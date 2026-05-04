@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
-# ClickUp chat message wrapper — reads creds from process env
+# ClickUp notification wrapper — posts a comment on a task via v2 API
 set -euo pipefail
 
-for v in CLICKUP_API_KEY CLICKUP_CHANNEL_ID; do
+for v in CLICKUP_API_KEY; do
   if [[ -z "${!v:-}" ]]; then
     echo "$v not set in environment" >&2
     exit 3
   fi
 done
+
+# Task to receive notifications. Override via CLICKUP_TASK_ID env var.
+TASK_ID="${CLICKUP_TASK_ID:-86d2w4nyb}"
 
 MESSAGE="${1:-}"
 if [[ -z "$MESSAGE" ]]; then
@@ -18,7 +21,7 @@ fi
 PAYLOAD=$(python3 -c "
 import json, sys
 msg = sys.argv[1]
-print(json.dumps({'content_format': 'text/md', 'content': msg}))
+print(json.dumps({'comment_text': msg, 'notify_all': False}))
 " "$MESSAGE")
 
 curl -s \
@@ -26,4 +29,4 @@ curl -s \
   -H "Authorization: ${CLICKUP_API_KEY}" \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" \
-  "https://api.clickup.com/api/v3/channel/${CLICKUP_CHANNEL_ID}/message" | python3 -m json.tool 2>/dev/null || true
+  "https://api.clickup.com/api/v2/task/${TASK_ID}/comment" | python3 -m json.tool 2>/dev/null || true
