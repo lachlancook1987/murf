@@ -108,3 +108,33 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-04 — Session-Open Validation (11:31 UTC)
+
+### Regime Correction
+Pre-session estimated BTC 20-day MA at ~$80,000–82,000. Actual computed MA (last 20 daily closes): **$76,730.88**.
+
+| Signal | Pre-Session Estimate | Actual |
+|---|---|---|
+| BTC 20-day MA | ~$80–82K | **$76,731** |
+| BTC vs MA | Below → Defensive | **Above → Offensive** |
+| BTC 24h change | ~0% | **+0.26%** (not down >5%) |
+
+**Regime: OFFENSIVE MODE** — full universe, normal sizes now available.
+
+### Live Prices (11:31 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $78,872 | $78,935 | **$78,904** |
+| ETH/USD | $2,335 | $2,337 | **$2,336** |
+
+### Entry Level Check
+| Trade | Planned Entry | Live Price | Status |
+|---|---|---|---|
+| BTC Long | $77,500–78,500 | $78,904 | **NOT TRIGGERED** — above range |
+| ETH Long | $2,250–2,300 | $2,336 | **NOT TRIGGERED** — above range |
+
+### Session-Open Decision: **HOLD**
+Regime upgraded to offensive but entry conditions unmet. No pullbacks to planned levels. No trades fired. Watch levels unchanged.
