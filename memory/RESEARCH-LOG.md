@@ -108,3 +108,113 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-05 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*No trades executed since inception.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,000–81,000 | +~1% 24h; holding range from yesterday |
+| ETH price | ~$2,374–2,390 | +0.6–0.95% 24h |
+| BTC Dominance | ~60% | CoinMarketCap 60.4%; CoinCodex 60.73%; stable |
+| Fear & Greed | 40 (Fear) | Down from 47 yesterday; sentiment softening |
+| BTC Funding Rate | avg −0.009%/8h | **Turned negative** — Binance −0.0004%, Bybit −0.0063%, BitMEX −0.0088%; market positioning bearish |
+| DXY | ~98.1–98.5 | +0.12% 24h; mild and persistent crypto headwind |
+| S&P 500 Futures | ~7,240 | Slight step down from ~7,265 yesterday; macro correlation to BTC ~0.7 |
+
+**BTC 20-day MA:** Estimated ~$80,000–82,000. BTC at lower bound — below MA. Defensive mode confirmed.
+
+**Notable change from yesterday:** Funding rate flipped from +0.01% → −0.009%/8h. More traders positioned short in perpetuals. Contrarian bullish signal if BTC holds support, but also signals weakening conviction among longs.
+
+---
+
+### Regime Filter (STEP 4)
+
+- BTC 24h change: +~1% (NOT down >5%) → HOLD gate **NOT triggered**
+- BTC vs. 20-day MA: At/below estimated MA (~$80–82K) → **DEFENSIVE MODE**
+- Funding: Negative (−0.009%/8h) → does NOT meet "neutral/positive" condition for offensive mode
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- ETF inflows still constructive: BTC spot ETFs $630M on May 1; ETH spot ETFs $101M same day
+- Negative funding is a contrarian setup — if BTC squeezes above $82,500, short-covering could accelerate
+- Total crypto market cap ~$2.6T; altcoin dominance low (BTC ~60%) = potential alt catch-up if BTC confirms
+- Solana ETF approval speculation ongoing; Schwab Crypto™ live (retail on-ramp)
+
+**Bearish/Risk:**
+- Fear & Greed slipped to 40 (Fear) — sentiment trending cautious
+- Funding negative → market participants leaning bearish in perpetuals
+- DXY still elevated (~98.1–98.5) and slightly rising; persistent headwind
+- S&P 500 futures softened to ~7,240; any risk-off cascade hits crypto ~3–5× harder
+- BABY (Babylon) unlock May 10 — pre-unlock sell pressure window begins now
+- INFRA (Bware Labs) unlock today (1% of supply) — minor noise
+
+---
+
+### Trade Ideas (DEFENSIVE mode — BTC/ETH only)
+
+**Idea 1 — BTC Long on Support Hold + Short Squeeze**
+- Catalyst: Negative funding (crowded shorts) + sustained ETF inflows + $79K support holding
+- Entry: $78,000–79,000 (current range / minor dip entry)
+- Stop: $74,800 (~5% below mid-entry)
+- Target 1: $82,500 (200-day EMA / offensive trigger); Target 2: $85,000
+- Size: ~$10,000 notional (10% equity, half of normal 20% defensive max)
+- R:R: ~1.7:1 (T1) / ~2.9:1 (T2)
+- Note: Requires BTC to hold above $77,500 on any dip. Negative funding = potential squeeze fuel.
+
+**Idea 2 — ETH Long Pre-Glamsterdam**
+- Catalyst: Glamsterdam upgrade upcoming (exact date TBD) + ETF inflows + ETH underperforming BTC recently
+- Entry: $2,250–2,320 (pullback to support band)
+- Stop: $2,130 (~6.5% below mid-entry)
+- Target 1: $2,600; Target 2: $2,800
+- Size: ~$8,000 notional (8% equity)
+- R:R: ~2.0:1 (T1) / ~3.1:1 (T2)
+- Note: Verify Glamsterdam date before entry. ETH/BTC ratio watch: any breakout above 0.031 = bullish catalyst.
+
+**Idea 3 — Offensive Mode Trigger (unchanged)**
+- BTC 2 consecutive daily closes above $82,500 → switch to offensive mode
+- Then: expand universe to SOL, AVAX; full position sizes
+- Confirm with: ETF inflows continuing + DXY rolling below 97 + F&G above 50
+
+---
+
+### Risk Factors
+1. BTC below 20-day MA — any long faces uptrend headwind
+2. Negative funding may reflect genuine bearish macro conviction, not just overcrowded shorts
+3. DXY at 98.1–98.5 and not falling — dollar strength persists
+4. BABY unlock May 10 — avoid BABY, watch for sentiment contagion
+5. INFRA unlock today — minor; monitor for broader unlock sentiment
+6. BTC–S&P correlation ~0.7; equity weakness = amplified crypto drawdown
+7. No confirmed positions = no P&L at risk, but also no upside exposure
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode confirmed. Funding turned negative (bearish positioning), sentiment softening to Fear (40). No defined pullback entry triggered (BTC not yet at $78K target zone). Watch for either:
+- BTC dip to $78,000–79,000 → potential long entry (Idea 1)
+- BTC 2 closes above $82,500 → offensive mode (Idea 3)
+- ETH dip to $2,250–2,320 → potential long entry (Idea 2)
+
+Patience > activity. No chasing current levels.
