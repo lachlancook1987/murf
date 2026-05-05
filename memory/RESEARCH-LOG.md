@@ -108,3 +108,33 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-05 — Midday Scan Addendum
+
+### Positions / Orders
+- Flat book — no positions, no open orders.
+
+### Market Check (via Perplexity, ~midday)
+| Asset | Price | Note |
+|---|---|---|
+| BTC | ~$79,824 | +$1,261 from prior close; Polymarket 64% prob in $80K-$82K range today |
+| ETH | N/A | No current data available |
+
+### Watch Level Status
+| Trigger | Level | Status |
+|---|---|---|
+| BTC dip long entry | $77,500–78,500 | NOT triggered (BTC ~$79.8K) |
+| BTC breakout entry | > $82,500 | NOT triggered |
+| ETH dip long entry | $2,250–2,300 | No data; monitor |
+| Offensive mode switch | BTC 2 closes > $82,500 | NOT triggered |
+
+### Actions Taken
+- None. Regime: DEFENSIVE (BTC at/below estimated 20-day MA ~$80–82K).
+- No positions cut (flat book).
+- No stops adjusted (no positions).
+- No thesis failures.
+
+### Decision: **HOLD — no change**
+BTC is stuck between the two trigger levels. Wait for a defined dip to $77.5–78.5K or a confirmed breakout above $82.5K before entering.
