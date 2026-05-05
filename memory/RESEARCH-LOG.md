@@ -108,3 +108,99 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-05 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Trades This Week | 0 |
+
+---
+
+### Live Quotes (09:15–09:17 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $80,634 | $80,725 | ~$80,680 |
+| ETH/USD | $2,369.00 | $2,371.40 | ~$2,370 |
+| SOL/USD | $84.45 | $84.77 | ~$84.61 |
+| XRP/USD | $1.4027 | $1.4081 | ~$1.405 |
+| AVAX/USD | $9.307 | $9.335 | ~$9.32 |
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC 24h change | +3.83% | Well above -5% trigger gate — NOT triggered |
+| BTC 20-day MA | ~$75,501 | BTC at $80,680 → ABOVE MA |
+| BTC Funding Rate | -0.0024%/8h | Negative — market short-biased in perps; NOT overheated longs |
+| Fear & Greed | 40 (Fear) | Above extreme fear (<15) threshold; trading allowed |
+| BTC Dominance | ~54.7% | Slight decrease vs yesterday; alt headwinds moderate |
+| DXY | ~98.47 | Mildly elevated; watch 99+ as red flag |
+
+---
+
+### Regime Filter
+- BTC 24h: **+3.83%** — HOLD gate NOT triggered
+- BTC vs 20-day MA: **$80,680 vs $75,501** → BTC ABOVE MA
+- Funding: **-0.0024%/8h** (negative = not overheated longs)
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Morgan Stanley Bitcoin Trust + institutional infrastructure expansion → new demand channels
+- Post-tax season (May): Historical pattern of capital returning to risk assets
+- CLARITY Act regulatory progress → reduced crypto policy uncertainty
+- XRP ETF inflows: $82M in April 2026 (strongest month YTD) → institutional interest
+- Negative funding rate across BTC perps → crowded short → squeeze risk = contrarian bullish
+- BTC recovering from Fear & Greed low of 12 → now at 40 (sustained sentiment recovery)
+
+**Bearish/Risk:**
+- DXY at 98.47 (slightly elevated); inverse crypto correlation — watch 99+
+- F&G still in Fear zone (40); not a tailwind yet
+- BTC perp shorts dominating for 6+ weeks → reflects persistent bearish sentiment in derivatives
+- BABY (Babylon) unlock May 10 — avoid BABY longs
+
+---
+
+### Trade Ideas
+
+**Previous triggers still not met:**
+- BTC long pullback: $77,500–78,500 — NOT hit (BTC at $80,680, above zone)
+- ETH long pullback: $2,250–2,300 — NOT hit (ETH at $2,370, above zone)
+- Offensive breakout: BTC 2 closes above $82,500 — NOT confirmed yet
+
+**New consideration — XRP/USD:**
+- Catalyst: XRP ETF inflows $82M April; CLARITY Act regulatory clarity; institutional adoption
+- Entry zone: $1.35–1.40 (pullback to support) or breakout above $1.50 with volume
+- Stop: ~$1.25 (~10% below $1.38 mid)
+- Target: $1.65–1.80
+- Size: ~$10,000 (10% equity at normal offensive sizing)
+- Note: Only enter on defined pullback or confirmed breakout
+
+---
+
+### Decision: **HOLD**
+
+No entry criteria met today:
+- BTC: Above pullback zone, below $82,500 breakout confirmation. Up +3.83% today — not chasing mid-run.
+- ETH: Above $2,250–2,300 entry zone.
+- SOL/XRP/AVAX: Offensive mode unlocks them, but no clean pullback/breakout setups on live data.
+- Negative funding is constructive (contrarian bullish) but not an immediate entry trigger.
+
+**Updated watch levels:**
+- BTC: Pullback to $79,000–80,000 (buy dip) OR close above $82,500 (breakout entry)
+- ETH: Pullback to $2,250–2,300
+- XRP: Pullback to $1.35–1.40 OR breakout above $1.50
+- Offensive mode confirmed — next clean setup gets full-size entry
