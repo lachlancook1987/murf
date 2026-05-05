@@ -108,3 +108,76 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-05 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*Week 2 session — no trades executed yet.*
+
+---
+
+### Market Context (live data as of ~08:15 UTC)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,870 (bid/ask mid) | ask $80,917 / bid $80,823 |
+| ETH price | $2,384 (bid/ask mid) | ask $2,385 / bid $2,383 |
+| BTC 24h change | ~+1% | Up from ~$80,000 yesterday |
+| BTC 20-day MA | ~$75,500–82,000 (conflicting sources) | Perplexity data inconsistent; using range from yesterday ($80-82K) |
+| Fear & Greed | Unavailable today | Was 47 (Neutral) yesterday |
+| BTC Funding Rate | Unavailable today | Was +0.01%/8h (neutral) yesterday |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: ~+1% (NOT down >5%) → gate **NOT triggered**
+- BTC vs. 20-day MA: At or slightly around estimated MA → **DEFENSIVE MODE maintained**
+- BTC 24h low cited ~$78,200 (Perplexity) — held above key support
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Institutional ETF inflows continuing; BTC/ETH ETF steady demand
+- US Clarity Act Senate markup expected mid-May — regulatory clarity catalyst
+- Global macro liquidity favorable heading into mid-2026
+- BTC recovered from 6-month low ~$78,200 area; holding $80K+
+
+**Bearish/Risk:**
+- Perplexity data inconsistency suggests choppy/uncertain price action
+- BTC still struggling to clearly reclaim $82,500 breakout level
+- FOMC aftermath: rate policy uncertainty remains
+
+---
+
+### Entry Zone Check
+
+| Asset | Yesterday's Trigger | Current Price | In Zone? |
+|---|---|---|---|
+| BTC | $77,500–78,500 pullback OR >$82,500 breakout | $80,870 | NO — between zones |
+| ETH | $2,250–2,300 pullback | $2,384 | NO — above entry zone |
+
+Neither asset is at a defined entry point. BTC is in "no-man's land" between support and breakout.
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode active. Prices are above entry zones — no chasing. Watch for:
+- BTC pullback to $77,500–78,500 → long entry
+- BTC 2 closes above $82,500 → offensive mode, expand universe
+- ETH pullback to $2,250–2,300 → long entry
