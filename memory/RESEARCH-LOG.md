@@ -4,6 +4,71 @@
 
 ---
 
+## 2026-05-05 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+| Trades This Week | 0 |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,926 (ask $79,968) | +0.08% from May 4 close; +1.64% May 3→4 |
+| ETH price | ~$2,349 (ask $2,349.90) | Stable |
+| BTC 20-day MA | $77,015 | Calculated from Apr 16–May 4 closes |
+| BTC vs 20-day MA | **ABOVE by 3.78% ($2,911)** | Regime: **OFFENSIVE** |
+| BTC 24h change | ~+1.64% (close-to-close) | Gate NOT triggered (threshold: -5%) |
+| Fear & Greed | 40 (Fear) | Down from 47 on May 4; not extreme |
+| BTC ETF Flows | +$600M+ early May | Strong; April total $1.97B–$2.44B |
+| Macro/Catalysts | None specific to May 5 | Quiet session |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +1.64% → gate **NOT triggered**
+- BTC vs 20-day MA: **ABOVE** ($79,926 vs $77,015) → **OFFENSIVE MODE**
+- Funding: ~+0.01%/8h (carryover neutral)
+- **Mode: OFFENSIVE — full universe, normal sizes permitted**
+- Note: Regime upgraded from DEFENSIVE (May 4) to OFFENSIVE today
+
+---
+
+### Entry Trigger Review
+
+| Plan | Trigger | Status |
+|---|---|---|
+| BTC long pullback | $77,500–78,500 | MISSED — BTC ran through without pulling back |
+| BTC long breakout | Close > $82,500 | Not reached |
+| ETH long pullback | $2,250–2,300 | MISSED — ETH held above |
+| Offensive expand (SOL/AVAX) | 2 closes > $82,500 | Not triggered |
+
+Both planned pullback entries were bypassed as BTC/ETH trended higher. Strategy says: "No chasing." No valid entry signals exist today.
+
+---
+
+### Decision: **HOLD**
+
+No entry triggers met. Regime is now OFFENSIVE but no fresh catalysts and no pullback to defined support levels. Default stance: patience > activity.
+
+**Updated Watch Levels:**
+- BTC long on pullback: $77,500–79,200 (reclaim 20-day MA zone from above)
+- BTC breakout long: clean close above $82,500 with volume
+- ETH long on pullback: $2,280–2,320
+- Offensive mode expansion (SOL/AVAX): BTC 2 consecutive closes > $82,500
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
