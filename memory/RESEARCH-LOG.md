@@ -108,3 +108,84 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-05 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Source |
+|---|---|---|
+| BTC price (live) | ~$80,841 (bid $80,818 / ask $80,865) | Alpaca live quote |
+| ETH price (live) | ~$2,357 (bid $2,357 / ask $2,359) | Alpaca live quote |
+| BTC 24h change | +1.30% (close $79,859→$80,893) | Alpaca daily bars |
+| BTC 20-day MA | $77,317 | Calculated from Alpaca bars (Apr 10–May 5) |
+| BTC vs 20-day MA | ABOVE (+4.6%) | → OFFENSIVE MODE |
+| Fear & Greed | ~50–55 est. (neutral, recovering) | Perplexity (no exact value returned) |
+| BTC Dominance | N/A today | Perplexity unavailable |
+| DXY | N/A today | Perplexity unavailable |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +1.30% (NOT down >5%) → gate **NOT triggered**
+- BTC vs 20-day MA: $80,893 > $77,317 → **OFFENSIVE MODE**
+- Funding: Assumed neutral (no data contradicting)
+- **Mode: OFFENSIVE — full universe, normal sizes permitted**
+
+Note: Yesterday assessed DEFENSIVE (BTC estimated at/below MA). Updated today with actual bar data — BTC has been above 20-day MA since ~Apr 25.
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- US spot Bitcoin ETFs: $630M inflows May 1; Ethereum ETF $101M May 1; sustained institutional demand
+- BTC uptrend: $73.8K (Apr 19) → $80.9K today = +9.6% over 16 days, consistent higher highs
+- Western Union stablecoin launch on Solana — ecosystem adoption signal
+- Consensus 2026 Miami May 6–8 — industry event, historically positive for crypto sentiment
+- BTC close to triggering tactical offensive switch ($82,500 target)
+
+**Bearish/Risk:**
+- BTC approaching $82,500 resistance (200-day EMA area) — possible rejection zone
+- No clean pullback entry available — price above planned entry zones
+- DXY data unavailable; remain watchful
+- Aave emergency legal motion — DeFi risk noise
+
+---
+
+### Trade Ideas (OFFENSIVE mode)
+
+**Entry levels NOT met today — no clean setups:**
+- BTC at $80,841: above planned entry ($77,500–78,500); not yet breakout above $82,500
+- ETH at $2,357: above planned entry ($2,250–2,300); no breakout above $2,400 yet
+- Strategy rule: "Entry on pullback to support OR breakout with volume" — neither condition met
+- Default stance: HOLD
+
+**New watch levels:**
+- BTC pullback entry: $78,500–80,000 (prior resistance turned support)
+- BTC breakout entry: break + hold above $82,500 with volume → full offensive add
+- ETH pullback entry: $2,280–2,320
+- ETH breakout entry: $2,400+ breakout
+
+---
+
+### Decision: **HOLD**
+
+OFFENSIVE mode confirmed but no clean entry signals. Price has moved past planned entry zones without offering a pullback. Wait for either (a) pullback to new support zone or (b) confirmed breakout above resistance with volume.
+
+**Trades this week: 0**
