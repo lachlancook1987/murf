@@ -29,8 +29,14 @@ case "$CMD" in
   orders)
     apca_curl "${BASE}/orders?status=all&limit=20" | python3 -m json.tool
     ;;
+  quote)
+    SYM="${2:-BTC/USD}"
+    ENC=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$SYM")
+    DATA_BASE="${ALPACA_CRYPTO_DATA_ENDPOINT:-https://data.alpaca.markets/v1beta3/crypto/us}"
+    apca_curl "${DATA_BASE}/latest/quotes?symbols=${ENC}" | python3 -m json.tool
+    ;;
   *)
-    echo "Usage: $0 {account|positions|orders}" >&2
+    echo "Usage: $0 {account|positions|orders|quote SYM/USD}" >&2
     exit 1
     ;;
 esac
