@@ -108,3 +108,97 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-06 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*No trades executed since session open on 2026-05-04.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC/USD | ~$81,834 | -0.50% 24h; mid of Alpaca bid/ask |
+| ETH/USD | ~$2,392 | +0.64% 24h |
+| SOL/USD | ~$88.79 | — |
+| BTC 20-day range | $75,775–$80,900 | Estimated MA ~$78–79K |
+| BTC 30-day trend | +10.72% | Upward; +1.21% 7-day |
+| DXY | Not retrieved | Assume mild headwind from prior session |
+| Fear & Greed | Not retrieved | Last known: 47 (Neutral) on 2026-05-04 |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.50% → Gate NOT triggered (requires >5% drop)
+- BTC vs 20-day MA: $81,834 vs ~$78–79K → **ABOVE MA**
+- Mode: **OFFENSIVE — full universe, normal sizes**
+- Funding: Not retrieved; assume neutral (prior session +0.01%/8h)
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC above 20-day MA and trending up +10.72% over 30 days
+- Ethereum Glamsterdam upgrade in active development (target June 2026, Devnet-5); EIP-7732 + EIP-7928 confirmed; gas limit 60M → 200M; 78.6% fee reduction expected
+- ETF inflows from prior session still the underlying driver
+
+**Watch/Risk:**
+- BTC approaching $82,500 resistance (prior session trigger level)
+- No confirmed pullback to support or breakout above $82,500 yet
+- BTC in "no man's land" between support ($79,500–80,500) and resistance ($82,500)
+- ETH at $2,392 — above prior entry zone ($2,250–2,300), not at pullback level
+
+---
+
+### Trade Ideas
+
+**Idea 1 — BTC Long on Breakout**
+- Catalyst: Offensive mode confirmed; sustained uptrend; ETF inflows
+- Entry: Daily close above $82,500 with volume
+- Stop: 12% trailing stop from entry
+- Target 1: $87,000; Target 2: $91,000
+- Size: $12,500 (12.5% equity; risk ~1.5% at 12% stop)
+- Qty: ~0.152770 BTC
+
+**Idea 2 — BTC Long on Pullback**
+- Entry: Pullback to $79,500–80,500
+- Stop: 12% trailing from entry (hard floor ~$70,400)
+- Target 1: $85,000; Target 2: $89,000
+- Size: $12,500 notional
+
+**Idea 3 — ETH Long on Pullback**
+- Catalyst: Glamsterdam June upgrade narrative + prior ETF inflows
+- Entry: Pullback to $2,280–2,360
+- Stop: 12% trailing from entry
+- Target 1: $2,600; Target 2: $2,800
+- Size: $10,000 notional (10% equity)
+
+---
+
+### Decision: **HOLD**
+
+No entry signals triggered:
+- BTC not at pullback support ($79,500–80,500) — current $81,834
+- BTC not yet broken out above $82,500 with confirmation
+- ETH above entry zone ($2,280–2,360) — current $2,392 — not a pullback entry
+
+**Watch levels:**
+- BTC long (breakout): Daily close above $82,500
+- BTC long (pullback): $79,500–80,500
+- ETH long (pullback): $2,280–2,360
+- Defensive revert: BTC drops below ~$78,500 (20-day MA) or -5% in any 24h window
