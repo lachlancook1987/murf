@@ -108,3 +108,47 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-06 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Open Positions | None |
+| Open Orders | None |
+
+*No losers to cut (STEP 3: N/A). No trailing stops to tighten (STEP 4: N/A). No thesis check needed (STEP 5: N/A).*
+
+---
+
+### Market Prices (Alpaca live feed, ~09:39 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $81,954 | $82,021 | ~$81,987 |
+| ETH/USD | $2,405.35 | $2,405.63 | ~$2,405 |
+
+---
+
+### Context vs. Last Session (2026-05-04)
+- BTC: $79–80K → $81,987 (+2.5–3.8%). Approaching but not yet through $82,500 offensive-mode trigger.
+- ETH: $2,330–2,380 → $2,405 (+1–3%). ETH entry range ($2,250–2,300) was NOT hit; price moved higher without a pullback.
+- **Regime:** Still DEFENSIVE (BTC not closed 2 consecutive days above $82,500 yet). One strong close today could set up the offensive-mode switch tomorrow.
+- Perplexity note: One source cited BTC at $118,838 — confirmed stale/unreliable; Alpaca live feed used as authoritative price.
+
+---
+
+### Catalyst Updates
+- **Ethereum Glamsterdam:** On track, June 2026 target. Devnet-5 testing underway. Key features: ePBS (EIP-7732), block-level access lists (EIP-7928). Expected 10,000 TPS / 78.6% gas reduction. **ETH bullish thesis intact.**
+- **BABY unlock (May 10):** Still 4 days out — avoid BABY longs.
+- No sharp intraday moves with unknown cause observed — no further Perplexity research triggered.
+
+---
+
+### Watch Levels (unchanged)
+- BTC offensive trigger: 2 closes above $82,500
+- BTC long dip entry: $77,500–78,500 (if reversal)
+- ETH long entry: $2,250–2,300 pullback (still valid if BTC dips)
+
+### Decision: **HOLD** — No action taken. No positions open. Monitoring for $82,500 breakout confirmation or pullback entry.
