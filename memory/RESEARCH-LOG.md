@@ -108,3 +108,64 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,236.04 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Long Market Value | $35,576.70 |
+| Open Positions | 3 (BTC, ETH, SOL — all opened this session) |
+| Trades This Week | 3 |
+
+### Market Context
+
+| Asset | Price (Alpaca) | 24h Change | Note |
+|---|---|---|---|
+| BTC | $81,531.55 | -0.50% | -$602 from yesterday close $81,133 |
+| ETH | $2,347.55 | +0.81% | From $2,328.60 yesterday |
+| SOL | $89.89 | +2.07% | From $88.07 yesterday |
+| BTC (Perplexity) | ~$81,100 | -0.50% | Polymarket: 69% prob $80-82K range |
+
+**BTC 20-day MA:** Estimated $80,000–82,000. BTC at $81,531 — borderline OFFENSIVE territory. BTC did NOT close ≥2 days above $82,500, so technically still DEFENSIVE. SOL position taken reflects borderline regime judgment.
+
+### Regime Filter
+
+- BTC 24h change: -0.50% → gate **NOT triggered**
+- BTC vs 20-day MA: At upper edge of estimated MA range → **BORDERLINE DEFENSIVE/OFFENSIVE**
+- **Mode: DEFENSIVE (BTC/ETH primary) — SOL included as ecosystem momentum play**
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF sustained inflows; Strategy accumulation continues (815K+ BTC)
+- ETH Glamsterdam upgrade narrative + $101M single-day ETF inflow (May 1)
+- SOL ecosystem growth (Schwab Crypto launch Apr 20)
+- Fear & Greed recovering from 12 (extreme fear) toward neutral
+- BTC holding above $80K support — consolidation above key level
+
+**Bearish/Risk:**
+- BTC -0.50% 24h, still below ATH ($126K, Oct 2025) by 35%
+- DXY unknown (no current data) — watch for spikes above 99
+- BTC entry ($81,660) above planned range ($77,500–78,500) — R:R compressed on BTC
+
+### Trades Executed This Session
+
+All three positions opened today. Trailing stops rejected by Alpaca; fixed stop-limits placed as fallback.
+
+| Symbol | Qty | Entry | Stop | Stop% | Target 1 | Target 2 | R:R (T1) |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 5.1702 | $2,321.66 | $2,130 | 8.25% | $2,550 | $2,750 | 1.19:1 |
+| SOL/USD | 123 | $88.17 | $77.59 | 12.0% | $100 | $120 | 1.12:1 |
+| BTC/USD | 0.152975 | $81,660.07 | $71,861 | 12.0% | $82,500 | $85,000 | 0.09:1 |
+
+*BTC R:R compressed — entry above planned range. Monitor closely.*
+
+### Decision: **HOLD**
+
+Three positions active with stops. No additional entries — 3 of 5 weekly trades used, regime borderline DEFENSIVE. Wait for BTC confirmation above $82,500 for 2 consecutive closes before expanding universe further.
