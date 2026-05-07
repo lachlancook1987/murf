@@ -108,3 +108,75 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,960.92 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Long Market Value | $35,301.58 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limits (one per position) |
+| Trades This Week | 3 of 5 limit |
+
+*Positions and stops placed by earlier session today (03:18–07:21 UTC).*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Source |
+|---|---|---|
+| BTC price | $80,999 | Alpaca live |
+| BTC 24h change | -0.17% | Alpaca |
+| ETH price | $2,327 | Alpaca live |
+| ETH 24h change | -0.06% | Alpaca |
+| SOL price | $89.16 | Alpaca live |
+| SOL 24h change | +1.24% | Alpaca |
+| BTC 20-day MA (est.) | ~$80,500 | Perplexity |
+| BTC vs MA | Marginally above | Estimate |
+| Fear & Greed | No data | N/A |
+
+---
+
+### Regime Filter
+
+- BTC 24h: -0.17% → gate **NOT triggered** (need >5% down)
+- BTC vs 20-day MA: ~$80,999 vs ~$80,500 → marginally above → borderline **OFFENSIVE**
+- Offensive mode trigger NOT confirmed (need 2 closes above $82,500)
+- **Mode: BORDERLINE — treating as late DEFENSIVE / early OFFENSIVE**
+
+---
+
+### Position Status
+
+| Symbol | Qty | Avg Entry | Current | Unreal. P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $80,999 | -$101 (-0.81%) | $71,861 stop-limit |
+| ETH/USD | 5.157275 | $2,321.66 | $2,327.30 | +$29 (+0.24%) | $2,130 stop-limit |
+| SOL/USD | 122.6925 | $88.17 | $89.16 | +$121 (+1.12%) | $77.59 stop-limit |
+
+All stops are active GTC orders. No action needed on existing stops.
+
+---
+
+### Decision: **HOLD — No new trades**
+
+**Rationale:**
+1. 3 positions already deployed (50% of 6-position max)
+2. No confirmed offensive mode (BTC not yet 2 closes above $82,500)
+3. No fresh catalyst documented for additional entries today
+4. Cash buffer healthy ($64,659 / 64.7% of equity)
+5. All existing stops properly set
+
+**Watch levels:**
+- Offensive trigger: BTC 2 consecutive closes above $82,500
+- BTC stop-out: $71,861 → reassess on trigger
+- ETH stop-out: $2,130 → reassess on trigger
+- SOL stop-out: $77.59 → reassess on trigger
+- New alt entries: only after confirmed offensive mode switch
