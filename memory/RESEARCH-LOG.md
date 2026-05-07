@@ -108,3 +108,27 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Midday Scan Addendum
+
+### Positions at Midday
+| Pair | Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|
+| ETH/USD | $2321.66 | $2332.20 | +$54.36 (+0.45%) | stop_limit $2130/$2100 |
+| SOL/USD | $88.17 | $88.72 | +$67.13 (+0.62%) | stop_limit $77.59/$76.04 |
+
+### Regime Check
+- Both positions small winners; no regime-filter action triggered
+- No sharp unexplained moves warranting Perplexity research
+- BTC/ETH stops from original thesis remain in place and untouched
+
+### Actions Taken
+- **None** — portfolio within normal parameters
+- Logged unrecorded entry trades to TRADE-LOG (entries were from morning session)
+
+### Watch Levels (carry-forward from 2026-05-04)
+- ETH target 1: $2,550 | target 2: $2,750
+- SOL stop: $77.59 (held)
+- Offensive mode trigger: BTC 2 closes above $82,500
