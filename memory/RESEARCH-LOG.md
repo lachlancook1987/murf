@@ -108,3 +108,69 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,499.23 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL — placed earlier today) |
+| Open Orders | 3 stop-limit sell orders |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $79,775 (mid) | Bid $79,740 / Ask $79,809 at 16:18 UTC |
+| ETH price | $2,288 (mid) | Bid $2,287 / Ask $2,290 at 16:17 UTC |
+| SOL price | $88.23 (mid) | Bid $88.06 / Ask $88.41 at 16:17 UTC |
+| BTC 24h change | -1.67% | From $81,133 (lastday) — minor pullback |
+| BTC 20-day MA | ~$76,621 | BTC well above MA |
+| Fear & Greed | N/A | Data unavailable |
+| Major catalysts | None today | No significant news driving action |
+
+**BTC 20-day MA:** ~$76,621. BTC at ~$79,775 — approximately $3,154 above MA.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -1.67% → gate **NOT triggered** (threshold: >5% down)
+- BTC vs 20-day MA: $79,775 > $76,621 → **OFFENSIVE MODE**
+- Funding: N/A (not pulled this session)
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+---
+
+### Existing Positions (opened earlier today)
+
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop | Stop Order ID |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $79,775 | -2.31% | $71,861 | c45fcb71 |
+| ETH/USD | 5.157275 | $2,321.66 | $2,288 | -1.45% | $2,130 | d4ccba1c |
+| SOL/USD | 122.6925 | $88.17 | $88.23 | +0.07% | $77.59 | 6c2eaac1 |
+
+Total deployed: ~$34,840 (35% of equity). All stops in place.
+
+---
+
+### New Trade Evaluation
+
+- 3 open positions (BTC, ETH, SOL) — 3 more slots available
+- 3 trades placed this week — 2 more allowed (5/week max)
+- No major catalysts identified for additional positions today
+- BTC in minor pullback (-1.67%); all 3 positions slightly underwater
+- Strategy: "Default stance: HOLD (patience > activity)"
+
+---
+
+### Decision: **HOLD**
+
+No new entries. Existing positions have stops in place. Wait for existing trades to play out or trigger stops. Re-evaluate if BTC reclaims $82,500 or pulls back further toward $76,621 MA support.
