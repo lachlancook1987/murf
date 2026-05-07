@@ -4,6 +4,112 @@
 
 ---
 
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,646.26 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Long Market Value | $34,986.92 |
+| Account | PA3GA9F7N5EE (paper) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Mkt Value | Unr. P&L | Stop |
+|---|---|---|---|---|---|---|
+| BTCUSD | 0.1526 | $81,660 | $80,164 | $12,232 | -$228 (-1.83%) | Stop $71,861 / Limit $70,783 |
+| ETHUSD | 5.157 | $2,321.66 | $2,302 | $11,873 | -$101 (-0.84%) | Stop $2,130 / Limit $2,100 |
+| SOLUSD | 122.69 | $88.17 | $88.69 | $10,882 | +$64 (+0.59%) | Stop $77.59 / Limit $76.04 |
+
+Total deployed: ~$34,987 (~35.1% of equity). Cash buffer: ~64.9%.
+Note: SOL position technically outside defensive mode (BTC/ETH only rule). Already entered — monitor and hold with stop in place.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,000–81,540 | -1.2% 24h; rejected $82,228 (200-day MA) again |
+| ETH price | ~$2,293–2,336 | -2.5% 24h; bears in charge short-term |
+| SOL price | ~$88.67–89.77 | +0.11% 24h; positive adoption catalysts |
+| BTC Dominance | ~59.3% | Stable; slight alt headwinds |
+| Fear & Greed | 46–47 (Fear/Neutral) | Holding neutral zone |
+| BTC Funding Rate | +0.01%/8h (Binance/Bybit) | Neutral; not overheated |
+| DXY | 97.87 (-0.15%) | Declining — mild tailwind for crypto |
+| S&P 500 Futures | ~7,378–7,393 (record highs) | Iran deal optimism; AI earnings beat; macro positive |
+
+**BTC 20-day MA:** Estimated ~$80,500–81,000. BTC at ~$81,000 is borderline/marginally above — DEFENSIVE mode maintained.
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Spot Bitcoin ETF inflows: $467M Tuesday alone; $1.63B since May 1 — sustained institutional demand
+- Tom Lee (Fundstrat): BTC closing May above $76K confirms bull market; 3 signals pointing to $85K
+- Whale accumulation: 230,000 ETH purchased near $2,300
+- SOL institutional adoption: Western Union launched USDPT stablecoin on Solana; Circle minted $750M USDC on Solana; Jito Labs self-custody trading tool launched
+- DXY declining to 97.87 — inverse correlation favors crypto
+- S&P 500 at record highs (~7,390) on Iran peace deal; macro tailwinds broad
+- Fed: Markets pricing 1–2 rate cuts by Q3; Brent oil ~$101 but easing
+
+**Bearish/Risk:**
+- BTC rejected $82,228 (200-day MA) — 7th rejection in 7 months per analysis; ceiling pattern
+- Strategy Inc. signaling potential BTC sales to fund dividends — supply overhang risk
+- ETH -2.5% today with no convincing recovery; bears in control short-term
+- Jito (JTO) unlock today: 11.31M tokens (~$4.51M, 1.13% supply) — minor selling pressure on JTO
+- SXT unlock May 8: ~$6M, 7.75–23% supply — avoid SXT
+- Rain unlock May 10: $377.3M (4.37% supply) — systemic unlock risk mid-week
+- BTC stops wide (~12% below entry) vs. strategy target of 3–5% — note for risk review
+
+---
+
+### Trade Ideas (DEFENSIVE mode — BTC/ETH primary)
+
+**Idea 1 — BTC: Manage Existing Position**
+- Current: Long 0.1526 BTC @ $81,660. Sitting -1.83% unrealized.
+- Catalyst: ETF inflows ($1.63B since May 1) remain strong. $82,228 is key breakout level.
+- Action: HOLD. Stop in place at $71,861. Consider tightening to ~$77,800 (5% below entry) for better risk management — current stop at ~12% is wider than strategy allows.
+- Watch: Break and close above $82,500 → adds confirmation for scale-in or offensive mode switch.
+
+**Idea 2 — ETH: Manage Existing Position**
+- Current: Long 5.157 ETH @ $2,321.66. Sitting -0.84% unrealized.
+- Catalyst: 230K ETH whale accumulation at $2,300 is a floor signal. Quantum-prep narrative positive longer term.
+- Action: HOLD. Stop at $2,130 (-8.2% from entry). Key level: $2,300 must hold; loss below it worsens outlook.
+- R:R on existing: Target $2,550 (T1) / $2,750 (T2) with stop $2,130 → 2.0:1 (T1).
+
+**Idea 3 — SOL: Manage Existing Position (hold exception)**
+- Current: Long 122.69 SOL @ $88.17. Only profitable position (+$64).
+- Catalyst: Western Union USDPT + Circle $750M USDC on Solana = strong real-world adoption. Jito tool adoption.
+- Action: HOLD. Stop at $77.59 in place. No new SOL entries until offensive mode confirmed.
+- Note: SOL technically outside defensive mode rule — existing position grandfathered, no adds.
+
+---
+
+### Risk Factors
+1. BTC 200-day MA ($82,228) is a hard ceiling — 7 failed attempts; avoid adding to BTC long above $81,500
+2. Strategy Inc. BTC sales signal — could cap any BTC rally near $82K–85K
+3. Rain unlock ($377M) on May 10 — broad market liquidity risk mid-week
+4. SOL position violates defensive mode rule (BTC/ETH only) — acceptable since entered with stop, but no adds
+5. Stop widths (BTC ~12%, SOL ~12%) exceed 3–5% strategy guideline — review if tightening stops is practical given volatility
+6. DXY trending down but oil elevated ($101 Brent) — geopolitical wildcard
+
+---
+
+### Regime Filter Summary
+- BTC 24h: ~-1.2% → Gate NOT triggered
+- BTC vs 20-day MA: Borderline/marginally above ~$80,500–81,000 estimate → **DEFENSIVE mode**
+- Funding: +0.01%/8h → Neutral
+- **Mode: DEFENSIVE — no new entries, manage existing positions**
+
+### Decision: **HOLD**
+Three positions active with GTC stop-limits. ETF inflows are genuinely bullish but BTC facing persistent $82,228 resistance + Strategy sales risk. No new entries. Monitor stop levels. Offensive mode trigger: BTC 2 consecutive closes above $82,500.
+
+*Note: S&P 500 query via Perplexity failed (JSON decode error) — fell back to WebSearch. BTC/ETH/SOL position queries also failed via Perplexity — fell back to WebSearch.*
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
