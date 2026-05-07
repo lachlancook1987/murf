@@ -19,6 +19,8 @@ apca_curl() {
     "$@"
 }
 
+DATA_BASE="${ALPACA_CRYPTO_DATA_ENDPOINT:-https://data.alpaca.markets}"
+
 case "$CMD" in
   account)
     apca_curl "${BASE}/account" | python3 -m json.tool
@@ -29,8 +31,24 @@ case "$CMD" in
   orders)
     apca_curl "${BASE}/orders?status=all&limit=20" | python3 -m json.tool
     ;;
+  quote)
+    SYM="${2:-BTC/USD}"
+    ENC=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$SYM")
+    apca_curl "${DATA_BASE}/v1beta3/crypto/us/latest/bars?symbols=${ENC}" | python3 -m json.tool
+    ;;
+  assets)
+    apca_curl "${BASE}/assets?asset_class=crypto&status=active" | python3 -m json.tool
+    ;;
+  order)
+    JSON="${2:-}"
+    if [[ -z "$JSON" ]]; then
+      echo "Usage: $0 order '<json>'" >&2
+      exit 1
+    fi
+    apca_curl -X POST -H "Content-Type: application/json" -d "$JSON" "${BASE}/orders" | python3 -m json.tool
+    ;;
   *)
-    echo "Usage: $0 {account|positions|orders}" >&2
+    echo "Usage: $0 {account|positions|orders|quote|assets|order}" >&2
     exit 1
     ;;
 esac

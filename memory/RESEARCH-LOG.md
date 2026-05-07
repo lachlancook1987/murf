@@ -108,3 +108,80 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,027.59 |
+| Cash | $77,151.29 |
+| Long Market Value | $22,876.30 (22.87% deployed) |
+| Open Positions | 2 (ETH, SOL) |
+| Weekly Trades Used | 2 of 5 |
+
+### Positions Carried
+| Symbol | Qty | Avg Entry | Current | P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 5.1572745 | $2,321.66 | $2,329.91 | +$51.94 | SL $2,130 / Lim $2,100 |
+| SOL/USD | 122.6925 | $88.17 | $88.48 | +$32.77 | SL $77.59 / Lim $76.04 |
+
+*Both stops are stop-limit GTC orders — active.*
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,085 | +~1.3% 24h (live Alpaca, 05:24 UTC) |
+| ETH price | ~$2,330 | +0.13% today |
+| SOL price | ~$88.48 | +0.35% today |
+| BTC Dominance | ~58–60% | ETF inflows concentrated in BTC |
+| Fear & Greed | Not available | Last known: 47 (Neutral) on May 4 |
+| BTC Funding Rate | Not available | Last known: +0.01%/8h (neutral) |
+| BTC ETF Inflows | +$467M (May 5) | 4th consecutive positive day; AUM $104.6B |
+
+---
+
+### Regime Filter
+- BTC 24h change: ~+1.3% → gate **NOT triggered** (not down >5%)
+- BTC vs 20-day MA: Estimated MA ~$80,000–82,000; BTC at $81,085 — borderline/neutral
+- ETH ETF: Weekly outflows -$81.6M — headwind for new ETH longs
+- SOL ETF: Weekly outflows -$11.1M
+- **Mode: DEFENSIVE** (cannot confirm BTC above 20-day MA; needs 2 closes above $82,500 for offensive mode)
+
+---
+
+### Catalysts
+**Bullish:**
+- BTC ETF inflows sustained: $467M May 5, ~$2B past month, 4 straight positive days
+- No major macro risk events today (no Fed, no CPI)
+- BTC uptrend: $79K (May 4) → $81,085 (May 7), +~2.6% over 3 days
+
+**Bearish/Risk:**
+- ETH ETF weekly outflows (-$81.6M) — institutional distribution signal
+- SOL ETF weekly outflows (-$11.1M)
+- BTC not yet above $82,500 offensive-mode trigger
+- Macro: oil >$100/bbl, Fed leadership uncertainty
+
+---
+
+### Entry Signal Check
+| Asset | Plan Entry Zone | Current Price | Signal? |
+|---|---|---|---|
+| BTC | $77,500–78,500 pullback OR >$82,500 breakout | $81,085 | **NO** — between levels |
+| ETH | $2,250–2,300 pullback | $2,330 | **NO** — above entry zone |
+
+---
+
+### Decision: **HOLD**
+
+No entry signals triggered. Existing positions (ETH, SOL) are slightly positive with stops in place.
+
+**Watch levels:**
+- BTC offensive mode trigger: 2 consecutive closes above $82,500
+- BTC pullback re-entry: $77,500–78,500
+- ETH re-entry: $2,250–2,300 pullback
+- ETH stop watch: $2,130 stop active — close above $2,400 target 1
