@@ -108,3 +108,46 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Midday Scan Addendum
+
+**Time:** ~12:00 UTC | **Scan type:** Routine midday review
+
+### Account Snapshot
+
+| Pair | Qty | Entry | Current | Unreal P&L% | Stop Level |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $81,600 | -0.07% | $71,861 (stop) |
+| ETH/USD | 5.1573 | $2,321.66 | $2,341.04 | +0.84% | $2,130 (stop) |
+| SOL/USD | 122.6925 | $88.17 | $89.84 | +1.89% | $77.59 (stop) |
+
+Total open notional: ~$35,547 | Unreal combined: ~+$295 (+0.83%)
+
+### Regime Check (midday)
+
+- BTC 24h change: +0.58% — no >5% down trigger
+- BTC price $81,600 vs ~$82,000 estimated 20-day MA → still **DEFENSIVE MODE**
+- SOL position is a defensive-mode rule violation (BTC/ETH only) from morning scan — flagged, not cut (thesis intact, no narrative break)
+
+### Intraday Moves
+
+| Asset | Today % | Note |
+|---|---|---|
+| BTC | +0.58% | Steady, no sharp moves |
+| ETH | +0.53% | Grinding higher |
+| SOL | +2.01% | Mild strength |
+
+No sharp unexplained moves — Perplexity research not warranted.
+
+### Actions Taken
+
+None — clean hold. No cuts, no stop adjustments, no new entries.
+
+### Afternoon Watch Levels
+
+- BTC: Hold as long as above $71,861 stop. Target reclaim of $82,500 for offensive mode.
+- ETH: Glamsterdam upgrade thesis intact. Hold stop at $2,130.
+- SOL: +25% tighten trigger = $110.21; +40% tighten trigger = $123.44. Both far off.
+- **Offensive mode switch:** BTC 2 consecutive daily closes above $82,500 → expand to full position sizes and alt universe.
