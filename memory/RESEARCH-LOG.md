@@ -108,3 +108,35 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Open Positions | None |
+| Open Orders | None |
+
+### Market Context (Midday)
+
+| Asset | Value | Note |
+|---|---|---|
+| BTC | ~$78,000 | Below estimated 20-day MA (~$80–82K); DEFENSIVE mode continues |
+| ETH | Consolidating | Targeting breakout above $2,600 downtrend; +10% April |
+| BTC ETF Flows | $2.44B April total | Sustained demand; bullish structural backdrop |
+| Sharp Moves | None | No unexpected spikes requiring investigation |
+
+### Actions Taken
+- No positions open → Steps 3 (cut losers), 4 (tighten stops), 5 (thesis check) all N/A.
+- Perplexity check: no sharp unexplained moves today.
+
+### Regime Filter
+- BTC ~$78K — still at/below 20-day MA (~$80–82K) → **DEFENSIVE MODE** continues
+- Watch: BTC breakout above $82,500 (2 closes) → switch to offensive
+
+### Decision: **HOLD**
+No defined entry triggers hit. Continue watching:
+- BTC pullback to $77,500–78,500 for long entry
+- ETH pullback to $2,250–2,300 for long entry
