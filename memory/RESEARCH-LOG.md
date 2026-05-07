@@ -108,3 +108,70 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,564.69 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL — entered earlier today) |
+| Portfolio Deployed | ~$34,905 (35% of equity) |
+| Trades This Week | 3 of 5 max |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,929 | -1.6% 24h; rejected $82,000 resistance |
+| ETH price | ~$2,300–2,336 | Rejected $2,400; consolidating |
+| SOL price | ~$88.09 | Essentially flat |
+| BTC 20-day MA | $76,621 | BTC ABOVE MA → Offensive mode |
+| 30yr Treasury | 5% | Macro headwind for risk assets |
+| ETF Flows | ~$490M weekly outflows (late Apr) | Institutional caution signal |
+| BTC Dominance | N/A (data unavailable) | — |
+| Fear & Greed | N/A (data unavailable) | — |
+
+---
+
+### Regime Filter (2026-05-07)
+
+- BTC 24h change: ~-1.6% → gate **NOT triggered** (<5% threshold)
+- BTC vs 20-day MA: $80,929 > $76,621 → **OFFENSIVE MODE** (full universe, normal sizes)
+- Macro: 30yr Treasury at 5% = risk headwind; ETF outflows in late April
+- BTC rejected $82,000 resistance — momentum uncertain
+- **Net: Offensive mode technically active, but macro/momentum headwinds warrant caution**
+
+---
+
+### Existing Positions (opened 2026-05-07 earlier today)
+
+| Symbol | Qty | Avg Entry | Current | Stop Level | Unrealized P&L |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $80,194 | $71,861 (stop_limit) | -$223.64 |
+| ETH/USD | 5.1573 | $2,321.66 | $2,299.84 | $2,130 (stop_limit) | -$112.53 |
+| SOL/USD | 122.6925 | $88.17 | $88.09 | $77.59 (stop_limit) | -$10.78 |
+
+---
+
+### Decision: **HOLD — No New Entries**
+
+Reasons:
+1. BTC rejected $82,000 resistance — failed breakout, potential drop to $78,700
+2. ETF outflows ~$490M weekly (late April) — institutional selling pressure
+3. 30-year Treasury at 5% — macro headwind for crypto
+4. All 3 existing positions slightly underwater — no need to add risk
+5. Stops in place (BTC $71,861, ETH $2,130, SOL $77.59) — risk managed
+6. 2 trades remaining this week — preserve for stronger setups
+
+**Watch levels:**
+- BTC add/new entry: hold above $80,000 + 2 closes above $82,500
+- ETH add: needs to hold $2,280 and reclaim $2,350+
+- SOL: monitor; add only if BTC confirms breakout above $82,500
+- Offensive trigger: BTC 2 consecutive closes above $82,500 + ETF inflows resume
