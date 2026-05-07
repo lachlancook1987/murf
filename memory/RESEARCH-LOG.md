@@ -108,3 +108,92 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Live Quotes (Alpaca, ~03:16 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $81,007 | $81,092 | ~$81,050 |
+| ETH/USD | $2,320 | $2,322 | ~$2,321 |
+| SOL/USD | $87.85 | $88.20 | ~$88.02 |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,050 | +0.6% 24h |
+| ETH price | ~$2,321 | Mixed alts |
+| BTC 20-day MA | ~$78,500 | BTC ABOVE → Offensive mode |
+| Fear & Greed | 68 (Greed) | Elevated; not extreme (>85) |
+| BTC Dominance | ~56.2% | Stable |
+| DXY | ~102.4 | Higher than last session (98.2); mild headwind |
+| BTC 24h change | +0.6% | Gate NOT triggered |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.6% (not down >5%) → gate **NOT triggered**
+- BTC vs 20-day MA: $81,050 > $78,500 → **OFFENSIVE MODE**
+- Fear & Greed: 68 — elevated but below extreme (85) threshold
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Ethereum Glamsterdam upgrade approaching — strong DeFi/L2 narrative
+- ETH ETF single-day inflow: $101M (May 1) — institutional demand confirmed
+- BTC ETF sustained inflows ($2B+ over 9 days through Apr 24)
+- BTC above 20-day MA ($78,500) for first time since April — trend recovery
+- Sentiment recovering: F&G 68 (Greed) vs. 12 (Extreme Fear) weeks ago
+
+**Bearish/Risk:**
+- DXY at 102.4 (higher than prior session 98.2) — stronger dollar headwind
+- F&G 68 — elevated, suggests some froth risk
+- ETH entry zone was $2,250–2,300; current $2,321 is 0.9% above (minor chase)
+- Post-ATH ($126K Oct 2025) recovery still incomplete; macro uncertainty
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH Long (EXECUTE)**
+- Catalyst: Glamsterdam upgrade + sustained ETF inflows + regime now offensive
+- Entry: ~$2,321 (market, 0.9% above planned zone — acceptable)
+- Stop: 12% trailing (fixed fallback: $2,042 if trailing rejected)
+- Target 1: $2,550 (+10%); Target 2: $2,750 (+18.5%)
+- Size: $12,000 notional (12% equity, offensive mode)
+- Qty: 5.1702 ETH
+- R:R: ~1.5:1 (T1) / ~2.8:1 (T2) with 12% stop
+
+**Idea 2 — BTC (SKIP)**
+- At $81,050: above entry zone ($77,500–78,500), below $82,500 breakout trigger
+- Neither pullback nor breakout conditions met — wait
+- Re-evaluate: long on dip to $78,000–79,000 OR breakout above $82,500
+
+**Idea 3 — SOL (SKIP)**
+- No specific catalyst documented today; offensive mode allows it in universe
+- Re-evaluate if BTC breaks $82,500 and SOL shows relative strength
+
+---
+
+### Decision: **ETH LONG — 5.1702 ETH @ market (~$2,321)**
