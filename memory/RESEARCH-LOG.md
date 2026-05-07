@@ -108,3 +108,81 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Live Quotes (Alpaca, ~01:16 UTC)
+| Asset | Ask | Bid | Mid |
+|---|---|---|---|
+| BTC/USD | $81,195.96 | $81,113.60 | ~$81,155 |
+| ETH/USD | $2,330.20 | $2,328.40 | ~$2,329 |
+| SOL/USD | $88.54 | $88.21 | ~$88.38 |
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC 24h change | +0.50% | Well within regime filter (+/- 5%) |
+| BTC 20-day MA | ~$80,000–82,000 (est.) | BTC ~$81,155 → borderline at/near MA |
+| Regime | DEFENSIVE | BTC at MA boundary; BTC/ETH only, 50% sizes |
+| Fear & Greed | Not retrieved | Assumed recovering (was 47 neutral on May 4) |
+| DXY | Not retrieved | Last known ~98.2 |
+
+**Regime decision: DEFENSIVE — BTC/ETH only, reduced position sizes.**
+
+---
+
+### Key Catalysts
+**Bullish:**
+- SOL Alpenglow testnet nearing deployment (mainnet early 2026) — alt positive
+- AVAX Particle Chain upgrade (Universal Accounts/Transaction Layer) — +13.5% in 10 days to ~$13
+- GRT Horizon mainnet imminent — Web3 data layer narrative
+- ETH in tight accumulation with May setups noted
+
+**Bearish/Risk:**
+- Sticky inflation & modest macro growth — risk-asset headwinds
+- Mixed central bank signals; U.S. macro outperformance creating uneven crypto flows
+- No major ETF flow data or token unlock catalysts retrieved this week
+
+---
+
+### Trigger Assessment vs. Prior Plan
+
+| Trade | Entry Plan | Live Price | Status |
+|---|---|---|---|
+| BTC Long | $77,500–78,500 pullback OR >$82,500 breakout | $81,155 | NOT triggered — between levels |
+| ETH Long | $2,250–2,300 pullback | $2,329 | NOT triggered — 1.3% above upper bound |
+
+**BTC:** At $81,155, BTC is in no-man's land between the pullback entry ($77.5-78.5K) and breakout level ($82.5K). No entry signal.
+
+**ETH at $2,329:** Above the planned entry zone ($2,250-$2,300). Entering here with 12% trailing stop places stop at ~$2,050. R:R to T1 ($2,550) = 0.79:1 — unacceptably poor. Do not chase.
+
+---
+
+### Decision: **HOLD**
+
+No trades today. Reasons:
+1. BTC not at either trigger level
+2. ETH above planned entry zone — R:R degraded to 0.79:1 at current price
+3. Defensive mode active — no new alt entries permitted
+4. Strategy principle: patience > activity
+
+**Watch levels (unchanged):**
+- BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
+- ETH long trigger: $2,250–2,300 pullback
+- Offensive mode switch: BTC 2 consecutive closes above $82,500
