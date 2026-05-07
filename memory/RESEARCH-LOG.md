@@ -108,3 +108,35 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Midday Scan Addendum
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| ETH/USD qty | 5.1573 ETH |
+| Avg Entry | $2,321.66 |
+| Current Price | $2,318.20 |
+| Unrealized P&L | -$17.84 (-0.149%) |
+| Open Stop Orders | **NONE — RISK FLAG** |
+
+### ETH Thesis Check (Perplexity, May 7 2026)
+- Price range May 6: $2,360–2,408; pulled back to $2,318 today
+- **Negative signals**: Bearish derivatives (negative funding rates, negative taker buy-sell ratio on most exchanges), ETH below 100-day EMA (~$2,365)
+- **Positive signals**: Bullish Binance positioning (taker ratio >1), DeFi growth intact
+- **No exploit, regulatory action, or major unlock events** — thesis NOT broken
+- Glamsterdam upgrade: No updated data available from Perplexity
+- Liquidation cluster risk at $2,217 — stop at $2,130 provides buffer
+
+### Decisions
+- **HOLD**: Thesis pressured but not broken; -0.149% is noise
+- **ACTION REQUIRED**: Stop-loss at $2,130 must be placed in Alpaca (not set at entry)
+- Trailing stop tightening: N/A (position not at +25% or +40%)
+- Cut losers: N/A (not at -10%)
+
+### Watch Levels (updated)
+- ETH stop (hard): $2,130 (~-8.3% from entry) — NOT YET SET IN ALPACA
+- ETH Target 1: $2,550; Target 2: $2,750
+- BTC offensive trigger: 2 consecutive closes above $82,500
