@@ -108,3 +108,77 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,196.40 |
+| Cash | $77,151.29 |
+| Buying Power | $154,302.58 |
+| Open Positions | 2 (ETH + SOL, entered earlier today) |
+| Open Orders | 2 stop-limit orders |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,678 | +0.28% 24h; high $82,826 May 6 |
+| ETH price | ~$2,344 | +0.61% today |
+| SOL price | ~$89.36 | +1.46% today |
+| BTC 20-day MA | $77,631 | Calculated from daily closes Apr 17–May 6 |
+| BTC vs 20-day MA | +5.2% above | OFFENSIVE mode confirmed |
+| BTC 24h change | +0.28% | Gate not triggered (not down >5%) |
+
+**BTC Regime:** OFFENSIVE — BTC $81,678 vs 20-day MA $77,631 (+5.2%). Full universe, normal sizes.
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Bitcoin ETF record inflow day: $843.6M (highest YTD); April 2026: $2.44B (strongest month); May building on Q2 momentum
+- BlackRock IBIT leading: $648M daily, $1.71B in April; YTD ETF AUM ~$155B
+- Institutional demand absorbing ~5× miner supply (April); BTC above $80K resistance zone cleared
+- Ethereum Glamsterdam upgrade: Devnet-5 underway, June mainnet target; 10× TPS, 78% gas fee cut potential
+- Solana: High TPS (65K+), Firedancer upgrade narrative, low-fee ecosystem
+- BTC dominance declining slightly — alt rotation potential
+
+**Risks:**
+- BTC near recent supply zone $81K–83K; no confirmed 2nd close above $82,500
+- No specific macro catalyst scheduled this week; monitor Fed comments, DXY (98+)
+- BTC YTD -6.9% from ATH ($126,198 Oct 2025); extended drawdown context
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.28% → gate **NOT triggered**
+- BTC vs 20-day MA ($77,631): **+5.2% above → OFFENSIVE MODE**
+- Funding rate: neutral (estimated from ETF flow data; no overheated signal)
+- **Mode: OFFENSIVE — full universe, normal sizes (up to 20% per position)**
+
+---
+
+### Trade Decisions
+
+**Already executed (earlier today, pre-log):**
+1. ETH/USD long @ $2,321.66 — Glamsterdam + ETF inflows catalyst
+2. SOL/USD long @ $88.17 — Schwab Crypto launch + Firedancer narrative
+
+**New entry this session:**
+3. BTC/USD long @ $81,660.07 — BTC above 20-day MA, record ETF inflows, $80K resistance cleared; offensive mode
+
+**Rule checks all passed:** 3 total positions (≤6), 3 trades this week (≤5), each position ≤20% equity
+
+**Watch:**
+- BTC target 1: $90,000 (R:R 0.85:1), target 2: $95,000 (R:R 1.36:1)
+- ETH target 1: $2,550 (R:R 1.6:1 from stop), target 2: $2,750
+- SOL target 1: $100 (R:R 1.0:1), target 2: $110
+- Exit trigger: any position stop hit, or BTC falls back below 20-day MA ($77,631)
