@@ -108,3 +108,51 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,825.58 |
+| Cash | $64,659.34 |
+| Long Market Value | $35,166.24 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,587–81,022 | 24h: -0.67% to -1.6% (sources vary); NOT triggering >5% gate |
+| ETH price | ~$2,318.50 | -0.43% today |
+| SOL price | ~$88.94 | +0.99% today |
+| BTC 20-day MA | ~$76,621 (Perplexity) | BTC above MA → OFFENSIVE mode |
+| BTC 24h gate | Not triggered | Well above -5% threshold |
+
+### Regime Filter
+- BTC 24h change: ~-1.6% (NOT >-5%) → gate **NOT triggered**
+- BTC vs 20-day MA: $80,587 vs $76,621 → **ABOVE** → **OFFENSIVE MODE**
+- No overheated funding signals
+
+### Existing Positions (placed by earlier session today)
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $80,587 | -$163.77 (-1.31%) | $71,861 SL |
+| ETH/USD | 5.1572745 | $2,321.659 | $2,318.50 | -$16.29 (-0.14%) | $2,130 SL |
+| SOL/USD | 122.6925 | $88.1729 | $88.94 | +$94.00 (+0.87%) | $77.59 SL |
+
+### Key Catalysts Today
+- BTC rejected $82,000 resistance; support at $80,000 critical (Perplexity)
+- No major breaking news or new catalysts
+- Polymarket: 79-84% probability BTC closes $80-82K range
+
+### Decision: **HOLD**
+All 3 positions covered by stop-limits. BTC rejected $82K resistance — no chase.
+Offensive expansion to new alts requires BTC 2 consecutive closes above $82,500 (not yet met).
+Weekly trade count: 3/5 used. Position count: 3/6 used.
+
+**Watch levels:**
+- BTC: close above $82,500 × 2 days → add SOL/AVAX
+- BTC: break below $80,000 → reassess all positions
+- ETH: $2,550+ = scale partial profit at Target 1
