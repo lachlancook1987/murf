@@ -108,3 +108,90 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,000 |
+| Cash | $100,000 |
+| Buying Power | $200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Trades This Week | 0 |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,950 (Alpaca live, 02:16 UTC) | +0.3% 24h |
+| ETH price | ~$2,316 (Alpaca live) | -1.2% 24h |
+| BTC 20-day MA | ~$76,621–76,658 (Barchart) | BTC ABOVE MA → Offensive mode |
+| BTC Dominance | Unknown | — |
+| Fear & Greed | Unknown | — |
+| BTC Funding Rate | Unknown | — |
+| DXY | Unknown | — |
+
+**BTC Regime:** BTC ($80,950) is clearly ABOVE 20-day MA ($76,621) → **OFFENSIVE MODE** (full universe, normal sizes). Gate not triggered: BTC only +0.3% 24h (not down >5%).
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC at 3-month high ($82K+ intraday May 7 per Perplexity); strong momentum
+- Kevin Warsh confirmed as new Fed Chair starting May 15 — crypto-friendly, holds BTC positions, staked in Bitwise/dYdX/Polymarket/Solana; major regulatory tailwind
+- ETF inflows: $2.4B week of May 4; ongoing ETF expansion
+- CLARITY Act in critical legislative window (regulatory clarity)
+- Meta USDC payouts via Solana/Polygon (Stripe, 160+ countries by year-end)
+- Solana: Falcon post-quantum signatures — tech narrative
+- Prediction markets: 98.8% probability BTC > $68K
+
+**Bearish/Risk:**
+- May 4 flash crash: $4.5B liquidations on fake Iran-US war rumor (Houthis attack denied); fragility signal
+- BTC YoY still -15% (per Perplexity May 4 note)
+- Token unlocks: ZRO (2.36% supply), SUI, ARB this month
+- Fed most divided vote since 1992 (hawkish hold still in effect until Warsh takes over)
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.3% → Gate **NOT triggered**
+- BTC vs 20-day MA: $80,950 vs $76,621 → **ABOVE MA → OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal position sizes (up to 20% equity)**
+
+---
+
+### Trade Ideas
+
+**Plan inherited from 2026-05-04 (triggers not yet met):**
+
+**Idea 1 — BTC Long (two scenarios):**
+- Scenario A (pullback): Entry $77,500–78,500 — price not there, HOLD
+- Scenario B (breakout): Entry above $82,500 close — not triggered yet, WATCH
+- Current BTC at $81K is in no-man's land between both triggers
+
+**Idea 2 — ETH Long:**
+- Entry zone: $2,250–2,300 — ETH at $2,316, above zone → HOLD, wait for dip
+
+**New Watch — Offensive Mode Expanded:**
+- If BTC holds above $82,500: consider SOL long (Falcon quantum + Meta ecosystem)
+- SOL entry zone: any pullback to 20-day support
+
+---
+
+### Decision: **HOLD — No trades placed**
+
+Neither BTC nor ETH has reached the defined entry triggers. BTC at $81K is between pullback zone ($77.5-78.5K) and breakout level ($82.5K). ETH at $2,316 is above the $2,250-2,300 entry zone. Strategy: patience > activity. Wait for defined levels.
+
+**Updated watch levels:**
+- BTC breakout entry: $82,500 close (then target $85K, $90K+)
+- BTC pullback re-entry: $78,000–79,000
+- ETH entry: $2,250–2,300 pullback
+- SOL entry: monitor if BTC breaks $82,500 (offensive mode fully confirmed)
