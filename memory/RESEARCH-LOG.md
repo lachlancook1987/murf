@@ -108,3 +108,128 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,573.12 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Long Market Value | $34,913.78 |
+| Account | PA3GA9F7N5EE (paper) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | MV | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| BTC | 0.152592 | $81,660.07 | $80,206.15 | $12,238.86 | -$221.86 (-1.78%) | $71,861 stop / $70,783 limit |
+| ETH | 5.1572745 | $2,321.66 | $2,292.35 | $11,822.28 | -$151.15 (-1.26%) | $2,130 stop / $2,100 limit |
+| SOL | 122.6925 | $88.17 | $88.454 | $10,852.64 | +$34.49 (+0.32%) | $77.59 stop / $76.04 limit |
+
+**Total deployed:** ~35% of equity ($34,913 / $99,573). Well within 80% max.
+**Combined unrealized P&L:** -$338.52
+
+⚠️ **Flag:** SOL position was entered today despite defensive mode (BTC/ETH only rule). Position is marginally profitable (+$34) and stop is in place. Keeping for now but flagging as a rule deviation.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,000–$81,300 | -1% to -3% 24h (Alpaca: -1.14%) |
+| ETH price | ~$2,292–$2,350 | -1% to -3% 24h |
+| SOL price | ~$84–$88.45 | +0.3%–+2% 24h |
+| BTC Dominance | ~58–61% | Slight decline; CoinMarketCap ~60.7% |
+| Fear & Greed | 46–48 (Fear/Neutral) | 3-month recovery from extreme fear (12) |
+| BTC Funding Rate | Mixed: +0.01%/8h (Binance/Bybit) | Neutral; no overheated longs |
+| DXY | 97.88 (-0.14% today, -1.26% MTD) | Weakening → crypto-positive |
+| S&P 500 Futures | ~7,379 (-0.14%) | Marginally negative; risk-neutral macro |
+| BTC 200-day MA | ~$83,218 | BTC below → DEFENSIVE MODE |
+
+---
+
+### Regime Filter (STEP 4)
+- BTC 24h change: -1.14% → gate **NOT triggered** (threshold: -5%)
+- BTC vs. 200-day MA: $80,200 vs. $83,218 → **DEFENSIVE MODE**
+- Funding: +0.01%/8h neutral → no overheated signal
+- **Mode: DEFENSIVE — BTC/ETH only (note: SOL already held), reduced position sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- DXY weakening to 97.88 (down 1.26% MTD) — inverse correlation supports crypto
+- Coinbase Q1 earnings today (expected beat on USDC/custody revenue) — sentiment catalyst
+- CLARITY Act advancing (CFTC jurisdiction, staking clarity) — regulatory positive
+- ETH Glamsterdam upgrade (June) — DeFi/L2 narrative, 10K TPS target
+- Visa $7B stablecoin settlements + Meta USDC creator payouts on Solana — SOL adoption
+- ETH ETF April inflows $356M (BlackRock/Fidelity); BTC ETF inflows continued strong
+- Fed pricing 1–2 rate cuts by Q3; Iran peace signals → oil down → risk-on
+- BTC RSI 65.60 (bullish, not overbought); up 19% in 30 days
+
+**Bearish:**
+- Strategy Inc. (ex-MicroStrategy) signaling potential BTC sales for dividends — **new bear signal**
+- ETH below 20-day EMA ($2,287) — technical weakness
+- BTC failed to hold $82K; consolidating below 200-day MA ($83,218)
+- SXT (Space and Time) unlock May 8: 387.6M tokens (23% of released supply) — sell pressure
+- BASED May 11: 20% supply release (~$5M)
+- S&P 500 slightly negative; macro risk-neutral to mildly negative
+- SOL showing bear flag / H&S risk per some technicals; below several SMAs
+
+---
+
+### Trade Ideas (DEFENSIVE mode)
+
+**Idea 1 — Hold BTC, Watch $80K Support**
+- Thesis: $80K is key psychological and technical support; ETF flows ongoing; DXY weakening
+- Action: Hold existing position (stop at $71,861 covers ~11.7% drawdown from entry — generous)
+- Consider tightening stop to $77,000–$77,500 if BTC closes below $80K on volume
+- Entry add-on zone: Only if BTC reclaims $82,500+ for 2 consecutive closes (offensive mode switch)
+- R:R on add: entry $82,500, stop $79,500, target $88,000–$90,000 → 1.8:1–2.5:1
+
+**Idea 2 — Hold ETH, Monitor $2,150 Support**
+- Thesis: Glamsterdam upgrade (June) narrative intact; ETF inflows sustaining demand floor
+- Action: Hold existing position; stop at $2,130 is well-placed
+- Risk: ETH below 20-day EMA is bearish. Prediction markets assign 55% to ETH breaking $2,150 bearishly
+- Watch: Coinbase earnings today — positive surprise could lift ETH sentiment
+- If ETH tests $2,150–$2,200 and holds with bullish candle → could add (reduced size, defensive)
+
+**Idea 3 — SOL: Manage Rule Deviation, Let Profits Run**
+- Thesis: Visa + Meta integrations are genuine adoption catalysts; SOL is most resilient today (+0.32%)
+- Position was entered at $88.17; currently +$34 unrealized
+- Stop at $77.59 covers ~12% drawdown — consider tightening to $84.00–$85.00 to lock in near breakeven
+- Target: $93.20 (Fib resistance); exit or scale at $93+
+- Only holds under offensive mode switch; if BTC remains defensive, keep small
+
+---
+
+### Risk Factors
+1. Strategy Inc. BTC sell signal — if confirmed, BTC could test $75K–$77K
+2. SXT unlock May 8 (23% supply release) — altcoin sentiment impact possible
+3. ETH 55% bear case probability (Polymarket) — $2,150 break targets $1,800–$2,000
+4. BTC below 200-day MA — all longs are counter-trend in regime context
+5. SOL stop at $77.59 is far; tightening recommended to reduce risk
+6. Coinbase earnings miss (tail risk) could pressure crypto sentiment broadly
+7. S&P 500 and Nasdaq at elevated levels — any macro shock amplified
+
+---
+
+### Decision: **HOLD**
+
+Existing positions maintained with stops in place. No new entries.
+
+**Actions to consider (not orders):**
+- Review BTC stop: $71,861 is far (~11.7% from entry); consider tightening to $76,500–$77,000
+- Review SOL stop: $77.59 is far; consider tightening to $84.00–$85.00
+- ETH stop at $2,130 is reasonable (~8.2% from entry); leave as-is
+- Offensive mode trigger: BTC closes above $82,500 × 2 consecutive days
+- Watch Coinbase earnings today for sentiment catalyst
+
+**Watch levels:**
+- BTC: Hold $80K or stops become relevant; breakout target $82,500+
+- ETH: $2,150 is the line in the sand; below it → momentum toward $1,800
+- SOL: $84.74 Fib resistance; above it → $87–$93 open
