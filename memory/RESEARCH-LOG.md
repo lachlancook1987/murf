@@ -108,3 +108,43 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Midday Scan Addendum (~12:00)
+
+### Positions / Orders
+- **None open.** Clean slate confirmed via Alpaca API.
+
+### Market Snapshot (Perplexity, ~midday)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC | ~$81,000 | +0.9% 24h |
+| ETH | ~$3,450 | +1.2% 24h (estimate; data limited) |
+| BTC Dominance | 54.2% | Down from ~59% last session — alt momentum |
+| Fear & Greed | 68 (Greed) | Up from 47 (Neutral) last session |
+| BTC 20-day MA est. | ~$78,500 | BTC now ~+3.2% above MA |
+| Sharp moves / news | None | BTC holding near $81K; no major catalysts |
+
+### Regime Filter Update
+- BTC is now **above** the 20-day MA (~$81K vs ~$78.5K)
+- BTC 24h change: +0.9% — gate NOT triggered
+- Fear & Greed: 68 — elevated greed but below extreme (>85) threshold
+- **Offensive mode trigger** requires BTC 2 consecutive closes above $82,500 — NOT yet met
+- **Current mode: DEFENSIVE** (BTC/ETH only, half size) — until $82,500 closes confirmed
+
+### ETH Note
+ETH at ~$3,450 vs prior estimate of ~$2,330–2,380 (~+47%) — Perplexity flagged limited direct data.
+If accurate, ETH has broken out significantly on Glamsterdam narrative. The long trigger ($2,250–2,300)
+was never hit from the other direction; price ran without us. **No regret trade — thesis was to wait
+for the pullback, not chase.** Watch for a retrace to $3,000–3,100 as new support/re-entry level.
+
+### Decision: **HOLD**
+- No positions to manage.
+- BTC not yet at offensive trigger ($82,500 × 2 closes).
+- F&G at 68 — elevated; not extreme. Acceptable to enter on defined setups.
+- **Revised watch levels:**
+  - BTC: enter long on pullback to $78,500–79,500 (new support = old 20-day MA zone)
+  - ETH: if ETH data confirms ~$3,450, watch for pullback to $3,000–3,100
+  - Offensive mode switch: unchanged — BTC 2 closes above $82,500
