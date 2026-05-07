@@ -108,3 +108,79 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,645.72 |
+| Cash | $64,659.34 |
+| Long Market Value | $34,986.38 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limit orders (one per position) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*Positions entered by prior session earlier today; TRADE-LOG updated this session.*
+
+---
+
+### Market Context (live via Alpaca + Perplexity)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,160.52 | -1.2% today (lastday $81,133) |
+| ETH price | $2,302.10 | -1.1% today (lastday $2,328.60) |
+| SOL price | $88.69 | +0.7% today (lastday $88.07) |
+| Fear & Greed | ~46–47 (Neutral) | Holding in neutral range; no extreme signal |
+| Perplexity BTC note | $80,050 support holding | 200-day MA ~$83,000 per source |
+| Perplexity BTC RSI | 65.60 | Bullish, not overbought |
+
+**BTC 20-day MA:** Not confirmed via live data; estimated ~$80,000–82,000 based on prior research. BTC at $80,160 is borderline/slightly below the range.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -1.2% → **gate NOT triggered** (threshold: >5% down)
+- BTC vs 20-day MA: Estimated at or slightly below → **DEFENSIVE MODE** maintained
+- **Mode: DEFENSIVE — BTC/ETH preferred, smaller sizes**
+
+*Note: SOL position was opened by prior session despite defensive mode — inconsistency with strategy. Position retained with stop active.*
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- ETF inflows continuing; institutional targets $94K–$130K for H2 2026
+- BTC holding $80,050 support level
+- RSI 65.60 — healthy bullish momentum, not yet overbought
+
+**Bearish/Risk:**
+- BTC below estimated 20-day MA → headwinds for alts
+- ETH and BTC both down on the day (-1.1% to -1.2%)
+- DXY data unavailable but prior reading ~98.2 (mild headwind)
+
+---
+
+### Existing Positions Review
+
+| Symbol | Entry | Current | Stop | P&L% | Risk from Entry |
+|---|---|---|---|---|---|
+| BTC/USD | $81,660.07 | $80,160.52 | $71,861 | -1.84% | -12% stop |
+| ETH/USD | $2,321.66 | $2,302.10 | $2,130 | -0.84% | -8.25% stop |
+| SOL/USD | $88.17 | $88.69 | $77.59 | +0.59% | -12% stop |
+
+All stops active (stop-limit GTC orders confirmed in Alpaca).
+
+---
+
+### Decision: **HOLD — No new trades**
+
+- 3 of 6 max positions filled; 2 of 5 weekly trades remaining
+- No new entry triggers met: BTC above $78,500 pullback zone; ETH above $2,300 pullback zone
+- Defensive mode: no offensive alts
+- Monitor BTC: close above $82,500 × 2 days → switch offensive
