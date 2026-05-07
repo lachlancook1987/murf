@@ -108,3 +108,81 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,116.19 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL — all entered today) |
+| Open Orders | 3 stop_limit sell orders covering all positions |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*All 3 positions entered in an earlier session run today (03:18–07:21 UTC).*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,858 | -2% 24h; failed to hold $82K; testing $80K support |
+| ETH price | ~$2,332–2,336 | Flat; rejected from $2,400 |
+| SOL price | ~$89.57–90.18 | -0.26% to +2.4% depending on source |
+| BTC 20-day MA est. | ~$79,500 | BTC ABOVE → Offensive mode |
+| Fear & Greed | N/A | Data unavailable from source |
+| BTC Dominance | N/A | Data unavailable from source |
+| DXY | N/A | Data unavailable from source |
+
+**BTC 20-day MA:** ~$79,500 (estimated from recent $76K–$82K range). BTC at ~$80,858 is above this → **OFFENSIVE MODE**.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -2% → gate **NOT triggered** (threshold >5%)
+- BTC vs 20-day MA (~$79,500): $80,858 is **ABOVE** → **OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe eligible, normal sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Continued ETF inflow narrative; any positive daily data reinforces $85K+ target
+- BTC holding $80K psychological support
+
+**Bearish/Risk:**
+- BTC rejected at $82K resistance; $80K breakdown risks cascade to $78.7K
+- Existing positions entered near-top of recent range ($81,660 BTC avg entry)
+
+---
+
+### Open Positions Summary
+
+| Symbol | Qty | Avg Entry | Current | P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $81,013.89 | -$98.60 (-0.79%) | $71,861 stop_limit |
+| ETH/USD | 5.1572745 | $2,321.66 | $2,332.69 | +$56.89 (+0.48%) | $2,130 stop_limit |
+| SOL/USD | 122.6925 | $88.17 | $90.18 | +$246.26 (+2.28%) | $77.59 stop_limit |
+
+---
+
+### Decision: **HOLD — No new entries**
+
+Reasons:
+1. BTC failed $82K resistance; testing $80K — weak momentum for new longs
+2. 3 of 6 max positions already deployed (35.4% of equity)
+3. All existing positions have protective stops
+4. Strategy rule: "Default stance: HOLD (patience > activity)"
+5. 3 trades already placed this week (week limit: 5)
+
+**Watch levels:**
+- BTC must hold $80K and reclaim $82K for additional BTC/alt longs
+- If BTC breaks $80K → monitor stops; do not add
+- SOL showing strength (+2.4%); offensive mode permits AVAX/other alts if BTC holds
