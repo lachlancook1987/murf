@@ -4,6 +4,76 @@
 
 ---
 
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,613.09 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL — all opened earlier today) |
+| Trades This Week | 3 (BTC, ETH, SOL entries) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,147 | -1.6% 24h |
+| ETH price | ~$2,295 | -1.4% 24h |
+| SOL price | ~$88.50 | +0.6% 24h |
+| AVAX price | ~$9.48 | CME futures launched May 5 |
+| BTC 20-day MA | $77,784 | BTC ABOVE → OFFENSIVE MODE |
+| Fear & Greed | ~47 (Neutral) | Recovering from lows |
+| BTC Dominance | ~59-60% | Slightly elevated |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -1.6% (gate NOT triggered — threshold >5% down)
+- BTC vs. 20-day MA: $80,147 > $77,784 → **OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Key Catalysts
+
+**AVAX (strongest today):**
+- CME AVAX futures launched May 5 (5K/standard, 500/micro contracts, cash-settled) — major institutional accessibility milestone
+- BlackRock $500M tokenized fund deployed on Avalanche
+- Progmat ~$2B assets migrating to AVAX L1
+- Broadridge AVAX L1 launch
+- Price ~$9.48, resistance $9.80–$10.45, support $9.00/$8.30
+
+**Existing holdings:**
+- BTC: ETF inflows sustained; ~$81,660 avg entry, stop at $71,861
+- ETH: Glamsterdam upgrade catalyst; ~$2,321 avg entry, stop at $2,130
+- SOL: Firedancer upgrade; ~$88.17 avg entry, stop at $77.59
+
+**Risk Factors:**
+- BTC down -1.6% — soft start to the day
+- DXY at ~98 — mild headwind
+- 3 positions already open; 2 trades remaining this week
+
+---
+
+### Trade Ideas
+
+**Idea 1 — AVAX Long (primary)**
+- Catalyst: CME futures + BlackRock + Progmat institutional tailwinds
+- Entry: ~$9.48 (market)
+- Stop: 12% trailing (~$8.34)
+- Target 1: $11.40 (+20%); Target 2: $12.36 (+30%)
+- Size: ~$15,000 (15% equity)
+- R:R: ~1.7:1 (T1)
+
+**No additional trades today** — 2 trade budget remaining, 1 used for AVAX; hold 1 in reserve.
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
