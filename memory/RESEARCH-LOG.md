@@ -132,11 +132,11 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 
 ### Decisions
 - **HOLD**: Thesis pressured but not broken; -0.149% is noise
-- **ACTION REQUIRED**: Stop-loss at $2,130 must be placed in Alpaca (not set at entry)
+- Stop-loss placed: stop_limit GTC, stop $2,130 / limit $2,100 (order ID d4ccba1c) ✅
 - Trailing stop tightening: N/A (position not at +25% or +40%)
 - Cut losers: N/A (not at -10%)
 
 ### Watch Levels (updated)
-- ETH stop (hard): $2,130 (~-8.3% from entry) — NOT YET SET IN ALPACA
+- ETH stop (hard): stop_limit GTC — stop $2,130 / limit $2,100 — order ID d4ccba1c ✅
 - ETH Target 1: $2,550; Target 2: $2,750
 - BTC offensive trigger: 2 consecutive closes above $82,500
