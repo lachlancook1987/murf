@@ -108,3 +108,70 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,976.54 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limit sell orders |
+| Deployed | $35,317.20 (35.3% equity) |
+
+*Trades placed by earlier session-open run today (03:18–07:21 UTC).*
+
+---
+
+### Market Context (Alpaca live prices)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,959.85 | -0.214% 24h (Alpaca) |
+| ETH price | $2,327.67 | -0.04% 24h |
+| SOL price | $89.32 | +1.423% 24h |
+| BTC 20-day MA | ~$80,000–81,000 (est.) | BTC at/slightly above — borderline |
+| BTC 24h Δ | -0.214% | Well above -5% HOLD threshold |
+| Fear & Greed | ~47–55 (est. neutral) | Recovering from extreme fear |
+| DXY | ~98 (est.) | Mild headwind |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.214% → gate **NOT triggered** (>-5% required)
+- BTC vs 20-day MA: At/slightly above estimated MA → **DEFENSIVE/BORDERLINE**
+- Mode applied: **DEFENSIVE** (BTC/ETH only, 50% size) — out of caution
+- Note: SOL was entered in earlier session despite defensive mode flag (rule deviation)
+
+---
+
+### Open Positions Review
+
+| Symbol | Avg Entry | Current | P&L | Stop Trigger | Stop % |
+|---|---|---|---|---|---|
+| BTC/USD | $81,660.07 | $80,959.85 | -$106.85 | $71,861 | -12.0% |
+| ETH/USD | $2,321.66 | $2,327.67 | +$31.00 | $2,130 | -8.3% |
+| SOL/USD | $88.17 | $89.32 | +$140.74 | $77.59 | -12.0% |
+
+All stops active. No stops triggered.
+
+---
+
+### Decision: **HOLD — No new trades**
+
+- 3 positions already open (BTC, ETH, SOL) — adequate exposure
+- Defensive mode → no new alts
+- BTC/ETH already fully positioned per the 2026-05-04 plan
+- Cash: $64,659.34 preserved as buffer
+- Weekly trade count: 3/5 (2 remaining if opportunity arises)
+
+**Watch levels:**
+- Offensive mode switch: BTC 2 closes above $82,500 → add SOL/AVAX
+- BTC stop: $71,861 — exit if triggered
+- ETH stop: $2,130 — exit if triggered
+- SOL stop: $77.59 — exit if triggered
