@@ -108,3 +108,65 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,091.74 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Long Market Value | $35,432.40 |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,181 | +0.50% 24h; +1.21% 7d |
+| ETH price | ~$2,333.70 | +0.22% 24h |
+| SOL price | ~$89.73 | +1.89% 24h |
+| BTC 20-day MA | ~$79,500–80,000 | BTC ABOVE MA → Offensive mode |
+| BTC Dominance | ~58–60% | Approx unchanged |
+| Fear & Greed | ~47–52 (Neutral) | Recovering; no extreme reading |
+| BTC Funding Rate | ~+0.01%/8h | Neutral |
+| DXY | ~98 | Slight headwind, stable |
+
+**BTC Regime:** 24h change +0.50% (gate NOT triggered). BTC $81,181 vs 20-day MA $79,500–80,000 → **OFFENSIVE MODE**
+
+---
+
+### Existing Positions (entered earlier today)
+
+| Symbol | Qty | Avg Entry | Current | Stop | Unrealized P&L |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $81,181.50 | $71,861 (stop_limit) | −$73.03 |
+| ETH/USD | 5.157275 | $2,321.66 | $2,333.70 | $2,130 (stop_limit) | +$62.07 |
+| SOL/USD | 122.6925 | $88.17 | $89.73 | $77.59 (stop_limit) | +$191.05 |
+
+All stops placed and active (GTC stop_limit orders).
+
+---
+
+### Catalysts
+- BTC sustained ETF inflows; Strategy (MSTR) accumulation; BTC above 20-day MA
+- ETH Glamsterdam upgrade narrative; ETF inflow $101M (May 1)
+- SOL Schwab Crypto ETF listing; positive momentum
+
+---
+
+### Decision: **HOLD new entries**
+
+3 positions already established today (3 of 5 weekly trades used, 3 of 6 max positions). No fresh catalyst researched for a 4th name. Offensive mode allows expansion but patience preferred — let existing positions develop.
+
+**Watch levels:**
+- BTC stop: $71,861 | Target T1: $90,000 / T2: $95,000
+- ETH stop: $2,130 | Target T1: $2,550 / T2: $2,750
+- SOL stop: $77.59 | Target T1: $100 / T2: $110
+- 4th position trigger: strong catalyst + BTC holds above $82,500
