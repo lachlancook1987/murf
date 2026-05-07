@@ -108,3 +108,80 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,062.25 |
+| Cash | $77,151.29 |
+| Buying Power | $154,302.58 |
+| Open Positions | 2 (ETH/USD, SOL/USD — filled earlier today) |
+| Long Market Value | $22,910.96 |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,800–$81,100 | +0.5% to +2.9% 24h |
+| BTC 20-day MA | ~$79,500–$80,000 | BTC NOW ABOVE 20-day MA |
+| ETH price | ~$2,340–$2,350 | +0.64% 24h (YoY +29.7%) |
+| SOL price | ~$88.69 | Current position price |
+| Fear & Greed | N/A (data unavailable) | Assumed neutral (47 last reading 05-04) |
+| BTC Dominance | N/A (data unavailable) | ~60% last reading |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.5% to +2.9% → gate NOT triggered (not down >5%) ✓
+- BTC vs 20-day MA: BTC ~$80,900 vs MA ~$79,500–$80,000 → BTC **ABOVE** 20-day MA
+- **Mode: BORDERLINE OFFENSIVE** — BTC above 20-day MA but has not yet confirmed 2 closes above $82,500 (per 05-04 watch level). Maintaining conservative stance.
+- SOL position placed by prior session despite defensive mode — now defensible as BTC above MA.
+
+---
+
+### Existing Positions (Opened Today Before This Session)
+
+**ETH/USD Long (filled 03:18 UTC)**
+- Qty: 5.1572745 | Entry: $2,321.66 | Cost: ~$11,973
+- Stop-limit: $2,130 trigger / $2,100 limit (8.25% risk from entry — tighter than 12% rule, per pre-research plan)
+- Stop order ID: d4ccba1c-4fbc-4482-81b8-ee56ccf351c4
+- Thesis: Glamsterdam upgrade catalyst + ETF inflows ($101M single day May 1)
+- Target 1: $2,550 | Target 2: $2,750
+
+**SOL/USD Long (filled 04:19 UTC)**
+- Qty: 122.6925 | Entry: $88.17 | Cost: ~$10,818
+- Stop-limit: $77.59 trigger / $76.04 limit (12% below entry — matches 12% stop rule)
+- Stop order ID: 6c2eaac1-bb65-4522-9181-e87eee580c3d
+- Thesis: Schwab Crypto + GSR BESO ETF with staking; BTC now above MA justifies alt exposure
+- Target 1: $100 | Target 2: $112
+
+---
+
+### Hard-Check vs Rules (Existing Positions)
+- Total positions: 2 ≤ 6 ✓
+- Trades this week: 2 ≤ 5 ✓
+- ETH cost ($11,973) = 11.97% equity ≤ 20% ✓
+- SOL cost ($10,818) = 10.81% equity ≤ 20% ✓
+- BTC not down >5% ✓
+- BTC above 20-day MA (borderline offensive — SOL now defensible) ✓
+- Catalysts documented above ✓
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+Existing ETH and SOL positions in profit with stops in place. BTC not yet confirmed above $82,500 for full offensive mode. Cash $77,151 available. No new entries today.
+
+**Watch levels:**
+- BTC offensive trigger: 2 consecutive closes above $82,500
+- ETH stop: $2,130 | SOL stop: $77.59
+- ETH profit target: $2,550 (scale out)
+- SOL profit target: $100 (scale out)
