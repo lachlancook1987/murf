@@ -108,3 +108,85 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-07 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,940.94 |
+| Cash | $64,659.34 |
+| Buying Power | $129,318.68 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limit sell orders |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*Trades placed earlier this session (03:18–07:21 UTC). TRADE-LOG not yet committed.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,900–81,540 | ~0% 24h change; rejected $82,821 high |
+| ETH price | ~$2,325–2,336 | -0.1% today; failed $2,400 |
+| SOL price | ~$89.20 | +1.3% today; +10% 30d |
+| BTC 24h change | ~-0.01% to -0.3% | NOT triggered (gate: >5% down) |
+| BTC 20-day MA | ~$79,000–81,000 (est.) | BTC at/near MA — borderline |
+| Fear & Greed | ~47–50 (Neutral, est.) | Recovering from extreme fear |
+| BTC Dominance | ~58–60% | Stable |
+| BTC WoW change | +5.3% | Positive weekly momentum |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: ~0% → gate **NOT triggered**
+- BTC vs. 20-day MA: At or slightly above estimated MA → **BORDERLINE / DEFENSIVE**
+- No confirmed 2 closes above $82,500 → offensive mode NOT unlocked
+- **Mode: DEFENSIVE — maintain existing positions, no new alts**
+
+---
+
+### Key Catalysts (May 7 2026)
+
+**Bullish:**
+- BTC at highest level since January; up 5.3% WoW
+- U.S.-Iran tensions easing — risk-on macro environment
+- Options desks positioning for breakout above $82,500
+- SOL integrations: Bittensor/Wormhole, SoFi stablecoin, State Street tokenized fund live
+- ETH steady at ~$2,330; Glamsterdam upgrade narrative intact
+
+**Bearish/Risk:**
+- BTC rejected at $82,821 intraday high — resistance overhead
+- ETH failed to reclaim $2,400
+- No new ETF inflow data reported today
+- SOL Perplexity data shows ~$84 vs Alpaca ~$89 — data discrepancy (use Alpaca live data)
+
+---
+
+### Position Review (Existing Trades — Placed Today)
+
+| Symbol | Qty | Entry | Current | P&L | Stop | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $80,900 | -$116 (-0.93%) | $71,861 (stop-limit) | Active |
+| ETH/USD | 5.157275 | $2,321.66 | $2,325.38 | +$19 (+0.16%) | $2,130 (stop-limit) | Active |
+| SOL/USD | 122.6925 | $88.17 | $89.20 | +$126 (+1.17%) | $77.59 (stop-limit) | Active |
+
+Total deployed: $35,281 / $99,941 = 35.3% equity  
+Trades this week: 3 of 5 allowed
+
+---
+
+### Decision: **HOLD — No New Entries**
+
+All three positions have stops in place. BTC is slightly underwater; ETH/SOL slightly positive. Regime is borderline defensive — no new trades until BTC confirms 2 closes above $82,500 or a high-conviction pullback setup emerges.
+
+**Watch levels:**
+- BTC: Hold above $80,000 support; trigger stop if breaks $71,861
+- ETH: Hold above $2,130; offensive add at confirmed $2,400+ breakout
+- SOL: Hold above $77.59; watch $95 for partial profit
+- Offensive mode switch: BTC 2 daily closes above $82,500
