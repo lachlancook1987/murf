@@ -4,6 +4,86 @@
 
 ---
 
+## 2026-05-08 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,696.22 |
+| Cash | $49,489.86 |
+| Buying Power | $98,979.72 |
+| Open Positions | 4 (AVAX, BTC, ETH, SOL) |
+| Open Orders | 4 (stop-limits on all positions) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,800–80,037 | +0.19% 24h; pulled back from weekly high ~$82k |
+| ETH price | ~$2,281 | -0.38% 24h |
+| SOL price | ~$89.31 | +1.50% 24h |
+| AVAX price | ~$9.727 | +2.94% 24h |
+| BTC 20-day MA | ~$79,000–82,000 | BTC at/near lower bound; DEFENSIVE mode maintained |
+| Fear & Greed | Unknown | No data from research |
+| BTC Dominance | Unknown | No data from research |
+| DXY | Unknown | No data from research |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.19% — gate NOT triggered (not down >5%)
+- BTC vs 20-day MA: At/near lower bound of estimated range → **DEFENSIVE MODE**
+- Funding: Unknown (no data)
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC hit weekly high ~$82,000 driven by US-Iran deal progress + institutional support
+- Option market targeting $115,000 BTC by year-end
+- Polymarket: 59% odds BTC closes above $80,000 today
+- BTC rebounded off EMA50 with bullish divergence (Economies.com)
+
+**Bearish/Risk:**
+- BTC pulled back from $82k to ~$79.8k on renewed Middle East conflict concerns
+- BTC currently below our avg entry of $81,660 (-2.3% unrealized)
+- ETH slightly underwater (-1.76% vs entry at $2,321.66)
+- No ETF flow data available for today
+
+---
+
+### Trade Ideas
+
+**No new trades — HOLD**
+- 4 positions open, all with stops in place
+- 1 trade remaining this week (4/5 used on 2026-05-07)
+- Defensive mode: only BTC/ETH eligible, but both already held and slightly underwater
+- No new entry catalyst identified; averaging down into losing positions without fresh signal is against strategy
+- Existing stops: BTC $71,861, ETH $2,130, SOL $77.59, AVAX $8.46 (all well below current prices)
+
+---
+
+### Watch Levels
+- BTC offensive switch: 2 consecutive closes above $82,500 → expand to SOL, AVAX (already held), full sizes
+- BTC stop trigger: $71,861 (stop-limit active)
+- ETH stop trigger: $2,130 (stop-limit active)
+- SOL stop trigger: $77.59 (stop-limit active)
+- AVAX stop trigger: $8.46 (stop-limit active)
+
+---
+
+### Decision: **HOLD**
+
+Existing 4 positions intact with stops. No new entries. Monitor for BTC reclaim of $82,500 to confirm offensive mode switch.
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
