@@ -108,3 +108,54 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,493.09 |
+| Cash | $49,489.86 |
+| Long Market Value | $50,003.23 |
+| Open Positions | 4 (BTC, ETH, SOL, AVAX) |
+| Trades This Week | 4 of 5 max (all placed 2026-05-07) |
+
+### Live Position Status
+| Symbol | Qty | Avg Entry | Current Price | P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660.07 | $80,245.70 | -$215.82 (-1.73%) | $71,861 stop-limit |
+| ETH/USD | 5.1573 | $2,321.66 | $2,295.98 | -$132.43 (-1.11%) | $2,130 stop-limit |
+| SOL/USD | 122.6925 | $88.17 | $88.84 | +$81.83 (+0.76%) | $77.59 stop-limit |
+| AVAX/USD | 1573.81 | $9.619 | $9.542 | -$121.87 (-0.81%) | $8.46 stop-limit |
+
+### Regime Filter (2026-05-08)
+- BTC 24h change: +0.576% → gate NOT triggered (not down >5%)
+- BTC price: ~$80,246 (Alpaca live); Perplexity cites ~$79,340–$80,245
+- BTC 20-day MA: Estimated ~$77,000–79,000 (MA14=$78,194, MA30=$76,035 as of May 6)
+- BTC likely at or above 20-day MA → borderline / neutral-to-offensive
+- **Offensive mode trigger from 2026-05-04 plan: BTC 2 closes above $82,500 — NOT met**
+- BTC failed $82K this week (high was ~$82,000, then pulled back to $79-80K)
+- **Mode: CAUTIOUS / DEFENSIVE — no new entries**
+
+### Market Context
+- BTC pulled back from weekly high ~$82,000 → consolidating $79-80K range
+- Perplexity: Prediction markets (Polymarket) favor $78K-$82K range
+- All 4 positions positive on the day (BTC +0.58%, ETH +0.44%, SOL +0.97%, AVAX +0.98%)
+- Stops intact: all 4 stop-limit sell orders active (GTC)
+- ETH stop at $2,130 is 8.2% below entry (slightly tighter than 12% target — acceptable)
+
+### Decision: **HOLD**
+
+No new trades today:
+1. BTC failed to hold $82,000 — offensive mode trigger (2 closes above $82,500) not met
+2. 4 of 5 weekly trade slots used — saving final slot for a clean setup
+3. All existing positions are slightly underwater; adding more risk not warranted
+4. Stop-limits active for all 4 positions — exits are protected
+
+**Watch levels for next session:**
+- BTC breakout: 2 daily closes above $82,500 → switch to offensive mode, consider SOL add or new alt
+- ETH support: Hold $2,250 → continue hold; lose $2,200 → reassess thesis
+- BTC support: Hold $78,000 → continue hold; below $77,500 → re-evaluate
+- Weekly trade slot resets Monday (2026-05-11)
