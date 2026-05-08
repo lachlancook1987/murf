@@ -108,3 +108,86 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,277.97 |
+| Cash | $49,489.86 |
+| Buying Power | $98,979.72 |
+| Open Positions | 4 (BTC, ETH, SOL, AVAX — placed May 7) |
+| Open Orders | 4 stop-limit sells (all GTC) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*Note: May 7 trades not in prior log — backfilled to TRADE-LOG.md this session.*
+
+---
+
+### Current Positions
+| Symbol | Qty | Avg Entry | Current Price | Unreal. P&L | Stop Trigger |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $80,020 | −$250 (−2.0%) | $71,861 |
+| ETH/USD | 5.157275 | $2,321.66 | $2,281.06 | −$209 (−1.7%) | $2,130 |
+| SOL/USD | 122.6925 | $88.17 | $88.11 | −$7 (−0.1%) | $77.59 |
+| AVAX/USD | 1573.81 | $9.619 | $9.533 | −$136 (−0.9%) | $8.46 |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,020 | +0.29% today (Alpaca live) |
+| ETH price | ~$2,281 | −0.22% today |
+| SOL price | ~$88.11 | +0.14% today |
+| AVAX price | ~$9.53 | +0.89% today |
+| BTC 20-day MA | $77,988 | BTC ~2.6% ABOVE MA |
+| Fear & Greed | ~60–70 (Greed) | Recovering, not extreme (Perplexity) |
+| BTC ETF Inflows | Positive multi-day | Institutional demand continuing |
+| DXY | ~98–99 range | Mild headwind |
+
+---
+
+### Regime Filter
+- BTC 24h change: +0.29% → gate NOT triggered
+- BTC vs 20-day MA ($77,988): **ABOVE** → **OFFENSIVE MODE**
+- F&G ~60–70 → not extreme greed (>85), trading permitted
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Trade Count This Week (May 4–8)
+| Date | Symbol | Action |
+|---|---|---|
+| 2026-05-07 | ETH/USD | BUY |
+| 2026-05-07 | SOL/USD | BUY |
+| 2026-05-07 | BTC/USD | BUY |
+| 2026-05-07 | AVAX/USD | BUY |
+
+**Used: 4 / 5 trades — 1 slot remaining**
+
+---
+
+### Key Catalysts
+**BTC:** ETF inflow streak continues; Strategy (MSTR) accumulation; recovery above $80K; macro-friendly  
+**ETH:** Glamsterdam upgrade narrative; DeFi TVL growing; spot ETF inflows  
+**SOL:** Strong on-chain activity; new DeFi/gaming launches; outperforming broad market  
+**AVAX:** Institutional interest in scalable L1s; enterprise dApp deployments  
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+- All 4 positions open, stops active, theses intact
+- No compelling fresh entry pattern today (no clear breakout or pullback to defined support)
+- 1 remaining trade slot preserved for a higher-conviction setup
+- Default stance is HOLD per strategy
+
+**Watch levels:**
+- BTC: hold above $77,988 (20-day MA). Bullish above $82,500 (offensive add).
+- ETH: watch $2,130 stop. Add if Glamsterdam date confirmed and price breaks $2,400.
+- SOL: watch $77.59 stop. Offensive add above $92 on volume.
+- AVAX: watch $8.46 stop. Consider add if institutional narrative accelerates above $10.50.
