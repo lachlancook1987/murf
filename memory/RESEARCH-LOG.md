@@ -108,3 +108,36 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Midday Scan Addendum
+
+### Live Positions (from Alpaca)
+
+| Symbol | Entry | Current | P&L% | Stop |
+|--------|-------|---------|------|------|
+| ETH/USD | $2,321.66 | $2,272.30 | -2.13% | $2,130 stop_limit |
+| SOL/USD | $88.17 | $88.06 | -0.13% | $77.59 stop_limit |
+| BTC/USD | $81,660.07 | $79,632.75 | -2.48% | $71,861 stop_limit |
+| AVAX/USD | $9.619 | $9.512 | -1.12% | $8.46 stop_limit |
+
+### Market Context (Perplexity scan)
+
+- BTC price: ~$79,633 (Alpaca live) — no major catalyst data returned for today
+- No protocol exploits, regulatory actions, or significant token unlocks affecting portfolio assets reported for May 8, 2026
+- BTC ATH context: $126,198 (Oct 2025); current price represents significant retracement
+- Regime: BTC below $82,500 offensive trigger → **DEFENSIVE MODE continues**
+
+### Scan Decisions
+
+- **Cut losers (-10% rule):** None triggered. Deepest drawdown is BTC at -2.48%.
+- **Trailing stop tightening:** None triggered. No position up ≥25%.
+- **Thesis check:** Clean — no narrative breaks found.
+- **AVAX/SOL deviation flag:** These alts should not exist in defensive-mode portfolio (BTC/ETH only per strategy). However, positions were entered in prior session with stops in place. Risk is contained: AVAX stop at $8.46 (-11.1% from current), SOL stop at $77.59 (-11.9% from current). Monitor for regime flip or -10% breach.
+- **Action taken:** None.
+
+### Watch Levels (unchanged)
+- BTC close above $82,500 for 2 consecutive days → switch to offensive mode, expand to full AVAX/SOL sizing
+- Any position reaches -10% unrealized → cut immediately
+- ETH stop ($2,130) is closest to current price (-6.3%) — monitor closely
