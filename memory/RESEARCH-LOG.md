@@ -108,3 +108,127 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,388.86 |
+| Cash | $49,489.86 |
+| Buying Power | $98,979.72 |
+| Long Market Value | $49,899.00 |
+| Total P&L | -$611.14 (-0.61%) |
+| Account | ACTIVE (paper — PA3GA9F7N5EE) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | MV | Unrealized P&L | Day |
+|---|---|---|---|---|---|---|
+| AVAXUSD | 1,573.81 | $9.619 | $9.575 | $15,069 | -$70 (-0.46%) | +1.33% |
+| BTCUSD | 0.1526 | $81,660 | $79,882 | $12,189 | -$271 (-2.18%) | +0.12% |
+| ETHUSD | 5.157 | $2,322 | $2,282 | $11,769 | -$204 (-1.71%) | -0.17% |
+| SOLUSD | 122.69 | $88.17 | $88.61 | $10,871 | +$53 (+0.49%) | +0.70% |
+
+**Open Stop-Loss Orders (GTC):**
+| Symbol | Stop | Limit | % Below Entry |
+|---|---|---|---|
+| AVAX | $8.46 | $8.36 | -12.0% ⚠️ |
+| BTC | $71,861 | $70,783 | -12.0% ⚠️ |
+| ETH | $2,130 | $2,100 | -8.3% ⚠️ |
+| SOL | $77.59 | $76.04 | -12.0% ⚠️ |
+
+⚠️ All stops wider than strategy guideline (3-5% below entry). Set in prior session — review/tighten if prices recover toward entry.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,858 | -1.83% 24h |
+| ETH price | ~$2,288–2,335 | -1.86% to -2.69% 24h |
+| BTC Dominance | ~58–61% | Range across sources |
+| Fear & Greed | 38–48 (Fear→Neutral) | Softening from prior 47; lean Fear |
+| BTC Funding Rate | ~0.00% avg | Binance +0.0024%, BitMEX -0.0011%; neutral |
+| DXY | ~97.8–98.0 | Slight daily gain +0.16%; YTD -3.45%; supportive for crypto |
+| S&P 500 Futures | ~7,385 (+0.56%) | ES JUN26 modest gains; macro neutral-positive |
+
+**BTC 20-day MA:** Estimated ~$80,000–82,000. BTC at $79,858 → **at/below MA → DEFENSIVE MODE**.
+
+---
+
+### BTC Regime Filter (STEP 4)
+- BTC 24h change: -1.83% → gate NOT triggered (threshold: >-5%)
+- BTC vs. 20-day MA: At/slightly below ~$80k MA → **DEFENSIVE MODE active**
+- Funding: ~neutral (not overheated)
+- **Mode: DEFENSIVE — no new alt entries; BTC/ETH only if adding; existing positions held**
+
+Note: Prior session entered AVAX and SOL despite defensive mode — positions held, stops in place.
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF inflows: $2.44B in April (strongest 2026 month); exchange reserves at 2019 lows
+- ETH ETF inflows: $356M net April; $101.2M on May 1 — institutional conviction
+- Glamsterdam upgrade: June 2026 target; triples L1 throughput to ~10k TPS (ETH catalyst)
+- SOL institutional adoption: Visa ($7B stablecoin settlements), Meta (USDC creator payouts)
+- CME AVAX futures launched May 5: institutional access, intraday spike to $9.77
+- DXY YTD -3.45% (USD weakness) → structural tailwind for crypto
+- Altcoin momentum: mild altseason whispers (TON, ICP, ADA, SUI outperforming)
+
+**Bearish/Risk:**
+- BTC below 20-day MA — defensive posture warranted
+- Fear & Greed softening to 38-48 (Fear zone) from prior 47 (Neutral)
+- All positions entered at higher prices; portfolio -0.61% from inception
+- SXT unlock today (387M tokens, $6.04M, 7.75% supply) — minor alt sell pressure
+- Rain unlock May 10 ($377.3M, 50.28B tokens) — largest week's unlock; watch for volatility
+- Linea unlock May 10 (1.01B tokens, $3.67M, 1.42% supply)
+- ETH -2%+ today; pre-Glamsterdam softness
+
+---
+
+### Trade Ideas
+
+**Idea 1 — BTC Long Add (if regime clears)**
+- Catalyst: ETF inflows sustained, exchange reserves at lows; structural supply squeeze
+- Entry: Only if BTC closes 2 consecutive days above $82,500 → switch to offensive mode
+- Current stance: Hold existing BTC position; stop at $71,861 (review for tightening)
+- If price recovers to $82k → consider trailing stop up to $76-77k range
+
+**Idea 2 — SOL Scale-Out at 1R**
+- Catalyst: Visa + Meta deployments, positive day today (+0.70%), short liquidation pressure
+- Entry: Already long at $88.17
+- Take-profit T1: $93 (~5.5% from current); T2: $97 (swing high)
+- Action: Consider partial close at $93 to lock profit; holds only if $88 support holds
+- R:R from entry: ~2.7:1 to T1 (stop at $77.59)
+
+**Idea 3 — AVAX Breakout Watch**
+- Catalyst: CME futures live (institutional access), mild altseason whispers, support ~$9.00
+- Entry: Existing position at $9.619; monitor breakout above $10.45 → target $12.35 (200 EMA)
+- Current price $9.575 — holding near entry, today +1.33%
+- Action: Hold; do NOT add (defensive mode); re-evaluate stop at $8.46 vs $9.00 support
+
+---
+
+### Risk Factors
+1. BTC at/below 20-day MA → all longs face mean-reversion headwind
+2. Stop-losses 8-12% below entry — far wider than 3-5% strategy guideline; elevated risk
+3. Rain unlock May 10 ($377M) — largest weekly unlock; may cause broad alt volatility
+4. ETH -2%+ today; Glamsterdam not until June — catalyst is weeks away
+5. Fear & Greed softening toward Fear zone — sentiment headwind
+6. Portfolio entered AVAX/SOL in prior session despite defensive mode — strategy breach to monitor
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode active. Existing positions held with stops in place. No new entries today.
+
+**Watch levels:**
+- BTC long trigger: 2 closes above $82,500 → offensive mode unlocked
+- SOL T1 profit target: $93 (partial close)
+- AVAX breakout watch: $10.45 (do not add in defensive mode)
+- Regime shift alert: BTC break below $76,000 → review all positions
