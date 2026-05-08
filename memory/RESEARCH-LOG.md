@@ -108,3 +108,85 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,373.66 |
+| Cash | $49,489.86 |
+| Buying Power | $98,979.72 |
+| Open Positions | 4 (BTC, ETH, SOL, AVAX) |
+| Open Orders | 4 sell stops (one per position) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+### Current Positions
+| Symbol | Qty | Avg Entry | Current Price | MV | Unrealized P&L | Stop Level |
+|---|---|---|---|---|---|---|
+| AVAX/USD | 1573.81 | $9.619 | $9.575 | $15,069.90 | -$69.30 (-0.46%) | stop $8.46 |
+| BTC/USD | 0.152593 | $81,660 | $79,770 | $12,172.36 | -$288.36 (-2.31%) | stop $71,861 |
+| ETH/USD | 5.1573 | $2,321.66 | $2,284.52 | $11,781.91 | -$191.52 (-1.60%) | stop $2,130 |
+| SOL/USD | 122.69 | $88.17 | $88.51 | $10,859.64 | +$41.46 (+0.38%) | stop $77.59 |
+
+Total deployed: $49,883.80 (50.2% of equity). Cash buffer: 49.8%.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,770–80,482 | -1.33% 24h |
+| ETH price | ~$2,284–2,312 | -2.27% 24h |
+| BTC 20-day MA | ~$77,050–77,311 | BTC well ABOVE MA |
+| BTC ETF Inflows | $1.7B over 5 days (through May 7) | 6th consecutive weekly inflow week on track |
+| ETH ETF Inflows | $272M over 4 days | 4-day inflow streak |
+| XRP ETF | $11M cumulative inflows | |
+| BTC Dominance | N/A (no data today) | |
+| Fear & Greed | N/A (no data today) | |
+| DXY | N/A (no data today) | |
+
+**BTC 20-day MA:** ~$77,050–77,311. BTC at ~$79,770–80,482 → **ABOVE 20-day MA**.
+
+---
+
+### Regime Filter
+- BTC 24h change: -1.33% → gate NOT triggered (threshold: -5%)
+- BTC vs. 20-day MA: BTC ~$79,770 > MA ~$77,050 → **OFFENSIVE MODE**
+- ETF inflows: Sustained and strong ($1.7B BTC, $272M ETH in 5/4 days)
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+---
+
+### Key Catalysts
+**Bullish:**
+- BTC spot ETF: $1.7B net inflows over 5 days (through May 7); 6th weekly inflow streak on track
+- Ether ETF: $272M 4-day inflow streak through May 7
+- BlackRock IBIT leading ETF inflows ($335M single day May 5)
+- YTD BTC ETF cumulative: $59.7B, AUM $109B (2026 high)
+- BTC well above 20-day MA (~$77k) → Offensive mode confirmed
+
+**Bearish/Risk:**
+- All 4 existing positions entered yesterday at slightly higher prices (BTC, ETH, AVAX currently underwater)
+- DXY/F&G data unavailable today — uncertainty on macro backdrop
+- Only 1 trade slot remaining this week
+
+---
+
+### Weekly Trade Count
+- Trades this week (May 4–10): 4 buys (BTC, ETH, SOL, AVAX all on May 7)
+- Remaining slots: 1 of 5
+
+---
+
+### Decision: **HOLD**
+
+All 4 positions entered yesterday with stops in place. No new individual-coin catalyst with sufficient conviction to justify using the final weekly trade slot today. Offensive mode is active but existing book already deployed ~50% of equity across 4 names. Save the remaining slot for a high-conviction breakout or pullback entry.
+
+**Watch levels:**
+- BTC breakout trigger: close above $82,500 (confirms sustained offensive mode)
+- ETH stop risk: $2,130 (if ETH drops to that level, stop fires)
+- AVAX stop risk: $8.46 (stop_limit in place)
+- SOL currently only profitable position — watch $85 as key support
