@@ -108,3 +108,71 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-08 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $99,442.21 |
+| Cash | $49,489.86 |
+| Long Market Value | $49,952.35 |
+| Open Positions | 4 (BTC, ETH, SOL, AVAX) |
+| Weekly Trades Used | 4 of 5 |
+
+### Live Prices (Alpaca)
+| Symbol | Price | 24h Change | Entry | P&L |
+|---|---|---|---|---|
+| BTC/USD | $80,241.53 | +0.57% | $81,660.07 | -1.74% |
+| ETH/USD | $2,288.33 | +0.10% | $2,321.66 | -1.44% |
+| SOL/USD | $88.75 | +0.87% | $88.17 | +0.66% |
+| AVAX/USD | $9.542 | +0.98% | $9.619 | -0.80% |
+
+### Open Stops in Place
+| Symbol | Stop Type | Stop Price | Limit Price |
+|---|---|---|---|
+| BTC/USD | stop_limit | $71,861 | $70,783 |
+| ETH/USD | stop_limit | $2,130 | $2,100 |
+| SOL/USD | stop_limit | $77.59 | $76.04 |
+| AVAX/USD | stop_limit | $8.46 | $8.36 |
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC 24h | +0.57% | Hard gate NOT triggered (<5% down) |
+| BTC 20-day MA | ~$75K–78K (est.) | BTC likely above → borderline offensive |
+| ETF flows May 7 | -$268.46M | Streak broken (FBTC -$129M, IBIT -$98M) |
+| ETF YTD total | ~$58B cumulative | Institutional demand intact long-term |
+| BTC weekly range | $79,522–$82,792 | Consolidating below $82.5K trigger |
+
+### Regime Filter
+- BTC 24h: +0.57% → gate NOT triggered
+- BTC vs 20-day MA: Uncertain — using DEFENSIVE mode (conservative)
+- ETF outflow reversal May 7 → negative short-term signal
+- **Mode: DEFENSIVE — BTC/ETH only, reduced sizes if any entry**
+
+### Catalysts
+**Positive (still valid):**
+- Institutional accumulation: Strategy $2.54B purchase intact
+- ETF YTD inflows ~$58B — structural demand
+- BTC price recovering from $69K low — uptrend intact longer-term
+
+**Negative (new today):**
+- May 7 ETF outflows -$268M (FBTC & IBIT both negative) — first reversal in 9-day streak
+- BTC, ETH entries from May 7 both underwater → momentum stalled
+
+### Decision: **HOLD**
+
+No new entries today. Rationale:
+1. ETF inflow streak broke May 7 (-$268M) — reduces confidence in sustained bid
+2. 4 of 5 weekly trade slots used — save last slot for clearer setup
+3. All 4 positions have stops; BTC + ETH slightly underwater
+4. AVAX entered yesterday — allow positions time to develop
+5. No new catalyst sufficient to override defensive posture
+
+**Watch levels (unchanged):**
+- BTC offensive trigger: 2 consecutive closes above $82,500
+- ETH: Would add on pullback to $2,250 if offensive mode confirmed
+- Stop levels intact — no adjustments needed
