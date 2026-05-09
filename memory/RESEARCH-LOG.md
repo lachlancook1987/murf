@@ -108,3 +108,92 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.74 |
+| Cash | $119.79 |
+| Open Positions | 1 (ETH/USD: 0.0085785 @ $2,314.9 entry) |
+| Open Orders | 1 (ETH/USD stop_limit sell @ $2,199.16/$2,188.16) |
+| Weekly Trades | 3/25 (BTC sell ×2, ETH buy ×1 on May 9) |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,677 | Bid $80,644 / Ask $80,709 (Alpaca live) |
+| BTC 24h | +0.60% | Not down >5% → entry gate open |
+| BTC 20-day MA | $77,331 | BTC ~$3,346 ABOVE MA |
+| ETH price | ~$2,327 | Bid $2,326.60 / Ask $2,328.45 |
+| ETH 24h | ~-0.04% to -2.52% | Slight pullback |
+| SOL price | ~$93.14 | Bid $92.98 / Ask $93.31 |
+| SOL 24h | +1-4.3% | Firedancer boost |
+| BTC Dominance | ~61% | Slightly rising |
+| Fear & Greed | ~47 (Neutral est.) | Last known value |
+
+---
+
+### Regime Filter
+- BTC 24h: +0.60% → gate **NOT triggered** (not down >5%)
+- BTC vs. 20-day MA ($77,331): BTC at $80,677 → **ABOVE MA by $3,346 (+4.3%)**
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+- (Changed from DEFENSIVE on 2026-05-04)
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF inflows: $2.1B in April, $630M on May 1 (single day) — institutional demand absorbing >500% of daily mined BTC
+- ETH whale accumulation: 140k ETH ($322M) bought in 96 hours; 30% of supply staked (reduces sell pressure)
+- SOL Firedancer upgrade (May 6): network throughput/performance boost, positive momentum +4.3% 24h
+- Schwab Crypto™ + GSR BESO ETF include SOL staking — institutional SOL narrative
+- BTC mining difficulty -2.3% (May 2) → miner profitability improving, less selling pressure
+
+**Bearish/Risk:**
+- BTC struggling to reclaim $82,500 (offensive trigger level from last plan)
+- BTC dominance 61% slight rise → mild alt headwind
+- No 2026-05-04 to 2026-05-09 trade log entries — prior BTC positions closed today (source: dashboard)
+- AVAX at $9.95 — weak, skip
+
+---
+
+### Trade Ideas (OFFENSIVE mode — full universe)
+
+**Idea 1 — SOL Long (Firedancer Catalyst)**
+- Catalyst: Firedancer upgrade May 6 (throughput boost), SOL ETF institutional narrative, offensive mode
+- Entry: ~$93.31 (market, ask price)
+- Size: 0.2995 SOL ≈ $27.95 (20% equity max)
+- Trailing stop: 12% GTC (initial stop ~$82.11)
+- Target: $105–$110 (technical breakout)
+- R:R: ~$11.70 profit / ~$11.20 risk ≈ 1.04:1
+
+**Idea 2 — BTC Long**
+- BTC at $80,700 is above planned entry zone ($77,500–78,500) by ~2.8% — marginal chase
+- Institutional buying still strong but no new today-specific catalyst
+- Decision: SKIP today, monitor for pullback to $78,500 or clean breakout above $82,500
+
+**Idea 3 — ETH Add**
+- Already hold 0.0085785 ETH (14.3% equity); only $8 more would fit in 20% limit — too small
+- Decision: HOLD existing position, let stop ride
+
+---
+
+### Hard-Check Rules for SOL Trade
+- Total positions after: 2 ≤ 20 ✓
+- Trades this week after: 4 ≤ 25 ✓
+- Position cost: $27.95 = 20% equity ✓
+- Catalyst documented: Firedancer upgrade (May 6) ✓
+- BTC 24h: +0.60%, not down >5% ✓
+- BTC above 20-day MA → offensive, full universe ✓
+- SOL/USD tradable: confirmed (Alpaca asset status: active/tradable) ✓
+
+---
+
+### Decision: **EXECUTE — SOL/USD market buy 0.2995 SOL**
