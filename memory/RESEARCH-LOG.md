@@ -4,6 +4,139 @@
 
 ---
 
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,652.02 |
+| Cash | $65,057.69 |
+| Buying Power | $130,115.38 |
+| Long Market Value | $35,594.33 |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+**Open Positions:**
+| Asset | Qty | Avg Entry | Current | Market Value | Unrealized P&L |
+|---|---|---|---|---|---|
+| BTC/USD | 0.1526 | $81,660.07 | $80,264.59 | $12,247.78 | -$212.94 (-1.71%) |
+| ETH/USD | 5.1573 | $2,321.66 | $2,312.05 | $11,923.88 | -$49.56 (-0.41%) |
+| SOL/USD | 122.69 | $88.17 | $93.10 | $11,422.67 | +$604.50 (+5.59%) |
+
+**Active Stop Orders:**
+- BTC: Stop-limit sell @ $76,000 stop / $74,860 limit (GTC)
+- ETH: Stop-limit sell @ $2,130 stop / $2,100 limit (GTC)
+- SOL: Stop-limit sell @ $88.18 stop / $87.30 limit (GTC — near break-even protection)
+
+**Recent Activity:** AVAX bought May 7 @ $9.619, sold May 9 @ $9.913 — small profit locked. Stop on SOL tightened today to near break-even ($88.18 from $82.55).
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | 24h Change | Note |
+|---|---|---|---|
+| BTC | ~$80,264–80,381 | +0.12% to +1.12% | Flat; range $79,316–$80,666 |
+| ETH | ~$2,310–2,370 | +0.4% to +1.5% | Slight bid |
+| BTC Dominance | ~58–60% | -0.04% to -0.43% | Stable |
+| Fear & Greed | 38 (Fear) | Down from 47 | Sentiment softened vs. last session |
+| BTC Funding Rate | -0.003% to -0.006%/8h | Turned negative | Shorts paying longs — squeeze potential |
+| DXY | ~97.90 | -0.15% to -0.35% | Dollar weakening — bullish for crypto |
+| S&P 500 Futures | 7,420.50 | +0.78% (Fri close) | Risk-on; markets closed Sat |
+
+**BTC 20-day MA:** Estimated ~$80,000–82,000. BTC at $80,264 is at the lower bound — borderline defensive.
+
+**Macro note:** DXY down ~2.79% since May 8 (per one source) — significant USD weakness supports crypto across the board. S&P at 7,420 confirms risk-on macro backdrop.
+
+---
+
+### Regime Filter (STEP 4)
+
+- BTC 24h change: ~+0.5–1% → NOT down >5% → gate **NOT triggered**
+- BTC vs. 20-day MA: At/borderline lower bound (~$80K) → **DEFENSIVE MODE**
+- Funding rate: Negative (-0.003 to -0.006%/8h) → not overheated; potential short-squeeze fuel
+- **Mode: DEFENSIVE — hold existing BTC/ETH/SOL positions, no new alt entries**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- DXY declining sharply (-2.79% since May 8) — strongest near-term crypto tailwind
+- Negative BTC funding rate → crowded shorts → squeeze risk if BTC reclaims $81K+
+- S&P 500 at 7,420 (+0.78% Friday) — risk-on environment
+- Spot BTC ETF inflows sustained (9 consecutive days of $2B+ through Apr 24)
+- Solana institutional adoption: Schwab Crypto™ live, GSR BESO ETF with SOL staking
+- Ethereum ETF best inflow streak since launch; Glamsterdam upgrade narrative ongoing
+- AI crypto momentum: TAO +16% (7d), RENDER +31%, FET +60% — sector rotation possible
+
+**Bearish/Risk:**
+- Fear & Greed dropped to 38 (Fear) from 47 last session — sentiment deteriorating
+- BTC still at/below 20-day MA — no breakout confirmation yet
+- ADI Chain unlock today: 6.99M tokens / $28.16M (0.70% supply) — minor noise
+- RAIN unlock May 10: 50.28B tokens / $377.3M (4.37% supply) — large; could trigger broad alt selling
+- Linea unlock May 10: 1.01B tokens / $3.67M — minor
+- SOL technicals mixed: RSI 45 (neutral), MACD bearish per analysis; 20-day SMA ~$83.37
+
+---
+
+### Position Assessment
+
+**BTC** (-1.71%): At entry $81,660, current $80,264. BTC is ~1.7% underwater but well protected with stop at $76K (5.3% below current). Hold; no action. If BTC reclaims $82K, consider raising stop.
+
+**ETH** (-0.41%): Marginally underwater at $2,312 vs. entry $2,321. Stop at $2,130 provides adequate cushion. Hold. Glamsterdam catalyst intact.
+
+**SOL** (+5.59%): Best performer. Stop raised to $88.18 (near break-even). Current $93.10 — consider raising stop to $89.50–90 to lock in more profit. Resistance at $85.13 already cleared per analysis; next resistance $87.90 also cleared. Watch $95–96 as next take-profit zone.
+
+---
+
+### Trade Ideas (DEFENSIVE mode)
+
+**Idea 1 — Tighten SOL Stop to Lock Profit**
+- Action: Cancel existing SOL stop-limit ($88.18/$87.30) and replace with stop $90.50 / limit $89.50
+- Rationale: SOL up 5.6%, protect ~$280+ profit. Break-even stop risks giving back all gains.
+- Risk: Normal volatility could trigger stop — but protecting profit > holding with wide stop
+- Priority: HIGH — consider executing this session
+
+**Idea 2 — BTC Add on Squeeze**
+- Catalyst: Negative funding + DXY weakness + S&P risk-on → short squeeze if BTC breaks $81K
+- Entry: $81,100–81,500 (reclaim of recent range high)
+- Stop: $79,400 (below key support)
+- Target 1: $84,000; Target 2: $85,500
+- Size: $6,000–8,000 notional (defensive, reduced size)
+- R:R: ~1.5:1 (T1) / ~2.2:1 (T2)
+- Note: Only if BTC shows momentum above $81K with volume
+
+**Idea 3 — Offensive Mode Trigger Watch**
+- If BTC closes 2 consecutive days above $82,500 → switch to offensive mode
+- Then eligible to add SOL (full size), explore LINK (LINK +11.5% 24h catalyst ongoing)
+- Confirm: DXY stays below 98, Fear & Greed rebounds above 45
+
+---
+
+### Risk Factors
+1. Fear & Greed at 38 (Fear) — sentiment softening; market could drift lower before breakout
+2. BTC below/at 20-day MA — momentum not confirmed; failed breakout risk
+3. RAIN unlock May 10 ($377M) — largest unlock of the week; alt pressure possible
+4. SOL stop at break-even could trigger on normal volatility — monitor closely
+5. Weekend liquidity thin — wider spreads, more volatile price swings
+6. BTC MACD on sell signal — short-term bearish indicator despite overall neutral picture
+
+---
+
+### Decision: **HOLD (with SOL stop tighten recommended)**
+
+Existing positions protected with stops. Macro backdrop (DXY weak, S&P strong, negative funding) tilts bullish but sentiment (Fear 38) and BTC position below 20-day MA argue for caution. Default HOLD maintained.
+
+**Priority action:** Tighten SOL stop from $88.18 to ~$90.50 to lock in ~$280 profit.
+
+**Watch levels:**
+- BTC long add trigger: Reclaim $81,000–81,500 with volume
+- BTC offensive mode: 2 closes above $82,500
+- SOL take-profit zone: $95–96
+- ETH: Hold until $2,130 stop or $2,550 target
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
