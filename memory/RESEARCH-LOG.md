@@ -108,3 +108,82 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.74 |
+| Cash | $119.79 |
+| Buying Power | $119.79 |
+| Open Positions | ETH/USD 0.0085785 @ $2,314.90 avg (~$19.95 market value) |
+| Open Orders | Stop-limit sell ETH @ $2,199.16 stop / $2,188.16 limit (GTC) |
+| Account Status | ACTIVE |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,691 | +0.63% 24h (prev close $80,188) |
+| ETH price | ~$2,326 | +0.39% vs prior close |
+| BTC 20-day MA | ~$77,998 | Computed from Apr 19–May 8 daily closes |
+| BTC vs 20MA | ABOVE by $2,693 | → OFFENSIVE MODE |
+| Fear & Greed | Conflicting: 9 (CMC) / 38 (Alternative.me) / 50 (Binance) | Treat as cautionary |
+| BTC Dominance | 58.43% (+0.26%) | Slight alt headwind |
+| BTC 24h change | +0.63% | HOLD gate NOT triggered |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.63% → gate **NOT triggered**
+- BTC vs 20-day MA: $80,691 > $77,998 → **OFFENSIVE MODE**
+- Fear & Greed: Conflicting signals — one source shows Extreme Fear (9), others Neutral (50). Treat as caution.
+- **Mode: OFFENSIVE — full universe, normal sizes permitted; F&G caution applied**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC sustained above $80K; MA stack bullish (MA7 > MA14 > MA30)
+- MAs stacked bullishly with recovery from April ~$73K lows
+- Spot ETF inflows continuing
+- ETH Glamsterdam upgrade narrative still intact
+
+**Bearish/Risk:**
+- F&G index at Extreme Fear per CoinMarketCap (9) — major uncertainty
+- BTC -16% weekly drawdown noted in some sources
+- ETH/BTC ratio weakening (ETH dominance down 0.21%)
+
+---
+
+### Trade Analysis
+
+**Existing ETH position:**
+- Entry $2,314.90, stop-limit $2,199.16/$2,188.16 (~5.1% stop)
+- Current price ~$2,326 → unrealized gain ~$0.09 (+0.46%)
+- Risk: 0.0085785 × ($2,314.90 - $2,199.16) = ~$0.99 (0.71% of equity)
+- Within position limit (14.3% of equity < 20% max) ✓
+
+**New BTC long:** Planned entry $77,500–78,500. Current $80,691 → ABOVE range → NO entry.
+
+**New ETH long:** Planned entry $2,250–2,300. Current $2,326 → ABOVE range, already positioned → NO additional entry.
+
+**SOL/alts:** OFFENSIVE mode permits; however no fresh catalyst research done and F&G uncertain → NO entry without catalyst.
+
+---
+
+### Decision: **HOLD**
+
+Offensive mode active. No new trades — all planned entry prices have been exceeded upward. Existing ETH long monitored with stop in place.
+
+**Watch levels:**
+- BTC: pullback to $78,000–79,500 could trigger re-entry
+- ETH: hold above $2,200 stop; target $2,550 (T1) / $2,750 (T2)
+- Offensive trigger for alts: sustained BTC close above $82,500 + confirmed F&G > 30
