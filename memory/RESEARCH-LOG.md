@@ -4,6 +4,117 @@
 
 ---
 
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.70 |
+| Cash | $139.70 |
+| Buying Power | $139.70 |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (live — #251041174) |
+
+**Note:** Previous log (2026-05-04) referenced a paper account ($100K equity, PA3GA9F7N5EE). This session connects to a live account with $139.70 equity. Two BTC sell-to-close orders executed earlier today: 0.00104538 BTC @ $80,220.86 and 0.0007 BTC @ $80,291.87 — all prior BTC closed.
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,350 | +0.1% to +1.25% 24h; range $79,149–$80,449 |
+| ETH price | ~$2,314 | +1.1% to +2.2% 24h |
+| BTC Dominance | ~59% | Range 57–60%; alts still not rotating |
+| Fear & Greed | 38 (Fear) | alternative.me/feargreedmeter; Binance 49 (Neutral) |
+| BTC Funding Rate | +0.0100%/8h | Low positive; mild bullish, balanced positioning |
+| DXY | ~97.84 | Down 0.12–0.35% → crypto tailwind (inverse corr.) |
+| S&P 500 Futures | ~7,419 (+0.79%) | Cash S&P 500 new ATH Friday; macro risk-on |
+
+**BTC 20-day MA:** ~$80,000–82,000 estimated. BTC at $80,350 — borderline, MAs short-term stacked bullishly (MA7 > MA14 > MA30) but price has not cleanly cleared the level.
+
+---
+
+### Regime Filter (STEP 4)
+
+- BTC 24h change: +0.1–1.25% → gate NOT triggered (not down >5%)
+- BTC vs. 20-day MA: Borderline (at lower end of $80–82K range)
+- Funding: +0.01%/8h → neutral, not overheated
+- Fear & Greed: 38 (Fear) — strategy requires strong thesis in fear zone
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Spot buyers (not leveraged) driving BTC — healthier setup for sustained moves
+- DXY ~97.84 and falling (-0.35% 24h) — ongoing crypto tailwind; 12-month forecast 96.17
+- Fed in pause-to-cut posture — risk asset reallocation backdrop
+- S&P 500 at new ATH — macro risk-on environment
+- BTC short-term MAs bullishly stacked (MA7 > MA14 > MA30)
+- BTC cleared True Market Mean and short-term holder cost basis
+- Next key resistance $82,000 (dealer short gamma, buying pressure) then $85,200 (Active Realized Price)
+- Continued BTC ETF record inflows + institutional participation
+- ETH outperforming BTC today (+2.2% vs +1.25%) — relative strength emerging
+
+**Bearish/Risk:**
+- Fear & Greed 38 (Fear) — market sentiment still cautious
+- BTC dominance ~59% — alts remain under pressure, rotation not yet broad
+- BABY (Babylon) unlock May 10 — pre-unlock sell pressure risk; avoid all week
+- BTC not cleanly above 20-day MA — breakout not confirmed
+- S&P 500 at ATH — any risk-off shock could see sharp reversal
+- **Account equity $139.70 — severely constrains position sizing** (20% max = ~$28 per trade)
+
+---
+
+### Trade Ideas (DEFENSIVE mode — BTC/ETH only, 50% size)
+
+**Idea 1 — BTC Long on Breakout Confirmation**
+- Catalyst: MAs stacked, spot demand, ETF inflows, DXY weakness, dealer gamma at $82K
+- Entry: $80,500–80,800 (breakout above current resistance on volume)
+- Stop: $77,500 (~3.5–4% below mid-entry)
+- Target 1: $82,000 (dealer gamma / resistance); Target 2: $85,200 (Active Realized Price)
+- Size: ~$25–28 notional (20% of $139.70 — maximum allowed)
+- R:R: ~0.5:1 (T1) / ~2.2:1 (T2)
+- Note: Account size makes fees material; T1 only makes sense if fees are low. Favor T2 hold.
+
+**Idea 2 — ETH Long on Pullback to Support**
+- Catalyst: ETH showing relative strength (+2.2%), Glamsterdam upgrade thesis, ETF inflows
+- Entry: $2,250–2,280 (pullback to consolidation support)
+- Stop: $2,130 (~6% below mid-entry)
+- Target 1: $2,500 (~10%); Target 2: $2,750 (~20%)
+- Size: ~$20 notional (15% of equity, reduced for defensive mode)
+- R:R: ~1.6:1 (T1) / ~3.6:1 (T2)
+- Note: ETH/BTC relative strength positive; only enter on confirmed pullback, not chase.
+
+**Idea 3 — Offensive Trigger Watch (unchanged)**
+- BTC 2 consecutive closes above $82,500 → switch to offensive mode
+- Expand to SOL, AVAX; restore full position sizes
+- Confirm: ETF inflows continue, DXY stays below 97, F&G moves toward Neutral (45+)
+
+---
+
+### Risk Factors
+1. Account equity only $139.70 — all trades are tiny notional; transaction fees erode returns on small moves
+2. BTC not cleanly above 20-day MA — momentum breakout unconfirmed
+3. Fear & Greed 38 (Fear) — strategy mandates strong thesis in fear conditions; not present yet
+4. BABY unlock May 10 — avoid entirely this week
+5. S&P 500 at ATH — vulnerable to sharp risk-off rotation
+6. Alpaca script uses incorrect base URL (missing /v2/); calls routed manually this session — flag for script fix
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode active. BTC borderline on 20-day MA, sentiment in Fear zone, account too small for meaningful trades without disproportionate fee drag. No entries. Watch for:
+- BTC pullback to $79,300–79,800 (re-test support) or clean breakout above $80,800 with volume
+- ETH pullback to $2,250–2,280
+- Offensive mode switch: BTC 2 closes above $82,500 + F&G above 45
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
