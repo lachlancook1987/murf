@@ -36,3 +36,13 @@
 - Fear & Greed Index
 - BTC dominance (rising = alt headwinds)
 - DXY (inverse correlation to crypto)
+
+## Narrative Sectors
+Track consecutive losses per sector; exit (no new entries) after 2 consecutive losses.
+
+| Sector | Assets | Status | Consecutive Losses | Last Updated |
+|---|---|---|---|---|
+| BTC / Store of Value | BTC | ACTIVE | 0 | 2026-05-09 |
+| Smart Contract (Large Cap) | ETH | ACTIVE | 0 | 2026-05-09 |
+| Smart Contract (Mid Cap) | SOL | ACTIVE | 0 | 2026-05-09 |
+| L1 Alts | AVAX | ACTIVE | 0 | 2026-05-09 |
