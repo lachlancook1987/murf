@@ -18,12 +18,12 @@ fi
 PAYLOAD=$(python3 -c "
 import json, sys
 msg = sys.argv[1]
-print(json.dumps({'content_format': 'text/md', 'content': msg}))
+print(json.dumps({'comment_text': msg, 'notify_all': False}))
 " "$MESSAGE")
 
-curl -s \
+curl -s -w "\nHTTP:%{http_code}" \
   -X POST \
   -H "Authorization: ${CLICKUP_API_KEY}" \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" \
-  "https://api.clickup.com/api/v3/channel/${CLICKUP_CHANNEL_ID}/message" | python3 -m json.tool 2>/dev/null || true
+  "https://api.clickup.com/api/v2/view/${CLICKUP_CHANNEL_ID}/comment" | tail -1 | grep -q "HTTP:200" || echo "WARNING: ClickUp delivery may have failed" >&2
