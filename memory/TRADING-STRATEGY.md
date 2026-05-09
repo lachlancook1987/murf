@@ -26,9 +26,9 @@
 
 ## Trailing Stop Schedule
 Triggered on winners — cancel static stop, place trailing stop:
-- Up >= +10% → trail_percent: "6"
-- Up >= +20% → trail_percent: "5"
-- Up >= +35% → trail_percent: "3"
+- Up >= +5% → trail_percent: "6"
+- Up >= +10% → trail_percent: "5"
+- Up >= +20% → trail_percent: "3"
 
 Never tighten within 5% of current price. Never move a stop down.
 
