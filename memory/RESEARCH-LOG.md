@@ -234,3 +234,6 @@ Regime is technically offensive (BTC > 20-day MA, funding not overheated), but *
 - SOL: support $89, resistance $96
 - F&G recovery to ≥15 = re-enable new entries
 - BTC close <$77K (below 20-day MA) = revert to defensive mode
+
+**Executed (post-research):**
+- Tightened BTC stop-limit: $71,861/$70,783 → $76,000/$74,860 (order id fcb687d4); cancelled prior order c45fcb71. Drawdown exposure reduced from ~12% to ~5.5%.
