@@ -24,6 +24,14 @@
 - Take profit: scale out at 1R, 2R, 3R
 - Time stop: exit if no movement in 48h
 
+## Trailing Stop Schedule
+Triggered on winners — cancel static stop, place trailing stop:
+- Up >= +10% → trail_percent: "6"
+- Up >= +20% → trail_percent: "5"
+- Up >= +35% → trail_percent: "3"
+
+Never tighten within 5% of current price. Never move a stop down.
+
 ## Risk Management
 - Default stance: HOLD (patience > activity)
 - No chasing pumps >10% from base
