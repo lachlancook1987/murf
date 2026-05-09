@@ -108,3 +108,36 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Midday Scan
+
+### Positions Snapshot
+| Symbol | Qty | Avg Entry | Current | Unreal P&L % | Stop |
+|---|---|---|---|---|---|
+| BTCUSD | 0.1526 | $81,660 | $80,427 | -1.51% | $76,000 stop / $74,860 limit |
+| ETHUSD | 5.157 | $2,321.66 | $2,317.66 | -0.17% | $2,130 stop / $2,100 limit |
+| SOLUSD | 122.69 | $88.17 | $93.89 | +6.48% | $88.18 stop / $87.30 limit |
+
+### AVAX Exit (prior session, 02:56 UTC)
+- AVAX closed at market @ $9.913 avg fill; ~+3.1% gain (~+$463 realized)
+- Position confirmed flat; no AVAX remaining
+
+### Step 3 — Losers Cut
+- No positions at ≤ -10%. No action.
+
+### Step 4 — Trailing Stop Tighten
+- SOL +6.48%: below +25% threshold. No change.
+- BTC/ETH: in the red. No change.
+
+### Step 5 — Thesis Check
+- BTC: ETF inflow + institutional accumulation thesis intact. Price drifting -1.51% from entry, well above stop ($76K). No narrative break.
+- ETH: Glamsterdam thesis intact. Barely negative. Stop at $2,130 provides ~8% cushion from current price.
+- SOL: Ecosystem / Schwab Crypto thesis intact. Up 6.48%. Stop tightened previously to $88.18 (slightly above entry — near breakeven stop).
+
+### Step 6 — Intraday Research
+- No sharp unexplained moves. Intraday changes: BTC -0.05%, ETH +0.05%, SOL +0.16%. No research triggered.
+
+### Decision: **NO ACTION**
+- All positions within normal parameters. Stops in place. Next tightening event for SOL at +25% (~$110.21).
