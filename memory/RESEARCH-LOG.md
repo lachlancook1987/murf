@@ -108,3 +108,35 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Midday Scan
+
+### Account Snapshot (midday)
+| Field | Value |
+|---|---|
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Portfolio Value | ~$35,691 deployed |
+| Unrealized P&L | +$439 net |
+
+### Position Status
+| Symbol | Entry | Current | P&L% | Stop | Status |
+|--------|-------|---------|-------|------|--------|
+| BTC/USD | $81,660 | $80,434 | -1.50% | SL $76,000/$74,860 | Hold — above -10% cut threshold |
+| ETH/USD | $2,321.66 | $2,316.37 | -0.23% | SL $2,130/$2,100 | Hold — essentially flat, thesis intact |
+| SOL/USD | $88.17 | $93.50 | +6.04% | SL $89.12/$88.24 | Hold — winner; stop tightened this morning to near-breakeven |
+
+### Actions Taken This Scan
+- **None** — no positions at -10% cut threshold; no positions at +25%/+40% stop-tighten threshold
+
+### Morning Scan Actions (logged for record)
+- **AVAX/USD closed** at $9.9134 (+3.06%) — exited offensive-mode position; BTC never cleared $82,500 trigger, defensive regime persisted; locked in gain before window closed
+
+### Thesis Check
+- **BTC**: ETF inflow thesis intact; BTC at $80,434, modestly below $81,660 entry. Stop at $76,000 provides ~6.6% buffer. Hold.
+- **ETH**: Glamsterdam upgrade catalyst still active. ETH at $2,316, within 0.2% of entry. Stop at $2,130 intact. Hold.
+- **SOL**: Schwab/GSR SOL ETF narrative continuing. Up +6.04% from entry. Stop tightened this morning to $89.12 (just above entry). No new adverse news. Hold.
+
+### Intraday Research
+- Skipped — no sharp unexplained moves (all three positions within normal intraday ranges)
