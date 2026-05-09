@@ -108,3 +108,76 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $100,789.41 |
+| Cash | $65,057.69 |
+| Long Market Value | $35,731.72 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Trades This Week | ~5 (under 25 limit) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+---
+
+### Positions
+| Symbol | Qty | Avg Entry | Current | Unreal. P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $80,271 | -$212 (-1.70%) | $76,000 stop_limit |
+| ETH/USD | 5.1573 | $2,321.66 | $2,317.90 | -$19 (-0.16%) | $2,130 stop_limit |
+| SOL/USD | 122.6925 | $88.17 | $93.97 | +$711 (+6.57%) | $88.18 stop_limit |
+
+AVAX/USD closed earlier today at $9.913 (bought May 7 @ $9.619, +3.1%).
+
+---
+
+### Regime Filter
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,271 | From Alpaca live positions |
+| BTC 24h change | -0.24% | Gate NOT triggered (threshold: -5%) |
+| BTC 20-day MA | $78,324 (calculated from 30-day bar history) | |
+| BTC vs MA | **ABOVE** (+$1,947) | → **OFFENSIVE MODE** |
+| BTC dominance | ~58-60% (est.) | |
+
+**Mode: OFFENSIVE — Full universe, normal sizes permitted**
+
+Note: Perplexity returned stale BTC price ($118,838). Alpaca live data ($80,271) used as authoritative.
+
+---
+
+### Market Context
+- BTC: $80,271, -0.24% today. Above 20-day MA ($78,324). Still below prior $82,500 breakout target from May 4 plan.
+- ETH: $2,317.90, +0.06% today. Glamsterdam upgrade catalyst still valid.
+- SOL: $93.97, +0.24% today. +6.57% unrealized gain from entry.
+- Momentum alts (BAT +10%, DOT +6.92%, XLM +6.25%): No identifiable catalysts — cannot enter per rules.
+- BTC ETF inflows: April 2026 strong ($2.44B); recent data unavailable.
+
+---
+
+### Trade Ideas Evaluated
+| Idea | Action | Reason |
+|---|---|---|
+| BAT long | **SKIP** | +10% move = chasing pump >10% — rule violation |
+| DOT long | **SKIP** | No catalyst documented |
+| XLM long | **SKIP** | No catalyst documented |
+| Re-enter AVAX | **SKIP** | Just closed; no fresh catalyst |
+| Add to BTC/ETH/SOL | **SKIP** | No new entry signal; stops active |
+
+---
+
+### Decision: **HOLD**
+
+Offensive mode is active but BTC has not breached $82,500 (prior breakout target). No new catalysts documented for any alt. Existing positions (BTC, ETH, SOL) are covered by stops. Default stance = HOLD (patience > activity).
+
+**Watch levels:**
+- BTC offensive confirmation: 2 closes above $82,500
+- BTC long add: pullback to $78,000–79,000 with volume
+- ETH long add: hold above $2,300 + Glamsterdam upgrade news
+- SOL: raise stop if price sustains above $96 (lock in gains)
+- New alt entry: only with documented catalyst + 20-day MA alignment
