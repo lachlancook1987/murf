@@ -108,3 +108,35 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Midday Scan Addendum
+
+### Account Snapshot (midday)
+| Field | Value |
+|---|---|
+| Equity | $139.76 |
+| Cash | $119.79 |
+| Long Market Value | $19.97 (ETH/USD) |
+| Open Positions | 1 (ETH/USD) |
+
+### Positions
+| Pair | Qty | Entry | Current | Unrealized P&L | % |
+|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,327.58 | +$0.11 | +0.55% |
+
+### Open Orders
+| Order ID | Type | Side | Pair | Stop | Limit | Status |
+|---|---|---|---|---|---|---|
+| ce339cc1 | stop_limit | sell | ETH/USD | $2,199.16 | $2,188.16 | active |
+
+### Midday Decisions
+- **Step 3 (Cut losers):** ETH at +0.55% — no cut (threshold: -10%). PASS.
+- **Step 4 (Tighten stops):** +0.55% far below +25% threshold — no tighten. PASS.
+- **Step 5 (Thesis check):** Glamsterdam upgrade narrative intact. ETF inflow momentum persists. No protocol exploit, unlock event, or regulatory action noted. HOLD.
+- **Step 6 (Research):** No sharp unexplained moves. BTC ~$80,200 range, ETH +0.47% today. No Perplexity query needed.
+- **Step 7 (Notification):** No action taken — no ClickUp alert sent.
+
+### Note
+ALPACA_ENDPOINT env var is set to `https://api.alpaca.markets` (missing `/v2`), causing `scripts/alpaca.sh` to fail with "endpoint not found". Workaround: used direct curl with `/v2` path for this scan. This env var should be corrected to `https://api.alpaca.markets/v2`.
