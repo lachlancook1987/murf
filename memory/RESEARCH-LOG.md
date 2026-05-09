@@ -108,3 +108,30 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Midday Scan
+
+### Position Summary
+
+| PAIR | ENTRY | CURRENT | UNREAL % | STATUS |
+|---|---|---|---|---|
+| BTC/USD | $81,660 | $80,315 | -1.65% | Hold — above -10% floor, stop active |
+| ETH/USD | $2,321.66 | $2,315.50 | -0.27% | Hold — nominal loss, stop active |
+| SOL/USD | $88.17 | $93.41 | +5.94% | Hold — winner, below +25% stop-tighten threshold |
+| AVAX/USD | $9.619 | $9.913 (exit) | +3.06% | **Closed** — market-sold 02:56 UTC, +$463 realized |
+
+### Actions Taken
+
+- **No losers cut**: All open positions above -10% threshold (BTC -1.65%, ETH -0.27%).
+- **No stop tightening**: SOL +5.94% is below the +25% threshold for tightening.
+- **AVAX closed** (pre-scan, 02:56 UTC): Stop-limit canceled and market-sold for +3.06% / +$463 realized P&L. Trade logged.
+- **No intraday research triggered**: No positions moving sharply without cause.
+- **No ClickUp alert**: No midday actions taken by this scan.
+
+### Regime Check
+
+- BTC sitting at $80,315 — below 20-day MA (est. $80–82K range) → **DEFENSIVE MODE** remains active
+- All stops are in place and not at risk of being hit (BTC stop ~11.2% below current, ETH stop ~8%, SOL stop ~17%)
+- Next tighten trigger: SOL needs to reach $110.21 (+25% from $88.17 entry) before considering stop tighten
