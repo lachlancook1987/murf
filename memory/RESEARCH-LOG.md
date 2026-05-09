@@ -108,3 +108,61 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.70 |
+| Cash | $139.70 |
+| Buying Power | $139.70 |
+| Open Positions | None (entering 1 ETH) |
+| Open Orders | None pre-session |
+| Account Status | ACTIVE (live — 251041174) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,315 | bid $80,292 / ask $80,337 (11:13 UTC) |
+| ETH price | ~$2,315 | bid $2,314 / ask $2,316 (11:13 UTC) |
+| BTC 20-day MA | $78,323 | Calculated from Apr 15–May 9 closes |
+| BTC 24h chg | +0.16% | Close-to-close May 8→May 9 |
+| Catalysts (bull) | ETF inflows, Standard Chartered ETH $10K–$40K, Robinhood pred mkt ETH >$2,250 @ 92¢ |  |
+| Catalysts (bear) | Fidelity: bear cycle bottom Nov 2026; BTC −17.5% YoY from $126K peak |  |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.16% → gate NOT triggered (not down >5%)
+- BTC vs. 20-day MA: $80,315 > $78,323 → **ABOVE MA → OFFENSIVE MODE**
+- Mode: Full universe, normal sizes
+
+---
+
+### Trade Executed
+
+**ETH/USD Long**
+- Catalyst: Glamsterdam upgrade DeFi/L2 narrative + ETF inflows + Standard Chartered long-term target
+- Entry: $2,314.90 (filled at market, 11:17 UTC)
+- Stop: $2,037.11 (12% below entry — blocked by Alpaca, set manually)
+- Size: 0.0086 ETH (~$19.91 notional, 14.3% equity)
+- Target 1: $2,550; Target 2: $2,750
+- R:R: ~1.9:1 (T1) / ~2.7:1 (T2)
+
+---
+
+### Decision: **BUY ETH/USD**
+
+Offensive mode active. ETH at prior support zone ($2,250–$2,300 from May 4 plan, now $2,315 — 0.65% above upper range, within noise). Glamsterdam + ETF catalyst documented.
+
+**Watch levels:**
+- Stop manually: $2,037.11 (12% below entry)
+- BTC offensive mode: already active (above 20-day MA)
+- Scale-out T1: $2,550
