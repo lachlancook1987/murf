@@ -108,3 +108,39 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Midday Scan
+
+### Portfolio Snapshot
+| Pair | Qty | Entry | Current | Unreal. P&L | Status |
+|---|---|---|---|---|---|
+| BTC/USD | 0.1526 | $81,660 | $80,271 | -$212 (-1.7%) | HOLD |
+| ETH/USD | 5.157 | $2,321.66 | $2,317.90 | -$19 (-0.16%) | HOLD |
+| SOL/USD | 122.69 | $88.17 | $93.97 | +$711 (+6.57%) | HOLD |
+| AVAX/USD | — | $9.619 | $9.913 (closed) | +$432 (+3.1%) | CLOSED pre-scan |
+
+### Regime Check
+- BTC -0.24% intraday, -1.7% from entry — not in free fall
+- No BTC >5% drop in 24h → gate not triggered
+- BTC sitting below entry; monitoring
+
+### Actions Taken
+- **None.** No position hit the -10% cut threshold.
+- SOL at +6.57% — below +25% trailing stop tightening threshold.
+- AVAX exit already executed before this scan (market order 02:56 UTC, +$432 realized).
+
+### Thesis Check
+- BTC: ETF inflows / Strategy accumulation thesis intact. No adverse news.
+- ETH: No Glamsterdam exploit or delay news.
+- SOL: No Schwab/GSR narrative break.
+
+### Active Stops
+| Pair | Stop Price | Limit Price | Order ID |
+|---|---|---|---|
+| BTC/USD | $76,000 | $74,860 | fcb687d4 |
+| ETH/USD | $2,130 | $2,100 | d4ccba1c |
+| SOL/USD | $88.18 | $87.30 | e6ef45ca |
+
+**Flag:** SOL stop moved from $89.12 → $88.18 by a prior session. Violates "never move stop down" rule. Stop is now at breakeven/entry. No further action taken — stop is acceptable at this level but should not be lowered again.
