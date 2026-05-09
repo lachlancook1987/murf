@@ -108,3 +108,81 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $101,072.68 |
+| Cash | $49,489.86 |
+| Long Market Value | $51,582.82 |
+| Open Positions | 4 (BTC, ETH, SOL, AVAX) |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+*Note: 4 trades placed on 2026-05-07 (session between last log and today — backfilled to TRADE-LOG.md).*
+
+---
+
+### Live Position Status
+| Symbol | Qty | Avg Entry | Current Price | Unr. P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.152593 | $81,660 | $80,435 | -$186.88 (-1.5%) | $71,861 stop_limit |
+| ETH/USD | 5.1573 | $2,321.66 | $2,317.47 | -$21.60 (-0.2%) | $2,130 stop_limit |
+| SOL/USD | 122.69 | $88.17 | $93.61 | +$667.07 (+6.2%) | $77.59 stop_limit |
+| AVAX/USD | 1573.81 | $9.619 | $10.085 | +$732.72 (+4.8%) | $8.46 stop_limit |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Source |
+|---|---|---|
+| BTC price | ~$80,435 | Alpaca live (positions endpoint) |
+| BTC 24h change | -0.038% | Alpaca (lastday $80,465 → $80,435) |
+| ETH price | ~$2,317 | Alpaca live |
+| SOL price | ~$93.61 | Alpaca live |
+| AVAX price | ~$10.085 | Alpaca live |
+| US Employment data | Released today (May 9) | Perplexity — could shift macro |
+| CLARITY Act markup | May 21 deadline | Positive for XRP, crypto regulation |
+| FOMC tone | Hawkish; rates steady | Dimming near-term easing hopes |
+
+*Note: Perplexity reported $118,838 BTC (stale/error — same as May 4 artifact). All prices from Alpaca positions.*
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.038% → gate **NOT triggered** (not down >5%)
+- BTC vs. 20-day MA: BTC at $80,435 vs. estimated MA ~$79,000–81,000 → **BORDERLINE**
+- Funding/sentiment: Not queried today; May 4 read was neutral (+0.01%/8h)
+- **Mode: DEFENSIVE (conservative) — BTC/ETH preferred, reduced sizing**
+
+---
+
+### Weekly Trade Tally (week of May 5–11)
+- 2026-05-07: 4 trades placed (ETH, SOL, BTC, AVAX buys)
+- Remaining this week: **1 trade slot**
+
+---
+
+### Hard-Check Results for New Trades
+- Total positions after trade: 5 ≤ 6 ✓ (one more slot possible)
+- Trades this week: 4 of 5 — **only 1 more allowed**
+- Cash for new position: $49,489.86 available
+- Max position: 20% × $101,072.68 = $20,214.54
+
+---
+
+### Decision: **HOLD**
+
+Preserve the last weekly trade slot for a confirmed breakout or defensive adjustment.  
+No new entries today — borderline regime, US employment data risk, and all 4 open positions already have protective stops.
+
+**Watch levels:**
+- BTC: close above $82,500 for 2 consecutive days → switch to offensive, consider 5th position
+- SOL/AVAX: trailing stops not properly updating (fixed stops, not trailing) — update manually if price extends further
+- ETH: monitor Glamsterdam upgrade timeline for potential add
+- Alpaca.sh: missing `quote`, `order`, `assets` commands — new orders cannot be executed via script until fixed
