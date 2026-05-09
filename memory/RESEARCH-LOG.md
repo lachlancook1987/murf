@@ -108,3 +108,71 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.68 |
+| Cash | $119.79 |
+| Open Positions | 1 (ETH/USD, 0.0085785 @ $2,314.90) |
+| Open Orders | 1 (ETH stop_limit sell @ $2,199.16) |
+| Weekly Trades | 3 (2 BTC sells + 1 ETH buy, earlier this session) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,387 | +0.25% 24h (prev close $80,188) |
+| ETH price | ~$2,316–2,319 | +0.4% 24h |
+| BTC 20-day MA | $77,998 | Calculated from 20 completed daily closes |
+| BTC vs MA | +3.06% | **OFFENSIVE MODE active** |
+| BTC 24h gate | NOT triggered | Only +0.25%, well above -5% threshold |
+| Fear & Greed | ~38 (Fear) | Alternative.me; not extreme (<15) |
+| DXY | Not available | |
+
+**Regime: OFFENSIVE — BTC above 20-day MA, no gate triggered. Full universe, normal sizes.**
+
+---
+
+### Key Catalysts (ongoing from May 4)
+
+**Bullish:**
+- US spot BTC ETF inflows sustained ($2.44B April total, strongest in 8 months)
+- ETF inflow on May 4: BTC $532M net, ETH $61M net
+- BTC dominance stable; ETH relative strength improving
+- Ethereum Glamsterdam upgrade still pending (date unconfirmed)
+
+**Bearish/Risk:**
+- Fear & Greed at 38 — market still in fear territory
+- No new catalyst specifically for May 9 confirmed
+- Perplexity data inconsistency (cited BTC $70,505 vs Alpaca live $80,387 — Alpaca trusted)
+
+---
+
+### Prior Trades Today (Earlier Session Run, ~10:46–11:21 UTC)
+
+- Closed BTC position: 0.0007 BTC @ $80,291.87 + 0.00104538 BTC @ $80,220.86
+- Opened ETH position: 0.0086 ETH @ $2,314.90 (cost ~$19.91)
+- ETH stop_limit placed: sell 0.0085785 ETH, stop $2,199.16 / limit $2,188.16
+
+---
+
+### Decision: **HOLD — No New Entries**
+
+BTC in offensive mode but prices are above planned entry ranges:
+- BTC: current $80,387 vs planned entry $77,500–78,500 (3% above range)
+- ETH: current $2,316 vs planned entry $2,250–2,300 (also above)
+- No new catalyst documented for May 9
+- Existing ETH position covered by stop_limit at $2,199.16 (~5% from entry)
+- Strategy default: HOLD (patience > activity)
+
+**Watch levels (unchanged):**
+- BTC offensive entry: break above $82,500 with volume, or pullback to $79,000–79,500
+- ETH add: pullback to $2,250–2,280
+- Switch to defensive: BTC drops below $78,000 (20-day MA)
