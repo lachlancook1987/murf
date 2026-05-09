@@ -108,3 +108,127 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-09 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|-------|-------|
+| Equity | $100,655.38 |
+| Cash | $65,057.69 |
+| Buying Power | $130,115.38 |
+| Long Market Value | $35,597.69 (35.4% deployed) |
+| Change vs Yesterday | -$394.84 (-0.39%) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
+|--------|-----|-----------|---------|----------------|------|
+| BTC | 0.152593 | $81,660.07 | $80,162.33 | -$228.54 (-1.83%) | stop $76,000 / limit $74,860 |
+| ETH | 5.157275 | $2,321.66 | $2,314.30 | -$37.95 (-0.32%) | stop $2,130 / limit $2,100 |
+| SOL | 122.6925 | $88.17 | $93.16 | +$611.86 (+5.66%) | stop $88.18 / limit $87.30 (break-even) |
+
+**Recent Closed Trade:**
+- AVAX: Bought May 7 @ $9.619, sold May 9 @ $9.913 → +2.95% (~+$465 realized)
+
+---
+
+### Market Context
+| Indicator | Value | Notes |
+|-----------|-------|-------|
+| BTC Price | ~$80,162–$80,427 | +0.5%–+1.1% 24h |
+| ETH Price | ~$2,314 | +0.8%–+1.7% 24h |
+| SOL Price | ~$93–$94 | Firedancer 1.0 live May 5 |
+| BTC Dominance | ~58.9% | Rising → alt headwinds persist |
+| Fear & Greed | 38–49 (Fear/Neutral) | Alt.me: 38 Fear; Binance: 49 Neutral; recovering from extreme fear last month |
+| BTC Funding Rate | -0.002% to -0.006% (8h) | NEGATIVE — shorts paying longs; bearish market structure |
+| DXY | ~97.90–97.95 | -0.35% 24h, -0.88% MTD — falling USD bullish for crypto |
+| S&P 500 (ES Futures) | 7,420.50 (+0.78%) | Near recent ATH; risk-on, macro supportive |
+| BTC 20-day MA | ~$80,000–$81,000 (est.) | BTC at borderline; using May 3 low as pivot |
+
+---
+
+### Regime Filter
+- BTC 24h change: +0.5% to +1.1% → **gate NOT triggered** (not down >5%)
+- BTC vs. 20-day MA: BTC at ~$80,162 vs. est. MA ~$80–81K → **BORDERLINE / AT MA**
+- Funding: Negative across Binance/Bybit/BitMEX → **NOT neutral/positive**
+- **Mode: DEFENSIVE** — BTC/ETH only for new entries; SOL position retained (stop at break-even, already in profit)
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Bitcoin ETF inflows: $1.63B in first week of May alone; strongest inflow month of 2026
+- BTC exchange reserves at 2019 lows — supply tightening
+- Whale accumulation: 270K BTC in past month (largest since 2013)
+- ETH: Pectra upgrade live; Glamsterdam (June) targeting 3× L1 throughput
+- ETH: 140K ETH (~$322M) whale accumulation in 96h; 30% supply staked
+- SOL: Firedancer 1.0 mainnet (May 5), targets 1M TPS; spot SOL ETF AUM >$1.05B cumulative
+- DXY declining → tailwind for all crypto assets
+- S&P 500 near ATH → risk-on sentiment
+
+**Bearish/Risk:**
+- BTC funding rates negative → bearish positioning or over-leveraged shorts (watch for squeeze vs. flush)
+- BTC 4H: 50-day MA sloping down — short-term bearish structure
+- ADI Chain unlock today: $28.16M (0.70% supply) — minor noise
+- Rain token unlock May 10: $377.3M (4.37% supply) — tomorrow, potential sell pressure on RAIN
+- Rising dominance (~58.9%) suggests alts still under pressure vs. BTC
+- BTC stop levels ($76K) still ~5.2% below current — no imminent stop risk
+- ETH stop ($2,130) is 8.2% below entry — wider than 3–5% guideline (acknowledged risk)
+
+---
+
+### Position Risk Assessment
+- **BTC**: Entry $81,660 vs. current $80,162 (-1.83%). Stop at $76,000 is 5.1% below current. Holding with existing stop. No action needed.
+- **ETH**: Entry $2,321.66 vs. current $2,314.30 (-0.32%). Near flat. Stop at $2,130 provides buffer. No action needed.
+- **SOL**: Entry $88.17 vs. current $93.16 (+5.66%). Stop at break-even ($88.18). In profit. Consider raising stop if SOL pushes above $95 resistance.
+
+---
+
+### Trade Ideas (DEFENSIVE mode — no new entries)
+
+**Idea 1 — BTC Momentum Long (offensive trigger watch)**
+- Catalyst: ETF inflows + whale accumulation + supply tightening
+- Trigger: BTC 2 consecutive daily closes above $82,000 + funding flips neutral/positive
+- Entry: $82,000–$82,500 breakout confirmation
+- Stop: $78,500 (~4.3% below mid-entry)
+- Target 1: $86,000; Target 2: $90,000
+- Size: 10% equity (~$10,000) — half-size pending regime confirmation
+- R:R: ~1.4:1 (T1) / ~2.8:1 (T2)
+- Note: Do NOT enter unless funding turns neutral. Negative funding = trap risk.
+
+**Idea 2 — SOL Stop Trail**
+- Action: If SOL closes above $95.50 (breakout of rising wedge resistance), raise stop to $90.00
+- Locks in partial profit while allowing upside to $100–$105
+- Not a new entry — position management on existing SOL
+
+**Idea 3 — ETH Glamsterdam Pre-Upgrade Positioning**
+- Catalyst: Glamsterdam upgrade scheduled June — historically upgrades drive ETH premiums
+- Trigger: ETH holds $2,300 + closes above 20-day EMA ($2,287) with volume
+- Entry: $2,300–$2,350 (already in position near this range)
+- Consider adding if regime shifts offensive and ETH clears $2,420 resistance
+- Size: 8% equity add (~$8,000) in offensive mode only
+
+---
+
+### Risk Factors
+1. Negative BTC funding → risk of short squeeze (good) OR further slide (bad) — binary
+2. BTC at/below 20-day MA borderline → any adverse macro news = break lower
+3. Rain unlock May 10 ($377.3M) — may bleed into alt sentiment generally
+4. ETH stop ($2,130) wider than 5% rule — monitor, may tighten if ETH rallies to $2,400+
+5. SOL rising wedge pattern on daily (bearish technical) — stop at break-even is critical
+6. DXY data for May 9 unavailable (weekend) — confirm direction when markets open
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode active (negative funding + BTC at 20-day MA borderline). All three positions have stops in place. SOL is the only winner (+5.66%). No new entries today.
+
+**Watch levels:**
+- BTC offensive trigger: 2 closes above $82,000 + funding ≥ 0%
+- ETH aggressive add: close above $2,420
+- SOL stop trail: raise to $90 if SOL closes above $95.50
+- Regime shift bearish: BTC below $78,500 (approach stop territory)
