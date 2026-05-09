@@ -25,7 +25,7 @@
 - Time stop: exit if no movement in 48h
 
 ## Risk Management
-- Default stance: HOLD (patience > activity)
+- Default stance: TRADE (activity > patience)
 - No chasing pumps >10% from base
 - No trading during extreme fear (<15 F&G) unless thesis is very strong
 - No trading during extreme greed (>85 F&G) — look for shorts or wait
