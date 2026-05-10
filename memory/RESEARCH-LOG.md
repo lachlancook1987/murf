@@ -957,3 +957,113 @@ DEFENSIVE mode active. BTC at 20-day MA — not cleanly above. Heavy unlock week
 - BTC offensive mode: 2 closes above $82,500
 - ETH long trigger: $2,200–2,250
 - DXY red flag: above 99.5
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $141.05 |
+| Cash | $63.86 |
+| Buying Power | $63.86 |
+| Long Market Value | $77.19 |
+| Unrealized P&L | +$1.54 (+2.0%) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | MV |
+|---|---|---|---|---|---|
+| ETHUSD | 0.0085785 | $2,314.90 | $2,351.77 | +$0.32 (+1.59%) | $20.17 |
+| SOLUSD | 0.29875 | $93.35 | $95.38 | +$0.61 (+2.18%) | $28.49 |
+| XRPUSD | 19.519 | $1.4294 | $1.461 | +$0.62 (+2.21%) | $28.52 |
+
+**Active Stop-Loss Orders (GTC):**
+| Symbol | Stop Price | Limit Price | Note |
+|---|---|---|---|
+| ETH/USD | $2,199.16 | $2,188.16 | ~5% below entry ✓ |
+| SOL/USD | $88.68 | $88.24 | ~5% below entry ✓ |
+| XRP/USD | $1.2579 | $1.2516 | ~12% below entry ⚠️ (tightened to $1.424/$1.417 later this session) |
+
+**Recent Activity (May 9):** BTC exited at ~$80,220–80,291 (market sell). ETH entered $2,314.90. SOL entered $93.35. XRP entered $1.4294. XRP stop replaced to 3% below current ($1.424/$1.417) later this session.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,600–81,400 | +0.3–0.8% 24h; range $80,124–81,568 |
+| ETH price | ~$2,350–2,363 | +0.8% 24h |
+| BTC Dominance | ~58–60% | Stable, slight upward drift |
+| Fear & Greed | 47–51 (Neutral) | Neutral; +9 from 38 in one day |
+| BTC Funding Rate | +0.0007–0.01% (8h) | Near-neutral; not overheated |
+| DXY | ~97.84 | Declining (-0.42% daily); crypto-positive |
+| S&P 500 Futures | ~7,420 (+0.78%) | Risk-on; strong macro support |
+
+**BTC 20-day MA estimate:** ~$80,000–82,000. BTC at $80,600–81,400 = borderline / transitioning. Not yet above $82,500 offensive trigger.
+
+---
+
+### Regime Filter
+- BTC 24h change: +0.3–0.8% → gate **NOT triggered**
+- BTC vs 20-day MA: borderline ~$81K vs estimated MA $80–82K → **DEFENSIVE (borderline)**
+- Funding: +0.0007–0.01% 8h → neutral
+- DXY: 97.84 declining → **POSITIVE** for crypto
+- S&P: +0.78% → **POSITIVE** risk-on macro
+- **Mode: DEFENSIVE (improving). Offensive trigger: BTC 2 closes above $82,500**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- DXY declining to 97.84 (-2.49% YTD) — liquidity loosening, positive for risk assets
+- S&P 500 futures +0.78%, risk-on macro
+- ETH Glamsterdam upgrade (H1 2026) + Spot ETH ETF inflows (BlackRock staked-ETH)
+- SOL Firedancer 1.0 mainnet launched May 5 (targets 1M TPS); Visa $7B stablecoin settlements; $1.05B+ ETF inflows
+- XRP RLUSD: $1.4B assets (+7.8% MoM), volume +62%; JPMorgan expects $8B+ XRP ETF year-1 inflows
+- BTC open interest exceeds 2025 ATH with neutral funding = measured accumulation
+
+**Bearish/Risk:**
+- RAIN token unlock today: $377.30M (4.37% supply) — not held, sentiment noise
+- BABY token first unlock today — not held
+- SOL head-and-shoulders on 3D chart; neckline ~$70, watch $78 support
+- ETH resistance at $2,360–2,400
+- BTC still 36% below Oct 2025 ATH ($126,210)
+
+---
+
+### Trade Ideas (DEFENSIVE mode)
+
+**Idea 1 — Hold ETH, consider trailing stop to $2,250**
+- ETH at $2,351 above entry $2,314.90; stop currently $2,199
+- Target 1: $2,400; Target 2: $2,600
+
+**Idea 2 — XRP stop tightened (EXECUTED)**
+- Replaced $1.2579 stop → new stop $1.4240 / limit $1.4169 (3% below $1.468 current)
+- Now compliant with 3–5% stop rule
+
+**Idea 3 — BTC re-entry trigger**
+- Trigger: 2 consecutive daily closes above $82,500 → offensive mode
+- Entry: $82,500–83,000 | Stop: $79,500 | T1: $85,000 | T2: $90,000
+
+---
+
+### Risk Factors
+1. XRP stop tightened this session — now compliant
+2. SOL head-and-shoulders — watch $78 support; stop $88.68 protects
+3. BTC below $82,500 offensive trigger — no new entries
+4. ETH resistance $2,360–2,400 — partial profit take zone
+5. Alpaca `scripts/alpaca.sh` missing `/v2/` path prefix — workaround used
+
+---
+
+### Decision: **HOLD (existing positions)**
+
+All three positions profitable, stops updated. XRP stop tightened to 3% this session. No new entries — wait for BTC 2 closes above $82,500 or defined pullbacks.
+
+**Watch levels:**
+- BTC offensive trigger: 2 closes above $82,500
+- ETH T1: $2,400 | trail stop to $2,250
+- SOL T1: $97.64 | stop $88.68
+- XRP stop: $1.4240 (active, 3% below entry)
