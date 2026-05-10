@@ -108,3 +108,76 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.62 |
+| Cash | $91.83 |
+| Buying Power | $91.83 |
+| Open Positions | 2 (ETH/USD, SOL/USD) |
+| Long Market Value | $47.79 |
+| Account Status | ACTIVE (#251041174) |
+
+---
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | ~$2,329 | +$0.10 | stop_limit $2,199/$2,188 (GTC, order ce339cc1) |
+| SOL/USD | 0.29875125 | $93.3467 | ~$93.38 | -$0.06 | stop_limit $88.68/$88.24 (GTC, order d6b66834) |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,699 | +0.15–0.5% 24h (Alpaca quote) |
+| ETH price | ~$2,329 | Position live |
+| SOL price | ~$93.38 | Position live |
+| BTC 20-day MA | ~$80,000–81,500 est. | May 3–9 range $79.8k–$82.8k; BTC borderline |
+| Fear & Greed | No fresh data | Last known: 47 (Neutral, May 4) |
+| BTC Dominance | No fresh data | Last known: ~60% (May 4) |
+| DXY | No fresh data | |
+
+---
+
+### Regime Filter
+- BTC 24h change: ~+0.15–0.5% → gate 1 **NOT triggered**
+- BTC vs. 20-day MA: At borderline (~$80,700 vs est. $80–81.5k MA) → **DEFENSIVE MODE**
+- **Mode: DEFENSIVE — BTC/ETH only, 50% size reduction**
+
+---
+
+### Key Notes / Catalysts
+- BABY (Babylon) team/investor unlock **today** → confirmed avoid BABY longs
+- BTC eyeing $100K on continued ETF inflows and whale accumulation (news)
+- No major negative catalysts identified
+
+---
+
+### Hard-Check Results (STEP 3)
+| Check | Result |
+|---|---|
+| Total positions after trade ≤ 20 | 2 current — OK if adding |
+| Trades this week ≤ 25 | 4 fills this week — OK |
+| BTC down >5% 24h | NO — gate not triggered |
+| BTC below 20-day MA | Borderline → DEFENSIVE MODE |
+| ETH entry zone $2,250–2,300 | Current $2,329 — **ABOVE zone, fails entry rule** |
+| BTC entry zone $77,500–78,500 or break >$82,500 | Current $80,699 — **neither condition met** |
+| SOL entry eligible | NO — defensive mode (BTC/ETH only) |
+
+---
+
+### Decision: **HOLD**
+
+No new entries today. Entry price conditions not met (ETH above planned zone, BTC in no-man's land). Defensive mode active. Both existing positions have stops in place.
+
+**Watch levels:**
+- BTC long trigger: $77,500–78,500 pullback OR sustained breakout above $82,500
+- ETH long trigger: $2,250–2,300 pullback (do NOT chase above $2,320)
+- Offensive mode switch: BTC 2 consecutive closes above $82,500 + DXY < 97
