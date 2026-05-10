@@ -4,6 +4,43 @@
 
 ---
 
+## 2026-05-10 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Date | 2026-05-10 |
+| Scan Type | Midday |
+
+### Open Positions
+
+| Symbol | Qty | Entry | Current | Unreal P&L% | Stop | Stop Type |
+|--------|-----|-------|---------|-------------|------|-----------|
+| ETHUSD | 0.0085785 | $2,314.90 | $2,327.00 | +0.52% | $2,199.16 (lim $2,188.16) | stop_limit GTC |
+| SOLUSD | 0.29875 | $93.3467 | $93.3467 | 0.00% | $82.14 (lim $81.73) | stop_limit GTC |
+
+### Step 3 — Cut Losers Check
+- ETHUSD: +0.52% → **No action** (threshold: ≤ -10%)
+- SOLUSD: 0.00% → **No action**
+
+### Step 4 — Stop Tightening Check
+- ETHUSD: +0.52% → **No action** (threshold: ≥ +25%)
+- SOLUSD: 0.00% → **No action**
+
+### Step 5 — Thesis Check
+- **ETH**: Glamsterdam upgrade + ETF inflow narrative — Perplexity confirms no exploits, regulatory action, or large unlocks in last 48h. Thesis **intact**.
+- **SOL**: Schwab Crypto / GSR BESO ETF narrative — No new negative events. April 2026 Drift DEX exploit (old news, not new) caused a temporary dip to ~$79-90; SOL now recovered to $93.35. Thesis **intact**.
+- **Note**: SOL stop at $82.14 is ~12% below entry — wider than strategy's 3-5% guideline. Cannot tighten without a qualifying profit threshold (+25%). Flagged for awareness; no stop-down movement per rules.
+
+### Step 6 — Perplexity Research
+- Query: ETH/SOL negative news last 48h, major events, current prices
+- Result: No major negative catalysts. SOL holding $90-93 range. No ETH-specific breakdown events. Drift exploit (April) is old context, not current thesis risk.
+
+### Decision: **HOLD — no action taken**
+All positions within acceptable ranges. Stops active. Theses intact.
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
