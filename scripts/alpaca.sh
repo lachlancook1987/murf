@@ -9,7 +9,7 @@ for v in ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT; do
   fi
 done
 
-BASE="${ALPACA_ENDPOINT}"
+BASE="${ALPACA_ENDPOINT}/v2"
 CMD="${1:-account}"
 
 apca_curl() {
