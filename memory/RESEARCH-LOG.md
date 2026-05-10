@@ -108,3 +108,27 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Midday Scan
+
+### Positions
+| Symbol | Qty | Entry | Current | Unr. PnL% | Stop |
+|---|---|---|---|---|---|
+| ETHUSD | 0.0085785 | $2,314.90 | $2,328.54 | +0.59% | $2,199.16 |
+| SOLUSD | 0.29875 | $93.3467 | $93.81 | +0.50% | $88.68 |
+
+### Actions Taken
+- **None.** No positions at -10% loss threshold (Step 3 — no cuts).
+- No positions at +25%/+40% gain threshold (Step 4 — no trailing stop tightening).
+
+### Thesis Check (via Perplexity)
+- **ETH:** Price ~$2,323–2,328. No protocol exploits or Glamsterdam cancellation found. Thesis intact. Prediction markets 92% probability ETH stays above $2,300 at 5pm EDT.
+- **SOL:** No major negative news found (data limited via search).
+- **Macro:** No macro shocks reported today.
+- **Note:** Glamsterdam upgrade timeline not confirmed by search — monitor ETH Foundation announcements.
+
+### Regime
+- DEFENSIVE mode remains active pending BTC/20-day MA confirmation.
+- No new entries warranted at current levels.
