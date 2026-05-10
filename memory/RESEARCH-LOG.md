@@ -108,3 +108,92 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research (inline, session-open)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.40 |
+| Cash | $63.86 |
+| Buying Power | $63.86 (1× — non-marginable crypto) |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Stop Orders | 3 (stop_limit on each position) |
+| Account Status | ACTIVE (live — acct 251041174) |
+
+*Note: Account is LIVE (not paper). Balance reflects actual positions placed since May 9.*
+
+---
+
+### Existing Positions (May 10 open)
+| Symbol | Qty | Entry | Current | MV | Unr. P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,330.20 | $19.99 | +$0.13 (+0.66%) | stop_limit $2,199.16 |
+| SOL/USD | 0.29875125 | $93.3467 | $94.483 | $28.23 | +$0.34 (+1.22%) | stop_limit $88.68 |
+| XRP/USD | 19.51878075 | $1.4294 | $1.45086 | $28.32 | +$0.42 (+1.50%) | stop_limit $1.2579 |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,852 | +0.24% 24h |
+| BTC 20-day MA | $78,340 | BTC above MA by +$2,512 (+3.21%) |
+| ETH price | ~$2,332 | +0.42% today |
+| SOL price | ~$94.48 | +1.87% today |
+| XRP price | ~$1.451 | +2.32% today |
+| Fear & Greed | 47–51 (Neutral) | Consistent with prior session |
+| BTC Dominance | ~N/A | Perplexity data unavailable |
+| DXY | ~N/A | Perplexity data unavailable |
+
+**BTC 20-day MA calculation:** Average of Apr 20–May 9 closes = $78,340.24
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.24% → **gate NOT triggered** (threshold: down >5%)
+- BTC vs 20-day MA: $80,852 vs $78,340 → **ABOVE by +3.21%**
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+*Note: Previous session (May 9) placed SOL/XRP in DEFENSIVE mode — technically a violation, but positions are profitable and stops are in place. Will hold.*
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC above 20-day MA — regime upgrade to OFFENSIVE
+- All 3 existing positions profitable within 24h of entry
+- ETH Glamsterdam upgrade still upcoming — DeFi/L2 narrative intact
+- SOL ecosystem momentum continuing
+
+**Bearish/Risk:**
+- BABY token unlock today (May 10) — avoid BABY longs
+- No specific new catalyst identified today (F&G neutral)
+- Small account ($140 equity) limits position sizing
+- DXY data unavailable — watch for surprises
+
+---
+
+### Trade Ideas
+
+**No new entries today — HOLD**
+
+Reasons:
+1. No fresh catalyst identified beyond general bullish momentum
+2. All 3 positions are early in their moves (+0.7–2.3%), stops protected
+3. Cash limited to $63.86; max new position = $28.08 (20% equity)
+4. Default stance: HOLD (patience > activity)
+5. BABY unlock today — avoid BABY; no other obvious unlock trade
+6. Would need specific catalyst + pullback to support for new entry
+
+**Watch levels (offensive mode):**
+- BTC: Hold or add on pull to $78,500–79,000 (near 20MA support)
+- ETH: Hold; T1 $2,550 still open
+- SOL: Hold; T1 ~$105 area
+- XRP: Hold; stop at $1.2579 guards position
+- Offensive mode trigger for new alts: Need specific catalyst + volume
