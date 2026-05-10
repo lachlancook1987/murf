@@ -20,7 +20,10 @@
 - Always set stop-loss at entry
 
 ## Exit Rules
-- Stop-loss: 3-5% below entry (hard stop)
+- Stop-loss: **5% trailing stop GTC**, placed immediately after fill confirmation
+  - Order type: `trailing_stop` with `trail_percent=5`
+  - Fallback if trailing_stop rejected: fixed stop-limit 5% below entry (stop) / 4.5% below entry (limit)
+  - Defensive mode (BTC below 20-day MA): tighten to **4% trailing stop** to reflect smaller position sizes
 - Take profit: scale out at 1R, 2R, 3R
 - Time stop: exit if no movement in 48h
 
