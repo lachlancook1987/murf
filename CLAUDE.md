@@ -30,30 +30,33 @@ The Alpaca broker API requires `/v2/` path prefix (e.g. `$ALPACA_ENDPOINT/v2/acc
 
 ### End-of-routine commit pattern (mandatory for ALL routines):
 
+The goal is simple: **every routine must land its memory changes on `main` before it ends.**
+
+**Preferred path — commit directly to main:**
 ```bash
-# 1. Stage only memory files (never commit .env or secrets)
+git fetch origin main
+git checkout main
+git pull origin main
 git add memory/
-
-# 2. Commit with descriptive message
 git commit -m "crypto <routine-name> <DATE>"
+git push origin main
+```
 
-# 3. Push to current branch
+**If the session harness forces a feature branch**, merge it to main immediately — do NOT leave it as a draft or open PR:
+```bash
+# On the feature branch after committing:
 git push -u origin <branch-name>
 
-# 4. Create PR (NOT draft) and immediately merge it
-#    Use mcp__github__ tools:
-#    - create_pull_request (draft: false)
-#    - merge_pull_request (merge_method: "squash")
-#
-# This ensures main is always up to date before the session ends.
+# Then via mcp__github__ tools — in a single step, no pausing:
+# 1. create_pull_request  (draft: FALSE)
+# 2. merge_pull_request   (merge_method: "squash")
 ```
 
-**Never leave PRs as draft or unmerged.** Always call `merge_pull_request` immediately after `create_pull_request` in every routine.
-
-If direct push to main is ever available (no branch protection), prefer:
-```bash
-git checkout main && git merge --ff-only <branch> && git push origin main
-```
+**Rules:**
+- Never create a draft PR for routine memory commits.
+- Never leave a PR open — merge it in the same routine run, immediately after creating it.
+- If the branch is behind main, rebase first (`git rebase origin/main`), resolve conflicts, then push and merge.
+- Never commit secrets, `.env` files, or anything outside `memory/` and `scripts/`.
 
 ## Routines
 
