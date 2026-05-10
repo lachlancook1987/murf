@@ -32,7 +32,7 @@ Note: Both positions placed May 9 via access_key (ETH @ 11:17 UTC, SOL @ 23:56 U
 |---|---|---|
 | BTC price | ~$80,760 | +0.13% from prior close ($80,656) |
 | ETH price | ~$2,329 | +0.26% vs prior day ($2,320) |
-| SOL price | ~$93.39 | +0.47% vs prior day ($92.75) |
+| SOL price | ~$93.39 | +0.47% vs prior day ($92,75) |
 | BTC 20-day MA | $78,584 | Calculated from 20 daily closes Apr 21–May 10 |
 | BTC vs 20-day MA | +$2,175 (+2.77%) | **Above MA → OFFENSIVE mode** |
 | BTC 24h change | +0.13% | Not down >5% — regime gate NOT triggered |
@@ -856,3 +856,104 @@ Watch for BTC 2-day close above $82,500 to switch offensive mode.
 - ETH: hold; stop $2,199; add target $2,250 on pullback if BTC > MA
 - SOL trim alert: intraday close below $91 → 50% trim
 - DXY red flag: sustained > 99
+
+---
+
+## 2026-05-10 Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | ~$100,000 (last known — Alpaca API unreachable today) |
+| Cash | ~$100,000 |
+| Buying Power | ~$200,000 (2× margin) |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (paper — PA3GA9F7N5EE) |
+
+**Note:** Alpaca API returned DNS failure (`api.alpaca.markets/account`) and auth error (`paper-api.alpaca.markets/v2/account`). Both scripts now fixed with `/v2` in paths. Root cause: `ALPACA_ENDPOINT` must be set to `https://paper-api.alpaca.markets` (not the live API URL) and paper-trading API keys must be used.
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,600–80,800 | +0.4–0.6% 24h; range $80,124–$81,065 |
+| ETH price | ~$2,327 | +0.5–0.9% 24h; range $2,300–$2,337 |
+| BTC Dominance | ~57–60% | CoinGecko 57.57% / CMC 60.2% — consensus ~58% |
+| Fear & Greed | 47–49 (Neutral) | Up from extreme fear (12) last month; stabilizing |
+| BTC Funding Rate | +0.0017%/8h avg | Neutral; Binance +0.0001%, Bybit -0.0031% — not overheated |
+| DXY | 97.84 | Down -2.38% YoY; in downtrend — crypto tailwind |
+| S&P 500 Futures | ~7,420 (+0.78%) | Near/at ATH; risk-on macro backdrop |
+
+**BTC 20-day MA:** Est. ~$80,000–82,000 (BTC at $80,700 = borderline/at MA). DEFENSIVE mode maintained.
+
+---
+
+### Regime Filter
+
+| Check | Status |
+|---|---|
+| BTC down >5% 24h? | NO (+0.4–0.6%) — gate not triggered |
+| BTC above 20-day MA? | BORDERLINE (at ~$80,700 vs. est. $80–82K MA) |
+| Funding overheated? | NO (+0.0017%/8h — neutral) |
+| **Mode** | **DEFENSIVE — BTC/ETH only, 50% position sizes** |
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF inflows: $500M+ in a single week (BlackRock, Fidelity led); supply absorbed ~9x faster than mining
+- MicroStrategy: 815,061 BTC total (3.9% of supply); floating supply shrinking
+- DXY in downtrend (97.84, -2.38% YoY) — sustained crypto tailwind
+- S&P 500 near ATH (~7,400) — risk-on; crypto-macro correlation positive
+- Chainlink (LINK): AWS Marketplace listing + SWIFT 2025 Business Challenge winner
+- AI crypto: TAO +87% monthly, RENDER +31%, FET +60%
+
+**Bearish/Risk:**
+- BTC stuck at 20-day MA; no clean breakout above $82,500 yet
+- RAIN unlock today: $377M (50.28B tokens, 4.37% supply) — avoid RAIN
+- APT unlock May 12: ~$102M; STRK May 15: ~$145M; ARB May 16: ~$108M
+- Total unlock week: ~$800M+ — alt sentiment headwind
+
+---
+
+### Trade Ideas (DEFENSIVE mode — BTC/ETH only)
+
+**Idea 1 — BTC Long on Pullback**
+- Entry: $78,500–79,500 | Stop: $76,500 | T1: $82,500 | T2: $85,000
+- Size: $10,000 notional | R:R: ~1.8:1 (T1) / ~3:1 (T2)
+- Note: Do NOT chase $80,700; only enter on defined pullback.
+
+**Idea 2 — ETH Long on Pullback**
+- Entry: $2,200–2,250 | Stop: $2,080 | T1: $2,500 | T2: $2,700
+- Size: $8,000 notional | R:R: ~1.9:1 (T1) / ~2.8:1 (T2)
+- Note: Verify Glamsterdam upgrade date before entry.
+
+**Idea 3 — Offensive Mode Trigger**
+- Trigger: BTC 2 consecutive closes above $82,500
+- Expand to LINK + TAO; full normal position sizes
+
+---
+
+### Risk Factors
+1. BTC at 20-day MA — failure to hold $78,500 = bearish breakdown
+2. RAIN unlock ($377M today) — alt sentiment contagion risk
+3. $800M+ unlock week (APT/STRK/ARB) — mid-week headwind
+4. S&P 500 at ATH — risk-off shock = amplified crypto drop
+5. Alpaca API unreachable — resolve env vars before any trade
+6. ClickUp notifications broken — v3 channel API returns 404; scripts updated to v2 view API
+
+---
+
+### Decision: **HOLD**
+
+DEFENSIVE mode active. BTC at 20-day MA — not cleanly above. Heavy unlock week. No entries today. Wait for defined pullbacks or offensive trigger. Fix Alpaca env vars before any trade execution.
+
+**Watch levels:**
+- BTC long trigger (dip): $78,500–79,500
+- BTC offensive mode: 2 closes above $82,500
+- ETH long trigger: $2,200–2,250
+- DXY red flag: above 99.5
