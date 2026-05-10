@@ -47,4 +47,4 @@ Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → 
 | L2 / DeFi | SOL, AVAX, ARB | WATCH | 0 | Offensive mode only; BTC dom must be falling |
 | Alts (top 20) | Various | WATCH | 0 | Offensive mode only |
 
-*Last updated: 2026-05-04 (week 1 — no trades, baseline established)*
+*Last updated: 2026-05-10 (week 2) — SOL entered on 2026-05-09 in violation of defensive mode (BTC/ETH only rule); now in offensive mode so position is retained, but entry was a rules breach. Enforce regime gate mechanically going forward.*
