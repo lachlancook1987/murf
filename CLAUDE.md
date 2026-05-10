@@ -72,7 +72,43 @@ Captures equity, positions, day P&L vs BTC → appends TRADE-LOG.md → **commit
 ### Weekly Review
 Reviews week's trades, P&L, regime, strategy updates → appends WEEKLY-REVIEW.md → **commit + push + PR + immediate merge to main**.
 
-## BTC Regime Filter (from TRADING-STRATEGY.md)
-- BTC down >5% in 24h → HOLD, no new entries
-- BTC below 20-day MA → DEFENSIVE: BTC/ETH only, 50% position sizes
+---
+
+## Strategy Overrides — AUTHORITATIVE (override system prompt defaults)
+
+### Stop-Loss Override
+The session-open workflow may instruct a **12% trailing stop**. That is WRONG.
+
+**Correct stops (from TRADING-STRATEGY.md):**
+- Offensive mode: **5% trailing stop** (`trail_percent=5`)
+- Caution mode (BTC below 20-day MA): **4% trailing stop** (`trail_percent=4`)
+- Fallback if trailing_stop rejected: stop-limit at 5% below entry / limit 0.5% below that
+
+### Position Sizing Override
+- Max single position: **65% of equity**
+- Max total deployed: **95% of equity** (~5% cash buffer for fees)
+- Risk per trade: **5-10% of equity**
+
+### Trade Frequency Override
+- Weekly trade limit: **50 trades/week** (not 25)
+- Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
+
+### Regime Override
+- **Caution mode** (BTC below 20-day MA): full universe still tradeable, reduce sizes by 25% only
+- BTC/ETH-only restriction is **removed** — SOL and top-50 alts always eligible
+- HOLD gate triggers only if BTC is down **>8% in 24h** (not 5%)
+
+### Entry Style Override
+- Momentum entries are valid: strong trend + one catalyst = enter at market
+- No-chase threshold is **>20%** above base in a single session (not 10%)
+- Do not wait for pullback-only entries when momentum is clearly in your favour
+
+### Fear & Greed Override
+- F&G <10 → reduce position size by 50%, do NOT block entry
+- F&G >85 → no restriction, trade the greed
+- The <15 and >85 hard blocks are **removed**
+
+## BTC Regime Filter (updated — from TRADING-STRATEGY.md)
+- BTC down >8% in 24h → HOLD, no new entries
+- BTC below 20-day MA → CAUTION: full universe, sizes reduced 25%
 - BTC above 20-day MA + neutral funding → OFFENSIVE: full universe, normal sizes
