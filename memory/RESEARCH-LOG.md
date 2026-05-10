@@ -108,3 +108,67 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Session-Open Research (~03:22 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.69 |
+| Cash | $91.83 |
+| Long Market Value | $47.86 |
+| Open Positions | 2 (ETH, SOL) |
+| Open Stop Orders | ETH stop-limit $2,199/$2,188 · SOL stop-limit $88.68/$88.24 |
+| Weekly Trades | 0 |
+
+---
+
+### Live Quotes (Alpaca, 03:22 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $80,668 | $80,768 | ~$80,718 |
+| ETH/USD | $2,324 | $2,327 | ~$2,325 |
+| SOL/USD | $92.93 | $93.32 | ~$93.12 |
+
+---
+
+### Market Context (Perplexity)
+| Indicator | Value | Note |
+|---|---|---|
+| BTC 24h change | ~+0.4% | Flat; NOT down >5% — regime gate NOT triggered |
+| BTC 20-day MA | ~$85,000 (est.) | BTC ~$80,718 = below 20-day MA |
+| ETH 24h | +0.28% | Slightly outperforming |
+| SOL weekly | −23% | Significant underperformance |
+| Fear & Greed | Not retrieved | Assumed neutral given flat BTC |
+
+---
+
+### Regime Filter
+- BTC 24h change: ~+0.4% → gate (>5% drop) **NOT triggered**
+- BTC vs 20-day MA: ~$80,718 vs ~$85,000 → BTC **BELOW** 20-day MA → **DEFENSIVE MODE**
+- **Mode: DEFENSIVE — BTC/ETH only, 50% position sizes**
+
+---
+
+### Position Review
+| Symbol | Qty | Avg Entry | Current | P&L | Stop |
+|---|---|---|---|---|---|
+| ETH | 0.0085785 | $2,314.90 | $2,325 | +$0.09 (+0.58%) | SL $2,199/$2,188 ✓ |
+| SOL | 0.29875 | $93.3467 | $93.12 | −$0.07 (−0.01%) | SL $88.68/$88.24 ✓ |
+
+Both stops confirmed active. SOL qty available = 0.00005125 (remainder locked by stop order).
+
+---
+
+### Trade Ideas
+- **BTC**: $80,718 — above planned buy zone ($77,500–$78,500). No entry signal.
+- **ETH**: $2,325 — above planned buy zone ($2,250–$2,300). Already holding; no add.
+- **SOL**: −23% weekly; DEFENSIVE mode excludes new entries. Existing stop covers position.
+
+---
+
+### Decision: **HOLD**
+
+No new entries. All instruments above defined buy zones or excluded by defensive-mode filter. Stops confirmed in place on both open positions. Continue watching for BTC pullback to $77,500–$78,500 or breakout above $82,500 (offensive mode trigger).
