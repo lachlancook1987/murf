@@ -108,3 +108,30 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Midday Scan
+
+### Positions (live data)
+| Symbol | Qty | Entry | Current | Unreal P&L | Stop |
+|---|---|---|---|---|---|
+| ETHUSD | 0.00858 | $2,314.90 | $2,325.56 | +$0.09 (+0.46%) | $2,199.16 (SL) |
+| SOLUSD | 0.29875 | $93.3467 | $94.267 | +$0.27 (+0.99%) | $88.68 (SL) |
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.94 |
+| Cash | $91.83 |
+| Buying Power | $91.83 |
+
+### Scan Results
+- **STEP 3 (Cut losers ≤ -10%):** Neither position triggered. ETH +0.46%, SOL +0.99%.
+- **STEP 4 (Tighten stops):** Neither position at +25% or +40%. No action.
+- **STEP 5 (Thesis check):** ETH — Glamsterdam upgrade narrative intact, ETF inflows ongoing. SOL — Schwab Crypto integration narrative intact; BABY unlock today does not affect SOL.
+- **STEP 6 (Intraday research):** No sharp moves requiring investigation. Skipped.
+- **Action taken:** None. No ClickUp notification sent.
+
+### API Note
+`ALPACA_ENDPOINT` (`api.alpaca.markets`) requires `/v2/` path prefix. The `alpaca.sh` wrapper uses `${BASE}/positions` without `/v2/` — calls return "endpoint not found." Direct curl with `/v2/` path confirmed working.
