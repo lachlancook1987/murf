@@ -108,3 +108,76 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $141.76 |
+| Cash | $63.86 |
+| Buying Power | $63.86 |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Stop Orders | 3 (one per position) |
+| Account Status | ACTIVE (live — #251041174) |
+
+*Prior sessions executed: ETH buy @$2,314.90 (May 9), SOL buy @$93.35 (May 9), XRP buy @$1.4294 (May 10), BTC closed @~$80,256 (May 9).*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$82,356 | +0.35–1.38% 24h (live Alpaca quote) |
+| ETH price | ~$2,379 | +2.18% today |
+| SOL price | ~$96.62 | +4.18% today |
+| XRP price | ~$1.474 | +3.94% today |
+| BTC Dominance | N/A | Perplexity unavailable today |
+| Fear & Greed | ~47 (Neutral) | Per prior context; refreshed data unavailable |
+| Key Catalyst | Geopolitical relief (Iran/Hormuz) + ETF inflows + CLARITY Act tailwind |
+
+**BTC 20-day MA:** Estimated ~$80,000–82,000. BTC at $82,356 is at the upper edge of the estimated range — not definitively confirmed above.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.35–1.38% → gate **NOT triggered**
+- BTC vs. 20-day MA: ~$82,356 vs. est. $80–82K → borderline, **not confirmed offensive**
+- Offensive trigger (2 closes above $82,500): **NOT met** (BTC at $82,356 today)
+- **Mode: DEFENSIVE — BTC/ETH only, reduced sizes**
+
+---
+
+### Position Review
+
+| Symbol | Entry | Current | Stop | P&L% |
+|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,370.95 | $2,199.16 | +2.42% |
+| SOL/USD | $93.35 | $96.62 | $88.68 | +3.51% |
+| XRP/USD | $1.4294 | $1.474 | $1.424 | +3.11% |
+
+*Note: SOL and XRP are outside the defensive-mode BTC/ETH-only rule — these were entered in prior sessions. Stops are active; no new alts to be added in defensive mode.*
+
+Weekly trade count: 5 (ETH buy, SOL buy, XRP buy, BTC sell ×2) — well under 25 limit.
+
+---
+
+### Decision: **HOLD**
+
+No new entries this session.
+
+**Reasons:**
+1. DEFENSIVE mode — BTC not confirmed above $82,500 for 2 consecutive days
+2. Cash limited to $63.86 (max new position ~$28 at 20% equity)
+3. All 3 existing positions profitable with active stops in place
+4. Strategy default: HOLD (patience > activity)
+
+**Watch levels:**
+- Offensive mode trigger: BTC close above $82,500 × 2 consecutive days → expand to full universe, full sizes
+- SOL stop: $88.68 (raise if SOL pushes above $100)
+- XRP stop: $1.424 (very tight; current $1.474 — consider raising if XRP holds above $1.50)
+- ETH stop: $2,199.16 (8h-old stop; ETH now $2,379 — consider trailing up)
