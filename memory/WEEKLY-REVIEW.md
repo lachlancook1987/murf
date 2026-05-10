@@ -51,3 +51,84 @@ No trades executed — no sector P&L to evaluate. Sectors remain at baseline (no
 **Patience is a position.** BTC rallied +3.15% this week while the bot held cash. This is an acceptable outcome in week 1 — the entry conditions were not met cleanly, and forcing a trade would have risked entering at $76K–77K just before a 3-day sideways grind. Defined levels > FOMO.
 
 Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, switch to offensive mode. Watch ETH for Glamsterdam upgrade catalyst entry at $2,250–2,300.
+
+---
+
+## Week of 2026-05-04 — Review Date: 2026-05-10
+
+### Account Snapshot (Friday Close)
+| Field | Value |
+|---|---|
+| Equity (ending) | $139.66 |
+| Cash | $91.83 |
+| Long Market Value | $47.83 |
+| Open Positions | 2 (ETH, SOL) |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (est.) | $137.11 |
+| Ending Equity | $139.66 |
+| **Week Return** | **+1.86%** |
+| BTC Week Return | +2.67% (Mon $78,557 → Fri $80,656) |
+| **Bot vs BTC** | **-0.81%** (underperformed) |
+
+> Starting equity estimated from BTC position value at Monday open (0.00174538 BTC × $78,557.39). Portfolio history API returned $0 all week — likely a reporting lag on this small live account. Ending equity from live `/v2/account`.
+
+### Trade Summary
+| # | Date | Pair | Side | Qty | Price | P&L | Status |
+|---|---|---|---|---|---|---|---|
+| 1 | 2026-05-09 | BTC/USD | SELL (close) | 0.0007 | $80,291.87 | N/A* | Closed |
+| 2 | 2026-05-09 | BTC/USD | SELL (close) | 0.00104538 | $80,220.86 | N/A* | Closed |
+| 3 | 2026-05-09 | ETH/USD | BUY (open) | 0.0086 | $2,314.90 | +$0.13 unrealized | Open |
+| 4 | 2026-05-09 | SOL/USD | BUY (open) ⚠️ | 0.2995 | $93.35 | -$0.05 unrealized | Open |
+
+*BTC buy price unknown — position predates order log (likely transferred in). No closed P&L calculable.
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades | 4 (2 closed, 2 open) |
+| Wins | N/A |
+| Losses | N/A |
+| Win Rate | N/A (no closed P&L) |
+| Profit Factor | N/A |
+| Avg Win / Avg Loss | N/A |
+
+### Open Positions (End of Week)
+| Pair | Entry | Current | Stop | Unrealized P&L |
+|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,330.08 | $2,199.16 | +$0.13 (+0.66%) |
+| SOL/USD | $93.35 | $93.20 | $88.68 | -$0.05 (-0.16%) |
+
+### BTC Price Action (Daily)
+| Date | Open | Close |
+|---|---|---|
+| Mon 2026-05-04 | $78,557 | $79,859 |
+| Tue 2026-05-05 | $79,847 | $80,900 |
+| Wed 2026-05-06 | $80,885 | $81,446 |
+| Thu 2026-05-07 | $81,440 | $79,995 |
+| Fri 2026-05-09 | $80,197 | $80,656 |
+
+### Sector Review
+| Sector | Trades | Result | Notes |
+|---|---|---|---|
+| BTC | 2 closes | Neutral | Rotated out; no buy records in system |
+| ETH | 1 open | +0.66% unrealized | Defensive mode compliant |
+| SOL | 1 open | -0.16% unrealized | ⚠️ RULES VIOLATION — defensive mode (BTC/ETH only) |
+
+**Sectors to exit:** None (no closed losses to trigger 2-consecutive-loss rule). SOL flagged for rules violation.
+
+### Regime Status
+- BTC 20-day MA: ~$78,584 — BTC now above at $80,733 (+2.77%); **OFFENSIVE mode** active
+- Funding rate: Neutral
+- F&G: Recovering (was 47 on May 4)
+- Mode: **OFFENSIVE** (confirmed by session-open 2026-05-10)
+
+### Key Lessons
+1. **Regime filter enforcement:** SOL was entered while in defensive mode (BTC/ETH only). Must enforce the regime gate mechanically — no exceptions.
+2. **No buy records for BTC:** Position predates order log; makes P&L tracking impossible. Any new position must be logged via TRADE-LOG.md at entry.
+3. **First full week HOLD then pivot:** Waited patiently Mon–Fri then acted May 9 — good patience, but the SOL entry violated the rules.
+4. **Account size reality:** Live account is ~$140 real money. Sizing discipline applies proportionally.
+
+---
