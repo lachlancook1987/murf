@@ -108,3 +108,89 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.87 |
+| Cash | $91.83 |
+| Long Market Value | $48.04 |
+| Open Positions | 2 (ETH, SOL) |
+| Open Orders | 2 (stop-limits for ETH and SOL) |
+| Account Status | ACTIVE (live — #251041174) |
+
+**Existing Positions:**
+- ETH: 0.0085785 @ $2,314.90, current $2,326.50 (+0.50%), stop at $2,199.16
+- SOL: 0.29875125 @ $93.3467, current $93.988 (+0.69%), stop at $88.68
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,852–80,915 | +0.24% 24h |
+| ETH price | ~$2,324–2,326 | +0.26% 24h |
+| SOL price | ~$93.72–94.07 | +1.34% 24h |
+| XRP price | ~$1.4242–1.4294 | Broke $1.43 resistance |
+| BTC 20-day MA | $78,588.95 | Calculated from 20 daily closes |
+| BTC vs 20-day MA | ABOVE by $2,263 (+2.88%) | Offensive regime |
+| BTC Dominance | ~58–60% | Stable |
+| Fear & Greed | Not retrieved | |
+| DXY | Not retrieved | |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.24% → gate NOT triggered (not down >5%)
+- BTC vs. 20-day MA: ABOVE by 2.88% → **OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal position sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- CLARITY Act markup: Senate Banking Committee scheduled week of May 11 → XRP specifically named as digital commodity; XRP broke $1.43 resistance, eyeing $2 target
+- BTC ETFs: $2.44B April inflows; $630M single-day (Week 1 May); BlackRock IBIT dominating
+- Ethereum Glamsterdam upgrade: June target; pre-positioning driving ETH; historically +35–60% pre-upgrade
+- MicroStrategy: 815,061 BTC held (3.9% of supply); supply squeeze ongoing
+- Risk sentiment: Geopolitical improvement (Iran Strait of Hormuz reopened)
+
+**Bearish/Risk:**
+- Fed Chair transition: Powell → Warsh (hawkish) May 15 → potential tightening signal
+- BTC struggling to break $82,500 (next resistance)
+- BABY unlock: Today (May 10) — avoid BABY
+- Kevin Warsh hawkish outlook — risk for mid-May
+
+---
+
+### Trade Ideas
+
+**Idea 1 — XRP/USD Long (CLARITY Act catalyst)**
+- Catalyst: Senate Banking Committee CLARITY Act markup week of May 11; XRP classified digital commodity; broke $1.43 resistance
+- Entry: Market ~$1.43 (breakout above resistance)
+- Stop: 12% trailing (~$1.26 fixed equivalent)
+- Target 1: $1.57 (+10%); Target 2: $2.00 (+40%)
+- Size: ~$27.97 (20% equity, max for offensive mode)
+- R:R: ~0.83:1 (T1) / ~2.67:1 (T2 vs 12% risk)
+- Qty: 19.5676 XRP
+
+**Idea 2 — Watch: BTC Long (breakout trigger)**
+- Trigger: BTC close above $82,500 — NOT YET MET
+- No action today
+
+**Idea 3 — Watch: ETH Add (pullback to support)**
+- Already holding. Add only on pullback to $2,250–2,300
+- NOT triggered today ($2,325)
+
+---
+
+### Decision: **ENTER XRP/USD**
+
+Regime upgraded to OFFENSIVE. CLARITY Act markup imminent (week of May 11). XRP broke $1.43 resistance. All hard rules pass. Execute market buy XRP/USD ~$27.97 notional, immediately set 12% trailing stop GTC.
