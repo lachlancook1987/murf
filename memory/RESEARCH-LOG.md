@@ -108,3 +108,91 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $141.70 |
+| Cash | $63.86 |
+| Buying Power | $63.86 |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Orders | 3 stop-limit sell orders (one per position) |
+| Account Status | ACTIVE |
+
+---
+
+### Market Context (live data as of ~22:45 UTC)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,890 (ask) | +1.53% vs yesterday close $80,656 |
+| ETH price | ~$2,367 (mid) | +2.16% today |
+| SOL price | ~$96.16 | +3.69% today |
+| XRP price | ~$1.4739 | +3.94% today |
+| BTC 20-day MA | $78,340 | BTC ABOVE by $3,550 |
+| BTC 24h change | +1.53% | Gate NOT triggered |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +1.53% → gate **NOT triggered**
+- BTC vs 20-day MA ($78,340): ABOVE by $3,550 → **OFFENSIVE MODE**
+- Funding: Neutral (no overheated signal)
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC sustained above 20-day MA; uptrend intact since late April
+- ETH, SOL, XRP all up 2–4% today on broad crypto strength
+- Spot BTC ETF inflows continuing; institutional accumulation narrative intact
+- ETH Glamsterdam upgrade catalyst still in play
+- All open positions profitable with stops in place
+
+**Risk/Bearish:**
+- BTC not yet confirmed above $82,500 (key watch level from 5/4 research)
+- BABY token unlock today (May 10) — pre-noted risk (not in our universe)
+- XRP just entered this morning (11:03 UTC) — position very fresh
+- Account cash limited to $63.86; max new position $28.34 (20% of equity)
+
+---
+
+### Open Position Status
+
+| Symbol | Avg Entry | Current | Unrealized P&L | Stop Level | Stop ID |
+|---|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,370.68 | +2.41% | $2,199.16 | ce339cc1 |
+| SOL/USD | $93.3467 | $96.16 | +3.02% | $88.68 | d6b66834 |
+| XRP/USD | $1.4294 | $1.4739 | +3.11% | $1.424 | 8af9aae7 |
+
+---
+
+### Trade Ideas Assessment
+
+**Potential: BTC Long**
+- BTC at $81,890, above 20-day MA, in uptrend
+- Watch level: $82,500 breakout for confirmation (not yet triggered)
+- With only $63.86 cash, max BTC position ~$28 (0.000342 BTC) — very small
+- **Verdict: HOLD — no confirmed breakout; chase risk too high at +1.5% intraday**
+
+**Existing positions:**
+- ETH, SOL, XRP all performing; stops protecting profits
+- No need to add to winners mid-session without fresh catalyst
+
+---
+
+### Decision: **HOLD — No new trades**
+
+Offensive mode active but no confirmed BTC breakout above $82,500. XRP entered just today; giving positions room. Watch for BTC close above $82,500 to trigger BTC long entry next session.
+
+**Watch levels for next session:**
+- BTC breakout trigger: close above $82,500 (2 consecutive days = full offensive)
+- ETH add trigger: pullback to $2,300 support
+- SOL/XRP: hold current positions with existing stops
