@@ -108,3 +108,96 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.68 |
+| Cash | $91.83 |
+| Buying Power | $91.83 |
+| Open Positions | 2 (ETH/USD, SOL/USD) |
+| Open Orders | 2 (protective stops on each) |
+| Account Status | ACTIVE (live — #251041174) |
+
+*Note: Previous sessions placed ETH and SOL buys on 2026-05-09; BTC position was fully exited on 2026-05-09.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,636 | -0.03% 24h (flat) |
+| ETH price | ~$2,326 | +0.45% 24h |
+| SOL price | ~$93.35 | -0.42% 24h |
+| BTC 20-day MA | $78,578 | BTC **above** MA → Offensive mode |
+| BTC Dominance | N/A | Data unavailable |
+| Fear & Greed | N/A | Data unavailable |
+| BTC Funding | N/A | Data unavailable |
+| DXY | N/A | Data unavailable |
+
+**BTC 20-day MA closes (Apr 15 – May 10):** calculated from Alpaca bars = $78,578
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.03% → gate NOT triggered (no >5% down)
+- BTC vs 20-day MA: $80,636 > $78,578 → **OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC institutional buying / ETFs targeting $80K–$100K range
+- SOL "Wall Street embrace": Schwab Crypto, GSR ETF with staking
+- SOL Alpenglow + Firedancer upgrades in pipeline
+- ETH holding $2,300; Glamsterdam upgrade catalyst still valid
+- BTC above 20-day MA confirms bullish momentum
+
+**Bearish/Risk:**
+- SOL $285M Drift exploit (partially resolved)
+- ETH/BTC ratio still lagging
+- BTC not yet breaking $82,500 (prior offensive trigger watch level)
+- BABY token unlock today (May 10) — avoid BABY longs
+- CLARITY Act deadline May 21 — regulatory uncertainty
+
+---
+
+### Existing Positions Review
+
+| Symbol | Qty | Entry | Current | P&L% | Stop | Stop Type |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,327 | +0.52% | $2,199.16 | stop_limit |
+| SOL/USD | 0.29875125 | $93.3467 | $93.35 | 0.00% | $82.14 | stop_limit |
+
+- ETH stop at $2,199.16 = ~5% below entry (within 3–5% stop rule) ✓
+- SOL stop at $82.14 = ~12% below entry ✓
+- All existing stops confirmed active in orders.
+
+---
+
+### Trade Ideas (OFFENSIVE mode)
+
+**BTC:** At $80,636 — between dip zone ($77,500–78,500) and breakout level ($82,500). No defined setup. **PASS.**
+
+**ETH add:** At $2,327 — above entry zone ($2,250–2,300). Don't chase. **PASS** (watch for pullback to $2,250–2,300).
+
+**SOL add:** At $93.35, flat from existing entry. No gain yet; not adding to flat position. **PASS.**
+
+---
+
+### Decision: **HOLD**
+
+No new entries. Existing ETH and SOL positions managed with stops. BTC not at defined entry or breakout level. Default stance: patience.
+
+**Watch levels:**
+- BTC long trigger: pullback to $77,500–78,500 OR close above $82,500 for 2 consecutive days
+- ETH add trigger: pullback to $2,250–2,300
+- SOL: hold with $82.14 stop; add on pullback to $88–89 support if catalyst aligns
