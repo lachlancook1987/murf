@@ -49,8 +49,23 @@ case "$CMD" in
     apca_curl -X POST -H "Content-Type: application/json" \
       -d "$BODY" "${BASE}/orders" | python3 -m json.tool
     ;;
+  close)
+    SYM="${2:?Usage: $0 close SYM/USD}"
+    ENC=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$SYM")
+    apca_curl -X DELETE "${BASE}/positions/${ENC}" | python3 -m json.tool
+    ;;
+  cancel)
+    OID="${2:?Usage: $0 cancel ORDER_ID}"
+    apca_curl -X DELETE "${BASE}/orders/${OID}" | python3 -m json.tool
+    ;;
+  replace)
+    OID="${2:?Usage: $0 replace ORDER_ID '{...}'}"
+    BODY="${3:?Usage: $0 replace ORDER_ID '{...}'}"
+    apca_curl -X PATCH -H "Content-Type: application/json" \
+      -d "$BODY" "${BASE}/orders/${OID}" | python3 -m json.tool
+    ;;
   *)
-    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets [SYM/USD]|order '{json}'}" >&2
+    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets [SYM/USD]|order '{json}'|close SYM/USD|cancel ORDER_ID|replace ORDER_ID '{json}'}" >&2
     exit 1
     ;;
 esac
