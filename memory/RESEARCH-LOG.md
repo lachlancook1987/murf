@@ -638,3 +638,117 @@ Both ETH and SOL positions held with active stop-losses. No new entries — BTC 
 - ETH stop raise: Move stop to $2,250 if ETH breaks $2,380
 - SOL time stop: Reassess/exit if no movement by May 11 (48h from entry May 9)
 - New entry opportunity: ETH dip to $2,280–2,300 if BTC stays firm
+
+---
+
+## 2026-05-10 — Pre-Session Research (Session 2)
+
+### Account Snapshot
+| Field | Value |
+|-------|-------|
+| Equity | $139.77 |
+| Cash / Buying Power | $91.83 |
+| Long Market Value | $47.94 |
+| Deployed | ~34% of equity |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop |
+|--------|-----|-----------|---------|----------|------|
+| ETHUSD | 0.0085785 | $2,314.90 | $2,326.48 | +$0.10 (+0.50%) | stop $2,199.16 / lmt $2,188.16 |
+| SOLUSD | 0.29875 | $93.3467 | $93.68 | +$0.10 (+0.36%) | stop $88.68 / lmt $88.24 |
+
+**Recent Activity:**
+- 2026-05-09: BTC closed (2 market sells) @ avg ~$80,256 — exited BTC position
+- 2026-05-09: ETH bought (market) 0.0086 @ $2,314.90 — opened ETH long
+- 2026-05-10: SOL bought (market) 0.2995 @ $93.3467 — opened SOL long; stop replaced (old $82.14 canceled → new $88.68 active)
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|-----------|-------|------|
+| BTC Price | $80,669 | +0.5% 24h; 24h range $80,125–$81,050 |
+| ETH Price | $2,327 | +0.7% 24h; above 50-day SMA $2,225 |
+| BTC Dominance | ~59% | Elevated; slight alt headwind |
+| Fear & Greed | 47 (Neutral) | 3-month high (recovered from extreme fear 12) |
+| BTC Funding Rate | +0.0017%/8h | Neutral; longs not overheated |
+| DXY | ~97.84–97.90 | Down 0.17–0.42% — bullish tailwind for crypto |
+| S&P 500 Futures | ~7,419 (+0.46%) | Macro positive; risk-on supportive |
+
+**BTC 20-day MA estimate:** ~$80,000–82,000 (BTC at lower boundary — borderline)
+
+---
+
+### Regime Filter
+- BTC 24h change: +0.5% → gate **NOT triggered**
+- BTC vs. 20-day MA: $80,669 at lower boundary → **DEFENSIVE MODE continues**
+- Funding: +0.0017%/8h → neutral
+- ⚠️ SOL regime conflict: SOL is outside defensive mode universe (BTC/ETH only); stop at $88.68 managing downside — do NOT add size
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF inflows: $500M recent week (BlackRock/Fidelity led); supply absorbed 9× faster than mining rate
+- MicroStrategy: 815,061 BTC total (3.9% supply) — structural bid intact
+- ETH: Glamsterdam upgrade catalyst + ETF inflow streak (best since launch)
+- Chainlink: AWS Data Feeds + Proof of Reserve listing; SWIFT 2025 winner; Grayscale/Bitwise ETF filings
+- AI crypto momentum: TAO +16% (7d), RENDER +31%, FET +60%
+- DXY 97.84 and falling — historically bullish (inverse correlation to crypto)
+- S&P 500 near highs, positive risk-on backdrop
+
+**Bearish / Risk:**
+- BTC at 20-day MA boundary — no confirmed breakout
+- BTC dominance ~59% elevated — capital staying in BTC, not flowing to alts
+- BABY (Babylon) first unlock today: team/investor/advisor 1/36th allocation — not held; watch for sentiment noise
+- AVAX $16.55M unlock this week (0.4% mcap); CONX $17.99M (58.8% mcap) — avoid CONX
+- Total 7-day protocol unlocks: ~$270M — systemic slight headwind
+- SOL: prediction market shows 20.5% chance <$80; RSI neutral 46.72; 3Commas bearish pattern
+
+---
+
+### Trade Ideas (DEFENSIVE mode)
+
+**Idea 1 — Hold ETH Long (existing)**
+- Current $2,326 vs entry $2,315 — +0.5% unrealized
+- Stop: $2,199.16 / $2,188.16 (~5.5% from current)
+- Catalyst: Glamsterdam upgrade + ETF inflow streak
+- Target 1: $2,550 (R:R ~2.0:1); Target 2: $2,750
+- Action: Hold; do not add in defensive mode
+
+**Idea 2 — Manage SOL Long (regime conflict)**
+- Current $93.68 vs entry $93.35 — +0.36% unrealized
+- Stop: $88.68 / $88.24 (~5.3% from current)
+- Risk: Outside defensive mode rules — no adds
+- Trim alert: Intraday close below $91 → consider 50% trim
+- Target: $100 (56% prediction market probability by May end)
+
+**Idea 3 — Offensive Mode Trigger Watch**
+- Trigger: BTC 2 consecutive daily closes above $82,500
+- Then: Expand to SOL (add size), consider AVAX; restore full position sizing
+- Confirm: ETF inflows continuing + DXY < 97 + funding neutral
+
+---
+
+### Risk Factors
+1. BTC at 20-day MA boundary — failure risks pullback to $77–78K support
+2. SOL outside defensive mode rules — stop is sole protection; no adds
+3. BABY unlock today (May 10) — not held; watch contagion sentiment
+4. CONX large unlock (58.8% mcap) — avoid; potential dump pressure
+5. DXY reversal risk — watch > 99 as red flag
+6. alpaca.sh script bug: ALPACA_ENDPOINT missing /v2 — wrapper calls return "endpoint not found"; worked around by calling /v2 directly
+
+---
+
+### Decision: **HOLD**
+
+Defensive mode active. ETH and SOL positions held with stops in place.
+No new entries. SOL regime conflict managed via stop at $88.68.
+Watch for BTC 2-day close above $82,500 to switch offensive mode.
+
+**Watch levels:**
+- BTC offensive trigger: 2 consecutive closes above $82,500
+- ETH: hold; stop $2,199; add target $2,250 on pullback if BTC > MA
+- SOL trim alert: intraday close below $91 → 50% trim
+- DXY red flag: sustained > 99
