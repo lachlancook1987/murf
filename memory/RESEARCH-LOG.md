@@ -108,3 +108,72 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.51 |
+| Cash | $63.86 |
+| Buying Power | $63.86 |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Orders | 3 stop-limit orders covering all positions |
+| Account Status | ACTIVE (live — 251041174) |
+
+*Positions entered May 9–10 by previous sessions. All protected by stop-limit orders.*
+
+---
+
+### Live Quotes (13:12 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $80,865 | $80,928 | ~$80,897 |
+| ETH/USD | $2,323.77 | $2,326.40 | ~$2,325 |
+| SOL/USD | $93.15 | $93.53 | ~$93.34 |
+| XRP/USD | $1.4230 | $1.4288 | ~$1.426 |
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC 24h change | +0.12% | NOT down >5% — entry gate CLEAR |
+| BTC 20-day MA | ~$77,331 | BTC ($80,897) ABOVE MA → OFFENSIVE MODE |
+| Fear & Greed | Unknown | No fresh data available |
+| BTC Dominance | Unknown | No fresh data available |
+| DXY | Unknown | No fresh data available |
+
+**Regime: OFFENSIVE — BTC above 20-day MA. Full universe, normal sizes permitted.**
+
+---
+
+### Existing Positions & Stops
+| Symbol | Qty | Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,325.33 | +$0.09 | Stop-limit $2,199.16 (~5% below entry) |
+| SOL/USD | 0.2987 | $93.35 | $93.56 | +$0.06 | Stop-limit $88.68 (~5% below entry) |
+| XRP/USD | 19.5187 | $1.4294 | $1.4219 | -$0.15 | Stop-limit $1.2579 (~12% below entry) |
+
+---
+
+### Trade Ideas — New Positions
+- Max new position: 20% × $139.51 = **$27.90**
+- Deployable above 20% cash buffer: $63.86 − $27.90 = **$35.96**
+- Trades this week (Mon–Sun): 5 (ETH buy, SOL buy, XRP buy, BTC sell ×2) — well under 25 limit
+
+**No new catalysts identified today. No new entry setups with high conviction.**
+
+---
+
+### Decision: **HOLD**
+
+Three positions already deployed, all protected by stops. Account is small ($139.51), offensive mode is active but no compelling new catalyst documented. Default stance = patience. Monitor existing positions.
+
+**Watch levels:**
+- ETH stop-limit at $2,199.16 — if triggered, reassess ETH re-entry
+- SOL stop-limit at $88.68 — if triggered, do not re-enter without fresh catalyst
+- XRP stop-limit at $1.2579 — widest risk; monitor XRP momentum
+- BTC: if pulling back to $77,500–78,500, consider small long entry (up to $27.90)
