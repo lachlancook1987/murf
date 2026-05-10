@@ -14,10 +14,10 @@ DATA_BASE="${ALPACA_CRYPTO_DATA_ENDPOINT:-https://data.alpaca.markets}/v1beta3/c
 CMD="${1:-account}"
 
 apca_curl() {
-  curl -s \
+  curl --no-progress-meter \
     -H "APCA-API-KEY-ID: ${ALPACA_API_KEY}" \
     -H "APCA-API-SECRET-KEY: ${ALPACA_SECRET_KEY}" \
-    "$@"
+    "$@" 2>/dev/null
 }
 
 case "$CMD" in
