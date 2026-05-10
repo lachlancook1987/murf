@@ -9,7 +9,7 @@ for v in ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT; do
   fi
 done
 
-BASE="${ALPACA_ENDPOINT}"
+BASE="${ALPACA_ENDPOINT%/}"  # strip trailing slash
 CMD="${1:-account}"
 
 apca_curl() {
@@ -21,13 +21,13 @@ apca_curl() {
 
 case "$CMD" in
   account)
-    apca_curl "${BASE}/account" | python3 -m json.tool
+    apca_curl "${BASE}/v2/account" | python3 -m json.tool
     ;;
   positions)
-    apca_curl "${BASE}/positions" | python3 -m json.tool
+    apca_curl "${BASE}/v2/positions" | python3 -m json.tool
     ;;
   orders)
-    apca_curl "${BASE}/orders?status=all&limit=20" | python3 -m json.tool
+    apca_curl "${BASE}/v2/orders?status=all&limit=20" | python3 -m json.tool
     ;;
   *)
     echo "Usage: $0 {account|positions|orders}" >&2
