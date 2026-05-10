@@ -36,3 +36,15 @@
 - Fear & Greed Index
 - BTC dominance (rising = alt headwinds)
 - DXY (inverse correlation to crypto)
+
+## Narrative Sectors
+Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → pause that sector.
+
+| Sector | Assets | Status | Consecutive Losses | Notes |
+|---|---|---|---|---|
+| BTC Core | BTC/USD | ACTIVE | 0 | Defensive-mode primary |
+| ETH / L1 | ETH/USD | ACTIVE | 0 | Glamsterdam upgrade catalyst pending |
+| L2 / DeFi | SOL, AVAX, ARB | WATCH | 0 | Offensive mode only; BTC dom must be falling |
+| Alts (top 20) | Various | WATCH | 0 | Offensive mode only |
+
+*Last updated: 2026-05-04 (week 1 — no trades, baseline established)*
