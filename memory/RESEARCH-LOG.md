@@ -4,6 +4,88 @@
 
 ---
 
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.68 |
+| Cash | $91.83 |
+| Buying Power | $91.83 |
+| Open Positions | 2 (ETH/USD, SOL/USD) |
+| Open Orders | 2 GTC stop-limits (ETH sell, SOL sell) |
+| Account Status | ACTIVE (live) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,620–$80,771 | +0.12–1.09% 24h |
+| ETH price | ~$2,319–$2,327 | +1.77% 24h |
+| SOL price | ~$93.35 | -0.42% today |
+| Fear & Greed | 50 (Neutral) | Stable from prior week |
+| BTC Dominance | ~58–60% | No change signal |
+| DXY | No current data | Prior ~98.2 |
+
+**BTC 20-day MA:** Insufficient bar data from API (1 bar only). Estimated ~$80,000–82,000 based on prior research and recent range. BTC at borderline — maintaining DEFENSIVE MODE.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.12% → gate **NOT triggered** (not down >5%)
+- BTC vs 20-day MA: ~$80,620 vs est. ~$80-82K → **DEFENSIVE MODE** (borderline)
+- Funding: No current data — assume neutral
+- **Mode: DEFENSIVE — BTC/ETH only, reduce sizes 50%**
+
+---
+
+### Existing Positions Status
+
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,327 | +0.52% | $2,199.16 (stop-limit) |
+| SOL/USD | 0.29875125 | $93.3467 | $93.35 | ~0% | $82.14 (stop-limit) |
+
+Note: SOL entered prior session outside defensive-mode rules. Position covered by stop.
+
+---
+
+### Position Sizing Analysis
+
+- Max per position: 20% × $139.68 = **$27.94**
+- SOL: $27.89 — **AT CAP, no adds**
+- ETH: $19.96 — room for ~$7.98 more (sub-threshold, not worth fees)
+- No new position fits defensively (BTC 0.0003 = ~$24 would be viable but no fresh catalyst)
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC volume +42% since Monday (Coinbase)
+- ETH Glamsterdam upgrade catalyst still live
+- Fear & Greed 50 — neutral, stable recovery from extreme fear
+
+**Bearish/Risk:**
+- BTC flat day (+0.12%) — no breakout momentum
+- Trump Media Q1 loss $406M on crypto markdowns — negative macro signal
+- No clear directional catalyst for fresh entry today
+- Account equity too small for meaningful BTC position sizing
+
+---
+
+### Decision: **HOLD**
+
+No new entries. Existing positions protected by GTC stop-limit orders. Watching for:
+- BTC 2 closes above $82,500 → offensive mode, expand universe
+- ETH pullback below $2,300 + hold → potential small add
+- SOL stop ($82.14) — currently ~12% below entry; monitor
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
