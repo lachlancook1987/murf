@@ -108,3 +108,74 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.65 |
+| Cash | $91.83 |
+| Buying Power | $91.83 |
+| Open Positions | 2 (ETH, SOL) |
+| Open Orders | 2 stop-limits (ETH @ $2,199.16, SOL @ $88.68) |
+| Account Status | ACTIVE |
+
+---
+
+### Live Quotes (07:04 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $80,695 | $80,800 | $80,748 |
+| ETH/USD | $2,328 | $2,330 | $2,329 |
+| SOL/USD | $93.32 | $93.66 | $93.49 |
+
+---
+
+### Regime Filter
+
+| Indicator | Value | Status |
+|---|---|---|
+| BTC 24h change | +0.58% | Gate NOT triggered |
+| BTC 20-day MA (Apr20–May9) | $78,340 | — |
+| BTC vs 20-day MA | +3.08% above | **OFFENSIVE MODE** |
+| BTC down >5% gate | Not triggered | — |
+
+**Regime: OFFENSIVE — full universe, normal sizes (BTC firmly above 20-day MA)**
+
+---
+
+### Open Positions Review
+| Symbol | Entry | Current | P&L | Stop | Status |
+|---|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,329 | +0.65% | $2,199.16 stop-limit | Holding |
+| SOL/USD | $93.35 | $93.49 | +0.15% | $88.68 stop-limit | Holding |
+
+---
+
+### Trade Setup Check — BTC Long
+
+- Planned entry zone: $77,500–78,500
+- Current BTC price: $80,748
+- BTC is **3.5–4.2% above** defined entry zone
+- No fresh catalyst documented today (Perplexity returned stale data)
+- Strategy: "Entry on pullback to key support — do NOT chase"
+- **Result: SKIP — price above entry zone, no catalyst**
+
+### Weekly Trade Count
+- Trades this week (May 4–10): 4 (BTC sell ×2, ETH buy ×1, SOL buy ×1)
+- Remaining: 21 of 25 allowed
+
+---
+
+### Decision: **HOLD**
+
+Offensive mode active but BTC has moved above the defined entry zone ($77.5K–$78.5K). No valid pullback setup. Existing ETH and SOL positions performing well with stops in place.
+
+**Watch levels:**
+- BTC long trigger: Pullback to $79,000–79,500 (new support band) OR continuation breakout above $82,500 with volume
+- ETH: Hold current long; add only on pullback to $2,250–2,300
+- SOL: Hold current long; add only on pullback to $90–91
+- Offensive mode confirmation: BTC 2 consecutive closes above $82,500 → expand to full alt universe (AVAX, LINK, etc.)
