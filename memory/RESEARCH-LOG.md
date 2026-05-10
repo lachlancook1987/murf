@@ -111,6 +111,32 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 
 ---
 
+## 2026-05-04 — Midday Addendum (~12:00)
+
+### Positions / Orders
+- **None** — account remains cash-only (clean slate confirmed via live API)
+
+### Price Check
+| Asset | Midday Price | vs. Pre-Session |
+|---|---|---|
+| BTC | ~$78,655–79,615 | Slight pullback (~0.5–1%) |
+| ETH | ~$2,309–2,359 | Slight pullback (~0.5–1%) |
+
+### Sharp Movers
+- No coins in top 20 with >5% move in past 4 hours (Perplexity: no intraday data flagged)
+- No exploits, protocol incidents, or major regulatory news reported
+
+### Regime Status
+- **Still DEFENSIVE** — BTC remains below estimated 20-day MA ($80–82K)
+- Entry triggers not reached: BTC needs pull to $77,500–78,500 or breakout >$82,500; ETH needs pull to $2,250–2,300
+
+### Actions Taken
+- **None** — no positions to manage, no losers to cut, no stops to tighten
+
+### Decision: **HOLD — continue watching entry levels**
+
+---
+
 ## 2026-05-10 — Session-Open Research (~03:22 UTC)
 
 ### Account Snapshot
