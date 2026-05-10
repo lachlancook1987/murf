@@ -21,9 +21,18 @@ msg = sys.argv[1]
 print(json.dumps({'comment_text': msg, 'notify_all': False}))
 " "$MESSAGE")
 
-curl -s \
+RESPONSE=$(curl -s \
   -X POST \
   -H "Authorization: ${CLICKUP_API_KEY}" \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" \
-  "https://api.clickup.com/api/v2/view/${CLICKUP_CHANNEL_ID}/comment" | python3 -m json.tool 2>/dev/null || true
+  "https://api.clickup.com/api/v2/view/${CLICKUP_CHANNEL_ID}/comment")
+
+echo "$RESPONSE" | python3 -m json.tool 2>/dev/null || echo "$RESPONSE"
+
+if echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); sys.exit(0 if 'err' not in d else 1)" 2>/dev/null; then
+  :
+else
+  echo "ClickUp API error: $RESPONSE" >&2
+  exit 1
+fi
