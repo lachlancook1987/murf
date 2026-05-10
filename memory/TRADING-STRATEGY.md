@@ -1,34 +1,38 @@
 # Crypto Trading Strategy
 
 ## Universe
-- Crypto only — BTC, ETH, SOL, and select large-cap alts (top 20 by market cap)
+- Crypto only — BTC, ETH, SOL, and alts in top 50 by market cap
 - No stocks, no options, no leverage >2x
 
 ## BTC Regime Filter (mandatory gate)
-- **BTC down >5% in 24h** → Decision = HOLD, no new entries
-- **BTC below 20-day MA** → Defensive mode: BTC/ETH only, reduce position sizes by 50%
+- **BTC down >8% in 24h** → Decision = HOLD, no new entries (genuine crash signal only)
+- **BTC below 20-day MA** → Caution mode: full universe still tradeable, reduce position sizes by 25%
 - **BTC above 20-day MA + neutral/positive funding** → Offensive mode: full universe, normal sizes
 
 ## Position Sizing
-- Max single position: 20% of portfolio
-- Max total deployed: 80% of portfolio (keep 20% cash buffer)
-- Risk per trade: 1-2% of portfolio equity
+- Max single position: 65% of portfolio equity
+- Max total deployed: 95% of portfolio (keep ~5% cash for fees/slippage)
+- Risk per trade: 5-10% of portfolio equity
 
 ## Entry Rules
-- Confirm catalyst (news, on-chain, technicals align)
-- Entry on pullback to key support or breakout with volume
-- Always set stop-loss at entry
+- Confirm catalyst (news, on-chain, technicals — at least one must be present)
+- Entry on pullback to key support, breakout with volume, OR momentum (strong trend + catalyst = valid market entry)
+- No chasing pumps >20% above base in a single session
+- Always set stop-loss immediately after fill
 
 ## Exit Rules
-- Stop-loss: 3-5% below entry (hard stop)
+- Stop-loss: **5% trailing stop GTC**, placed immediately after fill confirmation
+  - Order type: `trailing_stop` with `trail_percent=5`
+  - Fallback if trailing_stop rejected: fixed stop-limit 5% below entry (stop) / 4.5% below entry (limit)
+  - Caution mode (BTC below 20-day MA): tighten to **4% trailing stop**
 - Take profit: scale out at 1R, 2R, 3R
-- Time stop: exit if no movement in 48h
+- Trailing stop handles exits — no arbitrary time stop
 
 ## Risk Management
-- Default stance: HOLD (patience > activity)
-- No chasing pumps >10% from base
-- No trading during extreme fear (<15 F&G) unless thesis is very strong
-- No trading during extreme greed (>85 F&G) — look for shorts or wait
+- Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
+- Fear & Greed <10 → caution flag, reduce size by 50% (do NOT block entry entirely)
+- Fear & Greed >85 → no restriction, trade the greed
+- No trading during genuine market crashes (BTC >8% down 24h)
 
 ## Indicators Tracked
 - BTC 20-day MA (regime filter)
@@ -42,9 +46,9 @@ Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → 
 
 | Sector | Assets | Status | Consecutive Losses | Notes |
 |---|---|---|---|---|
-| BTC Core | BTC/USD | ACTIVE | 0 | Defensive-mode primary |
+| BTC Core | BTC/USD | ACTIVE | 0 | Primary holding |
 | ETH / L1 | ETH/USD | ACTIVE | 0 | Glamsterdam upgrade catalyst pending |
-| L2 / DeFi | SOL, AVAX, ARB | WATCH | 0 | Offensive mode only; BTC dom must be falling |
-| Alts (top 20) | Various | WATCH | 0 | Offensive mode only |
+| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | Now eligible in caution mode too |
+| Alts (top 50) | Various | ACTIVE | 0 | Full universe always eligible |
 
-*Last updated: 2026-05-10 (week 2) — SOL entered on 2026-05-09 in violation of defensive mode (BTC/ETH only rule); now in offensive mode so position is retained, but entry was a rules breach. Enforce regime gate mechanically going forward.*
+*Last updated: 2026-05-10 — Aggressive profile activated. Sector restrictions removed; all sectors ACTIVE at all times unless 2 consecutive losses trigger a sector pause.*
