@@ -108,3 +108,120 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-10 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.64 |
+| Cash | $91.83 (65.8%) |
+| Buying Power | $91.83 |
+| Portfolio Value | $139.64 |
+| Long Market Value | $47.81 |
+| Account Status | ACTIVE (acct# 251041174) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | MV | P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,326.60 | $19.96 | +$0.10 (+0.50%) | $2,199.16 (GTC) |
+| SOL/USD | 0.29875 | $93.3467 | $93.215 | $27.85 | -$0.04 (-0.14%) | $88.68 (GTC) |
+
+**Recent Activity:** BTC position fully exited May 9 at ~$80,220–80,291. SOL stop-limit updated (old stop at $82.14 canceled; new stop set at $88.68).
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,650–80,757 | +0.35–0.52% 24h; range $80,125–$81,065 |
+| ETH price | ~$2,326–2,329 | +0.5–0.9% 24h; range $2,300–$2,337 |
+| BTC Dominance | ~58.8% | CoinMarketCap 60.2% (+1.31% 24h); range 57.4–60.1% across sources |
+| Fear & Greed | 47–49 (Neutral) | Stable neutral; recovering from low of 12 last month |
+| BTC Funding Rate | +0.0017%/8h avg | Very low; Binance/BitMEX/Bybit all +0.01%, Kraken +0.0148% |
+| DXY | 97.84 | Down 0.23% session; -2.49% YoY; trending lower → crypto tailwind |
+| S&P 500 Futures | ~7,420 (+0.78%) | Near ATH; Nvidia miss caused Thu pullback; macro broadly positive |
+
+**BTC 20-day MA estimate:** ~$80,500–81,500 (BTC at borderline — AT the MA, not clearly above)
+
+---
+
+### Regime Filter (STEP 4)
+- BTC 24h: +0.4% → gate NOT triggered
+- BTC vs. 20-day MA: ~$80,650 vs. est. $80,500–81,500 → AT the MA, borderline
+- Funding: +0.0017%/8h → neutral, not overheated
+- DXY: 97.84 and falling → supportive
+- **Mode: DEFENSIVE** (unchanged) — BTC/ETH focus; reduced position sizes 50%
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF inflows: $629M single-day; sustained institutional absorption
+- MicroStrategy $42B BTC buying program ongoing
+- XRP ETF inflows $82M in April 2026 (strongest month ever)
+- CLARITY Act regulatory progress → positive long-term signal
+- DXY falling toward 97.6 (Q2 forecast) → structural crypto tailwind
+- SOL: Visa expanding $7B stablecoin settlement to Solana; Meta launching USDC creator payouts on Solana
+- ETH: Short-term target $2,403 by May 12 (Changelly forecast, +3.78% from current)
+- S&P near ATH — risk-on macro environment
+
+**Bearish/Risk:**
+- RAIN unlock today (May 10): 50.28B tokens, $377.30M (4.37% supply) — massive unlock, avoid RAIN
+- Linea unlock today: 1.01B tokens, $3.67M (1.42% supply) — minor
+- Nvidia earnings miss caused Thu pullback; Nasdaq futures -1.22% recently — AI/tech risk-off possible
+- Vitalik Buterin ETH sales reported (Fortune, May 8) — minor ETH headwind
+- SOL at $84–93 range; support $80–82 below current stop zone
+- BTC not yet clearly above 20-day MA — directional conviction low
+
+---
+
+### Trade Ideas (DEFENSIVE mode — no new entries)
+
+**Idea 1 — Hold ETH (existing position)**
+- Catalyst: Sustained ETF inflows + short-term $2,403 target by May 12
+- Entry: Already in @ $2,314.90; current $2,326.60 (+0.5%)
+- Stop: $2,199.16 (GTC, ~5.5% below current) — already placed
+- Target: $2,403 (T1), $2,550 (T2)
+- R:R from here: ~3.3:1 (T1) — favorable
+- Action: HOLD, stop remains in place
+
+**Idea 2 — Hold SOL (existing position, monitor)**
+- Catalyst: Visa stablecoin settlement + Meta USDC payouts on Solana
+- Note: SOL is technically out-of-scope for strict defensive mode (BTC/ETH only), but position is small and stop is placed
+- Entry: Already in @ $93.3467; current $93.215 (-0.14%)
+- Stop: $88.68 (GTC, ~5% below current) — already placed
+- Target: $98–$100 (Changelly avg ~$99.47 for May)
+- Action: HOLD, let stop manage risk; do NOT add to position in defensive mode
+
+**Idea 3 — BTC Re-entry Watch**
+- BTC exited yesterday at ~$80,250. Now trading $80,650.
+- Do NOT chase — wait for either:
+  - Pullback to $78,000–79,000 for re-entry (defensive add)
+  - 2 consecutive daily closes above $82,500 → switch to offensive mode
+- Current: NO ACTION, watching only
+
+---
+
+### Risk Factors
+1. BTC borderline at 20-day MA — break below $79,000 signals regime shift to firmly defensive/risk-off
+2. RAIN unlock ($377M today) — potential contagion selling pressure on smaller alts; ETH/SOL should be insulated
+3. Nvidia/tech earnings miss ripple — Nasdaq weakness could pressure crypto if risk-off spreads
+4. Vitalik ETH sales — sentiment dampener, watch for further reports
+5. SOL technically out-of-scope in defensive mode — if BTC drops below 20-day MA clearly, consider closing SOL
+6. DXY could reverse if Fed turns hawkish — watch 99+ as red line for crypto
+
+---
+
+### Decision: **HOLD**
+
+No new entries. Maintain both open positions (ETH, SOL) with existing stop-loss orders. BTC re-entry only on confirmed pullback or offensive mode trigger (2 closes above $82,500). Strategy: patience, let stops manage downside, wait for higher-probability setup.
+
+**Watch levels today:**
+- BTC regime flip DOWN: close below $79,000 → close SOL, tighten ETH stop
+- BTC offensive trigger: 2 closes above $82,500 → expand to full universe
+- ETH target: $2,403 (watch for scale-out opportunity)
+- SOL: $98–$100 target zone; stop $88.68 firm
