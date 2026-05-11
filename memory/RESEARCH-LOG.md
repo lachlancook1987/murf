@@ -4,6 +4,118 @@
 
 ---
 
+## 2026-05-11 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.49 |
+| Cash | $1.72 (1.2% — BELOW 20% buffer target) |
+| Buying Power | $1.72 |
+| Portfolio MV | $138.77 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | MV | P&L | % Equity |
+|---|---|---|---|---|---|---|
+| BTCUSD | 0.000242 | $80,868.63 | $80,784 | $19.54 | -$0.02 (-0.10%) | 13.9% |
+| ETHUSD | 0.008579 | $2,314.90 | $2,334 | $20.02 | +$0.16 (+0.83%) | 14.2% |
+| SOLUSD | 0.73785 | $95.29 | $95.86 | $70.73 | +$0.42 (+0.59%) | 50.3% ⚠️ |
+| XRPUSD | 19.519 | $1.4294 | $1.459 | $28.48 | +$0.58 (+2.07%) | 20.3% |
+
+**⚠️ Risk Alert:** Portfolio 98.8% deployed (strategy max: 80%). SOL = 50% of equity (strategy max: 20%). No cash buffer to add positions.
+
+**Active Stop-Loss Orders (GTC):**
+- BTC: sell stop $76,825 / limit $76,442 (~5.0% below entry) ✓
+- ETH: sell stop $2,199 / limit $2,188 (~5.0% below entry) ✓
+- SOL: sell stop $91.79 / limit $91.33 (~3.7% below entry) ✓
+- XRP: sell stop $1.424 / limit $1.417 (~0.4% below current) ⚠️ tight
+
+---
+
+### Market Context
+| Asset/Indicator | Value | 24h Change | Note |
+|---|---|---|---|
+| BTC | $80,784–$81,893 | +1.3–1.4% | Range $80,274–$82,450 |
+| ETH | $2,334–$2,350 | +1.2–2.2% | Above entry |
+| BTC Dominance | 58–60% | Flat (-0.08% to +0.05%) | Stable; altcoins neutral |
+| Fear & Greed | 47–50 (Neutral) | Flat | Unchanged from prior session |
+| BTC Funding Rate | +0.0007–0.0058%/8h | Low | Neutral; longs not overheated |
+| DXY | 97.56–98.12 | -0.35–0.42% | Weakening → crypto bullish signal |
+| S&P 500 Futures | ~7,408 | -0.14% | Slightly soft; macro neutral |
+| Fed Funds Rate | 5.75% | ⚠️ HIKED | Shock hike — risk-off macro catalyst |
+
+**BTC 20-day MA estimate:** ~$80,000–$81,500 (BTC at lower edge — borderline).
+
+---
+
+### Regime Filter (STEP 4)
+- BTC 24h: +1.3% → gate **NOT triggered** (threshold: -5%)
+- BTC vs 20-day MA: borderline (BTC ~$80,784, MA est. ~$80-81.5K) → **DEFENSIVE**
+- Funding: +0.006%/8h → neutral (no overheated longs)
+- **Mode: DEFENSIVE — BTC/ETH only for new entries, 50% size reduction**
+- Note: Fed hike to 5.75% compounds defensive stance — risk-off environment
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- DXY -0.4% today → headwind easing for crypto
+- Ethereum ETF inflows hit $2B cumulative (best streak since launch)
+- Bitcoin ETF inflows sustained (9-day streak through late April)
+- SOL: Visa stablecoin settlement + Meta USDC creator payouts — real adoption narrative
+- XRP: CLARITY Act markup May 21 (62% passage on Polymarket) → $1.50–$2.00 upside if passed
+- Fear & Greed: Neutral (47-50) — room to move up before overheating
+
+**Bearish/Risk:**
+- **Fed hiked to 5.75%** — unexpected shock; risk-off pressure across all risk assets
+- S&P 500 futures -0.14% — mild but macro risk-off sentiment
+- AVAX unlock: $16.6M (0.4% supply) this week → sell pressure on AVAX
+- ARB unlock: $13.2M this week → avoid ARB longs
+- APT unlock: $12.4M this week → avoid APT longs
+- BTC at lower bound of 20-day MA range — momentum fragile
+- XRP stop at $1.424 is only 2.4% below current ($1.459) — stop could be hit on any volatility
+
+---
+
+### Trade Ideas
+
+**No new entries possible** — portfolio 98.8% deployed, $1.72 cash remaining.
+
+**Position Management:**
+1. **SOL (50% of equity — overweight):** Consider trimming ~25% of SOL position if it rallies to $97–$98 to reduce concentration risk and build cash buffer. Visa/Meta catalyst is strong but concentration is a strategy violation.
+2. **XRP stop review:** Current stop at $1.424 is very close to price ($1.459). The CLARITY Act deadline May 21 is a binary catalyst. Consider raising stop slightly toward $1.38 to give more room, OR take partial profit at current levels given +2% gain.
+3. **Watch BTC $82,500:** If BTC reclaims and closes above $82,500 for 2 sessions → offensive mode trigger. Could add BTC if cash from SOL trim is available.
+
+**Hypothetical (if cash were available):**
+- ETH long on Glamsterdam upgrade + ETF inflows; entry $2,250–2,300, stop $2,130, target $2,550/$2,750
+- BTC long only above $82,500 reclaim
+
+---
+
+### Risk Factors
+1. Fed rate hike to 5.75% — biggest macro risk; could trigger equity selloff → crypto contagion
+2. Portfolio 98.8% deployed — zero flexibility; one bad day across all positions = compounding losses
+3. SOL 50% concentration — single-position risk well above strategy limit
+4. XRP stop at $1.424 very tight — volatility could shake it out before the CLARITY Act catalyst
+5. BTC at 20-day MA borderline — no confirmation of uptrend yet
+6. AVAX/ARB/APT unlocks ($40M+) this week — broad altcoin headwind possible
+
+---
+
+### Decision: **HOLD / MANAGE**
+
+All stops are in place. No cash to deploy new positions. Primary action: monitor SOL concentration and consider trimming on strength. Watch Fed-related risk-off contagion.
+
+**Key watch levels:**
+- BTC: hold above $76,825 (stop) | offensive trigger: 2 closes > $82,500
+- ETH: hold above $2,199 (stop) | target $2,550
+- SOL: trim trigger at $97–$98 | stop at $91.79
+- XRP: CLARITY Act May 21 binary catalyst | stop at $1.424 (tight — monitor)
+- Fed: any additional hike signals → shift to full defensive, tighten all stops
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
