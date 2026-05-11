@@ -9,7 +9,20 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
-### 2026-05-10T23:49:25Z | SOL/USD | BUY | 0.4402 SOL | Entry: $96.62 | Stop: $85.03 | Open
+### 2026-05-11T05:55:43Z | BTC/USD | BUY | 0.000242465 BTC | Entry: $80,868.63 | Stop: $76,825.20 | Open
+
+**Order ID (buy):** a8a4f7c2-1e54-4cf0-af72-ec6bd52ebf2a
+**Stop Order ID:** b8ca2258-8411-4c1e-89df-802eb42ee69b (stop_limit: trigger $76,825.20, limit $76,441.57, qty 0.000241)
+**Notional:** $20.00
+**Target:** open / hold
+**Stop level:** $76,825.20 (-5.00% from entry $80,868.63)
+**R:R:** n/a (no target set — user discretionary)
+**Thesis:** User-directed market buy at current price.
+**Notes:** Trailing stop rejected (not supported for crypto on Alpaca); 5% fixed stop_limit placed to match SOL stop convention.
+
+---
+
+### 2026-05-10T23:49:25Z | SOL/USD | BUY | 0.4402 SOL | Entry: $96.62 | Stop: $91.79 | Open
 
 **Order ID (buy):** dce75e96-99ad-455d-a298-96e121912e9a
 **Stop Order ID:** 704432d7-4778-4fc7-a98c-622c8008a7dd (stop_limit: trigger $91.79, limit $91.33, covers combined 0.7378 SOL; 5% below entry $96.62)
