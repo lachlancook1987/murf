@@ -108,3 +108,49 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Portfolio Value | ~$142.23 |
+| Cash | $1.72 |
+| Open Positions | 4 (BTC, ETH, SOL, XRP) |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unreal P&L% | Stop |
+|---|---|---|---|---|---|
+| BTCUSD | 0.000241858 | $80,868.63 | $81,589.56 | +0.89% | $76,825 (stop_limit) |
+| ETHUSD | 0.0085785 | $2,314.90 | $2,339.92 | +1.08% | $2,199 (stop_limit) |
+| SOLUSD | 0.73785075 | $95.2947 | $97.407 | +2.22% | $91.79 (stop_limit) |
+| XRPUSD | 19.51878075 | $1.4294 | $1.4769 | +3.32% | $1.424 (stop_limit) |
+
+### Step 3 — Losers Cut
+No positions at or below -10%. No cuts.
+
+### Step 4 — Trailing Stop Tightening
+No positions at +25% or +40%. No adjustments.
+
+### Step 5 — Thesis Check
+- **BTC**: ETF inflows intact ($58.5B cumulative), CLARITY Act advancing, institutional accumulation ongoing. No exploits or negative catalysts. Thesis **INTACT**.
+- **ETH**: Glamsterdam upgrade narrative intact. No negative news. Thesis **INTACT**.
+- **SOL**: Schwab Crypto + ecosystem momentum. No protocol exploits reported. Thesis **INTACT**.
+- **XRP**: CLARITY Act positive backdrop. No negative legal developments. Thesis **INTACT**.
+
+### Step 6 — Perplexity Research
+Queried for major negative events (exploits, regulatory actions) in last 24-48h.
+- No exploits or hacks reported for BTC, ETH, SOL, or XRP.
+- BTC structural bid intact (low exchange supply, whale accumulation per NordFX data).
+- CLARITY Act advancing — regulatory tailwind for broad crypto.
+- BTC ~$80K zone with resistance at $82,228 (200-day EMA). Watch for breakout.
+
+### Decision: **HOLD ALL**
+All positions within normal volatility, thesis intact, stops in place. No action required.
+
+**Next triggers:**
+- BTC breakout above $82,500 → assess adding to BTC or expanding to larger notional
+- Any position reaching +25% → tighten trail to 8%; +40% → tighten to 5%
+- Any exploit/unlock news → re-evaluate thesis immediately
