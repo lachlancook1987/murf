@@ -108,3 +108,67 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.29 |
+| Cash | $1.72 |
+| Buying Power | $1.72 |
+| Open Positions | 4 (BTC, ETH, SOL, XRP) |
+| Open Orders | 4 stop-limit orders (all positions covered) |
+
+---
+
+### Positions (live from Alpaca)
+| Symbol | Qty | Avg Entry | Current Price | Market Value | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000242 | $80,868.63 | $81,243 | $19.65 | +$0.09 (+0.46%) | $76,825.20 |
+| ETH/USD | 0.008579 | $2,314.90 | $2,329.02 | $19.98 | +$0.12 (+0.61%) | $2,199.16 |
+| SOL/USD | 0.737851 | $95.29 | $95.32 | $70.33 | +$0.02 (+0.03%) | $91.79 |
+| XRP/USD | 19.5188 | $1.4294 | $1.4656 | $28.61 | +$0.71 (+2.53%) | $1.424 |
+
+All stops covered. All qty_available at near-zero (stops already placed).
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,243 | -0.22% today (Alpaca live) |
+| ETH price | ~$2,329 | -1.30% today (Alpaca live) |
+| SOL price | ~$95.32 | -0.61% today (Alpaca live) |
+| XRP price | ~$1.466 | +0.25% today (Alpaca live) |
+| BTC 24h (broader) | +0.43% | Per Perplexity/MEXC |
+| BTC 20-day MA | ~$80,000 | BTC above → Offensive mode threshold met |
+| DXY | N/A | No live data retrieved |
+| Fear & Greed | N/A | No live data retrieved |
+
+**$300M shorts liquidated** per Perplexity — momentum continuing bullish. Polymarket 76% probability BTC stays $80K-$82K range today.
+
+---
+
+### Regime Filter
+- BTC 24h change: ~flat (-0.22% to +0.43%) → gate **NOT triggered**
+- BTC vs 20-day MA: Above ~$80K MA → **Offensive Mode eligible**
+- Note: Previous entry required 2 consecutive closes above $82,500 to fully confirm — BTC has not yet reached $82,500
+- **Mode: BORDERLINE** — BTC above 20-day MA but below $82,500 offensive trigger. Treating as late-defensive.
+
+---
+
+### Decision: **HOLD — Insufficient Cash**
+
+Buying power: $1.72 — cannot enter any new positions regardless of setup quality.
+
+**Existing positions status:** All 4 held with stop-limits in place. No action needed.
+
+**Watch levels for next session:**
+- BTC: Break above $82,500 (2 consecutive closes) → switch full offensive
+- SOL: Close above $97 → add to position if cash available
+- Cash top-up or position exit needed before any new entries possible
+
+### Trade Count This Week: 0 (of 25 allowed)
