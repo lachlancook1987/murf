@@ -108,3 +108,74 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Pre-Session Research (Session-Open)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.84 |
+| Cash | $1.72 |
+| Buying Power | $1.72 |
+| Open Positions | 4 (BTC, ETH, SOL, XRP) |
+| Open Orders | 4 stop_limit sell orders |
+| Account Status | ACTIVE |
+
+---
+
+### Live Quotes (09:41 UTC, Alpaca)
+| Asset | Ask | Bid | 24h Change |
+|---|---|---|---|
+| BTC/USD | $80,929 | $80,841 | -0.65% |
+| ETH/USD | $2,335.51 | $2,332.44 | -1.14% |
+| SOL/USD | $95.30 | $94.91 | -0.90% |
+| XRP/USD | $1.454 | $1.448 | -0.45% |
+
+---
+
+### Regime Filter
+| Check | Value | Status |
+|---|---|---|
+| BTC 24h change | -0.65% | PASS (not > -5%) |
+| BTC vs 20-day MA | ~$80,885 vs ~$77,765 | **ABOVE MA → OFFENSIVE MODE** |
+| Fear & Greed | ~50–67 (Neutral→Greed) | PASS (not <15 or >85) |
+
+**Mode: OFFENSIVE** — BTC above 20-day MA; full universe eligible, normal sizes.
+
+---
+
+### Market Context (Perplexity)
+- BTC: $80,800–81,450 range confirmed, +0.42–0.98% 24h per Perplexity (live Alpaca shows -0.65% vs yesterday's close)
+- ETH: $2,344–2,376 per Perplexity; Glamsterdam upgrade — no updated news
+- ETF Inflows: ETH ETF $11.57M (May 6), $97.5M (May 5); no May 11 data yet
+- BTC ATH: $126,198 (Oct 6, 2025); current consolidation at $80–81K
+- F&G rebounded from historic low of 5 (Feb 2026) → 50-67 (Neutral/Greed)
+
+---
+
+### Open Positions Status
+| Symbol | Entry | Current | P&L | Stop | Stop% vs Entry |
+|---|---|---|---|---|---|
+| BTC/USD | $80,868 | $80,885 | +$0.01 | $76,825 (SL) | -5.0% |
+| ETH/USD | $2,314.90 | $2,332.90 | +$0.15 | $2,199.16 (SL) | -5.0% |
+| SOL/USD | $95.29 | $95.05 | -$0.18 | $91.79 (SL) | -3.7% |
+| XRP/USD | $1.4294 | $1.4554 | +$0.51 | $1.424 (SL) | -0.4% |
+
+*Note: Stops were placed as stop_limit orders by prior sessions (~4-5% below entry), not 12% trailing as per strategy spec.*
+
+---
+
+### Decision: **HOLD — No New Entries**
+
+**Reason:** Account cash is $1.72 — insufficient buying power for any new position. Regime is offensive but no capital available.
+
+**Weekly trade count:** 7 of 25 used.
+
+**Watch:**
+- XRP: Stop at $1.424 is very thin vs entry ($1.4294). Currently in profit (+1.8%). Monitor for stop-out.
+- SOL: Slight loss (-0.26%); stop at $91.79 (~3.7% below entry). Entry was $95.29, current $95.05 — watch for stop trigger.
+- BTC: Essentially flat from entry. If BTC reclaims $82,500+, consider adding on next session with fresh capital.
+- ETH: Small gain (+0.78%). Stop at $2,199 is ~5% below entry with cushion.
+- Offensive trigger for next session: BTC sustained above $82,500 + fresh capital deployment.
