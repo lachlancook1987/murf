@@ -108,3 +108,125 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $142.00 |
+| Cash | $1.72 |
+| Buying Power | $1.72 |
+| Long Market Value | $140.28 |
+| Account Status | ACTIVE / CRYPTO_ACTIVE |
+| Balance As-Of | 2026-05-08 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current Price | Market Value | Unr. P&L | Unr. P&L % |
+|---|---|---|---|---|---|---|
+| BTCUSD | 0.000241858 | $80,868.63 | $81,758.66 | $19.77 | +$0.22 | +1.10% |
+| ETHUSD | 0.0085785 | $2,314.90 | $2,343.74 | $20.11 | +$0.25 | +1.25% |
+| SOLUSD | 0.73785075 | $95.29 | $97.21 | $71.73 | +$1.41 | +2.01% |
+| XRPUSD | 19.51878075 | $1.4294 | $1.469 | $28.67 | +$0.77 | +2.77% |
+
+**Active Stop-Loss Orders (GTC):**
+| Symbol | Stop Trigger | Limit | vs Cost Basis |
+|---|---|---|---|
+| BTC | $76,825.20 | $76,441.57 | -5.6% below entry (loss if hit) |
+| ETH | $2,199.16 | $2,188.16 | -5.0% below entry (loss if hit) |
+| SOL | $91.79 | $91.33 | -3.7% below entry (loss if hit) |
+| XRP | $1.424 | $1.4169 | -0.4% below entry (near breakeven) |
+
+**Note:** All stop-losses are below cost basis — positions profitable but stops have NOT been trailed to breakeven. Consider adjusting BTC/ETH/SOL stops upward.
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,759 (Alpaca live) | +0.41% today; 24h range $80,273–$82,450 |
+| ETH price | ~$2,344 (Alpaca live) | -0.68% today; broader 24h range flat |
+| BTC Dominance | ~58–60% | Consensus ~59%; high dom = alt headwinds |
+| Fear & Greed | 48 (Neutral) | Stable neutral; no extreme signal |
+| BTC Funding Rate | +0.0054%/8h avg | Neutral/slight positive — healthy, not overheated |
+| DXY | ~98.0 | Slightly down YTD (-3.94%); mild crypto tailwind |
+| S&P 500 | 7,398 (ATH) | Bullish trend intact; RSI 62.8 nearing overbought |
+
+**BTC 20-day MA:** ~$80,000–82,000 estimated. BTC at $81,759 — AT or just above the lower bound of the MA range. Offensive mode trigger still requires 2 consecutive closes above $82,500 (not yet confirmed).
+
+---
+
+### Regime Filter (STEP 4)
+
+- BTC 24h change: +0.41% → gate **NOT triggered** (not down >5%)
+- BTC vs. 20-day MA: ~$81,759 vs estimated MA ~$80,500 → **AT/SLIGHTLY ABOVE MA** — borderline
+- Funding: +0.0054%/8h → neutral (healthy, not overheated)
+- Offensive mode trigger: need 2 consecutive closes above $82,500 — **NOT confirmed**
+- **Mode: DEFENSIVE — maintain current positions, no new entries. Trail stops.**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- S&P 500 at ATH (7,398) with path-of-least-resistance higher — macro risk-on supportive
+- ETH ETF inflows $2B institutional (ongoing); BTC ETF inflows sustained
+- DXY at ~98 and declining YTD (-3.94%) — weakening dollar = crypto tailwind
+- XRP: CLARITY Act deadline May 21 + $1.3B+ ETF inflows + Rakuten integration; volume +32-40%
+- SOL: CoinGecko 81.5% probability of reaching $100 by month-end; technicals positive
+- BTC funding neutral — no over-leveraged long squeeze risk
+
+**Bearish/Risk:**
+- BTC at $81,759, still needs to clear $82,500 convincingly for offensive confirmation
+- BASED token: 20% supply unlock today (~$5M) — not in portfolio but sentiment noise
+- SOL linear daily unlocks ongoing (small pressure)
+- BABY monthly unlock ongoing — not in portfolio
+- S&P 500 RSI 62.8 — nearing overbought; any risk-off shock amplifies in crypto
+- Fed raised rates to 5.75% (catalyst data) — macro headwind if confirmed
+- One Perplexity catalyst source cited BTC $80,100 and ETH $1,800 — stale data, Alpaca live prices used
+
+---
+
+### Trade Ideas (DEFENSIVE mode — hold & trail stops)
+
+**Idea 1 — Trail BTC Stop to Breakeven**
+- Current stop: $76,825 (5.6% below $80,868 entry) → would lock in a loss
+- Action: Raise BTC stop to ~$80,500–80,700 (just below entry, ~1% buffer)
+- Rationale: Position is profitable (+1.1%); protect capital with near-breakeven stop
+- Risk: Tight stop may get swept on intraday noise — use $80,200 as absolute floor
+
+**Idea 2 — Trail SOL Stop to Breakeven**
+- Current stop: $91.79 (3.7% below $95.29 entry) → would lock in a loss
+- Action: Raise SOL stop to ~$94.50–95.00 (near breakeven)
+- Rationale: SOL +2% in profit; targets $100 (81.5% CoinGecko probability)
+- Do NOT add to SOL — defensive mode; wait for BTC offensive confirmation
+
+**Idea 3 — XRP Hold / Watch CLARITY Act (May 21)**
+- XRP at $1.469 with stop near breakeven ($1.424) — acceptable current setup
+- CLARITY Act vote May 21 is binary catalyst — could spike to $1.80–$2.35 (analyst targets) or dump on failure
+- Plan: Hold through catalyst with existing stop; scale out 50% at $1.55 if reached before May 21
+
+---
+
+### Risk Factors
+1. All stops below cost basis — portfolio profitable but exposed to loss on reversal; priority to trail stops up
+2. BTC dominance ~59% — any alt rally requires BTC to hold or rise
+3. Portfolio is 99% deployed ($1.72 cash) — no dry powder for new entries without stops being triggered first
+4. S&P 500 overbought (RSI 62.8) — exogenous shock risk
+5. Fed rate at 5.75% (if confirmed) — high rates = headwind for risk assets
+6. BASED 20% unlock today — watch for broad sentiment contagion if dump is large
+
+---
+
+### Decision: **HOLD**
+
+All positions in profit with active stops. Defensive mode continues — BTC has not closed 2 consecutive days above $82,500. No new entries. Primary action: consider raising stop-losses to protect gains (especially BTC and SOL which are furthest below breakeven protection).
+
+**Watch levels:**
+- Offensive mode switch: BTC 2 consecutive closes above $82,500
+- XRP scale-out: $1.55 (take 50% profit before May 21 CLARITY Act)
+- BTC stop trail target: $80,500 (from current $76,825)
+- SOL stop trail target: $94.50 (from current $91.79)
