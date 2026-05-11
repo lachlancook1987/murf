@@ -108,3 +108,84 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.00 |
+| Cash | $21.33 |
+| Buying Power | $21.33 |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Orders | 3 stop-limits (one per position) |
+| Account Status | ACTIVE (live — acct #251041174) |
+
+*Existing positions from prior sessions. Cash is very limited.*
+
+---
+
+### Live Prices (03:13 UTC)
+| Asset | Price | 24h Chg | Notes |
+|---|---|---|---|
+| BTC/USD | $80,739 | -1.79% | Above 20-day MA |
+| ETH/USD | $2,330 | ~-1.1% | Below yesterday high |
+| SOL/USD | $94.99 | ~-0.6% | Slight pullback |
+| XRP/USD | $1.445 | ~-1.2% | Near resistance $1.47 |
+
+### Regime Filter
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC 24h change | -1.79% | NOT triggered (gate = >5% down) |
+| BTC 20-day MA | $78,340 | BTC $80,739 → **ABOVE MA** |
+| Mode | **OFFENSIVE** | Full universe, normal sizes |
+
+---
+
+### Key Catalysts (May 11, 2026)
+
+**Bullish:**
+- XRP: Senate Banking Committee markup on CLARITY Act this week (May 11–21); commodity classification could send XRP to ~$1.80; spot XRP ETF inflows $34.2M last week
+- ETH: Glamsterdam upgrade driving whale accumulation; May historically +34.7% avg; target $2,370–2,500
+- SOL: Commodity status recently confirmed; momentum target $105+
+- BTC: Supporting broad market; above 20-day MA signals offense
+
+**Risk Events:**
+- May 14: Senate crypto vote (CLARITY Act) — binary event for XRP
+- May 15: Fed Chair Powell exit — macro uncertainty
+- XRP stop-limit at $1.424 is only 1.46% below current ($1.445) — could trigger on volatility before the catalyst fires
+
+---
+
+### Position Review
+| Symbol | Qty | Avg Entry | Current | P&L | Stop | Notes |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0085785 | $2,314.90 | $2,330 | +$0.15 | $2,199.16 SL (-5.7%) | Holding for Glamsterdam |
+| SOL/USD | 0.73785 | $95.29 | $94.99 | -$0.22 | $91.79 SL (-3.5%) | Slightly underwater, catalyst intact |
+| XRP/USD | 19.51878 | $1.4294 | $1.445 | +$0.30 | $1.424 SL (-1.46%) | TIGHT — CLARITY Act May 14 catalyst |
+
+Total deployed: ~$118.67 (~85% of equity) — **over 80% guideline**
+
+---
+
+### Trade Ideas
+
+**No new trades** — account already deployed at 85% (guideline max 80%), only $21.33 cash available. Minimum meaningful position would consume all remaining cash and push exposure further above limit.
+
+**Existing positions:** All have valid catalysts:
+- XRP: CLARITY Act vote May 14 — if passes, $1.80 target (20-day hold at risk from tight stop)
+- ETH: Glamsterdam + seasonal strength
+- SOL: Commodity status momentum
+
+---
+
+### Decision: **HOLD**
+
+No new entries. Over-deployed relative to 80% guideline. Watch existing stops — especially XRP at $1.424 (critical: CLARITY Act May 14, stop may trigger before catalyst).
+
+**Watch levels:**
+- XRP: If CLARITY passes → target $1.65–1.80; if stop triggers at $1.424 → re-evaluate re-entry
+- SOL: Monitor $91.79 stop; bullish above $100
+- ETH: Hold for $2,370+ target
