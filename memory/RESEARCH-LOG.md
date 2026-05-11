@@ -108,3 +108,84 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $142.30 |
+| Cash | $1.72 |
+| Buying Power | $1.72 |
+| Open Positions | 4 (BTC, ETH, SOL, XRP) |
+| Open Stop Orders | 4 (stop_limit on all positions) |
+| Account Status | ACTIVE |
+
+*NOTE: SOL position is $71.90 = 50.5% of equity — exceeds 20% single-position rule. Pre-existing; cannot retroactively unwind without triggering stop.*
+
+---
+
+### Market Context
+
+| Asset | Price (USD) | 24h Change | Source |
+|---|---|---|---|
+| BTC | ~$81,858 | +0.54% | Alpaca live |
+| ETH | ~$2,339 | -0.87% | Alpaca live |
+| SOL | ~$97.45 | +1.61% | Alpaca live |
+| XRP | ~$1.476 | +0.96% | Alpaca live |
+| ETH (Perplexity) | ~$2,328 | +0.85% | Multiple sources |
+| SOL (Perplexity) | $95.60–96.06 | +2.5–3.0% | Multiple sources |
+
+**BTC 20-day MA:** Estimated ~$81,000–82,000 (BTC at $81,858 — at or just above MA)
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.54% → gate **NOT triggered** (>5% down threshold not met)
+- BTC vs 20-day MA: At or slightly above estimated MA → **BORDERLINE / transitioning to OFFENSIVE**
+- Funding: Not confirmed today; assumed neutral based on flat price action
+- **Mode: DEFENSIVE (conservative) — BTC/ETH/SOL/XRP already held**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- ETH whale accumulation: 140,000 ETH (~$322M) bought in 96 hours
+- Spot ETH ETF: $356M net inflows in April (reversing 6-month negative streak)
+- Glamsterdam upgrade (June 2026): Ethereum L1 throughput tripling — strong DeFi/L2 catalyst
+- Analyst ETH targets: $2,250–$2,657 range; breakout above $2,420 key trigger
+- SOL: +1.6% today, recovering above $97; stop-limit at $91.79 gives room
+- XRP: +0.96% today, above entry $1.4294; stop at $1.424 tight but above entry
+
+**Bearish/Risk:**
+- Cash exhausted ($1.72) — no new positions possible
+- SOL position severely oversized (50.5% of equity)
+- ETH slightly red today (-0.87%); stop at $2,199.16 (5.1% below current price)
+- BTC stop at $76,825 is 6.1% below current — adequate buffer
+
+---
+
+### Trade Ideas
+
+**No new trades possible — cash = $1.72.**
+
+**Position management priorities:**
+1. SOL: Monitor carefully. Current price $97.45 vs stop $91.79 (5.8% buffer). If SOL breaks $98+ with volume, consider partially closing to reduce oversized exposure.
+2. XRP: Stop $1.424 is very tight vs entry $1.4294 (+/- noise level). Watch for stop getting hit.
+3. ETH: Glamsterdam catalyst in June; strong whale buying. Hold.
+4. BTC: Stop at $76,825 (6.1% below). ETF flows supportive. Hold.
+
+**Next session trigger:**
+- If any position stops out → evaluate redeployment of freed capital
+- If BTC closes above $82,500 for 2 consecutive days → offensive mode, expand universe
+- Offensive mode trigger levels: SOL $98+, ETH $2,420+, BTC $83,000+
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+Zero buying power. All 4 positions have active stop orders. Monitor for stop hits or breakthrough above key levels.
