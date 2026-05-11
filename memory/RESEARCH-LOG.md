@@ -1067,3 +1067,93 @@ All three positions profitable, stops updated. XRP stop tightened to 3% this ses
 - ETH T1: $2,400 | trail stop to $2,250
 - SOL T1: $97.64 | stop $88.68
 - XRP stop: $1.4240 (active, 3% below entry)
+
+---
+
+## 2026-05-10 — Session-Open Research (Session 5, ~23:00 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $141.76 |
+| Cash | $63.86 |
+| Buying Power | $63.86 |
+| Open Positions | 3 (ETH, SOL, XRP) |
+| Open Stop Orders | 3 (one per position) |
+| Account Status | ACTIVE (live — #251041174) |
+
+*Prior sessions executed: ETH buy @$2,314.90 (May 9), SOL buy @$93.35 (May 9), XRP buy @$1.4294 (May 10), BTC closed @~$80,256 (May 9). XRP stop tightened to $1.424 this day.*
+
+---
+
+### Live Quotes (Alpaca, ~23:38 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $82,319 | $82,393 | ~$82,356 |
+| ETH/USD | $2,377 | $2,380 | ~$2,379 |
+| SOL/USD | $96.36 | $96.62 | ~$96.49 |
+| XRP/USD | $1.4729 | $1.4749 | ~$1.474 |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$82,356 | +0.35–1.38% 24h (live Alpaca) |
+| ETH price | ~$2,379 | +2.18% today |
+| SOL price | ~$96.62 | +4.18% today |
+| XRP price | ~$1.474 | +3.94% today |
+| BTC Dominance | ~60.18% | Per Perplexity |
+| Fear & Greed | ~47 (Neutral) | Per prior context |
+| Key Catalyst | Geopolitical relief (Iran/Hormuz) + ETF inflows + CLARITY Act tailwind |
+
+**BTC 20-day MA:** Estimated ~$80,000–82,000. BTC at $82,356 is at the upper edge — not definitively confirmed above. Offensive trigger requires 2 closes above $82,500.
+
+---
+
+### Regime Filter
+- BTC 24h change: +0.35–1.38% → gate **NOT triggered**
+- BTC vs. 20-day MA: ~$82,356 vs. est. $80–82K → borderline, **not confirmed offensive**
+- Offensive trigger (2 closes above $82,500): **NOT met**
+- **Mode: DEFENSIVE — BTC/ETH only, reduced sizes**
+
+---
+
+### Position Review
+| Symbol | Entry | Current | Stop | P&L% |
+|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,370.95 | $2,199.16 | +2.42% |
+| SOL/USD | $93.35 | $96.62 | $88.68 | +3.51% |
+| XRP/USD | $1.4294 | $1.474 | $1.424 | +3.11% |
+
+Weekly trade count: 5 (ETH buy, SOL buy, XRP buy, BTC sell ×2) — well under 25 limit.
+
+---
+
+### Trades Executed This Session
+
+**1 — SOL/USD Add (user-directed, 30% equity override)**
+- Rationale: SOL breaking toward $100 psychological resistance; multiple analysts target $100–$115; +4.18% intraday momentum; Alpenglow upgrade Q3 2026; institutional embrace
+- Entry: $96.62 market fill | Qty: 0.4402 SOL | Notional: $42.53
+- Combined position after: 0.7378 SOL @ avg $95.295
+- Stop updated: old $88.68 cancelled; new stop_limit $91.79/$91.33 (5%) for full 0.7378 SOL
+- Target: $100.00 (+3.65%) — day trade, close manually
+
+**2 — BTC/USD Buy (user-directed, $20 notional)**
+- Entry: $80,868.63 market fill | Qty: 0.000242465 BTC | Notional: $20.00
+- Stop: stop_limit $76,825.20/$76,441.57 (5% below entry)
+- Target: open / user discretionary
+
+Candidates researched and rejected: LINK (Consensus conference expired May 7; bearish forecast), AAVE (no specific catalyst), SUI (+25% pump >10% rule), UNI (already ran).
+
+---
+
+### Decision: **2 TRADES EXECUTED**
+
+Session ended with 4 open positions: ETH, SOL (0.7378 combined), XRP, BTC. All have active stops. Cash ~$1.33 remaining — account nearly fully deployed.
+
+**Watch levels:**
+- SOL day trade target: $100.00 (manual close)
+- BTC: hold, no target set
+- Offensive mode trigger: BTC 2 closes above $82,500
+- ETH stop: $2,199.16 (consider trailing up if ETH clears $2,400)
