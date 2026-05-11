@@ -108,3 +108,23 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Midday Scan
+
+### Positions at Scan Time
+| Pair | Entry | Current | P&L | Stop |
+|---|---|---|---|---|
+| ETH/USD | $2,314.90 | $2,330.10 | +0.66% | $2,199.16 |
+| SOL/USD | $95.29 avg | $94.44 | −0.89% | $91.79 |
+| XRP/USD | $1.4294 | $1.4496 | +1.41% | $1.424 |
+
+### Market Context (intraday)
+- ETH −1.26% today, SOL −1.53%, XRP −0.85% — broad mild pullback, no unusual catalyst.
+- No positions near −10% cut threshold.
+- No positions near +25%/+40% trailing-stop-tighten thresholds.
+- No sharp unexplained moves; Perplexity query skipped.
+
+### Action Taken: **None**
+All positions held. Stops unchanged. No ClickUp notification sent (no-action scan).
