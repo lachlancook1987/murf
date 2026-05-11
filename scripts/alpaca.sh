@@ -9,7 +9,7 @@ for v in ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT; do
   fi
 done
 
-BASE="${ALPACA_ENDPOINT}"
+BASE="${ALPACA_ENDPOINT}/v2"
 CMD="${1:-account}"
 
 apca_curl() {
@@ -29,8 +29,21 @@ case "$CMD" in
   orders)
     apca_curl "${BASE}/orders?status=all&limit=20" | python3 -m json.tool
     ;;
+  quote)
+    SYMBOL="${2:-BTC/USD}"
+    DATA_BASE="${ALPACA_CRYPTO_DATA_ENDPOINT:-https://data.alpaca.markets}/v1beta3/crypto/us"
+    apca_curl "${DATA_BASE}/latest/quotes?symbols=${SYMBOL}" | python3 -m json.tool
+    ;;
+  close)
+    SYMBOL="${2:?Usage: $0 close SYMBOL}"
+    apca_curl -X DELETE "${BASE}/positions/${SYMBOL}" | python3 -m json.tool
+    ;;
+  cancel)
+    ORDER_ID="${2:?Usage: $0 cancel ORDER_ID}"
+    apca_curl -X DELETE "${BASE}/orders/${ORDER_ID}" | python3 -m json.tool
+    ;;
   *)
-    echo "Usage: $0 {account|positions|orders}" >&2
+    echo "Usage: $0 {account|positions|orders|quote SYMBOL|close SYMBOL|cancel ORDER_ID}" >&2
     exit 1
     ;;
 esac
