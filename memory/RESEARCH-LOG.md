@@ -108,3 +108,76 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-11 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.14 |
+| Cash | $1.72 |
+| Buying Power | $1.72 |
+| Open Positions | 4 (BTC, ETH, SOL, XRP) |
+| Long Market Value | $138.42 |
+| Account Status | ACTIVE |
+
+*Positions built across sessions May 9–11. Account nearly fully deployed.*
+
+---
+
+### Market Context (Live — Alpaca API)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,806.70 | Down 0.755% from prev day $81,421.80 |
+| ETH price | $2,329.52 | Down 1.283% from prev day $2,359.80 |
+| SOL price | $95.67 | Down 0.25% from prev day $95.91 |
+| XRP price | $1.45018 | Down 0.808% from prev day $1.462 |
+| BTC 20-day MA | ~$81,000–82,000 | Perplexity: short-term EMAs clustered near $81-82K |
+| Fear & Greed | N/A | No fresh data |
+| BTC Dominance | N/A | No fresh data |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.755% → gate **NOT triggered** (threshold: >5% down)
+- BTC vs. 20-day MA: BTC ~$80,806, MA ~$81-82K → **BTC slightly below MA**
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Open Positions & Stops
+
+| Symbol | Qty | Avg Entry | Current | Market Value | Unrealized P&L | Stop Level |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000241858 | $80,868.63 | $80,806.70 | $19.54 | -$0.01 | $76,825.20 (stop-limit) |
+| ETH/USD | 0.0085785 | $2,314.90 | $2,329.52 | $19.98 | +$0.13 | $2,199.16 (stop-limit) |
+| SOL/USD | 0.73785075 | $95.29 | $95.67 | $70.59 | +$0.28 | $91.79 (stop-limit) |
+| XRP/USD | 19.51878075 | $1.4294 | $1.45018 | $28.31 | +$0.41 | $1.424 (stop-limit) |
+
+All stops are active. Total unrealized P&L: +$0.81
+
+---
+
+### Trade Count (Week of May 4–11)
+- May 09: ETH buy, BTC sell ×2
+- May 09: SOL buy
+- May 10: XRP buy, SOL buy
+- May 11: BTC buy
+- **Total: 7 trades (25/week limit — 18 remaining)**
+
+---
+
+### Decision: **HOLD — NO NEW TRADES**
+
+Cash is $1.72 — insufficient for any meaningful position. All positions deployed with stops. Continue monitoring for stop triggers or regime shift.
+
+**Watch levels:**
+- BTC offensive trigger: 2 daily closes above $82,500 → expand to full universe
+- BTC stop trigger: below $76,825 → BTC position exits automatically
+- ETH stop trigger: below $2,199 → ETH exits automatically
+- SOL stop trigger: below $91.79 → SOL exits automatically
+- XRP stop trigger: below $1.424 → XRP exits automatically
