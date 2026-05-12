@@ -4,6 +4,73 @@
 
 ---
 
+## 2026-05-12 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $140.95 |
+| Cash | $1.95 |
+| Buying Power | $1.95 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Account Status | ACTIVE (live — #251041174) |
+
+---
+
+### Live Position Summary
+| Symbol | Qty | Avg Entry | Current | MV | P&L | Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000588525 | $81,645.25 | $81,225.23 | $47.80 | -$0.25 (-0.51%) | stop_limit $78,918/$78,523 |
+| ETH/USD | 0.0085785 | $2,314.90 | $2,313.02 | $19.84 | -$0.02 (-0.08%) | stop_limit $2,199/$2,188 |
+| SOL/USD | 0.73785075 | $95.29 | $96.70 | $71.35 | +$1.04 (+1.47%) | stop_limit $91.79/$91.33 |
+
+All positions fully covered by GTC stop-limit sell orders. Qty available ≈ 0 for BTC/ETH; SOL has 0.00005 dust available.
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,225 | -0.04% 24h (Alpaca live) |
+| ETH price | ~$2,313 | +0.04% 24h |
+| SOL price | ~$96.70 | +0.69% 24h |
+| BTC Dominance | ~n/a | Strong BTC relative to alts |
+| Fear & Greed | 12–47 (conflicting) | Multiple sources vary; overall fearful |
+| DXY | >100 | Headwind for crypto |
+| BTC ETF Inflows | $858M weekly | 6th consecutive week of inflows |
+| FOMC | Imminent | Macro risk factor |
+
+**BTC 20-day MA:** Estimated ~$79,500–81,500 (BTC recovering from April lows). BTC at $81,225 — borderline at/above MA.
+
+---
+
+### Regime Filter
+- BTC 24h change: -0.04% → gate **NOT triggered** (threshold: >-5%)
+- BTC vs 20-day MA: At/slightly above estimated MA → **borderline NEUTRAL/OFFENSIVE**
+- DXY >100: mild headwind — treat as **DEFENSIVE MODE** out of caution
+- **Mode: DEFENSIVE — BTC/ETH only, reduced sizes (50%)**
+
+---
+
+### Weekly Trade Count
+Filled orders this week (May 6–12): ~10 trades (BTC×4, ETH×1, SOL×2, XRP×3)
+Remaining capacity: 15 trades before 25-trade weekly cap.
+
+---
+
+### Decision: **HOLD — INSUFFICIENT CASH**
+
+Cash = $1.95. No new position entries possible regardless of regime or catalyst. All existing positions have protective stops in place.
+
+**Watch levels:**
+- BTC stop trigger: $78,918 → stop-limit exits at ~$78,523
+- ETH stop trigger: $2,199 → stop-limit exits at ~$2,188
+- SOL stop trigger: $91.79 → stop-limit exits at ~$91.33
+- If any position closes and cash returns, reassess BTC/ETH entries per DEFENSIVE mode rules
+- Offensive mode switch: BTC 2 closes above ~$83,000 + DXY rolls below 99
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
