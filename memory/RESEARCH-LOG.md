@@ -108,3 +108,95 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-12 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.55 |
+| Cash | $1.95 |
+| Buying Power | $1.95 |
+| Long Market Value | $137.60 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limit sell orders (one per position) |
+| Account Status | ACTIVE |
+
+---
+
+### Current Positions
+| Symbol | Qty | Avg Entry | Current | MV | P&L | Stop Level |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000588525 | $81,645.25 | $80,866.75 | $47.59 | -$0.46 (-0.95%) | $78,918.04 stop / $78,523.45 limit |
+| ETH/USD | 0.0085785 | $2,314.90 | $2,291.57 | $19.66 | -$0.20 (-1.01%) | $2,199.16 stop / $2,188.16 limit |
+| SOL/USD | 0.73785075 | $95.30 | $95.35 | $70.35 | +$0.04 (+0.05%) | $91.79 stop / $91.33 limit |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,883 | -1.05% 24h |
+| BTC 20-day SMA | $79,059 | BTC ABOVE MA → Offensive mode |
+| ETH price | ~$2,292 | -0.89% 24h |
+| SOL price | ~$95.35 | -0.72% 24h |
+| BTC Dominance | 58.42% | Slight uptick |
+| Fear & Greed | 48–49 (Neutral) | Steady neutral |
+| BTC Funding Rate | N/A (data unavailable) | — |
+| DXY | N/A (data unavailable) | — |
+
+**BTC 20-day SMA (computed from Alpaca daily bars, Apr 20–May 12):** $79,058.59
+**BTC vs 20dMA: ABOVE → OFFENSIVE MODE active**
+
+---
+
+### Regime Filter
+- BTC 24h change: -1.05% → NOT below -5% → **gate NOT triggered**
+- BTC vs 20-day MA: ABOVE $79,059 → **OFFENSIVE MODE** (full universe, normal sizes)
+- Fear & Greed: 48–49 (Neutral) — no extreme greed/fear block
+- **Mode: OFFENSIVE — full universe, normal sizes permitted**
+
+---
+
+### Key Catalysts
+**Bullish:**
+- CLARITY Act Senate markup scheduled May 14 — crypto regulatory clarity bullish signal
+- Powell-to-Warsh Fed transition May 15 — potential rate cuts strongly bullish for BTC
+- ETF inflows sustained: BTC $2.44B April net inflows; XRP $82M
+- Ethereum Glamsterdam upgrade (June timing) — ETH pre-rally positioning underway
+- BTC holding above 20-day MA despite mild pullback — structure intact
+
+**Bearish/Risk:**
+- Trump-Xi talks May 13–14 — macro risk event (trade/geopolitics)
+- BTC failed to hold above $82K — consolidating $80–82K range
+- Low cash balance ($1.95) limits new position ability
+- All positions slightly underwater except SOL (flat)
+
+---
+
+### Trade Ideas
+**No new entries possible today — cash $1.95 insufficient for any position.**
+
+Monitor existing stops:
+- BTC: if price drops to $78,918 → stop triggers, exit trade
+- ETH: if price drops to $2,199 → stop triggers, exit trade
+- SOL: if price drops to $91.79 → stop triggers, exit trade
+
+Offensive mode watch list for next funded session:
+- BTC: accumulate on pullback to $79,500–80,000 support
+- ETH: add on dip toward $2,250 (Glamsterdam catalyst still live)
+- SOL: add if BTC confirms strength above $82,500
+
+---
+
+### Decision: **HOLD — No new trades**
+
+**Reason:** Cash balance $1.95 — no capital available for new positions. All existing positions protected by stop-limit orders. Offensive mode active but no deployable capital.
+
+**Watch for May 13–15:**
+- Trump-Xi outcome (risk event)
+- CLARITY Act Senate vote May 14 (bullish if passes)
+- Powell-Warsh transition May 15 (rate cut expectations)
+- BTC holding above $79,059 SMA (offensive mode maintained)
