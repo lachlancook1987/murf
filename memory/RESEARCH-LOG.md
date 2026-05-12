@@ -4,6 +4,18 @@
 
 ---
 
+## 2026-05-12 — Midday Scan
+
+**Positions reviewed:** BTC/USD, ETH/USD, SOL/USD
+**BTC price:** $81,071.73 | **ETH:** $2,310.20 | **SOL:** $96.27
+
+All positions within normal drawdown bounds (< -1%). No cuts, no stop adjustments.
+SOL is classified as an offensive-mode asset per strategy; no entry thesis is documented. Position is protected by stop at $91.79. Monitor if BTC weakens further — if BTC closes below 20-day MA decisively, may need to exit SOL per defensive-mode rule (BTC/ETH only).
+
+No sharp intraday moves. No Perplexity research triggered. No ClickUp alert sent.
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
