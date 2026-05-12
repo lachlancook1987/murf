@@ -108,3 +108,48 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-12 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.84 |
+| Cash | $1.95 (effectively depleted) |
+| Buying Power | $1.95 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Trades This Week | ~4 (Mon–Tue) |
+
+### Live Position Prices (Alpaca, session open)
+| Symbol | Qty | Avg Entry | Current Price | Day Change | MV | PnL |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000588525 | $81,645.25 | $80,847.07 | -0.50% | $47.58 | -$0.47 |
+| ETH/USD | 0.0085785 | $2,314.90 | $2,284.56 | -1.20% | $19.60 | -$0.26 |
+| SOL/USD | 0.73785075 | $95.30 | $95.84 | -0.21% | $70.71 | +$0.40 |
+
+### Active Stop Orders
+| Symbol | Stop Price | Limit Price | Order ID |
+|---|---|---|---|
+| BTC/USD | $78,918.04 | $78,523.45 | 9c187cab-8af9-40f5-9d60-45def1c7d9e8 |
+| ETH/USD | $2,199.16 | $2,188.16 | ce339cc1-3c47-48c0-9312-7b890707f206 |
+| SOL/USD | $91.79 | $91.33 | 704432d7-4778-4fc7-a98c-622c8008a7dd |
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | $80,847 | -0.50% 24h (live Alpaca) |
+| ETH price | $2,284 | -1.20% 24h (live Alpaca) |
+| SOL price | $95.84 | -0.21% 24h (live Alpaca) |
+| Fear & Greed | 26 (Fear) | 7-day avg 21, 30-day avg 14 — recovering |
+| BTC 20-day MA | ~$80K–82K est. | Borderline; BTC at lower end of range |
+
+### Regime Filter
+- BTC 24h: -0.50% → NOT down >5%; hard HOLD gate **NOT triggered**
+- BTC vs 20-day MA: Borderline; treating as **DEFENSIVE MODE** (BTC/ETH only, 50% sizes)
+- F&G at 26 — above the <15 extreme-fear halt threshold; no halt triggered
+- SOL position held from prior session — not adding more non-BTC/ETH; monitor stops
+
+### Decision: **HOLD — No new trades**
+Cash is $1.95 — insufficient for any meaningful new position. All three positions have protective stop orders active. No new entries until BTC re-confirms above 20-day MA or a pullback provides a defined entry with available capital.
