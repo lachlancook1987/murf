@@ -108,3 +108,50 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-12 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $138.78 |
+| Cash | $1.95 |
+| Long Market Value | $136.83 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Trades This Week | 4 |
+| Account Status | ACTIVE |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | MV | Unr. P&L | Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000588525 | $81,645.25 | $80,653.98 | $47.47 | -$0.58 | $78,918.04 (stop_limit) |
+| ETH/USD | 0.0085785 | $2,314.90 | $2,284.18 | $19.59 | -$0.26 | $2,199.16 (stop_limit) |
+| SOL/USD | 0.73785075 | $95.30 | $94.55 | $69.76 | -$0.55 | $91.79 (stop_limit) |
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,654 | -0.74% 24h |
+| ETH price | ~$2,284 | -1.21% 24h |
+| SOL price | ~$94.55 | -1.55% 24h |
+| Fear & Greed | 49 (Neutral) | Stable neutral |
+| DXY | ~98.4 | +0.45% — slight crypto headwind |
+| BTC Dominance | N/A | Data unavailable |
+
+### Regime Filter
+- BTC 24h change: -0.74% → gate NOT triggered (>-5% threshold not hit)
+- BTC ~$80,654 vs estimated 20-day MA ~$80–82K → **BORDERLINE / DEFENSIVE MODE**
+- F&G 49 neutral — no extreme signal
+- **Mode: DEFENSIVE — BTC/ETH only, reduce sizes 50%**
+
+### Decision: **HOLD**
+
+Cash is $1.95 — no deployable capital. All three positions (BTC, ETH, SOL) are active with stop-limit orders in place. No new entries possible or warranted. Monitor stops; let existing positions run.
+
+**Watch levels:**
+- BTC: hold above $78,918 stop; target $83,000+
+- ETH: hold above $2,199 stop; target $2,550+
+- SOL: hold above $91.79 stop; target $100+
+- Offensive switch: BTC 2 closes above $82,500 + cash replenished
