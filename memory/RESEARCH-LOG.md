@@ -108,3 +108,24 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-13 — Midday Scan Addendum
+
+### Positions at Scan Time
+| Symbol | Qty | Entry | Current | P&L% | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.000588525 | $81,645.25 | $81,264.57 | -0.47% | $78,918 (active) |
+
+### Actions Taken
+- **None.** BTC at -0.47% — well above -10% cut rule. No stops to tighten (position not in profit).
+- SOL and ETH were closed by morning scan at 05:00 UTC (market sells). Reasons not documented by morning run; logged in TRADE-LOG for record-keeping.
+
+### Thesis Status — BTC
+- Original thesis (ETF inflows + institutional demand) still intact. BTC at $81,264 vs. 20-day MA ~$80–82K — borderline but holding.
+- Existing stop-limit at $78,918/$78,523 (3.35% from entry) is within strategy range (3–5%). No adjustment needed.
+- No signs of narrative breakdown (no exploit, no regulatory action flagged).
+
+### Decision: **HOLD BTC / WATCH**
+No intraday Perplexity research triggered — no sharp unexplained moves observed.
