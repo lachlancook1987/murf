@@ -108,3 +108,77 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-13 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.00 |
+| Cash | $91.84 |
+| Buying Power | $91.84 |
+| Open Positions | 1 (BTC/USD: 0.000588525 @ $81,645.25 entry, MV $47.16) |
+| Open Orders | 1 (BTC/USD stop_limit sell: stop $78,918.04 / limit $78,523.45) |
+| Account Status | ACTIVE (live — acct 251041174) |
+| Trades this week | 6 (May 11–13) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Source |
+|---|---|---|
+| BTC spot price | ~$80,259 mid | Alpaca real-time |
+| BTC 24h change | ~−1.0% ($81,095 → $80,259) | Alpaca |
+| ETH spot price | ~$2,286 mid | Alpaca real-time |
+| ETH 24h change | ~+1.1% | Perplexity |
+| BTC 20-day MA | ~$82,500 (est.) | Perplexity |
+| BTC vs 20-day MA | BELOW (~−2.7%) | Calc |
+| Fear & Greed | 52 (Neutral) | Perplexity |
+| BTC Funding Rate | +0.003%/8h | Perplexity (Binance/Bybit avg) |
+| BTC Dominance | 54.2% | Perplexity |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: −1.0% → gate (>5% down) **NOT triggered**
+- BTC vs 20-day MA: BELOW ~$82,500 → **DEFENSIVE MODE**
+- Funding: +0.003%/8h → mildly positive, not overheated
+- **Mode: DEFENSIVE — BTC/ETH only, reduce position sizes 50%**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- Ethereum Glamsterdam upgrade still pending (Q3 2026, originally H1) — medium-term narrative intact
+- SEC/CFTC Clarity Act: Senate Banking Committee critical vote May 14 (tomorrow) — regulatory clarity catalyst
+- ETH holding above $2,250 support; in planned entry zone $2,250–2,300
+
+**Bearish/Risk:**
+- BTC below 20-day MA — momentum headwind for all longs
+- Glamsterdam upgrade delayed to Q3 (from June); near-term upgrade catalyst reduced
+- Polymarket shows capped conviction above $82,000 BTC (~48% odds)
+- Perplexity ETH price data unreliable (returned $3,850 vs. Alpaca $2,286) — use Alpaca quotes only
+
+---
+
+### Trade Ideas (DEFENSIVE mode — BTC/ETH only, 50% sized)
+
+**Existing: BTC/USD long (0.000588525 @ $81,645)**
+- Underwater −1.86%; protective stop at $78,918 in place
+- No action — hold with existing stop
+
+**Idea: ETH/USD long (entry zone met)**
+- Catalyst: Glamsterdam (Q3 2026) + SEC/CFTC vote May 14
+- Entry: ~$2,287 (current ask)
+- Stop: 12% trailing (initial ~$2,012)
+- Target 1: $2,550 (+11.5%); Target 2: $2,750 (+20.2%)
+- Size: 50% defensive = 10% equity = $13.90 → 0.0061 ETH
+- R:R: ~0.96:1 (T1) / ~1.69:1 (T2)
+- Hard checks: positions 2/20 ✓, trades 7/25 ✓, size $13.90 < $27.80 (20% equity) ✓
+
+**Decision: ETH long 0.0061 ETH at market**
