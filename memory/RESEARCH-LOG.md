@@ -108,3 +108,66 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-13 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.76 |
+| Cash | $1.95 |
+| Buying Power | $1.95 |
+| Open Positions | 3 (BTC, ETH, SOL) |
+| Open Orders | 3 stop-limit sell orders |
+| Account Status | ACTIVE |
+
+---
+
+### Market Context (live Alpaca + Alpaca bars)
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $81,109 | Live from Alpaca positions |
+| BTC 24h change | +0.70% | May 12 close $80,481 → May 13 close $81,045 |
+| BTC 20-day MA | $79,177 | Calculated from Alpaca daily bars (last 20 closes) |
+| ETH price | $2,293.21 | Live from Alpaca positions |
+| SOL price | $95.42 | Live from Alpaca positions |
+| BTC Dominance | ~60% | Prior estimate, no fresh data |
+| Fear & Greed | ~47 (Neutral) | Prior estimate, no fresh data |
+| DXY | ~98 | Prior estimate, no fresh data |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +0.70% → gate **NOT triggered** (not down >5%)
+- BTC vs 20-day MA: $81,109 > $79,177 → **ABOVE MA = OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Positions Review
+
+| Symbol | Entry | Current | Unrealized P&L | Stop Level | Status |
+|---|---|---|---|---|---|
+| BTC/USD | $81,645.25 | $81,109.81 | -$0.32 (-0.66%) | $78,918 stop_limit | Protected |
+| ETH/USD | $2,314.90 | $2,293.21 | -$0.19 (-0.94%) | $2,199 stop_limit | Protected |
+| SOL/USD | $95.30 | $95.42 | +$0.09 (+0.13%) | $91.79 stop_limit | Protected |
+
+All three positions have active stop-limit orders. No stops triggered.
+
+---
+
+### Decision: **HOLD — INSUFFICIENT CASH**
+
+Account is 98.6% deployed ($137.81 of $139.76 equity). Only $1.95 cash available — insufficient for any new position.
+
+**No new trades this session.**
+
+**Watch levels:**
+- BTC: Monitor resistance at $82,500 — if sustained break → add SOL/AVAX
+- ETH: Glamsterdam upgrade catalyst still valid; watch for dip to $2,250 if cash freed up
+- SOL: Already in position; stop at $91.79 protects ~3.7% below entry
+- Cash trigger: If any stop fires and cash is restored, reassess immediately
