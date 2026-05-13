@@ -108,3 +108,31 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-13 — Midday Scan
+
+### Account Snapshot
+| Asset  | Qty        | Entry      | Current  | P&L%   | Stop       |
+|--------|-----------|------------|----------|--------|------------|
+| BTCUSD | 0.000589  | $81,645.25 | $81,155  | -0.60% | $78,918.04 |
+| ETHUSD | 0.008579  | $2,314.90  | $2,302.50| -0.54% | $2,199.16  |
+| SOLUSD | 0.737851  | $95.30     | $95.71   | +0.43% | $91.79     |
+
+### Regime
+- BTC at $81,155 — **below 20-day MA (~$82K)** → DEFENSIVE MODE active
+- No BTC 24h crash >5%
+
+### Actions Taken
+- **None** — no positions at or below -10%; no winners at +25%/+40% requiring stop tightening
+
+### Thesis Check (Perplexity)
+- No protocol exploits, hacks, or regulatory actions against BTC/ETH/SOL
+- ETH Glamsterdam upgrade: still on track
+- No thesis-breaking news for any held asset
+
+### Next Watch Levels
+- BTC: must reclaim $82,500 for 2 consecutive closes to enter offensive mode
+- ETH: Glamsterdam upgrade catalyst intact; watch for upgrade date confirmation
+- SOL: entered in prior session; stop at $91.79 (~3.7% buffer)
