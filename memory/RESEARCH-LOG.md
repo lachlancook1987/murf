@@ -108,3 +108,80 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-13 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.95 |
+| Cash | $124.20 |
+| Buying Power | $124.20 |
+| Open Positions | 1 (ETH/USD) |
+| Open Orders | 1 (ETH stop_limit sell GTC) |
+| Account Status | ACTIVE (live — 251041174) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | $79,445 | -1.29% 24h (from $80,481 close May 12) |
+| ETH price | $2,255 | -0.82% 24h (from $2,274 close May 12) |
+| BTC 20-day MA | $78,926 | Calculated from Apr 22–May 11 closes |
+| BTC vs 20-day MA | ABOVE (+$519) | Offensive mode active |
+| BTC 24h gate | Not triggered | -1.29%, far above -5% threshold |
+| Fear & Greed | ~49 (Neutral) | Source: Perplexity |
+| BTC Dominance | ~60% (est.) | Slight decrease from prior week |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -1.29% → gate **NOT triggered**
+- BTC vs 20-day MA: $79,445 > $78,926 → **OFFENSIVE MODE**
+- **Mode: OFFENSIVE — full universe, normal sizes**
+
+---
+
+### Key Developments Since Last Entry (May 4)
+
+**Completed trades (unlogged — catch-up):**
+- May 9–10: SOL/USD bought 0.7397 avg ~$95.32, sold May 13 @ $95.325 (≈ breakeven)
+- May 10: XRP/USD bought 19.5677 @ $1.4294, sold May 12 @ $1.47522 (+$0.89)
+- May 11: BTC/USD bot buy $20 notional @ $80,868.63 (0.000242 BTC)
+- May 12: BTC partial close (manual) @ $81,607.72, rebuy 0.00059 BTC @ $81,645.25
+- May 13 05:00: Old ETH position sold (manual) @ $2,305.35; SOL closed (manual) @ $95.325
+- May 13 13:06: ETH/USD bot buy 0.006100 @ $2,287.39 (CURRENT OPEN)
+- May 13 15:57: BTC stop_limit triggered, filled 0.000588525 @ $78,895.55 (≈ -$1.62 loss)
+
+**Notable:** BTC stopped out twice this week near the 20-day MA ($78,918 stop level). Price action choppy around $78,900–$82,000 range.
+
+---
+
+### Catalyst Assessment (Today)
+
+**Bullish (carry-over):**
+- ETF inflows remain strong (from May 4 research — no new data today)
+- ETH Glamsterdam upgrade narrative ongoing
+- BTC above 20-day MA → offensive mode active
+
+**Bearish/Risk:**
+- BTC just stopped out today → momentum fragile
+- ETH at $2,255 — below entry ($2,287), testing support
+- No fresh catalysts identified by Perplexity for May 13
+- Perplexity notes "bearish sentiment, 43% bullish per technical indicators"
+
+---
+
+### Decision: **HOLD — no new entries**
+
+ETH position already open with stop in place. BTC stopped out today — re-entering same session risks chasing choppy price action. No fresh catalyst documented. ETH at support ($2,250 area); stop at $2,012.90 covers 12% downside.
+
+**Watch levels:**
+- ETH hold level: $2,250 support — if closes below, stop at $2,012 becomes critical
+- BTC re-entry: Only if bounces back above $80,500 with volume + catalyst
+- Offensive mode switch OFF: If BTC closes below $78,926 (20-day MA)
