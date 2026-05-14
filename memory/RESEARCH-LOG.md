@@ -108,3 +108,42 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Midday Scan Addendum
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.84 |
+| Cash | $124.20 |
+| Long Market Value | $13.64 |
+| Open Positions | 1 (ETH/USD) |
+
+### Open Position: ETH/USD
+| Field | Value |
+|---|---|
+| Qty | 0.00608475 ETH |
+| Avg Entry | $2,287.39 |
+| Current Price | $2,241.80 |
+| Unrealized P&L | -$0.28 (-1.99%) |
+| Stop | $2,012.90 stop-limit GTC (order id: 1eb3bc0a) |
+
+### Step 3 — Cut Losers
+- ETH at -1.99% → well above -10% threshold → **no cut**
+
+### Step 4 — Trailing Stop Tightening
+- ETH not a winner (down from entry) → **no action**
+
+### Step 5 — Thesis Check
+- Queried Perplexity for ETH thesis breaks (Glamsterdam, exploits, regulatory)
+- **Vitalik Buterin ETH sales:** ~17,196 ETH sold in 2026 total, mostly Q1. Pre-announced, funding open-source/privacy work. Community reaction mixed but measured. Not systemic. Still holds ~224,000 ETH.
+- No protocol exploit, no major regulatory action found
+- **Thesis: INTACT** — hold ETH position
+
+### Step 6 — Intraday Research
+- ETH down ~-2% from entry but -0.9% intraday — no sharp unexplained move
+- No new catalyst research triggered
+
+### Decision: **HOLD** — no trades executed
