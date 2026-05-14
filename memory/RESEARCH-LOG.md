@@ -108,3 +108,57 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.93 |
+| Cash | $137.93 |
+| Open Positions | 0 |
+| Active Orders | 0 |
+| Account Status | ACTIVE |
+
+*Account is fully flat following ETH/USD close at 07:21 UTC today.*
+
+---
+
+### Midday Scan Actions
+
+**STEP 3 — Cut Losers:** No open positions → N/A.
+
+**STEP 4 — Trailing Stop Tightening:** No open positions → N/A.
+
+**STEP 5 — Thesis Check:** No open positions → N/A.
+
+**STEP 6 — Intraday Research:** No sharp moves in existing positions to investigate (flat).
+
+---
+
+### Position History Reconstructed (from order log)
+
+All positions opened and closed since last research entry (2026-05-04):
+
+| Trade | Entry | Exit | P&L |
+|---|---|---|---|
+| XRP/USD long | $1.4294 (May 10) | $1.47522 (May 12) | +$0.83 (+3.0%) |
+| SOL/USD long | ~$95.29 avg (May 9–10) | $95.325 (May 13) | -$0.16 (-0.2%) |
+| BTC/USD scalp | $80,868 (May 11) | $81,607 (May 12) | +$0.13 (+0.9%) |
+| BTC/USD long | $81,645 (May 12) | $78,895 (May 13, stop) | -$1.62 (-3.4%) |
+| ETH/USD long | $2,287 (May 13) | $2,262 (May 14, manual) | -$0.19 (-1.4%) |
+
+**Net realized P&L: ~-$0.81 across all trades.**
+
+---
+
+### Decision: **HOLD — FLAT**
+
+Account is fully flat. No action taken this midday scan. Awaiting next defined setup:
+- BTC long trigger: pullback to $77,500–78,500 OR breakout/hold above $82,500
+- ETH long trigger: pullback to $2,250–2,300
+- Offensive mode trigger: BTC 2 consecutive closes above $82,500
+
+**Note:** Account equity ($137.93) is far smaller than the $100K hypothetical from the May 4 strategy session. Actual position sizing must reflect the true ~$138 equity, not the paper scenario. Max single position = 20% = ~$27.60.
