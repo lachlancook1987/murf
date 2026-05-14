@@ -108,3 +108,79 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.93 |
+| Cash | $137.93 |
+| Buying Power | $137.93 |
+| Open Positions | None |
+| Open Orders | None |
+| Account Status | ACTIVE (live) |
+
+*Note: Account significantly reduced from $100K initial. All prior positions closed.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,581 | -1% to -3% 24h; 4-day declining trend |
+| ETH price | ~$2,261 | Slightly down |
+| BTC 20-day MA | $79,195 | Calculated from 25 daily bars |
+| BTC vs 20-day MA | +$386 ABOVE | Barely above — marginal offensive mode |
+| BTC 24h change | ~-1% to -3% | Does NOT trigger >5% HOLD gate |
+| ETF Flows | Net outflows | Spot BTC ETFs showing net outflows this week |
+| Fed/Macro | Warsh transition | May 13-15 Fed Chair transition period; mixed signals |
+| CLARITY Act | Senate markup | Regulatory bill in committee — uncertainty |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: ~-1% to -3% (not >5% down) → HOLD gate **NOT triggered**
+- BTC vs 20-day MA: $79,581 vs $79,195 → **ABOVE by $386** → technically OFFENSIVE MODE
+- Caveat: BTC only marginally above MA after 4-day slide from $82,198
+- **Mode: OFFENSIVE (marginal) — full universe permitted, normal sizes**
+
+---
+
+### Key Catalysts
+
+**Bearish:**
+- Bitcoin ETF net outflows this week — institutional de-risking
+- BTC in 4-day decline ($82,198 → $79,574)
+- CLARITY Act Senate markup = regulatory uncertainty
+- Warsh Fed Chair transition = macro uncertainty
+
+**Bullish:**
+- BTC holding above 20-day MA ($79,195)
+- BTC not showing extreme selling (24h only -1% to -3%)
+- CLARITY Act could be long-term bullish if it passes with positive language
+
+---
+
+### Trade Assessment
+
+**No valid entry signals today:**
+- BTC at $79,581 — not at pullback support ($77.5K–$78.5K), not at breakout ($82,500+)
+- ETH at $2,261 — not at pullback support ($2,250–$2,300) though approaching
+- No strong catalyst to justify entry
+- ETF outflows contradict bullish thesis
+- Account equity only $137.93 — requires high-conviction setups
+
+---
+
+### Decision: **HOLD**
+
+No trades fired. Await:
+- BTC pullback to $77,500–$78,500 for long entry
+- BTC breakout above $82,500 (2 closes) for offensive momentum entry
+- ETH pullback to $2,250–$2,260 with volume for ETH long
+- Reversal in ETF flows back to net inflows
