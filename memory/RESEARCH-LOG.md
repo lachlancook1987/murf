@@ -108,3 +108,81 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.57 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Open Positions | 1 (ETH/USD 0.058790 @ $2,262.29) |
+| Long Market Value | $132.97 |
+| Active Stop | ETH stop_limit @ $2,171.80 / limit $2,150.08 (placed 11:14 UTC) |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$81,131 | +1.52% 24h |
+| ETH price | ~$2,261.80 | -0.01% 24h (Alpaca live) |
+| Fear & Greed | 42 (Fear) | Below neutral; cautious sentiment |
+| BTC Dominance | ~N/A | Not retrieved |
+| ETF Flows | $3.4B 6-week inflow streak | May 7 saw $268M outflow reversal; trend still bullish |
+| Macro | Fed uncertainty; oil >$100/bbl | Headwinds |
+
+**BTC 20-day MA:** Estimated $80,000–82,000. BTC at $81,131 — borderline, likely at or just above MA. Offensive trigger ($82,500 2-day close) NOT met → **DEFENSIVE MODE**.
+
+---
+
+### Regime Filter
+
+- BTC 24h change: +1.52% → gate **NOT triggered**
+- BTC vs 20-day MA: At/near MA → **DEFENSIVE MODE** (BTC/ETH only, 50% size)
+- **Mode: DEFENSIVE**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- BTC ETF 6-week inflow streak ($3.4B); institutional demand absorbing 9× mined supply
+- ETH ETF tailwinds; ETH holding $2,260 support
+- BTC +11% from April close; recovering from cycle lows
+
+**Bearish/Risk:**
+- May 7 ETF outflow reversal ($268M) — streak potentially broken
+- Fear & Greed at 42 (Fear) — sentiment not confirming price
+- Oil >$100/bbl; Fed leadership uncertainty — macro headwinds
+- Polymarket: new ATH odds only 9% — market skeptical of continuation
+
+---
+
+### Trade Ideas
+
+**No new trades possible — only $4.60 cash remaining.**
+
+- Account is 96.7% deployed in ETH ($132.97 of $137.57)
+- Existing ETH position has stop-loss already placed and active
+- Even in offensive mode, insufficient capital for any meaningful position
+
+**Existing position management:**
+- ETH/USD 0.058790 @ $2,262.29 (entry today 11:12 UTC)
+- Stop-loss: stop_limit @ $2,171.80 / limit $2,150.08 (~4% below entry — within strategy range)
+- Target: $2,550 (T1), $2,750 (T2) per prior thesis
+
+---
+
+### Decision: **HOLD — No new entries**
+
+Fully deployed. Stop-loss active on ETH. Monitor position and await either stop trigger or target approach.
+
+**Watch levels:**
+- ETH stop trigger: $2,171.80
+- ETH T1: $2,550
+- Offensive trigger: BTC 2 closes above $82,500 (then add capital before trading)
