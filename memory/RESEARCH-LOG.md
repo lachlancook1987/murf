@@ -4,6 +4,57 @@
 
 ---
 
+## 2026-05-14 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.59 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Open Positions | 1 (ETH/USD) |
+| Open Orders | 1 (ETH/USD stop_limit sell, active) |
+| Account Status | ACTIVE |
+
+---
+
+### Open Position
+| Symbol | Qty | Entry | Current | Market Value | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,296.19 | $134.99 | +$1.99 (+1.50%) | Stop_limit: trigger $2,171.80 / limit $2,150.08 |
+
+Stop placed at 11:14 UTC. Stop is ~4% below entry (tighter than 12% trailing — acceptable).
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,549 | -1.55% 24h |
+| BTC 20-day MA | ~$80,200 | BTC below MA → DEFENSIVE |
+| ETH price | ~$2,296–2,303 | ~flat to -0.54% 24h |
+| Fear & Greed | N/A (unavailable) | — |
+| BTC Funding Rate | N/A (unavailable) | — |
+
+---
+
+### Regime Filter
+- BTC 24h change: -1.55% → NOT down >5% — **HOLD gate NOT triggered**
+- BTC vs 20-day MA: $79,549 vs ~$80,200 → **DEFENSIVE MODE** (BTC/ETH only, 50% size)
+
+---
+
+### Decision: **HOLD — no new entries**
+
+**Reason:** Only $4.60 cash available — insufficient for any position regardless of mode. Existing ETH/USD position ($135 notional, 96.7% of equity — note: over 20% limit, was placed by prior session) already protected by active stop_limit at ~4% below entry.
+
+**Watch:**
+- ETH stop trigger: $2,171.80 — if breached, position closes automatically
+- BTC long re-entry trigger: reclaim $80,200+ (above 20-day MA) → switch to offensive mode
+- Cash reload: any position exit frees ~$135 cash for next entry
+
+---
+
 ## 2026-05-04 — Pre-Session Research
 
 ### Account Snapshot
