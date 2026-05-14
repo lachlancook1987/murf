@@ -108,3 +108,74 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.87 |
+| Cash | $124.20 |
+| Buying Power | $124.20 |
+| Open Positions | 1 (ETH/USD: 0.00608475 @ $2,287.39 entry, -1.76%) |
+| Open Orders | 1 (ETH/USD stop-limit sell, stop $2,012.90) |
+| Trades This Week | 6 of 25 |
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$79,213 | -0.10% from May 13 close ($79,291) |
+| ETH price | ~$2,247 | -0.66% from prior day ($2,262) |
+| BTC 20-day MA | $79,089 | Calculated from 20 daily closes (Apr 24–May 13) |
+| BTC vs MA | +$124 (+0.16%) | Barely above — borderline offensive mode |
+| BTC dominance | ~60% (est.) | Elevated; alt headwind |
+| Fear & Greed | ~47–50 (est. neutral) | No extreme reading |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.10% → HOLD gate **NOT triggered** (gate requires >-5%)
+- BTC vs 20-day MA ($79,089): BTC at $79,213 → **ABOVE MA by 0.16%** → OFFENSIVE MODE (barely)
+- Caveat: BTC is only $124 above the MA; one down day could flip to DEFENSIVE
+- **Mode: OFFENSIVE (marginal) — full universe technically available; stay disciplined on entries**
+
+---
+
+### Key Catalysts
+
+**Bullish:**
+- ETH Glamsterdam upgrade thesis still active (deferred from May 4 research)
+- Spot ETF inflows narrative ongoing (institutional demand)
+- BTC holding $79k support after pulling back from $82k highs
+
+**Bearish/Risk:**
+- BTC failed to hold breakout above $82,500 (May 10 high $82,198 → now $79,213)
+- BTC pulled back ~3.8% from week's high; no confirmed reversal catalyst
+- ETH underperforming (entry at $2,287, now $2,247 = -1.76%)
+- DXY status uncertain; macro risk-off could accelerate crypto weakness
+
+---
+
+### Trade Ideas
+
+**BTC:** Not at entry zone. Buy zone = $77,500–78,500 (current $79,213 too high). Breakout trigger = $82,500 (not reached). **No entry.**
+
+**ETH:** Current $2,247 is just below the defined buy zone ($2,250–2,300). Already long at $2,287 with active stop at $2,012.90. Adding to a losing position without new catalyst is low conviction. **No add.**
+
+---
+
+### Decision: **HOLD**
+
+No new trades. Existing ETH position held with active stop-limit at $2,012.90 (≈12% below entry). BTC not at entry zone. Regime is technically offensive but marginal — maintain discipline.
+
+**Watch levels (updated):**
+- BTC long trigger: $77,500–78,500 pullback (entry zone)
+- BTC breakout trigger: sustained break above $82,500 with volume
+- ETH: Hold current position; add only on confirmed support at $2,200–2,250 with catalyst
+- Regime flip to DEFENSIVE: BTC close below $79,000 (current MA level)
