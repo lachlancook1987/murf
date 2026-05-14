@@ -108,3 +108,114 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-14 — Pre-Session Research
+
+### Account Snapshot
+
+| Field | Value |
+|---|---|
+| Equity | $137.10 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Open Position | ETHUSD long — 0.05879 ETH @ avg $2,262.29 |
+| Position Market Value | $132.50 |
+| Unrealized P&L | -$0.50 (-0.38%) |
+| Open Stop-Loss | Stop-limit sell: stop $2,171.80 / limit $2,150.08 (GTC) |
+| Account Status | ACTIVE (paper) |
+
+*Note: Prior session log assumed $100K equity — actual account is $137.10 (small paper account). Prior "clean slate" session notes were in error; ETH position was already open from earlier activity.*
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$80,000–81,050 | ~flat 24h (-1.3% to +1.5% range) |
+| ETH price | ~$2,253–2,260 | -1.5% to -2.4% 24h; slightly below entry |
+| BTC Dominance | ~59.3% | Range 57.6–60.3% across sources; slight 24h decline |
+| Fear & Greed | 34–46 (Fear→Neutral) | Fear bias; not extreme fear (<15) |
+| BTC Funding Rate | +0.01%/8h (Binance/Bybit) | Neutral; not overheated |
+| DXY | 98.52 (+0.22%) | Rising; 10yr yield at 4.49% (10-month high); crypto headwind |
+| S&P 500 Futures | +0.25% | Mild positive; macro neutral |
+
+**BTC 20-day MA:** Still estimated ~$80,000–82,000. BTC at $80K = at/borderline below MA → **DEFENSIVE MODE active.**
+
+---
+
+### Key Catalysts (2026-05-14)
+
+**Bullish:**
+- **CLARITY Act Senate Markup today (May 14)** — U.S. crypto regulation clarity; historically bullish for ETH/sector
+- Warsh Fed Chair Transition (May 13–15 events) — potential policy shift toward accommodation
+- Copper/Gold ratio broke 200DMA (first since 2020) — historically precedes BTC rallies (Hayes target $126K)
+- ETF inflows ongoing: $356M net April 2026; $101M ETH single day May 1
+- Glamsterdam upgrade (ETH): June 2026 target; 3× L1 throughput potential
+- LTC halving trending (top event, score 8.83/10) — alt narrative positive
+
+**Bearish/Risk:**
+- DXY rising (+0.22%) + strong PPI data → Fed stays hawkish → opportunity cost for crypto rises
+- 10yr yield at 4.49% (10-month high) — headwind for risk assets
+- Fear & Greed at 34 (Fear) on some sources
+- ETH down -2% today; trading below entry ($2,262)
+- **Token unlocks this week:** STRK 127M (4.05% supply, May 15), ARB 92.65M (1.71%, May 16) — L2 token sell pressure
+- BTC still struggling to reclaim 20-day MA
+
+---
+
+### Regime Filter (STEP 4)
+
+- BTC 24h change: ~flat (NOT down >5%) → hard HOLD gate **NOT triggered**
+- BTC vs. 20-day MA (~$80–82K): BTC at $80K → borderline/slightly below → **DEFENSIVE MODE**
+- Funding: +0.01%/8h → neutral
+- Fear & Greed: 34–46 → Fear (not extreme; trading not blocked by strategy rules)
+- **Mode: DEFENSIVE — BTC/ETH only, position sizes at 50% of normal**
+
+---
+
+### Trade Ideas (DEFENSIVE mode)
+
+**Current Position — ETH Long (HOLD/MANAGE)**
+- Entered: $2,262.29 | Current: ~$2,253.77 | Unrealized: -$0.50
+- Stop already set: $2,171.80 (~4% below entry) — adequate protection
+- Bullish thesis intact: Glamsterdam June upgrade + CLARITY Act markup today + ETF flows
+- If ETH reclaims $2,300+, consider raising stop to $2,200 to lock in break-even zone
+- Target 1: $2,420 (MEXC breakout level); Target 2: $2,550
+- Time stop: exit if ETH shows no progress by May 16
+
+**Idea 2 — BTC Long (Watch Only — no buying power)**
+- Catalyst: Copper/Gold ratio signal + CLARITY Act + ETF demand
+- Entry: $78,500–79,500 (test of current support base)
+- Stop: $75,800 (~4.5% risk)
+- Target 1: $82,500 (20-day MA reclaim); Target 2: $85,000
+- Size: Not executable — only $4.60 cash available
+- Note: Would require reducing ETH first
+
+**Offensive Mode Trigger (unchanged from prior session):**
+- BTC closes 2 consecutive days above $82,500 → switch to offensive
+- Then: expand to SOL, full sizes, add BTC/ETH
+
+---
+
+### Risk Factors
+1. ETH slightly underwater; stop at $2,171.80 — monitor DXY/yield closely
+2. DXY rising + 10yr yield at 4.49% — sustained risk-off could push ETH to stop
+3. STRK (May 15) and ARB (May 16) unlocks — L2 token pressure may drag ETH
+4. CLARITY Act markup could disappoint — watch for sell-the-news reaction
+5. Nearly 100% deployed ($132.50/$137.10) — no dry powder for new entries or averaging down
+6. BTC not confirmed above 20-day MA — defensive positioning appropriate
+
+---
+
+### Decision: **HOLD**
+
+Existing ETH long maintained with stop in place. No buying power for new entries. CLARITY Act markup today is key near-term catalyst — positive outcome could push ETH to $2,300+. If stop triggers at $2,171.80, account drops to ~$4 cash (effectively flat). Patience warranted.
+
+**Watch levels:**
+- ETH: hold above $2,200 (key psychological); stop hit if $2,171.80 breached
+- ETH raise-stop trigger: close above $2,300 → move stop to $2,200
+- BTC offensive mode: 2 closes above $82,500
+- DXY red flag: sustained move above 99.5
