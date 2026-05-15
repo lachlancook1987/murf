@@ -2470,3 +2470,28 @@ Default stance maintained. No new entries possible ($24.56 cash insufficient). B
 - XRP: Senate floor vote announcement = re-catalyst event; watch $1.50 breakout resumption
 - BTC: $82,000 sustained close = regime upgrade to OFFENSIVE; would allow BTC re-entry and larger sizing
 - Cash trigger: any ETH/XRP partial close frees capital for new entry in next session
+
+---
+
+## 2026-05-15 — Midday Scan Addendum
+
+### Positions Reviewed
+| Symbol | Qty | Entry | Current | Unrealized P&L | Stop | Action |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,223.60 | -$1.24 (-1.84%) | $2,151.94 / $2,130.42 (order e4efd513) | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.435 | -$0.12 (-0.28%) | $1.3814 / $1.3676 (order e079ed77) | HOLD |
+
+### Market Context (Perplexity + Alpaca)
+- BTC: ~$79,100–$80,700 | 24h: -2.6% to -3.0% — broad market selloff, crash gate NOT triggered (<-8%)
+- Regime: CAUTION (BTC near/below estimated 20-day MA ~$80–$82k); sizing & stops already set per CAUTION rules
+- ETH: $2,223.60 | -2.39% today | Stop $2,151.94 is $71.66 / 3.2% away from current
+- XRP: $1.435 | -3.60% today | Stop $1.3814 is $0.054 / 3.7% away from current
+
+### Scan Decisions
+- **STEP 3 (Cut losers):** ETH -1.84%, XRP -0.28% — both well above -10% threshold. No cuts.
+- **STEP 4 (Tighten stops):** Neither position up ≥25%. No stop adjustments.
+- **STEP 5 (Thesis check):** No ETH thesis break (Glamsterdam June 2026 intact, no protocol exploit). No XRP thesis break (CLARITY Act in progress, no Senate vote setback reported). Broad BTC-led selloff explains both dips — normal volatility.
+- **STEP 6 (Research):** Perplexity confirms market-wide weakness. No single catalyst; risk-off environment. Theses intact.
+
+### Decision: HOLD — No Action
+Both positions within normal drawdown bands. Stops in place. Cash ~$24-26 (insufficient for new entries). Next catalyst events: XRP CLARITY Act Senate floor vote; ETH Glamsterdam June 2026.

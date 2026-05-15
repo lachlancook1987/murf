@@ -125,3 +125,13 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Trades today:** ETH/USD BUY 0.030 @ $2,265.20 (bot re-entry post user dashboard close) | **Week:** 12/5 (cap exceeded; mix of bot + user actions)
 **Regime:** BTC $81,316 (+0.29% day vs May 14 close $81,079) — OFFENSIVE (no crash gate); 20-day MA not available via API
 **Notes:** Prior session wrote [final] EOD at $137.64 with 0.058790 ETH; user then closed full ETH via dashboard at $2,266.15 (07:29Z), freeing $133.24 cash. Bot re-entered 0.030 ETH @ $2,265.20 (07:39Z) = $67.96 notional (49.5% F&G-capped). Portfolio shifted from 97% ETH to 49.5% ETH / 50.5% cash. Bot underperformed BTC by -0.58% today (bot -0.29%, BTC +0.29%). Stop-limit GTC active: trigger $2,151.94, limit $2,130.42, qty 0.029925 (order e4efd513). ETH targets: T1 $2,420 (+6.8%), T2 $2,550 (+12.5%), T3 $2,750 (+21.4%). XRP watch: CLARITY Act markup before May 21 — cash available for entry if catalyst confirmed. Phase P&L -$4.21 (-2.97%) from $141.76 start (May 10).
+
+---
+
+## 2026-05-15 — Midday Scan (no trades)
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,223.60 | -1.84% | Stop e4efd513 active ($2,151.94) — HOLD
+- XRP/USD: 31.174 @ $1.439 | Current $1.435 | -0.28% | Stop e079ed77 active ($1.3814) — HOLD
+- No cuts (neither near -10%). No stop tightening (no winners up ≥25%). Theses intact.
+- BTC broad selloff (-2.6% to -3.0%) explains dips; no protocol exploits or regulatory action on either position.
+- No trades. No notification sent.
