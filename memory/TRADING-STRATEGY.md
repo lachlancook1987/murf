@@ -49,9 +49,9 @@ Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → 
 
 | Sector | Assets | Status | Consecutive Losses | Notes |
 |---|---|---|---|---|
-| BTC Core | BTC/USD | ACTIVE | 0 | Primary holding |
-| ETH / L1 | ETH/USD | ACTIVE | 0 | Glamsterdam upgrade catalyst pending |
-| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | Now eligible in caution mode too |
-| Alts (top 50) | Various | ACTIVE | 0 | Full universe always eligible |
+| BTC Core | BTC/USD | ACTIVE | 1 | Re-entry stopped out May 13 (-$1.62); at 1 of 2 pause threshold |
+| ETH / L1 | ETH/USD | ACTIVE | 0 | Current position open (May 14 entry, +0.47% unrealized); Glamsterdam upgrade June 2026 |
+| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — monitor sector |
+| Alts (top 50) | Various | ACTIVE | 0 | XRP win May 12 reset counter; CLARITY Act watch for XRP re-entry |
 
-*Last updated: 2026-05-10 — Aggressive profile activated. Sector restrictions removed; all sectors ACTIVE at all times unless 2 consecutive losses trigger a sector pause.*
+*Last updated: 2026-05-15 — Weekly review. BTC Core at 1 consecutive loss (re-entry stop-out); one more BTC loss triggers sector pause. All sectors ACTIVE.*
