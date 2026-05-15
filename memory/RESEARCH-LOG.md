@@ -108,3 +108,63 @@ First session, clean slate. Defensive mode active. No market entries — wait fo
 - BTC long trigger: $77,500–78,500 pullback OR breakout above $82,500
 - ETH long trigger: $2,250–2,300 pullback
 - Offensive mode switch: BTC 2 closes above $82,500
+
+---
+
+## 2026-05-15 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.04 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Long Market Value | $134.44 (ETH) |
+| Open Positions | 1 (ETH/USD) |
+| Pending Orders | 1 stop-limit sell on ETH |
+
+*Note: Account is nearly fully deployed. No cash for new entries.*
+
+---
+
+### Open Position
+| Symbol | Qty | Avg Entry | Current Price | Mkt Value | Unrealized P&L |
+|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,286.72 | $134.44 | +$1.44 (+1.08%) |
+
+**Active stop order:** stop-limit sell ETH/USD @ stop $2,171.80 / limit $2,150.08 (order 7083dc24, GTC)
+
+---
+
+### Market Context
+
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$118,838 | Perplexity data; significant run-up since early May |
+| BTC 24h change | -0.50% | Not down >5% — hold gate NOT triggered |
+| BTC 20-day MA | ~$117,400 | BTC ABOVE MA → OFFENSIVE MODE |
+| ETH price | $2,286.72 | Alpaca live price; +1.09% today |
+| ETH 24h change | +1.09% | Mild positive |
+| Fear & Greed | N/A | Data not available today |
+| BTC Dominance | N/A | Data not available today |
+| DXY | N/A | Data not available today |
+
+---
+
+### Regime Filter
+
+- BTC 24h change: -0.50% → gate **NOT triggered**
+- BTC vs 20-day MA: $118,838 > $117,400 → **BTC ABOVE MA → OFFENSIVE MODE**
+- Note: Offensive mode allows full universe + full sizes, but account has only $4.60 cash
+
+---
+
+### Decision: **HOLD**
+
+No new trades possible. $4.60 cash is insufficient for any meaningful position. Existing ETH position is profitable (+1.08%) with active stop-limit protection. Let position run.
+
+**Watch levels:**
+- ETH take-profit targets: $2,550 (T1), $2,750 (T2)
+- ETH stop: current stop-limit at $2,171.80 / $2,150.08
+- If ETH rallies to $2,400+, consider raising stop to lock in gains
+- New entry trigger: cash must exceed $10 before sizing any new trade
