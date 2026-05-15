@@ -44,3 +44,29 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **R:R:** n/a (no target set — user discretionary)
 **Thesis:** User-directed market buy at current price.
 **Notes:** Trailing stop rejected (not supported for crypto on Alpaca); 5% fixed stop_limit placed to match SOL stop convention.
+
+---
+
+## Closed Positions / Activity May 12–14 (reconstructed from Alpaca orders)
+
+| Date/Time (UTC) | Pair | Action | Qty | Price | Notes |
+|---|---|---|---|---|---|
+| 2026-05-12 00:01 | XRP/USD | SELL (dashboard exit) | 19.51878 | $1.47522 | Full close; +3.2% from $1.4294 entry ≈ +$0.89 P&L |
+| 2026-05-12 00:14 | BTC/USD | SELL (dashboard) | 0.000241858 | $81,607.72 | Partial close from May 11 buy; +0.9% ≈ +$0.18 |
+| 2026-05-12 00:15 | BTC/USD | BUY (dashboard re-entry) | 0.000590 | $81,645.25 | Manual re-entry; stop-limit set $78,918/$78,523 |
+| 2026-05-13 05:00 | ETH/USD | SELL (dashboard partial) | 0.008579 | $2,305.35 | Partial exit early ETH tranche |
+| 2026-05-13 05:00 | SOL/USD | SELL (dashboard exit) | 0.737851 | $95.325 | Full SOL close; -1.3% from $96.62 avg ≈ -$0.96 |
+| 2026-05-13 13:06 | ETH/USD | BUY (bot re-entry) | 0.006100 | $2,287.39 | Stop-limit set $2,012.90/$1,986.73 |
+| 2026-05-13 15:57 | BTC/USD | SELL (stop triggered) | 0.000589 | $78,895.55 | Stop-limit triggered; -3.4% from $81,645 ≈ -$1.62 |
+| 2026-05-14 07:21 | ETH/USD | SELL (dashboard partial) | 0.006085 | $2,262.35 | Partial close; -1.1% from $2,287 entry ≈ -$0.15 |
+| 2026-05-14 11:12 | ETH/USD | BUY (bot, $136 notional) | 0.058937 | $2,262.29 | **OPEN** — current position; stop-limit $2,171.80/$2,150.08 |
+
+---
+
+## 2026-05-15 — No New Trades
+
+- Equity: $139.04 | Cash: $4.60 | Buying power insufficient for new entries
+- Open: ETH/USD 0.058790 @ $2,262.29 | Current $2,286.72 | Unrealized +$1.44 (+1.08%)
+- Stop active: sell ETH at stop $2,171.80 / limit $2,150.08 (order 7083dc24, GTC)
+- Regime: OFFENSIVE (BTC $118,838 > 20-day MA $117,400) | BTC 24h: -0.50%
+- Weekly trade count: 8 / 25

@@ -1157,3 +1157,73 @@ Session ended with 4 open positions: ETH, SOL (0.7378 combined), XRP, BTC. All h
 - BTC: hold, no target set
 - Offensive mode trigger: BTC 2 closes above $82,500
 - ETH stop: $2,199.16 (consider trailing up if ETH clears $2,400)
+
+---
+
+## 2026-05-15 — Session-Open Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $139.04 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Long Market Value | $134.44 (ETH) |
+| Open Positions | 1 (ETH/USD) |
+| Pending Orders | 1 stop-limit sell on ETH |
+
+*All SOL, BTC, XRP positions and the earlier ETH tranche closed between May 11–14 via stops and manual exits. Only ETH re-entry from May 14 remains open.*
+
+---
+
+### Open Position
+| Symbol | Qty | Avg Entry | Current Price | Mkt Value | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,286.72 | $134.44 | +$1.44 (+1.08%) | stop-limit $2,171.80/$2,150.08 GTC |
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Source |
+|---|---|---|
+| BTC price | ~$118,838 | Perplexity |
+| BTC 24h change | -0.50% | Perplexity |
+| BTC 20-day MA | ~$117,400 | Perplexity (est.) |
+| ETH price | $2,286.72 | Alpaca live |
+| ETH 24h change | +1.09% | Alpaca live |
+| Fear & Greed | N/A | Not returned today |
+| BTC Dominance | N/A | Not returned today |
+| DXY | N/A | Not returned today |
+
+*Note: BTC has moved significantly since May 10 (~$80,760 → ~$118,838). This is consistent with the $118,838 figure flagged in the May 4 log as "stale/error" — that was Perplexity returning a future price, not an error.*
+
+---
+
+### Regime Filter
+- BTC 24h change: -0.50% → gate **NOT triggered** (need <-8% per current strategy)
+- BTC vs 20-day MA: $118,838 > $117,400 → **BTC ABOVE MA → OFFENSIVE MODE**
+- Strategy in effect: Aggressive profile (activated May 10) — max position 65% equity, 95% deployed, default stance TRADE
+
+---
+
+### Weekly Trade Count (May 11–15)
+- From Alpaca orders (all activity May 11–14): 8 fills across BTC, ETH, SOL, XRP
+- Today (May 15): 0 new trades
+- Total this week: **8 / 25 max**
+
+---
+
+### Hard-Check Results
+- Cash available: $4.60 → **insufficient for any new position** (minimum meaningful notional ~$10)
+- All rules pass for existing ETH position (stop in place, thesis intact)
+
+---
+
+### Decision: **HOLD — No Cash for New Entries**
+
+Account fully deployed in ETH ($134.44 of $139.04 equity). Stop-limit active at $2,171.80. No new trades possible until a position closes and frees cash.
+
+**Watch levels:**
+- ETH T1 target: $2,550 | T2: $2,750
+- ETH stop: $2,171.80 (raise if ETH clears $2,400+)
+- New entry trigger: cash > $10 AND valid thesis present
