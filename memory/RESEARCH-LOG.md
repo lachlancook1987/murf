@@ -1900,3 +1900,106 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
 **Cash:** $4.60 — no new entries possible.
 **Decision:** NO ACTION — HOLD. Stop protecting downside automatically.
   - Warsh hawkish comment → BTC/crypto negative → apply caution sizing on any new entry
+
+---
+
+## 2026-05-15 — Pre-Session Research (Week 2, Day 5 / Saturday)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $136.64 |
+| Cash | $4.60 (3.4%) |
+| Buying Power | $4.60 |
+| Long Market Value | $132.04 |
+| Day P&L | -$1.00 vs yesterday close $137.64 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.058790 | $2,262.29 | $2,245.95 | -$0.96 (-0.72%) | Stop-limit $2,171.80 / $2,150.08 (GTC, 7083dc24) |
+
+**Open Orders:** ETH stop-limit GTC active (7083dc24) — sell 0.058790 at stop $2,171.80 / limit $2,150.08. No other open orders.
+
+---
+
+### Market Context
+
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$79,200–$81,300 | Range-bound near $80k |
+| BTC 24h Change | +0.39% to +2.54% | Positive — no crash gate |
+| ETH Price | ~$2,246–$2,290 | Below 20-day EMA ~$2,287 |
+| ETH 24h Change | ~-1.4% intraday (Alpaca) | Slight negative |
+| BTC Dominance | 57–60% | Elevated — mild alt headwind |
+| Fear & Greed Index | 43 (Fear) | Reduce new-entry size 50% |
+| BTC Funding Rate | +0.0047% / 8h | Neutral / low positive |
+| DXY | ~99.07 (+0.18%) | Mild crypto headwind |
+| S&P 500 E-Mini | ~7,497–7,502 (+0.44–0.74%) | Risk-on, near ATH |
+
+**BTC Regime:** BTC 24h change ~+0.4–2.5% → crash gate NOT triggered. 20-day MA not available via API; BTC ranging $78k–$82k this week. Treating as NEUTRAL regime (neither confirmed offensive nor confirmed caution). Fear & Greed 43 → 50% size reduction on any new entries.
+
+---
+
+### Catalysts Today
+1. **Fed Chair Warsh** — Powell term ended May 15; Warsh now Fed Chair. Market watching tone on rate policy. Warsh historically more hawkish than Powell — crypto negative if hawkish comments follow.
+2. **CLARITY Act markup** — Expected before May 21; establishes XRP/digital commodity status permanently. XRP sector ACTIVE (0 consecutive losses).
+3. **Spot ETF inflows** — BTC ETF demand ongoing; ETH ETFs $356M net positive April 2026 (medium-term bullish for ETH).
+4. **Glamsterdam upgrade (ETH)** — June 2026; pre-positioning catalyst still live. ETH stalled below $2,420 resistance.
+5. **PYTH cliff unlock $106M** (this week) + **ZRO $36M** — DeFi sector selling pressure possible.
+6. **S&P 500 near all-time highs** — Cisco +13%, tech strength, macro risk-on backdrop.
+7. **US-China trade progress** — Easing geopolitical tensions supporting broader risk appetite.
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH HOLD (current position)**
+- **Catalyst:** Glamsterdam June 2026 + spot ETH ETF inflows $356M April + break above $2,420 as technical trigger
+- **Entry:** Already in @ $2,262.29 avg
+- **Stop:** $2,171.80 (active GTC, 7083dc24) — 3.4% below current $2,245.95 — do NOT move lower
+- **Targets:** T1 $2,550 (+13.5%), T2 $2,750 (+22.4%)
+- **Trail trigger:** ETH closes above $2,420 → update stop to 5% below new high
+- **R:R:** ~1.9:1 to T1 ($17.8 gain / $4.3 risk on 0.05879 ETH)
+- **Action:** HOLD. Thesis intact. ETH below 20-day EMA (~$2,287) — short-term bearish setup, but stop is managing downside. Support at $2,200; stop triggers at $2,171.80.
+
+**Idea 2 — XRP re-entry (contingent on CLARITY Act news + cash)**
+- **Catalyst:** CLARITY Act markup expected before May 21; XRP ETF inflows $82M April; alts sector ACTIVE (0 consecutive losses)
+- **Entry:** Pullback toward $1.40–$1.45 on CLARITY news confirmation or breakout above $1.60
+- **Stop:** 5% below entry (Fear & Greed 43 → 50% size reduction, NOT tighten stop)
+- **Target:** $1.65–$1.75 (+10–20%)
+- **R:R:** ~2.0–4.0:1
+- **Size:** 50% of normal (Fear & Greed rule) → ~$65 notional if cash available
+- **Prerequisite:** ETH stop triggered (~$127 freed) OR user deposit. Current $4.60 insufficient.
+
+**Idea 3 — BTC re-entry watch (contingent on cash, caution re 1-loss threshold)**
+- **Catalyst:** Warsh potentially dovish follow-through + BTC recovering above $82k sustained + S&P ATH macro tailwind
+- **Entry:** Sustained break above $82,000 with volume
+- **Stop:** 5% below entry (~$77,900 if entered $82k)
+- **Target:** $87,000–$90,000 (+6–10%)
+- **R:R:** ~1.5–2.0:1
+- **Size:** 50% of normal (Fear & Greed 43) AND minimum sizing (BTC Core sector 1 consecutive loss — one more = pause)
+- **Prerequisite:** Cash available; BTC sector at 1-loss threshold — trade carefully.
+
+---
+
+### Risk Factors
+1. **Warsh Fed Chair** — Hawkish tone risk; any rate-hawkish comment = crypto selloff; primary uncertainty.
+2. **Fear & Greed 43 (Fear)** — 50% size reduction mandatory on any new entry.
+3. **ETH below 20-day EMA** — Short-term bearish setup; stop at $2,171.80 provides protection (3.4% away).
+4. **DXY ~99 (+0.18%)** — Mild dollar strength = mild crypto headwind; not severe.
+5. **PYTH $106M + ZRO $36M unlocks** — DeFi sector selling pressure this week; could spill into alts broadly.
+6. **BTC Core sector 1-loss threshold** — One more BTC stop-out triggers sector pause.
+7. **ETH stop proximity** — Stop $2,171.80 is 3.4% below current $2,245.95. A 3.4% BTC-led drawdown would trigger exit (~$127 freed for redeployment).
+8. **Cash constraint** — $4.60 cash prevents all new entries regardless of signals.
+
+---
+
+### Decision: TRADE (conditional)
+- **Today (Saturday):** HOLD ETH; no new entries possible ($4.60 cash).
+- **Session action:** Monitor Warsh comments for rate policy tone; watch ETH $2,420 breakout level; watch XRP for CLARITY Act catalyst.
+- **Trigger points:**
+  - ETH < $2,171.80 → stop triggered → ~$127 cash freed → XRP or small BTC re-entry at 50% size (F&G rule)
+  - ETH > $2,420 sustained → trail stop to 5% below new high
+  - BTC > $82,000 sustained + cash available → BTC re-entry candidate (50% size, 1-loss threshold noted)
+  - Warsh hawkish → do NOT add new positions; hold ETH stop as downside protection
