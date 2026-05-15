@@ -132,3 +132,87 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 4. **Account size reality:** Live account is ~$140 real money. Sizing discipline applies proportionally.
 
 ---
+
+## Week of 2026-05-11 — Review Date: 2026-05-15
+
+### Account Snapshot (Friday Close)
+| Field | Value |
+|---|---|
+| Equity (ending, EOD snapshot) | $138.47 |
+| Equity (live at review time) | $138.22 |
+| Cash | $4.60 |
+| Long Market Value | $133.62 (ETH) |
+| Open Positions | 1 (ETH/USD) |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (May 10 phase start) | $141.76 |
+| Ending Equity (EOD May 15) | $138.47 |
+| **Week Return** | **-2.32%** (-$3.29) |
+| BTC Week Return | **-1.47%** (Mon open $82,209 → Fri close $81,003) |
+| **Bot vs BTC** | **-0.85%** (underperformed) |
+
+### Trade Summary (May 11–15 closed positions)
+| # | Date | Pair | Side | Entry | Exit | P&L | Sector |
+|---|---|---|---|---|---|---|---|
+| 1 | May 10→12 | XRP/USD | Long→Close | $1.4294 | $1.4752 | **+$0.89** | Alts |
+| 2 | May 11→12 | BTC/USD | Long→Partial close | $80,868 | $81,607 | **+$0.18** | BTC Core |
+| 3 | May 12→13 | BTC/USD | Long (re-entry)→Stop | $81,645 | $78,895 | **-$1.62** | BTC Core |
+| 4 | May 9→13 | SOL/USD | Long (combined)→Close | $95.295 avg | $95.325 | **-$0.09** | L2/DeFi |
+| 5 | May 9→13 | ETH/USD | Long (tranche 1)→Partial | $2,314.90 | $2,305.35 | **-$0.08** | ETH/L1 |
+| 6 | May 13→14 | ETH/USD | Long (re-entry)→Partial | $2,287.39 | $2,262.35 | **-$0.15** | ETH/L1 |
+
+*All except #1 and #3 were dashboard-initiated. Bot-placed orders: BTC buy May 11, ETH re-entry May 13, ETH large entry May 14.*
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed round trips) | 6 |
+| Open Positions | 1 (ETH long) |
+| Wins | 2 |
+| Losses | 4 |
+| Win Rate | 33% |
+| Gross Wins / Gross Losses | $1.07 / $1.94 |
+| Profit Factor | **0.55** |
+| Avg Win | $0.54 |
+| Avg Loss | $0.49 |
+| Fills this week (all orders) | 10 |
+
+### Open Positions (End of Week)
+| Pair | Qty | Entry | Current | Stop | Unrealized P&L |
+|---|---|---|---|---|---|
+| ETH/USD | 0.058790 | $2,262.29 | $2,272.84 | $2,171.80 / $2,150.08 | +$0.62 (+0.47%) |
+
+### BTC Price Action (Daily)
+| Date | Open | High | Low | Close |
+|---|---|---|---|---|
+| Mon 2026-05-11 | $82,209 | $82,381 | $80,435 | $81,738 |
+| Tue 2026-05-12 | $81,791 | $81,791 | $79,814 | $80,481 |
+| Wed 2026-05-13 | $80,473 | $81,305 | $78,667 | $79,291 |
+| Thu 2026-05-14 | $79,282 | $82,069 | $78,908 | $81,079 |
+| Fri 2026-05-15 | $81,047 | $81,657 | $80,729 | $81,003 |
+
+### Sector Review
+| Sector | Trades | Outcome | Consecutive Losses | Notes |
+|---|---|---|---|---|
+| BTC Core | 2 cycles | Net -$1.44 (LOSS) | **1** | Quick flip +$0.18 then re-entry stopped at -$1.62 |
+| ETH / L1 | 2 partial closes + 1 open | Partial closes -$0.23; open +$0.62 | 0 | Active position profitable; partials were size management |
+| L2 / DeFi | SOL full close | ~Breakeven (-$0.09) | 0 | Exit was orderly; combined avg vs exit near-flat |
+| Alts (top 50) | XRP close | **+$0.89** WIN | 0 (reset) | Best trade of week; clean entry/exit |
+
+**Sectors to exit:** None — no sector has reached 2 consecutive losses. BTC Core at 1.
+
+### Regime Status (end of week)
+- BTC $81,003 vs 20-day MA ~$79,000–$81,000 — **CAUTION/BORDERLINE**
+- BTC range this week: $78,667 (Wed low) – $82,381 (Mon high)
+- Aggressive profile active (since May 10): max 65% position, 95% deployed
+- ETH funding: negative (bearish derivatives signal); DXY: ~98.9 (mild headwind)
+
+### Key Lessons
+1. **Don't chase re-entries after dashboard partials.** The BTC cycle (May 11–13) saw a quick +$0.18 win turned into a -$1.62 loss on the re-entry the same session. Dashboard sells followed by immediate re-buys at higher prices compound risk.
+2. **SOL position was essentially flat despite the volatile week** — the combined avg entry ($95.295) vs exit ($95.325) nearly matched; the loss note in the trade log (-$0.96) was misleading (measured vs add-on price only, not combined avg).
+3. **Cash constraint is the binding constraint.** The account ended fully deployed ($133.62 of $138.22 in ETH). Until ETH exits or appreciates, no new entries are possible. Next week's priority: monitor ETH stop at $2,171.80 and trail if ETH breaks $2,420.
+4. **Win rate 33% with profit factor 0.55 is below target** — losses were larger than wins on average this week. BTC re-entry discipline is the primary fix.
+
+---
