@@ -2144,3 +2144,53 @@ Stop e4efd513 at $2,151.94 managing downside automatically. ETH thesis intact. C
 - XRP: CLARITY Act markup before May 21 → entry on confirmed catalyst + pullback to $1.40–$1.45
 - BTC: sustained break > $82,000 → re-entry candidate (minimum size, 1-loss sector threshold)
 - ARB unlock: May 16 13:00 UTC — L2 sector monitor
+
+---
+
+## 2026-05-15 — Session-Open Check (evening session)
+
+### Account Snapshot (live Alpaca)
+| Field | Value |
+|---|---|
+| Equity | $136.97 |
+| Cash / Buying Power | $69.53 (50.6%) |
+| Long Market Value | $67.44 (ETH) |
+| PDT Flag | No |
+| Trading Blocked | No |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,253.67 | -$0.34 (-0.51%) | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ ACTIVE |
+
+### Open Orders
+| Order ID | Symbol | Side | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|---|
+| e4efd513 | ETH/USD | sell | stop_limit | $2,151.94 | $2,130.42 | GTC | active |
+
+### Regime
+- BTC: $80,115 | 24h chg: ~-1.2% (crash gate NOT triggered; threshold >8%)
+- Regime: OFFENSIVE (no crash gate, BTC >20-day MA assumed per prior sessions)
+- Weekly trade count: 12/25
+
+### Hard-Check Rules
+| Rule | Result | Action |
+|---|---|---|
+| BTC crash gate (>8% 24h) | -1.2% — PASS | Trades allowed |
+| XRP CLARITY Act catalyst | NOT confirmed (before May 21) | No entry |
+| XRP price in zone ($1.40–$1.45) | $1.4564 — above zone | No entry |
+| BTC re-entry (>$82,000) | $80,115 — below threshold | No entry |
+| ETH stop management (≥+25%/≥+40%) | -0.51% — neither threshold | No change |
+
+### Stop Management
+ETH at $2,253.67 (-0.51% from entry $2,265.20). Neither +25% nor +40% threshold met. Stop unchanged at $2,151.94 (5% below entry). Cannot tighten — position below entry and rule prohibits moving stops down.
+
+### Decision: NO ACTION — HOLD
+No confirmed catalyst for any new entry. ETH stop (e4efd513) managing downside automatically. Cash $69.53 available for deployment on CLARITY Act confirmation or BTC >$82k.
+
+**Watch levels (carry forward):**
+- ETH T1: $2,420 (+6.8%) → T2: $2,550 → T3: $2,750
+- ETH stop trigger: $2,151.94 → reassess BTC/XRP re-entry
+- XRP: CLARITY Act markup before May 21 → entry on confirmed catalyst + pullback to $1.40–$1.45; current $1.4564
+- BTC: sustained break >$82,000 → re-entry candidate (sector 1/2 loss threshold)
+- ARB unlock: May 16 13:00 UTC — L2 sector monitor; watch for SOL/ARB volatility
