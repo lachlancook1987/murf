@@ -21,6 +21,14 @@ git checkout <session-branch>
 git branch -D _mem-sync
 ```
 
+## Notifications (WhatsApp via CallMeBot)
+
+`scripts/clickup.sh` now delegates to `scripts/whatsapp.sh` — all existing routine
+calls to `scripts/clickup.sh` continue to work unchanged.
+
+Required env vars: `WHATSAPP_PHONE` (international format, no `+`, e.g. `447911123456`)
+and `WHATSAPP_APIKEY` (received from CallMeBot on first activation).
+
 ## Alpaca Script Commands
 
 `scripts/alpaca.sh` supports only: `account`, `positions`, `orders`
