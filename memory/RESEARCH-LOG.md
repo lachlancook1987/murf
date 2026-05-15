@@ -1708,3 +1708,53 @@ Stop at $2,171.80 managing downside automatically. ETH thesis intact. $4.60 cash
 - ARB unlock: May 16 13:00 UTC — watch L2 sector
 - BTC regime shift: BTC sustained > $81,000 → OFFENSIVE mode watch
 - CLARITY Act markup → XRP re-entry candidate
+
+---
+
+## 2026-05-15 — Midday Scan (third run, routine confirmation)
+
+*Re-run requested to confirm routine functionality and end-to-end git persistence.*
+
+### Git Persistence Check
+- `git fetch origin main` → session branch memory files **identical** to origin/main (diff = 0). ✅
+- Latest main commit at scan time: `5cf136b crypto midday scan 2026-05-15 (verbose re-run, persistence verification)`
+
+### Account Snapshot (live Alpaca)
+| Field | Value |
+|---|---|
+| Equity | $138.03 |
+| Cash / Buying Power | $4.60 |
+| PDT Flag | No |
+| Trading Blocked | No |
+| Daytrade Count | 0 |
+| Weekly Trade Count | 8 / 25 |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Intraday |
+|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,269.53 | +$0.43 (+0.32%) | -0.375% |
+
+### Open Orders
+| Order ID | Symbol | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|
+| 7083dc24 | ETH/USD sell | stop_limit | $2,171.80 | $2,150.08 | GTC | active |
+
+### Scan Results
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH +0.32% | None |
+| 4 | Tighten stops (≥ +25% / ≥ +40%) | +0.32% — neither threshold met | None |
+| 5 | Thesis check | Glamsterdam + ETF inflows intact; -0.375% = macro beta | None |
+| 6 | Intraday research | No sharp move (>5% threshold not breached) | Skipped |
+| 7 | ClickUp notification | No action taken | Not sent |
+
+### Decision: NO ACTION — HOLD
+Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no new entries possible.
+
+**Watch levels (carry forward):**
+- ETH T1: $2,550 | T2: $2,750
+- ETH trail trigger: close above $2,420 → trail stop to 5% below new high
+- ETH stop trigger: $2,171.80 → reassess BTC/XRP re-entry (CAUTION sizing: 25% reduced, 4% stops)
+- ARB unlock: May 16 13:00 UTC — L2 sector watch
+- BTC > $81,000 sustained → OFFENSIVE regime watch
+- CLARITY Act markup → XRP re-entry candidate
