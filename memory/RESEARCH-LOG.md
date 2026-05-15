@@ -1484,6 +1484,32 @@ All ideas require cash to free up first (minimum ~$15 notional).
 
 ---
 
+## 2026-05-15 — Midday Scan
+
+### Account Snapshot (live)
+| Field | Value |
+|---|---|
+| Equity | ~$133.43 (ETH MV) + $4.60 cash ≈ $138.03 est. |
+| Cash | $4.60 |
+| Open Positions | 1 (ETH/USD) |
+| Open Orders | 1 (stop-limit sell on ETH, order 7083dc24) |
+
+### Position Status
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop | Action |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,269.53 | +$0.43 (+0.32%) | $2,171.80/$2,150.08 GTC | HOLD |
+
+### Step-by-Step Findings
+- **Losers cut (≤ -10%):** None — ETH +0.32%, well above threshold.
+- **Stop tightening (≥ +25% or ≥ +40%):** Neither threshold met at +0.32%. Existing stop unchanged.
+- **Thesis check:** ETH -0.375% intraday; macro drift (DXY firm, BTC near MA). No protocol exploit, no token unlock, no regulatory action breaking thesis. Glamsterdam + ETF inflows still intact.
+- **Intraday research:** No sharp unexplained move. Perplexity skipped.
+
+### Decision: NO ACTION
+Stop at $2,171.80 managing downside. Thesis intact. Cash $4.60 — no new entries possible.
+
+---
+
 ## 2026-05-15 — Pre-Session Research (third run / routine confirmation)
 
 *Full re-run to confirm git persistence and routine integrity. All 10 Perplexity queries executed fresh.*
