@@ -2194,3 +2194,51 @@ No confirmed catalyst for any new entry. ETH stop (e4efd513) managing downside a
 - XRP: CLARITY Act markup before May 21 → entry on confirmed catalyst + pullback to $1.40–$1.45; current $1.4564
 - BTC: sustained break >$82,000 → re-entry candidate (sector 1/2 loss threshold)
 - ARB unlock: May 16 13:00 UTC — L2 sector monitor; watch for SOL/ARB volatility
+
+---
+
+## 2026-05-15 — Midday Scan
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | ~$137 (est.) |
+| Cash | $69.53 |
+| Open Positions | 1 (ETH/USD) |
+| Pending Orders | 1 stop-limit sell ETH (e4efd513) |
+
+### Open Position
+| Symbol | Qty | Avg Entry | Current Price | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,223.35 | -$1.25 (-1.85%) | $2,151.94 / $2,130.42 GTC |
+
+### Market Context (Perplexity + Alpaca)
+| Indicator | Value |
+|---|---|
+| ETH price | ~$2,217–$2,223 |
+| ETH 24h change | ~-3.5% |
+| BTC price | ~$79,100 |
+| BTC 24h change | ~-2.9% |
+| BTC crash gate (>8%) | NOT triggered |
+| EF unstaking | 21,270 ETH (~$50M) unstaked from Lido — minor sell pressure, not thesis-breaking |
+
+### Step 3 — Cut Losers
+ETH at -1.85% unrealized. Threshold for immediate cut: -10%. **No action.**
+
+### Step 4 — Tighten Stops on Winners
+ETH is below entry (-1.85%). Neither +25% nor +40% threshold met. Stop unchanged at $2,151.94 (currently 3.2% below spot $2,223.35). **No action.**
+
+### Step 5 — Thesis Check
+- Glamsterdam upgrade (June 2026): intact, no protocol issues reported
+- ETF inflows narrative: intact
+- EF Lido unstaking: 21,270 ETH (~$50M) — notable but routine treasury management; not a protocol exploit or regulatory action
+- **Thesis INTACT. Hold.**
+
+### Decision: NO ACTION — HOLD
+ETH in normal drawdown (-1.85%) within stop boundary. Stop at $2,151.94 is 3.2% below spot — adequate buffer. Broad market weak (BTC -2.9%) but crash gate not triggered. No narrative break. No stop changes (rule prohibits moving stops down).
+
+**Watch levels:**
+- ETH stop trigger: $2,151.94 (now 3.2% away vs 5% at entry — proximity to watch)
+- ETH T1: $2,420 | T2: $2,550 | T3: $2,750
+- ARB unlock: May 16 13:00 UTC — tomorrow; monitor L2 sector volatility
+- XRP CLARITY Act markup: before May 21 — cash $69.53 available on catalyst confirmation
