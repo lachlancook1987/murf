@@ -74,11 +74,11 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 ---
 
 ### May 15 — EOD Snapshot (Day 5, Friday) [final]
-**Portfolio:** $138.47 | **Cash:** $4.60 (3.3%) | **Day P&L:** +$0.51 (+0.37%) | **Phase P&L:** -$3.29 (-2.32%) | **vs BTC:** +0.52%
+**Portfolio:** $137.64 | **Cash:** $4.60 (3.3%) | **Day P&L:** -$0.32 (-0.23%) | **Phase P&L:** -$4.12 (-2.91%) | **vs BTC:** +0.07%
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
 |---|---|---|---|---|---|---|
-| ETH/USD | 0.058790 | $2,262.29 | $2,277.01 | -0.05% | +$0.87 (+0.65%) | $2,171.80 / $2,150.08 |
+| ETH/USD | 0.058790 | $2,262.29 | $2,263.00 | -0.66% | +$0.04 (+0.03%) | $2,171.80 / $2,150.08 |
 **Trades today:** none | **Week:** 11/5 (cap breached — all excess trades user-initiated via dashboard)
-**Regime:** BTC $81,188 (-0.15% day) — 20-day MA not available via API; BTC range $78k–$82k this week
-**Breakeven:** ETH needs $2,318 (+1.8% from current $2,277) to close phase gap; phase start $141.76 (May 10)
-**Notes:** No bot trades today; buying power ($4.60) insufficient for any new entry. ETH drifted slightly intraday (-0.05%) but holds positive unrealized P&L (+0.65%) vs May 14 entry. Bot outperformed BTC by +0.52% (bot +0.37%, BTC -0.15%). Stop-limit GTC (order 7083dc24) active — trigger $2,171.80, limit $2,150.08, covers full 0.05879 ETH. Weekly trade cap (5) exceeded by user-initiated dashboard actions; bot made 0 trades this week. Monday: hold ETH into week open; watch BTC sustained above $82k for OFFENSIVE regime confirmation; cash insufficient for new entries unless ETH partially closed.
+**Regime:** BTC $80,837 (-0.30% day, May 14 close $81,079) — range $78k–$82k this week; 20-day MA not available via API
+**Breakeven:** ETH needs $2,333 (+3.1% from current $2,263) to close phase gap; phase start $141.76 (May 10)
+**Notes:** No bot trades today; buying power ($4.60) insufficient for any new entry. ETH gave back intraday gains, closing near entry ($2,263 vs $2,262 entry) with negligible unrealized gain (+0.03%). Bot outperformed BTC by +0.07% today (bot -0.23%, BTC -0.30%). Stop-limit GTC (order 7083dc24) active — trigger $2,171.80, limit $2,150.08, covers full 0.05879 ETH. Weekly trade cap (5) exceeded by user-initiated dashboard actions; bot made 0 trades this week. Monday: hold ETH into week open; watch BTC sustained above $82k for OFFENSIVE regime confirmation; cash insufficient for new entries unless ETH partially closed.
