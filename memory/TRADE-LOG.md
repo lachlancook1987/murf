@@ -73,12 +73,12 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
-### May 15 — EOD Snapshot (Day 5, Friday) [re-run verified]
-**Portfolio:** $138.30 | **Cash:** $4.60 (3.3%) | **Day P&L:** +$0.34 (+0.24%) | **Phase P&L:** -$3.46 (-2.44%) | **vs BTC:** +0.74%
+### May 15 — EOD Snapshot (Day 5, Friday) [final]
+**Portfolio:** $138.47 | **Cash:** $4.60 (3.3%) | **Day P&L:** +$0.51 (+0.37%) | **Phase P&L:** -$3.29 (-2.32%) | **vs BTC:** +0.52%
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
 |---|---|---|---|---|---|---|
-| ETH/USD | 0.058790 | $2,262.29 | $2,274.27 | -0.17% | +$0.70 (+0.53%) | $2,171.80 / $2,150.08 |
+| ETH/USD | 0.058790 | $2,262.29 | $2,277.01 | -0.05% | +$0.87 (+0.65%) | $2,171.80 / $2,150.08 |
 **Trades today:** none | **Week:** 11/5 (cap breached — all excess trades user-initiated via dashboard)
-**Regime:** BTC $81,309 — 20-day MA not available via API; prior erroneous $118,838 figure discarded; BTC range $78k–$82k this week
-**Breakeven:** ETH needs $2,321 (+2.1% from current $2,274) to close phase gap; phase start $141.76 (May 10)
-**Notes:** No bot trades today; buying power ($4.60) insufficient for any new entry. ETH softened intraday (-0.17%, from $2,278 yesterday) but holds positive unrealized P&L (+0.53%) vs May 14 entry. Stop-limit GTC (order 7083dc24) active — trigger $2,171.80, limit $2,150.08, covers full 0.05879 ETH. Stop is set at -4.0% from entry (caution-mode sizing). ETH needs only +2.1% to return the portfolio to phase breakeven ($141.76). Weekly trade cap (5) was exceeded by user-initiated dashboard actions; bot itself made 0 trades this week after midday scan confirmed no actionable signals. Tomorrow (Mon May 18): hold ETH into week open; watch for BTC sustained above $82k as OFFENSIVE regime confirmation; ARB unlock was May 16 13:00 UTC — monitor L2 sector. No cash available for new entries unless ETH partially closed.
+**Regime:** BTC $81,188 (-0.15% day) — 20-day MA not available via API; BTC range $78k–$82k this week
+**Breakeven:** ETH needs $2,318 (+1.8% from current $2,277) to close phase gap; phase start $141.76 (May 10)
+**Notes:** No bot trades today; buying power ($4.60) insufficient for any new entry. ETH drifted slightly intraday (-0.05%) but holds positive unrealized P&L (+0.65%) vs May 14 entry. Bot outperformed BTC by +0.52% (bot +0.37%, BTC -0.15%). Stop-limit GTC (order 7083dc24) active — trigger $2,171.80, limit $2,150.08, covers full 0.05879 ETH. Weekly trade cap (5) exceeded by user-initiated dashboard actions; bot made 0 trades this week. Monday: hold ETH into week open; watch BTC sustained above $82k for OFFENSIVE regime confirmation; cash insufficient for new entries unless ETH partially closed.
