@@ -2331,3 +2331,39 @@ CLARITY Act catalyst confirmed — XRP/USD re-entry valid at $1.44–$1.50 (CAUT
 - ETH: stop trigger $2,151.94 | T1 $2,420 | T2 $2,550 | T3 $2,750
 - BTC: re-entry threshold $82,000 (sustained close above)
 - ARB unlock: today 13:00 UTC — monitor L2 volatility
+
+---
+
+## 2026-05-15 — Midday Scan
+
+### Positions (Alpaca live)
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,219.50 | -$1.37 (-2.02%) | 3.04% | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.437 | -$0.06 (-0.14%) | 3.87% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+### Step 3 — Cut Losers Check
+- ETH: -2.02% → HOLD (cut threshold -10%)
+- XRP: -0.14% → HOLD (cut threshold -10%)
+
+### Step 4 — Stop Tightening Check
+- ETH: -2.02% → no action (requires +25% or +40% to trigger)
+- XRP: -0.14% → no action (requires +25% or +40% to trigger)
+
+### Step 5 — Thesis Check
+- ETH: Glamsterdam June/Q3 2026 intact; ETF inflows narrative unchanged. Decline (-2.57% today from $2,278 close) consistent with broad market weakness (DXY ~99, ARB unlock day). No exploit or regulatory action.
+- XRP: CLARITY Act thesis intact; no legislative setback. Decline (-3.47% today from $1.4886 post-catalyst close) is normal retracement from CLARITY Act pump. Senate floor vote timing still open.
+
+### Step 6 — Perplexity Research
+- BTC: ~$83k range (prediction market signals; Alpaca live unavailable via API)
+- No major breaking news affecting ETH or XRP thesis found
+- No protocol exploits, regulatory actions, or major token unlocks for ETH/XRP
+- Both theses intact
+
+### Decision: NO ACTION — HOLD
+Both positions within tolerance. Stops active. No stop tightening warranted (neither position is a winner). Both theses intact. No notification sent (no action taken).
+
+**Stop proximity watch:**
+- ETH: spot $2,219.50 vs stop $2,151.94 → 3.04% buffer — monitor if BTC legs down further
+- XRP: spot $1.437 vs stop $1.3814 → 3.87% buffer — adequate
+- BTC re-entry threshold: $82,000 sustained close
