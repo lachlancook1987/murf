@@ -135,3 +135,26 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No cuts (neither near -10%). No stop tightening (no winners up ≥25%). Theses intact.
 - BTC broad selloff (-2.6% to -3.0%) explains dips; no protocol exploits or regulatory action on either position.
 - No trades. No notification sent.
+
+---
+
+## 2026-05-15 — Overnight Triage Check (~23:49 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,223.60 | -1.84% | $2,151.94/$2,130.42 (order e4efd513) | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.435 | -0.28% | $1.3814/$1.3676 (order e079ed77) | HOLD |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. Both positions well within threshold.
+
+**Stop tightening (≥+25%):** None. No winners.
+
+**BTC Regime:** $79,076 now vs $81,079 (~24h ago) = **-2.47%** — under ±8% threshold. No regime alert. No crash gate triggered.
+
+**Result: NO-OP. No actions taken. No notification sent.**
