@@ -139,19 +139,19 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 | Field | Value |
 |---|---|
 | Equity (ending, EOD snapshot) | $138.47 |
-| Equity (live at review time) | $138.22 |
+| Equity (final post-market) | $137.77 |
 | Cash | $4.60 |
-| Long Market Value | $133.62 (ETH) |
+| Long Market Value | $133.17 (ETH) |
 | Open Positions | 1 (ETH/USD) |
 
 ### Weekly Performance
 | Metric | Value |
 |---|---|
 | Starting Equity (May 10 phase start) | $141.76 |
-| Ending Equity (EOD May 15) | $138.47 |
-| **Week Return** | **-2.32%** (-$3.29) |
+| Ending Equity (final, post-market May 15) | $137.77 |
+| **Week Return** | **-2.81%** (-$3.99) |
 | BTC Week Return | **-1.47%** (Mon open $82,209 → Fri close $81,003) |
-| **Bot vs BTC** | **-0.85%** (underperformed) |
+| **Bot vs BTC** | **-1.34%** (underperformed BTC by 1.34 pp) |
 
 ### Trade Summary (May 11–15 closed positions)
 | # | Date | Pair | Side | Entry | Exit | P&L | Sector |
@@ -182,7 +182,7 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 ### Open Positions (End of Week)
 | Pair | Qty | Entry | Current | Stop | Unrealized P&L |
 |---|---|---|---|---|---|
-| ETH/USD | 0.058790 | $2,262.29 | $2,272.84 | $2,171.80 / $2,150.08 | +$0.62 (+0.47%) |
+| ETH/USD | 0.058790 | $2,262.29 | $2,265.10 | $2,171.80 / $2,150.08 | +$0.17 (+0.12%) |
 
 ### BTC Price Action (Daily)
 | Date | Open | High | Low | Close |
