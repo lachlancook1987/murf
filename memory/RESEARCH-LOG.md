@@ -1335,4 +1335,149 @@ Default stance is TRADE but account is cash-constrained ($4.60). Existing ETH po
 - BTC re-entry: $82,000+ breakout with volume
 - XRP watch: CLARITY Act markup confirmation
 - ARB unlock: May 16 13:00 UTC — monitor for sector sell-off
+
+---
+
+## 2026-05-15 — Pre-Session Research (verbose re-run / persistence verification)
+
+*This entry is a full fresh research pass confirming data from the earlier session entry and verifying git persistence. All Perplexity queries re-run from scratch.*
+
+### Account Snapshot (live from Alpaca at run time)
+| Field | Value |
+|---|---|
+| Equity | $137.84 |
+| Cash | $4.60 |
+| Buying Power | $4.60 |
+| Long Market Value | $133.24 (ETH/USD) |
+| Portfolio Value | $137.84 |
+| PDT Flag | No |
+| Trading Blocked | No |
+| Daytrade Count | 0 |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Mkt Value | Unr. P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,266.40 | $133.24 | +$0.24 (+0.18%) | stop-limit $2,171.80 / $2,150.08 GTC (order 7083dc24) |
+
+### Open Orders
+| Symbol | Side | Type | Qty | Stop | Limit | TIF |
+|---|---|---|---|---|---|---|
+| ETH/USD | sell | stop_limit | 0.058789986 | $2,171.80 | $2,150.08 | GTC |
+
+---
+
+### Market Context (Perplexity — all 10 queries run)
+| Indicator | Value | Notes |
+|---|---|---|
+| BTC price | ~$79,923 | -1.33% 24h; consistent with Alpaca trade history ($78,895 stop May 13) |
+| ETH price | ~$2,266 (Alpaca live) / ~$2,247–$2,287 (Perplexity) | -0.18% to -0.43% intraday |
+| BTC Dominance | ~60% | Rising dominance → alt headwinds |
+| Fear & Greed | 34–49 (Fear → Neutral) | Range across sources; above the <10 size-cut threshold |
+| BTC Funding Rate | +0.0047% (Bybit) | Near zero, slightly positive; neutral longs, no overheating |
+| DXY | ~98.6–98.9 | +0.84% over past month; mild crypto headwind |
+| S&P 500 futures | +0.31% | Risk-on tone; resilient despite hot PPI print |
+| ETH macro driver | Hot PPI print (hawkish surprise) | Rate-hike fears driving risk-off; ETH pullback is beta-correlated to BTC, not chain-specific |
+
+---
+
+### BTC Regime Filter
+- **24h gate:** BTC -1.33% → crash gate NOT triggered (threshold: -8%)
+- **MA comparison:** BTC ~$79,923 vs 20-day MA est. ~$80,000–$81,000 → BTC at/below MA
+- **Verdict: CAUTION MODE**
+  - New entries: reduce size by 25%
+  - Stops on new entries: tighten to 4% below entry (vs normal 5%)
+  - Full universe remains eligible (no sector lock-outs per current aggressive profile)
+- **Funding rate:** +0.0047% (neutral) — not a disqualifier
+- **Fear & Greed:** 34–49 — above 10, no additional 50% size cut applies
+
+---
+
+### Catalysts
+**Macro / Regulatory (today, May 15)**
+1. **Fed Chair transition** — Powell term ends today; Kevin Warsh takes over. Less dovish historical record. Rate policy uncertainty is a short-term headwind.
+2. **Q1 2026 Form 13F deadline** — SEC deadline today; institutional crypto allocation disclosures could move markets (positive if large funds reveal new BTC/ETH positions).
+3. **Hot PPI print (prior session)** — Hawkish surprise; driving today's mild BTC/ETH pullback. ETH sell-off is macro beta, not chain-specific.
+
+**Crypto-specific**
+4. **CLARITY Act markup (before May 21)** — Digital commodity classification for XRP + broader crypto legal clarity. Primary XRP catalyst; secondary positive for sector.
+5. **Ethereum Glamsterdam upgrade (June 2026)** — Triple L1 throughput (~10,000 TPS), parallel execution, ePBS. Pre-upgrade accumulation thesis for current ETH position remains intact. Historically ETH rallies in weeks before major hard forks.
+6. **Spot ETH ETF inflows** — $356M net in April; BlackRock & Fidelity leading. First positive month after 6-month negative streak — structural institutional reversal signal.
+
+**Token unlocks / supply events this week**
+| Token | Amount | Date | Impact |
+|---|---|---|---|
+| STRK | 127M tokens (~$6.62M) | May 15 (today) | Minor sell pressure |
+| CONX | 1.32M tokens (~$17.95M) | May 15 (today) | Monitor |
+| ARB | 92.65M tokens (~$13.37M) | May 16, 13:00 UTC | ⚠️ Largest unlock — L2 sector headwind |
+| PI | 184.5M tokens (partial) | May 15 | Protocol 23 upgrade + unlock |
+
+---
+
+### ETH Position Analysis (current hold)
+- **Entry:** $2,262.29 | **Current:** $2,266.40 | **P&L:** +$0.24 (+0.18%)
+- **Stop:** $2,171.80 (4.2% below current — within strategy 5% band; CAUTION mode calls for 4% on new entries, existing stop stays)
+- **Key support:** $2,200–$2,100 (critical zone; stop sits within this band)
+- **Key resistance:** $2,320 → $2,414–$2,420 (breakout trigger)
+- **Trail rule:** Position must be up ≥25% (→ $2,827) to trigger first trail. Not applicable yet.
+- **Thesis check:** Glamsterdam ✅ | ETF inflows ✅ | Today's pullback = macro beta (not chain issue) ✅
+- **Action:** Hold. Stop in place. No trail needed. Watch $2,420 for breakout.
+
+---
+
+### Trade Ideas (constrained by $4.60 cash)
+All ideas require cash to free up first (minimum ~$15 notional).
+
+**1. ETH — hold and manage (active)**
+- Ride current position to T1 $2,550 | T2 $2,750
+- Trail stop to 5% below current if ETH closes above $2,420 (new high breakout)
+- No additions — insufficient cash
+
+**2. BTC — re-entry watch**
+- Trigger: BTC reclaims $81,000–$82,000 with volume after today's PPI-driven dip
+- Entry: market order on confirmation
+- Stop: 4% below entry (CAUTION mode) → ~$78,000
+- Target: $86,000–$88,000
+- Catalyst: Fed transition (potential dovish surprise from Warsh), 13F disclosure, ETF flows
+- Constraint: requires ETH partial/stop exit to free cash
+
+**3. XRP — CLARITY Act swing**
+- Trigger: CLARITY Act markup confirmation (before May 21)
+- Entry: pullback to $2.10–$2.20 support on news catalyst
+- Stop: 4% below entry (CAUTION mode) → ~$2.02–$2.11
+- Target: $2.50–$2.75 (ETF unlock premium)
+- Constraint: cash-constrained; secondary to BTC re-entry
+
+**4. INJ — emerging catalyst**
+- Native USDC/CCTP launch + regulated futures + buyback burn
+- Watch: consolidation entry at INJ support
+- Constraint: lower priority; must free cash first
+
+---
+
+### Risk Factors
+| Risk | Severity | Notes |
+|---|---|---|
+| Cash constraint | HIGH | $4.60 buying power — no new entries until position closes |
+| BTC at/below 20-day MA | MEDIUM | CAUTION mode in effect; reduce new-entry sizes 25% |
+| DXY firming (~98.9) | MEDIUM | Mild headwind; watch for further USD strength |
+| Hot PPI (hawkish) | MEDIUM | Rate-hike fear resurfacing; risk-off sentiment today |
+| ARB unlock May 16 | LOW-MED | ~$13.37M supply event; L2 sector could see sell pressure |
+| ETH stop proximity | LOW | Stop at $2,171.80 is 4.2% below current — within normal range, not at immediate risk |
+| Perplexity BTC data reliability | LOW | Price data now consistent across queries (~$79,923); flag removed |
+| Fed Chair transition | MEDIUM | Warsh less dovish than Powell; unknown policy path |
+
+---
+
+### Decision: **HOLD — Cash Constrained, ETH Thesis Intact**
+
+- **Default stance:** TRADE — but $4.60 buying power makes new entries impossible (min viable notional ~$15)
+- **Existing ETH:** valid position, stop in place, thesis intact. No action needed.
+- **No regime crash gate triggered.** CAUTION mode applies to any new entries when cash frees up.
+
+**Watch triggers for next action:**
+- ETH stop hit ($2,171.80) → cash frees; immediately evaluate BTC/XRP re-entry with CAUTION sizing
+- ETH breaks $2,420 → trail stop up to 5% below new high
+- CLARITY Act markup confirmed → XRP entry on pullback to $2.10–$2.20
+- BTC reclaims $81,000+ → BTC re-entry watch
+- ARB unlock May 16 13:00 UTC → monitor L2 sector
 - New entry trigger: cash > $10 AND valid thesis present
