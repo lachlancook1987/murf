@@ -70,3 +70,13 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - Stop active: sell ETH at stop $2,171.80 / limit $2,150.08 (order 7083dc24, GTC)
 - Regime: OFFENSIVE (BTC $118,838 > 20-day MA $117,400) | BTC 24h: -0.50%
 - Weekly trade count: 8 / 25
+
+---
+
+### May 15 — EOD Snapshot (Day 5, Friday)
+**Portfolio:** $138.30 | **Cash:** $4.60 (3.3%) | **Day P&L:** +$0.34 (+0.24%) | **Phase P&L:** -$3.46 (-2.44%) | **vs BTC:** +0.74%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.05879 | $2,262.29 | $2,274.27 | -0.17% | +$0.70 (+0.53%) | $2,171.80 |
+**Trades today:** none | **Week:** 11/5 (cap breached — all excess trades user-initiated via dashboard)
+**Notes:** No bot trades today; buying power ($4.60) too low for any new entries. ETH drifted slightly red intraday (-0.17%) but holds a positive unrealized gain (+0.53%) from the May 14 re-entry. BTC stabilizing around $81,275 — a large downward revision from stale prior-session data ($118,838 was erroneous); actual trade history confirms BTC in the $78k–$82k range this week. Stop-limit GTC (order 7083dc24) protecting full 0.05879 ETH at $2,171.80 trigger / $2,150.08 limit. Phase equity -2.44% vs aggressive-profile start ($141.76); need ETH to reclaim ~$2,320 to break even. Tomorrow: hold ETH, watch for recovery toward $2,300; no new entries until cash is replenished.
