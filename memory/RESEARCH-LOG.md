@@ -1637,3 +1637,74 @@ No new entries possible ($4.60 cash). Existing ETH position is at breakeven with
 - BTC > $81,000 sustained → regime watch for offensive shift
 - ARB unlock May 16 13:00 UTC → watch L2 sector
 - CLARITY Act markup → XRP catalyst watch
+
+---
+
+## 2026-05-15 — Midday Scan (verbose re-run, persistence verification)
+
+*Full re-run requested by user to verify git persistence and confirm main branch is always the source of truth for subsequent sessions.*
+
+### Git Persistence Verification
+- `git fetch origin main` confirmed: session branch memory files are **byte-for-byte identical** to origin/main at time of scan.
+- Most recent main commit: `0dfedc8 crypto midday scan 2026-05-15` (prior scan sync).
+- No divergence detected — memory is current.
+
+---
+
+### Account Snapshot (live Alpaca)
+| Field | Value |
+|---|---|
+| Equity | $138.03 |
+| Cash / Buying Power | $4.60 |
+| Portfolio Value | $138.03 |
+| PDT Flag | No |
+| Trading Blocked | No |
+| Daytrade Count | 0 |
+| Weekly Trade Count | 8 / 25 |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Mkt Value | Unr. P&L | Intraday P&L |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.058789986 | $2,262.29 | $2,269.53 | $133.43 | +$0.43 (+0.32%) | -$0.50 (-0.375%) |
+
+### Open Orders
+| Order ID | Symbol | Side | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|---|
+| 7083dc24 | ETH/USD | sell | stop_limit | $2,171.80 | $2,150.08 | GTC | active |
+
+---
+
+### Step 3 — Cut Losers Check (≤ -10%)
+- ETH/USD unrealized_plpc = +0.32% → **NO CUT** (threshold: ≤ -10%)
+
+### Step 4 — Stop Tightening Check
+- ≥ +40% threshold (new stop 5% below current)? NO — would need ETH ≥ $3,167.
+- ≥ +25% threshold (new stop 8% below current)? NO — would need ETH ≥ $2,827.
+- Moving stop to 5% below current ($2,269.53 × 0.95 = $2,156.05) would be LOWER than existing stop $2,171.80 — forbidden (never move a stop down).
+- **RESULT: Existing stop $2,171.80 unchanged.**
+
+### Step 5 — Thesis Check
+- Glamsterdam upgrade (June 2026): **INTACT** ✅
+- ETH spot ETF inflows ($356M April, first positive month in 6): **INTACT** ✅
+- Protocol exploit: None reported ✅
+- Token unlock affecting ETH directly: None ✅
+- ETH -0.375% intraday: macro beta (DXY firm ~98.9, BTC near 20-day MA) — not chain-specific ✅
+- **Thesis intact. No cut.**
+
+### Step 6 — Intraday Research (Perplexity)
+- ETH intraday move: -0.375% — not a sharp unexplained move (threshold: >5% with no obvious cause).
+- **Perplexity skipped.**
+
+### Step 7 — ClickUp Notification
+- No action taken → **no notification sent.**
+
+### Decision: NO ACTION — HOLD
+Stop at $2,171.80 managing downside automatically. ETH thesis intact. $4.60 cash — no new entries possible.
+
+**Active watch levels (carry forward):**
+- ETH T1: $2,550 | T2: $2,750
+- ETH trail trigger: close above $2,420 → trail stop to 5% below new high
+- ETH stop trigger: $2,171.80 → reassess BTC/XRP re-entry with CAUTION sizing (25% size reduction, 4% stops)
+- ARB unlock: May 16 13:00 UTC — watch L2 sector
+- BTC regime shift: BTC sustained > $81,000 → OFFENSIVE mode watch
+- CLARITY Act markup → XRP re-entry candidate
