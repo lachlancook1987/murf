@@ -1883,4 +1883,20 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
   - ETH < $2,171.80 → stop triggered → ~$127 cash freed → evaluate XRP or BTC re-entry at CAUTION sizing
   - ETH > $2,420 sustained → trail stop to 5% below new high
   - BTC > $82,000 sustained → BTC re-entry candidate (if cash available, 1-loss threshold noted)
+
+---
+
+## 2026-05-15 — Midday Scan (fifth run)
+
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH unrealized +0.088% (current $2,264.29 vs entry $2,262.29) | None |
+| 4 | Tighten stops (≥ +25% / ≥ +40%) | +0.088% — neither threshold met; 5%-below-current ($2,151) < existing stop ($2,171.80) — cannot move down | None |
+| 5 | Thesis check | Glamsterdam June 2026 + ETF inflows intact; ETH ranging near entry; no exploit/unlock/regulatory break | None |
+| 6 | Intraday research | ETH intraday -0.61% — below >5% sharp-move threshold | Skipped |
+| 7 | ClickUp | No action taken | Not sent |
+
+**Position:** ETH/USD 0.058790 @ $2,262.29 avg | Current $2,264.29 | Unr. +$0.12 (+0.088%) | Stop 7083dc24 active $2,171.80/$2,150.08 GTC
+**Cash:** $4.60 — no new entries possible.
+**Decision:** NO ACTION — HOLD. Stop protecting downside automatically.
   - Warsh hawkish comment → BTC/crypto negative → apply caution sizing on any new entry
