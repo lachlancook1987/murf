@@ -215,4 +215,33 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 3. **Cash constraint is the binding constraint.** The account ended fully deployed ($133.62 of $138.22 in ETH). Until ETH exits or appreciates, no new entries are possible. Next week's priority: monitor ETH stop at $2,171.80 and trail if ETH breaks $2,420.
 4. **Win rate 33% with profit factor 0.55 is below target** — losses were larger than wins on average this week. BTC re-entry discipline is the primary fix.
 
+### Addendum — Saturday Morning (2026-05-15T07:29–07:39Z)
+
+A second session opened Saturday morning. The user closed the full ETH position via dashboard; the bot then ran pre-session research and re-entered at 50% size (F&G 43 rule applied).
+
+| Time (UTC) | Action | Qty | Price | P&L |
+|---|---|---|---|---|
+| 07:29:33Z | ETH SELL (user, dashboard) | 0.058790 | $2,266.15 | **+$0.23** (+0.16%) |
+| 07:39:01Z | ETH BUY (bot) | 0.029925 | $2,265.20 | OPEN |
+
+**Revised Final Account State**
+| Metric | Prior Review | Updated (post-Saturday) |
+|---|---|---|
+| Ending Equity | $137.77 | **$136.99** |
+| Week Return | -2.81% | **-3.37%** |
+| Bot vs BTC | -1.34% | **-1.90%** |
+| Open Position | ETH 0.058790 @ $2,262.29 | ETH 0.029925 @ $2,265.20 |
+| Unrealized P&L (open) | +$0.17 (+0.12%) | -$0.32 (-0.48%) |
+
+**Revised Stats (all 7 closed trades)**
+| Wins | 4 | Losses | 3 |
+|---|---|---|---|
+| Win Rate | **57%** | Profit Factor | **0.71** |
+| Gross Wins | $1.32 | Gross Losses | $1.85 |
+| Avg Win | $0.33 | Avg Loss | $0.62 |
+
+*Saturday ETH close (+$0.23) adds 1 WIN to prior 3W/3L, improving week stats. ETH/L1 sector consecutive losses stays at 0.*
+
+**Open risk:** ETH stop-limit $2,151.94 / $2,130.42 (order e4efd513, GTC). Max loss on open: ~$3.39 (-5% from $2,265.20 entry).
+
 ---
