@@ -2242,3 +2242,92 @@ ETH in normal drawdown (-1.85%) within stop boundary. Stop at $2,151.94 is 3.2% 
 - ETH T1: $2,420 | T2: $2,550 | T3: $2,750
 - ARB unlock: May 16 13:00 UTC — tomorrow; monitor L2 sector volatility
 - XRP CLARITY Act markup: before May 21 — cash $69.53 available on catalyst confirmation
+
+---
+
+## 2026-05-16 — Pre-Session Research
+
+### Account Snapshot (Alpaca live)
+| Field | Value |
+|---|---|
+| Equity | $136.25 |
+| Cash / Buying Power | $69.53 (51.0%) |
+| Long Market Value | $66.72 (ETH) |
+| PDT Flag | No |
+| Trading Blocked | No |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,229.52 | -$1.07 (-1.58%) | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ ACTIVE |
+
+### Open Orders
+| Order ID | Symbol | Side | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|---|
+| e4efd513 | ETH/USD | sell | stop_limit | $2,151.94 | $2,130.42 | GTC | active |
+
+### Market Context
+| Indicator | Value | Notes |
+|---|---|---|
+| BTC price | ~$79,000–$80,000 | Perplexity / prior session consistency (Alpaca live unavailable via API) |
+| BTC 24h change | ~-2.1% to -3.0% | Perplexity multi-source consensus |
+| ETH price | $2,229.52 | Alpaca live |
+| ETH 24h change | -2.13% | Alpaca live |
+| BTC dominance | ~58–60% | Perplexity (CoinGecko ~57.2%, CMC ~60.3%) |
+| Fear & Greed | 46 (Neutral) | Alternative.me / Binance Square |
+| BTC perp funding | ~0% to -0.0005% | Perplexity (Coinbase: -0.0005%; neutral, not overheated) |
+| DXY | ~99 | WebSearch (weekly gain >1%; inflation/Iran energy shock) |
+| S&P 500 futures | ~7,521 | WebSearch (near ATH; Dow >50,000) |
+
+### BTC Regime Filter
+- BTC 24h change: ~-2.5% → **crash gate NOT triggered** (threshold >8%)
+- BTC vs 20-day MA: ~$79-80k vs estimated MA ~$80-82k (not available via API); treating as **CAUTION mode** (conservative)
+- Funding rate: ~0% / mildly negative → longs not overheated
+- F&G: 46 (Neutral) → no F&G-based size restriction (between 10 and 85)
+- **Regime: CAUTION** — BTC near/below estimated 20-day MA; 25% size reduction applies to new entries
+
+### Key Developments
+1. **CLARITY Act — CONFIRMED CATALYST:** Cleared Senate Banking Committee May 14 with 15-9 bipartisan vote. All 13 Republicans + 2 Democrats voted yes. XRP surged to $1.49 (+4.5%) on the news. Next step: Senate floor (needs 60-vote cloture). White House targets July 4, 2026 signing. This is the confirmed catalyst for XRP re-entry.
+2. **ETH Glamsterdam:** June/Q3 2026 mainnet target (Soldøgn Interop devnet concluded May 2). Introduces parallel processing, 10x throughput, 78.6% gas fee reduction. Thesis intact. ETH at $2,229.52 — second consecutive weekly loss; Glamsterdam remains the primary forward catalyst.
+3. **ARB unlock — TODAY:** May 16 13:00 UTC: 92.65M ARB (~$13.36M). Team/advisors receive 56.13M ARB. Sell pressure risk for L2 sector. No ARB position.
+4. **DXY at ~99:** Weekly gain >1%, driven by U.S. CPI/PPI beat and Iran conflict energy shock. Strong dollar = bearish headwind for crypto.
+5. **S&P 500 near ATH (~7,521):** Macro constructive; Dow reclaimed 50,000 this week. Risk appetite intact but DXY tension could limit crypto upside.
+
+### Trade Ideas
+
+#### 1. XRP/USD — CLARITY Act Momentum Play ⭐ PRIORITY
+- **Catalyst:** CLARITY Act cleared Senate Banking Committee (CONFIRMED). Codifies XRP as digital commodity; removes SEC 2020 enforcement theory. Next: Senate floor vote. July 4 WH signing target.
+- **Entry:** $1.44–$1.50 (pullback to support or market near $1.49; do NOT chase above $1.60)
+- **Stop:** $1.415 (5% below $1.49 entry = $1.4155; limit $1.40)
+- **Targets:** T1 $1.63 (+9.4%), T2 $1.75 (+17.4%), T3 $2.00 (+34%)
+- **Notional:** ~$45 (CAUTION mode: 25% size reduction → ~33% of $136.25 equity)
+- **R:R:** ~1.88:1 to T1 ($4.23 gain / $2.25 risk on 30 XRP at $1.49)
+- **Risk:** Senate floor 60-vote cloture uncertain; 4.5% already priced in; DXY headwind
+
+#### 2. ETH/USD — Hold, No Stop Change
+- **Status:** Open 0.029925 @ $2,265.20, current $2,229.52 (-1.58%). Stop $2,151.94 GTC (3.5% below spot).
+- **Thesis intact:** Glamsterdam June/Q3 2026, ETF inflows $356M April 2026.
+- **Action:** Hold. Stop cannot be moved down (rules). Monitor ETH proximity to stop if BTC legs down.
+- **Watch:** Sustained ETH above $2,350 → thesis firming; close below $2,200 → stop at 3.2% buffer.
+
+#### 3. BTC/USD — No Entry
+- BTC below re-entry threshold ($82,000). Sector at 1/2 consecutive loss threshold.
+- No entry until sustained break and close above $82k.
+
+### Risk Factors
+- DXY ~99 (+1% weekly): persistent dollar strength = crypto headwind; any Fed hawkish surprise adds pressure
+- ARB unlock today (13:00 UTC): 92.65M tokens could suppress L2/alt sector
+- ETH stop proximity: $2,229.52 spot vs $2,151.94 stop → 3.5% buffer; one BTC leg down could trigger
+- XRP: Senate floor vote timing uncertain; could take weeks; 4.5% catalyst move already captured
+- BTC in possible CAUTION regime (near/below 20-day MA) — reduces conviction for aggressive sizing
+
+### Decision: TRADE
+CLARITY Act catalyst confirmed — XRP/USD re-entry valid at $1.44–$1.50 (CAUTION-sized, ~$45 notional). ETH: hold with active stop. BTC: no entry.
+
+**Weekly trade count: 12/25 (13 cap remaining)**
+
+**Watch levels:**
+- XRP: entry zone $1.44–$1.50 | T1 $1.63 | T2 $1.75 | T3 $2.00 | stop $1.415
+- ETH: stop trigger $2,151.94 | T1 $2,420 | T2 $2,550 | T3 $2,750
+- BTC: re-entry threshold $82,000 (sustained close above)
+- ARB unlock: today 13:00 UTC — monitor L2 volatility
