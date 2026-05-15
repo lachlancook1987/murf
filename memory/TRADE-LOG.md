@@ -82,3 +82,18 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Regime:** BTC $80,837 (-0.30% day, May 14 close $81,079) — range $78k–$82k this week; 20-day MA not available via API
 **Breakeven:** ETH needs $2,333 (+3.1% from current $2,263) to close phase gap; phase start $141.76 (May 10)
 **Notes:** No bot trades today; buying power ($4.60) insufficient for any new entry. ETH gave back intraday gains, closing near entry ($2,263 vs $2,262 entry) with negligible unrealized gain (+0.03%). Bot outperformed BTC by +0.07% today (bot -0.23%, BTC -0.30%). Stop-limit GTC (order 7083dc24) active — trigger $2,171.80, limit $2,150.08, covers full 0.05879 ETH. Weekly trade cap (5) exceeded by user-initiated dashboard actions; bot made 0 trades this week. Monday: hold ETH into week open; watch BTC sustained above $82k for OFFENSIVE regime confirmation; cash insufficient for new entries unless ETH partially closed.
+
+---
+
+## 2026-05-15 — Session-Open Trade (Saturday morning, post-ETH-close re-entry)
+
+### 2026-05-15T07:39:01Z | ETH/USD | BUY | 0.030 ETH | Entry: $2,265.20 | Stop: $2,151.94 / $2,130.42 | Open
+
+**Order ID (buy):** 853453c9-4747-4bed-bb6a-4564f2ec2337
+**Stop Order ID:** e4efd513-810c-4dc2-8cfe-71f62aed6556 (stop_limit: trigger $2,151.94, limit $2,130.42, qty 0.029925, GTC)
+**Notional:** $67.96 (49.5% equity $137.49 — 50% F&G rule applied; strategy max 65%)
+**Target:** T1 $2,420 (+6.8%), T2 $2,550 (+12.5%), T3 $2,750 (+21.4%)
+**Stop level:** $2,151.94 (-5.00% from entry $2,265.20)
+**R:R:** ~1.35:1 to T1 ($4.64 gain / $3.39 risk on 0.030 ETH); 2.57:1 to T2
+**Thesis:** ETH Glamsterdam upgrade June 2026 pre-positioning + ETH ETF inflows $356M April 2026 + whale buying + full cash available after user ETH close at $2,266.15 (07:29Z). F&G 43 → 50% size reduction applied. BTC regime OFFENSIVE presumed (BTC ~$80,755, crash gate not triggered). XRP watch: CLARITY Act markup expected before May 21 — no entry yet (no confirmed catalyst trigger). BTC re-entry low priority (sector 1-loss threshold).
+**Notes:** Stop qty 0.029925 (not 0.030) due to Alpaca rounding of available balance. 20% workflow cap acknowledged; overridden by TRADING-STRATEGY.md 65% maximum (consistent with prior bot session). Weekly trade count: 12/25.
