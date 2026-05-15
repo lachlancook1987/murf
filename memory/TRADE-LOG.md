@@ -100,6 +100,23 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
+---
+
+## 2026-05-15 — Session-Open Trade (evening session)
+
+### 2026-05-15T19:09:41Z | XRP/USD | BUY | 31.2521 XRP | Entry: $1.439 | Stop: $1.3814 / $1.3676 | Open
+
+**Order ID (buy):** 350032fc-0f4e-451c-8dfb-a8585e3496f6
+**Stop Order ID:** e079ed77-2af9-4074-8185-69fb1feded7a (stop_limit: trigger $1.3814, limit $1.3676, qty 31.1739, GTC)
+**Notional:** $44.97 (33.0% equity $136.19 — CAUTION mode: 25% size reduction applied; strategy max 65%)
+**Target:** T1 $1.63 (+13.3%), T2 $1.75 (+21.6%), T3 $2.00 (+39.0%)
+**Stop level:** $1.3814 (-4.00% from entry $1.439 — CAUTION mode stop; limit $1.3676)
+**R:R:** ~3.3:1 to T1 ($5.97 gain / $1.80 risk on 31.25 XRP)
+**Thesis:** CLARITY Act cleared Senate Banking Committee May 14 with 15-9 bipartisan vote (confirmed catalyst). Codifies XRP as digital commodity; removes SEC 2020 enforcement theory. Next: Senate floor vote (60-vote cloture); White House targets July 4, 2026 signing. XRP at $1.439 (entry zone $1.44–$1.50). Regime: CAUTION (BTC ~$79,162, near/below estimated 20-day MA ~$80-82k); full universe tradeable per TRADING-STRATEGY.md, 25% size reduction applied.
+**Notes:** Stop qty 31.1739 (not 31.2521) due to Alpaca rounding of available settled balance. Risk factors: Senate floor 60-vote cloture uncertain; DXY ~99 headwind; ARB unlock May 16 13:00 UTC (L2 sector pressure). ETH stop (e4efd513) remains active. Weekly trade count: 13/25.
+
+---
+
 ### May 15 — EOD Snapshot v2 (Day 5, Friday — updated post session-open trade)
 **Portfolio:** $137.55 | **Cash:** $69.53 (50.5%) | **Day P&L:** -$0.41 (-0.29%) | **Phase P&L:** -$4.21 (-2.97%) | **vs BTC:** -0.58%
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
