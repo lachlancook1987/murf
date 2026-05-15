@@ -21,12 +21,15 @@
 - Always set stop-loss immediately after fill
 
 ## Exit Rules
-- Stop-loss: **5% trailing stop GTC**, placed immediately after fill confirmation
-  - Order type: `trailing_stop` with `trail_percent=5`
-  - Fallback if trailing_stop rejected: fixed stop-limit 5% below entry (stop) / 4.5% below entry (limit)
-  - Caution mode (BTC below 20-day MA): tighten to **4% trailing stop**
+- Stop-loss: **fixed stop-limit 5% below entry**, placed immediately after fill confirmation
+  - Order type: `stop_limit` — stop trigger at 5% below entry, limit at 4.5% below entry
+  - ⚠️ `trailing_stop` order type is NOT supported for crypto on Alpaca — never use it
+  - Caution mode (BTC below 20-day MA): tighten to 4% below entry
+- Midday stop management (manual trailing via midday scan):
+  - Position up ≥40%: cancel existing stop-limit, place new one 5% below current price
+  - Position up ≥25%: cancel existing stop-limit, place new one 8% below current price
+  - Never move a stop down. Never tighten within 5% of current price.
 - Take profit: scale out at 1R, 2R, 3R
-- Trailing stop handles exits — no arbitrary time stop
 
 ## Risk Management
 - Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
