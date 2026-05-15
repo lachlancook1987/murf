@@ -1774,3 +1774,113 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
 **Position:** ETH/USD 0.058790 @ $2,262.29 avg | Current $2,270.72 | Unr. +$0.50 (+0.37%) | Stop 7083dc24 active $2,171.80/$2,150.08 GTC
 **Cash:** $4.60 — no new entries possible.
 **Decision:** NO ACTION — HOLD. Stop managing downside automatically.
+
+---
+
+## 2026-05-15 — Pre-Session Research (new session open)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.77 |
+| Cash / Buying Power | $4.60 |
+| Long Market Value | $133.17 |
+| PDT Flag | No |
+| Trading Blocked | No |
+| Daytrade Count | 0 |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Intraday |
+|---|---|---|---|---|---|
+| ETH/USD | 0.058790 | $2,262.29 | $2,265.10 | +$0.17 (+0.12%) | -0.57% |
+
+### Open Orders
+| Order ID | Symbol | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|
+| 7083dc24 | ETH/USD sell | stop_limit | $2,171.80 | $2,150.08 | GTC | active |
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$81,316–$81,350 | +1.46–2.12% 24h |
+| ETH Price | ~$2,265–$2,289 | +0.7–2.2% 24h |
+| BTC Dominance | ~58% (57–60% range across sources) | Elevated — mild alt headwind |
+| Fear & Greed | ~43 (Fear) / 47 (Neutral) — sources vary | Caution: reduce new entries 50% per strategy |
+| BTC Funding Rate | +0.0047% avg (Binance +0.01%, Bybit -0.0056%) | Neutral-positive — no overheated longs |
+| DXY | ~99.0 (+0.1–0.4% intraday) | Mildly firm — slight crypto headwind |
+| S&P 500 Futures | 7,518.75, +0.31% pre-market | Risk-on — supportive for crypto |
+
+---
+
+### BTC Regime Filter (STEP 4)
+- BTC 24h: +1.46–2.12% → **NOT down >8%** → crash gate NOT triggered ✅
+- BTC funding: +0.0047% avg → **positive** → offensive factor ✅
+- BTC 20-day MA: not retrievable via API; BTC has recovered from $78k lows this week, now ~$81.3k
+- Fear & Greed 43 (Fear) → strategy requires 50% size reduction on new entries (does NOT block entry)
+- **REGIME: OFFENSIVE (tentative)** — positive funding, BTC up 1.46–2.12%, no crash gate
+- **Practical constraint: $4.60 cash → no new entries possible regardless of regime**
+
+---
+
+### Catalysts Today (2026-05-15)
+1. **Fed chair transition** — Powell's term ends TODAY (May 15). Kevin Warsh expected to comment on policy tone; risk event that could move risk assets in either direction. Watch for headlines.
+2. **CLARITY Act markup** — Bill advancing through process; key XRP catalyst; no confirmed vote date yet.
+3. **Spot Bitcoin ETF inflows** — Continued institutional demand ongoing; April flows $356M net positive (first positive month in 6 for ETH ETFs too).
+4. **Glamsterdam upgrade (ETH)** — Scheduled June 2026; pre-upgrade positioning still active. ETH range-bound below $2,420 breakout level.
+5. **PYTH cliff unlock** — $106M circulating supply cliff this week; potential DeFi selling pressure.
+6. **Trump-Xi summit** — Macro macro macro; risk-on / risk-off swing factor for U.S.–China trade war sentiment.
+
+---
+
+### Trade Ideas
+> Cash: $4.60 — no new entries executable today. Ideas are contingent on cash becoming available (ETH stop triggered, or user deposit).
+
+**Idea 1 — ETH HOLD (current position)**
+- **Catalyst:** Glamsterdam upgrade June 2026 + spot ETH ETF inflows ($356M April) + break above $2,420 as technical trigger
+- **Entry:** Already in @ $2,262.29 avg
+- **Stop:** $2,171.80 (active GTC, 7083dc24) — do NOT move lower
+- **Targets:** T1 $2,550 (+12.7%), T2 $2,750 (+21.6%)
+- **Trail trigger:** ETH closes above $2,420 → update stop to 5% below new high
+- **R:R:** ~1.9:1 to T1 ($288 gain / $93 risk per ETH)
+- **Action:** HOLD. Thesis intact; stop protecting downside automatically.
+
+**Idea 2 — XRP re-entry (contingent on CLARITY Act news / cash available)**
+- **Catalyst:** CLARITY Act markup advancing; XRP previously +3.2% win May 12; alts sector ACTIVE (0 consecutive losses)
+- **Entry:** Pullback toward $1.40–$1.45 support on CLARITY news confirmation
+- **Stop:** 4% below entry (CAUTION mode: Fear & Greed 43)
+- **Target:** $1.60–$1.70 (+10–18%)
+- **R:R:** ~2.5–4.5:1
+- **Prerequisite:** ETH stop triggered (generates ~$127 cash) OR user deposit. Current $4.60 insufficient.
+
+**Idea 3 — BTC re-entry watch (contingent on cash, 1 loss threshold warning)**
+- **Catalyst:** Powell transition → Warsh potentially more dovish; BTC recovering above $81k; positive funding
+- **Entry:** Sustained break above $82,000 with volume
+- **Stop:** 5% below entry (~$77,900 if entered $82k)
+- **Target:** $87,000–$90,000 (+6–10%)
+- **R:R:** ~1.5–2.0:1
+- **Warning:** BTC Core sector at 1 consecutive loss. One more BTC stop-out = sector pause. Size accordingly.
+- **Prerequisite:** Cash available (same constraint as Idea 2).
+
+---
+
+### Risk Factors
+1. **Fed chair transition today** — Powell term ends May 15; Warsh tone unknown; could spike volatility in either direction. Primary uncertainty for session.
+2. **Fear & Greed 43 (Fear)** — Strategy mandates 50% size reduction on new entries; already constrained by $4.60 cash.
+3. **DXY firm ~99** — Mild crypto headwind if dollar continues strengthening.
+4. **PYTH cliff unlock $106M** — DeFi/altcoin sector selling pressure possible this week.
+5. **BTC Core sector 1-loss threshold** — One more BTC stop-out pauses sector. BTC re-entry sizing should be minimum.
+6. **ARB unlock May 16 13:00 UTC** — L2 sector event tomorrow; monitor for SOL/ARB weakness spillover.
+7. **ETH stop proximity** — ETH at $2,265, stop at $2,171.80 (4.1% away). A sharp BTC sell-off could cascade into ETH stop trigger.
+
+---
+
+### Decision: TRADE (conditional)
+- **Today:** HOLD existing ETH position; no new entries possible ($4.60 cash).
+- **Session action:** Monitor Fed chair transition headlines; watch ETH $2,420 breakout level; watch XRP for CLARITY Act catalyst.
+- **Trigger points:**
+  - ETH < $2,171.80 → stop triggered → ~$127 cash freed → evaluate XRP or BTC re-entry at CAUTION sizing
+  - ETH > $2,420 sustained → trail stop to 5% below new high
+  - BTC > $82,000 sustained → BTC re-entry candidate (if cash available, 1-loss threshold noted)
+  - Warsh hawkish comment → BTC/crypto negative → apply caution sizing on any new entry
