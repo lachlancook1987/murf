@@ -1758,3 +1758,19 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
 - ARB unlock: May 16 13:00 UTC — L2 sector watch
 - BTC > $81,000 sustained → OFFENSIVE regime watch
 - CLARITY Act markup → XRP re-entry candidate
+
+---
+
+## 2026-05-15 — Midday Scan (fourth run)
+
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH +0.37% (unrealized_plpc +0.00373) | None |
+| 4 | Tighten stops (≥ +25% / ≥ +40%) | +0.37% — neither threshold met; 5%-below-current ($2,157) < existing stop ($2,171.80) — cannot move down | None |
+| 5 | Thesis check | Glamsterdam + ETF inflows intact; -0.32% intraday = macro drift | None |
+| 6 | Intraday research | No sharp move (>5% threshold not breached) | Skipped |
+| 7 | ClickUp | No action taken | Not sent |
+
+**Position:** ETH/USD 0.058790 @ $2,262.29 avg | Current $2,270.72 | Unr. +$0.50 (+0.37%) | Stop 7083dc24 active $2,171.80/$2,150.08 GTC
+**Cash:** $4.60 — no new entries possible.
+**Decision:** NO ACTION — HOLD. Stop managing downside automatically.
