@@ -159,7 +159,7 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 | 1 | May 10→12 | XRP/USD | Long→Close | $1.4294 | $1.4752 | **+$0.89** | Alts |
 | 2 | May 11→12 | BTC/USD | Long→Partial close | $80,868 | $81,607 | **+$0.18** | BTC Core |
 | 3 | May 12→13 | BTC/USD | Long (re-entry)→Stop | $81,645 | $78,895 | **-$1.62** | BTC Core |
-| 4 | May 9→13 | SOL/USD | Long (combined)→Close | $95.295 avg | $95.325 | **-$0.09** | L2/DeFi |
+| 4 | May 9→13 | SOL/USD | Long (combined)→Close | $95.295 avg | $95.325 | **+$0.02** | L2/DeFi |
 | 5 | May 9→13 | ETH/USD | Long (tranche 1)→Partial | $2,314.90 | $2,305.35 | **-$0.08** | ETH/L1 |
 | 6 | May 13→14 | ETH/USD | Long (re-entry)→Partial | $2,287.39 | $2,262.35 | **-$0.15** | ETH/L1 |
 
@@ -170,13 +170,13 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 |---|---|
 | Total Trades (closed round trips) | 6 |
 | Open Positions | 1 (ETH long) |
-| Wins | 2 |
-| Losses | 4 |
-| Win Rate | 33% |
-| Gross Wins / Gross Losses | $1.07 / $1.94 |
-| Profit Factor | **0.55** |
-| Avg Win | $0.54 |
-| Avg Loss | $0.49 |
+| Wins | 3 |
+| Losses | 3 |
+| Win Rate | 50% |
+| Gross Wins / Gross Losses | $1.09 / $1.85 |
+| Profit Factor | **0.59** |
+| Avg Win | $0.36 |
+| Avg Loss | $0.62 |
 | Fills this week (all orders) | 10 |
 
 ### Open Positions (End of Week)
@@ -198,7 +198,7 @@ Next week: if BTC holds above $78K and closes 2 consecutive days above $82,500, 
 |---|---|---|---|---|
 | BTC Core | 2 cycles | Net -$1.44 (LOSS) | **1** | Quick flip +$0.18 then re-entry stopped at -$1.62 |
 | ETH / L1 | 2 partial closes + 1 open | Partial closes -$0.23; open +$0.62 | 0 | Active position profitable; partials were size management |
-| L2 / DeFi | SOL full close | ~Breakeven (-$0.09) | 0 | Exit was orderly; combined avg vs exit near-flat |
+| L2 / DeFi | SOL full close | ~Breakeven (+$0.02) | 0 | Exit was orderly; combined avg vs exit near-flat |
 | Alts (top 50) | XRP close | **+$0.89** WIN | 0 (reset) | Best trade of week; clean entry/exit |
 
 **Sectors to exit:** None — no sector has reached 2 consecutive losses. BTC Core at 1.
