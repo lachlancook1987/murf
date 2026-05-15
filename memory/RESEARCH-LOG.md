@@ -2099,3 +2099,48 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
 - **Session action:** Enter ETH at 50% size (~$68 notional, ~0.030 ETH). Place stop-limit immediately after fill. Watch XRP for CLARITY Act catalyst. Avoid new BTC entry unless clear $82k break — sector at 1-loss threshold.
 - **Priority order:** ETH first (thesis most developed, sector 0 losses), XRP second (catalyst-dependent), BTC last (sector caution).
 - **Warsh override:** If hawkish comments emerge, hold cash — do NOT enter any new position until tone clarifies.
+
+---
+
+## 2026-05-15 — Midday Scan (sixth run)
+
+### Account Snapshot (live Alpaca)
+| Field | Value |
+|---|---|
+| Equity | $137.24 |
+| Cash / Buying Power | $69.53 |
+| Long Market Value | $67.71 (ETH) |
+| Day P&L | -$1.29 (-0.93%) vs last equity $138.53 |
+| PDT Flag | No |
+| Trading Blocked | No |
+| Daytrade Count | 0 |
+
+### Open Positions
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Intraday | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,262.70 | -$0.07 (-0.11%) | -0.67% | stop-limit $2,151.94/$2,130.42 GTC (e4efd513) |
+
+### Open Orders
+| Order ID | Symbol | Side | Type | Stop | Limit | TIF | Status |
+|---|---|---|---|---|---|---|---|
+| e4efd513 | ETH/USD | sell | stop_limit | $2,151.94 | $2,130.42 | GTC | active |
+
+### Scan Results
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH -0.11% | None |
+| 4 | Tighten stops (≥ +25% / ≥ +40%) | -0.11% — neither threshold met; 5%-below-current ($2,149.57) < existing stop ($2,151.94) — cannot move down | None |
+| 5 | Thesis check | Glamsterdam June 2026 + ETF inflows intact; -0.67% intraday = macro beta (DXY ~99, BTC near MA); no exploit/unlock/regulatory break | None |
+| 6 | Intraday research | -0.67% below >5% sharp-move threshold | Skipped |
+| 7 | ClickUp | No action taken | Not sent |
+
+### Decision: NO ACTION — HOLD
+Stop e4efd513 at $2,151.94 managing downside automatically. ETH thesis intact. Cash $69.53 available for new entries if a valid catalyst emerges.
+
+**Watch levels (carry forward):**
+- ETH T1: $2,420 (breakout trigger) → T2: $2,550 → T3: $2,750
+- ETH trail trigger: close above $2,420 → new stop 5% below new high
+- ETH stop trigger: $2,151.94 → reassess BTC/XRP re-entry (CAUTION sizing: 50% F&G rule, 4–5% stops)
+- XRP: CLARITY Act markup before May 21 → entry on confirmed catalyst + pullback to $1.40–$1.45
+- BTC: sustained break > $82,000 → re-entry candidate (minimum size, 1-loss sector threshold)
+- ARB unlock: May 16 13:00 UTC — L2 sector monitor
