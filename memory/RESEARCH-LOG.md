@@ -2003,3 +2003,99 @@ Stop $2,171.80 active and managing downside. Thesis intact. $4.60 cash — no ne
   - ETH > $2,420 sustained → trail stop to 5% below new high
   - BTC > $82,000 sustained + cash available → BTC re-entry candidate (50% size, 1-loss threshold noted)
   - Warsh hawkish → do NOT add new positions; hold ETH stop as downside protection
+
+---
+
+## 2026-05-15 — Pre-Session Research (Week 2, Day 5 / Saturday — Second Run, Post-ETH Close)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $137.49 |
+| Cash | $137.49 (100%) |
+| Buying Power | $137.49 |
+| Long Market Value | $0 |
+| Open Positions | None |
+| Open Orders | None |
+
+**ETH close recorded:** Market sell 0.058790 ETH @ $2,266.15 at 07:29:33Z (user-initiated via dashboard). Stop-limit 7083dc24 cancelled simultaneously. P&L on May 14 entry: +$0.23 (+0.16%). ETH/L1 sector consecutive losses remains **0**.
+
+**Phase P&L (since May 10, equity $141.76):** Current $137.49 → **-$4.27 (-3.01%)**
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$81,302 | Stable, range-bound $78k–$82k |
+| BTC 24h Change | +0.63%–+1.2% | Positive — crash gate NOT triggered |
+| ETH Price | ~$2,268–$2,291 | Flat; below $2,420 resistance |
+| ETH 24h Change | ~-0.3% to +1.0% | Near-flat |
+| BTC Dominance | ~57.6%–60.1% (CoinStats 57.6%) | Elevated — mild alt headwind |
+| Fear & Greed Index | 43–51 (Fear/Neutral — CFGI 47, FearGreedMeter 43) | **50% size reduction mandatory (F&G <50)** |
+| BTC Funding Rate | +0.0047%/8h (MacroMicro, May 14) | Neutral / low positive |
+| DXY | ~99.13 (+0.18%) | Mild dollar strength — mild crypto headwind |
+| S&P 500 E-Mini (ESM26) | ~6,462 (+1.24%) | Strong risk-on; near ATH |
+
+**BTC Regime:** BTC +0.63–1.2% 24h → crash gate NOT triggered. 20-day MA unavailable via API; BTC ranging $78k–$82k suggesting MA proximity. Funding neutral/positive. **Mode: OFFENSIVE (presumed), 50% size rule enforced (F&G 43).**
+
+---
+
+### Catalysts
+1. **Fed Chair Warsh** — Powell term ended May 15; Warsh now Fed Chair. Hawkish tone risk is primary macro uncertainty. No material hawkish statement yet; risk-on S&P (+1.24%) suggests market relaxed for now.
+2. **CLARITY Act markup** — Expected before May 21 recess. Bullish XRP/digital commodity catalyst. XRP sector ACTIVE (0 consecutive losses).
+3. **Glamsterdam (ETH June 2026)** — Pre-positioning catalyst intact. ETH neutral-bullish with $2,420 breakout level; forecasts $2,355–$2,489 for May.
+4. **BTC ETF inflows** — Ongoing institutional flow supporting BTC floor.
+5. **Token unlocks (selling pressure):** PYTH $106M cliff + ZRO $36M this week → DeFi sector headwind.
+6. **S&P 500 near ATH** — Risk-on macro backdrop strongly supportive.
+7. **INJ catalysts** — Native USDC + CCTP live, regulated futures, ETF filing with SEC. Top-50 alt sector ACTIVE.
+8. **TON/Toncoin** — Catchain 2.0 live, 6x fee cut, Telegram primary validator driver.
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH re-entry (primary)**
+- **Catalyst:** Glamsterdam June 2026 + ETH ETF inflows $356M April + whale buying noted + $2,420 breakout target
+- **Entry:** Market at ~$2,270 OR on reclaim of $2,287 (prior 20-day EMA); ETH currently at $2,268–$2,291
+- **Size:** 50% of normal (F&G 43) → $68 notional (~0.030 ETH at $2,270)
+- **Stop:** 5% below entry → $2,156 (stop_limit: trigger $2,156, limit $2,135)
+- **Targets:** T1 $2,420 (+6.6%), T2 $2,550 (+12.3%), T3 $2,750 (+21.1%)
+- **R:R:** ~1.5:1 to T1 ($4.65 gain / $3.21 risk on $68 notional); 2.4:1 to T2
+- **Action:** ENTER. Thesis intact, cash fully available, sector in good standing.
+
+**Idea 2 — XRP momentum (contingent on CLARITY Act news)**
+- **Catalyst:** CLARITY Act markup before May 21; XRP sector ACTIVE (0 losses); ETF inflows $82M April
+- **Entry:** On confirmed CLARITY Act advancement OR pullback to $1.40–$1.45 support
+- **Size:** 50% of normal (F&G rule) → ~$68 notional
+- **Stop:** 5% below entry (~$1.33–$1.38)
+- **Target:** $1.65–$1.75 (+10–20%)
+- **R:R:** ~2.0–4.0:1
+- **Action:** WATCH — do NOT enter until CLARITY news confirmed or clear technical trigger.
+
+**Idea 3 — BTC small re-entry (sector caution)**
+- **Catalyst:** Sustained break above $82k with volume + S&P ATH macro tailwind + Warsh non-hawkish
+- **Entry:** $82,000+ break with conviction
+- **Size:** Minimum (50% F&G rule + BTC Core at 1-loss threshold) → $30–$40 notional
+- **Stop:** 5% below entry (~$77,900)
+- **Target:** $87,000–$90,000 (+6–10%)
+- **R:R:** ~1.5–2.0:1
+- **Action:** LOW PRIORITY — BTC sector 1-loss threshold means one more stop-out triggers sector pause. Conservative sizing only.
+
+---
+
+### Risk Factors
+1. **Warsh hawkish tone** — Any rate-hawkish comment = crypto selloff. Primary uncertainty for today.
+2. **F&G 43 (Fear)** — 50% size reduction mandatory. Sentiment fragile.
+3. **DXY ~99.13 (+0.18%)** — Mild dollar strength = mild headwind; not severe but persistent.
+4. **PYTH $106M + ZRO $36M unlocks** — DeFi sector selling pressure; monitor ETH/alt correlation.
+5. **BTC Core at 1-loss threshold** — One more BTC stop-out = sector pause. Avoid overexposure to BTC.
+6. **ETH below $2,420 resistance** — Re-entry is a momentum-continuation bet; needs to clear $2,420 for full thesis confirmation.
+7. **Phase P&L -3.01%** — Down from phase start. ETH re-entry at 50% size limits further drawdown risk.
+
+---
+
+### Decision: TRADE
+- **Session action:** Enter ETH at 50% size (~$68 notional, ~0.030 ETH). Place stop-limit immediately after fill. Watch XRP for CLARITY Act catalyst. Avoid new BTC entry unless clear $82k break — sector at 1-loss threshold.
+- **Priority order:** ETH first (thesis most developed, sector 0 losses), XRP second (catalyst-dependent), BTC last (sector caution).
+- **Warsh override:** If hawkish comments emerge, hold cash — do NOT enter any new position until tone clarifies.
