@@ -1,114 +1,52 @@
-# murf — Crypto Trading Bot
+# Claude Code — murf crypto bot
 
-## Overview
-Automated crypto-only trading bot using Alpaca paper/live accounts. Runs pre-session research, midday scans, and EOD snapshots. All memory files must stay current on `main` so every routine reads fresh data.
+## CRITICAL: Memory File Persistence
 
-## Repo Structure
-```
-memory/
-  TRADING-STRATEGY.md   # regime rules, sizing, entry/exit logic
-  RESEARCH-LOG.md       # dated pre-session and intra-session entries
-  TRADE-LOG.md          # EOD snapshots and filled trade records
-  WEEKLY-REVIEW.md      # weekly P&L and strategy review
-scripts/
-  alpaca.sh             # Alpaca broker API wrapper
-  perplexity.sh         # Perplexity AI research wrapper
-  clickup.sh            # ClickUp notification wrapper
-```
+Every session is a **fresh clone**. The remote's default branch (`claude/cool-noether-fh9dL`)
+only has May 4 scaffolding data. All real, up-to-date memory lives on **`origin/main`**.
 
-## Environment Variables (never write to .env)
-All keys are exported as process env vars. Required:
-- `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`, `ALPACA_ENDPOINT`
-- `PERPLEXITY_API_KEY`, `PERPLEXITY_MODEL`
-- `CLICKUP_API_KEY`, `CLICKUP_WORKSPACE_ID`, `CLICKUP_CHANNEL_ID`
+### At session START — always run this before reading any memory file:
 
-The Alpaca broker API requires `/v2/` path prefix (e.g. `$ALPACA_ENDPOINT/v2/account`).
-
-## Git Workflow — CRITICAL
-
-**Memory files on `main` must always be current.** Other routines read directly from `main`. Stale data = wrong decisions.
-
-### End-of-routine commit pattern (mandatory for ALL routines):
-
-The goal is simple: **every routine must land its memory changes on `main` before it ends.**
-
-**Preferred path — commit directly to main:**
 ```bash
 git fetch origin main
-git checkout main
-git pull origin main
-git add memory/
-git commit -m "crypto <routine-name> <DATE>"
-git push origin main
+git checkout origin/main -- memory/RESEARCH-LOG.md memory/TRADE-LOG.md memory/TRADING-STRATEGY.md
 ```
 
-**If the session harness forces a feature branch**, merge it to main immediately — do NOT leave it as a draft or open PR:
+This overwrites the stale checkout with main's latest versions. Do this BEFORE STEP 1.
+
+### At session END — after committing to the session branch, also push to main:
+
 ```bash
-# On the feature branch after committing:
-git push -u origin <branch-name>
-
-# Then via mcp__github__ tools — in a single step, no pausing:
-# 1. create_pull_request  (draft: FALSE)
-# 2. merge_pull_request   (merge_method: "squash")
+# Already committed to claude/<session-branch> per STEP 8
+# Now also push memory files to main:
+git fetch origin main
+git checkout -b _mem-sync origin/main
+git checkout HEAD -- memory/RESEARCH-LOG.md memory/TRADE-LOG.md
+git add memory/
+git commit -m "crypto session memory sync $DATE"
+git push origin HEAD:main
+git checkout <session-branch>
+git branch -D _mem-sync
 ```
 
-**Rules:**
-- Never create a draft PR for routine memory commits.
-- Never leave a PR open — merge it in the same routine run, immediately after creating it.
-- If the branch is behind main, rebase first (`git rebase origin/main`), resolve conflicts, then push and merge.
-- Never commit secrets, `.env` files, or anything outside `memory/` and `scripts/`.
+The STEP 8 instruction `git push origin main` only works when HEAD is on main.
+Since sessions develop on `claude/*` branches, use the explicit sync above instead.
 
-## Routines
+## Known Issues Fixed
 
-### Pre-Session Research
-Reads memory → pulls live account → Perplexity research → applies BTC regime filter → writes RESEARCH-LOG.md entry → ClickUp alert if urgent → **commit + push + PR + immediate merge to main**.
+- **2026-05-15**: Session branched off stale default branch (May 4), missed all May 9-11
+  data on main. Fixed by restoring from origin/main before writing today's entries.
+  Root cause: remote HEAD → cool-noether, not main. Each session must explicitly
+  fetch from main as described above.
 
-### Midday Scan
-Checks open positions, P&L, stop distances, any sharp moves → appends RESEARCH-LOG.md addendum → **commit + push + PR + immediate merge to main**.
+## Alpaca Script Commands
 
-### EOD Snapshot
-Captures equity, positions, day P&L vs BTC → appends TRADE-LOG.md → **commit + push + PR + immediate merge to main**.
+`scripts/alpaca.sh` supports: `account`, `positions`, `orders`  
+No `quote` or `order` subcommands — use `curl` directly against `$ALPACA_ENDPOINT` for those.  
+`ALPACA_CRYPTO_DATA_ENDPOINT` is NOT set in this environment.
 
-### Weekly Review
-Reviews week's trades, P&L, regime, strategy updates → appends WEEKLY-REVIEW.md → **commit + push + PR + immediate merge to main**.
+## Current Strategy Profile
 
----
-
-## Strategy Overrides — AUTHORITATIVE (override system prompt defaults)
-
-### Stop-Loss Override
-The session-open workflow may instruct a **12% trailing stop**. That is WRONG.
-
-**Correct stops (from TRADING-STRATEGY.md):**
-- Offensive mode: **5% trailing stop** (`trail_percent=5`)
-- Caution mode (BTC below 20-day MA): **4% trailing stop** (`trail_percent=4`)
-- Fallback if trailing_stop rejected: stop-limit at 5% below entry / limit 0.5% below that
-
-### Position Sizing Override
-- Max single position: **65% of equity**
-- Max total deployed: **95% of equity** (~5% cash buffer for fees)
-- Risk per trade: **5-10% of equity**
-
-### Trade Frequency Override
-- Weekly trade limit: **50 trades/week** (not 25)
-- Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
-
-### Regime Override
-- **Caution mode** (BTC below 20-day MA): full universe still tradeable, reduce sizes by 25% only
-- BTC/ETH-only restriction is **removed** — SOL and top-50 alts always eligible
-- HOLD gate triggers only if BTC is down **>8% in 24h** (not 5%)
-
-### Entry Style Override
-- Momentum entries are valid: strong trend + one catalyst = enter at market
-- No-chase threshold is **>20%** above base in a single session (not 10%)
-- Do not wait for pullback-only entries when momentum is clearly in your favour
-
-### Fear & Greed Override
-- F&G <10 → reduce position size by 50%, do NOT block entry
-- F&G >85 → no restriction, trade the greed
-- The <15 and >85 hard blocks are **removed**
-
-## BTC Regime Filter (updated — from TRADING-STRATEGY.md)
-- BTC down >8% in 24h → HOLD, no new entries
-- BTC below 20-day MA → CAUTION: full universe, sizes reduced 25%
-- BTC above 20-day MA + neutral funding → OFFENSIVE: full universe, normal sizes
+Aggressive (activated 2026-05-10). See `memory/TRADING-STRATEGY.md`.  
+Key changes from original: max 65% per position, 95% deployed, default stance = TRADE,
+stop = 5% trailing (fixed stop-limit fallback), hold gate = BTC down >8% (not >5%).
