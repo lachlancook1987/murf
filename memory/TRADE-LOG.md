@@ -158,3 +158,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **BTC Regime:** $79,076 now vs $81,079 (~24h ago) = **-2.47%** — under ±8% threshold. No regime alert. No crash gate triggered.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+### May 15 — EOD Snapshot [v3 — Final] (Day 5, Friday)
+**Portfolio:** $135.84 | **Cash:** $24.56 (18.1%) | **Day P&L:** -$2.69 (-1.94%) | **Phase P&L:** -$5.92 (-4.18%) | **vs BTC:** +0.54%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,223.60 | -2.39% | -$1.25 (-1.84%) | $2,151.94 / $2,130.42 |
+| XRP/USD | 31.174 | $1.439 | $1.435 | -3.60% | -$0.12 (-0.28%) | $1.3814 / $1.3676 |
+**Trades today:** ETH/USD BUY 0.030 @ $2,265.20 (07:39Z), XRP/USD BUY 31.252 @ $1.439 (19:09Z) | **Week:** 13/5 (cap exceeded)
+**BTC regime:** $79,069 (-2.48% day from $81,079 May 14 close) — CAUTION; below estimated 20-day MA ~$80-82k; crash gate not triggered
+**Notes:** Broad crypto selloff: BTC fell -2.48% to $79,069, dragging ETH -2.39% to $2,223.60 and XRP -3.60% to $1.435. Both positions entered today remain well above stops (ETH stop $2,151.94 is -3.2% away; XRP stop $1.3814 is -3.9% away). Theses intact: ETH Glamsterdam June 2026 upgrade + ETF inflows; XRP CLARITY Act cleared Senate Banking Committee 15-9, Senate floor vote next. Bot outperformed BTC by +0.54% on the day — 18.1% cash cushion dampened drawdown (bot -1.94%, BTC -2.48%). Phase P&L -$5.92 (-4.18%) from $141.76 phase start (May 10). Risk watch: ARB unlock 13:00 UTC May 16 = L2/ETH sector pressure. Cash $24.56 insufficient for new entry. Stance: HOLD both positions, no changes planned.
