@@ -196,6 +196,28 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
+## 2026-05-16 — Overnight Triage Check (Saturday morning)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,225.39 | -1.76% | $2,151.94/$2,130.42 (order e4efd513) | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.426 | -0.90% | $1.3814/$1.3676 (order e079ed77) | HOLD |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. Both positions well within threshold.
+**Stop tightening (≥+25%):** None. No winners.
+**BTC Regime:** $78,970 vs May 15 close $79,069 = **-0.12%** — well under ±8% threshold. No crash gate. CAUTION regime persists.
+**Portfolio:** $135.61 | **Cash:** $24.56 (18.1%)
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
 ## 2026-05-16 — Session-Open Scan (Saturday)
 
 **Positions:**
