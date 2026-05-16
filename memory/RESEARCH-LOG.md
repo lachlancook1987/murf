@@ -2610,3 +2610,26 @@ Default stance maintained. No new entries possible (cash $24.56 insufficient for
 - BTC: $82,000 sustained close = regime upgrade to OFFENSIVE; BTC re-entry possible
 - Cash trigger: ETH or XRP partial close frees capital for next entry
 
+
+---
+
+## 2026-05-16 — Midday Scan v2 / Afternoon Addendum
+
+### Perplexity Thesis Check (ETH + XRP)
+**ETH specific:** No protocol exploit, hack, or regulatory action identified. Broad macro risk-off selling (S&P futures down, elevated yields, dollar strength) is the primary driver. Glamsterdam upgrade June 2026 thesis intact.
+**XRP specific:** No adverse CLARITY Act news. Senate floor vote still pending. Thesis intact.
+**BTC:** Same broad weakness — no BTC-specific event. Macro environment (DXY elevated, risk-off) dominates.
+
+### Current Snapshot
+| Symbol | Qty | Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,176.62 | -3.91% | $2,151.94/$2,130.42 (e4efd513) | **1.13% — CRITICAL** |
+| XRP/USD | 31.174 | $1.439 | $1.4098 | -2.03% | $1.3814/$1.3676 (e079ed77) | 2.01% |
+
+**Portfolio:** ~$133.65 | **Cash:** $24.56 (18.4%)
+
+### Decision: HOLD — No action
+- Neither position at -10% cut threshold
+- No thesis breakage confirmed
+- ETH stop buffer critically thin: any -1.1% ETH move triggers stop ($2,151.94). Let stop work — do NOT move it lower.
+- No notification sent (no action taken per rules)

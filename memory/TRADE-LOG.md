@@ -233,3 +233,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Trades today:** none | **Week:** 13/5 (cap exceeded)
 **BTC regime:** $78,457 (-0.77% day from $79,069 May 15 close) — CAUTION; below estimated 20-day MA ~$80-82k; crash gate not triggered
 **Notes:** Another down day as BTC shed 0.77% to $78,457, dragging ETH -1.59% to $2,191.90 and XRP -1.38% to $1.4181. Bot underperformed BTC by -0.32% — position losses exceeded the cushioning effect of 18.3% cash. Phase P&L deepens to -$7.40 (-5.22%) from $141.76 start (May 10). Stop buffers are thinning: ETH at 1.82% away from stop trigger ($2,151.94) and XRP at 2.59% — both warrant close monitoring on any Sunday/Monday gap down. BTC now ~$1,600 below estimated 20-day MA, regime firmly CAUTION. Cash $24.56 insufficient for new entries. No trades today; weekly cap (5) already exceeded from prior sessions. Weekend — no trades planned. Thesis intact: ETH Glamsterdam upgrade Jun 2026, XRP CLARITY Act Senate floor vote pending.
+
+---
+
+## 2026-05-16 — Midday Scan v2 (afternoon)
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,176.62 | -3.91% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer **1.13% — CRITICAL**)
+- XRP/USD: 31.174 @ $1.439 | Current $1.4098 | -2.03% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 2.01%)
+- No cuts (neither at -10% threshold). No stop tightening (no winners ≥+25%).
+- Perplexity thesis check: No ETH-specific protocol exploit, hack, or regulatory action. Broad macro/risk-off selloff. Glamsterdam thesis intact. XRP CLARITY Act thesis intact.
+- ETH stop buffer critically thin (1.13%). Stop trigger $2,151.94 may fire on continued selling — do NOT move stop down.
+- Portfolio: ~$133.65 | Cash: $24.56 (18.4%)
+- No trades. No notification sent (no action taken).
