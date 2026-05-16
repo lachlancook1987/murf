@@ -257,3 +257,24 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - Perplexity: no ETH-specific exploit, hack, or regulatory action; broad macro/risk-off selloff confirmed. XRP CLARITY Act thesis intact — no Senate vote setback.
 - ETH slightly recovered from v2 scan ($2,176.62 → $2,180.12); stop buffer remains critically thin.
 - No trades. No notification sent (no action taken).
+
+---
+
+## 2026-05-16 — Session-Open Scan (late session)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,180.50 | -3.74% | **1.31% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.417 | -1.53% | 2.51% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+**Account:** Equity $133.98 | Cash $24.56 (18.3%) | Long MV $109.42 | last_equity $136.04 | Day P&L: -$2.06 (-1.51%)
+**BTC:** $78,166 (ask $78,207 / bid $78,126) | 24h: ~-1.14% vs May 15 close $79,069 | Regime: **CAUTION** (below est. 20-day MA ~$80-82k) | Crash gate: NOT triggered
+**Weekly trades:** 13/25 | **Positions:** 2/20
+
+**Pre-trade checks (STEP 3):**
+- BTC crash gate: -1.14% 24h → clear ✓
+- BTC regime: CAUTION — full universe tradeable, 25% size reduction applies
+- Cash $24.56 → insufficient for any new entry at CAUTION sizing ✗
+- No new trades qualify: cash constraint binds
+
+**Decision: HOLD — No New Trades.** ETH stop critically thin (1.31% buffer); cash insufficient; CAUTION regime. Both GTC stops active and valid. Theses intact (ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending). No trades, no notification sent.
