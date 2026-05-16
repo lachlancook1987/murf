@@ -21,6 +21,12 @@ git checkout <session-branch>
 git branch -D _mem-sync
 ```
 
+> **IMPORTANT:** Memory files must be **committed on the session branch first** before
+> running the mem-sync above. The `git checkout <session-branch> -- memory/...` step
+> copies the *committed* version — any uncommitted edits on the session branch will be
+> lost. Always run `git add memory/ && git commit` on the session branch before switching
+> to `_mem-sync`.
+
 ## Notifications (WhatsApp via CallMeBot)
 
 `scripts/clickup.sh` now delegates to `scripts/whatsapp.sh` — all existing routine
