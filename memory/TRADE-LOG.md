@@ -170,3 +170,26 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Trades today:** ETH/USD BUY 0.030 @ $2,265.20 (07:39Z), XRP/USD BUY 31.252 @ $1.439 (19:09Z) | **Week:** 13/5 (cap exceeded)
 **BTC regime:** $79,069 (-2.48% day from $81,079 May 14 close) — CAUTION; below estimated 20-day MA ~$80-82k; crash gate not triggered
 **Notes:** Broad crypto selloff: BTC fell -2.48% to $79,069, dragging ETH -2.39% to $2,223.60 and XRP -3.60% to $1.435. Both positions entered today remain well above stops (ETH stop $2,151.94 is -3.2% away; XRP stop $1.3814 is -3.9% away). Theses intact: ETH Glamsterdam June 2026 upgrade + ETF inflows; XRP CLARITY Act cleared Senate Banking Committee 15-9, Senate floor vote next. Bot outperformed BTC by +0.54% on the day — 18.1% cash cushion dampened drawdown (bot -1.94%, BTC -2.48%). Phase P&L -$5.92 (-4.18%) from $141.76 phase start (May 10). Risk watch: ARB unlock 13:00 UTC May 16 = L2/ETH sector pressure. Cash $24.56 insufficient for new entry. Stance: HOLD both positions, no changes planned.
+
+---
+
+## 2026-05-16 — Overnight Triage Check (~01:00 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,227.10 | -1.68% | $2,151.94/$2,130.42 (order e4efd513) | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.4367 | -0.16% | $1.3814/$1.3676 (order e079ed77) | HOLD |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. Both positions within threshold.
+
+**Stop tightening (≥+25%):** None. No winners.
+
+**BTC Regime:** $79,079 now vs May 15 close $79,063 = **+0.02%** — flat overnight. Under ±8% threshold. No regime alert. No crash gate.
+
+**Result: NO-OP. No actions taken. No notification sent.**
