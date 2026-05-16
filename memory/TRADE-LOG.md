@@ -233,3 +233,21 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Trades today:** none | **Week:** 13/5 (cap exceeded)
 **BTC regime:** $78,457 (-0.77% day from $79,069 May 15 close) — CAUTION; below estimated 20-day MA ~$80-82k; crash gate not triggered
 **Notes:** Another down day as BTC shed 0.77% to $78,457, dragging ETH -1.59% to $2,191.90 and XRP -1.38% to $1.4181. Bot underperformed BTC by -0.32% — position losses exceeded the cushioning effect of 18.3% cash. Phase P&L deepens to -$7.40 (-5.22%) from $141.76 start (May 10). Stop buffers are thinning: ETH at 1.82% away from stop trigger ($2,151.94) and XRP at 2.59% — both warrant close monitoring on any Sunday/Monday gap down. BTC now ~$1,600 below estimated 20-day MA, regime firmly CAUTION. Cash $24.56 insufficient for new entries. No trades today; weekly cap (5) already exceeded from prior sessions. Weekend — no trades planned. Thesis intact: ETH Glamsterdam upgrade Jun 2026, XRP CLARITY Act Senate floor vote pending.
+
+---
+
+## 2026-05-16 — Session-Open Scan (second session)
+
+**Positions (live):**
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Stop Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,171.14 | -4.16% | $2,151.94 | **0.88%** ⚠️ CRITICAL | e4efd513 GTC ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.401 | -2.64% | $1.3814 | 1.39% | e079ed77 GTC ✓ |
+
+**Account:** Equity $133.20 | Cash $24.56 (18.4%) | Long MV $108.64
+**BTC Regime:** ~$77,924 | 24h: -1.46% → crash gate NOT triggered | below est. 20-day MA ~$80-82k → CAUTION
+**Weekly trades:** 13/25
+**Hard-check result:** No new catalysts beyond existing positions; cash $24.56 insufficient for any CAUTION-sized new entry. BTC sector at 1/2 consecutive loss threshold — no BTC entry.
+**Stop management:** Neither ETH (-4.16%) nor XRP (-2.64%) near +25%/+40% tightening triggers. No stop changes (rule prohibits moving stops down). Both GTC stop-limits active and valid.
+**Emergency exits (≤-10%):** None — both within threshold.
+**Result: HOLD. No trades. No notification sent.**
