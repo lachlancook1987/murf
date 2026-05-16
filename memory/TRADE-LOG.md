@@ -193,3 +193,19 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **BTC Regime:** $79,079 now vs May 15 close $79,063 = **+0.02%** — flat overnight. Under ±8% threshold. No regime alert. No crash gate.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-16 — Session-Open Scan (Saturday)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,228.60 | -1.62% | $2,151.94/$2,130.42 (order e4efd513) | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.4399 | +0.06% | $1.3814/$1.3676 (order e079ed77) | HOLD |
+
+**BTC Regime:** $79,139 — CAUTION (below estimated 20-day MA ~$80-82k); flat overnight; crash gate not triggered.
+**Emergency exits (≤-10%):** None. **Stop tightening (≥+25%):** None.
+**Cash:** $24.56 (18.1%) — insufficient for new entry at CAUTION sizing.
+**Watch:** ARB unlock 13:00 UTC today — L2/ETH sector pressure risk. Both stop-limits active and valid.
+**Result: HOLD. No trades. WhatsApp notification sent.**
