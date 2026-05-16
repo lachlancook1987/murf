@@ -2659,3 +2659,27 @@ Default stance maintained. No new entries possible (cash $24.56 insufficient for
 
 ### Decision: HOLD — No Action
 ETH stop buffer 1.29% — critically thin but stop is in place and cannot be moved lower per rules. XRP buffer 2.47% — adequate. Both theses intact. Cash $24.56 insufficient for new entries. Let stops work.
+
+---
+
+## 2026-05-16 — Midday Scan v4
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,180.13 | -3.76% | **1.29% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.409 | -2.09% | 1.96% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+### Account
+- Equity: $133.95 | Cash: $24.56 (18.3%) | Long MV: $109.39
+- Day P&L: -$2.09 (-1.54%) vs last_equity $136.04 | Phase P&L: -$7.81 (-5.51%) vs $141.76 start
+
+### Scan Results
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH -3.76%, XRP -2.09% — both above threshold | None |
+| 4 | Tighten stops (≥+25% / ≥+40%) | Neither threshold met | None |
+| 5 | Thesis check | Prices unchanged from v3 scan ($2,180 ETH / $1.409 XRP). v3 Perplexity confirmed no ETH exploit/hack/regulatory action; XRP CLARITY Act intact. No new developments. | None |
+| 7 | Notification | No action taken | Not sent |
+
+### Decision: HOLD — No Action
+Prices flat vs v3 scan. ETH stop buffer remains critically thin at 1.29% (stop trigger $2,151.94). XRP buffer 1.96%. Both stops active and valid. Theses intact. Cash $24.56 insufficient for new entries.
