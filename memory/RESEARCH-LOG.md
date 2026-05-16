@@ -2633,3 +2633,29 @@ Default stance maintained. No new entries possible (cash $24.56 insufficient for
 - No thesis breakage confirmed
 - ETH stop buffer critically thin: any -1.1% ETH move triggers stop ($2,151.94). Let stop work — do NOT move it lower.
 - No notification sent (no action taken per rules)
+
+---
+
+## 2026-05-16 — Midday Scan v3
+
+### Positions (Alpaca live)
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,180.12 | -$2.55 (-3.76%) | **1.29% — CRITICAL** | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.41643 | -$0.70 (-1.57%) | 2.47% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+### Account
+- Equity: $133.96 | Cash: $24.56 (18.3%) | Long MV: $109.40
+- Day P&L: -$2.08 (-1.53%) vs last_equity $136.04 | Phase P&L: -$7.80 (-5.51%) vs $141.76 start
+
+### Scan Results
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH -3.76%, XRP -1.57% — both above threshold | None |
+| 4 | Tighten stops (≥+25% / ≥+40%) | Neither threshold met | None |
+| 5 | Thesis check | ETH: Glamsterdam June 2026 intact, no exploit/regulatory action. XRP: CLARITY Act intact, no Senate setback. Both dips = broad macro selloff. | None |
+| 6 | Perplexity research | Confirmed macro/risk-off weakness; no ETH or XRP specific events. ETH slightly recovered from v2 ($2,176.62 → $2,180.12). | No action |
+| 7 | Notification | No action taken | Not sent |
+
+### Decision: HOLD — No Action
+ETH stop buffer 1.29% — critically thin but stop is in place and cannot be moved lower per rules. XRP buffer 2.47% — adequate. Both theses intact. Cash $24.56 insufficient for new entries. Let stops work.
