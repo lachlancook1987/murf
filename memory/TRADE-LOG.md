@@ -245,3 +245,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - ETH stop buffer critically thin (1.13%). Stop trigger $2,151.94 may fire on continued selling — do NOT move stop down.
 - Portfolio: ~$133.65 | Cash: $24.56 (18.4%)
 - No trades. No notification sent (no action taken).
+
+---
+
+## 2026-05-16 — Midday Scan v3
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,180.12 | -3.76% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer **1.29% — CRITICAL**)
+- XRP/USD: 31.174 @ $1.439 | Current $1.41643 | -1.57% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 2.47%)
+- Portfolio: $133.96 | Cash: $24.56 (18.3%) | Day P&L: -$2.08 (-1.53%) vs last_equity $136.04 | Phase P&L: -$7.80 (-5.51%)
+- No cuts (neither at -10%). No stop tightening (no winners ≥+25%). Theses intact.
+- Perplexity: no ETH-specific exploit, hack, or regulatory action; broad macro/risk-off selloff confirmed. XRP CLARITY Act thesis intact — no Senate vote setback.
+- ETH slightly recovered from v2 scan ($2,176.62 → $2,180.12); stop buffer remains critically thin.
+- No trades. No notification sent (no action taken).
