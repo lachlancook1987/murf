@@ -2530,3 +2530,83 @@ Both positions holding well above stops. No cuts, no stop tightening, no new ent
 - ETH stop buffer: 3.30% ($2,225.39 → stop $2,151.94)
 - XRP stop buffer: 3.13% ($1.426 → stop $1.3814)
 - No notification sent (no action taken).
+
+---
+
+## 2026-05-16 — Pre-Session Research (Saturday Evening)
+
+### Account Snapshot
+- **Equity:** $135.54 | **Cash:** $24.56 (18.1%) | **Long MV:** $110.98
+- **Day P&L:** -$2.99 vs last_equity $138.53 (-2.16%)
+- **Phase P&L:** -$6.22 (-4.39%) vs phase start $141.76 (May 10)
+
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop | Status |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,224.93 | -$1.21 (-1.78%) | $2,151.94/$2,130.42 GTC (e4efd513) ✓ | HOLD |
+| XRP/USD | 31.174 | $1.439 | $1.424 | -$0.46 (-1.02%) | $1.3814/$1.3676 GTC (e079ed77) ✓ | HOLD |
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC spot | ~$79,100–$79,500 | Flat vs overnight |
+| BTC 24h change | -2.6% to -2.74% | Crash gate NOT triggered (<8%) |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION mode active |
+| ETH spot | ~$2,225–$2,247 | Range-bound |
+| ETH 24h change | -1.7% to -1.9% | Stable |
+| BTC dominance | ~58–60% | Neutral-elevated; alt headwind |
+| Fear & Greed | 43 (Fear) | No size restriction (>10 threshold) |
+| BTC funding rate | +0.01% (8h, Binance) | Slightly positive, not overheated |
+| DXY | ~99.26–99.27 | 5-week high, +0.3–0.4% 24h; crypto headwind |
+| S&P 500 futures | 7,422 (-1.38% May 15) | Risk-off macro environment |
+| ARB unlock | 92.65M ARB (~$108M) at 13:00 UTC today | Pre-flagged L2 pressure; in progress |
+
+### Research Notes
+- **Catalysts:** CLARITY Act progressing — Senate Banking Committee cleared 15-9; floor vote (60-vote cloture) expected June/July. ETF inflows cited as supportive for BTC/ETH. Ethereum network upgrades (Glamsterdam) remain medium-term tailwind.
+- **ETH:** Range-bound $2,100–$2,400; resistance at $2,250–$2,315; mixed-to-slightly-bearish short-term signals. Stop $2,151.94 is ~3.2% below current $2,224.93. Thesis intact: Glamsterdam upgrade June 2026 + ETF inflows.
+- **XRP:** Trading $1.42–$1.43. No new Senate vote date confirmed. CLARITY Act thesis intact — next catalyst is Senate floor cloture vote. Stop $1.3814 is ~2.98% below current $1.424 (tighter than yesterday).
+- **Macro:** DXY near 5-week high = persistent dollar strength headwind. S&P 500 futures down -1.38% on May 15 = risk-off environment. Both compound crypto downside risk.
+- **Token unlock residual:** ARB 92.65M already underway (pre-flagged); OP 31.34M May 30 is next major L2 unlock.
+- **BTC dominance:** ~58–60%, elevated — headwind for altcoins ETH and XRP vs BTC.
+
+### BTC Regime Filter (STEP 4)
+- BTC 24h: ~-2.6% → crash gate NOT triggered (threshold: >8% down)
+- BTC ~$79,100 vs est. 20-day MA ~$80-82k → **CAUTION mode**: full universe tradeable, reduce new entry sizes by 25%
+- Funding rate: +0.01% (positive, not overheated — no additional caution)
+- **Result: CAUTION MODE ACTIVE — no regime upgrade, crash gate clear**
+
+### Trade Ideas
+#### 1. ETH/USD — Hold existing (no add; cash insufficient)
+- Long 0.029925 @ $2,265.20 | Current $2,224.93 | Unr. -$1.21 (-1.78%)
+- Catalyst: Glamsterdam June 2026 + ETF inflows; range-bound with $2,250 as upside trigger
+- Stop: $2,151.94 (3.2% buffer) | T1: $2,420 (+8.8%) | T2: $2,550 | T3: $2,750
+- R:R to T1: ~3.5:1 | Action: HOLD, thesis intact, stop in place
+
+#### 2. XRP/USD — Hold existing (no add; cash insufficient)
+- Long 31.174 @ $1.439 | Current $1.424 | Unr. -$0.46 (-1.02%)
+- Catalyst: CLARITY Act — Senate floor vote next; White House July 4 signing target; XRP at $1.50+ on Senate floor passage = re-catalyst event
+- Stop: $1.3814 (2.98% buffer — monitor closely) | T1: $1.63 (+14.5%) | T2: $1.75 | T3: $2.00
+- R:R to T1: ~4.8:1 | Action: HOLD, thesis intact, watch $1.40 support
+
+#### 3. Watchlist — No cash for new entries ($24.56 insufficient at CAUTION sizing)
+- BTC: sector at 1/2 consecutive loss threshold; avoid until sustained close >$82k
+- SOL: needs $100+ sustained close; watch
+- No new entries this session
+
+### Risk Factors
+1. **XRP stop proximity tightening**: $1.424 spot vs $1.3814 stop = 2.98% buffer; any further -3% dip triggers stop
+2. **ETH stop proximity**: $2,224.93 vs $2,151.94 stop = 3.2% buffer; BTC drop to ~$77k would likely trigger
+3. **DXY at 5-week high**: persistent dollar strength = sustained crypto headwind; no near-term DXY reversal catalyst identified
+4. **Risk-off macro**: S&P 500 futures down -1.38%; elevated yields (30yr ~5.1%); geopolitical uncertainty
+5. **BTC dominance elevated**: ~58-60% rising = capital rotation into BTC, away from alts (ETH/XRP)
+6. **BTC Core sector**: at 1/2 consecutive loss threshold — one more BTC stop-out triggers sector pause
+7. **Fear & Greed 43**: Fear territory; participants risk-averse, any negative catalyst magnified
+
+### Decision: TRADE
+Default stance maintained. No new entries possible (cash $24.56 insufficient for CAUTION-sized position). Both ETH and XRP positions held with active GTC stops. Both theses intact. Priority: protect capital, let stops work, wait for cash release (partial close) or regime upgrade (BTC >$82k) before sizing up.
+
+**Watch levels for next session:**
+- ETH: hold $2,151.94 stop | break $2,250 = re-accumulate if cash allows
+- XRP: hold $1.3814 stop | Senate floor vote announcement = re-catalyst; watch $1.50 breakout
+- BTC: $82,000 sustained close = regime upgrade to OFFENSIVE; BTC re-entry possible
+- Cash trigger: ETH or XRP partial close frees capital for next entry
+
