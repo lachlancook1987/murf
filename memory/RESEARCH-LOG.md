@@ -2495,3 +2495,38 @@ Default stance maintained. No new entries possible ($24.56 cash insufficient). B
 
 ### Decision: HOLD — No Action
 Both positions within normal drawdown bands. Stops in place. Cash ~$24-26 (insufficient for new entries). Next catalyst events: XRP CLARITY Act Senate floor vote; ETH Glamsterdam June 2026.
+
+---
+
+## 2026-05-16 — Midday Scan
+
+### Positions (Alpaca live)
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,225.39 | -$1.19 (-1.76%) | 3.30% | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.426 | -$0.41 (-0.90%) | 3.13% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+### Account
+- Portfolio: $135.61 | Cash: $24.56 (18.1%) | Day P&L: -$2.92 (-2.11%) vs last_equity $138.53
+- Both stop-limit orders status: **new** (active, unfilled) ✓
+
+### Step 3 — Cut Losers Check
+- ETH: -1.76% → HOLD (cut threshold -10%)
+- XRP: -0.90% → HOLD (cut threshold -10%)
+
+### Step 4 — Stop Tightening Check
+- ETH: -1.76% → no action (requires +25% or +40% to trigger)
+- XRP: -0.90% → no action (requires +25% or +40% to trigger)
+
+### Step 5 — Thesis Check
+- ETH: Glamsterdam June/Q3 2026 intact. No protocol exploit or regulatory action. Decline consistent with BTC CAUTION regime and ARB unlock day.
+- XRP: CLARITY Act thesis intact. ARB unlock (92.65M ARB, $13.36M at 13:00 UTC today) was pre-identified L2 sector risk; XRP -0.90% is modest and unrelated to ARB specifically. No Senate vote setback. Thesis: Senate floor cloture vote next, WH July 4 signing target.
+
+### Step 6 — Research
+- No sharp unexplained moves on either position. Both consistent with known macro context (BTC CAUTION, DXY ~99, ARB unlock day). Research not triggered.
+
+### Decision: HOLD — No Action
+Both positions holding well above stops. No cuts, no stop tightening, no new entries (cash $24.56 insufficient). Theses intact.
+- ETH stop buffer: 3.30% ($2,225.39 → stop $2,151.94)
+- XRP stop buffer: 3.13% ($1.426 → stop $1.3814)
+- No notification sent (no action taken).

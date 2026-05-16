@@ -209,3 +209,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Cash:** $24.56 (18.1%) — insufficient for new entry at CAUTION sizing.
 **Watch:** ARB unlock 13:00 UTC today — L2/ETH sector pressure risk. Both stop-limits active and valid.
 **Result: HOLD. No trades. WhatsApp notification sent.**
+
+---
+
+## 2026-05-16 — Midday Scan (no trades)
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,225.39 | -1.76% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer 3.30%)
+- XRP/USD: 31.174 @ $1.439 | Current $1.426 | -0.90% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 3.13%)
+- No cuts (neither near -10%). No stop tightening (no winners up ≥25%). Theses intact.
+- ARB unlock 13:00 UTC today (92.65M ARB, $13.36M) was pre-flagged L2 risk; no outsized ETH dislocation observed.
+- BTC regime: CAUTION (est. 20-day MA ~$80-82k, BTC ~$79k per prior sessions) — crash gate not triggered.
+- Portfolio: $135.61 | Cash: $24.56 (18.1%) | Day P&L: -$2.92 (-2.11%) vs last_equity $138.53
+- No trades. No notification sent.
