@@ -2828,3 +2828,33 @@ Cash $24.56 is insufficient for any new entry even with 25% CAUTION reduction. B
 Cash $24.56 remains below minimum entry threshold ($26.93) under CAUTION sizing. No qualifying entries. Both stops active. ETH stop buffer improved to 1.83% (from 1.56% pre-session) — still critical. XRP buffer 3.20%, stable. No trades placed. No notification sent.
 
 ---
+
+## 2026-05-17 — Midday Scan v2 (Afternoon)
+
+### Live Data
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,192.24 | -3.22% | **1.84% — CRITICAL** | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.42708 | -0.83% | 3.20% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+**Account:** Equity $134.57 | Cash $24.56 (18.3%) | Day P&L: -$1.47 (-1.08%) vs last_equity $136.04 | Phase P&L: ~-$7.19 (-5.07%) vs $141.76 start
+
+### BTC Regime
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC mid | ~$78,268 (est. from prior sessions) | +0.30% from EOD $78,031 |
+| BTC crash gate | NOT triggered | << 8% down ✓ |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION — 25% size reduction |
+
+### Thesis Check (Perplexity)
+- **ETH/Glamsterdam:** No new protocol-level exploits, no regulatory actions since May 16. Glamsterdam upgrade June 2026 remains on schedule. **Thesis INTACT.**
+- **XRP/CLARITY Act:** No adverse Senate floor vote developments. Senate floor vote still pending. **Thesis INTACT.**
+
+### Stop Buffers
+- ETH buffer 1.84% (CRITICAL — stop trigger at $2,151.94; any -1.84% ETH move hits stop)
+- XRP buffer 3.20% (stable)
+
+### Decision: **HOLD — NO-OP**
+No cuts, no stop adjustments, no new entries (cash constraint). Theses intact. No notification warranted.
+
+---
