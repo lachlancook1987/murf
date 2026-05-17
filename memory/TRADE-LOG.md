@@ -355,3 +355,23 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Sunday close with modest intraday recovery — ETH bounced +0.67% to $2,184.60 and XRP +0.88% to $1.4194. Bot Day P&L -$0.18 (-0.13%) outperformed BTC's -0.54% drop by +0.41 percentage points. ETH stop buffer recovered slightly to 1.50% (CRITICAL) from the overnight low of 1.20%; stop trigger $2,151.94 remains active and untouched. XRP buffer 2.67%, stable. Phase P&L -$7.58 (-5.35%) from $141.76 start (May 10). BTC holding ~$78,031, firmly below estimated 20-day MA — CAUTION regime continues. Weekly cap (5) exceeded at 13 total from prior sessions; no bot trades this week. Cash $24.56 insufficient for new entries under CAUTION sizing. Monday gap risk elevated given ETH's thin buffer; a -1.5% ETH open would breach the stop. Both GTC stops confirmed active. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
 
 ---
+
+## 2026-05-17 — Midday Scan v2 (Afternoon)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,192.24 | -3.22% | **1.84% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.42708 | -0.83% | 3.20% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+**Account:** Equity $134.57 | Cash $24.56 (18.3%) | Day P&L: -$1.47 (-1.08%) vs last_equity $136.04
+**BTC regime:** ~$78,268 (+0.30% from EOD) — CAUTION (below est. 20-day MA ~$80-82k); crash gate NOT triggered
+
+**STEP 3 — Cuts:** Neither position ≤-10%. No cuts.
+**STEP 4 — Stop tightening:** Neither position ≥+25%. No adjustments.
+**STEP 5 — Thesis check (Perplexity):**
+- ETH: No new protocol exploits or adverse regulatory action. Glamsterdam June 2026 on track. **Thesis INTACT.**
+- XRP: No new CLARITY Act adverse developments. Senate floor vote still pending. **Thesis INTACT.**
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
