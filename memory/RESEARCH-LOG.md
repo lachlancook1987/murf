@@ -2917,3 +2917,44 @@ No cuts, no stop adjustments, no new entries (cash constraint). Theses intact. N
 ### Decision: **HOLD — No New Trades**
 Both existing positions have valid GTC stops. Cash $24.56 is below minimum entry threshold under CAUTION sizing. No qualifying new entries. Both theses intact (ETH Glamsterdam, XRP CLARITY Act). ETH stop critically thin — do not move lower per rules; let the stop work. No regime shift, no crash gate, no emergency exits needed → no notification sent.
 
+
+---
+
+## 2026-05-17 — Session-Open Execution v2 (~19:06 UTC)
+
+### Live Account
+| Field | Value |
+|---|---|
+| Equity | $133.87 |
+| Cash | $24.56 (18.3%) |
+| Long Market Value | $109.31 |
+| Day P&L | -$2.17 (-1.60%) vs last_equity $136.04 |
+| Phase P&L | -$7.89 (-5.57%) vs $141.76 start (May 10) |
+
+### Positions
+| Symbol | Qty | Entry | Current | P&L% | Intraday | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,184.20 | -3.58% | +0.65% | **1.48% — CRITICAL** | e4efd513 stop $2,151.94/lim $2,130.42 GTC ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.4099 | -2.02% | +0.21% | 2.02% | e079ed77 stop $1.3814/lim $1.3676 GTC ✓ |
+
+### BTC Regime
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC mid | $78,227 (bid $78,194 / ask $78,259 @ 19:06 UTC) | +0.25% from EOD $78,031 |
+| BTC crash gate | NOT triggered | < 8% down ✓ |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION — 25% size reduction |
+
+### Hard Checks (STEP 3)
+| Rule | Check | Result |
+|---|---|---|
+| BTC crash gate (>8% 24h) | +0.25% | CLEAR ✓ |
+| BTC regime | Below est. 20-day MA | CAUTION — 25% reduction |
+| Weekly trades | 13/25 | OK ✓ |
+| Positions | 2/20 | OK ✓ |
+| Cash vs normal 20% threshold ($26.77) | $24.56 < $26.77 | Below normal ✗ |
+| Cash vs CAUTION threshold ($20.08) | $24.56 > $20.08 | Above caution ✓ |
+| New catalyst documented | None | BLOCKED — no new thesis |
+| Both GTC stops active | e4efd513 + e079ed77 | Confirmed ✓ |
+
+### Decision: **HOLD — No New Trades**
+No new catalyst documented for any new entry beyond existing ETH and XRP positions. CAUTION cash threshold ($20.08) is technically met by $24.56 cash, but no qualifying thesis exists. ETH stop buffer critically thin (1.48% — ~$32 to trigger). XRP buffer 2.02%. Both theses intact (ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending). BTC CAUTION regime ongoing. No trades placed. No notification sent. No commit required.
