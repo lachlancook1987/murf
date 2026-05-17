@@ -318,3 +318,28 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No trades. No notification sent.
 
 ---
+
+## 2026-05-17 — Overnight Triage Check (~05:10 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,188.71 | -3.38% | **1.68% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.41767 | -1.48% | 2.56% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. Both positions well within threshold.
+
+**Stop tightening (≥+25%):** None. No winners.
+
+**BTC Regime:** $78,219 mid (ask $78,265 / bid $78,173 @ 05:10 UTC) vs May 16 close $78,457 = **-0.30%** — well under ±8% threshold. No regime alert. No crash gate.
+
+**Notes:** ETH stop buffer 1.68% (critical — recovered from overnight low of 1.20%, holding steady). XRP buffer 2.56%. BTC overnight move minimal; no macro catalyst or regime shift. Both theses intact (ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending).
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
