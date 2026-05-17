@@ -343,3 +343,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No actions taken. No notification sent.**
 
 ---
+
+### May 17 — EOD Snapshot (Day 7, Sunday)
+**Portfolio:** $134.18 | **Cash:** $24.56 (18.3%) | **Day P&L:** -$0.18 (-0.13%) | **Phase P&L:** -$7.58 (-5.35%) | **vs BTC:** +0.41%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,184.60 | +0.67% | -$2.41 (-3.56%) | $2,151.94/$2,130.42 (buf 1.50% — CRITICAL) |
+| XRP/USD | 31.174 | $1.439 | $1.4194 | +0.88% | -$0.61 (-1.37%) | $1.3814/$1.3676 (buf 2.67%) |
+**Trades today:** none | **Week:** 13/5 (cap exceeded)
+**BTC regime:** $78,031 (-0.54% day from $78,457 May 16 close) — CAUTION; below estimated 20-day MA ~$80-82k; crash gate not triggered
+**Notes:** Sunday close with modest intraday recovery — ETH bounced +0.67% to $2,184.60 and XRP +0.88% to $1.4194. Bot Day P&L -$0.18 (-0.13%) outperformed BTC's -0.54% drop by +0.41 percentage points. ETH stop buffer recovered slightly to 1.50% (CRITICAL) from the overnight low of 1.20%; stop trigger $2,151.94 remains active and untouched. XRP buffer 2.67%, stable. Phase P&L -$7.58 (-5.35%) from $141.76 start (May 10). BTC holding ~$78,031, firmly below estimated 20-day MA — CAUTION regime continues. Weekly cap (5) exceeded at 13 total from prior sessions; no bot trades this week. Cash $24.56 insufficient for new entries under CAUTION sizing. Monday gap risk elevated given ETH's thin buffer; a -1.5% ETH open would breach the stop. Both GTC stops confirmed active. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
+
+---
