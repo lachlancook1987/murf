@@ -278,3 +278,30 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No new trades qualify: cash constraint binds
 
 **Decision: HOLD — No New Trades.** ETH stop critically thin (1.31% buffer); cash insufficient; CAUTION regime. Both GTC stops active and valid. Theses intact (ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending). No trades, no notification sent.
+
+---
+
+## 2026-05-17 — Overnight Triage Check (~01:15 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,177.98 | -3.85% | **1.20% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.409 | -2.09% | 1.96% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. Both positions within threshold.
+
+**Stop tightening (≥+25%):** None. No winners.
+
+**BTC Regime:** $77,858 now vs May 16 close $78,120 = **-0.33%** — flat overnight. Under ±8% threshold. No regime alert. No crash gate.
+
+**Notes:** ETH stop buffer thinned further to 1.20% (was 1.31% last session). Stop trigger $2,151.94 remains live — do NOT adjust down. XRP buffer 1.96%, stable. Both theses intact. BTC continued slow bleed (-0.33% overnight) but no crash event.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
