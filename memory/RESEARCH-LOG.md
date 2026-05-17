@@ -2683,3 +2683,46 @@ ETH stop buffer 1.29% — critically thin but stop is in place and cannot be mov
 
 ### Decision: HOLD — No Action
 Prices flat vs v3 scan. ETH stop buffer remains critically thin at 1.29% (stop trigger $2,151.94). XRP buffer 1.96%. Both stops active and valid. Theses intact. Cash $24.56 insufficient for new entries.
+
+---
+
+## 2026-05-17 — Session-Open (~03:08 UTC)
+
+### Live Prices (Alpaca)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $77,897 | $77,973 | **$77,935** |
+| ETH/USD | $2,175.49 | $2,178.42 | **$2,176.95** |
+| XRP/USD | $1.406 | $1.411 | **$1.408** |
+
+### BTC Regime
+- 24h change: ~$77,935 vs May 16 session ~$78,166 = **-0.30%** — crash gate NOT triggered ✓
+- Est. 20-day MA: ~$80–82k → BTC below MA → **CAUTION mode** (25% size reduction)
+
+### Positions
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,174.17 | -4.02% | **1.02% — CRITICAL** | stop_limit e4efd513 $2,151.94/$2,130.42 GTC ✓ |
+| XRP/USD | 31.17397 | $1.439 | $1.412 | -1.88% | 2.17% | stop_limit e079ed77 $1.3814/$1.3676 GTC ✓ |
+
+### Account
+- Equity: $133.64 | Cash: $24.56 (18.4%) | Long MV: $109.08
+- Day P&L: -$2.40 (-1.76%) vs last_equity $136.04 | Phase P&L: -$8.12 (-5.73%) vs $141.76 start
+- Weekly trades: 13/25 | Positions: 2/20
+
+### Pre-Trade Checks
+| Check | Result |
+|---|---|
+| BTC crash gate (>8% 24h) | -0.30% — CLEAR ✓ |
+| BTC regime | CAUTION — 25% size reduction applies |
+| Cash available | $24.56 — insufficient for new entry ✗ |
+| ETH stop buffer | 1.02% CRITICAL — stop trigger $2,151.94 only ~$22 away |
+| Weekly trade cap | 13/25 — clear |
+
+### Thesis / Catalyst Check (Perplexity)
+- **ETH:** Glamsterdam upgrade June 2026 — no delay or exploit reported. Thesis **intact**.
+- **XRP:** CLARITY Act Senate floor vote pending — no outcome reported. Thesis **intact**.
+- **BTC:** Macro/risk-off environment continues; no crash catalyst; ETF inflows remain bullish driver.
+
+### Decision: HOLD — No New Trades
+Cash $24.56 insufficient for new entries in CAUTION mode. ETH stop buffer critically thin at 1.02% — let stop work, do NOT move lower. Both GTC stops active and valid. No notification sent.
