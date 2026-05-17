@@ -2858,3 +2858,62 @@ Cash $24.56 remains below minimum entry threshold ($26.93) under CAUTION sizing.
 No cuts, no stop adjustments, no new entries (cash constraint). Theses intact. No notification warranted.
 
 ---
+
+---
+
+## 2026-05-17 — Pre-Session Research (Morning)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $133.84 |
+| Cash | $24.56 (18.3%) |
+| Long Market Value | $109.28 |
+| Day P&L | -$2.20 (-1.62%) vs last_equity $136.04 |
+| Phase P&L | -$7.92 (-5.59%) vs $141.76 start (May 10) |
+
+### Positions
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,184.96 | -3.54% | **1.51% — CRITICAL** | e4efd513 stop $2,151.94/lim $2,130.42 GTC ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.408 | -2.15% | 1.89% | e079ed77 stop $1.3814/lim $1.3676 GTC ✓ |
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC | ~$78,000 (-0.3% to -1% 24h) | Crash gate CLEAR (<8%) |
+| ETH | ~$2,190-2,195 (+0.7-1.9% 24h) | Intraday recovery |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION — 25% size reduction |
+| BTC dominance | ~57-60% (CoinGecko 57.26%) | Alt headwind |
+| Fear & Greed | 31 (Fear) | Normal caution — not <10 threshold |
+| BTC funding rate | +0.0033% | Neutral, not overheated |
+| DXY | ~99.27-100.14 (+0.40%) | Slight USD strength — headwind |
+| S&P 500 futures | ~7,432 (-0.95%) | Risk-off Monday |
+
+### BTC Regime Filter
+- Crash gate (>8% 24h): NOT triggered → **CLEAR** ✓
+- BTC below est. 20-day MA → **CAUTION mode** — 25% size reduction
+- Funding neutral (+0.0033%) → no overheating signal
+- Mode: **CAUTION / Offensive-lite**
+
+### Thesis Checks
+- **ETH/Glamsterdam:** ETH recovering +0.7-1.9% intraday. No new protocol-level exploits or regulatory action. Glamsterdam upgrade June 2026 intact (Perplexity could not confirm specific upgrade codename but ETH roadmap and upgrade thesis unchanged). ETH stop buffer 1.51% CRITICAL — stop trigger $2,151.94 is ~$33 below current price. **Thesis INTACT. Hold.**
+- **XRP/CLARITY Act:** XRP at $1.408. CLARITY Act Senate Banking Committee 15-9 pass still valid catalyst. Prediction markets: 78% chance >$1.50 by May end, 37% >$1.60. No adverse Senate vote. Stop buffer 1.89%. **Thesis INTACT. Hold.**
+
+### Trade Ideas
+1. **ETH hold — Glamsterdam (existing position):** ETH recovering intraday; stop at $2,151.94 (1.51% buffer — critical). If ETH gains to ~$2,230+, consider whether a new stop can be set. Current thesis intact. NO new entry needed (already positioned). R:R intact if ETH reaches Glamsterdam targets.
+2. **XRP hold — CLARITY Act (existing position):** Senate floor vote pending; 78% market odds >$1.50 by month end = 6.5%+ upside vs entry. Stop buffer 1.89%. Cash $24.56 insufficient to meaningfully add. Hold current exposure.
+3. **No new entries:** Cash $24.56 < minimum CAUTION threshold (~$26.93 = 20% equity × 0.75). All new entries blocked by cash constraint regardless of thesis quality. Next opportunity on ETH or XRP stop release (capital recovery) or further cash accumulation.
+
+### Risk Factors
+- ETH stop buffer **CRITICAL at 1.51%** — a -1.51% ETH move (~$33) triggers stop → releases ~$65 cash for future entries
+- S&P 500 futures -0.95% = risk-off Monday open; potential crypto pressure at market open
+- DXY +0.40% slight USD strength = macro headwind
+- Fear & Greed at 31 (Fear) — market sentiment cautious
+- BTC CAUTION regime limits new position sizes by 25%
+- Cash constraint ($24.56) blocks all new entries regardless of thesis
+- BTC dominance ~57-60% = ongoing alt headwinds (ETH, XRP)
+
+### Decision: **HOLD — No New Trades**
+Both existing positions have valid GTC stops. Cash $24.56 is below minimum entry threshold under CAUTION sizing. No qualifying new entries. Both theses intact (ETH Glamsterdam, XRP CLARITY Act). ETH stop critically thin — do not move lower per rules; let the stop work. No regime shift, no crash gate, no emergency exits needed → no notification sent.
+
