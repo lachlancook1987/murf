@@ -375,3 +375,16 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-17 — Midday Scan v3
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,185.72 | -3.51% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer **1.55% — CRITICAL**)
+- XRP/USD: 31.174 @ $1.439 | Current $1.4165 | -1.56% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 2.48%)
+- Account: Equity ~$134.13 | Cash $24.56 (18.3%) | Intraday: ETH +0.72%, XRP +0.68% vs prev close
+- No cuts (neither at -10%). No stop tightening (no winners ≥+25%). Theses intact.
+- Perplexity: No new ETH protocol exploits or Glamsterdam adverse news (older Kelp DAO/Arbitrum items are April-era, not new). No XRP/CLARITY Act adverse developments; Senate floor vote pending. Both theses INTACT.
+- BTC regime: CAUTION (below est. 20-day MA ~$80-82k); crash gate NOT triggered.
+- ETH stop buffer remains critically thin (1.55%) — stop trigger $2,151.94 is $33.78 away; do NOT move down.
+- No trades. No notification sent.
+
+---
