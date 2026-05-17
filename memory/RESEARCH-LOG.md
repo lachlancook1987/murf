@@ -2793,3 +2793,38 @@ Both GTC stops active and valid. Intraday: ETH +0.74%, XRP +0.85% vs yesterday's
 Cash $24.56 is insufficient for any new entry even with 25% CAUTION reduction. Both existing positions have valid stops in place. ETH stop critically thin (1.56%) but must not be moved lower per rules — let the stop work. XRP thesis strengthening (CLARITY Act). No new trades qualify. No notification warranted (no regime shift, no crash gate, no emergency exits needed).
 
 ---
+
+## 2026-05-17 — Session-Open Execution
+
+### Live Data (STEP 2)
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,192.07 | -3.23% | **1.83% — CRITICAL** | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.427 | -0.83% | 3.20% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+### Account
+- Equity: $134.64 | Cash: $24.56 (18.3%) | Long MV: $110.08
+- Day P&L: -$1.40 (-1.03%) vs last_equity $136.04 | Phase P&L: -$7.12 (-5.02%) vs $141.76 start
+- Intraday recovery: ETH +1.02%, XRP +1.42% vs yesterday close
+
+### BTC Regime
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC mid | ~$78,268 (bid $78,216 / ask $78,320) | +0.30% from EOD $78,031 |
+| BTC crash gate | NOT triggered | < 8% down in 24h → CLEAR ✓ |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION mode — 25% size reduction |
+
+### Hard Checks (STEP 3)
+| Rule | Check | Result |
+|---|---|---|
+| BTC crash gate (>8% 24h) | -0.30% | CLEAR ✓ |
+| BTC regime | Below 20-day MA | CAUTION — 25% reduction |
+| Weekly trades | 13/25 | OK ✓ |
+| Positions | 2/20 | OK ✓ |
+| Cash for new entry | $24.56 vs $26.93 min (20% equity × 0.75 CAUTION) | **BLOCKED** ✗ |
+| Both GTC stops active | e4efd513 + e079ed77 | Confirmed ✓ |
+
+### Decision: **HOLD — No New Trades**
+Cash $24.56 remains below minimum entry threshold ($26.93) under CAUTION sizing. No qualifying entries. Both stops active. ETH stop buffer improved to 1.83% (from 1.56% pre-session) — still critical. XRP buffer 3.20%, stable. No trades placed. No notification sent.
+
+---
