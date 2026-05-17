@@ -2720,3 +2720,76 @@ Prices flat vs v3 scan. ETH stop buffer remains critically thin at 1.29% (stop t
 
 ### Decision: HOLD — No Action
 Neither cut threshold nor stop-tightening threshold met. Theses intact — ETH DeFi exploits are application-layer, not protocol-level; XRP CLARITY Act progressing. BTC crash gate clear, CAUTION regime active. ETH stop buffer 1.68% (critically thin but marginally improved from overnight 1.20%). XRP buffer 2.56% adequate. Cash $24.56 insufficient for new entries. No trades. No notification sent.
+
+---
+
+## 2026-05-17 — Pre-Session Research
+
+### Account Snapshot
+| Metric | Value |
+|---|---|
+| Equity | $134.21 |
+| Cash | $24.56 (18.3%) |
+| Long Market Value | $109.65 |
+| Last Equity | $136.04 |
+| Day P&L | -$1.83 (-1.35%) |
+| Phase P&L | -$7.55 (-5.32%) vs $141.76 start |
+
+### Positions
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,186.05 | -3.49% | **1.56% — CRITICAL** | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.419 | -1.39% | 2.65% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+Both GTC stops active and valid. Intraday: ETH +0.74%, XRP +0.85% vs yesterday's close.
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC spot | ~$77,940 | -1.05% vs 24h prior |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION mode |
+| BTC crash gate | NOT triggered | < 8% down |
+| BTC dominance | ~60.0–60.4% | High — alt headwinds |
+| Fear & Greed | 42–43 (Fear/Neutral) | No size restriction |
+| BTC perp funding rate | +0.0033–0.0050% (Binance) | Slightly positive — manageable |
+| ETH spot | ~$2,173–$2,186 | Flat to -1.8% 24h |
+| XRP spot | ~$1.419 | Range-bound $1.40–$1.50 |
+| DXY | ~99.3, +0.4–0.5% today | Headwind for crypto |
+| S&P 500 futures | 7,418 (May 15 last close) | No fresh quote today |
+
+### Macro/Catalyst Summary
+- **Bearish macro:** US 10-year Treasury yields hit 4.54%; April CPI 3.8% YoY / PPI 6.0% revived rate-hike concerns; ~$550M in long liquidations reported. DXY up 0.4–0.5%, headwind for crypto.
+- **Bullish regulatory:** Senate Banking Committee passed CLARITY Act 15–9 — major positive for XRP, BTC, and broader crypto regulatory landscape. Senate floor vote timeline still pending.
+- **Bullish flows:** Spot BTC ETF inflows ~$2.7B over 9 straight days; nearly $1B in early May — institutional demand intact.
+- **Altcoin rotation:** Sector rotation active into XRP, UNI, AAVE, DOGE, LINK beyond BTC/ETH. TAO (AI sector) +16% 7d / +87% 1mo. HYPE +121% from bottom.
+- **LINK catalyst:** 30 wallets withdrew 6.26M LINK (~$116.7M) — accumulation signal, potential breakout thesis.
+- **ARB unlock:** 92.65M ARB (~$108M) unlocked May 16 — ongoing headwind for L2/DeFi sector. STRK unlock ($145M) May 15 already processed.
+- **ETH Glamsterdam:** Upgrade targeted June 2026; MEXC analysis notes market may not have fully priced in potential L1 throughput tripling.
+
+### Thesis Checks
+- **ETH:** Glamsterdam June 2026 upgrade intact. No protocol-level exploit, no regulatory action. Recent DeFi application-layer exploits (~$1.5M total) do not affect core thesis. ETH dip is broad macro-driven (rate fears, CPI miss). **Thesis INTACT.**
+- **XRP:** CLARITY Act passed Senate Banking Committee 15–9 — strengthens the legislative thesis. XRP in $1.40–$1.50 range; 78% probability >$1.50 per prediction markets if Act advances. No adverse regulatory action. **Thesis INTACT — and strengthening.**
+
+### BTC Regime Filter
+- Crash gate: -1.05% in 24h → **CLEAR** (threshold: >8% down)
+- Regime: BTC below est. 20-day MA (~$80-82k) → **CAUTION** — full universe tradeable, 25% size reduction
+- Funding: +0.0033–0.0050% → slightly positive, not overheated
+- Mode: **CAUTION / Offensive-lite** — tradeable but size-reduced
+
+### Trade Ideas
+1. **LINK long (if cash available):** 30-wallet accumulation event ($116.7M), sector rotation active, CLARITY Act tailwind for crypto broadly. Entry on breakout above $19.50 resistance, stop -5%, target $21+ (R:R ~1:1.5). **Blocked by cash constraint ($24.56).**
+2. **XRP add (thesis strengthening):** CLARITY Act 15-9 Senate Banking Committee pass is a direct XRP catalyst. If XRP reclaims $1.45 with volume, add to position — but cash $24.56 is insufficient for a meaningful add. **Blocked by cash constraint.** Watch for ETH stop trigger releasing capital.
+3. **ETH hold for Glamsterdam:** Current entry price $2,265.20. Glamsterdam targeting L1 throughput tripling — strong medium-term thesis. If ETH recovers above $2,230 intraday, consider whether stop can be preserved; if stopped out, evaluate re-entry when regime turns offensive (BTC above 20-day MA).
+
+### Risk Factors
+- ETH stop at critical 1.56% buffer — any -1.6% ETH move triggers stop, releasing ~$65 cash (enabling future entries)
+- High BTC dominance (60%+) = ongoing alt headwinds
+- Rising DXY + rate hike fears from hot CPI/PPI data — macro headwind
+- ARB unlock aftermath may pressure L2/DeFi sector
+- CAUTION regime limits new position sizes by 25%
+- Cash constraint ($24.56) blocks all new entries regardless of thesis quality
+
+### Decision: **HOLD — No New Trades**
+Cash $24.56 is insufficient for any new entry even with 25% CAUTION reduction. Both existing positions have valid stops in place. ETH stop critically thin (1.56%) but must not be moved lower per rules — let the stop work. XRP thesis strengthening (CLARITY Act). No new trades qualify. No notification warranted (no regime shift, no crash gate, no emergency exits needed).
+
+---
