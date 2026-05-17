@@ -305,3 +305,16 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No actions taken. No notification sent.**
 
 ---
+
+## 2026-05-17 — Midday Scan (no trades)
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,188.71 | -3.38% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer **1.68% — CRITICAL**)
+- XRP/USD: 31.174 @ $1.439 | Current $1.41767 | -1.48% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 2.56%)
+- No cuts (neither near -10%). No stop tightening (no winners up ≥25%). Theses intact.
+- Perplexity thesis check: Multiple ETH Ethereum mainnet smart contract exploits reported (~$1.5M total, four DeFi application-layer attacks); these are NOT protocol-level exploits — Glamsterdam upgrade thesis intact. No XRP/CLARITY Act adverse news; Senate floor vote still pending. No ETH regulatory action.
+- BTC: $78,160 (+0.06% today vs open) — crash gate NOT triggered. CAUTION regime (below est. 20-day MA ~$80-82k).
+- Both positions recovering intraday (ETH +0.86%, XRP +0.76% vs yesterday close). ETH stop buffer marginally improved from overnight low of 1.20% to 1.68%.
+- Portfolio: $134.25 | Cash: $24.56 (18.3%) | Day P&L: -$1.79 (-1.32%) vs last_equity $136.04
+- No trades. No notification sent.
+
+---
