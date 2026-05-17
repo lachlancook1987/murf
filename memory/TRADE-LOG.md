@@ -343,3 +343,39 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No actions taken. No notification sent.**
 
 ---
+
+## 2026-05-17 — Session-Open Scan (~07:15 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,183.71 | -3.60% | **1.45% — CRITICAL** | e4efd513 ($2,151.94/$2,130.42) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.417 | -1.53% | 2.51% | e079ed77 ($1.3814/$1.3676) ✓ |
+
+**Account:** Equity $134.15 | Cash $24.56 (18.3%) | Long MV $109.59 | last_equity $136.04 | Day P&L: -$1.89 (-1.39%)
+
+**BTC:** $78,065 mid (ask $78,117 / bid $78,012 @ 07:11 UTC) | 24h: ~-0.5% vs May 16 close $78,457 | Regime: **CAUTION** (below est. 20-day MA ~$80-82k) | Crash gate: NOT triggered
+
+**Weekly trades:** 13/25 | **Positions:** 2/20
+
+**Pre-Trade Checks (STEP 3):**
+| Check | Result |
+|---|---|
+| BTC crash gate | -0.5% 24h → CLEAR ✓ |
+| BTC regime | CAUTION — full universe tradeable, 25% size reduction |
+| Cash constraint | $24.56 — insufficient for new entries |
+| LINK long | Entry threshold $19.50 NOT met (LINK $9.76); doubly blocked by cash |
+| XRP add | Cash insufficient for meaningful add; thesis strengthening (CLARITY Act) |
+| ETH | HOLD — stop buffer critically thin (1.45%); Glamsterdam thesis intact |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit e4efd513: covers 0.029925 ETH — valid ✓
+- XRP/USD stop_limit e079ed77: covers 31.1739 XRP — valid ✓
+- No orphaned orders.
+
+**Emergency exits (≤-10%):** None.
+**Stop tightening (≥+25%):** None. No winners.
+
+**Decision: HOLD — No New Trades.** Cash $24.56 insufficient for any entry. LINK entry condition not met ($9.76 vs $19.50 threshold). ETH stop buffer 1.45% critically thin but both stops valid — do NOT move down. Theses intact: ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending. No notification sent.
+
+---
