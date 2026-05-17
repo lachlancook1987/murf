@@ -388,3 +388,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No trades. No notification sent.
 
 ---
+
+## 2026-05-17 — Midday Scan v4
+
+- ETH/USD: 0.029925 @ $2,265.20 | Current $2,185.13 | -3.54% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer **1.52% — CRITICAL**)
+- XRP/USD: 31.174 @ $1.439 | Current $1.4193 | -1.37% | Stop e079ed77 active ($1.3814/$1.3676) — HOLD (stop buffer 2.67%)
+- Account: Equity ~$134.19 | Cash $24.56 (18.3%) | Intraday: ETH +0.70%, XRP +0.87% vs yesterday close (lastday: ETH $2,170.04, XRP $1.407)
+- No cuts (neither at -10%). No stop tightening (no winners ≥+25%). Theses intact.
+- Both stops confirmed active (status: new), covering correct quantities.
+- BTC regime: CAUTION (below est. 20-day MA ~$80-82k); crash gate NOT triggered.
+- No trades. No notification sent.
+
+---
