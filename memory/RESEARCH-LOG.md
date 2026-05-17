@@ -2683,3 +2683,40 @@ ETH stop buffer 1.29% — critically thin but stop is in place and cannot be mov
 
 ### Decision: HOLD — No Action
 Prices flat vs v3 scan. ETH stop buffer remains critically thin at 1.29% (stop trigger $2,151.94). XRP buffer 1.96%. Both stops active and valid. Theses intact. Cash $24.56 insufficient for new entries.
+
+---
+
+## 2026-05-17 — Midday Scan
+
+### Positions (Alpaca live)
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,188.71 | -$2.29 (-3.38%) | **1.68% — CRITICAL** | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.41767 | -$0.66 (-1.48%) | 2.56% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+### Account
+- Equity: $134.25 | Cash: $24.56 (18.3%) | Long MV: $109.69
+- Day P&L: -$1.79 (-1.32%) vs last_equity $136.04 | Phase P&L: -$7.51 (-5.30%) vs $141.76 start
+- Intraday recovery: ETH +0.86%, XRP +0.76% vs yesterday's close (both improving from overnight lows)
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC spot | $78,160 | +0.06% today (from open $78,113) |
+| BTC vs est. 20-day MA (~$80-82k) | Below | CAUTION mode active |
+| BTC crash gate | NOT triggered | <8% down in 24h |
+| ETH spot | $2,188.71 | +0.86% intraday vs yesterday close $2,170.04 |
+| XRP spot | $1.41767 | +0.76% intraday vs yesterday close $1.407 |
+
+### Scan Results
+| Step | Check | Result | Action |
+|---|---|---|---|
+| 3 | Cut losers (≤ -10%) | ETH -3.38%, XRP -1.48% — both well above threshold | None |
+| 4 | Tighten stops (≥+25% / ≥+40%) | Neither threshold met | None |
+| 5 | Thesis check — ETH | Perplexity: four DeFi smart contract exploits on ETH mainnet (~$1.5M total: onchain aggregator $983K, TradingProtocol vault $398K, BCB reentrancy $39.8K, QNT arbitrary call $124.9K). **Application-layer only — NOT a protocol exploit.** Glamsterdam upgrade unaffected. No ETH regulatory action. Thesis intact. | None |
+| 5 | Thesis check — XRP | No adverse CLARITY Act news. No SEC action. Senate floor cloture vote still pending. XRP thesis intact. | None |
+| 6 | Research | BTC $78,160 (+0.06%) — flat/recovering. Both positions gaining intraday. No sharp unexplained moves. | None |
+| 7 | Notification | No action taken | Not sent |
+
+### Decision: HOLD — No Action
+Neither cut threshold nor stop-tightening threshold met. Theses intact — ETH DeFi exploits are application-layer, not protocol-level; XRP CLARITY Act progressing. BTC crash gate clear, CAUTION regime active. ETH stop buffer 1.68% (critically thin but marginally improved from overnight 1.20%). XRP buffer 2.56% adequate. Cash $24.56 insufficient for new entries. No trades. No notification sent.
