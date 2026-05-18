@@ -3078,3 +3078,94 @@ Both positions held with valid theses and healthy stops (3.65–3.96% buffer). C
 
 **Result: NO-OP. No trades. No notification sent.**
 
+
+---
+
+## 2026-05-18 — Pre-Session Research (Evening, ~18:03 UTC)
+
+### Account Snapshot
+| Metric | Value |
+|---|---|
+| Equity | $130.83 |
+| Cash | $44.82 (34.3%) |
+| Long Market Value | $86.01 (65.7%) |
+| Day P&L | -$5.21 (-3.83%) vs last_equity $136.04 |
+| Phase P&L | ~-$10.93 (-7.71%) vs $141.76 start (May 10) |
+
+| Symbol | Qty | Entry | Current | Unrealized P&L | Stop Trigger | Stop Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,107.16 | -$0.31 (-0.62%) | $2,035.58 | 3.40% ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.37705 | -$0.51 (-1.37%) | $1.3403 | 2.67% ✓ |
+
+Open GTC stops: ETH 572816b1 ($2,035.58/$2,015.22) ✓ | XRP 7b145e72 ($1.3403/$1.3269) ✓
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC | ~$76,500 (range $76,094–$77,003) | -1.1% to -2.5% 24h |
+| ETH | ~$2,107–$2,132 | -0.5% to -2.7% 24h |
+| BTC dominance | ~58% (CoinGecko 58.23%) | Alt headwind ongoing |
+| Fear & Greed | 27–28 (Fear) | No extra restriction (>10) |
+| BTC funding rate | -0.0007% (annualized ~-1.34%) | Slightly negative — neutral/no overheating |
+| DXY | ~99.1 (-0.2% to -0.4%) | Weakening slightly — marginally crypto-supportive |
+| S&P 500 futures | ~7,396 (-0.48%) | Risk-off; macro headwind |
+| US 10Y yield | Above 5% | Significant risk-off signal |
+| BTC spot ETF flows | **$1B+ outflows** (escalation from $263M yesterday) | **Major bearish headwind** |
+
+---
+
+### BTC Regime Filter
+- **Crash gate (>8% 24h):** NOT triggered — CLEAR ✓
+- **BTC vs est. 20-day MA (~$80,000):** ~$76,500 → ~4.4% below → **CAUTION mode** ✓
+- **Funding rate:** -0.0007% (slightly negative) → neutral, no overheated longs
+- **Mode: CAUTION** — 25% size reduction on new entries, 4% stop tightening applies
+
+---
+
+### Key Catalysts & Risk Factors
+
+**Bearish / Headwinds:**
+- BTC spot ETF outflows surged to **$1B+ today** (from $263M yesterday) — biggest single-day outflow recently; key negative catalyst
+- US Treasury yields surged **above 5%** — genuine risk-off pressure; rate-sensitive headwind
+- S&P 500 futures -0.48% — broad risk-off macro
+- BTC broken below $77K, technicals weak; liquidations adding volatility
+- Fear & Greed 27-28 — fearful sentiment; alts under pressure
+- BTC dominance ~58% — ongoing alt headwind (ETH, XRP)
+- DXY ~99.1 (mild softening today, not yet a tailwind)
+
+**Bullish / Holding Support:**
+- ETH: Glamsterdam upgrade June 2026 on track; staking ETF access broadening; whale accumulation; yearly-low exchange supply; ETH support $2,100–$2,200 holding
+- XRP: Clarity Act advancing (Senate deadline ~May 21); $1.39–$1.41 consolidation; prediction markets 78% >$1.50 by month-end; key support $1.36–$1.38 intact
+- SOL: Alpenglow upgrade testing began (not in position — watching)
+- BTC funding slightly negative → no overheated long crowding
+- DXY slight softening today → marginally supportive
+
+**Token unlocks (upcoming):**
+- OP: 31.34M tokens May 30 — not imminent; no major unlocks this week
+
+---
+
+### Trade Ideas
+1. **ETH/USD (hold existing):** Thesis intact — Glamsterdam June 2026 + staking ETF + institutional accumulation. Stop buffer 3.40% (healthy). Price at $2,107 vs key support $2,100. No adjustment needed. Next tightening gate: ≥$2,650.50 (+25% from entry).
+2. **XRP/USD (hold — caution elevated):** Thesis intact — Clarity Act Senate deadline ~May 21 approaching. Buffer 2.67% — above 2% floor but narrowing. XRP at $1.377 approaching key support $1.36–$1.38. No adjustment; GTC stop in place. Watch for break below $1.36 (would thin buffer critically).
+3. **No new entries:** BTC $1B+ ETF outflows + yields >5% + S&P -0.48% = unfavorable risk backdrop for adding exposure. Third position entry deferred until: (a) ETF outflow reverses, (b) BTC reclaims $77K+, (c) macro stabilizes. Max headroom under 95% cap: ~$38.
+
+---
+
+### Risk Factors for Session
+- **Critical:** $1B+ ETF outflow escalation is the most important new data point — if this continues tomorrow, BTC $76K support is at risk
+- **XRP stop buffer:** 2.67% — if XRP drops to ~$1.348, buffer falls to ~0.5% (near auto-stop zone). Key support $1.36–$1.38 must hold
+- **Sector pause threshold:** Both ETH and XRP sectors at 1 consecutive loss — 1 more stop-out on either triggers sector pause (no re-entry allowed)
+- **Macro:** Yields above 5% + risk-off equities = potential continued crypto pressure
+- **PYTH unlock:** $95.96M (~37% supply) — alt-market sell pressure (watching)
+
+---
+
+### Decision: **TRADE**
+Default stance = TRADE. Holding both ETH and XRP with valid theses and intact stop orders. BTC CAUTION mode prevents adding a 3rd position without clear ETF inflow reversal and BTC reclaiming $77K. Both stops healthy (3.40% / 2.67%). No new entries this session. Watch: XRP $1.36 support, BTC $76K support, ETF flow data tomorrow.
+
+No notification sent — no crash gate or regime shift triggered. $1B+ ETF outflow noted as risk factor (not yet a regime-change signal).
+
+---
