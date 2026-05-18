@@ -2917,3 +2917,57 @@ No cuts, no stop adjustments, no new entries (cash constraint). Theses intact. N
 ### Decision: **HOLD — No New Trades**
 Both existing positions have valid GTC stops. Cash $24.56 is below minimum entry threshold under CAUTION sizing. No qualifying new entries. Both theses intact (ETH Glamsterdam, XRP CLARITY Act). ETH stop critically thin — do not move lower per rules; let the stop work. No regime shift, no crash gate, no emergency exits needed → no notification sent.
 
+---
+
+## 2026-05-18 — Pre-Session Research (Monday session-open)
+
+### Overnight Events
+- ETH/USD stop_limit e4efd513 triggered 2026-05-17T23:40Z — filled 0.029925 ETH @ $2,155.13 | P&L: -$3.29 (-4.86%)
+- XRP/USD stop_limit e079ed77 triggered 2026-05-17T23:42Z — filled 31.1739 XRP @ $1.3827 | P&L: -$1.75 (-3.91%)
+- Total realized loss: -$5.05 | Account now fully in cash: $131.86
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.86 |
+| Cash | $131.86 (100%) |
+| Long Market Value | $0 (XRP dust $0.0001 negligible) |
+| Phase P&L | -$10.12 (-7.14%) vs $141.76 start (May 10) |
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC | $76,910 (bid $76,859 / ask $76,962) | -1.44% from May 17 EOD $78,031 |
+| ETH | $2,117.90 (bid $2,117.27 / ask $2,118.52) | Re-entry opportunity |
+| XRP | $1.3935 (bid $1.3909 / ask $1.3962) | Above prior stop $1.3827 |
+| SOL | $84.96 (bid $84.85 / ask $85.07) | No catalyst today |
+| BTC crash gate | -1.44% 24h | NOT triggered (<8%) ✓ |
+| BTC vs est. 20-day MA (~$80,000) | $76,910 — 3.9% below | CAUTION mode ✓ |
+| Fear & Greed | ~31 (Fear, from May 17 — no update) | No additional size restriction (<10 threshold) |
+| BTC dominance | ~57-60% | Alt headwind ongoing |
+
+### BTC 20-day MA Estimate
+Using 8 recent closes (May 10-17: $80,760 / $80,868 / $81,607 / $78,895 / $81,079 / $79,069 / $78,457 / $78,031) → 8-day avg $79,846. Full 20-day MA estimated at **~$80,000** (prior 12 days in high-$79k–$81k range). BTC at $76,910 = **-3.9% below MA → CAUTION confirmed**.
+
+### Thesis Checks
+- **ETH/Glamsterdam:** No protocol-level exploits or regulatory actions per Perplexity scan. Glamsterdam upgrade June 2026 timeline intact. **Thesis INTACT — re-entry justified.**
+- **XRP/CLARITY Act:** Senate Banking Committee 15-9 vote May 14 remains valid catalyst. No Senate floor vote scheduled yet; bill proceeding. No adverse updates. **Thesis INTACT — re-entry justified.**
+- **No major negative news today** per Perplexity scan.
+
+### Hard Checks (STEP 3)
+| Rule | Check | Result |
+|---|---|---|
+| BTC crash gate (>8% 24h) | -1.44% | CLEAR ✓ |
+| BTC regime | Below est. 20-day MA ~$80k | CAUTION — 25% size reduction, 4% stops ✓ |
+| Weekly trades | 0/25 (new week) | OK ✓ |
+| Positions | 0/20 (dust only) | OK ✓ |
+| Cash | $131.86 (100%) | Sufficient ✓ |
+| ETH sector | 1 consecutive loss | ACTIVE (1 of 2 pause threshold) ✓ |
+| XRP sector | 1 consecutive loss | ACTIVE (1 of 2 pause threshold) ✓ |
+
+### Trade Decisions
+1. **ETH re-entry**: 0.0236 ETH @ market (~$2,120.40) | 37.9% equity | Stop 4% ($2,035.58/$2,015.22) | R:R 3.30:1 to T1 $2,400
+2. **XRP re-entry**: 26.5 XRP @ market (~$1.3962) | 28.1% equity | Stop 4% ($1.3403/$1.3269) | R:R 4.18:1 to T1 $1.63
+3. SOL: no catalyst confirmed → skip
+4. BTC: sector at 1 consecutive loss + ongoing downtrend → skip
+
