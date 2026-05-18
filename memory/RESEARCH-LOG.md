@@ -3039,3 +3039,23 @@ Using 8 recent closes (May 10-17: $80,760 / $80,868 / $81,607 / $78,895 / $81,07
 ### Decision: **TRADE**
 Both positions held with valid theses and healthy stops (3.65–3.96% buffer). Cash $44.82 available for opportunistic 3rd entry if macro stabilizes. No new entries triggered this scan — risk-off macro (S&P -0.63%, BTC ETF outflows) warrants patience before adding. Default stance = TRADE; thesis must be confirmed before entry.
 
+---
+
+## 2026-05-18 — Midday Scan v2 (Afternoon)
+
+| Symbol | Qty | Entry | Current | P&L% | P&L$ | Stop Buf | Stop Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,112.01 | **-0.40%** | -$0.20 | 3.62% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3768 | **-1.39%** | -$0.51 | 2.65% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $131.09 | Cash $44.82 (34.2%) | Phase P&L: -$10.67 (-7.53%) vs $141.76 start (May 10)
+**BTC:** $76,688 | 24h chg: -0.26% | Crash gate: CLEAR | Regime: CAUTION (4.1% below est. 20-day MA ~$80k)
+
+**STEP 3 — Cuts:** ETH -0.40%, XRP -1.39% — neither ≤-10%. No cuts.
+**STEP 4 — Stop tightening:** Neither ≥+25%. No adjustments. Both GTC stops confirmed active (status: new).
+**STEP 5 — Thesis check:** ETH Glamsterdam June 2026 intact; XRP CLARITY Act Senate floor vote pending. No protocol exploits, no regulatory actions detected. Theses valid.
+**STEP 6 — Perplexity:** Skipped — no sharp moves (ETH -0.40%, XRP -1.39% from entry; within normal intraday range).
+**Note:** XRP stop buffer thinned to 2.65% (ETH: 3.62%) as prices drifted slightly lower vs EOD snapshot. Both above critical 2% floor; GTC stops correctly placed and covering full position quantities.
+
+**Result: NO-OP. No trades. No notification sent.**
+
