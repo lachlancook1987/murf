@@ -2971,3 +2971,71 @@ Using 8 recent closes (May 10-17: $80,760 / $80,868 / $81,607 / $78,895 / $81,07
 3. SOL: no catalyst confirmed → skip
 4. BTC: sector at 1 consecutive loss + ongoing downtrend → skip
 
+---
+
+## 2026-05-18 — Pre-Session Research (Evening/Next Session)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.49 |
+| Cash | $44.82 (34.1%) |
+| Long Market Value | $86.67 (65.9%) |
+| Phase P&L | ~-$10.27 (-7.24%) vs $141.76 start (May 10) |
+
+| Symbol | Qty | Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,119.60 | -$0.019 (-0.04%) | $2,035.58/$2,015.22 (~3.96% buf) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.391 | -$0.137 (-0.37%) | $1.3403/$1.3269 (~3.65% buf) ✓ |
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC | ~$76,900–$77,100 (-1.4% 24h) | Crash gate CLEAR (<8%) |
+| ETH | ~$2,119–$2,193 (+0.35–0.76% 24h per exchange) | Holding above entry |
+| BTC vs est. 20-day MA (~$80,000) | ~$76,900 — 3.9% below | **CAUTION mode** ✓ |
+| BTC dominance | ~58–60% | Alt headwind ongoing |
+| Fear & Greed | 28 (Fear) | No extra size restriction (>10 threshold) |
+| BTC funding rate | -0.0007% to +0.01% (flat/slightly negative) | Neutral, no overheating |
+| DXY | ~99.3–99.4 | Moderate USD strength — mild crypto headwind |
+| S&P 500 futures | ~7,385 (-0.63%) | Risk-off; macro headwind |
+
+### BTC Regime Filter
+- Crash gate (>8% 24h): NOT triggered → **CLEAR** ✓
+- BTC below est. 20-day MA ~$80,000 → **CAUTION mode** — 25% size reduction, 4% stops
+- Funding: flat/slightly negative → neutral, no overheating
+- **Mode: CAUTION**
+
+### Key Catalysts & Risk Factors
+**Bearish:**
+- Spot BTC ETFs snapped 9-day inflow streak → **$263.2M net outflows** — significant near-term headwind
+- S&P 500 futures -0.63% — risk-off macro backdrop
+- BTC dominance 58–60% — ongoing alt headwinds (ETH, XRP)
+- DXY ~99.3 moderate USD strength (crypto inverse correlation)
+- Fear & Greed 28 (Fear) — cautious sentiment
+
+**Bullish / Holding Support:**
+- ETH: BlackRock staking ETF launched; Bitmine $366M ETH accumulation; Glamsterdam + Hegotá upgrade roadmap intact; ETH 50/200-day MAs sloping up (longer-term trend)
+- XRP: CLARITY Act mid-May review ongoing; prediction markets 78% odds >$1.50 by May end; XRP ETF inflows narrative active; network activity elevated
+- BTC funding negative → no overheated long crowding; shorts not extreme
+- LINK/TON notable alt catalysts (not yet positioned)
+
+**Token unlocks this week (watch list):**
+- PYTH: $95.96M unlock (~37% circulating supply) — potential sell pressure
+- ZRO: $33.42M unlock (~10.2% circulating supply) — moderate pressure
+
+### Trade Ideas
+1. **ETH hold (existing):** Thesis intact — BlackRock staking ETF + Glamsterdam June 2026 + institutional accumulation. Stop buffer 3.96% (healthy). Hold; no adjustment needed. Next tightening gate: price ≥+25% from $2,120.40 → $2,650.50.
+2. **XRP hold (existing):** Thesis intact — CLARITY Act advancing, 78% market odds >$1.50 by month-end. XRP ETF inflow narrative adds upside. Stop buffer 3.65% (healthy). Hold; no adjustment needed.
+3. **Conditional alt entry (LINK or TON):** IF macro stabilizes (S&P futures recover, BTC holds $76k support, BTC ETF outflow reverses) → consider LINK (Chainlink CCIP institutional catalyst) or TON (Telegram validator + fee cuts + consensus upgrade). Max notional ~$35–38 (95% total cap constraint; CAUTION 25% reduction). Do NOT chase if BTC breaks below $76k.
+
+### Risk Factors
+- BTC ETF outflow reversal is the key binary catalyst — continuation → pressure on $76k support; reversal → potential breakout toward $80k MA retest
+- Both ETH and XRP sectors at 1 consecutive loss (1 of 2 pause threshold) — next stop on either triggers sector pause
+- S&P -0.63% risk-off macro may drag crypto lower at open
+- PYTH $95.96M unlock (37% supply) could create alt-market selling pressure
+- ETH stop buffer thin relative to ETH volatility — $2,035.58 trigger is ~$84 from current; any ETH leg down to $2,035 releases ~$50 cash
+
+### Decision: **TRADE**
+Both positions held with valid theses and healthy stops (3.65–3.96% buffer). Cash $44.82 available for opportunistic 3rd entry if macro stabilizes. No new entries triggered this scan — risk-off macro (S&P -0.63%, BTC ETF outflows) warrants patience before adding. Default stance = TRADE; thesis must be confirmed before entry.
+
