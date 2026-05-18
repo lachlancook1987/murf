@@ -400,3 +400,20 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No trades. No notification sent.
 
 ---
+
+## 2026-05-18 — Overnight Check
+
+- **STOPS TRIGGERED OVERNIGHT (2026-05-17 ~23:40 UTC):**
+  - ETH/USD: stop_limit e4efd513 filled — 0.029925 ETH @ $2,155.13 (entry $2,265.20) | P&L: **-$3.29 (-4.86%)**
+  - XRP/USD: stop_limit e079ed77 filled — 31.1739 XRP @ $1.3827 (entry $1.439) | P&L: **-$1.75 (-3.91%)**
+  - Total realized loss: **-$5.05**
+  - Stops worked as designed — both triggered before reaching -10% threshold.
+- Remaining position: XRP dust 0.00006975 XRP (~$0.0001) — negligible, not actionable.
+- Open orders: 0 (no orphaned orders).
+- Emergency exits: none triggered (no position at -10%).
+- Stop tightening: N/A (no open winners ≥+25%).
+- BTC regime: -0.03% overnight ($77,158 → $77,139) — NO regime alert.
+- Account fully in cash pending next entry opportunities.
+- No notification sent (no new actions this scan; stop fills were prior session events).
+
+---
