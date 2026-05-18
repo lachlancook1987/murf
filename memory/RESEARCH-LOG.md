@@ -3169,3 +3169,23 @@ Default stance = TRADE. Holding both ETH and XRP with valid theses and intact st
 No notification sent — no crash gate or regime shift triggered. $1B+ ETF outflow noted as risk factor (not yet a regime-change signal).
 
 ---
+
+## 2026-05-18 — Midday Scan v4 (Closing)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,134.17 | **+0.65%** | 4.62% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.39428 | **-0.14%** | 3.87% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity ~$131.92 | Cash $44.82 (34.0%) | Long MV $87.10 | Day P&L: ~-$4.12 (-3.03%) vs last_equity $136.04 | Phase P&L: ~-$9.84 (-6.94%)
+**BTC Regime:** CAUTION (below est. 20-day MA ~$80,000); crash gate NOT triggered.
+
+**STEP 3 — Cuts:** ETH +0.65%, XRP -0.14% — neither ≤-10%. No cuts.
+**STEP 4 — Stop tightening:** Neither ≥+25%. No adjustments. Both GTC stops active (status: new), covering correct quantities.
+**STEP 5 — Thesis check:** ETH Glamsterdam June 2026 intact; XRP CLARITY Act Senate floor vote pending. No protocol exploits or regulatory actions. Theses INTACT.
+**STEP 6 — Perplexity:** Skipped — no sharp unexplained moves. ETH recovered from session lows ($2,103 → $2,134); XRP stabilized at $1.394. Normal intraday price action.
+**Note:** Stop buffers expanded vs prior scan — ETH 3.23% → 4.62%, XRP 2.74% → 3.87% — both well above critical 2% floor. Day P&L improving as prices recover. Both sectors at 1 consecutive loss threshold; key macro watches remain: BTC ETF flow reversal, BTC holding $76K support.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
