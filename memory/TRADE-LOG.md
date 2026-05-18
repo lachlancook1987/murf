@@ -499,3 +499,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+### May 18 — EOD Snapshot (Day 8, Monday)
+**Portfolio:** $131.35 | **Cash:** $44.82 (34.1%) | **Day P&L:** -$2.83 (-2.11%) | **Phase P&L:** -$10.41 (-7.35%) | **vs BTC:** -0.64%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,118.16 | +0.02% | -$0.05 (-0.10%) | $2,035.58/$2,015.22 (buf 3.90%) |
+| XRP/USD | 26.434 | $1.3962 | $1.3870 | -0.37% | -$0.24 (-0.66%) | $1.3403/$1.3269 (buf 3.37%) |
+**Trades today:** ETH/USD BUY 0.023541 @ $2,120.40 (re-entry 03:05 UTC); XRP/USD BUY 26.5 @ $1.3962 (re-entry 03:05 UTC) | **Week:** 2/25
+**BTC regime:** $76,886 (-1.47% from May 17 close $78,031) — CAUTION; below est. 20-day MA ~$80,000; crash gate NOT triggered
+**Notes:** Day P&L -$2.83 (-2.11%) reflects the overnight stop-outs (ETH @ $2,155 and XRP @ $1.3827, realized ~-$5.05 combined) partially offset by small gains on the re-entered positions. Bot underperformed BTC by -0.64 percentage points (BTC -1.47% day). Phase P&L deepens to -$10.41 (-7.35%) from $141.76 start (May 10). Re-entries from early morning holding steady — ETH near flat (+0.02% from yesterday close), XRP slightly softer (-0.37%). Stop buffers healthy at ~3.9% (ETH) and ~3.4% (XRP), well above the critical <2% level seen in prior sessions. Cash 34.1% provides capacity for a third position if BTC regime improves. Both GTC stops confirmed active. Catalysts intact: ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — 1 more loss triggers sector pause.
+
+---
