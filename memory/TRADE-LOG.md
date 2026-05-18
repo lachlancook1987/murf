@@ -417,3 +417,43 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 - No notification sent (no new actions this scan; stop fills were prior session events).
 
 ---
+
+## 2026-05-18 — Session-Open Trades (Monday morning)
+
+### 2026-05-18T03:05:15Z | ETH/USD | BUY | 0.023541 ETH | Entry: $2,120.40 | Stop: $2,035.58 / $2,015.22 | Open
+
+**Order ID (buy):** 7bd2a7ad-3b4f-4f2b-a09e-a5951e779f7f
+**Stop Order ID:** 572816b1-77f7-43a5-98fa-23316c3aa340 (stop_limit: trigger $2,035.58, limit $2,015.22, qty 0.023541, GTC)
+**Notional:** $49.93 (37.9% equity $131.64 — CAUTION mode: 25% size reduction applied; strategy max 65%)
+**Target:** T1 $2,400 (+13.2%), T2 $2,550 (+20.3%), T3 $2,750 (+29.7%)
+**Stop level:** $2,035.58 (-4.00% from entry $2,120.40 — CAUTION mode stop; limit $2,015.22)
+**R:R:** ~3.30:1 to T1 ($6.59 gain / $2.00 risk on 0.023541 ETH); 5.07:1 to T2
+**Thesis:** ETH Glamsterdam upgrade June 2026 (timeline intact, no adverse news); ETH ETF inflows thesis ongoing; re-entry after overnight stop-out at $2,155.13. CAUTION mode (BTC $76,910 below est. 20-day MA ~$80k). No protocol exploits or regulatory actions per May 18 scan.
+**Notes:** ETH sector at 1 consecutive loss (May 15 re-entry stopped out overnight May 17-18); one more loss triggers sector pause. Trailing stop not supported for crypto on Alpaca; 4% fixed stop_limit used (CAUTION mode). Stop qty 0.023541 (not 0.0236) due to Alpaca rounding. Weekly trade count: 1/25.
+
+---
+
+### 2026-05-18T03:05:34Z | XRP/USD | BUY | 26.5 XRP | Entry: $1.3962 | Stop: $1.3403 / $1.3269 | Open
+
+**Order ID (buy):** cb342c84-8740-48f0-bb22-d3911448ce12
+**Stop Order ID:** 7b145e72-62c4-4e94-ae94-bd449eb0288d (stop_limit: trigger $1.3403, limit $1.3269, qty 26.4338, GTC)
+**Notional:** $37.00 (28.1% equity $131.64 — CAUTION mode: 25% size reduction applied)
+**Target:** T1 $1.63 (+16.7%), T2 $1.75 (+25.4%), T3 $2.00 (+43.2%)
+**Stop level:** $1.3403 (-4.00% from entry $1.3962 — CAUTION mode stop; limit $1.3269)
+**R:R:** ~4.18:1 to T1 ($6.18 gain / $1.48 risk on 26.5 XRP); 6.33:1 to T2
+**Thesis:** CLARITY Act cleared Senate Banking Committee 15-9 bipartisan vote May 14 (confirmed catalyst); codifies XRP as digital commodity; Senate floor vote pending (no adverse updates as of May 18 scan). Re-entry after overnight stop-out at $1.3827. CAUTION mode applied.
+**Notes:** XRP sector at 1 consecutive loss (May 15 re-entry stopped out overnight May 17-18); one more loss triggers sector pause. Stop qty 26.4338 (not 26.5) due to Alpaca rounding. Weekly trade count: 2/25.
+
+---
+
+### May 18 — Session-Open Snapshot
+**Portfolio:** $131.64 | **Cash:** $44.82 (34.1%) | **Phase P&L:** -$10.12 (-7.14%) vs $141.76 start (May 10)
+| Symbol | Qty | Entry | Price | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,120.40 | $0.00 | $2,035.58/$2,015.22 (buf 4.00%) |
+| XRP/USD | 26.4338 | $1.3962 | $1.3962 | $0.00 | $1.3403/$1.3269 (buf 4.00%) |
+**Trades today:** ETH/USD BUY 0.023541 @ $2,120.40 (re-entry); XRP/USD BUY 26.5 @ $1.3962 (re-entry) | **Week:** 2/25 (new week)
+**BTC regime:** $76,910 (-1.44% from May 17 close $78,031) — CAUTION; below est. 20-day MA ~$80,000; crash gate NOT triggered
+**Notes:** Both prior positions (ETH entry $2,265.20 and XRP entry $1.439) stopped out overnight May 17-18 (total realized loss: -$5.05). Re-entered both at lower prices with CAUTION sizing (25% reduction, 4% stops, combined 65.9% deployed). Phase P&L deepened to -$10.12 (-7.14%). ETH and XRP sectors each at 1 consecutive loss — 1 more loss each triggers sector pause. Catalysts intact: ETH Glamsterdam June 2026 on track; XRP CLARITY Act advancing after Senate Banking 15-9 vote.
+
+---

@@ -50,8 +50,8 @@ Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → 
 | Sector | Assets | Status | Consecutive Losses | Notes |
 |---|---|---|---|---|
 | BTC Core | BTC/USD | ACTIVE | 1 | Re-entry stopped out May 13 (-$1.62); at 1 of 2 pause threshold |
-| ETH / L1 | ETH/USD | ACTIVE | 0 | May 15 re-entry open (0.029925 @ $2,265.20, -$0.48% unrealized); Glamsterdam upgrade June 2026 |
-| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — monitor sector |
-| Alts (top 50) | Various | ACTIVE | 0 | XRP win May 12 reset counter; CLARITY Act watch for XRP re-entry |
+| ETH / L1 | ETH/USD | ACTIVE | 1 | May 15 re-entry stopped out May 17-18 @ $2,155.13 (-$3.29); at 1 of 2 pause threshold; May 18 re-entry @ $2,120.40 |
+| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — no outsized impact |
+| Alts (top 50) | Various | ACTIVE | 1 | XRP May 15 re-entry stopped out May 17-18 @ $1.3827 (-$1.75); at 1 of 2 pause threshold; May 18 re-entry @ $1.3962 |
 
-*Last updated: 2026-05-15 — Weekly review + addendum. BTC Core at 1 consecutive loss (re-entry stop-out); one more BTC loss triggers sector pause. ETH/L1: May 15 re-entry at $2,265.20 (0 consecutive losses). All sectors ACTIVE.*
+*Last updated: 2026-05-18 — Both ETH and XRP stopped out overnight May 17-18; both sectors now at 1 consecutive loss (1 of 2 pause threshold). Re-entered both at lower prices under CAUTION mode. BTC Core still at 1 loss (no BTC trade today). All sectors ACTIVE.*
