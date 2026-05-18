@@ -499,3 +499,25 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-18 — Session-Open Scan (~07:13 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,115.59 | -0.23% | **3.78%** | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3849 | -0.81% | **2.88%** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $131.47 | Cash $44.82 (34.1%) | Long MV $86.65 (65.9%) | Phase P&L: -$10.29 (-7.26%) vs $141.76 start
+**BTC:** $76,867 (day open $77,391, -0.68% intraday; 24h vs May 17 close $78,031 = -1.49%) | Regime: **CAUTION** | Crash gate: CLEAR
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Hard checks:**
+- BTC crash gate: -1.49% 24h → CLEAR ✓
+- BTC regime: CAUTION (below est. 20-day MA ~$80,000) → 25% size reduction, 4% stops ✓
+- ETH stop: 572816b1 ($2,035.58/$2,015.22) active ✓ | XRP stop: 7b145e72 ($1.3403/$1.3269) active ✓
+- Conditional 3rd entry (LINK/TON): requires macro stabilization (S&P futures recover + BTC ETF outflow reversal) → NOT met
+- Cash $44.82 available but no qualifying entry
+
+**Result: HOLD — No New Trades.** Both re-entries from 03:05 UTC this morning holding with healthy stop buffers (3.78% ETH, 2.88% XRP). Conditional LINK/TON entry not triggered — macro stabilization not confirmed. No notification sent.
+
+---
