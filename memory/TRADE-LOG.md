@@ -542,3 +542,23 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Decision: HOLD — No New Trades.** Both positions recovering with healthy buffers. BTC ETF outflow reversal remains key watch for third entry trigger. No trades, no notification sent.
 
 ---
+
+## 2026-05-18 — Midday Scan v2 (~17:00 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,103.51 | **-0.80%** | 3.23% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.378 | **-1.30%** | 2.74% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $130.76 | Cash $44.82 (34.3%) | Long MV $85.94 | Day P&L: -$5.28 (-3.88%) vs last_equity $136.04 | Phase P&L: -$11.00 (-7.76%)
+**BTC:** ~$76,293 | 24h from May 17 close $78,031: **-2.23%** | Regime: **CAUTION** (4.6% below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+
+**STEP 3 — Cuts:** ETH -0.80%, XRP -1.30% — neither ≤-10%. No cuts.
+**STEP 4 — Stop tightening:** Neither ≥+25%. No adjustments. Both GTC stops confirmed active (status: new).
+**STEP 5 — Thesis check:** ETH Glamsterdam June 2026 intact; XRP CLARITY Act Senate floor vote pending. No protocol exploits or adverse regulatory actions. Theses valid.
+**STEP 6 — Perplexity:** Skipped — moves within normal range; no sharp unexplained action (ETH -0.40% since prior scan, XRP recovered +0.04%).
+**Note:** XRP stop buffer at 2.74% (ETH: 3.23%) — above critical 2% floor. BTC continued drift to $76,293 from $76,688 at last scan (-0.51%). CAUTION mode firmly in effect.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
