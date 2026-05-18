@@ -511,3 +511,34 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Day P&L -$2.83 (-2.11%) reflects the overnight stop-outs (ETH @ $2,155 and XRP @ $1.3827, realized ~-$5.05 combined) partially offset by small gains on the re-entered positions. Bot underperformed BTC by -0.64 percentage points (BTC -1.47% day). Phase P&L deepens to -$10.41 (-7.35%) from $141.76 start (May 10). Re-entries from early morning holding steady — ETH near flat (+0.02% from yesterday close), XRP slightly softer (-0.37%). Stop buffers healthy at ~3.9% (ETH) and ~3.4% (XRP), well above the critical <2% level seen in prior sessions. Cash 34.1% provides capacity for a third position if BTC regime improves. Both GTC stops confirmed active. Catalysts intact: ETH Glamsterdam June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — 1 more loss triggers sector pause.
 
 ---
+
+## 2026-05-18 — Session-Open Scan (afternoon, ~13:02 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,148.46 | **+1.32%** | 5.25% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.40096 | **+0.34%** | 4.33% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $132.43 | Cash $44.82 (33.9%) | Long MV $87.61 | Day P&L: -$3.61 (-2.65%) vs last_equity $136.04
+**BTC:** $77,528 (bid $77,494 / ask $77,564) | 24h: ~-0.65% from May 17 close $78,031 | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Hard checks:**
+- BTC crash gate: -0.65% 24h — CLEAR ✓
+- Stop tightening: ETH +1.32%, XRP +0.34% — neither ≥+25%; no adjustments
+- Both GTC stops active and covering correct quantities ✓
+
+**Catalyst check (Perplexity):**
+- BTC ETF inflows: NOT reversed — $263M outflows yesterday; no fresh inflow confirmation (key binary trigger for third position)
+- XRP CLARITY Act: Senate floor vote still pending; no adverse news; thesis INTACT
+- ETH Glamsterdam June 2026: No adverse news; thesis INTACT
+- LINK/TON: No confirmed fresh 24-48h catalyst; prior accumulation event dated
+
+**Third position assessment:**
+- Max deployable under 95% total cap: $125.81 − $87.61 deployed = **$38.20 headroom**
+- BTC ETF reversal (key trigger) NOT confirmed → entry blocked per research log decision criteria
+- No qualifying alt catalyst → no entry
+
+**Decision: HOLD — No New Trades.** Both positions recovering with healthy buffers. BTC ETF outflow reversal remains key watch for third entry trigger. No trades, no notification sent.
+
+---
