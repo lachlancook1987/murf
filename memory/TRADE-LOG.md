@@ -457,3 +457,24 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Both prior positions (ETH entry $2,265.20 and XRP entry $1.439) stopped out overnight May 17-18 (total realized loss: -$5.05). Re-entered both at lower prices with CAUTION sizing (25% reduction, 4% stops, combined 65.9% deployed). Phase P&L deepened to -$10.12 (-7.14%). ETH and XRP sectors each at 1 consecutive loss — 1 more loss each triggers sector pause. Catalysts intact: ETH Glamsterdam June 2026 on track; XRP CLARITY Act advancing after Senate Banking 15-9 vote.
 
 ---
+
+## 2026-05-18 — Overnight Triage Check v2 (~05:10 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,118.90 | -0.07% | 5.53% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3968 | +0.04% | 4.05% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit 572816b1: covers 0.023541 ETH — valid ✓
+- XRP/USD stop_limit 7b145e72: covers 26.4338 XRP — valid ✓
+- No orphaned orders.
+
+**Emergency exits (≤-10%):** None. Both well within threshold.
+**Stop tightening (≥+25%):** None. No winners.
+**BTC Regime:** $77,010 now vs. May 17 close $78,031 = **-1.31%** — under ±8% threshold. No regime alert. No crash gate.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
