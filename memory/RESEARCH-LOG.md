@@ -3461,3 +3461,62 @@ Both GTC stops confirmed active and covering correct quantities ✓
 **Result: NO-OP. No trades. No notification sent.**
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+## 2026-05-19 — Session-Open Research (afternoon ~13:04 UTC)
+
+### Live Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.12 |
+| Cash | $44.82 (34.1%) |
+| Long Market Value | $86.30 |
+| Day P&L | -$0.39 (-0.29%) vs last_equity $131.51 |
+| Phase P&L | -$10.64 (-7.51%) vs phase start $141.76 (May 10) |
+
+**Open Positions:**
+| Symbol | Qty | Entry | Current | Unr. P&L | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,116.78 | -$0.085 (-0.17%) | $2,035.58/$2,015.22 (572816b1, GTC) | **3.84%** |
+| XRP/USD | 26.4338 | $1.3962 | $1.3797 | -$0.436 (-1.18%) | $1.3403/$1.3269 (7b145e72, GTC) | **2.86%** |
+
+Both GTC stops confirmed active and covering correct quantities ✓
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$76,856 (bid $76,834 / ask $76,878) | ~-0.25% to -1.46% 24h |
+| ETH Price | $2,116.78 | -0.38% today from lastday $2,124.89 |
+| XRP Price | $1.3797 | -0.53% today from lastday $1.387 |
+| BTC Regime | CAUTION | Below est. 20-day MA ~$80,000 |
+| Crash Gate | NOT triggered | 24h well under -8% threshold |
+
+---
+
+### BTC Regime Filter
+- BTC 24h: ~-0.25% to -1.46% → **NOT down >8%** → crash gate NOT triggered ✅
+- BTC ~$76,856 vs est. 20-day MA ~$80,000 → **CAUTION mode** (25% size reduction, 4% stops)
+- **REGIME: CAUTION** — full universe tradeable, 25% size reduction applies
+
+---
+
+### Perplexity Research
+1. **BTC:** ~$76.9k-$77.1k; 24h ~-0.25%; still below $80,000 → no regime upgrade
+2. **ETH Glamsterdam upgrade (June 2026):** No adverse news or delays found → thesis INTACT
+3. **XRP CLARITY Act:** No Senate floor vote yet; no adverse developments → thesis INTACT (Memorial Day recess ~May 26 remains watch item)
+4. **Alt catalysts (SOL/AVAX/LINK/ADA/DOT):** None found — no new entries
+5. **BTC ETF flows:** No inflow reversal confirmed — third position trigger blocked
+
+---
+
+### Decision: HOLD — No New Trades
+- Existing positions: ETH +3.84% stop buffer, XRP +2.86% stop buffer — both above 2% critical floor
+- No regime flip: BTC $3,144 below $80k trigger; CAUTION mode persists
+- No qualifying catalyst for third position
+- Cash $44.82 preserved for BTC regime upgrade trigger
+- Weekly trades: 2/25 — capacity available if opportunity arises
+
+---

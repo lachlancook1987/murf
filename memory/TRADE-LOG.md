@@ -703,3 +703,33 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Late-session prices softened from earlier EOD run ($131.59 → $131.46). Bot day +0.08% vs BTC +0.14%; net -0.06% vs BTC. ETH at $2,130.60 (+0.27% day) — healthy 4.46% stop buffer. XRP at $1.38 (-0.50% day) — 2.88% stop buffer above 2% critical floor but worth monitoring. Phase P&L -$10.30 (-7.27%) from $141.76 start (May 10). Cash 34.1% idle — third position contingent on BTC clearing ~$80K 20-day MA. Both GTC stops active: ETH 572816b1, XRP 7b145e72. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — one more stop-out triggers sector pause.
 
 ---
+
+## 2026-05-19 — Session-Open Scan (afternoon ~13:04 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,116.78 | **-0.17%** | 3.84% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3797 | **-1.18%** | 2.86% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $131.12 | Cash $44.82 (34.1%) | Long MV $86.30 | Day P&L: -$0.39 (-0.29%) vs last_equity $131.51 | Phase P&L: -$10.64 (-7.51%)
+**BTC:** mid ~$76,856 (bid $76,834 / ask $76,878) | 24h: ~-0.25% to -1.46% | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Hard checks:**
+- Crash gate: ~-0.25% to -1.46% 24h → CLEAR ✓
+- Emergency exits (≤-10%): ETH -0.17%, XRP -1.18% → none ✓
+- Stop tightening (≥+25%): neither qualifies → no adjustments ✓
+- Both GTC stops active and covering correct quantities ✓
+
+**Research (Perplexity):**
+- BTC: ~$76.9k-$77.1k, still below $80,000 → CAUTION regime, no regime flip
+- ETH Glamsterdam June 2026: no adverse news or delays → thesis INTACT
+- XRP CLARITY Act: no Senate floor vote yet, no adverse developments → thesis INTACT
+- No new alt catalysts (SOL, AVAX, LINK, ADA, DOT) → no third position entry
+- BTC ETF flows: no inflow reversal confirmed → third position trigger blocked
+
+**Third position:** Cash $44.82; headroom ~$38.26 under 95% cap; BTC $3,144 below $80k trigger → blocked.
+
+**Decision: HOLD — No New Trades.** No notification sent.
+
+---
