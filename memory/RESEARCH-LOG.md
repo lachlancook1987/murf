@@ -3323,3 +3323,105 @@ No notification sent — no crash gate or regime shift triggered. $1B+ ETF outfl
 - Watch: XRP CLARITY Act Memorial Day deadline approaching (~May 26); monitor for Senate floor vote news or adverse developments
 - Watch: ETH toward T1 $2,400 as Glamsterdam upgrade (June 2026) approaches; ETF outflows are noise not thesis-break
 - Third position trigger: BTC above $80,000 sustained — not in play today
+
+---
+
+## 2026-05-19 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.59 |
+| Cash | $44.82 (34.0%) |
+| Long Market Value | $86.77 |
+| Day P&L | +$0.08 (+0.06%) vs last equity $131.51 |
+| Phase P&L | -$10.17 (-7.17%) vs phase start $141.76 (May 10) |
+
+**Open Positions:**
+| Symbol | Qty | Entry | Current | Unr. P&L | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,134.00 | +$0.32 (+0.64%) | $2,035.58/$2,015.22 (572816b1, GTC) | **4.61%** |
+| XRP/USD | 26.4338 | $1.3962 | $1.382 | -$0.375 (-1.02%) | $1.3403/$1.3269 (7b145e72, GTC) | **3.02%** |
+
+Both GTC stops confirmed active and covering correct quantities ✓
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$76,575–$77,003 | Flat to +1.44% 24h (sources vary) |
+| ETH Price | ~$2,100–$2,134 | -2.7% to +0.43% 24h (Alpaca: +0.43% intraday) |
+| BTC Dominance | ~58–60% (CoinGecko 60.04%) | Elevated — mild alt headwind |
+| Fear & Greed | 25 (Extreme Fear) | Fear zone; no 50% rule trigger (<10 threshold) |
+| BTC Funding Rate | +0.01%/8h (Binance +0.0052%) | Positive/neutral — not overheated |
+| DXY | ~99.10 (-0.20%) | Slight weakening — mild crypto tailwind |
+| S&P 500 Futures | ~7,399–7,428 (~flat, +0.02%) | Near-flat vs. -0.57% yesterday — improvement |
+
+**Key Events / Catalysts:**
+- **XRP CLARITY Act:** Senate Banking Committee 15-9 bipartisan vote (May 14) advanced bill; full Senate floor vote still pending. XRP thesis catalyst intact — positive development.
+- **ETH Glamsterdam upgrade (June 2026):** No adverse news or delays confirmed; thesis INTACT.
+- **ETH ETF outflows:** ~$255M this week — persistent institutional exit; near-term weight on ETH but not thesis-break.
+- **Token unlocks this week:** TIA (Celestia) $1.82M today; ZRO and KAITO largest this week; TRUMP $522M and SUI $229M in next 30 days — moderate sector pressure.
+- **Macro improved:** S&P futures near-flat today (+0.02%) vs. -0.57% yesterday; DXY -0.20% — mild tailwind for crypto.
+
+---
+
+### BTC Regime Filter (STEP 4)
+- BTC 24h: flat to +1.44% → **NOT down >8%** → crash gate NOT triggered ✅
+- BTC ~$76,600–$77,000 vs est. 20-day MA ~$80,000 → **CAUTION mode** (25% size reduction)
+- Funding rate: +0.01%/8h → positive/neutral → not overheated
+- Fear & Greed: 25 → above <10 threshold → no additional size restriction
+- **REGIME: CAUTION** — full universe tradeable, 25% size reduction, 4% stops apply
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH HOLD (current position)**
+- **Catalyst:** Glamsterdam upgrade June 2026 intact; no delays confirmed. ETF outflows are noise, not thesis-break.
+- **Current:** $2,134 | Entry: $2,120.40 | Unr. +$0.32 (+0.64%)
+- **Stop:** $2,035.58 (GTC, 572816b1) — buffer 4.61% — HEALTHY
+- **Targets:** T1 $2,400 (+12.5%), T2 $2,550 (+19.5%)
+- **Action:** HOLD. Thesis intact. Stop healthy. Monitor ETF outflow trend; does not break Glamsterdam thesis.
+- **R:R:** ~2.5:1 to T1 ($6.26 gain / $2.31 risk on 0.023541 ETH)
+
+**Idea 2 — XRP HOLD (current position)**
+- **Catalyst:** CLARITY Act advanced 15-9 in Senate Banking Committee (May 14); full Senate floor vote still pending. Catalyst timeline intact; Memorial Day recess risk (~May 26) is watch item.
+- **Current:** $1.382 | Entry: $1.3962 | Unr. -$0.375 (-1.02%)
+- **Stop:** $1.3403 (GTC, 7b145e72) — buffer 3.02% — above critical 2% floor but watch closely
+- **Targets:** T1 $1.63 (+18.0%), T2 $1.75 (+26.6%)
+- **Action:** HOLD stop in place. Thesis technically intact — committee vote positive signal. Thesis break = Senate vote fails or bill shelved; reassess manually if that occurs.
+- **R:R:** ~4.8:1 to T1
+
+**Idea 3 — Third Position (BTC) — Watch Only, No Entry**
+- **Trigger:** BTC sustained close above $80,000 (20-day MA) confirming OFFENSIVE regime flip
+- **Entry:** $80,000–$81,000 on volume
+- **Stop:** 4% below entry (CAUTION mode until regime confirmed)
+- **Target:** $85,000–$88,000 (+5.6–10%)
+- **Available:** $44.82 cash; headroom ~$38.25 under 95% cap
+- **Blocker:** BTC ~$76,600–$77,000 (~3.9–4.4% below trigger). CAUTION mode. **No entry — watch only.**
+
+---
+
+### Risk Factors
+1. **ETH 24h divergence:** Some sources show ETH -2.7% to -3.5% (24h); Alpaca intraday +0.43% — monitor for continued 24h weakness
+2. **XRP stop buffer 3.02%** — above 2% floor but thin; a ~3% adverse move triggers stop at $1.3403
+3. **Both sectors at 1 consecutive loss** — one more stop-out on either ETH or XRP triggers sector pause per strategy rules
+4. **Fear & Greed 25 (Extreme Fear)** — market in fear zone; no near-term reversal catalyst visible
+5. **ETH ETF outflows ~$255M this week** — institutional selling weight; could pressure ETH toward stop
+6. **XRP CLARITY Act Memorial Day timeline (~May 26)** — full Senate floor vote pending; if not cleared before recess, thesis catalyst slips months
+7. **BTC CAUTION mode persisting** — below 20-day MA ~$80,000 for 10+ consecutive days; no regime upgrade catalyst visible
+8. **Token unlocks this week** — ZRO, KAITO, TIA — moderate altcoin sector headwind
+
+---
+
+### Decision: HOLD — No New Trades
+- Both existing positions holding with GTC stops active: ETH buffer healthy (4.61%), XRP buffer thin but above 2% floor (3.02%)
+- No new entries: CAUTION regime persists; BTC $3,900 below $80,000 trigger; no regime catalyst in sight
+- Macro slightly improved (S&P near-flat, DXY -0.20%) but Fear & Greed still at 25 Extreme Fear
+- XRP CLARITY Act: POSITIVE — Senate Banking Committee 15-9 vote advanced bill; full Senate vote still pending
+- ETH Glamsterdam thesis: INTACT — no adverse news
+- Watch: XRP for Senate floor vote news; Memorial Day recess deadline ~May 26
+- Watch: ETH toward T1 $2,400 as Glamsterdam approaches
+- Third position: BTC above $80,000 sustained only — not in play
