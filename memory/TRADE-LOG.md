@@ -583,13 +583,13 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
-## 2026-05-19 — Overnight Triage Check
+## 2026-05-19 — Overnight Triage Check (updated ~latest UTC)
 
 **Positions:**
 | Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
 |---|---|---|---|---|---|---|
-| ETH/USD | 0.023541 | $2,120.40 | $2,133.40 | **+0.61%** | 4.59% | 572816b1 ($2,035.58/$2,015.22) ✓ |
-| XRP/USD | 26.4338 | $1.3962 | $1.3930 | **-0.23%** | 3.78% | 7b145e72 ($1.3403/$1.3269) ✓ |
+| ETH/USD | 0.023541 | $2,120.40 | $2,122.00 | **+0.075%** | 4.07% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3750 | **-1.518%** | 2.52% | 7b145e72 ($1.3403/$1.3269) ✓ |
 
 **Open orders (status: new):**
 - ETH/USD stop_limit 572816b1: covers 0.023541 ETH — valid ✓
@@ -598,9 +598,9 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 **Emergency exits (≤-10%):** None. Both positions well within threshold.
 **Stop tightening (≥+25%):** None. No winners near threshold.
-**BTC Regime:** $77,037 now vs. May 18 close $76,947 = **+0.12%** — flat overnight. Well under ±8% threshold. No regime alert. No crash gate.
+**BTC Regime:** $76,533 now vs. May 18 close $76,947 = **-0.54%** — flat overnight. Well under ±8% threshold. No regime alert. No crash gate.
 
-**Notes:** Both positions recovering vs. prior session close (ETH +0.61%, XRP -0.23%). Stop buffers healthy — ETH 4.59% and XRP 3.78%, comfortably above critical <2% level. BTC essentially flat overnight ($76,947 → $77,037); no macro catalyst or regime shift. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
+**Notes:** ETH pulled back slightly from earlier overnight reading ($2,133 → $2,122), XRP softened further ($1.393 → $1.375). XRP stop buffer at 2.52% — above the critical 2% floor but worth monitoring. ETH buffer 4.07% — healthy. BTC drifted -0.54% overnight; no macro catalyst or regime shift. Both GTC stops confirmed active and covering correct quantities. No orphaned orders. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
