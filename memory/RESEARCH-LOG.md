@@ -3543,3 +3543,111 @@ Both GTC stops confirmed active and covering correct quantities ✓
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-19 — Pre-Session Research (evening session)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $130.70 |
+| Cash | $44.82 (34.3%) |
+| Long Market Value | $85.88 |
+| Last Equity (May 18) | $131.51 |
+| Day P&L | -$0.81 (-0.61%) |
+| Phase P&L | -$11.06 (-7.80%) vs $141.76 start (May 10) |
+| Weekly Trades | 2/25 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,115.39 | -0.24% | 572816b1 ($2,035.58/$2,015.22) ✓ | 3.77% |
+| XRP/USD | 26.4338 | $1.3962 | $1.365 | -2.24% | 7b145e72 ($1.3403/$1.3269) ✓ | ⚠️ 1.81% CRITICAL |
+
+**Active Stop Orders (GTC, status: new):**
+- ETH/USD stop_limit 572816b1 — valid ✓
+- XRP/USD stop_limit 7b145e72 — valid ✓ (XRP qty_available: 0.00001975 dust only — stop covers full position)
+- No orphaned orders.
+
+---
+
+### Market Context
+| Asset / Indicator | Value | Note |
+|---|---|---|
+| BTC Price | ~$76,663–$77,100 | Perplexity range; ~-0.4% vs May 19 EOD $77,022 |
+| ETH Price | $2,115.39 (Alpaca) | -0.45% intraday vs last_day $2,124.89 |
+| XRP Price | $1.365 (Alpaca) | -1.59% intraday vs last_day $1.387 |
+| BTC Dominance | 58.2–58.4% | CoinGecko 58.23%; slightly easing (good for alts) |
+| Fear & Greed | 28–39 (Fear) | Alt.me: 28; Binance: 39 — declined from 47 (Neutral) last week |
+| BTC Funding Rate | ~+0.0016% | Slightly positive, neutral — no overheated longs |
+| DXY | 99.23–99.39 | Elevated vs ~97.8 early May; headwind for crypto |
+| S&P 500 Futures | 7,431.25 (+0.07%) | Near flat; not strongly risk-on |
+| Token Unlocks | SOL/HYPE/PYTH linear | No major ETH or XRP specific unlocks this week |
+
+**BTC 20-day MA:** Est. ~$80,000 — BTC ~$76,700 is ~4.1% below → CAUTION mode
+
+---
+
+### Regime Filter (STEP 4)
+- **BTC 24h change:** ~-0.4% to -0.5% → crash gate **NOT triggered** (need >8%)
+- **BTC vs 20-day MA:** ~$76,700 vs ~$80,000 est. → **CAUTION mode** (full universe tradeable, 25% size reduction, 4% stops)
+- **Funding:** +0.0016% → neutral
+- **DXY:** 99.3 → elevated headwind (crypto pressure)
+- **F&G:** 28–39 (Fear) — not below 10, so no additional size restriction from strategy rules
+- **Mode: CAUTION — no regime flip**
+
+---
+
+### Position Review
+| Symbol | Status | Thesis | Buffer | Action |
+|---|---|---|---|---|
+| ETH/USD | HOLD | Glamsterdam June 2026 intact; ETF inflows ongoing; no adverse news | 3.77% (healthy) | HOLD; stop untouched |
+| XRP/USD | HOLD | CLARITY Act advancing (Senate Banking 15–9 vote); floor vote pending; no adverse update | ⚠️ 1.81% CRITICAL | HOLD; do NOT move stop down |
+
+**XRP Critical Note:** Buffer 1.81% — stop trigger $1.3403 is $0.0247 from current $1.365. Any dip >1.81% fires the stop. If triggered, this would be the 2nd XRP consecutive loss → XRP sector enters PAUSE. Thesis intact; no action taken per strategy rules.
+
+---
+
+### Market Catalysts
+**Bullish:**
+- ETH Glamsterdam June 2026 — upgrade timeline intact; targets $3,000 pre-upgrade
+- XRP CLARITY Act advancing — Senate floor vote next; codifies XRP as digital commodity
+- BTC dominance easing to 58.2% — minor tailwind for alts
+- BTC funding rate neutral — no excessive long crowding
+- S&P 500 near flat — no macro crash risk
+
+**Bearish/Risk:**
+- DXY elevated at 99.3 — strongest since early May, crypto headwind
+- F&G declined to Fear (28–39) from Neutral (47) — sentiment deterioration
+- BTC firmly in CAUTION zone ($3.3k below est. 20-day MA)
+- XRP stop buffer critically thin — sector pause risk on next stop-out
+- SOL linear unlocks this week — mild L2/alt headwind
+
+---
+
+### Trade Ideas
+1. **ETH/USD HOLD** — entry $2,120.40, current $2,115.39. Glamsterdam June 2026 + ETF inflow thesis intact. 3.77% stop buffer healthy. No action; next review at T1 $2,400 (+13.2%).
+2. **XRP/USD HOLD** — entry $1.3962, current $1.365. CLARITY Act Senate floor vote catalyst intact. Buffer critically thin (1.81%); stop set; no stop adjustments. R:R ~4.18:1 to T1 $1.63.
+3. **No new entries** — BTC below 20-day MA (CAUTION), DXY headwind, F&G Fear, no fresh catalyst to override. Cash $44.82 preserved; headroom ~$38 under 95% cap but no qualifying catalyst found.
+
+---
+
+### Risk Factors
+1. XRP buffer 1.81% — 2nd stop-out triggers XRP sector pause (2 consecutive losses threshold)
+2. DXY at 99.3 — ~1.5 points higher than early May; sustained strength = sustained crypto headwind
+3. F&G at Fear (28–39) — sentiment turn from Neutral deteriorates new-entry conviction
+4. BTC well below 20-day MA — no regime flip signal; CAUTION mode likely through week
+5. Phase P&L -$11.06 (-7.80%) — drawdown accumulating; capital preservation priority
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+Both positions held with active GTC stop-limits. No new entries this session — CAUTION mode + elevated DXY + Fear sentiment + no confirming catalyst overrides. XRP critical buffer monitored; stop will fire automatically if $1.3403 breached.
+
+**Watch levels:**
+- XRP stop trigger: $1.3403 (auto-fires) — if triggered, XRP sector enters PAUSE
+- ETH stop: $2,035.58 — 3.77% buffer, healthy
+- BTC regime flip: sustained close above ~$80,000 (est. 20-day MA) → OFFENSIVE mode, reconsider third position
+- BTC ETF inflow reversal → key binary trigger for third position entry
+
+---
