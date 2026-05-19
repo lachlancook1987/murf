@@ -656,3 +656,26 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-19 — Overnight Triage Check (~05:09 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,134.30 | **+0.66%** | 4.63% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3877 | **-0.61%** | 3.41% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit 572816b1: covers 0.023541 ETH — valid ✓
+- XRP/USD stop_limit 7b145e72: covers 26.4338 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. ETH +0.66%, XRP -0.61% — both well within threshold.
+**Stop tightening (≥+25%):** None. No winners near threshold.
+**BTC Regime:** $76,838 now (bar close 05:07 UTC) vs ~$77,010 24h ago = **-0.22%** — well under ±8% threshold. No regime alert. No crash gate.
+
+**Notes:** Positions recovered from session-open lows (ETH $2,122 → $2,134; XRP $1.375 → $1.388). Stop buffers healthy — ETH 4.63%, XRP 3.41%, well above the critical 2% floor. BTC flat overnight; no macro catalyst or regime shift. Both GTC stops confirmed active and covering correct quantities. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
