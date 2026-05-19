@@ -691,3 +691,15 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Quiet day — no trades, no stop triggers. Bot tracked BTC almost exactly (bot +0.18%, BTC +0.18%, vs BTC ±0.00%). ETH continued its recovery from the overnight lows, closing at $2,134 (+0.43% day) with a healthy 4.61% stop buffer. XRP slipped slightly to $1.382 (-0.36% day) but remains well above its stop with a 3.02% buffer — above the critical 2% floor. Phase P&L improved slightly to -$10.17 (-7.17%) from $141.76 phase start (May 10). Cash 34.0% preserved for a third position if BTC regime improves. Both GTC stops confirmed active (ETH 572816b1, XRP 7b145e72). Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — one more stop-out triggers sector pause.
 
 ---
+
+### May 19 — EOD Snapshot (Day 9, Tuesday) [Revised]
+**Portfolio:** $131.46 | **Cash:** $44.82 (34.1%) | **Day P&L:** +$0.11 (+0.08%) | **Phase P&L:** -$10.30 (-7.27%) | **vs BTC:** -0.06%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,130.60 | +0.27% | +$0.24 (+0.48%) | $2,035.58/$2,015.22 (buf 4.46%) |
+| XRP/USD | 26.434 | $1.3962 | $1.38 | -0.50% | -$0.43 (-1.16%) | $1.3403/$1.3269 (buf 2.88%) |
+**Trades today:** none | **Week:** 2/5
+**BTC regime:** $76,995 (+0.14% from May 18 close $76,886) — CAUTION; below est. 20-day MA ~$80,000; crash gate NOT triggered
+**Notes:** Late-session prices softened from earlier EOD run ($131.59 → $131.46). Bot day +0.08% vs BTC +0.14%; net -0.06% vs BTC. ETH at $2,130.60 (+0.27% day) — healthy 4.46% stop buffer. XRP at $1.38 (-0.50% day) — 2.88% stop buffer above 2% critical floor but worth monitoring. Phase P&L -$10.30 (-7.27%) from $141.76 start (May 10). Cash 34.1% idle — third position contingent on BTC clearing ~$80K 20-day MA. Both GTC stops active: ETH 572816b1, XRP 7b145e72. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — one more stop-out triggers sector pause.
+
+---
