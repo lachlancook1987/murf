@@ -3678,3 +3678,77 @@ Both positions held with active GTC stop-limits. No new entries this session —
 - Cash $44.82, BTC CAUTION mode, Day P&L -$1.06 (-0.81%), Phase P&L -$11.31 (-7.98%)
 
 ---
+
+## 2026-05-19 — Session-Open (Late, ~23:06 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $130.26 |
+| Cash | $44.82 (34.4%) |
+| Long Market Value | $85.44 |
+| Last Equity (May 18) | $131.51 |
+| Day P&L | -$1.25 (-0.95%) |
+| Phase P&L | -$11.50 (-8.11%) vs $141.76 start (May 10) |
+| Weekly Trades | 2/25 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,105.56 | -0.70% | 572816b1 ($2,035.58/$2,015.22) ✓ | 3.32% |
+| XRP/USD | 26.4338 | $1.3962 | $1.3582 | -2.72% | 7b145e72 ($1.3403/$1.3269) ✓ | ⚠️ 1.32% CRITICAL |
+
+**Active Stop Orders (GTC, status: new):**
+- ETH/USD stop_limit 572816b1 — confirmed active ✓
+- XRP/USD stop_limit 7b145e72 — confirmed active ✓ (XRP qty_available: 0.00001975 dust only)
+
+---
+
+### Live Quotes (23:06 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $76,597 | $76,679 | $76,638 |
+| ETH/USD | $2,104.62 | $2,106.50 | $2,105.56 |
+| XRP/USD | $1.3554 | $1.3610 | $1.3582 |
+
+---
+
+### Regime Filter
+- **BTC 24h change:** ~-0.32% (May 18 close $76,886 → current $76,638) → crash gate **NOT triggered**
+- **BTC vs 20-day MA:** ~$76,638 vs est. ~$80,000 → **CAUTION mode** (full universe, 25% size reduction, 4% stops)
+- **F&G:** 28–39 (Fear) — not <10, no additional 50% size restriction
+- **DXY:** ~99.3 — elevated headwind
+- **Mode: CAUTION — no change from earlier sessions**
+
+---
+
+### Hard-Check Results (new entry screen)
+| Check | Result |
+|---|---|
+| Crash gate | CLEAR ✓ |
+| Total positions after hypothetical trade | 3/20 ✓ |
+| Weekly trades | 2/25 ✓ |
+| 95% cap headroom | $38.31 |
+| New entry catalyst documented | NONE |
+| BTC below 20-day MA | CAUTION (25% size reduction, not blocked) |
+
+No new catalyst documented for any asset. DXY elevated. F&G at Fear. No qualifying third-position entry.
+
+### XRP Buffer Deterioration
+- Midday scan: 1.48% → Mid-afternoon: 1.40% → 23:06 UTC: **1.32%**
+- Stop trigger $1.3403 only $0.0179 above current $1.3582
+- Auto-fire imminent if XRP continues to decline
+- If triggered: 2nd consecutive XRP loss → **XRP sector enters PAUSE**
+- Strategy: do NOT move stop down; let it fire automatically
+
+### Decision: **HOLD — No New Trades**
+
+No new entries qualify. Both stops active. XRP auto-fire likely tonight.
+
+**Watch levels:**
+- XRP stop trigger: $1.3403 (auto-fires → sector PAUSE)
+- ETH stop: $2,035.58 — 3.32% buffer, healthy
+- BTC regime flip: sustained close above ~$80,000 → OFFENSIVE mode
+- Third position trigger: BTC above 20-day MA + documented catalyst
+
+---
