@@ -703,3 +703,31 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Notes:** Late-session prices softened from earlier EOD run ($131.59 → $131.46). Bot day +0.08% vs BTC +0.14%; net -0.06% vs BTC. ETH at $2,130.60 (+0.27% day) — healthy 4.46% stop buffer. XRP at $1.38 (-0.50% day) — 2.88% stop buffer above 2% critical floor but worth monitoring. Phase P&L -$10.30 (-7.27%) from $141.76 start (May 10). Cash 34.1% idle — third position contingent on BTC clearing ~$80K 20-day MA. Both GTC stops active: ETH 572816b1, XRP 7b145e72. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending. Each sector at 1 consecutive loss — one more stop-out triggers sector pause.
 
 ---
+
+## 2026-05-19 — Session-Open Scan v2 (~10:08 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,111.53 | **-0.42%** | 3.60% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.434 | $1.3962 | $1.3754 | **-1.49%** | 2.55% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $130.88 | Cash $44.82 (34.2%) | Long MV $86.06 | Day P&L: -$0.63 (-0.48%) vs last_equity $131.51
+**BTC:** ~$76,784 (bid $76,748 / ask $76,820) | 24h: ~-0.13% | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Hard checks:**
+- BTC crash gate: -0.13% 24h — CLEAR ✓
+- Emergency exits (≤-10%): None — ETH -0.42%, XRP -1.49% ✓
+- Stop tightening (≥+25%): None — no winners ✓
+- Both GTC stops active and covering correct quantities ✓
+
+**Third position assessment:**
+- Cash $44.82 available; headroom under 95% cap: $124.34 − $86.06 = $38.28
+- BTC at $76,784 = 4.0% below trigger ~$80,000 → CAUTION regime persists → blocked
+- No qualifying catalyst found for alts (no BTC ETF inflow reversal; XRP CLARITY Act Senate vote still pending — not a new entry signal)
+
+**Notes:** XRP stop buffer tightened from 3.30% → 2.55% since prior midday scan (prices: ETH $2,111 vs $2,132 prior, XRP $1.3754 vs $1.386 prior). Both still above critical 2% floor. Theses intact: ETH Glamsterdam upgrade June 2026; XRP CLARITY Act Senate floor vote pending.
+
+**Result: HOLD — No New Trades. No notification sent.**
+
+---
