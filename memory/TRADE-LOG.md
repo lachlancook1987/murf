@@ -733,3 +733,27 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Decision: HOLD — No New Trades.** No notification sent.
 
 ---
+
+## 2026-05-19 — Midday Scan (latest)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,110.00 | **-0.49%** | 3.53% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.36041 | **-2.56%** | ⚠️ **1.48% — CRITICAL** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $130.45 | Cash $44.82 (34.4%) | Long MV $85.63 | Last equity $131.51 | Day P&L: -$1.06 (-0.81%) | Phase P&L: -$11.31 (-7.98%)
+**BTC Regime:** CAUTION (below est. 20-day MA ~$80,000); crash gate NOT triggered.
+
+**STEP 3 — Cuts (≤-10%):** ETH -0.49%, XRP -2.56% — neither at threshold. No cuts.
+**STEP 4 — Stop tightening (≥+25%):** Neither qualifies. Both GTC stops confirmed active (status: new), covering correct quantities. No adjustments.
+**STEP 5 — Thesis check (Perplexity):**
+- **ETH Glamsterdam:** Timeline delayed from June → Q3 2026 (July-Sept) after latest dev interop (Soldøgn Interop, May 2). All core pieces running together in test environment. Security audits + Holesky/Sepolia testnets still ahead. NOT cancelled — thesis intact, timeline extended. Upgrade still represents major catalyst (200M gas limit, 10,000 TPS, ePBS). HOLD.
+- **XRP CLARITY Act:** Senate Banking Committee 15-9 vote (May 14) already known. Full Senate floor vote requires 60 votes; will NOT happen before Memorial Day recess May 21. Realistic June-July 2026 passage; risks: law enforcement concerns and Trump ethics provision may delay to 2027. No vote defeat or block — thesis INTACT but catalyst timeline uncertain. HOLD.
+**STEP 6 — Perplexity (triggered):** XRP critically thin buffer (1.48%) prompted research check. No fresh negative catalyst found for XRP specifically — decline attributed to continued technical weakness below $1.40 key support and macro CAUTION sentiment. No CLARITY Act setback news. No protocol exploit or regulatory action on ETH. Glamsterdam slip to Q3 confirmed but not a cancellation.
+
+**⚠️ XRP STOP BUFFER CRITICAL (1.48%):** Stop trigger $1.3403 only $0.0201 above current $1.36041. If triggered: this is XRP's 2nd consecutive loss → XRP sector enters PAUSE. Stop NOT being adjusted. Will fire automatically if $1.3403 breached.
+**⚠️ ETH GLAMSTERDAM TIMELINE NOTE:** Upgrade slipped June → Q3 2026. Thesis intact but pre-positioning play extends; ETH may take longer to reach T1 $2,400.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
