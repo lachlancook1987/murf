@@ -3651,3 +3651,30 @@ Both positions held with active GTC stop-limits. No new entries this session —
 - BTC ETF inflow reversal → key binary trigger for third position entry
 
 ---
+
+## 2026-05-19 — Midday Research Addendum
+
+### Thesis Updates
+
+**ETH Glamsterdam — Timeline Slip to Q3 2026**
+- Soldøgn Interop (May 2, Svalbard) completed; all Glamsterdam EIPs running together in test env for first time
+- Upgrade target pushed from June → Q3 2026 (July-Sept); security audits (30 days each) + Holesky/Sepolia testnets still ahead
+- Gas limit 60M → 200M (10,000 TPS theoretical), ePBS enshrined — transformational upgrade intact
+- NOT cancelled; thesis intact; pre-positioning window extends by ~1-3 months
+- ETH/USD held at $2,110 (-0.49% from entry $2,120.40); stop buffer 3.53% (healthy)
+
+**XRP CLARITY Act — No Senate Vote Before May 21 Recess**
+- Senate Banking Committee 15-9 bipartisan vote (May 14) confirmed; no update since
+- Full Senate vote NOT scheduled before Memorial Day recess (May 21 this week)
+- Realistic timeline: June-July 2026 passage; risks: law enforcement provision, Trump ethics clause may push to 2027
+- TD Cowen warning: potential 2027 slip if ethics provision not resolved
+- No vote defeat, no block, no adverse outcome — thesis INTACT but timeline uncertain
+- XRP/USD at $1.36041 (-2.56% from entry $1.3962); stop buffer 1.48% CRITICAL — stop at $1.3403
+
+### Decision: HOLD — No New Trades
+- Both positions held; theses intact per strategy rules (no protocol exploit, no regulatory reversal)
+- ETH Glamsterdam slip noted but not a thesis-break event
+- XRP stop buffer at 1.48% — may fire automatically; 2nd consecutive loss → sector pause if triggered
+- Cash $44.82, BTC CAUTION mode, Day P&L -$1.06 (-0.81%), Phase P&L -$11.31 (-7.98%)
+
+---
