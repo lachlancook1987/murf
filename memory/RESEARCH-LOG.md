@@ -3211,3 +3211,115 @@ No notification sent — no crash gate or regime shift triggered. $1B+ ETF outfl
 **Decision: HOLD — No New Trades.** No qualifying catalyst; macro headwinds; CAUTION regime; BTC ETF trigger not confirmed.
 
 ---
+
+---
+
+## 2026-05-19 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.47 |
+| Cash | $44.82 (34.1%) |
+| Buying Power | $44.82 |
+| Long Market Value | $86.65 |
+| Last Equity | $136.04 |
+| Day P&L | -$4.57 (-3.36%) |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | Unr. P&L | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,133.062 | +$0.298 (+0.60%) | $2,035.58/$2,015.22 (572816b1, GTC) | **4.57%** |
+| XRP/USD | 26.434 | $1.3962 | $1.37847 | -$0.469 (-1.27%) | $1.3403/$1.3269 (7b145e72, GTC) | **2.77%** |
+
+**Open Orders:**
+- ETH/USD stop_limit 572816b1: covers 0.023541 ETH — valid ✓
+- XRP/USD stop_limit 7b145e72: covers 26.4338 XRP — valid ✓
+- No orphaned orders.
+
+---
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | ~$76,640–$76,808 | Flat to slight -0.3% 24h |
+| ETH Price | ~$2,128–$2,134 | -1% to flat 24h |
+| BTC Dominance | 58–60% (CoinGecko 60.04%, CMC 60.2%) | Elevated — mild alt headwind |
+| Fear & Greed | 25 (Extreme Fear) – 39 (Fear) | Concern; no 50% rule trigger (threshold <10) |
+| BTC Funding Rate | +0.0072% to +0.01% / 8h | Positive/neutral — not overheated |
+| DXY | ~99.1 (-0.20%) | Slight weakening — mild crypto tailwind |
+| S&P 500 Futures | ~7,389.75, -0.57% | Risk-off macro — mild headwind |
+
+**Key Events Today:**
+- **PYTH unlock: 2.13B PYTH (~$99.9M) TODAY** — largest DeFi unlock of the week; sector selling pressure
+- **Yooldo (ESPORTS) unlock: ~$29.4M** — today
+- **ETH spot ETF outflows: ~$255M this week** — bearish ETH near-term weight
+- **XRP CLARITY Act:** Senate floor vote still pending; Memorial Day recess risk (possible slip beyond 2026 if not cleared by ~May 26) — thesis becoming time-sensitive
+- **S&P 500 futures -0.57%** — risk-off macro backdrop
+
+---
+
+### BTC Regime Filter (STEP 4)
+- BTC 24h: flat to -0.4% → **NOT down >8%** → crash gate NOT triggered ✅
+- BTC ~$76,640 vs est. 20-day MA ~$80,000 → **CAUTION mode** — full universe tradeable, 25% size reduction applies
+- Funding rate: +0.0072–0.01% → positive/neutral → not overheated
+- Fear & Greed: 25–39 (below threshold of <10 for 50% rule) → strategy: no additional size restriction from F&G rule
+- **REGIME: CAUTION** — BTC below 20-day MA; 4% stops apply (CAUTION mode)
+
+---
+
+### Catalysts Today (2026-05-19)
+1. **PYTH $99.9M unlock** — Large cliff unlock today; DeFi/altcoin sector selling pressure risk (watch ETH correlation)
+2. **ETH ETF outflows $255M this week** — Persistent institutional exit; near-term bearish weight on ETH
+3. **XRP CLARITY Act** — Senate floor vote still pending; Memorial Day recess looming (~May 26). If not cleared by recess, could slip well beyond 2026. Thesis remains technically intact but timeline risk elevated.
+4. **BTC Strategic Reserve guidance** — Possible White House clarity on 328k-coin reserve policy; if positive, BTC bullish catalyst
+5. **Risk-off macro** — S&P 500 futures -0.57%; broader risk appetite suppressed today
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH HOLD (current position)**
+- **Catalyst:** Glamsterdam upgrade June 2026 intact (no delays/cancellations); note ETH ETF outflows $255M this week as near-term headwind
+- **Current:** $2,133.062 | Entry: $2,120.40 | Unr. +$0.30 (+0.60%)
+- **Stop:** $2,035.58 (active GTC, 572816b1) — buffer 4.57% — HEALTHY
+- **Targets:** T1 $2,400 (+13.2%), T2 $2,550 (+20.3%)
+- **Action:** HOLD. Thesis intact. Stop at healthy buffer. ETH ETF outflows a watch item but do not break Glamsterdam thesis.
+- **R:R:** ~2.8:1 to T1 ($6.51 gain / $2.30 risk on 0.023541 ETH)
+
+**Idea 2 — XRP HOLD or EXIT WATCH (current position)**
+- **Catalyst:** CLARITY Act Senate floor vote pending. Memorial Day recess risk now material — if bill not cleared by ~May 26, timeline slips months.
+- **Current:** $1.37847 | Entry: $1.3962 | Unr. -$0.47 (-1.27%)
+- **Stop:** $1.3403 (active GTC, 7b145e72) — buffer 2.77% — watch closely
+- **Targets:** T1 $1.63 (+16.7%), T2 $1.75 (+25.4%)
+- **Action:** HOLD stop in place. Thesis technically intact — no adverse Senate developments confirmed. If price approaches stop (~$1.34), do NOT move stop lower. Thesis break = Senate vote fails or bill shelved; in that case reassess manually.
+- **R:R:** ~4.8:1 to T1 (unchanged from entry)
+
+**Idea 3 — Third Position (BTC) — Watch Only, No Entry**
+- **Trigger:** BTC sustained close above $80,000 (20-day MA) confirming OFFENSIVE regime flip
+- **Entry:** $80,000–$81,000 breakout on volume
+- **Stop:** 4% below entry (CAUTION mode until regime confirmed)
+- **Target:** $85,000–$88,000 (+5.6–10%)
+- **Available:** $44.82 cash; headroom ~$38.25 under 95% cap
+- **Blocker:** BTC currently $76,640 (~4.2% below trigger). CAUTION regime holds. S&P risk-off today. **No entry — watch only.**
+
+---
+
+### Risk Factors
+1. **PYTH $99.9M cliff unlock TODAY** — Largest DeFi unlock of the week; could spill into ETH/altcoin sector
+2. **ETH ETF outflows $255M this week** — Institutional selling weight on ETH; could pressure price toward stop
+3. **XRP CLARITY Act Memorial Day timeline** — If Senate doesn't vote before ~May 26 recess, thesis catalyst could be months delayed; sector already at 1 consecutive loss
+4. **S&P futures -0.57%** — Risk-off macro; broadly negative for crypto positioning today
+5. **XRP stop buffer 2.77%** — Thin; a -2.77% move from current $1.378 triggers stop at $1.3403
+6. **Both sectors at 1 consecutive loss** — One more stop-out on either ETH or XRP triggers sector pause per strategy rules
+7. **Fear & Greed 25–39** — Market in fear zone; no catalyst to reverse in near term
+8. **BTC below 20-day MA for 10+ consecutive days** — Regime stubbornly CAUTION; no regime upgrade in sight
+
+---
+
+### Decision: HOLD — No New Trades
+- Both existing positions holding with stops in place: ETH buffer healthy (4.57%), XRP buffer thin (2.77%)
+- No new entries: CAUTION regime + risk-off macro (S&P -0.57%) + PYTH unlock today + no BTC catalyst trigger
+- Watch: XRP CLARITY Act Memorial Day deadline approaching (~May 26); monitor for Senate floor vote news or adverse developments
+- Watch: ETH toward T1 $2,400 as Glamsterdam upgrade (June 2026) approaches; ETF outflows are noise not thesis-break
+- Third position trigger: BTC above $80,000 sustained — not in play today
