@@ -3520,3 +3520,26 @@ Both GTC stops confirmed active and covering correct quantities ✓
 - Weekly trades: 2/25 — capacity available if opportunity arises
 
 ---
+
+## 2026-05-19 — Midday Scan (session 3, ~16:10 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,109.89 | **-0.495%** | 3.52% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3640 | **-2.306%** | ⚠️ 1.74% | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $130.54 | Cash $44.82 (34.3%) | Long MV $85.72 | Day P&L: -$0.97 (-0.74%) vs last_equity $131.51
+**BTC Regime:** $76,490 — CAUTION (below est. 20-day MA ~$80,000); crash gate NOT triggered (~-0.7% vs yesterday)
+
+**STEP 3 — Cuts:** ETH -0.495%, XRP -2.306% — neither ≤-10%. No cuts.
+**STEP 4 — Stop tightening:** ETH -0.495%, XRP -2.306% — neither ≥+25%. Both GTC stops confirmed active (status: new), covering correct quantities. No adjustments.
+**STEP 5 — Thesis check:** ETH Glamsterdam June 2026 intact. XRP CLARITY Act: Senate Banking Committee voted 15–9 to advance; floor vote still pending; no adverse outcome. No protocol exploits or regulatory reversals. Theses INTACT.
+**STEP 6 — Perplexity (triggered):** XRP down -1.66% today to $1.364 with stop buffer below 2% critical floor — checked for adverse news. Result: no fresh negative catalyst; CLARITY Act advancing (15–9 Banking Committee vote); drop attributed to technical sell pressure / slip below $1.40 key support. XRP underperforming broad market but NO narrative break.
+
+**⚠️ XRP STOP BUFFER WARNING:** At 1.74%, buffer is below the 2% critical floor. Stop at $1.3403 — only $0.0237 above current price. Stop is NOT being moved down. Position remains open per strategy rules (no -10% cut trigger, thesis intact). Watch closely — if XRP breaks $1.3403 the stop fires automatically.
+
+**Third position:** Cash $44.82; BTC $76,490 still $3,510 below $80K trigger; no new catalysts found → blocked.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
