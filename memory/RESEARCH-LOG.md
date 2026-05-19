@@ -3189,3 +3189,25 @@ No notification sent — no crash gate or regime shift triggered. $1B+ ETF outfl
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-19 — Pre-Session Research (inline, no prior entry)
+
+**BTC Regime:**
+- BTC: bid $76,607 / ask $76,673 (mid ~$76,640) as of ~03:09 UTC
+- 24h change: ~-0.35% from May 18 session-open ($76,910 at 03:05 UTC) — well under 8% crash gate
+- Regime: **CAUTION** — BTC below est. 20-day MA ~$80,000; crash gate NOT triggered
+- Macro headwinds: US 30-year Treasury yield ~5% (risk-off), oil ~$125/bbl (risk-off)
+- BTC ETF flows: net outflows last week; NO confirmed inflow reversal (key trigger for 3rd position blocked)
+
+**Existing Position Thesis Check:**
+- **ETH/USD:** Glamsterdam upgrade June 2026 — no delays, cancellations, or adverse news in last 48h; no fresh positive catalyst either; thesis **INTACT**
+- **XRP/USD:** CLARITY Act — Senate Banking Committee 15-9 vote May 14 confirmed; Senate floor vote still pending; no adverse developments in last 48h; thesis **INTACT**
+
+**New Entry Screening:**
+- SOL, AVAX, LINK, DOT, ADA, MATIC/POL: no fresh high-conviction 24-48h catalyst found
+- BTC ETF inflow reversal: NOT confirmed → third position trigger blocked
+- Fear & Greed: not retrieved; macro environment (yields 5%, oil $125) indicates risk-off/caution
+
+**Decision: HOLD — No New Trades.** No qualifying catalyst; macro headwinds; CAUTION regime; BTC ETF trigger not confirmed.
+
+---
