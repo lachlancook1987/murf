@@ -161,6 +161,36 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
+## 2026-05-19 — Session-Open Scan (~19:05 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,114.20 | **-0.29%** | 3.72% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.434 | $1.3962 | $1.365 | **-2.24%** | **1.81% — ⚠️ CRITICAL** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $130.67 | Cash $44.82 (34.3%) | Long MV $85.85 | Last equity $131.51 | Day P&L: -$0.84 (-0.64%)
+**BTC:** $76,720 bid / $76,812 ask (mid ~$76,766) | 24h: ~-0.15% | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Hard checks:**
+- BTC crash gate: ~-0.15% 24h — CLEAR ✓
+- Emergency exits (≤-10%): ETH -0.29%, XRP -2.24% — none ✓
+- Stop tightening (≥+25%): neither qualifies — no adjustments ✓
+- Both GTC stops active and covering correct quantities ✓
+
+**Research:**
+- ETH Glamsterdam June 2026: no adverse news or delays → thesis INTACT
+- XRP CLARITY Act: Senate floor vote still pending; Memorial Day recess ~May 26 watch item → thesis INTACT
+- BTC ETF flows: no inflow reversal confirmed → third position trigger blocked
+- No new alt catalysts (SOL, AVAX, LINK, ADA) → no entry
+- Third position: cash $44.82 available; BTC $3,234 below $80K trigger → blocked
+
+**⚠️ XRP CRITICAL:** Stop buffer 1.81% from last price ($1.365); 1.45% from bid ($1.360). Below 2% critical floor. Stop trigger $1.3403 is $0.0247 away. DO NOT move stop lower. Key support $1.36–$1.38 must hold. CLARITY Act Memorial Day recess risk (~May 26) — thesis intact but time-sensitive.
+
+**Decision: HOLD — No New Trades.** No notification sent.
+
+---
+
 ### May 15 — EOD Snapshot [v3 — Final] (Day 5, Friday)
 **Portfolio:** $135.84 | **Cash:** $24.56 (18.1%) | **Day P&L:** -$2.69 (-1.94%) | **Phase P&L:** -$5.92 (-4.18%) | **vs BTC:** +0.54%
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
