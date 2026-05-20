@@ -3853,3 +3853,119 @@ CAUTION mode active. No new catalysts documented. DXY near red flag. XRP stop ex
 - ETH stop raise: trail to 4% below current if ETH clears $2,280+ (per CAUTION mode rules)
 
 ---
+
+## 2026-05-20 — Pre-Session Research (~17:00 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.08 |
+| Cash | $44.82 (34.2%) |
+| Buying Power | $44.82 |
+| Long Market Value | $86.26 |
+| Day P&L | -$0.43 (-0.33%) vs last_equity $131.51 |
+| Phase P&L | -$10.68 (-7.54%) vs $141.76 start (May 10) |
+| Weekly Trades | 2/25 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Today% | Stop | Buffer |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,126.14 | +0.27% | +0.55% | 572816b1 ($2,035.58/$2,015.22) ✓ | 4.26% ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3697 | -1.90% | +1.01% | 7b145e72 ($1.3403/$1.3269) ✓ | 2.14% ✓ |
+
+Both GTC stops active. XRP buffer recovered from 0.56% CRITICAL (session open) → 2.14% — out of critical zone.
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$76,633–$76,712 | -0.66% to +0.1% 24h; mid ~$76.6k |
+| BTC 24h change | ~-0.3% to -0.66% | Crash gate NOT triggered |
+| BTC 20-day MA | est. ~$80,000 | BTC ~$3,350 below MA → CAUTION |
+| ETH price | ~$2,107–$2,126 | Flat to -0.5% 24h; Alpaca +0.55% intraday |
+| XRP price | ~$1.36–$1.37 | +1.01% today; stop buffer 2.14% |
+| BTC Dominance | ~60.2–60.9% | Elevated — alt headwinds |
+| Fear & Greed | 25 (Fear) | Declining from 28 yesterday; above 10 — no 50% size cut |
+| BTC Funding | ~+0.0016% to +0.0148% | Near-zero positive — neutral, not overheated |
+| DXY | ~99.3 | Flat/slightly lower; neutral to mildly supportive (below 99.5 red flag) |
+| 10Y Treasury | ~4.69% | 16-month high — risk-off macro backdrop |
+| S&P 500 Futs | -0.4% to -0.7% | Modest risk-off; tech under pressure from yields |
+
+---
+
+### Regime Filter
+- **BTC 24h:** ~-0.3% to -0.66% → crash gate **NOT triggered** (threshold -8%)
+- **BTC vs 20-day MA:** ~$76,633 vs est. $80,000 → **BELOW MA → CAUTION mode**
+- **F&G:** 25 (Fear) — above 10; no extra 50% size reduction
+- **Funding:** near-zero positive — not overheated, does not restrict entries
+- **DXY:** 99.3 — below 99.5 red flag; neutral
+- **Mode: CAUTION — full universe, 25% size reduction on new entries, 4% stops (tightened)**
+
+---
+
+### Thesis Check
+| Position | Status | Notes |
+|---|---|---|
+| ETH Glamsterdam (Q3 2026) | INTACT | No cancellation; ePBS complex; short-term technicals bearish but 60%+ call OI bullish; pre-positioning window extended |
+| XRP CLARITY Act | INTACT | No Senate floor vote confirmed; Senate Banking Committee advanced May 2026; realistic June-July passage; no adverse developments |
+
+---
+
+### Key Catalysts Today
+1. **Nvidia earnings (post-market today)** — largest single risk-on/risk-off catalyst; miss = broad selloff including BTC/ETH/AI tokens; beat = potential risk-on rally
+2. **April FOMC minutes** — Fed tone on rates/inflation/liquidity; hawkish = yields stay elevated → crypto headwind; dovish = potential relief rally
+3. **Token unlocks this week**: PYTH ~2.13B tokens (May 19-21); POLY ~45M tokens May 20 (4.5% supply); STRK ~64M May 22 — none impact ETH or XRP directly
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH Nvidia Catalyst Add (post-earnings)**
+- Catalyst: Nvidia beats → risk-on rally; ETH above $2,200 with volume
+- Entry: $2,200+ breakout (next session open if overnight gap up)
+- Stop: 4% below entry (~$2,112) per CAUTION mode
+- Target: T1 $2,280 (1R), T2 $2,350 (2R), T3 $2,400
+- R:R: ~2.5–3:1 | Size: ~$28–30 notional (CAUTION headroom cap)
+- Trigger: Nvidia EPS beat confirmed + ETH holds above $2,200
+
+**Idea 2 — BTC FOMC Dovish Break**
+- Catalyst: FOMC minutes dovish → BTC breaks toward $78k–$80k
+- Entry: sustained hourly close above $78,000 on volume
+- Stop: 4% below entry (~$74,880) per CAUTION mode
+- Target: T1 $82,000 (1R — also regime flip level), T2 $85,000 (2R)
+- R:R: ~3:1 | Size: ~$28–30 notional (CAUTION headroom cap)
+- Trigger: FOMC minutes dovish + BTC hourly close above $78,000
+
+**Idea 3 — XRP Reclaim $1.40 (low priority)**
+- Catalyst: CLARITY Act Senate update or BTC strength spill-over
+- Entry: XRP holds $1.40 with volume (current $1.3697)
+- Stop: 4% below entry (~$1.344) per CAUTION mode
+- Target: T1 $1.46 (1R), T2 $1.54 (2R) | R:R: ~2:1
+- Rating: LOW — no confirmed catalyst; wait for Senate news; 2nd consecutive loss risk
+
+---
+
+### Risk Factors
+1. **Nvidia miss** → broad risk-off; could trigger XRP stop ($1.3403)
+2. **FOMC minutes hawkish** → yields hold at 16-month highs, DXY firms above 99.5
+3. **XRP stop risk** — 2.14% buffer; any dip below $1.3403 = 2nd loss → XRP sector PAUSE
+4. **ETH bearish technicals** — 50-day and 200-day MAs both falling; price below MAs
+5. **BTC dominance 60%+** — structural alt headwinds while BTC consolidates
+6. **10-year yield at 4.69%** — 16-month high; risk-asset pressure
+7. **F&G declining (28→25)** — sentiment deteriorating
+
+---
+
+### Decision: **HOLD — No New Entries (Pending Catalysts)**
+
+CAUTION mode active. Nvidia earnings (post-market) and FOMC minutes are the decisive macro events — no new entries before these resolve. Existing stops active and covering full quantities. Both theses intact. If Nvidia beats and ETH breaks $2,200 at next session open, Idea 1 is the primary entry. If FOMC is dovish and BTC clears $78k, Idea 2 triggers. XRP PAUSE threshold still alive — do not move XRP stop.
+
+**Watch Levels:**
+- XRP stop trigger: $1.3403 (auto-fire → 2nd loss → XRP sector PAUSE)
+- ETH stop: $2,035.58 (4.26% buffer — healthy)
+- ETH Nvidia catalyst entry: ETH above $2,200 + Nvidia EPS beat confirmed
+- BTC FOMC entry: BTC hourly close above $78,000 + dovish minutes
+- BTC regime flip: sustained close above ~$80,000 → OFFENSIVE mode
+
+---
