@@ -4107,3 +4107,135 @@ If Nvidia misses → HOLD, monitor ETH stop at $2,035.58.
 - XRP sector: PAUSED — no XRP/alt entries
 
 ---
+
+## 2026-05-20 — Pre-Session Research (late session, ~post-14:00 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.40 |
+| Cash | $48.09 (36.7%) |
+| Buying Power | $48.09 |
+| Long Market Value | $83.31 |
+| Day P&L | +$0.94 (+0.72%) vs last_equity $130.46 |
+| Phase P&L | ~-$10.36 (-7.31%) vs $141.76 start (May 10) |
+| Weekly Trades | 4/25 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Today% | Stop | Buffer |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,139.13 | +0.72% | +1.17% | 8fef13a1 ($2,065.13/$2,054.49) ✓ | 3.46% ✓ |
+
+One active stop order: ETH/USD stop_limit 8fef13a1 — trigger $2,065.13 / limit $2,054.49 / qty 0.038882 / GTC / status: new ✓.
+XRP sector PAUSED (2nd consecutive loss, stopped out at $1.366 earlier today).
+
+---
+
+### Live Quotes (Alpaca)
+| Asset | Current | Today Change |
+|---|---|---|
+| ETH/USD | $2,139.13 | +1.17% |
+| BTC/USD | ~$77,200–$77,400 | ~flat to -0.3% |
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$77,200–$77,400 | Flat to -0.3% 24h; crash gate NOT triggered |
+| BTC 20-day MA | **$78,768** (Barchart) | Revised from prior est. $80,000; BTC ~$1,350–1,600 below MA |
+| BTC vs MA | -1.8% to -2.0% | CAUTION mode (closer to flip than previously estimated) |
+| ETH price | $2,139.13 (Alpaca) | +1.17% today |
+| BTC Dominance | ~60.3% | Elevated; alt headwinds persist |
+| Fear & Greed | 25 (Fear) | Declining from 28 yesterday; above 10 — no extra 50% size cut |
+| BTC Funding Rate | ~+0.0016%/8h | Neutral — not overheated |
+| DXY | ~99.33 | Slightly below 99.5 red flag; mild crypto headwind |
+| S&P 500 Futures | ~7,374.50 (-0.05%) | Slightly negative; cautious ahead of Nvidia earnings |
+| 10Y Treasury | ~4.69% | 16-month high — risk-off macro pressure |
+| Nvidia Earnings | **PENDING post-market tonight** | Largest near-term risk-on/risk-off binary event |
+
+---
+
+### Regime Filter
+- **BTC 24h change:** ~flat to -0.3% → crash gate **NOT triggered** (threshold -8%)
+- **BTC vs 20-day MA:** $77,200 vs $78,768 → BTC **BELOW MA → CAUTION mode** (but gap narrowing — only ~$1,350–1,600 below)
+- **F&G:** 25 (Fear) — above 10; no extra 50% size reduction applies
+- **Funding:** +0.0016%/8h — neutral, no restriction
+- **DXY:** 99.33 — just below 99.5 red flag; monitor closely
+- **Mode: CAUTION — full universe, 25% size reduction on new entries, 4% stops**
+
+---
+
+### Thesis Check
+| Position | Status | Notes |
+|---|---|---|
+| ETH Glamsterdam (Q3 2026) | INTACT | "slow but steady"; devnets live; ePBS complex but not cancelled; 200M gas limit confirmed; Q3 2026 window valid; Schwab spot ETH trading (39M accounts, May 13); on-chain accumulation 140,000 ETH by large holders; tokenized Treasuries on ETH hit $8B record |
+
+---
+
+### Key Catalysts / Events
+1. **Nvidia Q1 FY2027 earnings (post-market tonight)** — consensus: ~$78.4B revenue / $1.76 EPS / ~$65B+ data center. Beat = broad risk-on rally (ETH/BTC breakout trigger); miss = risk-off selloff (ETH stop $2,065.13 at risk)
+2. **BTC 20-day MA revised lower ($78,768)** — BTC now only ~$1,400 below CAUTION→OFFENSIVE threshold; a moderate BTC rally toward $79k would begin regime transition
+3. **ETH on-chain accumulation ongoing** — 140k ETH bought by large holders recently; Schwab spot ETH live for 39M accounts
+4. **DXY 99.33** — staying below 99.5 red flag; if DXY breaks 99.5, new entries blocked
+5. **CLARITY Act** — no Senate floor vote; Senate Banking Committee advanced; realistic June–July 2026 passage; XRP sector PAUSED regardless
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH Nvidia Beat Add-On (primary trigger)**
+- Catalyst: Nvidia beats → risk-on → ETH clears $2,200 with volume
+- Entry: $2,200+ (next session open or confirmed overnight break)
+- Stop: 4% below entry (~$2,112) — CAUTION mode
+- Target: T1 $2,280 (1R), T2 $2,350 (2R), T3 $2,400
+- Size: ~$25–28 notional (CAUTION 25% reduction; total ETH stays under 65% cap)
+- R:R: ~2.5–3:1
+- Risk: ETH/L1 sector at 1 consecutive loss — 2nd stop-out pauses sector; Nvidia miss invalidates entry
+
+**Idea 2 — BTC Breakout on Risk-On (secondary)**
+- Catalyst: Nvidia beat → broad risk-on → BTC breaks $78,000 on volume (approaching 20-day MA $78,768)
+- Entry: BTC sustained hourly close above $78,000
+- Stop: 4% below entry (~$74,880) — CAUTION mode
+- Target: T1 $82,000 (also regime flip level, 1R+), T2 $85,000 (2R)
+- Size: ~$25–28 notional
+- R:R: ~3:1
+- Risk: BTC Core at 1 consecutive loss — 2nd stop-out pauses BTC sector; however $78k entry gives natural buffer to $78,768 MA (potential regime flip catalyst)
+
+**Idea 3 — SOL Momentum (cleanest sector)**
+- Catalyst: Nvidia beat → risk-on → SOL bounces; L2/DeFi sector at 0 consecutive losses
+- Entry: SOL at/above support on confirmed volume/momentum
+- Size: ~$22–25 notional (CAUTION mode)
+- R:R: ~2:1 (entry-dependent)
+- Advantage: cleanest sector (0 losses); any single loss does NOT trigger pause
+
+---
+
+### Risk Factors
+1. **Nvidia miss** → broad risk-off selloff; ETH stop $2,065.13 would be threatened (current $2,139, buffer 3.46%)
+2. **DXY break above 99.5** → new entries blocked per session rules; currently at 99.33
+3. **ETH/L1 sector at 1 consecutive loss** — another ETH stop-out pauses ETH/L1 entirely; current position alive but sector fragile
+4. **F&G declining (28→25)** — deteriorating sentiment; no entry block but indicates weak conviction
+5. **10Y Treasury at 4.69%** (16-month high) — sustained risk-off macro backdrop
+6. **BTC still below 20-day MA** — regime CAUTION locked; note MA revised lower to $78,768 (positive — closer to flip)
+7. **S&P 500 slightly negative** — cautious macro pre-Nvidia; could swing sharply post-earnings
+
+---
+
+### Decision: **HOLD — No New Entries Pending Nvidia Result**
+
+CAUTION mode. Nvidia post-market earnings are the decisive binary event for all 3 trade ideas. No new positions before earnings resolve:
+- **If Nvidia beats:** Priority 1 = ETH add-on above $2,200 (Idea 1); Priority 2 = BTC break above $78,000 (Idea 2); Priority 3 = SOL (Idea 3, cleanest sector)
+- **If Nvidia misses:** HOLD, protect ETH stop at $2,065.13; do not add risk
+
+Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime flip is now ~$1,400 closer than logged in prior sessions. This is constructive.
+
+**Watch Levels:**
+- ETH stop: $2,065.13 (3.46% buffer — healthy)
+- ETH Nvidia entry trigger: ETH above $2,200 + confirmed Nvidia EPS beat
+- BTC entry trigger: hourly close above $78,000 + Nvidia beat confirmed
+- DXY red flag: above 99.5 → block new entries
+- Regime flip: BTC sustained close above $78,768 → OFFENSIVE mode (revised from $80,000)
+- XRP sector: PAUSED — no XRP or top-50 alt entries
+
+---
