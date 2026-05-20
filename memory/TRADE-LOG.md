@@ -858,3 +858,22 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 | ETH/USD | 0.038882 | $2,123.79 | $2,129.77 | +0.72% | +$0.23 (+0.28%) | $2,065.13 / $2,054.49 |
 **Trades today:** XRP/USD SELL 26.4338 @ ~$1.34 (stop triggered; 2nd consec loss → XRP sector PAUSED), ETH/USD BUY 0.01538 @ $2,129.00 (user-directed add-on) | **Week:** 4/5
 **Notes:** XRP stop at $1.3403 triggered and filled at market (~$1.34), locking in second consecutive XRP loss and placing XRP sector on PAUSE. ETH add-on executed at user direction at $2,129.00, combining with prior 0.023541 ETH to create a full position of 0.038882 ETH at avg entry $2,123.79. ETH closed the day +0.72% with 3.04% stop buffer; unrealized P&L +$0.23. Combined stop 8fef13a1 (trigger $2,065.13 / limit $2,054.49) active and covers full 0.038882 qty. BTC moved +0.93% today ($76,763 → $77,480) — bot underperformed by -0.60% vs BTC. Day P&L positive at +$0.44 (+0.34%) despite XRP exit drag. BTC CAUTION regime (below est. 20-day MA ~$80,000) persists; crash gate clear. XRP sector: PAUSED. Tomorrow: hold ETH, no new positions until BTC reclaims $80k or ETH hits T1 ($2,280) / stop ($2,065.13).
+
+---
+
+## 2026-05-20 — Midday Scan (~11:09 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,131.20 | **+0.35%** | 3.10% | 8fef13a1 ($2,065.13/$2,054.49) ✓ |
+
+**Account:** Equity $130.96 | Cash $48.09 (36.7%) | Long MV $82.87 | Day P&L: +$0.50 (+0.38%) | Phase P&L: ~-$10.36
+**BTC:** $77,467 (≈ flat vs yesterday close $77,480 = -0.02%) | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+
+**STEP 3 — Cuts (≤-10%):** ETH +0.35% — no cut needed.
+**STEP 4 — Stop tightening (≥+25%):** ETH +0.35% — does not qualify. Stop 8fef13a1 confirmed active (status: new), covers correct qty 0.038882. No adjustments.
+**STEP 5 — Thesis check:** ETH Glamsterdam Q3 2026 intact (devnets live, 200M gas limit confirmed; no adverse news). No exploits, regulatory actions, or protocol failures. Thesis INTACT.
+**STEP 6 — Research:** No sharp/unexplained moves. ETH +0.35%, BTC -0.02% — both quiet. Nvidia Q1 FY2027 earnings still pending (US post-market, ~20:00 UTC). Perplexity returned limited live data; no new breaking crypto events identified. Prior research log (17:00 + 21:00 UTC entries) covers today's key risk factors and trade triggers. Skipping further research.
+**Note:** XRP position closed (stop-out). Single active position: ETH/USD 0.038882 @ avg $2,123.79. Stop buffer healthy at 3.10%. Watching Nvidia post-market: ETH above $2,200 on confirmed beat = add-on trigger (Idea 1 per pre-session research). BTC above $78,000 hourly close = BTC entry trigger (Idea 2). DXY last known 99.33 — below 99.5 red flag. Alts sector PAUSED.
+
+**Result: NO-OP. No trades. No notification sent.**
