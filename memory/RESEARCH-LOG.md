@@ -3752,3 +3752,104 @@ No new entries qualify. Both stops active. XRP auto-fire likely tonight.
 - Third position trigger: BTC above 20-day MA + documented catalyst
 
 ---
+
+## 2026-05-20 — Session-Open Research (~03:10 UTC)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $129.96 |
+| Cash | $44.82 (34.5%) |
+| Buying Power | $44.82 |
+| Long Market Value | $85.14 |
+| Day P&L | -$1.55 (-1.18%) vs last_equity $131.51 |
+| Phase P&L | -$11.80 (-8.33%) vs $141.76 start (May 10) |
+| Weekly Trades | 2/25 |
+
+**Open Positions:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,103.29 | -0.81% | 572816b1 ($2,035.58/$2,015.22) ✓ | 3.22% |
+| XRP/USD | 26.4338 | $1.3962 | $1.3478 | -3.47% | 7b145e72 ($1.3403/$1.3269) ✓ | ⚠️ **0.56% CRITICAL** |
+
+---
+
+### Live Quotes (Alpaca, ~03:05 UTC)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $76,530 | $76,594 | ~$76,562 |
+| ETH/USD | $2,103.63 | $2,105.92 | ~$2,104.78 |
+| XRP/USD | $1.3478 | $1.3520 | ~$1.3499 |
+
+---
+
+### Market Context (Perplexity)
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$76,562 (Alpaca) / ~$77,189 (Perplexity) | ~-0.2% to +0.4% 24h |
+| BTC 24h change | ~-0.3% (Alpaca: vs May 19 close $76,763) | Crash gate NOT triggered |
+| BTC 20-day MA | est. ~$80,000 | BTC ~$3,438 below MA |
+| ETH price | ~$2,103-2,104 | -0.53% today |
+| XRP price | ~$1.3478-1.3520 | -0.61% today; stop buffer CRITICAL (0.56%) |
+| Fear & Greed | 28 (Fear) | Not <10; no additional 50% size restriction |
+| DXY | ~99.4 | ⚠️ Approaching 99.5 red flag threshold; mild-to-moderate crypto headwind |
+| Macro | Higher US yields, firmer USD | Risk-off macro backdrop |
+
+---
+
+### Regime Filter
+- **BTC 24h change:** ~-0.3% → crash gate **NOT triggered** (threshold: -8%)
+- **BTC vs 20-day MA:** ~$76,562 vs est. $80,000 → BTC **BELOW MA → CAUTION mode**
+- **F&G:** 28 (Fear) — above 10, no additional 50% size reduction
+- **DXY:** 99.4 — approaching 99.5 red flag; risk-off headwind
+- **Mode: CAUTION — full universe, 25% size reduction on new entries, 4% stops**
+
+---
+
+### Thesis Check
+| Position | Status |
+|---|---|
+| ETH Glamsterdam (Q3 2026) | INTACT — "slow but steady" per Apr 10 Foundation checkpoint; ePBS trickier than anticipated; no cancellation or formal delay; pre-positioning window extended ~1-3 months from June → Q3 |
+| XRP CLARITY Act | INTACT — no Senate floor vote; bill passed House July 2025; Senate Banking Committee advanced version mid-May 2026; needs reconciliation with Agriculture Committee; realistic June-July 2026 passage; no adverse vote or block |
+
+---
+
+### Hard-Check Results (new entry screen)
+| Check | Result |
+|---|---|
+| Crash gate | CLEAR ✓ |
+| Total positions after hypothetical trade | 3/20 ✓ |
+| Weekly trades | 2/25 ✓ |
+| 95% cap headroom | $123.46 − $85.14 = $38.32 |
+| Catalyst documented | NONE — no new confirmed catalyst for any asset |
+| BTC regime | CAUTION — 25% size reduction, not blocked |
+| DXY | 99.4 — approaching red flag 99.5; additional caution warranted |
+| F&G | 28 (Fear) — above 10; no extra 50% cut, but fearful sentiment |
+| BTC ETF flows | Not confirmed reversed → third position trigger blocked |
+
+No qualifying entry: no documented catalyst, DXY elevated, fearful sentiment, CAUTION regime.
+
+---
+
+### Key Risks
+1. **XRP stop imminent** — $1.3478 current vs $1.3403 stop (0.56% buffer); likely to fire today; will be 2nd consecutive XRP loss → XRP sector enters PAUSE per strategy rules
+2. **ETH support** — ETH at $2,103, stop $2,035.58 (3.22% buffer); watching $2,100 level
+3. **DXY elevated (99.4)** — approaching 99.5 red flag; sustained USD strength = crypto headwind
+4. **F&G at 28 (Fear)** — sentiment weak; market skewing bearish
+5. **BTC well below 20-day MA** — CAUTION regime locked in; no offensive mode unless BTC clears ~$80,000 sustained
+6. **ETH Glamsterdam timing risk** — "slow but steady" + ePBS complexity could push Q3 2026 → later; thesis still valid but timeline uncertainty elevated
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+CAUTION mode active. No new catalysts documented. DXY near red flag. XRP stop expected to fire automatically (do NOT intervene — let stop work). If XRP stop fires: 2nd consecutive loss → XRP sector PAUSE. ETH thesis intact; stop buffer healthy.
+
+**Watch levels:**
+- XRP stop trigger: $1.3403 (auto-fire → XRP sector PAUSE)
+- ETH stop: $2,035.58 (3.22% buffer — healthy)
+- BTC regime flip: sustained close above ~$80,000 → OFFENSIVE mode; reconsider third position
+- New entry trigger: BTC above 20-day MA + documented catalyst + DXY below 99.5
+- ETH stop raise: trail to 4% below current if ETH clears $2,280+ (per CAUTION mode rules)
+
+---

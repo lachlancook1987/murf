@@ -782,3 +782,34 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No actions taken. No notification sent.**
 
 ---
+
+## 2026-05-20 — Session-Open Scan (~03:10 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,103.29 | **-0.81%** | 3.22% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3478 | **-3.47%** | ⚠️ **0.56% CRITICAL** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $129.96 | Cash $44.82 (34.5%) | Long MV $85.14 | Day P&L: -$1.55 (-1.18%) | Phase P&L: -$11.80 (-8.33%)
+**BTC:** mid ~$76,562 (bid $76,530 / ask $76,594) | 24h: ~-0.3% | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+**F&G:** 28 (Fear) | **DXY:** 99.4 (⚠️ approaching 99.5 red flag)
+
+**Hard checks:**
+- Crash gate: -0.3% 24h — CLEAR ✓
+- Emergency exits (≤-10%): ETH -0.81%, XRP -3.47% — none ✓
+- Stop tightening (≥+25%): neither qualifies ✓
+- Both GTC stops active and covering correct quantities ✓
+
+**Research:**
+- ETH Glamsterdam Q3 2026: "slow but steady" per Apr 10 Foundation checkpoint; ePBS complex; no cancellation — thesis INTACT
+- XRP CLARITY Act: no Senate floor vote; Senate Banking Committee advanced version mid-May 2026; reconciliation with Agriculture Committee still needed; realistic June-July 2026 — thesis INTACT
+- No new alt catalyst (SOL, AVAX, LINK, ADA, DOT) — third position blocked
+- BTC ETF flows: not confirmed reversed — third position trigger blocked
+- DXY 99.4 approaching 99.5 red flag — additional headwind
+
+**⚠️ XRP STOP CRITICAL (0.56%):** XRP at $1.3478 vs stop $1.3403. Stop auto-fire expected. If triggered: 2nd consecutive XRP loss → **XRP sector enters PAUSE**. Do NOT move stop down.
+
+**Decision: HOLD — No New Trades.** No notification sent.
+
+---
