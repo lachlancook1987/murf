@@ -877,3 +877,22 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Note:** XRP position closed (stop-out). Single active position: ETH/USD 0.038882 @ avg $2,123.79. Stop buffer healthy at 3.10%. Watching Nvidia post-market: ETH above $2,200 on confirmed beat = add-on trigger (Idea 1 per pre-session research). BTC above $78,000 hourly close = BTC entry trigger (Idea 2). DXY last known 99.33 — below 99.5 red flag. Alts sector PAUSED.
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+## 2026-05-20 — Midday Scan (~12:30 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,134.56 | **+0.51%** | 3.25% | 8fef13a1 ($2,065.13/$2,054.49) ✓ |
+
+**Account:** Equity $131.09 | Cash $48.09 (36.7%) | Long MV $83.00 | Last equity $130.46 | Day P&L: +$0.63 (+0.48%) | Phase P&L: -$10.67 (-7.53%)
+**BTC Regime:** CAUTION (below est. 20-day MA ~$80,000); crash gate NOT triggered.
+
+**STEP 3 — Cuts (≤-10%):** ETH +0.51% — no cut needed.
+**STEP 4 — Stop tightening (≥+25%):** ETH +0.51% — does not qualify. Stop 8fef13a1 confirmed active (status: new), covers 0.038882 ETH. No adjustments.
+**STEP 5 — Thesis check:** ETH Glamsterdam Q3 2026 intact (devnets live, 200M gas limit confirmed; no cancellation). No exploits, regulatory actions, or protocol failures. Thesis INTACT.
+**STEP 6 — Research (Perplexity):** Nvidia Q1 FY2027 earnings NOT yet reported as of scan time (scheduled post-market US ~20:00 UTC). No live crypto breakout or sharp move confirmed. ETH +0.95% intraday ($2,114.48 → $2,134.56) — orderly recovery, not a sharp/unexplained move. Entry trigger for ETH add-on (Idea 1) requires ETH above $2,200 on confirmed Nvidia beat — NOT yet met.
+**Note:** XRP sector PAUSED (2 consecutive losses). Single active position: ETH only. Stop buffer 3.25% — healthy. Watching for Nvidia post-market result; if ETH breaks $2,200 on a beat, add-on entry activates per pre-session Idea 1.
+
+**Result: NO-OP. No trades. No notification sent.**
