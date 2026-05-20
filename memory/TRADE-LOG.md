@@ -814,6 +814,21 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
+## 2026-05-20 — Session-Open Trade (~07:59 UTC)
+
+### 2026-05-20T07:59:43Z | ETH/USD | BUY | 0.01538 ETH | Entry: $2,129.00 | Stop: $2,065.13 / $2,054.49 | Open
+
+**Order ID (buy):** 57e2f99e-d3f4-4379-aafa-5fb37e3f2224
+**Stop Order ID:** 8fef13a1-7af4-43a4-8564-ce367a0d4047 (stop_limit: trigger $2,065.13, limit $2,054.49, qty 0.038882, GTC — covers combined ETH position)
+**Notional:** $32.74 (25% of $130.98 equity — user-directed sizing)
+**Target:** T1 $2,280 (~7.1%), T2 $2,350 (~10.4%), T3 $2,400 (~12.7%)
+**Stop level:** $2,065.13 (-3.00% from entry $2,129.00 — user-directed; limit $2,054.49)
+**R:R:** ~2.37:1 to T1 ($7.70 gain / $3.25 risk on 0.01538 ETH)
+**Thesis:** User-directed add-on to existing ETH position. ETH Glamsterdam upgrade Q3 2026 (devnets live, 200M gas limit floor confirmed); ETH ETF inflows ongoing. CAUTION regime (BTC below 20-day MA ~$80k). 25% equity sizing per user instruction.
+**Notes:** Previous stop 572816b1 ($2,035.58/$2,015.22, qty 0.023541) cancelled to clear wash-trade rejection; replaced with new combined stop 8fef13a1 covering full 0.038882 ETH at 3% below new fill. Combined ETH position: 0.023541 (@ $2,120.40) + 0.01538 (@ $2,129.00) = 0.038921 ETH avg entry ~$2,123.72. Stop moved up from $2,035.58 → $2,065.13 (favorable direction). ETH/L1 sector at 1 consecutive loss — a stop-out here triggers sector PAUSE. Weekly trade count: 4/25.
+
+---
+
 ## 2026-05-20 — Midday Scan (~12:00 UTC)
 
 | Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
