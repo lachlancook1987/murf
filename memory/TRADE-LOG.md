@@ -833,3 +833,34 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-20 — Session-Open Scan (~17:30 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,127.61 | **+0.34%** | 4.33% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3711 | **-1.80%** | ⚠️ **2.25%** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity $131.15 | Cash $44.82 (34.2%) | Long MV $86.33 | Phase P&L: ~-$10.61 (-7.49%)
+**BTC:** ~$77,282 (+0.42% 24h from $76,995 close) | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**Weekly trades:** 2/25 | **Positions:** 2/20
+
+**Pre-session research context (17:00 UTC):** Nvidia earnings (post-market tonight) and FOMC minutes are the decisive catalysts. No new entries before these resolve.
+
+**STEP 3 — Hard checks:**
+- BTC crash gate: +0.42% 24h → CLEAR ✓
+- BTC regime: CAUTION (BTC $2,718 below est. 20-day MA ~$80k) — 25% size reduction, 4% stops on new entries
+- Weekly trades: 2/25 → CLEAR ✓
+- Emergency exits (≤-10%): ETH +0.34%, XRP -1.80% — none ✓
+- Stop tightening (≥+25%): neither qualifies ✓
+
+**Entry conditions (from today's research):**
+- **ETH Nvidia catalyst add:** Requires ETH > $2,200 + Nvidia EPS beat confirmed → ETH at $2,127 — **NOT triggered**
+- **BTC FOMC dovish entry:** Requires BTC hourly close > $78,000 + dovish FOMC minutes → BTC at $77,282 — **NOT triggered**
+- **XRP:** Low priority, no confirmed CLARITY Act Senate update — **NOT triggered**
+
+**Note:** XRP continued recovery from 0.56% CRITICAL buffer at 03:10 UTC → 2.25% now. ETH stop buffer healthy at 4.33%. Both GTC stops active, covering correct quantities. Theses intact: ETH Glamsterdam Q3 2026; XRP CLARITY Act Senate floor vote June-July 2026.
+
+**Result: HOLD — No New Trades. No notification sent. No commit (no trades fired).**
+
+---
