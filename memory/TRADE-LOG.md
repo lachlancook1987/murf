@@ -813,3 +813,23 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Decision: HOLD — No New Trades.** No notification sent.
 
 ---
+
+## 2026-05-20 — Midday Scan (~12:00 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,115.68 | **-0.22%** | 3.79% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3550 | **-2.95%** | ⚠️ **1.09% — CRITICAL** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Account:** Equity ~$130.45 | Cash $44.82 (34.4%) | Long MV ~$85.63 | Phase P&L: ~-$11.31 (-7.98%)
+**BTC Regime:** CAUTION (below est. 20-day MA ~$80,000); crash gate NOT triggered.
+
+**STEP 3 — Cuts (≤-10%):** ETH -0.22%, XRP -2.95% — neither at threshold. No cuts.
+**STEP 4 — Stop tightening (≥+25%):** Neither qualifies. Both GTC stops confirmed active (status: new), covering correct quantities. No adjustments.
+**STEP 5 — Thesis check:** ETH Glamsterdam Q3 2026 intact; XRP CLARITY Act Senate floor vote pending (no adverse news). No protocol exploits or regulatory actions. Theses INTACT.
+**STEP 6 — Perplexity:** Skipped — no sharp/unexplained moves. ETH near flat today (+0.06% vs yesterday close $2,114.48); XRP essentially flat (-0.07% vs yesterday close $1.356). Prior session research covers all active risk factors.
+**Note:** XRP bounced from session-open low $1.3478 → $1.3550 (+0.54%); stop buffer improved from 0.56% (session open) to 1.09% (midday). Still CRITICAL — stop trigger $1.3403 is $0.0147 away. If triggered: 2nd consecutive XRP loss → XRP sector enters PAUSE per strategy rules. Stop NOT being adjusted — let it work. ETH holding with healthy 3.79% buffer.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
