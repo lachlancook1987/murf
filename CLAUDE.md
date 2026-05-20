@@ -44,6 +44,30 @@ for quotes or placing orders.
 
 `ALPACA_CRYPTO_DATA_ENDPOINT` is not set in this environment.
 
+## Kraken Script Commands (migration target)
+
+`scripts/kraken.sh` is a drop-in replacement for `alpaca.sh` targeting the Kraken spot API.
+
+Required env vars: `KRAKEN_API_KEY` and `KRAKEN_PRIVATE_KEY` (base64-encoded private key
+from Kraken API settings).
+
+Subcommands: `account`, `positions`, `orders`, `quote SYM/USD`, `assets [SYM/USD]`,
+`order '{json}'`, `close SYM/USD`, `cancel TXID`
+
+**Key differences from Alpaca:**
+- **Trailing stops are natively supported** — use `"type":"trailing_stop"` with
+  `"trail_percent":"3"` in the order JSON (e.g. 3% trailing stop).
+- Symbols use the same `ETH/USD` / `BTC/USD` format; `BTC/USD` is auto-translated
+  to `XBTUSD` internally.
+- ETC/USD and a much wider alt universe are available.
+- No paper trading environment — all orders execute against live funds.
+- Order IDs are called `txid` (not UUID); use txid for `cancel`.
+
+Order JSON is Alpaca-compatible. Trailing stop example:
+```json
+{"symbol":"ETH/USD","qty":"0.038882","side":"sell","type":"trailing_stop","trail_percent":"3","time_in_force":"gtc"}
+```
+
 ## Current Strategy Profile
 
 Aggressive profile (activated 2026-05-10). See `memory/TRADING-STRATEGY.md`.
