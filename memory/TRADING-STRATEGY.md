@@ -52,6 +52,6 @@ Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → 
 | BTC Core | BTC/USD | ACTIVE | 1 | Re-entry stopped out May 13 (-$1.62); at 1 of 2 pause threshold |
 | ETH / L1 | ETH/USD | ACTIVE | 1 | May 15 re-entry stopped out May 17-18 @ $2,155.13 (-$3.29); at 1 of 2 pause threshold; May 18 re-entry @ $2,120.40 |
 | L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — no outsized impact |
-| Alts (top 50) | Various | ACTIVE | 1 | XRP May 15 re-entry stopped out May 17-18 @ $1.3827 (-$1.75); at 1 of 2 pause threshold; May 18 re-entry @ $1.3962 |
+| Alts (top 50) | Various | **PAUSED** | **2** | XRP May 18 re-entry stopped out May 20 @ $1.366 (-$0.80, -2.14%); 2nd consecutive loss → PAUSE triggered |
 
-*Last updated: 2026-05-18 — Both ETH and XRP stopped out overnight May 17-18; both sectors now at 1 consecutive loss (1 of 2 pause threshold). Re-entered both at lower prices under CAUTION mode. BTC Core still at 1 loss (no BTC trade today). All sectors ACTIVE.*
+*Last updated: 2026-05-20 — XRP stopped out at $1.366 (market sell 07:42 UTC). 2nd consecutive loss for Alts/top-50 sector → PAUSED. No XRP or other alt entries until sector resets (2 consecutive winners elsewhere or manual override). ETH and BTC Core each at 1 loss (at pause threshold). L2/DeFi cleanest at 0 losses.*
