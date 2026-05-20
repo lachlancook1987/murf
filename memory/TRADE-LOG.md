@@ -757,3 +757,28 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-20 — Overnight Triage Check (~01:10 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.023541 | $2,120.40 | $2,110.14 | **-0.48%** | 3.53% | 572816b1 ($2,035.58/$2,015.22) ✓ |
+| XRP/USD | 26.4338 | $1.3962 | $1.3551 | **-2.94%** | ⚠️ **1.09% — CRITICAL** | 7b145e72 ($1.3403/$1.3269) ✓ |
+
+**Open orders (status: new):**
+- ETH/USD stop_limit 572816b1: covers 0.023541 ETH — valid ✓
+- XRP/USD stop_limit 7b145e72: covers 26.4338 XRP — valid ✓
+- No orphaned orders found.
+
+**Emergency exits (≤-10%):** None. ETH -0.48%, XRP -2.94% — both well within threshold.
+**Stop tightening (≥+25%):** None. No winners.
+**BTC Regime:** $76,732 (bar close 01:04 UTC) vs May 19 close $76,763 = **-0.04%** — flat overnight. Well under ±8% threshold. No regime alert. No crash gate.
+
+**⚠️ XRP STOP BUFFER CRITICAL (1.09%):** XRP slipped further overnight ($1.36041 → $1.3551). Stop trigger $1.3403 now only $0.0148 away. If triggered: XRP's 2nd consecutive loss → XRP sector enters PAUSE. Stop NOT being adjusted — let it work.
+
+**Notes:** ETH holding steady at -0.48% with healthy 3.53% buffer. XRP continued overnight weakness — buffer worsened from 1.48% (last scan) to 1.09%. BTC essentially flat overnight; no macro catalyst or regime shift. Both GTC stops confirmed active and covering correct quantities. Theses remain intact: ETH Glamsterdam Q3 2026 (timeline extended from June, thesis valid); XRP CLARITY Act Senate floor vote pending (no adverse developments, timing June-July 2026).
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
