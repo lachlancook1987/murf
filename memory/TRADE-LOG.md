@@ -877,3 +877,27 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Note:** XRP position closed (stop-out). Single active position: ETH/USD 0.038882 @ avg $2,123.79. Stop buffer healthy at 3.10%. Watching Nvidia post-market: ETH above $2,200 on confirmed beat = add-on trigger (Idea 1 per pre-session research). BTC above $78,000 hourly close = BTC entry trigger (Idea 2). DXY last known 99.33 — below 99.5 red flag. Alts sector PAUSED.
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+## 2026-05-20 — Session-Open Scan (late session, post-21:00 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,131.05 | **+0.34%** | 3.09% | 8fef13a1 ($2,065.13/$2,054.49) ✓ |
+
+**Account:** Equity $130.95 | Cash $48.09 (36.7%) | Long MV $82.86 | Weekly trades: 4/25
+**BTC:** $77,451 (+0.60% from May 19 close $76,995) | Regime: **CAUTION** (below est. 20-day MA ~$80,000) | Crash gate: NOT triggered
+**SOL/USD:** $84.94 (reference) | **ETH trigger:** $2,200+ (not met) | **BTC trigger:** $78,000+ (not met)
+
+**Hard checks:**
+- Crash gate: +0.60% 24h → CLEAR ✓
+- ETH add-on trigger (ETH >$2,200 + Nvidia beat): ETH $2,131 — **NOT triggered**
+- BTC entry trigger (BTC hourly close >$78,000): BTC $77,451 — **NOT triggered**
+- SOL entry (Nvidia beat + risk-on): Nvidia result unconfirmed, no catalyst trigger — **BLOCKED**
+- Alts: **PAUSED** — XRP 2nd consecutive loss (07:42 UTC today); no alt entries
+- Emergency exits (≤-10%): ETH +0.34% — none
+- Stop tightening (≥+25%): ETH +0.34% — does not qualify
+- ETH stop 8fef13a1 confirmed active (status: new), covers 0.038882 ETH ✓
+
+**Decision: HOLD — No New Trades.** All planned entry triggers (ETH $2,200+, BTC $78,000+) remain unmet. Nvidia earnings result unconfirmed; no catalyst trigger fired. Alts PAUSED. ETH thesis (Glamsterdam Q3 2026) intact; stop healthy at 3.09% buffer. No notification sent.
