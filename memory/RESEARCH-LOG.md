@@ -4479,3 +4479,133 @@ Size to conviction — no caps. Use `validate: true` on first order to confirm s
 - ✅ LINK/USD: 1.1533 LINK @ $9.616 — buy O2PYN3-HWML7-RQMNI3 | trailing stop OULSVN-3TUF5-PPM4YW (5%, stop $9.052) ✓
 - ZUSD remaining: $14.9855 (ZEC allocation idle — no replacement trade identified)
 
+---
+
+## 2026-05-21 — Pre-Session Research (Evening)
+
+### Account Snapshot
+
+**Kraken equity: ~$47.4 deployed | ZUSD: $0.087 (fully deployed)**
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Stop ID | Buffer |
+|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.2900 | $0.5006 | $0.5251 | **+4.89%** | $0.4988 (ratcheting) | OBLSOB-IGZY2-HFZXG7 (trail 5%) | ~5.0% |
+| LINK/USD | 1.1533 | $9.616 | $9.795 | **+1.86%** | $9.3498 | OULSVN-3TUF5-PPM4YW (trail 5%) | ~4.55% |
+| SOL/USD | 0.17211 | $85.90 | $87.39 | **+1.74%** | $83.51 | OAOOBG-DNG7C-B4WTH2 (trail 5%) | ~4.44% |
+
+**Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Current ~$77,670 | -0.31% | Stop a2b44cf9 (stop $74,793.86, limit $74,045.92) ✓ | Buffer ~3.70%
+
+**All trailing stops verified open and ratcheted up from prior session scans.**
+
+---
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC | ~$77,646 (+1.34% 24h, Kraken) |
+| ETH | ~$2,145 (+0.6–1.5% 24h) |
+| Fear & Greed | 29 (Fear) — improving from 27 yesterday |
+| BTC Funding Rate | +0.004–0.005%/8h (neutral, not overheated) |
+| Crash Gate | **NOT triggered** (BTC +1.34% 24h, well above -20% threshold) |
+
+**Top 24h gainers (cross-market):** BOBO +487%, RAVE +106%, MWC +68%, OPG +59%, JTO +28%, CORE +24.7%
+
+**Market catalysts:**
+- US regulatory momentum: CLARITY Act stablecoin legislation advancing, improving visibility
+- Real-world asset tokenization surging: $5.6B → $19B in tokenized assets over 12 months
+- Uniswap fee-sharing proposals driving DeFi rerating narrative
+- Corporate treasury staking/lending emerging as new catalyst for BTC/ETH/SOL holders
+
+**Token unlock risks today (2026-05-21):**
+- **PYTH:** Massive unlock — ~2.13B tokens (>$1B value) — **AVOID PYTH and correlated names**
+- **STRK:** ~64M tokens unlock May 22 tomorrow — **AVOID STRK**
+- **HYPE:** 14.2M tokens unlock May 29
+- Minor: GWEI, PLUME, PYBOBO, TA unlock today
+
+---
+
+### Open Position Thesis Review
+
+**JTO/USD (+4.89% from entry):**
+- Still in top 10 gainers (CoinMarketCap cross-exchange +28.33% 24h)
+- JTX consumer trading terminal July 2026 launch — catalyst intact
+- a16z $50M raise confirmed — Solana liquid staking narrative intact
+- Near-term target cluster $0.52–$0.56, downside risk $0.38–$0.43 on reversal
+- Trailing stop at $0.4988 (HWM ratcheting from $0.5244 to ~$0.5251 as price moves)
+- Spread confirmed 0.095% ✓ | **Thesis INTACT — HOLD, let trail run**
+
+**LINK/USD (+1.86% from entry):**
+- Current $9.795, HWM $9.842, resistance $9.70/$9.95/$10.07
+- RSI ~44–48 (neutral/weak), 7d -5–6.5% — near-term bearish-leaning
+- Long-term thesis (DTCC, SWIFT, Visa integrations) intact
+- Spread confirmed 0.030% ✓ | **Thesis INTACT — HOLD, let trail run**
+
+**SOL/USD (+1.74% from entry):**
+- Current $87.39 at 24h high zone ($87.90 HWM), support $85–$87
+- ETF net inflows ongoing; Firedancer 1.0 mainnet live; 30d model target ~$104
+- XRP cited as strongest near-term catalyst, but SOL narrative remains constructive
+- Spread confirmed 0.011% ✓ | **Thesis INTACT — HOLD, let trail run**
+
+---
+
+### New Trade Ideas
+
+> Account is fully deployed (ZUSD $0.087). New entries require leveraged margin against existing equity.
+
+**Idea 1 — HBAR/USD | 2x Leveraged Long**
+- **Catalyst:** Newly listed on Kraken (new listing premium); touching 24h high ($0.09018); 4.5M+ HBAR volume today; Hedera institutional adoption narrative (Google, IBM council members)
+- **Entry:** Market near $0.09016 (at day high — breakout confirmation)
+- **Stop:** `trailing_stop`, trail_percent 5 → initial trigger ~$0.08565
+- **Target:** T1 $0.0992 (+10%), T2 $0.1040 (+15%)
+- **R:R:** ~2:1 to T1
+- **Size:** ~$10 notional at 2x leverage (~$5 margin from equity)
+- **Pair:** HBAR/USD ✓ (online, margin 2x–5x supported)
+- **Spread:** 0.033% ✓
+- **Note:** Minimum order 55 HBAR (~$4.96). Execution requires confirming Kraken margin availability against existing spot equity.
+
+**Idea 2 — XRP/USD | 2x Leveraged Long**
+- **Catalyst:** Regulatory clarity narrative strongest near-term catalyst per research (CLARITY Act, stablecoin legislation); XRP cited as "most active catalyst" asset today; ultra-liquid
+- **Entry:** Market near $1.3747
+- **Stop:** `trailing_stop`, trail_percent 5 → initial trigger ~$1.306
+- **Target:** T1 $1.51 (+10%), T2 $1.58 (+15%)
+- **R:R:** ~2:1 to T1
+- **Size:** ~$15 notional at 2x leverage (~$7.50 margin from equity)
+- **Pair:** XRP/USD ✓ (online, margin up to 10x supported, ultra-tight spread)
+- **Spread:** 0.001% ✓
+- **Note:** Highly liquid; lowest execution risk of the new ideas.
+
+**Idea 3 — Let JTO Trail to Target**
+- JTO now +4.89% from entry, stop ratcheted up. If momentum continues toward $0.56 (T1), trailing stop will protect profits. No new capital needed — just let the existing position run.
+- If JTO closes above $0.55 today, consider whether to take partial profit manually.
+
+**Idea 4 — Tighten LINK Stop Manually (Optional)**
+- LINK sitting below HWM ($9.842), 7d trend weak. Could consider tightening trail from 5% → 3% to lock in more of the current small profit, given the bearish-leaning short-term technicals.
+- Upside: protects existing gain. Downside: risks early exit before a potential $10+ breakout.
+
+---
+
+### Risk Factors
+
+1. **Fully deployed capital** — all new entries require margin; rolling Kraken 4h fees compound on leveraged positions held overnight
+2. **Fear & Greed 29 (Fear)** — weak broad sentiment; favour catalyst-specific plays over macro-directional bets
+3. **PYTH mega-unlock today** — avoid PYTH and any PYTH-correlated positions; may bleed into Solana sentiment
+4. **STRK unlock tomorrow (May 22)** — avoid STRK
+5. **LINK 7d weakness** — slightly bearish technicals; trailing stop may close position before catalyst materialises
+6. **Alpaca BTC buffer 3.70%** — narrowing; further BTC drop of 3.7% triggers stop at $74,793.86; monitor but no action needed now
+7. **JTO stop very tight** — at 5.0% buffer while price is at HWM; any sharp reversal (micro-cap risk) could trigger exit; that is the intended behaviour
+
+---
+
+### Decision: TRADE
+
+**Crash gate: NOT triggered (BTC +1.34% 24h)**
+**Regime: Active — find best setups and enter**
+
+- **Primary:** Hold all three existing Kraken positions (JTO, LINK, SOL) — all in profit, all stops ratcheted up, theses intact. Let trailing stops run.
+- **New entry priority (leverage required):**
+  1. **XRP/USD 2x** — strongest regulatory catalyst, ultra-liquid, trivial execution risk
+  2. **HBAR/USD 2x** — new listing momentum, tight spread, touching day high
+- **Optional:** Tighten LINK trailing stop from 5% → 3% given bearish 7d technicals
+- **Avoid:** PYTH (massive unlock today), STRK (unlock tomorrow), CORE (not on Kraken)
+
