@@ -35,14 +35,10 @@ calls to `scripts/clickup.sh` continue to work unchanged.
 Required env vars: `WHATSAPP_PHONE` (international format, no `+`, e.g. `447911123456`)
 and `WHATSAPP_APIKEY` (received from CallMeBot on first activation).
 
-## Alpaca Script Commands
+## Primary Broker: Kraken
 
-`scripts/alpaca.sh` supports only: `account`, `positions`, `orders`
-
-No `quote` or `order` subcommands exist. Use `curl` directly against `$ALPACA_ENDPOINT`
-for quotes or placing orders.
-
-`ALPACA_CRYPTO_DATA_ENDPOINT` is not set in this environment.
+All new trading uses `scripts/kraken.sh`. See Kraken Script Commands below.
+Alpaca is legacy — one residual BTC position remains open with a stop, no new Alpaca trades.
 
 ## Kraken Script Commands
 
@@ -72,8 +68,8 @@ use TRADE-LOG.md for that).
 
 ## Current Strategy Profile
 
-Aggressive profile (activated 2026-05-10). See `memory/TRADING-STRATEGY.md`.
-Key parameters: max 65% per position, 95% total deployed, default stance = TRADE,
-stop = 5% fixed stop-limit (trailing_stop not supported for crypto on Alpaca;
-**use `scripts/kraken.sh` for native trailing-stop support**),
-hold gate = BTC down >8% in 24h.
+**Kraken** (primary): High-frequency, full universe, 2× leverage, trailing stops native.
+No regime filter, no sector pauses, no trade cap. See `memory/TRADING-STRATEGY.md` — Kraken Profile.
+
+**Alpaca** (legacy/wind-down): One residual BTC position with stop `a2b44cf9`.
+No new Alpaca trades. Monitor stop only.

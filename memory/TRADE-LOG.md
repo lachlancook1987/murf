@@ -979,3 +979,10 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Sector status:** ETH/L1: 0 losses (reset by profitable ETH close) | BTC Core: 1 loss | L2/DeFi: 0 losses | Alts: PAUSED
 
 ---
+
+## ── MIGRATED TO KRAKEN 2026-05-21 ──────────────────────────────────────────
+## All new trades below this line are Kraken. Alpaca entries above are archived.
+## Residual Alpaca position: BTC/USD 0.001619226 @ $77,910.27 | stop a2b44cf9
+## ─────────────────────────────────────────────────────────────────────────────
+
+

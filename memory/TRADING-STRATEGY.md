@@ -66,60 +66,8 @@ bash scripts/kraken.sh order '{"symbol":"SYM/USD","qty":"N","side":"sell","type"
 
 ---
 
-## ALPACA PROFILE (active when using scripts/alpaca.sh)
+## ALPACA PROFILE (archived — legacy wind-down only)
 
-## Universe
-- Crypto only — BTC, ETH, SOL, and alts in top 50 by market cap
-- No stocks, no options, no leverage >2x
-
-## BTC Regime Filter (mandatory gate)
-- **BTC down >8% in 24h** → Decision = HOLD, no new entries (genuine crash signal only)
-- **BTC below 20-day MA** → Caution mode: full universe still tradeable, reduce position sizes by 25%
-- **BTC above 20-day MA + neutral/positive funding** → Offensive mode: full universe, normal sizes
-
-## Position Sizing
-- Max single position: 65% of portfolio equity
-- Max total deployed: 95% of portfolio (keep ~5% cash for fees/slippage)
-- Risk per trade: 5-10% of portfolio equity
-
-## Entry Rules
-- Confirm catalyst (news, on-chain, technicals — at least one must be present)
-- Entry on pullback to key support, breakout with volume, OR momentum (strong trend + catalyst = valid market entry)
-- No chasing pumps >20% above base in a single session
-- Always set stop-loss immediately after fill
-
-## Exit Rules
-- Stop-loss: **fixed stop-limit 5% below entry**, placed immediately after fill confirmation
-  - Order type: `stop_limit` — stop trigger at 5% below entry, limit at 4.5% below entry
-  - ⚠️ `trailing_stop` order type is NOT supported for crypto on Alpaca — never use it
-  - Caution mode (BTC below 20-day MA): tighten to 4% below entry
-- Midday stop management (manual trailing via midday scan):
-  - Position up ≥40%: cancel existing stop-limit, place new one 5% below current price
-  - Position up ≥25%: cancel existing stop-limit, place new one 8% below current price
-  - Never move a stop down. Never tighten within 5% of current price.
-- Take profit: scale out at 1R, 2R, 3R
-
-## Risk Management
-- Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
-- Fear & Greed <10 → caution flag, reduce size by 50% (do NOT block entry entirely)
-- Fear & Greed >85 → no restriction, trade the greed
-- No trading during genuine market crashes (BTC >8% down 24h)
-
-## Indicators Tracked
-- BTC 20-day MA (regime filter)
-- Funding rate (positive = overheated longs)
-- Fear & Greed Index
-- BTC dominance (rising = alt headwinds)
-- DXY (inverse correlation to crypto)
-
-## Narrative Sectors
-Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → pause that sector.
-
-| Sector | Assets | Status | Consecutive Losses | Notes |
-|---|---|---|---|---|
-| BTC Core | BTC/USD | ACTIVE | 1 | Re-entry stopped out May 13 (-$1.62); at 1 of 2 pause threshold |
-| ETH / L1 | ETH/USD | ACTIVE | 1 | May 15 re-entry stopped out May 17-18 @ $2,155.13 (-$3.29); at 1 of 2 pause threshold; May 18 re-entry @ $2,120.40 |
-| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — no outsized impact |
-| Alts (top 50) | Various | **PAUSED** | **2** | XRP May 18 re-entry stopped out May 20 @ $1.366 (-$0.80, -2.14%); 2nd consecutive loss → PAUSE triggered |
-
-*Last updated: 2026-05-20 — XRP stopped out at $1.366 (market sell 07:42 UTC). 2nd consecutive loss for Alts/top-50 sector → PAUSED. No XRP or other alt entries until sector resets (2 consecutive winners elsewhere or manual override). ETH and BTC Core each at 1 loss (at pause threshold). L2/DeFi cleanest at 0 losses.*
+*Migrated to Kraken 2026-05-21. No new Alpaca trades. One residual position remains:*
+*BTC/USD 0.001619226 @ $77,910.27 | stop a2b44cf9 at $74,793.86 / $74,045.92 (GTC)*
+*Monitor stop only. When triggered or manually closed, Alpaca is fully retired.*
