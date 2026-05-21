@@ -1030,3 +1030,34 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **ZEC skipped:** AU trading restriction — EAccount:Invalid permissions:ZEC trading restricted for AU
 **Weekly trades (Kraken):** 2 (new week — first Kraken session trades)
 
+---
+
+## 2026-05-21 — Midday Scan
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.4902 | **-2.07%** | 3.77% | OBLSOB-IGZY2-HFZXG7 (trailing 5%, trigger $0.4718) ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.545 | **-0.74%** | 4.67% | OULSVN-3TUF5-PPM4YW (trailing 5%, trigger $9.099) ✓ |
+
+**Kraken equity:** ~$45.74 | ZUSD cash $14.99 (32.8%) | Long MV ~$30.75
+**BTC (Alpaca):** 0.001619 @ $77,910.27 | Current ~$77,159 | -0.97% | Stop a2b44cf9 ($74,793.86) ✓ | Buffer ~3.07%
+**Crash gate:** BTC +1.5% 24h — NOT triggered ✓ | Regime: CAUTION (BTC ~$77,159 vs 20-day MA $78,768)
+
+**STEP 3 — Trailing stops verified:**
+- JTO: OBLSOB-IGZY2-HFZXG7, covers 40.29 JTO, 5% trail, trigger $0.4718 — ✓
+- LINK: OULSVN-3TUF5-PPM4YW, covers 1.1533 LINK, 5% trail, trigger $9.099 — ✓
+No unprotected positions.
+
+**STEP 4 — Stop tightening:** JTO -2.07%, LINK -0.74% — neither up ≥+20%. No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **JTO:** No protocol exploit, rug pull, or regulatory action. NEW: a16z $50M raise confirmed (Solana liquid staking expansion); JTX trading app targeting July launch. Momentum thesis intact. Thesis INTACT. HOLD.
+- **LINK:** No exploit or adverse regulatory action. $18B Q1 2026 cross-chain volume; SWIFT/Visa/Robinhood/Aave integrations ongoing; DTCC integration expected later 2026. Thesis INTACT. HOLD.
+
+**STEP 6 — New entry scan:**
+- DASH: +16% at morning session, now $47.37 (below open $50.68, pulled back from $54.40 intraday high). Momentum faded — no entry.
+- BTC: $77,159 — still CAUTION (below 20-day MA $78,768). No regime flip. No entry.
+- No fresh intraday movers confirmed on Kraken. ZUSD $14.99 held idle — no qualifying setup found.
+
+**Result: NO-OP. No trades. No notification sent.**
+
