@@ -4609,3 +4609,136 @@ Size to conviction — no caps. Use `validate: true` on first order to confirm s
 - **Optional:** Tighten LINK trailing stop from 5% → 3% given bearish 7d technicals
 - **Avoid:** PYTH (massive unlock today), STRK (unlock tomorrow), CORE (not on Kraken)
 
+
+---
+
+## 2026-05-21 — Pre-Session Research (Session Start / Evening)
+
+### Account Snapshot
+
+**Kraken:**
+| Symbol | Qty | Entry | Current | P&L% | Trail | HWM | Trigger | Stop ID |
+|---|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.5210 | **+4.07%** | 5% | $0.5440 | $0.5168 | OBLSOB-IGZY2-HFZXG7 ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.697 | **+0.84%** | 5% | $9.8419 | $9.3498 | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $87.04 | **+1.33%** | 5% | $87.90 | $83.51 | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+Kraken equity: ~$47.23 | ZUSD: $0.087 (fully deployed, all new entries require 2x leverage)
+All trailing stops GTC ✓ | No unprotected positions
+
+**Alpaca (residual BTC):**
+BTC/USD 0.001619226 @ $77,910.27 | Current ~$77,586 (-0.42% from entry) | Stop a2b44cf9 ($74,793.86 stop / $74,045.92 limit) ✓ | Buffer 3.60%
+
+---
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC | ~$77,646 (+1.34% 24h) — crash gate NOT triggered ✓ |
+| ETH | ~$2,141 (+0.54% 24h) |
+| Fear & Greed | **29 (Fear)** |
+| BTC Funding Rate | +0.0043–0.0061%/8h (positive — longs pay shorts; mild bullish lean, not extreme) |
+
+**Top 24h gainers (cross-market):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38%, GWEI +30%, GUN +29%, ZA2Z +29%, ORCA +27%, CORE +25%
+
+**Key catalysts today:**
+- **CLARITY Act** advancing before Memorial Day recess; 55% chance signed into law 2026 (Polymarket) — strongest XRP catalyst
+- **Ethereum Glamsterdam** upgrade targeted June 2026 — early positioning building
+- **SUI:** CME Group futures (May 4), Grayscale Sui Trust S-1 filed, 21Shares 2x SUI ETF — institutional narrative strongest on board
+- **Tokenized RWA:** $5.6B → $19B in 12 months; structural macro tailwind
+- **Powell → Warsh Fed transition** (May 15): easier policy expected, BTC supportive
+- **Bitcoin ETF demand weakening** despite CLARITY Act progress — macro tailwind less strong than headline implies
+
+**Token unlock risks:**
+- **PYTH:** ~2.13B tokens today (~$100M) — **AVOID PYTH and PYTH-correlated names**
+- **HYPE:** 14.18M tokens unlock May 29 — monitor if holding into next week
+- Minor: GWEI, PLUME, PYBOBO, TA, INFRA, SKYA unlocking today
+
+---
+
+### Open Position Thesis Review
+
+**JTO/USD (+4.07%):**
+- Current $0.5210, HWM $0.5440, trigger $0.5168 — **buffer only 0.81% (very tight)**
+- 24h range $0.4853–$0.5526 — pulled back from high; stop ratcheted correctly
+- JTX consumer trading app July 2026 on track; a16z $50M raise; Jito Labs APAC expansion; SEC Crypto Task Force meeting (constructive)
+- Tight buffer is correct trail behavior after pulling back from $0.5526 high — potential auto-exit imminent
+- **Thesis INTACT — HOLD, let trail manage the exit**
+
+**LINK/USD (+0.84%):**
+- Current $9.697, HWM $9.8419, trigger $9.3498 — buffer 3.59%
+- 24h range $9.5124–$9.8425; short-term momentum weak (7d -5% to -18% depending on source)
+- CCIP v1.5 expansion, ZK rollup support roadmap, DTCC/SWIFT integration narrative intact
+- Bearish 7d technicals argue for tightening trail: 5% → 3% to protect small gain
+- **Thesis INTACT — HOLD. Consider tightening trail to 3% given 7d weakness**
+
+**SOL/USD (+1.33%):**
+- Current $87.04, HWM $87.90 (SOL at 24h high), trigger $83.51 — buffer 4.01%
+- Firedancer 1.0 mainnet live; BESO ETF staking flows; Circle minted ~500M USDC on Solana past 24h
+- Support $80–$84, resistance $90–$95; break above $90 opens $100+ target
+- **Thesis INTACT — HOLD, let trail run**
+
+---
+
+### New Trade Ideas (all leverage required — ZUSD $0.087)
+
+**Idea 1 — SUI/USD | 2x Leveraged Long (HIGH CONVICTION)**
+- **Catalyst:** CME Group SUI futures live (May 4, 2026); Grayscale Sui Trust S-1 filed; 21Shares 2x SUI ETF reference — strongest confirmed institutional catalyst on board today; Fusaka post-upgrade momentum; tokenized RWA narrative
+- **Entry:** Market ~$1.1124 (up +3.1% from $1.0786 open; still below session high $1.1639)
+- **Stop:** `trailing_stop`, trail_percent 5 → initial trigger ~$1.0568
+- **Target:** T1 $1.27 (+14%), T2 $1.40 (+26%)
+- **R:R:** ~2.8:1 to T1 (14% gain / 5% stop)
+- **Size:** ~$20 notional at 2x leverage (~$10 margin from equity)
+- **Pair:** SUI/USD ✓ (status: online, margin 2x–10x available)
+- **Spread:** 0.009% ✓ ($1.1123 / $1.1124)
+
+**Idea 2 — XRP/USD | 2x Leveraged Long (MEDIUM CONVICTION)**
+- **Catalyst:** CLARITY Act advancing before Memorial Day recess; Polymarket 55% signed 2026; XRP cited as "most active catalyst" asset; stablecoin legislation improving visibility; ultra-liquid pair
+- **Entry:** Market ~$1.3696 (range $1.3505–$1.3846, near midpoint)
+- **Stop:** `trailing_stop`, trail_percent 5 → initial trigger ~$1.3012
+- **Target:** T1 $1.51 (+10%), T2 $1.58 (+15%)
+- **R:R:** ~2:1 to T1 (10% gain / 5% stop)
+- **Size:** ~$15 notional at 2x leverage (~$7.50 margin from equity)
+- **Pair:** XRP/USD ✓ (status: online, margin up to 10x)
+- **Spread:** 0.001% ✓ ($1.36916 / $1.36926)
+
+**Idea 3 — HBAR/USD | 2x Leveraged Long (LOWER CONVICTION)**
+- **Catalyst:** Hedera institutional network (Google, IBM council members); recent Kraken listing momentum; current price $0.08972 near session high $0.0906
+- **Entry:** Market ~$0.08972
+- **Stop:** `trailing_stop`, trail_percent 5 → initial trigger ~$0.08523
+- **Target:** T1 $0.0992 (+10.6%), T2 $0.1040 (+15.9%)
+- **R:R:** ~2.1:1 to T1 (10.6% gain / 5% stop)
+- **Size:** ~$10 notional at 2x leverage (~$5 margin from equity)
+- **Pair:** HBAR/USD ✓ (status: online, margin up to 5x)
+- **Spread:** 0.033% ✓ ($0.089690 / $0.089720)
+
+**OMNI/USD — SKIP:** Spread 9.94%, only 10 trades in 24h — completely illiquid.
+
+---
+
+### Risk Factors
+
+1. **Fully deployed spot capital** — all new entries require margin; 4h Kraken rollover fees compound on leveraged holds
+2. **Fear & Greed 29 (Fear)** — weak broad sentiment; catalyst-specific plays only, avoid macro-directional bets
+3. **PYTH mega-unlock today** — 2.13B tokens (~$100M); avoid PYTH and PYTH-correlated positions
+4. **JTO buffer 0.81%** — near-certain auto-exit on any dip; correct stop behavior — profit locked at ~+3.24% worst case
+5. **LINK 7d bearish technicals** — possible early stop exit before catalyst materialises; tighten trail 5%→3% to protect small gain
+6. **BTC ETF flow weakness** — "demand weakening despite policy win" noted; macro tailwind may be overstated
+7. **Alpaca BTC buffer 3.60%** — narrowing; only $2,792 of BTC drop needed to hit stop; monitor but no action required
+
+---
+
+### Decision: TRADE
+
+**Crash gate: NOT triggered (BTC +1.34% 24h)**
+**Regime: Active — find best setups and enter**
+
+- **HOLD** JTO, LINK, SOL — all profitable, all trail-protected. JTO may auto-exit shortly (0.81% buffer).
+- **NEW ENTRIES (leverage — priority order):**
+  1. **SUI/USD 2x** — best institutional catalyst stack (CME futures + Grayscale S-1 + ETF); spread 0.009% ✓
+  2. **XRP/USD 2x** — CLARITY Act regulatory momentum; ultra-liquid; spread 0.001% ✓
+  3. **HBAR/USD 2x** — lower conviction; enter only if margin headroom allows after SUI/XRP
+- **OPTIONAL:** Tighten LINK trailing stop 5% → 3% to protect small gain given bearish 7d technicals
+- **AVOID:** PYTH (mega-unlock), HYPE (unlock May 29), OMNI (illiquid spread 9.94%)
+
