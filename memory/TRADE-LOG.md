@@ -963,3 +963,26 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **BTC spread:** 0.125% ✓ | **Stop:** active (new) ✓
 **Sector status:** BTC Core ACTIVE (1 consec loss), ETH/L1 ACTIVE (1 consec loss), L2/DeFi ACTIVE (0), Alts PAUSED (2)
 **Notes:** User rotated ETH→BTC via dashboard. ETH closed at +$0.49 gain. BTC position entered at $77,910 (below $78,768 regime-flip MA — user conviction entry). Nearly fully deployed; no bot entries possible. BTC stop 4% below entry (CAUTION mode). Watch: BTC close above $78,768 → regime flip to OFFENSIVE; BTC stop trigger $74,793 = 2nd BTC loss → BTC sector PAUSE.
+
+---
+
+## 2026-05-21 — ETH/USD Liquidation (Kraken, user-directed)
+
+### 2026-05-21 | ETH/USD | SELL (close) | 0.021824 ETH | ~$2,118 | Kraken
+
+**Order ID:** O2XHRE-CQGBY-ORSSX3 (market sell, user-directed)
+**Stop cancelled:** ORLN5M-EKNJU-74J7OZ (trailing stop +5%, trigger $2,021.05) — cancelled prior to market sell ✓
+**Qty:** 0.021824 ETH
+**Approx exit price:** ~$2,118 ($46.2439 proceeds ÷ 0.021824)
+**Proceeds:** $46.2439 ZUSD
+
+**Kraken account post-close:**
+| Asset | Balance |
+|---|---|
+| ZUSD | $46.2439 |
+| XETH | 0.000000 |
+| XXBT | 0.000000 |
+| Equity | $46.24 |
+
+**Status:** Fully liquid. $46.24 ZUSD available for new entries.
+
