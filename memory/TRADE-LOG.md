@@ -915,3 +915,13 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Note:** XRP sector PAUSED (2 consecutive losses). Single active position: ETH only. Stop buffer 3.25% — healthy. Watching for Nvidia post-market result; if ETH breaks $2,200 on a beat, add-on entry activates per pre-session Idea 1.
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+### May 21 — EOD Snapshot (Day 12, Thursday)
+**Portfolio:** $131.04 | **Cash:** $48.09 (36.7%) | **Day P&L:** -$0.33 (-0.25%) | **Phase P&L:** -$10.72 (-7.56%) | **vs BTC:** -0.75%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.80 | $2,133.46 | -0.39% | +$0.38 (+0.46%) | $2,065.13 / $2,054.49 |
+**Trades today:** none | **Week:** 4/5
+**Notes:** Quiet no-trade day. ETH gave back -0.39% intraday ($2,141.80 → $2,133.46) while BTC edged up +0.50% ($77,480 → $77,871), causing -0.75% underperformance vs BTC. Portfolio declined -$0.33 (-0.25%). Stop buffer on ETH 3.20% (current $2,133.46 vs trigger $2,065.13) — healthy. BTC CAUTION regime persists (below est. 20-day MA ~$80,000); XRP sector PAUSED (2 consecutive losses). Phase P&L: -$10.72 (-7.56%). Week ends at 4/5 trades. Tomorrow: hold ETH, no new positions until BTC reclaims $80k; watch ETH above $2,200 as potential add-on signal.
