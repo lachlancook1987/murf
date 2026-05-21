@@ -944,3 +944,38 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Decision: HOLD — No New Trades.** All entry triggers unmet. ETH stop buffer 2.86% (healthy; above 2% critical floor). Cash $48.09 preserved. No notification sent.
 
 ---
+
+## 2026-05-21 — User-Directed Trades (~09:07–09:09 UTC)
+
+### 2026-05-21T09:07Z | ETH/USD | SELL (close, user dashboard) | 0.038882 ETH | Exit: $2,136.40
+
+**Realised P&L:** +$0.49 (+0.59%) on avg entry $2,123.79
+**Stop cancelled:** 8fef13a1 auto-cancelled by Alpaca on position close ✓
+**Sector update:** ETH/L1 had 1 consecutive loss → this WIN resets ETH/L1 consecutive loss counter to **0**
+**Note:** User-initiated dashboard market sell. Bot had no active trigger for ETH close at this level.
+
+---
+
+### 2026-05-21T09:09Z | BTC/USD | BUY (user dashboard) | 0.001619226 BTC | Entry: $77,910.27 | Stop: $74,793.86 / $74,045.92 | Open
+
+**Order ID (buy):** (dashboard/notional — no bot order ID)
+**Stop Order ID:** a2b44cf9-d17c-4c2c-9150-6528f5d06ab6 (stop_limit: trigger $74,793.86, limit $74,045.92, qty 0.001619, GTC — placed by bot 09:17 UTC)
+**Notional:** ~$126.15 (~96.7% equity $130.44 — ⚠️ exceeds 95% max deployed; user-directed)
+**Target:** user discretionary
+**Stop level:** $74,793.86 (-4.00% from entry — CAUTION mode; limit $74,045.92)
+**R:R:** n/a (no target set)
+**Thesis:** User-directed. BTC approaching 20-day MA ($78,768) from below; regime flip constructive. Kraken deposit pending — possible bridge position.
+**Notes:** ETH closed profitably (+$0.49) then proceeds plus cash deployed into BTC. BTC Core sector at 1 consecutive loss — another stop-out pauses BTC Core sector. Trailing stop not supported for crypto on Alpaca; 4% CAUTION-mode fixed stop_limit placed. Stop covers 0.001619 of 0.001619226 total qty (0.000000226 uncovered due to Alpaca minimum rounding). Weekly trade count: 6/25.
+
+---
+
+### May 21 — Mid-Session Snapshot
+**Portfolio:** $130.44 | **Cash:** $4.48 (3.4%) | **Deployed:** 96.6%
+| Symbol | Qty | Entry | Price | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| BTC/USD | 0.001619226 | $77,910.27 | $77,789 | -$0.20 (-0.16%) | a2b44cf9: $74,793.86 / $74,045.92 (buf 3.99%) |
+**Trades today:** ETH close +$0.49 (user), BTC buy (user), BTC stop placed (bot) | **Week:** 6/25
+**BTC regime:** $77,789 vs 20-day MA ~$78,768 = CAUTION (buf $979 = 1.3%)
+**Sector status:** ETH/L1: 0 losses (reset by profitable ETH close) | BTC Core: 1 loss | L2/DeFi: 0 losses | Alts: PAUSED
+
+---
