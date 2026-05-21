@@ -4239,3 +4239,42 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 - XRP sector: PAUSED — no XRP or top-50 alt entries
 
 ---
+
+## 2026-05-21 — Midday Scan (~05:15 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,143.90 | **+0.95%** | 3.67% | 8fef13a1 ($2,065.13/$2,054.49) ✓ |
+
+**Account:** Equity ~$131.47 (est.) | Cash $48.09 (36.6%) | Long MV $83.36 | Phase P&L: ~-$10.29
+**BTC:** $78,065 (+0.76% vs yesterday close $77,480) | Regime: **CAUTION** (below 20-day MA ~$78,768 by $703) | Crash gate: NOT triggered
+**DXY:** ~99.33 (last known — below 99.5 red flag; new entries not blocked)
+
+### Nvidia Q1 FY2027 Post-Earnings Assessment
+- **Result:** BEAT — Revenue $81.62B (est. $79.0B), EPS $1.87 (est. $1.78), Gross margin 75.0%
+- **Q2 Guidance:** $91B revenue, 75% gross margin (strong)
+- **Data Center:** Record $60.4B — sharply higher
+- **Dividend:** raised from $0.01 → $0.25; $80B buyback authorized
+- **NVDA stock reaction:** Down -1.3% in after-hours ($223.47 → $220.66) — "sell the news" / China export ceiling concern
+- **Implication for trade ideas:** Nvidia beat is confirmed, but risk-on rally did NOT materialize — NVDA fell despite strong beat. BTC at $78,065 (above Idea 2 trigger of $78k) but "sustained hourly close" criterion still being evaluated. Full risk-on rally thesis weakened by muted NVDA reaction.
+
+### Trade Idea Status (Post-Nvidia)
+| Idea | Status | Notes |
+|---|---|---|
+| Idea 1 — ETH add-on above $2,200 | **NOT TRIGGERED** | ETH at $2,143.90 — $56 below $2,200 trigger; Nvidia beat confirmed but no ETH breakout |
+| Idea 2 — BTC breakout above $78,000 | **PARTIAL** | BTC at $78,065 (above $78k); Nvidia beat confirmed; but NVDA -1.3% AH = muted risk-on; need sustained close above $78k AND regime conviction before entry |
+| Idea 3 — SOL momentum (cleanest sector) | **WATCHING** | CAUTION regime; no new L2/DeFi entries unless BTC regime confirms |
+
+**STEP 3 — Cuts (≤-10%):** ETH +0.95% — no cut.
+**STEP 4 — Stop tightening (≥+25%):** ETH +0.95% — does not qualify. Stop 8fef13a1 ($2,065.13/$2,054.49) active, qty 0.038882, status: new. No adjustments.
+**STEP 5 — Thesis check:** ETH Glamsterdam Q3 2026 intact. No protocol exploits, token unlocks, or adverse regulatory actions reported. Thesis INTACT.
+**STEP 6 — Research (Perplexity):** Nvidia Q1 FY2027 confirmed beat (revenue + EPS); but NVDA AH reaction -1.3% dampens risk-on thesis. ETH at $2,143.90 — below $2,200 trigger. BTC at $78,065 — approaching 20-day MA flip at $78,768 ($703 away = 0.9%). Regime flip constructive but not yet.
+
+### BTC Regime Update
+- Current: $78,065 | 20-day MA: ~$78,768 | Gap: $703 (0.9%)
+- Still CAUTION. Regime flip to OFFENSIVE would: remove 25% size reduction, revert stops to 5% from 4%, allow full position sizing.
+- No new entries today — Nvidia beat not producing the price breakout needed to confirm Idea 1 or Idea 2.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
