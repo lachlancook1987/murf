@@ -915,3 +915,32 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **Note:** XRP sector PAUSED (2 consecutive losses). Single active position: ETH only. Stop buffer 3.25% — healthy. Watching for Nvidia post-market result; if ETH breaks $2,200 on a beat, add-on entry activates per pre-session Idea 1.
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+## 2026-05-21 — Session-Open Scan (~07:05 UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,126 (mid) | **+0.11%** | **2.86%** | 8fef13a1 ($2,065.13/$2,054.49) ✓ |
+
+**Account:** Equity $130.84 | Cash $48.09 (36.7%) | Long MV $82.75 | Last equity $131.37 | Day P&L: -$0.53 (-0.40%)
+**BTC:** mid ~$77,530 (bid $77,485 / ask $77,575) | 20-day MA: $78,768 | Gap: -$1,238 (-1.6%) | Regime: **CAUTION** | Crash gate: NOT triggered
+**Weekly trades:** 4/25 | **Positions:** 1/20 | **Sectors:** ETH/L1 ACTIVE (1 loss), BTC Core ACTIVE (1 loss), L2/DeFi ACTIVE (0 losses), Alts: **PAUSED**
+
+**STEP 3 — Hard checks:**
+- BTC crash gate (>8% down 24h): ~-0.2% → CLEAR ✓
+- BTC regime: CAUTION (BTC $1,238 below 20-day MA $78,768) ✓
+- Stop tightening (≥+25%): ETH +0.11% → does not qualify ✓
+- Emergency exits (≤-10%): ETH +0.11% → not applicable ✓
+- Stop 8fef13a1 confirmed active (status: new), covers 0.038882 ETH ✓
+
+**Trigger status (pre-session plan):**
+- Idea 1 — ETH add-on above $2,200: ETH at $2,126 → **NOT TRIGGERED** (-$74 gap)
+- Idea 2 — BTC long above $78,768 (regime flip): BTC at $77,530 → **NOT TRIGGERED** (-$1,238 gap)
+- Idea 3 — SOL momentum (BTC regime required): BTC below MA → **BLOCKED**
+- Alts sector: **PAUSED** — no new entries
+
+**Decision: HOLD — No New Trades.** All entry triggers unmet. ETH stop buffer 2.86% (healthy; above 2% critical floor). Cash $48.09 preserved. No notification sent.
+
+---
