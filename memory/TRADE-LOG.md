@@ -986,3 +986,47 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 **Status:** Fully liquid. $46.24 ZUSD available for new entries.
 
+---
+
+## 2026-05-21 — Session-Open Trades (Kraken, bot)
+
+### 2026-05-21T10:27:45Z | JTO/USD | BUY | 40.2900 JTO | Entry: $0.5006 | Trailing Stop: $0.4718 | Open
+
+**Order ID (buy):** OPI2Y3-HQVY4-CKSAFE (market buy, spot)
+**Trailing Stop Order ID:** OBLSOB-IGZY2-HFZXG7 (trailing-stop sell, trail -5%, stop $0.471790, HWM $0.496620, GTC ✓)
+**Notional:** $20.17 (43.6% of $46.24 Kraken equity — spot, no margin; JTO has no leverage available)
+**Effective fill price:** $0.5006 ($20.1689 ZUSD ÷ 40.2900)
+**Stop level:** $0.4718 (5% trailing below HWM $0.49662)
+**Target:** T1 $0.5607 (+12%), T2 $0.5908 (+18%)
+**R:R:** ~2.4:1 to T1; ~3.6:1 to T2 (5% stop)
+**Thesis:** Solana liquid staking momentum; JTO +28% 24h at research time (pulled back to $0.497 at execution — lower entry vs peak); Solana ecosystem institutional embrace (Schwab, BESO ETF); Firedancer 1.0 on mainnet; tight spread 0.60% ✓
+**Notes:** ZEC/USD was second planned trade but blocked (EAccount: ZEC trading restricted for AU). Trailing stop is GTC and self-manages downside. LINK trade follows.
+
+---
+
+### 2026-05-21T10:30:38Z | LINK/USD | BUY | 1.1533 LINK | Entry: $9.616 | Trailing Stop: $9.052 | Open
+
+**Order ID (buy):** O2PYN3-HWML7-RQMNI3 (market buy, spot)
+**Trailing Stop Order ID:** OULSVN-3TUF5-PPM4YW (trailing-stop sell, trail -5%, stop $9.051950, HWM $9.528360, GTC ✓)
+**Notional:** $11.09 (24.0% of $46.24 Kraken equity — spot)
+**Effective fill price:** $9.616 ($11.0895 ZUSD ÷ 1.1533)
+**Stop level:** $9.052 (5% trailing below HWM $9.528)
+**Target:** T1 $10.578 (+10%), T2 $11.059 (+15%)
+**R:R:** ~2.0:1 to T1; ~3.0:1 to T2 (5% stop)
+**Thesis:** DeFi throughput tailwind from Ethereum Glamsterdam upgrade Q3 2026; breakout candidate; Chainlink AWS Marketplace listing + SWIFT 2025 winner — institutional DeFi bridge narrative; tight spread 0.085% ✓
+**Notes:** Spot only (2x leverage available but not used — sizing designed for full-equity spot deployment). Stop self-manages.
+
+---
+
+### 2026-05-21 — Session-Open Snapshot (post-trades)
+**Kraken equity:** ~$46.24 deployed | **ZUSD remaining:** $14.9855 (32.4% idle — ZEC skipped due to AU restriction)
+| Symbol | Qty | Entry | Trailing Stop | Stop ID | Stop Level | Target |
+|---|---|---|---|---|---|---|
+| JTO/USD | 40.2900 | $0.5006 | 5% | OBLSOB-IGZY2-HFZXG7 | $0.4718 | T1 $0.5607 |
+| LINK/USD | 1.1533 | $9.616 | 5% | OULSVN-3TUF5-PPM4YW | $9.052 | T1 $10.578 |
+
+**Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Stop a2b44cf9 ($74,793.86) active ✓
+**Crash gate:** BTC ~-0.47% 24h — clear ✓
+**ZEC skipped:** AU trading restriction — EAccount:Invalid permissions:ZEC trading restricted for AU
+**Weekly trades (Kraken):** 2 (new week — first Kraken session trades)
+
