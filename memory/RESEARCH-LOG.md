@@ -4421,3 +4421,59 @@ New entry priority (leverage required):
 
 Size to conviction — no caps. Use `validate: true` on first order to confirm structure before submitting.
 
+
+---
+
+## PENDING ORDERS — EXECUTE AT NEXT SESSION OPEN
+
+*Set: 2026-05-21. Status: AWAITING EXECUTION. Clear this section once all orders are placed.*
+
+**Context:** Kraken account liquidated ETH position → $46.24 ZUSD fully liquid. Three ideas identified from pre-session research. Execute all three at session open in priority order. Run `kraken.sh quote` and `kraken.sh assets` for each before placing to confirm spread ≤1% and pair online at time of execution.
+
+---
+
+### Order 1 — JTO/USD (Priority: HIGH)
+- **Catalyst:** +28% 24h Solana liquid staking momentum; top Kraken gainer; tight spread confirmed 0.14%
+- **Size:** ~$20 notional (~43% of Kraken equity)
+- **Stop:** trailing_stop, trail_percent 5
+- **Target:** +12–18%
+- **Execution steps:**
+  1. `bash scripts/kraken.sh quote JTO/USD` — confirm spread ≤1%
+  2. Calculate qty: $20 ÷ current ask price
+  3. Place order:
+```json
+{"symbol":"JTO/USD","side":"buy","type":"trailing_stop","qty":"<qty>","trail_percent":5}
+```
+
+### Order 2 — ZEC/USD (Priority: HIGH)
+- **Catalyst:** +18% 24h privacy narrative momentum; excellent spread 0.03%
+- **Size:** ~$15 notional (~32% of Kraken equity)
+- **Stop:** trailing_stop, trail_percent 5
+- **Target:** +12–15%
+- **Execution steps:**
+  1. `bash scripts/kraken.sh quote ZEC/USD` — confirm spread ≤1%
+  2. Calculate qty: $15 ÷ current ask price
+  3. Place order:
+```json
+{"symbol":"ZEC/USD","side":"buy","type":"trailing_stop","qty":"<qty>","trail_percent":5}
+```
+
+### Order 3 — LINK/USD (Priority: MEDIUM)
+- **Catalyst:** DeFi throughput tailwind from Ethereum upgrades; breakout candidate; spread 0.02%
+- **Size:** ~$11 notional (~24% of Kraken equity; remainder of equity)
+- **Stop:** trailing_stop, trail_percent 5
+- **Target:** +10–15%
+- **Execution steps:**
+  1. `bash scripts/kraken.sh quote LINK/USD` — confirm spread ≤1%
+  2. Calculate qty: $11 ÷ current ask price
+  3. Place order:
+```json
+{"symbol":"LINK/USD","side":"buy","type":"trailing_stop","qty":"<qty>","trail_percent":5}
+```
+
+---
+
+**After all three placed:** delete this PENDING ORDERS block (or mark EXECUTED) and log each fill in TRADE-LOG.md.
+**If spread on any pair >1% at execution time:** skip that pair, hold remaining ZUSD.
+**Crash gate check before executing:** if BTC down >20% in 24h → abort all orders.
+
