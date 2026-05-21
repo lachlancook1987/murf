@@ -4281,29 +4281,38 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 
 ---
 
+---
+
 ## 2026-05-21 — Pre-Session Research
 
 **DATE:** 2026-05-21 | **CRASH GATE:** NOT triggered (BTC +1.0–1.5% 24h) | **STANCE: TRADE**
+
+---
 
 ### Account Snapshot
 
 **Kraken (primary):**
 
-| Field | Value |
-|---|---|
-| XBT balance | 0.00061053 (~$47.36 at $77,568) |
-| USD cash (ZUSD) | $0.00 |
-| Open positions | None |
-| Open orders | None |
-| Equity | ~$46.89 |
+| Asset | Balance | Value (~) |
+|---|---|---|
+| XETH | 0.021824 ETH | ~$46.39 @ $2,126.71 |
+| XXBT | 0.000000 | $0.00 |
+| ZUSD | $0.21 | $0.21 |
+| **Equity** | | **~$46.61** |
+
+**Open Kraken orders:**
+| Order ID | Side | Pair | Type | Qty | Stop Trigger | HWM | Status |
+|---|---|---|---|---|---|---|---|
+| ORLN5M-EKNJU-74J7OZ | sell | ETH/USD | trailing-stop +5% | 0.02180 | $2,021.05 | $2,127.42 | open ✓ |
+
+**ETH trailing stop:** trails 5% below high-water mark. HWM $2,127.42 → stop trigger $2,021.05. Current ETH $2,126.71 → buffer **4.97%** ✓
 
 **Alpaca (residual BTC position):**
-
 | Symbol | Qty | Entry | Current | Unrealized P&L | Stop | Buffer |
 |---|---|---|---|---|---|---|
-| BTC/USD | 0.001619 | $77,910.27 | $77,631.30 | -$0.45 (-0.36%) | $74,793.86 / $74,045.92 (a2b44cf9 ✓) | 3.64% |
+| BTC/USD | 0.001619 | $77,910.27 | $77,508.20 | -$0.65 (-0.52%) | $74,793.86 / $74,045.92 (a2b44cf9 ✓) | 3.50% |
 
-**Note:** `scripts/kraken.sh` was missing at session start (never previously committed to git). Restored from user-pushed main mid-session. All Kraken data is confirmed live.
+**Cash for new entries:** $0.21 ZUSD (spot buys not viable). 2x leverage is the route for new Kraken positions (free margin ~$46.15).
 
 ---
 
@@ -4311,83 +4320,104 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 
 | Metric | Value | Notes |
 |---|---|---|
-| BTC | ~$77,941 (+1.0–1.5% 24h) | Holding above $77k support; spread 0.0001% ✓ |
-| ETH | ~$2,143 (+0.3–1.5% 24h) | — |
-| Top Gainers 24h | BOBO +487%, RAVE +106%, MWC +68%, OPG +59%, JTO +28%, ORCA +27%, BANANAS31 +26%, ZEC +18% | Mix of micro-caps and mid-caps |
-| Fear & Greed | ~25 (Extreme Fear) | Alternative.me; bearish broad sentiment |
-| BTC Funding | +0.0019–+0.0043% per 8h | Neutral; longs not crowded |
+| BTC | ~$77,646–$77,941 (+1.0–1.5% 24h) | Holding above $77k support; spread 0.0001% ✓ |
+| ETH | ~$2,127–$2,145 (flat to +0.6% 24h) | Live Kraken quote $2,126.71 |
+| Top Gainers 24h | JTO +28%, BANANAS31 +26%, ZEC +18%, DASH +16%, OMNI +174% (Kraken-specific) | Multiple confirmed on Kraken |
+| Fear & Greed | **29 (Fear)** | Bearish broad sentiment; prefer specific catalyst plays |
+| BTC Funding | +0.0019–+0.0043% per 8h | Neutral; longs not crowded; not overheated |
 
-**Crash gate check:** BTC +1.0–1.5% 24h — NOT triggered → **TRADE**
+**Crash gate:** BTC +1.0–1.5% 24h — NOT triggered → **TRADE**
 
 ---
 
 ### Key Catalysts
 
-- **INJ (Injective):** Circle native USDC + CCTP launched on Injective; 55k+ INJ community buyback burn; 21Shares INJ spot ETF filing pending at SEC — multi-layered catalyst
-- **JTO (Jito):** +28% 24h — Solana liquid staking momentum
-- **ZEC (Zcash):** +17.5% 24h — privacy narrative momentum
-- **LDO (Lido DAO):** Tokenholder update today — possible ETH sentiment catalyst
-- **Stablecoin legislation:** GENIUS Act / CLARITY Act progress — medium-term positive
-- **Token unlock risks:** PYTH ~$1B+ unlock window (May 19–21), STRK 64M unlock May 22 — avoid both
+- **ETH (held):** ETH Glamsterdam Q3 2026 (devnets live); institutional ETF inflows; Lido DAO tokenholder update today; oversold RSI with 4h bullish bias — thesis intact
+- **JTO (Jito):** +28% 24h, Solana liquid staking momentum — top confirmed gainer on Kraken, tight spread 0.14% ✓
+- **ZEC (Zcash):** +18% 24h, privacy narrative; tight spread 0.03% ✓
+- **DASH:** +16% 24h momentum; tight spread 0.06% ✓
+- **LINK:** DeFi breakout candidate; tight spread 0.02% ✓; catalyst = Ethereum upgrade-driven DeFi throughput
+- **OMNI:** +174% 24h (Kraken-specific); extreme move — needs spread check before considering; likely thin
+- **Stablecoin legislation:** CLARITY Act progress — medium-term positive; favours DeFi/L2 names
+- **Token unlock risks:** PYTH ~$1B+ unlock window ending today (May 21) — avoid; STRK 64M unlock May 22 — avoid
+
+---
+
+### Spread & Availability Checks
+
+| Pair | Spread | Status | Min Order | Action |
+|---|---|---|---|---|
+| ETH/USD | 0.0047% | online ✓ | — | Held ✓ |
+| JTO/USD | 0.1355% | online ✓ | 13 JTO (~$6.43) | OK — viable |
+| ZEC/USD | 0.0286% | online ✓ | 0.01 ZEC | OK — viable |
+| DASH/USD | 0.0602% | online ✓ | 0.1 DASH | OK — viable |
+| LINK/USD | 0.0240% | online ✓ | — | OK — viable |
+
+All checked pairs within 1% spread limit ✓
 
 ---
 
 ### Trade Ideas
 
-**Idea 1 — INJ/USD (Best Catalyst)**
-- Catalyst: Circle USDC native launch on Injective + 55k+ INJ buyback burn + 21Shares ETF filing
-- Entry: Market or limit on any intraday dip; spread check mandatory first
-- Stop: `trailing_stop`, `trail_percent: 5`
-- Target: +15–20%
-- Size: Up to 50% of Kraken equity (~$23 spot; or ~$47 at 2x leverage if margin available)
-- R:R: ~3:1 at 5% stop / 15% target
-- Action: Sell ~half Kraken XBT → ZUSD → buy INJ; OR leveraged long if INJ/USD margin available on Kraken
-- Prereq: `kraken.sh assets INJ/USD` online; `kraken.sh quote INJ/USD` spread ≤1%
+**Idea 1 — HOLD ETH/USD (active position)**
+- Position: 0.021824 ETH @ entry via Kraken, trailing stop active (ORLN5M ✓, stop $2,021.05, 4.97% buffer)
+- Thesis: Glamsterdam Q3 2026, institutional ETF inflows, Lido DAO update today, 4h chart bullish bias
+- Action: Hold. Stop trails automatically — no manual adjustment needed unless ETH breaks strongly above $2,200 (at which point consider tightening trail to 3%)
+- Target: $2,280 (+7.2%), $2,500 (+17.5% — analyst base case)
 
-**Idea 2 — JTO/USD (Momentum)**
-- Catalyst: +28% 24h Solana staking ecosystem momentum
-- Entry: Pullback to consolidation or breakout above 24h high
+**Idea 2 — JTO/USD (momentum, 2x leverage)**
+- Catalyst: +28% 24h Solana liquid staking momentum; top Kraken gainer; Solana ecosystem strength
+- Entry: Market now or any intraday pullback; spread 0.14% ✓
+- Stop: `trailing_stop`, `trail_percent: 5`
+- Target: +12–18% from entry
+- Size: ~25% of Kraken equity as margin (~$11.50 margin → ~$23 exposure at 2x); or full equity if conviction is high
+- R:R: ~2.5–3:1 at 5% stop / 15% target
+- Note: Confirm margin availability on JTO/USD before placing — if not available, use spot (minimum ~13 JTO requires ~$6.43 ZUSD; free up small amount from ETH partial close if needed)
+- Order: `{"symbol":"JTO/USD","side":"buy","type":"trailing_stop","qty":"<qty>","trail_percent":5,"leverage":"2"}`
+
+**Idea 3 — ZEC/USD (momentum, 2x leverage)**
+- Catalyst: +18% 24h privacy narrative momentum; near-zero spread (0.03%) ✓
+- Entry: Market or limit on any dip; spread excellent
+- Stop: `trailing_stop`, `trail_percent: 5`
+- Target: +12–15%
+- Size: ~20% of Kraken equity as margin (~$9 margin → ~$18 at 2x)
+- R:R: ~2.5:1
+- Order: `{"symbol":"ZEC/USD","side":"buy","type":"trailing_stop","qty":"<qty>","trail_percent":5,"leverage":"2"}`
+
+**Idea 4 — LINK/USD (DeFi breakout)**
+- Catalyst: DeFi throughput tailwind from Ethereum upgrades; breakout candidate per research; near-zero spread (0.02%) ✓
+- Entry: Market or limit above $9.70 on volume confirmation
 - Stop: `trailing_stop`, `trail_percent: 5`
 - Target: +10–15%
-- Size: ~30% of Kraken equity (~$14)
+- Size: ~20% of Kraken equity as margin (~$9 margin → ~$18 at 2x)
 - R:R: ~2.5:1
-- Prereq: `kraken.sh assets JTO/USD` online; spread ≤1%
-
-**Idea 3 — ZEC/USD (Momentum)**
-- Catalyst: +17.5% 24h privacy narrative
-- Entry: Pullback or continuation
-- Stop: `trailing_stop`, `trail_percent: 5`
-- Target: +10–12%
-- Size: ~20% of Kraken equity (~$9)
-- R:R: ~2:1
-- Prereq: `kraken.sh assets ZEC/USD` online; spread ≤1%
-
-**Idea 4 — BTC Leveraged Long (breakout / conviction play)**
-- Catalyst: BTC holding above $77k support; $82k–$85k upside if macro holds
-- Entry: Any time; or tighten entry to confirmed close above $79k
-- Stop: `stop_limit`, stop_price 4% below entry
-- Target: T1 $82,000 (+5.2%), T2 $85,000 (+9.1%)
-- Size: 2x leverage on full Kraken equity (~$94 notional exposure, ~$47 margin)
-- R:R: ~1.3:1 to T1; ~2.3:1 to T2
-- Note: Alpaca BTC already covers some upside; this adds additional levered exposure; use only if alts unavailable
 
 **Idea 5 — Hold Alpaca BTC**
-- No action; stop order a2b44cf9 active (3.64% buffer ✓)
+- No action; stop order a2b44cf9 active (buffer 3.50% ✓)
+- BTC at $77,508 — sitting above $77k support; stop is healthy but buffer narrowing vs earlier today
 
 ---
 
 ### Risk Factors
 
-1. **Kraken has no USD cash** — new spot buys require selling XBT first or using 2x leverage; plan funding step before placing orders
-2. **PYTH unlock** (~$1B+ window May 19–21) — avoid PYTH entries
-3. **STRK unlock May 22** — avoid STRK entries
-4. **Fear & Greed 25 (Extreme Fear)** — favour assets with strong specific catalysts (INJ, JTO) over broad macro plays
-5. **Alpaca BTC stop at $74,793** — triggers a realized loss if hit; 3.64% buffer is healthy
+1. **No ZUSD cash** — all new entries require 2x leverage; not all Kraken pairs support margin; confirm before each order
+2. **Fear & Greed 29 (Fear)** — broad sentiment weak; favour names with strong specific catalysts (JTO, ZEC) over macro-correlated plays
+3. **ETH 4.97% trailing stop buffer** — not wide; if ETH sells off sharply the position closes automatically; that's fine by design
+4. **Alpaca BTC buffer narrowing** — 3.50% to stop; a further 3.5% BTC drop triggers; monitor
+5. **PYTH unlock ending today** — avoid PYTH; any PYTH-correlated names may face sell pressure
+6. **STRK unlock May 22 tomorrow** — avoid STRK entries
+7. **OMNI +174%** — extreme move; likely very wide spread; do not enter without checking quote first
 
 ---
 
 ### Decision: TRADE
 
-Priority: **INJ/USD** (Idea 1) → **JTO/USD** (Idea 2) → **ZEC/USD** (Idea 3) → **BTC leveraged** (Idea 4, fallback if alts unavailable).
-Run `kraken.sh quote` and `kraken.sh assets` on each before entering. Size to conviction — no arbitrary caps.
+Active positions: ETH/USD (Kraken, trailing stop ✓) | BTC/USD (Alpaca, stop-limit ✓)
+
+New entry priority (leverage required):
+1. **JTO/USD** — strongest momentum + catalyst; check margin availability first
+2. **ZEC/USD** — excellent spread, solid momentum
+3. **LINK/USD** — DeFi breakout setup; lowest risk of the three
+
+Size to conviction — no caps. Use `validate: true` on first order to confirm structure before submitting.
 
