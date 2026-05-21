@@ -1090,3 +1090,34 @@ No unprotected positions.
 **Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Stop a2b44cf9 ($74,793.86) active ✓
 **Crash gate:** BTC ~-0.27% 24h — clear ✓
 
+---
+
+## 2026-05-21 — Midday Scan #2 (afternoon)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Stop Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.5063 | **+1.14%** | $0.5119 | $0.4863 | 3.95% | OBLSOB-IGZY2-HFZXG7 (trail 5%) ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.645 | **+0.30%** | $9.675 | $9.191 | 4.71% | OULSVN-3TUF5-PPM4YW (trail 5%) ✓ |
+| SOL/USD | 0.17211 | $85.90 | $86.35 | **+0.52%** | $86.78 | $82.45 | 4.52% | OAOOBG-DNG7C-B4WTH2 (trail 5%) ✓ |
+
+**Kraken equity:** ~$46.47 | ZUSD $0.087 (fully deployed)
+**BTC (Alpaca):** 0.001619 @ $77,910.27 | Current ~$77,800 | -0.14% | Stop a2b44cf9 ($74,793.86) ✓ | Buffer ~3.35%
+**Crash gate:** BTC +0.8% 24h — NOT triggered ✓
+
+**STEP 3 — Trailing stops verified:**
+- JTO: OBLSOB-IGZY2-HFZXG7, 40.29 JTO, trail 5%, trigger $0.4863 (HWM $0.5119) — ✓
+- LINK: OULSVN-3TUF5-PPM4YW, 1.1533 LINK, trail 5%, trigger $9.191 (HWM $9.675) — ✓
+- SOL: OAOOBG-DNG7C-B4WTH2, 0.17211 SOL, trail 5%, trigger $82.45 (HWM $86.78) — ✓
+No unprotected positions.
+
+**STEP 4 — Stop tightening:** JTO +1.14%, LINK +0.30%, SOL +0.52% — none near ≥+20%. No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **JTO:** a16z $50M raise confirmed; JTX consumer trading app launch pending; momentum intact (+24% 24h on broad timeframe). No exploit, rug, or adverse regulatory action. Thesis INTACT. HOLD.
+- **LINK:** Range-bound $9.5–$10.0; DTCC/institutional integration narrative intact; no new adverse news. Neutral to cautiously bearish short-term but long-term constructive. Thesis INTACT. HOLD.
+- **SOL:** ETF net inflows $39.23M this week (institutional demand confirmed); Firedancer 1.0 mainnet live; support ~$85, resistance $86.5–$87.2. No adverse news. Thesis INTACT. HOLD.
+
+**STEP 6 — New entry scan:** ZUSD $0.087 — fully deployed, no cash for new entries. Intraday movers (ROLL +144%, PLAY +46%, RLS +36%) are micro-caps with likely wide spreads; no spread checks run. No qualifying setup found.
+
+**Result: NO-OP. No trades. No notification sent.**
+
