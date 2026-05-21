@@ -4239,3 +4239,114 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 - XRP sector: PAUSED — no XRP or top-50 alt entries
 
 ---
+
+## 2026-05-21 — Session-Open Research
+
+### Account Snapshot (Alpaca live)
+| Field | Value |
+|---|---|
+| Equity | $131.43 |
+| Cash / Buying Power | $48.09 (36.6%) |
+| Long Market Value | $83.34 |
+| Day P&L | +$0.97 (+0.74%) vs last_equity $130.46 |
+| Phase P&L | ~-$10.33 (-7.29%) vs $141.76 start (May 10) |
+| Weekly Trades | 4/25 |
+
+**Open Position:**
+| Symbol | Qty | Avg Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,143.30 | +0.92% | 8fef13a1 ($2,065.13/$2,054.49) ✓ | 3.65% ✓ |
+
+Stop 8fef13a1 confirmed active (status: new), covers full 0.038882 ETH qty.
+
+---
+
+### Live Quotes (Alpaca, session-open)
+| Asset | Bid | Ask | Mid |
+|---|---|---|---|
+| BTC/USD | $77,863 | $77,937 | ~$77,901 |
+| ETH/USD | $2,138.50 | $2,140.70 | ~$2,139.60 |
+| SOL/USD | $86.29 | $86.63 | ~$86.46 |
+
+---
+
+### Market Context
+| Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$77,901 | +0.55% from May 20 EOD ~$77,480 |
+| BTC 24h change | ~+0.55% | Crash gate NOT triggered |
+| BTC 20-day MA | $78,768 (Barchart, May 20) | BTC $867 below MA → CAUTION mode |
+| ETH price | ~$2,139 | +0.70% intraday |
+| SOL price | ~$86.46 | Under pressure per Perplexity ("weakest major") |
+| BTC Dominance | ~58.1–58.2% | Elevated; alt headwinds persist |
+| Fear & Greed | 27 (Fear) | Slightly up from 25 yesterday; above 10 — no extra 50% size cut |
+| DXY | ~99.09 | Below 99.5 red flag; neutral to mild headwind |
+| Nvidia Q1 FY2027 | BEAT: $81.62B revenue ($78.42B est), EPS $1.87 ($1.76 est) | No material crypto rally observed |
+| Macro | S&P 500 data unavailable; cautious post-Nvidia | Memorial Day weekend approaching |
+
+---
+
+### Regime Filter
+- **BTC 24h change:** ~+0.55% → crash gate **NOT triggered** (threshold -8%)
+- **BTC vs 20-day MA:** $77,901 vs $78,768 → BTC **BELOW MA by 1.1% → CAUTION mode**
+- **F&G:** 27 (Fear) — above 10; no extra 50% size reduction
+- **DXY:** 99.09 — below 99.5 red flag; neutral
+- **Funding:** assumed neutral (no overheating signal)
+- **Mode: CAUTION — full universe, 25% size reduction on new entries, 4% stops**
+
+---
+
+### Entry Trigger Assessment (prior session conditions)
+| Trigger | Condition | Status |
+|---|---|---|
+| ETH Nvidia add-on | ETH > $2,200 + Nvidia EPS beat confirmed | ❌ ETH $2,139 — $61 below trigger |
+| BTC breakout | BTC hourly close > $78,000 + Nvidia beat | ❌ BTC $77,901 — $99 below trigger |
+| SOL momentum | Nvidia beat + SOL on support with volume | ❌ No confirmed catalyst; SOL weakest major |
+| DXY red flag | DXY > 99.5 (would block entries) | CLEAR — DXY 99.09 |
+
+Despite Nvidia's significant beat, BTC and ETH have NOT broken out to their entry trigger levels. No crypto-specific rally followed the earnings release.
+
+---
+
+### Thesis Check
+| Position | Status | Notes |
+|---|---|---|
+| ETH Glamsterdam (Q3 2026) | INTACT | No adverse news; devnets progressing; 200M gas limit confirmed; stop managing downside |
+| ETH/L1 sector | ACTIVE (1 consecutive loss) | One more stop-out triggers sector pause |
+
+---
+
+### Risk Factors
+1. **Nvidia beat not translating to crypto** — no breakout despite catalyst confirming; risk appetite in AI/semiconductors may be competing with crypto for capital
+2. **BTC $867 below 20-day MA** — CAUTION locked; regime flip still requires sustained BTC above $78,768
+3. **Fear & Greed 27 (Fear)** — sentiment persisting weak; no conviction rally
+4. **ETH/L1 sector at 1 consecutive loss** — current ETH position is the sector's "last chance"; stop-out triggers full ETH/L1 pause
+5. **DXY 99.09** — just below 99.5 red flag; watch closely
+6. **Memorial Day weekend** — US markets close Monday May 25; thin liquidity potential over weekend
+7. **CLARITY Act Senate vote** — was expected before May 21 recess but per prior research will NOT happen before Memorial Day; XRP sector PAUSED regardless
+
+---
+
+### Sector Status
+| Sector | Status | Consecutive Losses | Note |
+|---|---|---|---|
+| BTC Core | ACTIVE | 1 | Re-entry stopped out May 13; BTC below $78k trigger |
+| ETH / L1 | ACTIVE | 1 | May 15 stop-out; current ETH re-entry @ $2,123.79 |
+| L2 / DeFi | ACTIVE | 0 | Cleanest sector; SOL, AVAX, ARB available if catalyst emerges |
+| Alts (top 50) | **PAUSED** | **2** | XRP stopped out May 20 → PAUSE triggered |
+
+---
+
+### Decision: **HOLD — No New Trades**
+
+All entry triggers from May 20 pre-session research remain unmet despite Nvidia's earnings beat. Crypto did not follow tech risk-on. ETH is $61 below the $2,200 add-on trigger; BTC is $99 below the $78,000 breakout trigger. CAUTION mode active. Stop managing ETH downside at $2,065.13 (3.65% buffer — healthy).
+
+**Watch Levels (carry forward):**
+- ETH stop: $2,065.13 (3.65% buffer — healthy, no action needed)
+- ETH add-on trigger: ETH sustained above $2,200 with catalyst confirmation
+- BTC breakout trigger: BTC hourly close above $78,000 (then $78,768 regime flip)
+- DXY red flag: above 99.5 → block new entries
+- SOL entry: would need confirmed catalyst + L2/DeFi momentum (cleanest sector at 0 losses)
+- CLARITY Act: Senate floor vote post-Memorial Day recess (June-July realistic); XRP sector PAUSED
+
+---
