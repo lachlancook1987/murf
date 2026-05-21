@@ -1061,3 +1061,32 @@ No unprotected positions.
 
 **Result: NO-OP. No trades. No notification sent.**
 
+---
+
+## 2026-05-21 — Session-Open Trade (afternoon, Kraken)
+
+### 2026-05-21 | SOL/USD | BUY | 0.17211197 SOL | Entry: $85.90 | Trailing Stop: $81.61 | Open
+
+**Order ID (buy):** OTRTAZ-KYTZI-JPH5HS (market buy, spot)
+**Trailing Stop Order ID:** OAOOBG-DNG7C-B4WTH2 (trailing-stop sell, trail -5%, stop $81.61, HWM $85.90, GTC ✓)
+**Notional:** ~$14.99 (32.4% of $46.24 Kraken equity — 100% of idle ZUSD; replaces blocked ZEC trade)
+**Effective fill price:** $85.90 (confirmed via trailing stop HWM)
+**Stop level:** $81.61 (5% trailing below HWM $85.90)
+**Target:** T1 $94.49 (+10%), T2 $98.79 (+15%)
+**R:R:** ~2:1 to T1; ~3:1 to T2 (5% stop)
+**Thesis:** Solana institutional narrative — Firedancer 1.0 mainnet launched May 5 (targets 1M TPS), Schwab Crypto™ live, BESO ETF with staking, Wall Street embrace; flat price action today (not chasing); tight spread 0.012% ✓. ZEC replacement (AU trading restriction blocked ZEC at session open).
+**Notes:** Spot only (no leverage). ZEC/USD was original 3rd trade but blocked (EAccount:Invalid permissions:ZEC trading restricted for AU). SOL selected as replacement: documented institutional catalyst, tight spread, fully idle ZUSD deployed. Kraken account now fully deployed (ZUSD $0.087 remaining). Weekly Kraken trades: 3.
+
+---
+
+### May 21 — Session Snapshot (updated post SOL trade)
+**Kraken equity:** ~$46.3 deployed | **ZUSD:** $0.087 (fully deployed)
+| Symbol | Qty | Entry | Trailing Stop | Stop ID | Stop Level | Target |
+|---|---|---|---|---|---|---|
+| JTO/USD | 40.2900 | $0.5006 | 5% | OBLSOB-IGZY2-HFZXG7 | $0.4718 | T1 $0.5607 |
+| LINK/USD | 1.1533 | $9.616 | 5% | OULSVN-3TUF5-PPM4YW | $9.112 | T1 $10.578 |
+| SOL/USD | 0.17211197 | $85.90 | 5% | OAOOBG-DNG7C-B4WTH2 | $81.61 | T1 $94.49 |
+
+**Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Stop a2b44cf9 ($74,793.86) active ✓
+**Crash gate:** BTC ~-0.27% 24h — clear ✓
+
