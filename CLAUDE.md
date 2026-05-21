@@ -44,9 +44,36 @@ for quotes or placing orders.
 
 `ALPACA_CRYPTO_DATA_ENDPOINT` is not set in this environment.
 
+## Kraken Script Commands
+
+`scripts/kraken.sh` mirrors the full `alpaca.sh` interface plus extra subcommands:
+
+```
+account | positions | orders | quote SYM/USD | assets [SYM/USD]
+order '{json}' | close SYM/USD | cancel ORDER_ID | replace ORDER_ID '{json}'
+```
+
+Required env vars: `KRAKEN_API_KEY`, `KRAKEN_PRIVATE_KEY` (base64-encoded private key).
+
+**Order JSON format is identical to Alpaca** — the script translates internally:
+
+| Alpaca `type`    | Kraken `ordertype`   | Notes |
+|------------------|----------------------|-------|
+| `market`         | `market`             | |
+| `limit`          | `limit`              | needs `"price"` |
+| `stop_limit`     | `stop-loss-limit`    | needs `"stop_price"` + `"limit_price"` |
+| `stop`           | `stop-loss`          | needs `"stop_price"` |
+| `trailing_stop`  | `trailing-stop`      | needs `"trail_percent"` — **supported natively** |
+
+Symbol format is the same: `ETH/USD`, `BTC/USD`, `SOL/USD`.
+`replace ORDER_ID '{json}'` = cancel + new order (Kraken has no PATCH endpoint).
+`positions` synthesises holdings from Balance + live Ticker (no avg entry price —
+use TRADE-LOG.md for that).
+
 ## Current Strategy Profile
 
 Aggressive profile (activated 2026-05-10). See `memory/TRADING-STRATEGY.md`.
 Key parameters: max 65% per position, 95% total deployed, default stance = TRADE,
-stop = 5% fixed stop-limit (trailing_stop not supported for crypto on Alpaca),
+stop = 5% fixed stop-limit (trailing_stop not supported for crypto on Alpaca;
+**use `scripts/kraken.sh` for native trailing-stop support**),
 hold gate = BTC down >8% in 24h.
