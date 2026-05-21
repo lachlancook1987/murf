@@ -35,7 +35,26 @@ calls to `scripts/clickup.sh` continue to work unchanged.
 Required env vars: `WHATSAPP_PHONE` (international format, no `+`, e.g. `447911123456`)
 and `WHATSAPP_APIKEY` (received from CallMeBot on first activation).
 
-## Alpaca Script Commands
+## Kraken Script Commands (primary broker)
+
+`scripts/kraken.sh` supports: `account`, `positions`, `orders`, `quote SYM/USD`,
+`assets SYM/USD`, `order '{...}'`, `cancel <txid|all>`
+
+Required env vars: `KRAKEN_API_KEY`, `KRAKEN_PRIVATE_KEY` (base64-encoded secret).
+
+Symbol format: `BTC/USD`, `ETH/USD`, `SOL/USD` etc. (script maps BTC→XBT internally).
+
+Order JSON fields:
+- `symbol`, `qty`, `side` (buy/sell), `type` (market|limit|stop_limit|trailing_stop)
+- `stop_price` + `limit_price` for stop_limit
+- `trail_percent` for trailing_stop (default 5)
+- `leverage` (optional, e.g. `"leverage":"2"` for 2x margin)
+- `time_in_force` (gtc)
+- `validate` (optional, `true` = dry-run, confirms order structure without submitting)
+
+Trailing stop IS supported on Kraken (unlike Alpaca).
+
+## Alpaca Script Commands (residual — Alpaca BTC position only)
 
 `scripts/alpaca.sh` supports only: `account`, `positions`, `orders`
 
@@ -46,7 +65,6 @@ for quotes or placing orders.
 
 ## Current Strategy Profile
 
-Aggressive profile (activated 2026-05-10). See `memory/TRADING-STRATEGY.md`.
-Key parameters: max 65% per position, 95% total deployed, default stance = TRADE,
-stop = 5% fixed stop-limit (trailing_stop not supported for crypto on Alpaca),
-hold gate = BTC down >8% in 24h.
+Kraken profile (activated 2026-05-21). See `memory/TRADING-STRATEGY.md`.
+Key parameters: full alt universe, no position caps, up to 2x leverage,
+multiple trades/day, trailing stops supported, crash gate = BTC down >20% in 24h.

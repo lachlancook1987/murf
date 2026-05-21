@@ -185,8 +185,15 @@ if order.get('type') == 'trailing_stop':
     params['price']  = f'-{trail_pct}%'            # trailing offset
     params['price2'] = f'-{trail_pct + 0.5}%'      # limit offset (0.5% slack below stop)
 
+if order.get('leverage'):
+    params['leverage'] = str(order['leverage'])
+
 if order.get('time_in_force', '').lower() == 'gtc':
     params['timeinforce'] = 'GTC'
+
+# Dry-run: validate=true checks the order without submitting
+if order.get('validate'):
+    params['validate'] = 'true'
 
 key    = os.environ['KRAKEN_API_KEY']
 secret = base64.b64decode(os.environ['KRAKEN_PRIVATE_KEY'])
