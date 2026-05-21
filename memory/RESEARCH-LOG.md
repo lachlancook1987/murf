@@ -4509,3 +4509,47 @@ Active action items:
 4. **Watch ETH $2,200** — add-on trigger (Idea 3), if kraken.sh restored and cash freed
 5. **INJ/USD** — best new-entry candidate if kraken.sh restored (Idea 2)
 
+
+---
+
+## 2026-05-21 — Pre-Session Addendum (Kraken account confirmed)
+
+*Appended after kraken.sh was restored from main.*
+
+### Kraken Account (live data)
+| Field | Value |
+|---|---|
+| Balance | 0.00061053 XBT (~$47.36 at $77,568) |
+| USD Cash (ZUSD) | $0.00 — no fiat in account |
+| Open Positions | None |
+| Open Orders | None |
+| Equity | ~$46.89 |
+
+**Implication:** Kraken has no USD cash for spot buys. Options:
+1. Use 2x leverage (margin) to enter a leveraged long — borrows USD, requires stop-loss mandatory
+2. Sell the 0.00061053 BTC holding to get ~$47 USD, then redeploy into another asset
+3. Hold idle BTC and monitor; no new spot entries possible without USD
+
+**Combined account picture:**
+- Kraken BTC (spot): 0.00061053 BTC ~$47.36
+- Alpaca BTC (open position): 0.001619 BTC @ $77,910.27, stop $74,793.86 active ✓
+- Total BTC exposure: ~0.002230 BTC (~$173 at $77,568)
+
+### Updated Trade Ideas (post Kraken data)
+
+**Idea 1 — BTC Leveraged Long on Kraken (regime flip trigger)**
+- Entry: BTC sustained close above $78,768 → regime flips OFFENSIVE
+- Mechanism: 2x leverage buy (borrows USD), no USD cash needed
+- Immediately pair with stop-loss order (mandatory per strategy)
+- Stop: 3% below entry (OFFENSIVE mode)
+- Size: ~$47 notional at 1x, ~$94 at 2x leverage
+- R:R: ~1.5–2:1 to T1 $82,000
+
+**Idea 2 — Rotate Kraken BTC → Alt (optional)**
+- Sell 0.00061053 XBT → ~$47 USD cash → buy INJ, ZEC, or JTO on catalyst
+- Only worthwhile if alt thesis is strong (INJ catalyst is the best current candidate)
+- Spread checks needed before rotation
+
+**Idea 3 — Alpaca BTC Hold (no action)**
+- Stop active (3.64% buffer), thesis intact, no new Alpaca entries possible (near-zero remaining cash)
+
