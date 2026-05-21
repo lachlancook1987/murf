@@ -4278,3 +4278,111 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+## 2026-05-21 — Pre-Session Research
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| Equity | $131.08 |
+| Cash | $48.09 (36.7%) |
+| Long MV | $82.99 (63.3%) |
+| Day P&L | +$0.62 (+0.48%) vs last equity $130.46 |
+| Phase P&L | ~-$10.28 (-7.26%) |
+
+**Open Position:**
+| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
+|---|---|---|---|---|---|
+| ETH/USD | 0.038882 | $2,123.79 | $2,134.25 | +$0.41 (+0.49%) | 8fef13a1: trigger $2,065.13 / limit $2,054.49 (3.24% buffer) |
+
+**Open Orders:** Stop-limit 8fef13a1 — sell 0.038882 ETH/USD GTC, trigger $2,065.13, limit $2,054.49. Status: active (new).
+
+---
+
+### Market Context
+| Indicator | Value | Notes |
+|---|---|---|
+| BTC | ~$77,700 (+1.4% 24h) | Pulled back slightly from $78,065 at yesterday's 05:15 UTC scan |
+| ETH | ~$2,134–$2,143 (flat to +1.5% 24h) | Alpaca: $2,134.25; Kraken: $2,143 |
+| BTC Dominance | ~60.2–60.5% | CoinMarketCap; elevated, mild alt headwind |
+| Fear & Greed | **27 (Fear)** | Unchanged/slightly improved from 25 yesterday |
+| BTC Funding | +0.0019–+0.0043% per 8h | Neutral-positive; not overheated |
+| DXY | ~99.0–99.19 | Below 99.5 red flag → new entries NOT blocked |
+| S&P 500 Futures | ~7,435 | Flat/stable; macro not alarming |
+| BTC 20-day MA | ~$78,768 | BTC at $77,700 → $1,068 below MA (1.4% gap); CAUTION regime |
+
+**Regime: CAUTION** — BTC below 20-day MA. Reduce position sizes 25%. Stops at 4% (not 5%). Crash gate: NOT triggered (BTC +1.4% 24h).
+
+---
+
+### Key Catalysts & Events
+- **Lido DAO (LDO) tokenholder update:** 21 May 2026 at 14:00 UTC — could move LDO and indirectly support ETH sentiment
+- **Stablecoin legislation:** US Senate/House activity continuing; positive medium-term catalyst for crypto broadly
+- **Institutional flows:** Ongoing BTC/ETH corporate treasury accumulation supporting base demand
+- **Token unlocks this week:** ZRO ~$270M (7-day), TRUMP ~$523M (30-day), SUI ~$229M (30-day) — none held; no direct impact
+- **ETH near-term technicals:** Resistance flagged at $2,260–$2,280 (aligns with T1 target $2,280); support at $2,100–$2,120
+- **Nvidia post-earnings:** Beat confirmed yesterday; "sell the news" (NVDA -1.3% AH) — risk-on boost did NOT fully materialize but also did not crash
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH Add-On (Priority)**
+- Catalyst: ETH Glamsterdam Q3 2026 (devnets live, 200M gas limit floor confirmed); institutional ETH ETF inflows; Lido DAO update may boost ETH sentiment
+- Thesis: Existing position +0.49% unrealized; add-on on sustained break above $2,200 to increase conviction on T1 target $2,280
+- Entry: ETH sustained close above $2,200 (currently $66 away, ~3.1%)
+- Stop: 4% below entry (~$2,112 on $2,200 entry) — CAUTION mode
+- Target: T1 $2,280 (~3.6% above $2,200 entry)
+- Size: ~$32 notional (25% equity, CAUTION mode)
+- R:R: ~0.9:1 to T1 — marginal; only enter on strong momentum confirming breakout
+- Sector: ETH/L1 (1 consecutive loss — another stop-out pauses ETH sector)
+
+**Idea 2 — BTC Long (Regime Flip)**
+- Catalyst: BTC reclaims 20-day MA ($78,768) → regime flips OFFENSIVE; macro stabilization post-Nvidia earnings
+- Entry: BTC sustained hourly close above $78,768 (regime flip confirmation; $1,068 above current $77,700)
+- Stop: 4% below entry (~$75,617 on $78,768 entry) — CAUTION mode; tightens to 3% on OFFENSIVE flip
+- Target: T1 $82,000 (+4.1% above entry), T2 $86,000 (+9.2%)
+- Size: ~$32 notional (25% equity, CAUTION; upgrade to ~$42 if regime flips OFFENSIVE first)
+- R:R: ~1.1:1 to T1
+- Sector: BTC Core (1 consecutive loss — another stop-out pauses BTC sector)
+- Note: Wait for confirmed sustained close above MA, not just an intraday wick
+
+**Idea 3 — SOL Momentum (Cleanest Sector)**
+- Catalyst: L2/DeFi sector at 0 consecutive losses; post-Nvidia risk-on still possible if BTC breaks $78,768; SOL historically correlates with macro risk-on
+- Entry: SOL pullback to support near $155–$160 OR breakout above $175 on strong volume; only enter if BTC at/above 20-day MA
+- Stop: 4% below entry (CAUTION mode)
+- Target: T1 +8–10% above entry
+- Size: ~$22 notional (CAUTION mode, smaller given no immediate catalyst)
+- R:R: ~2.5:1 (entry-dependent)
+- Sector: L2/DeFi (0 losses — safest sector for new entries)
+
+---
+
+### Risk Factors
+1. **ETH/L1 sector at 1 consecutive loss** — another ETH stop-out (trigger $2,065.13) pauses ETH sector entirely; current 3.24% buffer is healthy but not wide
+2. **BTC Core sector at 1 consecutive loss** — any BTC entry that stops out pauses BTC sector
+3. **Alts sector PAUSED** (2 consecutive losses) — no XRP or top-50 alt trades until sector resets
+4. **Fear & Greed 27 (Fear)** — below 30; deteriorating sentiment but not at <10 block threshold
+5. **BTC still below 20-day MA ($78,768)** — CAUTION regime locked; $1,068 gap; no regime flip yet
+6. **DXY at 99.0** — below 99.5 red flag; if DXY spikes above 99.5, block new entries this session
+7. **ETH resistance at $2,260–$2,280** — Idea 1 T1 aligns with resistance; need strong volume to push through
+8. **Lido DAO update 14:00 UTC** — could be directional catalyst for LDO/ETH; monitor for any negative governance outcome
+
+---
+
+### Decision: **TRADE** (triggers required; default TRADE stance applies)
+
+CAUTION mode (BTC below 20-day MA). No immediate entries now — both ETH and BTC are below their respective entry triggers. Active watches:
+- **Priority 1:** ETH sustained above $2,200 → add-on entry (Idea 1)
+- **Priority 2:** BTC sustained hourly close above $78,768 → regime flip + BTC entry (Idea 2)
+- **Priority 3:** SOL at support $155–$160 or breakout $175+ with BTC regime confirmation (Idea 3)
+
+**Watch Levels:**
+- ETH stop: $2,065.13 (3.24% buffer — healthy)
+- ETH entry trigger: sustained break above $2,200
+- BTC regime flip: sustained close above $78,768
+- DXY red flag: above 99.5 → block new entries
+- Lido DAO update: 14:00 UTC — monitor for ETH direction
+- Alts sector: PAUSED — no alt entries
+
+---
