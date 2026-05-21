@@ -963,3 +963,39 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 **BTC spread:** 0.125% ✓ | **Stop:** active (new) ✓
 **Sector status:** BTC Core ACTIVE (1 consec loss), ETH/L1 ACTIVE (1 consec loss), L2/DeFi ACTIVE (0), Alts PAUSED (2)
 **Notes:** User rotated ETH→BTC via dashboard. ETH closed at +$0.49 gain. BTC position entered at $77,910 (below $78,768 regime-flip MA — user conviction entry). Nearly fully deployed; no bot entries possible. BTC stop 4% below entry (CAUTION mode). Watch: BTC close above $78,768 → regime flip to OFFENSIVE; BTC stop trigger $74,793 = 2nd BTC loss → BTC sector PAUSE.
+
+---
+
+## 2026-05-21 — Session-Open Trades (Kraken, bot, ~13:10 UTC)
+
+### 2026-05-21T~13:10Z | BTC/USD | SELL (close/rotate) | 0.00061053 BTC | Exit: $77,588.20 | Broker: Kraken
+
+**Order txid:** TLFAPH-EJF4B-ZTQRJQ (market sell)
+**Qty:** 0.00061053 BTC | **Exit price:** $77,588.20 | **Fee:** $0.379
+**Net USD proceeds:** $46.98
+**Notes:** Rotated full Kraken BTC balance into ETH. No prior entry price documented for this BTC — initial Kraken account capital.
+
+---
+
+### 2026-05-21T~13:10Z | ETH/USD | BUY | 0.0218 ETH | Entry: $2,126.39 | Trailing Stop: $2,019.39 (5%) | Broker: Kraken | Open
+
+**Order txid (buy):** TYVV7G-W3WL7-374WAW (market buy 0.022000 ETH; fee deducted from received ETH → net 0.021824)
+**Trailing Stop txid:** ORLN5M-EKNJU-74J7OZ (trailing-stop: +5.0000% trail, qty 0.02180, GTC, status: open ✓)
+**Notional:** $46.78 (100% of Kraken capital — no hard cap under Kraken profile)
+**Entry price:** $2,126.39
+**Trailing stop initial trigger:** $2,019.39 (5% below current price at order placement ~$2,125.67)
+**Target:** T1 $2,280 (+7.2%), T2 $2,400 (+12.9%), T3 $2,550 (+19.9%)
+**Stop level:** 5% trailing (adjusts up with price; will NOT be moved down)
+**R:R:** ~1.44:1 to T1; ~2.58:1 to T2
+**Thesis:** ETH Glamsterdam upgrade Q3 2026 (devnets live, 200M gas limit floor confirmed; timeline extended from June to Q3 — thesis intact); sustained ETH ETF inflows; Kraken profile active (trailing stops supported, no regime filter, crash gate = BTC >20% drop). BTC crash gate clear at -0.14% 24h. Rotating Kraken idle BTC capital into ETH momentum play.
+**Notes:** Kraken profile activated 2026-05-21. First Kraken bot trades this session. kraken.sh script created and tested this session. Trailing stop format fix: +5% (not -5%) for Kraken API. Spread at order time: ETH <0.01% ✓; BTC <0.01% ✓. Weekly trade count: 8/25 (includes Alpaca trades earlier today).
+
+---
+
+### May 21 — Session-Open Snapshot v2 (post-Kraken-bot-trades, ~13:15 UTC)
+**Alpaca:** BTC/USD 0.001619 @ $77,910.27 | Current ~$77,620 | Stop a2b44cf9 ($74,793.86/$74,045.92, 3.67% buf) | Cash $4.48
+**Kraken:** ETH/USD 0.021824 @ $2,126.39 | Trailing stop ORLN5M-EKNJU-74J7OZ (trigger $2,019.39, +5% trail)
+**Combined equity est.:** ~$177 (Alpaca $130 + Kraken $47)
+**Sector status (Alpaca):** BTC Core ACTIVE (1 consec loss), ETH/L1 ACTIVE, Alts PAUSED (2)
+**Sector status (Kraken):** No consecutive loss rules — Kraken profile has no sector pauses
+**Alpaca BTC stop confirmed:** a2b44cf9 active (status: new) ✓

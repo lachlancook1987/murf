@@ -1,247 +1,173 @@
 #!/usr/bin/env bash
-# Kraken REST API wrapper for the murf crypto bot
-# Usage: kraken.sh {account|positions|orders|quote SYM/USD|assets SYM/USD|order '{...}'}
-
+# Kraken API wrapper — reads creds from process env
 set -euo pipefail
 
-[[ -n "${KRAKEN_API_KEY:-}" ]]     || { echo "KRAKEN_API_KEY not set in environment"     >&2; exit 1; }
-[[ -n "${KRAKEN_PRIVATE_KEY:-}" ]] || { echo "KRAKEN_PRIVATE_KEY not set in environment" >&2; exit 1; }
+for v in KRAKEN_API_KEY KRAKEN_PRIVATE_KEY; do
+  if [[ -z "${!v:-}" ]]; then
+    echo "$v not set in environment" >&2
+    exit 3
+  fi
+done
 
-# ─── Auth helper ─────────────────────────────────────────────────────────────
-# Authenticated POST to Kraken private API.
-# Args: <url_path> [<extra_postdata_urlencoded>]
-_private() {
-    python3 - "$@" <<'PYEOF'
-import os, sys, urllib.request, hashlib, hmac, base64, time, json
+CMD="${1:-account}"
 
-key    = os.environ['KRAKEN_API_KEY']
-secret = base64.b64decode(os.environ['KRAKEN_PRIVATE_KEY'])
-path   = sys.argv[1]
-extra  = sys.argv[2] if len(sys.argv) > 2 else ''
+# Map friendly symbol to Kraken pair (BTC->XBT, rest pass through)
+map_pair() {
+  local base="${1%/USD}"
+  [[ "$base" == "BTC" ]] && echo "XBTUSD" || echo "${base}USD"
+}
 
-nonce = str(int(time.time() * 1000))
-body  = 'nonce=' + nonce + ('&' + extra if extra else '')
+# Authenticated Kraken REST call via Python (handles nonce + HMAC-SHA512)
+kraken_private() {
+  python3 - "$KRAKEN_API_KEY" "$KRAKEN_PRIVATE_KEY" "$@" <<'PYEOF'
+import sys, hashlib, hmac, base64, urllib.parse, time, json
+from urllib.request import Request, urlopen
 
-h256 = hashlib.sha256((nonce + body).encode()).digest()
-sig  = base64.b64encode(
-    hmac.new(secret, path.encode() + h256, hashlib.sha512).digest()
-).decode()
+api_key  = sys.argv[1]
+secret   = sys.argv[2]
+urlpath  = sys.argv[3]
+extra    = {}
+for item in sys.argv[4:]:
+    if '=' in item:
+        k, v = item.split('=', 1)
+        extra[k] = v
 
-req = urllib.request.Request(
-    'https://api.kraken.com' + path,
-    body.encode(),
-    {'API-Key': key, 'API-Sign': sig, 'Content-Type': 'application/x-www-form-urlencoded'}
+nonce    = str(int(time.time() * 1000))
+params   = {'nonce': nonce, **extra}
+postdata = urllib.parse.urlencode(params)
+
+encoded  = (nonce + postdata).encode()
+message  = urlpath.encode() + hashlib.sha256(encoded).digest()
+mac      = hmac.new(base64.b64decode(secret), message, hashlib.sha512)
+sig      = base64.b64encode(mac.digest()).decode()
+
+req = Request(
+    f'https://api.kraken.com{urlpath}',
+    data=postdata.encode(),
+    headers={
+        'API-Key': api_key,
+        'API-Sign': sig,
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
 )
-try:
-    with urllib.request.urlopen(req, timeout=15) as r:
-        print(r.read().decode())
-except urllib.error.HTTPError as e:
-    print(json.dumps({'error': [f'HTTP {e.code}: {e.read().decode()}']}))
-except Exception as e:
-    print(json.dumps({'error': [str(e)]}))
+with urlopen(req) as resp:
+    print(json.dumps(json.load(resp), indent=2))
 PYEOF
 }
 
-# Public GET — no auth
-_public() {
-    curl -sf --max-time 15 "https://api.kraken.com${1}"
-}
-
-# Symbol normalisation: BTC/USD → XBTUSD, ETH/USD → ETHUSD, SOL/USD → SOLUSD
-_pair() {
-    echo "${1//\//}" | sed 's/^BTC/XBT/'
-}
-
-# Pretty-print Kraken result JSON, exit non-zero on API errors
-_pp() {
-    python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-errs = d.get('error', [])
-if errs:
-    print('ERROR:', errs, file=sys.stderr)
-    sys.exit(1)
-print(json.dumps(d.get('result', d), indent=2))
-"
-}
-
-# ─── Subcommands ──────────────────────────────────────────────────────────────
-
-case "${1:-}" in
-
-# ----- account ---------------------------------------------------------------
-account)
-    echo "=== Balance ==="
-    _private /0/private/Balance | _pp
-    echo ""
-    echo "=== Trade Balance (equity / margin / unrealized P&L) ==="
-    _private /0/private/TradeBalance | _pp
+case "$CMD" in
+  account)
+    kraken_private "/0/private/Balance"
     ;;
 
-# ----- positions -------------------------------------------------------------
-positions)
-    result=$(_private /0/private/OpenPositions docalcs=true | _pp 2>&1) || {
-        echo "$result" >&2; exit 1
-    }
-    if [[ "$result" == "{}" ]]; then
-        echo "No open positions."
+  positions)
+    kraken_private "/0/private/OpenPositions"
+    ;;
+
+  orders)
+    kraken_private "/0/private/OpenOrders"
+    ;;
+
+  quote)
+    SYM="${2:?Usage: $0 quote SYM/USD}"
+    PAIR=$(map_pair "$SYM")
+    curl --no-progress-meter \
+      "https://api.kraken.com/0/public/Ticker?pair=${PAIR}" 2>/dev/null \
+      | python3 -m json.tool
+    ;;
+
+  assets)
+    SYM="${2:-}"
+    if [[ -n "$SYM" ]]; then
+      PAIR=$(map_pair "$SYM")
+      curl --no-progress-meter \
+        "https://api.kraken.com/0/public/AssetPairs?pair=${PAIR}" 2>/dev/null \
+        | python3 -m json.tool
     else
-        echo "$result"
+      curl --no-progress-meter \
+        "https://api.kraken.com/0/public/AssetPairs" 2>/dev/null \
+        | python3 -m json.tool
     fi
     ;;
 
-# ----- orders ----------------------------------------------------------------
-orders)
-    _private /0/private/OpenOrders | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-if d.get('error'):
-    print('ERROR:', d['error'], file=sys.stderr); sys.exit(1)
-orders = d.get('result', {}).get('open', {})
-if not orders:
-    print('No open orders.')
-else:
-    print(json.dumps(orders, indent=2))
-"
-    ;;
+  order)
+    BODY="${2:?Usage: $0 order '{...}'}"
+    python3 - "$KRAKEN_API_KEY" "$KRAKEN_PRIVATE_KEY" "$BODY" <<'PYEOF'
+import sys, hashlib, hmac, base64, urllib.parse, time, json
+from urllib.request import Request, urlopen
 
-# ----- quote -----------------------------------------------------------------
-quote)
-    [[ -n "${2:-}" ]] || { echo "Usage: $0 quote SYM/USD" >&2; exit 1; }
-    pair=$(_pair "$2")
-    _public "/0/public/Ticker?pair=${pair}" | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-if d.get('error'):
-    print('ERROR:', d['error'], file=sys.stderr); sys.exit(1)
-for p, v in d['result'].items():
-    bid = float(v['b'][0])
-    ask = float(v['a'][0])
-    mid = (bid + ask) / 2
-    spread_pct = (ask - bid) / mid * 100
-    print(f'Pair:   {p}')
-    print(f'Bid:    \${bid:,.4f}')
-    print(f'Ask:    \${ask:,.4f}')
-    print(f'Mid:    \${mid:,.4f}')
-    print(f'Spread: {spread_pct:.4f}%  ', end='')
-    print('OK ✓' if spread_pct <= 1.0 else 'WIDE — skip trade ✗')
-"
-    ;;
+api_key  = sys.argv[1]
+secret   = sys.argv[2]
+body     = json.loads(sys.argv[3])
 
-# ----- assets ----------------------------------------------------------------
-assets)
-    [[ -n "${2:-}" ]] || { echo "Usage: $0 assets SYM/USD" >&2; exit 1; }
-    pair=$(_pair "$2")
-    _public "/0/public/AssetPairs?pair=${pair}" | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-if d.get('error'):
-    print('ERROR:', d['error'], file=sys.stderr); sys.exit(1)
-for p, v in d['result'].items():
-    status = v.get('status', 'unknown')
-    print(f'Pair:      {p}')
-    print(f'Status:    {status}  ', end='')
-    print('OK ✓' if status == 'online' else 'NOT TRADEABLE ✗')
-    print(f'Min order: {v.get(\"ordermin\", \"n/a\")}')
-    print(f'Lot dec:   {v.get(\"lot_decimals\")}')
-"
-    ;;
+sym_base = body['symbol'].split('/')[0]
+if sym_base == 'BTC':
+    sym_base = 'XBT'
+pair = f"{sym_base}USD"
 
-# ----- order -----------------------------------------------------------------
-order)
-    [[ -n "${2:-}" ]] || { echo "Usage: $0 order '{...}'" >&2; exit 1; }
-    python3 - "$2" <<'PYEOF'
-import json, sys, os, urllib.request, urllib.parse, hashlib, hmac, base64, time
-
-order = json.loads(sys.argv[1])
-
-# Symbol: BTC/USD → XBTUSD, ETH/USD → ETHUSD, etc.
-sym = order['symbol'].replace('/', '')
-if sym.startswith('BTC'):
-    sym = 'XBT' + sym[3:]
-
-OTYPE = {
+otype_map = {
     'market':        'market',
     'limit':         'limit',
     'stop_limit':    'stop-loss-limit',
-    'trailing_stop': 'trailing-stop-limit',
+    'trailing_stop': 'trailing-stop',
 }
-otype = OTYPE.get(order.get('type', 'market'), 'market')
+kraken_type = otype_map.get(body.get('type', 'market'), 'market')
 
+nonce  = str(int(time.time() * 1000))
 params = {
-    'pair':      sym,
-    'type':      order['side'],
-    'ordertype': otype,
-    'volume':    str(order['qty']),
+    'nonce':     nonce,
+    'pair':      pair,
+    'type':      body['side'],
+    'ordertype': kraken_type,
+    'volume':    str(body.get('qty', 0)),
 }
 
-if order.get('type') == 'stop_limit':
-    params['price']  = str(order['stop_price'])   # stop trigger price
-    params['price2'] = str(order['limit_price'])  # limit price (below trigger)
+if kraken_type == 'stop-loss-limit':
+    params['price']  = str(body['stop_price'])   # trigger
+    params['price2'] = str(body['limit_price'])  # limit
+elif kraken_type == 'limit':
+    params['price'] = str(body['price'])
+elif kraken_type == 'trailing-stop':
+    pct = body.get('trail_percent', 5)
+    params['price'] = f'+{pct}%'
 
-if order.get('type') == 'trailing_stop':
-    # Kraken trailing stop: price = percentage offset from market (negative = trail below)
-    trail_pct = float(order.get('trail_percent', 5))
-    params['price']  = f'-{trail_pct}%'            # trailing offset
-    params['price2'] = f'-{trail_pct + 0.5}%'      # limit offset (0.5% slack below stop)
-
-if order.get('leverage'):
-    params['leverage'] = str(order['leverage'])
-
-if order.get('time_in_force', '').lower() == 'gtc':
-    params['timeinforce'] = 'GTC'
-
-# Dry-run: validate=true checks the order without submitting
-if order.get('validate'):
+if body.get('leverage'):
+    params['leverage'] = str(body['leverage'])
+if body.get('validate'):
     params['validate'] = 'true'
 
-key    = os.environ['KRAKEN_API_KEY']
-secret = base64.b64decode(os.environ['KRAKEN_PRIVATE_KEY'])
-path   = '/0/private/AddOrder'
-nonce  = str(int(time.time() * 1000))
-body   = 'nonce=' + nonce + '&' + urllib.parse.urlencode(params)
+urlpath  = '/0/private/AddOrder'
+postdata = urllib.parse.urlencode(params)
+encoded  = (nonce + postdata).encode()
+message  = urlpath.encode() + hashlib.sha256(encoded).digest()
+mac      = hmac.new(base64.b64decode(secret), message, hashlib.sha512)
+sig      = base64.b64encode(mac.digest()).decode()
 
-h256 = hashlib.sha256((nonce + body).encode()).digest()
-sig  = base64.b64encode(
-    hmac.new(secret, path.encode() + h256, hashlib.sha512).digest()
-).decode()
-
-req = urllib.request.Request(
-    'https://api.kraken.com' + path,
-    body.encode(),
-    {'API-Key': key, 'API-Sign': sig, 'Content-Type': 'application/x-www-form-urlencoded'}
+req = Request(
+    f'https://api.kraken.com{urlpath}',
+    data=postdata.encode(),
+    headers={
+        'API-Key': api_key,
+        'API-Sign': sig,
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
 )
-try:
-    with urllib.request.urlopen(req, timeout=15) as r:
-        result = json.loads(r.read().decode())
-        if result.get('error'):
-            print('ORDER ERROR:', result['error'], file=sys.stderr)
-            print(json.dumps(result, indent=2))
-            sys.exit(1)
-        print(json.dumps(result, indent=2))
-except urllib.error.HTTPError as e:
-    body_text = e.read().decode()
-    print(json.dumps({'error': [f'HTTP {e.code}: {body_text}']}))
-    sys.exit(1)
-except Exception as e:
-    print(json.dumps({'error': [str(e)]}))
-    sys.exit(1)
+with urlopen(req) as resp:
+    print(json.dumps(json.load(resp), indent=2))
 PYEOF
     ;;
 
-# ----- cancel ----------------------------------------------------------------
-cancel)
-    [[ -n "${2:-}" ]] || { echo "Usage: $0 cancel <order_id>  OR  $0 cancel all" >&2; exit 1; }
-    if [[ "$2" == "all" ]]; then
-        _private /0/private/CancelAll | _pp
+  cancel)
+    TXID="${2:?Usage: $0 cancel <txid|all>}"
+    if [[ "$TXID" == "all" ]]; then
+      kraken_private "/0/private/CancelAll"
     else
-        _private /0/private/CancelOrder "txid=${2}" | _pp
+      kraken_private "/0/private/CancelOrder" "txid=${TXID}"
     fi
     ;;
 
-# ----- help ------------------------------------------------------------------
-*)
-    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets SYM/USD|order '{...}'|cancel <id|all>}" >&2
+  *)
+    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets [SYM/USD]|order '{json}'|cancel <txid|all>}" >&2
     exit 1
     ;;
 esac
