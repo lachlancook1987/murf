@@ -925,3 +925,41 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 | ETH/USD | 0.038882 | $2,123.80 | $2,133.46 | -0.39% | +$0.38 (+0.46%) | $2,065.13 / $2,054.49 |
 **Trades today:** none | **Week:** 4/5
 **Notes:** Quiet no-trade day. ETH gave back -0.39% intraday ($2,141.80 → $2,133.46) while BTC edged up +0.50% ($77,480 → $77,871), causing -0.75% underperformance vs BTC. Portfolio declined -$0.33 (-0.25%). Stop buffer on ETH 3.20% (current $2,133.46 vs trigger $2,065.13) — healthy. BTC CAUTION regime persists (below est. 20-day MA ~$80,000); XRP sector PAUSED (2 consecutive losses). Phase P&L: -$10.72 (-7.56%). Week ends at 4/5 trades. Tomorrow: hold ETH, no new positions until BTC reclaims $80k; watch ETH above $2,200 as potential add-on signal.
+
+---
+
+## 2026-05-21 — Session-Open Trades (user dashboard, ~09:07–09:17 UTC)
+
+### 2026-05-21T09:07:35Z | ETH/USD | SELL (close) | 0.038882 ETH | Exit: $2,136.399 | Realized P&L: +$0.49 (+0.59%)
+
+**Order ID:** 99e947a9-9bff-494b-aeb5-d80bc63eadb0 (market sell, source: dashboard)
+**Stop cancelled:** 8fef13a1 ($2,065.13/$2,054.49) — cancelled at same time as close ✓
+**Avg entry:** $2,123.79 | **Exit:** $2,136.399 | **Qty:** 0.038882
+**P&L:** ($2,136.399 − $2,123.79) × 0.038882 = **+$0.49 (+0.59%)**
+**Notes:** User-directed close via dashboard. ETH/L1 sector exits at 1 consecutive loss — no loss triggered (position was profitable). Sector remains ACTIVE at 1 consecutive loss count.
+
+---
+
+### 2026-05-21T09:09:18Z | BTC/USD | BUY | 0.001619 BTC | Entry: $77,910.27 | Stop: $74,793.86 / $74,045.92 | Open
+
+**Order ID (buy):** 19e2106f-344e-48bd-a7c8-0dd15ea76d69 (market buy $129 notional, source: dashboard)
+**Stop Order ID:** a2b44cf9-d17c-4c2c-9150-6528f5d06ab6 (stop_limit: trigger $74,793.86, limit $74,045.92, qty 0.001619, GTC, status: new ✓)
+**Notional:** $129.00 (98.8% equity — user-directed; near-full deployment)
+**Target:** T1 $78,768 (regime flip, +1.1%), T2 $82,000 (+5.2%), T3 $85,000 (+9.1%)
+**Stop level:** $74,793.86 (-4.00% from entry $77,910.27 — CAUTION mode; limit $74,045.92)
+**R:R:** ~1.30:1 to T2 ($4,089 gain / $3,116 risk); ~2.28:1 to T3
+**Thesis:** User-directed BTC long. BTC near 20-day MA ($78,768 = +1.1% above entry); CAUTION mode (BTC below MA at entry); post-Nvidia earnings beat confirmed; macro cautiously supportive. Stop set 4% below entry per CAUTION mode rules.
+**Notes:** BTC Core sector at 1 consecutive loss — a stop-out here triggers BTC sector PAUSE. Cash after entry: $4.48 (no further entries possible). Weekly trade count: 6/25.
+
+---
+
+### May 21 — Session-Open Snapshot (post-user-trades, ~09:45 UTC)
+**Portfolio:** $130.42 | **Cash:** $4.48 (3.4%) | **Phase P&L:** ~-$11.34 (-8.00%)
+| Symbol | Qty | Entry | Price | Unrealized P&L | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.001619 | $77,910.27 | ~$77,642 | ~-$0.22 (-0.17%) | $74,793.86/$74,045.92 (order a2b44cf9) | ~3.67% ✓ |
+**Trades today:** ETH/USD SELL 0.038882 @ $2,136.399 (user dashboard); BTC/USD BUY 0.001619 @ $77,910.27 (user dashboard) | **Week:** 6/25
+**Regime:** CAUTION (BTC $77,642 vs 20-day MA $78,768 → 1.43% below; crash gate NOT triggered)
+**BTC spread:** 0.125% ✓ | **Stop:** active (new) ✓
+**Sector status:** BTC Core ACTIVE (1 consec loss), ETH/L1 ACTIVE (1 consec loss), L2/DeFi ACTIVE (0), Alts PAUSED (2)
+**Notes:** User rotated ETH→BTC via dashboard. ETH closed at +$0.49 gain. BTC position entered at $77,910 (below $78,768 regime-flip MA — user conviction entry). Nearly fully deployed; no bot entries possible. BTC stop 4% below entry (CAUTION mode). Watch: BTC close above $78,768 → regime flip to OFFENSIVE; BTC stop trigger $74,793 = 2nd BTC loss → BTC sector PAUSE.
