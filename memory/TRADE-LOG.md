@@ -1121,3 +1121,34 @@ No unprotected positions.
 
 **Result: NO-OP. No trades. No notification sent.**
 
+---
+
+## 2026-05-21 — Midday Scan #3
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.5302 | **+5.91%** | $0.5440 | $0.5168 (trail 5%) | 2.53% | OBLSOB-IGZY2-HFZXG7 ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.759 | **+1.48%** | $9.842 | $9.350 (trail 5%) | 4.19% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $87.24 | **+1.56%** | $87.90 | $83.51 (trail 5%) | 4.28% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Kraken equity:** ~$46.7 | ZUSD $0.087 (fully deployed)
+**BTC (Alpaca):** 0.001619 @ $77,910.27 | Current ~$77,609 | -0.39% | Stop a2b44cf9 ($74,793.86) ✓ | Buffer 3.63%
+**Crash gate:** BTC +0.05% 24h — NOT triggered ✓ | Regime: CAUTION (BTC $77,609 vs 20-day MA ~$78,768)
+
+**STEP 3 — Trailing stops verified:**
+- JTO: OBLSOB-IGZY2-HFZXG7, 40.29 JTO, trail 5%, trigger $0.5168 (HWM $0.5440) — ✓
+- LINK: OULSVN-3TUF5-PPM4YW, 1.1533 LINK, trail 5%, trigger $9.350 (HWM $9.842) — ✓
+- SOL: OAOOBG-DNG7C-B4WTH2, 0.17211 SOL, trail 5%, trigger $83.51 (HWM $87.90) — ✓
+No unprotected positions.
+
+**STEP 4 — Stop tightening:** JTO +5.91%, LINK +1.48%, SOL +1.56% — none ≥+20%. No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **JTO:** Jito Labs met with SEC Crypto Task Force (constructive/positive); JTX consumer trading terminal July 2026 launch on track; a16z $50M raise confirmed; Solana momentum intact. No exploit, rug, or adverse regulatory action. **Thesis INTACT. HOLD.**
+- **LINK:** CCIP v1.5 expansion ongoing, ZK rollup support in roadmap; DTCC integration H2 2026; range-bound $9.5–$10.0 with institutional catalysts intact. No adverse news. **Thesis INTACT. HOLD.**
+- **SOL:** Circle minted ~500M USDC on Solana in past 24h (ecosystem health signal); Firedancer 1.0 mainnet live; BESO ETF staking flows. No adverse news. **Thesis INTACT. HOLD.**
+
+**STEP 6 — New entry scan:** Market flat (BTC +0.05%, ETH +0.18%). No Kraken-specific assets confirmed up >5% in 4h. ZUSD $0.087 — all new entries require 2x leverage. F&G 29 (Fear) warrants catalyst-specific plays only. No qualifying intraday setup identified. Leveraged XRP/HBAR ideas from evening research remain open but flat market/Fear sentiment does not present a fresh trigger. Pass.
+
+**Result: NO-OP. No trades. No notification sent.**
+
