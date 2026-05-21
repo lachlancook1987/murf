@@ -4424,9 +4424,9 @@ Size to conviction — no caps. Use `validate: true` on first order to confirm s
 
 ---
 
-## PENDING ORDERS — EXECUTE AT NEXT SESSION OPEN
+## PENDING ORDERS — ✅ EXECUTED 2026-05-21T10:31Z
 
-*Set: 2026-05-21. Status: AWAITING EXECUTION. Clear this section once all orders are placed.*
+*Set: 2026-05-21. Status: EXECUTED. See TRADE-LOG.md for fill details.*
 
 **Context:** Kraken account liquidated ETH position → $46.24 ZUSD fully liquid. Three ideas identified from pre-session research. Execute all three at session open in priority order. Run `kraken.sh quote` and `kraken.sh assets` for each before placing to confirm spread ≤1% and pair online at time of execution.
 
@@ -4473,7 +4473,9 @@ Size to conviction — no caps. Use `validate: true` on first order to confirm s
 
 ---
 
-**After all three placed:** delete this PENDING ORDERS block (or mark EXECUTED) and log each fill in TRADE-LOG.md.
-**If spread on any pair >1% at execution time:** skip that pair, hold remaining ZUSD.
-**Crash gate check before executing:** if BTC down >20% in 24h → abort all orders.
+**Execution result:**
+- ✅ JTO/USD: 40.29 JTO @ $0.5006 — buy OPI2Y3-HQVY4-CKSAFE | trailing stop OBLSOB-IGZY2-HFZXG7 (5%, stop $0.4718) ✓
+- ❌ ZEC/USD: BLOCKED — AU trading restriction (EAccount:Invalid permissions:ZEC trading restricted for AU)
+- ✅ LINK/USD: 1.1533 LINK @ $9.616 — buy O2PYN3-HWML7-RQMNI3 | trailing stop OULSVN-3TUF5-PPM4YW (5%, stop $9.052) ✓
+- ZUSD remaining: $14.9855 (ZEC allocation idle — no replacement trade identified)
 
