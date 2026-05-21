@@ -1,57 +1,99 @@
-# Crypto Trading Strategy
+# Crypto Trading Strategy — Kraken Profile
+
+*Activated: 2026-05-21. Replaces the old Alpaca conservative profile.*
+
+---
+
+## Philosophy
+
+This is discretionary gambling capital. The goal is active trading and compounding gains
+across Kraken's full asset universe — not long-term holding. Trade > hold.
+
+---
 
 ## Universe
-- Crypto only — BTC, ETH, SOL, and alts in top 50 by market cap
-- No stocks, no options, no leverage >2x
 
-## BTC Regime Filter (mandatory gate)
-- **BTC down >8% in 24h** → Decision = HOLD, no new entries (genuine crash signal only)
-- **BTC below 20-day MA** → Caution mode: full universe still tradeable, reduce position sizes by 25%
-- **BTC above 20-day MA + neutral/positive funding** → Offensive mode: full universe, normal sizes
+- **Any crypto asset tradeable on Kraken** — BTC, ETH, SOL, alts, micro-caps, memes
+- No stocks, no options, no fiat pairs beyond USD
+- Prefer assets with spread ≤ 1% (checked via `kraken.sh quote`); skip if wider
+
+---
 
 ## Position Sizing
-- Max single position: 65% of portfolio equity
-- Max total deployed: 95% of portfolio (keep ~5% cash for fees/slippage)
-- Risk per trade: 5-10% of portfolio equity
+
+- No hard per-position cap — size to conviction and available capital
+- Max total deployed: 100% of equity (no forced cash reserve)
+- **Leverage: up to 2x available** — add `"leverage":"2"` to order JSON when using margin
+  - Kraken charges rollover fees every **4 hours** on open margin positions (typically 0.01–0.02%/4h per asset)
+  - At 2x leverage a 50% adverse move = liquidation — always place a stop on leveraged positions
+
+---
+
+## Trade Frequency
+
+- Multiple trades per day is the target; idle capital is wasted capital
+- No weekly trade cap
+- No sector pause rules — consecutive losses do not block re-entry
+- Intraday scalps, momentum plays, news-driven entries all valid
+
+---
 
 ## Entry Rules
-- Confirm catalyst (news, on-chain, technicals — at least one must be present)
-- Entry on pullback to key support, breakout with volume, OR momentum (strong trend + catalyst = valid market entry)
-- No chasing pumps >20% above base in a single session
-- Always set stop-loss immediately after fill
 
-## Exit Rules
-- Stop-loss: **fixed stop-limit 5% below entry**, placed immediately after fill confirmation
-  - Order type: `stop_limit` — stop trigger at 5% below entry, limit at 4.5% below entry
-  - ⚠️ `trailing_stop` order type is NOT supported for crypto on Alpaca — never use it
-  - Caution mode (BTC below 20-day MA): tighten to 4% below entry
-- Midday stop management (manual trailing via midday scan):
-  - Position up ≥40%: cancel existing stop-limit, place new one 5% below current price
-  - Position up ≥25%: cancel existing stop-limit, place new one 8% below current price
-  - Never move a stop down. Never tighten within 5% of current price.
-- Take profit: scale out at 1R, 2R, 3R
+- Any documented catalyst: news, technicals, momentum, on-chain signal, narrative
+- Market orders for speed on fast-moving setups; limit orders when entry precision matters
+- No restriction on chasing — if the move is real, enter
+- Spread check mandatory before every order: `bash scripts/kraken.sh quote SYM/USD`
 
-## Risk Management
-- Default stance: **TRADE** — if a thesis exists, enter. Idle cash is wasted capital.
-- Fear & Greed <10 → caution flag, reduce size by 50% (do NOT block entry entirely)
-- Fear & Greed >85 → no restriction, trade the greed
-- No trading during genuine market crashes (BTC >8% down 24h)
+---
 
-## Indicators Tracked
-- BTC 20-day MA (regime filter)
-- Funding rate (positive = overheated longs)
-- Fear & Greed Index
-- BTC dominance (rising = alt headwinds)
-- DXY (inverse correlation to crypto)
+## Exit & Stop Rules
 
-## Narrative Sectors
-Sectors tracked for cumulative performance. Exit rule: 2 consecutive losses → pause that sector.
+- **Stop-loss recommended on every position**, especially leveraged ones
+- Default: 5% stop-loss-limit below entry (`type: stop_limit`)
+- Tighten or trail stops manually as positions move in favour
+- Trailing stop available on Kraken: `type: trailing_stop`, `trail_percent: 5`
+- No fixed hold time — exit when thesis is invalidated or target is hit
+- Cancel orders any time: `bash scripts/kraken.sh cancel <order_id>`
 
-| Sector | Assets | Status | Consecutive Losses | Notes |
-|---|---|---|---|---|
-| BTC Core | BTC/USD | ACTIVE | 1 | Re-entry stopped out May 13 (-$1.62); at 1 of 2 pause threshold |
-| ETH / L1 | ETH/USD | ACTIVE | 1 | May 15 re-entry stopped out May 17-18 @ $2,155.13 (-$3.29); at 1 of 2 pause threshold; May 18 re-entry @ $2,120.40 |
-| L2 / DeFi | SOL, AVAX, ARB | ACTIVE | 0 | SOL closed May 13 near-flat; ARB unlock May 16 — no outsized impact |
-| Alts (top 50) | Various | **PAUSED** | **2** | XRP May 18 re-entry stopped out May 20 @ $1.366 (-$0.80, -2.14%); 2nd consecutive loss → PAUSE triggered |
+---
 
-*Last updated: 2026-05-20 — XRP stopped out at $1.366 (market sell 07:42 UTC). 2nd consecutive loss for Alts/top-50 sector → PAUSED. No XRP or other alt entries until sector resets (2 consecutive winners elsewhere or manual override). ETH and BTC Core each at 1 loss (at pause threshold). L2/DeFi cleanest at 0 losses.*
+## Leverage Rules
+
+- Max 2x (`"leverage":"2"` in order JSON)
+- Always pair a leveraged buy with an immediate stop-loss order
+- Monitor rollover cost on multi-day margin holds (4h rollover fee compounds)
+- Not all Kraken pairs support margin — check `assets` output for margin availability
+
+---
+
+## Crash Gate
+
+- BTC down **>20% in 24h** → pause all new entries; close leveraged positions
+- Normal BTC dips (-5%, -10%) are buying opportunities, not blockers
+
+---
+
+## Risk Awareness (not rules — just notes)
+
+- Kraken taker fee: ~0.26% per trade. Two trades/day = ~0.52%/day in fees — factor this into targets
+- Thin alt liquidity: wide spreads and slippage on low-cap coins can exceed the fee cost
+- 2x leverage on volatile alts can gap through stop limits — size accordingly
+- No limitations means full upside and full downside; no circuit breakers beyond the crash gate
+
+---
+
+## Sector Tracking
+
+Sector pause rules from the Alpaca era are **retired**. All sectors open.
+
+| Sector | Assets | Status |
+|---|---|---|
+| BTC Core | BTC/USD | OPEN |
+| ETH / L1 | ETH/USD | OPEN |
+| L2 / DeFi | SOL, AVAX, ARB, OP | OPEN |
+| Alts / Memes | Full Kraken universe | OPEN |
+
+---
+
+*Last updated: 2026-05-21*

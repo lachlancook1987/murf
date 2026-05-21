@@ -222,9 +222,19 @@ except Exception as e:
 PYEOF
     ;;
 
+# ----- cancel ----------------------------------------------------------------
+cancel)
+    [[ -n "${2:-}" ]] || { echo "Usage: $0 cancel <order_id>  OR  $0 cancel all" >&2; exit 1; }
+    if [[ "$2" == "all" ]]; then
+        _private /0/private/CancelAll | _pp
+    else
+        _private /0/private/CancelOrder "txid=${2}" | _pp
+    fi
+    ;;
+
 # ----- help ------------------------------------------------------------------
 *)
-    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets SYM/USD|order '{...}'}" >&2
+    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets SYM/USD|order '{...}'|cancel <id|all>}" >&2
     exit 1
     ;;
 esac
