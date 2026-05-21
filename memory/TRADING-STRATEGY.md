@@ -96,4 +96,37 @@ Sector pause rules from the Alpaca era are **retired**. All sectors open.
 
 ---
 
+## Pre-Session Research Query Set
+
+Run all of these via `bash scripts/perplexity.sh "<query>"` at each session open:
+
+1. `"Bitcoin price and 24h change right now"`
+2. `"Ethereum price and 24h change right now"`
+3. `"Top 10 crypto gainers in the last 24 hours"`
+4. `"Crypto Fear and Greed Index today"`
+5. `"Bitcoin perpetual futures funding rate today"`
+6. `"Top crypto market catalysts and breaking news today $DATE"`
+7. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
+8. `"Top altcoin momentum plays on Kraken exchange today — assets up more than 5% in 4 hours"`
+9. `"Best DeFi altcoin trade setups with catalyst today $DATE"`
+10. One query per open position: `"<ASSET> news and price outlook today"`
+
+### Opportunity Scan Checklist
+
+For each candidate identified in research:
+- [ ] `bash scripts/kraken.sh assets SYM/USD` — confirm pair is online on Kraken
+- [ ] `bash scripts/kraken.sh quote SYM/USD` — confirm spread ≤1% (skip if wider)
+- [ ] Catalyst documented (news / momentum / technical breakout)
+- [ ] Stop type chosen: `trailing_stop` (default, trail_percent 5) or `stop_limit`
+- [ ] Size chosen based on conviction — no arbitrary cap; up to 100% equity
+
+### What NOT to apply (retired Alpaca rules)
+
+- ~~Sector consecutive-loss pause~~ — all sectors always open
+- ~~CAUTION / OFFENSIVE regime based on BTC vs 20-day MA~~ — does not affect entries or sizing
+- ~~DXY red flag~~ — not part of this strategy
+- ~~Fixed 25% position size in CAUTION mode~~ — size to conviction
+
+---
+
 *Last updated: 2026-05-21*
