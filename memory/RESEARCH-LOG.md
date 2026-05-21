@@ -4279,136 +4279,31 @@ Note: BTC 20-day MA revised to **$78,768** (vs prior $80,000 est.) — regime fl
 
 ---
 
+---
+
 ## 2026-05-21 — Pre-Session Research
 
+**DATE:** 2026-05-21 | **CRASH GATE:** NOT triggered (BTC +1.0–1.5% 24h) | **STANCE: TRADE**
+
 ### Account Snapshot
+
+**Kraken (primary):**
+
 | Field | Value |
 |---|---|
-| Equity | $131.08 |
-| Cash | $48.09 (36.7%) |
-| Long MV | $82.99 (63.3%) |
-| Day P&L | +$0.62 (+0.48%) vs last equity $130.46 |
-| Phase P&L | ~-$10.28 (-7.26%) |
-
-**Open Position:**
-| Symbol | Qty | Avg Entry | Current | Unrealized P&L | Stop |
-|---|---|---|---|---|---|
-| ETH/USD | 0.038882 | $2,123.79 | $2,134.25 | +$0.41 (+0.49%) | 8fef13a1: trigger $2,065.13 / limit $2,054.49 (3.24% buffer) |
-
-**Open Orders:** Stop-limit 8fef13a1 — sell 0.038882 ETH/USD GTC, trigger $2,065.13, limit $2,054.49. Status: active (new).
-
----
-
-### Market Context
-| Indicator | Value | Notes |
-|---|---|---|
-| BTC | ~$77,700 (+1.4% 24h) | Pulled back slightly from $78,065 at yesterday's 05:15 UTC scan |
-| ETH | ~$2,134–$2,143 (flat to +1.5% 24h) | Alpaca: $2,134.25; Kraken: $2,143 |
-| BTC Dominance | ~60.2–60.5% | CoinMarketCap; elevated, mild alt headwind |
-| Fear & Greed | **27 (Fear)** | Unchanged/slightly improved from 25 yesterday |
-| BTC Funding | +0.0019–+0.0043% per 8h | Neutral-positive; not overheated |
-| DXY | ~99.0–99.19 | Below 99.5 red flag → new entries NOT blocked |
-| S&P 500 Futures | ~7,435 | Flat/stable; macro not alarming |
-| BTC 20-day MA | ~$78,768 | BTC at $77,700 → $1,068 below MA (1.4% gap); CAUTION regime |
-
-**Regime: CAUTION** — BTC below 20-day MA. Reduce position sizes 25%. Stops at 4% (not 5%). Crash gate: NOT triggered (BTC +1.4% 24h).
-
----
-
-### Key Catalysts & Events
-- **Lido DAO (LDO) tokenholder update:** 21 May 2026 at 14:00 UTC — could move LDO and indirectly support ETH sentiment
-- **Stablecoin legislation:** US Senate/House activity continuing; positive medium-term catalyst for crypto broadly
-- **Institutional flows:** Ongoing BTC/ETH corporate treasury accumulation supporting base demand
-- **Token unlocks this week:** ZRO ~$270M (7-day), TRUMP ~$523M (30-day), SUI ~$229M (30-day) — none held; no direct impact
-- **ETH near-term technicals:** Resistance flagged at $2,260–$2,280 (aligns with T1 target $2,280); support at $2,100–$2,120
-- **Nvidia post-earnings:** Beat confirmed yesterday; "sell the news" (NVDA -1.3% AH) — risk-on boost did NOT fully materialize but also did not crash
-
----
-
-### Trade Ideas
-
-**Idea 1 — ETH Add-On (Priority)**
-- Catalyst: ETH Glamsterdam Q3 2026 (devnets live, 200M gas limit floor confirmed); institutional ETH ETF inflows; Lido DAO update may boost ETH sentiment
-- Thesis: Existing position +0.49% unrealized; add-on on sustained break above $2,200 to increase conviction on T1 target $2,280
-- Entry: ETH sustained close above $2,200 (currently $66 away, ~3.1%)
-- Stop: 4% below entry (~$2,112 on $2,200 entry) — CAUTION mode
-- Target: T1 $2,280 (~3.6% above $2,200 entry)
-- Size: ~$32 notional (25% equity, CAUTION mode)
-- R:R: ~0.9:1 to T1 — marginal; only enter on strong momentum confirming breakout
-- Sector: ETH/L1 (1 consecutive loss — another stop-out pauses ETH sector)
-
-**Idea 2 — BTC Long (Regime Flip)**
-- Catalyst: BTC reclaims 20-day MA ($78,768) → regime flips OFFENSIVE; macro stabilization post-Nvidia earnings
-- Entry: BTC sustained hourly close above $78,768 (regime flip confirmation; $1,068 above current $77,700)
-- Stop: 4% below entry (~$75,617 on $78,768 entry) — CAUTION mode; tightens to 3% on OFFENSIVE flip
-- Target: T1 $82,000 (+4.1% above entry), T2 $86,000 (+9.2%)
-- Size: ~$32 notional (25% equity, CAUTION; upgrade to ~$42 if regime flips OFFENSIVE first)
-- R:R: ~1.1:1 to T1
-- Sector: BTC Core (1 consecutive loss — another stop-out pauses BTC sector)
-- Note: Wait for confirmed sustained close above MA, not just an intraday wick
-
-**Idea 3 — SOL Momentum (Cleanest Sector)**
-- Catalyst: L2/DeFi sector at 0 consecutive losses; post-Nvidia risk-on still possible if BTC breaks $78,768; SOL historically correlates with macro risk-on
-- Entry: SOL pullback to support near $155–$160 OR breakout above $175 on strong volume; only enter if BTC at/above 20-day MA
-- Stop: 4% below entry (CAUTION mode)
-- Target: T1 +8–10% above entry
-- Size: ~$22 notional (CAUTION mode, smaller given no immediate catalyst)
-- R:R: ~2.5:1 (entry-dependent)
-- Sector: L2/DeFi (0 losses — safest sector for new entries)
-
----
-
-### Risk Factors
-1. **ETH/L1 sector at 1 consecutive loss** — another ETH stop-out (trigger $2,065.13) pauses ETH sector entirely; current 3.24% buffer is healthy but not wide
-2. **BTC Core sector at 1 consecutive loss** — any BTC entry that stops out pauses BTC sector
-3. **Alts sector PAUSED** (2 consecutive losses) — no XRP or top-50 alt trades until sector resets
-4. **Fear & Greed 27 (Fear)** — below 30; deteriorating sentiment but not at <10 block threshold
-5. **BTC still below 20-day MA ($78,768)** — CAUTION regime locked; $1,068 gap; no regime flip yet
-6. **DXY at 99.0** — below 99.5 red flag; if DXY spikes above 99.5, block new entries this session
-7. **ETH resistance at $2,260–$2,280** — Idea 1 T1 aligns with resistance; need strong volume to push through
-8. **Lido DAO update 14:00 UTC** — could be directional catalyst for LDO/ETH; monitor for any negative governance outcome
-
----
-
-### Decision: **TRADE** (triggers required; default TRADE stance applies)
-
-CAUTION mode (BTC below 20-day MA). No immediate entries now — both ETH and BTC are below their respective entry triggers. Active watches:
-- **Priority 1:** ETH sustained above $2,200 → add-on entry (Idea 1)
-- **Priority 2:** BTC sustained hourly close above $78,768 → regime flip + BTC entry (Idea 2)
-- **Priority 3:** SOL at support $155–$160 or breakout $175+ with BTC regime confirmation (Idea 3)
-
-**Watch Levels:**
-- ETH stop: $2,065.13 (3.24% buffer — healthy)
-- ETH entry trigger: sustained break above $2,200
-- BTC regime flip: sustained close above $78,768
-- DXY red flag: above 99.5 → block new entries
-- Lido DAO update: 14:00 UTC — monitor for ETH direction
-- Alts sector: PAUSED — no alt entries
-
----
-
----
-
-## 2026-05-21 — Pre-Session Research
-
-**DATE:** 2026-05-21 | **REGIME:** CAUTION (BTC below 20-day MA ~$78,768) | **CRASH GATE:** NOT triggered
-
-### ⚠️ CRITICAL: kraken.sh MISSING
-`scripts/kraken.sh` is absent from the repo. Kraken account/positions/orders cannot be queried directly. WhatsApp alert sent. All Kraken-dependent actions (order placement, spread checks, account balance) are blocked until kraken.sh is restored and pushed to main. Alpaca data used as proxy for BTC position tracking.
-
----
-
-### Account Snapshot
+| XBT balance | 0.00061053 (~$47.36 at $77,568) |
+| USD cash (ZUSD) | $0.00 |
+| Open positions | None |
+| Open orders | None |
+| Equity | ~$46.89 |
 
 **Alpaca (residual BTC position):**
+
 | Symbol | Qty | Entry | Current | Unrealized P&L | Stop | Buffer |
 |---|---|---|---|---|---|---|
-| BTC/USD | 0.001619 | $77,910.27 | $77,631.30 | -$0.45 (-0.36%) | $74,793.86/$74,045.92 (a2b44cf9 ✓) | 3.64% ✓ |
+| BTC/USD | 0.001619 | $77,910.27 | $77,631.30 | -$0.45 (-0.36%) | $74,793.86 / $74,045.92 (a2b44cf9 ✓) | 3.64% |
 
-- Stop order a2b44cf9: stop_limit, trigger $74,793.86, limit $74,045.92, GTC, status: **new ✓** — active
-- Estimated cash: ~$4.48 (near-fully deployed; per yesterday's session-open snapshot)
-
-**Kraken account:** UNAVAILABLE (kraken.sh missing — see alert above)
+**Note:** `scripts/kraken.sh` was missing at session start (never previously committed to git). Restored from user-pushed main mid-session. All Kraken data is confirmed live.
 
 ---
 
@@ -4416,140 +4311,83 @@ CAUTION mode (BTC below 20-day MA). No immediate entries now — both ETH and BT
 
 | Metric | Value | Notes |
 |---|---|---|
-| BTC | ~$77,941 (+1.0–1.5% 24h) | Holding above $77k support; ~$827 below 20-day MA $78,768 (1.1% gap — narrowing) |
-| ETH | ~$2,143 (+0.3–1.5% 24h) | Still below $2,200 add-on trigger |
+| BTC | ~$77,941 (+1.0–1.5% 24h) | Holding above $77k support; spread 0.0001% ✓ |
+| ETH | ~$2,143 (+0.3–1.5% 24h) | — |
 | Top Gainers 24h | BOBO +487%, RAVE +106%, MWC +68%, OPG +59%, JTO +28%, ORCA +27%, BANANAS31 +26%, ZEC +18% | Mix of micro-caps and mid-caps |
-| Fear & Greed | ~25–29 (Extreme Fear / Fear) | Alternative.me: 25 (Extreme Fear); deteriorating vs yesterday ~27 |
-| BTC Funding | +0.0019–+0.0043% per 8h | Neutral-positive; not overheated; longs not crowded |
-| Regime | CAUTION | BTC at $77,941 vs MA $78,768; gap narrowing (+$299 from yesterday's open) |
+| Fear & Greed | ~25 (Extreme Fear) | Alternative.me; bearish broad sentiment |
+| BTC Funding | +0.0019–+0.0043% per 8h | Neutral; longs not crowded |
 
-**Crash gate check:** BTC +1.0–1.5% 24h → NOT triggered → **TRADE stance active**
+**Crash gate check:** BTC +1.0–1.5% 24h — NOT triggered → **TRADE**
 
 ---
 
-### Key Catalysts & Events
+### Key Catalysts
 
-- **Injective (INJ):** Circle launched native USDC + CCTP on Injective; community buyback burned 55k+ INJ; 21Shares INJ spot ETF filing pending at SEC — strong multi-catalyst setup
-- **Jito (JTO):** +28% in top gainers — Solana staking protocol; Solana ecosystem momentum
-- **Zcash (ZEC):** +17.5% 24h — privacy coin momentum; may be Kraken-listed
-- **Stablecoin legislation:** US GENIUS Act / CLARITY Act progress continues — medium-term positive for stablecoins and DeFi broadly
-- **Lido DAO (LDO):** Tokenholder update on CoinMarketCal today — ETH sentiment catalyst
-- **BTC regime flip imminent:** Only $827 above current price to 20-day MA ($78,768) — if BTC closes above, regime flips OFFENSIVE; opens door to larger position sizing and more entries
-- **Token unlock risks:** PYTH ~$1B+ unlock (May 19–21 window, overlapping today); STRK 64M unlock May 22 — these suppress price for unlocked assets; avoid PYTH and STRK entries
+- **INJ (Injective):** Circle native USDC + CCTP launched on Injective; 55k+ INJ community buyback burn; 21Shares INJ spot ETF filing pending at SEC — multi-layered catalyst
+- **JTO (Jito):** +28% 24h — Solana liquid staking momentum
+- **ZEC (Zcash):** +17.5% 24h — privacy narrative momentum
+- **LDO (Lido DAO):** Tokenholder update today — possible ETH sentiment catalyst
+- **Stablecoin legislation:** GENIUS Act / CLARITY Act progress — medium-term positive
+- **Token unlock risks:** PYTH ~$1B+ unlock window (May 19–21), STRK 64M unlock May 22 — avoid both
 
 ---
 
 ### Trade Ideas
 
-**⚠️ NOTE: All new order ideas require kraken.sh to be restored. Currently, spread checks and order placement are blocked. Ideas below are pre-planned for execution once kraken.sh is available.**
+**Idea 1 — INJ/USD (Best Catalyst)**
+- Catalyst: Circle USDC native launch on Injective + 55k+ INJ buyback burn + 21Shares ETF filing
+- Entry: Market or limit on any intraday dip; spread check mandatory first
+- Stop: `trailing_stop`, `trail_percent: 5`
+- Target: +15–20%
+- Size: Up to 50% of Kraken equity (~$23 spot; or ~$47 at 2x leverage if margin available)
+- R:R: ~3:1 at 5% stop / 15% target
+- Action: Sell ~half Kraken XBT → ZUSD → buy INJ; OR leveraged long if INJ/USD margin available on Kraken
+- Prereq: `kraken.sh assets INJ/USD` online; `kraken.sh quote INJ/USD` spread ≤1%
 
-**Idea 1 — HOLD BTC (Active Position)**
-- Existing: 0.001619 BTC @ $77,910.27, stop active at $74,793.86 ✓
-- Thesis: BTC only 1.06% below regime-flip MA ($78,768); if BTC closes above → OFFENSIVE mode → stop can tighten, sizing on any add-on increases
-- Action: Hold. Watch for regime flip.
-- No spread check needed (existing position).
-- R:R ongoing: T1 $82,000 (+5.2%), T2 $85,000 (+9.1%) from entry
+**Idea 2 — JTO/USD (Momentum)**
+- Catalyst: +28% 24h Solana staking ecosystem momentum
+- Entry: Pullback to consolidation or breakout above 24h high
+- Stop: `trailing_stop`, `trail_percent: 5`
+- Target: +10–15%
+- Size: ~30% of Kraken equity (~$14)
+- R:R: ~2.5:1
+- Prereq: `kraken.sh assets JTO/USD` online; spread ≤1%
 
-**Idea 2 — INJ/USD Catalyst Long (conditional on kraken.sh)**
-- Catalyst: Circle USDC native launch on Injective (May 7, still fresh), 55k+ INJ buyback burn, 21Shares ETF filing pending
-- JTO also noteworthy but INJ has more layered catalysts
-- Entry: INJ/USD on pullback or breakout confirmation; check spread (<1%) before entry
-- Stop: 5% trailing (strategy default; switch to 4% CAUTION mode if BTC stays below MA)
-- Target: +10–15% (narrative / ETF filing premium)
-- Size: ~$20–25 notional (CAUTION mode; no position cap but limited cash available)
-- R:R: ~2.5–3:1 at 5% stop / 12% target
-- Prerequisite: kraken.sh restored; spread check; verify INJ/USD listed on Kraken
-
-**Idea 3 — ETH/USD Add-On (trigger: sustained close above $2,200)**
-- Sector: ETH/L1 at 1 consecutive loss — another stop-out pauses ETH sector
-- Entry: ETH sustained hourly close above $2,200 (currently $2,143, ~2.7% away)
-- Stop: 4% below entry (~$2,112 on $2,200 entry) — CAUTION mode
-- Target: T1 $2,280 (+3.6% from $2,200 entry)
-- Size: ~$20–25 notional (CAUTION mode — note limited cash available)
-- R:R: ~0.9:1 to T1 — marginal; only enter on strong volume confirmation
-- Lido DAO update today could be ETH tailwind; watch for >$2,200 on any LDO positive news
-
-**Idea 4 — ZEC/USD Momentum (conditional on kraken.sh)**
-- Catalyst: +17.5% 24h momentum, privacy narrative
-- Entry: ZEC/USD on any pullback with spread ≤1%
-- Stop: 5% trailing
-- Target: +10–12% (momentum extension)
-- Size: ~$15–20 notional (smaller; pure momentum — less fundamental backing)
+**Idea 3 — ZEC/USD (Momentum)**
+- Catalyst: +17.5% 24h privacy narrative
+- Entry: Pullback or continuation
+- Stop: `trailing_stop`, `trail_percent: 5`
+- Target: +10–12%
+- Size: ~20% of Kraken equity (~$9)
 - R:R: ~2:1
-- Prerequisite: kraken.sh restored; spread check; verify ZEC/USD on Kraken
+- Prereq: `kraken.sh assets ZEC/USD` online; spread ≤1%
 
-**Idea 5 — BTC Regime Flip Add-On (conditional on regime flip + cash availability)**
-- If BTC closes above $78,768 and kraken.sh is restored and cash is available: open additional BTC/USD long via Kraken
-- Entry: Regime flip confirmation (sustained close above $78,768)
-- Stop: 3% below entry (OFFENSIVE mode — tighter stop)
-- Target: T1 $82,000, T2 $85,000
-- Size: up to 50% of available cash (OFFENSIVE mode removes CAUTION size restrictions)
+**Idea 4 — BTC Leveraged Long (breakout / conviction play)**
+- Catalyst: BTC holding above $77k support; $82k–$85k upside if macro holds
+- Entry: Any time; or tighten entry to confirmed close above $79k
+- Stop: `stop_limit`, stop_price 4% below entry
+- Target: T1 $82,000 (+5.2%), T2 $85,000 (+9.1%)
+- Size: 2x leverage on full Kraken equity (~$94 notional exposure, ~$47 margin)
+- R:R: ~1.3:1 to T1; ~2.3:1 to T2
+- Note: Alpaca BTC already covers some upside; this adds additional levered exposure; use only if alts unavailable
+
+**Idea 5 — Hold Alpaca BTC**
+- No action; stop order a2b44cf9 active (3.64% buffer ✓)
 
 ---
 
 ### Risk Factors
 
-1. **kraken.sh missing** — primary operational blocker; no Kraken order placement possible until restored
-2. **Near-zero cash** — ~$4.48 estimated available; even if kraken.sh restored, new entries very limited unless BTC position closed or partial cash freed
-3. **Fear & Greed at 25 (Extreme Fear)** — worsening sentiment; buyer reluctance
-4. **PYTH mega-unlock** (~$1B+ in window May 19–21) — risk of sell pressure on PYTH; avoid
-5. **STRK unlock May 22** — potential STRK suppression
-6. **ETH/L1 sector at 1 consecutive loss** — another ETH stop-out pauses sector
-7. **BTC Core sector at 1 consecutive loss** — BTC stop-out at $74,793 would pause BTC sector
-8. **Alts sector PAUSED** (2 consecutive losses) — no XRP or general alt entries
+1. **Kraken has no USD cash** — new spot buys require selling XBT first or using 2x leverage; plan funding step before placing orders
+2. **PYTH unlock** (~$1B+ window May 19–21) — avoid PYTH entries
+3. **STRK unlock May 22** — avoid STRK entries
+4. **Fear & Greed 25 (Extreme Fear)** — favour assets with strong specific catalysts (INJ, JTO) over broad macro plays
+5. **Alpaca BTC stop at $74,793** — triggers a realized loss if hit; 3.64% buffer is healthy
 
 ---
 
-### Decision: **TRADE** (conditional — regime triggers required; operational blocker = missing kraken.sh)
+### Decision: TRADE
 
-Active action items:
-1. **URGENT: Restore scripts/kraken.sh** — push to main so next session can use it
-2. **Hold existing BTC position** — stop active and healthy (3.64% buffer)
-3. **Watch BTC $78,768** — regime flip trigger; if crossed, tighten BTC stop and size up if cash available
-4. **Watch ETH $2,200** — add-on trigger (Idea 3), if kraken.sh restored and cash freed
-5. **INJ/USD** — best new-entry candidate if kraken.sh restored (Idea 2)
-
-
----
-
-## 2026-05-21 — Pre-Session Addendum (Kraken account confirmed)
-
-*Appended after kraken.sh was restored from main.*
-
-### Kraken Account (live data)
-| Field | Value |
-|---|---|
-| Balance | 0.00061053 XBT (~$47.36 at $77,568) |
-| USD Cash (ZUSD) | $0.00 — no fiat in account |
-| Open Positions | None |
-| Open Orders | None |
-| Equity | ~$46.89 |
-
-**Implication:** Kraken has no USD cash for spot buys. Options:
-1. Use 2x leverage (margin) to enter a leveraged long — borrows USD, requires stop-loss mandatory
-2. Sell the 0.00061053 BTC holding to get ~$47 USD, then redeploy into another asset
-3. Hold idle BTC and monitor; no new spot entries possible without USD
-
-**Combined account picture:**
-- Kraken BTC (spot): 0.00061053 BTC ~$47.36
-- Alpaca BTC (open position): 0.001619 BTC @ $77,910.27, stop $74,793.86 active ✓
-- Total BTC exposure: ~0.002230 BTC (~$173 at $77,568)
-
-### Updated Trade Ideas (post Kraken data)
-
-**Idea 1 — BTC Leveraged Long on Kraken (regime flip trigger)**
-- Entry: BTC sustained close above $78,768 → regime flips OFFENSIVE
-- Mechanism: 2x leverage buy (borrows USD), no USD cash needed
-- Immediately pair with stop-loss order (mandatory per strategy)
-- Stop: 3% below entry (OFFENSIVE mode)
-- Size: ~$47 notional at 1x, ~$94 at 2x leverage
-- R:R: ~1.5–2:1 to T1 $82,000
-
-**Idea 2 — Rotate Kraken BTC → Alt (optional)**
-- Sell 0.00061053 XBT → ~$47 USD cash → buy INJ, ZEC, or JTO on catalyst
-- Only worthwhile if alt thesis is strong (INJ catalyst is the best current candidate)
-- Spread checks needed before rotation
-
-**Idea 3 — Alpaca BTC Hold (no action)**
-- Stop active (3.64% buffer), thesis intact, no new Alpaca entries possible (near-zero remaining cash)
+Priority: **INJ/USD** (Idea 1) → **JTO/USD** (Idea 2) → **ZEC/USD** (Idea 3) → **BTC leveraged** (Idea 4, fallback if alts unavailable).
+Run `kraken.sh quote` and `kraken.sh assets` on each before entering. Size to conviction — no arbitrary caps.
 

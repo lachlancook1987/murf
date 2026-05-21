@@ -68,3 +68,54 @@ for quotes or placing orders.
 Kraken profile (activated 2026-05-21). See `memory/TRADING-STRATEGY.md`.
 Key parameters: full alt universe, no position caps, up to 2x leverage,
 multiple trades/day, trailing stops supported, crash gate = BTC down >20% in 24h.
+
+## Pre-Session Research — Kraken Framework
+
+The Kraken profile is **aggressive**. Apply only these rules in pre-session research —
+the old Alpaca conservative rules are fully retired.
+
+### Perplexity Queries (run all)
+
+- `"Bitcoin price and 24h change right now"`
+- `"Ethereum price and 24h change right now"`
+- `"Top 10 crypto gainers in the last 24 hours"`
+- `"Crypto Fear and Greed Index today"`
+- `"Bitcoin perpetual futures funding rate today"`
+- `"Top crypto market catalysts and breaking news today $DATE"`
+- `"Crypto token unlocks or major protocol upgrades this week $DATE"`
+- `"Top altcoin momentum plays on Kraken exchange today — assets up more than 5% in 4 hours"`
+- `"Best DeFi altcoin trade setups with catalyst today $DATE"`
+- One query per open Kraken position: `"<ASSET> news and price outlook today"`
+
+### Decision Rules (one gate only)
+
+| Rule | Kraken |
+|---|---|
+| Crash gate | BTC down >20% in 24h → no new entries, protect positions |
+| Everything else | **TRADE** — find the best setup and enter |
+| Sector pause rules | **RETIRED** — ignore consecutive loss counts entirely |
+| CAUTION / OFFENSIVE regime | **RETIRED** — BTC vs MA does not affect sizing or entries |
+| DXY filter | **NOT in strategy** — do not apply |
+| Per-position size cap | **None** — size to conviction, up to 100% equity |
+| Leverage | Normal tool — 2x available; always pair with a stop |
+
+### Trade Idea Format
+
+For each idea include:
+- **Catalyst** (what's driving it)
+- **Entry** (market, limit, or trigger level)
+- **Stop:** `stop_limit` (stop_price + limit_price) or `trailing_stop` (trail_percent, default 5)
+- **Target** and **R:R**
+- **Size** (% of equity or $ notional — sized to conviction, no arbitrary caps)
+- **Kraken pair** confirmed via `kraken.sh assets SYM/USD`
+- **Spread** confirmed ≤1% via `kraken.sh quote SYM/USD`
+
+### Banned phrases in research logs
+
+These belong to the old Alpaca strategy — do not use them:
+- "Sector X at N consecutive losses"
+- "CAUTION mode" / "OFFENSIVE mode"
+- "Size 25% in CAUTION"
+- "DXY red flag"
+- "BTC below 20-day MA → reduce sizing"
+- "Alts sector PAUSED"
