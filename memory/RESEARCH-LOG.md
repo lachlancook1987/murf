@@ -4975,3 +4975,118 @@ All four positions held with trailing/fixed stops in place. All theses intact.
 **Secondary:** XRP/USD 2x (CLARITY Act) or SUI/USD 2x (ETF catalysts) — after NEAR resolves or with separate capital
 **Immediate action required:** Verify Alpaca BTC position status and re-set stop if position is live
 
+
+---
+
+## 2026-05-22 — Pre-Session Research
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Balance | Entry | Current | P&L% | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ZUSD | $149.99 | — | — | — | — | — | — |
+| LINK | 1.1533 | $9.616 | $9.811 | **+2.03%** | $9.362 trail 5% (HWM $9.855) | 4.76% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL | 0.17211 | $85.90 | $86.65 | **+0.87%** | $83.51 trail 5% (HWM $87.90) | 3.63% | OAOOBG-DNG7C-B4WTH2 ✓ |
+| JTO | 0 | — | — | — | — | — | Stopped out |
+
+No open margin positions on Kraken.
+
+**Alpaca (residual):**
+Positions endpoint returned `[]`. Order history shows: sell market 0.001619 BTC @ $77,535 (05:22 UTC), then buy market 0.001639 BTC @ $77,574 (05:29 UTC). Most recent Alpaca position status unclear — likely a prior session rebalanced the residual and the new buy has no stop attached. **Monitor/treat as unprotected.**
+
+---
+
+### Market Context
+
+| Indicator | Value | Note |
+|---|---|---|
+| BTC | ~$77,500 | -0.5% in 24h; crash gate NOT triggered (need -20%) |
+| ETH | ~$2,128 | Flat, -0.1% to +0.3% across sources |
+| NEAR | $2.157 | **+11.9%** from 24h open $1.927; 4h vol = 43% of 24h vol → acceleration |
+| SOL | $86.65 | -0.71% from open $87.27; range-bound below $87.90 resistance |
+| LINK | $9.811 | +0.66% from open $9.747; capped below $9.855 HWM |
+| SUI | $1.100 | -2.15% from open $1.124; pulling back |
+| XRP | $1.362 | -0.72% from open $1.372; flat/slight down |
+| ORCA | $1.423 | -2.6% from open $1.461 on Kraken; global gainer data (+27%) was on other venues — thin Kraken volume ~$22K/24h |
+| Fear & Greed | **29 (Fear)** | Third consecutive Fear day |
+| BTC Funding Rate | +0.0036–+0.0064%/8h | Mild positive; not overheated |
+| 24h Top Gainers | RAVE +106%, MWC +68%, OPG +59%, ORCA +27%, CORE +25% | None confirmed on Kraken with adequate liquidity |
+
+**Token unlocks today (2026-05-22):** STRK 64M (headwind for L2s), ID 9.87M, SCR 10.98M, INFRA 50K, XWGT 819K. PYTH 2.13B unlock completed May 19-21.
+
+**Key catalysts:**
+- **NEAR:** Grayscale NEAR Protocol Trust S-1 filing — ETF narrative driving +12% breakout. 4h volume = 43% of full 24h volume indicating intraday acceleration (1.73M NEAR in 4h vs 4.04M total). Spread: (2.16000-2.15830)/2.16000 = 0.079% ✓. Leverage 2x/3x available ✓.
+- **XRP:** CLARITY Act markup advancing in Senate; 55% Polymarket odds of 2026 signing. Flat today = cleaner entry than chasing. Spread: 0.003% ✓. Leverage 2x–10x ✓.
+- **SUI:** CME SUI futures listed, Grayscale SUI Trust S-1 filed, 21Shares ETF reference. Pulling back from $1.164 high to $1.100 — potentially better R:R entry. Spread: 0.027% ✓. Leverage 2x–10x ✓.
+- **LINK:** AWS Marketplace adoption, CCIP 80K daily active addresses ATH, DTCC H2 2026. Capped below $10 — hold, add only on $10+ reclaim.
+
+---
+
+### Open Position Thesis Check
+
+| Symbol | Thesis | Status |
+|---|---|---|
+| LINK | AWS marketplace, CCIP ATH activity, DTCC H2 2026, SWIFT integration | INTACT — HOLD. Add only if $10+ reclaimed. |
+| SOL | Firedancer 1.0 mainnet live, Alpenglow in dev, record futures OI | INTACT — HOLD. Watch $87.90 resistance break. |
+| JTO | Stopped out. JTX terminal July 2026 / a16z thesis still intact | Monitoring for re-entry above $0.54 on consolidation. |
+
+---
+
+### Trade Ideas
+
+**IDEA 1 — NEAR/USD 2x Leveraged Long (PRIMARY)**
+- **Catalyst:** Grayscale NEAR Protocol Trust S-1 filing driving ETF narrative; confirmed +11.9% breakout from $1.927→$2.157 with 4h vol at 43% of 24h total — momentum still accelerating, not exhausted.
+- **Kraken pair:** NEARUSD ✓ | Spread: 0.079% ✓ | Leverage: 2x/3x ✓ | Min: 4 NEAR ✓
+- **Entry:** Market ~$2.157
+- **Size:** 55 NEAR × $2.157 = $118.64 notional; ~$59.32 margin at 2x (uses ~40% of ZUSD)
+- **Stop:** Trailing 5% (trigger ~$2.049 at entry; auto-trails up)
+- **Target:** T1 $2.40 (+11.3%), T2 $2.65 (+22.9%)
+- **R:R:** ($2.40 − $2.157) / ($2.157 − $2.049) = **2.25:1** to T1
+- **Order:** `bash scripts/kraken.sh order '{"symbol":"NEAR/USD","qty":"55","side":"buy","type":"market","leverage":"2"}'`
+- **Stop order after fill:** `bash scripts/kraken.sh order '{"symbol":"NEAR/USD","qty":"55","side":"sell","type":"trailing_stop","trail_percent":"5","leverage":"2"}'`
+- **Risk note:** Entering +12% off yesterday lows, near 24h high $2.214; F&G 29 means no broad tailwind. If pullback triggers 5% stop, lose ~$5.93 on margin.
+
+**IDEA 2 — XRP/USD 2x Leveraged Long (SECONDARY)**
+- **Catalyst:** CLARITY Act Senate markup advancing; cleaner entry today (-0.72%) vs chasing yesterday's high.
+- **Kraken pair:** XRPUSD ✓ | Spread: 0.003% ✓ | Leverage: 2x–10x ✓ | Min: 1.65 XRP ✓
+- **Entry:** Market ~$1.362
+- **Size:** 80 XRP × $1.362 = $108.96 notional; ~$54.48 margin at 2x (uses ~36% of ZUSD)
+- **Stop:** Trailing 5% (trigger ~$1.294)
+- **Target:** T1 $1.50 (+10.1%), T2 $1.65 (+21.1%)
+- **R:R:** ($1.50 − $1.362) / ($1.362 − $1.294) = **2.03:1** to T1
+- **Combined margin if NEAR + XRP both entered:** ~$114, leaving ~$36 ZUSD buffer. Viable but fully deployed.
+
+**IDEA 3 — SUI/USD 2x Leveraged Long (TERTIARY)**
+- **Catalyst:** CME SUI futures live, Grayscale S-1, 21Shares ETF reference, Ramp USDC integration. Pullback to $1.100 from $1.164 high = improved R:R.
+- **Kraken pair:** SUIUSD ✓ | Spread: 0.027% ✓ | Leverage 2x–10x ✓ | Min: 5 SUI ✓
+- **Entry:** Market ~$1.100 only if NEAR or XRP position closes with profit to free margin.
+- **Size:** 90 SUI × $1.100 = $99 notional; ~$49.50 margin at 2x
+- **Stop:** Trailing 5% (trigger ~$1.045)
+- **Target:** T1 $1.25 (+13.6%), T2 $1.40 (+27.3%)
+- **R:R:** ($1.25 − $1.100) / ($1.100 − $1.045) = **2.73:1** to T1
+
+**IDEA 4 — JTO/USD Re-entry Watch**
+- Thesis intact; stopped out near $0.52. Wait for $0.52 support hold + Solana ecosystem momentum confirmation before re-entry above $0.54.
+- Do not chase today.
+
+---
+
+### Risk Factors
+- F&G 29 (Fear) — third consecutive Fear day; no broad tailwind
+- STRK 64M unlock today — headwind for L2 sector broadly
+- NEAR entry risk: +12% from lows, entering near 24h high; if momentum fades, 5% trailing stop caps loss at ~$5.93
+- Alpaca BTC residual: unclear position with no confirmed stop — potential unprotected exposure; monitor
+- Combined NEAR + XRP deployment uses ~$114 of $150 ZUSD as margin — nearly fully deployed
+- BTC flat/slightly down: altcoin breakouts need their own catalysts to sustain without BTC leadership
+
+---
+
+### Decision: **TRADE — Primary: NEAR/USD 2x Long | Secondary: XRP/USD 2x Long**
+
+**Crash gate:** BTC ~-0.5% in 24h — NOT triggered ✓
+**NEAR:** Grayscale ETF narrative + confirmed +12% breakout + 4h volume acceleration → ENTER 55 NEAR @ market 2x long, trailing stop 5%
+**XRP:** CLARITY Act + flat entry vs chasing → ENTER 80 XRP @ market 2x long, trailing stop 5% (execute after NEAR filled)
+**SUI:** Hold as tertiary; enter only when margin freed
+**LINK/SOL:** Hold existing positions; stops in place and covering
+
