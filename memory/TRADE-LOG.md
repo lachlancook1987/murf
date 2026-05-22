@@ -1280,3 +1280,16 @@ No unprotected positions.
 **Margin restriction:** Blocked (one-sided margin) → all entries executed as spot
 **Weekly trades (Kraken):** 2
 
+---
+
+### May 22 — EOD Snapshot (Day 13, Friday)
+**Portfolio:** $179.78 | **Cash:** $0.86 (0.5%) | **Day P&L:** +$3.76 (+2.14%) | **Phase P&L:** $0.00 (0% — first Kraken EOD; baseline set at $179.78) | **vs BTC:** +2.38%
+| Symbol | Qty | Entry | Price | Day Chg (24h) | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| NEAR/USD | 55.0000 | $2.187 | $2.253 | +16.9% | +$3.62 (+3.01%) | $2.180 (5%, HWM $2.295, buf 3.2%) |
+| XRP/USD | 21.0000 | $1.363 | $1.365 | -0.51% | +$0.05 (+0.17%) | $1.299 (5%, HWM $1.367, buf 4.9%) |
+| LINK/USD | 1.1533 | $9.616 | $9.825 | +0.80% | +$0.24 (+2.17%) | $9.362 (5%, HWM $9.855, buf 4.7%) |
+| SOL/USD | 0.17211 | $85.90 | $87.21 | -0.07% | +$0.23 (+1.53%) | $83.510 (5%, HWM $87.90, buf 4.2%) |
+**Trades today:** JTO/USD SELL (trailing stop ~$0.523, +4.6% realized) | NEAR/USD BUY 55 @$2.187 | XRP/USD BUY 21 @$1.363 | **Total since migration:** 6
+**Notes:** First Kraken EOD snapshot — phase baseline established at $179.78. Kraken profile activated May 21; user closed Alpaca BTC (stop a2b44cf9 cancelled, position resolved) and deposited ~$130 to Kraken, giving $149.99 ZUSD for today's session. JTO trailing stop triggered pre-session (stop $0.5235, ~4.6% profit from $0.5006 entry; proceeds folded into ZUSD). Three positions deployed today: NEAR (Grayscale NEAR Protocol Trust S-1 ETF filing driving +16.9% 24h surge, bought at $2.187, now +3.0% from entry at $2.253) and XRP (CLARITY Act advancing, -0.51% 24h, flat +0.2% from entry). Retained LINK (+0.80% day, +2.2% from entry) and SOL (-0.07% day, +1.5% from entry). All 4 Kraken positions protected by 5% trailing stops (GTC). Alpaca: stop a2b44cf9 cancelled, no Alpaca exposure. BTC closed -0.24%; bot outperformed by +2.38%. Day P&L reference: session-open proxy ~$176.02 (no prior Kraken EOD existed). Kraken starting equity (phase baseline): $179.78.
+
