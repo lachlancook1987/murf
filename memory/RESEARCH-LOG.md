@@ -5090,3 +5090,109 @@ Positions endpoint returned `[]`. Order history shows: sell market 0.001619 BTC 
 **SUI:** Hold as tertiary; enter only when margin freed
 **LINK/SOL:** Hold existing positions; stops in place and covering
 
+
+---
+
+## 2026-05-22 — Pre-Session Research (Session Open)
+
+### Account Snapshot
+
+| Field | Value |
+|---|---|
+| Kraken ZUSD | $2.06 (fully deployed) |
+| Kraken Positions | NEAR 40, INJ 5, XRP 21, SOL 0.17211, LINK 1.1533 |
+| Alpaca Positions | None (BTC residual cleared) |
+| Active Kraken Stop Orders | 5 trailing stops — all confirmed GTC |
+
+### Kraken Position Status
+
+| Symbol | Qty | Entry | Live Price | P&L% | HWM | Stop Trigger | Buffer | Order ID |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 40.00 | $2.193 | $2.180 | -0.59% | $2.2324 | $2.1208 (5% trail) | 2.71% | OBU5GQ-S33RH-NTSBR4 ✓ |
+| INJ/USD | 5.00 | $5.308 | $5.435 | +2.39% | $5.6570 | $5.3750 (5% trail) | ⚠️ 1.10% | OURVFE-XZUEJ-4ZZQE7 ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.350 | -0.95% | $1.3691 | $1.3006 (5% trail) | 3.65% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $86.41 | +0.59% | $87.91 | $83.51 (5% trail) | 3.36% | OAOOBG-DNG7C-B4WTH2 ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.712 | +1.00% | $10.0201 | $9.5191 (5% trail) | 2.00% | OULSVN-3TUF5-PPM4YW ✓ |
+
+**Est. portfolio value:** ~$170.86 | **Est. P&L vs. entry:** ~+$0.05 (flat; NEAR pullback offsets INJ/SOL gains)
+
+**⚠️ INJ WARNING:** Only 1.1% buffer above trailing stop $5.375. Price at $5.435. One bearish candle triggers exit.
+
+### Market Context
+
+| Indicator | Value | Note |
+|---|---|---|
+| BTC | ~$77,000 | -0.5% 24h — crash gate NOT triggered |
+| ETH | ~$2,126 | +0.22% 24h |
+| Fear & Greed | 28 (Fear) | Fourth consecutive Fear day |
+| BTC Funding Rate | -0.0008% (Binance) / +0.0013% (Bybit) 8h | Near-zero / slightly negative — market not over-leveraged long |
+| Top 24h Gainers | RAVE +106%, MWC +68%, OPG +59%, BAS +40% | All illiquid micro-caps; no Kraken-confirmed plays |
+| NEAR | $2.18, +22–26% 24h | AI/Nvidia rotation + Grayscale ETF S-1 + short squeeze |
+| INJ | $5.44, +3.5% 24h | Circle USDC/CCTP launch + 21Shares ETF ref + burn + Community Call today |
+| XRP | $1.350, -1.3% 24h | CLARITY Act Senate markup — range-bound |
+| SOL | $86.41, -1.0% 24h | Range-bound below $88.50 resistance |
+| LINK | $9.71, -0.3% 24h | Pulled back from $10.02 HWM; mildly bullish above $9.50 |
+| SUI | $1.084, -3.6% 24h | CME futures live, Grayscale S-1, 21Shares ETF ref — pullback from $1.164 |
+
+**Token unlocks today:** STRK 64M (L2 headwind), SCR 10.98M, ID 9.87M, INFRA 50K, XWGT 819K.
+**INJ event:** Discord Community Call today — potential catalyst for sustained bid.
+
+### Thesis Check
+
+| Symbol | Thesis | Status |
+|---|---|---|
+| NEAR | Grayscale NEAR Protocol Trust S-1 ETF filing; AI/Nvidia sector rotation; short squeeze | **INTACT** — +22-26% 24h confirms ongoing momentum; overbought risk but stop manages downside |
+| INJ | Circle USDC/CCTP native launch on Injective; 21Shares ETF reference; monthly buy/burn; INJ Community Call today | **INTACT** — HWM $5.657 hit; stop ⚠️ 1.1% away; needs to hold $5.375 |
+| XRP | CLARITY Act Senate markup advancing; 55% Polymarket odds 2026 signing | **INTACT** — range-bound; patience required; stop 3.65% away |
+| SOL | Firedancer 1.0 mainnet live; Alpenglow in dev; consolidating below $88.50 | **INTACT** — hold; stop 3.36% away |
+| LINK | AWS Marketplace; CCIP 80K daily active addresses ATH; DTCC H2 2026 | **INTACT** — pulled back from HWM; still above stop; hold |
+
+### Trade Ideas (ZUSD $2.06 — fully deployed; all ideas are contingency on stop-out)
+
+**No new entries possible without a position stopping out.** The following are watchlist setups to execute immediately if capital is freed.
+
+---
+
+**IDEA 1 — SUI/USD Spot Long (PRIMARY contingency — if any position stops out)**
+- **Catalyst:** CME Group SUI regulated futures live (May 4, 2026); Grayscale Sui Trust S-1 filed; 21Shares SUI ETF reference; Ramp USDC integration. Pulling back from $1.164 24h high to $1.084 — improved R:R entry after flush.
+- **Kraken pair:** SUIUSD ✓ | Spread: 0.009% ✓ | Min: 5 SUI ✓
+- **Entry:** Market ~$1.084
+- **Stop:** Trailing 5% (trigger ~$1.030)
+- **Target:** T1 $1.20 (+10.7%), T2 $1.40 (+29.1%)
+- **R:R:** ($1.20 − $1.084) / ($1.084 − $1.030) = **2.15:1** to T1
+- **Size:** Size to available ZUSD post-stop-out; max conviction
+
+**IDEA 2 — NEAR/USD Add (SECONDARY contingency — if XRP or SOL stops out)**
+- **Catalyst:** Grayscale ETF S-1 + AI/Nvidia rotation still printing +22% 24h. A dip to $2.00–$2.10 support would offer a cleaner add-on entry below current 40-unit position.
+- **Entry:** Limit order at $2.10 (below current $2.18, near prior support) if ZUSD freed
+- **Stop:** Trailing 5% from fill
+- **Target:** T1 $2.45 (+16.7%), T2 $2.65 (+26.2%)
+- **R:R:** ($2.45 − $2.10) / ($2.10 × 0.05) = **3.33:1** to T1
+
+**IDEA 3 — LINK $10 Reclaim Watch (TERTIARY contingency)**
+- If LINK reclaims and holds $10.00+, momentum may extend toward $10.50–$11.00.
+- Only applicable if capital freed and LINK shows a sustained close above $10.
+- Catalyst: AWS/CCIP/DTCC narrative intact; supply on exchanges declining.
+
+### Risk Factors
+
+- **INJ ⚠️:** 1.1% buffer — extremely likely to trigger within today's trading if momentum stalls. Stop is protected but exit would be at a small loss (~$0.32 if filled at $5.30 area).
+- **LINK buffer thin (2.0%):** If broad risk-off, LINK may trigger stop before recovering.
+- **F&G 28 (Fear):** Four consecutive Fear days — no broad market tailwind; alt-specific catalysts required for outperformance.
+- **STRK 64M unlock:** L2 sector headwind; minor SOL/ARB sentiment drag.
+- **BTC funding slightly negative:** Bearish signal for leveraged alt trades; consistent with cautious sentiment.
+- **NEAR overbought:** +22-26% 24h run; short-term pullback risk; stop at $2.12 manages this.
+- **ZUSD $2.06:** Cannot enter anything new without a stop-out; no new exposure possible.
+
+### Crash Gate Check
+
+BTC ~$77,000, -0.5% 24h → **NOT triggered** (need -20%). All existing positions held.
+
+### Decision: **HOLD ALL — Monitor INJ (⚠️ 1.1% buffer)**
+
+- **Crash gate:** NOT triggered ✓
+- **Action:** Hold all 5 positions with trailing stops in place. No new entries possible (ZUSD $2.06).
+- **Watch:** INJ stop trigger $5.375 — if triggered, evaluate SUI/USD entry as primary redeployment target.
+- **Watch:** NEAR momentum — +22-26% catalyst; if price recovers above $2.20, stop will trail up from $2.1208.
+- **Contingency queue:** SUI > NEAR add > LINK reclaim
+
