@@ -5196,3 +5196,88 @@ BTC ~$77,000, -0.5% 24h → **NOT triggered** (need -20%). All existing position
 - **Watch:** NEAR momentum — +22-26% catalyst; if price recovers above $2.20, stop will trail up from $2.1208.
 - **Contingency queue:** SUI > NEAR add > LINK reclaim
 
+
+---
+
+## 2026-05-22 — Midday Scan #3
+
+**Date:** 2026-05-22 | **Strategy:** Kraken Aggressive Profile
+
+---
+
+### Account Snapshot
+
+| Asset | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Stop ID |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD (Kraken spot) | 38.00 | $2.137 | $2.087 | **-2.3%** | $1.994 (trail 7%) | 4.4% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD (Kraken spot) | 37.00 | $1.0686 | $1.061 | **-0.75%** | $1.0165 (trail 5%) | 4.2% | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD (Kraken spot) | 21.00 | $1.363 | $1.341 | **-1.6%** | $1.30064 (trail 5%) | 3.1% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD (Kraken spot) | 0.17211 | $85.90 | $85.05 | **-0.99%** | $83.51 (trail 5%) | **1.8% ⚠️** | OAOOBG-DNG7C-B4WTH2 ✓ |
+| BTC/USD (Alpaca) | — | — | — | — | — | — | **NO POSITION** |
+
+**Kraken ZUSD:** $1.81 (fully deployed)
+**Alpaca:** No positions, no open orders. BTC position was sold (last order was market buy 05:29 UTC 05-22, but positions API returned []). No active stop needed.
+
+---
+
+### Market Context
+
+| Indicator | Value | Note |
+|---|---|---|
+| BTC | ~$77,700 | -1% to -2% 24h — crash gate NOT triggered (need >-20%) |
+| NEAR | $2.087 | -2.3% from entry; 24h +22-26%; HWM $2.144; RSI 88 overbought on 4h |
+| SUI | $1.061 | -0.75% from entry; brief $1.08→$1.16 pop on stablecoin news, gave back |
+| XRP | $1.341 | -1.6% from entry; CLARITY Act markup (May 14) — Memorial Day window risk |
+| SOL | $85.05 | -0.99% from entry; 24h low $83.92 (stop $83.51 = only $0.41 buffer) |
+
+---
+
+### Crash Gate
+BTC -1% to -2% 24h → **NOT triggered** ✓
+
+---
+
+### STEP 3 — Trailing Stop Verification
+All 4 positions have confirmed active trailing stops:
+- NEAR: OSX7LL-VVQZV-JPVWBB (7%, trigger $1.994) ✓
+- SUI: OISAQO-TUKYN-CIVCAH (5%, trigger $1.0165) ✓
+- XRP: OOKBA5-NVKUU-NWIH5S (5%, trigger $1.30064) ✓
+- SOL: OAOOBG-DNG7C-B4WTH2 (5%, trigger $83.51) ✓
+
+---
+
+### STEP 4 — Stop Tightening (≥+20%)
+No position up ≥+20% from entry. **No adjustments.**
+
+---
+
+### STEP 5 — Thesis Check
+
+| Symbol | Thesis | Status |
+|---|---|---|
+| NEAR | Grayscale ETF S-1 + short squeeze (short liquidations above $1.72) + AI/TEE narrative + tokenomics (inflation cut 5%→2.5%, fee conversion demand). +22-26% 24h. RSI 88 overbought but momentum intact. | **INTACT — HOLD** |
+| SUI | CME futures + Grayscale S-1 + 21Shares ETF + NEW: gasless stablecoin transfers for USDC + 6 tokens launched today. Price $1.08→$1.16 on news then pulled back to $1.061 (below $1.10 support). TVL concern ($600M vs $4.3B peak) but catalyst flow positive. | **INTACT — HOLD** (trail manages it) |
+| XRP | CLARITY Act markup scheduled May 14 committee. "If bill does not advance before Memorial Day recess (May 25), legislative window narrows." XRP has faded -1.6% from entry. Thesis intact but time-gated. | **INTACT — HOLD (watch Memorial Day May 25)** |
+| SOL | ETF inflows ($39.3M last week, Bitwise BSOL); Alpenglow on community test cluster; whale accumulation. But 24h low $83.92 nearly hit stop $83.51 (41¢ buffer at low). Currently $85.05. | **INTACT — HOLD (stop very tight; close monitoring needed)** |
+
+---
+
+### STEP 6 — New Entry Scan
+
+**Top 24h gainers (external sources):** CHIP +100%+, RAVE +43%, DENT +27%, MET +26%, MEME +23% — primarily micro-caps and memes not confirmed on Kraken with adequate liquidity.
+
+**ZUSD available:** $1.81 — insufficient for any minimum order size (spot or leveraged). No new entries possible.
+
+---
+
+### Decision: **HOLD — No Action Taken**
+
+All four positions held with trailing stops. No thesis breaks. No new entries (insufficient ZUSD). SOL stop buffer critically thin (1.8%); if SOL falls below $83.92 (today's 24h low), stop at $83.51 will trigger and ZUSD will be freed for potential redeployment.
+
+**Watch levels:**
+- SOL stop trigger: $83.51 — if hit, evaluate SUI add or XRP add with freed ZUSD
+- XRP CLARITY Act vote: must advance by May 25 (Memorial Day) or narrative stalls
+- NEAR: RSI 88 overbought — if reversal, 7% trail ($1.994 trigger) handles exit
+- SUI: $1.10 support — if reclaimed, momentum resumes toward T1 $1.20
+
+**No WhatsApp notification sent** (no action taken per protocol).

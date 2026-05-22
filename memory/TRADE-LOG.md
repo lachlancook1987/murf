@@ -1524,3 +1524,29 @@ No unprotected positions.
 **Weekly trades (Kraken):** 7
 **Exits this session (auto-stop):** INJ +$0.34 | LINK ~-$0.11 | NEAR(#3) ~-$2.89
 
+
+---
+
+## 2026-05-22 — Midday Scan #3 Summary
+
+| Symbol | Qty | Entry | Midday Price | P&L% | HWM | Stop Trigger | Buffer | Stop ID |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.087 | **-2.3%** | $2.144 | $1.994 (trail 7%) | 4.4% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.061 | **-0.75%** | ~$1.070 | $1.0165 (trail 5%) | 4.2% | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.341 | **-1.6%** | $1.369 | $1.30064 (trail 5%) | 3.1% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $85.05 | **-0.99%** | $87.90 | $83.51 (trail 5%) | **1.8% ⚠️** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** No position, no orders ✓
+**ZUSD:** $1.81 (fully deployed)
+**BTC:** ~$77,700 (-1% to -2% 24h) — crash gate NOT triggered ✓
+**Weekly trades (Kraken):** 7 (no new trades this scan)
+
+**Actions taken:** NONE
+- All 4 trailing stops verified active ✓
+- No position up ≥+20% — no stop tightening
+- All theses intact
+- SOL 24h low $83.92 was within $0.41 of stop $83.51 — critically thin buffer
+- XRP: Memorial Day May 25 is CLARITY Act deadline risk
+- ZUSD $1.81 — no new entries possible
+
+**Contingency:** If SOL stop triggers at $83.51, freed ZUSD → evaluate SUI add or XRP add (watch Memorial Day risk). NEAR thesis strongest (short squeeze + ETF + tokenomics).
