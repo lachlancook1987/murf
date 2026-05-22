@@ -1293,3 +1293,32 @@ No unprotected positions.
 **Trades today:** JTO/USD SELL (trailing stop ~$0.523, +4.6% realized) | NEAR/USD BUY 55 @$2.187 | XRP/USD BUY 21 @$1.363 | **Total since migration:** 6
 **Notes:** First Kraken EOD snapshot — phase baseline established at $179.78. Kraken profile activated May 21; user closed Alpaca BTC (stop a2b44cf9 cancelled, position resolved) and deposited ~$130 to Kraken, giving $149.99 ZUSD for today's session. JTO trailing stop triggered pre-session (stop $0.5235, ~4.6% profit from $0.5006 entry; proceeds folded into ZUSD). Three positions deployed today: NEAR (Grayscale NEAR Protocol Trust S-1 ETF filing driving +16.9% 24h surge, bought at $2.187, now +3.0% from entry at $2.253) and XRP (CLARITY Act advancing, -0.51% 24h, flat +0.2% from entry). Retained LINK (+0.80% day, +2.2% from entry) and SOL (-0.07% day, +1.5% from entry). All 4 Kraken positions protected by 5% trailing stops (GTC). Alpaca: stop a2b44cf9 cancelled, no Alpaca exposure. BTC closed -0.24%; bot outperformed by +2.38%. Day P&L reference: session-open proxy ~$176.02 (no prior Kraken EOD existed). Kraken starting equity (phase baseline): $179.78.
 
+---
+
+## 2026-05-22 — Session-Open Scan #2
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 55.0000 | $2.187 | $2.2045 | **+0.80%** | $2.30770 | $2.19240 (trail 5%) | ⚠️ **0.55% — CRITICAL** | OWLXN6-2IYWZ-LK4LLX ✓ |
+| XRP/USD | 21.0000 | $1.363 | $1.3584 | **-0.34%** | $1.36710 | $1.29876 (trail 5%) | 4.39% | OOKBA5-NVKUU-NWIH5S ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.8125 | **+2.03%** | $9.8546 | $9.36187 (trail 5%) | 4.59% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $87.025 | **+1.31%** | $87.90 | $83.510 (trail 5%) | 4.04% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** no positions, no active orders ✓
+**ZUSD:** $0.86 (fully deployed — no cash for new entries)
+**BTC Crash Gate:** $77,237 (24h open $77,550 = -0.41%) — NOT triggered ✓
+**Weekly trades (Kraken):** 2
+
+**Hard checks:**
+- Crash gate: -0.41% 24h — CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open and covering correct quantities ✓
+
+**⚠️ NEAR STOP CRITICAL (0.55%):** NEAR pulled back from HWM $2.30770 to $2.2045. Trailing stop $2.19240 is only $0.0121 away. If triggered: NEAR locked in ~+$0.30 profit (entry $2.187, stop $2.1924, qty 55 spot). Do NOT cancel stop — let it work.
+
+**New entries:** Blocked — ZUSD $0.86 (essentially zero, below any minimum order on Kraken).
+
+**Research plan status:** NEAR and XRP trades executed this morning per plan. Margin restriction blocked 2x leverage; both filled as spot. No further action possible this session.
+
+**Result: HOLD — No new trades. No notification sent (no new trades placed).**
+
