@@ -4,6 +4,87 @@
 
 ---
 
+## Week of 2026-05-18 — Review Date: 2026-05-22
+
+### Context
+**Profile switch week.** Kraken profile activated May 21. First half of week ran on Alpaca (old CAUTION-mode rules still applied to ETH/XRP positions); second half transitioned to Kraken with new Kraken aggressive profile. All future weeks will be Kraken-only.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $179.85 | $0.86 ZUSD | SOL, LINK, NEAR, XRP (all open) |
+| Alpaca | $0 (fully transferred) | — | — |
+| **Total** | **$179.85** | — | 4 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Mon May 18) | $177.91 (Alpaca $131.64 + Kraken ETH $46.27) |
+| Ending Equity (Fri May 22) | **$179.85** |
+| **Week Return** | **+1.09%** (+$1.94) |
+| BTC Week Return | **+0.64%** (Mon open $76,910 → Fri $77,402) |
+| **Bot vs BTC** | **+0.45%** |
+
+### Trade Summary
+| # | Date | Pair | Platform | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|---|
+| 1 | May 18–21 | ETH/USD | Alpaca | $2,123.79 avg | $2,136.40 | **+$0.49** | WIN |
+| 2 | May 18–20 | XRP/USD | Alpaca | $1.3962 | $1.3403 (stop) | **-$1.48** | LOSS |
+| 3 | May 21–22 | BTC/USD | Alpaca | $77,910 | $77,574 | **-$0.54** | LOSS |
+| 4 | May 21–22 | JTO/USD | Kraken | $0.5006 | ~$0.5235 (trail stop) | **+$0.92** | WIN |
+| 5 | May 21→ | SOL/USD | Kraken | $85.90 | open | +$0.23 unr. | OPEN |
+| 6 | May 21→ | LINK/USD | Kraken | $9.616 | open | +$0.24 unr. | OPEN |
+| 7 | May 22→ | NEAR/USD | Kraken | $2.187 | open | +$3.67 unr. | OPEN |
+| 8 | May 22→ | XRP/USD | Kraken | $1.363 | open | +$0.06 unr. | OPEN |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades | 8 (4 closed, 4 open) |
+| Wins (closed) | 2 |
+| Losses (closed) | 2 |
+| Win Rate | **50%** |
+| Gross Wins / Losses | $1.41 / $2.03 |
+| Profit Factor (closed) | **0.70** |
+| Avg Win | $0.71 |
+| Avg Loss | $1.01 |
+| Largest Win | JTO +$0.92 |
+| Largest Loss | XRP (Alpaca) -$1.48 |
+| Open Unrealized | **+$4.21** (NEAR +$3.67 dominant) |
+| Est. Fees Paid | ~$1.15 (8 trades × $55 avg notional × 0.26%) |
+
+### Open Positions (End of Week)
+| Pair | Qty | Entry | Current | Stop Level | Stop Buffer | Unrealized |
+|---|---|---|---|---|---|---|
+| SOL/USD | 0.17211 | $85.90 | $87.265 | $83.51 (trail 5%, HWM $87.90) | 4.3% | +$0.23 (+1.6%) |
+| LINK/USD | 1.1533 | $9.616 | $9.827 | $9.362 (trail 5%, HWM $9.855) | 4.7% | +$0.24 (+2.2%) |
+| NEAR/USD | 55.000 | $2.187 | $2.254 | $2.180 (trail 5%, HWM $2.295) | 3.3% | +$3.67 (+3.1%) |
+| XRP/USD | 21.000 | $1.363 | $1.366 | $1.299 (trail 5%, HWM $1.367) | 4.9% | +$0.06 (+0.2%) |
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Catalyst breakout (NEAR):** Grayscale ETF filing + intraday volume acceleration (+43% of 24h volume in 4h window) = cleanest entry of the week. Already +$3.67 unrealized in <1 day.
+- **Momentum with trailing stop (JTO):** a16z $50M raise + Solana ecosystem narrative. Trailing stop captured +4.57% gain before exit on pullback — exactly how the Kraken profile should work.
+- **Thesis re-entry at lower price (ETH):** Re-entered below prior stop-out; Glamsterdam Q3 catalyst intact. Small win.
+
+**Entry types that underperformed:**
+- **XRP binary-catalyst play (Alpaca):** Third consecutive stop-out on XRP. CLARITY Act thesis valid but price action too volatile around news headlines; fixed stop_limit too rigid, depleting buffer repeatedly.
+- **BTC directional bet (Alpaca):** Brief user-directed position; -$0.54.
+
+**Stop quality:**
+- Kraken trailing stops: **Excellent.** JTO auto-managed its exit cleanly. NEAR/SOL/LINK trailing correctly. No buffer monitoring anxiety.
+- Alpaca fixed stop_limits: Multiple "CRITICAL buffer" alerts (ETH, XRP). Now retired — fully on Kraken.
+
+**Profile violations:** None. All Kraken trades confirmed spread ≤1%, trailing stops placed at entry, no leverage (margin restriction active — working around it with spot entries).
+
+**Concrete adjustment for next week:** Use **7% trailing stop** (not 5%) for assets with pending binary regulatory catalysts (XRP, assets with Senate/SEC votes pending). Headline volatility on CLARITY Act news will spike ±3–4% intraday; 5% trail is too tight. Updated in TRADING-STRATEGY.md.
+
+### Key Lesson
+**Trailing stops and the Kraken profile are the upgrade this bot needed.** Fixed stop_limits on Alpaca created constant buffer-monitoring stress and three XRP stop-outs. Kraken trailing stops let winners run (JTO), protect capital on reversals, and eliminate the "critical buffer" anxiety loop. NEAR breakout entry was the textbook Kraken play: confirmed intraday volume acceleration + ETF filing catalyst = entry with 5% trailing stop. Next week: continue this pattern — catalyst first, spread check, then trailing stop.
+
+---
+
 ## Week of 2026-04-28 — Review Date 2026-05-04
 
 ### Performance

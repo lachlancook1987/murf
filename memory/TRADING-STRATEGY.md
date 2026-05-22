@@ -51,8 +51,9 @@ across Kraken's full asset universe — not long-term holding. Trade > hold.
 
 - **Stop-loss recommended on every position**, especially leveraged ones
 - Default: 5% stop-loss-limit below entry (`type: stop_limit`)
+- **Binary catalyst assets (regulatory votes, ETF filings, token unlocks pending):** use `trail_percent: 7` — headline volatility can swing 3–4% intraday; 5% trail is too tight.
 - Tighten or trail stops manually as positions move in favour
-- Trailing stop available on Kraken: `type: trailing_stop`, `trail_percent: 5`
+- Trailing stop available on Kraken: `type: trailing_stop`, `trail_percent: 5` (7 for binary-catalyst plays)
 - No fixed hold time — exit when thesis is invalidated or target is hit
 - Cancel orders any time: `bash scripts/kraken.sh cancel <order_id>`
 
@@ -129,4 +130,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-05-21*
+*Last updated: 2026-05-22 (weekly review: added 7% trail rule for binary-catalyst assets)*
