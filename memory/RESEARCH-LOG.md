@@ -4742,3 +4742,111 @@ BTC/USD 0.001619226 @ $77,910.27 | Current ~$77,586 (-0.42% from entry) | Stop a
 - **OPTIONAL:** Tighten LINK trailing stop 5% → 3% to protect small gain given bearish 7d technicals
 - **AVOID:** PYTH (mega-unlock), HYPE (unlock May 29), OMNI (illiquid spread 9.94%)
 
+---
+
+## 2026-05-22 — Session-Open Research
+
+### Account Snapshot
+| Asset | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Stop ID |
+|---|---|---|---|---|---|---|---|
+| JTO/USD (Kraken spot) | 40.29 | $0.5006 | $0.5305 | +5.97% | $0.5168 (trail 5%) | 2.58% | OBLSOB-IGZY2-HFZXG7 ✓ |
+| LINK/USD (Kraken spot) | 1.1533 | $9.616 | $9.739 | +1.28% | $9.350 (trail 5%) | 3.98% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD (Kraken spot) | 0.17211 | $85.90 | $86.82 | +1.07% | $83.51 (trail 5%) | 3.81% | OAOOBG-DNG7C-B4WTH2 ✓ |
+| BTC/USD (Alpaca residual) | 0.001619 | $77,910.27 | ~$77,426 | -0.62% | $74,793.86 (stop_limit) | 3.40% | a2b44cf9 ✓ |
+
+**Kraken ZUSD:** $0.087 (fully deployed in spot)
+
+---
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price | ~$77,426 | 24h range $76,652–$78,100; about -0.16% from open |
+| ETH price | ~$2,141 | +0.54% 24h |
+| Fear & Greed | **29 (Fear)** | Same as yesterday — weak sentiment persists |
+| BTC Funding Rate | +0.0043%/8h | Neutral positive; longs paying shorts, not overheated |
+| BTC 24h | -0.16% | Gate NOT triggered (need >20% down) |
+| Top 24h Gainers | NEAR +15%, AERO +13%, INJ +11%, WLD +9%, HYPE +9% | Altcoin rotation in selective names |
+| Unlocks today | STRK 64M tokens, ID 9.87M, SCR 10.98M, INFRA 50K | STRK = avoid; others minor |
+
+---
+
+### Regime Check
+- **Crash gate:** BTC -0.16% 24h → NOT triggered ✓
+- **All sectors:** OPEN (Kraken profile — no regime restrictions)
+- **New entries:** All require 2x leverage (ZUSD $0.087 — insufficient for spot)
+
+---
+
+### Open Position Thesis Review
+| Symbol | Thesis | Status |
+|---|---|---|
+| JTO | JTX trading app July 2026; a16z $50M raise; Jito Labs APAC expansion; SEC Crypto Task Force constructive meeting | INTACT — HOLD |
+| LINK | CCIP v1.5 expansion; DTCC H2 2026; SWIFT integration; AWS marketplace; RSI 44–48 bearish technicals near $9.3 support | INTACT (cautious) — HOLD |
+| SOL | Firedancer 1.0 mainnet live; Schwab Crypto™; BESO ETF staking; Circle 500M USDC minted on Solana recently | INTACT — HOLD |
+| BTC (Alpaca) | User-directed conviction buy; stop 4% below entry; buffer 3.40% | INTACT — HOLD |
+
+---
+
+### Key Catalysts
+**Bullish:**
+- CLARITY Act advancing (XRP, broader market); 55% Polymarket odds signed 2026
+- Ethereum Glamsterdam upgrade Q3 2026 (devnets live)
+- SUI: Ramp USDC integration (50k+ businesses), CME futures, Grayscale S-1, 21Shares ETF reference
+- LINK: Institutional oracle adoption narrative (DTCC, SWIFT, AWS)
+- NEAR: Grayscale ETF filing narrative driving +15% move today (older catalyst, not fresh)
+
+**Bearish/Risk:**
+- F&G 29 (Fear) — weak broad sentiment; catalyst-specific plays only
+- STRK 64M unlock today — L2 sector headwind
+- SOL bearish near-term technicals (below resistance $86-$90 band)
+- BTC stuck below $80K (Kraken profile has no regime restriction, but macro is cautious)
+- BTC Alpaca buffer 3.40% — narrowing; $2,632 of BTC decline triggers stop
+
+---
+
+### New Entry Attempts
+
+**SUI/USD 2x leveraged long:**
+- Catalyst: CME futures, Grayscale S-1, 21Shares ETF, Ramp USDC (May 19); price pulled back from $1.163 → $1.099 (better entry)
+- Spread: 0.046% ✓ | Margin 2x–10x confirmed ✓ | Min 5 SUI ✓
+- Order placed: buy 18.2000 SUI @ market, leverage 2
+- **Result: BLOCKED — EOrder:Reduce only:One-sided margin**
+
+**XRP/USD 2x leveraged long:**
+- Catalyst: CLARITY Act advancing; ultra-liquid
+- Spread: 0.0015% ✓ | Margin 2x–10x confirmed ✓ | Min 1.65 XRP ✓
+- Order placed: buy 10.9572 XRP @ market, leverage 2
+- **Result: BLOCKED — EOrder:Reduce only:One-sided margin**
+
+**Conclusion:** Kraken account appears to have a "reduce-only" margin restriction active (same account-level regional/risk restriction that blocked ZEC on May 21). New leveraged long positions cannot be opened. All new entries blocked.
+
+---
+
+### Candidates Evaluated and Skipped
+| Candidate | Reason Skipped |
+|---|---|
+| NEAR/USD | Catalyst is old Grayscale ETF filing (not fresh today), price near 24h high after +15% run, F&G Fear = poor R:R to chase |
+| INJ/USD | No specific catalyst; pulled back -2.5% from 24h high |
+| STRK | 64M token unlock today — AVOID |
+| Any spot entry | ZUSD $0.087 — insufficient for minimum order |
+
+---
+
+### Decision: **HOLD — No New Entries**
+
+**Crash gate:** NOT triggered ✓
+**Margin entries:** Blocked (one-sided margin restriction account-wide)
+**Spot entries:** Impossible (ZUSD $0.087 — essentially zero)
+
+All four positions held with trailing/fixed stops in place. All theses intact.
+
+**Watch levels for next session:**
+- JTO T1: $0.5607 (+5.7% from current) — let trail manage
+- LINK: Watch $9.3 support — if lost, stop fires; if reclaims $10, thesis accelerates
+- SOL: Watch $89–$90 resistance — break opens $95–$100 range
+- BTC (Alpaca): Watch $78,768 (20-day MA) — reclaim = regime improvement
+- **Margin restriction:** Verify if "one-sided margin" clears in next session before attempting leveraged entries
+
+---
+
