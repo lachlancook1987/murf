@@ -1206,3 +1206,31 @@ No unprotected positions.
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
+---
+
+## 2026-05-22 — Overnight Triage Check #3
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.5279 | **+5.44%** | $0.5510 | $0.5235 (trail 5%) | ⚠️ **0.84% — CRITICAL** | OBLSOB-IGZY2-HFZXG7 ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.797 | **+1.88%** | $9.855 | $9.362 (trail 5%) | 4.44% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $86.865 | **+1.12%** | $87.90 | $83.51 (trail 5%) | 3.86% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Current ~$77,569 | -0.44% | Stop a2b44cf9 ($74,793.86/$74,045.92, status: new) ✓ | Buffer 3.58%
+
+**STEP 2 — Trailing stops verified:**
+- JTO: OBLSOB-IGZY2-HFZXG7, 40.29 JTO, trail 5%, trigger $0.5235 (HWM $0.5510) — ✓
+- LINK: OULSVN-3TUF5-PPM4YW, 1.1533 LINK, trail 5%, trigger $9.362 (HWM $9.855) — ✓
+- SOL: OAOOBG-DNG7C-B4WTH2, 0.17211 SOL, trail 5%, trigger $83.51 (HWM $87.90) — ✓
+No unprotected positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable. No position down >20%.
+
+**STEP 4 — Stop tightening (≥+20% since entry):** JTO +5.44%, LINK +1.88%, SOL +1.12% — none qualify. No adjustments.
+
+**STEP 5 — BTC Crash Gate:** $77,569 now vs 24h open $77,550 = **+0.02%** — flat overnight. No crash gate. No regime alert.
+
+**⚠️ JTO STOP BUFFER CRITICAL (0.84%):** JTO pulled back from HWM $0.5510 to $0.5279; stop $0.5235 is $0.0044 away. Stop may fire on any continued decline — this is normal trailing stop behaviour. Do NOT cancel or replace. Let the stop work.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
