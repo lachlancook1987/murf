@@ -1550,3 +1550,37 @@ No unprotected positions.
 - ZUSD $1.81 — no new entries possible
 
 **Contingency:** If SOL stop triggers at $83.51, freed ZUSD → evaluate SUI add or XRP add (watch Memorial Day risk). NEAR thesis strongest (short squeeze + ETF + tokenomics).
+
+---
+
+## 2026-05-22 — Session-Open Scan (new session)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.0812 | **-2.6%** | $2.1440 | $1.9940 (trail 7%) | 4.2% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.95 | **-1.1%** | $87.90 | $83.510 (trail 5%) | ⚠️ **1.7% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.3402 | **-1.7%** | $1.36909 | $1.30064 (trail 5%) | 3.0% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.0616 | **-0.7%** | $1.0686 | $1.0165 (trail 5%) | 4.3% | OISAQO-TUKYN-CIVCAH ✓ |
+
+**Kraken ZUSD:** $1.8063 (fully deployed) | **Alpaca:** no positions, no active orders (stop a2b44cf9 cancelled 2026-05-22T05:22Z)
+**BTC:** $75,705 (Kraken live) | 24h open $77,549 = **-2.38%** | Crash gate: NOT triggered ✓
+**F&G:** 28 (Fear) | **DXY:** ~99.29 | **Weekly Kraken trades:** 7
+
+**STEP 3 — Hard checks:**
+- Crash gate: -2.38% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open and covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20%):** No position up ≥+20% from entry. No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **NEAR:** $2.00–$2.25 across sources. Grayscale NEAR Protocol Trust S-1 ETF narrative intact; no adverse news or cancellation. Short-term mixed technicals but 7% trail handles volatility. **Thesis INTACT. HOLD.**
+- **SOL:** ~$86.8–$87 per Perplexity; whales added $9.7M SOL confirmed; Firedancer 1.0 mainnet live. BTC selloff dragging SOL to $84.95 on Kraken. Stop $83.51 buffer CRITICALLY THIN (1.7%). Do NOT adjust stop. **Thesis INTACT. HOLD.**
+- **XRP:** CLARITY Act advanced committee 15-9 (May 14); Senate floor vote still pending; no adverse developments. Memorial Day recess (May 25) = deadline risk if vote not scheduled. **Thesis INTACT. HOLD.**
+- **SUI:** Native stablecoins USDi + suiUSDe announced on Sui blockchain today (fresh catalyst). CME futures + Grayscale S-1 intact. Kraken price $1.0616 (pulled back from 24h high $1.132 after initial pop). **Thesis INTACT — catalyst strengthening. HOLD.**
+
+**STEP 6 — New entries:** ZUSD $1.81 — insufficient for any minimum order. No new entries possible.
+
+**Decision: HOLD — No New Trades.** No WhatsApp notification sent (no action taken).
+
+**SOL watch:** If stop triggers at $83.51 → freed ~$14.62 ZUSD → prioritize SUI add (native stablecoin catalyst fresh) or NEAR add. XRP Memorial Day risk reduces priority.
