@@ -1152,3 +1152,31 @@ No unprotected positions.
 
 **Result: NO-OP. No trades. No notification sent.**
 
+---
+
+## 2026-05-22 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| JTO/USD | 40.29 | $0.5006 | $0.5288 | **+5.63%** | $0.5440 | $0.5168 (trail 5%) | 2.27% | OBLSOB-IGZY2-HFZXG7 ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.707 | **+0.95%** | $9.842 | $9.350 (trail 5%) | 3.68% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $86.65 | **+0.87%** | $87.90 | $83.51 (trail 5%) | 3.62% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca (residual):** BTC/USD 0.001619 @ $77,910.27 | Stop a2b44cf9 ($74,793.86/$74,045.92, status: new) ✓
+
+**BTC Crash Gate:** $77,279 now vs 24h open $77,550 = **-0.35%** — well under 20% threshold. No crash gate. No regime alert.
+
+**STEP 2 — Trailing stops verified:**
+- JTO: OBLSOB-IGZY2-HFZXG7, 40.29 JTO, trail 5%, trigger $0.5168 — ✓
+- LINK: OULSVN-3TUF5-PPM4YW, 1.1533 LINK, trail 5%, trigger $9.350 — ✓
+- SOL: OAOOBG-DNG7C-B4WTH2, 0.17211 SOL, trail 5%, trigger $83.51 — ✓
+No unprotected positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable or within normal range.
+
+**STEP 4 — Stop tightening (≥+20% since entry):** JTO +5.63%, LINK +0.95%, SOL +0.87% — none qualify. No adjustments.
+
+**STEP 5 — Crash gate:** BTC -0.35% overnight — NOT triggered.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
