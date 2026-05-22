@@ -1378,3 +1378,74 @@ No unprotected positions.
 **STEP 5 — Thesis check:** NEAR intact (Grayscale ETF + Nvidia AI catalyst). XRP intact (CLARITY Act). SOL intact (Firedancer 1.0). LINK intact (AWS/CCIP/DTCC). All theses INTACT.
 **STEP 6 — New entries:** NEAR re-entry executed. No other qualifying catalyst found. ZUSD $7.29 — insufficient for additional entries.
 
+---
+
+## 2026-05-22 — Midday Scan #2
+
+### NEAR/USD — Trailing Stop OUOKEJ Triggered (post-midday #1, pre-midday #2)
+
+**Stop Order:** OUOKEJ-7FFCF-4ROJPJ (trailing-stop, 5%, initial HWM $2.2447)
+**HWM at trigger:** ~$2.3326 (24h high confirmed via Kraken tick data: NEAR hit $2.3326)
+**Stop trigger level:** ~$2.2160 ($2.3326 × 0.95)
+**Fill:** ~$2.2034 per NEAR (slippage ~0.57% below trigger — normal trailing stop execution)
+**Qty closed:** 50.00 NEAR
+**Proceeds:** ~$109.89 ZUSD (gross ~$110.17 less ~$0.29 fee)
+**Entry:** $2.2447 | **Exit:** ~$2.2034 | **P&L:** ~-$2.07 spot + fees → **net ~-$2.65**
+**Notes:** NEAR ran from entry $2.2447 to $2.3326 HWM (trailing stop tracked up to $2.2160), then reversed through trigger. Exit at a modest loss; thesis and momentum intact. NEAR recovered to $2.193 immediately after stop execution. ZUSD restored to $117.18 ($7.29 pre + $109.89 proceeds).
+
+---
+
+### 2026-05-22T~midday2 UTC | NEAR/USD | BUY | 40.00 NEAR | Entry: ~$2.193 | Trailing Stop: $2.083 | Open
+
+**Order ID (buy):** OZTMG5-MSPKA-2MJJSK (market buy, spot)
+**Trailing Stop Order ID:** OBU5GQ-S33RH-NTSBR4 (trailing-stop sell, trail -5%, stop $2.0834, HWM $2.1930, GTC ✓)
+**Notional:** ~$87.72 (spot, ~74.9% of $117.18 ZUSD)
+**Effective fill price:** ~$2.193 (HWM $2.1930 at stop placement confirms fill level)
+**Stop level:** $2.0834 (5% trailing below HWM $2.1930)
+**Target:** T1 $2.45 (+11.7%), T2 $2.65 (+20.8%)
+**R:R:** ~2.26:1 to T1 (($2.45−$2.193) / ($2.193−$2.0834))
+**Thesis:** Grayscale NEAR Protocol Trust S-1 ETF filing (institutional catalyst, 3rd consecutive day driving +15% 24h move); NEAR One ecosystem expansion; AI-adjacent L1 narrative; price at $2.193 = cleaner re-entry below peak $2.33, stop below today's support zone. Spread 0.11% ✓. BTC crash gate clear (-1.1% 24h) ✓.
+**Notes:** 3rd NEAR entry today (spot-only; margin restriction confirmed still active from ZUSD constraints). ZUSD ~$29.46 remaining post-trade.
+
+---
+
+### 2026-05-22T~midday2 UTC | INJ/USD | BUY | 5.00 INJ | Entry: ~$5.308 | Trailing Stop: $5.043 | Open
+
+**Order ID (buy):** OXH7YQ-GXOMD-HBHI67 (market buy, spot)
+**Trailing Stop Order ID:** OURVFE-XZUEJ-4ZZQE7 (trailing-stop sell, trail -5%, stop $5.0430, HWM $5.3080, GTC ✓)
+**Notional:** ~$26.54 (spot, ~22.6% of $117.18 ZUSD; ~90% of remaining ZUSD after NEAR)
+**Effective fill price:** ~$5.308 (HWM $5.3080 at stop placement confirms fill level)
+**Stop level:** $5.0430 (5% trailing below HWM $5.3080)
+**Target:** T1 $5.80 (+9.3%), T2 $6.20 (+16.8%)
+**R:R:** ~1.85:1 to T1 (($5.80−$5.308) / ($5.308−$5.043))
+**Thesis:** Circle native USDC/CCTP launch on Injective (fresh on-chain adoption catalyst); 21Shares INJ spot ETF reference filing; monthly INJ buyback/burn active; volume +113% and OI +17% to $103M — confirmed momentum day. INJ defended $4.50 support and rebounding. Spread 0.056% ✓. BTC crash gate clear (-1.1% 24h) ✓.
+**Notes:** New position — INJ not previously held. Spot only. ZUSD $2.06 remaining post-trade (fully deployed). Weekly Kraken trade count: 5.
+
+---
+
+### 2026-05-22 — Midday Scan #2 Summary
+
+| Symbol | Qty | Entry | Approx Price | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 40.00 | $2.193 | $2.193 | **0.0%** | $2.1930 | $2.0834 (trail 5%) | 5.00% | OBU5GQ-S33RH-NTSBR4 ✓ |
+| INJ/USD | 5.00 | $5.308 | $5.308 | **0.0%** | $5.3080 | $5.0430 (trail 5%) | 5.00% | OURVFE-XZUEJ-4ZZQE7 ✓ |
+| XRP/USD | 21.00 | $1.363 | ~$1.351 | **-0.88%** | $1.36909 | $1.30064 (trail 5%) | 3.86% | OOKBA5-NVKUU-NWIH5S ✓ |
+| LINK/USD | 1.1533 | $9.616 | ~$9.781 | **+1.72%** | $10.0201 | $9.5191 (trail 5%) | 2.67% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | ~$86.66 | **+0.88%** | $87.90 | $83.510 (trail 5%) | 3.64% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** no positions, no active orders ✓
+**ZUSD:** $2.06 (fully deployed)
+**BTC:** ~$76,700 (-1.10% 24h) — crash gate NOT triggered ✓
+**Weekly trades (Kraken):** 5
+
+**Actions taken:**
+- NEAR stop OUOKEJ triggered — 50 NEAR closed at ~$2.2034, net ~-$2.65 P&L
+- NEAR re-entry #3: 40 NEAR @ ~$2.193 (OZTMG5), trailing stop OBU5GQ (5%, trigger $2.0834) ✓
+- INJ new entry: 5 INJ @ ~$5.308 (OXH7YQ), trailing stop OURVFE (5%, trigger $5.043) ✓
+- WhatsApp notification sent ✓
+
+**STEP 3 — Stops verified:** All 5 positions have active trailing stops. No unprotected positions ✓
+**STEP 4 — Stop tightening (≥+20%):** No position up ≥+20% from entry. No adjustments.
+**STEP 5 — Thesis check:** NEAR intact (Grayscale ETF S-1). XRP intact (CLARITY Act). SOL intact (Firedancer 1.0). LINK intact (AWS/CCIP/DTCC, HWM $10.02 hit). INJ intact (Circle USDC/CCTP + 21Shares ETF + burn). All theses INTACT.
+**STEP 6 — New entries:** NEAR (3rd) + INJ (new) entered. ZUSD $2.06 — fully deployed.
+
