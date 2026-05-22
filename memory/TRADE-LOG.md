@@ -1322,3 +1322,59 @@ No unprotected positions.
 
 **Result: HOLD — No new trades. No notification sent (no new trades placed).**
 
+---
+
+## 2026-05-22 — Midday Scan
+
+### NEAR/USD — Trailing Stop Triggered (pre-midday)
+
+**Stop Order:** OWLXN6-2IYWZ-LK4LLX (trailing-stop, 5%, HWM $2.30770, trigger $2.19240)
+**Fill:** ~$2.174 per NEAR (market execution; slight slippage below trigger $2.19240)
+**Qty closed:** 55.00 NEAR
+**Proceeds:** ~$119.57 ZUSD (gross ~$120.56 less ~$0.31 fee)
+**Entry:** $2.187 | **Exit:** ~$2.174 | **P&L:** ~-$0.71 (-0.59%) — small loss; stop worked as designed
+**Notes:** NEAR pulled back from HWM $2.30770 through stop trigger $2.19240. Price subsequently recovered to $2.265 — temporary shakeout, thesis intact.
+
+---
+
+### 2026-05-22 — NEAR/USD Re-entry (Midday)
+
+### 2026-05-22T~midday UTC | NEAR/USD | BUY | 50.00 NEAR | Entry: ~$2.245 | Trailing Stop: $2.133 | Open
+
+**Order ID (buy):** ONEFEI-6I7EF-PEKJXC (market buy, spot)
+**Trailing Stop Order ID:** OUOKEJ-7FFCF-4ROJPJ (trailing-stop sell, trail -5%, stop $2.1325, HWM $2.2447, GTC ✓)
+**Notional:** ~$112.24 (spot, ~93.2% of $120.43 ZUSD — fully deployed)
+**Effective fill price:** ~$2.2447 (HWM confirms entry level)
+**Stop level:** $2.1325 (5% trailing below HWM $2.2447)
+**Target:** T1 $2.45 (+9.2%), T2 $2.65 (+18.1%)
+**R:R:** ~1.83:1 to T1 (($2.45−$2.2447) / ($2.2447−$2.1325))
+**Thesis:** Grayscale NEAR Protocol Trust S-1 ETF filing driving narrative; Nvidia AI/earnings catalyst (NEAR positioned as AI-adjacent L1); Robinhood listing recent catalyst; price recovered from trailing stop shakeout to $2.265, confirming momentum intact. Spread 0.11% ✓. BTC crash gate clear (BTC -0.69% 24h) ✓.
+**Notes:** Re-entry after prior 55 NEAR position stopped out (~-$0.71). Spot only (margin restriction: EOrder:Reduce only:One-sided margin). ZUSD $7.29 remaining post-trade (fully deployed). Weekly Kraken trade count: 3.
+
+---
+
+### 2026-05-22 — Midday Scan Summary
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 50.00 | $2.2447 | $2.265 | **+0.90%** | $2.2447 | $2.1325 (trail 5%) | 5.00% | OUOKEJ-7FFCF-4ROJPJ ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.359 | **-0.29%** | $1.36711 | $1.29876 (trail 5%) | 4.43% | OOKBA5-NVKUU-NWIH5S ✓ |
+| LINK/USD | 1.1533 | $9.616 | $9.817 | **+2.09%** | $9.8546 | $9.36187 (trail 5%) | 4.63% | OULSVN-3TUF5-PPM4YW ✓ |
+| SOL/USD | 0.17211 | $85.90 | $86.90 | **+1.16%** | $87.90 | $83.510 (trail 5%) | 3.90% | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** no positions, no active orders ✓
+**ZUSD:** $7.29 (fully deployed)
+**BTC:** ~$77,381 (-0.69% 24h) — crash gate NOT triggered ✓
+**F&G:** 28–29 (Fear)
+**Weekly trades (Kraken):** 3
+
+**Actions taken:**
+- NEAR stop OWLXN6 triggered (pre-midday) — 55 NEAR closed at ~$2.174, ~-$0.71 P&L
+- NEAR re-entry: 50 NEAR @ ~$2.245 (ONEFEI), trailing stop OUOKEJ (5%, trigger $2.1325) placed immediately
+- WhatsApp notification sent ✓
+
+**STEP 3 — Stops verified:** All 4 positions have active trailing stops. No unprotected positions.
+**STEP 4 — Stop tightening (≥+20%):** No position up ≥+20% from entry. No adjustments.
+**STEP 5 — Thesis check:** NEAR intact (Grayscale ETF + Nvidia AI catalyst). XRP intact (CLARITY Act). SOL intact (Firedancer 1.0). LINK intact (AWS/CCIP/DTCC). All theses INTACT.
+**STEP 6 — New entries:** NEAR re-entry executed. No other qualifying catalyst found. ZUSD $7.29 — insufficient for additional entries.
+
