@@ -1449,3 +1449,78 @@ No unprotected positions.
 **STEP 5 — Thesis check:** NEAR intact (Grayscale ETF S-1). XRP intact (CLARITY Act). SOL intact (Firedancer 1.0). LINK intact (AWS/CCIP/DTCC, HWM $10.02 hit). INJ intact (Circle USDC/CCTP + 21Shares ETF + burn). All theses INTACT.
 **STEP 6 — New entries:** NEAR (3rd) + INJ (new) entered. ZUSD $2.06 — fully deployed.
 
+---
+
+## 2026-05-22 — Trailing Stop Exits (auto-triggered overnight/session)
+
+### INJ/USD — Trailing Stop OURVFE Triggered
+**Stop Order:** OURVFE-XZUEJ-4ZZQE7 (trailing-stop, 5%, HWM $5.6570, trigger $5.3750)
+**Fill:** ~$5.375 (market execution at trailing stop trigger)
+**Qty closed:** 5.00 INJ
+**Entry:** $5.308 | **Exit:** ~$5.375 | **P&L:** ~+$0.34 (+1.3%) — small profit; stop worked as designed
+**Notes:** INJ pulled back from HWM $5.657 through trailing stop $5.375. Circle USDC/CCTP thesis intact — price weakness attributed to broad risk-off.
+
+---
+
+### LINK/USD — Trailing Stop OULSVN Triggered
+**Stop Order:** OULSVN-3TUF5-PPM4YW (trailing-stop, 5%, HWM $10.0201, trigger $9.5191)
+**Fill:** ~$9.509–$9.519 (24h low $9.509 breached trigger $9.519; slippage possible)
+**Qty closed:** 1.1533 LINK
+**Entry:** $9.616 | **Exit:** ~$9.509–$9.519 | **P&L:** ~-$0.11 to -$0.12 (−1.0–1.1%)
+**Notes:** LINK 24h range hit low of $9.509, triggering trailing stop at $9.519. AWS/CCIP/DTCC thesis intact; BTC -1.66% broad market dragged LINK lower.
+
+---
+
+### NEAR/USD — Trailing Stop OBU5GQ Triggered (Entry #3 — 40 units)
+**Stop Order:** OBU5GQ-S33RH-NTSBR4 (trailing-stop, 5%, HWM $2.2324, trigger $2.1208)
+**Fill:** ~$2.1208 (market execution; HWM $2.2324)
+**Qty closed:** 40.00 NEAR
+**Entry:** $2.193 | **Exit:** ~$2.1208 | **P&L:** ~-$2.89 (-3.3%)
+**Notes:** NEAR pulled back from HWM $2.2324 through stop $2.1208. Grayscale ETF S-1 thesis intact (+27% 24h still valid). 3rd NEAR stop-out today due to 5% trail being too tight for binary catalyst intraday volatility (3-4% swings typical). Upgrading trail to 7% on re-entry per TRADING-STRATEGY.md binary catalyst rule.
+
+---
+
+## 2026-05-22 — Session-Open Trades (Kraken, bot — afternoon)
+
+### 2026-05-22T~session | SUI/USD | BUY | 37.00 SUI | Entry: ~$1.0686 | Trailing Stop: $1.0152 | Open
+
+**Order ID (buy):** ORJ4LG-HENF5-KKYGZX (market buy, spot)
+**Trailing Stop Order ID:** OISAQO-TUKYN-CIVCAH (trailing-stop sell, trail -5%, stop $1.0152, HWM $1.0686, GTC ✓)
+**Notional:** ~$39.53 (spot; ~47% of ~$83.66 freed ZUSD from INJ/LINK/NEAR stop-outs)
+**Effective fill price:** ~$1.0686 (HWM $1.0686 confirms fill level)
+**Stop level:** $1.0152 (5% trailing below HWM $1.0686)
+**Target:** T1 $1.20 (+12.3%), T2 $1.40 (+31.1%)
+**R:R:** ~2.46:1 to T1 (($1.20−$1.069) / ($1.069−$1.015))
+**Thesis:** CME Group SUI regulated futures live (May 4, 2026); Grayscale Sui Trust S-1 filed; 21Shares SUI ETF reference; Ramp USDC integration for 50k+ businesses. Pullback from $1.164 24h high to $1.068 = improved R:R entry. Spread 0.028% ✓. BTC crash gate clear (-1.66% 24h) ✓.
+**Notes:** Deployed from freed ZUSD (INJ+LINK stops triggered). Spot only (margin restriction active). Per pre-session contingency plan: SUI primary redeployment target. Weekly Kraken trade count: 6.
+
+---
+
+### 2026-05-22T~session | NEAR/USD | BUY | 38.00 NEAR | Entry: ~$2.137 | Trailing Stop (7%): $1.9875 | Open
+
+**Order ID (buy):** OUUEEA-JDIES-O6TEOW (market buy, spot)
+**Trailing Stop Order ID:** OSX7LL-VVQZV-JPVWBB (trailing-stop sell, trail -7%, stop $1.9875, HWM $2.1370, GTC ✓)
+**Notional:** ~$81.21 (spot; ~97% of remaining ZUSD after SUI entry)
+**Effective fill price:** ~$2.137 (HWM $2.137 confirms fill level)
+**Stop level:** $1.9875 (7% trailing below HWM $2.137 — binary catalyst rule applied)
+**Target:** T1 $2.45 (+14.6%), T2 $2.65 (+24.0%)
+**R:R:** ~2.09:1 to T1 (($2.45−$2.137) / ($2.137−$1.9875))
+**Thesis:** Grayscale NEAR Protocol Trust S-1 ETF filing driving +27% 24h narrative; AI/Nvidia sector rotation catalyst intact; NEAR One ecosystem expansion; Robinhood listing; confirmed ongoing momentum on high volume (6.3M NEAR 24h). Spread 0.094% ✓. BTC crash gate clear (-1.66% 24h) ✓.
+**Notes:** 4th NEAR entry today. Used 7% trailing stop per TRADING-STRATEGY.md binary catalyst rule (ETF S-1 filing = binary catalyst — headline volatility swings 3-4% intraday; 5% trail was too tight, triggered 3 times today). Stop $1.9875 places floor at prior $2.00-$2.10 support zone. Spot only. Weekly Kraken trade count: 7.
+
+---
+
+### 2026-05-22 — Session Snapshot (post-afternoon trades)
+**Kraken equity (approx):** ~$225+ | **ZUSD:** $1.81 (fully deployed)
+| Symbol | Qty | Entry | Trailing Stop | Trail% | Stop ID | Stop Level | HWM | Target |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | ~$2.137 | 7% | OSX7LL-VVQZV-JPVWBB | $1.9875 | $2.1370 | T1 $2.45 |
+| SUI/USD | 37.00 | ~$1.0686 | 5% | OISAQO-TUKYN-CIVCAH | $1.0152 | $1.0686 | T1 $1.20 |
+| XRP/USD | 21.00 | $1.363 | 5% | OOKBA5-NVKUU-NWIH5S | $1.30064 | $1.36909 | T1 $1.50 |
+| SOL/USD | 0.17211 | $85.90 | 5% | OAOOBG-DNG7C-B4WTH2 | $83.510 | $87.90 | T1 $94.49 |
+
+**Alpaca:** no positions, no active orders ✓
+**Crash gate:** BTC $76,263 (-1.66% 24h) — clear ✓
+**Weekly trades (Kraken):** 7
+**Exits this session (auto-stop):** INJ +$0.34 | LINK ~-$0.11 | NEAR(#3) ~-$2.89
+
