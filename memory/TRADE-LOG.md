@@ -1234,3 +1234,49 @@ No unprotected positions.
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
+---
+
+## 2026-05-22 — Session-Open Trades (Kraken, bot)
+
+### 2026-05-22T06:49:15Z | NEAR/USD | BUY | 55.0000 NEAR | Entry: ~$2.187 | Trailing Stop: $2.059 | Open
+
+**Order ID (buy):** OE3UI5-WLEPV-NYJKI4 (market buy, spot)
+**Trailing Stop Order ID:** OWLXN6-2IYWZ-LK4LLX (trailing-stop sell, trail -5%, stop $2.059, HWM $2.167, GTC ✓)
+**Notional:** ~$120.29 (80.2% of $149.99 Kraken ZUSD — spot, no leverage; margin restriction active)
+**Effective fill price:** ~$2.187 (cost incl. taker fee ÷ qty; HWM confirms ~$2.167 at stop placement)
+**Stop level:** $2.059 (5% trailing below HWM $2.167)
+**Target:** T1 $2.40 (+9.7%), T2 $2.65 (+21.1%)
+**R:R:** ~2.25:1 to T1 (($2.40−$2.187) / ($2.187−$2.059))
+**Thesis:** Grayscale NEAR Protocol Trust S-1 ETF filing driving narrative; +12% breakout from $1.927→$2.167 with 4h volume = 43% of 24h total (intraday acceleration confirmed). NEAR One ecosystem expansion; institutional ETF narrative. Spread 0.162% ✓. Crash gate clear (BTC -0.18% 24h) ✓.
+**Notes:** Margin restriction ("EOrder:Reduce only:One-sided margin") blocked 2x leveraged entry; fell back to spot per STEP 4 fallback. Stop covers full 55 NEAR. Weekly Kraken trade count: 1.
+
+---
+
+### 2026-05-22T06:49:41Z | XRP/USD | BUY | 21.0000 XRP | Entry: ~$1.363 | Trailing Stop: $1.2945 | Open
+
+**Order ID (buy):** ONPPOI-LAU27-TUUAO4 (market buy, spot)
+**Trailing Stop Order ID:** OOKBA5-NVKUU-NWIH5S (trailing-stop sell, trail -5%, stop $1.2945, HWM $1.3626, GTC ✓)
+**Notional:** ~$28.64 (19.1% of $149.99 Kraken ZUSD — spot, remaining ZUSD after NEAR)
+**Effective fill price:** ~$1.363 (HWM $1.3626 confirms fill near ask $1.36225)
+**Stop level:** $1.2945 (5% trailing below HWM $1.3626)
+**Target:** T1 $1.50 (+10.1%), T2 $1.65 (+21.0%)
+**R:R:** ~2.03:1 to T1 (($1.50−$1.363) / ($1.363−$1.2945))
+**Thesis:** CLARITY Act advancing in US Senate (Banking Committee 15-9 vote confirmed); 55% Polymarket odds of 2026 signing; XRP is primary regulatory-clarity beneficiary. Flat entry (-0.72% on the day) = cleaner than chasing. Spread 0.007% ✓.
+**Notes:** Remaining ZUSD after NEAR = $29.70 → bought 21 XRP, leaving $0.86 ZUSD (fully deployed). Stop covers full 21 XRP. Leveraged entry blocked; spot used. Weekly Kraken trade count: 2.
+
+---
+
+### 2026-05-22 — Session-Open Snapshot
+**Kraken equity (approx):** ~$180 | **ZUSD:** $0.86 (fully deployed)
+| Symbol | Qty | Entry | Trailing Stop | Stop ID | Stop Level | HWM | Target |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | 55.0000 | ~$2.187 | 5% | OWLXN6-2IYWZ-LK4LLX | $2.059 | $2.167 | T1 $2.40 |
+| XRP/USD | 21.0000 | ~$1.363 | 5% | OOKBA5-NVKUU-NWIH5S | $1.2945 | $1.3626 | T1 $1.50 |
+| LINK/USD | 1.1533 | $9.616 | 5% | OULSVN-3TUF5-PPM4YW | $9.3619 | $9.8546 | T1 $10.578 |
+| SOL/USD | 0.17211 | $85.90 | 5% | OAOOBG-DNG7C-B4WTH2 | $83.51 | $87.90 | T1 $94.49 |
+
+**Alpaca (residual):** Positions = [] (BTC position resolved; no active Alpaca position)
+**Crash gate:** BTC $77,408 (-0.18% 24h) — clear ✓
+**Margin restriction:** Blocked (one-sided margin) → all entries executed as spot
+**Weekly trades (Kraken):** 2
+
