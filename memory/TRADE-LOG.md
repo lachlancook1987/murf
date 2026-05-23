@@ -1809,3 +1809,33 @@ No unprotected positions. No orphaned orders.
 - ETH stop at $1,976.52 → ~$38.94 freed → NEAR re-entry (7% trail) or LINK add
 - LINK stop at $8.9432 → ~$14.54 freed → check min order; ETH add preferred
 - All stops → ~$176 freed → concentrate: ETH 40%, NEAR re-entry 40%, LINK 20%
+
+---
+
+## 2026-05-23 — Session-Open Stop Tightening
+
+### 2026-05-23 | NEAR/USD | STOP TIGHTENED | 12.30 lot | 7% → 3% trail
+
+**Trigger:** NEAR 12.30 lot (entry $2.032) reached ask $2.44000 = **+20.1%** ≥ +20% threshold (per TRADING-STRATEGY.md stop tightening rule; contingency plan flagged $2.438 target)
+
+**Action:**
+- Cancelled: OMB3ZI-YNXTU-FF2W7U (7% trailing stop, floor $2.29910, HWM $2.47210)
+- New order: OCPEFI-MAHQ6-CW3ZHR (3% trailing stop, floor $2.36560, HWM $2.43870, GTC ✓)
+
+**Floor improvement:** $2.29910 → $2.36560 (+$0.0665 better protection)
+- If triggered at new floor: ~+16.5% on 12.30 lot vs entry $2.032 (+$4.11/lot)
+- vs old floor: +13.5% on this lot
+
+**Active stops after action:**
+| Order | Pair | Qty | Trail | Stop | HWM | Status |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $2.29910 | $2.47210 | ✓ |
+| OCPEFI-MAHQ6-CW3ZHR | NEAR/USD | 12.30 | 3% | $2.36560 | $2.43870 | ✓ (tightened) |
+| O6GVNC-H2KL5-3K2WQG | ETH/USD | 0.0197 | 5% | $2,040.15 | $2,147.52 | ✓ |
+| OZ3567-BYLHI-5JVOHK | LINK/USD | 1.626 | 5% | $9.27832 | $9.76665 | ✓ |
+
+**BTC crash gate:** $76,619 ask, 24h open $75,457 = +1.54% — CLEAR ✓
+**NEAR 38 lot:** entry $2.137, ask $2.44 = +14.2% — not at +20% threshold ($2.564). No adjustment.
+**ETH:** +4.4% | **LINK:** +4.5% — no tightening warranted.
+**Portfolio (approx):** NEAR 50.30×$2.44=$122.73 + ETH 0.0197×$2,115=$41.67 + LINK 1.627×$9.561=$15.55 + ZUSD $0.01 = **~$179.96**
+**No new entries:** ZUSD $0.006 — fully deployed.
