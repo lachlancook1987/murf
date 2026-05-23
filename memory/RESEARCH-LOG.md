@@ -5281,3 +5281,40 @@ All four positions held with trailing stops. No thesis breaks. No new entries (i
 - SUI: $1.10 support — if reclaimed, momentum resumes toward T1 $1.20
 
 **No WhatsApp notification sent** (no action taken per protocol).
+
+---
+
+## 2026-05-23 — Pre-Session Research
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/trusting-faraday-Ckw8V
+
+### Market Snapshot
+- **BTC:** ~$75,515–$75,900 | 24h: ~-2.3% | Crash gate: NOT triggered ✓
+- **ETH:** ~$2,070–$2,073 | 24h: ~-2.9%
+- **F&G:** 28 (Fear)
+- **BTC funding rate:** +0.0018–0.0028% (neutral/slightly positive — no extreme longs)
+
+### Top 24h Gainers (macro scan)
+RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38%, GWEI +30%, GUN +29% — micro-caps, not on Kraken or no confirmed sustained catalyst.
+
+### Macro Catalysts
+- CLARITY Act pending Senate floor vote; no adverse development; Memorial Day May 25 recess = deadline risk for XRP
+- ETH Glamsterdam upgrade June 2026 — pre-upgrade positioning theme in media
+- NEAR: Grayscale ETF S-1 filing narrative intact; no cancellation news
+- SUI: native stablecoins (USDi + suiUSDe) announced May 22 — catalyst fresh; CME futures + Grayscale S-1 intact
+- Token unlocks this week: HYPE May 29 (14.2M tokens, ~3% MC); STRK May 22 done; PYTH unlock largely complete
+
+### Position Thesis Checks
+- **NEAR:** Grayscale NEAR Protocol Trust S-1 ETF thesis intact. No adverse news. Short-term forecasts neutral-to-bearish (MEXC $1.38 5d target). Current $2.097 vs stop $1.994 (7% trail). Buffer 4.9%. **Thesis INTACT. HOLD.**
+- **SOL:** Firedancer 1.0 mainnet live, whale buying confirmed. Below 200-day SMA; technically weak. 24h low $83.95 barely above stop $83.51. Buffer **1.14% CRITICAL**. Do NOT adjust. **Thesis INTACT. HOLD.**
+- **XRP:** CLARITY Act still advancing; Senate floor vote pending. ETF inflows positive. No adverse news. Memorial Day May 25 recess risk. Current $1.339 vs stop $1.30064 (5% trail). Buffer 2.87%. **Thesis INTACT. HOLD.**
+- **SUI:** Native stablecoin catalyst (May 22) + CME futures + Grayscale S-1 intact. Current $1.043 vs stop $1.0165 (5% trail). Buffer 2.5%. Short-term cautiously neutral. **Thesis INTACT. HOLD.**
+
+### New Trade Ideas
+None viable — ZUSD $1.81 is fully deployed; no minimum-order cash available.
+
+### Decision
+**HOLD — No New Trades.** No WhatsApp notification sent.
+
+**Contingency (SOL stop at $83.51):** Freed ~$14.62 ZUSD → SUI add (catalyst fresh) or NEAR add (ETF S-1 strongest thesis). XRP Memorial Day risk = lower priority.

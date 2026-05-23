@@ -1636,3 +1636,45 @@ No unprotected positions.
 **⚠️ SOL STOP BUFFER CRITICAL (1.04%):** SOL at $84.39 vs stop trigger $83.51. Buffer worsened from 1.1% (prior check) to 1.04%. Stop survived another session. Do NOT adjust — let it work. If triggered: freed ~$14.62 ZUSD → evaluate SUI add or NEAR add per prior contingency plan.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-23 — Session-Open Scan
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.097 | **-1.87%** | $2.144 | $1.994 (trail 7%) | 4.9% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.043 | **-2.4%** | $1.070 | $1.0165 (trail 5%) | 2.5% | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.339 | **-1.76%** | $1.369 | $1.30064 (trail 5%) | 2.87% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.47 | **-1.67%** | $87.90 | $83.510 (trail 5%) | ⚠️ **1.14% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22T05:22Z) ✓
+**ZUSD:** $1.81 (fully deployed — no new entries possible)
+**BTC:** ~$75,515 (Kraken live) | 24h: ~-2.3% | Crash gate: NOT triggered ✓
+**F&G:** 28 (Fear) | **BTC funding rate:** +0.0018–0.0028% (normal/slightly positive)
+**Weekly Kraken trades:** 7
+
+**Pre-session research summary:**
+- BTC ~$75,900 (-2.3% 24h) — Fear regime; no crash gate (well under -20% threshold)
+- ETH ~$2,070–$2,073 (-2.9% 24h)
+- Top gainers: RAVE (+106%), MWC (+68%), OPG (+59%) — not on Kraken or no catalyst
+- CLARITY Act still pending Senate floor vote; no adverse developments; Memorial Day May 25 recess risk
+- ETH Glamsterdam June 2026 upgrade referenced in news as upcoming catalyst
+- Token unlocks this week: HYPE May 29 (14.2M tokens); PYTH unlock (largely complete); STRK May 22 done
+- NEAR: Grayscale ETF S-1 thesis intact; no cancellation/adverse news. Short-term forecasts neutral-to-bearish (MEXC $1.38 target); 24h range $2.062–$2.132. Thesis INTACT. HOLD.
+- SOL: Firedancer 1.0 live, whale buying intact. Below 200-day SMA; technically weak. 24h low $83.95 within $0.44 of stop $83.51. Buffer CRITICALLY THIN (1.14%). Do NOT adjust. Thesis INTACT. HOLD.
+- XRP: CLARITY Act advancing, Senate floor vote pending. No adverse news. ETF inflows cited as positive. Thesis INTACT. HOLD.
+- SUI: Native stablecoins (USDi + suiUSDe) catalyst from May 22 still fresh. CME futures + Grayscale S-1 intact. Cautiously neutral short-term. Thesis INTACT. HOLD.
+
+**STEP 3 — Hard checks:**
+- Crash gate: ~-2.3% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open and covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20%):** No position up ≥+20% from entry. No adjustments.
+
+**STEP 6 — New entries:** ZUSD $1.81 — insufficient for any minimum order. No new entries possible.
+
+**Decision: HOLD — No New Trades.** No WhatsApp notification sent (no action taken).
+
+**SOL contingency:** If stop triggers at $83.51 → freed ~$14.62 ZUSD → evaluate SUI add (buffer thinning, stablecoin catalyst) or NEAR add (strongest thesis, ETF S-1). XRP Memorial Day risk = lower priority.
