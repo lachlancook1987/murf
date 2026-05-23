@@ -1748,3 +1748,5 @@ No unprotected positions. No orphaned orders.
 - Both trigger → ~$52 freed → concentrate into NEAR (highest conviction)
 
 **Decision: HOLD — No New Trades. No notification sent.**
+
+| 2026-05-23 | ETH/USD | BUY | 0.0197 | ~$2,026 | Market | O2XQR3-KWHXM-HRTSCP | Glamsterdam June upgrade pre-position | Trailing stop 5% @ O6GVNC-H2KL5-3K2WQG (stop $1,925.03, HWM $2,026.34) | OPEN |
