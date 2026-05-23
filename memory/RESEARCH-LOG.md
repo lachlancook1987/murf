@@ -5673,3 +5673,154 @@ None — ZUSD $1.81 insufficient for any minimum order. No entries possible.
 - Both trigger → ~$52 freed → concentrate into NEAR (strongest institutional thesis)
 - XRP: CLARITY Act advanced = thesis strengthened; hold through Memorial Day (May 25)
 
+
+---
+
+## 2026-05-23 — Pre-Session Research (Evening Session)
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/magical-carson-Ovb8D
+
+---
+
+### ALERT: Three Stops Triggered Overnight
+
+All three critically-buffered positions stopped out since last midday scan:
+
+| Symbol | Stop Trigger | Units | Proceeds (est.) | Last Buffer |
+|---|---|---|---|---|
+| SOL/USD | $83.510 | 0.17211 | ~$14.37 | 0.77% |
+| SUI/USD | $1.01650 | 37.00 | ~$37.61 | 0.85% |
+| XRP/USD | $1.30064 | 21.00 | ~$27.31 | 2.20% |
+
+Cause: Broad altcoin weakness following BTC drift lower to $75,383 (-2.44% 24h). No single-asset shock — systematic risk-off sweep through the portfolio. Stops worked as designed.
+
+---
+
+### Account Snapshot (Kraken)
+
+| Asset | Qty | Status |
+|---|---|---|
+| NEAR | 38.00 | HOLD — trailing stop OSX7LL-VVQZV-JPVWBB active |
+| SOL | 0.000012 dust | Exited |
+| SUI | 0.00000 | Exited |
+| XRP | 0.00000000 | Exited |
+| ZUSD | **$80.44** | Available for redeployment |
+
+**Kraken open orders:** 1 (OSX7LL-VVQZV-JPVWBB — NEAR trailing stop, 38.00 units, trail +7%, stopprice $1.994, HWM $2.144) ✓
+
+**Alpaca:** No positions, no orders ✓
+
+---
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $75,383 | -2.44% 24h | Crash gate NOT triggered ✓ |
+| ETH | $2,023 (ask) | -2% from 24h open $2,063 | Glamsterdam June catalyst |
+| F&G | 28 (Fear) | Unchanged — persistent risk-off |
+| BTC Funding | +0.0018–0.0028% | Normal, slightly positive |
+| 24h Top Gainers | RAVE +106%, MWC +68%, OPG +59%, ORCA +27%, CORE +24% | CORE not on Kraken; ORCA on Kraken but thin volume |
+
+**NEAR current:** $2.023 ask | Stop $1.994 | Buffer **1.44% CRITICAL**
+
+---
+
+### Perplexity Research Summary
+
+- **BTC:** $75,383 (-2.44% 24h) on Kraken; ranging $75,136–$77,650 zone
+- **ETH:** $2,023 (-2% from 24h open); Glamsterdam upgrade June 2026 pre-positioning window
+- **Top gainers:** RAVE, MWC, OPG — not on Kraken. ORCA (+27%) on Kraken but 7,347 units/day volume (unusable thin)
+- **Fear & Greed:** 28 — Fear regime, unchanged from prior sessions
+- **BTC funding:** +0.0018–0.0028% (normal); no extreme short squeeze or long unwind signal
+- **Catalysts today:** CLARITY Act Senate floor timing; Fed 50bps cut expectation mid-2026; ETH Glamsterdam June; institutional accumulation narrative continuing
+- **Token unlocks:** INFRA 50K (1% MC), XWGT 819K (5.65% MC), SQT 182M (4.8% MC) — all micro, no market impact. HYPE May 29 (14.2M) still upcoming
+- **NEAR:** $2.07-2.08 per Perplexity; 24h move -4% to -6%; RSI mixed signals; Grayscale ETF S-1 and Arthur Hayes endorsement intact; forecasts diverge ($1.43–$2.40 range for 2026); thesis intact
+- **DeFi setups:** LINK, ETH, SUI, NEAR cited across multiple May 2026 setup lists; TON narrative (Telegram validator) as additional watch
+- **SOL/SUI/XRP drops:** Broad altcoin weakness tracking BTC; no single-asset fundamental shock; stops functioned correctly
+
+---
+
+### Candidate Spread Checks
+
+| Pair | Ask | Bid | Spread | Status |
+|---|---|---|---|---|
+| ETH/USD | $2,023.44 | $2,023.10 | 0.017% | ✓ |
+| NEAR/USD | $2.0234 | $2.0199 | 0.17% | ✓ |
+| LINK/USD | $9.1068 | $9.1039 | 0.032% | ✓ |
+| SOL/USD | $81.89 | $81.88 | 0.012% | ✓ but below former stop |
+| XRP/USD | $1.3108 | $1.3108 | 0.005% | ✓ |
+| ORCA/USD | $1.396 | $1.392 | 0.29% | ✓ spread OK but volume 7,347/day → SKIP |
+| CORE/USD | N/A | N/A | N/A | ✗ Not on Kraken |
+
+---
+
+### Trade Ideas
+
+**Idea 1: ETH/USD — Glamsterdam Pre-Positioning (PRIMARY)**
+- **Catalyst:** ETH Glamsterdam upgrade targeted June 2026; 10-week institutional ETF inflow streak; historical pre-upgrade rally pattern; DeFi sector beta
+- **Entry:** Market ~$2,023 (ask)
+- **Stop:** trailing_stop, trail_percent 5 (initial stop ~$1,922)
+- **Target:** $2,300 | R:R ~2.7:1
+- **Size:** $40 → ~0.01978 ETH
+- **Pair:** ETH/USD ✓ online | Spread: 0.017% ✓ | Margin: up to 10x (not using)
+
+**Idea 2: NEAR/USD add — ETF Thesis (add at lower average)**
+- **Catalyst:** Grayscale ETF S-1 + Arthur Hayes endorsement + AI/scaling narrative; adding at $2.023 lowers avg from $2.137 to ~$2.093 on combined 50.36 NEAR
+- **Entry:** Market ~$2.023 (ask)
+- **Stop:** trailing_stop, trail_percent 7 (new position; existing OSX7LL stop unchanged at $1.994)
+- **Target:** $2.40 (+18.7%) | R:R ~2.7:1
+- **Size:** $25 → ~12.36 NEAR additional
+- **⚠️ Warning:** Existing 38 NEAR stop at $1.994 = 1.44% buffer from current $2.023 — CRITICAL. New units would have their own 7% trail from entry (~$1.881 initial). If existing stop fires, new position remains protected by its own stop.
+- **Pair:** NEAR/USD ✓ online | Spread: 0.17% ✓
+
+**Idea 3: LINK/USD — DeFi Infrastructure (diversifier)**
+- **Catalyst:** AWS Chainlink Data Feeds integration; ETH Glamsterdam proxy (DeFi oracle demand); multiple May 2026 top-setup lists
+- **Entry:** Market ~$9.107 (ask)
+- **Stop:** trailing_stop, trail_percent 5 (initial stop ~$8.652)
+- **Target:** $10.50 (+15.3%) | R:R ~3.0:1
+- **Size:** $15 → ~1.648 LINK (min order 0.55 ✓)
+- **Pair:** LINK/USD ✓ online | Spread: 0.032% ✓
+
+**Idea 4: XRP/USD re-entry — SKIP**
+- Stopped out at $1.300; current $1.311; CLARITY Act binary May 25 risk unchanged; same conditions as prior entry exist; no material thesis change justifies immediate re-entry. Monitor through Memorial Day; reassess if CLARITY Act advances.
+
+**Idea 5: SOL/USD re-entry — SKIP**
+- Stopped out at $83.51; current ask $81.89 (further decline). Bearish H&S pattern flagged by analysts; downside $79-82 support cited. Entering below former stop into confirmed weakness is not a trade — it's a catch. No re-entry until price reclaims $84+.
+
+---
+
+### Recommended Allocation
+
+| Trade | Size | Units | Stop Type |
+|---|---|---|---|
+| ETH buy | $40 | ~0.01978 ETH | trailing_stop 5% |
+| NEAR add | $25 | ~12.36 NEAR | trailing_stop 7% |
+| LINK buy | $15 | ~1.648 LINK | trailing_stop 5% |
+| ZUSD residual | $0.44 | — | — |
+| **Total deployed** | **$80** | | |
+
+---
+
+### Risk Factors
+
+1. **NEAR stop critically thin (1.44%)** — existing 38 NEAR position at imminent stop territory; adding more NEAR is doubling down near a potential exit
+2. **Broad altcoin weakness confirmed** — three positions stopped out in one sweep; Fear regime persistent; no reversal catalyst visible today
+3. **BTC ranging at $75K** — no breakout, no breakdown; directionless market increases whipsaw risk on new entries
+4. **ETH Glamsterdam June** — catalyst is real but 4+ weeks away; position may drift before catalyst materialises
+5. **LINK low volume today** — only 1,775 trades; low conviction activity
+6. **All new entries face headwind** — Fear & Greed 28; institutional bids not yet lifting altcoin layer
+
+---
+
+### Decision
+
+**TRADE — Deploy $80 into ETH ($40), NEAR add ($25), LINK ($15)**
+
+Crash gate: NOT triggered (BTC -2.44%, threshold -20%) ✓
+Strategy default: TRADE unless crash gate active ✓
+All three new entries have spread ✓, Kraken pair confirmed ✓, catalyst documented ✓
+
+**NEAR note:** Adding here is the highest-conviction play (strongest institutional thesis) at a lower entry price, but the existing stop proximity is a known risk. New units will carry their own trailing stop independent of existing position.
+
