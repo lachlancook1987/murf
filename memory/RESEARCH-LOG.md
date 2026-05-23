@@ -5824,3 +5824,55 @@ All three new entries have spread ✓, Kraken pair confirmed ✓, catalyst docum
 
 **NEAR note:** Adding here is the highest-conviction play (strongest institutional thesis) at a lower entry price, but the existing stop proximity is a known risk. New units will carry their own trailing stop independent of existing position.
 
+---
+
+## 2026-05-23 — Midday Scan (Post-Rebalance)
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+
+### Account Snapshot
+| Asset | Qty | Notes |
+|---|---|---|
+| ETH | 0.0197 | Spot position |
+| NEAR | 50.30 (38 + 12.30) | Spot position — blended avg $2.111 |
+| LINK | 1.6268 | Spot position |
+| ZUSD | $0.006 | No cash — fully deployed |
+
+### Open Trailing Stops (all verified)
+| Order | Pair | Qty | Trail | Stop Trigger | HWM |
+|---|---|---|---|---|---|
+| O6GVNC-H2KL5-3K2WQG | ETH/USD | 0.0197 | 5% | $1,929.55 | $2,031.10 |
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $1.994 | $2.144 |
+| OMB3ZI-YNXTU-FF2W7U | NEAR/USD | 12.30 | 7% | $1.9476 | $2.0941 |
+| OZ3567-BYLHI-5JVOHK | LINK/USD | 1.626 | 5% | $8.7494 | $9.2098 |
+
+### Live Position Summary (midday quotes)
+| Symbol | Qty | Entry | Ask | P&L% | Stop Trigger | Buffer |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026.00 | $2,029.63 | **+0.18%** | $1,929.55 | 4.93% |
+| NEAR/USD | 38.00 | $2.137 | $2.0811 | -2.6% | $1.994 | 4.18% |
+| NEAR/USD | 12.30 | $2.032 | $2.0811 | **+2.4%** | $1.9476 | 6.4% |
+| LINK/USD | 1.6268 | $9.147 | $9.196 | **+0.53%** | $8.749 | 4.89% |
+
+**BTC:** $74,679 (ask) | 24h open $75,457 = **-1.03%** | Crash gate: NOT triggered ✓
+
+### STEP 3 — Trailing Stops Verified
+All 4 trailing stops confirmed open and covering correct quantities ✓. No unprotected positions.
+
+### STEP 4 — Stop Tightening
+No position up ≥+20% from entry. No adjustments.
+
+### STEP 5 — Thesis Check
+- **ETH:** Glamsterdam June 2026 upgrade intact. Price $2,030 vs entry $2,026 (+0.18%). No adverse news. **INTACT. HOLD.**
+- **NEAR:** Grayscale ETF S-1 thesis intact. Price $2.08 vs blended avg $2.111 (-1.5%). Protocol upgrades, altcoin ETF approval narrative active. **INTACT. HOLD.**
+- **LINK:** Thesis strengthening — Kraken itself switched cross-chain from LayerZero to Chainlink CCIP; Kelp DAO migration; DTCC 24/7 collateral management partnership; active addresses 8-month high; 32.93M LINK whale accumulation over 30 days. Price $9.20 vs entry $9.147 (+0.53%). **INTACT AND STRENGTHENING. HOLD.**
+
+### STEP 6 — New Entry Scan
+Momentum scan: SOL +9%, SUI +18.6%, ZEC +40% 7d, TAO +16% 7d.
+- **ZUSD $0.006** — no minimum order achievable. Zero new entries possible.
+
+### Decision
+**HOLD — No New Trades. No WhatsApp notification sent (no action taken).**
+
+**Contingency:** If any trailing stop triggers → evaluate SOL re-entry (Firedancer 1.0, +9% momentum) or SUI add (gasless stablecoin catalyst, +18.6%). LINK thesis strongest in portfolio — add on freed capital if spread still ≤1%.
+
