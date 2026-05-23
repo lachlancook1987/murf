@@ -1764,3 +1764,31 @@ No unprotected positions. No orphaned orders.
 | LINK/USD | 1.6268 | $9.147 | $9.110 | -3.2% | -$0.06 (-0.4%) | $8.690 (5%, HWM $9.148) |
 **Trades today:** SUI/USD trailing stop triggered (~$1.017, -4.9%) | XRP/USD trailing stop triggered (~$1.300, -4.6%) | SOL/USD trailing stop triggered (~$83.51, -2.8%) | ETH/USD BUY 0.0197 @$2,026 | NEAR/USD BUY (add) 12.30 @$2.032 | LINK/USD BUY 1.626 @$9.147 | **Total since migration:** 13
 **Notes:** Three trailing stops triggered today — SUI (-4.9%), XRP (-4.6%), SOL (-2.8%) — generating ~$79 in proceeds recycled into ETH (Glamsterdam June upgrade pre-position), NEAR add (combined 50.30 NEAR @avg $2.111, ETF S-1 thesis strongest), and new LINK position (AWS/Chainlink integration / ETH DeFi proxy). Day P&L of -$22.02 (-12.25%) reflects the formal May 22 EOD baseline of $179.78 (the only prior EOD reference), but that snapshot was taken early in the Kraken activation day before afternoon NEAR/INJ/LINK stop-outs on May 22 — so two days of stop-cascade activity is compressed into today's figure. BTC fell -1.39% (open $75,457 → $74,407); bot underperformed by -10.86% due to multi-stop cascade. All three new positions are mildly underwater: ETH -0.2%, NEAR blended -2.9%, LINK -0.4%. NEAR 38 original stop at $1.994 has only 2.8% buffer from current $2.0498 — most critical overnight risk. Four trailing stops confirmed active (ETH: O6GVNC, NEAR 38: OSX7LL, NEAR 12.30: OMB3ZI, LINK: OZ3567). Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure.
+
+---
+
+## 2026-05-23 — Session-Open Scan (late session)
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026.00 | $2,026.77 | **+0.04%** | $2,029.73 | $1,928.25 (5%) | 4.86% | O6GVNC-H2KL5-3K2WQG ✓ |
+| NEAR/USD | 38.00 | $2.137 | $2.0779 | **-2.77%** | $2.1440 | $1.9940 (7%) | 4.03% | OSX7LL-VVQZV-JPVWBB ✓ |
+| NEAR/USD | 12.30 | $2.032 | $2.0779 | **+2.26%** | $2.0936 | $1.9471 (7%) | 6.29% | OMB3ZI-YNXTU-FF2W7U ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.1905 | **+0.47%** | $9.1901 | $8.7306 (5%) | 5.00% | OZ3567-BYLHI-5JVOHK ✓ |
+
+**Kraken ZUSD:** $0.0059 (fully deployed) | **Alpaca:** no positions, no active orders ✓
+**BTC:** $74,624 (ask) | 24h open $75,456 = **-1.10%** | Crash gate: NOT triggered ✓
+**Portfolio (est):** ~$159.41 | **vs EOD:** +$1.65 (+1.05%)
+
+**STEP 3 — Hard checks:**
+- Crash gate: -1.10% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open and covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** No position qualifies. No adjustments.
+
+**STEP 5 — Thesis check:** ETH Glamsterdam June 2026 intact. NEAR Grayscale ETF S-1 + Arthur Hayes intact. LINK AWS/CCIP intact. BTC -1.10% — broad slight weakness; no single-asset shock on any position. All theses INTACT.
+
+**STEP 6 — New entries:** ZUSD $0.0059 — no capacity for any minimum order. No entries possible.
+
+**Decision: HOLD — No New Trades. No notification sent.**
