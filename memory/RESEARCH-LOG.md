@@ -5876,3 +5876,76 @@ Momentum scan: SOL +9%, SUI +18.6%, ZEC +40% 7d, TAO +16% 7d.
 
 **Contingency:** If any trailing stop triggers → evaluate SOL re-entry (Firedancer 1.0, +9% momentum) or SUI add (gasless stablecoin catalyst, +18.6%). LINK thesis strongest in portfolio — add on freed capital if spread still ≤1%.
 
+
+---
+
+## 2026-05-23 — Midday Scan (Second Session)
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/brave-newton-jq0dV
+
+### Account Snapshot
+
+**Kraken balances:**
+| Asset | Qty | Notes |
+|---|---|---|
+| NEAR | 50.30 | Spot — 38 @$2.137 + 12.30 @$2.032 (avg $2.111) |
+| XETH | 0.0197 | Spot — Glamsterdam June upgrade |
+| LINK | 1.6268 | Spot — AWS/Chainlink integration / ETH DeFi proxy |
+| ZUSD | $0.006 | Fully deployed — no cash for new entries |
+
+**Alpaca:** No positions, no open orders. Confirmed via API.
+
+**Open trailing stops (all confirmed):**
+| Order ID | Pair | Qty | Trail | Stop Trigger | HWM | Buffer |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $2.22270 | $2.39000 | 3.1% |
+| OMB3ZI-YNXTU-FF2W7U | NEAR/USD | 12.30 | 7% | $2.22270 | $2.39000 | 3.1% |
+| O6GVNC-H2KL5-3K2WQG | ETH/USD | 0.0197 | 5% | $1,962.62 | $2,065.91 | 4.7% |
+| OZ3567-BYLHI-5JVOHK | LINK/USD | 1.626 | 5% | $8.8899 | $9.3578 | 4.6% |
+
+### Live Position Summary (Kraken quotes)
+| Symbol | Bid | Ask | Entry | P&L% | HWM | Stop | Buffer |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | $2.293 | $2.295 | $2.111 avg | **+8.7%** | $2.390 | $2.2227 (7%) | 3.1% |
+| ETH/USD | $2,059.47 | $2,059.48 | $2,026.00 | **+1.6%** | $2,065.91 | $1,962.62 (5%) | 4.7% |
+| LINK/USD | $9.314 | $9.317 | $9.147 | **+1.8%** | $9.358 | $8.890 (5%) | 4.6% |
+
+### Market Context
+| Indicator | Value |
+|---|---|
+| BTC | ~$74,655–$75,900 | 24h: **-3.1% to -3.4%** — crash gate NOT triggered ✓ |
+| ETH | ~$2,059–$2,072 | 24h: -2.9% to -3.2% |
+| Fear & Greed | 28 (Fear) |
+
+**NEAR standout:** +25.78% 24h per MEXC. Rallied from open $2.10 to high $2.39 (HWM for both stops). Currently pulling back to $2.294 — still well above entry.
+
+### Crash Gate: BTC -3.1% to -3.4% → **CLEAR** ✓
+
+### STEP 3 — Trailing Stop Verification
+All 4 trailing stops confirmed open via Kraken API. All covering correct quantities. No unprotected positions. ✓
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+| Position | Entry | +20% threshold | Current | Qualifies? |
+|---|---|---|---|---|
+| NEAR 38 | $2.137 | $2.564 | $2.295 | ❌ +7.4% — NO |
+| NEAR 12.30 | $2.032 | $2.438 | $2.295 | ❌ +12.9% — NO |
+| ETH | $2,026.00 | $2,431.20 | $2,059 | ❌ +1.6% — NO |
+| LINK | $9.147 | $10.976 | $9.317 | ❌ +1.8% — NO |
+**No tightening required.**
+
+### STEP 5 — Thesis Check
+- **NEAR:** Grayscale ETF S-1 intact. +25.78% 24h momentum — no adverse news. HWM stops trailed up to $2.2227. **INTACT. HOLD.**
+- **ETH:** Glamsterdam June upgrade — no delay/cancellation news. +1.6% from entry. **INTACT. HOLD.**
+- **LINK:** ADI Foundation selected Chainlink to bridge **$240B in institutional assets** onto blockchain — **thesis STRENGTHENED**. BTC drag muting move. **INTACT. HOLD.**
+
+### STEP 6 — New Entries
+ZUSD $0.006 — insufficient for any minimum order. **No new entries possible.**
+
+### Decision
+**HOLD — No New Trades. No WhatsApp notification sent.**
+
+**Contingency (if stop triggers):**
+- NEAR stop at $2.2227 (~$112 freed) → ETH add (Glamsterdam) or LINK add (ADI catalyst)
+- ETH stop at $1,962.62 (~$40 freed) → NEAR add or LINK add
+- LINK stop at $8.8899 (~$14.47 freed) → evaluate vs minimum order size
