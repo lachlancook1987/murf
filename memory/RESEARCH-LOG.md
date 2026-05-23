@@ -5626,3 +5626,50 @@ SOL and SUI stops critically thin — imminent trigger possible any session
 - Do NOT re-enter SUI until price reclaims $1.05+
 - XRP: hold through Memorial Day; if CLARITY Act advances = add thesis; if delayed = reassess
 
+---
+
+## 2026-05-23 — Midday Scan
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/brave-newton-1fM9u
+
+### Live Position Summary (midday quotes)
+
+| Symbol | Qty | Entry | Ask | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.0579 | -3.7% | $1.994 (trail 7%) | 3.09% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.16 | -2.0% | $83.510 (trail 5%) | ⚠️ **0.77% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.32987 | -2.4% | $1.30064 (trail 5%) | 2.20% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.0252 | -4.1% | $1.01650 (trail 5%) | ⚠️ **0.85% CRITICAL** | OISAQO-TUKYN-CIVCAH ✓ |
+
+**ZUSD:** $1.81 (fully deployed — no new entries possible)
+**Alpaca:** No positions, no open orders ✓
+
+### Trailing Stop Verification (STEP 3)
+All 4 stops confirmed open and covering correct quantities:
+- OSX7LL-VVQZV-JPVWBB: NEAR 38.00, trail +7%, stopprice $1.99400, HWM $2.14400 ✓
+- OAOOBG-DNG7C-B4WTH2: SOL 0.17210, trail +5%, stopprice $83.51000, HWM $87.90000 ✓
+- OOKBA5-NVKUU-NWIH5S: XRP 21.00, trail +5%, stopprice $1.30064, HWM $1.36909 ✓
+- OISAQO-TUKYN-CIVCAH: SUI 37.00, trail +5%, stopprice $1.01650, HWM $1.07000 ✓
+
+### Stop Tightening Check (STEP 4)
+All positions underwater from entry — none qualify for tightening (≥+20% required). No adjustments.
+
+### Thesis Checks (STEP 5 — Perplexity)
+- **NEAR:** Arthur Hayes endorsement + AI-token momentum intact. Mixed near-term forecasts ($1.38–$2.25 range). No adverse catalyst. **INTACT. HOLD.**
+- **SOL:** Bearish head-and-shoulders pattern flagged; support at $83 then $78. ETF inflow decline noted. 24h low $83.94 held above stop $83.51 (buffer only $0.43). No protocol exploit or regulatory break. **INTACT. HOLD. Do NOT adjust stop.**
+- **XRP:** CLARITY Act advanced through Senate Banking Committee — **thesis strengthened**. $1.45B ETF inflows since launch. Daily txn volume -20% (minor negative). Large long liquidations at $1.50 resistance. Stop buffer 2.20% healthy. **INTACT. HOLD.**
+- **SUI:** CME SUI futures live, 21Shares spot ETF (TSUI) trading on Nasdaq since Feb 2026, Grayscale S-1 intact. SUI Group staked 108.8M tokens (supply tightening). Gasless stablecoins across 7 assets including USDC live May 20. Token unlock headwind remains. Stop buffer 0.85% CRITICAL — 24h low $1.0213 just $0.0048 above stop. **INTACT. HOLD.**
+
+### New Trade Ideas (STEP 6)
+None — ZUSD $1.81 insufficient for any minimum order. No entries possible.
+
+### Decision
+**HOLD — No New Trades. No WhatsApp notification sent (no action taken).**
+
+**Contingency (armed — unchanged):**
+- SOL triggers ($83.51) → ~$14.47 freed → NEAR add (7% trail) OR ETH (Glamsterdam)
+- SUI triggers ($1.0165) → ~$37.6 freed → ETH (Glamsterdam) OR NEAR add
+- Both trigger → ~$52 freed → concentrate into NEAR (strongest institutional thesis)
+- XRP: CLARITY Act advanced = thesis strengthened; hold through Memorial Day (May 25)
+
