@@ -5356,3 +5356,107 @@ None — ZUSD $1.81 fully deployed.
 **HOLD — No New Trades.** No WhatsApp notification sent.
 
 **SOL contingency:** Stop triggers at $83.51 → freed ~$14.62 ZUSD → SUI add (gasless stablecoin fresh) or NEAR add (ETF S-1). XRP Memorial Day risk = lower priority.
+
+---
+
+## 2026-05-23 — Pre-Session Research (Evening)
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/magical-carson-DWcNk
+
+### Account Snapshot
+
+**Kraken balances:**
+| Asset | Qty | Notes |
+|---|---|---|
+| NEAR | 38.00 | Spot position |
+| SUI | 37.00 | Spot position |
+| XRP | 21.00 | Spot position |
+| SOL | 0.17211 | Spot position |
+| ZUSD | $1.81 | Fully deployed — no cash for new entries |
+
+**Alpaca:** No positions, no open orders. BTC residual fully closed.
+
+**Open trailing stops (all confirmed):**
+| Order | Pair | Qty | Trail | Stop Trigger | HWM | Buffer |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $1.99400 | $2.14400 | 3.6% |
+| OISAQO-TUKYN-CIVCAH | SUI/USD | 37.00 | 5% | $1.01650 | $1.07000 | ⚠️ 1.3% CRITICAL |
+| OOKBA5-NVKUU-NWIH5S | XRP/USD | 21.00 | 5% | $1.30064 | $1.36909 | 2.3% |
+| OAOOBG-DNG7C-B4WTH2 | SOL/USD | 0.17211 | 5% | $83.51000 | $87.90000 | ⚠️ 0.95% CRITICAL |
+
+### Live Position Summary (Kraken quotes)
+| Symbol | Bid | Ask | Entry | P&L% | Stop Buffer |
+|---|---|---|---|---|---|
+| NEAR/USD | $2.067 | $2.069 | $2.137 | -3.2% | 3.6% |
+| SOL/USD | $84.30 | $84.32 | $85.90 | -1.85% | ⚠️ 0.95% |
+| XRP/USD | $1.331 | $1.331 | $1.363 | -2.4% | 2.3% |
+| SUI/USD | $1.030 | $1.030 | $1.0686 | -3.6% | ⚠️ 1.3% |
+
+### Market Context
+
+| Indicator | Value |
+|---|---|
+| BTC | ~$75,400 | -2.4 to -2.8% 24h — crash gate NOT triggered ✓ |
+| ETH | ~$2,062 | Spread essentially zero; mixed 24h signals |
+| Fear & Greed | 28 (Fear) |
+| BTC Funding Rate | +0.0018–0.0028% (neutral/slightly positive) |
+
+**Top 24h gainers:** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38%, ORCA +27%, CORE +25% — micro-caps/memes, not viable on Kraken.
+
+### Macro Catalysts
+- **CLARITY Act**: pending Senate floor vote; Memorial Day recess risk May 25 — key gating event for XRP
+- **ETH Glamsterdam upgrade**: June 2026 target; ETH historically rallies ahead of major forks — LINK is pure DeFi infrastructure play on same thesis
+- **Powell → Warsh Fed chair transition**: rate cut expectations supportive of risk assets
+- **CME SUI futures launch**: cited May 29 2026; 24/7 crypto futures — SUI institutional catalyst intact
+- **HYPE unlock**: May 29, 14.2M tokens (~1.4% supply) — minor overhang
+- **APT unlock**: mid-month ~11.3M tokens >$100M — selling pressure risk on APT
+- **PYTH unlock**: May 19–21 largely complete; STRK May 22 done
+
+### Position Thesis Checks
+
+**NEAR:** Grayscale ETF S-1 filing intact; NEAR Intents fee conversion (Feb 2026) ongoing. Short-term mixed-to-bearish (Changelly $2.24 target for today vs current $2.069). 7% trailing stop at $1.994 manages downside. **Thesis INTACT. HOLD.**
+
+**SOL:** ETF inflows (spot Solana ETF), Firedancer 1.0 mainnet live, Visa/Meta payment use-cases cited. BUT 24h low $83.95 is within $0.44 of stop $83.51 (0.95% buffer). Bearish short-term structure — analysts flag $78 and $70 downside if $83.51 breaks. **Thesis INTACT but STOP CRITICALLY THIN. HOLD — do not adjust stop.**
+
+**XRP:** CLARITY Act still advancing; ETF inflows positive; no adverse news. Memorial Day May 25 recess risk — if bill doesn't advance before recess, legislative window narrows. Current $1.331 vs stop $1.30064 (2.3% buffer). **Thesis INTACT. HOLD with Memorial Day vigilance.**
+
+**SUI:** Gasless USDC/stablecoin transfers live (zero gas), CME SUI futures May 29 launch, Grayscale S-1 intact. Current $1.030 vs stop $1.0165 (1.3% buffer). Short-term cautiously neutral; support at $0.85–$0.87 well below. **Thesis INTACT. HOLD.**
+
+### New Candidate Scan
+
+| Candidate | Catalyst | Spread | Decision |
+|---|---|---|---|
+| OMNI/USD | +174% 24h momentum | 6.85% — WAY too wide | ❌ SKIP (spread >1%) |
+| LINK/USD | ETH Glamsterdam DeFi pre-trade; tight spread 0.02% | 0.02% ✓ | ❌ SKIP (no ZUSD) |
+| ETH/USD | Glamsterdam June upgrade pre-positioning | ~0% ✓ | ❌ SKIP (no ZUSD) |
+| CORE | +25% 24h | Not on Kraken | ❌ Skip |
+
+**ZUSD $1.81 — no minimum order achievable. Zero new entries possible.**
+
+### Contingency — If Stop Triggers
+
+**SOL stop at $83.51 (~$14.37 freed):**
+- Option A: NEAR add — Grayscale S-1 strongest thesis, $14.37 / $2.069 ≈ 6.9 NEAR tokens
+- Option B: LINK add — Glamsterdam pre-trade, 5% trailing stop, $14.37 / $9.33 ≈ 1.54 LINK
+- XRP lower priority (Memorial Day risk)
+
+**SUI stop at $1.0165 (~$37.6 freed):**
+- Option A: NEAR add + LINK add (split conviction)
+- Option B: ETH small position for Glamsterdam play (entry ~$2,062, trail 5%)
+- Do NOT re-enter SUI until stop buffer rebuilds (wait for $1.05+ reclaim)
+
+### Risk Factors
+- SOL stop buffer 0.95% — single bad candle triggers exit; $70 downside scenario if $83.51 breaks
+- SUI stop buffer 1.3% — thin; CME futures May 29 is catalyst but that's 6 days away
+- XRP Memorial Day May 25 = binary risk in 2 days: advance or legislative window narrows
+- Fear regime (F&G 28) across the board — macro headwinds from risk-off BTC
+- All 4 positions underwater; no position cushion to absorb further drawdown without stop triggers
+
+### Decision
+**HOLD — No New Trades. ZUSD $1.81 insufficient for any entry.**
+
+All 4 trailing stops confirmed open and covering correct quantities. No unprotected exposure.
+No WhatsApp notification sent (no action taken — notification protocol requires actionable planned trades).
+
+---
