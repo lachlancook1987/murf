@@ -1764,3 +1764,48 @@ No unprotected positions. No orphaned orders.
 | LINK/USD | 1.6268 | $9.147 | $9.110 | -3.2% | -$0.06 (-0.4%) | $8.690 (5%, HWM $9.148) |
 **Trades today:** SUI/USD trailing stop triggered (~$1.017, -4.9%) | XRP/USD trailing stop triggered (~$1.300, -4.6%) | SOL/USD trailing stop triggered (~$83.51, -2.8%) | ETH/USD BUY 0.0197 @$2,026 | NEAR/USD BUY (add) 12.30 @$2.032 | LINK/USD BUY 1.626 @$9.147 | **Total since migration:** 13
 **Notes:** Three trailing stops triggered today — SUI (-4.9%), XRP (-4.6%), SOL (-2.8%) — generating ~$79 in proceeds recycled into ETH (Glamsterdam June upgrade pre-position), NEAR add (combined 50.30 NEAR @avg $2.111, ETF S-1 thesis strongest), and new LINK position (AWS/Chainlink integration / ETH DeFi proxy). Day P&L of -$22.02 (-12.25%) reflects the formal May 22 EOD baseline of $179.78 (the only prior EOD reference), but that snapshot was taken early in the Kraken activation day before afternoon NEAR/INJ/LINK stop-outs on May 22 — so two days of stop-cascade activity is compressed into today's figure. BTC fell -1.39% (open $75,457 → $74,407); bot underperformed by -10.86% due to multi-stop cascade. All three new positions are mildly underwater: ETH -0.2%, NEAR blended -2.9%, LINK -0.4%. NEAR 38 original stop at $1.994 has only 2.8% buffer from current $2.0498 — most critical overnight risk. Four trailing stops confirmed active (ETH: O6GVNC, NEAR 38: OSX7LL, NEAR 12.30: OMB3ZI, LINK: OZ3567). Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure.
+
+---
+
+## 2026-05-23 — Session-Open Scan (new session)
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 50.30 (38@$2.137+12.30@$2.032) | $2.111 avg | $2.3934 | **+13.4%** | $2.4721 | $2.2991 (trail 7%) | 3.9% | OSX7LL + OMB3ZI ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,070.64 | **+2.2%** | $2,080.54 | $1,976.52 (trail 5%) | 4.5% | O6GVNC ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.3624 | **+2.4%** | $9.4139 | $8.9432 (trail 5%) | 4.5% | OZ3567 ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+**ZUSD:** $0.006 (fully deployed — no new entries possible)
+**BTC:** $75,709 ask | 24h open $75,457 = **+0.33%** | Crash gate: NOT triggered ✓
+**Weekly Kraken trades:** 7 (since Mon 2026-05-18 week reset)
+
+**STEP 3 — Hard checks:**
+- Crash gate: +0.33% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open, covering correct quantities ✓
+- NEAR stop details (live): OSX7LL stopprice $2.29910, HWM $2.47210 ✓ | OMB3ZI stopprice $2.29910, HWM $2.47210 ✓
+- ETH stop (live): O6GVNC stopprice $1,976.52, HWM $2,080.54 ✓
+- LINK stop (live): OZ3567 stopprice $8.9432, HWM $9.4139 ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: +12.0% — not at +20%. No adjustment.
+- NEAR 12.30 @ $2.032: +17.8% — approaching threshold but NOT at +20%. No adjustment.
+- ETH: +2.2% | LINK: +2.4% — no adjustments.
+
+**STEP 5 — Thesis check:**
+- **NEAR:** Arthur Hayes endorsement + Grayscale ETF S-1 intact. AI token narrative driving continued rally (NEAR led CMC AI-token category). HWM $2.4721 ratcheted up significantly from EOD $2.144. Stop at $2.2991 locks in +$9.47 unrealized gain if triggered. **INTACT. HOLD.**
+- **ETH:** Glamsterdam June 2026 upgrade on track. BitMine accumulation + CBOE ETH futures expansion confirmed in prior research. HWM $2,080.54 — recovery from overnight lows. **INTACT. HOLD.**
+- **LINK:** ADI Foundation / $240B institutional assets + Chainlink CCIP multi-chain expansion + DTCC 24/7 collateral management + Kraken CCIP migration all intact. HWM $9.4139. **INTACT AND STRENGTHENING. HOLD.**
+
+**STEP 6 — New entries:** ZUSD $0.006 — insufficient for any minimum order. No entries possible.
+
+**Portfolio estimate:** NEAR $120.37 + ETH $40.79 + LINK $15.23 + ZUSD $0.01 = **~$176.40** | Phase gain from EOD $157.76: **+$18.64 (+11.8%)**
+
+**Decision: HOLD — No New Trades. No WhatsApp notification sent (no action taken).**
+
+**Contingency (armed for next stop triggers):**
+- NEAR stops at $2.2991 → ~$115.54 freed → ETH add (Glamsterdam) + LINK add (ADI/$240B)
+- ETH stop at $1,976.52 → ~$38.94 freed → NEAR re-entry (7% trail) or LINK add
+- LINK stop at $8.9432 → ~$14.54 freed → check min order; ETH add preferred
+- All stops → ~$176 freed → concentrate: ETH 40%, NEAR re-entry 40%, LINK 20%
