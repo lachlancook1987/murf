@@ -5949,3 +5949,108 @@ ZUSD $0.006 — insufficient for any minimum order. **No new entries possible.**
 - NEAR stop at $2.2227 (~$112 freed) → ETH add (Glamsterdam) or LINK add (ADI catalyst)
 - ETH stop at $1,962.62 (~$40 freed) → NEAR add or LINK add
 - LINK stop at $8.8899 (~$14.47 freed) → evaluate vs minimum order size
+
+---
+
+## 2026-05-23 — Pre-Session Research (Evening)
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/magical-carson-eSlGh
+
+### STEP 1 — Account Snapshot
+
+**Kraken balances:**
+| Asset | Qty | Notes |
+|---|---|---|
+| NEAR | 50.30 | Spot — 38 @$2.137 + 12.30 @$2.032 (avg $2.111) |
+| XETH | 0.0197 | Spot — Glamsterdam June upgrade |
+| LINK | 1.6268 | Spot — AWS/Chainlink/ADI Foundation catalyst |
+| ZUSD | $0.006 | Fully deployed — zero cash |
+
+**Alpaca:** No positions, no open orders. All prior BTC positions closed.
+
+**Open trailing stops (Kraken API confirmed):**
+| Order ID | Pair | Qty | Trail | Stop Trigger | HWM | Buffer |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $2.27860 | $2.45010 | 2.4% |
+| OMB3ZI-YNXTU-FF2W7U | NEAR/USD | 12.30 | 7% | $2.27860 | $2.45010 | 2.4% |
+| O6GVNC-H2KL5-3K2WQG | ETH/USD | 0.0197 | 5% | $1,962.62 | $2,065.91 | 4.9% |
+| OZ3567-BYLHI-5JVOHK | LINK/USD | 1.626 | 5% | $8.88994 | $9.35783 | 4.6% |
+
+**Live quotes (Kraken):**
+| Symbol | Ask | Entry | P&L% | HWM | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| NEAR/USD | $2.335 | $2.111 avg | **+10.6%** | $2.4501 | $2.2786 (7%) | ⚠️ 2.4% |
+| ETH/USD | $2,064 | $2,026.00 | **+1.9%** | $2,065.91 | $1,962.62 (5%) | 4.9% |
+| LINK/USD | $9.319 | $9.147 | **+1.9%** | $9.3578 | $8.8899 (5%) | 4.6% |
+
+**Estimated portfolio value:** ~$173 (NEAR $117.45 + ETH $40.67 + LINK $15.16 + cash $0.01)
+**Phase P&L from EOD $157.76:** +$15.52 (+9.8%) — driven by NEAR continuation rally
+
+### STEP 2 — Market Context
+
+| Indicator | Value |
+|---|---|
+| BTC | $75,474 ask | 24h open $75,457 = **-0.02%** (flat) | Crash gate: NOT triggered ✓ |
+| BTC 24h range | $74,209 low / $76,821 high |
+| ETH | $2,064 | 24h open $2,063 = **+0.04%** (flat) |
+| ETH 24h range | $2,002 low / $2,119 high |
+| Fear & Greed | **28 — Fear** |
+| BTC funding rate | Mixed: Binance +0.001%/8h (low positive); Bybit flat; BitMEX slight negative — no crowded long signal |
+
+### STEP 3 — Research Findings
+
+**BTC:** Essentially flat on the day (~-0.02%), 24h range $74,209–$76,821. Macro: risk-off tone, BTC trading as a macro-sensitive asset. No crash gate trigger. Constructive structure but no breakout.
+
+**ETH:** ~$2,064 (-0.04% from open). Glamsterdam upgrade thesis still intact. BitMine large ETH acquisition noted. CBOE planning new ETH futures products. Short-term technicals mixed; 2026 models target $2,200–$2,500+.
+
+**Top 24h gainers (CoinGecko):** RaveDAO +106%, MWC +68%, OpenGradient +59%, BAS +40%, TIG +38%, GWEI +30%, GUN +29%, CORE +25%, UnifAI +24%, KOGE +22%. None confirmed on Kraken with adequate liquidity.
+
+**Kraken movers:** OMNI +174% 24h, MAT +66%, DOLO +53% — all micro-cap, spread risk unknown.
+
+**Token unlocks this week:**
+- **HYPE (May 29):** 14.18M tokens (~1.4% supply, ~3% of market cap) — watch for pre-unlock sell pressure
+- INFRA today: 50K (~1% market cap)
+- PYTH (week of May 18–24): $95.7M — already in market
+
+**Macro catalysts:** Stablecoin legislation (CLARITY Act) advancing; RWA tokenization accelerating; AI+crypto VC flows increasing. NEAR specifically: Arthur Hayes endorsement + AI token narrative driving +30% move. NEAR led AI-token rally on CMC.
+
+**NEAR thesis check:** Arthur Hayes endorsement + Grayscale ETF S-1 intact. Price $2.335 (+10.6% from entry, +11% from open $2.104). HWM $2.4501 set earlier today — NEAR has pulled back ~4.8% from HWM. Stop trailed up to $2.2786. Buffer only 2.4% — most critical overnight risk. AI token narrative remains active. **INTACT. HOLD.**
+
+**ETH thesis check:** Glamsterdam June 2026 upgrade on track. BitMine accumulation. CBOE ETH futures expansion. Price $2,064 +1.9% from entry. HWM $2,065.91 (barely above current ask — stop has not trailed up significantly). **INTACT. HOLD.**
+
+**LINK thesis check:** ADI Foundation selected Chainlink CCIP to bridge $240B institutional assets; Kraken itself migrated cross-chain to Chainlink CCIP; DTCC 24/7 collateral management partnership; active addresses 8-month high; 32.93M LINK whale accumulation. Price $9.319 +1.9% from entry. New integrations across five chains. **INTACT AND STRENGTHENING. HOLD.**
+
+### STEP 4 — Crash Gate / Trade Scan
+
+**Crash gate:** BTC -0.02% 24h → **CLEAR** ✓ No crash gate triggered.
+
+**Cash available:** $0.006 — no new entries possible regardless.
+
+**Contingency plan (when stops trigger):**
+1. NEAR 50.30 stops at $2.2786 → ~$114.41 freed → best use: ETH add (Glamsterdam, strong institutional) + LINK add (ADI/$240B catalyst) + small SOL re-entry (Firedancer/Alpenglow, May 29 HYPE unlock caution)
+2. ETH stop at $1,962.62 → ~$38.67 freed → NEAR add or LINK add
+3. LINK stop at $8.8899 → ~$14.47 freed → min order check first; ETH add preferred
+4. All stop → ~$173 freed → concentrate: ETH (40%), NEAR re-entry (40%), LINK (20%)
+
+**Opportunity watchlist (for when capital frees):**
+- **SOL:** Firedancer 1.0 + Alpenglow protocol; strong momentum; spread check needed at time of entry
+- **SUI:** CME futures launch May 29 — 6-day catalyst window; CME listing historically bullish
+- **ETH add:** Glamsterdam June; institutional accumulation; low beta vs BTC
+- **LINK add:** ADI/$240B thesis strongest in sector; CCIP expanding
+
+### STEP 5 — Decision
+
+**Crash gate:** NOT triggered (BTC -0.02% 24h)
+**Cash:** $0.006 → **ZERO new entries possible**
+**All 4 trailing stops confirmed active** ✓
+
+**⚠️ NEAR stop buffer 2.4% — CRITICAL.** NEAR pulled back from $2.4501 HWM to $2.335 (-4.8% from HWM). Stop at $2.2786. A move to $2.278 triggers. Given AI-token momentum and Arthur Hayes thesis intact, do NOT adjust stops — let the 7% trail do its job.
+
+**Decision: HOLD — No New Trades.**
+
+**Risk factors:**
+- NEAR: 2.4% buffer, any negative news on AI tokens / NEAR could trigger stop
+- HYPE unlock May 29 could suppress DeFi alts broadly
+- BTC 24h range included $74,209 low — if BTC retests that level, alts could gap through stops
+- Fear & Greed at 28 (Fear) — market fragile; use no leverage until sentiment recovers
