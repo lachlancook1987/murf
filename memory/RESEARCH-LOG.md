@@ -5318,3 +5318,41 @@ None viable — ZUSD $1.81 is fully deployed; no minimum-order cash available.
 **HOLD — No New Trades.** No WhatsApp notification sent.
 
 **Contingency (SOL stop at $83.51):** Freed ~$14.62 ZUSD → SUI add (catalyst fresh) or NEAR add (ETF S-1 strongest thesis). XRP Memorial Day risk = lower priority.
+
+---
+
+## 2026-05-23 — Midday Scan
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+
+### Market Snapshot
+- **BTC:** ~$75,600–$75,900 | 24h: ~-2.3% | Crash gate: NOT triggered ✓
+- **F&G:** 28 (Fear) | Risk-off macro tone persists
+
+### Position Summary
+| Symbol | Price | P&L% | Stop Buffer | Status |
+|---|---|---|---|---|
+| NEAR/USD | $2.057 | -3.7% | 3.0% | HOLD |
+| SUI/USD | $1.033 | -3.3% | 1.6% | HOLD |
+| XRP/USD | $1.334 | -2.1% | 2.5% | HOLD |
+| SOL/USD | $84.22 | -2.0% | **0.84% ⚠️** | HOLD |
+
+### Thesis Updates (midday Perplexity)
+- **NEAR:** Grayscale ETF S-1 intact. NEAR Intents fee conversion ongoing. Short-term cautious but thesis undamaged. HOLD.
+- **SUI:** Fresh catalyst — gasless USDC transfers live ($0 gas, no SUI balance needed). CME futures + Grayscale S-1 intact. HOLD.
+- **XRP:** CLARITY Act advancing; no adverse news. Memorial Day recess risk (May 25) unchanged. HOLD.
+- **SOL:** No SOL-specific negative catalyst. Firedancer 1.0 intact. Macro drag from BTC. Buffer critically thin (0.84%). 24h low $83.95 survived. HOLD.
+
+### Macro Catalysts (midday)
+- CLARITY Act: main structural crypto driver; still pending Senate floor vote
+- BTC risk-off; equities stronger — sector divergence
+- SUI gasless stablecoin transfers: fresh usage catalyst
+- ETF pipeline / SEC decisions cited as near-term catalyst across sources
+
+### New Trade Ideas
+None — ZUSD $1.81 fully deployed.
+
+### Decision
+**HOLD — No New Trades.** No WhatsApp notification sent.
+
+**SOL contingency:** Stop triggers at $83.51 → freed ~$14.62 ZUSD → SUI add (gasless stablecoin fresh) or NEAR add (ETF S-1). XRP Memorial Day risk = lower priority.
