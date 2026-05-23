@@ -1678,3 +1678,35 @@ No unprotected positions.
 **Decision: HOLD — No New Trades.** No WhatsApp notification sent (no action taken).
 
 **SOL contingency:** If stop triggers at $83.51 → freed ~$14.62 ZUSD → evaluate SUI add (buffer thinning, stablecoin catalyst) or NEAR add (strongest thesis, ETF S-1). XRP Memorial Day risk = lower priority.
+
+---
+
+## 2026-05-23 — Overnight Triage Check (latest)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.078 | **-2.76%** | $2.144 | $1.994 (trail 7%) | 4.03% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.036 | **-3.05%** | $1.070 | $1.0165 (trail 5%) | ⚠️ **1.88% — CRITICAL** | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.335 | **-2.06%** | $1.369 | $1.30064 (trail 5%) | 2.57% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.34 | **-1.82%** | $87.90 | $83.510 (trail 5%) | ⚠️ **0.98% — CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22T05:22Z) ✓
+
+**STEP 2 — Trailing stops verified (Kraken API cross-check):**
+- OSX7LL-VVQZV-JPVWBB: NEAR 38.00 qty, trail +7%, stopprice $1.99400, limitprice (HWM) $2.14400 — MATCH ✓
+- OISAQO-TUKYN-CIVCAH: SUI 37.00 qty, trail +5%, stopprice $1.01650, limitprice (HWM) $1.07000 — MATCH ✓
+- OOKBA5-NVKUU-NWIH5S: XRP 21.00 qty, trail +5%, stopprice $1.30064, limitprice (HWM) $1.36909 — MATCH ✓
+- OAOOBG-DNG7C-B4WTH2: SOL 0.17210 qty, trail +5%, stopprice $83.51000, limitprice (HWM) $87.90000 — MATCH ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** NEAR -2.76%, SUI -3.05%, XRP -2.06%, SOL -1.82% — none qualify. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $75,453 (ask) vs 24h open $75,457 = **-0.005%** — flat overnight. Well under -20% threshold. No crash gate. ✓
+- 24h range: $75,136 low / $77,650 high — BTC ranging; no extreme move.
+
+**⚠️ SOL STOP BUFFER CRITICAL (0.98%):** 24h low $83.91 came within $0.40 of trigger $83.51. Stop has survived multiple sessions. Do NOT adjust. If triggered: freed ~$14.62 ZUSD → evaluate SUI add (stablecoin catalyst) or NEAR add (ETF S-1 thesis strongest).
+**⚠️ SUI STOP BUFFER CRITICAL (1.88%):** SUI 24h low $1.033; stop at $1.0165 is $0.019 away. Monitor closely.
+
+**Result: NO-OP. No actions taken. No WhatsApp notification sent.**
