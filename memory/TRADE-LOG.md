@@ -1710,3 +1710,41 @@ No unprotected positions. No orphaned orders.
 **⚠️ SUI STOP BUFFER CRITICAL (1.88%):** SUI 24h low $1.033; stop at $1.0165 is $0.019 away. Monitor closely.
 
 **Result: NO-OP. No actions taken. No WhatsApp notification sent.**
+
+---
+
+## 2026-05-23 — Session-Open Scan
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.062 | **-3.5%** | $2.144 | $1.994 (trail 7%) | 3.3% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.030 | **-3.6%** | $1.070 | $1.0165 (trail 5%) | ⚠️ **1.3% CRITICAL** | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.337 | **-1.9%** | $1.369 | $1.300 (trail 5%) | 2.8% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.25 | **-1.9%** | $87.90 | $83.510 (trail 5%) | ⚠️ **0.9% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22T05:22Z) ✓
+**ZUSD:** $1.81 (fully deployed — no new entries possible)
+**BTC:** $75,354 (ask) | 24h open $75,456 = **-0.13%** | Crash gate: NOT triggered ✓
+**Weekly Kraken trades:** 7
+
+**STEP 3 — Hard checks:**
+- Crash gate: -0.13% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open, covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** None qualify. No adjustments.
+
+**STEP 5 — Thesis check:**
+- NEAR: Grayscale ETF S-1 + Arthur Hayes endorsement intact. 24h low $2.042 held above stop $1.994. **INTACT. HOLD.**
+- SOL: Firedancer 1.0 live; Deel payroll adoption intact. 24h session low $83.95 within $0.44 of stop $83.51 — stop survived. Buffer 0.9% CRITICAL. Do NOT adjust. **INTACT. HOLD.**
+- XRP: CLARITY Act advancing; Memorial Day May 25 binary risk. 24h low $1.326 held above stop $1.300. Buffer 2.8% healthy. **INTACT. HOLD.**
+- SUI: CME futures May 29 catalyst; gasless stablecoins live. 24h low $1.0248 above stop $1.0165. Buffer 1.3% CRITICAL. Do NOT adjust. **INTACT. HOLD.**
+
+**STEP 6 — New entries:** ZUSD $1.81 insufficient for any minimum order. No entries possible.
+
+**Contingency (armed):**
+- SOL triggers ($83.51) → ~$14.37 freed → NEAR add (7% trail) OR LINK (5% trail)
+- SUI triggers ($1.0165) → ~$37.60 freed → ETH (Glamsterdam) OR NEAR add OR AAVE
+- Both trigger → ~$52 freed → concentrate into NEAR (highest conviction)
+
+**Decision: HOLD — No New Trades. No notification sent.**
