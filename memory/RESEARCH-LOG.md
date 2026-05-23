@@ -6053,4 +6053,71 @@ ZUSD $0.006 — insufficient for any minimum order. **No new entries possible.**
 - NEAR: 2.4% buffer, any negative news on AI tokens / NEAR could trigger stop
 - HYPE unlock May 29 could suppress DeFi alts broadly
 - BTC 24h range included $74,209 low — if BTC retests that level, alts could gap through stops
+
+---
+
+## 2026-05-23 — Midday Scan
+
+**Date:** 2026-05-23 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/brave-newton-QLDMP
+
+### Market Snapshot
+- **BTC:** $76,780 ask | 24h open $75,456.60 = **+1.75%** | Crash gate: NOT triggered ✓
+- **F&G:** ~28 (Fear persists, but BTC recovering)
+
+### Position Summary (live quotes)
+| Symbol | Qty | Entry | Ask | P&L% | HWM (ratcheted) | Stop | Buffer |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD (38) | 38.00 | $2.137 | $2.405 | **+12.5%** | $2.47210 | $2.29910 (7%) | 4.4% |
+| NEAR/USD (12.30) | 12.30 | $2.032 | $2.405 | **+18.4%** | $2.47210 | $2.29910 (7%) | 4.4% |
+| ETH/USD | 0.0197 | $2,026.00 | $2,117.24 | **+4.5%** | $2,147.52 ↑ | $2,040.15 (5%) | 3.7% |
+| LINK/USD | 1.6268 | $9.147 | $9.648 | **+5.5%** | $9.76665 ↑ | $9.27832 (5%) | 3.8% |
+
+**Note:** ETH HWM ratcheted significantly from ~$2,065 → $2,147.52; LINK HWM from ~$9.41 → $9.767. Stop floors are now +0.7% (ETH) and +1.4% (LINK) above entry — both positions are now in guaranteed-profit territory if stopped.
+
+**Alpaca:** Order history only (historical fills); no open positions or stops ✓
+**ZUSD:** $0.006 — fully deployed
+
+### STEP 3 — Stop Verification
+All 4 trailing stops confirmed open and correctly set:
+| Order | Pair | Qty | Trail | Stop | HWM | Status |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $2.29910 | $2.47210 | ✓ |
+| OMB3ZI-YNXTU-FF2W7U | NEAR/USD | 12.30 | 7% | $2.29910 | $2.47210 | ✓ |
+| O6GVNC-H2KL5-3K2WQG | ETH/USD | 0.01970 | 5% | $2,040.15 | $2,147.52 | ✓ |
+| OZ3567-BYLHI-5JVOHK | LINK/USD | 1.626 | 5% | $9.27832 | $9.76665 | ✓ |
+
+### STEP 4 — Stop Tightening
+- NEAR 38 @ $2.137: +12.5% → below +20% threshold ($2.564). No adjustment.
+- NEAR 12.30 @ $2.032: +18.4% → approaching +20% threshold ($2.438). **⚠️ Watch** — if NEAR reclaims $2.438, tighten to trail_percent 3.
+- ETH: +4.5% → no adjustment.
+- LINK: +5.5% → no adjustment.
+
+No stops tightened.
+
+### STEP 5 — Thesis Check
+- **NEAR:** Arthur Hayes endorsement + ecosystem growth + AI/Web3 narrative intact. Day high $2.47210 showed strong buying. Price pulled back to $2.405 but thesis undamaged. **INTACT. HOLD.**
+- **ETH:** Glamsterdam June upgrade + institutional accumulation intact. Weak short-term consolidation but ETH holding $2,100. **INTACT. HOLD.**
+- **LINK:** CCIP adoption expanding (Kraken migrated cross-chain to Chainlink CCIP; Kelp DAO migrated post-LayerZero exploit; DTCC 24/7 collateral mgmt; active addresses 8-month high). Price -4% 24h but fundamental thesis STRENGTHENING. **INTACT. HOLD.**
+
+No broken theses. No forced exits.
+
+### STEP 6 — New Entries
+ZUSD $0.006 — zero cash. No new entries possible.
+
+### Portfolio Estimate
+- NEAR: 50.30 × $2.405 = **$120.97**
+- ETH: 0.0197 × $2,117.24 = **$41.71**
+- LINK: 1.6268 × $9.648 = **$15.69**
+- ZUSD: **$0.01**
+- **Total: ~$178.38** | vs EOD baseline $157.76 = **+$20.62 (+13.1%)**
+
+### Decision
+**HOLD — No New Trades. No action taken. No WhatsApp notification sent.**
+
+**Contingency (unchanged):**
+- NEAR stops at $2.2991 → ~$115 freed → ETH add + LINK add
+- ETH stop at $2,040 → ~$40 freed → NEAR re-entry (7% trail) or LINK add
+- LINK stop at $9.278 → ~$15 freed → ETH add (preferred)
+- NEAR 12.30 lot hits $2.438 (entry +20%) → tighten OMB3ZI to trail_percent 3
 - Fear & Greed at 28 (Fear) — market fragile; use no leverage until sentiment recovers
