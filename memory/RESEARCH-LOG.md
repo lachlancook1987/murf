@@ -5460,3 +5460,169 @@ All 4 trailing stops confirmed open and covering correct quantities. No unprotec
 No WhatsApp notification sent (no action taken — notification protocol requires actionable planned trades).
 
 ---
+
+---
+
+## 2026-05-23 — Pre-Session Research
+
+### Account Snapshot
+
+**Kraken balances:**
+| Asset | Qty | Notes |
+|---|---|---|
+| NEAR | 38.00 | Spot — Grayscale ETF S-1 play |
+| SUI | 37.00 | Spot — CME futures / stablecoin catalyst |
+| XRP | 21.00 | Spot — CLARITY Act / regulatory catalyst |
+| SOL | 0.17211 | Spot — Firedancer 1.0 / institutional ETF |
+| ZUSD | $1.81 | Fully deployed — no cash for new entries |
+
+**Alpaca:** No open positions, no open orders. BTC residual fully closed (filled 2026-05-22).
+
+**Trailing stops confirmed open (Kraken API):**
+| Order ID | Pair | Qty | Trail | Stop Trigger | HWM | Live Buffer |
+|---|---|---|---|---|---|---|
+| OSX7LL-VVQZV-JPVWBB | NEAR/USD | 38.00 | 7% | $1.99400 | $2.14400 | 2.48% |
+| OISAQO-TUKYN-CIVCAH | SUI/USD | 37.00 | 5% | $1.01650 | $1.07000 | ⚠️ 0.99% CRITICAL |
+| OOKBA5-NVKUU-NWIH5S | XRP/USD | 21.00 | 5% | $1.30064 | $1.36909 | 2.35% |
+| OAOOBG-DNG7C-B4WTH2 | SOL/USD | 0.17211 | 5% | $83.51000 | $87.90000 | ⚠️ 0.72% CRITICAL |
+
+**Live quotes (Kraken, session-open):**
+| Pair | Bid | Ask | Spread | Entry | P&L% |
+|---|---|---|---|---|---|
+| NEAR/USD | $2.0448 | $2.0475 | 0.13% ✓ | $2.137 | -4.27% |
+| SOL/USD | $84.12 | $84.13 | 0.01% ✓ | $85.90 | -2.07% |
+| XRP/USD | $1.3319 | $1.3320 | 0.01% ✓ | $1.363 | -2.28% |
+| SUI/USD | $1.0267 | $1.0269 | 0.02% ✓ | $1.0686 | -3.89% |
+
+---
+
+### Market Context
+
+| Indicator | Value | Source |
+|---|---|---|
+| BTC | $75,322 | Kraken live (-0.18% session, -2.5% 24h) |
+| ETH | $2,059 | Kraken live (-0.2% session, -3.0% 24h) |
+| Fear & Greed | 28 (Fear) | Perplexity |
+| BTC Funding Rate | +0.0018% (Binance), +0.0028% predicted | Perplexity |
+| Crash Gate | NOT triggered (BTC -2.5% 24h, threshold -20%) ✓ | |
+
+**BTC 24h range:** $75,136 low / $77,495 high — ranging, no directional breakout.
+
+**Top 24h gainers (CoinGecko):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38% — micro-caps not on Kraken.
+**Kraken top movers:** RHEA +69%, BOB +58%, FIDA +41%, ALT +35%, XYO +33% — spreads thin post-pump, no fresh catalyst.
+
+---
+
+### Market Catalysts
+
+- **CLARITY Act (XRP key):** Pending Senate floor vote before Memorial Day May 25 recess. Advance = bullish for XRP and broad crypto regulation. Recess without vote = 2-3 week delay, bearish signal.
+- **ETH Glamsterdam upgrade:** June 2026 target. MEV fairness + efficiency focus. Pre-positioning window open for ETH, LINK (DeFi infrastructure), AAVE.
+- **Chainlink AWS listing:** AWS marketplace now lists Chainlink Data Feeds + Proof of Reserve. Enterprise adoption signal, positive for LINK.
+- **CME SUI futures launch:** Reportedly May 29, 2026. Institutional cash-settled exposure — 6 days away.
+- **SOL Firedancer:** Live mainnet, running on ~20% of validators. Alpenglow (150ms finality) in testing.
+- **Solana Deel payroll:** Deel launched Solana-powered stablecoin salary payments.
+- **Powell → Warsh Fed transition:** Rate cut expectations remain supportive of risk assets.
+- **NEAR catalyst (May 22):** Arthur Hayes endorsement + AI/scaling narrative drove NEAR surge. ETF S-1 Grayscale filing intact.
+- **HYPE unlock May 29:** 14.2M tokens (~1.4% supply) — minor overhang, not on Kraken.
+- **Token unlocks (minor today):** INFRA 50K (1% MC), XWGT 818K (5.65% MC) — micro projects, no impact.
+
+---
+
+### Position Thesis Checks
+
+**NEAR ($2.047 | Stop $1.994 | Buffer 2.48%):**
+Grayscale ETF S-1 intact. Arthur Hayes endorsement (May 22) + AI/scaling narrative fresh. NEAR above key support. 24h low $2.042 held. Short-term mixed (some models target $1.38 pullback) but thesis strongest of 4 positions. **HOLD — 7% trail appropriate for ETF binary.**
+
+**SOL ($84.12 | Stop $83.51 | Buffer 0.72% ⚠️ CRITICAL):**
+Firedancer 1.0 live, whale accumulation $9.7M, Deel payroll adoption. BUT: 24h session low $83.95 is within $0.44 of stop. YTD -38%. Downside targets $79–$82 (support), $73/$67 if breaks. Stop at $83.51 is the line. **HOLD — do not adjust stop. If triggered, frees ~$14.37 ZUSD.**
+
+**XRP ($1.332 | Stop $1.300 | Buffer 2.35%):**
+CLARITY Act advancing (Senate Banking Committee markup complete). ETF inflows positive. Memorial Day risk in 2 days — if bill doesn't advance, 2-3 week delay. RSI 43 neutral. 24h low $1.326 held. **HOLD with vigilance — binary CLARITY Act event May 23-25.**
+
+**SUI ($1.027 | Stop $1.0165 | Buffer 0.99% ⚠️ CRITICAL):**
+CME futures May 29 (6 days), gasless stablecoin transfers live May 21. But SUI 24h low $1.027 = effectively at session floor already. Grayscale S-1 intact. **HOLD — do not adjust stop. If triggered, frees ~$37.60 ZUSD.**
+
+---
+
+### New Entry Candidates (Contingency — for when stops trigger)
+
+ZUSD $1.81 — no new entries possible now. All ideas staged for when SOL or SUI stops free capital.
+
+**Idea 1: NEAR add (highest conviction — both SOL and SUI contingency)**
+- Catalyst: Grayscale ETF S-1 + Arthur Hayes endorsement + AI narrative + ETF thesis
+- Entry: Market ~$2.048 (ask)
+- Stop: trailing_stop trail_percent 7 (binary ETF catalyst)
+- Target: $2.40 (+17.2%) | R:R ~2.4:1
+- Size: SOL triggers → ~7 NEAR ($14.37); SUI triggers → ~18.4 NEAR ($37.6); both → ~25.4 NEAR ($52)
+- Pair: NEARUSD ✓ online | Spread: 0.13% ✓
+
+**Idea 2: LINK/USD (Chainlink DeFi / AWS catalyst)**
+- Catalyst: AWS Chainlink Data Feeds listing + ETH Glamsterdam DeFi proxy play
+- Entry: Market ~$9.312 (ask)
+- Stop: trailing_stop trail_percent 5
+- Target: $10.50 (+12.7%) | R:R ~2.5:1
+- Size: SOL triggers → ~1.54 LINK ($14.37); SUI triggers → ~4.0 LINK ($37.6)
+- Pair: LINKUSD ✓ online | Spread: 0.015% ✓ | Min order: 0.55 LINK (~$5.12)
+
+**Idea 3: ETH/USD (Glamsterdam pre-positioning — SUI contingency)**
+- Catalyst: Glamsterdam June 2026 upgrade; 10-week ETF inflow streak institutional support
+- Entry: Market ~$2,059 (ask)
+- Stop: trailing_stop trail_percent 5
+- Target: $2,300 (+11.7%) | R:R ~2.3:1
+- Size: SUI triggers → ~0.018 ETH ($37.6)
+- Pair: ETHUSD ✓ online | Spread: ~0.0% ✓ | Min order: 0.001 ETH ✓
+
+**Idea 4: AAVE/USD (DeFi sector rotation — SUI contingency)**
+- Catalyst: DeFi recovery, ETH Glamsterdam protocol upgrade, primary lending protocol
+- Entry: Market ~$85.16 (ask)
+- Stop: trailing_stop trail_percent 5
+- Target: $96 (+12.7%) | R:R ~2.5:1
+- Size: SUI triggers → ~0.44 AAVE ($37.6)
+- Pair: AAVEUSD ✓ online | Spread: 0.047% ✓ | Min order: 0.05 AAVE ✓
+
+**Idea 5: NEAR add (if both stops trigger simultaneously)**
+- Full $52 ZUSD → ~25.4 NEAR — maximum conviction concentration
+- Thesis strongest; ETF S-1 is the clearest institutional catalyst in the portfolio
+
+---
+
+### Candidate Spread Checks
+
+| Pair | Spread | Status | Decision |
+|---|---|---|---|
+| NEAR/USD | 0.13% | ✓ | CONTINGENCY — SOL/SUI trigger |
+| LINK/USD | 0.015% | ✓ | CONTINGENCY — SOL trigger |
+| ETH/USD | ~0.0% | ✓ | CONTINGENCY — SUI trigger |
+| AAVE/USD | 0.047% | ✓ | CONTINGENCY — SUI trigger |
+| FIDA/USD | 0.34% | Post-pump cooling | ❌ SKIP |
+| XYO/USD | 0.72% | Post-pump cooling | ❌ SKIP |
+
+---
+
+### Risk Factors
+
+1. **SOL stop 0.72% buffer** — single adverse candle triggers at $83.51; downside scenario $73–$79 if fails
+2. **SUI stop 0.99% buffer** — CME catalyst not until May 29; 6 days of exposure before catalyst
+3. **XRP Memorial Day binary** — CLARITY Act floor vote must happen by May 25 or delayed 2-3 weeks
+4. **Fear regime (F&G 28)** — persistent risk-off; institutional bids not yet lifting altcoin layer
+5. **BTC ranging $75K** — no breakout catalyst; $75,136 low tested intraday; crash gate clear but momentum absent
+6. **All 4 positions underwater** — no cushion to absorb further drawdown without stop triggers
+7. **Fully deployed (ZUSD $1.81)** — zero flexibility for new entries until stops trigger
+
+---
+
+### Decision
+
+**HOLD — No New Trades. ZUSD $1.81 insufficient for any minimum order.**
+
+Crash gate: NOT triggered (BTC -2.5% 24h, threshold -20%) ✓
+All 4 trailing stops confirmed open, covering correct quantities ✓
+SOL and SUI stops critically thin — imminent trigger possible any session
+
+**Contingency plan armed:**
+- SOL triggers ($83.51) → ~$14.37 freed → NEAR add (7% trail) OR LINK add (5% trail)
+- SUI triggers ($1.0165) → ~$37.6 freed → ETH (Glamsterdam) OR NEAR add OR AAVE
+- Both trigger → ~$52 freed → concentrate into NEAR (highest conviction)
+- Do NOT re-enter SUI until price reclaims $1.05+
+- XRP: hold through Memorial Day; if CLARITY Act advances = add thesis; if delayed = reassess
+
