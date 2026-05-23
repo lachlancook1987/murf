@@ -1584,3 +1584,30 @@ No unprotected positions.
 **Decision: HOLD — No New Trades.** No WhatsApp notification sent (no action taken).
 
 **SOL watch:** If stop triggers at $83.51 → freed ~$14.62 ZUSD → prioritize SUI add (native stablecoin catalyst fresh) or NEAR add. XRP Memorial Day risk reduces priority.
+
+---
+
+## 2026-05-23 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.096 | **-1.9%** | $2.144 | $1.994 (trail 7%) | 4.9% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.048 | **-1.9%** | $1.070 | $1.0165 (trail 5%) | 3.0% | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.335 | **-2.0%** | $1.369 | $1.30064 (trail 5%) | 2.6% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.46 | **-1.7%** | $87.90 | $83.510 (trail 5%) | ⚠️ **1.1% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** Stop a2b44cf9 confirmed CANCELLED (2026-05-22T05:22Z) — no Alpaca BTC position. ✓
+
+**STEP 2 — Trailing stops verified:** All 4 Kraken positions have active trailing stops. No unprotected positions. ✓
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions well within threshold (each stop > -10% from entry; gap to -20% is 10%+ below current stops). ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** NEAR +0.3% (HWM), SUI +0.1%, XRP +0.4%, SOL +2.3% — none qualify. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $75,378 (ask) | 24h open $75,456 = **-0.10%** | 24h VWAP $76,479 | 24h low $75,136 — well under -20% threshold. No crash gate. No regime alert. ✓
+
+**⚠️ SOL STOP BUFFER CRITICAL (1.1%):** 24h low $83.91 came within $0.40 of stop trigger $83.51. Stop survived overnight. Do NOT adjust — let it work. If triggered: freed ~$14.62 ZUSD → evaluate SUI add or NEAR add.
+
+**STEP 6 — Notification:** No actions taken → no notification sent.
+
+**Result: NO-OP. No actions taken. No notification sent.**
