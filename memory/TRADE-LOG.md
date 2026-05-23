@@ -1752,3 +1752,15 @@ No unprotected positions. No orphaned orders.
 | 2026-05-23 | ETH/USD | BUY | 0.0197 | ~$2,026 | Market | O2XQR3-KWHXM-HRTSCP | Glamsterdam June upgrade pre-position | Trailing stop 5% @ O6GVNC-H2KL5-3K2WQG (stop $1,925.03, HWM $2,026.34) | OPEN |
 | 2026-05-23 | NEAR/USD | BUY (add) | 12.30 | ~$2.032 | Market | OFWP6I-TFTS3-MOR2E4 | ETF S-1 / Arthur Hayes — add at lower avg (combined 50.30 NEAR, avg ~$2.10) | Trailing stop 7% @ OMB3ZI-YNXTU-FF2W7U (stop $1.8904, HWM $2.0326) | OPEN |
 | 2026-05-23 | LINK/USD | BUY | 1.626 | ~$9.147 | Market | OGGYBA-G64MC-OCMB7H | AWS Chainlink integration / ETH Glamsterdam DeFi proxy | Trailing stop 5% @ OZ3567-BYLHI-5JVOHK (stop $8.6863, HWM $9.1435) | OPEN |
+
+---
+
+### May 23 — EOD Snapshot (Day 14, Saturday)
+**Portfolio:** $157.76 | **Cash:** $0.01 (0.0%) | **Day P&L:** -$22.02 (-12.25%) | **Phase P&L:** -$22.02 (-12.25%) | **vs BTC:** -10.86%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026.00 | $2,021.81 | -2.0% | -$0.08 (-0.2%) | $1,928.25 (5%, HWM $2,029.73) |
+| NEAR/USD | 50.30 (38@$2.137+12.30@$2.032) | $2.111 avg | $2.0498 | -2.6% | -$3.09 (-2.9%) | $1.994 (7%, HWM $2.144) + $1.916 (7%, HWM $2.061) |
+| LINK/USD | 1.6268 | $9.147 | $9.110 | -3.2% | -$0.06 (-0.4%) | $8.690 (5%, HWM $9.148) |
+**Trades today:** SUI/USD trailing stop triggered (~$1.017, -4.9%) | XRP/USD trailing stop triggered (~$1.300, -4.6%) | SOL/USD trailing stop triggered (~$83.51, -2.8%) | ETH/USD BUY 0.0197 @$2,026 | NEAR/USD BUY (add) 12.30 @$2.032 | LINK/USD BUY 1.626 @$9.147 | **Total since migration:** 13
+**Notes:** Three trailing stops triggered today — SUI (-4.9%), XRP (-4.6%), SOL (-2.8%) — generating ~$79 in proceeds recycled into ETH (Glamsterdam June upgrade pre-position), NEAR add (combined 50.30 NEAR @avg $2.111, ETF S-1 thesis strongest), and new LINK position (AWS/Chainlink integration / ETH DeFi proxy). Day P&L of -$22.02 (-12.25%) reflects the formal May 22 EOD baseline of $179.78 (the only prior EOD reference), but that snapshot was taken early in the Kraken activation day before afternoon NEAR/INJ/LINK stop-outs on May 22 — so two days of stop-cascade activity is compressed into today's figure. BTC fell -1.39% (open $75,457 → $74,407); bot underperformed by -10.86% due to multi-stop cascade. All three new positions are mildly underwater: ETH -0.2%, NEAR blended -2.9%, LINK -0.4%. NEAR 38 original stop at $1.994 has only 2.8% buffer from current $2.0498 — most critical overnight risk. Four trailing stops confirmed active (ETH: O6GVNC, NEAR 38: OSX7LL, NEAR 12.30: OMB3ZI, LINK: OZ3567). Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure.
