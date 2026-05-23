@@ -1611,3 +1611,28 @@ No unprotected positions.
 **STEP 6 — Notification:** No actions taken → no notification sent.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-23 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.091 | **-2.15%** | $2.144 | $1.994 (trail 7%) | 4.64% | OSX7LL-VVQZV-JPVWBB ✓ |
+| SUI/USD | 37.00 | $1.0686 | $1.040 | **-2.68%** | $1.070 | $1.0165 (trail 5%) | 2.26% | OISAQO-TUKYN-CIVCAH ✓ |
+| XRP/USD | 21.00 | $1.363 | $1.339 | **-1.76%** | $1.369 | $1.30064 (trail 5%) | 2.86% | OOKBA5-NVKUU-NWIH5S ✓ |
+| SOL/USD | 0.17211 | $85.90 | $84.39 | **-1.76%** | $87.90 | $83.510 (trail 5%) | ⚠️ **1.04% CRITICAL** | OAOOBG-DNG7C-B4WTH2 ✓ |
+
+**Alpaca:** Stop a2b44cf9 confirmed CANCELLED (2026-05-22T05:22Z) — no Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified:** All 4 Kraken positions have active trailing stops covering correct quantities. No unprotected positions. ✓
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** NEAR -2.15%, SUI -2.68%, XRP -1.76%, SOL -1.76% — none qualify. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** $75,493 now vs 24h open $75,457 = **+0.05%** — essentially flat. Well under -20% threshold. No crash gate. No regime alert. ✓
+
+**⚠️ SOL STOP BUFFER CRITICAL (1.04%):** SOL at $84.39 vs stop trigger $83.51. Buffer worsened from 1.1% (prior check) to 1.04%. Stop survived another session. Do NOT adjust — let it work. If triggered: freed ~$14.62 ZUSD → evaluate SUI add or NEAR add per prior contingency plan.
+
+**Result: NO-OP. No actions taken. No notification sent.**
