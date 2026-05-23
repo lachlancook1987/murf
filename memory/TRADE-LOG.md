@@ -1750,3 +1750,5 @@ No unprotected positions. No orphaned orders.
 **Decision: HOLD — No New Trades. No notification sent.**
 
 | 2026-05-23 | ETH/USD | BUY | 0.0197 | ~$2,026 | Market | O2XQR3-KWHXM-HRTSCP | Glamsterdam June upgrade pre-position | Trailing stop 5% @ O6GVNC-H2KL5-3K2WQG (stop $1,925.03, HWM $2,026.34) | OPEN |
+| 2026-05-23 | NEAR/USD | BUY (add) | 12.30 | ~$2.032 | Market | OFWP6I-TFTS3-MOR2E4 | ETF S-1 / Arthur Hayes — add at lower avg (combined 50.30 NEAR, avg ~$2.10) | Trailing stop 7% @ OMB3ZI-YNXTU-FF2W7U (stop $1.8904, HWM $2.0326) | OPEN |
+| 2026-05-23 | LINK/USD | BUY | 1.626 | ~$9.147 | Market | OGGYBA-G64MC-OCMB7H | AWS Chainlink integration / ETH Glamsterdam DeFi proxy | Trailing stop 5% @ OZ3567-BYLHI-5JVOHK (stop $8.6863, HWM $9.1435) | OPEN |
