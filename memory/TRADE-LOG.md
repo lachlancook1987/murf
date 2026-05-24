@@ -1953,3 +1953,43 @@ No adjustments needed.
 **STEP 5 — BTC Crash Gate:** BTC $76,840 | 24h open $76,670 = **+0.22%** — well under ±20% threshold. No crash gate. No regime alert. ✓
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-24 — Session-Open Scan
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.407 | **+12.6%** | $2.47210 | $2.29910 (trail 7%) | 4.5% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,124 | **+4.8%** | $2,147.52 | $2,040.15 (trail 5%) | 3.9% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.604 | **+5.0%** | $9.76665 | $9.27832 (trail 5%) | 3.4% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.065 | **-0.4%** | $1.06940 | $1.01600 (trail 5%) | 4.6% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+**ZUSD:** $0.14 (fully deployed — no new entries possible)
+**BTC:** $76,890 ask | 24h open $76,670 = **+0.29%** | Crash gate: NOT triggered ✓
+**Weekly Kraken trades:** 8 (since Mon 2026-05-18 week reset)
+
+**STEP 3 — Hard checks:**
+- Crash gate: +0.29% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open, covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: +12.6% — threshold $2.564 (+20%). Not yet.
+- ETH @ $2,026: +4.8% — threshold $2,431 (+20%). Not yet.
+- LINK @ $9.147: +5.0% — threshold $10.976 (+20%). Not yet.
+- SUI @ $1.069: -0.4% — threshold $1.283 (+20%). Not yet.
+No adjustments.
+
+**STEP 5 — Thesis check:** All intact per May 24 pre-session research (session branch claude/trusting-faraday-uPaw1). NEAR Grayscale ETF S-1 + Arthur Hayes AI narrative; ETH Glamsterdam June 2026 upgrade; LINK ADI Foundation $240B + CCIP expansion; SUI CME futures live + native stablecoins. No catalyst breaks.
+
+**STEP 6 — New entries:** ZUSD $0.14 — insufficient for any minimum order. No entries possible.
+
+**Contingency (armed):**
+- NEAR stops at $2.2991 → ~$91 freed → ETH add + LINK add
+- SUI triggers $1.016 → ~$28 freed → NEAR add (7% trail) or ETH add
+- ETH stop at $2,040 → ~$42 freed → NEAR re-entry (7%) or LINK add
+- NEAR 38 hits $2.564 (+20%) → tighten OSX7LL to trail_percent 3–4
+
+**Decision: HOLD — No New Trades. No notification sent.**
