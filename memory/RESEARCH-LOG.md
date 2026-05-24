@@ -6121,3 +6121,84 @@ ZUSD $0.006 — zero cash. No new entries possible.
 - LINK stop at $9.278 → ~$15 freed → ETH add (preferred)
 - NEAR 12.30 lot hits $2.438 (entry +20%) → tighten OMB3ZI to trail_percent 3
 - Fear & Greed at 28 (Fear) — market fragile; use no leverage until sentiment recovers
+
+---
+
+## 2026-05-24 — Pre-Session Research
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile
+**Session branch:** claude/trusting-faraday-uPaw1
+
+### Market Snapshot
+- **BTC:** $76,718 ask | 24h open $76,670.10 = **+0.07%** | 24h range $74,209–$77,308 | Crash gate: NOT triggered ✓
+- **ETH:** $2,119–$2,126 | 24h: ~+2%
+- **F&G:** 28 (Fear) — unchanged from prior sessions
+- **BTC funding rate:** +0.0074% (Binance 8h, positive = longs paying shorts, normal/mildly bullish)
+
+### Overnight Event: OCPEFI (NEAR 12.30 3% trail) Triggered
+- NEAR ran to 24h high $2.4721 → stop ratcheted → pulled back through ~$2.398 trigger
+- 12.30 NEAR closed ~+18.0% from $2.032 entry | Proceeds: ~$29.23 ZUSD
+- Leaves: NEAR 38 (OSX7LL 7% trail), ETH 0.0197, LINK 1.6268 | ZUSD $29.23 (deployable)
+
+### Perplexity Research Summary
+| Query | Key Finding |
+|---|---|
+| BTC 24h | $76,718; +0.07% — flat overnight; crash gate clear |
+| ETH 24h | $2,116–$2,126; ~+2% day; Glamsterdam June intact |
+| Top 10 gainers | RAVE +106%, MWC +68%, OPG +59% — not on Kraken or no catalyst |
+| F&G | 28 (Fear) — persists |
+| BTC funding | +0.0074% (Binance) — normal |
+| Catalysts today | CLARITY Act, FOMC, ETH Glamsterdam, AI tokens, tokenization |
+| Token unlocks | HYPE unlock May 29 (14.2M); SOL/TRUMP recurring; INFRA/XWGT/SQT May 23-24 (minor) |
+| Momentum plays | OMNI +174%, MAT +66%, DOLO +53% (not Kraken-verified or catalystless) |
+| DeFi setups | MORPHO mentioned; LINK/ETH/NEAR cited |
+| NEAR | AI/Hayes narrative intact; trading $2.06–$2.09 per older data; resistance $2.31/$2.51; support $1.91 |
+| ETH | Range-bound, $2,000 support, $2,260+ resistance; Glamsterdam June INTACT |
+| LINK | Neutral/bearish near-term; ADI/$240B institutional catalyst intact; RSI 44 neutral |
+| MORPHO | No fresh catalyst today; TVL $7.5B (prior data) |
+| SUI | CME 24/7 trading launches May 29 ✓; price $1.065 recovered from 24h low $0.9813; USDi+suiUSDe stablecoins live |
+| XRP | CLARITY Act Senate floor vote still pending; no adverse news; Memorial Day May 25 = recess risk |
+
+### Position Thesis Check
+| Symbol | Thesis | Status |
+|---|---|---|
+| NEAR/USD (38) | Grayscale ETF S-1 + Arthur Hayes + AI narrative | INTACT — resistance $2.31 cleared (current $2.396) |
+| ETH/USD | Glamsterdam June 2026 upgrade | INTACT |
+| LINK/USD | ADI Foundation $240B + Chainlink CCIP expansion | INTACT |
+
+### New Entry Decision: SUI/USD BUY 27.00 @ ~$1.0689
+**Catalyst:** CME 24/7 SUI futures trading starts May 29 (5 days — confirmed institutional catalyst). Native stablecoins USDi+suiUSDe live May 22. Price recovered from 24h low $0.9813 → $1.065 (demand demonstrated). Prior stop-out at $1.0165 was on May 23 (strategy: sector pause RETIRED, valid re-entry).
+**Hard checks:**
+- Spread: 0.0094% ✓
+- BTC crash gate: +0.07% 24h ✓
+- Asset: SUI/USD online on Kraken ✓
+- Leverage: spot only ✓
+**Sizing:** $28.86 (all available ZUSD from OCPEFI proceeds — strategy: idle capital is wasted capital)
+**Stop:** 5% trailing (ONH4IU), stop $1.0155, HWM $1.0689
+**Target:** T1 $1.20 (+12.3%), T2 $1.35 (+26.3%)
+
+### NEAR add considered and rejected
+- NEAR 38 already open, +12.1% unrealized
+- Adding at $2.396 on a position already up 12% has lower R:R (resistance $2.51 = only $0.114/NEAR upside vs $0.168 stop risk)
+- SUI offers better R:R (2.5:1) and fresh near-term catalyst
+- Decision: SUI re-entry preferred over NEAR concentration
+
+### XRP entry considered and rejected
+- Senate floor vote still pending; Memorial Day May 25 (tomorrow) = recess risk
+- Weekend binary risk before vote scheduled — pass
+
+### Portfolio Post-Trade
+| Symbol | Qty | Entry | Ask | P&L% | Stop | HWM | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.396 | +12.1% | $2.29910 (7%) | $2.47210 | 4.0% | OSX7LL ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,119 | +4.6% | $2,040.15 (5%) | $2,147.52 | 3.7% | O6GVNC ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.545 | +4.3% | $9.27832 (5%) | $9.76665 | 2.8% | OZ3567 ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.065 | -0.4% | $1.01550 (5%) | $1.06890 | 4.7% | ONH4IU ✓ |
+
+**ZUSD:** $0.14 (fully deployed) | **Weekly Kraken trades:** 8
+
+### Contingency (updated)
+- NEAR stops at $2.2991 → ~$91 freed → ETH add + LINK add + consider SUI add
+- SUI triggers $1.0155 → ~$27.40 freed → NEAR add (7% trail) or ETH add
+- ETH stop at $2,040 → ~$40 freed → NEAR re-entry or LINK add
+- NEAR 38 lot hits $2.564 (entry +20%) → tighten OSX7LL to trail_percent 3–4

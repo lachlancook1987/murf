@@ -1882,3 +1882,34 @@ No adjustments.
 
 **Result: NO-OP. No actions taken. No notification sent.**
 (OCPEFI auto-exit noted as overnight auto-stop; no new manual actions taken this session.)
+
+---
+
+## 2026-05-24 — Session-Open Trades
+
+### 2026-05-24T03:05:58Z | SUI/USD | BUY | 27.0000 SUI | Entry: $1.0689 | Stop: $1.0155 (trail 5%) | Open
+
+**Order ID (buy):** OEVGWF-6A2BM-XMVM3K (market buy, spot)
+**Trailing Stop Order ID:** ONH4IU-X2MIR-H7KC5Y (trailing-stop sell, trail -5%, stop $1.01550, HWM $1.06890, GTC ✓)
+**Notional:** ~$28.86 (redeployment of OCPEFI NEAR 12.30 lot proceeds ~$29.23)
+**Fill price:** $1.06890 (HWM confirmed by trailing stop limitprice field)
+**Stop level:** $1.01550 (5% trailing below HWM $1.06890)
+**Target:** T1 $1.20 (+12.3%), T2 $1.35 (+26.3%)
+**R:R:** ~2.5:1 to T1 (($1.20−$1.0689) / ($1.0689−$1.0155) × 27 SUI = $3.54 / $1.44)
+**Thesis:** CME 24/7 SUI futures trading launches May 29, 2026 (5 days — near-term institutional catalyst confirmed). Native stablecoins USDi + suiUSDe live (May 22 catalyst). Grayscale SUI S-1 filed. SUI recovered from sub-$1.00 dip (24h low $0.9813) back to $1.065 — demand demonstrated. Spread 0.0094% ✓. BTC crash gate clear (+0.07% 24h) ✓. Redeploying freed NEAR partial-profit capital into diversified catalyst.
+**Notes:** Re-entry after prior SUI position stopped out ~$1.017 (-4.9%) on May 23. Strategy: sector pause rules RETIRED — re-entry valid. Spot only (no leverage). Portfolio: NEAR 38 / ETH 0.0197 / LINK 1.6268 / SUI 27.00 / ZUSD $0.14. Weekly Kraken trade count: 8.
+
+---
+
+### 2026-05-24 — Session-Open Snapshot
+**Portfolio (approx):** | **ZUSD:** $0.14 (fully deployed)
+| Symbol | Qty | Entry | Ask | Unrealized P&L% | Trailing Stop | HWM | Buffer | Stop ID |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.396 | **+12.1%** | 7% | $2.47210 | $2.29910 — 4.0% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,119.51 | **+4.6%** | 5% | $2,147.52 | $2,040.15 — 3.7% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.545 | **+4.3%** | 5% | $9.76665 | $9.27832 — 2.8% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.0651 | **-0.4%** | 5% | $1.06890 | $1.01550 — 4.7% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**BTC:** $76,718 (+0.07% 24h) | Crash gate: NOT triggered ✓
+**F&G:** 28 (Fear) | **Funding rate:** +0.0074% (Binance, 8h) — normal/slightly bullish
+**Weekly Kraken trades:** 8
