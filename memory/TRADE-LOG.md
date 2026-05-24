@@ -1882,3 +1882,39 @@ No adjustments.
 
 **Result: NO-OP. No actions taken. No notification sent.**
 (OCPEFI auto-exit noted as overnight auto-stop; no new manual actions taken this session.)
+
+---
+
+## 2026-05-24 — Overnight Triage Check v2 (~session run)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.423 | **+13.4%** | $2.47210 | $2.29910 (trail 7%) | 5.1% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,123.10 | **+4.8%** | $2,147.52 | $2,040.15 (trail 5%) | 3.9% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.553 | **+4.4%** | $9.76665 | $9.27832 (trail 5%) | 2.88% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.0691 | **+0.01%** | $1.06940 | $1.01600 (trail 5%) | 5.0% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**SUI note:** ONH4IU trailing stop was placed by the buying session (~31s after fill). Initial triage orders check showed only 3 orders (race condition); refresh confirmed 4 stops all active. Balance confirmed via BalanceEx (SUI hold_trade: 27.0 = fully reserved for stop). No unprotected positions.
+
+**Alpaca:** Stop a2b44cf9 — confirmed CANCELED (2026-05-22T05:22Z). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- NEAR 38: OSX7LL-VVQZV-JPVWBB, 38.00 NEAR, trail +7%, stop $2.29910, HWM $2.47210 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+- LINK: OZ3567-BYLHI-5JVOHK, 1.6268 LINK, trail +5%, stop $9.27832, HWM $9.76665 — ✓
+- SUI: ONH4IU-X2MIR-H7KC5Y, 27.00 SUI, trail +5%, stop $1.01600, HWM $1.06940 — ✓
+No unprotected positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable or flat. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.423 = **+13.4%** — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,123 = **+4.8%** — threshold: $2,431 (+20%). Not yet.
+- LINK @ $9.147: current $9.553 = **+4.4%** — threshold: $10.976 (+20%). Not yet.
+- SUI @ $1.0689: current $1.069 = **+0.01%** — threshold: $1.283 (+20%). Not yet.
+No adjustments needed.
+
+**STEP 5 — BTC Crash Gate:** BTC $76,840 | 24h open $76,670 = **+0.22%** — well under ±20% threshold. No crash gate. No regime alert. ✓
+
+**Result: NO-OP. No actions taken. No notification sent.**
