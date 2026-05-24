@@ -6467,3 +6467,120 @@ No actions taken → **no notification sent.**
 
 **Result: NO-OP.** All 4 stops healthy. NEAR continues running on Hayes/AI catalyst. LINK buffer at 1.7% (watch closely but no action — trailing stop managing correctly). Watch NEAR $2.564 for +20% stop tightening trigger. Post-Memorial Day (May 26): revisit XRP CLARITY Act entry when Senate resumes.
 
+
+---
+
+## 2026-05-24 — Pre-Session Research (Kraken Aggressive Profile)
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile
+
+### STEP 1 — Account Snapshot
+| Asset | Balance |
+|---|---|
+| ZUSD | $0.14 (fully deployed) |
+| NEAR | 38.00 |
+| XETH | 0.0197 |
+| LINK | 1.6268 |
+| SUI | 27.00 |
+| Alpaca | No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓ |
+
+**Positions & Trailing Stops (live):**
+| Symbol | Qty | Entry | Ask | P&L% | HWM (API) | Stop (API) | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.446 | **+14.5%** | $2.51110 | $2.33540 (7% trail) | 4.5% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,100.46 | **+3.7%** | $2,147.52 | $2,040.15 (5% trail) | 2.9% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.449 | **+3.3%** | $9.76665 | $9.27832 (5% trail) | **1.8% ⚠️** | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.0435 | **-2.4%** | $1.06940 | $1.01600 (5% trail) | 2.6% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Portfolio (approx):** $177.88 | **Phase vs $179.78 start:** -$1.90 (-1.1%)
+All 4 trailing stops confirmed live via Kraken OpenOrders. No unprotected positions. ✓
+
+### STEP 2 — Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $76,567 | -0.15% (Kraken live) | Range $75,468–$77,421. Crash gate: NOT triggered ✓ |
+| ETH | $2,100 | +0.3–3% | Glamsterdam June 2026 thesis intact |
+| NEAR | $2.446 | flat to +5% | Hayes AI catalyst running; HWM $2.511 |
+| LINK | $9.449 | -1% | 1.8% stop buffer ⚠️; CCIP/RWA adoption ongoing |
+| SUI | $1.0435 | -2.2% | $1.00 support watched; gasless payments + CME live |
+| **F&G** | **25** | Extreme Fear | Cautious market |
+| **BTC funding** | +0.0063–0.0084% | positive (longs paying) | No squeeze/extreme signal |
+
+**Top 24h gainers (broader market):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, HYPE +6.9%
+**HYPE on Kraken:** $62.75, open $58.70 = **+6.9%**, volume strong, spread 0.016% ✓
+
+### STEP 3 — Key Catalysts
+- **CLARITY Act (XRP):** Senate resumes post-Memorial Day (US holiday today); markup expected imminently. XRP at $1.350, spread 0.007% ✓ — legislative catalyst pending.
+- **HYPE momentum + buyback:** +6.9% today on Kraken. Hyperliquid's fee buyback program provides structural support. Flow-driven breakout pattern. Caution: HYPE cliff unlock event in May 2026 (Tokenomist flagged).
+- **ETH Glamsterdam:** June 2026 upgrade still the thesis; $169M spot ETF net inflows reported; staking guidance from IRS/Treasury. ETH fragile but intact.
+- **NEAR AI narrative:** Arthur Hayes endorsement + post-quantum/AI upgrades. HWM ratcheting confirms momentum.
+- **Token unlocks today (May 24):** JUP 1.78%, TON 0.72%, BWARE INFRA 1.0%, XWGT 5.65% — watch JUP for selling pressure on any JUP position (none held).
+- **ONDO & TRUMP:** cliff unlocks flagged for later May by Tokenomist — not held, monitor.
+
+### STEP 4 — Crash Gate
+BTC $76,567 ask | 24h open $76,670 = **-0.15%** — well within ±20% threshold. **No crash gate. TRADE stance.**
+
+### STEP 5 — Trade Ideas
+
+All new entries require margin (ZUSD $0.14 insufficient for spot). Capital frees up when LINK or SUI stop triggers.
+
+**Idea 1: HYPE/USD — Momentum + Buyback**
+- **Catalyst:** +6.9% from open today, flow-driven breakout per AInvest; Hyperliquid fee buyback program active; highest-volume day vs 24h average
+- **Entry:** Market ~$62.75 on LINK stop trigger (capital freed ~$15)
+- **Stop:** `trailing_stop`, trail_percent 7 (binary-catalyst / cliff unlock risk warrants extra buffer)
+- **Target:** $67–68 (+7%), resistance near 24h high $64.42 then $68 round number
+- **R:R:** ~1:1.0 (7% trail, 7% target) — acceptable given momentum
+- **Size:** ~$15 (all LINK proceeds) if LINK stop triggers
+- **Kraken pair:** HYPE/USD ✓ | Spread 0.016% ✓ | Margin available (2x) ✓
+- **Risk:** HYPE May 2026 cliff unlock could cap upside; set 7% trail to account for unlock volatility
+
+**Idea 2: XRP/USD — CLARITY Act Legislative Catalyst**
+- **Catalyst:** US Senate CLARITY Act markup expected to advance when session resumes. XRP explicitly named as payment-token beneficiary. Could trigger 10–15% gap on committee passage.
+- **Entry:** Market ~$1.350, or breakout above $1.374 (24h high) for confirmation
+- **Stop:** `trailing_stop`, trail_percent 7 (binary legislative catalyst)
+- **Target:** $1.50–1.55 (+11–14%)
+- **R:R:** ~1:1.6 with 7% trail
+- **Size:** $27–30 if SUI stop triggers (proceeds ~$27.43 at $1.016 trigger)
+- **Kraken pair:** XRP/USD ✓ | Spread 0.007% ✓ | Margin up to 10x ✓
+- **Risk:** Senate delay; vote fails; price already partially pricing the event
+
+**Idea 3: NEAR/USD — Add on Margin**
+- **Catalyst:** Grayscale ETF S-1 filed + Arthur Hayes AI narrative; NEAR 14.5% in profit, HWM ratcheting confirms momentum
+- **Entry:** Market if NEAR breaks above $2.511 (current HWM, triggering a new all-time-high-since-entry)
+- **Stop:** Widen existing trailing stop or add a second position with 7% trail
+- **Size:** $20–30 via 2x margin against existing collateral — contingent on ZUSD freeing up
+- **Risk:** Concentration (already largest holding); Fear & Greed 25; requires margin collateral
+
+**Idea 4: ETH/USD — Add on Glamsterdam Momentum**
+- **Catalyst:** $169M ETF inflows, Glamsterdam June 2026, staking guidance tailwind
+- **Entry:** Limit at $2,060–2,070 (near trailing stop floor $2,040 + buffer); or market on any break above $2,148 HWM
+- **Stop:** `trailing_stop`, trail_percent 5
+- **Target:** $2,300–2,400 by June upgrade (+10–14%)
+- **Size:** Small ($10–15) via margin; conviction modest given 2.9% buffer on existing stop
+- **Risk:** Fragile technicals; ETH underperforming BTC YTD
+
+**Idea 5: SUI — Monitor Only**
+- Price $1.0435, stop $1.016, buffer 2.6%. Catalyst (gasless stablecoins, CME, private tx) intact per Perplexity.
+- **Decision:** Let trailing stop manage. Do NOT manually exit. If stop triggers at ~$1.016, proceeds ~$27.43 available for XRP entry.
+- **Note:** Watch $1.00 support. If SUI prints $1.00 intraday, stop may trigger before $1.016 (Kraken stop-limit behavior).
+
+### STEP 6 — Decision
+**Crash gate: CLEAR. Strategy: TRADE.**
+
+**Today's plan:**
+- Hold all 4 existing positions with trailing stops active ✓
+- **Preferred new entry: HYPE/USD** (~$62.75, trail 7%) — contingent on LINK stop trigger (~$15 proceeds)
+- **Secondary: XRP/USD** (~$1.350, trail 7%) — contingent on SUI stop trigger (~$27 proceeds)
+- **NEAR add (Idea 3):** Low priority given F&G 25 and margin overhead; revisit if NEAR breaks $2.75
+
+**LINK buffer 1.8% ⚠️:** Likely to trigger soon if LINK retreats another $0.17. On trigger, immediately queue HYPE market buy.
+
+**Stop tightening thresholds (none reached today):**
+- NEAR +20% = $2.564 (currently +14.5% — not yet)
+- ETH +20% = $2,431 (currently +3.7% — not yet)
+- LINK +20% = $10.976 (currently +3.3% — not yet)
+- SUI +20% = $1.283 (currently -2.4% — not yet)
+
+**Decision: HOLD existing positions. New entries contingent on stop triggers. Alert HYPE and XRP as watchlist.**
+
