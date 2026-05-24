@@ -6364,3 +6364,46 @@ All 4 trailing stops confirmed open and live via Kraken orders query.
 - All stops healthy; NEAR buffer slim but within spec
 - Review post-Memorial Day (May 26) for XRP CLARITY Act entry
 
+---
+
+## 2026-05-24 — Midday Scan v2
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile
+
+### Market Snapshot
+- **BTC:** $77,197 ask | 24h open $76,670 = **+0.69%** — crash gate CLEAR ✓
+- **NEAR:** $2.366 | **ETH:** $2,122 | **LINK:** $9.600 | **SUI:** $1.068
+
+### STEP 2 — Positions & Orders
+| Symbol | Qty | Entry | Current | P&L% | Stop (API) | HWM (API) | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.366 | **+10.7%** | $2.29910 (7% trail) | $2.47210 | 2.8% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,122 | **+4.7%** | $2,040.15 (5% trail) | $2,147.52 | 3.9% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.600 | **+5.0%** | $9.27832 (5% trail) | $9.76665 | 3.4% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.068 | **-0.1%** | $1.01600 (5% trail) | $1.06940 | ~2.1%⚠️ | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22). ✓
+
+### STEP 3 — Trailing Stops
+All 4 stops confirmed live via Kraken OpenOrders. No unprotected positions. ✓
+
+**SUI note:** 24h rolling high = $1.10030 > API HWM $1.06940. Trailing stop has likely ratcheted server-side to ~$1.04529 ($1.10030 × 0.95). Real buffer from current $1.068 ≈ 2.1% — tighter than API shows. Position still open; stop design working as intended.
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+- NEAR: +10.7% — threshold $2.564. Not yet.
+- ETH: +4.7% — threshold $2,431. Not yet.
+- LINK: +5.0% — threshold $10.976. Not yet.
+- SUI: -0.1% — threshold $1.283. Not yet.
+**No adjustments.**
+
+### STEP 5 — Thesis Check
+All theses intact: NEAR (Grayscale ETF + Hayes AI), ETH (Glamsterdam Q3 2026), LINK (ADI Foundation $240B + DTCC), SUI (CME futures live + gasless stablecoins). No protocol exploits, no rug, no token unlock dump. **HOLD ALL.**
+
+### STEP 6 — New Entry Scan
+ZUSD ~$0.14 — fully deployed. No spot entries possible. No margin setup with confirmed catalyst meets conviction threshold (Fear & Greed 28, Memorial Day illiquidity). **No new entries.**
+
+### STEP 7 — Notification
+No actions taken → no notification sent.
+
+**Result: NO-OP.** Portfolio ~$178 fully deployed. All stops healthy. Post-Memorial Day (May 26) review for XRP CLARITY Act entry when Senate resumes.
+
