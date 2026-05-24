@@ -1839,3 +1839,46 @@ No unprotected positions. No orphaned orders.
 **ETH:** +4.4% | **LINK:** +4.5% — no tightening warranted.
 **Portfolio (approx):** NEAR 50.30×$2.44=$122.73 + ETH 0.0197×$2,115=$41.67 + LINK 1.627×$9.561=$15.55 + ZUSD $0.01 = **~$179.96**
 **No new entries:** ZUSD $0.006 — fully deployed.
+
+---
+
+## 2026-05-24 — Overnight Triage Check
+
+### NEAR/USD — Trailing Stop OCPEFI Auto-Triggered (overnight)
+
+**Stop Order:** OCPEFI-MAHQ6-CW3ZHR (3% trailing stop, HWM $2.43870 at placement → ratcheted to $2.47210 per 24h high)
+**Auto-trigger level:** ~$2.398 ($2.47210 × 0.97)
+**Estimated fill:** ~$2.39–$2.40 (market execution at trigger; slippage possible)
+**Qty closed:** 12.30 NEAR
+**Entry:** $2.032 | **Exit:** ~$2.398 | **P&L:** ~+$4.50 (+18.0%) — profitable exit; stop worked as designed
+**Notes:** NEAR ran to 24h high $2.47210, ratcheting the 3% stop to ~$2.398. Price then pulled back through trigger. OCPEFI no longer visible in open orders — confirmed triggered. ZUSD proceeds added to cash balance.
+
+---
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.367 | **+10.8%** | $2.47210 | $2.29910 (trail 7%) | 2.86% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,117.17 | **+4.5%** | $2,147.52 | $2,040.15 (trail 5%) | 3.64% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.572 | **+4.6%** | $9.76665 | $9.27832 (trail 5%) | 3.07% | OZ3567-BYLHI-5JVOHK ✓ |
+
+**Alpaca:** Stop a2b44cf9 — **CANCELED** (2026-05-22T05:22Z confirmed). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- NEAR 38: OSX7LL-VVQZV-JPVWBB, 38.00 NEAR, trail +7%, stop $2.29910 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15 — ✓
+- LINK: OZ3567-BYLHI-5JVOHK, 1.626 LINK, trail +5%, stop $9.27832 — ✓
+- OCPEFI (NEAR 12.30, 3% trail) — auto-triggered overnight; position closed profitably ~+18% ✓
+No unprotected positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable. ✓
+
+**STEP 4 — Stop tightening:**
+- NEAR 38 @ $2.137: current $2.367 = **+10.8%** — threshold for tightening: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,117 = **+4.5%** — threshold: $2,431 (+20%). Not yet.
+- LINK @ $9.147: current $9.572 = **+4.6%** — threshold: $10.976 (+20%). Not yet.
+No adjustments.
+
+**STEP 5 — BTC Crash Gate:** BTC $76,679 (ask) | 24h open $76,670 = **+0.01%** — essentially flat overnight. 24h range $74,209–$77,308. Well under -20% threshold. No crash gate. No regime alert. ✓
+
+**Result: NO-OP. No actions taken. No notification sent.**
+(OCPEFI auto-exit noted as overnight auto-stop; no new manual actions taken this session.)
