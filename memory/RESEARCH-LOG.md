@@ -6202,3 +6202,62 @@ ZUSD $0.006 — zero cash. No new entries possible.
 - SUI triggers $1.0155 → ~$27.40 freed → NEAR add (7% trail) or ETH add
 - ETH stop at $2,040 → ~$40 freed → NEAR re-entry or LINK add
 - NEAR 38 lot hits $2.564 (entry +20%) → tighten OSX7LL to trail_percent 3–4
+
+---
+
+## 2026-05-24 — Midday Scan
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile
+
+### Market Snapshot (midday)
+- **BTC:** $76,666 ask | 24h open $76,670 = **-0.005%** — crash gate clear ✓
+- **ETH:** $2,117 | **NEAR:** $2.376 | **LINK:** $9.505 | **SUI:** $1.058
+
+### STEP 2 — Current State
+
+**Positions (via trailing stop orders — spot holdings confirmed):**
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | HWM | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.376 | **+11.2%** | $2.29910 (trail 7%) | $2.47210 | 3.2% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,117.02 | **+4.5%** | $2,040.15 (trail 5%) | $2,147.52 | 3.6% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.505 | **+3.9%** | $9.27832 (trail 5%) | $9.76665 | 2.4% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.058 | **-1.0%** | $1.01600 (trail 5%) | $1.06940 | 3.98% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Alpaca:** Stop a2b44cf9 confirmed CANCELED (2026-05-22). No Alpaca positions or orders. ✓
+
+### STEP 3 — Trailing Stops Verified
+All 4 stops active and confirmed via live orders query. No unprotected positions. ✓
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+- NEAR 38 @ $2.137: current $2.376 = +11.2% — threshold: $2.564. Not yet.
+- ETH @ $2,026: current $2,117 = +4.5% — threshold: $2,431. Not yet.
+- LINK @ $9.147: current $9.505 = +3.9% — threshold: $10.976. Not yet.
+- SUI @ $1.069: current $1.058 = -1.0% — threshold: $1.283. Not yet.
+No adjustments.
+
+### STEP 5 — Thesis Check
+| Symbol | Catalyst | Status | Notes |
+|---|---|---|---|
+| NEAR | Grayscale ETF S-1 + Arthur Hayes + AI | INTACT | Price $2.376 — outperforming; Perplexity showed stale $2.06–$2.08 data, live Kraken price confirms thesis running |
+| ETH | Glamsterdam June 2026 | INTACT | Confirmed in current Perplexity research |
+| LINK | ADI Foundation $240B institutional | INTACT | No adverse news; Perplexity couldn't confirm fresh catalyst but no counter-narrative; RSI 44, neutral |
+| SUI | CME futures + native stablecoins | PARTIAL | CME SUI futures launched May 4 (not May 29 as originally cited) — "upcoming launch" angle stale. However: futures ARE live (positive for institutional access), gasless stablecoin transfers live, broader narrative intact. No exploit/rug. Position -1%, stop at $1.016 (4% buffer). Hold. |
+
+No thesis breaks requiring emergency exit.
+
+### STEP 6 — New Entry Scan
+**Momentum names identified (Kraken top gainers):**
+- KET +134%, SPICE +33%, GRASS +31%, MYX +33% — all assessed, no hard catalyst confirmed for any
+- GRASS: DePIN/bandwidth narrative, $37–58M volume — momentum only, no specific news catalyst → PASS (strategy requires documented catalyst)
+- No other Kraken-available names with confirmed catalyst + spread ≤1%
+
+**XRP:** Still passing — CLARITY Act Senate vote pending, Memorial Day recess risk unchanged from pre-session.
+
+**BTC crash gate:** Clear (-0.005%). No regime alerts. Macro: Fed leadership transition, Glamsterdam, tokenization themes — consistent with pre-session research.
+
+**New entries: NONE.** No qualifying setups with documented catalyst + acceptable spread.
+
+### STEP 7 — Notification
+No actions taken → **no notification sent.**
+
+**Result: NO-OP.** All stops healthy. No tightening. No exits. No new entries.
