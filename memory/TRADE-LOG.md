@@ -2010,3 +2010,32 @@ No adjustments.
 **Portfolio approx:** ~$177.10 | Phase P&L vs $179.78 start: **-$2.68 (-1.49%)**
 
 **Decision: HOLD — No New Trades.** No notification sent. All stops healthy. Watch NEAR $2.564 for stop tightening trigger; watch post-Memorial Day for XRP CLARITY Act entry opportunity.
+
+---
+
+## 2026-05-24 — Midday Scan: Exits + New Entry
+
+### CLOSED — LINK/USD (trailing stop auto-triggered)
+- **Exit:** ~$9.278 | Stop OZ3567-BYLHI-5JVOHK triggered (24h low $9.248 breached stop at $9.27832)
+- **Entry:** $9.147 | **Qty:** 1.6268 | **P&L:** +1.4% | **+$0.21**
+- **Reason:** Trailing stop managed exit. No thesis break — ADI catalyst intact but price retreated from HWM $9.767 through stop level.
+
+### CLOSED — SUI/USD (trailing stop auto-triggered)
+- **Exit:** ~$1.016 | Stop ONH4IU-X2MIR-H7KC5Y triggered (24h low $1.006 breached stop at $1.016)
+- **Entry:** $1.0689 | **Qty:** 27.00 | **P&L:** -4.9% | **-$1.43**
+- **Reason:** Trailing stop managed exit. CME SUI futures had already launched May 4 (not May 29 as originally expected) — "upcoming catalyst" angle was stale. Price failed to hold above entry, stop did its job.
+
+### OPENED — XRP/USD
+- **Entry:** $1.34427 market | Order: O3EFWV-DJBYW-RXVAZU
+- **Qty:** 31.00 | **Notional:** $41.67
+- **Catalyst:** CLARITY Act cleared Senate Banking Committee 15-9 on May 14. Senate floor vote expected post-Memorial Day recess (week of May 26). Pre-positioning on dip (-0.97% from 24h open). Binary regulatory catalyst → 7% trail per strategy.
+- **Stop:** OCLYQ6-H45E6-KDCK4X | trailing_stop 7% | initial stop $1.250 | HWM $1.344
+- **Spread:** 0.005% ✓ | **Target:** T1 $1.70 (+26.5%), T2 $2.00 (+49%)
+
+**Portfolio snapshot post-trade:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | HWM | Order |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.419 | +13.2% | $2.335 (trail 7%) | $2.511 | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,086 | +2.96% | $2,040 (trail 5%) | $2,147.52 | O6GVNC-H2KL5-3K2WQG ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.344 | ~0% | $1.250 (trail 7%) | $1.344 | OCLYQ6-H45E6-KDCK4X ✓ |
+**ZUSD:** $0.29 | **Active stops:** 3/3 ✓ | **Phase P&L vs $179.78:** ~-$5.04 (-2.8%) incl. LINK/SUI realized
