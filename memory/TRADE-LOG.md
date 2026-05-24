@@ -1953,3 +1953,16 @@ No adjustments needed.
 **STEP 5 — BTC Crash Gate:** BTC $76,840 | 24h open $76,670 = **+0.22%** — well under ±20% threshold. No crash gate. No regime alert. ✓
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+### May 24 — EOD Snapshot (Day 15, Sunday)
+**Portfolio:** $176.45 | **Cash:** $0.14 (0.08%) | **Day P&L:** +$18.69 (+11.85%) | **Phase P&L:** -$3.33 (-1.85%) | **vs BTC:** +11.76%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.379 | -2.8% | +$9.21 (+11.3%) | OSX7LL 7%, stop $2.299, HWM $2.472 |
+| ETH/USD | 0.0197 | $2,026.00 | $2,118.19 | +0.1% | +$1.82 (+4.5%) | O6GVNC 5%, stop $2,040.15, HWM $2,147.52 |
+| LINK/USD | 1.6268 | $9.147 | $9.569 | +0.1% | +$0.69 (+4.6%) | OZ3567 5%, stop $9.278, HWM $9.767 |
+| SUI/USD | 27.00 | $1.0689 | $1.059 | -0.8% | -$0.26 (-0.9%) | ONH4IU 5%, stop $1.016, HWM $1.069 |
+**Trades today:** NEAR/USD 12.30 trailing stop OCPEFI-MAHQ6-CW3ZHR triggered overnight (~$2.398, +18.0%) | SUI/USD BUY 27.00 @$1.0689 | **Total since migration:** 15
+**Notes:** Strong overnight recovery drove an 11.85% day gain vs yesterday's EOD of $157.76, mostly from open positions catching up after May 23's multi-stop cascade. NEAR 38 leads at +11.3% unrealized ($9.21); ETH and LINK both firmed ~4.5–4.6%; SUI new position fractionally underwater (-0.9%, $28.61 vs $28.86 cost). The NEAR 12.30 add (OCPEFI) exited cleanly at +18%, proceeds recycled into SUI 27 (CME futures + Grayscale S-1 thesis). BTC flat on the day (+0.09%, $76,670→$76,733) so bot outperformed by +11.76%. All four trailing stops confirmed active. Phase P&L now -$3.33 (-1.85%) from starting equity $179.78 — close to breakeven. Alpaca: stop a2b44cf9 remains cancelled; no Alpaca exposure.
