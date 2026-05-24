@@ -1885,6 +1885,41 @@ No adjustments.
 
 ---
 
+## 2026-05-24 — Overnight Triage Check v3
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.387 | **+11.7%** | $2.47210 | $2.29910 (trail 7%) | 3.7% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,117.46 | **+4.5%** | $2,147.52 | $2,040.15 (trail 5%) | 3.6% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.516 | **+4.0%** | $9.76665 | $9.27832 (trail 5%) | 2.5% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.0605 | **-0.8%** | $1.06940 | $1.01600 (trail 5%) | 4.2% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Alpaca:** Stop a2b44cf9 — confirmed CANCELED (2026-05-22T05:22Z). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- NEAR 38: OSX7LL-VVQZV-JPVWBB, 38.00 NEAR, trail +7%, stop $2.29910, HWM $2.47210 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+- LINK: OZ3567-BYLHI-5JVOHK, 1.6268 LINK, trail +5%, stop $9.27832, HWM $9.76665 — ✓
+- SUI: ONH4IU-X2MIR-H7KC5Y, 27.00 SUI, trail +5%, stop $1.01600, HWM $1.06940 — ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions at -0.8% to +11.7% — all well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.387 = +11.7% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,117 = +4.5% — threshold: $2,431 (+20%). Not yet.
+- LINK @ $9.147: current $9.516 = +4.0% — threshold: $10.976 (+20%). Not yet.
+- SUI @ $1.069: current $1.061 = -0.8% — threshold: $1.283 (+20%). Not yet.
+No adjustments.
+
+**STEP 5 — BTC Crash Gate:** BTC $76,681 ask | 24h open $76,670 = **+0.01%** — essentially flat. 24h range $74,209–$77,308. Well under -20% threshold. No crash gate. No regime alert. ✓
+
+**Notes:** Prices softened slightly vs v2 check (NEAR $2.423→$2.387, BTC $76,840→$76,681). LINK buffer narrowed to 2.5% — worth monitoring but above the critical 2% floor. All trailing stops tracking correctly. All theses intact from prior research: NEAR (Grayscale ETF S-1 + Arthur Hayes endorsement); ETH (Glamsterdam Q3 2026); LINK (ADI Foundation / $240B institutional assets + DTCC); SUI (CME futures + Grayscale S-1 + native stablecoins). OCPEFI (NEAR 12.30, 3% trail) confirmed closed overnight at ~+18% profit.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
 ## 2026-05-24 — Overnight Triage Check v2 (~session run)
 
 **Positions:**
