@@ -2039,3 +2039,50 @@ No adjustments.
 | ETH/USD | 0.0197 | $2,026 | $2,086 | +2.96% | $2,040 (trail 5%) | $2,147.52 | O6GVNC-H2KL5-3K2WQG ✓ |
 | XRP/USD | 31.00 | $1.344 | $1.344 | ~0% | $1.250 (trail 7%) | $1.344 | OCLYQ6-H45E6-KDCK4X ✓ |
 **ZUSD:** $0.29 | **Active stops:** 3/3 ✓ | **Phase P&L vs $179.78:** ~-$5.04 (-2.8%) incl. LINK/SUI realized
+
+---
+
+## 2026-05-24 — Session-Open Scan (evening)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.4195 | **+13.2%** | $2.5111 | $2.3354 (trail 7%) | 3.5% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,092.07 | **+3.3%** | $2,147.52 | $2,040.15 (trail 5%) | 2.5% | O6GVNC-H2KL5-3K2WQG ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.34775 | **+0.3%** | $1.34975 | $1.25527 (trail 7%) | 6.9% | OCLYQ6-H45E6-KDCK4X ✓ |
+
+**Account:** Kraken ZUSD $0.29 (fully deployed) | Alpaca: stop a2b44cf9 cancelled 2026-05-22; no positions, no active orders ✓
+**BTC:** $76,822 ask | 24h open $76,670 = **+0.22%** | Crash gate: NOT triggered ✓
+**F&G:** 25 (Extreme Fear)
+
+**STEP 3 — Hard checks:**
+- Crash gate: +0.22% 24h — CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 3 trailing stops confirmed open, covering correct quantities ✓
+- Stop details confirmed live: NEAR OSX7LL stop $2.33540 HWM $2.51110 ✓ | ETH O6GVNC stop $2,040.15 HWM $2,147.52 ✓ | XRP OCLYQ6 stop $1.25527 HWM $1.34975 ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: +13.2% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: +3.3% — threshold: $2,431 (+20%). Not yet.
+- XRP @ $1.344: +0.3% — threshold: $1.613 (+20%). Not yet.
+No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **NEAR:** +13–17% intraday with strong volume on Kraken/Binance — AI narrative + Grayscale ETF S-1 catalyst confirmed running. HWM $2.511 ratcheted. **INTACT. HOLD.**
+- **ETH:** Glamsterdam H1 2026 upgrade on track (no delays). ETF inflows ($169M reported). Price pulling back from HWM $2,148 to $2,092 — stop buffer 2.5%, monitor closely but thesis valid. **INTACT. HOLD.**
+- **XRP:** CLARITY Act Senate Banking Committee 15-9 passage (May 14) confirmed; Senate floor vote expected week of May 26 post-Memorial Day recess. Price $1.348 vs entry $1.344 — flat, holding. 7% trail provides buffer for binary volatility. **INTACT. HOLD.**
+
+**STEP 6 — New entries:**
+- ZUSD $0.29 — insufficient for any spot order (minimum Kraken order ~$5–10)
+- Margin: F&G 25 (Extreme Fear) + fully deployed — no margin entries justified
+- No new trades qualify
+
+**Portfolio estimate:** NEAR 38×$2.4195=$91.94 + ETH 0.0197×$2,092=$41.21 + XRP 31×$1.34775=$41.78 + ZUSD $0.29 = **~$175.22**
+**Phase P&L vs $179.78 start:** **-$4.56 (-2.5%)** | vs BTC (+0.22% day): bot flat
+
+**Decision: HOLD — No New Trades. No notification sent. No commit required.**
+
+**Contingency (armed):**
+- NEAR stop ($2.335) → ~$88.75 freed → ETH add (Glamsterdam) + XRP add (CLARITY Act)
+- ETH stop ($2,040) → ~$40.20 freed → NEAR re-entry or XRP add
+- XRP stop ($1.255) → ~$38.91 freed → NEAR add or ETH add
+- Watch NEAR $2.564 for stop tightening trigger (3% trail); watch May 26 for XRP CLARITY Act Senate floor vote
