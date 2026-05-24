@@ -1885,31 +1885,36 @@ No adjustments.
 
 ---
 
-## 2026-05-24 — Session-Open Trades
+## 2026-05-24 — Overnight Triage Check v2 (~session run)
 
-### 2026-05-24T03:05:58Z | SUI/USD | BUY | 27.0000 SUI | Entry: $1.0689 | Stop: $1.0155 (trail 5%) | Open
-
-**Order ID (buy):** OEVGWF-6A2BM-XMVM3K (market buy, spot)
-**Trailing Stop Order ID:** ONH4IU-X2MIR-H7KC5Y (trailing-stop sell, trail -5%, stop $1.01550, HWM $1.06890, GTC ✓)
-**Notional:** ~$28.86 (redeployment of OCPEFI NEAR 12.30 lot proceeds ~$29.23)
-**Fill price:** $1.06890 (HWM confirmed by trailing stop limitprice field)
-**Stop level:** $1.01550 (5% trailing below HWM $1.06890)
-**Target:** T1 $1.20 (+12.3%), T2 $1.35 (+26.3%)
-**R:R:** ~2.5:1 to T1 (($1.20−$1.0689) / ($1.0689−$1.0155) × 27 SUI = $3.54 / $1.44)
-**Thesis:** CME 24/7 SUI futures trading launches May 29, 2026 (5 days — near-term institutional catalyst confirmed). Native stablecoins USDi + suiUSDe live (May 22 catalyst). Grayscale SUI S-1 filed. SUI recovered from sub-$1.00 dip (24h low $0.9813) back to $1.065 — demand demonstrated. Spread 0.0094% ✓. BTC crash gate clear (+0.07% 24h) ✓. Redeploying freed NEAR partial-profit capital into diversified catalyst.
-**Notes:** Re-entry after prior SUI position stopped out ~$1.017 (-4.9%) on May 23. Strategy: sector pause rules RETIRED — re-entry valid. Spot only (no leverage). Portfolio: NEAR 38 / ETH 0.0197 / LINK 1.6268 / SUI 27.00 / ZUSD $0.14. Weekly Kraken trade count: 8.
-
----
-
-### 2026-05-24 — Session-Open Snapshot
-**Portfolio (approx):** | **ZUSD:** $0.14 (fully deployed)
-| Symbol | Qty | Entry | Ask | Unrealized P&L% | Trailing Stop | HWM | Buffer | Stop ID |
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
 |---|---|---|---|---|---|---|---|---|
-| NEAR/USD | 38.00 | $2.137 | $2.396 | **+12.1%** | 7% | $2.47210 | $2.29910 — 4.0% | OSX7LL-VVQZV-JPVWBB ✓ |
-| ETH/USD | 0.0197 | $2,026.00 | $2,119.51 | **+4.6%** | 5% | $2,147.52 | $2,040.15 — 3.7% | O6GVNC-H2KL5-3K2WQG ✓ |
-| LINK/USD | 1.6268 | $9.147 | $9.545 | **+4.3%** | 5% | $9.76665 | $9.27832 — 2.8% | OZ3567-BYLHI-5JVOHK ✓ |
-| SUI/USD | 27.00 | $1.0689 | $1.0651 | **-0.4%** | 5% | $1.06890 | $1.01550 — 4.7% | ONH4IU-X2MIR-H7KC5Y ✓ |
+| NEAR/USD | 38.00 | $2.137 | $2.423 | **+13.4%** | $2.47210 | $2.29910 (trail 7%) | 5.1% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,123.10 | **+4.8%** | $2,147.52 | $2,040.15 (trail 5%) | 3.9% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.553 | **+4.4%** | $9.76665 | $9.27832 (trail 5%) | 2.88% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.0691 | **+0.01%** | $1.06940 | $1.01600 (trail 5%) | 5.0% | ONH4IU-X2MIR-H7KC5Y ✓ |
 
-**BTC:** $76,718 (+0.07% 24h) | Crash gate: NOT triggered ✓
-**F&G:** 28 (Fear) | **Funding rate:** +0.0074% (Binance, 8h) — normal/slightly bullish
-**Weekly Kraken trades:** 8
+**SUI note:** ONH4IU trailing stop was placed by the buying session (~31s after fill). Initial triage orders check showed only 3 orders (race condition); refresh confirmed 4 stops all active. Balance confirmed via BalanceEx (SUI hold_trade: 27.0 = fully reserved for stop). No unprotected positions.
+
+**Alpaca:** Stop a2b44cf9 — confirmed CANCELED (2026-05-22T05:22Z). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- NEAR 38: OSX7LL-VVQZV-JPVWBB, 38.00 NEAR, trail +7%, stop $2.29910, HWM $2.47210 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+- LINK: OZ3567-BYLHI-5JVOHK, 1.6268 LINK, trail +5%, stop $9.27832, HWM $9.76665 — ✓
+- SUI: ONH4IU-X2MIR-H7KC5Y, 27.00 SUI, trail +5%, stop $1.01600, HWM $1.06940 — ✓
+No unprotected positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable or flat. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.423 = **+13.4%** — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,123 = **+4.8%** — threshold: $2,431 (+20%). Not yet.
+- LINK @ $9.147: current $9.553 = **+4.4%** — threshold: $10.976 (+20%). Not yet.
+- SUI @ $1.0689: current $1.069 = **+0.01%** — threshold: $1.283 (+20%). Not yet.
+No adjustments needed.
+
+**STEP 5 — BTC Crash Gate:** BTC $76,840 | 24h open $76,670 = **+0.22%** — well under ±20% threshold. No crash gate. No regime alert. ✓
+
+**Result: NO-OP. No actions taken. No notification sent.**
