@@ -6261,3 +6261,106 @@ No thesis breaks requiring emergency exit.
 No actions taken → **no notification sent.**
 
 **Result: NO-OP.** All stops healthy. No tightening. No exits. No new entries.
+
+---
+
+## 2026-05-24 — Pre-Session Research
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile
+
+### STEP 2 — Account Snapshot
+
+**Kraken Balance:**
+- ZUSD: $0.14 (fully deployed)
+- NEAR: 38.00 | LINK: 1.6269 | SUI: 27.00 | XETH: 0.0197
+
+**Open Positions (via trailing stop orders):**
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | HWM | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.343 | **+9.6%** | $2.29910 (trail 7%) | $2.47210 | **1.88%** ⚠️ | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,119.07 | **+4.6%** | $2,040.15 (trail 5%) | $2,147.52 | 3.72% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.576 | **+4.7%** | $9.27832 (trail 5%) | $9.76665 | 3.11% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.056 | **-1.2%** | $1.01600 (trail 5%) | $1.06940 | 3.79% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Alpaca:** No positions, no active orders. BTC residual fully closed. ✓
+
+All 4 trailing stops confirmed open and live via Kraken orders query.
+
+### STEP 3 — Market Context
+
+**BTC:** $76,740 ask | 24h open $76,670 = **+0.09%** | Range $74,209–$77,308
+→ **Crash gate CLEAR** — well under -20% threshold ✓
+
+**ETH:** $2,119 | +2–3% in 24h | Resistance ~$2,150–$2,200 | Support ~$2,000
+
+**Fear & Greed Index:** **28 — Fear**
+
+**BTC Funding Rate:** +0.009% (Binance, 8h) — slightly positive, longs paying shorts; mildly elevated but not excessive
+
+**Top 24h Gainers (CoinGecko/CMC):**
+1. RAVE +106% | 2. MWC +68% | 3. OPG +59% | 4. BAS +40% | 5. TIG +38%
+6. GWEI +30% | 7. GUN +29% | 8. ORCA +27% | 9. MERL +14% | 10. AUKI +15%
+
+**Key Macro Catalysts:**
+- CLARITY Act: Senate markup expected post-Memorial Day recess (May 26+) — XRP primary beneficiary
+- Glamsterdam upgrade: Q3 2026 — ETH pre-upgrade trade intact
+- Memorial Day (May 25 tomorrow): Congress in recess; legislative catalysts delayed to next week
+- Funding rates mildly positive — market slightly leaning long but not overheated
+
+**Token Unlocks (week of May 19–24):** PYTH ~2.13B tokens (May 19–21 window, peak now past), STRK ~64M (May 22), APT mid-month periodic. No major unlock directly threatening held assets.
+
+### Open Position Thesis Status
+
+| Symbol | Catalyst | Status | Notes |
+|---|---|---|---|
+| NEAR | Grayscale ETF S-1 + Arthur Hayes AI narrative | INTACT | Price $2.343 from entry $2.137 (+9.6%). NEAR buffer slim at 1.88% — price retreated from HWM $2.472; stop hasn't updated. Monitor closely. No adverse news. |
+| ETH | Glamsterdam June/Q3 2026 upgrade | INTACT | $2,119. ETF inflows cited ($169M single-day). Resistance at $2,150–$2,200. Thesis running. |
+| LINK | ADI Foundation $240B institutional + whale accumulation | INTACT | $9.576. Mixed technicals (RSI neutral). Growing fee revenue, partnerships. No catalyst break. |
+| SUI | CME futures live + gasless stablecoin transfers (May 23) | PARTIAL | $1.056, entry $1.069, -1.2%. Grayscale highlighted gasless model May 23. Support $1.00–$1.02 key floor. Stop at $1.016. If $1.00 breaks, risk of accelerated down move. |
+
+### STEP 4 — Candidate Scan (New Entries)
+
+**Cash available:** $0.14 ZUSD — spot buys impossible without margin.
+
+**Candidates assessed (margin required for any new position):**
+
+**1. XRP/USD — CLARITY Act play**
+- Catalyst: Senate CLARITY Act markup, XRP ETF flows $82M in April
+- Status: Markup delayed past Memorial Day recess; Senate not in session until May 26+
+- Spread: 0.013% ✓ | Leverage: up to 10x ✓
+- Decision: **PASS** — binary catalyst timing uncertain; recess gap = headline risk both ways. Revisit May 26.
+
+**2. TAO/USD (Bittensor) — AI subnet narrative**
+- Catalyst: AI/ML subnet growth narrative; +62% in April, now $279
+- Status: Near-term action "choppy and technically cautious"; no fresh catalyst today
+- Spread: 0.006% ✓ | Leverage: up to 5x ✓
+- Decision: **PASS** — insufficient fresh catalyst for margin entry; mixed technical signal
+
+**3. ORCA/USD — Solana DEX momentum**
+- Catalyst: +27% in 24h (momentum only, no confirmed news catalyst found)
+- Status: No leverage on Kraken; no ZUSD for spot; no documented catalyst → required by strategy
+- Spread: 0.14% ✓ | Leverage: NONE
+- Decision: **PASS** — no leverage, no cash, no documented catalyst
+
+**New entries: NONE.** Capital fully deployed; no margin setup with confirmed catalyst justified.
+
+### Contingency Watchlist
+- **NEAR stop triggers $2.299** → ~$89 freed → XRP limit buy (CLARITY Act, post-recess) OR add to ETH/LINK
+- **SUI stop triggers $1.016** → ~$27 freed → add to NEAR (if still above entry) or ETH
+- **XRP**: set alert for $1.36–$1.38 on CLARITY Act markup confirmation post-May 26; 7% trail (binary catalyst)
+
+### Risk Factors
+- NEAR buffer slim (1.88%) — any intraday weakness could trigger stop; position size is largest (~$89 at risk)
+- SUI -1.2% from entry; support floor at $1.00 is critical — a break risks the trailing stop chain
+- Fear & Greed at 28 (Fear) — choppy market environment; momentum plays can reverse fast
+- Memorial Day holiday tomorrow: low liquidity Sunday/Monday, wider spreads possible on altcoin pairs
+- Funding slightly positive — no crash gate concern but watch for rate escalation if BTC rallies hard
+
+### Decision
+**HOLD ALL POSITIONS. NO NEW ENTRIES.**
+- Crash gate: CLEAR
+- Stance: TRADE is default, but capital is fully deployed ($0.14 ZUSD)
+- No margin setup meets catalyst + conviction threshold today
+- All stops healthy; NEAR buffer slim but within spec
+- Review post-Memorial Day (May 26) for XRP CLARITY Act entry
+
