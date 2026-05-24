@@ -6407,3 +6407,63 @@ No actions taken → no notification sent.
 
 **Result: NO-OP.** Portfolio ~$178 fully deployed. All stops healthy. Post-Memorial Day (May 26) review for XRP CLARITY Act entry when Senate resumes.
 
+---
+
+## 2026-05-25 — Midday Scan (Memorial Day)
+
+**Date:** 2026-05-25 | **Strategy:** Kraken Aggressive Profile
+
+### Market Snapshot (midday)
+- **BTC:** $76,459 ask | 24h open $76,670 = **-0.28%** | Crash gate: NOT triggered ✓
+- **NEAR:** $2.4135 | **ETH:** $2,097 | **LINK:** $9.434 | **SUI:** $1.046
+
+### STEP 2 — Current State (live Kraken)
+**Account:** ZUSD $0.14 | NEAR 38.00 | XETH 0.0197 | LINK 1.6268 | SUI 27.00 — fully deployed ✓
+
+**Positions & Trailing Stops:**
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.4135 | **+12.9%** | $2.51110 | $2.33540 (trail 7%) | 3.2% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,097.06 | **+3.5%** | $2,147.52 | $2,040.15 (trail 5%) | 2.7% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.434 | **+3.1%** | $9.76665 | $9.27832 (trail 5%) | **1.7%** | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.04590 | **-2.2%** | $1.06940 | $1.01600 (trail 5%) | 2.9% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Notable:** NEAR HWM ratcheted from $2.47210 → $2.51110 since overnight — NEAR hit a new session high (consistent with Arthur Hayes + AI narrative running). Stop ratcheted from $2.29910 → $2.33540. LINK buffer at 1.7% — thin but trailing stop doing its job (HWM $9.767, price pulled back to $9.434).
+
+**Alpaca:** No positions, no active orders. Stop a2b44cf9 cancelled 2026-05-22. ✓
+
+### STEP 3 — Trailing Stops Verified
+All 4 stops confirmed open via live orders query. No unprotected positions. ✓
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+- NEAR 38 @ $2.137: current $2.4135 = +12.9% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,097 = +3.5% — threshold: $2,431. Not yet.
+- LINK @ $9.147: current $9.434 = +3.1% — threshold: $10.976. Not yet.
+- SUI @ $1.069: current $1.046 = -2.2% — threshold: $1.283. Not yet.
+**No adjustments.**
+
+### STEP 5 — Thesis Check
+| Symbol | Catalyst | Status | Notes |
+|---|---|---|---|
+| NEAR | Arthur Hayes endorsement + AI/quantum-safe upgrades | **INTACT** | Perplexity confirms 14.8% 24h gain reported on CMC. Hayes called NEAR top altcoin May 23. AI narrative + dynamic resharding + post-quantum crypto upgrades running. HWM $2.5111 confirms momentum intact. |
+| ETH | Glamsterdam June 2026 + ETF inflows | **INTACT** | $356M net ETF inflows April 2026, whale accumulation 140K ETH/96h, Glamsterdam unchanged. |
+| LINK | ADI Foundation $240B + CCIP/RWA adoption | **INTACT** | Short-term sentiment neutral/bearish (RSI 44-47), but no fundamental break. $1.1M LINK added to reserve treasury. CCIP demand for tokenized RWAs ongoing. Support $9.1-$9.3. |
+| SUI | Hashi + free-tier payments + private tx launches; CME live | **INTACT** | Newest catalysts: Hashi product launch, free-tier payments, private transactions. TVL >$1B. CME contract live. Price at $1.046, -2.2% from entry, stop buffer 2.9%. |
+
+No thesis breaks. No emergency exits required.
+
+### STEP 6 — New Entry Scan
+**Kraken top gainers (midday):** ELX +527%, RHEA +97.76%, SAROS +36.84%, KET +128%, GRASS +35.9%
+- **SAROS:** $10M liquidity grant program cited, but no fresh May 25 catalyst — momentum repricing only. PASS.
+- **ELX / RHEA / KET:** No documented catalyst. PASS.
+- **GRASS:** DePIN narrative — assessed previously as momentum only. PASS.
+- **XRP:** CLARITY Act vote still pending; Memorial Day recess. Pass — revisit May 26.
+- **ZUSD $0.14:** Fully deployed; no margin setup with conviction threshold. No entries possible.
+
+**New entries: NONE.**
+
+### STEP 7 — Notification
+No actions taken → **no notification sent.**
+
+**Result: NO-OP.** All 4 stops healthy. NEAR continues running on Hayes/AI catalyst. LINK buffer at 1.7% (watch closely but no action — trailing stop managing correctly). Watch NEAR $2.564 for +20% stop tightening trigger. Post-Memorial Day (May 26): revisit XRP CLARITY Act entry when Senate resumes.
+
