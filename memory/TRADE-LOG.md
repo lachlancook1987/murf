@@ -1966,3 +1966,47 @@ No adjustments needed.
 | SUI/USD | 27.00 | $1.0689 | $1.059 | -0.8% | -$0.26 (-0.9%) | ONH4IU 5%, stop $1.016, HWM $1.069 |
 **Trades today:** NEAR/USD 12.30 trailing stop OCPEFI-MAHQ6-CW3ZHR triggered overnight (~$2.398, +18.0%) | SUI/USD BUY 27.00 @$1.0689 | **Total since migration:** 15
 **Notes:** Strong overnight recovery drove an 11.85% day gain vs yesterday's EOD of $157.76, mostly from open positions catching up after May 23's multi-stop cascade. NEAR 38 leads at +11.3% unrealized ($9.21); ETH and LINK both firmed ~4.5–4.6%; SUI new position fractionally underwater (-0.9%, $28.61 vs $28.86 cost). The NEAR 12.30 add (OCPEFI) exited cleanly at +18%, proceeds recycled into SUI 27 (CME futures + Grayscale S-1 thesis). BTC flat on the day (+0.09%, $76,670→$76,733) so bot outperformed by +11.76%. All four trailing stops confirmed active. Phase P&L now -$3.33 (-1.85%) from starting equity $179.78 — close to breakeven. Alpaca: stop a2b44cf9 remains cancelled; no Alpaca exposure.
+
+---
+
+## 2026-05-25 — Session-Open Scan (Monday)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.402 | **+12.4%** | $2.47210 | $2.29910 (trail 7%) | 4.2% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,117 | **+4.5%** | $2,147.52 | $2,040.15 (trail 5%) | 3.6% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.538 | **+4.3%** | $9.76665 | $9.27832 (trail 5%) | 2.7% | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.056 | **-1.2%** | $1.06940 | $1.01600 (trail 5%) | 3.8% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Account:** Kraken ZUSD $0.14 (fully deployed) | Alpaca: no positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+**BTC:** $76,984 ask | 24h open $76,670 = **+0.45%** | Crash gate: NOT triggered ✓
+**F&G:** 28 (Fear) | **Memorial Day (US):** May 25 today — Congress in recess, thin liquidity risk for altcoins
+
+**STEP 3 — Hard checks:**
+- Crash gate: +0.45% 24h — CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open, covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.402 = +12.4% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,117 = +4.5% — threshold: $2,431. Not yet.
+- LINK @ $9.147: current $9.538 = +4.3% — threshold: $10.976. Not yet.
+- SUI @ $1.069: current $1.056 = -1.2% — threshold: $1.283. Not yet.
+No adjustments.
+
+**STEP 5 — Thesis check (from today's research log):**
+- NEAR: Grayscale ETF S-1 + Arthur Hayes AI narrative — INTACT
+- ETH: Glamsterdam Q3 2026 upgrade — INTACT
+- LINK: ADI Foundation $240B + DTCC integration — INTACT
+- SUI: CME futures live (May 4) + gasless stablecoins (May 22) — PARTIAL (CME already live, thesis intact but "upcoming" angle expired; position -1.2%, stop healthy at 3.8% buffer)
+
+**STEP 6 — New entries:**
+- ZUSD $0.14 — insufficient for any spot order
+- Margin: no confirmed catalyst + conviction threshold met; Fear & Greed 28; Memorial Day illiquidity
+- XRP: CLARITY Act markup expected post-recess (May 26+); pass today, revisit tomorrow
+- No new trades qualify
+
+**Unrealized P&L (approx):** NEAR +$9.99 | ETH +$1.79 | LINK +$0.64 | SUI -$0.35 | Total: **+$12.07**
+**Portfolio approx:** ~$177.10 | Phase P&L vs $179.78 start: **-$2.68 (-1.49%)**
+
+**Decision: HOLD — No New Trades.** No notification sent. All stops healthy. Watch NEAR $2.564 for stop tightening trigger; watch post-Memorial Day for XRP CLARITY Act entry opportunity.
