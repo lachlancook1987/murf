@@ -6584,3 +6584,63 @@ All new entries require margin (ZUSD $0.14 insufficient for spot). Capital frees
 
 **Decision: HOLD existing positions. New entries contingent on stop triggers. Alert HYPE and XRP as watchlist.**
 
+---
+
+## 2026-05-24 — Midday Scan
+
+**Date:** 2026-05-24 | **Strategy:** Kraken Aggressive Profile | **Branch:** claude/brave-newton-zNgSp
+
+### Market Snapshot (midday)
+- **BTC:** $76,751 (Kraken) | 24h: +1.81% — crash gate CLEAR ✓
+- **ETH:** $2,086 | NEAR: $2.419 | XRP: $1.344
+- **F&G:** 28 (Fear, unchanged)
+- **Key catalyst:** CLARITY Act Senate Banking Committee cleared 15-9 (May 14); floor vote expected post-Memorial Day recess (week of May 26)
+
+### STEP 2 — Current State (live pull)
+**Stops found on orders pull:** Only 2 of 4 (NEAR OSX7LL + ETH O6GVNC). LINK OZ3567 and SUI ONH4IU missing — confirmed triggered.
+
+**Account balances confirmed:**
+- NEAR: 38.00 ✓ | XETH: 0.0197 ✓ | LINK: 0.0009 (dust) | SUI: 0.00 | ZUSD: $42.30 (freed from stops)
+
+**NEAR stop update:** HWM ratcheted to $2.511 (24h high) from prior $2.472; stop moved to $2.335 (+7% trailing). ✓
+
+### STEP 3 — Stop Verification
+- NEAR: OSX7LL-VVQZV-JPVWBB | 38 NEAR | 7% trail | stop $2.335 | HWM $2.511 ✓
+- ETH: O6GVNC-H2KL5-3K2WQG | 0.0197 ETH | 5% trail | stop $2,040 | HWM $2,147.52 ✓
+- LINK: CLOSED — stop triggered (OZ3567, 24h low $9.248 < stop $9.278)
+- SUI: CLOSED — stop triggered (ONH4IU, 24h low $1.006 < stop $1.016)
+
+### STEP 4 — Stop Tightening
+- NEAR: entry $2.137, current $2.419 = +13.2% — threshold +20% = $2.564. Not yet.
+- ETH: entry $2,026, current $2,086 = +2.96% — threshold +20% = $2,431. Not yet.
+No adjustments.
+
+### STEP 5 — Thesis Check
+| Symbol | Catalyst | Status |
+|---|---|---|
+| NEAR | Grayscale ETF S-1 + Arthur Hayes AI | INTACT — running +13.2%, stop ratcheted to $2.335 |
+| ETH | Glamsterdam Q3 2026 | INTACT — retreated from $2,148 HWM to $2,086; stop buffer 2.2% |
+| LINK | ADI Foundation $240B | CLOSED (stop) — no thesis break, price action triggered |
+| SUI | CME futures + stablecoins | CLOSED (stop) — CME catalyst stale (launched May 4 not May 29) |
+
+### STEP 6 — New Entry: XRP/USD
+**Catalyst:** CLARITY Act cleared Senate Banking Committee 15-9 on May 14. Senate floor vote upcoming post-Memorial Day (Congress returns May 26). Pre-positioning on intraday dip (-0.97% from 24h open $1.357). Binary regulatory catalyst asset per strategy = 7% trail.
+- **Spread:** 0.005% ✓ | **Asset confirmed:** XXRPZUSD on Kraken ✓
+- **Entry:** $1.34427 market, 31 XRP, O3EFWV-DJBYW-RXVAZU
+- **Stop:** OCLYQ6-H45E6-KDCK4X | trailing_stop 7% | stop $1.250 | HWM $1.344
+- **Size:** $41.67 (all available ZUSD — idle capital is wasted capital)
+- **Target:** T1 $1.70 (+26.5%), T2 $2.00 (+49%) | R:R ~3.8:1 at T1
+
+**Why XRP over HYPE (prior session's preferred name):** Prior session flagged HYPE contingent on LINK trigger + fresh intraday research. Midday research showed no specific intraday HYPE catalyst confirmed. XRP has a specific, near-dated legislative trigger (floor vote week of May 26). Combined LINK+SUI proceeds deployed into single XRP position.
+
+### STEP 7 — Notification Sent ✓
+Actions taken: LINK stopped out, SUI stopped out, XRP BUY 31 @ $1.344 + stop placed.
+
+### Final Portfolio
+| Symbol | Qty | Entry | Current | P&L% | Stop | HWM | Order |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.419 | +13.2% | $2.335 (7%) | $2.511 | OSX7LL ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,086 | +2.96% | $2,040 (5%) | $2,147.52 | O6GVNC ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.344 | ~0% | $1.250 (7%) | $1.344 | OCLYQ6 ✓ |
+**ZUSD:** $0.29 | **Stops:** 3/3 ✓
+
