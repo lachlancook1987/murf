@@ -2267,3 +2267,51 @@ No unprotected positions. No orphaned orders.
 **Decision: HOLD — No New Trades. No notification sent. No commit required.**
 
 **Watch:** XRP Senate CLARITY Act floor vote this week (May 26+); AVAX at HWM $9.37 — stop auto-ratcheting correctly; ETH buffer 3.49% (above critical 2% floor); ONDO weakest position — if stop at $0.41676 triggers, rotate ALL proceeds into HYPE/USD market order at ~$63 with 5% trailing stop.
+
+---
+
+## 2026-05-25 — Midday Scan
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.40 | **+1.95%** | $9.41 | $8.76 (trail 7%) | 6.38% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.1 | ~$0.448 | $0.43057 | **-3.89%** | $0.44812 | $0.41676 (trail 7%) | 3.21% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.35821 | **+1.06%** | $1.36309 | $1.26768 (trail 7%) | 6.66% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,113.58 | **+4.32%** | $2,147.52 | $2,040.15 (trail 5%) | 3.47% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**Account:** Kraken ZUSD $0.00 (fully deployed) | Alpaca: stop a2b44cf9 CANCELLED (2026-05-22T05:22Z); no positions, no active orders. ✓
+**BTC:** ~$77,081–$77,419 | 24h: **+0.42–0.81%** | Crash gate: **NOT triggered** ✓
+**Portfolio estimate:** AVAX 4.82×$9.40=$45.31 + ONDO 101.1×$0.43057=$43.53 + XRP 31×$1.35821=$42.10 + ETH 0.0197×$2,113.58=$41.64 = **~$172.58**
+**Phase P&L vs $179.78 start:** **-$7.20 (-4.01%)**
+
+**STEP 3 — Trailing stops verified (live Kraken orders API):**
+- AVAX: OLCZTS-Q5PS4-3T3UFD, 4.82 AVAX, trail +7%, stop $8.76, HWM $9.41 (new 24h high — stop ratcheted up from $8.72) ✓
+- ONDO: OX6MNX-DLDMM-PZ3J4Y, 101.10 ONDO, trail +7%, stop $0.41676, HWM $0.44812 ✓
+- XRP: OCLYQ6-H45E6-KDCK4X, 31.00 XRP, trail +7%, stop $1.26768, HWM $1.36309 ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- AVAX +1.95% → threshold $11.064 — not yet
+- ONDO -3.89% → threshold $0.5376 — not yet
+- XRP +1.06% → threshold $1.613 — not yet
+- ETH +4.32% → threshold $2,431 — not yet
+**No adjustments.**
+
+**STEP 5 — Thesis check (Perplexity):**
+| Symbol | Status | Notes |
+|---|---|---|
+| AVAX | **INTACT** | CME AVAX futures launched May 22; Kraken staking active May 22; Grayscale flagged as regulatory tailwind beneficiary. Price $9.40 near HWM $9.41 — stop auto-ratcheted correctly. Mixed short-term sentiment but no protocol failure. |
+| ONDO | **INTACT — WATCH STOP** | Token unlock overhang (Jan 2026) cited as bearish pressure; some sources project $0.39–$0.36 near-term. No protocol exploit, rug, or regulatory action. RWA sector thesis (70% share, fee-switch H2 2026) intact. Buffer 3.21% above 2% critical floor — stop handles downside. |
+| XRP | **INTACT — CATALYSING** | CLARITY Act Senate Banking Committee 15-9 passage (May 14) confirmed. Senate floor vote still pending (Congress returned from Memorial Day recess today/tomorrow). No adverse news. Binary catalyst 7% trail in place. |
+| ETH | **INTACT** | Glamsterdam upgrade target June 2026 (potential Q3 slip noted by one source). Changelly forecasts $2,196 by May 27, $2,342 by May 29. Current $2,113 — above entry $2,026, buffer 3.47% above 2% critical floor. ETF inflows ongoing. |
+
+**STEP 6 — New entry scan:**
+- ZUSD $0.00 — no spot orders possible.
+- Kraken gainers (Perplexity): OMNI +174%, MAT +66%, DOLO +53%, others +30–50% — micro-caps; no documented catalyst; PASS.
+- Margin: BTC +0.42%, F&G Fear — no high-conviction setup identified beyond existing watchlist; no margin entries justified.
+- **WATCHLIST active:** HYPE (#1 rotation on any stop trigger), SOL (#2), ETH add (#3).
+
+**Result: NO-OP. No trades. No stops tightened. No notification sent.**
+
+**Watch:** ONDO buffer 3.21% — thin; if price breaks $0.427 support, stop at $0.41676 fires → rotate ALL ONDO proceeds into HYPE/USD market order with 5% trailing stop. XRP CLARITY Act Senate floor vote expected May 26+. AVAX stop ratcheted to $8.76 (HWM $9.41).
