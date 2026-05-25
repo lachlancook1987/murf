@@ -2315,3 +2315,51 @@ No unprotected positions. No orphaned orders.
 **Result: NO-OP. No trades. No stops tightened. No notification sent.**
 
 **Watch:** ONDO buffer 3.21% — thin; if price breaks $0.427 support, stop at $0.41676 fires → rotate ALL ONDO proceeds into HYPE/USD market order with 5% trailing stop. XRP CLARITY Act Senate floor vote expected May 26+. AVAX stop ratcheted to $8.76 (HWM $9.41).
+
+---
+
+## 2026-05-25 — Midday Scan #2
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM (API) | Stop (API) | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.32 | **+1.08%** | $9.49 (new!) | $8.83 (trail 7%) | 5.25% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.10 | ~$0.448 | $0.43947 | **-1.90%** | $0.44812 | $0.41676 (trail 7%) | 5.17% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.35223 | **+0.61%** | $1.36439 (new!) | $1.26889 (trail 7%) | 6.16% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,107.24 | **+4.01%** | $2,147.52 | $2,040.15 (trail 5%) | 3.18% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**Account:** Kraken ZUSD $0.00 (fully deployed) | Alpaca: no positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+**BTC:** $77,238 ask | 24h open $76,981 = **+0.33%** | Crash gate: **NOT triggered** ✓
+**Portfolio estimate:** AVAX 4.82×$9.32=$44.92 + ONDO 101.1×$0.43947=$44.43 + XRP 31×$1.35223=$41.92 + ETH 0.0197×$2,107.24=$41.51 = **~$172.78**
+**Phase P&L vs $179.78 start:** **-$7.00 (-3.89%)**
+
+**STEP 3 — Trailing stops verified (live Kraken orders API):**
+- AVAX: OLCZTS-Q5PS4-3T3UFD, 4.82 AVAX, trail +7%, stop $8.83, HWM $9.49 — auto-ratcheted from $8.76/$9.41 (AVAX hit new session high $9.49 since last scan) ✓
+- ONDO: OX6MNX-DLDMM-PZ3J4Y, 101.10 ONDO, trail +7%, stop $0.41676, HWM $0.44812 ✓
+- XRP: OCLYQ6-H45E6-KDCK4X, 31.00 XRP, trail +7%, stop $1.26889, HWM $1.36439 — auto-ratcheted from $1.26768/$1.36309 ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- AVAX +1.08% → threshold $11.064 — not yet
+- ONDO -1.90% → threshold $0.5376 — not yet
+- XRP +0.61% → threshold $1.613 — not yet
+- ETH +4.01% → threshold $2,431 — not yet
+**No adjustments.**
+
+**STEP 5 — Thesis check (Perplexity):**
+| Symbol | Status | Notes |
+|---|---|---|
+| AVAX | **INTACT** | No fresh breaking news today. TA sources bearish-to-neutral near-term ($9.00–$9.25 targets cited by CoinCodex/MEXC). CME futures (live May 22) + Kraken staking thesis unchanged. Price pulled back from $9.49 HWM to $9.32 — stop auto-ratcheted correctly, protecting at $8.83. No protocol failure. |
+| ONDO | **INTACT — IMPROVING** | Up ~3–5% today. RWA + AI narrative traction; ONDO listed as top daily gainer. Buffer improved from 3.21% → 5.17%. Short-term selling pressure still noted (exchange net flows positive inbound). HWM $0.44812 unchanged — price hasn't set new high. RWA thesis ($29B tokenization, 70% sector share, fee-switch H2 2026) intact. |
+| XRP | **INTACT — CATALYSING** | Price $1.352, range $1.342–$1.364 today. CLARITY Act Senate floor vote still pending — today is Memorial Day (US), Senate resumes May 26+. Perplexity unable to confirm vote today; consistent with holiday recess. Binary catalyst loading. Stop auto-ratcheted to $1.26889 (HWM $1.36439). |
+| ETH | **INTACT** | Slight pullback from earlier session ($2,113 → $2,107). Whale accumulation and ETF inflows cited. One Perplexity source flagged "Hegota" as upgrade name for late-2026 (possible naming discrepancy vs "Glamsterdam") — thesis is an Ethereum protocol upgrade in H2 2026 regardless of name. Buffer 3.18%, above 2% critical floor. |
+
+**STEP 6 — New entry scan:**
+- ZUSD $0.00 — no spot entries possible.
+- Kraken gainers today (Perplexity): ROB +1,191% (micro-cap, no catalyst — PASS), POND +71% (no catalyst — PASS), PLAY +56% (micro-cap — PASS), RENDER +9.82% ($1.12B mcap), INJ +9.23% ($563M mcap).
+- RENDER/INJ: Larger liquid names with AI/DeFi narratives. No specific breaking catalyst identified for either. Without high-conviction catalyst + F&G Fear (~28–30), no margin entry justified.
+- **WATCHLIST:** HYPE (#1 on any stop trigger), RENDER (#2 — AI narrative + large cap), XRP leveraged add (#3 on CLARITY Act passage).
+
+**Result: NO-OP. No trades. No stops tightened (Kraken auto-ratcheted AVAX and XRP correctly). No notification sent.**
+
+**Watch:** XRP CLARITY Act Senate floor vote expected May 26+ (Senate back from Memorial Day recess). ONDO buffer improved to 5.17% — if ONDO holds above $0.43, thesis strengthening. ETH buffer 3.18% — above 2% floor but watch for further pullback. AVAX HWM $9.49 — if reclaimed and held, continuation possible.
