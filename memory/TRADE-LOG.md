@@ -2086,3 +2086,15 @@ No adjustments.
 - ETH stop ($2,040) → ~$40.20 freed → NEAR re-entry or XRP add
 - XRP stop ($1.255) → ~$38.91 freed → NEAR add or ETH add
 - Watch NEAR $2.564 for stop tightening trigger (3% trail); watch May 26 for XRP CLARITY Act Senate floor vote
+
+---
+
+### May 25 — EOD Snapshot (Day 16, Monday)
+**Portfolio:** $174.98 | **Cash:** $0.29 (0.17%) | **Day P&L:** -$1.47 (-0.83%) | **Phase P&L:** -$4.80 (-2.67%) | **vs BTC:** -0.96%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.406 | +0.49% | +$10.21 (+12.6%) | OSX7LL 7%, stop $2.335, HWM $2.511 |
+| ETH/USD | 0.0197 | $2,026.00 | $2,101 | +0.19% | +$1.48 (+3.7%) | O6GVNC 5%, stop $2,040, HWM $2,148 |
+| XRP/USD | 31.00 | $1.344 | $1.351 | +0.13% | +$0.20 (+0.5%) | OCLYQ6 7%, stop $1.258, HWM $1.352 |
+**Trades today:** none | **Total since migration:** 18
+**Notes:** Quiet Memorial Day (US holiday) session. Portfolio slipped -$1.47 (-0.83%) vs yesterday's official EOD of $176.45 (note: May 24 EOD was captured before the midday LINK/SUI exits + XRP entry; current positions reflect correct post-transition state). NEAR leads at +12.6% unrealized ($10.21); ETH +3.7% ($1.48); XRP barely off entry at +0.5% ($0.20) — awaiting post-recess CLARITY Act Senate floor vote (week of May 26). BTC +0.13% on the day; bot underperformed by -0.96% on thin holiday liquidity. All three trailing stops active and healthy. ZUSD effectively zero ($0.29). Phase P&L: -$4.80 (-2.67%) from $179.78 Kraken start. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no exposure.
