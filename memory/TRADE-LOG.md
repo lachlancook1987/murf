@@ -2098,3 +2098,20 @@ No adjustments.
 | XRP/USD | 31.00 | $1.344 | $1.351 | +0.13% | +$0.20 (+0.5%) | OCLYQ6 7%, stop $1.258, HWM $1.352 |
 **Trades today:** none | **Total since migration:** 18
 **Notes:** Quiet Memorial Day (US holiday) session. Portfolio slipped -$1.47 (-0.83%) vs yesterday's official EOD of $176.45 (note: May 24 EOD was captured before the midday LINK/SUI exits + XRP entry; current positions reflect correct post-transition state). NEAR leads at +12.6% unrealized ($10.21); ETH +3.7% ($1.48); XRP barely off entry at +0.5% ($0.20) — awaiting post-recess CLARITY Act Senate floor vote (week of May 26). BTC +0.13% on the day; bot underperformed by -0.96% on thin holiday liquidity. All three trailing stops active and healthy. ZUSD effectively zero ($0.29). Phase P&L: -$4.80 (-2.67%) from $179.78 Kraken start. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no exposure.
+
+---
+
+## 2026-05-25 — Manual Exit: NEAR/USD
+
+### CLOSED — NEAR/USD (manual profit-take)
+- **Exit:** ~$2.365 (market) | Order: OGHTS6-SXO7K-MFR6RV
+- **Entry:** $2.137 | **Qty:** 38.00 | **Proceeds:** $89.88 | **P&L:** +10.7% | **+$8.68**
+- **Reason:** User profit-take. Price had pulled back 5.1% from HWM ($2.511→$2.382) with only 2% buffer to trailing stop — elected to lock in gains manually rather than risk stop triggering in thin Memorial Day liquidity. Catalyst (Grayscale NEAR ETF S-1 + Hayes AI narrative) intact but momentum fading.
+- **Trailing stop OSX7LL cancelled** prior to market sell ✓
+
+**Portfolio post-exit:**
+| Symbol | Qty | Entry | Stop | Unrealized P&L |
+|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026.00 | O6GVNC 5%, stop $2,040 | ~+3.7% |
+| XRP/USD | 31.00 | $1.344 | OCLYQ6 7%, stop $1.258 | ~+0.5% |
+**ZUSD:** $90.18 | **Total since migration:** 19
