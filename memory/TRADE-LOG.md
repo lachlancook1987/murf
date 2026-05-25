@@ -2090,14 +2090,15 @@ No adjustments.
 ---
 
 ### May 25 — EOD Snapshot (Day 16, Monday)
-**Portfolio:** $174.98 | **Cash:** $0.29 (0.17%) | **Day P&L:** -$1.47 (-0.83%) | **Phase P&L:** -$4.80 (-2.67%) | **vs BTC:** -0.96%
+**Portfolio:** $173.20 | **Cash:** $0.00 (0%) | **Day P&L:** -$3.25 (-1.84%) | **Phase P&L:** -$6.58 (-3.66%) | **vs BTC:** -2.20%
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
 |---|---|---|---|---|---|---|
-| NEAR/USD | 38.00 | $2.137 | $2.406 | +0.49% | +$10.21 (+12.6%) | OSX7LL 7%, stop $2.335, HWM $2.511 |
-| ETH/USD | 0.0197 | $2,026.00 | $2,101 | +0.19% | +$1.48 (+3.7%) | O6GVNC 5%, stop $2,040, HWM $2,148 |
-| XRP/USD | 31.00 | $1.344 | $1.351 | +0.13% | +$0.20 (+0.5%) | OCLYQ6 7%, stop $1.258, HWM $1.352 |
-**Trades today:** none | **Total since migration:** 18
-**Notes:** Quiet Memorial Day (US holiday) session. Portfolio slipped -$1.47 (-0.83%) vs yesterday's official EOD of $176.45 (note: May 24 EOD was captured before the midday LINK/SUI exits + XRP entry; current positions reflect correct post-transition state). NEAR leads at +12.6% unrealized ($10.21); ETH +3.7% ($1.48); XRP barely off entry at +0.5% ($0.20) — awaiting post-recess CLARITY Act Senate floor vote (week of May 26). BTC +0.13% on the day; bot underperformed by -0.96% on thin holiday liquidity. All three trailing stops active and healthy. ZUSD effectively zero ($0.29). Phase P&L: -$4.80 (-2.67%) from $179.78 Kraken start. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no exposure.
+| AVAX/USD | 4.82 | $9.22 | $9.34 | +1.52% | +$0.58 (+1.30%) | OLCZTS 7%, stop $8.69, HWM $9.34 |
+| ONDO/USD | 101.10 | $0.448 | $0.4387 | +0.04% | -$0.94 (-2.08%) | OX6MNX 7%, stop $0.41676, HWM $0.44812 |
+| XRP/USD | 31.00 | $1.344 | $1.3617 | +0.94% | +$0.55 (+1.32%) | OCLYQ6 7%, stop $1.26768, HWM $1.36309 |
+| ETH/USD | 0.0197 | $2,026 | $2,112 | +0.71% | +$1.70 (+4.26%) | O6GVNC 5%, stop $2,040.15, HWM $2,147.52 |
+**Trades today:** NEAR/USD 38.00 trailing stop OSX7LL triggered (~$2.335, +9.3%, +$7.52) | AVAX/USD BUY 4.82 @$9.22 | ONDO/USD BUY 101.10 @$0.448 | **Total since migration:** 21
+**Notes:** NEAR 7% trailing stop (OSX7LL) triggered on a pullback from HWM $2.511, locking in +9.3% ($7.52 realized). Proceeds (~$88.73) recycled ~50/50 into AVAX ($44.44, trail 7%) and ONDO ($45.30, trail 7%). AVAX up +1.52% on the day, HWM ratcheted to match current ask ($9.34); ONDO fractionally underwater (-2.08%) with healthy 5.84% stop buffer. XRP +0.94% intraday — CLARITY Act Senate floor vote expected week of May 26 post-recess; ETH +0.71%, trailing near HWM $2,147.52 with 3.4% buffer. All four trailing stops confirmed active and covering full quantities. Day P&L -$3.25 (-1.84%) vs May 24 EOD $176.45; BTC gained +0.36% so bot underperformed by -2.20% — drag from NEAR proceeds deployed into ONDO at a slight dip. Phase P&L: -$6.58 (-3.66%) from $179.78 Kraken start. ZUSD $0.00 (fully deployed). Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure.
 
 ---
 
