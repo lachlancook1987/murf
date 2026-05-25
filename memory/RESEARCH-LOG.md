@@ -6863,3 +6863,163 @@ All 4 stops healthy. No unprotected positions. No orphaned orders. ✓
 **Result: NO-OP. All 4 stops healthy and self-ratcheting correctly (AVAX + XRP new HWMs). No trades. No stops tightened. No notification sent.**
 
 **Watch:** XRP CLARITY Act Senate floor vote imminent (Congress back); AVAX stop ratcheted to $8.83 (HWM $9.49); ONDO buffer 4.39% — improved, stop at $0.41676 manages downside; ETH buffer 4.00% healthy. HYPE #1 rotation on any stop trigger.
+
+---
+
+## 2026-05-25 — Pre-Session Research
+
+### Account Snapshot
+
+| Broker | Balance | Status |
+|---|---|---|
+| Kraken ZUSD | $0.00 | Fully deployed |
+| Kraken ZAUD | $0.1066 | Negligible |
+| Alpaca | No positions | Stop a2b44cf9 cancelled 2026-05-22; no active orders |
+
+**Open Kraken positions (spot):**
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Trail | Buffer | Order ID |
+|---|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.45 | **+2.49%** | $9.49 | $8.83 | 7% | 6.56% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.10 | ~$0.448 | $0.4401 | **-1.78%** | $0.44812 | $0.41676 | 7% | 5.30% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.3622 | **+1.35%** | $1.36439 | $1.26889 | 7% | 6.85% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,131.74 | **+5.21%** | $2,147.52 | $2,040.15 | 5% | 4.30% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**Portfolio estimate:** AVAX 4.82×$9.45=$45.55 + ONDO 101.1×$0.4401=$44.49 + XRP 31×$1.3622=$42.23 + ETH 0.0197×$2,131.74=$42.00 = **~$174.27**
+**Phase P&L vs $179.78 start:** **-$5.51 (-3.06%)** — improving trend vs -$6.31 at prior midday
+
+All 4 trailing stops confirmed live in Kraken orders API. No unprotected positions. No orphaned orders. ✓
+
+---
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$77,080 (Kraken) | +0.47% 24h |
+| ETH | $2,131.74 | +1.64% 24h (Kraken open $2,097.36) |
+| Fear & Greed | **30 (Fear)** | Alternative.me 30, Binance 41 (Neutral) |
+| BTC Funding Rate | +0.0014% (Binance) / -0.0058% (BitMEX) | Low/neutral — not frothy |
+| Crash gate | **NOT triggered** | BTC +0.47% (far from -20%) |
+
+**Top 24h gainers (CoinGecko):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38%, GWEI +30%, GUN +29%, CORE +25%, UAI +24%, KOGE +22%
+
+**Kraken-listed movers:** OMNI +174%, MAT +66%, DOLO +53%, REX/INIT/UFD +30-50% — micro-caps, no documented catalyst, all PASS
+
+**Key news & catalysts:**
+- Trump Media moved 2,650 BTC to Crypto.com (institutional treasury action)
+- Fed proposal for payment accounts for non-traditional institutions (crypto-supportive)
+- CLARITY Act (XRP catalyst): Senate Banking Committee 15-9 approval confirmed May 14; Senate floor vote imminent this week (Congress back from Memorial Day recess)
+- Hyperliquid (HYPE) cited as strong performer in multiple sources — perp DEX dominance
+- Chainlink CCIP institutional adoption highlighted as DeFi infrastructure catalyst
+
+**Token unlocks this week (May 25-31):** SUI $14.85M, EIGEN $8.23M, XPL $7.24M, OP $3.94M, GUN notable — SUI/OP unlock pressure a headwind for those assets this week
+
+---
+
+### Trailing Stop Verification
+
+| Order | Asset | Qty | Trail | Stop | HWM | Status |
+|---|---|---|---|---|---|---|
+| OLCZTS-Q5PS4-3T3UFD | AVAX | 4.82 | 7% | $8.83 | $9.49 | ✓ auto-ratcheted |
+| OX6MNX-DLDMM-PZ3J4Y | ONDO | 101.10 | 7% | $0.41676 | $0.44812 | ✓ |
+| OCLYQ6-H45E6-KDCK4X | XRP | 31.00 | 7% | $1.26889 | $1.36439 | ✓ auto-ratcheted |
+| O6GVNC-H2KL5-3K2WQG | ETH | 0.0197 | 5% | $2,040.15 | $2,147.52 | ✓ |
+
+Note: ONDO 24h high $0.44883 slightly above HWM $0.44812 — Kraken trailing stop may auto-ratchet stop to ~$0.41741 intraday.
+
+---
+
+### Stop Tightening Check (≥+20% from entry threshold)
+
+| Asset | Entry | Threshold | Current | Status |
+|---|---|---|---|---|
+| AVAX | $9.22 | $11.064 | $9.45 | Not yet |
+| ONDO | $0.448 | $0.5376 | $0.4401 | Not yet |
+| XRP | $1.344 | $1.613 | $1.3622 | Not yet |
+| ETH | $2,026 | $2,431 | $2,131.74 | Not yet |
+
+No manual stop adjustments needed.
+
+---
+
+### Thesis Check
+
+| Symbol | Status | Notes |
+|---|---|---|
+| AVAX | **INTACT** | CME AVAX futures launched May 22 + Kraken staking = institutional access improving. Perplexity: bearish near-term technicals (RSI 45, mixed indicators), $9 support key. Current $9.45 above stop; HWM $9.49 = session high. Buffer 6.56% — healthy. |
+| ONDO | **INTACT — WATCH** | RWA sector tailwinds intact (70% market share, fee-switch H2 2026). Support $0.42 holding; resistance $0.46-$0.48. Near-term price sensitive to token-unlock overhang and sector flows. Buffer 5.30% — above critical 2% floor. |
+| XRP | **INTACT — CATALYSING** | CLARITY Act Senate floor vote IMMINENT this week (Congress returned Memorial Day). Committee 15-9 approval May 14 confirmed. Resistance $1.45-$1.50; breakout targets $1.65 T1 / $1.80 T2. Binary catalyst — 7% trail correct. |
+| ETH | **INTACT — STRENGTHENING** | $2,131, +5.21% from entry. Glamsterdam upgrade June 2026 (possible Q3 slip). Changelly targets $2,196 by May 27, $2,342 by May 29. Buffer 4.30% above stop. ETF inflows ongoing. |
+
+---
+
+### Trade Ideas
+
+**Execution constraint:** ZUSD $0.00 — no spot orders possible without liquidating an existing position. All ideas below activate on rotation (stop trigger) or confirmed Kraken margin headroom.
+
+**Idea 1 (PRIMARY — ROTATION READY): HYPE/USD**
+- **Catalyst:** Hyperliquid #1 perp DEX by volume; ETF narrative; cited as strong performer across multiple Perplexity sources today; HYPE +7.4% noted in prior scans
+- **Entry:** Market ~$62.13 (immediate on any stop trigger)
+- **Stop:** 5% trailing (`trail_percent: 5`)
+- **Target:** $68 T1 (+9.4%), $72 T2 (+15.9%), R:R ~2:1
+- **Size:** 100% of freed ZUSD on rotation
+- **Pair:** HYPE/USD ✓ | Spread: $0.01/$62.13 = **0.016%** ✓ | 2x leverage available ✓
+- **Priority:** Execute immediately when ONDO, AVAX, XRP, or ETH stop fires
+
+**Idea 2: XRP leveraged add — CLARITY Act binary catalyst**
+- **Catalyst:** Senate floor vote imminent this week; passage could push XRP to $1.65-$1.80 near-term
+- **Entry:** Market ~$1.362, 2x leverage if Kraken free margin confirmed
+- **Stop:** 7% trailing (`trail_percent: 7`, binary catalyst rule)
+- **Target:** $1.65 T1 (+21%), $1.80 T2 (+32%), R:R ~3:1 at 2x leverage
+- **Size:** ~$40 notional (2x leverage = ~$20 margin) — pending margin availability check
+- **Pair:** XRP/USD ✓ | Spread: 0.013% ✓ | 2x margin confirmed
+- **Priority:** Check Kraken free margin before executing; CLARITY Act timing is the trigger
+
+**Idea 3: LINK/USD — DeFi infrastructure rotation**
+- **Catalyst:** Chainlink CCIP institutional adoption (cited by Perplexity as DeFi infrastructure catalyst); LINK +2.01% today (open $9.42, current $9.61)
+- **Entry:** Market ~$9.61 on ONDO or AVAX rotation
+- **Stop:** 5% trailing
+- **Target:** $10.50 T1 (+9.3%), $11.00 T2 (+14.4%), R:R ~1.9:1
+- **Size:** 50% of freed ZUSD if HYPE already held
+- **Pair:** LINK/USD ✓ | Spread: $0.0019/$9.61 = **0.020%** ✓ | Up to 10x leverage (use 2x max)
+
+**Idea 4 (CONTINGENCY): ETH leveraged add**
+- **Catalyst:** Glamsterdam June 2026; ETF inflows; +5.21% from entry already strong
+- **Entry:** Market ~$2,131 if ETH breaks above $2,150 resistance
+- **Stop:** 5% trailing alongside existing position stop
+- **Target:** $2,342 T1 (+10%), R:R ~2:1
+- **Size:** ~$40 notional (add to existing) — pending ZUSD/margin
+- **Priority:** #3 on rotation after HYPE and LINK
+
+**Idea 5 (PASS — micro-cap): OMNI/MAT/DOLO**
+- 24h gainers +50-174% on Kraken — no documented catalyst beyond price action; spread risk high; **PASS**
+
+---
+
+### Risk Factors
+
+1. **ZUSD $0.00** — fully deployed; any new trade requires margin or stop trigger first
+2. **ONDO weakest** — buffer 5.30%, below $0.42 support = stop at $0.41676 fires; rotate ALL into HYPE immediately on trigger
+3. **XRP binary catalyst risk** — Senate floor vote could stall or slip to June; if delayed, XRP stagnates near $1.36
+4. **AVAX near-term technicals mixed** — RSI 45, bearish signals noted; $9 support key; stop at $8.83 gives 6.56% buffer
+5. **SUI $14.85M unlock this week** — not held, but signals broader unlock pressure on alts
+6. **F&G still Fear (30)** — recovering slowly; market hesitant despite CLARITY Act progress
+7. **BTC funding rates neutral** — neither frothy (overheated longs) nor panic (extreme shorts); neutral backdrop
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC +0.47% in 24h). TRADE stance.**
+
+- All 4 existing positions: theses intact, stops healthy, buffers adequate. No emergency exits. No manual adjustments.
+- **New entries blocked** by ZUSD = $0. Rotation watchlist is armed and ready:
+  - #1: HYPE/USD (immediate market order with 5% trailing stop on any stop trigger)
+  - #2: LINK/USD (50% of freed ZUSD alongside HYPE, or full on ONDO rotation alone)
+  - #3: XRP leveraged add (pending margin confirmation, binary catalyst timing)
+- **XRP priority watch:** CLARITY Act Senate floor vote this week — if passes, target $1.65 and consider leveraged add
+- **ONDO watch:** Buffer 5.30%; if $0.42 breaks → stop at $0.41676 fires → HYPE rotation executes immediately
+
+**Planned trades:** HYPE/USD (on rotation) + XRP leveraged add (pending margin check, CLARITY Act trigger)
+
