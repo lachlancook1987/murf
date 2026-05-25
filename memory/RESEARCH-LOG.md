@@ -6644,3 +6644,75 @@ Actions taken: LINK stopped out, SUI stopped out, XRP BUY 31 @ $1.344 + stop pla
 | XRP/USD | 31.00 | $1.344 | $1.344 | ~0% | $1.250 (7%) | $1.344 | OCLYQ6 ✓ |
 **ZUSD:** $0.29 | **Stops:** 3/3 ✓
 
+---
+
+## 2026-05-25 — Midday Scan #2
+
+**Date:** 2026-05-25 | **Strategy:** Kraken Aggressive Profile
+
+### STEP 1 — Account Snapshot (live Kraken API)
+| Asset | Balance |
+|---|---|
+| AVAX | 4.8211197 |
+| ONDO | 101.10000 |
+| XETH | 0.01970000 |
+| XXRP | 31.00000000 |
+| ZUSD | $0.00 (fully deployed) |
+
+### STEP 2 — Market Snapshot
+- **BTC:** ~$77,000 | 24h: flat to +0.4% | **Crash gate: NOT triggered ✓**
+- **F&G:** 25 (Extreme Fear) | Memorial Day holiday — thin US volumes
+- **AVAX:** $9.28 ask | **ONDO:** $0.44192 | **XRP:** $1.35532 | **ETH:** $2,106.29
+
+### STEP 3 — Trailing Stops Verified (live orders API)
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.28 | **+0.65%** | $9.29 | $8.64 (trail 7%) | 6.9% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.1 | ~$0.448 | $0.44193 | **-1.36%** | $0.44812 | $0.41676 (trail 7%) | 5.7% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.35532 | **+0.84%** | $1.35641 | $1.26147 (trail 7%) | 6.9% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,106.29 | **+3.96%** | $2,147.52 | $2,040.15 (trail 5%) | 3.14% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+All 4 trailing stops confirmed open via live orders query. No unprotected positions. ✓
+
+**Alpaca:** Stop a2b44cf9 CANCELLED (2026-05-22T05:22Z confirmed). No Alpaca positions or active orders. ✓
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+- AVAX +0.65% → threshold $11.06 — not yet
+- ONDO -1.36% → threshold $0.538 — not yet
+- XRP +0.84% → threshold $1.613 — not yet
+- ETH +3.96% → threshold $2,431 — not yet
+**No adjustments.**
+
+### STEP 5 — Thesis Check
+| Symbol | Catalyst | Status | Notes |
+|---|---|---|---|
+| AVAX/USD | CME AVAX futures launch + Kraken staking rollout | **INTACT** | Perplexity confirms CME institutional product launch, Kraken staking rollout active. Price $9.28 testing support near $9.30. No exploit or protocol failure. |
+| ONDO/USD | Tokenized ETF market tripled; ONDO 70% RWA sector market share | **INTACT** | Sector TVL $1.4B. China RWA tailwind (+15% surge May 22). Near-term tech setup mixed (~$0.44 resistance) but no fundamental break. |
+| XRP/USD | CLARITY Act Senate floor vote (week of May 26, Congress returns post-Memorial Day) | **INTACT** | No new developments today (US holiday). Pending binary catalyst intact. |
+| ETH/USD | Glamsterdam mid-2026 (ePBS, block-level access lists) + ETF inflows | **INTACT** | Perplexity confirms Glamsterdam on track for mid-2026; ETH $2,106, up from $2,026 entry. Buffer 3.14% — above 2% critical floor. |
+
+No protocol exploits, rugs, regulatory actions, or token unlock dumps. All 4 theses intact. No emergency exits. ✓
+
+### STEP 6 — New Entry Scan
+**Top Kraken gainers midday:** XRT +815%, WAR +469%, ELX +356% — micro-cap, no documented catalyst → PASS all.
+**SUI +2.46%:** Already exited SUI. No fresh catalyst to justify re-entry.
+**ZUSD $0.00:** Fully deployed. No spot entries possible.
+**Margin:** F&G 25 (Extreme Fear) + thin Memorial Day volume = no margin entry justified without specific conviction catalyst. None identified.
+**New entries: NONE.**
+
+### STEP 7 — Notification
+No actions taken → **no notification sent.**
+
+### Portfolio Estimate
+- AVAX: 4.82 × $9.28 = **$44.73**
+- ONDO: 101.1 × $0.44192 = **$44.68**
+- XRP: 31.00 × $1.35532 = **$42.01**
+- ETH: 0.0197 × $2,106.29 = **$41.49**
+- ZUSD: $0.00
+- **Total: ~$172.91**
+- **Phase P&L vs $179.78 start: -$6.87 (-3.82%)**
+
+**Watch:** XRP CLARITY Act Senate floor vote week of May 26 (Congress resumes tomorrow). ETH buffer 3.14% — above critical floor, trailing stop managing correctly. AVAX at $9.28 near support $9.30 — stop buffer 6.9% provides adequate cushion.
+
+**Result: NO-OP. All 4 stops healthy. No new entries. No thesis breaks. No notification sent.**
+
