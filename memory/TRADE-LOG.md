@@ -2115,3 +2115,31 @@ No adjustments.
 | ETH/USD | 0.0197 | $2,026.00 | O6GVNC 5%, stop $2,040 | ~+3.7% |
 | XRP/USD | 31.00 | $1.344 | OCLYQ6 7%, stop $1.258 | ~+0.5% |
 **ZUSD:** $90.18 | **Total since migration:** 19
+
+---
+
+## 2026-05-25 — New Entries: ONDO + AVAX
+
+### OPENED — ONDO/USD
+- **Entry:** ~$0.446 market | Order: OLE6SB-EOYKX-IIALQ4
+- **Qty:** 101.10 | **Notional:** ~$45.10
+- **Catalyst:** RWA tokenization sector leader — $24B+ tokenized assets on-chain. GENIUS Act (stablecoins) passed = structural tailwind for tokenized finance. Named by Kraken as top-performing RWA token. Showing relative strength (+2%) on thin Memorial Day volume.
+- **Stop:** OX6MNX-DLDMM-PZ3J4Y | trailing_stop 7% | initial stop ~$0.415
+- **Target:** $0.55–$0.60 | **R:R:** ~2.5:1
+
+### OPENED — AVAX/USD
+- **Entry:** ~$9.19 market | Order: OARQ6Y-RCUIV-TPEXZM
+- **Qty:** 4.82 (fill 4.8211 net of fees) | **Notional:** ~$44.73
+- **Catalyst:** CME cash-settled AVAX futures launched May 22; 24/7 continuous trading goes live May 29. CFTC digital commodity classification (March 2026). Kraken staking 10% APY reduces sell pressure. Daily txns +10x YoY. Same CME-listing thesis as SUI trade.
+- **Stop:** OLCZTS-Q5PS4-3T3UFD | trailing_stop 7% | initial stop ~$8.55
+- **Target:** $11–$12 (+20–30%) | **R:R:** ~3:1
+- **Note:** ZEC/USD geo-restricted for AU accounts on Kraken — AVAX substituted as next-best catalyst.
+
+**Portfolio post-entries:**
+| Symbol | Qty | Entry | Stop | Thesis |
+|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026 | O6GVNC 5%, ~$2,040 | Glamsterdam |
+| XRP/USD | 31.00 | $1.344 | OCLYQ6 7%, ~$1.258 | CLARITY Act vote |
+| ONDO/USD | 101.10 | ~$0.446 | OX6MNX 7%, ~$0.415 | RWA + GENIUS Act |
+| AVAX/USD | 4.82 | ~$9.19 | OLCZTS 7%, ~$8.55 | CME 24/7 May 29 |
+**ZUSD:** $0.07 (fully deployed) | **Total since migration:** 21
