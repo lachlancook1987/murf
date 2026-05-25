@@ -2192,3 +2192,34 @@ No unprotected positions. No orphaned orders.
 **Notes:** NEAR auto-stop exit confirmed (+9.3%, ~$7.52 realized). Proceeds recycled into AVAX + ONDO (7% trails each). ETH stop buffer 2.69% — above critical 2% floor; anchored to HWM $2,147.52. XRP +0.15% near entry; CLARITY Act Senate floor vote expected week of May 26.
 
 **Result: NO-OP (manual actions). No notification sent.**
+
+---
+
+## 2026-05-25 — Overnight Triage Check #3 (~current UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.26 | **+0.43%** | ~$9.27 | $8.62 (trail 7%) | 6.91% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.1 | ~$0.448 | $0.4426 | **-1.21%** | $0.44812 | $0.41676 (trail 7%) | 5.84% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.3537 | **+0.72%** | $1.35488 | $1.26004 (trail 7%) | 6.93% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,103.87 | **+3.84%** | $2,147.52 | $2,040.15 (trail 5%) | 3.03% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**Alpaca:** Stop a2b44cf9 CANCELLED (2026-05-22T05:22Z confirmed via API). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified (Kraken API live):**
+- AVAX: OLCZTS-Q5PS4-3T3UFD, 4.82 AVAX, trail +7%, stop $8.62 — ✓
+- ONDO: OX6MNX-DLDMM-PZ3J4Y, 101.10 ONDO, trail +7%, stop $0.41676 — ✓
+- XRP: OCLYQ6-H45E6-KDCK4X, 31.00 XRP, trail +7%, stop $1.26004 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15 — ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. ONDO -1.21% is worst; all well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- AVAX +0.43%, ONDO -1.21%, XRP +0.72%, ETH +3.84% — none qualify. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** $77,244.60 ask | 24h open $76,980.70 = **+0.34%** | 24h range $76,020.50–$77,421.20. No crash gate. ✓
+
+**Notes:** Overnight move minimal. AVAX HWM ratcheted up slightly vs prior check ($8.580 → $8.62 stop level). ETH buffer 3.03% — healthy, well above 2% floor. XRP approaching its prior HWM ($1.35488); CLARITY Act Senate floor vote expected this week (May 26+). All theses intact.
+
+**Result: NO-OP. No actions taken. No notification sent.**
