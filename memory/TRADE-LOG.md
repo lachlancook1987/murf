@@ -2098,3 +2098,37 @@ No adjustments.
 | XRP/USD | 31.00 | $1.344 | $1.351 | +0.13% | +$0.20 (+0.5%) | OCLYQ6 7%, stop $1.258, HWM $1.352 |
 **Trades today:** none | **Total since migration:** 18
 **Notes:** Quiet Memorial Day (US holiday) session. Portfolio slipped -$1.47 (-0.83%) vs yesterday's official EOD of $176.45 (note: May 24 EOD was captured before the midday LINK/SUI exits + XRP entry; current positions reflect correct post-transition state). NEAR leads at +12.6% unrealized ($10.21); ETH +3.7% ($1.48); XRP barely off entry at +0.5% ($0.20) — awaiting post-recess CLARITY Act Senate floor vote (week of May 26). BTC +0.13% on the day; bot underperformed by -0.96% on thin holiday liquidity. All three trailing stops active and healthy. ZUSD effectively zero ($0.29). Phase P&L: -$4.80 (-2.67%) from $179.78 Kraken start. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no exposure.
+
+---
+
+## 2026-05-25 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.366 | **+10.7%** | $2.51110 | $2.33540 (trail 7%) | ⚠️ **1.28% — CRITICAL** | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,102.42 | **+3.8%** | $2,147.52 | $2,040.15 (trail 5%) | 2.96% | O6GVNC-H2KL5-3K2WQG ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.35004 | **+0.4%** | $1.35361 | $1.25886 (trail 7%) | 6.75% | OCLYQ6-H45E6-KDCK4X ✓ |
+
+**Alpaca:** Stop a2b44cf9 confirmed CANCELLED (2026-05-22T05:22Z). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified (live Kraken API):**
+- OSX7LL-VVQZV-JPVWBB: NEAR 38.00, trail +7%, stop $2.33540, HWM $2.51110 — ✓
+- O6GVNC-H2KL5-3K2WQG: ETH 0.01970, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+- OCLYQ6-H45E6-KDCK4X: XRP 31.00, trail +7%, stop $1.25886, HWM $1.35361 — ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All positions profitable. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.366 = +10.7% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,102 = +3.8% — threshold: $2,431 (+20%). Not yet.
+- XRP @ $1.344: current $1.350 = +0.4% — threshold: $1.613 (+20%). Not yet.
+No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** $77,025 now | 24h open (o) $76,981 = **+0.06%** | 24h range $76,021–$77,421. Well under -20% threshold. No crash gate. No regime alert. ✓
+
+**⚠️ NEAR STOP BUFFER CRITICAL (1.28%):** NEAR at $2.366 vs stop trigger $2.33540 = $0.031 buffer. Stop is ratcheted high from HWM $2.511 — this is normal for a trailing stop on a profitable position. Do NOT cancel or move stop. Let it work. If triggered: NEAR locks in ~+$7.48 profit (38 NEAR × ($2.335 − $2.137)).
+
+**Notes:** BTC flat overnight (+0.06%), all positions holding. NEAR buffer critically thin due to high HWM ratchet — the stop is protecting significant unrealized gains. XRP sitting near entry (+0.4%); CLARITY Act Senate floor vote expected week of May 26 post-Memorial Day recess. ETH healthy at +3.8% with 2.96% buffer. All theses intact from prior session research.
+
+**Result: NO-OP. No actions taken. No notification sent.**
