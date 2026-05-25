@@ -6716,3 +6716,100 @@ No actions taken → **no notification sent.**
 
 **Result: NO-OP. All 4 stops healthy. No new entries. No thesis breaks. No notification sent.**
 
+---
+
+## 2026-05-25 — Pre-Session Research
+
+**Date:** 2026-05-25 | **Strategy:** Kraken Aggressive Profile
+
+### STEP 1 — Account Snapshot (live Kraken API)
+
+| Asset | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Trail | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.29 | **+0.76%** | $9.29 | $8.64 | 7% | 7.00% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.1 | ~$0.448 | $0.4427 | **-1.18%** | $0.44812 | $0.41676 | 7% | 5.86% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.35636 | **+0.92%** | $1.35908 | $1.26395 | 7% | 6.81% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,105.40 | **+3.92%** | $2,147.52 | $2,040.15 | 5% | ⚠️ 3.10% | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**ZUSD: $0.00 (fully deployed)**
+**Alpaca:** No positions, no active orders. ✓
+**Portfolio total: ~$173.06 | Phase P&L vs $179.78 start: -3.74%**
+**Stop tighten check (+20% from entry): AVAX $11.06 / ONDO $0.538 / XRP $1.613 / ETH $2,431 — none triggered.**
+
+### STEP 2 — Market Context
+
+- **BTC:** $77,307 ask | 24h open $76,981 | **+0.42% 24h** | range $76,021–$77,421 | **CRASH GATE NOT TRIGGERED ✓**
+- **ETH:** $2,105 | 24h +1.15–2.25% (source variance) | Glamsterdam target June 2026
+- **F&G:** 30 (Fear) — improving from 25 (Extreme Fear) on prior session
+- **BTC Funding Rate:** +0.0065% per 8h (Binance) — longs paying shorts modestly; no squeeze signal
+- **Top 24h gainers:** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38% — all micro-caps; none tradeable on Kraken with sufficient liquidity
+- **Token unlocks today:** INFRA 50.15K (~1% float), GTAI 631K (~1.56% float) — small caps, not held
+- **Macro:** GENIUS Act (stablecoins) already signed; CLARITY Act market-structure bill pending Senate floor vote this week (Congress returned today May 26)
+
+### STEP 3 — Thesis Status
+
+| Symbol | Catalyst | Status | Notes |
+|---|---|---|---|
+| AVAX | CME AVAX futures (launched May 22) + Kraken staking | **INTACT** | Price $9.29 — testing resistance $9.70–$10.50. CME product live and institutional; Grayscale noted AVAX as regulatory tailwind beneficiary. Support at $8.60. |
+| ONDO | RWA sector dominance (70% share), fee-switch H2 2026, Ondo Global Markets $1B+ TVL | **INTACT** | Price $0.4427, off $0.45202 24h high. Sector TVL $20B+, BlackRock BUIDL >$1.7B AUM. Near-term pressure from Jan 2026 large unlock still digesting. No fundamental break. |
+| XRP | CLARITY Act Senate floor vote (15-9 committee clear May 14; floor action this week) | **INTACT — CATALYSING** | Congress returned today. Floor vote imminent. XRP +0.92% from entry; stop ratcheted to $1.26395 (HWM $1.35908). Bull case: $1.70 T1, $2.00 T2. Stop uses 7% trail (binary catalyst per strategy). |
+| ETH | Glamsterdam upgrade (ePBS, block-level access lists) target June 2026 | **INTACT — STRENGTHENING** | Perplexity forecasts $2,196 by May 27, $2,342 by May 29. Current $2,105, HWM $2,147.52, stop $2,040.15. Buffer 3.10% — above 2% critical floor. If Glamsterdam is confirmed June, price could track toward $3,000. |
+
+### STEP 4 — Trade Opportunities
+
+**ZUSD: $0.00 — no spot entries. New entries require margin 2x OR capital freed by stop trigger.**
+
+#### Watchlist (execute on ZUSD freed or confirmed margin availability)
+
+**Idea 1: HYPE/USD — ATH Breakout + Grayscale ETF**
+- **Catalyst:** New all-time high $64.30 hit May 24; Grayscale amended HYPE ETF filing; rising perp DEX dominance + spot volume surge; whale accumulation reported
+- **Spread:** $62.79/$62.80 = 0.016% ✓ | Kraken: HYPEUSD online ✓ | Leverage up to 2x available ✓
+- **Entry:** Market ~$62.80 (momentum; accept chase given ATH breakout)
+- **Stop:** Trailing 5%, trigger ~$59.66 at entry
+- **Target:** $70 (T1, +11.5%), R:R ~2.3:1
+- **Size:** ~$40–$50 notional (margin 2x if ZUSD available, else spot from freed proceeds)
+- **Priority:** #1 rotation target if any stop triggers
+
+**Idea 2: SOL/USD — ETF Inflows + Alpenglow Upgrade**
+- **Catalyst:** Solana spot ETF continued inflows; Alpenglow + Firedancer scalability upgrades; strong DeFi/DEX activity; bullish social sentiment mid-May
+- **Spread:** $85.90/$85.91 = 0.012% ✓ | Kraken: SOLUSD online ✓
+- **Entry:** Market ~$85.91 on break above $86.10
+- **Stop:** Trailing 5%, trigger ~$81.61 at entry
+- **Target:** $100 (T1, +16.4%), R:R ~3.3:1
+- **Size:** ~$40–$45 notional
+- **Priority:** #2 rotation target
+
+**Idea 3: ETH margin add — Glamsterdam acceleration**
+- **Catalyst:** Glamsterdam confirmed June 2026 target; Perplexity price target $2,342 by May 29 (short-term); ETF inflows; current position already +3.92%
+- **Spread:** $2,105.39/$2,105.40 = 0.005% ✓
+- **Entry:** Market ~$2,105 (add to winner as upgrade approaches)
+- **Stop:** Trailing 5% from existing HWM ($2,040.15); new add would share same 5% trail
+- **Target:** $2,342 (T1, +11.3%), R:R ~2.3:1
+- **Size:** ~$40 notional (2x margin if available) — separate order to existing
+- **Priority:** #3 — strong but already held; adds concentration
+
+**Idea 4: XRP — holding; catalyst approaching**
+- No new XRP entry needed. Existing position positioned correctly for Senate floor vote. If CLARITY Act advances to final passage, target $1.70 T1 (+26.5%). 7% trailing stop manages risk.
+
+**Idea 5: Existing ONDO — monitor closely**
+- ONDO is -1.18%, weakest position. Fee-switch H2 2026 is months away. Near-term price action mixed. Stop at $0.41676 protects capital. If stop triggers, do NOT re-enter ONDO immediately — rotate proceeds into HYPE (Idea 1).
+
+### STEP 5 — Risk Factors
+
+1. **ETH buffer 3.10%** — closest to critical floor. A $65 pullback (~3%) triggers stop. Monitor closely.
+2. **ZUSD depleted** — portfolio fully exposed; any market downturn cannot be averaged into without margin
+3. **F&G still Fear (30)** — recovering but not bullish. Memorial Day hangover + thin post-holiday volumes may persist today
+4. **XRP binary catalyst risk** — Senate floor vote could stall or be delayed; CLARITY Act still needs Senate floor, reconciliation, president signature. Any delay = XRP stagnates near entry
+5. **ONDO Jan 2026 unlock overhang** — 1.94B tokens released in Jan; circulating supply pressure may limit upside short term
+
+### STEP 6 — Decision
+
+**CRASH GATE: NOT triggered (BTC +0.42%). TRADE stance.**
+
+- **Existing positions:** All 4 theses intact, all stops healthy. No emergency exits, no manual adjustments needed. ETH buffer 3.10% — watch but above critical floor.
+- **New entries today:** ZUSD $0.00 — cannot place spot orders. No margin entries until verified free margin is confirmed. **WATCHLIST ACTIVE:** HYPE (#1), SOL (#2), ETH add (#3) — execute immediately when capital freed.
+- **Priority action:** If ONDO stop triggers ($0.41676) or any other stop fires, rotate ALL proceeds into HYPE/USD market order with 5% trailing stop.
+- **XRP watch:** CLARITY Act Senate floor vote expected this week — position already in place. If vote advances, consider adding leveraged XRP if margin headroom exists.
+
+**Planned trades: MONITORING — watchlist HYPE, SOL, ETH add (pending ZUSD/margin). No new entries at session open.**
+
