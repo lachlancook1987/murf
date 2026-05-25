@@ -2132,3 +2132,63 @@ No adjustments. ✓
 **Notes:** BTC flat overnight (+0.06%), all positions holding. NEAR buffer critically thin due to high HWM ratchet — the stop is protecting significant unrealized gains. XRP sitting near entry (+0.4%); CLARITY Act Senate floor vote expected week of May 26 post-Memorial Day recess. ETH healthy at +3.8% with 2.96% buffer. All theses intact from prior session research.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-25 — Auto-Stop Exit + New Entries (post-triage session)
+
+### NEAR/USD — Trailing Stop OSX7LL-VVQZV-JPVWBB Auto-Triggered
+
+**Stop Order:** OSX7LL-VVQZV-JPVWBB (trailing-stop, 7%, HWM $2.51110, trigger $2.33540)
+**Estimated fill:** ~$2.335 (stop trigger level; slippage possible)
+**Qty closed:** 38.00 NEAR
+**Entry:** $2.137 | **Exit:** ~$2.335 | **P&L:** ~+$7.52 (+9.3%)
+**Proceeds:** ~$88.73 ZUSD
+**Notes:** Buffer was 1.28% at last triage check ($2.366 vs stop $2.33540). Price pulled back through trigger. Stop worked as designed — position closed profitably.
+
+---
+
+### 2026-05-25 | AVAX/USD | BUY | 4.82000 AVAX | Entry: ~$9.22 | Trailing Stop (7%): $8.58 | Open
+
+**Trailing Stop Order ID:** OLCZTS-Q5PS4-3T3UFD (trail -7%, stop $8.580, HWM $9.220, GTC ✓)
+**Notional:** ~$44.44 (spot; ~50% of ~$88.73 NEAR proceeds)
+**Stop level:** $8.58 (7% trailing below HWM $9.22)
+
+---
+
+### 2026-05-25 | ONDO/USD | BUY | 101.10000 ONDO | Entry: ~$0.448 | Trailing Stop (7%): $0.41676 | Open
+
+**Trailing Stop Order ID:** OX6MNX-DLDMM-PZ3J4Y (trail -7%, stop $0.41676, HWM $0.44812, GTC ✓)
+**Notional:** ~$45.30 (spot; ~50% of ~$88.73 NEAR proceeds)
+**Stop level:** $0.41676 (7% trailing below HWM $0.44812)
+
+---
+
+## 2026-05-25 — Overnight Triage Check #2 (~current UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.175 | **-0.49%** | $9.220 | $8.580 (trail 7%) | 6.49% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ONDO/USD | 101.1 | ~$0.448 | $0.4414 | **-1.49%** | $0.44812 | $0.41676 (trail 7%) | 5.59% | OX6MNX-DLDMM-PZ3J4Y ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.346 | **+0.15%** | $1.35488 | $1.26004 (trail 7%) | 6.38% | OCLYQ6-H45E6-KDCK4X ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,096 | **+3.5%** | $2,147.52 | $2,040.15 (trail 5%) | ⚠️ **2.69%** | O6GVNC-H2KL5-3K2WQG ✓ |
+
+**Alpaca:** Stop a2b44cf9 CANCELLED (2026-05-22T05:22Z). No Alpaca positions or active orders. ✓
+
+**STEP 2 — Trailing stops verified (Kraken API live):**
+- AVAX: OLCZTS-Q5PS4-3T3UFD, 4.82 AVAX, trail +7%, stop $8.580, HWM $9.220 — ✓
+- ONDO: OX6MNX-DLDMM-PZ3J4Y, 101.10 ONDO, trail +7%, stop $0.41676, HWM $0.44812 — ✓
+- XRP: OCLYQ6-H45E6-KDCK4X, 31.00 XRP, trail +7%, stop $1.26004, HWM $1.35488 — ✓
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. All within normal range. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- AVAX -0.49%, ONDO -1.49%, XRP +0.15%, ETH +3.5% — none qualify. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** $77,043 now | 24h open $76,981 = **+0.08%** | range $76,021–$77,421. No crash gate. ✓
+
+**Notes:** NEAR auto-stop exit confirmed (+9.3%, ~$7.52 realized). Proceeds recycled into AVAX + ONDO (7% trails each). ETH stop buffer 2.69% — above critical 2% floor; anchored to HWM $2,147.52. XRP +0.15% near entry; CLARITY Act Senate floor vote expected week of May 26.
+
+**Result: NO-OP (manual actions). No notification sent.**
