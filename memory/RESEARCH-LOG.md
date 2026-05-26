@@ -7451,3 +7451,131 @@ All new entries require an existing stop to trigger first, freeing ZUSD.
 - XRP (31.00): OCLYQ6 7% trail ✓
 - XRP add (29.80): OBR3BF 7% trail ✓
 - FET: OGNVDP 2.5% trail ✓
+
+---
+
+## 2026-05-26 — Session 4 Pre-Session Research (Morning/Continuation)
+
+### Account Snapshot
+
+**Kraken live balances (pulled this session):**
+| Asset | Qty | Approx Value | Status |
+|---|---|---|---|
+| BTC/USD | 0.00052026 | ~$39.52 | Open — stop OOT7MM 5% trail $74,090 |
+| XRP/USD | 31.00000 | ~$41.26 | Open — stop OCLYQ6 7% trail $1.26889 |
+| XRP/USD (add) | 29.80537 | ~$39.70 | Open — stop OBR3BF 7% trail $1.26840 |
+| HYPE/USD | — | — | **STOPPED OUT** (OITY3H triggered, ~$61.22) |
+| ZUSD | $39.38 | $39.38 | Available to deploy |
+
+**HYPE stop-out confirmed:** OITY3H (2.5% trail from HWM $62.78) triggered at ~$61.22. Entry was $63.53. P&L: ~-3.6% (~-$1.39 on $40.61). Proceeds $39.38 ZUSD now available. HYPE currently at $60.50 (fell further after stop).
+
+**Alpaca:** No open positions, no active orders. Alpaca BTC residual no longer showing.
+
+**Portfolio estimate:**
+- BTC: $39.52 | XRP total: ~$80.96 | ZUSD: $39.38 | Total: **~$159.86**
+- Baseline $179.78 (May 22) → **~-$19.92 (-11.1%)**
+
+---
+
+### Market Context
+
+| Asset | 24h Open | Current (Kraken) | 24h Chg | 24h High | Notes |
+|---|---|---|---|---|---|
+| BTC/USD | $77,265.90 | $75,991 | **-1.65% session / ~-3% 24h** | $77,989 | Stop buffer 2.5% — CRITICAL |
+| ETH/USD | — | ~$2,095–$2,128 | ~flat to -1% | — | Mixed signals across venues |
+| XRP/USD | $1.34903 | $1.33088 | **-1.35%** | $1.36387 | Stop buffer ~4.65% — OK |
+| WLD/USD | $0.3305 | $0.3808 | **+15.2%** | $0.4269 | ONLY positive mover; off 10.8% from high |
+| HYPE/USD | $61.11 | $60.50 | **-1.0%** | $64.80 | Below our stop-out price; no re-entry |
+| AKT/USD | $0.9282 | $0.8916 | **-3.9%** | $0.9397 | Declining; skip |
+| LINK/USD | $9.4959 | $9.4049 | **-0.96%** | $9.6717 | Fading from earlier pop; skip |
+| SOL/USD | $84.98 | $83.76 | **-1.44%** | $86.05 | Broad market down; skip |
+| AVAX/USD | $9.29 | $9.17 | **-1.29%** | $9.48 | Broad market down; skip |
+
+**Fear & Greed Index:** 34 — Fear
+**BTC perpetual funding rate:** +0.0006% to +0.0058% (slightly positive across exchanges — longs still dominant, not extreme)
+**BTC crash gate:** -3.04% 24h (per Perplexity) / -1.65% from Kraken session open → **NOT triggered (>20% required)**
+
+**Top 24h Gainers (market-wide):**
+1. KTA +17.04% | 2. WLD +15.66% | 3. DEXE +13.40% | 4. H (Humanity Protocol) +12.37% | 5. AKT +11.28%
+Honorable mention: LINK reportedly +11.5% (now fading), OMNI +174% (suspect thin liquidity), MAT +66%
+
+**Breaking Catalysts Today:**
+- LINK: Oracle/RWA narrative + CCIP adoption — but Perplexity clarified it's below key MAs; move driven by positioning not new fundamental. Fading confirmed by live quote.
+- WLD: Sam Altman AI identity narrative — +15.2% from open. Late entry risk (off 10.8% from high) but still the strongest momentum on the board.
+- Monad: Mainnet launched — token sale demand strong. Check Kraken availability.
+- CLARITY Act: Senate Banking Committee advanced (May 14). Full Senate vote still pending. XRP binary catalyst active.
+- BTC: Broad macro pressure; market in Fear; ETF inflows slowing.
+
+**Token Unlocks Today (May 26):**
+- HUMA: 458.75M tokens unlocked (~$11.64M, 20.04% of supply) — bearish for HUMA, not held by us
+- SAHARA AI: 132.93M tokens unlocked (~$4.56M) — not on Kraken
+
+---
+
+### Candidate Screening
+
+**PASSED:**
+| Asset | Spread | 24h Chg | vs Open | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| WLD/USD | 0.079% ✓ | +15.7% | +15.2% ✓ | Sam Altman AI identity | PRIMARY CANDIDATE |
+
+**FAILED / SKIPPED:**
+| Asset | Reason |
+|---|---|
+| HYPE/USD | -1.0% from open; below stop-out price $61.22; no re-entry |
+| AKT/USD | -3.9% from open; momentum faded despite 24h gains |
+| LINK/USD | -0.96% from open; confirmed fading; below MAs |
+| SOL/USD | -1.44% from open; broad market pressure |
+| AVAX/USD | -1.29% from open; no catalyst |
+| OMNI/MAT | Extreme % moves (66–174%) — likely thin-liquidity pumps; not checking further |
+
+---
+
+### Trade Ideas
+
+**Idea 1 (PRIMARY): WLD/USD — AI identity narrative momentum**
+- **Catalyst:** Sam Altman / Worldcoin AI identity narrative. WLD +15.2% from 24h open $0.3305. Session VWAP $0.3692, current $0.3808 (above VWAP = positive). Volume massive: 9.67M tokens today (session) vs avg. Spread 0.079% ✓. Kraken WLD/USD online ✓.
+- **Entry:** Market ~$0.3808
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → initial trigger ~$0.3713
+- **T1:** $0.3922 (+3%) | **T2:** $0.3998 (+5%)
+- **R:R:** 1.2:1 at T1 (3% gain / 2.5% trail) ✓
+- **Size:** 100% available ZUSD ($39.38 → ~103.4 WLD)
+- **Risk:** WLD was stopped out on us earlier today (OM4NPW). Pattern of spike→retrace established. Currently -10.8% off its $0.4269 high. Re-entry valid only if price holds $0.3808 or reclaims. Market in Fear (34). Late-stage momentum trade.
+
+**Idea 2 (CONDITIONAL — BTC stop-out rotation): LINK/USD**
+- If OOT7MM triggers (BTC stop-out at $74,090), ZUSD from BTC frees up ~$39
+- Monitor LINK for reclaiming above $9.50 session open with volume; only enter if confirmed
+- Catalyst (if reactivated): oracle/RWA narrative, CCIP adoption
+- Stop: 2.5% trail, T1 $9.88 (+3%), T2 $10.08 (+5%), R:R 1.2:1 ✓
+
+**Idea 3 (CONDITIONAL — XRP CLARITY Act): XRP leveraged add**
+- Only on confirmed Senate floor vote + passage of CLARITY Act
+- Entry: market, 2x leverage, `trail_percent: 7`
+- Existing XRP exposure $80.96 — add only on hard catalyst
+
+**PASS — HYPE/USD:** Stopped out, price now $60.50 (below stop trigger $61.22). Only re-enter above $62 with momentum recovery.
+**PASS — WLD leveraged:** Supports 2x leverage on Kraken but market Fear 34 + pattern risk = spot only.
+
+---
+
+### Risk Factors
+
+1. **BTC stop buffer CRITICAL — only 2.5%**: BTC at $75,991 vs stop $74,090. Another -2.5% in BTC triggers OOT7MM. If BTC breaks $75,000 key psychological level, stop very likely fires. Monitor closely.
+2. **Fear & Greed 34** — market cautious; momentum trades need confirmation before adding leverage.
+3. **WLD retrace pattern** — hit $0.4269 high, now -10.8% off. Third consecutive stop-out risk on WLD (OM4NPW fired earlier today). Only enter on fresh momentum, not just on residual 24h gains.
+4. **XRP buffer tightening** — XRP at $1.331 vs stop $1.269 = 4.65% buffer. If broad market continues selling, XRP stop could also approach.
+5. **Positive but low funding rates** — longs still dominant; no extreme crowding yet.
+6. **Portfolio down 11.1% vs baseline** — capital preservation matters; don't force entries into declining markets.
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC ~-3% 24h, threshold >20%). TRADE stance.**
+
+**Immediate actions (in priority order):**
+1. **Enter WLD/USD:** Market buy $39.38 ZUSD at ~$0.3808 → ~103.4 WLD. Immediately place 2.5% trailing stop.
+2. **Monitor BTC stop (OOT7MM):** Buffer only 2.5%. If triggered, rotate $39 into best setup (LINK on reclaim or HYPE on recovery).
+3. **XRP:** No action needed. 7% trail stops appropriate for CLARITY Act binary event.
+
+**Planned trades:** WLD/USD buy (primary, ~$39.38 ZUSD, market). XRP and BTC holds with existing stops. XRP leveraged add on CLARITY Act vote only.
