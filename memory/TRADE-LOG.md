@@ -2459,3 +2459,52 @@ No notification sent. No commit required (no trades).
 - **HYPE:** New entry per ONDO rotation contingency. DEX/Hyperliquid narrative intact; near 24h lows for favorable entry. Trail 5% protecting downside.
 
 **Key watches:** XRP CLARITY Act Senate floor vote this week — passage triggers leveraged XRP add (2x, 7% trail). HYPE $64 resistance — break triggers stop tightening review at +20% from entry. ETH buffer 3.08% — monitor.
+
+---
+
+## 2026-05-26 — Auto-Stop Exits (AVAX + HYPE, post session-open)
+
+### CLOSED — AVAX/USD (trailing stop OLCZTS-Q5PS4-3T3UFD auto-triggered)
+
+- **Stop Order:** OLCZTS-Q5PS4-3T3UFD (trail -7%, HWM $9.49, stop $8.83)
+- **Exit:** ~$8.83 (stop trigger level; slippage possible)
+- **Qty closed:** 4.82 AVAX
+- **Entry:** ~$9.22 | **Exit:** ~$8.83 | **P&L:** ~-4.2% | **~-$1.88**
+- **Notes:** Stop worked as designed. CME futures already live; catalyst fully priced. Proceeds added to ZUSD.
+
+### CLOSED — HYPE/USD (trailing stop OIR5UB-Z4FPO-K5HD6T auto-triggered)
+
+- **Stop Order:** OIR5UB-Z4FPO-K5HD6T (trail -5%, HWM $60.65, stop $57.62)
+- **Exit:** ~$57.62 (stop trigger level; slippage possible)
+- **Qty closed:** 0.67952 HYPE
+- **Entry:** ~$60.65 | **Exit:** ~$57.62 | **P&L:** ~-5.0% | **~-$2.06**
+- **Notes:** Stop worked as designed. ZUSD balance post-exits confirmed $84.02 (vs $0.25 prior — ~$83.77 freed from both exits).
+
+---
+
+## 2026-05-26 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.0197 | $2,026.00 | $2,087.07 | **+3.01%** | $2,147.52 | $2,040.15 (trail 5%) | ⚠️ **2.25%** | O6GVNC-H2KL5-3K2WQG ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.33567 | **-0.62%** | $1.36439 | $1.26889 (trail 7%) | 4.96% | OCLYQ6-H45E6-KDCK4X ✓ |
+
+**Account:** ZUSD $84.02 | AVAX $0.00 (exited) | HYPE $0.00 (exited) | Alpaca: stop a2b44cf9 CANCELLED (2026-05-22T05:22Z); no Alpaca positions. ✓
+
+**STEP 2 — Trailing stops verified (live Kraken API):**
+- ETH: O6GVNC-H2KL5-3K2WQG, 0.0197 ETH, trail +5%, stop $2,040.15, HWM $2,147.52 — ✓
+- XRP: OCLYQ6-H45E6-KDCK4X, 31.00 XRP, trail +7%, stop $1.26889, HWM $1.36439 — ✓
+- No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** ETH +3.01%, XRP -0.62% — both well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- ETH @ $2,026: current $2,087 = +3.0% — threshold $2,431 (+20%). Not yet.
+- XRP @ $1.344: current $1.336 = -0.62% — threshold $1.613 (+20%). Not yet.
+No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $76,574 ask | 24h open $77,265.90 = **-0.89%** | range $76,450–$77,809. Well under -20% threshold. No crash gate. No regime alert. ✓
+
+**Notes:** AVAX (OLCZTS) and HYPE (OIR5UB) trailing stops auto-triggered since last session entry — both positions closed; ~$83.77 freed. ETH buffer 2.25% (above 2% critical floor but thin — stop at $2,040.15 is above entry $2,026, locking in profit floor). XRP buffer 4.96%, stable. BTC -0.89% overnight; no macro catalyst or regime shift. Both remaining theses intact: ETH Glamsterdam/Fusaka H2 2026 upgrade; XRP CLARITY Act Senate floor vote still pending (May 26+). ZUSD $84.02 available for new entries next session.
+
+**Result: NO-OP (auto-stops already executed). No new manual actions taken. No notification sent.**
