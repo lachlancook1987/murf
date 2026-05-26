@@ -7413,3 +7413,41 @@ All new entries require an existing stop to trigger first, freeing ZUSD.
 
 **Planned trades:** RENDER/USD buy (primary, $43.36 ZUSD) | XRP OT5EI4 stop upgrade 5%→7% | XRP leveraged add on CLARITY Act vote
 
+
+---
+
+## 2026-05-26 — Midday Scan
+
+### Market Snapshot (midday)
+
+| Asset | 24h Open | Current | 24h Chg | Stop | Buffer |
+|---|---|---|---|---|---|
+| BTC/USD | $77,265.90 | ~$77,136 | **-0.17%** | $73,652 (5% trail OOT7MM) | 4.52% |
+| XRP/USD | $1.34903 | ~$1.355 | **+0.44%** | $1.26889 (7% trail OCLYQ6) | 6.28% |
+| FET/USD | $0.2318 | ~$0.2513 | **+8.4%** | $0.2447 (2.5% trail OGNVDP) | 2.62% |
+
+**BTC Crash Gate:** -0.17% 24h → **NOT triggered** ✓
+
+### Actions Taken
+
+**WLD stop-out (OM4NPW triggered):**
+- WLD trailing stop at $0.3849 (2.5% from HWM $0.3947) triggered — WLD fell to $0.377–$0.382
+- Proceeds ~$41.72 ZUSD freed for rotation
+
+**FET/USD midday re-entry:**
+- Entered at ~$0.2531 | 164.3744 FET | $41.60 notional
+- Catalyst: ASI Agent Launchpad narrative (+8.2% 24h, 5.7x avg volume)
+- Stop OGNVDP placed at $0.2447 (2.5% trail, HWM $0.2509) ✓
+- T1 $0.2607 | T2 $0.2658
+
+### Screening (New candidates checked)
+- **CORE/USD** — not available on Kraken (EQuery:Unknown asset pair)
+- **SOL/USD** — only +0.40% 24h, no momentum signal, skipped
+- **WLD/USD** — bearish outlook, stopped out, no re-entry
+- **FET/USD** — selected: best combination of momentum, volume, catalyst
+
+### All Stops Verified (4/4 active)
+- BTC: OOT7MM 5% trail ✓
+- XRP (31.00): OCLYQ6 7% trail ✓
+- XRP add (29.80): OBR3BF 7% trail ✓
+- FET: OGNVDP 2.5% trail ✓
