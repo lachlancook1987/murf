@@ -1,13 +1,15 @@
-# Crypto Trading Strategy — Kraken Profile
+# Crypto Trading Strategy — Kraken Day Trading Profile
 
-*Activated: 2026-05-21. Replaces the old Alpaca conservative profile.*
+*Activated: 2026-05-21. Day trading focus added: 2026-05-26.*
 
 ---
 
 ## Philosophy
 
-This is discretionary gambling capital. The goal is active trading and compounding gains
-across Kraken's full asset universe — not long-term holding. Trade > hold.
+This is discretionary gambling capital. The goal is **intraday day trading** — targeting
+3–5% gains per trade, recycling capital multiple times per day. Fast entries, fast exits,
+tight stops. **No holding through uncertainty.** Cut losses at 2.5%, let winners run to
+target, move on. Volume of profitable trades beats size of any single trade.
 
 ---
 
@@ -31,30 +33,36 @@ across Kraken's full asset universe — not long-term holding. Trade > hold.
 
 ## Trade Frequency
 
-- Multiple trades per day is the target; idle capital is wasted capital
-- No weekly trade cap
-- No sector pause rules — consecutive losses do not block re-entry
-- Intraday scalps, momentum plays, news-driven entries all valid
+- **Day trading is the primary mode** — target 3–5% per trade, multiple cycles per day
+- Idle capital is wasted capital; recycle freed ZUSD immediately into next best setup
+- No weekly trade cap; no sector pause rules; consecutive losses do not block re-entry
+- Intraday scalps, momentum plays, and news-driven entries are the priority
+- Multi-day holds are the exception, not the rule — only if thesis is exceptional and stop is in profit
 
 ---
 
 ## Entry Rules
 
-- Any documented catalyst: news, technicals, momentum, on-chain signal, narrative
+- **Intraday momentum is the primary signal**: price up >3% in the last 1–4h with volume confirmation
+- Catalyst required: news, technicals, momentum, on-chain signal, or narrative — no blind chasing
 - Market orders for speed on fast-moving setups; limit orders when entry precision matters
-- No restriction on chasing — if the move is real, enter
 - Spread check mandatory before every order: `bash scripts/kraken.sh quote SYM/USD`
+- **Target: 3–5% gain from entry.** Define T1 (3%) and T2 (5%) before entering
+- Skip any setup where the projected gain to T1 is less than 2× the 2.5% stop risk (R:R < 1.2:1)
 
 ---
 
 ## Exit & Stop Rules
 
-- **Stop-loss recommended on every position**, especially leveraged ones
-- Default: 5% stop-loss-limit below entry (`type: stop_limit`)
-- **Binary catalyst assets (regulatory votes, ETF filings, token unlocks pending):** use `trail_percent: 7` — headline volatility can swing 3–4% intraday; 5% trail is too tight.
-- Tighten or trail stops manually as positions move in favour
-- Trailing stop available on Kraken: `type: trailing_stop`, `trail_percent: 5` (7 for binary-catalyst plays)
-- No fixed hold time — exit when thesis is invalidated or target is hit
+- **Stop-loss mandatory on every new position, placed immediately after fill**
+- **Default: 2.5% trailing stop on ALL new trades** — `type: trailing_stop`, `trail_percent: 2.5`
+  - Placed as a market-order sell GTC immediately after the buy fills
+  - No exceptions: if a stop is not placed, the trade is not complete
+- **Profit targets: T1 = +3%, T2 = +5%** from entry
+  - At T1 (+3%): tighten trailing stop to 0.5% to lock in gains, let it run toward T2
+  - At T2 (+5%): consider closing or tightening further — day trading wins are banked, not held
+- **Binary catalyst assets (regulatory votes, ETF filings):** use `trail_percent: 7` for the initial stop — headline volatility can blow through 2.5%; widen only on binary events, not routine trades
+- No fixed hold time — exit when thesis is invalidated, target is hit, or stop fires
 - Cancel orders any time: `bash scripts/kraken.sh cancel <order_id>`
 
 ---
@@ -77,10 +85,12 @@ across Kraken's full asset universe — not long-term holding. Trade > hold.
 
 ## Risk Awareness (not rules — just notes)
 
-- Kraken taker fee: ~0.26% per trade. Two trades/day = ~0.52%/day in fees — factor this into targets
-- Thin alt liquidity: wide spreads and slippage on low-cap coins can exceed the fee cost
-- 2x leverage on volatile alts can gap through stop limits — size accordingly
-- No limitations means full upside and full downside; no circuit breakers beyond the crash gate
+- Kraken taker fee: ~0.26% per trade (round trip ~0.52%). On a 3% target that's ~17% of profit — factor in
+- At 2.5% trailing stop: net loss per bad trade ≈ −2.5% − 0.26% fee ≈ −2.76%. Need >1 winner per loser
+- Thin alt liquidity: wide spreads and slippage can eat into the 2.5% stop budget — tight spread check is critical
+- 2.5% trail on fast-moving alts may trigger on normal noise — pick assets with steady momentum, not spike-and-dump
+- 2x leverage on volatile alts can gap through stops — size accordingly; day trades are usually unleveraged spot
+- No circuit breakers beyond the crash gate — discipline is the only risk management
 
 ---
 
@@ -103,31 +113,48 @@ Run all of these via `bash scripts/perplexity.sh "<query>"` at each session open
 
 1. `"Bitcoin price and 24h change right now"`
 2. `"Ethereum price and 24h change right now"`
-3. `"Top 10 crypto gainers in the last 24 hours"`
-4. `"Crypto Fear and Greed Index today"`
-5. `"Bitcoin perpetual futures funding rate today"`
-6. `"Top crypto market catalysts and breaking news today $DATE"`
-7. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
-8. `"Top altcoin momentum plays on Kraken exchange today — assets up more than 5% in 4 hours"`
-9. `"Best DeFi altcoin trade setups with catalyst today $DATE"`
-10. One query per open position: `"<ASSET> news and price outlook today"`
+3. `"Crypto assets with the biggest price surge in the last 1 hour right now"`
+4. `"Top 10 crypto gainers in the last 24 hours"`
+5. `"Crypto Fear and Greed Index today"`
+6. `"Bitcoin perpetual futures funding rate today"`
+7. `"Top crypto market catalysts and breaking news today $DATE"`
+8. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
+9. `"Top altcoin momentum plays on Kraken exchange today — assets up more than 3% in 4 hours"`
+10. `"Crypto volume surge alerts — which coins have unusual trading volume in the last 4 hours $DATE"`
+11. `"Best intraday crypto day trade setups with catalyst today $DATE"`
+12. One query per open position: `"<ASSET> news and price outlook today"`
+
+### Candidate Screening (fast-mover focus)
+
+Priority signals to look for in research output — rank candidates by these:
+
+| Signal | Threshold | Notes |
+|---|---|---|
+| 1h price surge | >3% in 1h | Strongest intraday signal |
+| 4h momentum | >5% in 4h | Confirms sustained move |
+| Volume surge | >2× 24h average | Confirms real buying, not thin noise |
+| News catalyst | Last 6h | Listing, partnership, upgrade, regulatory win |
+| Spread | ≤1% | Hard skip if wider |
 
 ### Opportunity Scan Checklist
 
 For each candidate identified in research:
 - [ ] `bash scripts/kraken.sh assets SYM/USD` — confirm pair is online on Kraken
 - [ ] `bash scripts/kraken.sh quote SYM/USD` — confirm spread ≤1% (skip if wider)
-- [ ] Catalyst documented (news / momentum / technical breakout)
-- [ ] Stop type chosen: `trailing_stop` (default, trail_percent 5) or `stop_limit`
+- [ ] Catalyst documented — momentum alone OK if 1h surge >3% with volume
+- [ ] Stop: `trailing_stop`, `trail_percent: 2.5` (default); 7 for binary-catalyst events only
+- [ ] T1 = entry +3%, T2 = entry +5% defined before entry
+- [ ] R:R ≥ 1.2:1 (T1 gain vs 2.5% stop risk)
 - [ ] Size chosen based on conviction — no arbitrary cap; up to 100% equity
 
-### What NOT to apply (retired Alpaca rules)
+### What NOT to apply (retired rules)
 
 - ~~Sector consecutive-loss pause~~ — all sectors always open
 - ~~CAUTION / OFFENSIVE regime based on BTC vs 20-day MA~~ — does not affect entries or sizing
 - ~~DXY red flag~~ — not part of this strategy
 - ~~Fixed 25% position size in CAUTION mode~~ — size to conviction
+- ~~5% default trailing stop~~ — replaced by 2.5% on all new day trades
 
 ---
 
-*Last updated: 2026-05-22 (weekly review: added 7% trail rule for binary-catalyst assets)*
+*Last updated: 2026-05-26 (day trading profile: 3–5% targets, 2.5% default trailing stop, fast-mover research focus)*
