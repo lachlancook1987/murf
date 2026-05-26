@@ -65,34 +65,47 @@ for quotes or placing orders.
 
 ## Current Strategy Profile
 
-Kraken profile (activated 2026-05-21). See `memory/TRADING-STRATEGY.md`.
-Key parameters: full alt universe, no position caps, up to 2x leverage,
-multiple trades/day, trailing stops supported, crash gate = BTC down >20% in 24h.
+Kraken **day trading** profile (activated 2026-05-21, day trading focus added 2026-05-26).
+See `memory/TRADING-STRATEGY.md`.
+Key parameters: target 3–5% per trade, recycle capital multiple times per day, full alt
+universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new trades**
+(placed immediately after fill), crash gate = BTC down >20% in 24h.
 
 ## Pre-Session Research — Kraken Framework
 
-The Kraken profile is **aggressive**. Apply only these rules in pre-session research —
-the old Alpaca conservative rules are fully retired.
+The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session
+research — the old Alpaca conservative rules are fully retired.
 
 ### Perplexity Queries (run all)
 
 - `"Bitcoin price and 24h change right now"`
 - `"Ethereum price and 24h change right now"`
+- `"Crypto assets with the biggest price surge in the last 1 hour right now"`
 - `"Top 10 crypto gainers in the last 24 hours"`
 - `"Crypto Fear and Greed Index today"`
 - `"Bitcoin perpetual futures funding rate today"`
 - `"Top crypto market catalysts and breaking news today $DATE"`
 - `"Crypto token unlocks or major protocol upgrades this week $DATE"`
-- `"Top altcoin momentum plays on Kraken exchange today — assets up more than 5% in 4 hours"`
-- `"Best DeFi altcoin trade setups with catalyst today $DATE"`
+- `"Top altcoin momentum plays on Kraken exchange today — assets up more than 3% in 4 hours"`
+- `"Crypto volume surge alerts — which coins have unusual trading volume in the last 4 hours $DATE"`
+- `"Best intraday crypto day trade setups with catalyst today $DATE"`
 - One query per open Kraken position: `"<ASSET> news and price outlook today"`
+
+### Candidate Screening Priority
+
+After Perplexity research, rank candidates by these signals before checking Kraken:
+1. **1h surge >3%** — strongest intraday signal
+2. **4h momentum >5%** — sustained move, not a spike
+3. **Volume surge >2× average** — real buying pressure
+4. **News catalyst <6h old** — listing, upgrade, partnership, regulatory win
+5. Spread ≤1% (hard skip if wider)
 
 ### Decision Rules (one gate only)
 
 | Rule | Kraken |
 |---|---|
 | Crash gate | BTC down >20% in 24h → no new entries, protect positions |
-| Everything else | **TRADE** — find the best setup and enter |
+| Everything else | **TRADE** — find the best intraday setup and enter |
 | Sector pause rules | **RETIRED** — ignore consecutive loss counts entirely |
 | CAUTION / OFFENSIVE regime | **RETIRED** — BTC vs MA does not affect sizing or entries |
 | DXY filter | **NOT in strategy** — do not apply |
@@ -102,13 +115,19 @@ the old Alpaca conservative rules are fully retired.
 ### Trade Idea Format
 
 For each idea include:
-- **Catalyst** (what's driving it)
-- **Entry** (market, limit, or trigger level)
-- **Stop:** `stop_limit` (stop_price + limit_price) or `trailing_stop` (trail_percent, default 5)
-- **Target** and **R:R**
+- **Catalyst** (what's driving it — must be <6h old for day trades)
+- **Entry** (market for speed; limit if precise level matters)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (default all new trades); 7 for binary-catalyst events only
+- **T1** (entry +3%) and **T2** (entry +5%) — both defined before entry
+- **R:R** — must be ≥1.2:1 at T1 vs 2.5% stop
 - **Size** (% of equity or $ notional — sized to conviction, no arbitrary caps)
 - **Kraken pair** confirmed via `kraken.sh assets SYM/USD`
 - **Spread** confirmed ≤1% via `kraken.sh quote SYM/USD`
+
+### Stop placement rule (MANDATORY)
+
+Immediately after every buy fill: place `trailing_stop` at `trail_percent: 2.5`, GTC.
+The trade is not complete until the stop is placed. No open unprotected positions.
 
 ### Banned phrases in research logs
 
