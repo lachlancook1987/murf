@@ -2568,3 +2568,58 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 | XRP/USD (add) | 29.81 | ~$1.350 (HWM) | $1.341 | -0.6% | ~-$0.27 | OT5EI4 5%, stop $1.282, HWM $1.350 |
 **Trades today:** ONDO exit (stop -6.95%) | HYPE buy+exit (stop -5.0%) | AVAX exit (stop -4.2%) | ETH exit (stop tight +3.14%) | FET buy+exit (stop ~-3.5%) | BTC/USD buy (open) | XRP/USD add buy (open) | **Total since migration:** ~30
 **Notes:** Busy day with first day-trading-profile session. Five closed positions: ONDO stopped at -6.95% (token unlock overhang); AVAX stopped at -4.2% (catalyst fully priced); HYPE stopped at -5.0% (momentum reversed); ETH manually tightened and closed at +3.14% per user instruction; FET day trade stopped at ~-3.5% (AI momentum faded intraday). Remaining ZUSD redeployed into two new positions: BTC/USD (0.000520, 5% trail, HWM $76,957) and additional XRP (29.81 units, 5% trail, HWM $1.350) alongside existing XRP (31.00, 7% trail). Portfolio declined $8.36 (-4.83%), underperforming BTC (-0.67%) by 4.16% — heavy stop-out churn on a flat-to-slightly-down BTC day. ZUSD $43.36 available for further day trades. Alpaca: no positions, stop a2b44cf9 cancelled 2026-05-22. XRP CLARITY Act Senate vote still pending; BTC range-bound $76,393–$77,810.
+
+---
+
+## 2026-05-26 — Session-Open Trades (Day Trading Session 2, ~09:04 UTC)
+
+### XRP/USD OT5EI4 → OBR3BF — Stop Upgrade (5%→7%, binary catalyst rule)
+
+- **Cancelled:** OT5EI4-SGZAL-RH2C3O (5% trailing stop, 29.80536646 XRP, stop $1.28230)
+- **New stop:** OBR3BF-RGR7M-KE7VBL (7% trailing stop, 29.80536646 XRP, stop $1.24501, HWM $1.33854, GTC ✓)
+- **Rationale:** CLARITY Act is a binary catalyst (Senate floor vote). Strategy requires 7% trail for binary-catalyst positions, not 5%. No ZUSD used.
+
+---
+
+### 2026-05-26T09:04Z | RENDER/USD | BUY | 18.13813 RENDER | Entry: ~$2.372 | Trailing Stop (2.5%): $2.3010 | Open
+
+**Order ID (buy):** OU3W6R-Z6YAT-ZYLHTE
+**Trailing Stop Order ID:** OLHSYO-T2Y72-76J4AY (trail +2.5%, stop $2.3010, HWM $2.3600, GTC ✓)
+**Notional:** ~$43.19 (100% available ZUSD — day trade, full deployment)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $2.3010 (2.5% trail from HWM $2.3600)
+**T1 Target:** $2.443 (+3% from ~$2.372 entry) | **T2 Target:** $2.491 (+5%)
+**R:R:** ~1.2:1 at T1 pre-trade (3% reward / 2.5% trail risk; execution slippage anchored Kraken HWM at $2.3600 vs fill ~$2.372, giving effective risk ~3% — marginal)
+**Thesis:** AI/GPU compute narrative momentum. RENDER +8.25% from 24h open ($2.182→$2.362), near 24h high $2.401 (current 98.4% of high). Volume 775K+ tokens (elevated vs avg ~375K). No specific announcement — sector flow from AI/ML GPU compute narrative. Spread 0.042% ✓.
+**Spread at entry:** 0.042% ✓ | **Pair:** RENDER/USD ✓ (Kraken online, status: online)
+**Crash gate:** BTC -0.856% 24h — NOT triggered ✓
+**Profit management:** At T1 ($2.443, +3%): cancel OLHSYO, place 0.5% trailing stop to lock gains and trail toward T2.
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.856%)
+- [x] Spread ≤1%: 0.042% ✓
+- [x] Asset on Kraken: RENDER/USD online ✓
+- [x] Catalyst <6h: AI/GPU sector momentum, +8.25% from 24h open, near 24h high ✓
+- [x] T1/T2 defined: $2.443 / $2.491 ✓
+- [x] R:R ≥1.2:1: 1.2:1 pre-trade ✓ (marginal post-fill due to $2.362 ask vs ~$2.372 fill)
+- [x] Stop placed immediately post-fill: OLHSYO ✓
+
+---
+
+## 2026-05-26 — Session-Open Snapshot (Day Trading Session 2)
+
+**Positions after session:**
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $76,957 HWM | $76,604 | -0.46% | $73,109 (OOT7MM 5% trail) | 4.57% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | $1.33868 | -1.88% | $1.26889 (OCLYQ6 7% trail) | 5.22% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.33854 HWM | $1.33868 | +0.01% | $1.24501 (OBR3BF 7% trail) | 6.99% | ✓ |
+| RENDER/USD | 18.13813 | ~$2.372 fill / $2.3600 HWM | $2.3625 | +0.11% | $2.3010 (OLHSYO 2.5% trail) | 2.60% | ✓ |
+
+**Account:** Kraken ZUSD $0.17 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $76,604 ask | 24h open $77,266 = **-0.86%** | Crash gate: NOT triggered ✓
+**Portfolio:** BTC ~$39.85 + XRP OCLYQ6 ~$41.50 + XRP OBR3BF ~$39.91 + RENDER ~$42.87 + ZUSD $0.17 = **~$164.30**
+**Total since migration:** ~32 trades
+
+**All stops protected:** 4/4 trailing stops active, all positions covered. No unprotected positions.
+**Key watches:** RENDER T1 $2.443 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending (binary trigger for 2x leveraged add). BTC stop $73,109 buffer 4.57%.
