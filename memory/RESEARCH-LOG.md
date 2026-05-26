@@ -7023,3 +7023,134 @@ No manual stop adjustments needed.
 
 **Planned trades:** HYPE/USD (on rotation) + XRP leveraged add (pending margin check, CLARITY Act trigger)
 
+---
+
+## 2026-05-26 — Pre-Session Research (Session 2)
+
+### Account Snapshot
+
+**Kraken balances (live):**
+| Asset | Qty | Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | ~$76,957 | $76,838 | **-0.15%** | $73,108.80 (5% trail, OOT7MM) | **4.86%** |
+| ETH/USD | 0.01970 | $2,026 | $2,100 | **+3.65%** | $2,040.15 (5% trail, O6GVNC) | **⚠️ 2.85%** |
+| XRP/USD | 31.00 | $1.344 | $1.347 | **+0.22%** | $1.26889 (7% trail, OCLYQ6) | 5.79% |
+| XRP/USD add | 29.80536646 | ~$1.3498 | $1.347 | **-0.20%** | $1.28230 (5% trail, OT5EI4) | 4.82% |
+
+**ZUSD: $3.79** (essentially fully deployed)
+**Alpaca: no open positions, no active orders** ✓
+
+**Portfolio value (approx):** BTC $39.97 + ETH $41.37 + XRP×2 $81.92 + ZUSD $3.79 = **~$167.05**
+
+**Key change since last session:** Two new positions entered (BTC add + XRP leveraged add) using the $84.02 ZUSD from AVAX/HYPE stop exits. ZUSD now essentially $0.
+
+---
+
+### Market Context
+
+| Asset | 24h Open | Current | 24h Chg |
+|---|---|---|---|
+| BTC | $77,265.90 | $76,838 | **-0.55%** |
+| ETH | $2,110.97 | $2,100 | **-0.52%** |
+| XRP | $1.34903 | $1.347 | **-0.13%** |
+
+**Fear & Greed Index:** 30 (Fear) — unchanged from prior session
+**BTC Funding Rate:** Binance +0.0081%, Bybit +0.0040% (mildly positive — longs slight premium, no froth)
+**BTC Crash Gate:** -0.55% in 24h → **NOT triggered** ✓
+
+**Top gainers 24h (Perplexity):**
+- WLD (Worldcoin): +9.2% from open ($0.3305 → $0.3609); 24h high $0.4269 (+29% spike then pullback)
+- FET (Fetch.ai): +4.83% from open ($0.2318 → $0.243); AT 24h high — still running
+- AKT (Akash Network): +11.28% per CryptoSlate BUT pulled back from high today ($0.9397 → $0.905 = -2.5% now)
+- HYPE: -1.06% today (off from 7-day +39% run, consolidating at $60.46)
+- TAO: +1.66% today (7-day +16%)
+
+**Key macro catalysts:**
+- U.S. CLARITY Act / crypto market-structure legislation: Senate floor vote still pending; Coinbase + Ripple urging Senate to preserve GENIUS rewards — XRP binary catalyst still loading
+- Hyperliquid "flipped Solana by FDV" per Perplexity — HYPE narrative intact
+- Post-Fusaka DeFi throughput improvement: LINK, ETH in "tight accumulation zones" (BeInCrypto)
+- Token unlocks this week: KMNO ~$4.7M on May 30 (not held; minor market noise)
+- No major BTC news; BTC RSI ~47 neutral, 200-day MA rising since May 21
+
+**Perplexity data note:** One query returned BTC at "$93,000" — clearly stale/hallucinated; Kraken live quote $76,838 used throughout.
+
+---
+
+### Stop / Position Flags
+
+**⚠️ FLAG 1 — ETH buffer THIN:** ETH at $2,100, stop at $2,040.15 = **2.85% buffer**. Below 3% threshold. One -3% ETH day triggers stop. ETH -0.52% today, 4h chart bearish. Watch closely — at risk if BTC continues soft.
+
+**⚠️ FLAG 2 — XRP new add stop too tight for binary catalyst:** Stop OT5EI4 is set at **5% trail** on 29.80 XRP. Per strategy rule: *binary-catalyst assets (CLARITY Act = binary) → use `trail_percent: 7`*. 5% trail risks early stop-out on Senate vote volatility. **Action: consider replacing OT5EI4 with a 7% trailing stop.** No cost except free ZUSD needed for a new stop order — can be done if ZUSD freed.
+
+**BTC stop OK:** OOT7MM at 5% trail, stop $73,109, buffer 4.86%. BTC near entry ($76,838 vs HWM $76,957). Normal.
+
+---
+
+### Trade Opportunities (rotation-contingent — ZUSD $3.79)
+
+All new entries require an existing stop to trigger first or margin headroom.
+
+**Idea 1 (PRIMARY ROTATION): FET/USD — AI momentum**
+- **Catalyst:** Fetch.ai AI agent infrastructure; +60% in 30 days; +4.83% today, AT 24h high ($0.2432) — momentum not exhausted; one of few assets making new session highs today
+- **Entry:** Market ~$0.243 (immediate on any stop trigger)
+- **Stop:** 5% trailing (`trail_percent: 5`)
+- **Target:** $0.27 T1 (+11.1%), $0.30 T2 (+23.5%) | R:R ~2.2:1
+- **Size:** 100% of freed ZUSD on first rotation trigger
+- **Pair:** FET/USD ✓ | Spread: $0.0004/$0.243 = **0.165%** ✓
+- **Priority:** #1 on rotation (highest current momentum)
+
+**Idea 2 (CONTINGENCY): HYPE/USD — DEX narrative**
+- **Catalyst:** Hyperliquid #1 on-chain perp DEX; "flipped Solana by FDV"; recovering from $57.62 (our stop exit) back to $60.46 — position reset
+- **Entry:** Market ~$60.46 on second rotation
+- **Stop:** 5% trailing
+- **Target:** $66 T1 (+9.2%), $72 T2 (+19.1%) | R:R ~1.8:1
+- **Size:** 100% of freed ZUSD if FET not already held
+- **Pair:** HYPE/USD ✓ | Spread: 0.017% ✓
+- **Priority:** #2 rotation slot
+
+**Idea 3 (CONTINGENCY): LINK/USD — DeFi/Fusaka accumulation**
+- **Catalyst:** Post-Fusaka L2 fee reduction improving DeFi throughput; BeInCrypto "tight accumulation zone"; LINK in 30-day base at ~$9.50
+- **Entry:** Market ~$9.53 on third rotation
+- **Stop:** 5% trailing
+- **Target:** $10.50 T1 (+10.2%), $11.00 T2 (+15.4%) | R:R ~2:1
+- **Size:** 50% of freed ZUSD (diversify with FET)
+- **Pair:** LINK/USD ✓ | Spread: 0.019% ✓
+
+**Idea 4 (PASS): WLD/USD**
+- WLD +9.2% from open but already -15.5% off $0.4269 24h high. Pullback from spike, no documented catalyst. **PASS.**
+
+**Idea 5 (PASS): AKT/USD**
+- AKT spiked +11.28% then reversed; now -2.5% from 24h open. Momentum exhausted. **PASS.**
+
+---
+
+### Risk Factors
+
+1. **ETH 2.85% buffer** — below critical threshold; stop triggers if ETH falls to $2,040.15
+2. **XRP CLARITY Act timing** — vote can slip again; XRP sitting just below entry ($1.347 vs $1.3498 add entry); if vote delayed, XRP may drift lower
+3. **XRP add stop at 5%** — should be 7% per binary-catalyst rule (see FLAG 2)
+4. **BTC at flat entry** — $76,838 vs HWM $76,957; no profit buffer yet; stop $73,109 still 4.86% below. If BTC continues down, could trigger first
+5. **F&G 30 (Fear)** — market hesitant; rallies lack conviction; any macro negative (rate surprise, equity selloff) amplifies downside
+6. **ZUSD = $3.79** — no new entries without rotation or margin draw
+7. **FET momentum risk** — already +60% in 30 days; entering at 24h high means no pullback cushion; set tight stop immediately on entry
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC -0.55% in 24h). TRADE stance.**
+
+**Existing positions:** All 4 stops intact. No emergency exits. No manual adjustments needed today — except:
+- **Action item:** Consider replacing XRP add stop OT5EI4 (5% trail) with a 7% trail stop when ZUSD allows (cancel old, place new).
+
+**New entries:** BLOCKED by ZUSD $3.79. Rotation watchlist armed:
+1. **#1 FET/USD** — market order + 5% trailing stop immediately on any rotation
+2. **#2 HYPE/USD** — market order + 5% trailing stop on second rotation
+3. **#3 LINK/USD** — market order + 5% trailing stop alongside FET if two exits
+
+**XRP watch:** CLARITY Act vote still imminent — if passes, evaluate leveraged XRP add at current ~$1.35 level. XRP total exposure already $81.92 (~49% of portfolio). New leveraged add only if conviction is strong post-vote catalyst.
+
+**ETH watch:** Buffer 2.85% — if ETH drops toward $2,040, stop fires first among existing positions → rotate freed ~$41 into FET.
+
+**Planned trades:** FET/USD (on first rotation — ETH or BTC stop trigger) | HYPE/USD (second rotation) | XRP stop upgrade to 7% trail when ZUSD available
+
