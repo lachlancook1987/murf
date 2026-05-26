@@ -2666,40 +2666,51 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 
 ---
 
-## 2026-05-26 — Session-Open Scan (Day Trading Session 3)
+## 2026-05-26 — FET Manual Profit Take + WLD Entry
 
-### FET Stop Tightened — T2 Reached (+5%)
+### CLOSED — FET/USD (user manual profit take)
 
-- **Cancelled:** OGK5ML-QVH47-AUTQHE (4% trailing stop, stop $0.2478, HWM $0.2581)
-- **New stop:** ONB3O6-WEPV7-O35YNK (0.5% trailing stop, stop $0.2563, HWM $0.2575, GTC ✓)
-- **Rationale:** FET hit T2 ($0.2577 = +5% from $0.2454 entry); current ask $0.2578. Strategy mandates tightening to 0.5% trail at T1 to lock gains and trail toward T2. T2 reached — executing tightening. Locks in ~+4.4% minimum gain if stop triggers at $0.2563.
-- **Effective lock-in at stop:** 168.64 × ($0.2563 − $0.2454) = **~+$1.84 gain** vs entry
+- **Exit:** ~$0.25+ (user-initiated manual close; 4% trailing stop OGK5ML cancelled by fill)
+- **Qty closed:** 168.64 FET
+- **Entry:** ~$0.2454 | **P&L:** ~+3–4% | **Approx +$1.40–$1.70**
+- **Proceeds:** ~$42.91 ZUSD rotated into WLD
 
 ---
 
-### 2026-05-26 — Session-Open Snapshot (Day Trading Session 3, post stop tightening)
+### 2026-05-26 | WLD/USD | BUY | 107.41376 WLD | Entry: ~$0.3947 | Trailing Stop (2.5%): $0.3849 | Open
 
-| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
-|---|---|---|---|---|---|---|---|---|
-| BTC/USD | 0.00052026 | ~$76,957 HWM | $77,133 | +0.23% | $77,528.60 | $73,652.20 (OOT7MM 5% trail) | 4.51% | ✓ |
-| XRP/USD | 31.00 | $1.344 | $1.350 | +0.45% | $1.36439 | $1.26889 (OCLYQ6 7% trail) | 6.05% | ✓ |
-| XRP/USD (add) | 29.80537 | ~$1.350 HWM | $1.350 | -0.52% | $1.35776 | $1.26272 (OBR3BF 7% trail) | 6.51% | ✓ |
-| FET/USD | 168.64 | ~$0.2454 | $0.2578 | **+5.1% ✓ T2** | $0.2575 | $0.2563 (ONB3O6 0.5% trail) | 0.58% | ✓ TIGHTENED |
+**Order ID (buy):** OGHUEE-YOJBX-S52JAV
+**Trailing Stop Order ID:** OM4NPW-DBSJH-KR5OAV (trail +2.5%, stop $0.3849, HWM $0.3947, GTC ✓)
+**Notional:** ~$42.81 (100% available ZUSD)
+**Trailing Stop %:** 2.5% (strategy default)
+**Stop trigger:** $0.3849 (2.5% trail from HWM $0.3947)
+**T1 Target:** $0.4064 (+3%) | **T2 Target:** $0.4143 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% stop risk) ✓
+**Thesis:** Sam Altman / AI identity / Worldcoin narrative. WLD +19.4% from 24h open $0.3305; 24h high $0.4269. Current $0.3947 = 92.5% of 24h high — pulled back from high, offering re-entry with room to reclaim and exceed. Volume 10.1M tokens (elevated). Spread 0.025% ✓. T1 $0.4064 and T2 $0.4143 both below 24h high $0.4269 (achievable).
+**Spread at entry:** 0.025% ✓ | **Pair:** WLD/USD ✓ (Kraken online)
+**Crash gate:** BTC -0.35% 24h — NOT triggered ✓
+**Profit management:** At T1 ($0.4064, +3%): cancel OM4NPW, place 0.5% trailing stop to lock gains and trail toward T2.
 
-**Account:** Kraken ZUSD $0.09 (fully deployed) | Alpaca: no positions, no active orders ✓
-**BTC:** $77,133 ask | 24h open $77,266 = **-0.17%** | Crash gate: NOT triggered ✓
-**F&G:** 34 (Fear) | **Research:** No new alt catalysts; ZUSD $0.09 blocks new entries
-**Portfolio estimate:** BTC ~$40.13 + XRP OCLYQ6 ~$41.87 + XRP OBR3BF ~$40.26 + FET ~$43.42 + ZUSD $0.09 = **~$165.77**
-**Total since migration:** ~34 stop/management actions
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.35%)
+- [x] Spread ≤1%: 0.025% ✓
+- [x] Asset on Kraken: WLD/USD online ✓
+- [x] Catalyst: AI identity/Sam Altman narrative, +19.4% 24h, high volume ✓
+- [x] T1/T2 defined: $0.4064 / $0.4143 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OM4NPW ✓
 
-**Thesis check:**
-| Symbol | Status | Notes |
-|---|---|---|
-| FET | **AT T2 — TIGHTENED** | Stop tightened to 0.5% trail. Locks ~+4.4% min gain. If FET continues higher, HWM ratchets. |
-| BTC | **INTACT** | HWM $77,528.60; stop $73,652.20; buffer 4.51%. Range-bound. |
-| XRP (OCLYQ6) | **INTACT — CATALYSING** | CLARITY Act Senate floor vote still pending. Buffer 6.05%. |
-| XRP (OBR3BF) | **INTACT — CATALYSING** | Binary-catalyst rule (7% trail) applied. Buffer 6.51%. |
+---
 
-**Decision: HOLD — No New Entries.** ZUSD $0.09 blocks any new spot trades. XRP leveraged add blocked (CLARITY Act vote not yet occurred). FET stop tightened at T2 per strategy. All theses intact.
-**Key watch:** FET — 0.5% trail tight; expect exit soon at ~+4.4% or higher if momentum continues. XRP CLARITY Act vote imminent (Congress in session May 26+).
-**Notification:** Sent via WhatsApp (FET T2 + stop tightening action).
+## 2026-05-26 — Snapshot (post WLD entry)
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $77,529 HWM | ~$76,997 | -0.68% | $73,652 (OOT7MM 5% trail) | 4.48% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.357 | -0.54% | $1.26889 (OCLYQ6 7% trail) | 6.48% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.35776 HWM | ~$1.357 | -0.06% | $1.26272 (OBR3BF 7% trail) | 6.99% | ✓ |
+| WLD/USD | 107.41376 | $0.3947 HWM | ~$0.3947 | ~0% | $0.3849 (OM4NPW 2.5% trail) | 2.49% | ✓ |
+
+**Account:** ZUSD $0.10 (fully deployed) | All 4 trailing stops active ✓
+**Total since migration:** ~34 trades
+**Key watches:** WLD T1 $0.4064 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending. BTC HWM $77,529 (running higher).
