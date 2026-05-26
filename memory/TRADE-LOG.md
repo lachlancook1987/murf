@@ -2714,3 +2714,55 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 **Account:** ZUSD $0.10 (fully deployed) | All 4 trailing stops active ✓
 **Total since migration:** ~34 trades
 **Key watches:** WLD T1 $0.4064 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending. BTC HWM $77,529 (running higher).
+
+---
+
+## 2026-05-26 — Midday Scan — WLD Stop-Out + FET Re-Entry
+
+### CLOSED — WLD/USD (trailing stop OM4NPW triggered)
+
+- **Stop Order:** OM4NPW-DBSJH-KR5OAV (trail 2.5%, HWM $0.3947, stop $0.3849)
+- **Exit:** ~$0.3849 (2.5% trailing stop trigger)
+- **Qty closed:** 107.41376 WLD
+- **Entry:** ~$0.3947 | **Exit:** ~$0.3849 | **P&L:** ~-2.5% | **~-$1.06**
+- **Proceeds:** ~$41.72 ZUSD rotated into FET
+- **Post-exit price:** $0.377–$0.382 (continued lower — stop protection worked)
+
+---
+
+### 2026-05-26 | FET/USD | BUY (Midday re-entry) | 164.3744 FET | Entry: ~$0.2531 | Trailing Stop 2.5%: $0.2447 | Open
+
+**Buy Order ID:** OPIZQB-SZBXI-XAWBUT
+**Trailing Stop Order ID:** OGNVDP-5NI65-3CEI5D (trail -2.5%, stop $0.2447, HWM $0.2509, GTC ✓)
+**Notional:** ~$41.60 (100% of WLD stop proceeds)
+**Trailing Stop %:** 2.5% (strategy default)
+**Stop trigger:** $0.2447 (2.5% trail from HWM $0.2509)
+**T1 Target:** $0.2607 (+3% from ~$0.2531 entry) | **T2 Target:** $0.2658 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% stop risk) ✓
+**Thesis:** AI/ASI Alliance — FET +8.2% from 24h open $0.2318; 24h high $0.2615. Volume 13.3M tokens today (5.7x avg ~2.3M). ASI Agent Launchpad live (May 20-22 catalyst, ongoing narrative). Spread 0.012% ✓. Re-entry after manual close earlier today at ~$0.25+.
+**Crash gate:** BTC -0.05% 24h — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered ✓
+- [x] Spread ≤1%: 0.012% ✓
+- [x] Asset on Kraken: FET/USD online ✓
+- [x] Catalyst: ASI Agent Launchpad, +8.2% 24h, 5.7x avg volume ✓
+- [x] T1/T2 defined: $0.2607 / $0.2658 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OGNVDP ✓
+
+---
+
+## 2026-05-26 — Midday Snapshot
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $77,529 HWM | ~$77,136 | +0.23% | $73,652 (OOT7MM 5% trail) | 4.52% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.355 | +0.82% | $1.26889 (OCLYQ6 7% trail) | 6.28% | ✓ |
+| XRP/USD add | 29.80537 | $1.35844 HWM | ~$1.355 | +0.39% | $1.26335 (OBR3BF 7% trail) | 6.73% | ✓ |
+| FET/USD | 164.3744 | ~$0.2531 / $0.2509 HWM | ~$0.2513 | ~-0.7% | $0.2447 (OGNVDP 2.5% trail) | 2.62% | ✓ |
+
+**Account:** ZUSD $0.107 (fully deployed) | All 4 trailing stops active ✓
+**Total since migration:** ~35 trades
+**WLD stop-out:** -2.5% (-$1.06) — capital immediately rotated into FET
+**Key watches:** FET T1 $0.2607 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate vote still pending. BTC buffer comfortable at 4.52%.
