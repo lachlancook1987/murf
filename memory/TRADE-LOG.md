@@ -2880,3 +2880,38 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 **Total trades since migration:** ~38
 
 **Key watches:** WLD T1 $0.3976 (+3%) → tighten to 0.5% trail. BTC buffer 2.52% — CRITICAL. XRP CLARITY Act Senate floor vote still pending (binary trigger). WLD AI identity narrative intact (+16% 24h).
+
+---
+
+## 2026-05-26 — Overnight Triage Check (~post session)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| WLD/USD | 101.720 | ~$0.386 | $0.3810 | **-1.3%** | $0.3842 (new!) | $0.3746 (trail 2.5%, ratcheted ↑) | 1.7% | OWGVLY-INHIB-UDNHKE ✓ |
+| BTC/USD | 0.00052026 | ~$76,957 | $75,748 | **-1.6%** | $77,989 | $74,090 (trail 5%) | 2.3% | OOT7MM-7SEJA-5ZXDPL ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.329 | **-1.1%** | $1.36439 | $1.26889 (trail 7%) | 4.5% | OCLYQ6-H45E6-KDCK4X ✓ |
+| XRP/USD (add) | 29.80537 | ~$1.350 | $1.329 | **-1.6%** | $1.36387 | $1.26840 (trail 7%) | 4.5% | OBR3BF-RGR7M-KE7VBL ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 cancelled 2026-05-22 (Alpaca BTC closed prior session). ✓
+
+**STEP 2 — Trailing stops verified (Kraken live orders API):**
+- WLD: OWGVLY, 101.72 WLD, trail +2.5%, stop $0.3746 (auto-ratcheted ↑ from $0.3725 — WLD hit new HWM ~$0.3842 overnight) ✓
+- BTC: OOT7MM, 0.00052026 BTC, trail +5%, stop $74,089.90 — unchanged (BTC drifted lower) ✓
+- XRP: OCLYQ6, 31.00 XRP, trail +7%, stop $1.26889 — unchanged ✓
+- XRP add: OBR3BF, 29.80537 XRP, trail +7%, stop $1.26840 — unchanged ✓
+No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. Worst position -1.6% (BTC). All well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- WLD -1.3% → threshold $0.463 (+20%) — not yet
+- BTC -1.6% → threshold $92,348 (+20%) — not yet
+- XRP -1.1% → threshold $1.613 (+20%) — not yet
+- XRP add -1.6% → threshold $1.620 (+20%) — not yet
+No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $75,748 | 24h open $77,265.90 = **-1.97%** | range $75,555–$77,989. Well under -20% threshold. No crash gate. ✓
+
+**Notes:** Quiet overnight. WLD stop auto-ratcheted up ($0.3725→$0.3746) after hitting new HWM ~$0.3842; currently at $0.3810 with 1.7% buffer — thin but above 2% critical floor check (WLD was above stop all night). BTC drifted -1.97% overnight but stop at $74,090 gives comfortable buffer. Both XRP positions unchanged. All theses intact: XRP CLARITY Act Senate floor vote still pending (May 26+, Congress now back); WLD AI identity/Sam Altman narrative.
+
+**Result: NO-OP. No actions taken. No notification sent.**
