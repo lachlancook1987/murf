@@ -2408,3 +2408,54 @@ No manual stop adjustments.
 No notification sent. No commit required (no trades).
 
 **Watch:** XRP CLARITY Act Senate floor vote May 26+ — vote passage triggers XRP leveraged add (2x, trail 7%). ETH stop buffer 2.97% — above 2% critical floor; monitor. ONDO $0.427 support key — break triggers HYPE/USD rotation. AVAX at $9.27 vs HWM $9.49 — needs reclaim for continuation.
+
+---
+
+## 2026-05-26 — Session-Open Trades
+
+### CLOSED — ONDO/USD (trailing stop OX6MNX-DLDMM-PZ3J4Y auto-triggered overnight)
+
+- **Stop Order:** OX6MNX-DLDMM-PZ3J4Y (trail -7%, stop $0.41676, HWM $0.44812)
+- **Exit:** ~$0.41676 (stop trigger level; slippage possible)
+- **Qty closed:** 101.10 ONDO
+- **Entry:** $0.448 | **Exit:** ~$0.41676 | **P&L:** ~-$3.15 (-6.95%)
+- **Proceeds:** ~$42.14 ZUSD (ZUSD balance confirmed $41.79 post-fill)
+- **Notes:** Stop worked as designed. Token unlock overhang (Jan 2026) and short-term selling pressure drove ONDO below stop. Proceeds rotated into HYPE per pre-planned contingency.
+
+---
+
+### 2026-05-26 | HYPE/USD | BUY | 0.67952 HYPE | Entry: ~$60.65 | Trailing Stop (5%): $57.62 | Open
+
+**Order ID (buy):** O7SZ4M-T37IV-IEZ7HN
+**Trailing Stop Order ID:** OIR5UB-Z4FPO-K5HD6T (trail -5%, stop $57.62, HWM $60.65, GTC ✓)
+**Notional:** ~$41.21 (all ONDO proceeds; 100% of available ZUSD)
+**Target:** T1 $66.00 (+8.8%), T2 $72.00 (+18.7%), T3 $80.00 (+31.9%)
+**Stop level:** $57.62 (-5% trailing from HWM $60.65)
+**R:R:** ~1.76:1 to T1 ($3.64 gain / $2.07 risk on 0.67952 HYPE)
+**Thesis:** Pre-planned rotation on ONDO stop trigger. HYPE (Hyperliquid) is the native token of the leading on-chain perpetuals DEX, currently near 24h lows ($60.34 session low) — favorable entry vs recent HWM $64. DEX narrative vs CEX continues; strong volume ($268M 24h). BTC crash gate NOT triggered (-0.27% 24h). F&G 30 (Fear) — contrarian entry.
+**Notes:** HYPE spread 0.016% ✓; pair online ✓; spot (no leverage). Stop set immediately post-fill. All prior contingency criteria met (ONDO stop triggered → HYPE market order). Kraken taker fee ~0.4%.
+
+---
+
+## 2026-05-26 — Session-Open Snapshot
+
+**Positions after trades:**
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| AVAX/USD | 4.82 | ~$9.22 | $9.29 | **+0.76%** | $9.49 | $8.83 (trail 7%) | 5.49% | OLCZTS-Q5PS4-3T3UFD ✓ |
+| ETH/USD | 0.0197 | $2,026 | $2,105 | **+3.90%** | $2,147.52 | $2,040.15 (trail 5%) | 3.08% | O6GVNC-H2KL5-3K2WQG ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.346 | **+0.15%** | $1.36439 | $1.26889 (trail 7%) | 5.80% | OCLYQ6-H45E6-KDCK4X ✓ |
+| HYPE/USD | 0.67952 | ~$60.65 | $60.64 | **~0%** | $60.65 | $57.62 (trail 5%) | ~5% | OIR5UB-Z4FPO-K5HD6T ✓ |
+
+**Account:** Kraken ZUSD $0.25 (fully deployed) | Alpaca: no positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+**BTC:** $77,054 ask | 24h open $77,266 = **-0.27%** | Crash gate: NOT triggered ✓
+**F&G:** 30 (Fear) | **BTC funding rate:** Binance +0.0014%, Bybit +0.0073% (mildly positive = longs slight premium)
+**Total since migration:** 23 trades
+
+**Thesis check — existing positions:**
+- **AVAX:** CME futures live (May 22); Kraken staking active. Range-bound $9.23–$9.38. INTACT. HOLD.
+- **ETH:** Glamsterdam/Fusaka upgrade H2 2026 on track. ETF inflows ongoing. Buffer 3.08% above 2% floor. INTACT. HOLD.
+- **XRP:** CLARITY Act Senate floor vote expected this week (May 26+). Perplexity unable to confirm vote today — binary catalyst still loading. Buffer 5.80%. INTACT — CATALYSING. HOLD.
+- **HYPE:** New entry per ONDO rotation contingency. DEX/Hyperliquid narrative intact; near 24h lows for favorable entry. Trail 5% protecting downside.
+
+**Key watches:** XRP CLARITY Act Senate floor vote this week — passage triggers leveraged XRP add (2x, 7% trail). HYPE $64 resistance — break triggers stop tightening review at +20% from entry. ETH buffer 3.08% — monitor.
