@@ -2623,3 +2623,43 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 
 **All stops protected:** 4/4 trailing stops active, all positions covered. No unprotected positions.
 **Key watches:** RENDER T1 $2.443 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending (binary trigger for 2x leveraged add). BTC stop $73,109 buffer 4.57%.
+
+---
+
+## 2026-05-26 — RENDER Exit + FET Re-entry + Stop Upgrade
+
+### CLOSED — RENDER/USD (trailing stop OLHSYO-T2Y72-76J4AY triggered)
+
+- **Stop Order:** OLHSYO-T2Y72-76J4AY (trail 2.5%, HWM $2.3600, stop $2.3010)
+- **Exit:** ~$2.301 (stop trigger level)
+- **Qty closed:** 18.13813 RENDER
+- **Entry:** ~$2.372 | **Exit:** ~$2.301 | **P&L:** ~-3.0% | **~-$1.29**
+- **Proceeds:** ~$41.57 ZUSD rotated into FET
+
+---
+
+### 2026-05-26 | FET/USD | BUY | 168.64 FET | Entry: ~$0.2454 | Trailing Stop (4%): $0.2358 | Open
+
+**Stop Order ID:** OGK5ML-QVH47-AUTQHE (trail +4.0%, stop $0.2358, HWM $0.2456, GTC ✓)
+*(Initial 2.5% stop O5SP7A-R6AMA-UALYH5 cancelled; upgraded to 4% per user instruction)*
+**Notional:** ~$41.57 (100% of RENDER proceeds)
+**Trailing Stop %:** 4% (user-specified)
+**Stop trigger:** $0.2358 (4% trail from HWM $0.2456)
+**T1 Target:** $0.2527 (+3% from ~$0.2454 entry) | **T2 Target:** $0.2577 (+5%)
+**R:R:** ~0.75:1 at T1 (3% reward / 4% stop risk — below 1.2:1 threshold; user overrode per explicit instruction; wider stop gives more room for AI/ASI momentum to develop toward T2+)
+**Thesis:** AI/ASI Alliance narrative re-entry — FET +6.0% from 24h open $0.2318, near 24h high $0.2465. Volume 7.8M tokens (elevated, vs avg ~2.3M). ASI Agent Launchpad live (May 22 catalyst still <4 days old). Spread 0.018% ✓. Pair FETUSD online ✓.
+**Crash gate:** BTC -0.95% 24h — NOT triggered ✓
+
+---
+
+## 2026-05-26 — Snapshot (post FET entry)
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $76,957 HWM | $76,535 | -0.55% | $73,109 (OOT7MM 5% trail) | 4.48% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.339 | -1.86% | $1.26889 (OCLYQ6 7% trail) | 5.23% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.34162 HWM | ~$1.339 | -0.19% | $1.24771 (OBR3BF 7% trail) | 6.97% | ✓ |
+| FET/USD | 168.64 | ~$0.2454 / $0.2456 HWM | $0.2456 | +0.08% | $0.2358 (OGK5ML 4% trail) | 3.99% | ✓ |
+
+**Account:** ZUSD $0.09 (fully deployed) | All 4 trailing stops active ✓
+**Total since migration:** ~33 trades
