@@ -2556,3 +2556,15 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 - [x] T1/T2 defined: $0.2516 / $0.2565 ✓
 - [x] R:R ≥1.2:1: 1.47:1 ✓
 - [x] Stop placed immediately post-fill: O73HOS ✓
+
+---
+
+### May 26 — EOD Snapshot (Day 17, Tuesday)
+**Portfolio:** $164.84 | **Cash:** $43.36 (26.3%) | **Day P&L:** -$8.36 (-4.83%) | **Phase P&L:** -$14.94 (-8.31%) | **vs BTC:** -4.16%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.000520 | ~$76,957 (HWM) | $76,745 | -0.3% | ~-$0.11 | OOT7MM 5%, stop $73,109 |
+| XRP/USD | 31.00 | $1.344 | $1.341 | -0.2% | -$0.09 | OCLYQ6 7%, stop $1.269, HWM $1.364 |
+| XRP/USD (add) | 29.81 | ~$1.350 (HWM) | $1.341 | -0.6% | ~-$0.27 | OT5EI4 5%, stop $1.282, HWM $1.350 |
+**Trades today:** ONDO exit (stop -6.95%) | HYPE buy+exit (stop -5.0%) | AVAX exit (stop -4.2%) | ETH exit (stop tight +3.14%) | FET buy+exit (stop ~-3.5%) | BTC/USD buy (open) | XRP/USD add buy (open) | **Total since migration:** ~30
+**Notes:** Busy day with first day-trading-profile session. Five closed positions: ONDO stopped at -6.95% (token unlock overhang); AVAX stopped at -4.2% (catalyst fully priced); HYPE stopped at -5.0% (momentum reversed); ETH manually tightened and closed at +3.14% per user instruction; FET day trade stopped at ~-3.5% (AI momentum faded intraday). Remaining ZUSD redeployed into two new positions: BTC/USD (0.000520, 5% trail, HWM $76,957) and additional XRP (29.81 units, 5% trail, HWM $1.350) alongside existing XRP (31.00, 7% trail). Portfolio declined $8.36 (-4.83%), underperforming BTC (-0.67%) by 4.16% — heavy stop-out churn on a flat-to-slightly-down BTC day. ZUSD $43.36 available for further day trades. Alpaca: no positions, stop a2b44cf9 cancelled 2026-05-22. XRP CLARITY Act Senate vote still pending; BTC range-bound $76,393–$77,810.
