@@ -2825,3 +2825,58 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 **Total trades since migration:** ~37
 
 **Key watches:** HYPE T1 $65.44 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate vote still pending (binary add trigger). BTC stop $74,090 buffer 3.46% (monitor). FET recovered to $0.249 after our stop — pattern of choppy intraday noise on AI sector.
+
+---
+
+## 2026-05-26 — Session 5 (Session-Open Continuation)
+
+### HYPE/USD OITY3H — Auto Stop-Out (confirmed from account)
+
+- **Stop Order:** OITY3H-2PEIY-QV5N3Y (trail 2.5%, HWM $62.78, stop $61.22)
+- **Exit:** ~$61.22 | **Qty:** 0.6392448 HYPE | **P&L:** ~-3.6% / ~-$1.39
+- **Proceeds:** $39.38 ZUSD (confirmed in account balance)
+- **Notes:** Auto-stop confirmed closed (HYPE balance = 0 in API). HYPE fell further to $59.65 post-stop.
+
+---
+
+### 2026-05-26 | WLD/USD | BUY | 101.7200 WLD | Entry: ~$0.386 | Trailing Stop (2.5%): $0.3725 | Open
+
+**Order ID (buy):** O5NO52-NMDZK-DNR5PY
+**Trailing Stop Order ID:** OWGVLY-INHIB-UDNHKE (trail -2.5%, stop $0.3725, HWM $0.3820, GTC ✓)
+**Notional:** ~$39.28 (100% available ZUSD — HYPE stop proceeds)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $0.3725 (2.5% trail from HWM $0.3820)
+**T1 Target:** $0.3976 (+3% from ~$0.386) | **T2 Target:** $0.4053 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** AI identity/Sam Altman/Worldcoin narrative. WLD +16.2% from 24h open $0.3305 (24h high $0.4269). Current above VWAP ($0.369 session). Volume 10.4M tokens. Spread 0.078% ✓. Re-entry after HYPE stop-out rotation; capital recycled per strategy.
+**Spread at entry:** 0.078% ✓ | **Pair:** WLD/USD ✓ (Kraken online)
+**Crash gate:** BTC -1.63% 24h — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -1.63%) ✓
+- [x] Spread ≤1%: 0.078% ✓
+- [x] Asset on Kraken: WLD/USD online ✓
+- [x] Catalyst: AI identity narrative, +16.2% 24h, above VWAP, 10.4M tokens volume ✓
+- [x] T1/T2 defined: $0.3976 / $0.4053 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OWGVLY ✓
+
+---
+
+## 2026-05-26 — Session 5 Snapshot
+
+| Symbol | Qty | Entry/HWM | Ask | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| WLD/USD | 101.720 | ~$0.386 / $0.3820 HWM | $0.3841 | ~-0.5% | $0.3725 (OWGVLY 2.5% trail) | 2.46% | ✓ |
+| BTC/USD | 0.00052026 | $77,989 HWM | $76,011 | -2.28% | $74,090 (OOT7MM 5% trail) | 2.52% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | $1.331 | -2.49% | $1.26889 (OCLYQ6 7% trail) | 4.69% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.36387 HWM | $1.331 | -2.52% | $1.26840 (OBR3BF 7% trail) | 4.72% | ✓ |
+
+**Account:** Kraken ZUSD $0.10 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $76,011 ask | 24h open $77,266 = **-1.63%** | Crash gate: NOT triggered ✓
+**Portfolio:** WLD ~$39.07 + BTC ~$39.54 + XRP total ~$80.94 + ZUSD $0.10 = **~$159.65**
+**Phase P&L vs $179.78 baseline (May 22):** ~-$20.13 (-11.2%)
+**All stops: 4/4 active ✓ | No unprotected positions**
+**Total trades since migration:** ~38
+
+**Key watches:** WLD T1 $0.3976 (+3%) → tighten to 0.5% trail. BTC buffer 2.52% — CRITICAL. XRP CLARITY Act Senate floor vote still pending (binary trigger). WLD AI identity narrative intact (+16% 24h).
