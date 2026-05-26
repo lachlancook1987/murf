@@ -2663,3 +2663,54 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 
 **Account:** ZUSD $0.09 (fully deployed) | All 4 trailing stops active ✓
 **Total since migration:** ~33 trades
+
+---
+
+## 2026-05-26 — FET Manual Profit Take + WLD Entry
+
+### CLOSED — FET/USD (user manual profit take)
+
+- **Exit:** ~$0.25+ (user-initiated manual close; 4% trailing stop OGK5ML cancelled by fill)
+- **Qty closed:** 168.64 FET
+- **Entry:** ~$0.2454 | **P&L:** ~+3–4% | **Approx +$1.40–$1.70**
+- **Proceeds:** ~$42.91 ZUSD rotated into WLD
+
+---
+
+### 2026-05-26 | WLD/USD | BUY | 107.41376 WLD | Entry: ~$0.3947 | Trailing Stop (2.5%): $0.3849 | Open
+
+**Order ID (buy):** OGHUEE-YOJBX-S52JAV
+**Trailing Stop Order ID:** OM4NPW-DBSJH-KR5OAV (trail +2.5%, stop $0.3849, HWM $0.3947, GTC ✓)
+**Notional:** ~$42.81 (100% available ZUSD)
+**Trailing Stop %:** 2.5% (strategy default)
+**Stop trigger:** $0.3849 (2.5% trail from HWM $0.3947)
+**T1 Target:** $0.4064 (+3%) | **T2 Target:** $0.4143 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% stop risk) ✓
+**Thesis:** Sam Altman / AI identity / Worldcoin narrative. WLD +19.4% from 24h open $0.3305; 24h high $0.4269. Current $0.3947 = 92.5% of 24h high — pulled back from high, offering re-entry with room to reclaim and exceed. Volume 10.1M tokens (elevated). Spread 0.025% ✓. T1 $0.4064 and T2 $0.4143 both below 24h high $0.4269 (achievable).
+**Spread at entry:** 0.025% ✓ | **Pair:** WLD/USD ✓ (Kraken online)
+**Crash gate:** BTC -0.35% 24h — NOT triggered ✓
+**Profit management:** At T1 ($0.4064, +3%): cancel OM4NPW, place 0.5% trailing stop to lock gains and trail toward T2.
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.35%)
+- [x] Spread ≤1%: 0.025% ✓
+- [x] Asset on Kraken: WLD/USD online ✓
+- [x] Catalyst: AI identity/Sam Altman narrative, +19.4% 24h, high volume ✓
+- [x] T1/T2 defined: $0.4064 / $0.4143 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OM4NPW ✓
+
+---
+
+## 2026-05-26 — Snapshot (post WLD entry)
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $77,529 HWM | ~$76,997 | -0.68% | $73,652 (OOT7MM 5% trail) | 4.48% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.357 | -0.54% | $1.26889 (OCLYQ6 7% trail) | 6.48% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.35776 HWM | ~$1.357 | -0.06% | $1.26272 (OBR3BF 7% trail) | 6.99% | ✓ |
+| WLD/USD | 107.41376 | $0.3947 HWM | ~$0.3947 | ~0% | $0.3849 (OM4NPW 2.5% trail) | 2.49% | ✓ |
+
+**Account:** ZUSD $0.10 (fully deployed) | All 4 trailing stops active ✓
+**Total since migration:** ~34 trades
+**Key watches:** WLD T1 $0.4064 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending. BTC HWM $77,529 (running higher).
