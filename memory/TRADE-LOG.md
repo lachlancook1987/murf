@@ -2766,3 +2766,62 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 **Total since migration:** ~35 trades
 **WLD stop-out:** -2.5% (-$1.06) — capital immediately rotated into FET
 **Key watches:** FET T1 $0.2607 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate vote still pending. BTC buffer comfortable at 4.52%.
+
+---
+
+## 2026-05-26 — FET Stop-Out (OGNVDP) + HYPE Re-entry (Session 3)
+
+### CLOSED — FET/USD (trailing stop OGNVDP-5NI65-3CEI5D triggered)
+
+- **Stop Order:** OGNVDP-5NI65-3CEI5D (trail 2.5%, HWM $0.2509, trigger $0.2447)
+- **Exit:** ~$0.2447 (2.5% trailing stop trigger)
+- **Qty closed:** 164.3744 FET
+- **Entry:** ~$0.2531 | **Exit:** ~$0.2447 | **P&L:** ~-3.3% | **~-$1.38**
+- **Proceeds:** ~$40.21 ZUSD (ZUSD balance confirmed ~$40.71 post-fill)
+- **Notes:** FET dipped below 2.5% trailing stop trigger. 4th FET stop-out today — pattern of tight 2.5% trail being blown through on choppy AI-sector intraday noise. Capital rotated into HYPE/USD per session-3 scan.
+
+---
+
+### 2026-05-26 | HYPE/USD | BUY | 0.6392448 HYPE | Entry: ~$63.53 | Trailing Stop (2.5%): $61.22 | Open
+
+**Order ID (buy):** OPWUBY-RVXUC-ZXQOGY (market buy, spot)
+**Trailing Stop Order ID:** OITY3H-2PEIY-QV5N3Y (trail -2.5%, stop $61.22, HWM $62.78, GTC ✓)
+**Notional:** ~$40.61 (100% available ZUSD — day trade, full deployment)
+**Effective fill price:** ~$63.53 ($40.61 cost / 0.6392448 HYPE)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $61.22 (2.5% trail from HWM $62.78)
+**T1 Target:** $65.44 (+3% from $63.53 entry) | **T2 Target:** $66.71 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** Hyperliquid DEX perpetuals narrative — near Kraken ATH ($64.80 today, prior ATH ~$64.27 May 24); +3.36% from 24h open $61.11; 97.5% retention of 24h high (strong momentum signal); surging DEX volumes ($268M+ 24h); 108% from Jan 2026 yearly low. Spread 0.016% ✓. Re-entry after earlier $60.65→$57.62 stop-out (market subsequently recovered strongly, confirming continued demand at higher prices).
+**Spread at entry:** 0.016% ✓ | **Pair:** HYPE/USD ✓ (Kraken online)
+**Crash gate:** BTC -0.79% 24h — NOT triggered ✓
+**Profit management:** At T1 ($65.44, +3%): cancel OITY3H, place 0.5% trailing stop to lock gains and trail toward T2.
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.79%) ✓
+- [x] Spread ≤1%: 0.016% ✓
+- [x] Asset on Kraken: HYPE/USD online ✓
+- [x] Catalyst <6h: DEX/Hyperliquid near ATH momentum, +3.36% from open, surging volumes ✓
+- [x] T1/T2 defined: $65.44 / $66.71 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OITY3H ✓
+
+---
+
+## 2026-05-26 — Session 3 Snapshot (post HYPE entry)
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| HYPE/USD | 0.6392448 | ~$63.53 / $62.78 HWM | ~$63.16 | ~-0.6% | $61.22 (OITY3H 2.5% trail) | 3.08% | ✓ |
+| BTC/USD | 0.00052026 | $77,989 HWM | ~$76,652 | -1.72% | $74,090 (OOT7MM 5% trail) | 3.46% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.349 | -1.06% | $1.26889 (OCLYQ6 7% trail) | 6.28% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.36387 HWM | ~$1.349 | -1.01% | $1.26840 (OBR3BF 7% trail) | 6.27% | ✓ |
+
+**Account:** Kraken ZUSD $0.10 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $76,652 ask | 24h: -0.79% | Crash gate: NOT triggered ✓
+**Portfolio:** HYPE ~$40.41 + BTC ~$39.86 + XRP OCLYQ6 ~$41.83 + XRP OBR3BF ~$40.22 + ZUSD $0.10 = **~$162.42**
+**Phase P&L vs $179.78 baseline (May 22):** ~-$17.36 (-9.66%)
+**All stops: 4/4 active ✓ | No unprotected positions**
+**Total trades since migration:** ~37
+
+**Key watches:** HYPE T1 $65.44 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate vote still pending (binary add trigger). BTC stop $74,090 buffer 3.46% (monitor). FET recovered to $0.249 after our stop — pattern of choppy intraday noise on AI sector.
