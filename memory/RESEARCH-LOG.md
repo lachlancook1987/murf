@@ -7154,3 +7154,135 @@ All new entries require an existing stop to trigger first or margin headroom.
 
 **Planned trades:** FET/USD (on first rotation — ETH or BTC stop trigger) | HYPE/USD (second rotation) | XRP stop upgrade to 7% trail when ZUSD available
 
+---
+
+## 2026-05-26 — Pre-Session Research (Day Trading Session 2)
+
+### Account Snapshot
+
+| Asset | Qty | Entry | Current | P&L% | Stop Order | Stop Trigger | Buffer |
+|---|---|---|---|---|---|---|---|
+| FET/USD | 180.0 | $0.2452 | $0.2421 | **-1.3%** | O73HOS (2.5% trail) | $0.2367 | 2.26% |
+| BTC/USD | 0.00052026 | ~$76,957 HWM | $76,634 | **-0.42%** | OOT7MM (5% trail) | $73,109 | 4.59% |
+| XRP/USD | 31.00 | $1.344 | $1.339 | **-0.37%** | OCLYQ6 (7% trail) | $1.26889 | 5.24% |
+| XRP/USD add | 29.80536646 | $1.3498 | $1.339 | **-0.81%** | OT5EI4 (5% trail) | $1.28230 | 4.27% |
+
+**ZUSD: $0.47** (fully deployed)
+**Alpaca: no open positions, no active orders** ✓
+
+**Portfolio value (approx):** FET $43.58 + BTC $39.87 + XRP $81.42 + ZUSD $0.47 = **~$165.34**
+
+**Stop status:** All 4 stops confirmed open via `kraken.sh orders`. No unprotected positions. ✓
+
+**FLAG — XRP OT5EI4 stop (5% trail):** Per strategy, binary-catalyst assets (CLARITY Act = binary) should use 7% trail. Current 5% trail at $1.28230 is adequate but may blow through on Senate vote volatility. Upgrade to 7% when ZUSD allows (cancel + replace with 7% trail).
+
+---
+
+### Market Context
+
+| Asset | 24h Open | Current (Kraken live) | 24h Chg |
+|---|---|---|---|
+| BTC | $77,265.90 | $76,634 | **-0.82%** |
+| ETH | $2,110.97 | ~$2,090 | **-1.0%** |
+| XRP | $1.34903 | $1.339 | **-0.74%** |
+| FET | $0.23180 | $0.2421 | **+4.44%** |
+| WLD | $0.33050 | $0.3696 | **+11.8%** |
+| AKT | $0.92820 | $0.887 | **-4.5%** (reversed from +11.28% spike) |
+
+**Fear & Greed Index:** 30 (Fear) — unchanged from prior sessions
+**BTC Funding Rate:** Binance +0.0081%, Bybit +0.0040% (mildly positive — longs slight premium, no froth)
+**BTC Crash Gate:** -0.82% in 24h → **NOT triggered** ✓
+
+**Top gainers 24h (CryptoSlate via Perplexity):**
+1. KTA (Keeta): +17.04% — micro-cap, thin liquidity, skip
+2. WLD (Worldcoin): +15.66% (+11.8% from 24h open; current $0.3696; pulled back from $0.4269 high)
+3. DEXE (DeXe): +13.40% — not priority
+4. H (Humanity Protocol): +12.37% — not Kraken focus
+5. AKT (Akash Network): +11.28% per Perplexity BUT has reversed to -4.5% from 24h open ($0.887 vs $0.928 open). Momentum exhausted. **PASS.**
+
+**Kraken top gainers (Perplexity Kraken screener):** XRT +1030%, WAR +534%, PLAY +47.4%, XAN +37%, SAGA +34.3%. All extremely thin; MUBARAK +5.12% — spread checked: **4.32% → HARD SKIP.**
+
+**Key catalysts today:**
+- **CLARITY Act (XRP binary):** U.S. Senate floor vote still pending — primary binary trigger for XRP. RSI 41.6 bearish but fundamentals intact.
+- **AI/ASI narrative:** FET/Fetch.ai Agent Launchpad launched May 20 — narrative intact, but Perplexity notes range-bound near $0.22–$0.244; no fresh catalyst today.
+- **Token unlocks today:** HUMA 458.75M tokens ($11.64M, 20% of supply), SAHARA 132.93M ($4.56M) — minor market noise; not held.
+- **BTC technical:** 4h trend bullish (50/200-day MA rising), RSI 47 neutral. CoinCodex targets $78,430 (+2.3%) today.
+- **Regulatory context:** U.S. crypto market-structure legislation broadly supportive; Coinbase legislative push ongoing.
+
+**Perplexity data quality note:** One catalyst query returned BTC "above $93,000" — clearly stale/hallucinated. All BTC values from Kraken live quote ($76,634) throughout.
+
+---
+
+### Position Analysis
+
+**FET/USD** — Entry $0.2452, current $0.2421 (-1.3%). HWM $0.2427, stop $0.2367, buffer 2.26%. FET is up +4.44% from 24h open ($0.2318) — entered at the daily high. Today is range-bound near $0.22–$0.244. No fresh catalyst beyond the May 20 Agent Launchpad. Not at T1 ($0.2516). Stop narrow but within tolerance. If FET breaks above $0.2442 (24h high) with volume → monitor for T1 approach. Hold.
+
+**BTC/USD** — Entry HWM ~$76,957, current $76,634 (-0.42%). Stop OOT7MM at $73,109 (buffer 4.59%). Slight bullish bias per technicals; RSI 47 neutral; no catalyst today. 4h bullish structure intact. Hold.
+
+**XRP/USD (OCLYQ6 — 7% trail)** — Entry $1.344, current $1.339 (-0.37%). Stop $1.26889, buffer 5.24%. CLARITY Act binary trigger still loading. Perplexity: bearish RSI 41.6, neutral to bearish sentiment. Binance Liquidity Index falling to zero headline today per MEXC. Wait for catalyst.
+
+**XRP/USD (OT5EI4 — 5% trail)** — Entry $1.3498, current $1.339 (-0.81%). Stop $1.28230, buffer 4.27%. Same thesis as above. Stop should be 7% per binary-catalyst rule — flagged for upgrade.
+
+---
+
+### Trade Ideas (Rotation-Contingent — ZUSD $0.47)
+
+All new entries require an existing stop to trigger first, freeing ZUSD.
+
+**Idea 1 (PRIMARY ROTATION): WLD/USD — Worldcoin momentum**
+- **Catalyst:** +15.66% 24h (top gainer); current $0.3696 = +11.8% from $0.3305 open; 24h volume 7.3M tokens (elevated); Sam Altman AI identity narrative. Still holding 86.6% of intraday high = strong retention (vs AKT which reversed entirely).
+- **Entry:** Market ~$0.3696 on first rotation trigger
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → trigger ~$0.3604 at entry
+- **T1:** $0.3807 (+3%) | **T2:** $0.3881 (+5%)
+- **R:R:** 1.2:1 at T1 vs 2.5% stop ✓ (borderline; vol confirms quality of move)
+- **Size:** 100% of freed ZUSD
+- **Kraken pair:** WLD/USD ✓ (online) | **Spread:** 0.054% ✓
+- **Risk:** 13.4% pulled back from $0.4269 high — later-stage entry. Only valid if current momentum resumes.
+
+**Idea 2 (CONTINGENCY): FET/USD re-entry**
+- If FET stop fires at $0.2367 and price subsequently recovers above $0.2400 with volume confirmation
+- **Catalyst:** AI Agent Launchpad narrative intact. Recovery above $0.24 re-validates thesis.
+- **Entry:** Market on confirmed recovery ~$0.240–$0.242
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $0.247 (+3%) | **T2:** $0.252 (+5%)
+- **R:R:** 1.2:1 ✓
+
+**Idea 3 (CONDITIONAL BINARY): XRP leveraged add on CLARITY Act passage**
+- Only triggered by confirmed Senate vote passage
+- Entry: market ~$1.35+ on news confirmation, 2x leverage, `trail_percent: 7`
+- Note: existing XRP exposure is $81.42 (~49% of portfolio) — new add only on confirmed catalyst
+- Also: upgrade OT5EI4 from 5% to 7% trail immediately (binary-catalyst rule)
+
+**PASS — AKT/USD:** Reversed from +11.28% to -4.5% from open. Momentum exhausted.
+**PASS — MUBARAK/USD:** Spread 4.32% → hard skip (>1% threshold).
+**PASS — SAGA/USD:** Pulled back from 24h high; volume thin intraday.
+
+---
+
+### Risk Factors
+
+1. **ZUSD $0.47** — fully deployed; no new entries without rotation. One stop trigger needed first.
+2. **FET buffer 2.26%** — narrow; stop $0.2367 is close to current $0.2421. One intraday dip triggers exit.
+3. **XRP OT5EI4 stop at 5%** — should be 7% for binary catalyst. Upgrade blocked by ZUSD depletion.
+4. **XRP RSI 41.6** — bearish technical setup; if CLARITY Act vote delayed again, XRP drifts lower.
+5. **F&G 30 (Fear)** — third consecutive session at 30; market lacks conviction; choppy intraday action.
+6. **WLD rotation risk** — entering +11.8% from open is late-stage; must confirm momentum before entry.
+7. **FET range-bound** — no fresh catalyst today; breakout requires new AI sector news.
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC -0.82% in 24h). TRADE stance.**
+
+**Existing positions:** All 4 stops intact and confirmed. No emergency exits required. No manual adjustments possible (ZUSD depleted). ETH exited cleanly at +3.14% last session. AVAX and HYPE exited via trailing stops (prior session).
+
+**Action item:** Upgrade XRP OT5EI4 from 5% → 7% trailing stop as soon as any rotation frees ZUSD. Cancel OT5EI4, place new 7% trailing stop on 29.80536646 XRP.
+
+**Rotation watchlist (armed and ready):**
+1. **#1 WLD/USD** — market order + 2.5% trailing stop on first exit trigger
+2. **#2 FET/USD re-entry** — only on confirmed recovery after stop trigger
+3. **#3 XRP leveraged add** — CLARITY Act passage only (binary event)
+
+**Planned trades:** WLD/USD (primary rotation on any stop trigger) | XRP OT5EI4 stop upgrade to 7% trail | XRP leveraged add on CLARITY Act vote
+
