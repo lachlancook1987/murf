@@ -2508,3 +2508,51 @@ No adjustments. ✓
 **Notes:** AVAX (OLCZTS) and HYPE (OIR5UB) trailing stops auto-triggered since last session entry — both positions closed; ~$83.77 freed. ETH buffer 2.25% (above 2% critical floor but thin — stop at $2,040.15 is above entry $2,026, locking in profit floor). XRP buffer 4.96%, stable. BTC -0.89% overnight; no macro catalyst or regime shift. Both remaining theses intact: ETH Glamsterdam/Fusaka H2 2026 upgrade; XRP CLARITY Act Senate floor vote still pending (May 26+). ZUSD $84.02 available for new entries next session.
 
 **Result: NO-OP (auto-stops already executed). No new manual actions taken. No notification sent.**
+
+---
+
+## 2026-05-26 — ETH Trailing Stop Tightened (User Instruction)
+
+### ETH/USD — Stop Replaced (0.5% trail, profit lock)
+
+- **Old stop cancelled:** O6GVNC-H2KL5-3K2WQG (5% trail, stop $2,040.15, HWM $2,147.52)
+- **New stop (3.25% trail, discarded):** OVYAU5-555C5-L55FLN — cancelled immediately, too wide
+- **Final stop placed:** OQ2KER-QWJ5F-UAXNBT (0.5% trail, stop $2,089.56, HWM $2,100.06, GTC ✓)
+- **Rationale:** User instruction to lock in ~3.14% profit from $2,026 entry via tight trailing stop
+- **Result:** ETH stop OQ2KER triggered at ~$2,089.56 → position closed; +3.14% profit locked ✓
+- **Proceeds:** ~$41.16 ZUSD added to account (0.0197 ETH × $2,089.56)
+
+---
+
+## 2026-05-26 — Day Trading Session (New Strategy Profile)
+
+### Strategy Update Note
+Day trading profile activated this session: target 3–5% per trade, 2.5% trailing stop on all new entries, fast-mover research focus. See memory/TRADING-STRATEGY.md.
+
+### FET/USD — BUY (Day Trade)
+
+**Order ID (buy):** O2T2IP-VPZ3T-PQ7QXF
+**Trailing Stop Order ID:** O73HOS-PEZAC-PPBLGE (trail -2.5%, stop $0.2367, HWM $0.2427, GTC ✓)
+**Date/Time:** 2026-05-26 UTC
+**Symbol:** FET/USD (Fetch.ai / ASI Alliance)
+**Side:** BUY | **Type:** Market
+**Qty:** 180.0000 FET
+**Entry (effective incl. fee):** ~$0.2452 | **Gross fill:** ~$0.2443
+**Notional:** ~$44.14 (100% of available ZUSD)
+**Trailing Stop %:** 2.5% (new default — day trading profile)
+**Stop trigger:** $0.2367 (2.5% below HWM $0.2427)
+**T1 Target:** $0.2516 (+3%) | **T2 Target:** $0.2565 (+5%)
+**R:R:** ~1.47:1 at T1 (3.67% gain vs 2.5% stop from HWM)
+**Thesis:** AI/ASI narrative momentum — Fetch.ai/ASI Alliance AI agent platform launch (May 22); +4.88% from 24h open, holding at 24h high ($0.2431 vs $0.2442 high); RSI 61 (not overbought); volume 4.76M tokens (elevated). RENDER also considered (+8.6%) but further extended; FET chosen for cleaner catalyst and more room to T1.
+**Spread at entry:** 0.041% ✓ | **Pair:** FET/USD ✓ (Kraken online)
+**Crash gate:** BTC -0.84% — NOT triggered ✓
+**Profit management:** At T1 ($0.2516, +3%): cancel O73HOS, place 0.5% trailing stop to lock gains and trail toward T2.
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.84%)
+- [x] Spread ≤1%: 0.041% ✓
+- [x] Asset on Kraken: FET/USD online ✓
+- [x] Catalyst <6h: momentum at 24h highs with AI narrative ✓
+- [x] T1/T2 defined: $0.2516 / $0.2565 ✓
+- [x] R:R ≥1.2:1: 1.47:1 ✓
+- [x] Stop placed immediately post-fill: O73HOS ✓
