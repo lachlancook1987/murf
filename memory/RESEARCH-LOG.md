@@ -7286,3 +7286,130 @@ All new entries require an existing stop to trigger first, freeing ZUSD.
 
 **Planned trades:** WLD/USD (primary rotation on any stop trigger) | XRP OT5EI4 stop upgrade to 7% trail | XRP leveraged add on CLARITY Act vote
 
+---
+
+## 2026-05-26 — Pre-Session Research (Day Trading Session 2)
+
+### Account Snapshot
+
+**Kraken balances:** ZUSD $43.36 | BTC 0.00052026 | XRP 60.80536646 (31.00 + 29.80536646)
+**Alpaca:** No positions. All historical orders confirmed closed (last was 2026-05-22).
+
+**Open positions & trailing stops:**
+| Symbol | Qty | Entry HWM | Current | P&L% | Stop | Buffer | Order ID |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $76,956.60 | $76,678 | -0.36% | OOT7MM 5% → $73,108.80 | 4.65% | ✓ |
+| XRP/USD | 31.00 | $1.36439 | $1.33937 | -1.83% | OCLYQ6 7% → $1.26889 | 5.26% | ✓ |
+| XRP/USD (add) | 29.80536646 | $1.34978 | $1.33937 | -0.77% | OT5EI4 5% → $1.28230 | 4.26% | ⚠️ should be 7% |
+
+**Portfolio value:** BTC ~$39.89 + XRP OCLYQ6 ~$41.52 + XRP OT5EI4 ~$39.93 + ZUSD $43.36 = **~$164.70**
+**Day P&L vs prior session:** Approximately flat; positions drifted slightly lower overnight with BTC -0.36%, XRP -1.83%/−0.77% from HWMs.
+
+---
+
+### Market Context
+
+**BTC:** $76,678 (Kraken ask $76,678.90), 24h open $77,265.90 → **-0.76%** in 24h. Range $76,393–$77,810 (24h). Support ~$76,400, resistance ~$77,275. BTC technicals: 4h structure bullish, RSI ~47 neutral. ETF inflows improving per background coverage. Changelly 24h target ~$81,712 (speculative). **CRASH GATE: NOT triggered (-0.76%)** ✓
+
+**ETH:** ~$2,091–$2,113, 24h change -0.2% to -0.7%. No open ETH position. Glamsterdam/Fusaka narrative intact.
+
+**Fear & Greed Index:** **34 (Fear)** — fractionally improved from 30 in prior two sessions, still cautious backdrop; favours fast-moving momentum setups over broad exposure.
+
+**BTC Funding Rate:** Binance +0.0081%, Bybit +0.0040% — mildly positive, longs slight premium, no froth. Healthy.
+
+**Top gainers (24h via Perplexity/CoinGecko):**
+- RENDER/USD: +8.48% from 24h open ($2.182→$2.368), near 24h high $2.401 — AI/GPU compute momentum
+- WLD/USD: +12.77% from 24h open ($0.3305→$0.3727), off intraday high $0.4269 by -12.7% — Sam Altman/AI identity narrative
+- FET/USD: +5.70% from 24h open ($0.2318→$0.2450), near 24h high $0.2465 — AI/ASI Alliance narrative
+- NEAR/USD: -0.72% from 24h open ($2.767→$2.747) — broad altcoin rotation, no specific catalyst; pass
+- INJ/USD: -3.33% from 24h open ($5.669→$5.480) — momentum faded; pass
+
+**Token unlocks this week:** PYTH (2.13B tokens), STRK (May 22), APT (11.3M, ~$100M+) — all prior to today. No major unlock today confirmed. Minor noise only.
+
+**Key catalysts:**
+- **CLARITY Act (XRP binary):** U.S. Senate floor vote still pending — primary trigger for XRP add. No confirmed date.
+- **AI/GPU narrative:** RENDER, FET, ASI benefiting from AI compute sector momentum. RENDER near 24h highs.
+- **Coinbase/regulatory:** U.S. crypto market-structure legislation moving forward; Coinbase India expansion announced.
+- **Perplexity data quality note:** One catalyst query returned BTC "above $93,000" and intraday setups referencing "$100,000" — clearly stale/hallucinated. All BTC prices from Kraken live quote throughout.
+
+---
+
+### Open Position Analysis
+
+**BTC/USD (OOT7MM, 5% trail):**
+- Current $76,678 vs HWM $76,957 = -0.36%. Stop $73,108.80, buffer 4.65%.
+- Support $76,393 (24h low) is close. No new BTC catalyst today; range-bound. Hold.
+
+**XRP/USD OCLYQ6 (7% trail):**
+- Current $1.33937 vs HWM $1.36439 = -1.83%. Stop $1.26889, buffer 5.26%.
+- CLARITY Act still pending. RSI 41.6 bearish near-term; rangebound $1.33–$1.36. Hold; 7% trail correct for binary catalyst.
+
+**XRP/USD OT5EI4 (5% trail — FLAGGED):**
+- Current $1.33937 vs HWM $1.34978 = -0.77%. Stop $1.28230, buffer 4.26%.
+- **ACTION REQUIRED:** This is a binary-catalyst position (CLARITY Act). Per strategy, binary catalyst stops must be 7%, not 5%. Cancel OT5EI4, replace with 7% trailing stop on 29.80536646 XRP. Stop cost: none (no ZUSD required).
+
+---
+
+### Trade Ideas
+
+**Idea 1 (PRIMARY): RENDER/USD — AI/GPU compute momentum**
+- **Catalyst:** Broad AI sector momentum + GPU compute narrative. RENDER +8.48% from 24h open; near 24h high $2.401 (current $2.368 = 98.6% of high) with confirmed volume expansion. Spread 0.085% ✓. Kraken RENDER/USD online ✓.
+- **Entry:** Market ~$2.368
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → trigger ~$2.309 at entry
+- **T1:** $2.439 (+3%) | **T2:** $2.486 (+5%)
+- **R:R:** 1.2:1 at T1 ✓
+- **Size:** 100% of available ZUSD (~$43.36 → ~18.3 RENDER)
+- **Risk:** No specific new announcement today; sector flow could reverse quickly. Monitor for fade on low volume.
+
+**Idea 2 (SECONDARY/SPLIT): FET/USD — AI/ASI Alliance momentum**
+- **Catalyst:** AI/ASI narrative; Fetch.ai Agent Launchpad live. FET +5.70% from 24h open; near 24h high $0.2465 (current $0.2451 = 99.4% of high). Spread 0.041% ✓. Volume elevated (7.2M tokens intraday vs avg ~2.3M).
+- **Entry:** Market ~$0.2451
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $0.252 (+3%) | **T2:** $0.257 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** 50–100% of ZUSD (~177 FET at $43.36); consider splitting between RENDER and FET if conviction equal
+- **Note:** FET was previously stopped at -3.5% yesterday (same intraday setup). Re-entry valid only if momentum holds; price at 99.4% of 24h high is strong signal.
+
+**Idea 3 (TERTIARY): WLD/USD — Worldcoin AI identity narrative**
+- **Catalyst:** Sam Altman AI identity narrative; +12.77% from 24h open. Spread 0.242% ✓. Kraken WLD/USD online ✓.
+- **Entry:** Market ~$0.3727
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $0.384 (+3%) | **T2:** $0.391 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Risk:** WLD peaked at $0.4269 intraday and has since corrected -12.7%. Entry here is late-stage. Only if RENDER/FET stop out first and WLD resumes with volume.
+
+**Idea 4 (CONDITIONAL BINARY): XRP/USD leveraged add**
+- Only on confirmed CLARITY Act Senate vote passage
+- Entry: market ~$1.35+, 2x leverage, `trail_percent: 7`
+- Existing XRP exposure $81.45 (~49% of portfolio) — new add only on hard catalyst confirmation
+
+**PASS — NEAR/USD:** -0.72% from 24h open; broad rotation catalyst only; no specific NEAR news. Skip.
+**PASS — INJ/USD:** -3.33% from 24h open; momentum faded. Skip.
+
+---
+
+### Risk Factors
+
+1. **ZUSD $43.36** — modest entry size; gains will be small in dollar terms. Focus on % execution.
+2. **Fear & Greed 34** — market cautious; setups need clean momentum confirmation.
+3. **XRP OT5EI4 at 5% trail** — must upgrade to 7% before session begins (CLARITY Act binary rule).
+4. **RENDER/FET: no hard catalyst** — sector flow only; susceptible to reversal. 2.5% stop designed for this.
+5. **WLD off 12.7% from high** — late-stage momentum; only tertiary entry if primary stops out first.
+6. **BTC support $76,393** — thin; break below triggers broader alt pressure.
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC -0.76% in 24h). TRADE stance.**
+
+**Immediate actions:**
+1. Upgrade XRP OT5EI4 (OCLYQ6-H45E6-KDCK4X): cancel 5% trailing stop, replace with 7% on 29.80536646 XRP (binary-catalyst rule for CLARITY Act)
+2. Enter RENDER/USD: market buy ~$43.36 ZUSD, immediately place 2.5% trailing stop
+
+**Rotation watchlist:**
+1. FET/USD — re-entry on RENDER stop-out if FET still near 24h high
+2. WLD/USD — tertiary rotation only if FET/RENDER both stop out and WLD resumes
+
+**Planned trades:** RENDER/USD buy (primary, $43.36 ZUSD) | XRP OT5EI4 stop upgrade 5%→7% | XRP leveraged add on CLARITY Act vote
+
