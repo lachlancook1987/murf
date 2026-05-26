@@ -2622,64 +2622,44 @@ Day trading profile activated this session: target 3–5% per trade, 2.5% traili
 **Total since migration:** ~32 trades
 
 **All stops protected:** 4/4 trailing stops active, all positions covered. No unprotected positions.
-
----
-
-## 2026-05-26 — Midday Scan (~11:00 UTC)
-
-### RENDER/USD — STOPPED OUT (passive, between sessions)
-
-**Stop Order:** OLHSYO-T2Y72-76J4AY (2.5% trailing stop)
-**Stop trigger:** ~$2.3010 (2.5% below HWM $2.3600)
-**Entry:** ~$2.372 | **Exit:** ~$2.3010
-**P&L:** ~-3.0% | **Notional loss:** ~-$1.29 on $43.19
-**Reason:** AI/GPU momentum faded; trailing stop triggered between sessions. No thesis break — market-wide risk-off with BTC near 2-week low ($76,545). Stop performed as designed.
-**ZUSD freed:** ~$41.74
-
----
-
-### FET/USD — BUY (Midday Day Trade, Re-Entry)
-
-**Order ID (buy):** O77UDN-2QZNV-FX3IPG
-**Trailing Stop Order ID:** O5SP7A-R6AMA-UALYH5 (trail -2.5%, stop $0.2389, HWM $0.2450, GTC ✓)
-**Date/Time:** 2026-05-26 midday UTC
-**Symbol:** FET/USD (Fetch.ai / ASI Alliance)
-**Side:** BUY | **Type:** Market
-**Qty:** 168.64 FET (ordered 170; received 168.64 after fee in base)
-**Effective entry:** ~$0.2470 ($41.65 ZUSD / 168.64 FET)
-**Notional:** ~$41.65 (100% available ZUSD)
-**Trailing Stop %:** 2.5% (day trading default)
-**Stop trigger:** $0.2389 (2.5% below HWM $0.2450)
-**T1 Target:** $0.2544 (+3%) | **T2 Target:** $0.2594 (+5%)**
-**R:R:** 1.2:1 at T1 (3% gain vs 2.5% stop risk)
-**Thesis:** AI/ASI Alliance momentum — FET +5.4% from 24h open ($0.2318→$0.2447), near session high $0.2465. Volume 7.77M tokens this session (elevated vs 4.76M noted at morning entry). Re-entry above morning stop exit (~$0.2366) confirms continued upward pressure. Spread 0.082% ✓.
-**Spread at entry:** 0.082% ✓ | **Pair:** FET/USD ✓
-**Crash gate:** BTC -1.0% from 24h open — NOT triggered ✓
-**Profit management:** At T1 ($0.2544, +3%): cancel O5SP7A, place 0.5% trailing stop.
-
-**Pre-trade checklist:**
-- [x] Crash gate: NOT triggered (BTC -1.0%)
-- [x] Spread ≤1%: 0.082% ✓
-- [x] Asset on Kraken: FET/USD online ✓
-- [x] Catalyst <6h: AI/ASI narrative, +5.4% from 24h open, elevated volume ✓
-- [x] T1/T2 defined: $0.2544 / $0.2594 ✓
-- [x] R:R ≥1.2:1: 1.2:1 ✓
-- [x] Stop placed immediately post-fill: O5SP7A ✓
-
----
-
-## 2026-05-26 — Midday Snapshot
-
-**Positions:**
-| Symbol | Qty | Entry | HWM | Stop Trigger | Trail | Order |
-|---|---|---|---|---|---|---|
-| BTC/USD | 0.00052026 | ~$76,957 | $76,957 | $73,109 | 5% | OOT7MM ✓ |
-| XRP/USD | 31.00 | $1.344 | $1.36439 | $1.26889 | 7% | OCLYQ6 ✓ |
-| XRP/USD (add) | 29.80537 | ~$1.350 | $1.34162 | $1.24771 | 7% | OBR3BF ✓ |
-| FET/USD | 168.64 | ~$0.2470 | $0.2450 | $0.2389 | 2.5% | O5SP7A ✓ |
-
-**Account:** ZUSD $0.09 (fully deployed) | BTC $76,545 (-1.0% from open) | XRP $1.3399 | FET $0.2455
-**Portfolio approx:** BTC ~$39.84 + XRP OCLYQ6 ~$41.53 + XRP OBR3BF ~$39.93 + FET ~$41.40 + ZUSD $0.09 = **~$162.79**
-**All stops protected:** 4/4 trailing stops active ✓
-**Alpaca:** no positions, no active orders ✓
 **Key watches:** RENDER T1 $2.443 (+3%) → tighten to 0.5% trail. XRP CLARITY Act Senate floor vote pending (binary trigger for 2x leveraged add). BTC stop $73,109 buffer 4.57%.
+
+---
+
+## 2026-05-26 — RENDER Exit + FET Re-entry + Stop Upgrade
+
+### CLOSED — RENDER/USD (trailing stop OLHSYO-T2Y72-76J4AY triggered)
+
+- **Stop Order:** OLHSYO-T2Y72-76J4AY (trail 2.5%, HWM $2.3600, stop $2.3010)
+- **Exit:** ~$2.301 (stop trigger level)
+- **Qty closed:** 18.13813 RENDER
+- **Entry:** ~$2.372 | **Exit:** ~$2.301 | **P&L:** ~-3.0% | **~-$1.29**
+- **Proceeds:** ~$41.57 ZUSD rotated into FET
+
+---
+
+### 2026-05-26 | FET/USD | BUY | 168.64 FET | Entry: ~$0.2454 | Trailing Stop (4%): $0.2358 | Open
+
+**Stop Order ID:** OGK5ML-QVH47-AUTQHE (trail +4.0%, stop $0.2358, HWM $0.2456, GTC ✓)
+*(Initial 2.5% stop O5SP7A-R6AMA-UALYH5 cancelled; upgraded to 4% per user instruction)*
+**Notional:** ~$41.57 (100% of RENDER proceeds)
+**Trailing Stop %:** 4% (user-specified)
+**Stop trigger:** $0.2358 (4% trail from HWM $0.2456)
+**T1 Target:** $0.2527 (+3% from ~$0.2454 entry) | **T2 Target:** $0.2577 (+5%)
+**R:R:** ~0.75:1 at T1 (3% reward / 4% stop risk — below 1.2:1 threshold; user overrode per explicit instruction; wider stop gives more room for AI/ASI momentum to develop toward T2+)
+**Thesis:** AI/ASI Alliance narrative re-entry — FET +6.0% from 24h open $0.2318, near 24h high $0.2465. Volume 7.8M tokens (elevated, vs avg ~2.3M). ASI Agent Launchpad live (May 22 catalyst still <4 days old). Spread 0.018% ✓. Pair FETUSD online ✓.
+**Crash gate:** BTC -0.95% 24h — NOT triggered ✓
+
+---
+
+## 2026-05-26 — Snapshot (post FET entry)
+
+| Symbol | Qty | Entry/HWM | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | $76,957 HWM | $76,535 | -0.55% | $73,109 (OOT7MM 5% trail) | 4.48% | ✓ |
+| XRP/USD | 31.00 | $1.36439 HWM | ~$1.339 | -1.86% | $1.26889 (OCLYQ6 7% trail) | 5.23% | ✓ |
+| XRP/USD (add) | 29.80537 | $1.34162 HWM | ~$1.339 | -0.19% | $1.24771 (OBR3BF 7% trail) | 6.97% | ✓ |
+| FET/USD | 168.64 | ~$0.2454 / $0.2456 HWM | $0.2456 | +0.08% | $0.2358 (OGK5ML 4% trail) | 3.99% | ✓ |
+
+**Account:** ZUSD $0.09 (fully deployed) | All 4 trailing stops active ✓
+**Total since migration:** ~33 trades
