@@ -3037,3 +3037,49 @@ No unprotected positions. No orphaned orders. 4/4 active. ✓
 
 **Result: NO-OP. No trades. No notification sent.**
 
+---
+
+## 2026-05-27 — Session-Open Scan (latest session)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.01800 | $2,070.90 | $2,060.27 | **-0.51%** | $2,093.43 | $2,041.10 (OCPMXI, 2.5% trail) | ⚠️ **0.93% CRITICAL** | ✓ |
+| BTC/USD | 0.00052026 | ~$76,957 | $74,912 | **-2.66%** | $77,989.30 | $74,089.90 (OOT7MM, 5% trail) | ⚠️ **1.10% CRITICAL** | ✓ |
+| XRP/USD | 31.00 | $1.344 | $1.33013 | **-1.03%** | $1.36439 | $1.26889 (OCLYQ6, 7% trail) | 4.60% ✓ | ✓ |
+| XRP/USD (add) | 29.806 | ~$1.350 | $1.33013 | **-1.48%** | $1.36387 | $1.26840 (OBR3BF, 7% trail) | 4.64% ✓ | ✓ |
+
+**Account:** Kraken ZUSD $0.43 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $74,912 ask | Day open $75,827.70 = **-1.21%** | Day range $74,650–$76,042 | Crash gate: **NOT triggered** ✓
+**Portfolio:** ETH ~$37.08 + BTC ~$38.96 + XRP OCLYQ6 ~$41.23 + XRP OBR3BF ~$39.66 + ZUSD $0.43 = **~$157.36**
+**Phase P&L vs $179.78 baseline (May 22):** **-$22.42 (-12.47%)**
+**Total since migration:** ~39 trades
+
+**STEP 3 — Hard checks:**
+- Crash gate: BTC -1.21% 24h → NOT triggered ✓
+- Emergency exits (≤-20%): ETH -0.51%, BTC -2.66%, XRP -1.03%/-1.48% — none at threshold ✓
+- All 4 trailing stops verified active (live Kraken API) ✓
+  - OCPMXI: ETH 0.018, trail 2.5%, stop $2,041.10, HWM $2,093.43 ✓
+  - OOT7MM: BTC 0.00052026, trail 5%, stop $74,089.90, HWM $77,989.30 ✓
+  - OCLYQ6: XRP 31.00, trail 7%, stop $1.26889, HWM $1.36439 ✓
+  - OBR3BF: XRP 29.806, trail 7%, stop $1.26840, HWM $1.36387 ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** None qualify. No adjustments.
+
+**STEP 5 — Thesis check (Perplexity):**
+- **ETH:** Glamsterdam/Fusaka upgrade H2 2026 on track. CLARITY Act momentum cited as positive for broader crypto. No protocol exploit or adverse news. **INTACT. HOLD.**
+- **BTC:** ETF inflows reportedly turned positive (Strategy/Morgan Stanley BTC Trust). Core position. BTC stop buffer CRITICAL at 1.10% — day low $74,650 came within $560 of stop $74,090. Do NOT move stop. **INTACT. HOLD.**
+- **XRP:** CLARITY Act Senate floor vote still pending June 2026. Short-term RSI 41 (neutral). TA sources cite bearish scenario to $1.13–$1.26 if downside continues; binary catalyst 7% trail appropriate. **INTACT. HOLD.**
+
+**STEP 6 — New entry scan:** ZUSD $0.43 — no spot entries possible. Perplexity Kraken gainers: OMNI +174%, MAT +66%, DOLO +53% — all verified with >15% spreads (hard skip). No actionable catalyst-backed setups.
+
+**Critical buffer alerts:**
+- ⚠️ ETH 0.93% CRITICAL: $2,060 vs stop $2,041. Day low $2,048 came within $7 of stop trigger. Do NOT move stop.
+- ⚠️ BTC 1.10% CRITICAL: $74,912 vs stop $74,090. Day low $74,650 within $560 of stop. Do NOT move stop.
+
+**Contingency (armed):**
+- ETH stop fires at $2,041 → ~$36.74 freed → REQ/USD if it reclaims VWAP $0.093 (2.5% trail); or hold ZUSD for next morning session rotation
+- BTC stop fires at $74,090 → ~$38.53 freed → NEAR re-entry (7% trail, ETF S-1 narrative) or SOL/USD (Firedancer thesis)
+- Both fire → ~$75 freed → NEAR 40%, SOL/ETH 40%, ZUSD reserve 20%
+
+**Decision: HOLD — No New Trades. No notification sent. No commit required (no trades executed).**
+
