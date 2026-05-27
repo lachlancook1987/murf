@@ -3096,3 +3096,36 @@ No unprotected positions. No orphaned orders. 4/4 active. ✓
 - Conditional: HYPE entry if HYPE ≥ $61.00 with volume; ETH re-entry if ETH ≥ $2,064 AND BTC ≥ $75,000
 - No notification sent (no new trades)
 
+---
+
+## 2026-05-27 — Overnight Triage Check (late session)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | — | — | — | **STOPPED OUT** | — | — | OCPMXI closed (prior session) |
+| BTC/USD | 0.00052026 | ~$76,957 | $74,317 | **-3.43%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | ⚠️ **0.31% IMMINENT** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.30877 | **-2.62%** | $1.26889 (OCLYQ6, 7% trail, HWM $1.36439) | 3.05% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.30877 | **-3.05%** | $1.26840 (OBR3BF, 7% trail, HWM $1.36387) | 3.08% ✓ | ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 cancelled 2026-05-22 ✓
+
+**STEP 2 — Trailing stops verified (Kraken live orders API):**
+- BTC: OOT7MM, 0.00052026 BTC, trail +5%, stop $74,089.90, HWM $77,989.30 ✓
+- XRP: OCLYQ6, 31.00 XRP, trail +7%, stop $1.26889, HWM $1.36439 ✓
+- XRP add: OBR3BF, 29.806 XRP, trail +7%, stop $1.26840, HWM $1.36387 ✓
+- 3/3 active. No unprotected positions. No orphaned orders. ✓
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. Worst position BTC -3.43%. All within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- BTC: -3.43% → threshold $92,348 (+20%) — not yet
+- XRP: -2.62% → threshold $1.613 (+20%) — not yet
+- XRP add: -3.05% → threshold $1.620 (+20%) — not yet
+No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $74,317 | 24h open $75,827.70 = **-1.99%** | range $74,154–$76,042. Well under -20% threshold. No crash gate. ✓
+
+**CRITICAL NOTE:** BTC trailing stop OOT7MM at $74,089.90 is only 0.31% below current price ($74,317). Day low $74,154 came within $64 of the stop. Stop is working as designed — trailing stops manage this automatically. Do NOT override.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
