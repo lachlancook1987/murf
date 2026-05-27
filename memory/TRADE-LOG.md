@@ -3037,3 +3037,62 @@ No unprotected positions. No orphaned orders. 4/4 active. ✓
 
 **Result: NO-OP. No trades. No notification sent.**
 
+---
+
+## 2026-05-27 — CLOSED — ETH/USD (trailing stop OCPMXI triggered overnight)
+
+- **Stop Order:** OCPMXI-QXOEP-5CCJIP (trail 2.5%, HWM $2,093.43, stop $2,041.10)
+- **Exit:** ~$2,024–$2,041 (stop triggered at day low $2,040.04; market fill ~$2,024 after slippage/fees)
+- **Qty closed:** ~0.018001 ETH
+- **Entry:** $2,070.90 | **Exit proceeds:** ~$36.44 ZUSD | **P&L:** **~-$0.84 (-2.25%)**
+- **ZUSD freed:** $36.44 → ZUSD balance $36.87
+- **Notes:** Trailing stop auto-triggered at day low $2,040.04 (stop was $2,041.10, 2.5% trail from HWM $2,093.43). Stop worked as designed; ETH continued lower overnight. Capital now in reserve for conditional re-entry.
+
+---
+
+## 2026-05-27 — Session-Open Scan
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | — | — | $2,057 | **STOPPED OUT** | — | — | OCPMXI closed |
+| BTC/USD | 0.00052026 | ~$76,957 | $75,100 | **-2.41%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | ⚠️ **1.35% CRITICAL** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.328 | **-1.19%** | $1.26889 (OCLYQ6, 7% trail) | 4.52% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.328 | **-1.63%** | $1.26840 (OBR3BF, 7% trail) | 4.55% ✓ | ✓ |
+
+**Account:** Kraken ZUSD $36.87 (free) | Alpaca: no positions, no active orders ✓
+**BTC:** $75,100 ask | 24h open $75,828 = **-0.96%** | Day range $74,529–$76,042 | Crash gate: **NOT triggered** ✓
+**Portfolio est.:** BTC ~$39.07 + XRP OCLYQ6 ~$41.16 + XRP OBR3BF ~$39.57 + ZUSD $36.87 = **~$156.67**
+**Phase P&L vs $179.78 baseline (May 22):** ~**-$23.11 (-12.9%)**
+
+**Crash gate check:** BTC -0.96% 24h → NOT triggered ✓
+**Stops verified (Kraken live orders API):**
+- BTC: OOT7MM, 0.00052026 BTC, trail 5%, stop $74,089.90, HWM $77,989.30 ✓
+- XRP: OCLYQ6, 31.00 XRP, trail 7%, stop $1.26889, HWM $1.36439 ✓
+- XRP add: OBR3BF, 29.806 XRP, trail 7%, stop $1.26840, HWM $1.36387 ✓
+- 3/3 active. No unprotected positions. No orphaned orders. ✓
+
+**ETH re-entry trigger check:** ETH $2,057 vs trigger $2,064 (VWAP) — **NOT triggered** | BTC $75,100 > $75,000 ✓ (BTC condition met but ETH VWAP not)
+**HYPE entry trigger check:** HYPE $60.31 vs trigger $61.00 (VWAP) — **NOT triggered** | Fresh catalysts: $30.9M whale off Coinbase today + Bitwise ETF $40M AUM. RSI 71.96 (overbought). Wait for VWAP reclaim.
+
+**Market context:**
+- Fear & Greed: **25 — Extreme Fear**
+- BTC pinned near $75K options put strike (Deribit $6.6B expiry May 29)
+- ETF flows turned negative (near-term BTC headwind)
+- XRP CLARITY Act: Senate Banking Committee cleared 15-9; Senate floor vote not yet scheduled; July 4 signing target
+- ETH Glamsterdam upgrade mid-2026 on track — thesis intact but just stopped out; below VWAP
+- HYPE new ATH $63.32 today; pulled back to $60.31; below VWAP $61.08
+
+**New entry scan:**
+- HYPE: trigger $61.00 not met → hold ZUSD
+- ETH: trigger $2,064 not met (+ ETH just showed stop-out weakness) → hold ZUSD
+- REQ: $0.074 — 12.6% below day open $0.085, fading hard → SKIP
+- ORCA: $1.305 — 3.8% below day open $1.357, no momentum → SKIP
+- OMNI: spread 15.5% → HARD SKIP
+- No other qualifying setup on Kraken with ≤1% spread + >3% 4h momentum + fresh catalyst
+
+**Decision: HOLD — No New Trades.** ZUSD $36.87 held in reserve.
+- Hold BTC (OOT7MM) — let trailing stop manage; do NOT override
+- Hold XRP ×2 (OCLYQ6, OBR3BF) — CLARITY Act binary catalyst; 7% trail appropriate
+- Conditional: HYPE entry if HYPE ≥ $61.00 with volume; ETH re-entry if ETH ≥ $2,064 AND BTC ≥ $75,000
+- No notification sent (no new trades)
+
