@@ -7645,3 +7645,140 @@ No position up ≥20% from entry. No stop tightening warranted.
 
 **No WhatsApp notification** — no action taken this scan.
 
+
+---
+
+## 2026-05-27 — Pre-Session Research
+
+### Account Snapshot
+
+**Kraken balances:**
+- ZUSD: $38.00 (free — WLD stopped out overnight/early session)
+- XXBT (BTC): 0.00052026 BTC
+- XXRP (XRP): 60.80537 total
+
+**Open Orders / Stops (Kraken):**
+| Order ID | Symbol | Type | Stop Trigger | HWM | Trail |
+|---|---|---|---|---|---|
+| OOT7MM | BTC/USD | trailing-stop | $74,089.90 | $77,989.30 | 5% |
+| OCLYQ6 | XRP/USD | trailing-stop | $1.26889 | $1.36439 | 7% |
+| OBR3BF | XRP/USD | trailing-stop | $1.26840 | $1.36387 | 7% |
+
+**WLD Position — STOPPED OUT:** OWGVLY stop fired at ~$0.3746 (HWM $0.3842, 2.5% trail). Proceeds ~$38.00 ZUSD now available. WLD trading at $0.3610 post-stop.
+
+**Alpaca:** No positions, no active orders ✓ (Alpaca BTC fully closed prior session)
+
+**Portfolio estimate at session open:**
+- ZUSD: $38.00
+- BTC: 0.00052026 × $75,675 = ~$39.35
+- XRP: 60.80537 × $1.327 = ~$80.69
+- **Total: ~$158.04**
+- **Phase P&L vs $179.78 baseline (May 22): ~-$21.74 (-12.1%)**
+- All stops: 3/3 active ✓ | No unprotected positions
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $75,675 ask (Kraken) / ~$75,910 (Perplexity) | ~-0.2% (Kraken open) / -1.76% (Perplexity) | 24h range $75,555–$77,989 |
+| ETH | $2,070.95 ask | ~flat (+0.004% from Kraken open $2,070.91) | 24h range $2,052–$2,138 |
+| XRP | $1.327 ask | ~flat (24h open $1.327) | 24h range $1.325–$1.364 |
+| WLD | $0.3610 ask | -3.7% from 24h open $0.3749 | Stop fired, avoid re-entry on declining trend |
+
+**Fear & Greed Index:** 34 — Fear territory
+
+**BTC Funding Rate:** Mildly positive (Binance +0.0058%, Bybit +0.0006%) — long-biased, no extreme crowding
+
+**Crash Gate:** BTC ~-0.2% 24h on Kraken, ~-1.76% on broader indices. Well under -20% threshold. **NOT triggered. TRADE stance.**
+
+---
+
+### Top Gainers Scan (CoinGecko 24h)
+
+| Rank | Coin | 24h | Kraken available? | Spread | Decision |
+|---|---|---|---|---|---|
+| 1 | RAVE | +106% | No | — | SKIP — not on Kraken |
+| 2 | MWC | +68% | No | — | SKIP |
+| 3 | OPG | +59% | No | — | SKIP |
+| OMNI | (Kraken momentum) | +174% (Perplexity) | ✓ ONLINE | **15% bid/ask** | **HARD SKIP — spread too wide** |
+| MAT | — | +66% | Not verified | — | SKIP |
+
+Note: The Perplexity-cited Kraken momentum plays (OMNI, MAT, DOLO) appeared at 15% spread on Kraken live quote — untradeable. No actionable top-gainer candidates available on Kraken with spread ≤1%.
+
+---
+
+### Key Catalysts
+
+1. **ETH Glamsterdam upgrade** — Targeting June 2026. Pre-upgrade positioning typical. ETH flat today but catalyst is real and upcoming (<30 days).
+2. **XRP CLARITY Act** — Cleared Senate Banking Committee 15-9. Awaiting full Senate floor vote (scheduling by Majority Leader Thune). ~60-62% odds of 2026 enactment per prediction markets. Binary catalyst — existing 7% trail stops appropriate.
+3. **HYPE token unlock** — 14.18M HYPE tokens unlock May 29 (~1.4% supply, ~3% market cap). **Bearish pressure watch** — we have no HYPE position.
+4. **YGG unlock** — 12.5M tokens May 27 (today). Watch for sell pressure.
+5. **Kevin Warsh replacing Powell** — macro-dovish narrative for BTC medium-term.
+
+---
+
+### Trade Ideas
+
+**Idea 1 — ETH/USD LONG (PRIMARY)**
+- **Catalyst:** Glamsterdam upgrade narrative (June target), ETH showing relative strength vs BTC (flat while BTC -1.76%), institutional pre-upgrade positioning
+- **Entry:** Market ~$2,071, notional $38.00 → ~0.01835 ETH
+- **Stop:** Trailing stop 2.5%, trail_percent: 2.5 → initial trigger ~$2,019 (placed immediately after fill)
+- **T1:** $2,133 (+3%) | **T2:** $2,175 (+5%)
+- **R:R:** 3% / 2.5% = 1.2:1 ✓
+- **Spread:** 0.001% ✓ | **Kraken pair:** ETH/USD ONLINE ✓
+- **Size:** $38.00 (100% available ZUSD)
+- **Concern:** No strong intraday momentum signal today (flat 24h); Fear & Greed 34 — this is a catalyst play, not a momentum play. Enter only if BTC stabilizes above $75,500.
+
+**Idea 2 — SOL/USD LONG (SECONDARY / IF ETH WEAK)**
+- **Catalyst:** Relative strength — SOL flat (+0.05% from open) while BTC declining. Breakout candidate above $84 resistance if BTC stabilizes.
+- **Entry:** Market ~$83.68, notional $38.00 → ~0.454 SOL
+- **Stop:** Trailing stop 2.5% → ~$81.59
+- **T1:** $86.19 (+3%) | **T2:** $87.86 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Spread:** 0.024% ✓ | **Kraken pair:** SOL/USD ONLINE ✓
+- **Size:** $38.00 (100% available ZUSD)
+- **Conditional:** Enter only on BTC recovery signal
+
+**Idea 3 — WLD/USD RE-ENTRY (CONDITIONAL)**
+- **Catalyst:** AI identity/Sam Altman narrative still active, 43% supply unlock reduction from July. BUT price declining from 24h open (-3.7%). Stopped out at $0.3746; now $0.3610 (further down).
+- **Conditional trigger:** Price recovery above $0.3749 (24h open) with sustained volume
+- **Entry:** Limit $0.3749+ only on momentum recovery
+- **Stop:** 2.5% trail | **T1:** $0.386 | **T2:** $0.394
+- **Spread:** 0.083% ✓ | **Kraken pair:** WLD/USD ONLINE ✓
+- **Status:** DO NOT ENTER NOW — price declining, wait for reclaim of 24h open
+
+**Idea 4 — XRP LEVERAGED ADD (BINARY CATALYST ONLY)**
+- **Trigger:** Only on confirmed CLARITY Act Senate floor vote with positive momentum
+- **Trail:** 7% (binary event) | **Leverage:** 2x
+- **Status:** No trigger yet — monitoring
+
+**Idea 5 — HOLD ZUSD (FALLBACK)**
+- If BTC breaks below $75,555 (24h low) and momentum deteriorates, hold $38 as dry powder for next session rotation
+
+---
+
+### Risk Factors
+
+1. **BTC stop CRITICAL (2.1% buffer):** BTC $75,675 vs stop $74,090 — another -2.1% in BTC fires OOT7MM. BTC at key psychological $75,000 area.
+2. **Fear & Greed 34** — market in fear; momentum trades need confirmation. Prefer catalyst plays over pure momentum chasing today.
+3. **WLD thesis weakening** — Stopped out, price falling further. Multiple consecutive WLD stops (OM4NPW + OWGVLY). Re-enter only on clear reversal.
+4. **HYPE unlock May 29** — could pressure broader alts if market weak.
+5. **Positive but low funding** — no extreme crowding; market not at euphoria.
+6. **Portfolio down 12.1% vs baseline** — capital at $158 vs $179.78 start. Avoid forced entries; quality over quantity.
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC ~-0.2% Kraken / -1.76% broader — well under -20%). TRADE stance.**
+
+**Primary action:** Enter **ETH/USD long** with ~$38 ZUSD at market (~$2,071). Place 2.5% trailing stop immediately after fill. Glamsterdam upgrade narrative + relative strength vs BTC. Conditional: BTC must be above $75,500 at time of entry.
+
+**Secondary:** If ETH shows no movement within session, rotate to **SOL/USD** as alternative.
+
+**Watchlist:** WLD recovery above $0.3749 for conditional re-entry. XRP CLARITY Act vote for leveraged add trigger.
+
+**Planned trades:** ETH/USD buy $38 ZUSD (~0.0183 ETH @ market). XRP and BTC holds. XRP leveraged add on CLARITY Act vote only.
+
