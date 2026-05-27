@@ -2915,3 +2915,28 @@ No adjustments. ✓
 **Notes:** Quiet overnight. WLD stop auto-ratcheted up ($0.3725→$0.3746) after hitting new HWM ~$0.3842; currently at $0.3810 with 1.7% buffer — thin but above 2% critical floor check (WLD was above stop all night). BTC drifted -1.97% overnight but stop at $74,090 gives comfortable buffer. Both XRP positions unchanged. All theses intact: XRP CLARITY Act Senate floor vote still pending (May 26+, Congress now back); WLD AI identity/Sam Altman narrative.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-27 | ETH/USD | BUY | 0.018000 ETH | Entry: ~$2,070.90 | Trailing Stop (2.5%): $2,019.13 | Open
+
+**Order ID (buy):** O22JAZ-G6X7R-UDDIFJ
+**Trailing Stop Order ID:** OCPMXI-QXOEP-5CCJIP (trail -2.5%, stop $2,019.13, HWM $2,070.90, GTC ✓)
+**Notional:** ~$37.28 (100% available ZUSD ~$38.00)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $2,019.13 (2.5% trail from HWM $2,070.90)
+**T1 Target:** $2,133.03 (+3% from $2,070.90) | **T2 Target:** $2,174.45 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** Glamsterdam upgrade (June 2026) pre-positioning. ETH showing relative strength vs BTC (flat vs BTC -1.76%). Pre-upgrade narratives historically drive 5-10% moves. Fear & Greed 34 — catalyst play, not pure momentum.
+**Spread at entry:** 0.007% ✓ | **Pair:** ETH/USD ✓ (Kraken online)
+**Crash gate:** BTC $75,715 > $75,500 threshold — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.2% Kraken / -1.76% broader) ✓
+- [x] Spread ≤1%: 0.007% ✓
+- [x] Asset on Kraken: ETH/USD online ✓
+- [x] Catalyst: Glamsterdam June upgrade, ETH relative strength, institutional pre-upgrade positioning ✓
+- [x] T1/T2 defined: $2,133 / $2,174 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OCPMXI ✓
+
