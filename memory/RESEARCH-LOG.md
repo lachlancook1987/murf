@@ -7942,3 +7942,112 @@ Notable: ETH stop has ratcheted up since entry (HWM $2,070.90 → $2,083.06). ET
 $0.43 ZUSD available — no new entries possible. Kraken top gainers cited by research (XRT +1031%, WAR +534%) are likely untradeable spreads. No position warrants closing to fund rotation. No new trades.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-05-27 — Pre-Session Research (Day 8, Wednesday)
+
+### Account Snapshot
+
+**ETH STOPPED OUT overnight** — Day low $2,040.04 triggered stop OCPMXI ($2,040.99, 2.5% trail from HWM $2,093.43). ZUSD freed from $0.43 → $36.87. ETH P&L: entry $37.28, exit proceeds ~$36.44 → **-$0.84 (-2.25%)** including fees.
+
+| Symbol | Qty | Entry | Current | P&L% | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | ~$76,957 | $75,036 | **-2.50%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | ⚠️ **1.26% CRITICAL** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.32959 | **-2.11%** | $1.26889 (OCLYQ6, 7% trail) | 4.56% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.32959 | **-2.11%** | $1.26840 (OBR3BF, 7% trail) | 4.59% ✓ | ✓ |
+| ETH/USD | — | — | — | **STOPPED OUT** ~$2,041 | — | — | OCPMXI closed |
+
+**ZUSD:** $36.87 (freed from ETH stop-out) | **Alpaca:** No positions, no active orders ✓
+
+**Portfolio estimate:** BTC $39.04 + XRP OCLYQ6 $41.23 + XRP OBR3BF $39.64 + ZUSD $36.87 = **~$156.78**
+**Phase P&L vs $179.78 baseline (May 22):** ~**-$23.00 (-12.8%)**
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Chg | Notes |
+|---|---|---|---|
+| BTC | $75,036 | **-0.94%** (Perplexity) / -1.04% (Kraken open) | Day range $74,529–$76,042. Key support $74.4K–$74.9K. Breakdown risk below $74.4K. Bullish only above $78K. |
+| ETH | $2,055 | **-3.23%** (24h) / -0.73% (session) | Bounced from day low $2,040 (our stop level). Below VWAP $2,064. Glamsterdam June intact. |
+| XRP | $1.32959 | **+0.17%** (session) | CLARITY Act Senate floor vote still pending. $82M XRP ETF inflows April. Range $1.30–$1.50. |
+
+**Fear & Greed Index:** 25 — **Extreme Fear** (consensus; Binance shows 35 Fear, CFGI.io 50 Neutral)
+**BTC Funding Rate:** Binance +0.0099% / BitMEX -0.0107% / Bybit -0.0006% — mixed/neutral (no extreme leverage)
+
+**Top Gainers (24h):** RAVE +106%, MWC +67%, OPG +59%, BAS +39.9%, TIG +38.2%, GWEI +30.3%, GUN +29.3% — mostly micro-caps not on Kraken.
+**Kraken-specific gainers (Perplexity):** OMNI +174% (spread 15.5% — HARD SKIP, illiquid), MAT +66%, DOLO +53%, HYPE notable for ATH touch today.
+
+**Token unlocks today (May 27):** HOPR 10M (~$205K, 1.5% of market cap), ZRC 10.69M (0.11%), BWARE INFRA 50K (~$2.7K) — all minor, no market-moving unlocks.
+
+**Key catalysts:**
+- **HYPE/USD:** Macro prediction markets expansion announced May 26 (yesterday) + 501,250 HYPE whale withdrawal from Coinbase (bullish accumulation signal). HYPE hit ATH above $63.32 today before pulling back to $60.05.
+- **XRP:** CLARITY Act still loading — Senate floor vote not yet announced. Spot XRP ETF (Canary Capital XRPC) launched, adding institutional narrative. XRPL upgrade underway.
+- **ETH:** Glamsterdam upgrade mid-2026 on track (testnet completion pending). Staking ATH 32.19% supply locked. Harvard/Goldman institutional selling already known/priced.
+- **BTC:** Fed chair transition Powell→Warsh (supportive for BTC long-term). ETF flows turning positive. No crash-gate trigger.
+
+---
+
+### Crash Gate Check
+BTC 24h: -0.94% (Perplexity) / -1.04% (Kraken) → **NOT triggered** (threshold: -20%). All trading permitted. ✓
+
+---
+
+### Opportunity Scan
+
+**HYPE/USD** — Primary new entry candidate
+- **Catalyst:** Prediction markets expansion (May 26, <24h) + whale accumulation 501K HYPE off Coinbase
+- **Kraken pair:** ✓ ONLINE | **Spread:** $60.04/$60.05 = **0.017%** ✓ Excellent
+- **Today's price action:** Open $59.51 → ATH $63.32 → pulled back to $60.05 (-5.2% from ATH). VWAP $61.11 — currently BELOW VWAP.
+- **Entry trigger (conditional):** HYPE reclaims $61.00 (VWAP) with volume → market entry. Do NOT chase below VWAP.
+- **Stop:** 2.5% trailing stop, placed immediately post-fill
+- **T1:** $62.83 (+3%) | **T2:** $64.05 (+5%) [T2 near ATH $63.32 — tighten stop aggressively at T1]
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $36.87 (all free ZUSD) → ~0.61 HYPE
+- **Risk factor:** Below VWAP currently; fear & greed 25; market headwind. Wait for VWAP reclaim.
+
+**ETH/USD re-entry** — Secondary watchlist
+- **Catalyst:** Glamsterdam upgrade June 2026 intact; bounced from stop level $2,040 (day low = stop trigger level)
+- **Kraken pair:** ✓ ONLINE | **Spread:** $2,055.26/$2,055.27 = **0.00005%** ✓ Excellent
+- **Entry trigger (conditional):** ETH reclaims VWAP $2,064 + BTC holds above $75,000 → market entry
+- **Stop:** 2.5% trailing stop
+- **T1:** $2,126 (+3%) | **T2:** $2,163 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** $36.87 → ~0.0179 ETH
+- **Risk:** ETH just stopped out showing weakness; -3.23% 24h; below VWAP. Wait for VWAP reclaim confirmation.
+- **Priority:** HYPE > ETH (HYPE has fresher catalyst; ETH stopped out = weakness signal)
+
+**HOLD BTC/USD** — Core position, critical buffer watch
+- **Status:** 0.00052026 BTC | Stop $74,090 | Buffer 1.26% CRITICAL
+- **BTC at $75,036 — below $76.6K (Perplexity breakdown trigger).** Key support $74.4K–$74.9K.
+- **Action:** Do NOT add; let OOT7MM manage the exit if support breaks. No manual intervention.
+
+**HOLD XRP/USD ×2** — Binary catalyst hold
+- **Status:** 60.806 XRP | Stops $1.268–$1.269 | Buffers 4.56–4.59% ✓
+- CLARITY Act Senate floor vote loading; 7% trail appropriate for binary catalyst. No action.
+
+**SKIP — OMNI/USD:** Spread 15.5% — HARD SKIP (illiquid micro-cap)
+**SKIP — INJ/USD:** Flat day (-0.23% from open), no momentum, no catalyst
+
+---
+
+### Risk Factors
+1. **BTC stop buffer 1.26% CRITICAL** — $75,036 vs stop $74,090. BTC has been testing $74,500–$74,900 support (day low $74,529 today). Another -1.3% fires OOT7MM and returns ~$39 ZUSD.
+2. **Fear & Greed 25 (Extreme Fear)** — Market-wide headwind. Favor conditional/triggered entries over market orders below key levels.
+3. **ETH just stopped out** — Weakness signal. Re-entry requires VWAP reclaim before acting.
+4. **HYPE below VWAP** — Catalyst is real but price pulled back 5.2% from ATH. Wait for VWAP reclaim.
+5. **XRP binary catalyst risk** — June Senate floor vote date unknown. Holding 7% trail stops appropriate. Flat-to-weak today.
+6. **Portfolio -12.8% vs baseline** — No forced entries; deploy only on high-conviction setups.
+
+---
+
+### Decision
+**CRASH GATE: NOT triggered (BTC -1.04%). TRADE stance active.**
+
+**Today's plan:**
+1. **HOLD BTC stop OOT7MM** — Let $74,090 stop manage the position. Do NOT manually override.
+2. **HOLD XRP ×2** — CLARITY Act June catalyst intact. Hold 7% trail stops.
+3. **HYPE/USD conditional entry** — Enter market if HYPE reclaims $61.00 (VWAP). Stop 2.5% trail immediately post-fill. T1 $62.83, T2 $64.05. Size: all $36.87 ZUSD. Priority #1.
+4. **ETH/USD conditional re-entry** — Enter market if ETH reclaims $2,064 (VWAP) AND BTC holds above $75,000. Stop 2.5% trail. T1 $2,126, T2 $2,163. Priority #2 (HYPE preferred).
+5. **ZUSD $36.87 held in reserve** — Do not enter below trigger levels. Deploy only on VWAP reclaim confirmation.
