@@ -7906,3 +7906,39 @@ Notable: ETH stop has ratcheted up since entry (HWM $2,070.90 → $2,083.06). ET
 - **XRP patience** — June CLARITY Act vote is the catalyst. Hold 7% trail stops.
 - **REQ watchlist** — conditional re-entry only if ZUSD frees up AND REQ reclaims VWAP $0.093
 - **No new forced entries**
+
+---
+
+## 2026-05-27 — Midday Scan
+
+### Live Prices (midday)
+| Asset | Bid | Ask | Day Open | Day Chg |
+|---|---|---|---|---|
+| ETH | $2,079.36 | $2,079.37 | $2,070.91 | +0.41% |
+| BTC | $75,763.20 | $75,763.30 | $75,827.70 | -0.08% |
+| XRP | $1.32958 | $1.32979 | $1.32727 | +0.19% |
+
+### Portfolio (midday)
+| Symbol | Qty | Entry | Price | P&L% | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.018001 | $2,070.90 | $2,079.37 | **+0.41%** | $2,040.99 (OCPMXI, 2.5% trail, HWM $2,093.32) | 1.85% | ✓ |
+| BTC/USD | 0.000520 | ~$76,957 | $75,763 | **-1.55%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | 2.21% | ✓ |
+| XRP/USD | 31.000 | $1.364 | $1.32979 | **-2.50%** | $1.26889 (OCLYQ6, 7% trail) | 4.58% | ✓ |
+| XRP/USD add | 29.806 | $1.364 | $1.32979 | **-2.50%** | $1.26840 (OBR3BF, 7% trail) | 4.61% | ✓ |
+
+**ZUSD:** $0.43 (fully deployed) | **Alpaca:** No positions, no active orders ✓
+
+### Checks
+- **Crash gate:** BTC -0.08% day — NOT triggered ✓
+- **All stops active:** 4/4 ✓ (no unprotected positions)
+- **Stop tightening (≥+20%):** ETH +0.41%, BTC -1.55%, XRP -2.50% — none near threshold ✓
+
+### Thesis Reviews
+- **ETH:** Glamsterdam upgrade (June 2026) intact. Staking ATH 32.19% supply locked — bullish supply dynamic. Headwind: Harvard sold $87M ETH ETF, Goldman cut 70% holdings — institutional de-risking ongoing but already known. No exploit/rug. **HOLD.**
+- **BTC:** No narrative change. Core position. **HOLD.**
+- **XRP:** CLARITY Act cleared Senate Banking Committee 15-9 (May 14); awaiting full Senate floor vote. Binary catalyst intact. **HOLD 7% trail stops.**
+
+### New Entry Scan
+$0.43 ZUSD available — no new entries possible. Kraken top gainers cited by research (XRT +1031%, WAR +534%) are likely untradeable spreads. No position warrants closing to fund rotation. No new trades.
+
+**Result: NO-OP. No actions taken. No notification sent.**
