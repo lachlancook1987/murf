@@ -2997,3 +2997,43 @@ No adjustments. ✓
 
 **Decision: HOLD — No New Trades.** All stops active; theses intact; ZUSD fully deployed. No notification sent. No commit required (no trades).
 
+---
+
+## 2026-05-27 — Midday Scan #2
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.01800 | $2,070.90 | $2,067.52 | **-0.16%** | $2,041.10 (OCPMXI, 2.5% trail, HWM $2,093.43) | ⚠️ **1.28% CRITICAL** | ✓ |
+| BTC/USD | 0.000520 | ~$76,957 | $75,081 | **-2.44%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | ⚠️ **1.32% CRITICAL** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.32533 | **-1.39%** | $1.26889 (OCLYQ6, 7% trail, HWM $1.36439) | 4.26% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.32533 | **-1.83%** | $1.26840 (OBR3BF, 7% trail, HWM $1.36387) | 4.30% ✓ | ✓ |
+
+**Account:** Kraken ZUSD $0.43 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $75,081 ask | 24h open $75,828 = **-0.98%** | Day range $74,731–$76,042 | Crash gate: **NOT triggered** ✓
+**Portfolio:** ETH ~$37.22 + BTC ~$39.06 + XRP OCLYQ6 ~$41.09 + XRP OBR3BF ~$39.50 + ZUSD $0.43 = **~$157.30**
+**Phase P&L vs $179.78 baseline (May 22):** **-$22.48 (-12.5%)**
+
+**STEP 3 — Trailing stops verified (live Kraken API):**
+- ETH: OCPMXI, 0.018 ETH, trail 2.5%, stop $2,041.10, HWM $2,093.43 (today's 24h high — stop auto-ratcheted) ✓
+- BTC: OOT7MM, 0.00052026 BTC, trail 5%, stop $74,089.90, HWM $77,989.30 ✓
+- XRP: OCLYQ6, 31.00 XRP, trail 7%, stop $1.26889, HWM $1.36439 ✓
+- XRP add: OBR3BF, 29.806 XRP, trail 7%, stop $1.26840, HWM $1.36387 ✓
+No unprotected positions. No orphaned orders. 4/4 active. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** ETH -0.16%, BTC -2.44%, XRP -1.39%, XRP add -1.83% — none near +20%. No adjustments. ✓
+
+**STEP 5 — Thesis check (Perplexity):**
+| Symbol | Status | Notes |
+|---|---|---|
+| ETH | **INTACT** | Glamsterdam upgrade target mid-2026 confirmed (pending testnet completion — schedule risk flagged but no cancellation). No protocol exploit, rug, or regulatory action. ETH ~$2,070. HOLD. |
+| BTC | **INTACT** | BTC -0.98% day, -1.0–1.8% 24h broader. Core position. No crash gate. Bearish seasonal signal flagged by some TA sources but no macro break. HOLD. |
+| XRP | **INTACT — CATALYSING** | CLARITY Act still at Senate Banking Committee stage (15-9 passed May 14); Senate floor vote not yet scheduled/occurred. Binary catalyst loading. 7% trail appropriate. HOLD. |
+
+**STEP 6 — New entry scan:** ZUSD $0.43 — no entries possible. Kraken gainers: Robonomics (+769%, micro-cap), Rain (+63.8%, micro-cap), REQ (+29.5% — on watchlist but fading, no free capital). No actionable setups.
+
+**Critical buffer alerts:**
+- ETH: $2,067.52 vs stop $2,041.10 = 1.28% buffer. ETH pulled back from HWM $2,093.43 (today's high). BTC day low $74,731 came within 0.86% of BTC stop — stop held. Do NOT move stops down.
+- BTC: $75,081 vs stop $74,090 = 1.32% buffer. Day low $74,731 tested proximity of stop; stop not triggered.
+
+**Result: NO-OP. No trades. No notification sent.**
+
