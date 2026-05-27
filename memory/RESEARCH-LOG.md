@@ -8051,3 +8051,46 @@ BTC 24h: -0.94% (Perplexity) / -1.04% (Kraken) → **NOT triggered** (threshold:
 3. **HYPE/USD conditional entry** — Enter market if HYPE reclaims $61.00 (VWAP). Stop 2.5% trail immediately post-fill. T1 $62.83, T2 $64.05. Size: all $36.87 ZUSD. Priority #1.
 4. **ETH/USD conditional re-entry** — Enter market if ETH reclaims $2,064 (VWAP) AND BTC holds above $75,000. Stop 2.5% trail. T1 $2,126, T2 $2,163. Priority #2 (HYPE preferred).
 5. **ZUSD $36.87 held in reserve** — Do not enter below trigger levels. Deploy only on VWAP reclaim confirmation.
+
+---
+
+## 2026-05-27 — Midday Scan #3
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | 0.00052026 | ~$76,957 | $74,592.80 | **-3.07%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989.30) | ⚠️ **0.67% CRITICAL** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.31813 | **-1.92%** | $1.26889 (OCLYQ6, 7% trail, HWM $1.36439) | 3.73% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.31813 | **-2.36%** | $1.26840 (OBR3BF, 7% trail, HWM $1.36387) | 3.77% ✓ | ✓ |
+
+**Account:** Kraken ZUSD $36.87 (free) | ETH stopped out (OCPMXI) ✓ | Alpaca: no positions, no active orders ✓
+**BTC:** $74,592.80 ask | 24h open $75,827.70 = **-1.63%** | Day range $74,226.50–$76,041.70 | Crash gate: **NOT triggered** ✓
+**Portfolio est.:** BTC ~$38.80 + XRP (×2) ~$80.14 + ZUSD $36.87 = **~$155.81**
+**Phase P&L vs $179.78 baseline (May 22):** ~**-$23.97 (-13.3%)**
+
+**STEP 3 — Trailing stops verified (live Kraken API):**
+- BTC: OOT7MM, 0.00052026 BTC, trail 5%, stop $74,089.90, HWM $77,989.30 ✓
+- XRP: OCLYQ6, 31.000 XRP, trail 7%, stop $1.26889, HWM $1.36439 ✓
+- XRP add: OBR3BF, 29.806 XRP, trail 7%, stop $1.26840, HWM $1.36387 ✓
+All 3 stops active. No unprotected positions. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** BTC -3.07%, XRP -1.92%, XRP add -2.36% — none near +20%. No adjustments. ✓
+
+**STEP 5 — Thesis check (Perplexity):**
+| Symbol | Status | Notes |
+|---|---|---|
+| BTC | **INTACT** | BTC -1.63% today, -1.88% broader. ETF flows negative (short-term headwind). Options expiry $6.6B Deribit May 29 — max pain ~$75K keeping BTC range-bound. No crash gate. HOLD. |
+| XRP | **INTACT** | $1.318, down ~1% 24h. CLARITY Act cleared Senate Banking 15-9; Senate floor vote pending. US spot XRP ETF inflows $116M in May — institutional demand supportive. 7% trail appropriate. HOLD. |
+
+No narrative-breaking events. No protocol exploit, rug, or regulatory action against any held asset.
+
+**STEP 6 — New entry scan:**
+- HYPE: $59.80 ask vs trigger $61.00 — **NOT MET**. 24h open $59.51 → +0.49% — no momentum. Day high was $63.32 (session ATH) but now fading below VWAP. SKIP.
+- ETH: $2,027.93 ask vs trigger $2,064 — **NOT MET**. BTC $74,592 < $75,000 BTC floor — **NOT MET**. SKIP.
+- ATOM: +3.49% 24h cited by Perplexity — not ≥3% in 1h or ≥5% in 4h. No specific catalyst. SKIP.
+- No other qualifying setup with 1h surge >3% + catalyst + spread ≤1%.
+
+**BTC stop note:** Day low $74,226.50 came within $136 of stop $74,089.90 — stop held. Current buffer $502.90 = **0.67% CRITICAL**. If BTC falls further OOT7MM fires — this is working as designed. Do NOT adjust.
+
+**Result: NO-OP. No trades. No notification sent.**
+
+---
