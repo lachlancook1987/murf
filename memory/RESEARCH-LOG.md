@@ -7782,3 +7782,127 @@ Note: The Perplexity-cited Kraken momentum plays (OMNI, MAT, DOLO) appeared at 1
 
 **Planned trades:** ETH/USD buy $38 ZUSD (~0.0183 ETH @ market). XRP and BTC holds. XRP leveraged add on CLARITY Act vote only.
 
+
+---
+
+## 2026-05-27 — Pre-Session Research
+
+### Account Snapshot (Kraken)
+| Asset | Qty | Price | Value |
+|---|---|---|---|
+| ETH/USD | 0.0180015 | $2,083.08 | $37.49 |
+| BTC/USD | 0.0005203 | $75,873 | $39.47 |
+| XRP/USD | 60.80537 | $1.3298 | $80.87 |
+| ZUSD | — | — | $0.43 |
+| **Total** | | | **~$158.26** |
+
+**Alpaca:** No open positions. No active orders. (BTC residual closed prior session.) ✓
+
+**Portfolio vs $179.78 baseline (May 22):** ~-$21.52 (-11.97%)
+
+---
+
+### Open Trailing Stops (all verified ✓)
+| Order | Pair | Qty | Trail | HWM | Stop Trigger | Buffer |
+|---|---|---|---|---|---|---|
+| OCPMXI-QXOEP-5CCJIP | ETH/USD | 0.0180 | 2.5% | $2,083.06 | $2,030.99 | 2.50% |
+| OOT7MM-7SEJA-5ZXDPL | BTC/USD | 0.00052 | 5.0% | $77,989.30 | $74,089.90 | 2.35% |
+| OCLYQ6-H45E6-KDCK4X | XRP/USD | 31.000 | 7.0% | $1.36439 | $1.26889 | 4.58% |
+| OBR3BF-RGR7M-KE7VBL | XRP/USD | 29.806 | 7.0% | $1.36387 | $1.26840 | 4.62% |
+
+**No unprotected positions. 4/4 stops active ✓**
+
+Notable: ETH stop has ratcheted up since entry (HWM $2,070.90 → $2,083.06). ETH currently at session 24h high = stop auto-advancing in real time.
+
+---
+
+### Market Context
+| Asset | Price | 24h Change | Session High |
+|---|---|---|---|
+| BTC | $75,873 (Kraken) | +0.06% session / -1.2% broader | $75,984 |
+| ETH | $2,083 | +0.58% from open | $2,083 (AT HIGH) |
+| XRP | $1.3298 | +0.19% from open | $1.3350 |
+
+**Fear & Greed Index:** 25–34 (Extreme Fear / Fear range across sources)
+
+**BTC Funding Rate:** Binance +0.0100%, BitMEX -0.0036%, Bybit +0.0015% — mildly long-biased, no extreme crowding
+
+**Crash Gate:** BTC -1.2% broader, +0.06% Kraken session. Well under -20% threshold. **NOT triggered. TRADE stance.**
+
+---
+
+### Key Catalysts
+1. **ETH Glamsterdam upgrade** — H1 2026 / mid-2026 target. ePBS + block-level access lists. ETH at session high today; pre-upgrade narrative intact.
+2. **XRP CLARITY Act** — Cleared Senate Banking Committee 15-9. June is make-or-break window for Senate floor vote (60 votes needed). Delays could weaken bull case; passage would be strongly bullish.
+3. **Bitcoin ETF flows** — Spot BTC ETF flows reportedly turned positive again; institutional demand cited (Strategy, Morgan Stanley BTC Trust).
+4. **Kevin Warsh replacing Powell** — Macro-dovish medium-term narrative for BTC.
+5. **Token unlocks this week** — Bitlayer (BTR) 524K/day tiny; SOL routine 8,379 SOL/day. No major cliff events.
+
+---
+
+### Top Gainers Scan (Kraken availability + spread check)
+| Coin | 24h Gain | Kraken? | Spread | Decision |
+|---|---|---|---|---|
+| REQ/USD | +34.6% (CoinRanking) | ✓ ONLINE | 0.67% | WATCHLIST — currently fading (below VWAP $0.093, ask $0.0865). Not a clean entry. |
+| DRIFT/USD | +33.1% (CoinRanking) | ✓ ONLINE | 0.60% | SKIP — down -14.97% from 24h open $0.0394; daily high $0.055 was pre-session spike, now dumping |
+| OSMO/USD | +5.8% from Kraken open | ✓ ONLINE | **1.16%** | HARD SKIP — spread >1% |
+| ESIM, CLAWNCH, NOCK, MORI | +23-41% | Not on Kraken | — | N/A |
+
+**No actionable alt setups available** — gainers either not on Kraken, spread too wide, or already reversing.
+
+---
+
+### Trade Ideas
+
+**1. HOLD ETH/USD — PRIMARY (ETH at session high)**
+- **Status:** Open position, 0.0180 ETH @ ~$2,070.90 entry
+- **Current:** $2,083 (+0.58%), AT 24h session high → stop auto-advancing
+- **Stop:** $2,030.99 (2.5% trail from HWM $2,083.06) — now ABOVE $2,053 (session low), locked-in protection
+- **T1:** $2,133 (+3%) | **T2:** $2,175 (+5%)
+- **Action:** HOLD. If ETH breaks $2,100 with volume, consider tightening trail to 1.5% to lock in gains toward T1. No action required — let stop do the work.
+
+**2. HOLD XRP/USD (×2) — BINARY CATALYST HOLD**
+- **Status:** 60.806 XRP total in 2 positions
+- **Current:** $1.3298 (+0.19%), flat-to-quiet. CLARITY Act still pending Senate floor vote.
+- **Stops:** $1.26889 / $1.26840 (7% trail) — appropriate for binary catalyst event
+- **Action:** HOLD. June Senate floor vote is the binary trigger. No adjustment needed. If CLARITY Act floor vote announced, positions are set to capture the move.
+
+**3. HOLD BTC/USD — TIGHT BUFFER WATCH**
+- **Status:** 0.00052026 BTC
+- **Current:** $75,873. Stop at $74,090 = 2.35% buffer. CRITICAL if BTC weakens.
+- **Action:** HOLD. BTC stabilizing after -1.2% broader drop. ETF inflows turning positive. No crash gate. Monitor: if BTC breaks $75,200 (session low), stop buffer narrows to ~1.5% — consider whether to tighten manually or accept trail.
+
+**4. WATCHLIST — REQ/USD (if momentum resumes)**
+- **Catalyst:** REQ +34.6% 24h (CoinRanking), currently fading from $0.1062 high back to $0.0865
+- **Do NOT enter now:** Price below VWAP ($0.093) and fading
+- **Conditional entry trigger:** REQ reclaims $0.093 (VWAP) + volume surge → market entry ~$0.093, stop 2.5% trail, T1 $0.096, T2 $0.098
+- **Spread:** 0.67% ✓ | **Kraken pair:** ONLINE ✓
+- **Note:** Need capital — only enter if a current stop fires and frees ZUSD
+
+**5. NO NEW ENTRIES — ZERO FREE ZUSD**
+- ZUSD balance: $0.43 — fully deployed
+- All new entries contingent on existing stop firing and freeing capital
+- Forced entry without conviction is not the strategy
+
+---
+
+### Risk Factors
+1. **ETH stop buffer 2.50%** — currently at HWM, stop advancing in real time. Good shape.
+2. **BTC buffer 2.35% CRITICAL** — BTC at $75,873, session low $75,200. Another -2.35% fires OOT7MM. BTC is the weakest buffer position.
+3. **XRP flat** — CLARITY Act binary catalyst unrealized. June timeline means multi-day hold. 7% trail appropriate.
+4. **Fear & Greed 25–34** — Extreme Fear. Market skittish. Prefer holds over new entries in fear environment.
+5. **Portfolio -11.97% vs baseline** — avoid forced or low-conviction entries to chase recovery.
+6. **No free capital** — cannot add positions without a stop-out event. Fully deployed.
+
+---
+
+### Decision
+**CRASH GATE: NOT triggered (BTC -1.2% broader / +0.06% Kraken session). TRADE stance — but no capital to deploy.**
+
+**Today's plan:**
+- **HOLD all 4 positions** (ETH, BTC, XRP×2) — let stops do the work
+- **ETH is the live winner** — at session high, stop auto-advancing. Primary focus: don't interfere, let T1 ($2,133) develop
+- **BTC critical watch** — $75,200 is the danger line; stop at $74,090 fires if BTC drops another 2.35%
+- **XRP patience** — June CLARITY Act vote is the catalyst. Hold 7% trail stops.
+- **REQ watchlist** — conditional re-entry only if ZUSD frees up AND REQ reclaims VWAP $0.093
+- **No new forced entries**
