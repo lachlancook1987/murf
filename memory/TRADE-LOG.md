@@ -2940,3 +2940,24 @@ No adjustments. ✓
 - [x] R:R ≥1.2:1: 1.2:1 ✓
 - [x] Stop placed immediately post-fill: OCPMXI ✓
 
+---
+
+## 2026-05-27 — EOD Snapshot (Day 7, Wednesday)
+
+### May 27 — EOD Snapshot (Day 7, Wednesday)
+
+**Portfolio:** $158.70 | **Cash:** $0.43 (0.3%) | **Day P&L:** -$0.95 (-0.60%) | **Phase P&L:** -$21.08 (-11.73%) | **vs BTC:** -0.47%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0180 | $2,070.90 | $2,090.88 | +0.96% | +$0.36 (+0.96%) | $2,040.99 (OCPMXI, 2.5%, HWM $2,093.32) |
+| BTC/USD | 0.000520 | ~$76,957 | $75,915 | +0.12% | -$0.54 (-1.35%) | $74,090 (OOT7MM, 5%, HWM $77,989) |
+| XRP/USD | 31.000 | $1.364 | $1.334 | +0.53% | -$0.93 (-2.20%) | $1.26889 (OCLYQ6, 7%) |
+| XRP/USD (add) | 29.806 | $1.364 | $1.334 | +0.53% | -$0.88 (-2.17%) | $1.26840 (OBR3BF, 7%) |
+
+**Trades today:** 1) WLD/USD stopped out OWGVLY ~$0.373 (realized -$1.28 / -3.3%); 2) ETH/USD BUY 0.018 ETH @ $2,070.90 (capital recycled) | **Total since migration:** ~39
+
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**Notes:** WLD trailing stop OWGVLY triggered today at approximately $0.373 (2.5% trail from HWM $0.3842), realizing a -3.3% loss (-$1.28). AI identity/Sam Altman narrative failed to sustain momentum above entry. Proceeds immediately recycled into ETH/USD at $2,070.90 (Glamsterdam June upgrade pre-position). ETH ratcheted stop to $2,040.99 with HWM $2,093.32, currently +0.96% from entry — approaching T1 ($2,133). BTC +0.12% today but -1.35% from original entry; 5% trail stop at $74,090 (HWM $77,989) provides buffer. Both XRP legs +0.53% on day but -2.2% from entries; 7% trail stops at $1.268–$1.269 comfortable. All 4 stops confirmed active. No crash gate (BTC -0.13% vs yesterday EOD $76,011). Bot underperformed BTC by -0.47% today.
+
