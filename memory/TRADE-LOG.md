@@ -2961,3 +2961,39 @@ No adjustments. ✓
 
 **Notes:** WLD trailing stop OWGVLY triggered today at approximately $0.373 (2.5% trail from HWM $0.3842), realizing a -3.3% loss (-$1.28). AI identity/Sam Altman narrative failed to sustain momentum above entry. Proceeds immediately recycled into ETH/USD at $2,070.90 (Glamsterdam June upgrade pre-position). ETH ratcheted stop to $2,040.99 with HWM $2,093.32, currently +0.96% from entry — approaching T1 ($2,133). BTC +0.12% today but -1.35% from original entry; 5% trail stop at $74,090 (HWM $77,989) provides buffer. Both XRP legs +0.53% on day but -2.2% from entries; 7% trail stops at $1.268–$1.269 comfortable. All 4 stops confirmed active. No crash gate (BTC -0.13% vs yesterday EOD $76,011). Bot underperformed BTC by -0.47% today.
 
+---
+
+## 2026-05-27 — Session-Open Scan (late session)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.0180 | $2,070.90 | $2,074.52 | **+0.17%** | $2,040.99 (OCPMXI, 2.5% trail, HWM $2,093.32) | ⚠️ **1.62% CRITICAL** | ✓ |
+| BTC/USD | 0.000520 | ~$76,957 | $75,615.80 | **-1.75%** | $74,089.90 (OOT7MM, 5% trail, HWM $77,989) | ⚠️ **2.02%** | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.325 | **-1.41%** | $1.26889 (OCLYQ6, 7% trail) | 4.24% | ✓ |
+| XRP/USD (add) | 29.806 | ~$1.350 | $1.325 | **-1.85%** | $1.26840 (OBR3BF, 7% trail) | 4.27% | ✓ |
+
+**Account:** Kraken ZUSD $0.43 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $75,615.80 ask | 24h open $75,827.70 = **-0.28%** | Crash gate: NOT triggered ✓
+**Portfolio:** ETH ~$37.34 + BTC ~$39.33 + XRP OCLYQ6 ~$41.08 + XRP OBR3BF ~$39.49 + ZUSD $0.43 = **~$157.67**
+**Phase P&L vs $179.78 baseline (May 22):** ~-$22.11 (-12.3%)
+
+**Hard checks:**
+- Crash gate: BTC -0.28% 24h → NOT triggered ✓
+- Emergency exits (≤-20%): none ✓
+- Stop tightening (≥+20% from entry): none ✓
+- All 4 trailing stops active ✓ | No unprotected positions
+
+**Stop buffer alerts:**
+- ETH buffer **1.62% CRITICAL** — stop $2,040.99 is $33.53 below current $2,074.52. ETH session high was $2,093.32 (HWM); now pulled back -0.9% from HWM. Stop correctly fixed — do NOT move down.
+- BTC buffer **2.02% ⚠️** — stop $74,090 is $1,525 below current $75,616. Another -2% BTC decline fires OOT7MM.
+- XRP buffers healthy: 4.24% / 4.27% — well above 2% critical floor.
+
+**Thesis check:**
+- ETH: Glamsterdam/Fusaka upgrade H2 2026 on track. ETH staking supply 32.19% locked (ATH). Headwind: institutional de-risking (Harvard $87M ETH ETF sold, Goldman cut 70%) already known and priced in. **INTACT. HOLD.**
+- BTC: Core position. ETF inflows turning positive (Strategy, Morgan Stanley BTC Trust cited). **HOLD.**
+- XRP: CLARITY Act cleared Senate Banking 15-9 (May 14). June Senate floor vote is binary trigger. 7% trail stops appropriate for binary catalyst. **INTACT. HOLD.**
+
+**New entries:** ZUSD $0.43 — no new entries possible. Top gainers scan: REQ (fading below VWAP), DRIFT (dumping from spike), OSMO (1.16% spread — hard skip). No actionable setup available.
+
+**Decision: HOLD — No New Trades.** All stops active; theses intact; ZUSD fully deployed. No notification sent. No commit required (no trades).
+
