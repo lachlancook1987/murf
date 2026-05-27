@@ -2961,3 +2961,52 @@ No adjustments. ✓
 
 **Notes:** WLD trailing stop OWGVLY triggered today at approximately $0.373 (2.5% trail from HWM $0.3842), realizing a -3.3% loss (-$1.28). AI identity/Sam Altman narrative failed to sustain momentum above entry. Proceeds immediately recycled into ETH/USD at $2,070.90 (Glamsterdam June upgrade pre-position). ETH ratcheted stop to $2,040.99 with HWM $2,093.32, currently +0.96% from entry — approaching T1 ($2,133). BTC +0.12% today but -1.35% from original entry; 5% trail stop at $74,090 (HWM $77,989) provides buffer. Both XRP legs +0.53% on day but -2.2% from entries; 7% trail stops at $1.268–$1.269 comfortable. All 4 stops confirmed active. No crash gate (BTC -0.13% vs yesterday EOD $76,011). Bot underperformed BTC by -0.47% today.
 
+---
+
+## 2026-05-27 — Session-Open Scan (~morning UTC)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| ETH/USD | 0.0180 | $2,070.90 | $2,079 | **+0.39%** | $2,093.32 | $2,040.99 (OCPMXI 2.5% trail) | **1.83%** | ✓ |
+| BTC/USD | 0.00052026 | ~$76,957 | $75,698 | **-1.6%** | $77,989.30 | $74,089.90 (OOT7MM 5% trail) | **2.12%** | ✓ |
+| XRP/USD | 31.000 | $1.364 | $1.332 | **-2.3%** | $1.36439 | $1.26889 (OCLYQ6 7% trail) | **4.74%** | ✓ |
+| XRP/USD (add) | 29.806 | $1.364 | $1.332 | **-2.3%** | $1.36387 | $1.26840 (OBR3BF 7% trail) | **4.76%** | ✓ |
+
+**Account:** Kraken ZUSD $0.43 (fully deployed) | Alpaca: no positions, no active orders ✓
+**BTC:** $75,698 | 24h: -1.19% (broader) | Crash gate: NOT triggered ✓
+**Portfolio:** ETH ~$37.42 + BTC ~$39.36 + XRP (2 legs) ~$80.99 + ZUSD $0.43 = **~$158.20**
+**Fear & Greed:** 25 (Extreme Fear)
+**BTC Funding Rate:** ~0% (Kraken 0.037% annualized, near-neutral)
+
+**Pre-trade checks:**
+- BTC crash gate: -1.19% 24h — CLEAR ✓
+- Emergency exits (≤-10%): ETH +0.39%, BTC -1.6%, XRP -2.3% — none triggered ✓
+- Stop tightening (≥+20% from entry): none qualify ✓
+- All 4 GTC trailing stops active and confirmed ✓
+
+**Thesis checks (Perplexity):**
+- ETH Glamsterdam June 2026: ePBS + block-level access lists — NO adverse news, ETH at session high earlier (HWM $2,093.32). **INTACT ✓**
+- XRP CLARITY Act: Senate Banking Committee passed 15-9; Senate floor vote (June window) pending — NO adverse developments. **INTACT ✓**
+- BTC: ETF inflows reportedly turning positive (Strategy, Morgan Stanley BTC Trust). Kevin Warsh replacing Powell = macro-dovish medium-term narrative. **No new negative catalysts ✓**
+
+**Top 24h gainers research (Perplexity):**
+- WLD +13.86% 24h (AI identity/Oku Trade World App integration, 266% swap volume surge)
+- FET +8.50% 24h (AI/ASI Alliance momentum persistent)
+- SEI +6.46% 24h / **+7.45% from today's Kraken open** — strongest intraday signal
+- RENDER +5.15% 24h (AI/GPU narrative)
+- HYPE +2.78% 24h (DEX momentum)
+
+**Watchlist (for when capital frees up):**
+1. **SEI/USD** — Catalyst: Giga upgrade (200K+ TPS, sub-400ms finality) + EVM-only pivot narrative. Up +7.45% from today's Kraken open. At 97.7% of 24h high. Spread 0.127% ✓. Volume 9.1M today (elevated). T1 = entry +3%, T2 = entry +5%. 2.5% trailing stop. Entry only if ZUSD frees up + momentum holds.
+2. **WLD/USD** — Catalyst: Oku Trade integration (266% swap vol surge). Currently fading (-3.87% from today's Kraken open). Re-entry only if price reclaims $0.38+ VWAP zone with volume. Spread 0.083% ✓.
+3. **FET/USD** — AI/ASI Alliance persistent. Slightly below today's open (-1.8%). Re-entry only on momentum resumption above $0.252. Spread 0.081% ✓.
+
+**Decision: HOLD — No New Trades.**
+- ZUSD $0.43 insufficient for any new position
+- All 4 positions have active trailing stops — let stops do the work
+- ETH buffer thin (1.83%): OCPMXI stop advancing in real time; target T1 $2,133 (+3%). Do NOT interfere.
+- BTC buffer thin (2.12%): monitor $75,200 level — another -0.7% would push stop buffer to ~1.5%
+- XRP: June CLARITY Act binary catalyst intact; 7% trails appropriate; patience required
+- F&G 25 (Extreme Fear): no forced entries
+- No notification sent (no trade placed)
+
