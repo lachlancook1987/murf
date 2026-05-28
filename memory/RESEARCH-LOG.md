@@ -8533,3 +8533,154 @@ BTC at new day lows, Extreme Fear 22, all triggers unmet. No fresh (<6h) catalys
 **Day P&L (2026-05-28):** +$2.14 (XLM T1 gain: $151.61 − $149.47)
 **Phase P&L:** $151.61 − $179.78 = **-$28.17 (-15.7%)**
 **Positions:** 0 | **Open orders:** 0 | **Cash:** 100% ZUSD $151.61
+
+
+---
+
+## 2026-05-28 — Pre-Session Research (Evening)
+
+### Account Snapshot
+
+| Account | Balance | Notes |
+|---|---|---|
+| Kraken ZUSD | **$151.61** | 100% cash, clean slate |
+| Kraken crypto | None | No open positions |
+| Open orders | None | No trailing stops active |
+| Alpaca | No positions, no orders | Residual BTC position closed weeks ago ✓ |
+
+**Phase P&L:** $151.61 − $179.78 = **-$28.17 (-15.7%)** from Kraken migration start
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Open | 24h Change | 24h Low | 24h High | VWAP | Notes |
+|---|---|---|---|---|---|---|---|
+| BTC | $73,228 | $74,337 | -1.49% | $72,470 | $74,467 | $73,192 | Crashed to $72,470, bounced; below open |
+| ETH | $2,007 | $2,022 | -0.75% | $1,964 | $2,027 | $1,992 | Reclaimed $2K from $1,964 low |
+| SOL | $81.88 | $82.31 | -0.52% | $79.83 | $82.87 | $81.12 | Bounced +2.6% from low; below open |
+| HBAR | $0.08818 | $0.08553 | **+3.1%** | $0.08178 | $0.09244 | $0.08788 | Above VWAP; OKCoinJapan listing today |
+| XRP | $1.310 | $1.306 | +0.36% | $1.266 | $1.336 | $1.300 | +3.5% bounce from low; above VWAP |
+| SUI | N/A | N/A | -8% est | — | — | — | SKIP — mainnet halt/network stall May 28 |
+
+**Fear & Greed:** 22 — Extreme Fear (CNN/Coinmarket alt source: 33 Fear)
+**BTC Funding Rate:** Mixed signals across exchanges; BitMEX XBTUSD showing 0.05% — slightly bullish lean
+**Crash Gate Check:** BTC -1.49% from 24h open → NOT triggered ✓ (requires >-20%)
+
+---
+
+### Perplexity Research Summary
+
+**BTC:** $73,228–$74,457 range reported; Perplexity data slightly delayed vs Kraken live. BTC bounced from $72,470 day low but remains below 24h open. Macro narrative: Fed policy uncertainty, institutional flows via IBIT/MSTR, CLARITY Act pending.
+
+**ETH:** ~$2,007 — reclaimed psychological $2K support. Bounce from $1,964 low (+2.2%). No fresh catalyst beyond technical recovery.
+
+**Top 24h gainers (off-Kraken or wide spreads):** ROLL +98%, ESIM +78%, BABYSHARK +78%, PHB +52%, HIFI +47% — none available on Kraken or too wide spread.
+
+**Kraken-specific gainers from Perplexity:** OMNI +174% (Kraken spread ~20% — HARD SKIP), MAT +66% (Kraken data shows currently -3.9% from open, misleading headline), DOLO +53% (spread 3.45% — HARD SKIP).
+
+**Volume surges:** SUI elevated (mainnet halt — negative), BTC/ETH normal-to-high institutional flow.
+
+**Catalysts today:**
+- OKCoinJapan (OKJ) lists HBAR for trading + brokerage services → new JPY on-ramp for Japanese retail (**<12h, in-scope catalyst**)
+- SUI mainnet halt/network stall → NEGATIVE, hard skip
+- GENIUS Act (stablecoin) signed/progressed → positive macro, no direct Kraken setup identified
+- CLARITY Act: still pending Senate floor vote (unscheduled)
+- RWA tokenization narrative ongoing (Stellar/DTCC = prior catalyst, now 36h+ old)
+
+**Token unlocks this week:** INFRA ~1% monthly supply, XWGT ~5.65% monthly supply — both micro-caps, not Kraken-traded. PYTH, STRK, APT unlocks were mid-week and are now passed.
+
+**Intraday setup guidance from Perplexity:** BTC/ETH for clean execution on directional bias; SOL for momentum at $83–$87; XRP for regulatory catalyst events.
+
+---
+
+### Spread Verification
+
+| Pair | Ask | Bid | Spread | Status |
+|---|---|---|---|---|
+| BTC/USD | $73,228.30 | $73,228.20 | ~0.0001% | ✓ PASS |
+| ETH/USD | $2,006.54 | $2,006.39 | ~0.0075% | ✓ PASS |
+| SOL/USD | $81.88 | $81.86 | ~0.024% | ✓ PASS |
+| HBAR/USD | $0.088220 | $0.088180 | ~0.045% | ✓ PASS |
+| XRP/USD | $1.31048 | $1.31036 | ~0.009% | ✓ PASS |
+| OMNI/USD | $0.7080 | $0.5670 | ~19.9% | ✗ HARD SKIP |
+| MAT/USD | $0.0864 | $0.0862 | ~0.23% | ✓ spread OK but DOWN -3.9% from open — SKIP |
+| DOLO/USD | $0.030740 | $0.029680 | ~3.45% | ✗ HARD SKIP |
+
+---
+
+### Trade Ideas
+
+#### Idea 1 — HBAR/USD (PRIMARY TRADE)
+
+- **Catalyst:** OKCoinJapan exchange listing today — new JPY on-ramp; neutral-to-bullish impact confirmed by CoinMarketCap. <12h old ✓
+- **Price action:** +3.1% from 24h open $0.08553 → $0.08818. Current price above VWAP ($0.08788). Day high was $0.09244; consolidating above VWAP = healthy.
+- **Volume:** 29.9M HBAR today; rolling 24h 31.5M — elevated, real buying pressure ✓
+- **Kraken pair:** HBAR/USD — confirmed online ✓ (supports up to 5x margin)
+- **Entry:** Market ~$0.08822 (spot, no leverage)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → initial stop ~$0.08601
+- **T1:** $0.09087 (+3%) — within today's range (day high $0.09244 ✓)
+- **T2:** $0.09263 (+5%) — fractionally above today's high (new high needed)
+- **R:R:** 3% / 2.5% = **1.20:1 ✓** (minimum threshold met)
+- **Size:** $100–$105 (~67% of $151.61 ZUSD) — partial position; market in Extreme Fear warrants reserve
+- **Risk:** Listing catalyst is OKCoinJapan (Japan retail, not Binance); initial pump to $0.09244 may already be in; macro headwind (Fear & Greed 22); RSI 44.52 neutral
+
+---
+
+#### Idea 2 — ETH/USD (CONDITIONAL)
+
+- **Catalyst:** $2,000 psychological level reclaimed from $1,964 low (+2.2% bounce). No news catalyst.
+- **Entry trigger:** Only if ETH > $2,022 (reclaims 24h open) with positive BTC correlation
+- **Entry:** Market at trigger confirmation
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** Entry + 3% | **T2:** Entry + 5%
+- **R:R:** 1.2:1 ✓
+- **Size:** $50 remaining reserve (if HBAR deployed), or up to $100 (if HBAR skipped)
+- **Risk:** Purely technical bounce, no fresh catalyst; Extreme Fear could reverse quickly
+
+---
+
+#### Idea 3 — SOL/USD (CONDITIONAL)
+
+- **Catalyst:** Perplexity identifies $83–$87 as key momentum zone; SOL bounced +2.6% from $79.83 low
+- **Entry trigger:** SOL > $82.87 (breaks above 24h high) with volume confirmation
+- **Entry:** Market at breakout confirmation
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** Entry + 3% | **T2:** Entry + 5%
+- **R:R:** 1.2:1 ✓
+- **Size:** $50–$75 conviction position
+- **Risk:** Below daily open $82.31; needs breakout confirmation; Extreme Fear
+
+---
+
+#### Idea 4 — BTC/USD (CONDITIONAL — lowest priority)
+
+- **Catalyst:** Recovery from $72,470 day low (+1.0% bounce); needs catalyst to extend
+- **Entry trigger:** BTC > $74,337 (reclaims 24h open)
+- **Entry:** Market at trigger
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** Trigger + 3% | **T2:** Trigger + 5%
+- **R:R:** 1.2:1 ✓
+- **Risk:** Weakest setup — purely technical, macro headwinds, Extreme Fear
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear (22):** Market in risk-off mode; setups can fail quickly on macro reversals
+2. **No strong fresh catalyst:** HBAR listing is strongest; others purely technical
+3. **HBAR pullback from high:** Already pumped to $0.09244 and pulled back; retest of high needed
+4. **SUI mainnet halt:** Negative contagion risk if network issues spook broader alt market
+5. **Funding rates muted:** Not a bullish signal from leveraged traders
+6. **Phase P&L at -15.7%:** Consecutive losing sessions increase psychological pressure — discipline critical
+
+---
+
+### Decision: TRADE — HBAR/USD Primary Setup
+
+**Crash gate:** NOT triggered (BTC -1.49%, requires >-20%) ✓
+**Primary:** HBAR/USD ~$100 market entry — OKCoinJapan listing catalyst, +3.1% from open, volume confirmed, spread 0.045%
+**Secondary:** ETH conditional on reclaiming $2,022 open; SOL conditional on breaking $82.87 day high
+**Cash reserve:** Minimum $46.61 ZUSD held back (30% reserve in Extreme Fear)
+
+---
