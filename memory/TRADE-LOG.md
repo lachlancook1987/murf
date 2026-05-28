@@ -3221,3 +3221,18 @@ No adjustments. ✓
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
+---
+
+## 2026-05-28 — EOD Snapshot (Day 8, Thursday)
+
+### May 28 — EOD Snapshot (Day 8, Thursday)
+**Portfolio:** $149.47 | **Cash:** $149.47 (100%) | **Day P&L:** -$9.23 (-5.82%) | **Phase P&L:** -$30.31 (-16.87%) | **vs BTC:** -4.18%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | All positions exited via trailing stops | — | — |
+
+**Trades today:** 1) BTC trailing stop OOT7MM overnight (~$74,050, proceeds ~$38.23) 2) HYPE/USD BUY 1.27729 @ ~$58.46 (user-directed) 3) HYPE trailing stop OOP7VZ (~$57.08, ~-2.5%) 4) XRP OCLYQ6 trailing stop (31.000 XRP @ ~$1.268, ~-5.6%) 5) XRP OBR3BF trailing stop (29.806 XRP @ ~$1.268, ~-6.0%) | **Total since migration:** ~45
+
+**Notes:** Mass stop cascade day. BTC trailing stop OOT7MM (5% trail) fired overnight at ~$74,050; proceeds $38.23 combined with $36.87 existing ZUSD → $75.10 cash at session open. User directed HYPE/USD BUY 1.27729 @ ~$58.46 for ~$74.67 (100% ZUSD). HYPE failed to hold and trailing stop OOP7VZ fired at ~$57.08 (-2.5%). XRP×2 both stopped at ~$1.268 — CLARITY Act Senate floor vote unscheduled, sentiment eroding (BTC -1.64% day, Fear & Greed 25 "Extreme Fear"). Portfolio now 100% ZUSD $149.47, no open positions, no pending orders. Day P&L -$9.23 (-5.82%) vs $158.70 May 27 EOD. Phase P&L -$30.31 (-16.87%) from $179.78 Kraken start. Bot underperformed BTC by -4.18% today. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure. Tomorrow: 100% cash — fresh scan; require BTC reclaim $75K and Fear & Greed improvement before new entries.
+
