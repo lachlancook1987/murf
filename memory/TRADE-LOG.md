@@ -3197,3 +3197,27 @@ No adjustments. ✓
 - [x] R:R ≥1.2:1: 1.2:1 ✓
 - [x] Stop placed immediately post-fill: OOP7VZ ✓
 
+---
+
+## 2026-05-28 — Overnight Triage Check
+
+**Positions (Kraken spot — trailing stops confirmed live):**
+
+| Symbol | Qty | Entry | Current | P&L% | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| HYPE/USD | 1.27729 | ~$58.46 | $58.37 | -0.15% | $57.08 (OOP7VZ, 2.5% trail, HWM ~$58.54) | 2.21% ✓ | ✓ |
+| XRP/USD | 31.000 | $1.344 | $1.29983 | -3.29% | $1.26889 (OCLYQ6, 7% trail, HWM $1.36439) | 2.38% ✓ | ✓ |
+| XRP/USD add | 29.806 | ~$1.350 | $1.29983 | -3.71% | $1.26840 (OBR3BF, 7% trail, HWM $1.36387) | 2.42% ✓ | ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 cancelled 2026-05-22 ✓
+
+**STEP 2 — Trailing stops verified:** 3/3 active. No unprotected positions. ✓
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** None. Worst position XRP add -3.71%. All within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):** No winners. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC $74,097 | 24h open $74,337 = **-0.32%** | Well under -20% threshold. No crash gate. ✓
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
