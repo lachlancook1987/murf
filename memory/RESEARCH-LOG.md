@@ -8369,3 +8369,26 @@ No narrative-breaking events. No protocol exploit, rug, or regulatory action aga
 4. **BTC/USD** — Enter market on $74,500 VWAP reclaim. $75 ZUSD. 2.5% trail. Only if BTC shows recovery.
 5. **All ZUSD $149.47 on standby** — NO market orders below trigger levels. Wait for momentum confirmation.
 6. **Alpaca: clean.** No action needed.
+
+---
+
+## 2026-05-28 — Session-Open Execution Check
+
+**Time:** ~09:00 UTC (session bot run)
+
+**Live quotes at execution:**
+
+| Asset | Ask | Trigger | Met? |
+|---|---|---|---|
+| BTC | $73,204 | ≥ $74,500 | ❌ NO |
+| ETH | $1,986.58 | ≥ $2,005 | ❌ NO |
+| SOL | $80.91 | ≥ $82.50 | ❌ NO |
+| HYPE | $56.83 | ≥ $59.60 | ❌ NO |
+
+**Account:** Kraken ZUSD $149.47. No open positions. No open orders. Alpaca: clean.
+
+**Crash gate:** BTC $73,204 vs open $74,337 = -1.52% → NOT triggered ✓
+
+**Perplexity scan:** Stale/unreliable data (cited ETH +7% vs live -1.7%). GENIUS Act passed (stablecoin positive, no immediate Kraken trade). No new catalyst <6h old for any screened pair. No new movers identified.
+
+**Decision: NO TRADES. All four trigger levels unmet. ZUSD $149.47 on standby. Waiting for momentum confirmation before any entries.**
