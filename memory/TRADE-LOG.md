@@ -3172,5 +3172,28 @@ No adjustments. ✓
 - HYPE: ATH $63.32 today; pulled back -8%; VWAP $60.57 not reclaimed — WAIT.
 - SOL: Below VWAP $83.30; no momentum catalyst confirmed — WAIT.
 
-**Decision: HOLD — No New Trades.** No notification sent (no trades). No commit required.
+**Decision: HOLD — No New Trades (initial scan).** Superseded below — user directed trade.
+
+---
+
+## 2026-05-28 | HYPE/USD | BUY | 1.27729 HYPE | Entry: ~$58.46 | Trailing Stop 2.5%: $56.71 | Open
+
+**Buy Order ID:** OH6S5M-IZ5XT-A3UDHG
+**Trailing Stop Order ID:** OOP7VZ-TKT7G-ARLHYH (trail -2.5%, stop $56.71, HWM $58.16, GTC ✓)
+**Notional:** ~$74.67 (100% available ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $56.71 (2.5% trail from HWM $58.16)
+**T1 Target:** $60.21 (+3% from ~$58.46 entry) | **T2 Target:** $61.38 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** Hyperliquid DEX perpetuals — new ATH $63.32 today; $14.84B 24h volume (exceptional institutional flow); +0.9% from 24h open $57.66; surging DEX volumes. Spread 0.017% ✓. User-directed entry.
+**Crash gate:** BTC -0.25% 24h — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -0.25%) ✓
+- [x] Spread ≤1%: 0.017% ✓
+- [x] Asset on Kraken: HYPE/USD online ✓
+- [x] Catalyst: ATH today ($63.32), $14.84B 24h volume, DEX narrative ✓
+- [x] T1/T2 defined: $60.21 / $61.38 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OOP7VZ ✓
 
