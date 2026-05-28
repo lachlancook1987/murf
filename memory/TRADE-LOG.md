@@ -3129,3 +3129,48 @@ No adjustments. ✓
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
+---
+
+## 2026-05-28 — Session-Open Scan
+
+### Account State (confirmed live)
+
+| Account | Balance | Notes |
+|---|---|---|
+| Kraken ZUSD | **$75.10** | BTC stop OOT7MM fired overnight at $74,050 (trigger $74,090); proceeds $38.23 |
+| Kraken XRP | **60.806 XRP** | Two trailing stops active: OCLYQ6 + OBR3BF |
+| Alpaca | **No positions, no active orders** | Confirmed clean ✓ |
+
+| Symbol | Qty | Entry avg | Current | P&L% | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|
+| XRP/USD | 31.000 | $1.344 | $1.299 | **-3.35%** | $1.26889 (OCLYQ6, 7% trail, HWM $1.36439) | 2.32% ⚠️ | ✓ |
+| XRP/USD (add) | 29.806 | ~$1.350 | $1.299 | **-3.78%** | $1.26840 (OBR3BF, 7% trail, HWM $1.36387) | 2.36% ⚠️ | ✓ |
+
+**BTC:** $74,150 ask | 24h open $74,337 = **-0.25%** | Crash gate: **NOT triggered** ✓
+**Fear & Greed:** 25 — Extreme Fear
+
+**STEP 3 — Crash gate:** BTC -0.25% → CLEAR ✓
+
+**STEP 3 — Open stops verified (Kraken live orders API):**
+- XRP: OCLYQ6, 31.00 XRP, trail +7%, stop $1.26889, HWM $1.36439 ✓
+- XRP add: OBR3BF, 29.806 XRP, trail +7%, stop $1.26840, HWM $1.36387 ✓
+- 2/2 active. No unprotected positions. No orphaned orders. ✓
+
+**STEP 4 — Trigger checks (conditional entries from research log):**
+
+| Candidate | Trigger | Current | Met? |
+|---|---|---|---|
+| HYPE/USD | ≥ $60.57 (VWAP reclaim) | $58.19 | ❌ NO |
+| SOL/USD | ≥ $83.30 (VWAP reclaim) | $82.14 | ❌ NO |
+| ETH/USD | ≥ $2,064 AND BTC ≥ $75,000 | $2,014 / $74,150 | ❌ NO |
+| BTC | No re-entry today | $74,150 | SKIP |
+
+**All three conditional triggers unmet. ZUSD $75.10 held on standby.**
+
+**Thesis check:**
+- XRP: CLARITY Act + XRP Ledger amendment May 27 — **INTACT. HOLD.** 7% trail appropriate.
+- HYPE: ATH $63.32 today; pulled back -8%; VWAP $60.57 not reclaimed — WAIT.
+- SOL: Below VWAP $83.30; no momentum catalyst confirmed — WAIT.
+
+**Decision: HOLD — No New Trades.** No notification sent (no trades). No commit required.
+
