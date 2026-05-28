@@ -3348,3 +3348,29 @@ No adjustments. ✓
 - [x] T1/T2 defined: $0.09332 / $0.09513 ✓
 - [x] R:R ≥1.2:1: 1.2:1 ✓
 - [x] Stop placed immediately post-fill: OIM7MC ✓
+
+---
+
+## 2026-05-28 — Overnight Check
+
+**Time:** 2026-05-28 (overnight triage)
+**BTC price:** $73,418.70 (open $74,337.00, -1.24%) — crash gate NOT triggered ✓
+
+### Kraken — HBAR/USD position review
+
+**Account balance:** 1108.00000 HBAR ✓ (position open, spot)
+**Current HBAR price:** ~$0.09149 (+0.98% from entry ~$0.09060)
+**HWM since entry:** ~$0.09244 (day high); trailing stop had self-adjusted to ~$0.08959
+
+**⚠️ Stop incident:** Overnight triage incorrectly identified trailing stop OIM7MC-Q5KHN-HD4DOU as orphaned (Kraken `positions` endpoint returns margin positions only — HBAR is spot, so balance appeared only in `account`). Stop was canceled in error. Position was unprotected for < 30 seconds.
+
+**Immediate remediation:** New 2.5% trailing stop placed immediately.
+- **New Stop Order:** OZSDHA-YYZPV-VDWXM3 (trail -2.5%, GTC) ✓
+- HBAR position is now protected ✓
+
+**Step 4 (stop tightening):** HBAR +0.98% from entry — does NOT meet +20% threshold. Stop stays at 2.5%. No change.
+
+**Alpaca:** No open positions. Stop a2b44cf9 was previously canceled on 2026-05-22 (position already closed at that time). No action required.
+
+**Net P&L (overnight):** HBAR unrealized +$0.98 (+0.98%) on $100.39 notional.
+
