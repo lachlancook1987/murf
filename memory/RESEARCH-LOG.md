@@ -8094,3 +8094,145 @@ No narrative-breaking events. No protocol exploit, rug, or regulatory action aga
 **Result: NO-OP. No trades. No notification sent.**
 
 ---
+
+---
+
+## 2026-05-28 — Pre-Session Research
+
+### Account Snapshot
+
+| Account | Balance / Position | Notes |
+|---|---|---|
+| Kraken ZUSD | **$75.10** | ↑ from $36.87 — BTC stop OOT7MM fired overnight |
+| Kraken XRP | **60.806 XRP @ ~$1.347 avg** | Stops active ✓ |
+| Kraken BTC | **CLOSED** | OOT7MM trailing stop fired at day low $74,050 (trigger $74,090) |
+| Alpaca | **No positions, no active orders** | Residual cleared ✓ |
+
+**BTC exit reconstructed:** 0.00052026 BTC × ~$73,483 fill ≈ **$38.23 received** (market fill below trigger + fees). Day low confirmed $74,050.
+
+**Open Kraken stops:**
+- OCLYQ6: sell 31.00 XRP @ 7% trail, stop **$1.26889**, HWM $1.36439 ✓
+- OBR3BF: sell 29.806 XRP @ 7% trail, stop **$1.26840**, HWM $1.36387 ✓
+
+**Portfolio estimate:**
+- XRP 60.806 × $1.301 ask = **~$79.11**
+- ZUSD = **$75.10**
+- Total: **~$154.21**
+- Phase P&L vs $179.78 baseline (May 22): **~-$25.57 (-14.2%)**
+
+**XRP stop buffer:** $1.301 vs $1.269 = **2.48% ⚠️ TIGHT** (7% trail, HWM $1.364)
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $74,250 ask | -0.12% from today's open; 24h VWAP $75,037 | Day range $74,050–$76,042; stop fired at $74,050 |
+| ETH | $2,017 ask | -0.23% from open | Very weak; below VWAP; day high $2,093 yesterday |
+| XRP | $1.301 ask | -0.35% from open | Thesis intact; CLARITY Act pending Senate floor vote |
+| SOL | $82.11 ask | -0.24% from open | Below 24h VWAP $83.30 |
+| AVAX | $9.01 ask | -0.22% from open | Flat; no momentum |
+| FET | $0.2364 ask | -2.64% from open | Perplexity showed +10.71% 24h; has since reversed |
+| HYPE | $58.23 ask | +0.99% from open | ATH $63.32 today; pulled back -8% from ATH; below VWAP $60.57 |
+| LINK | $9.083 ask | -0.44% from open | $348M 24h volume but no upward momentum |
+
+**Fear & Greed Index:** 25 — Extreme Fear
+
+**BTC Funding Rate:** Binance +0.0099%, Bybit -0.0006%, MacroMicro avg +0.0055% — slightly net positive (minor longs paying shorts; not crowded either way)
+
+**Top 24h Gainers (CoinGecko):** RAVE +106%, MWC +67.8%, OPG +59.1%, CORE +24.7%, UAI +24.3% — majority micro-caps unlikely to be on Kraken with acceptable spread.
+
+**Kraken top movers (Perplexity):** OMNI +174%, MAT +66%, DOLO +53% — OMNI confirmed 15.5% spread yesterday (hard skip); others unverified.
+
+**Volume surge alerts:** HYPE 24h volume $14.84B (exceptional), ETH volume +53.87%, BTC volume +53.43%, FET $361M (+10.71% at peak), LINK $348M, TON $416M.
+
+**Token unlocks this week:** HOPR 10M tokens ($205K) — minor; no major supply overhang.
+
+**Catalysts:**
+- XRP Ledger amendment activated May 27 ✓ (thesis-positive)
+- CLARITY Act cleared Senate Banking Committee 15-9; Senate floor vote date TBD
+- Ethereum Pectra upgrade mid-2026 on track
+- Spot ETF flows: negative near-term (BTC headwind); no new listing shock
+- Deribit $6.6B options expiry May 29 — max pain ~$75K; BTC pinned in range
+
+**Crash gate check:** BTC $74,250 vs 24h open $74,337 = **-0.12%** → **NOT triggered** ✓
+
+---
+
+### Trade Candidate Screening
+
+| Candidate | Signal | Spread | Status |
+|---|---|---|---|
+| HYPE/USD | +0.99% from open; ATH $63.32 today; $14.84B volume | 0.017% ✓ | Conditional — needs VWAP $60.57 reclaim |
+| SOL/USD | Perplexity: breakout $83–87 zone mentioned | 0.012% ✓ | Conditional — needs VWAP $83.30 reclaim |
+| ETH/USD | Volume +53.87% | ~0% ✓ | Conditional — needs $2,064 AND BTC ≥$75K |
+| FET/USD | Perplexity: +10.71% 24h at peak; reversed | 0.085% ✓ | SKIP — fading, -2.64% from open; no momentum |
+| LINK/USD | $348M volume | 0.033% ✓ | SKIP — flat/down, no catalyst |
+| AVAX/USD | — | 0.111% ✓ | SKIP — no momentum, no catalyst |
+| OMNI/USD | +174% Kraken | 15.5% yesterday | HARD SKIP — spread |
+
+---
+
+### Trade Ideas
+
+**1. HYPE/USD — Conditional Long (Priority #1)**
+- **Catalyst:** HYPE set new ATH $63.32 today; $14.84B 24h volume (exceptional institutional flow); pulled back to $58.23 but above today's open $57.66. VWAP reclaim = momentum confirmation.
+- **Entry:** Market order if/when HYPE ≥ **$60.57** (24h VWAP reclaim)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC — placed immediately post-fill
+- **T1:** $62.13 (+2.58% from $60.57 entry) — tighten trail to 0.5%
+- **T2:** $63.60 (+5.0%) — consider full close (ATH area)
+- **R:R at T1:** ~1.03:1 (T1 is $1.56 gain vs 2.5% × $60.57 = $1.51 stop risk) — borderline; T2 at +5% gives 2.0:1 ✓
+- **Size:** $75 ZUSD (all free capital)
+- **Pair confirmed:** HYPEUSD ✓, spread 0.017% ✓
+
+**2. SOL/USD — Conditional Long (Priority #2)**
+- **Catalyst:** SOL at Perplexity-cited breakout zone $83–87; volume expanding; Pectra tailwinds lifting L1s broadly
+- **Entry:** Market order if/when SOL ≥ **$83.30** (24h VWAP reclaim)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC
+- **T1:** $85.80 (+3% from $83.30)
+- **T2:** $87.47 (+5%)
+- **R:R:** 1.2:1 at T1 ✓
+- **Size:** $37 ZUSD (split if HYPE not triggered, otherwise defer to HYPE fill)
+- **Pair confirmed:** SOLUSD ✓, spread 0.012% ✓
+
+**3. ETH/USD — Conditional Re-entry (Priority #3)**
+- **Catalyst:** Volume surge +53.87%; Pectra upgrade narrative; Extreme Fear = mean-reversion opportunity if BTC stabilises
+- **Entry:** Market order if/when ETH ≥ **$2,064** AND BTC ≥ **$75,000**
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $2,126 (+3%), **T2:** $2,167 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** All remaining ZUSD at time of trigger
+- **Pair confirmed:** XETHZUSD ✓, spread <0.01% ✓
+
+**4. HOLD XRP ×2 — Binary Catalyst**
+- XRP $1.301, stops $1.269 (buffer 2.48% ⚠️ TIGHT). CLARITY Act + XRP Ledger amendment thesis intact. 7% trail appropriate for binary event. No action — let stops manage.
+
+**5. BTC — No re-entry today**
+- BTC stop fired overnight. BTC below 24h VWAP $75,037 and in consolidation. No fresh catalyst. Wait for momentum > $76K before considering re-entry.
+
+---
+
+### Risk Factors
+
+1. **XRP stop buffer 2.48% CRITICAL** — XRP at $1.301 vs stop $1.269. Another -2.5% fires both stops, returns ~$79 ZUSD. Do NOT adjust.
+2. **Fear & Greed 25 (Extreme Fear)** — Difficult entry environment; conditional triggers reduce risk of chasing.
+3. **Deribit $6.6B expiry May 29** — Max pain ~$75K keeps BTC range-bound; may suppress alt momentum through expiry.
+4. **BTC stopped out** — Capital recycled but overall portfolio at -14.2% from baseline; no forced recovery trades.
+5. **HYPE R:R at T1 borderline** — T1 only 2.58% vs 2.5% stop (barely 1:1). Value comes from T2 (+5%) and ATH breakout potential if $63.32 is retested.
+6. **No strong 4h momentum reads** — Every major asset is flat to slightly red from today's open. Waiting for trigger levels is the disciplined play.
+
+---
+
+### Decision
+
+**CRASH GATE: NOT triggered (BTC -0.12%). TRADE stance active.**
+
+**Today's plan:**
+1. **HOLD XRP ×2** — CLARITY Act thesis; 7% trail stops active. No intervention.
+2. **HYPE/USD conditional** — Enter market on VWAP reclaim ≥ $60.57 with $75 ZUSD. Trail 2.5%.
+3. **SOL/USD conditional** — Enter market on VWAP reclaim ≥ $83.30 (secondary to HYPE). Trail 2.5%.
+4. **ETH/USD conditional** — Only if ETH ≥ $2,064 AND BTC ≥ $75,000. Low probability today.
+5. **BTC** — No re-entry. Monitor for momentum above $76K before considering.
+6. **ZUSD $75.10 on standby** — Deploy only on confirmed trigger levels. No below-VWAP market orders.
+
