@@ -3302,3 +3302,25 @@ No adjustments. ✓
 **New candidates screened:** INIT/USD (-3.81% from open, not a momentum play); no fresh <6h catalyst found for any Kraken asset.
 
 **Decision: HOLD — No New Trades.** XLM stop locked at T1. Cash reserve maintained for trigger confirmation.
+
+---
+
+## 2026-05-28 — XLM/USD | CLOSED | Exit ~$0.17884 | +3.0% | Stop-out at T1
+
+**Stop Order:** ODKG3E-2ZFML-4MN4OW (0.5% trailing stop, triggered)
+**Entry:** $0.17362 | **Exit:** ~$0.17884 (0.5% trail from HWM $0.17974)
+**Qty:** 577 XLM | **Notional in:** $100.18 | **Notional out:** ~$102.92 (net of fees)
+**Gain:** +$2.74 (+2.74% net after fees) ✓ T1 hit and locked
+**Stop type:** 0.5% trailing (tightened from 2.5% when T1 hit)
+**Thesis outcome:** DTCC/Stellar tokenization partnership catalyst; exited at T1 lock via trailing stop. XLM continued to $0.194 (+11.7% from exit) but catalyst 36h old at midday scan — no re-entry.
+
+**Post-exit account:** Kraken ZUSD $151.61 | No open positions | No open orders ✓
+
+---
+
+## 2026-05-28 — Midday Scan: NO-OP
+
+**Kraken:** No positions, no orders. ZUSD $151.61.
+**Alpaca:** No positions, no orders.
+**Action:** None. All conditional triggers unmet. BTC $72,530 new day lows, Fear & Greed 22 (Extreme Fear).
+**Phase P&L:** $151.61 − $179.78 = **-$28.17 (-15.7%)**

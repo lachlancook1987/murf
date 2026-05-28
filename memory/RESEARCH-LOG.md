@@ -8477,3 +8477,59 @@ XLM exceeded T1 ($0.17883) with bid $0.17952. Per strategy: tightened trailing s
 All conditional triggers unmet. No fresh catalyst. $48.69 ZUSD held in reserve.
 XLM managing toward T2 ($0.18230) with 0.5% trail protecting T1 gains.
 
+
+---
+
+## 2026-05-28 — Midday Scan
+
+### Account Snapshot
+
+| Account | Balance | Notes |
+|---|---|---|
+| Kraken ZUSD | **$151.61** | XLM position stopped out at ~T1 |
+| Kraken crypto | None | All positions closed |
+| Open orders | None | No trailing stops active |
+| Alpaca | No positions, no orders | Clean ✓ |
+
+**XLM stop-out confirmed:** 0.5% trailing stop ODKG3E-2ZFML-4MN4OW fired. 577 XLM exited at ~$0.17884 (HWM $0.17974, 0.5% trail). Proceeds ~$103.19 − fees ≈ $102.92. Locked +3.0% on $100.18 position. XLM subsequently continued to $0.194 but catalyst (DTCC, May 27) is 36h old — no re-entry.
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $72,530 | **-2.43%** | New day low $72,470; falling |
+| ETH | $1,969 | **-2.62%** | Below $2K psychological support |
+| SOL | $80.05 | **-2.74%** | Well below $82.31 open |
+| HYPE | $57.23 | **-0.75%** | Well below VWAP trigger $59.56 |
+| XLM | $0.194 | **+18.3%** | Stopped out at T1; catalyst 36h old; daily chart bearish |
+| MAT | $0.0873 | **-2.5%** | Downtrending from open; skip |
+| INIT | $0.0636 | **-5.0%** | Downtrending from open; skip |
+
+**Fear & Greed Index:** 22 — Extreme Fear
+
+**Crash Gate:** BTC $72,530 vs 24h open $74,337 = **-2.43%** → NOT triggered ✓
+
+### Research Findings
+
+**Perplexity top 24h gainers:** RAVE +106%, MWC +68%, OPG +59% — all micro-caps not tradeable on Kraken with acceptable spread.
+
+**Kraken movers:** OMNI +174% (18% spread — HARD SKIP), MAT (down -2.5% from open), INIT (down -5% from open). No Kraken alt showing momentum plus tight spread.
+
+**XLM re-entry assessment:** DTCC/Stellar partnership catalyst is 36h old (strategy requires <6h for day trades). Price extended +18% from 24h open. Perplexity: 4h chart bullish but daily chart bearish; RSI 41 neutral. No re-entry justified.
+
+**Conditional trigger check:**
+
+| Candidate | Trigger | Current | Met? |
+|---|---|---|---|
+| HYPE/USD | ≥ $59.56 (VWAP) | $57.23 | ❌ NO |
+| ETH/USD | ≥ $2,064 AND BTC ≥ $75K | $1,969 / $72,530 | ❌ NO |
+| SOL/USD | ≥ $82.50 (VWAP) | $80.05 | ❌ NO |
+| BTC/USD | ≥ $74,500 (VWAP) | $72,530 | ❌ NO |
+
+### Decision: NO NEW TRADES
+
+BTC at new day lows, Extreme Fear 22, all triggers unmet. No fresh (<6h) catalysts on any Kraken asset with spread ≤1%. Cash $151.61 held in reserve.
+
+**Day P&L (2026-05-28):** +$2.14 (XLM T1 gain: $151.61 − $149.47)
+**Phase P&L:** $151.61 − $179.78 = **-$28.17 (-15.7%)**
+**Positions:** 0 | **Open orders:** 0 | **Cash:** 100% ZUSD $151.61
