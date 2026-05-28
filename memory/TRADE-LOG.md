@@ -3324,3 +3324,27 @@ No adjustments. ✓
 **Alpaca:** No positions, no orders.
 **Action:** None. All conditional triggers unmet. BTC $72,530 new day lows, Fear & Greed 22 (Extreme Fear).
 **Phase P&L:** $151.61 − $179.78 = **-$28.17 (-15.7%)**
+
+---
+
+## 2026-05-28T21:05:16Z | HBAR/USD | BUY | 1108.0000 HBAR | Entry: ~$0.09060 | Trailing Stop 2.5%: $0.08781 | Open
+
+**Order ID (buy):** O3MMDD-TIYH2-HJ6CDB
+**Trailing Stop Order ID:** OIM7MC-Q5KHN-HD4DOU (trail -2.5%, stop $0.08781, HWM ~$0.09006, GTC ✓)
+**Notional:** ~$100.39 (~66% of $151.61 ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $0.08781 (2.5% trail from HWM ~$0.09006)
+**T1 Target:** $0.09332 (+3% from ~$0.09060) | **T2 Target:** $0.09513 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** OKCoinJapan exchange listing today — new JPY on-ramp; +5.5% from 24h open $0.08553; volume 31.8M HBAR (elevated); price above VWAP $0.08791; spread 0.022% ✓. Capital reserve $51.22 ZUSD held (Extreme Fear environment).
+**Spread at entry:** ~0.022% ✓ | **Pair:** HBAR/USD ✓ (Kraken online)
+**Crash gate:** BTC -1.15% 24h — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -1.15%) ✓
+- [x] Spread ≤1%: 0.022% ✓
+- [x] Asset on Kraken: HBAR/USD online ✓
+- [x] Catalyst: OKCoinJapan listing today + momentum +5.5% from 24h open ✓
+- [x] T1/T2 defined: $0.09332 / $0.09513 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OIM7MC ✓
