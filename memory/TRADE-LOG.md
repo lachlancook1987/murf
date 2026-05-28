@@ -3263,3 +3263,42 @@ No adjustments. ✓
 - [x] T1/T2 defined: $0.17883 / $0.18230 ✓
 - [x] R:R ≥1.2:1: 1.2:1 ✓
 - [x] Stop placed immediately post-fill: OEBVA3 ✓
+
+---
+
+## 2026-05-28 — Session-Open Scan (evening)
+
+### XLM/USD — T1 Reached → Stop Tightened
+
+**Time:** ~UTC (session-open scan)
+**XLM current:** $0.17955 (bid) | Entry: $0.17362 | **+3.42% — PAST T1 ✓**
+**T1:** $0.17883 (+3%) — **EXCEEDED**
+**T2:** $0.18230 (+5%)
+
+**Action taken:** Cancelled 2.5% trailing stop OEBVA3-AJOBJ-25PZDS; placed 0.5% trailing stop per strategy rules.
+
+**New Stop Order ID:** ODKG3E-2ZFML-4MN4OW (trail -0.5%, stop $0.17884, HWM $0.17974, GTC ✓)
+**Locked gain:** +3.01% minimum from entry $0.17362 (stop $0.17884)
+
+**Other positions/orders:** 1/1 active. No unprotected positions. ✓
+
+**Account:** Kraken ZUSD $48.69 | XLM 577.00 | Trailing stop ODKG3E active ✓
+**Alpaca:** No positions, no active orders ✓
+
+### Conditional Trigger Check (pre-research plan)
+
+| Candidate | Trigger | Current | Met? |
+|---|---|---|---|
+| HYPE/USD | ≥ $59.60 | $56.86 | ❌ NO |
+| ETH/USD | ≥ $2,005 | $1,984.85 | ❌ NO |
+| SOL/USD | ≥ $82.50 | $80.71 | ❌ NO |
+| BTC/USD | ≥ $74,500 | $73,325 | ❌ NO |
+
+**All triggers unmet. ZUSD $48.69 held in reserve.**
+
+**BTC crash gate:** $73,325 vs 24h open $74,337 = **-1.36%** → NOT triggered ✓
+**Fear & Greed:** 22 — Extreme Fear
+
+**New candidates screened:** INIT/USD (-3.81% from open, not a momentum play); no fresh <6h catalyst found for any Kraken asset.
+
+**Decision: HOLD — No New Trades.** XLM stop locked at T1. Cash reserve maintained for trigger confirmation.

@@ -8433,3 +8433,47 @@ No narrative-breaking events. No protocol exploit, rug, or regulatory action aga
 - **Stop trigger:** $0.16928
 
 **Decision: XLM LONG entered. 2/2 orders confirmed active. ZUSD $48.69 held in reserve.**
+
+---
+
+## 2026-05-28 — Session-Open Scan (evening)
+
+**Time:** UTC session-open run
+**State:** XLM/USD 577 @ entry $0.17362 | ZUSD $48.69 | Stop OEBVA3 active (2.5% trail)
+
+### Live Market State
+
+| Asset | Bid | 24h Open | Change | Status |
+|---|---|---|---|---|
+| BTC | $73,325 | $74,337 | -1.36% | Below $74,500 trigger |
+| ETH | $1,984.76 | $2,021.72 | -1.83% | Below $2,005 trigger |
+| SOL | $80.70 | $82.31 | -1.94% | Below $82.50 trigger |
+| HYPE | $56.85 | $57.66 | -1.39% | Below $59.60 trigger |
+| **XLM** | **$0.17952** | **$0.16394** | **+9.50%** | **ABOVE T1 — stop tightened** |
+
+**BTC crash gate:** -1.36% → NOT triggered ✓
+**Fear & Greed:** 22 — Extreme Fear
+
+### XLM Stop Management
+
+XLM exceeded T1 ($0.17883) with bid $0.17952. Per strategy: tightened trailing stop from 2.5% → 0.5%.
+
+- **Cancelled:** OEBVA3-AJOBJ-25PZDS (2.5% trail, stop was $0.17522)
+- **Placed:** ODKG3E-2ZFML-4MN4OW (0.5% trail, stop $0.17884, HWM $0.17974, GTC ✓)
+- **Locked gain:** +3.01% minimum from entry | T2 target $0.18230 (+5%) still open
+
+### Research Findings
+
+**Perplexity top gainers (24h):** RAIN +22.86%, RAVE +106%, MWC +67%, OPG +59% — none on Kraken or all micro-caps without verified catalysts.
+
+**INIT/USD check:** On Kraken, spread 0.155% ✓, but price $0.06430 = -3.81% from open ($0.06690) — declining, not a momentum play.
+
+**CORE/USD:** Not on Kraken (EQuery:Unknown asset pair).
+
+**Fresh <6h catalyst scan:** No new catalyst found. GENIUS Act (stablecoin) passed — positive macro but no direct Kraken-tradeable setup identified. No new movers with confirmed catalyst in last 6 hours.
+
+### Decision: NO NEW TRADES
+
+All conditional triggers unmet. No fresh catalyst. $48.69 ZUSD held in reserve.
+XLM managing toward T2 ($0.18230) with 0.5% trail protecting T1 gains.
+
