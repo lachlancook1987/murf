@@ -3236,3 +3236,30 @@ No adjustments. ✓
 
 **Notes:** Mass stop cascade day. BTC trailing stop OOT7MM (5% trail) fired overnight at ~$74,050; proceeds $38.23 combined with $36.87 existing ZUSD → $75.10 cash at session open. User directed HYPE/USD BUY 1.27729 @ ~$58.46 for ~$74.67 (100% ZUSD). HYPE failed to hold and trailing stop OOP7VZ fired at ~$57.08 (-2.5%). XRP×2 both stopped at ~$1.268 — CLARITY Act Senate floor vote unscheduled, sentiment eroding (BTC -1.64% day, Fear & Greed 25 "Extreme Fear"). Portfolio now 100% ZUSD $149.47, no open positions, no pending orders. Day P&L -$9.23 (-5.82%) vs $158.70 May 27 EOD. Phase P&L -$30.31 (-16.87%) from $179.78 Kraken start. Bot underperformed BTC by -4.18% today. Alpaca: stop a2b44cf9 cancelled 2026-05-22; no Alpaca exposure. Tomorrow: 100% cash — fresh scan; require BTC reclaim $75K and Fear & Greed improvement before new entries.
 
+
+---
+
+## 2026-05-28 — XLM/USD | BUY | 577 XLM | Entry: ~$0.17362 | Trailing Stop 2.5%: $0.16928 | Open
+
+**Buy Order ID:** OVSBJW-33UOJ-VG6NXQ
+**Trailing Stop Order ID:** OEBVA3-AJOBJ-25PZDS (trail -2.5%, stop $0.16928, HWM $0.17362, GTC ✓)
+**Notional:** ~$100.18 (~67% of $149.47 ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $0.16928 (2.5% trail from HWM $0.17362)
+**T1 Target:** $0.17883 (+3%) | **T2 Target:** $0.18230 (+5%)
+**R:R:** 1.2:1 at T1 ✓
+
+**Thesis:** DTCC/Stellar Development Foundation tokenization partnership (announced May 27). Stellar designated for Wall Street tokenized asset settlement infrastructure. XLM the standout gainer in weak market (+5.67% from daily open vs 91% of assets down). Price above VWAP $0.17192. Spread 0.139% ✓.
+
+**Sizing note:** 67% allocation (not full 100%) — catalyst is 24h old and T1 sits near day high resistance ($0.17874). $48.69 ZUSD held in reserve.
+
+**Crash gate:** BTC -1.27% 24h — NOT triggered ✓
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC -1.27%) ✓
+- [x] Spread ≤1%: 0.139% ✓
+- [x] Asset on Kraken: XLMUSD online ✓
+- [x] Catalyst: DTCC tokenization partnership + ongoing institutional demand ✓
+- [x] T1/T2 defined: $0.17883 / $0.18230 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OEBVA3 ✓
