@@ -9110,3 +9110,64 @@ No candidate meets entry criteria. BTC weekly gate active, all alts below opens,
 - BTC reclaim $74,000 → watch for alt momentum cascade
 
 ---
+
+## 2026-05-29 — Evening Session-Open Scan
+
+**Time:** 2026-05-29 (evening session)
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash).
+**Alpaca:** Historical orders only from 2026-05-22. No active exposure.
+
+### Live Market Snapshot (Kraken quotes)
+
+| Asset | Price | 24h Open | 24h Change | Spread | Status |
+|---|---|---|---|---|---|
+| BTC | $73,027 | $73,516 | −0.67% | 0.0001% | Below open |
+| ETH | $2,001.82 | $2,006.93 | −0.25% | 0.007% | Below open |
+| XRP | $1.30662 | $1.31355 | −0.53% | 0.001% | Below open |
+| WLD | $0.2991 | $0.2809 | +6.5% | 0.13% | Above open; move reversed from $0.408 peak |
+
+**BTC Crash Gate:** BTC −0.67% from 24h open → NOT triggered ✓
+**Fear & Greed:** 23 (Extreme Fear)
+**BTC funding rate:** +0.0054% (Binance) — neutral, no squeeze signal
+
+### BTC Weekly Trend Gate: TRIGGERED
+
+BTC on 2026-05-22: ~$77,574 → Current: $73,027 = **−5.84% over 5 trading days** (threshold: >−3%).
+Gate active — requires 1h momentum **>5% AND fresh catalyst <3h old**.
+
+### Candidates Screened
+
+**WLD/USD (+6.5% from open):**
+- Catalyst: World App + Oku Trade DeFi integration (swap incentives, whale activity). Rally already peaked at $0.408 on May 27 (11-week high) and reversed sharply amid liquidations. Current $0.2991 is in distribution phase.
+- Catalyst age: >2 days old. Not a fresh event today.
+- SKIP — move is reversal from May 27 peak, not fresh intraday surge with new catalyst.
+
+**ETH/USD (−0.25%):**
+- Catalyst: CME 24/7 crypto futures launch today (fresh). BUT ETH below 24h open, no 1h >5% momentum.
+- Gate: 1h momentum fails. SKIP.
+
+**BTC/USD (−0.67%):**
+- Catalyst: CME 24/7 launch (fresh today). BUT BTC below open, no 1h >5% surge.
+- Gate: 1h momentum fails. SKIP.
+
+**XRP/USD (−0.53%):**
+- CLARITY Act: Senate Banking Committee approved 15-9 on May 14. No Senate floor vote today.
+- XRP below open; no gate-exempt fresh catalyst. R:R 0.43:1 fails at 7% trail.
+- SKIP.
+
+**HYPE/USD:**
+- 14,175,778 HYPE token unlock today (1.4% supply, ~3% market cap). Supply overhang = selling pressure.
+- SKIP.
+
+### Decision: NO NEW TRADES
+
+No candidate meets entry criteria under BTC weekly trend gate. Market in Extreme Fear (23). All Kraken alts flat to negative with no qualifying 1h surge or fresh catalyst. Portfolio 100% ZUSD $150.55.
+
+**Watchlist for next session:**
+- XRP: Any CLARITY Act Senate floor vote news → immediate entry, 7% trail
+- WLD: Watch for fresh catalyst if Oku Trade incentive competition announces new phase (<3h)
+- Any asset: 1h surge >5% + fresh catalyst <3h → meets weekly gate
+- BTC reclaim $74,000 + volume → watch for alt momentum cascade
+- HYPE: Wait for token unlock selling pressure to resolve before re-screening
+
+---
