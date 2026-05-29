@@ -8999,3 +8999,71 @@ Entry $0.09060 (2026-05-28), exit ~$0.08964 (overnight trailing stop OZSDHA-YYZP
 **ZUSD available:** $150.5526 — sufficient for BTC + XRP triggers simultaneously
 
 ---
+
+## 2026-05-29 — Midday Scan
+
+**Time:** 2026-05-29 (midday)
+**Portfolio:** $150.55 ZUSD (100% cash, no open positions, no open orders)
+
+### Account State
+- **Kraken:** No positions, no orders ✓
+- **Alpaca:** Historical orders only from 2026-05-22, no active exposure ✓
+
+### Market Snapshot
+
+| Asset | Price | Open | Day Chg | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC | $73,593 | $73,517 | +0.10% | $72,470–$73,827 | 0.0001% ✓ |
+| XLM | $0.2105 | $0.2036 | +3.4% | $0.1728–$0.2237 | 0.084% ✓ |
+| HYPE | $62.52 | $61.51 | +1.6% | $56.18–$63.41 | 0.016% ✓ |
+| HBAR | $0.09267 | $0.09098 | +1.9% | $0.08298–$0.09541 | 0.032% ✓ |
+| ALGO | $0.11873 | $0.11572 | +2.6% | $0.10346–$0.11996 | 0.076% ✓ |
+| XRP | $1.32129 | $1.31355 | +0.6% | $1.28181–$1.33611 | 0.001% ✓ |
+
+**Fear & Greed:** 22 (Extreme Fear)
+
+### BTC Weekly Trend Gate — TRIGGERED
+
+BTC 5-day comparison: $77,574 (May 22 Alpaca fill) → $73,593 (today) = **-5.1%**
+Gate requires: 1h momentum >5% AND catalyst <3h old for new entries.
+Pure momentum entries banned. Catalyst-driven entries (XRP/CLARITY Act) remain open.
+
+### Candidates Screened
+
+**XLM/USD (+3.4% from open):**
+- Catalyst: DTCC/Stellar tokenization partnership — announced ~May 26-27, now 2-3 days old. NOT fresh (<3h required under weekly gate).
+- Big move already happened ($0.1728→$0.2237 = +29.5%). Now consolidating.
+- SKIP — catalyst too old under weekly trend gate.
+
+**HYPE/USD (+1.6% from open):**
+- Catalyst: 1M HYPE donation to Hyperliquid Policy Center (Washington D.C. advocacy). Mixed signal — slight supply overhang, ~$28.7M implied.
+- 1h momentum: ~1.6% from open, well below >5% gate requirement.
+- SKIP — insufficient 1h momentum, mixed catalyst.
+
+**HBAR/USD (+1.9% from open):**
+- Catalyst: OKCoinJapan listing (May 28, >24h old). No fresh catalyst.
+- HBAR stopped out this morning ($0.08964). Classic stop-and-reverse pattern.
+- SKIP — catalyst too old, no fresh driver.
+
+**ALGO/USD (+2.6% from open):**
+- Catalyst: Robinhood relisting (May 20, 9 days old); regulatory clarity (March-April 2026). No fresh catalyst today.
+- Near resistance $0.12–$0.127. Bearish/neutral near-term per analysis.
+- SKIP — no fresh catalyst, near resistance.
+
+**XRP/USD (+0.6% from open — gate exempt for CLARITY Act):**
+- Catalyst: CLARITY Act advanced from Senate Banking Committee (15-9 vote May 14). Floor vote pending but NO NEW VOTE OR UPDATE TODAY.
+- Strategy exemption: XRP binary catalyst entries remain open regardless of weekly gate, using 7% trail.
+- R:R check: Entry ~$1.321 | Stop 7% trail | T1 +3% = $1.360 | R:R = 3%/7% = **0.43:1 — FAILS ≥1.2:1 minimum**.
+- SKIP — R:R fails strategy minimum even under binary catalyst framework.
+
+### Decision: NO NEW TRADES
+
+No candidate meets entry criteria under the BTC weekly trend gate. Portfolio remains 100% ZUSD $150.55. No notification sent (no action taken).
+
+**Conditional watchlist for afternoon session:**
+- XRP: Enter immediately on any CLARITY Act Senate floor vote news (use 7% trail, accept vol)
+- XLM: Re-enter if fresh Stellar/DTCC implementation news breaks today (<3h)
+- BTC: Reclaim $74,000 + volume spike = watch for alt momentum cascade
+- Any asset: 1h surge >5% with confirmed fresh catalyst → meet weekly gate requirements
+
+---
