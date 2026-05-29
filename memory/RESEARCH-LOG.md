@@ -9067,3 +9067,46 @@ No candidate meets entry criteria under the BTC weekly trend gate. Portfolio rem
 - Any asset: 1h surge >5% with confirmed fresh catalyst → meet weekly gate requirements
 
 ---
+
+## 2026-05-29 — Midday Scan
+
+**Time:** 2026-05-29 (midday)
+**Kraken:** No positions, no open orders. ZUSD $150.55 (100% cash).
+**Alpaca:** Historical orders only (2026-05-22). No active positions or stops.
+
+### Live Market Snapshot (Kraken quotes)
+
+| Asset | Price | Open | 24h Change | Spread | Status |
+|---|---|---|---|---|---|
+| BTC | $73,046 | $73,516 | −0.64% | 0.0001% | Below open |
+| ETH | $1,996 | $2,007 | −0.54% | 0.0005% | Below open |
+| XRP | $1.305 | $1.314 | −0.66% | 0.007% | Below open |
+| SOL | $81.36 | $82.02 | −0.81% | 0.012% | Below open |
+| HBAR | $0.08949 | $0.09098 | −1.64% | 0.022% | Below open; pre-session trigger $0.09256 NOT fired |
+| AVAX | $8.83 | $8.93 | −1.12% | 0.11% | Below open |
+| SUI | $0.9047 | $0.9310 | −2.83% | 0.044% | Below open |
+| RENDER | $1.980 | $2.001 | −1.05% | 0.05% | Below open |
+| DOGE | $0.09837 | $0.09945 | −1.09% | 0.019% | Below open |
+
+### BTC Weekly Trend Gate: TRIGGERED
+
+BTC on 2026-05-22 (trade log entry): ~$77,574. Current: $73,046. Change: **−5.84% over 5 trading days** (threshold: >−3%). Gate active — requires 1h momentum >5% AND fresh catalyst <3h old for non-catalyst entries.
+
+**Crash gate:** BTC −0.64% from open → NOT triggered ✓
+
+### Candidate Assessment
+
+- **HBAR/USD:** −1.64% from open; pre-session breakout trigger ($0.09256) NOT fired; OKCoinJapan listing catalyst >24h old. SKIP.
+- **XRP/USD:** −0.66% from open; CLARITY Act gate-exempt but no fresh Senate vote news today; R:R 3%/7% = 0.43:1 fails ≥1.2:1 minimum. SKIP.
+- **ETH, SOL, AVAX, SUI, RENDER, DOGE:** All below opens, no 1h momentum >5%, no fresh catalysts. SKIP.
+
+### Decision: NO NEW TRADES
+
+No candidate meets entry criteria. BTC weekly gate active, all alts below opens, zero qualifying momentum or catalyst signals. Portfolio 100% ZUSD $150.55. No notification sent (no action taken).
+
+**Watchlist carried forward to next session:**
+- XRP: Any CLARITY Act Senate floor vote breaking news → immediate entry, 7% trail
+- Any asset: 1h surge >5% + fresh catalyst <3h → meets weekly gate
+- BTC reclaim $74,000 → watch for alt momentum cascade
+
+---
