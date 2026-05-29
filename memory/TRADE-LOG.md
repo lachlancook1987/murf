@@ -3374,3 +3374,18 @@ No adjustments. ✓
 
 **Net P&L (overnight):** HBAR unrealized +$0.98 (+0.98%) on $100.39 notional.
 
+---
+
+## 2026-05-29 — EOD Snapshot (Day 9, Friday)
+
+### May 29 — EOD Snapshot (Day 9, Friday)
+**Portfolio:** $150.55 | **Cash:** $150.55 (100%) | **Day P&L:** +$1.08 (+0.73%) | **Phase P&L:** -$29.23 (-16.26%) | **vs BTC:** +0.46%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | All positions exited | — | — |
+
+**Trades today:** 1) HBAR/USD trailing stop OZSDHA-YYZPV-VDWXM3 exit at ~$0.08964 (-1.05%, -$1.06) | **Total since migration:** ~49
+
+**Notes:** HBAR/USD position (entered 2026-05-28 21:05Z at ~$0.09060, OKCoinJapan listing catalyst) stopped out today via 2.5% trailing stop OZSDHA at ~$0.08964 (−1.05%, −$1.06 net). Portfolio returned to 100% ZUSD $150.55. Day P&L +$1.08 (+0.73%) is net positive because yesterday's XLM trade (+$2.74 net) offset today's HBAR stop loss; both positions were entered/exited after the May 28 EOD snapshot. Phase P&L −$29.23 (−16.26%) from $179.78 Kraken start. Bot outperformed BTC by +0.46% today (BTC +0.27%, $73,418→$73,618). No open positions, no open orders. Alpaca: stop a2b44cf9 canceled 2026-05-22, no Alpaca exposure. Tomorrow (Saturday): 100% cash; BTC ~$73,618, Fear & Greed 22 (Extreme Fear). Require BTC reclaim $74,000+ and sentiment improvement before new entries.
+
