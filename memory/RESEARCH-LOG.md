@@ -9067,3 +9067,46 @@ No candidate meets entry criteria under the BTC weekly trend gate. Portfolio rem
 - Any asset: 1h surge >5% with confirmed fresh catalyst → meet weekly gate requirements
 
 ---
+
+## 2026-05-29 — Afternoon Session-Open Scan (NO TRADES)
+
+**Time:** 2026-05-29 (afternoon/evening)
+**Portfolio:** $150.55 ZUSD (100% cash, no positions, no orders) — confirmed via live Kraken API ✓
+**Alpaca:** No positions, no active orders — historical orders only from 2026-05-22 ✓
+
+### Live Market State
+
+| Asset | Bid | Ask | 24h Open | vs Open | Trigger | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $73,325.60 | $73,325.70 | $73,516.50 | -0.26% | $73,827 (break) | ❌ unmet |
+| XRP/USD | $1.30860 | $1.30868 | $1.31355 | -0.38% | $1.336 (break) | ❌ unmet |
+| ETH/USD | $2,000.49 | $2,000.50 | $2,006.93 | -0.32% | $2,027 (break) | ❌ unmet |
+| HBAR/USD | $0.08927 | $0.08933 | $0.09098 | -1.8% | $0.09541 (break) | ❌ unmet (stopped out earlier, catalyst >24h old) |
+| SOL/USD | $81.55 | $81.56 | $82.02 | -0.57% | None set | — |
+
+### Gate Check
+
+- **Crash gate:** BTC -0.26% 24h → NOT triggered ✓
+- **BTC weekly trend gate:** BTC ~-5.1% over 5 days (unchanged from morning scan) → **ACTIVE**
+  - Requires 1h momentum >5% AND fresh catalyst <3h old
+  - No asset meeting this threshold identified
+
+### Catalyst Scan (Perplexity)
+
+- **BTC:** $6.25B options expiry today (already in morning plan). ETF: 7 straight days of outflows — not reversed. No new catalysts since morning.
+- **XRP CLARITY Act:** No Senate floor vote today (still May 14 committee markup only). Entry R:R still 0.43:1 at current $1.309 → FAILS minimum.
+- **Top 24h gainers:** GUA, ALLO, MUMU, MAIGA, XCX — all micro-caps, none on Kraken.
+- **Fear & Greed:** 22–23 (Extreme Fear) — 3rd consecutive day.
+- **BTC funding rate:** ~-0.0002% (shorts paying longs — mild bullish signal but not actionable alone).
+- **No new intraday catalyst found** for any Kraken-listed asset.
+
+### Decision: NO NEW TRADES
+
+All 4 morning plan triggers remain unmet. BTC weekly trend gate active. No qualifying 1h surge >5% or fresh <3h catalyst. No trades placed, no notification sent.
+
+**Watchlist carried forward:**
+- XRP: Enter on confirmed CLARITY Act Senate floor vote (7% trail, R:R checked at live price)
+- BTC: Reclaim $74,000+ with volume → opens alt momentum plays
+- Any Kraken asset: 1h surge >5% + catalyst <3h → re-evaluate immediately
+
+---
