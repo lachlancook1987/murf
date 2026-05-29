@@ -3374,3 +3374,28 @@ No adjustments. ✓
 
 **Net P&L (overnight):** HBAR unrealized +$0.98 (+0.98%) on $100.39 notional.
 
+---
+
+## 2026-05-29 — Session-Open Scan
+
+**Account:** Kraken ZUSD $150.5526 | No open positions | No open orders ✓
+**Alpaca:** No positions, no orders ✓
+**Phase P&L (Kraken):** $150.55 − $179.78 = **−$29.23 (−16.3%)** from phase start
+
+**BTC:** $73,450 (ask) | 24h open $73,516.50 | 24h change **−0.09%** | Crash gate: NOT triggered ✓
+**Fear & Greed:** 22 (Extreme Fear) — unchanged from yesterday
+
+### Conditional Trigger Check
+
+| Candidate | Trigger | Current Ask | Distance | Status |
+|---|---|---|---|---|
+| HBAR/USD | >$0.09256 (24h high breakout) | $0.09208 | −0.52% | ❌ NOT triggered |
+| XRP/USD | >$1.31355 (reclaim 24h open) | $1.30948 | −0.31% | ❌ NOT triggered |
+| ETH/USD | >$2,027.41 (24h high breakout) | $2,008.13 | −0.96% | ❌ NOT triggered |
+| SOL/USD | >$82.87 (24h high breakout) | $81.82 | −1.27% | ❌ NOT triggered |
+
+**Crash gate:** BTC −0.09% 24h → CLEAR ✓
+**Spread check:** HBAR 0.02% ✓ | XRP 0.001% ✓ | ETH 0.004% ✓ | SOL 0.024% ✓
+
+**Decision: HOLD — No New Trades.** All 4 conditional triggers unmet. Extreme Fear (22) persists; BTC flat. All entries remain conditional on trigger confirmation. No notification sent.
+
