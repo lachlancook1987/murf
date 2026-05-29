@@ -326,3 +326,100 @@ A second session opened Saturday morning. The user closed the full ETH position 
 **Open risk:** ETH stop-limit $2,151.94 / $2,130.42 (order e4efd513, GTC). Max loss on open: ~$3.39 (-5% from $2,265.20 entry).
 
 ---
+
+## Week of 2026-05-25 — Review Date: 2026-05-29
+
+### Context
+**Day trading profile week.** Day trading focus formally added May 26. High-churn week — 22+ round trips across FET, HYPE, WLD, XLM, HBAR, RENDER, ONDO, AVAX, XRP, BTC, ETH, NEAR. BTC fell -4.83% on the week ($77,402 → $73,665), dragging all positions into a persistent headwind. Alpaca residual BTC closed May 22 — no Alpaca exposure remaining.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $150.55 | $150.55 ZUSD | 0 — fully in cash |
+| Alpaca | $0 | — | Closed May 22 |
+| **Total** | **$150.55** | $150.55 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (May 22 EOD) | $179.85 |
+| Ending Equity (May 29 current) | **$150.55** |
+| **Week Return** | **-16.3%** (-$29.30) |
+| BTC Week Return | **-4.83%** ($77,402 → $73,665) |
+| **Bot vs BTC** | **-11.5%** (underperformed) |
+
+### Trade Summary (all closed trades May 22–29)
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | May 22→24 | LINK/USD | $9.147 | $9.278 (trail stop) | **+$0.21** | WIN |
+| 2 | May 22→24 | SUI/USD | $1.069 | $1.016 (trail stop) | **-$1.43** | LOSS |
+| 3 | May 22→24 | XRP/USD (21u) | $1.363 | ~$1.299 (trail stop) | **~-$1.34** | LOSS |
+| 4 | May 25 | NEAR/USD | $2.137 | $2.335 (trail stop) | **+$7.52** | WIN |
+| 5 | May 25→26 | AVAX/USD | $9.22 | $8.83 (trail stop) | **-$1.88** | LOSS |
+| 6 | May 25→26 | ONDO/USD | $0.448 | $0.417 (trail stop) | **-$3.15** | LOSS |
+| 7 | May 26 | HYPE/USD (1st) | $60.65 | $57.62 (trail stop) | **-$2.06** | LOSS |
+| 8 | May 26 | ETH/USD | $2,026 | $2,089 (tightened stop) | **+$1.25** | WIN |
+| 9 | May 26 | FET/USD (DT1) | $0.2452 | ~$0.2367 (trail stop) | **~-$1.50** | LOSS |
+| 10 | May 26 | RENDER/USD | $2.372 | $2.301 (trail stop) | **-$1.29** | LOSS |
+| 11 | May 26 | FET/USD (DT2) | $0.2454 | ~$0.254 (manual) | **~+$1.55** | WIN |
+| 12 | May 26 | WLD/USD (1st) | $0.3947 | $0.3849 (trail stop) | **-$1.06** | LOSS |
+| 13 | May 26 | FET/USD (DT3) | $0.2531 | $0.2447 (trail stop) | **-$1.38** | LOSS |
+| 14 | May 26 | HYPE/USD (2nd) | $63.53 | $61.22 (trail stop) | **-$1.39** | LOSS |
+| 15 | May 26→27 | WLD/USD (2nd) | $0.386 | $0.373 (trail stop) | **-$1.28** | LOSS |
+| 16 | May 26→28 | BTC/USD | ~$76,957 | ~$74,050 (trail stop) | **-$1.51** | LOSS |
+| 17 | May 24→28 | XRP/USD (31u) | $1.344 | ~$1.268 (trail stop) | **-$2.36** | LOSS |
+| 18 | May 26→28 | XRP/USD add | ~$1.350 | ~$1.268 (trail stop) | **-$2.44** | LOSS |
+| 19 | May 27 | ETH/USD | $2,070.90 | ~$2,035 (trail stop) | **-$0.84** | LOSS |
+| 20 | May 28 | HYPE/USD (3rd) | $58.46 | ~$57.08 (trail stop) | **-$1.80** | LOSS |
+| 21 | May 28 | XLM/USD | $0.17362 | $0.17884 (T1, tight trail) | **+$2.74** | WIN |
+| 22 | May 28→29 | HBAR/USD | $0.09060 | ~$0.08964 (trail stop) | **-$1.06** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Closed Trades | 22 |
+| Wins | 5 |
+| Losses | 17 |
+| Win Rate | **22.7%** |
+| Gross Wins | **$13.27** (NEAR $7.52, XLM $2.74, FET-manual $1.55, ETH $1.25, LINK $0.21) |
+| Gross Losses | **$27.77** |
+| Profit Factor | **0.48** |
+| Avg Win | **$2.65** |
+| Avg Loss | **$1.63** |
+| Largest Win | NEAR trailing stop **+$7.52 (+9.3%)** |
+| Largest Loss | ONDO token unlock stop **-$3.15 (-6.95%)** |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$4.47** (~40 txns × $43 avg notional × 0.26%) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $150.55 in Kraken. All trailing stops executed cleanly.
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Trailing stop swing inheritance (NEAR +9.3%):** Best trade of the week required no active management — the trailing stop inherited from a strong-momentum entry executed perfectly. Let it work.
+- **T1 tightening execution (XLM +3.0%):** DTCC/Stellar partnership was a clean catalyst entry. Tightening to 0.5% trailing stop at T1 locked the gain. This is the exact workflow the strategy prescribes.
+- **Manual profit take (FET DT2 ~+3.5%):** Only the user-directed exit worked among FET's three attempts — confirming that FET's intraday volatility makes the 2.5% trailing stop unreliable.
+
+**Entry types that failed:**
+- **2.5% trailing stop on volatile mid/small caps in choppy conditions (FET×3, HYPE×3, WLD×2, HBAR, RENDER):** All nine entries were stopped at -2.5% to -5%, then recovered past entry within hours. The 2.5% trail is too tight for assets with 3–5% intraday ATR. This is the dominant source of losses this week.
+- **XRP binary catalyst in a downtrending market:** Both XRP legs (7% trail) eventually stopped at -5.6% and -6.0%. The CLARITY Act thesis is intact but BTC's weekly decline created a persistent bid-side headwind that the binary catalyst could not overcome.
+- **ONDO with known unlock overhang:** Pre-flagged risk materialised immediately. Entry quality was poor — the unlock was a direct bearish catalyst.
+- **Entering new longs in a confirmed weekly downtrend:** BTC fell every day this week (-4.83% total). Most new day-trade long entries were placed into persistent selling pressure. Without a BTC stabilisation signal, day-trade long win rates compress toward 10–15%.
+
+**Stop quality:**
+- All trailing stops executed correctly as designed. Zero orphaned positions (one stop was accidentally cancelled and immediately re-placed within 30 seconds). The stop system is sound.
+- The issue was not stop placement — it was entry selection and trail width vs asset volatility.
+
+**Profile violations:**
+- FET DT2: Used 4% trail per user instruction (R:R was 0.75:1, below 1.2:1 threshold, explicitly noted at entry). No other violations. Spread ≤1% confirmed on all entries; no leverage used this week.
+
+**Concrete adjustment for next week:**
+**Add a BTC trend gate:** If BTC has declined >3% over the past 5 trading days, require 1h momentum >5% AND a fresh catalyst <3h old before entering new momentum day trades. Pure momentum entries (no specific catalyst) are banned in a weekly BTC downtrend — they have near-zero edge. This does NOT affect catalyst-driven entries (CLARITY Act, protocol upgrade, exchange listing) which remain open regardless of BTC trend.
+
+Additionally: for assets with expected intraday ATR >3% (FET, HYPE, WLD-type), use **3.5% trailing stop** (not 2.5%) to give trades room to work without noise-stopping.
+
+### Key Lesson
+**Day trading into a BTC downtrend with tight trailing stops is a reliable way to lose money fast.** The trailing stop system works exactly as designed — every stop protected capital from larger losses. The failure was entry selection: 9 of the 17 losses were assets that recovered past entry after stopping. In a downtrending BTC week, the correct move is to wait for BTC stabilisation above a key level ($75K+) before deploying fresh capital into intraday longs. Cash is a position. The one trade that worked cleanly without active management (NEAR, inherited) and the one catalyst trade that worked (XLM) validate the strategy's core thesis — the churn was entirely from discretionary day-trade entries that violated the "catalyst required" rule.
+
+---

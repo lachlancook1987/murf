@@ -58,6 +58,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - **Default: 2.5% trailing stop on ALL new trades** — `type: trailing_stop`, `trail_percent: 2.5`
   - Placed as a market-order sell GTC immediately after the buy fills
   - No exceptions: if a stop is not placed, the trade is not complete
+  - **Exception: high-ATR assets** — for assets with expected intraday ATR >3% (e.g. FET, HYPE, WLD-type momentum coins), use **3.5% trailing stop** to avoid noise-stops on otherwise valid trades
 - **Profit targets: T1 = +3%, T2 = +5%** from entry
   - At T1 (+3%): tighten trailing stop to 0.5% to lock in gains, let it run toward T2
   - At T2 (+5%): consider closing or tightening further — day trading wins are banked, not held
@@ -80,6 +81,15 @@ target, move on. Volume of profitable trades beats size of any single trade.
 
 - BTC down **>20% in 24h** → pause all new entries; close leveraged positions
 - Normal BTC dips (-5%, -10%) are buying opportunities, not blockers
+
+## BTC Weekly Trend Gate (added 2026-05-29)
+
+- If BTC is down **>3% over the past 5 trading days**, apply stricter day-trade entry criteria:
+  - Require 1h momentum **>5%** AND a fresh catalyst **<3h old** (not just >3%/1h momentum)
+  - Pure momentum entries (no specific catalyst) are **banned** during a weekly BTC downtrend
+  - Catalyst-driven entries (regulatory event, exchange listing, protocol upgrade) remain open regardless of BTC weekly trend
+  - XRP binary catalyst (CLARITY Act / regulatory vote) entries remain open at 7% trail
+- This gate does NOT apply to crash-gate situations — the crash gate supersedes it
 
 ---
 
@@ -157,4 +167,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-05-26 (day trading profile: 3–5% targets, 2.5% default trailing stop, fast-mover research focus)*
+*Last updated: 2026-05-29 (added BTC weekly trend gate; high-ATR assets use 3.5% trailing stop instead of 2.5%)*
