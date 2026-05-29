@@ -9171,3 +9171,104 @@ No candidate meets entry criteria under BTC weekly trend gate. Market in Extreme
 - HYPE: Wait for token unlock selling pressure to resolve before re-screening
 
 ---
+
+---
+
+## 2026-05-29 — Pre-Session Research (Morning)
+
+**Time:** 2026-05-29 (morning session open)
+**Kraken:** No open positions. No open orders. ZUSD $150.5526 (100% cash).
+**Alpaca:** Historical orders only (2026-05-22). No active exposure.
+
+### Account Snapshot
+
+| Account | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $150.5526 ZUSD | None | None |
+| Alpaca | Historical only | None | None |
+
+**Phase P&L:** −$29.23 (−16.26%) from $179.78 Kraken start. 100% cash entering session.
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Source |
+|---|---|---|---|
+| BTC | $74,142 | +1.04% | Perplexity |
+| ETH | $2,037 | +0.50% | Perplexity |
+| XLM | $0.2369 | +16.3% | Kraken (open $0.2036) |
+| HYPE | $65.86 | +7.07% | Kraken (open $61.51) |
+| ALGO | $0.1191 | +2.89% | Kraken (open $0.1157) |
+
+**Fear & Greed Index:** 23 — Extreme Fear (unchanged from yesterday)
+**BTC Funding Rate:** +0.0054% / 8h (Binance) — neutral, no long squeeze signal
+**BTC Crash Gate:** BTC +1.04% from 24h open → **NOT triggered** ✓
+**BTC Weekly Trend Gate:** BTC on 2026-05-22 = $77,574 → today $74,142 = **−4.42%** over 5 trading days (threshold −3%) → **GATE ACTIVE**
+
+Gate requirements: 1h momentum >5% AND fresh catalyst <3h old. OR: catalyst-driven entries (regulatory event, exchange listing, protocol upgrade) exempt from gate.
+
+**Key positive:** BTC has reclaimed $74,000 — the watchlist trigger from yesterday's session. Weekly gate still active but market conditions improving.
+
+---
+
+### Top 24h Gainers (Screened)
+
+**CoinMarketCap large-cap:** XLM +24.7%, ALGO +10.98%, HBAR +7.04%, HYPE +6.08%
+**CoinGecko small-cap:** RAVE +106%, MWC +67.8%, OPG +59.1% (micro-caps, not on Kraken)
+
+**Token unlocks today:** INFRA (~50K tokens), XWGT (~819K tokens) — negligible; major unlocks (PYTH, STRK) were May 15–22.
+
+---
+
+### Candidate Screening
+
+#### XLM/USD
+- **24h move (Kraken):** +16.3% (open $0.2036 → last $0.2369; day high $0.2463)
+- **Spread:** ask $0.23718 / bid $0.23685 → **0.14%** ✓
+- **Kraken:** ONLINE ✓ | Leverage 2x available
+- **Catalyst:** DTCC–Stellar tokenization partnership — institutional validation for real-world asset settlement on Stellar.
+- **Catalyst age:** 2+ days old (already traded on May 28, exited at T1 $0.17884). Catalyst was "36h old" at midday scan on May 28.
+- **Weekly gate assessment:** DTCC/Stellar partnership could qualify as catalyst-driven exemption (major institutional protocol use-case). BUT move already +16.3% from open; day high $0.2463 is only $0.007 above current price ($0.2369). T1 (+3%) = $0.2440 — this is ABOVE the day high.
+- **R:R:** 3% target / 2.5% stop = 1.2:1 — meets minimum threshold if assessed against T1. But T1 is above day high; price would need to make a new daily high to hit T1.
+- **Decision: SKIP** — catalyst 2+ days old, price extended +16% from open, T1 requires new daily high. Chasing an aged catalyst near the top of an intraday range.
+
+#### HYPE/USD
+- **24h move (Kraken):** +7.07% (open $61.51 → last $65.86; day high $67.48)
+- **Spread:** ask $65.93 / bid $65.92 → **0.015%** ✓ (excellent)
+- **Kraken:** ONLINE ✓ | Leverage up to 5x available
+- **Catalyst:** $1.16B buyback speculation + RWA perps OI at $2.65B narrative. No single discrete event.
+- **ATR classification:** High-ATR asset (HYPE is strategy-specified as high-ATR) → **3.5% trailing stop required**
+- **R:R at T1:** T1 = $65.86 × 1.03 = $67.83; stop = 3.5% trail. R:R = 3% / 3.5% = **0.86:1** — FAILS ≥1.2:1 minimum ❌
+- **Decision: SKIP** — R:R fails with mandatory 3.5% high-ATR stop.
+
+#### ALGO/USD
+- **24h move (Kraken):** +2.89% (open $0.11572 → last $0.11907; day high $0.11996)
+- **Spread:** ask $0.11907 / bid $0.11890 → **0.14%** ✓
+- **Kraken:** ONLINE ✓
+- **Catalyst:** Technical breakout / short squeeze — no fundamental catalyst confirmed.
+- **Weekly gate:** Pure technical entry banned under active gate (requires catalyst <3h old). FAILS gate.
+- **Decision: SKIP** — No catalyst; fails BTC weekly trend gate.
+
+#### HBAR/USD
+- Previously traded (entered May 28, stopped out May 29 at −1.05%). OKCoinJapan listing catalyst >24h old. No fresh catalyst. SKIP.
+
+---
+
+### Decision: NO NEW TRADES
+
+**BTC weekly trend gate is ACTIVE** (BTC −4.42% vs May 22). No candidate today has:
+1. Fresh catalyst <3h old AND 1h momentum >5%, OR
+2. A qualifying catalyst-driven exemption with acceptable R:R and non-extended entry point
+
+XLM has the strongest technical move but the catalyst is 2+ days old and the entry is near the daily high — poor risk/reward for a fresh day trade.
+
+**Watchlist for next session:**
+- **XLM/USD:** Watch for fresh DTCC/Stellar institutional development or secondary catalyst; re-screen if 1h momentum resurges with new news.
+- **XRP/USD:** CLARITY Act Senate floor vote → immediate entry at market, 7% trail (catalyst-driven exemption applies).
+- **HYPE/USD:** Wait for retracement to ~$62–63 where 3.5% stop allows 3%+ R:R to new highs. Monitor for specific buyback announcement (discrete event).
+- **Any asset:** 1h surge >5% + fresh catalyst <3h → meets weekly gate criteria.
+- **BTC weekly gate reset:** BTC returning to $77,574+ removes the gate entirely.
+
+---
+
