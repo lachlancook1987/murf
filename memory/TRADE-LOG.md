@@ -3389,3 +3389,15 @@ No adjustments. ✓
 
 **Notes:** HBAR/USD position (entered 2026-05-28 21:05Z at ~$0.09060, OKCoinJapan listing catalyst) stopped out today via 2.5% trailing stop OZSDHA at ~$0.08964 (−1.05%, −$1.06 net). Portfolio returned to 100% ZUSD $150.55. Day P&L +$1.08 (+0.73%) is net positive because yesterday's XLM trade (+$2.74 net) offset today's HBAR stop loss; both positions were entered/exited after the May 28 EOD snapshot. Phase P&L −$29.23 (−16.26%) from $179.78 Kraken start. Bot outperformed BTC by +0.46% today (BTC +0.27%, $73,418→$73,618). No open positions, no open orders. Alpaca: stop a2b44cf9 canceled 2026-05-22, no Alpaca exposure. Tomorrow (Saturday): 100% cash; BTC ~$73,618, Fear & Greed 22 (Extreme Fear). Require BTC reclaim $74,000+ and sentiment improvement before new entries.
 
+---
+
+## 2026-05-29 — Midday Scan (no trades)
+
+- Kraken: No positions, no orders. ZUSD $150.5526 (100% cash).
+- BTC $73,316 (−0.27% 24h) — crash gate NOT triggered; weekly trend gate ACTIVE (−5.4% vs May 22 $77,574)
+- Fear & Greed: 23 (Extreme Fear) | BTC ETF outflows −$223M May 28
+- **XLM:** +17.5% from open but DTCC catalyst 2+ days old → fails weekly gate (no fresh <3h catalyst). SKIP.
+- **HYPE:** +5.47% from open but R:R 0.86:1 (3.5% stop, high-ATR) < 1.2:1 minimum; token unlock today. SKIP.
+- **XRP:** No CLARITY Act floor vote; R:R 0.43:1 fails even under binary catalyst framework. SKIP.
+- No trades. No notification sent.
+
