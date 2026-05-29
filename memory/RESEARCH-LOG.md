@@ -9272,3 +9272,80 @@ XLM has the strongest technical move but the catalyst is 2+ days old and the ent
 
 ---
 
+## 2026-05-29 — Session-Open Scan (Late)
+
+**Time:** 2026-05-29 (late session)
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash).
+**Alpaca:** Historical orders only from 2026-05-22. No active exposure.
+
+### Live Market Snapshot (Kraken quotes)
+
+| Asset | Price | Open | Day Chg | Spread | Notes |
+|---|---|---|---|---|---|
+| BTC | $73,552 | $73,517 | +0.05% | 0.0001% ✓ | Day range $72,363–$74,200 |
+| ETH | $2,016 | $2,007 | +0.46% | 0.005% ✓ | Modest recovery |
+| XRP | $1.321 | $1.314 | +0.56% | 0.0015% ✓ | CLARITY Act pending |
+| XLM | $0.2428 | $0.2036 | +19.2% | 0.19% ✓ | Near day high $0.2463 |
+| HYPE | $65.13 | $61.51 | +5.89% | 0.015% ✓ | Token unlock today |
+| HBAR | $0.0931 | $0.0910 | +2.3% | 0.032% ✓ | Stopped out earlier |
+| WLD | $0.2992 | $0.2809 | +6.5% | 0.07% ✓ | Distribution phase |
+
+**BTC Crash Gate:** +0.05% from 24h open → NOT triggered ✓
+**BTC Weekly Trend Gate:** $77,574 (May 22) → $73,552 (now) = **−5.2%** → **GATE ACTIVE**
+Gate requires: 1h momentum >5% AND fresh catalyst <3h old. Catalyst-driven exemptions: XRP/CLARITY Act.
+**Fear & Greed:** 23 (Extreme Fear) | **Funding rate:** +0.0054% (neutral) ✓
+
+### Candidates Screened
+
+**XLM/USD (+19.2% from open):**
+- Primary catalyst: DTCC/Stellar tokenization integration (announced May 27–28, now 2+ days old). CME 24/7 XLM futures were launched February 9, 2026 — not a fresh catalyst today. Confirmed via Perplexity.
+- T1 = $0.2428 × 1.03 = $0.2501 → ABOVE current day high $0.2463. Requires new daily high.
+- **SKIP** — catalyst aged, entry extended, T1 above day high.
+
+**HYPE/USD (+5.89% from open):**
+- High-ATR asset → 3.5% trailing stop mandatory per strategy.
+- R:R = 3% / 3.5% = **0.86:1 — FAILS** ≥1.2:1 minimum.
+- 14,175,778 HYPE token unlock today (supply overhang). Evening scan flagged this.
+- **SKIP** — R:R fails; token unlock pressure.
+
+**XRP/USD (+0.56%):**
+- Binary catalyst exemption (CLARITY Act). Senate floor vote still pending — no new floor vote today, no fresh development.
+- R:R at T1 with 7% trail: 3% / 7% = **0.43:1 — FAILS** ≥1.2:1 minimum.
+- **SKIP** — R:R fails even under binary catalyst framework.
+
+**HBAR/USD (+2.3%):**
+- OKCoinJapan listing catalyst >24h old. Position stopped out today at −1.05%.
+- No fresh catalyst. Below gate threshold.
+- **SKIP**.
+
+**WLD/USD (+6.5%):**
+- Catalyst: World App / Oku Trade DeFi integration (2+ days old). Peaked at $0.408 on May 27, reversed to $0.30 range — distribution phase.
+- No fresh catalyst <3h. Price stagnant since evening scan at same $0.2991 level.
+- **SKIP**.
+
+**ETH/SOL/BTC:**
+- ETH +0.46%, SOL +0.13%, BTC +0.05% — all well below 1h >5% gate requirement; no fresh catalysts.
+- **SKIP**.
+
+**OMNI/USD:**
+- Ask $0.708 / Bid $0.566 = **20% spread**. Only 2 trades in 24h. Critically illiquid.
+- **SKIP** — spread hard-fails ≤1% requirement.
+
+### Decision: NO NEW TRADES
+
+BTC weekly trend gate ACTIVE (−5.2% vs May 22). No candidate meets entry criteria:
+- No fresh catalyst <3h old with 1h momentum >5%
+- No catalyst-driven exemption with passing R:R (XRP R:R 0.43:1 fails; XLM catalyst aged)
+- Market in Extreme Fear (23); BTC ETF outflows continuing
+
+Portfolio: 100% ZUSD $150.5526. No notification sent (no action taken).
+
+**Watchlist for next session:**
+- XRP: Any CLARITY Act Senate floor vote news → immediate entry, 7% trail (catalyst-driven exemption)
+- XLM: Fresh institutional development (DTCC implementation milestone or new partnership <3h) → re-screen
+- HYPE: Post-unlock selling pressure resolves + retracement to ~$62–63 → R:R improves for 3.5% stop
+- Any asset: 1h surge >5% + fresh catalyst <3h → meets weekly gate
+- BTC reclaim $74,000+ with volume → watch for alt momentum cascade
+
+---
+
