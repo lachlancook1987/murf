@@ -8684,3 +8684,153 @@ BTC at new day lows, Extreme Fear 22, all triggers unmet. No fresh (<6h) catalys
 **Cash reserve:** Minimum $46.61 ZUSD held back (30% reserve in Extreme Fear)
 
 ---
+
+## 2026-05-29 — Pre-Session Research
+
+**Date:** 2026-05-29
+**Session branch:** claude/affectionate-gates-c30rC
+
+---
+
+### Account Snapshot
+
+**Kraken:** ZUSD $150.5526 — fully liquid, no open positions, no open orders
+- HBAR/USD position from 2026-05-28: **CLOSED** — trailing stop OZSDHA-YYZPV-VDWXM3 (2.5% trail) fired when HBAR dropped to day low $0.082330. Entry $0.09060 × 1108 = $100.39 notional; exit ~$0.08959 → ~$99.27 returned. Net trade P&L: **−$1.12 (−1.1%)** (est. −1.37% after fees).
+- HBAR subsequently recovered to $0.09204 — classic stop-and-reverse. Position was unprotected from ~$0.09060 entry through $0.08233 low.
+- **Phase P&L (Kraken):** $150.55 − $179.78 = **−$29.23 (−16.3%)** from phase start
+
+**Alpaca:** No positions, no orders (fully closed; all historical orders from 2026-05-22)
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | 24h High | 24h Low | Notes |
+|---|---|---|---|---|---|
+| BTC | $73,477 | −0.05% from open $73,517 | $73,827 | $72,470 | Flat; crash gate NOT triggered |
+| ETH | $2,009 | +0.13% from open $2,007 | $2,027 | $1,965 | Above $2K, flat |
+| SOL | $81.93 | −0.11% from open $82.02 | $82.87 | $79.83 | Below open, no momentum |
+| XRP | $1.311 | −0.22% from open $1.314 | $1.336 | $1.276 | Flat; CLARITY Act catalyst |
+| HBAR | $0.09204 | +1.17% from open $0.09098 | $0.09256 | $0.08233 | Recovery momentum; OKCoin listing |
+
+**Fear & Greed Index:** 22 (Extreme Fear) — unchanged from yesterday
+**BTC Funding Rate:** Perplexity unable to give specific number; implied neutral/slightly negative in Extreme Fear environment
+**Crash Gate:** BTC −0.05% from 24h open → NOT triggered (requires >−20%) ✓
+
+---
+
+### Research Highlights
+
+**Macro catalysts:**
+- **CLARITY Act:** ~66% probability on Polymarket (pending Senate floor vote, unscheduled). Would reclassify major cryptos as commodities — direct positive for XRP, HBAR, SOL
+- **Strategy BTC accumulation:** $42B additional BTC purchase authorization; ongoing buy program
+- **Spot ETF flows:** Positive inflows reported in recent data (March 2026: $1.32B)
+- **Post-tax-season liquidity:** Broadly supportive backdrop despite Extreme Fear sentiment
+
+**Token unlocks (low impact):**
+- BTR: 524K unlock May 29 ($12.5K notional, 0.052% supply) — immaterial
+- No major protocol upgrades or large unlocks this week
+
+**HBAR specific:** OKCoinJapan listing May 28 (now >24h old). BrandBoost tokenized loyalty platform on Hedera (enterprise adoption, minor). CLARITY Act commodity reclassification could benefit HBAR. Technical outlook: "mixed to cautiously bearish" per Perplexity — below $0.10 key resistance, capital outflows noted. However, price recovered +11.8% from day low $0.08233 to $0.09204 with strong volume (38.5M 24h).
+
+**Top 24h gainers (CoinGecko):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38% — none tradeable on Kraken with acceptable spreads (confirmed: OMNI +174% Kraken quote spread 20.1% HARD SKIP; MAT Kraken quote flat from open; DOLO spread 2.28% HARD SKIP; REZ below open; UFD spread 1.89% HARD SKIP)
+
+---
+
+### Spread Verification
+
+| Pair | Ask | Bid | Spread | vs Open | Status |
+|---|---|---|---|---|---|
+| BTC/USD | $73,475.20 | $73,475.10 | ~0.0001% | −0.05% | ✓ |
+| ETH/USD | $2,009.20 | $2,009.06 | 0.007% | +0.13% | ✓ |
+| SOL/USD | $81.93 | $81.92 | 0.012% | −0.11% | ✓ |
+| XRP/USD | $1.31070 | $1.31069 | 0.001% | −0.22% | ✓ |
+| HBAR/USD | $0.091900 | $0.091860 | 0.044% | +1.17% | ✓ |
+| OMNI/USD | $0.7080 | $0.5660 | ~20.1% | flat | ✗ HARD SKIP |
+| DOLO/USD | $0.030300 | $0.029610 | 2.28% | flat | ✗ HARD SKIP |
+| UFD/USD | $0.014280 | $0.014010 | 1.89% | −1.7% | ✗ HARD SKIP |
+| REZ/USD | $0.004088 | $0.004070 | 0.44% | −1.5% | SKIP (down) |
+| INIT/USD | $0.06300 | $0.06290 | 0.16% | −0.95% | SKIP (down) |
+| MAT/USD | $0.08670 | $0.08630 | 0.46% | +0.56% | SKIP (no momentum) |
+
+---
+
+### Trade Ideas
+
+#### Idea 1 — HBAR/USD (PRIMARY — Conditional Breakout)
+
+- **Catalyst:** OKCoinJapan listing May 28 (now >24h old — marginal). Recovery momentum: +11.8% from day low $0.08233 to current $0.09204. Volume 38.5M 24h (elevated, confirms buying). CLARITY Act ongoing catalyst for commodity reclassification.
+- **Signal:** +1.17% from 24h open; testing 24h high $0.09256. Breakout above 24h high = momentum confirmation.
+- **Entry trigger:** Break and hold above $0.09256 (24h high) with volume
+- **Entry:** Market on trigger confirmation ~$0.09270
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → initial stop ~$0.09036
+- **T1:** $0.09548 (+3% from entry $0.09270) | **T2:** $0.09734 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $100 (~66% of $150.55 ZUSD); reserve $50 in Extreme Fear environment
+- **Kraken pair:** HBAR/USD ✓ | **Spread:** 0.044% ✓
+- **Risk:** Catalyst aging (>24h old); Perplexity outlook "mixed to cautiously bearish"; below $0.10 key resistance; stop-and-reverse risk if another flush occurs
+
+#### Idea 2 — XRP/USD (SECONDARY — Catalyst Play)
+
+- **Catalyst:** CLARITY Act Senate vote pending (~66% Polymarket odds) — direct commodity reclassification benefit for XRP. Fresh ongoing catalyst.
+- **Signal:** Currently −0.22% from open $1.31355. Tight spread 0.001%. Volume 16.5M 24h.
+- **Entry trigger:** Reclaim of 24h open $1.31355 OR on any CLARITY Act news breaking
+- **Entry:** Market on trigger ~$1.314
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard); upgrade to 7% if CLARITY vote triggers (binary event)
+- **T1:** $1.354 (+3%) | **T2:** $1.380 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** $75 (if HBAR deployed); or up to $100 (if HBAR skipped)
+- **Kraken pair:** XRP/USD ✓ | **Spread:** 0.001% ✓
+- **Risk:** Senate vote timing unknown (could be weeks away); no imminent scheduled trigger; purely event-driven
+
+#### Idea 3 — ETH/USD (TERTIARY — Technical Breakout)
+
+- **Catalyst:** $2,000 psychological level holding (+0.13% from open); recovery from $1,965 low
+- **Entry trigger:** Breakout above 24h high $2,027.41 with volume
+- **Entry:** Market at trigger ~$2,028
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $2,089 (+3%) | **T2:** $2,129 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** $50 (reserve after primary/secondary deployed)
+- **Kraken pair:** ETH/USD ✓ | **Spread:** 0.007% ✓
+- **Risk:** No news catalyst; purely technical; Extreme Fear macro headwind
+
+#### Idea 4 — SOL/USD (QUATERNARY — Conditional)
+
+- **Catalyst:** Perplexity confirms $83–$87 as key momentum zone; bounce from $79.83 low (+2.6%)
+- **Entry trigger:** Reclaim of 24h open $82.02 → push through 24h high $82.87
+- **Entry:** Market at breakout confirmation ~$82.90
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $85.39 (+3%) | **T2:** $87.05 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** $50 (only if other ideas not deployed or capital freed)
+- **Kraken pair:** SOL/USD ✓ | **Spread:** 0.012% ✓
+- **Risk:** Below 24h open; needs sequential trigger confirmations; low conviction
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear (22):** Market remains in risk-off mode — two consecutive days at 22. Setups have high failure rate.
+2. **BTC flat range:** $72,470–$73,827 is a tight consolidation. No directional break either way.
+3. **Aging catalysts:** HBAR listing >24h old; no fresh <6h catalyst identified for any asset.
+4. **CLARITY Act timing unknown:** Major positive catalyst but no scheduled Senate date.
+5. **Phase drawdown −16.3%:** Psychological pressure; discipline required. Stick to stops.
+6. **HBAR stop-and-reverse pattern:** Got stopped at $0.08959, then recovered to $0.09204. Suggests volatile intraday swings — 2.5% stop may be susceptible to noise on HBAR.
+
+---
+
+### Decision: TRADE — Conditional Entries Only
+
+**Crash gate:** NOT triggered (BTC −0.05%, requires >−20%) ✓
+**Stance:** TRADE is the default — but all entries are conditional on trigger levels
+
+**Priority order:**
+1. HBAR/USD — enter on break above $0.09256 (24h high) | $100 position
+2. XRP/USD — enter on reclaim of $1.31355 or CLARITY Act news | $75 position
+3. ETH/USD — enter on break above $2,027.41 | $50 position
+4. SOL/USD — enter on reclaim of $82.87 | $50 position
+
+**ZUSD available:** $150.5526 — sufficient for all triggers if they activate
+
+---
