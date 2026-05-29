@@ -9349,3 +9349,73 @@ Portfolio: 100% ZUSD $150.5526. No notification sent (no action taken).
 
 ---
 
+## 2026-05-29 — Midday Scan
+
+**Time:** 2026-05-29 (midday)
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash).
+**Alpaca:** No active exposure.
+
+### Live Market Snapshot
+
+| Asset | Price | Open | Day Chg | Spread | Notes |
+|---|---|---|---|---|---|
+| BTC | $73,316 | $73,516 | −0.27% | 0.0001% ✓ | Day range $72,363–$74,200; weekly gate active |
+| XLM | $0.23930 | $0.20358 | +17.5% | 0.126% ✓ | Day high $0.2463; catalyst 2+ days old |
+| HYPE | $64.870 | $61.510 | +5.47% | 0.015% ✓ | Token unlock today (14.2M HYPE); R:R fails |
+| XRP | ~$1.321 | ~$1.314 | +0.56% | 0.0015% ✓ | CLARITY Act pending; R:R 0.43:1 fails |
+| OMNI | $0.566 bid / $0.708 ask | — | — | ~20% ✗ | Critically illiquid |
+| INIT | $0.0631 | $0.0634 | −0.47% | 0.32% ✓ | No momentum; no catalyst |
+
+**BTC Crash Gate:** −0.27% 24h → NOT triggered ✓
+**BTC Weekly Trend Gate:** $77,574 (May 22) → $73,316 (now) = **−5.4%** → **GATE ACTIVE**
+Gate requires: 1h momentum >5% AND fresh catalyst <3h old, OR catalyst-driven exemption.
+**Fear & Greed:** 23 (Extreme Fear) | **BTC ETF flows:** Net outflows −$223M on May 28
+
+### STEP 3–5: N/A (no open positions)
+
+### STEP 6 — Candidate Screening
+
+**XLM/USD (+17.5% from open):**
+- Spread 0.126% ✓ | Volume 65M+ XLM (elevated) ✓
+- Catalyst: DTCC/Stellar tokenization partnership (announced May 27–28) — **2+ days old**. Perplexity confirms "extending gains for a third straight day" — no fresh development today.
+- Entry at $0.2393; T1 = $0.2465 — at/above day high $0.2463. Entry at resistance.
+- Weekly gate status: FAILS — catalyst >3h old; pure momentum play banned under active gate.
+- **SKIP.**
+
+**HYPE/USD (+5.47% from open):**
+- Spread 0.015% ✓ | High-ATR asset → 3.5% trailing stop mandatory
+- R:R = 3% gain / 3.5% trail = **0.86:1 — FAILS** ≥1.2:1 minimum
+- Token unlock overhang: 14.175M HYPE today (supply pressure)
+- No specific fresh catalyst <3h; broad altcoin strength narrative only
+- **SKIP — R:R fails; token unlock headwind.**
+
+**XRP/USD (+0.56%):**
+- CLARITY Act: no Senate floor vote yet; no new development today
+- Binary catalyst exemption applies BUT R:R = 3% / 7% trail = **0.43:1 — FAILS** minimum
+- **SKIP — R:R fails even under binary catalyst framework.**
+
+**BTC/USD (−0.27% 24h):**
+- No directional momentum. Weekly gate active. Options expiry today (Deribit + CME) creates volatility but is not a strategy-exempted catalyst (not regulatory event, listing, or protocol upgrade).
+- **SKIP.**
+
+**OMNI/USD:** 20% spread — critically illiquid. Hard skip.
+**INIT/USD:** Down from open, no momentum, no catalyst. Skip.
+
+### Decision: NO NEW TRADES
+
+BTC weekly trend gate ACTIVE (−5.4% vs May 22). No candidate meets entry criteria:
+- No fresh catalyst <3h old with 1h momentum >5%
+- No catalyst-driven exemption with passing R:R
+- Market in Extreme Fear (23); BTC ETF outflows continuing; BTC below $74,000
+
+**No notification sent (no action taken).**
+
+**Watchlist for next session:**
+- **XRP:** Any CLARITY Act Senate floor vote news → immediate entry at market, 7% trail
+- **XLM:** Fresh institutional DTCC milestone or new partnership <3h → re-screen with spread check
+- **HYPE:** Post-unlock selling resolves + retracement to ~$62–63 → R:R improves for 3.5% stop
+- **Any asset:** 1h surge >5% + fresh catalyst <3h → meets weekly gate
+- **Weekly gate reset:** BTC reclaim $77,574+ removes gate entirely
+
+---
+
