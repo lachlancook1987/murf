@@ -8834,3 +8834,168 @@ BTC at new day lows, Extreme Fear 22, all triggers unmet. No fresh (<6h) catalys
 **ZUSD available:** $150.5526 — sufficient for all triggers if they activate
 
 ---
+
+## 2026-05-29 — Pre-Session Research
+
+### Account Snapshot
+
+**Kraken:**
+- ZUSD: $150.5526
+- Positions: NONE (HBAR trailing stop triggered overnight)
+- Open orders: NONE
+- HBAR exit: ~$0.08964 (estimated; ~-1.1% from entry $0.09060, net ~-1.3% after fees)
+
+**Alpaca:** No positions, no active orders ✓
+
+**Phase P&L:** $150.55 − $179.78 = **-$29.23 (-16.3%)**
+
+---
+
+### HBAR Post-Mortem
+
+Entry $0.09060 (2026-05-28), exit ~$0.08964 (overnight trailing stop OZSDHA-YYZPV-VDWXM3).
+- HWM estimated ~$0.09195; 2.5% trail → stop ~$0.08965
+- Net loss: ~-1.3% (stop-and-reverse from $0.08298 low to $0.09541 high; we were stopped mid-recovery)
+- Current HBAR: $0.09216 — has recovered above our exit. No re-entry until fresh catalyst.
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | 24h Open | 24h High | 24h Low | Spread |
+|---|---|---|---|---|---|---|
+| BTC/USD | $73,568 | +0.07% vs open | $73,516 | $73,827 | $72,470 | ~0.0001% ✓ |
+| ETH/USD | $2,006 | -0.05% vs open | $2,007 | $2,027 | $1,965 | ~0.0005% ✓ |
+| XRP/USD | $1.318 | +0.34% vs open | $1.314 | $1.336 | $1.282 | ~0.0008% ✓ |
+| SOL/USD | $82.19 | +0.21% vs open | $82.02 | $82.87 | $79.83 | ~0.0012% ✓ |
+| HBAR/USD | $0.09216 | +1.3% vs open | $0.09098 | $0.09541 | $0.08298 | ~0.043% ✓ |
+
+**Fear & Greed:** 22 — Extreme Fear (3rd consecutive day)
+**BTC Funding Rate (Binance):** +0.0100% / 8h — neutral/slightly positive (not overheated)
+**Top 24h Gainers (CoinGecko):** RAVE +106%, MWC +68%, OPG +59%, BAS +40%, TIG +38%, GWEI +30%, GUN +29%, CORE +25%, UAI +24%, KOGE +22% — mostly micro-caps not on Kraken
+
+---
+
+### Key Catalysts Today (2026-05-29)
+
+1. **BTC Options Expiry — $6.25B** (PRIMARY CATALYST)
+   - 80,535 contracts expiring today (CME monthly + Deribit)
+   - Heavy positioning: $75,000 put strike cluster + $80,000 call strike cluster
+   - Max pain estimated $75k–$76k range; BTC at $73,568 = ~$1,400 below max pain level
+   - Gamma pin forces typically push toward max pain as market makers hedge delta
+   - **Bullish bias** for BTC: MM hedging into expiry could drive +1.9–2.5% move toward max pain
+
+2. **CME 24/7 Crypto Futures & Options Launch** (STRUCTURAL CATALYST)
+   - CME launching 24/7 cryptocurrency futures and options trading starting today
+   - Removes weekend gap risk; opens institutional flow 24/7
+   - Reduces arbitrage premium for off-hours sessions
+   - First trading day effect possible
+
+3. **CLARITY Act** (ONGOING — NOT imminent)
+   - Senate vote timing still unknown; ~66% Polymarket odds of passage
+   - Benefits XRP (commodity reclassification); benefits broad crypto
+   - No scheduled date — event-driven, not session-timed
+
+4. **HYPE Token Unlock — 14.175M HYPE** (BEARISH EVENT — AVOID HYPE)
+   - 1.4% of total supply, ~3% of market cap unlocking May 29
+   - **Hard skip HYPE today** — supply overhang risk
+
+5. **Macro Risk-Off**
+   - U.S.-Iran / Strait of Hormuz tensions
+   - Eurozone flash CPI in calendar
+   - BTC consolidating $72.5k–$73.8k range with no directional break yet
+
+---
+
+### Trade Ideas
+
+#### Idea 1 — BTC/USD | CME 24/7 Launch + Options Expiry Pin (PRIMARY)
+
+- **Catalyst:** CME launches 24/7 crypto futures TODAY (structural positive); $6.25B BTC options expiry with max pain ~$75k — gamma pin risk + MM hedging supports upside. Combined fresh <6h structural catalyst.
+- **Entry trigger:** Break and hold above 24h high $73,827 with volume
+- **Entry:** Market ~$73,900 on breakout confirmation
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → initial ~$72,053 (2.5% below entry)
+- **T1:** $76,117 (+3% from $73,900) | **T2:** $77,595 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $100 (~66% of $150.55 ZUSD)
+- **Kraken pair:** BTC/USD ✓ | **Spread:** 0.0001% ✓
+- **Risk:** Macro risk-off (Hormuz tensions); $6.25B expiry vol spike possible both directions; BTC has been unable to break $73,827 high in the session
+
+#### Idea 2 — XRP/USD | CLARITY Act Momentum (SECONDARY)
+
+- **Catalyst:** CLARITY Act commodity reclassification directly benefits XRP; 66% Senate passage odds (Polymarket); no expiry date known but active ongoing catalyst. Currently +0.34% from open, testing 24h high zone.
+- **Entry trigger:** Break above 24h high $1.336 with volume confirmation
+- **Entry:** Market ~$1.338 on break confirmation
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (not using 7% since no imminent vote date known) → initial ~$1.305
+- **T1:** $1.378 (+3% from $1.338) | **T2:** $1.405 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $75
+- **Kraken pair:** XRP/USD ✓ | **Spread:** 0.0008% ✓
+- **Note:** If CLARITY vote announced for today → upgrade stop to 7% trail (binary event)
+
+#### Idea 3 — HBAR/USD | ETF Inflow Momentum Re-Entry (TERTIARY)
+
+- **Catalyst:** Canary HBAR ETF cumulative inflows $93M+; recovering from $0.08298 session low (+11% recovery). Currently $0.09216 (+1.3% from open). Spread ✓.
+- **Entry trigger:** Break above session high $0.09541 with volume (only entry — no chasing below high)
+- **Entry:** Market ~$0.09560 on confirmed break
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` → initial ~$0.09321
+- **T1:** $0.09847 (+3% from $0.09560) | **T2:** $1.0038 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $50 (reduced — re-entry after stop-out; catalyst not fresh <6h)
+- **Kraken pair:** HBAR/USD ✓ | **Spread:** 0.043% ✓
+- **Risk:** Just stopped out yesterday at similar level; $0.10 key resistance directly above T1; catalyst (OKCoin listing) now 36h+ old; ETF catalyst is slow-moving, not intraday
+
+#### Idea 4 — ETH/USD | $2k Technical Support Hold (QUATERNARY)
+
+- **Catalyst:** $2,000 psychological support holding; recovery from $1,965 low (+2%); benefits from CME 24/7 catalyst alongside BTC
+- **Entry trigger:** Break above 24h high $2,027 with volume
+- **Entry:** Market ~$2,029
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $2,090 (+3%) | **T2:** $2,130 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Size:** $50 (only if BTC/XRP deployed and capital remains, or BTC takes stop)
+- **Kraken pair:** ETH/USD ✓ | **Spread:** 0.0005% ✓
+- **Risk:** No independent ETH catalyst; pure technical; Extreme Fear headwind; follows BTC
+
+---
+
+### Spread Verification
+
+| Pair | Ask | Bid | Spread | 24h Open | vs Open | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $73,568.70 | $73,568.60 | 0.0001% | $73,516.50 | +0.07% | ✓ |
+| ETH/USD | $2,005.96 | $2,005.95 | 0.0005% | $2,006.93 | -0.05% | ✓ |
+| XRP/USD | $1.31797 | $1.31796 | 0.0008% | $1.31355 | +0.34% | ✓ |
+| SOL/USD | $82.19 | $82.18 | 0.0012% | $82.02 | +0.21% | ✓ |
+| HBAR/USD | $0.09216 | $0.09212 | 0.043% | $0.09098 | +1.3% | ✓ |
+| GUN/USD | $0.00810 | $0.00808 | 0.25% | $0.00800 | +1.25% | SKIP (thin vol, 551 trades 24h) |
+| CORE/USD | — | — | — | — | — | NOT ON KRAKEN |
+| HYPE/USD | — | — | — | — | — | HARD SKIP (14.175M unlock today) |
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear (22) — 3rd consecutive day:** Market remains in risk-off. High setup failure rate, tight stops essential.
+2. **BTC options expiry volatility:** $6.25B expiry can pin OR spike vol in both directions — gamma risk cuts both ways around strikes.
+3. **Macro Hormuz tensions:** Ongoing geopolitical risk-off; could accelerate BTC selloff below $72.5k.
+4. **HBAR re-entry risk:** Consecutive stop-out pattern; $0.10 resistance overhead; catalyst not fresh.
+5. **Phase drawdown -16.3%:** Discipline required — stick to conditional triggers, don't chase.
+6. **All entries conditional:** No momentum confirmed yet. Default to cash until trigger levels print.
+
+---
+
+### Decision: TRADE — Conditional Entries Only
+
+**Crash gate:** BTC -0.07% from 24h open (Kraken live) — NOT triggered ✓ (requires >-20%)
+**Stance:** TRADE — but all 4 ideas require trigger confirmation before entry
+
+**Priority order:**
+1. BTC/USD — entry on break of $73,827 | $100 position
+2. XRP/USD — entry on break of $1.336 | $75 position
+3. HBAR/USD — entry on break of $0.09541 | $50 position (low conviction re-entry)
+4. ETH/USD — entry on break of $2,027 | $50 position (if capital available)
+
+**ZUSD available:** $150.5526 — sufficient for BTC + XRP triggers simultaneously
+
+---
