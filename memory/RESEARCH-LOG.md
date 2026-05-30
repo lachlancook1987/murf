@@ -9419,3 +9419,96 @@ BTC weekly trend gate ACTIVE (−5.4% vs May 22). No candidate meets entry crite
 
 ---
 
+
+---
+
+## 2026-05-30 — Pre-Session Research
+
+**Time:** 2026-05-30 (pre-session)
+**Session branch:** claude/affectionate-gates-Zfyhv
+
+### Account Snapshot
+
+| Account | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.5526 (100% cash) | None | None |
+| Alpaca | $0 exposure | None (history only) | None |
+
+### Market Context
+
+| Asset | Price | 24h Chg | Open | Notes |
+|---|---|---|---|---|
+| BTC | $73,437 | +0.09% | $73,370 | Weekly gate: −5.3% vs May 22 $77,574 → ACTIVE |
+| ETH | $2,013 | +0.07% | $2,011 | Flat; no catalyst |
+| SUI | $0.9009 | −0.41% | $0.9046 | Sui mainnet outage May 28 → resolved; trending down |
+| XRP | $1.3397 | +0.88% | $1.3279 | 25M XRP moved off exchanges; CLARITY Act advancing |
+| ALLO | $0.2664 | +3.82% | $0.2566 | 24h high $0.3044; fading from massive prior-day surge |
+| ONDO | $0.3467 | −2.14% | $0.3544 | Down on day; tokenized asset narrative stale |
+| LINK | $9.143 | +1.45% | $9.013 | No news catalyst |
+| KAS | $0.03045 | −1.87% | $0.03103 | Toccata fork Jun 5-20; down today |
+
+**Crash Gate:** BTC +0.09% 24h → NOT triggered ✓
+**BTC Weekly Trend Gate:** $77,574 (May 22) → $73,437 (today) = **−5.3%** → **GATE ACTIVE**
+Gate requires: 1h momentum >5% AND fresh catalyst <3h old, OR catalyst-driven exemption with passing R:R.
+
+**Fear & Greed:** 23 — Extreme Fear (same as yesterday and last week)
+**BTC Funding Rate:** +0.0035–0.0070%/8h (Binance/Bybit) — positive/neutral; longs paying shorts
+**Top 24h Macro Catalysts:**
+- US–Iran deal reopening Strait of Hormuz → BTC relief bounce (macro positive for risk)
+- CLARITY Act passed Senate Banking Committee 15–9 in mid-May; awaiting full Senate floor vote
+- Institutional ETF inflows providing structural BTC bid (Strategy still accumulating)
+- Altcoin ETF filings (SOL, XRP, ZEC, HYPE) providing structural bid for specific assets
+
+**Token Unlocks Today (May 30):**
+- **OP (Optimism):** 31.34M OP (~$85M) — significant sell pressure on OP today; AVOID OP
+- JUP ($8.37M), PARTI ($8.28M), XPL ($8.21M) — moderate unlock pressure
+
+**Volume Anomalies (Santiment/on-chain):**
+- XRP: 25M coins moved off exchanges (bullish accumulation signal)
+- BCH: whale transaction count at 3-month high
+- WLD (Worldcoin): jump in whale activity, active addresses, social dominance
+
+### Candidate Screening
+
+| Asset | Open→Now | Spread | Gate Status | Verdict |
+|---|---|---|---|---|
+| ALLO/USD | +3.82% (fading from +104% 24h surge) | 0.60% ✓ | Catalyst exists (upgrade + Cobot AI launch) but move 90% done; no 1h >5% now | SKIP — fading |
+| XRP/USD | +0.88% | 0.005% ✓ | No floor vote yet; binary catalyst exemption NOT triggered; R:R 0.43:1 fails | SKIP — R:R fails |
+| LINK/USD | +1.45% | 0.027% ✓ | Pure momentum play — no news catalyst; banned under weekly gate | SKIP — gate |
+| SUI/USD | −0.41% | 0.004% ✓ | Mainnet outage recovery underway; trending down; CME futures catalyst old (May 4) | SKIP — down |
+| KAS/USD | −1.87% | 0.033% ✓ | Toccata fork June 5-20 not fresh <3h; moving down | SKIP — down |
+| ONDO/USD | −2.14% | 0.035% ✓ | Tokenized asset narrative stale; down on day and 7-day | SKIP — down |
+| ETH/USD | +0.07% | 0.000% ✓ | Flat; no catalyst; no momentum | SKIP — no signal |
+| BCH/USD | −0.14% | 0.037% ✓ | Whale txn count record but no directional catalyst; down today | SKIP — no momentum |
+
+### Trade Ideas
+
+**No trades meet entry criteria.** All candidates screened out:
+- Gate requires 1h momentum >5% + fresh catalyst <3h old (no candidate)
+- OR catalyst-driven exemption with R:R ≥1.2:1 (XRP R:R 0.43:1 fails; CLARITY Act floor vote not triggered)
+- ALLO came closest (network upgrade + Cobot launch catalyst) but the move is 90%+ done and fading; entering now is chasing a dead move
+
+**Watchlist / Session Triggers (act immediately if these occur):**
+1. **XRP:** CLARITY Act Senate floor vote scheduled/confirmed → market entry, 7% trailing stop
+2. **ALLO:** Fresh 1h surge >5% above $0.2678 on renewed volume → re-screen; entry if still valid
+3. **SUI:** Confirmed 1h recovery >5% + no further network incidents → entry $0.906+, 3.5% trail (high-ATR), T1 $0.933, T2 $0.951, spread 0.004% ✓
+4. **BTC weekly gate reset:** BTC reclaim $77,574 (needs +5.6%) → gate lifts, full alt universe reopens
+5. **Any asset:** 1h surge >5% + fresh catalyst <3h → screen immediately with spread and R:R check
+
+### Risk Factors
+
+- Extreme Fear (23) sustaining for 5+ consecutive days → weak buy-side pressure, momentum stalls quickly
+- OP unlock today ($85M): potential spread to other L2 tokens (ARB, OP, MATIC sector contagion)
+- BTC below $73,000 support → possible retest of $72,362 day low; watch for break
+- Sui network instability: second outage risk; avoid SUI until 24h+ of stable mainnet operation
+- Weekly gate keeps portfolio in cash during market chop — this is correct behavior, not failure
+
+### Decision
+
+**NO NEW TRADES — BTC weekly trend gate ACTIVE.**
+
+Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
+Gate criteria not met: BTC −5.3% vs May 22, no candidate with 1h >5% + fresh <3h catalyst,
+no catalyst-driven exemption with passing R:R.
+Ready to act on watchlist triggers immediately if they fire during session.
+
