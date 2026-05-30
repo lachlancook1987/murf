@@ -3467,3 +3467,19 @@ No adjustments. ✓
 
 **Decision: NO NEW TRADES.** Weekly gate active; no candidate has a fresh catalyst <6h old; R:R failures persist. No notification sent (no trades fired).
 
+---
+
+## 2026-05-30 — Overnight Triage Check
+
+**Kraken positions:** None — 100% ZUSD $150.5526  
+**Kraken orders:** None  
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22 — previously documented)
+
+**Step 2 — Trailing stops:** N/A — no open positions  
+**Step 3 — Emergency exits:** N/A — no open positions  
+**Step 4 — Stop tightening:** N/A — no open positions  
+
+**Step 5 — Crash gate:** BTC open $73,370.70 → current $73,879.80 = **+0.69%** — crash gate NOT triggered (threshold: BTC <$58,750)
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
