@@ -3416,3 +3416,24 @@ No adjustments. ✓
 
 **Notes:** Flat no-trade Saturday. Portfolio 100% ZUSD $150.5526, unchanged from May 29 EOD. No positions, no open orders. BTC drifted -0.24% intraday ($73,618 → $73,443) while bot held flat, resulting in +0.24% outperformance vs BTC today. Alpaca stop a2b44cf9 canceled 2026-05-22 — no Alpaca exposure. Phase P&L remains -$29.23 (-16.26%) from Kraken starting equity $179.78. Fear & Greed still ~22 (Extreme Fear); BTC $73,443. Plan for Sunday/Monday: require confirmed BTC reclaim above $74,000+ and fresh catalyst before new entries; crash gate threshold $58,754 (BTC -20% from ~$73,443).
 
+---
+
+## 2026-05-30 — Midday Scan (no trades)
+
+- **Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+- **Alpaca:** No active positions or orders. ✓
+- **BTC:** $73,791 (+0.57% from 24h open $73,370) — crash gate NOT triggered ✓ | Weekly trend gate ACTIVE: −4.87% vs May 22 $77,574
+- **Fear & Greed:** 23 (Extreme Fear)
+
+**Candidates screened (midday):**
+
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| HYPE/USD | +5.75% 24h, near ATH $68.57 | Spot ETF $74.91M inflows (ongoing since May 12), buybacks | Catalyst-driven exemption — BUT R:R 0.86:1 with required 3.5% high-ATR stop (< 1.2:1 min) | SKIP — R:R fails |
+| WLD/USD | +11.1% 24h, near day high $0.3241 | Whale accumulation 30M coins; July 24 unlock reduction (55 days away) — no fresh <3h catalyst | Weekly gate: pure momentum, no fresh <3h event | SKIP — gate |
+| XLM/USD | -2.9% from today's open $0.25967 | DTCC partnership (3+ days old) | Below VWAP; negative momentum | SKIP — down from open |
+| XRP/USD | +0.92% 24h | CLARITY Act Senate floor vote NOT scheduled/triggered | Binary trigger not fired | SKIP — trigger not met |
+| BTC/USD | +0.57% 24h | No fresh catalyst | Weekly gate still active | SKIP — gate |
+
+**Decision: NO NEW TRADES — BTC weekly trend gate ACTIVE.** HYPE was closest candidate but R:R fails (0.86:1) using required 3.5% trail for high-ATR asset. No notification sent (no action taken).
+

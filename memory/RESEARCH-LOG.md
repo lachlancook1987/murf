@@ -9538,3 +9538,27 @@ Ready to act on watchlist triggers immediately if they fire during session.
 **Decision: NO NEW TRADES — BTC weekly trend gate ACTIVE.**
 No candidate meets 1h >5% + fresh <3h catalyst, and no catalyst-driven exemption available.
 Portfolio 100% ZUSD $150.5526 — unchanged. No notification sent (no action taken).
+
+---
+
+## 2026-05-30 — Midday Scan v2 (~midday UTC)
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No orders ✓
+**BTC:** $73,791 (+0.57% 24h from open $73,370) | Weekly gate: −4.87% vs May 22 $77,574 → **ACTIVE** | Crash gate: NOT triggered ✓
+**Fear & Greed:** 23 (Extreme Fear) — 7th consecutive day
+
+**Candidates screened:**
+
+| Asset | 24h Move | Spread | Gate/R:R | Verdict |
+|---|---|---|---|---|
+| HYPE/USD | +5.75% (ATH run, day high $68.57) | 0.015% ✓ | Catalyst-driven exemption (spot ETF $74.91M inflows, ongoing buybacks) — R:R 0.86:1 with required 3.5% high-ATR stop < 1.2:1 minimum | **SKIP — R:R fails** |
+| WLD/USD | +11.1% (near day high $0.3241) | 0.093% ✓ | Whale accumulation 30M coins; supply cut July 24 (55 days away) — no fresh <3h event catalyst; pure momentum under weekly gate | **SKIP — weekly gate** |
+| XLM/USD | −2.9% from today open $0.2597 | 0.068% ✓ | DTCC partnership 3+ days old; below VWAP; negative momentum | **SKIP — down from open** |
+| XRP/USD | +0.92% | 0.011% ✓ | CLARITY Act floor vote not scheduled; binary trigger not fired | **SKIP — trigger unmet** |
+| BTC/USD | +0.57% | ~0% ✓ | Weekly gate active; no fresh catalyst | **SKIP — gate** |
+
+**HYPE detail:** Spot ETF ($74.91M cumulative since May 12, Bitwise/21Shares) + 99% fee buyback → qualifies as catalyst-driven exemption. R:R at T1 (+3%) vs required 3.5% high-ATR stop = 0.86:1. Fails 1.2:1 minimum. Prior stop-outs: May 26 (−3.6%) and May 28 (−2.5%) confirm 3.5% is the correct risk budget. SKIP.
+
+**WLD detail:** +11.1% from open with whale accumulation signal. No fresh event <3h: July 24 unlock reduction is speculative/future; prior Perplexity scan also noted WLD was weak in morning. Under weekly gate, this is a pure momentum play with no qualifying catalyst. SKIP.
+
+**Decision: NO NEW TRADES.** Weekly gate active; HYPE R:R fails on high-ATR stop. No notification sent (no action taken).
