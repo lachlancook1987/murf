@@ -9538,3 +9538,49 @@ Ready to act on watchlist triggers immediately if they fire during session.
 **Decision: NO NEW TRADES — BTC weekly trend gate ACTIVE.**
 No candidate meets 1h >5% + fresh <3h catalyst, and no catalyst-driven exemption available.
 Portfolio 100% ZUSD $150.5526 — unchanged. No notification sent (no action taken).
+
+---
+
+## 2026-05-30 — Session-Open Scan (12:02 UTC)
+
+**Time:** 2026-05-30 12:02 UTC
+
+### Account State
+
+| Account | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.5526 (100% cash) | None | None |
+| Alpaca | $0 exposure | None (history only) | None |
+
+### Market Context
+
+| Asset | Price | 24h Chg | Open | Notes |
+|---|---|---|---|---|
+| BTC | $73,500 | +0.09% | $73,370 | Weekly gate ACTIVE: −5.2% vs May 22 $77,574 |
+| ETH | ~$2,013 | ~flat | — | No catalyst |
+| SUI | $0.8989 | −0.63% | $0.90460 | Below daily open, no fresh catalyst |
+| ALLO | $0.3122 | +21.6% | $0.25660 | Protocol upgrade catalyst but stale; see below |
+| TON | $1.7580 | +0.57% | $1.7480 | No momentum surge |
+| XRP | ~flat | flat | — | CLARITY Act vote not scheduled |
+
+**Crash Gate:** BTC +0.09% 24h → NOT triggered ✓
+**BTC Weekly Trend Gate:** −5.2% vs May 22 → ACTIVE. Requires 1h >5% + fresh <3h catalyst OR catalyst-driven exemption with R:R ≥1.2:1.
+
+### Candidate Screening
+
+| Asset | Signal | Catalyst | Gate Status | Verdict |
+|---|---|---|---|---|
+| ALLO/USD | +21.6% from daily open; near 24h high $0.3150 | Allora network upgrade + Cobot AI launch (May 18 — **12 days old**) | Protocol upgrade → gate exemption; but catalyst too stale; spread 0.87% (29% of target); R:R **0.86:1** with correct 3.5% high-ATR stop → FAILS 1.2:1 minimum | **SKIP — R:R fails** |
+| SUI/USD | −0.63% from daily open; 1h ~+0.1% | CME futures catalyst (May 4) — stale; mainnet outage resolved | No 1h >5% momentum; no fresh catalyst | SKIP |
+| TON/USD | +0.57% from daily open | No fresh catalyst; old volume spike data | No momentum signal | SKIP |
+| XRP/USD | ~flat | CLARITY Act floor vote not scheduled | Binary trigger not fired; R:R fails | SKIP |
+| LINK/ETH/BTC | Flat / slight positive | No fresh catalyst | Pure momentum — banned under weekly gate | SKIP |
+
+**ALLO detail:** Current $0.3122, 24h open $0.2566 (+21.6%). Despite strong momentum, catalyst (Cobot AI May 18) is 12 days old — not a fresh <3h catalyst. Protocol upgrade exemption keeps gate open but R:R check still applies. With correct 3.5% trailing stop (high-ATR: FET/WLD-type alt), R:R = 3.0%/3.5% = 0.86:1 < 1.2:1 minimum. Spread 0.87% further degrades economics (29% of 3% target). SKIP is correct.
+
+### Decision
+
+**NO NEW TRADES — BTC weekly trend gate ACTIVE. No candidate passes all hard checks.**
+
+Portfolio: 100% ZUSD $150.5526. No open positions. No open orders.
+No WhatsApp notification (no trades placed).
