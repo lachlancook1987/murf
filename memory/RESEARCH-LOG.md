@@ -9512,3 +9512,29 @@ Gate criteria not met: BTC −5.3% vs May 22, no candidate with 1h >5% + fresh <
 no catalyst-driven exemption with passing R:R.
 Ready to act on watchlist triggers immediately if they fire during session.
 
+
+---
+
+## 2026-05-30 — Midday Scan (no trades)
+
+- **Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+- **Alpaca:** No active positions or orders (historical records only). ✓
+- **BTC:** $73,372 (−0.24% 24h) — crash gate NOT triggered ✓ | Weekly trend gate ACTIVE: −5.4% vs May 22 $77,574
+- **Fear & Greed:** 23 (Extreme Fear) — unchanged for 6th consecutive day
+
+**Candidates screened:**
+
+| Asset | 24h Move | 1h Signal | Catalyst | Gate Status | Verdict |
+|---|---|---|---|---|---|
+| XLM/USD | +30%+ | −0.40% (neg) | DTCC partnership (3 days old) | Catalyst too old (needs <3h); 1h negative | SKIP |
+| XRT/USD | +1062% | Unknown | None identified | Pure pump, no catalyst — banned under weekly gate | SKIP |
+| ROLL | +96% | Unknown | None identified | Pure pump, no catalyst — banned under weekly gate | SKIP |
+| XMN | +33% | Unknown | None identified | No catalyst — banned under weekly gate | SKIP |
+| ACA | +33% | Unknown | None identified | No catalyst — banned under weekly gate | SKIP |
+| WLD/USD | Weak | Weak/neg | Unlock reduction July 24 (not today) | Not a fresh <3h catalyst; weak momentum | SKIP |
+| XRP/USD | ~flat | Flat | CLARITY Act floor vote NOT scheduled today | Binary trigger not fired; R:R fails | SKIP |
+| ETH/SOL/BTC | Flat | Flat | No fresh catalyst | Pure momentum — banned under weekly gate | SKIP |
+
+**Decision: NO NEW TRADES — BTC weekly trend gate ACTIVE.**
+No candidate meets 1h >5% + fresh <3h catalyst, and no catalyst-driven exemption available.
+Portfolio 100% ZUSD $150.5526 — unchanged. No notification sent (no action taken).
