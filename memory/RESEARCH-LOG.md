@@ -9562,3 +9562,72 @@ Portfolio 100% ZUSD $150.5526 — unchanged. No notification sent (no action tak
 **WLD detail:** +11.1% from open with whale accumulation signal. No fresh event <3h: July 24 unlock reduction is speculative/future; prior Perplexity scan also noted WLD was weak in morning. Under weekly gate, this is a pure momentum play with no qualifying catalyst. SKIP.
 
 **Decision: NO NEW TRADES.** Weekly gate active; HYPE R:R fails on high-ATR stop. No notification sent (no action taken).
+
+---
+
+## 2026-05-30 — Pre-Session Research (Day 11, Sunday evening)
+
+### Account Snapshot
+- **Kraken:** ZUSD $150.5526 (100% cash) | No positions | No orders
+- **Alpaca:** No positions, no orders (historical only — BTC position closed 2026-05-22)
+- **Phase P&L:** −$29.23 (−16.26%) from $179.78 Kraken starting equity | Total trades: ~49
+
+### Market Context
+- **BTC:** $73,372 (−0.24% 24h) | Crash gate: NOT triggered | Weekly trend gate: **ACTIVE** (−5.4% vs May 22 open $77,574; gate triggers at −3%)
+- **ETH:** $2,024 (+0.8% 24h) | Recovering mildly, no strong catalyst
+- **Fear & Greed:** 23 (Extreme Fear) — 8th consecutive day unchanged
+- **BTC Funding rate:** +0.0062% per 8h (Binance) — slightly positive; low leverage in system, neutral-to-mildly bullish signal
+- **BTC weekly gate reset level:** $77,574 (+5.8% from current) — gate lifts when BTC reclaims this level
+
+### Key Market Catalysts
+- **CLARITY Act (XRP):** Advanced through Senate Banking Committee; no floor vote scheduled. July 4 window target; needs 60 Senate votes. Binary trigger NOT fired.
+- **BTC ETF flows:** Mixed — some sources cite renewed inflows, others cite continued cautious outflows. Strategy BTC accumulation ongoing.
+- **Macro:** Geopolitical/macro headwinds sustaining Extreme Fear; reduced risk appetite persists.
+- **Token unlocks today (May 30):** OP 31.34M (~$85M to core contributors) + BASED 50M — bearish supply events for OP and BASED specifically.
+
+### Top Perplexity Research Summary
+- **Top 24h gainers (CoinMarketCap):** HEI +200%, RAVE +106%, SPACE ID (ID) +76%, MWC +68%, R2 +56%, LAB +55% — all micro/unknown; not on Kraken
+- **Kraken-listed movers:** ALGO +11.75% 24h, CAKE +9.45% 24h, XLM +40%+ peak (now reversing)
+- **Volume anomalies:** XRP 25M coins moved off exchanges (bullish on-chain); Worldcoin, EigenLayer, Injective, Ondo flagged as "hot" (Santiment)
+- **Intraday catalyst quality:** Weak overall — mostly ongoing narratives, no major breaking events today
+
+### Candidate Screening
+
+| Asset | 24h Signal | 1h/Current | Spread | Catalyst | Weekly Gate | Verdict |
+|---|---|---|---|---|---|---|
+| ALGO/USD | +11.75% 24h | $0.1280, retreating from $0.1394 high; VWAP $0.1298 above current | 0.078% ✓ | AI narrative + AlgoKit 4.0 (ongoing, no fresh <3h event today) | Requires 1h >5% + fresh <3h; momentum fading from high | **SKIP — no fresh catalyst, below VWAP** |
+| CAKE/USD | +9.45% 24h; +10.3% from open | $1.491, near day high $1.518 | 0.20% ✓ | Solstice USX/EUSX stablecoin integration on PancakeSwap (live, timing unclear) | Catalyst timing unclear; only 112 trades 24h — dangerously thin liquidity | **SKIP — thin volume, slippage risk** |
+| XLM/USD | +40%+ peak; NOW −5.5% from open | $0.2453 vs open $0.2597; high $0.298 was days ago | 0.057% ✓ | DTCC–Stellar tokenized securities integration (4-5 days old) | Catalyst too old; momentum fully reversed; overbought flag | **SKIP — momentum reversed, old catalyst** |
+| XRP/USD | ~flat | ~flat | — | CLARITY Act (no floor vote scheduled; July 4 window) | Binary trigger NOT fired | **SKIP — trigger unmet** |
+| WLD/USD | +11% 24h | Unclear intraday trend | — | Whale accumulation (speculative; July 24 unlock reduction — 55 days away) | Pure momentum, no fresh <3h event | **SKIP — weekly gate** |
+| INJ/USD | +6.9% 24h | Fading from high | — | Native USDC on Injective (launched May 27, 3 days old) | Catalyst too old (>6h) | **SKIP — catalyst stale** |
+| OP/USD | ~flat/down | Under pressure | — | 31.34M OP unlock today ($85M) — bearish supply event | Unlock = bearish catalyst; momentum down | **SKIP — bearish unlock** |
+
+### Risk Factors
+- Extreme Fear (23) sustaining for 8 consecutive days → weak buy-side pressure, momentum fades quickly
+- OP/BASED unlocks today adding supply pressure in L2/DeFi sector
+- BTC holding above $73,000 support but no bullish momentum to lift weekly gate
+- CAKE thin liquidity (112 trades / 24h on Kraken) — avoid regardless of catalyst; slippage would eat any edge
+- ALGO retreating from day high with VWAP overhead → poor risk/reward for entries now
+
+### Trade Ideas
+**No trades meet entry criteria under the current weekly gate.**
+
+All candidates screened out:
+- ALGO: Best fundamental setup (spread ✓, available ✓, 2x leverage available) but AI narrative is ongoing with no fresh breaking event today; trading below today's VWAP after fading from high — not a valid entry under weekly gate
+- CAKE: Stablecoin integration catalyst exists but timing is unclear, and 112 trades/24h makes this untradeable (slippage risk)
+- XLM: Momentum fully reversed; catalyst is 4-5 days old
+- XRP/WLD: Gates/triggers not met
+
+### Watchlist / Session Triggers
+1. **XRP:** CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop (binary catalyst exemption remains open)
+2. **ALGO/USD:** Fresh AI/protocol announcement <3h old + confirmed 1h surge >5% from $0.128 → screen with R:R check; T1 $0.132, T2 $0.134, 2.5% trail, spread 0.078% ✓
+3. **BTC weekly gate reset:** BTC reclaim $77,574 (needs +5.8%) → full alt universe reopens with standard 1h >3% criteria
+4. **Any asset:** 1h surge >5% + fresh catalyst <3h + spread ≤1% → screen immediately
+
+### Decision
+**NO NEW TRADES — BTC weekly trend gate ACTIVE.**
+
+Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
+Gate criteria not met: BTC −5.4% vs May 22; no candidate with 1h >5% + fresh <3h catalyst; no catalyst-driven exemption fires today.
+Weekly gate is functioning correctly — protecting capital during sustained BTC weakness and Extreme Fear environment.
