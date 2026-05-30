@@ -9672,3 +9672,56 @@ Weekly gate is functioning correctly — protecting capital during sustained BTC
 BTC weekly trend gate ACTIVE (−4.84% vs May 22). INJ is sole fresh-catalyst candidate but R:R 0.857:1 fails with required 3.5% high-ATR trailing stop, and price has already reversed −5.6% from day high. No notification sent (no trades placed).
 
 Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
+
+---
+
+## 2026-05-30 — Midday Scan v3
+
+**Time:** 2026-05-30 (midday scan v3)
+**Account:** Kraken ZUSD $150.5526 | No positions | No orders ✓
+**Alpaca:** No active positions or orders (historical only) ✓
+
+### Market Context
+
+| Asset | Price | 24h Chg | Notes |
+|---|---|---|---|
+| BTC | $73,684 | +0.8% | Weekly gate: −4.9% vs May 22 $77,574 → **ACTIVE** | Crash gate: NOT triggered |
+| XRP | ~$1.38 | +4.2% | ETF flow optimism + CLARITY Act narrative — no floor vote scheduled |
+| INJ | $6.561 | +1.95% from open | Below VWAP $6.710; high was $7.078 earlier |
+| XLM | ~$0.25 | +13.6% 24h | Below VWAP; DTCC catalyst 3+ days old |
+| NIGHT | ~$0.035 | +10.5% 24h | Audit comp + whitepaper released May 28-29 (1-2 days old) |
+| VTHO | Up 24h | Unknown | No clear catalyst — pure momentum |
+| SUI | ~flat | ~flat | CME futures May 6, Grayscale May 24-26 (old); mainnet outage May 28 |
+| LINK | +1.45% | +1.45% | Buyback announced Aug 2025 (9mo old); CCIP ongoing; no fresh catalyst |
+| KAS | -1.87% | -1.87% | Toccata fork June 5-20 (upcoming, not <3h catalyst) |
+
+**Fear & Greed:** 23 (Extreme Fear) — 9th consecutive day unchanged
+**BTC Weekly Gate:** ACTIVE — requires 1h momentum >5% + fresh catalyst <3h old, OR catalyst-driven exemption with R:R ≥1.2:1
+
+### Candidates Screened
+
+| Asset | 24h Signal | Catalyst | Gate/R:R | Verdict |
+|---|---|---|---|---|
+| INJ/USD | +1.95% from open ($6.436→$6.561); BELOW VWAP $6.710; day high $7.078 | Binance US INJ staking launched May 29 (>24h old) | Catalyst fails <6h rule; price below VWAP; move already faded −7.3% from high | **SKIP — catalyst stale, price faded** |
+| XRP/USD | +4.2% | Ongoing ETF inflow optimism + CLARITY Act sentiment — no binary floor vote trigger | Binary catalyst trigger NOT fired; floor vote not scheduled | **SKIP — trigger unmet** |
+| XLM/USD | +13.6% 24h but fading | DTCC partnership (3+ days old) | Catalyst too old; price below VWAP | **SKIP — catalyst stale** |
+| NIGHT/USD | +10.5% 24h | $400K audit competition + whitepaper release May 28-29 | Catalyst 1-2 days old; not <6h | **SKIP — catalyst stale** |
+| VTHO/USD | Trending up | No clear event catalyst — pure momentum play | Weekly gate: pure momentum banned | **SKIP — no catalyst** |
+| SUI/USD | Flat | CME futures live May 6, Grayscale May 24-26 (all old) | Catalysts old; mainnet outage May 28 (stability unverified) | **SKIP — catalysts stale** |
+| LINK/USD | +1.45% | Buyback Aug 2025 (9mo old); CCIP v1.5 (ongoing) | Not a fresh catalyst | **SKIP — no fresh catalyst** |
+| KAS/USD | -1.87% | Toccata fork June 5-20 (5+ days away) | Upcoming event, not a fired catalyst; price down | **SKIP — down, no trigger** |
+
+### Decision: NO NEW TRADES
+
+BTC weekly trend gate ACTIVE (−4.9% vs May 22). No candidate has:
+- 1h momentum >5% + fresh catalyst <3h old
+- OR catalyst-driven exemption with R:R ≥1.2:1
+
+Best near-miss: INJ — Binance US staking was a valid catalyst on May 29 but the move is >24h old, price has retreated −7.3% from day high $7.078 to $6.561, now trading below VWAP. Entry now would be chasing a faded move.
+
+Portfolio: 100% ZUSD $150.5526. No open positions, no open orders. No notification sent (no action taken).
+
+**Active watchlist triggers:**
+1. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5% from current) → full alt universe reopens
+3. Any asset: 1h surge >5% + fresh catalyst <3h → screen immediately
