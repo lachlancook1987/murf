@@ -3437,3 +3437,33 @@ No adjustments. ✓
 
 **Decision: NO NEW TRADES — BTC weekly trend gate ACTIVE.** HYPE was closest candidate but R:R fails (0.86:1) using required 3.5% trail for high-ATR asset. No notification sent (no action taken).
 
+---
+
+## 2026-05-30 — Session-Open Scan (evening)
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No orders ✓
+**Alpaca:** No positions, no active orders ✓
+**BTC:** $73,821 (+0.62% 24h, open $73,370) | Weekly gate: −4.84% vs May 22 $77,574 → **ACTIVE** | Crash gate: NOT triggered ✓
+**Fear & Greed:** 23 (Extreme Fear) — 7th consecutive day
+
+**Pre-session research highlights:**
+- INJ/USD: +6.9% 24h — native USDC on Injective launched May 27 (3 days old, fails <6h catalyst rule)
+- XLM/USD: NOW −3.2% from 24h open $0.259673 (current $0.251, day high $0.298 earlier) — DTCC catalyst 3+ days old; momentum reversed
+- WLD/USD: +11% 24h — no fresh <3h catalyst; weekly gate bars pure momentum
+- HYPE/USD: +5.75% 24h — ongoing ETF inflows catalyst but R:R 0.86:1 < 1.2:1 min (3.5% high-ATR stop)
+- XRP/USD: CLARITY Act floor vote not scheduled
+- OP/USD: 31.34M OP unlock today (~$85M) — bearish supply event
+
+**Candidates screened:**
+
+| Asset | Signal | Gate/Check | Verdict |
+|---|---|---|---|
+| XLM/USD | −3.2% from open; high $0.298 → now $0.251 | DTCC catalyst 3+ days old; momentum reversed | SKIP |
+| INJ/USD | +6.9% 24h; below day high $7.078 | USDC catalyst May 27 (3 days old) | SKIP |
+| HYPE/USD | +5.75% 24h | R:R 0.86:1 < 1.2:1 minimum | SKIP |
+| WLD/USD | +11% 24h | No fresh <3h catalyst; weekly gate | SKIP |
+| XRP/USD | ~flat | Floor vote not scheduled | SKIP |
+| OP/USD | ~flat | Unlock event today (bearish) | SKIP |
+
+**Decision: NO NEW TRADES.** Weekly gate active; no candidate has a fresh catalyst <6h old; R:R failures persist. No notification sent (no trades fired).
+
