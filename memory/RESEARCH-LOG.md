@@ -9631,3 +9631,44 @@ All candidates screened out:
 Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
 Gate criteria not met: BTC −5.4% vs May 22; no candidate with 1h >5% + fresh <3h catalyst; no catalyst-driven exemption fires today.
 Weekly gate is functioning correctly — protecting capital during sustained BTC weakness and Extreme Fear environment.
+
+---
+
+## 2026-05-30 — Session-Open Scan (night)
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No orders ✓
+**Alpaca:** No positions, no active orders ✓
+**BTC:** $73,872 (+0.68% from 24h open $73,370) | Crash gate: NOT triggered ✓
+**Weekly trend gate:** ACTIVE — BTC −4.84% vs May 22 ($77,574)
+**Fear & Greed:** 23 (Extreme Fear) — 9th consecutive day
+
+**Pre-session research highlights:**
+- INJ/USD: +3.8% from 24h open ($6.436→$6.681); day high $7.078 (already reversed −5.6%); Binance US INJ staking launch <6h (FRESH catalyst)
+- XLM/USD: −7% from 24h open ($0.25967→$0.2415); day high $0.298 was hours ago; DTCC catalyst May 28 (2 days old); momentum reversed
+- LINK/USD: +2.56% from 24h open ($9.013→$9.244); Mastercard partnership May 29 (1 day old, not <6h)
+- ETH/USD: +0.64% from 24h open ($2,011.65→$2,024.63); Fusaka narrative ongoing, no fresh catalyst
+- SUI/USD: +0.5% from 24h open ($0.9046→$0.9089); CME futures May 4 (26 days old)
+- BTC: +0.68% 24h; positive funding rate ~+0.0055%; weekly gate bars pure momentum plays
+
+**Candidates screened:**
+
+| Asset | Signal | Catalyst | Gate/Check | R:R | Verdict |
+|---|---|---|---|---|---|
+| INJ/USD | +3.8% 24h; −5.6% from day high $7.078 | Binance US staking launch <6h ✓ | High-ATR asset → 3.5% trail required; R:R = 3%/3.5% = 0.857:1 < 1.2:1 | 0.857 ❌ | **SKIP — R:R fails** |
+| XLM/USD | −7% from open; momentum reversed | DTCC (May 28, 2 days old) | No fresh catalyst; price below open | — | **SKIP — reversed** |
+| LINK/USD | +2.56% 24h | Mastercard (May 29, 1 day old) | Catalyst not <6h; weekly gate active | — | **SKIP — catalyst stale** |
+| ETH/USD | +0.64% 24h | Fusaka (ongoing) | No fresh catalyst; weekly gate active | — | **SKIP** |
+| SUI/USD | +0.50% 24h | CME futures (May 4, 26 days old) | No momentum; stale catalyst | — | **SKIP** |
+| BTC/USD | +0.68% 24h | None fresh | Weekly gate active | — | **SKIP** |
+
+**Spread checks (confirmed):**
+- INJ: $6.681 bid / $6.686 ask = 0.075% ✓ (would have cleared)
+- XLM: $0.24164 bid / $0.24174 ask = 0.041% ✓
+- LINK: $9.2447 bid / $9.2469 ask = 0.024% ✓
+- ETH: $2,024.62 bid / $2,024.63 ask = 0.005% ✓
+- SUI: $0.90880 bid / $0.90910 ask = 0.033% ✓
+
+**Decision: NO NEW TRADES.**
+BTC weekly trend gate ACTIVE (−4.84% vs May 22). INJ is sole fresh-catalyst candidate but R:R 0.857:1 fails with required 3.5% high-ATR trailing stop, and price has already reversed −5.6% from day high. No notification sent (no trades placed).
+
+Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
