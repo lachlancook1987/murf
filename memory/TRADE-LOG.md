@@ -3401,3 +3401,18 @@ No adjustments. ✓
 - **XRP:** No CLARITY Act floor vote; R:R 0.43:1 fails even under binary catalyst framework. SKIP.
 - No trades. No notification sent.
 
+---
+
+## 2026-05-30 — EOD Snapshot (Day 10, Saturday)
+
+### May 30 — EOD Snapshot (Day 10, Saturday)
+**Portfolio:** $150.55 | **Cash:** $150.55 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** -$29.23 (-16.26%) | **vs BTC:** +0.24%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~49
+
+**Notes:** Flat no-trade Saturday. Portfolio 100% ZUSD $150.5526, unchanged from May 29 EOD. No positions, no open orders. BTC drifted -0.24% intraday ($73,618 → $73,443) while bot held flat, resulting in +0.24% outperformance vs BTC today. Alpaca stop a2b44cf9 canceled 2026-05-22 — no Alpaca exposure. Phase P&L remains -$29.23 (-16.26%) from Kraken starting equity $179.78. Fear & Greed still ~22 (Extreme Fear); BTC $73,443. Plan for Sunday/Monday: require confirmed BTC reclaim above $74,000+ and fresh catalyst before new entries; crash gate threshold $58,754 (BTC -20% from ~$73,443).
+
