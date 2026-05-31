@@ -3515,3 +3515,39 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Sunday. Portfolio 100% ZUSD $150.5526, unchanged from May 30 EOD. No positions, no open orders. BTC gained +0.08% intraday (24h open $73,779 → EOD $73,835), causing bot to underperform BTC by -0.08% on a cash-only day. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC ranged $73,399–$74,161 today; no catalyst or momentum setup met entry criteria. Plan for Monday: require BTC sustained above $74,000 + fresh catalyst (<6h old) before new entries; crash gate threshold $58,754 (BTC -20% from current ~$73,835).
+
+---
+
+## 2026-05-31 — Session-Open Scan (Monday morning)
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No orders ✓
+**Alpaca:** No positions, no active orders (historical orders only) ✓
+**BTC:** $73,808 (+0.04% from 24h open $73,779) | Crash gate NOT triggered ✓ | Weekly trend gate ACTIVE: −4.85% vs May 22 $77,574
+**ETH:** $2,017 (−0.12% from open $2,019) | **SOL:** $82.49 (−0.16% from open $82.62)
+**Fear & Greed:** 28 (Fear — slight improvement from 23 Extreme Fear)
+**BTC Funding Rate:** +0.0012–0.0055% (positive bias, longs paying)
+
+**Candidates Screened:**
+
+| Asset | Signal | Catalyst | Gate/Check | Verdict |
+|---|---|---|---|---|
+| LIT/USD | −15.7% from open $0.1137 → $0.0958; 24h high $0.1327 | None confirmed (Litentry vs Lighter confusion) | Spread 1.38% → hard skip | SKIP — wide spread + down from open |
+| PORTAL/USD | +12.2% from open $0.01254 → $0.01407; day high $0.01914 (now −26.5% from high) | None (pure momentum per Perplexity) | Weekly gate: pure momentum BANNED | SKIP — faded, no catalyst |
+| VTHO/USD | Down from open; 24h high faded | Tokenomics update months old | Faded, stale catalyst | SKIP |
+| STG/USD | +24.4% 24h | No fresh catalyst identified | Weekly gate: pure momentum BANNED | SKIP |
+| LINK/USD | Flat (+0.05% from open) | AWS Marketplace listing — announced April 24, 2026 (5+ weeks old) | Stale catalyst | SKIP |
+| XRP/USD | Flat | CLARITY Act Senate floor vote NOT scheduled | Binary trigger not met | SKIP |
+| ETH/USD | −0.12% from open | Fusaka narrative; no fresh catalyst | Flat, no momentum | SKIP |
+| SOL/USD | −0.16% from open | Western Union USDPT (days old) | No fresh catalyst <3h | SKIP |
+| HIVE | N/A | Not on Kraken | N/A | N/A |
+
+**Hard checks summary:**
+- BTC crash gate: +0.04% 24h → CLEAR ✓
+- BTC weekly trend gate: ACTIVE (−4.85% vs May 22) — requires 1h momentum >5% + catalyst <3h old, or catalyst-driven exemption with R:R ≥1.2:1
+- No candidate meets combined criteria: fresh catalyst <6h old + 1h momentum + R:R ≥1.2:1
+
+**Decision: NO NEW TRADES.** Weekly gate ACTIVE; no fresh catalyst identified for any Kraken asset. No notification sent.
+
+**Active watchlist:**
+1. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
