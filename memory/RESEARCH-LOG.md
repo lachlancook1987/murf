@@ -9926,3 +9926,93 @@ Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
 3. **KAS/USD**: Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches
 
 No trades executed. No WhatsApp notification sent. No commit required.
+
+---
+
+## 2026-06-01 — Pre-Session Research (Monday)
+
+### Account Snapshot
+**Kraken:** ZUSD $150.5526 (100% cash) | No open positions | No open orders  
+**Alpaca:** No positions, no active orders (historical BTC orders from May 22 only — position fully closed)
+
+### Market Context
+
+| Indicator | Value | Notes |
+|---|---|---|
+| BTC | ~$73,493 ask | 24h open $73,779 → −0.39% | Crash gate NOT triggered |
+| ETH | ~$2,023 | +0.5–1% 24h |
+| Fear & Greed | 28 (Fear) | Up from 23 yesterday — slight improvement |
+| Funding rate | +0.0051–0.0057%/8h | Neutral; slight long bias |
+| 24h total volume | ~$57.8B | Bitcoin volume down −39% vs typical; light participation |
+| BTC weekly trend | −5.25% vs May 22 $77,574 | **Weekly trend gate: ACTIVE** |
+
+**BTC status:** Crash gate NOT triggered (threshold: BTC <$58,750). Weekly trend gate ACTIVE — requires 1h momentum >5% + catalyst <3h old, OR catalyst-driven exemption.
+
+### Top 24h Gainers (from Perplexity / Coinranking)
+
+| Rank | Asset | 24h Change | On Kraken? |
+|---|---|---|---|
+| 1 | PORTAL | +77% | Yes (confirmed prior session) |
+| 2 | HIVE | +47% | No (not listed on Kraken) |
+| 3 | H (Humanity) | +38% | No |
+| 4 | SRM (Serum) | +32% | No |
+| 5 | STG | +24% (+64% from Kraken open) | Yes |
+| 6 | PUNDIX | +27% | Not checked |
+| 8 | BNB | +1.2% 24h (not +12.3% — earlier figure was incorrect) | Yes |
+
+**BNB catalyst check:** VanEck launched VBNB spot BNB ETF on Nasdaq on **May 28, 2026** — 3 days ago. Price pumped from ~$700 to $744.62 high, now faded back to $708 (below 24h open $719.35 = −1.52%).
+
+### Today's Catalysts
+
+| Catalyst | Asset | Freshness | Notes |
+|---|---|---|---|
+| VanEck VBNB spot ETF (Nasdaq) | BNB | May 28 — 3 days old | Already priced in; price reversed below open |
+| CFTC regulated perpetual futures (Coinbase + Kalshi) | BTC/ETH | May 29 — 2 days old | Structural, not intraday |
+| BTC ETF outflows (week) | BTC | Today | Bearish for BTC intraday |
+| ETF inflows Friday $629M | BTC | Friday — supportive | Partially offsets outflows |
+| Geopolitical relief (Hormuz) | General crypto | Intraday | Supporting sentiment |
+| KAS Toccata hard fork | KAS | June 5–20 — 5+ days away | Not yet intraday catalyst |
+| OP token unlock | OP | Today May 31 — bearish supply | Avoid OP |
+
+### Candidate Screening
+
+| Asset | Signal | Catalyst | Gate/Check | Kraken Ask | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| STG/USD | +64% from 24h open $0.2327 → $0.3817; 24h high $0.4191 | No catalyst — pure speculative volume + BNB ecosystem rotation (Perplexity confirmed no coin-specific news) | Weekly gate: pure momentum BANNED | $0.3817 | 0.131% ✓ | **SKIP — no catalyst** |
+| BNB/USD | 24h high $744.62; current $708.38 → −1.52% from open | VanEck VBNB ETF launch May 28 (3 days old); price already reversed | Catalyst 3 days old; momentum reversed below open | $708.38 | 0.0014% ✓ | **SKIP — price faded** |
+| ARB/USD | −1.7% from open $0.1032 → $0.1014 | No fresh catalyst | Below open; momentum negative | $0.1014 | 0.099% ✓ | **SKIP** |
+| QNT/USD | −0.6% from open $71.17 → $70.74 | No fresh catalyst | Below open; tight range | $70.74 | 0.042% ✓ | **SKIP** |
+| PORTAL/USD | +77% 24h | No catalyst identified (prior session: no announcement found) | Pure momentum; stale / no catalyst | Not rechecked | — | **SKIP** |
+| KAS/USD | −1.9% from open | Toccata fork June 5–20 — upcoming but not today | Below open; catalyst not yet price-active | Not quoted | — | **SKIP** |
+| OP/USD | Flat | Token unlock today — bearish supply event | Bearish event | Not quoted | — | **SKIP** |
+
+### BTC Weekly Gate Assessment
+
+| Gate | Status | Required |
+|---|---|---|
+| BTC −5.25% vs May 22 | **ACTIVE** | 1h momentum >5% + catalyst <3h, OR catalyst-driven exemption |
+| Crash gate | NOT triggered | BTC needs to be <$58,750 for crash gate |
+
+No candidate has a fresh catalyst <6h old. STG has the only standout momentum signal (+64% from open) but Perplexity explicitly confirmed no coin-specific catalyst — pure speculative pump. Under the weekly gate, pure momentum entries are BANNED.
+
+### Decision: NO NEW TRADES
+
+BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the combined criteria of fresh catalyst + positive momentum.
+
+**Closest miss:** STG — extraordinary momentum (+64% from open, spread 0.13%, high volume 4.8M tokens intraday) but zero catalyst confirmed. Entry would be pure momentum gambling against the gate rules.
+
+**BNB runner-up:** Valid institutional catalyst (VanEck ETF) but 3 days stale and price has reversed below open. Not an actionable setup today.
+
+### Risk Factors
+
+- BTC ETF outflows are a near-term headwind for BTC range recovery
+- Fear & Greed at 28 (Fear) — market sentiment remains fragile
+- Light 24h BTC volume (−39% vs typical) = thin market, prone to false breakouts
+- Weekly gate will remain active until BTC reclaims $77,574 (+5.5% from current)
+
+### Active Watchlist Triggers (unchanged)
+
+1. **XRP:** CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop (binary catalyst)
+2. **BTC weekly gate reset:** BTC reclaim $77,574 → full alt universe reopens; NEAR, KAS, SUI, BNB reassessed
+3. **KAS/USD:** Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches within 24–48h
+4. **STG:** If a coin-specific catalyst emerges (protocol upgrade, listing, governance), reassess — momentum base is established
