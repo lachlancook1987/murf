@@ -3515,3 +3515,64 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Sunday. Portfolio 100% ZUSD $150.5526, unchanged from May 30 EOD. No positions, no open orders. BTC gained +0.08% intraday (24h open $73,779 → EOD $73,835), causing bot to underperform BTC by -0.08% on a cash-only day. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC ranged $73,399–$74,161 today; no catalyst or momentum setup met entry criteria. Plan for Monday: require BTC sustained above $74,000 + fresh catalyst (<6h old) before new entries; crash gate threshold $58,754 (BTC -20% from current ~$73,835).
+
+---
+
+## 2026-05-31 — Session-Open Scan
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| — | — | — | — | 100% ZUSD | — | — |
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No open orders ✓  
+**Alpaca:** No positions, no active orders ✓  
+**BTC:** $73,612 ask | 24h open $73,779 = **−0.23%** | 24h range: $73,273–$74,161 | Crash gate: **NOT triggered** ✓  
+**Fear & Greed:** 28 (Fear)  
+**BTC Funding:** +0.006% per 8h (Binance) — slightly positive, no crowding  
+**BTC Weekly Gate:** $73,612 vs May 22 $77,574 = **−5.1%** → **ACTIVE**  
+**Portfolio:** ZUSD $150.55 | Phase P&L: **−$29.23 (−16.26%)**  
+
+**Pre-session research (12 Perplexity queries run):**
+
+| Query | Key Finding |
+|---|---|
+| BTC price/24h | $73,612, ~−0.23% |
+| ETH price/24h | $2,003, −0.81% from open |
+| 1h surge leaders | No live 1h data; CMC 24h leaders: Humanity +31.9%, FET +14%, WLD +18.3% |
+| 24h top gainers | PORTAL +77%, HIVE +47%, STG +24% (Coinranking) |
+| Fear & Greed | 28 (Fear) |
+| BTC funding | Binance +0.006%/8h — positive |
+| Catalysts/news | BTC under pressure near $74K; ETF outflows; CLARITY Act progress; Kaspa Toccata fork June 5–20; INJ Binance US staking; SUI CME/Grayscale |
+| Token unlocks | OP ~$3.91M (bearish, avoid); EIGEN $8.13M June 1; KITE $21.37M June 1 |
+| Kraken alt momentum | INJ +25% (Binance US staking); ARB +3.6%; QNT +3.8% |
+| Volume surges | NEAR $1.24B 24h; RAVE $208M/212% |
+| Intraday setups | BTC range compression; no discrete catalyst setups |
+
+**Candidate screening (STEP 3 hard checks):**
+
+| Asset | Kraken Quote | 24h Open | Current vs Open | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| STG/USD | $0.393 ask | $0.2327 | **+68.7%** | None confirmed (pure momentum) | Weekly gate: pure momentum BANNED | **SKIP** |
+| HYPE/USD | $70.04 ask | $68.30 | +2.5% | New ATH momentum only; DEX narrative | High-ATR: 3.5% stop → R:R 0.86:1 < 1.2:1; pure momentum | **SKIP** |
+| INJ/USD | $6.443 ask | $6.593 | −2.3% | Binance US staking (timing unclear, announcement = "coming soon") | Catalyst timing unclear; momentum reversed; high-ATR → R:R fails | **SKIP** |
+| WLD/USD | $0.3378 ask | $0.3448 | −2.0% | Eightco treasury → Sep 2025 catalyst, stale | Old catalyst; momentum reversed below open | **SKIP** |
+| FET/USD | $0.2793 ask | $0.2791 | +0.07% | AI sector rotation — broad, not coin-specific | Pure momentum (sector rotation); no fresh catalyst <3h | **SKIP** |
+| SUI/USD | $0.881 ask | $0.9093 | −3.1% | CME futures/Grayscale Trust (weeks old) | Negative momentum; old catalysts | **SKIP** |
+| ARB/USD | $0.1016 ask | $0.1032 | −1.6% | Technical bounce/L2 narrative (no fresh event) | Negative momentum; no catalyst | **SKIP** |
+| ETH/USD | $2,003 ask | $2,019 | −0.8% | Glamsterdam Q3 2026 (multi-week play) | Negative momentum from open; not a fresh intraday catalyst | **SKIP** |
+| OP/USD | — | — | — | Token unlock today — BEARISH | Supply event | **SKIP** |
+| BTC/USD | $73,612 | $73,779 | −0.23% | Range compression; no fresh catalyst | Weekly gate: pure momentum; no catalyst exemption | **SKIP** |
+
+**Weekly gate exemption check:** Gate allows "catalyst-driven entries (regulatory event, exchange listing, protocol upgrade)." No qualifying event found today:
+- INJ Binance US staking: "coming soon" announcement, exact timing unclear, price already reversed
+- No new protocol upgrades confirmed <6h old
+- CLARITY Act: Senate floor vote not yet scheduled
+
+**Decision: HOLD — No New Trades.**  
+BTC weekly trend gate ACTIVE (−5.1% vs May 22). Fear & Greed 28 (Fear). No candidate passes combined criteria: fresh catalyst <6h old + positive momentum + R:R ≥1.2:1. Capital preserved at $150.5526 ZUSD. No notification sent (no trades fired).
+
+**Active watchlist triggers (unchanged):**
+- XRP: CLARITY Act Senate floor vote confirmed → entry, 7% trailing stop (binary catalyst)
+- BTC reclaim $77,574 → weekly gate resets; full alt universe reopens
+- KAS: Toccata hard fork June 5–20 — monitor 24–48h before event for pre-positioning momentum
+- STG: If coin-specific catalyst emerges, reassess momentum base established at $0.39+
