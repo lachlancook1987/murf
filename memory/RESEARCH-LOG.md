@@ -10016,3 +10016,44 @@ BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the 
 2. **BTC weekly gate reset:** BTC reclaim $77,574 → full alt universe reopens; NEAR, KAS, SUI, BNB reassessed
 3. **KAS/USD:** Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches within 24–48h
 4. **STG:** If a coin-specific catalyst emerges (protocol upgrade, listing, governance), reassess — momentum base is established
+
+---
+
+## 2026-05-31 — Midday Scan #3
+
+**Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+**Alpaca:** Historical orders only — no active positions or orders. ✓
+**BTC:** ~$73,600 (−0.4% 24h) | Crash gate: NOT triggered (threshold: BTC <$58,750) ✓ | Weekly trend gate: ACTIVE — BTC −5.4% vs May 22 $77,574
+**Fear & Greed:** 28 (Fear — slight improvement from Extreme Fear streak)
+
+**Candidates screened:**
+
+| Asset | From Open | Catalyst | Gate/R:R | Spread | Verdict |
+|---|---|---|---|---|---|
+| HYPE/USD | +4.32% ($68.30→$71.25); new ATH $71.56; VWAP $69.10 | ETF inflows ongoing (BHYP+THYP $136M/13 sessions); CFTC KalshiEX BTCPERP approval May 29; Circle USDC yield partnership May 30; ICE CEO "bigger than Nasdaq" | Catalyst-driven exemption valid (regulatory + partnership); BUT R:R 0.857:1 with required 3.5% trail (intraday ATR 5.8% = high-ATR asset) — fails 1.2:1 minimum | 0.014% ✓ | **SKIP — R:R fails** |
+| STG/USD | +73% ($0.2327→$0.4022); day high $0.4275 | Upbit listing confirmed March 18, 2026 (stale); CoinMarketCap AI: "no clear catalyst — BNB Chain rotation, volume breakout" | Pure momentum, no fresh catalyst → BANNED (weekly gate) | 0.22% ✓ | **SKIP — pure momentum** |
+| TAO/USD | ~flat from open ($254.52→$254.65); below VWAP $255.07 | "Conviction" feature May 2026 (date unclear, days/weeks ago); ETF filings August decisions; $229M token unlock risk | No intraday momentum; below VWAP; unlock headwind | 0.062% ✓ | **SKIP — no intraday momentum** |
+| FET/USD | −2.87% ($0.2791→$0.2711); below open | Agent Launchpad May 26 (5 days old); profit-taking on-chain | Down from open; catalyst stale | 0.11% ✓ | **SKIP — faded, stale** |
+| KAS/USD | −1.36% ($0.030860→$0.030430); below open | Toccata hard fork June 5–20 (not fresh today; upcoming event) | Down from open; fork not imminent | 0.10% ✓ | **SKIP — down, fork not today** |
+| ZEC/USD | Already confirmed stale (Q1 2026 report weeks old) | SEC closure weeks old | Catalyst stale confirmed prev scan | — | **SKIP** |
+| PORTAL/USD | +77% 24h | AI pivot reboot narrative (vague, old) | Spread 1.57% (prev scan) — hard skip > 1% | >1% | **SKIP — spread** |
+| SRM/Serum | +32% 24h; price ~$0.0025 | No identifiable catalyst; speculative | No catalyst | — | **SKIP** |
+| PUNDIX/USD | +2.9% 24h (not 26% as Coinranking showed) | AI/data partnerships (old); RSI 36.44; bearish | Weak momentum, old catalyst | — | **SKIP** |
+
+**HYPE deep analysis:**
+- New ATH $71.56 today — price at $71.25 (ask)
+- Catalysts: CFTC KalshiEX approval (May 29, 2 days ago); Circle USDC yield deal (May 30, yesterday); ongoing ETF inflows
+- Weekly gate: catalyst-driven exemption valid (regulatory + partnership categories)
+- High-ATR classification: intraday range $67.41–$71.56 = 5.8% → 3.5% trailing stop required (>3% intraday ATR)
+- R:R = 3% target / 3.5% stop = 0.857:1 → below 1.2:1 minimum → **FAILS entry criteria**
+- Note: would qualify at 2.5% stop (R:R 1.2:1 exactly) but high-ATR asset warrants 3.5% per strategy
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE (−5.4% vs May 22). HYPE is the closest valid setup but R:R fails with required 3.5% high-ATR stop. No action taken, no notification sent.
+
+### Active Watchlist Triggers (updated)
+
+1. **XRP:** CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop (binary catalyst)
+2. **BTC weekly gate reset:** BTC reclaim $77,574 (+5.5% from $73,600) → full alt universe reopens
+3. **HYPE/USD:** R:R unlocks if: (a) HYPE pulls back to ~$68 entry (R:R 3%/3.5%=0.857 improves at lower entry IF stop also moves), or (b) strategy accepts 2.5% stop on HYPE (R:R 1.2:1 at current levels). Monitor.
+4. **KAS/USD:** Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches within 24–48h
+5. **STG:** If a coin-specific catalyst emerges (protocol upgrade, listing, governance), reassess — momentum base +73% today is strong
