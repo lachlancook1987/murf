@@ -3515,3 +3515,52 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Sunday. Portfolio 100% ZUSD $150.5526, unchanged from May 30 EOD. No positions, no open orders. BTC gained +0.08% intraday (24h open $73,779 → EOD $73,835), causing bot to underperform BTC by -0.08% on a cash-only day. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC ranged $73,399–$74,161 today; no catalyst or momentum setup met entry criteria. Plan for Monday: require BTC sustained above $74,000 + fresh catalyst (<6h old) before new entries; crash gate threshold $58,754 (BTC -20% from current ~$73,835).
+
+---
+
+## 2026-05-31 — Session-Open Research
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No orders ✓
+**Alpaca:** No positions, no active orders ✓
+**BTC:** $73,821 (bid $73,821.20 / ask $73,821.30) | 24h open $73,779 → +0.06% | 24h high $74,161, low $73,402
+**Crash gate:** NOT triggered (BTC +0.06% 24h; threshold: BTC -20% → $58,750) ✓
+**BTC weekly trend gate:** ACTIVE (BTC $73,821 vs May 22 close $77,574 = **-4.84%** → >3% down in 5 days → requires 1h >5% AND fresh <3h catalyst; pure momentum entries BANNED)
+**Fear & Greed:** 23 (Extreme Fear) — 8th+ consecutive day
+
+### Market Context
+| Indicator | Value | Signal |
+|---|---|---|
+| BTC Price | $73,821 (+0.06% 24h) | Flat/ranging |
+| ETH Price | ~$2,023–$2,030 (+0.4–0.9% 24h) | Slight positive |
+| Fear & Greed | 23 (Extreme Fear) | 8th+ consecutive day extreme fear |
+| BTC Funding Rate | +0.0044–0.0074%/8h | Mildly positive — not overheated |
+| BTC Regime | CAUTION / Weekly gate ACTIVE | Gate threshold not cleared |
+| XRP CLARITY Act | No Senate floor vote scheduled | July floor vote discussed but unconfirmed |
+| Token unlocks (week) | SUI ~$14.85M, EIGEN ~$8.23M | Bearish supply pressure on SUI |
+
+### Candidates Screened
+
+| Asset | Signal | Catalyst | Spread | Gate Result | Verdict |
+|---|---|---|---|---|---|
+| VTHO/USD | +34% 24h reported BUT reversed: 24h open $0.000560, current $0.000531 (-5.3%); day high $0.000920 | No fundamental catalyst — technical squeeze only (oversold RSI, short-covering) | 0.86% ✓ | FAILS weekly gate (no fresh <3h catalyst) | **SKIP** |
+| PORTAL/USD | +34–82% 24h reported BUT reversed: day high $0.01914 → current $0.01366 (-29% from high) | No confirmed catalyst — narrative "AI pivot + new leadership" (stale); OrangeX delisted in April | 1.30% ✗ (>1%) | FAILS spread + weekly gate | **SKIP** |
+| SUI/USD | -0.73% from 24h open $0.9093, currently $0.9027 | Volume surge noted, no fresh catalyst; SUI token unlock ~$14.85M this week (bearish supply) | Tight ✓ | FAILS weekly gate (no catalyst; bearish unlock) | **SKIP** |
+| HIVE/USD | +47% 24h reported | Not listed on Kraken | N/A | Not available | **SKIP** |
+| XRP/USD | ~flat | CLARITY Act: no floor vote scheduled; July 2026 realistic timeline | N/A | No binary trigger | **SKIP** |
+| BTC/USD | +0.06% 24h | None fresh | Tight ✓ | Weekly gate active; no 1h >5% momentum | **SKIP** |
+
+### Hard-Check Summary (STEP 3)
+- **Crash gate:** NOT triggered (BTC +0.06% 24h) ✓
+- **Weekly trend gate:** ACTIVE — all entries require 1h >5% + fresh <3h catalyst simultaneously
+- **No candidate** met both conditions
+- **Spread check:** PORTAL >1% (additional hard fail); all others passed
+- **Catalyst check:** VTHO = technical only; PORTAL = stale narrative; SUI = none; XRP = no vote
+
+### Decision: NO NEW TRADES
+- BTC weekly trend gate ACTIVE (BTC -4.84% vs May 22): bars all pure momentum entries
+- No asset has both 1h >5% surge AND a fresh catalyst <3h old
+- Leading movers (VTHO, PORTAL) already reversed sharply from intraday highs — chasing decline
+- Fear & Greed 23 (Extreme Fear): eighth consecutive day of extreme fear; no sentiment reversal
+- 100% ZUSD $150.5526 preserved
+- No WhatsApp notification sent (no trades fired)
+- Phase P&L: -$29.23 (-16.26%) from Kraken starting equity $179.78
