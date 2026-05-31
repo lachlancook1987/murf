@@ -9725,3 +9725,88 @@ Portfolio: 100% ZUSD $150.5526. No open positions, no open orders. No notificati
 1. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
 2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5% from current) → full alt universe reopens
 3. Any asset: 1h surge >5% + fresh catalyst <3h → screen immediately
+
+---
+
+## 2026-05-31 — Pre-Session Research
+
+### Account Snapshot
+
+| Account | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $150.5526 ZUSD (100% cash) | None | None |
+| Alpaca | $0 | None (stop a2b44cf9 cancelled 2026-05-22 — fully resolved) | None |
+
+**Portfolio:** $150.5526 | **Phase P&L:** −$29.23 (−16.26%) vs Kraken starting equity $179.78
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Chg | Notes |
+|---|---|---|---|
+| BTC | $73,829 | +0.27% | Crash gate NOT triggered (threshold: <$58,750) |
+| ETH | ~$2,030 | +0.5% | Fusaka narrative ongoing; no fresh catalyst |
+| Fear & Greed | 23 (Extreme Fear) | — | 11th consecutive day unchanged |
+| BTC Funding Rate | +0.0044–0.0055% (8h) | — | Mild bullish bias; longs paying shorts |
+| BTC Weekly Trend | −4.83% vs May 22 ($77,574) | — | **GATE ACTIVE** |
+
+**Crash gate:** NOT triggered ✓  
+**Weekly trend gate:** ACTIVE — requires 1h momentum >5% + catalyst <3h old, OR catalyst-driven exemption with R:R ≥1.2:1
+
+---
+
+### Top Kraken Gainers (24h)
+
+| Asset | 24h Gain | Open→Now | 24h VWAP | Day High | Notes |
+|---|---|---|---|---|---|
+| VVV/USD | +10.32% | $16.82→$18.30 (+8.76%) | $16.92 | $18.38 | Near day high; buy-and-burn April 15 (old) |
+| XLM/USD | +10.17% | $0.2295→$0.2311 (+0.70%) | $0.2415 | $0.2433 | Below VWAP; momentum faded |
+| RENDER/USD | +6.34% | $2.109→$2.108 (flat) | $2.103 | $2.450 | Faded from 24h high; flat from open |
+| ZEC/USD | +5.62% | $528.25→$548.21 (+3.78%) | $536.95 | $557.47 | Above VWAP; SEC closure catalyst |
+| QNT/USD | +3.79% | — | — | — | Moderate momentum; no fresh catalyst identified |
+
+**Token unlocks this week (May 25–31):** SUI $14.85M, HUMA $11.64M, H $22M cliff May 25 — mild bearish supply pressure  
+**Notable catalysts:** BTC ETF outflows (headwind); Solana Western Union USDPT stablecoin; NEAR dynamic resharding upgrade June; Chainlink OpenAssets RWA routing
+
+---
+
+### Candidates Screened
+
+| Asset | Signal | Catalyst | Gate/R:R | Spread | Verdict |
+|---|---|---|---|---|---|
+| ZEC/USD | +3.78% from open; above VWAP $536.95; spread 0.055% | SEC investigation closed → no enforcement (regulatory win; "today" per Perplexity) | Catalyst-driven exemption valid IF <6h old; 2.5% trail R:R=1.2:1 (exactly min); high intraday range $526–$557 raises noise-stop risk | 0.055% ✓ | **WATCHLIST — catalyst freshness unverified** |
+| VVV/USD | +8.76% from open; near 24h high $18.38 | Buy-and-burn engine (launched April 15, 2026 — 6+ weeks old); 2M users milestone (date unverified) | Weekly gate: primary catalyst >6h old; AI rotation = pure momentum = BANNED | 0.202% ✓ | **SKIP — catalyst stale** |
+| XLM/USD | +0.70% from open; below VWAP | DTCC tokenization narrative (3+ days old) | Below VWAP; momentum reversed from day high; catalyst stale | 0.032% ✓ | **SKIP — faded, catalyst stale** |
+| RENDER/USD | Flat from open; −13.8% from 24h high | AI/GPU narrative (ongoing, no specific event) | No fresh catalyst; momentum reversed | 0.095% ✓ | **SKIP — faded** |
+| STG/USD | +25% 24h (from global top gainers) | No news catalyst found (Coinbase: 0 articles) | Pure momentum — banned under weekly gate | Not checked | **SKIP — no catalyst** |
+| QNT/USD | +3.79% 24h | No fresh catalyst identified | Pure momentum play | Not checked | **SKIP — no catalyst** |
+
+**ZEC/USD deep analysis:**
+- SEC investigation into Zcash Foundation closed with no enforcement action = major regulatory win
+- Catalyst sourced from Q1 2026 report — publication date uncertain (could be today or weeks ago)
+- Kraken data: open $528.25 → ask $548.21, VWAP $536.95, day high $557.47 → move is distributed over 24h (not a fresh spike), suggesting catalyst may be >6h old
+- With 2.5% trailing stop: R:R = 3%/2.5% = 1.2:1 (exactly minimum, no buffer)
+- ZEC intraday range today: $526.19–$557.47 = 5.9% → noise-stop risk on 2.5% trail is real
+- High-ATR interpretation: if 3.5% trail warranted, R:R = 0.857:1 → FAILS
+- **Net: ZEC does not meet entry criteria with sufficient confidence — too much ambiguity on both catalyst freshness and appropriate stop width**
+
+---
+
+### Decision: NO NEW TRADES
+
+**BTC weekly trend gate ACTIVE** (−4.83% vs May 22). No candidate definitively meets the combined criteria of:
+1. Fresh catalyst <6h old (or confirmed catalyst-driven exemption)
+2. R:R ≥1.2:1 with appropriate stop
+
+Closest miss: ZEC — valid regulatory catalyst (SEC closure) but freshness unverified and move already distributed over 24h. Risk of chasing with noise-stop exposure.
+
+Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
+
+**Active watchlist triggers:**
+1. ZEC: SEC closure confirmed published <6h → assess entry at market; 2.5% trailing stop (R:R 1.2:1); T1 $564, T2 $575 from $548 entry
+2. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+3. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
+4. VVV: 2M user milestone or EXPAND allocation confirmed as today's fresh announcement → screen for entry near current levels
+
+---
