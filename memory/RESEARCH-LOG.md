@@ -9810,3 +9810,31 @@ Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
 4. VVV: 2M user milestone or EXPAND allocation confirmed as today's fresh announcement → screen for entry near current levels
 
 ---
+
+## 2026-05-31 — Midday Scan (no trades)
+
+- **Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+- **Alpaca:** Historical orders only, no active positions or orders. ✓
+- **BTC:** $73,743 (−0.05% from 24h open $73,779) — crash gate NOT triggered ✓ | Weekly trend gate ACTIVE: −4.93% vs May 22 $77,574
+- **Fear & Greed:** ~23 (Extreme Fear)
+
+**Candidates screened (midday):**
+
+| Asset | Signal | Catalyst | Gate/Check | Verdict |
+|---|---|---|---|---|
+| PORTAL/USD | +20.3% from open $0.01254 → ask $0.01524 | No identifiable fresh catalyst; AI pivot narrative (old) | Spread 1.57% — hard skip (>1%) | SKIP — wide spread |
+| VTHO/USD | −6.4% from today's open $0.000560 → $0.000524 (24h was +34%) | Tokenomics update from 2025 Renaissance upgrade (months old); no fresh catalyst | Move played out; down from open | SKIP — faded, stale catalyst |
+| SOL/USD | −0.1% from open $82.62 → $82.53 | Western Union USDPT stablecoin (days old); ETF inflows ongoing | Flat from open, no fresh catalyst <3h; weekly gate | SKIP — no fresh catalyst |
+| LIT/USD | −8.8% from open $0.1137 → $0.1037; spread 1.43% | No identifiable catalyst | Down from open, spread >1% | SKIP — down, wide spread |
+| YALA/USD | Down from open; spread 9.03% | No data | Extreme spread | SKIP — extreme spread |
+| ZEC/USD | (from pre-session watchlist) | SEC Q1 2026 report confirmed as source → catalyst is weeks old, not today | Catalyst confirmed stale | SKIP — stale catalyst confirmed |
+
+**ZEC catalyst resolution:** Perplexity confirmed the SEC investigation closure news originates from the Zcash Foundation's **Q1 2026 report** — published weeks before today. Not a fresh catalyst. ZEC watchlist trigger removed.
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE. No candidate meets fresh catalyst <3h + R:R ≥1.2:1 criteria. No actions taken. No notification sent.
+
+**Updated watchlist triggers:**
+1. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
+
+---
