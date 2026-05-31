@@ -9865,3 +9865,64 @@ Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
 2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
 
 ---
+
+---
+
+## 2026-05-31 — Session-Open Scan (evening)
+
+**Account:** Kraken ZUSD $150.5526 (100% cash) | No positions | No orders ✓
+**Alpaca:** No positions, no active orders ✓
+**BTC:** $73,496 ask (bid $73,495.50) | 24h open $73,778.80 = **−0.38%** | Range $73,406–$74,161 | Crash gate: NOT triggered ✓
+**Fear & Greed:** 28 (Fear — slight improvement from 22–23 streak)
+**BTC Weekly Gate:** ACTIVE — BTC −5.27% vs May 22 $77,574 | Requires 1h >5% + catalyst <3h OR catalyst-driven exemption
+
+**Perplexity Research Summary:**
+
+| Query | Finding |
+|---|---|
+| BTC 24h | ~$73,700–73,870 across sources (+0.4–0.7%) |
+| 1h surges | No reliable 1h table; 24h leaders: H +31.9%, STRAX +33% (not on Kraken) |
+| Today's catalysts | LINK OpenAssets/CCIP v1.5 (ongoing), KAS Toccata fork June 5–20, SUI CME/21Shares ETF |
+| XRP CLARITY Act | **NO vote** — Senate Banking cleared 15-9 (May 14); floor vote unscheduled; July 4 signing target |
+| LINK buyback | Announced August 2025 — 9 months old; stale |
+| WLD catalyst | Altcoin rotation + whale accumulation late May (stale); Eightco OpenAI narrative (stale) |
+| KAS Toccata | June 5–20 mainnet; price catalyst valid BUT no intraday momentum today |
+| NEAR | No fresh catalyst; mild +1.82% from open; bearish sentiment |
+| Volume alerts | REQ, MED, TST flagged (not on watchlist); no Kraken 4h volume surge confirmed |
+| Fear & Greed | **28 — Fear** (improving from 22–23 Extreme Fear streak) |
+
+**Kraken Live Quotes (screened candidates):**
+
+| Asset | 24h Open | Current Ask | 24h Chg | Spread | Status |
+|---|---|---|---|---|---|
+| WLD/USD | $0.3448 | $0.3187 | **−7.6% from open** | 0.031% | SKIP — momentum reversed |
+| NEAR/USD | $2.2480 | $2.2900 | **+1.82% from open** | 0.048% | SKIP — no fresh catalyst; weekly gate |
+| KAS/USD | $0.030860 | $0.030280 | **−1.92% from open** | 0.066% | SKIP — no momentum; fork weeks away |
+| RENDER/USD | $2.1090 | $2.0250 | **−4.07% from open** | 0.099% | SKIP — momentum reversed |
+| BTC/USD | $73,779 | $73,496 | **−0.38%** | 0.001% | Core reference |
+
+**Pre-Trade Checks:**
+- Crash gate: BTC −0.38% → NOT triggered ✓
+- Weekly gate: ACTIVE — all pure momentum entries BANNED; catalyst-driven exemptions checked
+- XRP binary trigger: Senate floor vote NOT confirmed → no entry
+- BTC gate reset ($77,574 +5.5%): NOT met → gate remains active
+
+**Candidates Verdict:**
+
+| Asset | Gate Check | Verdict |
+|---|---|---|
+| WLD | Momentum reversed (−7.6% from open); stale catalyst | SKIP |
+| NEAR | Weekly gate: no catalyst <3h; +1.82% < 5% 1h threshold | SKIP |
+| KAS | Down from open (−1.92%); Toccata fork valid catalyst but weeks away; no price confirmation | SKIP |
+| RENDER | Momentum reversed; no fresh catalyst | SKIP |
+| CAKE | Narrative/momentum pop; no hard catalyst event | SKIP |
+| H | +32% 24h but NOT on Kraken; micro-cap tokens excluded | SKIP |
+
+**Decision: NO NEW TRADES.** Weekly gate active; no asset meets combined criteria of fresh catalyst <6h old + positive price momentum. No new setups qualify.
+
+**Active Watchlist Triggers (unchanged):**
+1. **XRP**: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop (binary catalyst)
+2. **BTC weekly gate reset**: BTC reclaim $77,574 → full alt universe reopens; NEAR, KAS, SUI reassessed
+3. **KAS/USD**: Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches
+
+No trades executed. No WhatsApp notification sent. No commit required.
