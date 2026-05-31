@@ -3483,3 +3483,20 @@ No adjustments. ✓
 
 **Result: NO-OP. No actions taken. No notification sent.**
 
+---
+
+## 2026-05-31 — Overnight Triage Check
+
+**Kraken positions:** None — 100% ZUSD $150.5526  
+**Kraken orders:** None  
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22 — position closed, expected)
+
+**Step 2 — Trailing stops:** N/A — no open positions  
+**Step 3 — Emergency exits:** N/A — no open positions  
+**Step 4 — Stop tightening:** N/A — no open positions  
+
+**Step 5 — Crash gate:** BTC 24h open $73,778.80 → current $73,986 (ask $73,985.90) = **+0.28%** — crash gate NOT triggered (threshold: BTC <$58,750)  
+24h range: $73,131 low / $74,161 high — BTC ranging; no extreme move.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
