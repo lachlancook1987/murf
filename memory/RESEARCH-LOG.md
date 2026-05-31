@@ -9838,3 +9838,30 @@ Portfolio: 100% ZUSD $150.5526. No open positions, no open orders.
 2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
 
 ---
+
+## 2026-05-31 — Midday Scan #2 (no trades)
+
+**Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+**Alpaca:** Historical orders only, no active positions or orders. ✓
+**BTC:** $73,680 (−0.13% from 24h open $73,778.80) — crash gate NOT triggered ✓ | Weekly trend gate ACTIVE: −5.02% vs May 22 $77,574
+**Fear & Greed:** ~23 (Extreme Fear)
+
+**Candidates screened:**
+
+| Asset | Signal | Catalyst | Gate/Check | Verdict |
+|---|---|---|---|---|
+| STG/USD | +18.3% from open $0.2327 → $0.2752; spread 0.18% ✓ | WBTC on Aptos — announced July 2025 (10 months old); no fresh catalyst today | Weekly gate: pure momentum, no fresh catalyst → BANNED | SKIP — stale catalyst |
+| H (Humanity Protocol) | +27–40% 24h | Momentum + leverage, Mastercard partnership (old), 105M token unlock pending | Not on Kraken; pure momentum; token unlock headwind | SKIP — not on Kraken, no fresh catalyst |
+| LINK/USD | −0.04% from open $9.1828 → $9.1788 | LayerZero→CCIP migration (timing unclear); CCIP v1.5 (ongoing, not fresh) | Flat from open; no momentum | SKIP |
+| SUI/USD | −1.25% from open $0.9093 → $0.8979 | CME futures May 4 (4 weeks old) | Below open, near day low | SKIP |
+| WLD/USD | −5.6% from open $0.3448 → $0.3255 | Unlock reduction July 24 (55 days), institutional disclosure (timing unclear) | Down from open, fading from $0.3804 day high | SKIP — momentum reversed |
+
+**STG investigation note:** STG shows strongest raw momentum (+18.3% from open, spread 0.18%, high volume 3.1M today). Catalyst appeared to be WBTC-on-Aptos launch — confirmed by Perplexity as announced July 2025 (10 months old). Pure momentum under weekly gate → BANNED.
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE (−5.02% vs May 22). No candidate has a fresh catalyst <6h old. No actions taken, no notification sent.
+
+**Watchlist triggers unchanged:**
+1. XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+2. BTC weekly gate reset: BTC reclaim $77,574 (+5.5%) → full alt universe reopens
+
+---
