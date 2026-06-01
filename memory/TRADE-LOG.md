@@ -3530,3 +3530,31 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Monday. Portfolio 100% ZUSD $150.5526, unchanged from May 31 EOD. No positions, no open orders. BTC fell -1.32% intraday (24h open $73,569.90 → EOD ~$72,601.90; range $72,523–$74,070), so cash outperformed BTC by +1.32% today. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC broke below $73,000 for the first time this session — bearish intraday pressure. Crash gate threshold $58,750 (BTC -20%). Plan for Tuesday: watch for BTC stabilisation and any fresh catalyst <6h old; require R:R ≥1.2:1 before entry.
+
+---
+
+## 2026-06-01 — Midday Scan
+
+- **Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+- **Alpaca:** No active positions or orders (stop a2b44cf9 confirmed cancelled 2026-05-22). ✓
+- **BTC:** ~$73,580 (−0.41% to −0.81% 24h) | Weekly gate: **ACTIVE** (BTC −5.1% vs May 22 $77,574) | Crash gate: NOT triggered ✓
+- **Fear & Greed:** 28 (Fear, improving from 22–23 yesterday)
+
+**STEP 3 — Trailing stops:** N/A — no open positions.
+**STEP 4 — Stop tightening:** N/A — no open positions.
+**STEP 5 — Thesis check:** N/A — no open positions.
+
+**STEP 6 — New entry scan:**
+
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| ALGO/USD | +7.79% 24h (Kraken) | Technical breakout only — no fundamental catalyst | Weekly gate: pure momentum BANNED | SKIP |
+| PORTAL/USD | +157–173% 24h | Technical breakout, no confirmed today-specific catalyst (Perplexity confirmed) | Weekly gate: pure momentum BANNED | SKIP |
+| NIGHT/USD | +4.18% 24h (Kraken) | No catalyst | Weekly gate: pure momentum BANNED | SKIP |
+| RENDER/USD | +3.43% 24h (Kraken) | No catalyst | Weekly gate: pure momentum BANNED | SKIP |
+| XRP/USD | −2.1% from open | CLARITY Act Senate floor vote NOT confirmed today | Binary catalyst exemption not triggered | SKIP |
+| SUI/USD | — | ~$158M token unlock today (bearish supply) | — | SKIP |
+| ENA/USD | — | ~$36M token unlock today (bearish supply) | — | SKIP |
+
+**Weekly gate:** BTC $73,580 vs May 22 $77,574 = −5.1% → ACTIVE. Requires 1h >5% + fresh catalyst <3h, OR catalyst-driven exemption. No candidate qualifies.
+**No trades. No notification sent (no actions taken).**

@@ -10126,3 +10126,29 @@ BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the 
 5. **PORTAL:** Any verified today-specific catalyst (listing, partnership, protocol upgrade) → reassess immediately; momentum base strong if catalyst confirms
 
 **Decision: NO NEW TRADES — BTC weekly gate ACTIVE.** No candidate has a fresh catalyst <6h old meeting the catalyst-driven exemption criteria. PORTAL is the closest call on momentum but Perplexity confirms no today-specific catalyst; pure momentum under weekly gate is banned. Capital: 100% ZUSD $150.5526.
+
+---
+
+## 2026-06-01 — Midday Scan
+
+**Positions:** None — 100% ZUSD $150.5526
+**Orders:** Kraken: 0 open. Alpaca: no active orders (stop a2b44cf9 cancelled 2026-05-22).
+
+**Market Update (vs pre-session):**
+- BTC: ~$73,580 (−0.41% to −0.81% 24h) — flat vs pre-session $73,758; weekly gate ACTIVE (−5.1% vs May 22)
+- Fear & Greed: 28 (Fear, improving from 22–23 yesterday)
+- $253M crypto longs liquidated 24h — bearish flow persists
+
+**Midday Research Additions:**
+- **ALGO/USD:** +7.79% 24h on Kraken — Perplexity confirms pure technical breakout (W-pattern reversal), no fresh fundamental catalyst (no listing, partnership, or protocol upgrade). Weekly gate: BANNED.
+- **PORTAL/USD:** +157–173% 24h — Perplexity confirms no confirmed project-specific announcement. Pure momentum speculative pump already fading (−19% from intraday high). Weekly gate: BANNED.
+- **XRP CLARITY Act:** No Senate floor vote scheduled. "White House targets July 4" but no confirmed date. Binary catalyst exemption NOT triggered.
+- **Token unlocks today:** SUI ~$158M (1.3% supply), ENA ~$36M — both bearish supply events; these assets SKIP.
+- **Weekly gate:** ACTIVE. BTC must reclaim $77,574 (+5.3%) before pure momentum entries reopen. No catalyst-driven exemptions triggered today.
+
+**Decision: NO NEW TRADES.** Same as pre-session conclusion. Capital 100% ZUSD $150.5526. No notification sent.
+
+**Active watchlist carries forward unchanged from pre-session:**
+1. XRP — CLARITY Act floor vote confirmed → entry (7% trail)
+2. KAS — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of fork
+3. BTC gate reset at $77,574 → full universe reopens
