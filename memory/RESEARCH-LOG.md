@@ -10286,3 +10286,44 @@ No candidate satisfies either condition today.
 2. **XRP/USD** — CLARITY Act: Senate Banking Committee passed May 14; full Senate floor vote July estimate. No confirmed date today. If floor vote confirmed → binary catalyst entry, 7% trailing stop.
 3. **HYPE/USD** — R:R structurally fails (3.5% stop → 0.857:1 vs 1.2:1 min). Only actionable if fresh catalyst <3h AND price dips to ~$68 to improve R:R, OR new stop rule modification.
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+8.6% from $71,436) for full momentum universe to reopen.
+
+---
+
+## 2026-06-01 — Midday Scan #2
+
+**Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+**Alpaca:** No active positions or orders (stop a2b44cf9 confirmed cancelled 2026-05-22). ✓
+**BTC:** $70,815 (−3.74% from open $73,570) | **Weekly gate: ACTIVE** (BTC −8.71% vs May 22 $77,574) | Crash gate: NOT triggered ✓ (threshold ~$58,750)
+**Selloff driver:** ETF outflows — 10 consecutive days, $2.97B total drained; BlackRock IBIT saw $1.26B institutional exit at 2–3% discount. Order-flow driven, no single macro headline.
+
+**STEP 3–5:** N/A — no open positions.
+
+**STEP 6 — New entry scan:**
+
+| Asset | From Open | Catalyst | Gate/Check | Spread | Verdict |
+|---|---|---|---|---|---|
+| SLX/USD | +93.1% ($0.1893→$0.3656) | Binance Futures SLXUSDT perp launch TODAY (June 1) + Upbit listing | Catalyst-driven exemption valid; BUT spread 1.012% → hard skip (>1%) | 1.012% ✗ | **SKIP — spread** |
+| HYPE/USD | +1.12% ($72.04→$72.85) | ATH $74.54, large short -$30M+ squeeze, institutional inflows, CFTC perp tailwind | High-ATR intraday 5.68% → 3.5% stop required; R:R 3%/3.5%=0.857:1 < 1.2:1 minimum | 0.027% ✓ | **SKIP — R:R fails** |
+| PORTAL/USD | −25.2% from open | No confirmed catalyst; pump reversing (high $0.0497→$0.0244) | Below open, unwinding | — | SKIP |
+| STG/USD | −15.6% from open | No catalyst; fading from peak | Below open | — | SKIP |
+| BTC/USD | −3.74% | ETF outflows headwind | Below open | 0.001% ✓ | SKIP |
+| XRP/USD | −3.27% from open | CLARITY Act Senate floor vote July 2026 estimate — NOT confirmed today | Binary catalyst exemption not triggered | 0.001% ✓ | SKIP |
+| KAS/USD | −1.79% from open | Toccata hard fork June 5–20 — not yet in 48h entry window (June 3 opens window) | Below open; fork not imminent | 0.066% ✓ | SKIP |
+| SOL/USD | −2.35% | No fresh catalyst | Below open | 0.013% ✓ | SKIP |
+| ETH/USD | −0.95% | No fresh catalyst | Below open | 0.001% ✓ | SKIP |
+| ADA/USD | −2.75% | No catalyst | Below open | 0.057% ✓ | SKIP |
+
+**SLX note:** Only new candidate with verified same-day catalyst (Binance Futures perp + Upbit listing). Catalyst-driven exemption from weekly gate would apply, but spread 1.012% is a hard skip per strategy. Price also already faded −36.8% from intraday high $0.579 → $0.366 — best of the pump likely captured by earlier buyers.
+
+**HYPE note:** R:R has failed every session this week. Would unlock if HYPE dips to ~$68 entry OR if fresh catalyst <3h old arrives. Neither applies now.
+
+**BTC macro:** Broad risk-off session. BTC ETF outflows are structural headwinds. Fear & Greed ~28 (Fear). Weekly gate reset requires BTC +8.71% to $77,574.
+
+**Decision: NO NEW TRADES. No notification sent.**
+
+**Active watchlist (updated):**
+1. **KAS/USD** ⬆️ — Toccata hard fork window June 5–20. **48h pre-fork entry window opens June 3.** If KAS shows 1h >3% on June 3–4 → catalyst-driven exemption → market entry, 2.5% trailing stop. Currently at $0.0302 (−1.79% from open today).
+2. **SLX/USD** — NEW watchlist entry. Binance Futures perp + Upbit listing catalysts confirmed. If spread drops to ≤1% in a future scan → reassess immediately with full candidate screening.
+3. **XRP/USD** — CLARITY Act Senate floor vote July 2026 estimate. Binary catalyst entry if vote confirmed → 7% trailing stop.
+4. **HYPE/USD** — R:R fails at current price. Actionable only on dip to ~$68 with fresh catalyst.
+5. **BTC weekly gate reset** — BTC must reclaim $77,574 (+8.71% from $70,815) for full momentum universe.
