@@ -10219,3 +10219,70 @@ BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the 
 2. **KAS** — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of fork
 3. **BTC weekly gate reset** → BTC reclaim $77,574 (+8.5% from current $71,519) reopens full universe
 4. **HYPE** — R:R improves at pullback to ~$68 OR if fresh catalyst <6h arrives
+
+---
+
+## 2026-06-01 — Pre-Session Research (late)
+
+**Account Snapshot:**
+- Kraken: ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+- Alpaca: No positions | No active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**Market Context (live Kraken data):**
+| Asset | Price | 24h Open | 24h Chg | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $71,436.40 | $73,569.90 | **-2.90%** | $70,581–$73,960 | 0.001% ✓ |
+| ETH/USD | $1,999.35 | $2,004.07 | **-0.25%** | $1,955–$2,018 | 0.001% ✓ |
+| KAS/USD | $0.030330 | $0.030750 | **-1.37%** | $0.02920–$0.03082 | 0.066% ✓ |
+| HYPE/USD | $73.28 | $72.04 | **+1.70%** | $68.97–$74.54 | 0.041% ✓ |
+
+- **Fear & Greed:** 29 (Fear) — unchanged from prior scans
+- **BTC funding rate:** +0.0028–0.0100% (low positive, neutral/slightly bullish carry)
+- **BTC weekly gate:** $71,436 vs May 22 $77,574 = **−7.91% → ACTIVE**
+- **Crash gate:** NOT triggered (threshold BTC <$58,850 at −20%)
+- **Top 24h gainers (CoinGecko):** PORTAL +190.6%, SLX +111.7%, PLAY +76.4%, H +64.5%, LAB +41.3%
+- **Macro:** Risk-off tone continues; BTC broke below $71k (low $70,581 today); 24h BTC down −2.90%
+
+**Token Unlocks (today Jun 1):**
+- Bware Labs INFRA: 50.15K (1% supply) — negligible
+- Wodo Gaming XWGT: 818.7K (5.65% supply) — not on Kraken
+- Maverick Protocol MAV: 15.52M (1.67% supply) — mild bearish supply pressure
+
+**Candidate Screening:**
+
+| Asset | Price | 24h Chg | Spread | Gate Check | Verdict |
+|---|---|---|---|---|---|
+| OMNI/USD | $0.479 | fading | **32.4%** | Spread FAIL; only 4 trades, illiquid; rebranding to NOM (Nomina) — structural confusion | **HARD SKIP** |
+| MAT/USD | $0.0706 | +0.7% | 0.99% | Micro-cap altcoin rotation (-99% from ATH $6.67); pure momentum; weekly gate BANNED | **SKIP** |
+| DOLO/USD | $0.0301 | -2.5% | **2.06%** | Spread FAIL | **HARD SKIP** |
+| PORTAL/USD | $0.0247 | -24% from open | **1.37%** | Spread FAIL; price fading after pump; no catalyst confirmed | **HARD SKIP** |
+| HYPE/USD | $73.28 | +1.70% | 0.041% ✓ | High-ATR → 3.5% stop → R:R 0.857:1 < 1.2:1 minimum; prior catalysts 2–3d old (CFTC May 29, Circle May 30) | **SKIP — R:R fails** |
+| KAS/USD | $0.0303 | -1.37% | 0.066% ✓ | Toccata fork June 5–20; 48h pre-fork window opens June 3; currently below open | **SKIP — ELEVATED WATCH** |
+| XRP/USD | ~$1.29 | ~-3.5% | 0.001% ✓ | CLARITY Act committee passed May 14; full Senate floor vote not confirmed (July estimate) | **SKIP** |
+| BTC/USD | $71,436 | -2.90% | 0.001% ✓ | Below open; weekly gate ACTIVE; no fresh catalyst | **SKIP** |
+| ETH/USD | $1,999 | -0.25% | 0.001% ✓ | Near flat from open; Glamsterdam Q3 2026 (not intraday catalyst) | **SKIP** |
+
+**Trade Ideas (watchlist only — no entries today):**
+
+All setups blocked by BTC weekly gate (−7.91% vs May 22 $77,574). Gate requires either:
+- 1h momentum >5% **AND** fresh catalyst <3h old, OR
+- Catalyst-driven exemption (regulatory event, exchange listing, protocol upgrade)
+
+No candidate satisfies either condition today.
+
+**Risk Factors:**
+- BTC touched new recent low $70,581 — if it breaks $70k, bearish pressure intensifies
+- Fear & Greed index at 29 (Fear) for multiple consecutive sessions — no sentiment recovery yet
+- Token unlock pressure (MAV 1.67% supply today) adds mild selling to DeFi
+- PORTAL pump +190% on no confirmed catalyst = likely thin-liquidity manipulative move; fading fast
+
+**Decision: NO NEW TRADES — BTC weekly gate ACTIVE.**
+- Crash gate: NOT triggered (−2.90% 24h vs −20% threshold)
+- Weekly gate: ACTIVE (−7.91% vs May 22). Requires >5% 1h momentum + catalyst <3h OR catalyst exemption
+- No qualifying candidates. Capital: 100% ZUSD $150.5526 preserved.
+
+**Active watchlist (updated):**
+1. **KAS/USD** ⬆️ ELEVATED — Toccata hard fork window June 5–20 CONFIRMED. **48h pre-fork entry window opens June 3.** Spread 0.066% ✓, 3,461 trades/day, supports 2x leverage. If KAS shows 1h >3% on June 3 or 4 → catalyst-driven exemption applies → market entry, 2.5% trailing stop.
+2. **XRP/USD** — CLARITY Act: Senate Banking Committee passed May 14; full Senate floor vote July estimate. No confirmed date today. If floor vote confirmed → binary catalyst entry, 7% trailing stop.
+3. **HYPE/USD** — R:R structurally fails (3.5% stop → 0.857:1 vs 1.2:1 min). Only actionable if fresh catalyst <3h AND price dips to ~$68 to improve R:R, OR new stop rule modification.
+4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+8.6% from $71,436) for full momentum universe to reopen.
