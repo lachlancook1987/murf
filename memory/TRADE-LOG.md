@@ -3572,3 +3572,47 @@ No adjustments. ✓
 - **SLX/USD:** Upbit listing catalyst but not listed on Kraken → SKIP
 - **XRP/USD:** CLARITY Act floor vote July 2026 estimate, not confirmed today → SKIP
 - No trades. No notification sent.
+
+---
+
+## 2026-06-01 — Session-Open Scan (evening)
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**Live Kraken quotes (session-open):**
+| Asset | Ask | 24h Open | 24h Chg | VWAP | Spread | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $71,519.60 | $73,569.90 | −2.78% | $72,344 | 0.001% ✓ | BELOW open |
+| ETH/USD | $1,968.35 | $2,004.07 | −1.78% | $1,984 | 0.001% ✓ | BELOW open |
+| XRP/USD | $1.28501 | $1.33121 | −3.47% | $1.301 | 0.001% ✓ | BELOW open |
+| SOL/USD | $79.64 | $82.32 | −3.26% | $81.09 | 0.013% ✓ | BELOW open |
+| ALGO/USD | $0.11711 | $0.12738 | −8.06% | $0.12029 | 0.077% ✓ | BELOW open |
+| HYPE/USD | $71.40 | $72.04 | −0.88% | $72.59 | 0.028% ✓ | BELOW open |
+
+**BTC weekly trend gate:** $71,519 vs May 22 $77,574 = **−7.81% → ACTIVE**
+**Crash gate:** −2.78% 24h vs −20% threshold → NOT triggered
+
+**Candidate screening:**
+
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| ALGO/USD | −8.06% from open; high $0.1275 → now $0.1171; BELOW VWAP | AlgoKit 4.0 "H1 2026" (no confirmed release date today); not a fresh <6h catalyst | Weekly gate: catalyst not fresh/confirmed | SKIP |
+| HYPE/USD | −0.88% from open; below VWAP $72.59 | CFTC approval May 29 (3 days old); Circle May 30 (2 days old); high-ATR 3.5% stop → R:R 0.857:1 < 1.2:1 | R:R fails + momentum negative | SKIP |
+| XRP/USD | −3.47% from open | CLARITY Act floor vote NOT confirmed today | Binary trigger not fired | SKIP |
+| SOL/USD | −3.26% from open | No fresh catalyst | Below open | SKIP |
+| ETH/USD | −1.78% from open | Glamsterdam Q3 2026 (multi-week horizon); no intraday catalyst | Below open; no intraday catalyst | SKIP |
+| PORTAL/USD | +173% 24h | No confirmed project-specific catalyst (Perplexity confirmed multiple times) | Pure momentum BANNED under weekly gate | SKIP |
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE (−7.81% vs May 22); requires 1h >5% + catalyst <3h old OR catalyst-driven exemption
+- All screened assets are BELOW their 24h open — no positive momentum
+- No fresh catalysts <6h old identified today
+- Macro: U.S. jobs report risk-off; BTC broke below $72k; Fear & Greed 28–29 (Fear)
+- Capital: 100% ZUSD $150.5526 preserved
+
+**Active watchlist carries forward:**
+1. **XRP** — CLARITY Act Senate floor vote confirmed → entry, 7% trail (binary catalyst exemption)
+2. **KAS** — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of confirmed fork date
+3. **BTC weekly gate reset** → BTC reclaim $77,574 (+8.5% from current) reopens full momentum universe
+4. **HYPE** — R:R improves if fresh catalyst <6h OR pullback to $68 entry level
