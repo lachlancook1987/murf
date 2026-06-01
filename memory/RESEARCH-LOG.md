@@ -10057,3 +10057,72 @@ BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the 
 3. **HYPE/USD:** R:R unlocks if: (a) HYPE pulls back to ~$68 entry (R:R 3%/3.5%=0.857 improves at lower entry IF stop also moves), or (b) strategy accepts 2.5% stop on HYPE (R:R 1.2:1 at current levels). Monitor.
 4. **KAS/USD:** Toccata hard fork June 5–20 — monitor for price momentum confirmation as event approaches within 24–48h
 5. **STG:** If a coin-specific catalyst emerges (protocol upgrade, listing, governance), reassess — momentum base +73% today is strong
+
+---
+
+## 2026-06-01 — Pre-Session Research (Day 12, Monday)
+
+**Account Snapshot:**
+- Kraken: ZUSD $150.5526 (100% cash) | No open positions | No open orders
+- Alpaca: No positions, no active orders (BTC position fully closed 2026-05-22, confirmed)
+
+**Market Context:**
+- **BTC:** $73,758 (−0.41% 24h, open $73,758) | Weekly gate reference May 22 $77,574 → **−4.84% → gate ACTIVE** | Crash gate: NOT triggered (threshold: BTC <$58,606 = $73,258×0.8 / actual threshold ~$58,750)
+- **ETH:** $2,007 (−1.0% 24h)
+- **Fear & Greed:** 28 (Fear) — persistent fear zone
+- **BTC Funding Rate:** +0.0036–0.0057% per 8h (slightly positive/neutral — not overheated longs)
+- **Weekly gate status:** ACTIVE — BTC must reclaim $77,574 (+5.2% from current) for gate reset
+- **Crash gate status:** NOT triggered
+
+**Top Kraken Gainers (24h):**
+- PORTAL: +180% (24h open $0.03254 → current $0.04041)
+- VTHO: +34.6% (but current below 24h open — reversed)
+- YALA: +27.7% (spread 17.9% — hard skip)
+- XLM: +13.85% (but −1.2% from 24h open — reversed)
+- STG: +50% from 24h low, but current $0.319 vs 24h open $0.382 = −16.5% — peak-and-fade
+
+**Key Catalysts (today, 2026-06-01):**
+- **FOMC June 16–17**: Not today, but macro overhang; 98.2% probability of no change
+- **XRP CLARITY Act**: Senate committee passed May 14; full Senate floor vote pending — NOT confirmed for today
+- **KAS Toccata hard fork**: June 5–20 window — not imminent today
+- **BTC ETF flows**: Monitoring for reversal of outflows — no confirmed reversal today
+- **XRP ETF cumulative inflows**: $1.4B reported; SWIFT 25+ banks live announcement (exact date unclear)
+- **PORTAL**: Animoca Brands backing + AI pivot narrative — ongoing/stale, NOT a fresh today-specific catalyst (Perplexity confirmed no new listing, partnership, or protocol launch today)
+
+**Candidate Screening:**
+
+| Asset | From 24h Open | Spread | Catalyst | Gate Check | Verdict |
+|---|---|---|---|---|---|
+| PORTAL/USD | +24.2% ($0.03254→$0.04041) | 0.79% ✓ | NO today-specific catalyst (Animoca/AI pivot stale narrative; Perplexity confirmed) | Weekly gate: pure momentum BANNED | **SKIP — no catalyst** |
+| STG/USD | −16.5% ($0.38180→$0.31900) | 0.16% ✓ | None identified | Momentum reversed from 24h high | **SKIP — faded** |
+| VTHO/USD | −5.2% ($0.00052→$0.00049) | 0.24% ✓ | None | Below 24h open | **SKIP — faded** |
+| YALA/USD | ~flat (near open $0.000281) | 17.9% ✗ | None | Hard skip — spread >1% | **SKIP — spread** |
+| XLM/USD | −1.2% ($0.25983→$0.25666) | 0.046% ✓ | SWIFT banks live — unclear if fresh today | Below 24h open; momentum reversed | **SKIP — faded** |
+| XRP/USD | −2.1% ($1.33121→$1.30261) | 0.001% ✓ | CLARITY Act pending Senate vote — NOT confirmed today | Below 24h open; binary catalyst exemption only if vote imminent | **SKIP — floor vote not scheduled today** |
+| HYPE/USD | +0.85% ($72.04→$72.65) | 0.014% ✓ | CFTC approval May 29 (3 days old); Circle USDC May 30 (2 days old) | High-ATR: intraday range 3.7% → 3.5% stop required; R:R = 3%/3.5% = 0.857:1 < 1.2:1 minimum | **SKIP — R:R fails** |
+| EDGEX/USD | −3.04% ($1.289→$1.250) | 0.088% ✓ | None | Below open; trivial volume (3,900 units today) | **SKIP — faded + illiquid** |
+
+**BTC Weekly Gate Assessment:**
+
+| Gate | Status | Required for entry |
+|---|---|---|
+| BTC −4.84% vs May 22 $77,574 | **ACTIVE** | 1h momentum >5% + catalyst <6h old, OR catalyst-driven exemption (regulatory/listing/upgrade) |
+| Crash gate | NOT triggered | BTC needs <$58,750 |
+
+**No candidate today qualifies:** PORTAL is the only standout momentum (+24.2% from open, spread ✓) but has zero verified today-specific catalyst — pure speculative pump. Pure momentum entries BANNED under weekly gate. All other candidates are below their 24h open or fail R:R/spread.
+
+**Risk Factors:**
+- BTC weekly gate expected to persist until $77,574 reclaimed (+5.2% from $73,758)
+- Fear & Greed at 28 (Fear) — market fragile; momentum pumps likely to reverse without catalyst support
+- $253M crypto longs liquidated in last 24h — elevated liquidation pressure
+- PORTAL pump without catalyst: high reversal risk; already off highs ($0.04967 → $0.04041 = −19% from intraday high)
+- FOMC June 16–17 creates macro uncertainty window; could suppress risk appetite
+
+**Active Watchlist Triggers (updated):**
+1. **XRP/USD:** CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop (binary catalyst exemption)
+2. **KAS/USD:** Toccata hard fork June 5–20 — if price moves >3% in 1h within 48h of confirmed fork date + spread ≤1%, enter; catalyst-driven exemption applicable
+3. **BTC weekly gate reset:** BTC reclaim $77,574 (+5.2%) → full alt universe reopens; PORTAL, HYPE, NEAR, SUI, BNB reassessed with standard 1h >3% momentum criteria
+4. **HYPE/USD:** R:R improves if HYPE dips to $68 entry OR if a fresh catalyst <6h arrives; monitor daily
+5. **PORTAL:** Any verified today-specific catalyst (listing, partnership, protocol upgrade) → reassess immediately; momentum base strong if catalyst confirms
+
+**Decision: NO NEW TRADES — BTC weekly gate ACTIVE.** No candidate has a fresh catalyst <6h old meeting the catalyst-driven exemption criteria. PORTAL is the closest call on momentum but Perplexity confirms no today-specific catalyst; pure momentum under weekly gate is banned. Capital: 100% ZUSD $150.5526.
