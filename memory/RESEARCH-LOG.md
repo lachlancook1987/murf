@@ -10185,3 +10185,37 @@ BTC weekly trend gate ACTIVE (−5.25% vs May 22). No asset qualifies under the 
 2. KAS — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of confirmed fork date
 3. BTC weekly gate reset → BTC reclaim $77,574 (+5.3%) reopens full momentum universe
 3. BTC gate reset at $77,574 → full universe reopens
+
+---
+
+## 2026-06-01 — Session-Open Scan (evening)
+
+**Account:** Kraken ZUSD $150.5526 | No positions | No open orders | Alpaca: no active positions/orders ✓
+
+**Live market data (Kraken):**
+- BTC: $71,519.60 ask (24h open $73,569.90; −2.78%) | Crash gate NOT triggered | Weekly gate ACTIVE −7.81% vs May 22 $77,574
+- ETH: $1,968.35 (24h open $2,004.07; −1.78%)
+- XRP: $1.28501 (24h open $1.33121; −3.47%)
+- SOL: $79.64 (24h open $82.32; −3.26%)
+- ALGO: $0.11711 (24h open $0.12738; −8.06%)
+- HYPE: $71.40 (24h open $72.04; −0.88%)
+- Fear & Greed: 28–29 (Fear)
+
+**Research findings:**
+- Macro: U.S. jobs report driving risk-off tone; BTC broke below $72k intraday (low $71,275)
+- No fresh crypto-specific catalyst <6h identified for any Kraken-listed asset
+- ALGO: AlgoKit 4.0 narrative (AI developer tooling) but no confirmed release date; price fading −8% from open
+- HYPE: CFTC approval May 29 (3 days old), Circle USDC deal May 30 (2 days old); −0.88% from open; R:R 0.857:1 (below 1.2:1 minimum with required 3.5% high-ATR stop)
+- PORTAL: +173% 24h from Coinranking but no project-specific catalyst confirmed (Perplexity confirms multiple times); pure momentum BANNED under weekly gate
+- XRP: −3.47% from open; CLARITY Act floor vote NOT confirmed today
+- Token unlocks today: INFRA (1% market cap), XWGT (5.65%), ZETA, HOOK — negligible impact
+
+**Candidate screening result:** All assets screened are below their 24h open; no positive intraday momentum exists; no catalyst-driven exemptions available.
+
+**Decision: NO NEW TRADES.** Weekly gate ACTIVE (BTC −7.81% vs May 22). Crash gate NOT triggered. Capital: 100% ZUSD $150.5526.
+
+**Active watchlist:**
+1. **XRP** — CLARITY Act Senate floor vote confirmed → market entry, 7% trailing stop
+2. **KAS** — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of fork
+3. **BTC weekly gate reset** → BTC reclaim $77,574 (+8.5% from current $71,519) reopens full universe
+4. **HYPE** — R:R improves at pullback to ~$68 OR if fresh catalyst <6h arrives
