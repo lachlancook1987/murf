@@ -3558,3 +3558,17 @@ No adjustments. ✓
 
 **Weekly gate:** BTC $73,580 vs May 22 $77,574 = −5.1% → ACTIVE. Requires 1h >5% + fresh catalyst <3h, OR catalyst-driven exemption. No candidate qualifies.
 **No trades. No notification sent (no actions taken).**
+
+---
+
+## 2026-06-01 — Midday Scan v2 (no trades)
+
+- **Kraken:** No positions, no orders. ZUSD $150.5526 (100% cash). ✓
+- **Alpaca:** No active positions or orders. ✓
+- **BTC:** ~$73,600 (weekly gate ACTIVE −5.1% vs May 22 $77,574) | Crash gate: NOT triggered ✓
+- **Fear & Greed:** 28 (Fear)
+- **STG/USD screened:** Spread 0.13% ✓ but −21.2% from 24h open $0.3818 (fading pump from $0.4081 high); LayerZero buyout catalyst Aug 2025 (stale) → SKIP
+- **PORTAL/USD:** +173–190% 24h but no confirmed today-specific catalyst → weekly gate BANNED → SKIP
+- **SLX/USD:** Upbit listing catalyst but not listed on Kraken → SKIP
+- **XRP/USD:** CLARITY Act floor vote July 2026 estimate, not confirmed today → SKIP
+- No trades. No notification sent.
