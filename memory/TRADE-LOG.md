@@ -3515,3 +3515,18 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Sunday. Portfolio 100% ZUSD $150.5526, unchanged from May 30 EOD. No positions, no open orders. BTC gained +0.08% intraday (24h open $73,779 → EOD $73,835), causing bot to underperform BTC by -0.08% on a cash-only day. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC ranged $73,399–$74,161 today; no catalyst or momentum setup met entry criteria. Plan for Monday: require BTC sustained above $74,000 + fresh catalyst (<6h old) before new entries; crash gate threshold $58,754 (BTC -20% from current ~$73,835).
+
+---
+
+## 2026-06-01 — EOD Snapshot (Day 12, Monday)
+
+### Jun 01 — EOD Snapshot (Day 12, Monday)
+**Portfolio:** $150.55 | **Cash:** $150.55 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** -$29.23 (-16.26%) | **vs BTC:** +1.32%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~49
+
+**Notes:** Flat no-trade Monday. Portfolio 100% ZUSD $150.5526, unchanged from May 31 EOD. No positions, no open orders. BTC fell -1.32% intraday (24h open $73,569.90 → EOD ~$72,601.90; range $72,523–$74,070), so cash outperformed BTC by +1.32% today. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual exposure. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. BTC broke below $73,000 for the first time this session — bearish intraday pressure. Crash gate threshold $58,750 (BTC -20%). Plan for Tuesday: watch for BTC stabilisation and any fresh catalyst <6h old; require R:R ≥1.2:1 before entry.
