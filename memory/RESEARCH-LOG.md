@@ -10406,3 +10406,58 @@ No candidate satisfies either condition today.
 2. **XRP/USD** — CLARITY Act Senate floor vote: if confirmed today or upcoming → binary catalyst entry, 7% trailing stop. Currently $1.265. Monitoring.
 3. **STG/USD** — +9.5% from open, tight spread. Watching for fresh catalyst <3h old. If new LayerZero/ZRO news or exchange listing emerges → catalyst entry with 2.5% trail at current ~$0.364.
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+10.9% from $69,955) to reopen full momentum universe.
+
+---
+
+## 2026-06-02 — Midday Scan
+
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash) ✓
+**Alpaca:** No positions, no active orders ✓
+
+**Live Midday Quotes (Kraken):**
+| Asset | Ask | 24h Open | 24h Chg | Spread | Status |
+|---|---|---|---|---|---|
+| BTC/USD | $69,405 | $71,316 | −2.68% | 0.000% ✓ | Below open |
+| ETH/USD | $1,972.50 | $2,003.90 | −1.57% | 0.001% ✓ | Below open |
+| SOL/USD | $79.00 | $81.18 | −2.69% | 0.013% ✓ | Below open |
+| XRP/USD | $1.2588 | $1.2956 | −2.84% | 0.003% ✓ | Below open |
+| HYPE/USD | $70.96 | $73.52 | −3.48% | 0.014% ✓ | Below open |
+| KAS/USD | $0.02942 | $0.03044 | −3.35% | 0.034% ✓ | Below open |
+| ADA/USD | $0.22284 | $0.23078 | −3.44% | 0.028% ✓ | Below open |
+| XLM/USD | $0.23051 | $0.24268 | −5.01% | 0.072% ✓ | Below open |
+| SUI/USD | $0.8393 | $0.8786 | −4.47% | 0.036% ✓ | Below open |
+| STG/USD | $0.345 | $0.3324 | +3.79% | 0.145% ✓ | Above open (FADING — was +12% at session-open) |
+| INJ/USD | $7.277 | $6.964 | +4.49% | 0.082% ✓ | Above open |
+
+**Gates:**
+- **BTC weekly gate:** $69,405 vs May 22 $77,574 = **−10.6% → ACTIVE**
+- **Crash gate:** NOT triggered (threshold BTC < $57,052)
+- **BTC trend:** Continuing to decline — $69,405 vs session-open $69,553 (−0.2% intraday; $69,405 is near 24h lows)
+
+**Perplexity Research (midday):**
+- "1h surge leaders" — Perplexity returned inconsistent data referencing a ceasefire catalyst; live Kraken quotes do NOT confirm any 1h surge; all major assets are below 24h opens. Perplexity data was referencing historical events (June 2025 / April 2026), NOT current intraday moves.
+- **INJ/USD +4.49%:** Catalysts are 21Shares ETF filing (date unclear), native USDC/CCTP launch (date unclear), Community BuyBack May 6 (4 weeks old) — NO confirmed catalyst <3h old today. Under weekly gate, pure momentum BANNED and no qualifying catalyst-driven exemption confirmed.
+- **STG/USD +3.79%:** Fading from +12% high at session-open. No fresh catalyst <3h old (Superform Swap was May 21, 12 days ago; Coinmetro delisted STG April 27 — bearish overhang). FADING momentum → SKIP.
+- **SUI/USD −4.47%:** June 3 token unlock ~30.45M tokens — bearish supply pressure tomorrow. SKIP.
+- **KAS/USD −3.35%:** Toccata hard fork window opens TOMORROW June 3. Below open today. Entry window not yet active.
+- **XRP/USD −2.84%:** CLARITY Act — Senate text released May 2026; floor vote not confirmed today.
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| INJ/USD | +4.49% from open | USDC/CCTP (date unclear), ETF filing (timing unclear), BuyBack May 6 (4 wks old) | Weekly gate: 1h <5% threshold; no confirmed catalyst <3h today | SKIP |
+| STG/USD | +3.79% from open (was +12% at open, now fading) | No fresh catalyst <3h; Superform Swap May 21 (12d old) | Weekly gate: pure momentum BANNED; momentum fading | SKIP |
+| All others | Below 24h open | None | — | SKIP |
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −10.6%; requires 1h >5% + catalyst <3h, OR confirmed catalyst-driven exemption
+- No qualifying setup found — INJ shows modest gains but catalysts are weeks old; STG is fading
+- Perplexity's reported 1h surges (HYPE +8%, ETH +6.5%, etc.) were NOT confirmed by live Kraken quotes — likely referencing historical data
+- Capital: 100% ZUSD $150.5526 preserved
+- **No action taken → no WhatsApp notification sent**
+
+**Active Watchlist (unchanged):**
+1. **KAS/USD** ⬆️⬆️ CRITICAL — Toccata hard fork window OPENS TOMORROW June 3. 48h pre-fork catalyst-driven exemption fires if KAS shows 1h >3% June 3. Entry ~$0.0294, T1 +3%, T2 +5%, 2.5% trailing stop, size up to 80% equity (~$120).
+2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
+3. **INJ/USD** — Watch for confirmed fresh catalyst today (USDC/CCTP launch confirmation, ETF filing date confirmed <3h). If catalyst confirmed + 1h >5% → entry, 2.5% trail.
+4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+11.7% from $69,405) to reopen full momentum universe.
