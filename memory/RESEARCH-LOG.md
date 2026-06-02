@@ -10634,3 +10634,49 @@ _Note: Perplexity returned BTC ~$71,492 (stale/delayed data). Kraken live quote 
 3. **INJ/USD** — WATCH for confirmed AI agent launch or mainnet upgrade date <3h AND 1h >5%. If fires before Bithumb suspension June 4 → entry. Spread 0.10% ✓.
 4. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
 5. **BTC weekly gate reset** — BTC must reclaim $77,574 (+15.5% from $67,184) to reopen full momentum universe.
+
+---
+
+## 2026-06-02 — 3rd Midday Scan (Late Afternoon)
+
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash) ✓
+**Alpaca:** No positions, no active orders (historical only) ✓
+
+**Live Kraken Quotes:**
+| Asset | Ask | 24h Open | 24h Chg | Status |
+|---|---|---|---|---|
+| BTC/USD | $67,204 | $71,316 | −5.76% | Near 24h lows ($66,327) |
+| KAS/USD | $0.02913 | $0.03044 | −4.30% | Below open |
+| INJ/USD | $6.611 | $6.964 | −5.07% | FULLY REVERSED (was +4.49% at noon) |
+| XRP/USD | $1.2186 | $1.2956 | −5.94% | Below open |
+| STG/USD | $0.2979 | $0.3324 | −10.34% | FULLY REVERSED (was +12% at session-open) |
+| SOL/USD | $75.24 | $81.18 | −7.32% | Below open, near 24h lows |
+| HYPE/USD | $68.79 | $73.52 | −6.41% | Below open |
+
+**Gates:**
+- **BTC weekly gate:** $67,204 vs May 22 $77,574 = **−13.4% → ACTIVE** (deepest yet today)
+- **Crash gate:** NOT triggered (threshold BTC <$57,052)
+- Market-wide selloff: virtually all assets at or near 24h lows
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| All watchlist assets | Below 24h open | None fresh <3h | Weekly gate ACTIVE | SKIP |
+| STG/USD | −10.34% (was +12%) | No fresh catalyst; fully reversed | Below open | SKIP |
+| INJ/USD | −5.07% (fully reversed from +4.49%) | No confirmed catalyst <3h | Below open | SKIP |
+| KAS/USD | −4.30% | Toccata fork window opens June 3 (tomorrow); fork not yet active | Below open | SKIP — CRITICAL WATCH tomorrow |
+
+**Perplexity:** No 1h surge leaders identified. No fresh catalysts confirmed. KAS Toccata fork date not confirmed from today's sources (previously confirmed June 5–20 window via earlier research).
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −13.4%; all assets below 24h open
+- Morning green assets (INJ, STG) have fully reversed — no intraday momentum survived
+- No confirmed catalyst-driven exemption qualifies
+- Capital: 100% ZUSD $150.5526 preserved
+- **No action taken → no WhatsApp notification sent**
+
+**Active Watchlist (updated):**
+1. **KAS/USD** ⬆️⬆️⬆️ CRITICAL — Toccata fork window opens June 3 (tomorrow). If KAS 1h >3% on June 3 → catalyst-driven exemption fires. Entry ~$0.02913, T1 $0.03000 (+3%), T2 $0.03059 (+5%), 2.5% trailing stop, R:R 1.2:1 ✓. Spread 0.034% ✓. Size up to 80% equity (~$120).
+2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
+3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+15.5% from $67,204) to reopen full momentum universe.
+4. **INJ/USD** — Fully reversed; remove from active watch until fresh catalyst emerges with positive 1h momentum.
