@@ -3728,3 +3728,20 @@ No adjustments. ✓
 2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
 3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+14.8% from current $67,567) to reopen full momentum universe.
 4. **PORTAL/USD** — Spread must narrow below 1%; PLUS confirmed project catalyst required. Current spread 1.11% → blocked.
+
+---
+
+## 2026-06-02 — Overnight Triage Check (latest)
+
+**Kraken positions:** None — 100% ZUSD $150.5526
+**Kraken orders:** None
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22 — position closed, confirmed)
+
+**Step 2 — Trailing stops:** N/A — no open positions
+**Step 3 — Emergency exits:** N/A — no open positions
+**Step 4 — Stop tightening:** N/A — no open positions
+
+**Step 5 — Crash gate:** BTC 24h open $71,315.50 → current $66,183.50 (ask) = **−7.19%** — crash gate NOT triggered (threshold: BTC < $57,052 = −20% from 24h open)
+24h range: $66,155 low / $71,464.90 high. BTC weekly gate still ACTIVE (−14.7% vs May 22 $77,574 baseline).
+
+**Result: NO-OP. No actions taken. No notification sent.**
