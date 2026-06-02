@@ -3678,3 +3678,53 @@ No adjustments. ✓
 2. **XRP/USD** — CLARITY Act floor vote confirmed → binary catalyst entry, 7% trailing stop
 3. **STG/USD** — watching for fresh catalyst <3h; if LayerZero/ZRO news breaks → entry ~$0.37, 2.5% trail
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+11.5% from current) to reopen full momentum universe
+
+---
+
+## 2026-06-02 — Session-Open Scan (morning)
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+**Alpaca:** No positions | No active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**Live Kraken Quotes:**
+| Asset | Ask | 24h Open | 24h Chg | 24h Low | Spread | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $67,567 | $71,315.50 | −5.26% | $66,327 | 0.018% ✓ | BELOW open |
+| KAS/USD | $0.02927 | $0.030440 | −3.84% | $0.02852 | 0.068% ✓ | BELOW open |
+| PORTAL/USD | $0.02537 | $0.02157 | +17.6% | $0.01846 | 1.11% ✗ | ABOVE open — spread fails |
+| NEAR/USD | $2.713 | $2.637 | +2.88% | $2.450 | 0.11% ✓ | Slightly above open |
+| INJ/USD | $6.658 | $6.964 | −4.40% | $6.459 | 0.09% ✓ | BELOW open |
+| XRP/USD | $1.2235 | $1.2956 | −5.56% | $1.2055 | 0.001% ✓ | BELOW open |
+
+**Gates:**
+- **BTC weekly gate:** $67,567 vs May 22 $77,574 = **−12.9% → ACTIVE**
+- **Crash gate:** BTC −5.26% 24h vs −20% threshold → NOT triggered (threshold BTC < $57,052)
+- **Fear & Greed:** 23 (Extreme Fear) — unchanged
+- **BTC funding rate:** Binance +0.0083%, Bybit +0.0092% — slightly positive, neutral signal
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| KAS/USD | −3.84% from open | Toccata hard fork June 5 (Perplexity confirmed: "June 5–20 window"); within 72h window but entry requires 1h >3% positive momentum | Entry signal NOT firing — KAS DOWN | **SKIP — CRITICAL WATCH June 5** |
+| PORTAL/USD | +17.6% from open | No confirmed project catalyst (pure speculation/liquidity rotation — confirmed multiple times) | Spread 1.11% → HARD SKIP; weekly gate bans pure momentum | **SKIP** |
+| NEAR/USD | +2.88% from open | No catalyst | Weekly gate: below 3% threshold; no catalyst | **SKIP** |
+| XRP/USD | −5.56% from open | CLARITY Act Senate floor vote July 2026 est.; not confirmed today | Binary trigger not fired | **SKIP** |
+| INJ/USD | −4.40% from open | No fresh catalyst; Bithumb suspension headwind June 4 | Below open | **SKIP** |
+| OMNI/USD | Quote available | Spread 38.7% (illiquid, 4 trades in period) | HARD SKIP — spread | **SKIP** |
+
+**ENA token unlock today:** 94.18M ENA ($7.73M) — bearish supply pressure ongoing.
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −12.9%; all major assets except PORTAL below open
+- PORTAL: spread 1.11% > 1% → HARD SKIP; no confirmed catalyst = BANNED
+- KAS Toccata fork confirmed June 5 but momentum signal NOT firing today (KAS −3.84%)
+- XRP CLARITY Act: Senate floor vote July 2026, binary trigger not confirmed
+- No new exchange listings, regulatory wins, or protocol upgrades confirmed <3h
+- Capital: 100% ZUSD $150.5526 preserved
+- No trades → no WhatsApp notification sent
+
+**Active Watchlist (updated):**
+1. **KAS/USD** ⬆️⬆️⬆️ CRITICAL — Toccata hard fork activation window June 5–20 (one source: June 5). If KAS 1h >3% on June 5+ → catalyst-driven exemption fires. Entry ~$0.02927, T1 $0.03015 (+3%), T2 $0.03073 (+5%), 2.5% trailing stop, R:R 1.2:1 ✓, size up to 80% equity (~$120). Spread 0.068% ✓.
+2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
+3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+14.8% from current $67,567) to reopen full momentum universe.
+4. **PORTAL/USD** — Spread must narrow below 1%; PLUS confirmed project catalyst required. Current spread 1.11% → blocked.
