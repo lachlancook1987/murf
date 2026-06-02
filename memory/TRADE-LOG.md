@@ -3678,3 +3678,57 @@ No adjustments. ✓
 2. **XRP/USD** — CLARITY Act floor vote confirmed → binary catalyst entry, 7% trailing stop
 3. **STG/USD** — watching for fresh catalyst <3h; if LayerZero/ZRO news breaks → entry ~$0.37, 2.5% trail
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+11.5% from current) to reopen full momentum universe
+
+---
+
+## 2026-06-02 — Session-Open Scan (evening ~12:06 UTC)
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+**Alpaca:** No positions | No active orders ✓
+
+**Live Quotes:**
+| Asset | Ask | 24h Open | 24h Chg | Spread | Status |
+|---|---|---|---|---|---|
+| BTC/USD | $69,360 | $71,315.50 | −2.74% | 0.001% ✓ | Below open; near 24h lows |
+| ETH/USD | $1,977 | $2,003.94 | −1.32% | 0.001% ✓ | Below open |
+| JTO/USD | $0.6236 | $0.57902 | +7.69% | 0.40% ✓ | ABOVE open — momentum |
+| NEAR/USD | $2.6775 | $2.6370 | +1.54% | 0.052% ✓ | Recovering from lows |
+| INJ/USD | $7.076 | $6.964 | +1.60% | 0.099% ✓ | Fading from +4.49% high |
+| STG/USD | $0.3114 | $0.33240 | −6.3% | 0.161% ✓ | Fading badly (was +9.5%) |
+| HYPE/USD | $72.90 | $73.52 | −0.84% | 0.014% ✓ | Below open |
+| KAS/USD | $0.02950 | $0.03044 | −3.10% | 0.034% ✓ | Below open |
+| XRP/USD | $1.261 | $1.296 | −2.65% | 0.009% ✓ | Below open |
+
+**Gates:**
+- **BTC weekly gate:** $69,360 vs May 22 $77,574 = **−10.6% → ACTIVE**
+- **Crash gate:** NOT triggered (threshold BTC < $57,052)
+- **Fear & Greed:** 23 (Extreme Fear)
+- **BTC funding rate:** +0.0100%/8h (neutral)
+
+**Full Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| JTO/USD | +7.69% from open | No confirmed catalyst — "no visible Jito-specific news catalyst" (CoinMarketCap) — pure momentum | Weekly gate: pure momentum BANNED | SKIP |
+| INJ/USD | +1.60% from open (fading from +4.49%) | USDC/CCTP launch June 1 (yesterday, >24h old); ETF filings ongoing (not same-day) | Catalyst >24h old; 1h momentum declining | SKIP |
+| NEAR/USD | +1.54% from open | $7.6M institutional inflows June 1 (yesterday, >24h old); AI/chain-abstraction narrative multi-week | Catalyst >24h old; 1h <5% | SKIP |
+| STG/USD | −6.3% from open | No fresh catalyst <3h (Superform Swap May 21 = 12d old) | FADING — reversed from session high | SKIP |
+| KAS/USD | −3.10% from open | Toccata hard fork June 5–20 | Entry window not yet active (opens June 3) | SKIP — ELEVATED WATCH |
+| XRP/USD | −2.65% from open | CLARITY Act floor vote: June target, NOT confirmed today | Binary catalyst not triggered | SKIP |
+| ETH/USD | −1.32% from open | Glamsterdam Q3 2026 (multi-week horizon) | Below open; no intraday catalyst | SKIP |
+| BTC/USD | −2.74% from open | ETF outflows structural | Below open; weekly gate ACTIVE | SKIP |
+| HYPE/USD | −0.84% from open | CFTC approval May 29 (4d old); Circle May 30 (3d old) | R:R 0.86:1 < 1.2:1 with 3.5% high-ATR stop | SKIP |
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −10.6%; requires 1h >5% + fresh catalyst <3h, OR catalyst-driven exemption
+- JTO is the strongest mover (+7.69%) but has NO confirmed catalyst — pure momentum BANNED
+- INJ and NEAR both have catalysts that are >24h old (June 1), not <3h
+- STG reversed hard from session highs; fading momentum
+- No catalyst-driven exemption qualifies today
+- Capital: 100% ZUSD $150.5526 preserved
+
+**Active Watchlist (updated):**
+1. **KAS/USD** ⬆️⬆️ CRITICAL — Entry window OPENS TOMORROW June 3. Toccata hard fork June 5–20 = catalyst-driven exemption qualifies. If KAS shows 1h >3% June 3 → market entry. Entry ~$0.0295, T1 $0.0304 (+3%), T2 $0.0310 (+5%), 2.5% trailing stop, R:R 1.2:1 ✓. Size up to 80% equity (~$120). Spread 0.034% ✓.
+2. **XRP/USD** — CLARITY Act Senate floor vote in June target window (May 28–June 4 per analysis). If vote confirmed → binary catalyst entry, 7% trailing stop. Current $1.261.
+3. **INJ/USD** — USDC/CCTP live June 1 + dual ETF filings (21Shares + Canary Capital). If fresh catalyst <3h today (ETF approval/confirmation), re-evaluate. Current $7.076, spread 0.099% ✓.
+4. **JTO/USD** — strong momentum +7.69% but no catalyst; entry opens if BTC weekly gate resets OR confirmed catalyst <3h emerges. Current $0.6236, spread 0.40% ✓.
+5. **BTC weekly gate reset** — BTC must reclaim $77,574 (+11.6% from $69,360) to reopen full momentum universe.
