@@ -3616,3 +3616,20 @@ No adjustments. ✓
 2. **KAS** — Toccata hard fork June 5–20 → catalyst-driven exemption if 1h >3% within 48h of confirmed fork date
 3. **BTC weekly gate reset** → BTC reclaim $77,574 (+8.5% from current) reopens full momentum universe
 4. **HYPE** — R:R improves if fresh catalyst <6h OR pullback to $68 entry level
+
+---
+
+## 2026-06-02 — Overnight Triage Check
+
+**Kraken positions:** None — 100% ZUSD $150.5526
+**Kraken orders:** None
+**Alpaca:** No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22 — already documented)
+
+**Step 2 — Trailing stops:** N/A — no open positions
+**Step 3 — Emergency exits:** N/A — no open positions
+**Step 4 — Stop tightening:** N/A — no open positions
+
+**Step 5 — Crash gate:** BTC 24h open $71,315.50 → current $70,767 = **−0.77%** — crash gate NOT triggered (threshold: BTC < $58,750)
+24h range: $70,000 low / $73,889 high. BTC weekly gate still ACTIVE (−8.82% vs May 22 $77,574 baseline).
+
+**Result: NO-OP. No actions taken. No notification sent.**
