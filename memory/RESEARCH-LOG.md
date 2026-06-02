@@ -10563,3 +10563,74 @@ No candidate satisfies either condition today.
 2. **INJ/USD** — WATCH for confirmed AI agent launch or mainnet upgrade <3h AND 1h >5% surge. If fires → catalyst-driven exemption entry. Monitor pre-Bithumb suspension June 4 (note: Bithumb suspension = headwind for June 4+). Spread 0.04% ✓.
 3. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop, ~$1.265–$1.285 range.
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+14.3% from current $67,830) to reopen full momentum universe.
+
+---
+
+## 2026-06-02 — Pre-Session Research (Late Session)
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+**Alpaca:** No positions | No active orders (historical BTC orders from May 22 only) ✓
+
+**Live Kraken Quotes:**
+| Asset | Ask | 24h Open | 24h Chg | 24h Low | Spread | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $67,183.80 | $71,315.50 | **−5.79%** | $66,327 | 0.000% ✓ | AT/NEAR 24H LOWS |
+| ETH/USD | $1,911.76 | $2,003.94 | **−4.59%** | $1,879.61 | 0.001% ✓ | Below open |
+| SOL/USD | $75.69 | $81.18 | **−6.76%** | $74.40 | 0.013% ✓ | Below open |
+| INJ/USD | $6.664 | $6.964 | **−4.31%** | $6.459 | 0.10% ✓ | Below open |
+| KAS/USD | $0.029170 | $0.030440 | **−4.17%** | $0.028520 | 0.069% ✓ | Below open |
+| PORTAL/USD | $0.02434 | $0.02157 | **+12.8%** | $0.01846 | 0.74% ✓ | ABOVE open |
+| LIT/USD | $0.07510 | $0.08190 | **−8.3%** | $0.07030 | 1.32% ✗ | Below open, wide spread |
+| VTHO/USD | $0.000455 | $0.000491 | **−7.3%** | $0.000448 | 0.44% ✓ | Below open |
+| YALA/USD | $0.000313 | $0.000268 | **+16.8%** | $0.000260 | 13.4% ✗ | HARD SKIP — spread |
+
+_Note: Perplexity returned BTC ~$71,492 (stale/delayed data). Kraken live quote $67,183 is authoritative._
+
+**Gates:**
+- **BTC weekly gate:** $67,184 vs May 22 $77,574 = **−13.4% → ACTIVE** (deepening)
+- **Crash gate:** BTC −5.79% 24h vs −20% threshold → NOT triggered (threshold: BTC < $57,052)
+- **Fear & Greed:** 23 (Extreme Fear) — unchanged, deteriorating from 34 last week
+
+**Market Context:**
+- BTC broke to new session lows at $66,327; VWAP $68,557; now $67,184 — well below 24h open
+- ETH at $1,911, SOL at $75.69, INJ at $6.664 — broad sell-off, all below 24h opens
+- BTC funding rate: Binance +0.0083%, Bybit +0.0092% — slightly positive (longs paying shorts); no crowded short signal
+- ENA token unlock today (94.18M ENA) — bearish supply pressure on ENA
+- CLARITY Act: Senate Banking Committee 15-9 vote (May 14); full floor vote July 2026 est., no confirmed date today
+- Macro: broader risk-off; no positive catalysts confirmed <3h old on any major asset
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| PORTAL/USD | +12.8% from open; 24h high $0.02889 → now $0.02434 (pulling back) | +192% June 1, +150% June 2 — "speculation and liquidity rotation into low-cap names" (Perplexity confirmed — no verified fundamental catalyst) | Weekly gate: **pure momentum BANNED** | **SKIP** |
+| YALA/USD | +16.8% from open | Unknown | Spread 13.4% → **HARD SKIP** | SKIP |
+| LIT/USD | −8.3% from open | None identified | Spread 1.32% → fails | SKIP |
+| VTHO/USD | −7.3% from open | None identified | Below open; no momentum | SKIP |
+| KAS/USD | −4.17% from open | Toccata hard fork "expected June 2026" — final testnet rehearsal underway (no confirmed specific launch date today) | Below open; catalyst-driven exemption requires 1h >3% + confirmed fork date | SKIP — CRITICAL WATCH |
+| INJ/USD | −4.31% from open | No confirmed AI agent launch or mainnet upgrade <3h; USDC/CCTP launch May 7 (26d old); Bithumb suspension headwind June 4 | Below open; momentum reversed | SKIP |
+| XRP/USD | −3.5% est. | CLARITY Act Senate floor vote: July 2026 est., not confirmed today | Binary trigger not fired | SKIP |
+| SOL/USD | −6.76% from open | No catalyst | At session lows | SKIP |
+| ETH/USD | −4.59% from open | Glamsterdam Q3 2026; no intraday catalyst | Below open | SKIP |
+
+**Risk Factors:**
+- BTC weekly gate deepening (-13.4%) — most sustained downtrend since tracking began
+- All major assets making new 24h lows or near them
+- ENA supply unlock today adds sell pressure to sentiment
+- Fear & Greed at 23 (Extreme Fear) — weakest sentiment reading in this strategy's history
+- PORTAL spike (+192% June 1) now pulling back — spike-and-dump pattern; no confirmed catalyst
+- Bithumb INJ suspension June 4 = near-term headwind for INJ
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −13.4%; requires 1h >5% momentum + catalyst <3h old OR pure catalyst-driven entry
+- No asset shows positive momentum with a qualifying catalyst
+- PORTAL is pure momentum (no verified catalyst) → BANNED under weekly gate
+- YALA: spread 13.4% → HARD SKIP
+- All watchlist assets below open, no signals firing
+- Capital: 100% ZUSD $150.5526 preserved
+
+**Active Watchlist (carry forward):**
+1. **KAS/USD** ⬆️⬆️⬆️ CRITICAL — Toccata hard fork window NOW OPEN (June 3+ per prior watchlist). Entry: if KAS 1h >3% with confirmed fork date → catalyst-driven exemption fires. Current ~$0.029170, T1 $0.03004 (+3%), T2 $0.03062 (+5%), 2.5% trailing stop, R:R 1.2:1 ✓. Size up to 80% equity (~$120). Spread 0.069% ✓.
+2. **PORTAL/USD** — WATCH for confirmed project catalyst (exchange listing, partnership, product launch <3h) + sustained above-open price. If catalyst confirmed → re-evaluate. Current pullback from $0.02889 high → $0.02434 (−15.7% from high). Do NOT enter on pure momentum.
+3. **INJ/USD** — WATCH for confirmed AI agent launch or mainnet upgrade date <3h AND 1h >5%. If fires before Bithumb suspension June 4 → entry. Spread 0.10% ✓.
+4. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
+5. **BTC weekly gate reset** — BTC must reclaim $77,574 (+15.5% from $67,184) to reopen full momentum universe.
