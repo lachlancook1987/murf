@@ -3633,3 +3633,48 @@ No adjustments. ✓
 24h range: $70,000 low / $73,889 high. BTC weekly gate still ACTIVE (−8.82% vs May 22 $77,574 baseline).
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-02 — Session-Open Scan
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No positions | No open orders ✓
+**Alpaca:** No positions | No active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**Live Quotes:**
+| Asset | Ask | 24h Open | 24h Chg | 24h Low | Spread | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $69,553 | $71,315.50 | −2.47% | $69,540 | 0.001% ✓ | AT 24H LOWS |
+| HYPE/USD | $71.16 | $73.52 | −3.21% | $71.00 | 0.028% ✓ | AT 24H LOWS |
+| SOL/USD | $79.39 | $81.18 | −2.21% | $79.10 | 0.013% ✓ | BELOW open |
+| XRP/USD | $1.261 | $1.296 | −2.65% | $1.257 | 0.009% ✓ | BELOW open |
+| KAS/USD | $0.02941 | $0.03044 | −3.38% | $0.02920 | 0.068% ✓ | BELOW open |
+| STG/USD | $0.37280 | $0.33240 | +12.15% | $0.31310 | 0.161% ✓ | ABOVE open |
+
+**Gates:**
+- **BTC weekly gate:** $69,553 vs May 22 $77,574 = **−10.30% → ACTIVE**
+- **Crash gate:** NOT triggered (threshold BTC < $57,052)
+- **Fear & Greed:** 23 (Extreme Fear)
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| STG/USD | +12.15% from open | LayerZero acquisition (months old); Superform Swap May 21 (12d old); no fresh catalyst <3h confirmed by Perplexity | Weekly gate: pure momentum BANNED | SKIP |
+| KAS/USD | −3.38% from open | Toccata hard fork window opens TOMORROW June 3 | Below open; entry window not yet active | SKIP — ELEVATED WATCH |
+| HYPE/USD | −3.21% from open | No fresh catalyst | At 24h lows | SKIP |
+| SOL/USD | −2.21% from open | No catalyst | Below open | SKIP |
+| XRP/USD | −2.65% from open | CLARITY Act Senate floor vote not confirmed today | Binary trigger not fired | SKIP |
+| BTC/USD | −2.47% from open; at 24h lows | ETF outflows structural | Below open; weekly gate ACTIVE | SKIP |
+
+**Exchange listings / regulatory wins / protocol upgrades (Perplexity):** None confirmed on Kraken within last 3h.
+
+**Decision: NO NEW TRADES.**
+- Weekly gate ACTIVE at −10.30%; all assets below open except STG (momentum only → BANNED)
+- No catalyst-driven exemption qualifies today
+- Capital: 100% ZUSD $150.5526 preserved
+
+**Active Watchlist:**
+1. **KAS/USD** ⬆️⬆️ CRITICAL — Toccata hard fork window OPENS June 3. If KAS 1h >3% tomorrow → catalyst-driven exemption → entry ~$0.0294, T1 $0.0303 (+3%), T2 $0.0309 (+5%), 2.5% trailing stop, size up to 80% equity (~$120)
+2. **XRP/USD** — CLARITY Act floor vote confirmed → binary catalyst entry, 7% trailing stop
+3. **STG/USD** — watching for fresh catalyst <3h; if LayerZero/ZRO news breaks → entry ~$0.37, 2.5% trail
+4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+11.5% from current) to reopen full momentum universe
