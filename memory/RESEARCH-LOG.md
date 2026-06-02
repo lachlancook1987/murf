@@ -10512,3 +10512,54 @@ No candidate satisfies either condition today.
 2. **INJ/USD** — ELEVATED WATCH: if AI agent launch or mainnet upgrade date confirmed <3h AND 1h >5% → catalyst-driven exemption fires. Monitor June 3 (day before Bithumb suspension). Spread 0.042% ✓.
 3. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop, ~$1.256.
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+13.2% from $68,503) to reopen full momentum universe.
+
+---
+
+## 2026-06-02 — Session-Open Scan (Evening)
+
+**Kraken:** No positions, no open orders. ZUSD $150.5526 (100% cash) ✓
+**Alpaca:** No positions, no active orders ✓
+
+**Live Kraken Quotes:**
+| Asset | Bid | Ask | 24h Open | 24h Chg | Spread | Status |
+|---|---|---|---|---|---|---|
+| BTC/USD | $67,829.90 | $67,830.00 | $71,315.50 | **−4.89%** | 0.000% ✓ | AT 24H LOWS |
+| KAS/USD | $0.02901 | $0.02904 | $0.030440 | **−4.60%** | 0.10% ✓ | Below open |
+| INJ/USD | $6.911 | $6.914 | $6.964 | **−0.72%** | 0.04% ✓ | Reversed; below open |
+
+**Gates:**
+- **BTC weekly gate:** $67,830 vs May 22 $77,574 = **−12.56% → ACTIVE** (deepening)
+- **Crash gate:** NOT triggered (threshold BTC < $57,052)
+- **Fear & Greed:** 23 (Extreme Fear — unchanged from this morning)
+
+**Perplexity Research Summary:**
+- BTC: $67,830–$69,400 range across sources; confirming -4.89% 24h decline; weekly gate deepening
+- Fear & Greed: 23 (Extreme Fear); was 29 yesterday, 34 last week — deteriorating
+- KAS/Toccata: Toccata hard fork NOT yet confirmed in Perplexity sources for today; Crescendo (2024) is the only fork documented. Entry window officially opens June 3 tomorrow. KAS currently -4.60% from open.
+- INJ: Circle USDC/CCTP launch was May 7 (confirmed but 26 days old); no AI agent launch or mainnet upgrade confirmed <3h today. INJ reversed from +4.49% earlier today to -0.72% from open. Bithumb suspension June 4 creates near-term headwind.
+- XRP CLARITY Act: Senate Banking Committee 15-9 vote (May 14) confirmed; full Senate floor vote June–July 2026 window; no confirmed vote today.
+- Top 24h gainers (OMNI +174%, MAT +66%, DOLO +53%): All previously screened — spread fails (32.4%, 3.75%, 2.11% respectively). HARD SKIP.
+- No intraday 1h surge >3% confirmed on any Kraken asset. All major assets at or near 24h lows.
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| KAS/USD | −4.60% from open | Toccata hard fork entry window opens TOMORROW June 3 | Below open; entry window not yet active | SKIP — CRITICAL WATCH JUNE 3 |
+| INJ/USD | −0.72% from open (reversed from +4.49%) | No confirmed catalyst <3h; USDC launch May 7 (26d old); Bithumb suspension June 4 headwind | Below open; momentum reversed | SKIP |
+| XRP/USD | −2.65% from open | CLARITY Act Senate floor vote July 2026 est.; not confirmed today | Binary trigger not fired | SKIP |
+| All others | At or below 24h open | None identified | — | SKIP |
+
+**Decision: NO NEW TRADES.**
+- BTC weekly gate ACTIVE at −12.56%, deepening below $68k — worst level since tracking began
+- All screened assets below 24h open; no positive momentum
+- No confirmed catalyst <3h old on any asset
+- INJ reversed fully from earlier session gains (-4.49% peak → now -0.72% from open)
+- KAS Toccata fork entry window opens TOMORROW June 3 — elevated watch for morning session
+- Capital: 100% ZUSD $150.5526 preserved
+- **No trades → no WhatsApp notification sent**
+
+**Active Watchlist (June 3 Priority):**
+1. **KAS/USD** ⬆️⬆️⬆️ CRITICAL — Toccata hard fork window OPENS JUNE 3. 48h pre-fork catalyst-driven exemption fires if KAS shows 1h >3% at any point June 3. Current price ~$0.02904, T1 $0.02991 (+3%), T2 $0.03049 (+5%), 2.5% trailing stop, R:R 1.2:1 ✓. Size up to 80% equity (~$120). Spread 0.10% ✓. Run `kraken.sh assets KAS/USD` to confirm pair active before entry.
+2. **INJ/USD** — WATCH for confirmed AI agent launch or mainnet upgrade <3h AND 1h >5% surge. If fires → catalyst-driven exemption entry. Monitor pre-Bithumb suspension June 4 (note: Bithumb suspension = headwind for June 4+). Spread 0.04% ✓.
+3. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop, ~$1.265–$1.285 range.
+4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+14.3% from current $67,830) to reopen full momentum universe.
