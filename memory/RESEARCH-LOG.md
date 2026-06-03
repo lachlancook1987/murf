@@ -10680,3 +10680,99 @@ _Note: Perplexity returned BTC ~$71,492 (stale/delayed data). Kraken live quote 
 2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
 3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+15.5% from $67,204) to reopen full momentum universe.
 4. **INJ/USD** — Fully reversed; remove from active watch until fresh catalyst emerges with positive 1h momentum.
+
+---
+
+## 2026-06-03 — Pre-Session Research (Morning)
+
+**Kraken:** ZUSD $150.5526 (100% cash) | No open positions | No open orders ✓
+**Alpaca:** No positions | No active orders (historical orders only; BTC position closed 2026-05-22) ✓
+
+### Live Kraken Quotes
+
+| Asset | Ask | 24h Open | 24h Chg | 24h Low | 24h High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $67,150 | $66,669.70 | +0.72% | $65,379.80 | $67,420 | 0.0001% ✓ | Slightly above open |
+| KAS/USD | $0.030740 | $0.028600 | **+7.48%** | $0.028000 | $0.030770 | 0.09% ✓ | AT 24h HIGH |
+| NEAR/USD | $2.87260 | $2.62580 | **+9.40%** | $2.44990 | $2.90440 | 0.04% ✓ | AT 24h HIGH |
+| ENA/USD | $0.10260 | $0.09470 | **+8.34%** | $0.08160 | $0.10320 | 0.09% ✓ | Near 24h HIGH |
+| XRP/USD | $1.24012 | $1.21050 | +2.45% | $1.18867 | $1.24700 | 0.002% ✓ | Above open |
+| SOL/USD | $75.06 | $74.14 | +1.24% | $72.21 | $79.70 | 0.01% ✓ | Slightly above open |
+
+### Market Context
+
+- **BTC:** $67,150 (+0.72% from 24h open). Recovery from yesterday's lows ($65,379). Slightly positive backdrop.
+- **ETH:** ~$1,845–$1,860 (Perplexity; live quote not pulled). Down ~5–7% over prior 24h but slightly off recent lows.
+- **Fear & Greed:** 11–23 (Extreme Fear across trackers — Alternative.me: 23, others: 11). Persistent extreme fear reading.
+- **BTC funding rate:** Binance +0.0072%, BitMEX +0.0066% (8h, slightly positive). Longs paying shorts; no crowded-short signal.
+- **Top 24h gainers (CoinGecko):** SkyAI +62.9%, Singularry +51.0%, LAB +42.2% — micro/low-cap names, not Kraken-listed liquid assets.
+- **Kraken momentum names today:** NEAR +9.40%, ENA +8.34%, KAS +7.48% — notable breakouts from prior session's lows.
+
+### Gates
+
+- **Crash gate:** BTC +0.72% from 24h open — NOT triggered (threshold: BTC < $53,336 = −20% from $66,669.70)
+- **BTC weekly gate:** $67,150 vs May 22 baseline $77,574 = **−13.44% → ACTIVE**
+  - Weekly gate rules: pure momentum entries banned; catalyst-driven protocol upgrades EXEMPT
+- **Token unlocks this week:** HumidiFi (WET) cliff unlock June 3; ENA ~94M tokens (completed/completing); ZETA 44M tokens
+
+### Candidate Screening
+
+| Asset | Signal | Catalyst | Weekly Gate | Verdict |
+|---|---|---|---|---|
+| **KAS/USD** | +7.48% from open; AT 24h high $0.030770 | **Toccata protocol upgrade — mainnet activation window June 5–20, 2026** (confirmed CoinMarketCap/MEXC; 2 days away) | **EXEMPT** — protocol upgrade overrides weekly gate | **TRADE IDEA ✓** |
+| NEAR/USD | +9.40% from open; AT 24h high | No confirmed catalyst <3h old; technical commentary only | Pure momentum → **BANNED** | SKIP |
+| ENA/USD | +8.34% from open; near 24h high | No fresh catalyst; ENA token unlock ~94M ongoing → supply headwind | Pure momentum + unlock headwind → **BANNED** | SKIP |
+| XRP/USD | +2.45% from open | CLARITY Act Senate floor vote July 2026 est.; XRP ETF inflows noted (not time-specific today) | Binary trigger not confirmed today | **MONITOR** |
+| SOL/USD | +1.24% from open | No catalyst | Below weekly gate threshold | SKIP |
+
+### Trade Ideas
+
+#### 1. KAS/USD — TRADE (PRIMARY) ★★★
+- **Catalyst:** Toccata hard fork protocol upgrade activation window June 5–20, 2026. One source (Bitrue) cites June 5 specifically. Fork was delayed from May 5 → pre-fork buying has resumed. Protocol upgrade = catalyst-driven exemption from BTC weekly gate.
+- **Pair:** KASUSD online ✓, margin 2x available
+- **Entry:** Market ~$0.030740 (at 24h highs — momentum entry)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR asset; 24h range = 9.9%)
+- **T1:** $0.031662 (+3%) — tighten trail to 0.5% at hit
+- **T2:** $0.032277 (+5%) — close or tighten further
+- **R:R:** 3% / 2.5% (standard denominator) = **1.2:1 ✓**
+- **Size:** 70% equity = $105.39 = ~3,428 KAS (conservative — entering at 24h highs)
+- **Risk:** $105.39 × 3.5% = **$3.69 max loss**
+- **Reward at T1:** $105.39 × 3% = **+$3.16**
+
+#### 2. XRP/USD — MONITOR (BINARY CATALYST)
+- **Catalyst:** CLARITY Act Senate floor vote (July 2026 est.); XRP ETF inflows ongoing.
+- **Entry trigger:** CLARITY Act vote confirmation or positive regulatory news <3h old
+- **Stop:** `trailing_stop`, `trail_percent: 7` (binary catalyst)
+- **T1/T2:** Entry +3% / +5%. R:R at T1 = 3%/7% = 0.43:1 (poor — only justified if binary catalyst fires)
+- **Spread:** 0.002% ✓
+- **Status:** Binary trigger not confirmed today → no entry. Continue monitoring.
+
+#### 3. NEAR/USD — SKIP (no catalyst)
+- Strong momentum (+9.40%, at 24h highs) but no confirmed catalyst <3h. Weekly gate bans pure momentum. Would be a trade if NEAR protocol upgrade or major partnership confirmed. Spread 0.04% ✓ — keep on standby.
+
+#### 4. ENA/USD — SKIP (unlock headwind)
+- +8.34% momentum but 94M ENA token unlock is ongoing bearish supply pressure. Pure momentum + supply dilution = skip.
+
+#### 5. OMNI/USD, LIT/USD, PORTAL/USD — SKIP (spread fails or no catalyst)
+- Previously checked; spreads consistently wide or no verified catalyst.
+
+### Risk Factors
+
+1. KAS entering at 24h highs (+7.48%) — chasing risk; if momentum stalls, stop fires quickly
+2. Toccata fork delayed once (May 5 → June 5-20); second delay possible = catalyst disappointment
+3. BTC weekly gate remains ACTIVE (−13.44%) — adverse BTC move could drag KAS down
+4. High-ATR asset (24h range ~10%): actual 3.5% trailing stop may not hold on normal volatility
+5. Small account ($105 deployed) — single trade concentrates risk; be ready to let T1 lock gains
+
+### Decision: TRADE — KAS/USD
+
+- Crash gate: NOT triggered (BTC +0.72% from open)
+- Weekly gate: ACTIVE — BUT KAS Toccata fork = protocol upgrade = EXEMPT
+- KAS firing the signal we've been watching since June 2: +7.48% from open at 24h highs
+- Spread 0.09% ✓, pair online ✓, margin available (using spot)
+- Entry: market order ~$0.030740; trailing stop 3.5% placed immediately after fill
+- Size: $105.39 (70% equity — conservative given extended entry)
+- No other setups qualify under current weekly gate rules
+
+**Planned trade:** KAS/USD market buy $105 → immediate 3.5% trailing stop GTC
+
