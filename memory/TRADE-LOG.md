@@ -3799,3 +3799,31 @@ No adjustments. ✓
 **Notes:** High-ATR asset (24h range ~9.4%) → 3.5% trailing stop per strategy exception (vs 2.5% default). BTC weekly gate ACTIVE (-13.44%) but protocol upgrade exemption fires. Entry at 24h highs — full catalyst-momentum alignment. ZUSD after fill: $44.6348 (from $150.5526). Alpaca: no positions, no active orders confirmed.
 
 **At T1 ($0.032239):** cancel trailing stop OPX7OP-RQ6FF-EVNTD4, replace with 0.5% trailing stop to lock gains and trail toward T2.
+
+---
+
+## 2026-06-03 — Midday Scan
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| KAS/USD | 3367 | $0.031300 | $0.031040 | **−0.83%** | 2.57% | OPX7OP-RQ6FF-EVNTD4 ($0.030300 trail 3.5%) ✓ |
+
+**Account:** ZUSD $44.6348 (residual cash) | KAS MV ~$104.54 | Total ~$149.17 | BTC weekly gate: −13.55% ACTIVE
+**BTC:** $67,080 (+0.61% from 24h open $66,669.70) | Crash gate: NOT triggered
+
+**STEP 3 — Trailing stops:** KAS trailing stop OPX7OP-RQ6FF-EVNTD4 confirmed open (status: open, stopprice $0.030300, trail 3.5%, 3367 KAS, GTC) ✓ HWM = $0.031390 (24h high at session open).
+
+**STEP 4 — Stop tightening:** KAS −0.83% from entry — far below +20% threshold. No adjustments.
+
+**STEP 5 — Thesis check:**
+- **KAS Toccata fork:** Toccata hard fork window June 5–20, 2026 (today is June 3). Fork has NOT activated yet — pre-fork positioning thesis INTACT. Perplexity confirms no adverse news, no exploit, no delay announcement. HOLD.
+
+**STEP 6 — New entry scan:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| ZEC/USD | Ask $615.98 (+1.04% from open); 24h high was $644.61 (now pulling back) | Emergency Orchard protocol security patch June 1–2 (1–2 days old, not <6h) | Catalyst too old; momentum reversed from highs | SKIP |
+| NEAR/USD | $2.834 (+7.89% from open) | No catalyst confirmed | Pure momentum → **BANNED** under weekly gate | SKIP |
+| XRP/USD | $1.239 (+2.35% from open) | CLARITY Act Senate floor vote not confirmed today | Binary trigger not fired | SKIP |
+| BTC/USD | $67,080 (+0.61%) | No catalyst | Weekly gate −13.55% ACTIVE; no signal | SKIP |
+
+**Result: NO-OP. No trades. No notification sent.**
