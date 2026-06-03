@@ -3827,3 +3827,35 @@ No adjustments. ✓
 | BTC/USD | $67,080 (+0.61%) | No catalyst | Weekly gate −13.55% ACTIVE; no signal | SKIP |
 
 **Result: NO-OP. No trades. No notification sent.**
+
+---
+
+## 2026-06-03 — Session-Open Scan (Afternoon)
+
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| KAS/USD | 3367 | $0.031300 | $0.030720 | **−1.85%** | ⚠️ **1.37% — CRITICAL** | OPX7OP-RQ6FF-EVNTD4 (trail 3.5%, stop $0.030300) ✓ |
+
+**Account:** ZUSD $44.6348 | KAS MV ~$103.45 | Total ~$148.09
+**BTC:** $66,930 (+0.39% from 24h open $66,669.70) | Crash gate: NOT triggered | Weekly gate: −13.73% ACTIVE
+**Fear & Greed:** 23 (Extreme Fear) | BTC funding: ~neutral/mildly positive (~0.003%)
+**Alpaca:** No positions, no active orders ✓
+
+**Candidate Screening:**
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| ETH/USD | +0.99% from open | No catalyst | Below 3% threshold | SKIP |
+| SOL/USD | +1.21% from open | No catalyst | Below 3% threshold | SKIP |
+| XRP/USD | +2.03% from open | CLARITY Act Senate floor vote pending (July 2026 est.) | Binary trigger not confirmed | MONITOR |
+| XLM/USD | +2.27% from open | DTCC tokenization announcement — **7 days old (May 27)** | Catalyst >6h old → hard skip | SKIP |
+| PORTAL/USD | −4.84% from open | No catalyst; spread 0.80% | Falling from open, no catalyst | SKIP |
+| KAS/USD | −1.85% from entry | Toccata hard fork June 5–20 INTACT | Already positioned; stop buffer CRITICAL | HOLD |
+
+**KAS position assessment:**
+- Stop $0.030300 (HWM $0.031390 × 96.5%). Buffer 1.37% critically thin.
+- Thesis intact: Toccata protocol hard fork activation window opens June 5 (2 days away).
+- No adverse news (no fork delay/cancellation, no exploit).
+- Stop working as designed — if $0.030300 breached, position closes with ~−3.2% loss.
+- DO NOT adjust stop down. Let trailing stop work.
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE (−13.73%); no fresh catalysts <6h for any asset. KAS stop protecting existing position. XRP binary trigger not confirmed. No notification sent.
