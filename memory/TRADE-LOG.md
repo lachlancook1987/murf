@@ -3912,3 +3912,35 @@ No adjustments. ✓
 4. **ONDO/USD** — Ondo Perps launch June 9; if fresh news <6h arrives on/after June 9, re-evaluate.
 
 **WhatsApp notification sent: KAS T1 hit, stop tightened 3.5%→0.5%.**
+
+---
+
+## 2026-06-03 — Session-Open Trade (morning session)
+
+### KAS/USD — Re-entry | Toccata Fork Pre-Positioning
+
+**Context:** Prior KAS position (3367 KAS, entry $0.031300) was stopped out at ~$0.032348 (0.5% trailing stop O4TQJ3-WTCJ5-FTIOCB triggered after T1 was hit). KAS subsequently dipped to $0.028000 (24h low) before recovering. Toccata hard fork window opens June 5 (TOMORROW) — thesis INTACT.
+
+**Pre-trade hard-check:**
+| Check | Result |
+|---|---|
+| Crash gate (BTC -20% / 24h) | BTC -2.65% ($66,670→$64,905) — NOT triggered ✓ |
+| BTC weekly gate | ACTIVE (-14.4% vs May 27 $75,824) — BUT: protocol upgrade exception applies ✓ |
+| Pair online | KAS/USD confirmed online ✓ |
+| Spread | 0.095% ($0.031820/$0.031840) ✓ |
+| Catalyst <6h | Toccata fork window opens June 5 (tomorrow) — ongoing protocol upgrade ✓ |
+| 24h momentum | +10.84% ($0.028600→$0.031700) ✓ |
+| R:R | 3% T1 / 2.5% stop risk = 1.2:1 ✓ |
+
+### 2026-06-03T~UTC | KAS/USD | BUY | 4730 KAS | Entry: $0.032022 | Stop: 3.5% trailing | Open
+
+**Order ID (buy):** O3AIQI-WYS2G-KEO3FA
+**Trailing Stop Order ID:** OKGTE3-W5ESJ-T4YY3D (trailing_stop -3.5%, stopprice $0.030740, GTC)
+**Notional:** ~$151.46 (99% equity — full conviction, Toccata fork opens tomorrow)
+**ZUSD remaining:** $1.7457
+**T1:** $0.032983 (+3.0%) | **T2:** $0.033623 (+5.0%)
+**Stop level:** $0.030740 (3.5% trailing from HWM $0.031855 at stop placement; high-ATR asset)
+**R:R:** 1.2:1 (3% T1 gain / 2.5% reference stop risk)
+**Thesis:** Kaspa Toccata hard fork window opens June 5–20, 2026 (tomorrow). Protocol upgrade adds UTXO commitments, parallelism improvements, and prepares for Kaspa 2.0. KAS up +10.84% today on pre-fork momentum. Fear & Greed 11 (Extreme Fear) — contrarian timing. Previous position stopped at T1+, validating the thesis; re-entry at similar price level with fork 24h away.
+**Stop rationale:** 3.5% trailing (high-ATR asset — today's range: $0.028000–$0.032670 = 16.7% range; noise-stop protection). Stop trails up as HWM advances.
+**Notes:** Weekly gate ACTIVE but protocol upgrade entries explicitly exempt per TRADING-STRATEGY.md. ZEC (+16%) catalyst (SEC probe closure May 19) was 14 days old — skipped. WLD (+36%) parabolic derivatives squeeze — skipped. BCH down -10% from open — skipped. At T1 (+3%): cancel 3.5% stop, replace with 0.5% trailing to lock gains. Binary-catalyst scenario (fork activation confirmed): widen to 7% trail only if volatility spike warrants.

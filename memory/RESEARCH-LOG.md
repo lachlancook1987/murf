@@ -10894,3 +10894,73 @@ KAS P&L +1.69% from entry $0.031300 — far below +20% threshold. No tightening.
 3. **NEAR/USD** — No entry until confirmed resharding activation date announced with fresh news <6h
 4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+16%) to reopen full momentum universe
 
+---
+
+## 2026-06-03 — Session-Open Research (morning)
+
+### Account Snapshot
+| Field | Value |
+|---|---|
+| ZUSD (cash) | $153.2049 (pre-trade) → $1.7457 (post-trade) |
+| KAS balance | 4730 KAS (new position) |
+| Open Positions | 1 — KAS/USD |
+| Open Orders | 1 — OKGTE3-W5ESJ-T4YY3D (3.5% trailing stop, KAS/USD) |
+| Alpaca | No positions, no active orders ✓ |
+
+### Market Context
+| Asset/Indicator | Value | Note |
+|---|---|---|
+| BTC price (Kraken) | $64,905 | Bid/ask $64,904.90/$64,905.00 |
+| BTC 24h open | $66,669.70 | 24h change: **-2.65%** — crash gate NOT triggered |
+| BTC 5-day change | -14.4% ($75,824 May 27 → $64,905) | Weekly gate ACTIVE |
+| ETH price | ~$1,860 | -5% in 24h |
+| KAS price | $0.031700–$0.031850 | +10.84% from 24h open $0.028600 |
+| Fear & Greed | 11 (Extreme Fear) | Down from 23 yesterday |
+| BTC Funding rate | ~neutral/mildly positive | Binance +0.01%, BitMEX -0.007% |
+
+### Regime Assessment
+- **Crash gate:** BTC -2.65% in 24h → NOT triggered ✓
+- **BTC weekly gate:** BTC down -14.4% vs May 27 → **ACTIVE**
+  - Pure momentum entries: BANNED
+  - Protocol upgrade / regulatory / listing catalysts: OPEN regardless
+  - Standard entries: require 1h momentum >5% AND catalyst <3h old
+- **Active strategy:** Kraken day trading, Toccata fork pre-positioning
+
+### Pre-Session Perplexity Research Summary
+| Query | Finding |
+|---|---|
+| BTC price + 24h | ~$64,905–$66,351 (sources vary); 24h ~-2.65% |
+| ETH price + 24h | ~$1,860; -5% in 24h — weak |
+| 1h surge leaders | WLD +36% 24h, ZEC +16% 24h, NEAR +14.25% 24h |
+| 24h gainers | ZEC +16.15%, ONDO +11.76%, BCH +9.57%, QNT +9.63%, NEAR +14.25% |
+| Fear & Greed | 11 (Extreme Fear) — down from 23 yesterday |
+| BTC funding | Neutral/mildly positive |
+| Market catalysts | Broad selloff, institutional outflows; ZEC/SEC closure, WLD viral, KAS Toccata fork tomorrow |
+| Token unlocks today | WET (HumidiFi) 19.25% supply cliff unlock June 3 — AVOID |
+| Kraken alts momentum | OMNI +174%, MAT +66%, DOLO +53% (new Kraken listings); ONDO +10.33%, NEAR +5.79% |
+| Volume surge | HYPE, NEAR, ONDO high volume; 4h data not directly available |
+| Best day setups | KAS Toccata fork (tomorrow); ZEC multi-catalyst (SEC/Grayscale/institutional) |
+| KAS news | Up +5–9.6%; Toccata fork still on track June 5–20; no adverse news |
+
+### Candidate Screening
+| Asset | 24h Move | Kraken Quote | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| **KAS/USD** | +10.84% | $0.031700/$0.031840 | 0.095% ✓ | Toccata protocol upgrade June 5 (tomorrow) | **Protocol upgrade → exempt** | **TRADE ✓** |
+| ZEC/USD | +2.37% from open (but +16% 24h per external) | $623.62/$624.72 | 0.176% ✓ | SEC probe closure May 19-20 (14 days old) | Catalyst too old (<6h rule) + pulling back from high | **SKIP** |
+| WLD/USD | +36.3% from open | $0.5183/$0.5187 | 0.077% ✓ | World ID / Thirty Seconds to Mars viral; derivatives squeeze | Parabolic, overextended; speculative squeeze not fundamental | **SKIP** |
+| BCH/USD | -10.1% from open | $242.44/$242.58 | 0.058% ✓ | None; was up 12% intraday but now reversing | Momentum reversed — falling from open | **SKIP** |
+| NEAR/USD | +14.25% 24h | — | — | Dynamic resharding June 2026 (no activation date) | Momentum only (banned); resharding date not confirmed <6h | **SKIP** |
+| ONDO/USD | +11.76% 24h | — | — | Perps launch June 9 (>24h old announcement) | Catalyst too old | **SKIP** |
+| BTC/USD | -2.65% 24h | $64,905 | — | None | Weekly gate active; no catalyst | **SKIP** |
+
+### Trade Executed
+- **KAS/USD BUY** 4730 KAS @ ~$0.032022 | Order O3AIQI-WYS2G-KEO3FA
+- **KAS/USD trailing stop** 3.5% GTC | Order OKGTE3-W5ESJ-T4YY3D | Stop $0.030740
+
+**Active Watchlist:**
+1. **KAS/USD** — OPEN; 3.5% trailing stop OKGTE3-W5ESJ-T4YY3D ($0.030740); T1 $0.032983, T2 $0.033623; Toccata fork opens June 5
+2. **ZEC/USD** — Triple catalyst intact; re-evaluate when price confirms intraday bid (>$630 with momentum)
+3. **XRP/USD** — Binary trigger (CLARITY Act Senate vote July 2026 est.); 7% trail on confirmed vote
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+5. **BTC weekly gate reset** — BTC must reclaim ~$77,574 to reopen full momentum universe
+
