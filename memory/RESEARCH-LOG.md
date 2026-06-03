@@ -10776,3 +10776,39 @@ _Note: Perplexity returned BTC ~$71,492 (stale/delayed data). Kraken live quote 
 
 **Planned trade:** KAS/USD market buy $105 → immediate 3.5% trailing stop GTC
 
+---
+
+## 2026-06-03 — Midday Scan (2nd)
+
+**Account:** ZUSD $44.6348 | KAS 3367 @ MV ~$107.18 ($0.031830) | Total ~$151.81
+**BTC:** ~$66,980 (+0.47% from 24h open $66,669.70) | Crash gate: NOT triggered | Weekly gate: −13.7% ACTIVE
+
+### STEP 3 — Trailing Stops
+| Symbol | Order ID | Type | Stop Price | Trail% | HWM | Buffer | Status |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | OPX7OP-RQ6FF-EVNTD4 | trailing_stop | $0.030910 | 3.5% | $0.032030 | 2.89% | ✓ OPEN |
+
+HWM $0.032030 = 24h high. Stop trailing correctly upward from morning session.
+
+### STEP 4 — Stop Tightening
+KAS P&L +1.69% from entry $0.031300 — far below +20% threshold. No tightening. T1 ($0.032239) not yet reached.
+
+### STEP 5 — Thesis Check
+- **KAS/USD:** Toccata hard fork activation window June 5–20, 2026. Fork opens TOMORROW. No adverse news (no delay, no exploit, no regulatory action). Resistance band $0.032–$0.036 per analysis; price $0.031830 approaching but not yet through. Thesis INTACT → HOLD.
+
+### STEP 6 — New Entry Scan
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| INJ/USD | +4.10% from 24h open ($6.582→$6.852); spread 0.146% ✓ | Community Buyback June 3 (today) — largest to date, ~$315K supply burn | Fresh catalyst <6h ✓ BUT Bithumb suspension June 4 (tomorrow) headwind; pre-event run-up likely complete (−1.67% off 24h high $6.969) | **SKIP** — headwind imminent; tiny available capital $44.63 |
+| BTC/USD | +0.47% from open | No catalyst | Below 3% threshold | SKIP |
+| XRP/USD | ~+1.5% from open | CLARITY Act Senate floor vote pending (July est.) | Binary trigger not confirmed | MONITOR |
+
+**Available ZUSD:** $44.6348 only — insufficient for a meaningful new position without using all free cash.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+**Watchlist (unchanged):**
+1. **KAS/USD** — Toccata fork window opens June 5. Trailing stop protecting at $0.030910. T1 = $0.032239 (+1.28% from current). At T1: cancel OPX7OP-RQ6FF-EVNTD4, replace with 0.5% trailing stop.
+2. **XRP/USD** — CLARITY Act binary trigger. Monitor.
+3. **INJ/USD** — Buyback catalyst used today. Bithumb suspension June 4 creates headwind. Re-evaluate June 5+ if suspension impact clears.
+
