@@ -3745,3 +3745,25 @@ No adjustments. ✓
 24h range: $66,155 low / $71,464.90 high. BTC weekly gate still ACTIVE (−14.7% vs May 22 $77,574 baseline).
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-03 — Overnight Triage Check
+
+**Kraken positions:** None — 100% ZUSD (verified `kraken.sh positions` → `{}`)
+**Kraken orders:** None (verified `kraken.sh orders` → `{"open":{}}`)
+**Alpaca:** No positions, no active orders (stop a2b44cf9 canceled 2026-05-22 — confirmed)
+
+**Step 2 — Trailing stops:** N/A — no open positions
+**Step 3 — Emergency exits:** N/A — no open positions
+**Step 4 — Stop tightening:** N/A — no open positions
+
+**Step 5 — Crash gate:** BTC 24h open $66,669.70 → current $66,540 (last $66,539.50) = **−0.19%** — crash gate NOT triggered (threshold: BTC < $53,336 = −20% from 24h open)
+24h range: $66,384.80 low / $67,083.30 high. BTC weekly gate still ACTIVE (−14.2% vs May 22 $77,574 baseline).
+
+**Active Watchlist:**
+1. **KAS/USD** ⬆️⬆️⬆️ CRITICAL — Toccata hard fork activation window June 5–20. If KAS 1h >3% on June 5+ → catalyst-driven exemption fires.
+2. **XRP/USD** — CLARITY Act Senate floor vote confirmed → binary catalyst entry, 7% trailing stop.
+3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+16.6% from $66,540) to reopen full momentum universe.
+
+**Result: NO-OP. No actions taken. No notification sent.**
