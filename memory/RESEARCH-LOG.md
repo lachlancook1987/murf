@@ -10964,3 +10964,53 @@ KAS P&L +1.69% from entry $0.031300 — far below +20% threshold. No tightening.
 4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
 5. **BTC weekly gate reset** — BTC must reclaim ~$77,574 to reopen full momentum universe
 
+---
+
+## 2026-06-03 — Midday Scan (3rd)
+
+**Account:** ZUSD $1.7457 | KAS 4730 @ $0.032800 MV ~$155.14 | Total ~$156.89
+**BTC:** $65,524 (−1.72% from open $66,669.70) | Crash gate: NOT triggered | Weekly gate: −13.6% ACTIVE
+
+### KAS/USD Position Review
+
+**KAS/USD — OPEN** | 4730 KAS | Entry $0.032022 | Current $0.032800 | P&L **+2.43%** (+$3.68)
+
+| Parameter | Value |
+|---|---|
+| Entry | $0.032022 |
+| Current ask | $0.032800 |
+| HWM | $0.032830 (24h high) |
+| Trailing stop | OKGTE3-W5ESJ-T4YY3D (3.5%, stopprice $0.031690) |
+| Buffer | 3.38% ($0.032800 → $0.031690) ✓ |
+| T1 | $0.032983 (+3%) — **0.56% away** |
+| T2 | $0.033623 (+5%) |
+| Fork opens | **TOMORROW — June 5, 2026** |
+
+**Stop check:** OKGTE3-W5ESJ-T4YY3D OPEN and active ✓. Stop has trailed up from $0.030740 (placement) → $0.031690 (current) as HWM advanced to $0.032830. No missing stop.
+
+**Stop tightening (STEP 4):** P&L +2.43% — below +20% threshold. No tightening action.
+
+**Thesis check (STEP 5):** Toccata hard fork window June 5–20 INTACT. No delay, no exploit, no adverse news. Activation countdown continues. Thesis NOT broken.
+
+### Candidate Screening (new entries)
+
+BTC weekly gate ACTIVE (−13.6%). All new entries require catalyst <6h old. ZUSD $1.7457 (insufficient for meaningful new position in any case).
+
+| Asset | Move | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| WLD/USD | +42.9% from open ($0.3808→$0.5441) | 0.055% ✓ | World ID fan-verification (Thirty Seconds to Mars); derivatives/short squeeze; technicals. Catalyst is ecosystem narrative — no confirmed fresh announcement <6h today | Pure momentum + stale catalyst → **BANNED** | **SKIP** |
+| OPIN/USD | +96% | unknown | No confirmed catalyst sourced | Pure pump → **BANNED** | **SKIP** |
+| TREMP/USD | +37% | unknown | Meme coin, no catalyst | No signal | **SKIP** |
+| XLM/USD | — | — | DTCC tokenization (days old; surfaced May 27) | Catalyst >6h old | **SKIP** |
+| All others | — | — | No fresh catalysts | — | **SKIP** |
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE; no qualifying fresh (<6h) catalysts for any candidate; only $1.75 ZUSD free regardless.
+
+No notification sent (no action taken).
+
+### Active Watchlist
+1. **KAS/USD** — OPEN; stop OKGTE3-W5ESJ-T4YY3D (3.5% trail, $0.031690); T1 $0.032983 (+0.56% away); T2 $0.033623; Toccata fork opens TOMORROW (June 5)
+2. **XRP/USD** — CLARITY Act binary trigger pending (July 2026 est.); 7% trail on confirmed vote
+3. **ONDO/USD** — Perps launch June 9; re-evaluate with fresh <6h catalyst on/after June 9
+4. **BTC weekly gate reset** — BTC must reclaim ~$77,574 (+18.4% from $65,524) to reopen full momentum universe
+
