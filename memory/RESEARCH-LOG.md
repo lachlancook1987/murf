@@ -10812,3 +10812,85 @@ KAS P&L +1.69% from entry $0.031300 — far below +20% threshold. No tightening.
 2. **XRP/USD** — CLARITY Act binary trigger. Monitor.
 3. **INJ/USD** — Buyback catalyst used today. Bithumb suspension June 4 creates headwind. Re-evaluate June 5+ if suspension impact clears.
 
+
+---
+
+## 2026-06-03 — Pre-Session Research (Session Open)
+
+### Account Snapshot
+
+**Kraken:** ZUSD $153.2049 | No open positions | No open orders
+**Alpaca:** No positions, no open orders ✓ (BTC residual fully closed)
+
+**KAS trade closed since last session-open entry:**
+- Entry: $0.031300 × 3,367 KAS = $105.37 invested
+- Close: ~$0.032397 (0.5% trailing stop fired after T1 hit)
+- Proceeds: ~$108.57 → net profit ~+$3.20 (+3.04%) ✓
+- Toccata fork thesis played out to T1; stop locked gains correctly
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $66,906 | −6.41% | Institutional outflows, forced deleveraging, macro headwinds |
+| ETH | ~$1,820–$1,850 | −5.0–5.6% | Broad selloff |
+| ZEC | $600.69 | ~flat vs 24h open ($609.53) | Pulled back from $644.61 intraday high |
+| NEAR | $2.82850 | +7.7% from 24h open $2.62580 | Resharding narrative only |
+| ONDO | ~$1.30 area | +11–17% | June 9 perps launch anticipation |
+
+- **BTC weekly gate:** ACTIVE — BTC $66,906 vs May 22 close $77,574 = **−13.7%** (gate requires catalyst-driven entries only)
+- **Crash gate:** NOT triggered (BTC −6.41%, threshold >20%)
+- **Fear & Greed:** 11 — Extreme Fear
+- **BTC funding rate:** Near-neutral — Binance +0.010% (8h), BitMEX −0.007% (8h); no extreme longs/shorts squeeze signal
+- **Token unlocks today (June 3):** HumidiFi (WET) cliff unlock ~19.25% total supply — supply headwind for WET
+- **Upcoming:** Rain (RAIN) June 10 $713.59M unlock; SPK June 17 $61M unlock
+
+### ZEC Catalyst Summary (primary watchlist)
+1. **SEC closed investigation** into Zcash Foundation without enforcement action — regulatory relief
+2. **Grayscale spot Zcash ETF filing** — institutional narrative activated
+3. **Emergency Orchard shielded-pool fix deployed June 2** — security patch, no exploitation found
+4. Multi-catalyst breakout drove ZEC from ~$540 to $644.61 intraday high
+5. **Now at $600.69** — pulled back 7% from high, -1.44% vs 24h open; momentum reversed
+
+### Candidate Screening
+
+| Asset | Signal | Catalyst | Weekly Gate | Spread | Verdict |
+|---|---|---|---|---|---|
+| **ZEC/USD** | 24h high $644.61; now $600.69 (−7% off high, −1.44% vs open) | SEC investigation closed ✓, Grayscale ETF filing ✓, Orchard fix June 2 ✓ | **EXEMPT** (regulatory event) | 0.063% ✓ | **WATCHLIST** — catalysts intact, intraday momentum reversed; no entry until positive 1-4h momentum re-establishes |
+| NEAR/USD | +7.7% from open; high $3.08, now $2.83 (−8% off high) | Resharding narrative — no confirmed activation date today | Pure momentum — BANNED weekly gate | 0.057% ✓ | SKIP |
+| ONDO/USD | +11–17% 24h | June 9 Ondo Perps launch — announced >24h ago | Catalyst >24h old → pre-event drift only | Low ✓ | SKIP |
+| PORTAL/USD | +30.4% 24h | No catalyst — thin-market liquidity spike, volume FALLING | No catalyst | 0.54% ✓ | SKIP |
+| NEAR, ENA, SUI | Various | Token unlock headwinds (SUI June 1, ENA June 2) | N/A | N/A | SKIP |
+
+### Trade Ideas
+
+#### ZEC/USD — WATCHLIST (no entry today, but setup monitoring)
+- **Catalysts:** Triple catalyst — SEC investigation closed (regulatory win), Grayscale ETF filing, Orchard security fix. All fresh and structural. Exempt from BTC weekly gate.
+- **Problem:** Intraday momentum has reversed. ZEC made its big move (>15%) and is now pulling back from $644 high to $600. Core strategy requires price up >3% in 1-4h for entry — that condition is NOT currently met.
+- **Entry trigger:** ZEC establishes base at/above $588 support and breaks $610 (today's 24h open) on increasing volume; OR next session shows renewed upside momentum with volume confirmation
+- **Stop (when entered):** `trailing_stop`, `trail_percent: 2.5` (ZEC is high-ATR — consider 3.5% given intraday range ~9%)
+- **T1:** entry +3% | **T2:** entry +5%
+- **Next resistance:** $640–$660 (from analyst commentary)
+- **Support:** $510–$542 / $580–$590
+
+### Risk Factors
+
+1. BTC macro weakness (-6.41% today) drags entire market — entering any alt into a falling BTC is high-risk
+2. ZEC catalysts may be already priced in at $644 high — pullback could extend to $540-$560 range
+3. Extreme Fear (11) — market-wide risk-off; bounces tend to be weak and short
+4. BTC weekly gate active — only catalyst-driven entries open; catalog of valid setups is thin
+5. WET cliff unlock today adds sector supply headwind
+
+### Decision: NO NEW TRADES
+
+- Crash gate: NOT triggered
+- BTC weekly gate: ACTIVE (-13.7%)
+- ZEC: Strong catalysts (regulatory/ETF/protocol) — EXEMPT from weekly gate — BUT intraday momentum has REVERSED (-7% from $644 high). Core entry rule (positive 1-4h momentum) not met. Adding to watchlist; re-evaluate next session or if intraday rebound emerges.
+- All other screened assets: either no catalyst, stale catalyst (>24h), pure momentum (banned), or thin liquidity
+
+**Watchlist for next scan:**
+1. **ZEC/USD** — Triple catalyst intact; monitor $588–$610 support/base; entry on break above $610 with volume
+2. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed vote
+3. **NEAR/USD** — No entry until confirmed resharding activation date announced with fresh news <6h
+4. **BTC weekly gate reset** — BTC must reclaim $77,574 (+16%) to reopen full momentum universe
+
