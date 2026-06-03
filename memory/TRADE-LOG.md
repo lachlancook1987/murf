@@ -3767,3 +3767,18 @@ No adjustments. ✓
 3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+16.6% from $66,540) to reopen full momentum universe.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-03 — EOD Snapshot (Day 14, Wednesday)
+
+### Jun 03 — EOD Snapshot (Day 14, Wednesday)
+**Portfolio:** $150.55 | **Cash:** $150.55 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** -$29.23 (-16.26%) | **vs BTC:** -0.46%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~49
+
+**Notes:** Flat no-trade Wednesday. Portfolio 100% ZUSD $150.5526, unchanged. No positions, no open orders. BTC rose +0.46% intraday (24h open $66,669.70 → EOD $66,975; range $65,379.80–$67,420), so cash underperformed BTC by -0.46% today. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. No June 2 EOD snapshot was generated (triage-only day, equity unchanged). BTC weekly gate ACTIVE at -13.7% vs May 22 $77,574 baseline. Crash gate NOT triggered. Key watch: KAS Toccata hard fork window opens June 5; XRP CLARITY Act binary trigger pending. Plan for Thursday: monitor KAS for 1h >3% surge on/after June 5; watch for any fresh <6h catalyst across full Kraken universe; require R:R ≥1.2:1.
