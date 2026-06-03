@@ -3944,3 +3944,31 @@ No adjustments. ✓
 **Thesis:** Kaspa Toccata hard fork window opens June 5–20, 2026 (tomorrow). Protocol upgrade adds UTXO commitments, parallelism improvements, and prepares for Kaspa 2.0. KAS up +10.84% today on pre-fork momentum. Fear & Greed 11 (Extreme Fear) — contrarian timing. Previous position stopped at T1+, validating the thesis; re-entry at similar price level with fork 24h away.
 **Stop rationale:** 3.5% trailing (high-ATR asset — today's range: $0.028000–$0.032670 = 16.7% range; noise-stop protection). Stop trails up as HWM advances.
 **Notes:** Weekly gate ACTIVE but protocol upgrade entries explicitly exempt per TRADING-STRATEGY.md. ZEC (+16%) catalyst (SEC probe closure May 19) was 14 days old — skipped. WLD (+36%) parabolic derivatives squeeze — skipped. BCH down -10% from open — skipped. At T1 (+3%): cancel 3.5% stop, replace with 0.5% trailing to lock gains. Binary-catalyst scenario (fork activation confirmed): widen to 7% trail only if volatility spike warrants.
+
+---
+
+## 2026-06-03 — Overnight Triage Check
+
+**Positions (Kraken):**
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| KAS/USD | 4730 | $0.032022 | $0.032130 | **+0.34%** | $0.032900 | $0.031750 (trail 3.5%) | 1.18% ⚠️ | OKGTE3-W5ESJ-T4YY3D ✓ |
+
+**Alpaca:** Stop a2b44cf9 CANCELLED since 2026-05-22 — no Alpaca positions or orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- KAS/USD: OKGTE3-W5ESJ-T4YY3D, 4730 KAS, trail 3.5%, HWM $0.032900 (today's high), stop $0.031750 — ✓
+- No unprotected Kraken positions.
+
+**STEP 3 — Emergency exits (>-20% AND stop not triggered):** KAS +0.34% from entry — not applicable.
+
+**STEP 4 — Stop tightening (≥+20% since entry):** KAS +0.34% — well below threshold. No adjustments. 3.5% trail is appropriate for this high-ATR asset (today's range: $0.028000–$0.032900 = 17.5%).
+
+**STEP 5 — BTC Crash Gate:**
+- BTC ask: $64,604 | 24h open: $66,669.70 | Move: **-3.1%**
+- Threshold: -20% | Gate: **NOT triggered** ✓
+- 24h range: $64,564.90 – $67,420.00
+
+**Notes:** KAS trailing stop buffer 1.18% — thin but expected given today's strong run to $0.032900 HWM. Stop is correctly trailing the HWM. Price is $0.032130 with T1 at $0.032983 (+2.6% away) and Toccata hard fork window opening June 5 (tomorrow). Thesis intact. BTC down -3.1% (normal drawdown, not a crash event). No Alpaca exposure.
+
+**Result: NO-OP. No actions taken. No notification sent.**
