@@ -3859,3 +3859,14 @@ No adjustments. ✓
 - DO NOT adjust stop down. Let trailing stop work.
 
 **Decision: NO NEW TRADES.** BTC weekly gate ACTIVE (−13.73%); no fresh catalysts <6h for any asset. KAS stop protecting existing position. XRP binary trigger not confirmed. No notification sent.
+
+---
+
+## 2026-06-03 — Midday Scan (2nd) Position Update
+
+**KAS/USD — OPEN** | 3367 KAS | Entry $0.031300 | Current $0.031830 | P&L **+1.69%** (+$1.78)
+- Trailing stop OPX7OP-RQ6FF-EVNTD4: stopprice $0.030910, trail 3.5%, HWM $0.032030, 2.89% buffer ✓
+- Stop has trailed UP from $0.030300 (afternoon) → $0.030910 (midday) — HWM reset to 24h high $0.032030
+- T1 ($0.032239): 1.28% away — not yet triggered
+- Toccata fork opens tomorrow (June 5). Thesis intact.
+- No actions taken. No notification sent.
