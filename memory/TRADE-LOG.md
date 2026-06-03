@@ -3870,3 +3870,45 @@ No adjustments. ✓
 - T1 ($0.032239): 1.28% away — not yet triggered
 - Toccata fork opens tomorrow (June 5). Thesis intact.
 - No actions taken. No notification sent.
+
+---
+
+## 2026-06-03 — Session-Open Scan (latest)
+
+### KAS/USD — T1 HIT → Stop Tightened to 0.5%
+
+**KAS/USD — OPEN** | 3367 KAS | Entry $0.031300 | Current $0.032545 | P&L **+3.98%** (+$4.21)
+
+**T1 ACTION TRIGGERED:** KAS crossed T1 ($0.032239). Per strategy, cancelled 3.5% trailing stop and replaced with 0.5% trailing stop to lock gains and trail toward T2.
+
+| Action | Detail |
+|---|---|
+| Cancelled stop | OPX7OP-RQ6FF-EVNTD4 (trailing 3.5%, stop $0.031490) |
+| New stop placed | O4TQJ3-WTCJ5-FTIOCB (trailing 0.5%, stop $0.032510, GTC) |
+| HWM at placement | $0.032560 (ask) |
+| Stop level | $0.032510 (0.5% below HWM) |
+| T2 target | $0.032865 (+5%) — 0.98% away |
+
+**BTC Regime:** $66,719 | 24h open $66,669.70 → +0.07% — crash gate NOT triggered | Weekly gate ACTIVE (−14.0% vs May 22 $77,574)
+
+**Candidate Screening (new entries):**
+| Asset | 24h Move | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| ONDO/USD | +9.9% | 0.063% ✓ | Ondo Perps launch June 9 (announced June 2 — >24h old) | Catalyst too old for <6h rule | **SKIP** |
+| NEAR/USD | +14.25% | 0.133% ✓ | Golden cross only — no confirmed fresh catalyst | Pure momentum, BANNED under weekly gate | **SKIP** |
+| PORTAL/USD | −7.1% from open | 0.54% ✓ | None — falling from open | No signal | **SKIP** |
+| XRP/USD | −2% 24h | ✓ | CLARITY Act Senate vote July 2026 est., not fired | Binary trigger not confirmed | **SKIP** |
+| ETH/USD | −0.4% from open | ✓ | None | No signal | **SKIP** |
+| SOL/USD | −0.1% from open | ✓ | None | No signal | **SKIP** |
+
+**Fear & Greed:** 11 (Extreme Fear) | **ZUSD:** $44.6348 | **KAS MV:** ~$109.60 | **Total equity:** ~$154.23
+
+**Decision: NO NEW TRADES.** BTC weekly gate ACTIVE (−14.0%); no fresh (<6h) catalysts for any screened asset; NEAR momentum-only (banned); ONDO catalyst >24h old.
+
+**Active Watchlist:**
+1. **KAS/USD** — OPEN; T1 hit; 0.5% trailing stop O4TQJ3-WTCJ5-FTIOCB active; T2 $0.032865 (+5%) 0.98% away. Toccata fork window opens June 5.
+2. **XRP/USD** — binary trigger (CLARITY Act Senate vote) pending; 7% trail on confirmed vote.
+3. **BTC weekly gate reset** — BTC must reclaim $77,574 (+16.2%) to reopen full momentum universe.
+4. **ONDO/USD** — Ondo Perps launch June 9; if fresh news <6h arrives on/after June 9, re-evaluate.
+
+**WhatsApp notification sent: KAS T1 hit, stop tightened 3.5%→0.5%.**
