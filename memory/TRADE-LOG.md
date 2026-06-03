@@ -3782,3 +3782,20 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~49
 
 **Notes:** Flat no-trade Wednesday. Portfolio 100% ZUSD $150.5526, unchanged. No positions, no open orders. BTC rose +0.46% intraday (24h open $66,669.70 → EOD $66,975; range $65,379.80–$67,420), so cash underperformed BTC by -0.46% today. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — no Alpaca residual. Phase P&L unchanged at -$29.23 (-16.26%) from Kraken starting equity $179.78. No June 2 EOD snapshot was generated (triage-only day, equity unchanged). BTC weekly gate ACTIVE at -13.7% vs May 22 $77,574 baseline. Crash gate NOT triggered. Key watch: KAS Toccata hard fork window opens June 5; XRP CLARITY Act binary trigger pending. Plan for Thursday: monitor KAS for 1h >3% surge on/after June 5; watch for any fresh <6h catalyst across full Kraken universe; require R:R ≥1.2:1.
+
+---
+
+## 2026-06-03 — Session-Open Trade (Thursday morning)
+
+### 2026-06-03T09:05:00Z | KAS/USD | BUY | 3367 KAS | Entry: ~$0.031300 | Stop: trailing 3.5% (OPX7OP-RQ6FF-EVNTD4) | Open
+
+**Order ID (buy):** OPU6QW-CEMVR-MAJUIK
+**Stop Order ID:** OPX7OP-RQ6FF-EVNTD4 (trailing_stop: trail_percent 3.5%, covers 3367 KAS, GTC; current stop level $0.030200 — trails upward)
+**Notional:** $105.39 (70.0% equity $150.5526)
+**Target:** T1 $0.032239 (+3%), T2 $0.032865 (+5%)
+**Stop level:** trailing 3.5% below high watermark; initial stop $0.030200 (-3.5% from ~$0.031300 entry)
+**R:R:** 1.2:1 at T1 (3% target / 2.5% standard denominator per strategy)
+**Thesis:** KAS Toccata protocol hard fork activation window June 5–20, 2026. One source (Bitrue) cites June 5 specifically. Protocol upgrade = catalyst-driven exemption from BTC weekly gate. KAS at +9.44% from 24h open at session high — pre-fork momentum accelerating. Spread 0.128% ✓. BTC crash gate NOT triggered (BTC +0.39% from 24h open $66,669.70).
+**Notes:** High-ATR asset (24h range ~9.4%) → 3.5% trailing stop per strategy exception (vs 2.5% default). BTC weekly gate ACTIVE (-13.44%) but protocol upgrade exemption fires. Entry at 24h highs — full catalyst-momentum alignment. ZUSD after fill: $44.6348 (from $150.5526). Alpaca: no positions, no active orders confirmed.
+
+**At T1 ($0.032239):** cancel trailing stop OPX7OP-RQ6FF-EVNTD4, replace with 0.5% trailing stop to lock gains and trail toward T2.
