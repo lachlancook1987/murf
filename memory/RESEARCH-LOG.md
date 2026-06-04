@@ -11568,3 +11568,68 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 6. **BTC weekly gate reset** — BTC at $63,697; needs ~$75,824 (+19%) for full reset
 
 **No notification sent. No orders placed.**
+
+---
+
+## 2026-06-04 — Midday Scan (2nd)
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Perplexity) | ~$63,800–$63,950 | 24h change: −2.9% to −4.9% |
+| BTC weekly gate | **ACTIVE** — BTC ~$63,900 vs May 27 $75,824 = **~−15.7%** → strict entries enforced |
+| Crash gate | **NOT triggered** — BTC well within −20% threshold ✓ |
+| Fear & Greed | ~12 — Extreme Fear (unchanged from prior scans) |
+| KAS (Bybit) | $0.02903 | 24h: −6.89% | Bearish intraday |
+
+### STEP 2 — Position / Order Verification
+- Kraken: 0 open positions, 0 open orders ✓ (KAS OKGTE3-W5ESJ-T4YY3D filled overnight)
+- Alpaca: 0 positions, 0 orders ✓ (stop a2b44cf9 cancelled 2026-05-22)
+
+### STEP 3 — Trailing Stop Check
+No open positions → N/A
+
+### STEP 4 — Stop Tightening
+No open positions → N/A
+
+### STEP 5 — Thesis Check
+No open positions → N/A
+
+### STEP 6 — New Entry Scan
+
+| Asset | 24h Move | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| HYPE/USD | +8.08% 24h | ~0.015% ✓ | Grayscale staking ETF June 3 (**yesterday, stale**); Galaxy $12.6M accumulation June 3 (stale); **Token unlock June 6 = $684M supply risk in <48h** | Catalyst not <3h; unlock risk | **SKIP** |
+| ADA/USD | +7.19% 24h | ~0.023% ✓ | No specific fresh catalyst identified | Weekly gate: no <3h catalyst | **SKIP** |
+| ETH/USD | +6.54% 24h | ~0.004% ✓ | Glamsterdam positioning — not a fresh <3h catalyst | Weekly gate: no <3h catalyst | **SKIP** |
+| SOL/USD | +6.20% 24h | — | No specific fresh catalyst | Weekly gate: no <3h catalyst | **SKIP** |
+| XRP/USD | +5.38% 24h | 0.011% ✓ | CLARITY Act Senate vote July 2026 est. — trigger not fired | Binary trigger not confirmed | **WATCHLIST** |
+| KAS/USD | −6.89% 24h | 0.067% ✓ | Toccata fork window OPEN (June 5–20) — fork exception BUT price down −7%, no positive 1h momentum | Fork exception: need positive momentum; KAS declining | **SKIP** |
+
+**Perplexity key findings:**
+- All 24h gainers (HYPE, ADA, ETH, SOL, XRP) are 24h figures — no confirmed 1h surge >5% for any asset
+- HYPE: ETF catalyst from June 3 (yesterday = stale); token unlock June 6 = ~$684M supply pressure in <48h — avoid
+- KAS: Toccata fork window open but price bearish, −6.89% from open; no positive 1h momentum
+- No fresh catalyst <3h old identified for any Kraken-listed asset
+- Fear & Greed 12 (Extreme Fear) — broad market risk-off continues
+
+### Decision: NO NEW TRADES
+
+**BTC weekly gate:** ACTIVE (~−15.7%) — requires 1h momentum >5% + catalyst <3h old
+**Crash gate:** NOT triggered ✓
+**Result:** No candidate meets weekly gate criteria. HYPE has stale catalyst + major token unlock risk. KAS fork window open but no positive momentum. No 1h surge >5% confirmed for any asset.
+
+### Updated Watchlist
+1. **KAS/USD** — Toccata fork window OPEN (June 5–20); eligible when 1h momentum turns positive + ask ≥$0.030; 3.5% trail (high-ATR); fork exception bypasses weekly gate
+2. **HYPE/USD** — Wait for June 6 unlock ($684M) to clear; reassess post-unlock price action
+3. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote; spread 0.011% ✓
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
+5. **BTC weekly gate reset** — BTC ~$63,900; needs ~$75,824 (+19%) for full reset
+
+**No notification sent. No orders placed.**
