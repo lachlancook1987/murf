@@ -3972,3 +3972,41 @@ No adjustments. ✓
 **Notes:** KAS trailing stop buffer 1.18% — thin but expected given today's strong run to $0.032900 HWM. Stop is correctly trailing the HWM. Price is $0.032130 with T1 at $0.032983 (+2.6% away) and Toccata hard fork window opening June 5 (tomorrow). Thesis intact. BTC down -3.1% (normal drawdown, not a crash event). No Alpaca exposure.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-04 — Overnight Triage Check
+
+### KAS/USD — STOP TRIGGERED OVERNIGHT (trailing stop filled)
+
+**Positions (Kraken):**
+| Symbol | Qty | Entry | Exit (implied) | P&L% | P&L$ | Notes |
+|---|---|---|---|---|---|---|
+| KAS/USD | 4730 | $0.032022 | ~$0.031482 | **−1.69%** | **~−$2.56** | Trailing stop OKGTE3-W5ESJ-T4YY3D filled |
+
+**Details:**
+- Stop order: OKGTE3-W5ESJ-T4YY3D (trailing_stop, 3.5%, HWM $0.032900 → stop trigger $0.031750)
+- Implied fill: ~$0.031482 (ZUSD balance post-fill $150.6460 − pre-fill $1.7457 = $148.90 / 4730 KAS)
+- Fill slightly below trigger ($0.031750) — light slippage consistent with KAS 24h low $0.028320 (sharp intraday drop)
+- Stop worked as designed — no manual intervention required
+
+**STEP 1 — Positions & Orders:**
+- Kraken: **0 open positions, 0 open orders** ✓
+- Alpaca: **0 positions, 0 orders** (stop a2b44cf9 canceled 2026-05-22) ✓
+
+**STEP 2 — Trailing stop verification:** No open positions → N/A
+
+**STEP 3 — Emergency exits:** No open positions → N/A
+
+**STEP 4 — Stop tightening:** No open positions → N/A
+
+**STEP 5 — BTC Crash Gate:**
+- BTC last: $63,385.90 | 24h open: $64,036.10 | Move: **−1.0%**
+- 24h range: $61,255.90 – $67,420.00
+- Threshold: −20% | Gate: **NOT triggered** ✓
+
+**Account:** ZUSD $150.6460 (100% cash) | KAS dust: 0 | All other balances: negligible dust
+
+**KAS/USD Toccata note:** Toccata hard fork window opened June 5. Position was stopped out before fork activation — stop worked correctly. KAS now at $0.030100 (−5.7% from 24h open $0.031910; low $0.028320). If KAS shows fresh <6h catalyst on/after fork activation, re-entry eligible in next session (no consecutive-loss rules apply per Kraken day trading profile).
+
+**Result: NO-OP. Stops worked as designed. No manual actions taken. No notification sent.**
