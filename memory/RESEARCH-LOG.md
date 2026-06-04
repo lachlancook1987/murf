@@ -11209,3 +11209,62 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 4. **LIT/USD** — Best real catalysts (RWA perps, US licensing, buybacks); blocked by spread >1% this morning; check spread again next session
 5. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
 6. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+
+---
+
+## 2026-06-04 — Late Session Scan
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | 0 | None | None |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Kraken) | $62,520 ask | 24h open $64,036.10 | Move: −2.37% |
+| BTC 24h range | $61,255.90 – $64,686.10 |
+| ETH | ~$1,803.57 (−1.96% 24h) |
+| Fear & Greed | **12 — Extreme Fear** |
+| BTC funding rate | Binance +0.0027% — slightly positive/neutral |
+| BTC weekly gate | **ACTIVE** — BTC ~−17.5% vs May 27 $75,824 → strict entries |
+| Crash gate | **NOT triggered** — BTC −2.37% today (threshold −20%) |
+| Market event | $1.63B daily liquidations — risk-off environment |
+
+### Candidate Screening
+
+| Asset | Intraday vs 24h Open | Spread | Weekly Gate | Catalyst | Issue | Verdict |
+|---|---|---|---|---|---|---|
+| LIT/USD | +15.3% ($0.0718→$0.0828) | **1.57% ❌** | Active | RWA perps Dell/IBM, US licensing | Spread >1% | **HARD SKIP** |
+| KAS/USD | −9.2% ($0.031910→$0.028980) | 0.069% ✓ | Upgrade exempt | Toccata fork window OPEN | Price DOWN; R:R = 3.0÷3.5 = **0.857 ❌** | SKIP |
+| PORTAL/USD | −13.1% ($0.01967→$0.01710) | 0.88% ✓ | Active | None identified | Reversing hard | SKIP |
+| WLD/USD | −12.3% ($0.5408→$0.4742) | 0.17% ✓ | Active | Coin of the Day (stale) | Reversing | SKIP |
+| ADA/USD | −5.3% ($0.2002→$0.1895) | 0.021% ✓ | Active | None | Reversing, no catalyst | SKIP |
+| HYPE/USD | −11.4% ($74.50→$66.01) | 0.015% ✓ | Active | Bitwise ETF filing | Sell-the-news reversal | SKIP |
+| OMNI/USD | 0 trades | **37.1% ❌** | — | — | 0 volume — illiquid | SKIP |
+| DOLO/USD | −3.8% | **1.91% ❌** | — | — | Spread too wide | SKIP |
+| SIDEKICK/USD | — | **10.3% ❌** | — | — | Spread too wide | SKIP |
+| YALA/USD | — | **12.8% ❌** | — | — | Spread too wide | SKIP |
+| MAT/USD | −1.8% | 0.30% ✓ | Active | None | 16 trades/24h — thin liquidity, no catalyst | SKIP |
+| VTHO/USD | +0.02% | 0.46% ✓ | Active | None | Zero momentum | SKIP |
+| XRP/USD | — | 0.006% ✓ | Active | CLARITY Act (no floor vote) | Binary trigger not fired | WATCHLIST |
+
+### Fresh Catalyst Scan (last 3h)
+- No token-specific catalysts <3h old identified on any Kraken-listed asset
+- Macro event: $1.63B BTC liquidations — broad risk-off
+
+### Decision: HOLD — NO NEW TRADES
+
+**Crash gate:** NOT triggered (−2.37% vs −20% threshold) ✓
+**BTC weekly gate:** ACTIVE — requires catalyst <3h old + 1h momentum >5%
+**Result:** LIT remains the only asset with positive intraday momentum (+15.3%) but spread 1.57% is a hard skip. All other movers are declining from their 24h opens with no qualifying catalysts. No trade justified.
+
+**No notification sent. No orders placed.**
+
+### Updated Watchlist
+1. **LIT/USD** — Strong catalyst (RWA perps Dell/IBM, US licensing); only blocker is spread; monitor for spread ≤1%
+2. **KAS/USD** — Toccata fork window open June 5–20; re-enter when 1h momentum turns positive AND ask >~$0.030 (R:R ≥1.2:1 at 3.5% stop)
+3. **XRP/USD** — CLARITY Act Senate floor vote pending (July 2026 est.); 7% trailing stop on confirmed vote
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+5. **HYPE/USD** — Bitwise ETF filing catalyst; wait for reversal to complete and price stabilise
