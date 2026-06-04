@@ -11325,3 +11325,69 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 6. **BTC weekly gate reset** — BTC at $64,158; needs to reclaim ~$65,800 (5-day avg) or ~$75,824 (full reset) to ease entry criteria
 
 **No notification sent. No orders placed.**
+
+---
+
+## 2026-06-04 — Session-Open Research
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | 0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Kraken ask) | $63,804 | 24h open $64,036 | Move: **−0.36%** |
+| BTC 24h range | $61,255.90 – $64,686.10 |
+| ETH (Kraken ask) | $1,771.99 | 24h open $1,810.52 | Move: **−2.12%** |
+| Fear & Greed | **12 — Extreme Fear** |
+| BTC funding rate | Binance +0.0015%, Bybit +0.0030% — slightly positive/neutral |
+| BTC weekly gate | **ACTIVE** — BTC $63,804 vs May 27 $75,824 = **−15.8%** → strict entries |
+| Crash gate | **NOT triggered** — BTC −0.36% today (threshold −20%) ✓ |
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Weekly Gate | Catalyst | Issue | Verdict |
+|---|---|---|---|---|---|---|
+| LIT/USD | +20.1% ($0.0718→$0.0862) | **1.16% ❌** | Active | RWA perps (June 1, 3 days old) | Spread >1% | **HARD SKIP** |
+| KAS/USD | −6.8% ($0.0319→$0.0297) | 0.067% ✓ | Toccata fork exception | Fork opens June 5 (tomorrow) | Price declining, no positive 1h momentum | SKIP |
+| VTHO/USD | +0.04% | 0.51% ✓ | Active | None | Flat, only 27 trades | SKIP |
+| PORTAL/USD | −10.2% ($0.01967→$0.01766) | 0.51% ✓ | Active | None | Declining | SKIP |
+| HNT/USD | +0.80% ($0.6337→$0.6388) | 0.25% ✓ | Active | None (market beta only) | Pumped to $0.8151 then crashed to $0.6388 (−21.6% from high); no catalyst | SKIP |
+| WLD/USD | +1.52% ($0.5408→$0.5490) | 0.20% ✓ | Active | Thirty Seconds to Mars partnership (June 1, 3 days old) | Catalyst stale, only +1.52% from open (gate needs >5% 1h momentum) | SKIP |
+| INJ/USD | −12.1% ($6.502→$5.717) | 0.10% ✓ | Active | None | Heavy decline | SKIP |
+| NEAR/USD | −15.2% ($2.812→$2.385) | 0.13% ✓ | Active | None | Heavy decline | SKIP |
+| ZEC/USD | −13.7% ($624.19→$538.65) | 0.16% ✓ | Active | Network halt (bearish) | Declining + bad news | SKIP |
+| HYPE/USD | −9.6% ($74.50→$67.34) | 0.015% ✓ | Active | Bitwise ETF (stale) | Sell-the-news reversal | SKIP |
+| ETH/USD | −2.12% | 0.006% ✓ | Active | None | Declining | SKIP |
+| SOL/USD | −2.61% ($71.52→$69.65) | 0.014% ✓ | Active | None | Declining | SKIP |
+| XRP/USD | −2.28% ($1.1995→$1.1721) | 0.006% ✓ | Active | CLARITY Act (July 2026 est.) | No floor vote — binary trigger not fired | WATCHLIST |
+| ADA/USD | −5.44% ($0.2002→$0.1893) | 0.021% ✓ | Active | None | Declining | SKIP |
+
+### Perplexity Research Notes
+- Broad risk-off environment; BTC and ETH both down from 24h open despite intraday bounce
+- Major catalysts today: stablecoin legislation, RWA tokenization, DeFi tokenomics rotation (all structural, no <6h intraday catalyst identified)
+- Token unlocks: RAIN $713M on June 10, ME $14M June 10, PUMP $17M June 12 — all future events
+- Volume outliers: NEAR $1.46B, HYPE $1.42B, WLD high volume — but all in downtrends
+- HNT reported +26% in 1h by Perplexity but live quote shows pump already reversed (now +0.80% from open)
+- ZEC volume during network halt — bearish, not a trading catalyst
+- No fresh Litentry (LIT) catalyst found; RWA perps from June 1 continues to drive residual price action
+- Toccata fork (KAS) opens **tomorrow June 5** — prepare for re-entry if positive 1h momentum appears
+
+### Decision: HOLD — NO NEW TRADES
+
+**Crash gate:** NOT triggered (−0.36% vs −20% threshold) ✓
+**BTC weekly gate:** ACTIVE (−15.8%) — requires 1h momentum >5% + catalyst <3h old
+**Result:** No candidate meets both weekly gate criteria. LIT continues to be the only strong gainer (+20%) but spread 1.16% remains a hard skip. All other assets are declining from 24h opens.
+
+### Updated Watchlist
+1. **KAS/USD** — Toccata hard fork window opens **June 5 (tomorrow)**; re-enter when 1h momentum positive + ask >~$0.030 (R:R ≥1.2:1 at 3.5% stop); spread 0.067%; this is the primary opportunity
+2. **LIT/USD** — Spread 1.16% (just over 1% limit); RWA perps catalyst; monitor spread — eligible if spread drops ≤1% AND fresh <3h catalyst AND positive 1h momentum AND R:R ≥1.2:1
+3. **WLD/USD** — Spread 0.20% ✓, volume strong; catalyst June 1 is stale; re-evaluate if whale momentum continues with fresh news <6h
+4. **XRP/USD** — CLARITY Act Senate floor vote pending (July 2026 est.); 7% trailing stop on confirmed vote
+5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+6. **BTC weekly gate reset** — BTC at $63,804; needs to reclaim ~$75,800 (full reset) or show 5-day recovery for gate relaxation
+
+**No notification sent. No orders placed.**
