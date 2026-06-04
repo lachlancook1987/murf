@@ -11014,3 +11014,83 @@ No notification sent (no action taken).
 3. **ONDO/USD** — Perps launch June 9; re-evaluate with fresh <6h catalyst on/after June 9
 4. **BTC weekly gate reset** — BTC must reclaim ~$77,574 (+18.4% from $65,524) to reopen full momentum universe
 
+---
+
+## 2026-06-04 — Pre-Session Research
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | 0 | None | None (stop canceled 2026-05-22) |
+
+**Prior session recap:** KAS/USD trailing stop OKGTE3-W5ESJ-T4YY3D triggered overnight 2026-06-04. Fill ~$0.031482, P&L −1.69% (−$2.56). KAS ran to $0.032900 HWM before retracing through stop level $0.031750. Stop worked as designed. Account now 100% cash.
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Kraken) | $63,620 (24h open $64,036, −0.65% today; −3.22% per Perplexity broader basis) |
+| BTC 24h range | $61,256 – $64,686 |
+| ETH | $1,803.57 (−1.96% 24h) |
+| Fear & Greed | **12 — Extreme Fear** |
+| BTC funding rate | Binance +0.0027% / Bybit −0.0005% — mixed/neutral |
+| BTC weekly gate | **ACTIVE** — BTC was ~$75,824 on May 27; ~−14% over 5 trading days → stricter entries required |
+| Crash gate | **NOT triggered** — BTC −0.65% today (threshold −20%) |
+
+### Top Movers (24h, multi-source)
+| Asset | 24h Gain | Kraken Intraday (open→now) | Notes |
+|---|---|---|---|
+| Backpack (BP) | +80.7% | — | Not on Kraken |
+| LIT (Lighter) | +34% | $0.07180→$0.09630 (+34%) | On Kraken; spread 1.64% → HARD SKIP |
+| WLD | +41% (CoinGecko) | $0.5408→$0.5188 (−4.1%) | Reversing today after yesterday's squeeze |
+| PORTAL | +30–34% | $0.01967→$0.01785 (−9.3%) | Momentum reversed intraday |
+| ENA | +21.73% | $0.11180→$0.10310 (−7.8%) | Momentum reversed intraday |
+| NEAR | +14.25% | $2.812→$2.395 (−14.9%) | Massive intraday reversal |
+| KAS | +3–5% (Perplexity) | $0.031910→$0.02943 (−7.8%) | Toccata fork opens June 5 (tomorrow); weak today |
+| TAO | — | $225.997→$216.884 (−4.0%) | Covenant-72B catalyst is March 2026 (3 months old) |
+| XRP | — | $1.19947→$1.16821 (−2.6%) | CLARITY Act advanced in Senate; no floor vote confirmed |
+
+### Token Unlocks & Protocol Upgrades
+- **$ME (Magic Eden):** 172M tokens unlocking June 10 — AVOID
+- **PUMP (pump.fun):** 10B tokens unlocking June 12 — AVOID
+- **Kaspa Toccata hard fork:** Mainnet activation window opens **June 5–20, 2026** (TOMORROW)
+- **ONDO perps launch:** June 9 — re-evaluate on/after with fresh catalyst
+
+### Candidate Screening
+| Asset | Intraday Move | Spread | Weekly Gate | Catalyst | R:R | Verdict |
+|---|---|---|---|---|---|---|
+| LIT/USD | +34% from open | **1.64% ❌** | Active | RWA perps, US licensing, buybacks (fresh) | N/A | **HARD SKIP** (spread) |
+| KAS/USD | −7.8% from open | 0.068% ✓ | Protocol upgrade exempt | Toccata fork opens June 5 (tomorrow) | 3%÷3.5% = **0.857 ❌** | **SKIP** (R:R fails, stop at 24h low) |
+| WLD/USD | −4.1% from open | 0.039% ✓ | Active | Yesterday's catalyst (World ID viral) — stale | N/A | SKIP (reversal) |
+| PORTAL/USD | −9.3% from open | 0.168% ✓ | Active | Unknown catalyst | N/A | SKIP (reversal) |
+| ENA/USD | −7.8% from open | 0.194% ✓ | Active | No fresh catalyst identified | N/A | SKIP (reversal) |
+| NEAR/USD | −14.9% from open | 0.075% ✓ | Active | Dynamic resharding June 2026 (no specific date) | N/A | SKIP (major downtrend) |
+| TAO/USD | −4.0% from open | 0.127% ✓ | Active | Covenant-72B = March 2026 (**3 months old**) | N/A | SKIP (stale catalyst, declining) |
+| XRP/USD | −2.6% from open | 0.006% ✓ | Active | CLARITY Act Senate committee pass; no floor vote confirmed | N/A | WATCHLIST (binary trigger not fired) |
+
+**KAS R:R detail:** At ask $0.02943, T1 = $0.030313 (+3%). High-ATR asset (today's range 11.8%) requires 3.5% trailing stop → stop at $0.028397. R:R = 3.0% / 3.5% = 0.857 — **below 1.2:1 minimum**. Entry not justified at current price; would need price above ~$0.030 with momentum for R:R to recover.
+
+### Risk Factors
+- BTC weekly trend gate ACTIVE: requires catalyst <3h + 1h momentum >5% for non-upgrade assets; all momentum candidates from yesterday are reversing
+- Extreme Fear (12) — contrarian signal but no individual asset passing all criteria
+- KAS Toccata fork tomorrow is a high-quality catalyst but "sell the rumor, buy the news" may already be playing out — price down 7.8% today despite fork activation imminent
+- LIT has strong real catalysts (RWA perps, US licensing, buybacks) but spread is 1.64% — hard skip rule applies; monitor for tightening in future sessions
+- "ME Magic Eden unlock June 10" and "PUMP unlock June 12" are supply headwinds to avoid
+
+### Decision: HOLD — NO NEW TRADES
+
+**Crash gate:** NOT triggered (BTC −0.65% today vs −20% threshold) ✓
+**Trade stance:** HOLD — all identified candidates fail at least one hard requirement:
+- LIT: spread 1.64% (hard skip)
+- KAS: R:R 0.857 < 1.2:1 (poor setup despite valid catalyst)
+- All other movers: reversing intraday (momentum gate not met)
+
+Default strategy is TRADE, but no candidate clears spread + R:R + momentum simultaneously. Re-evaluate at next session or intraday if KAS shows positive momentum after Toccata activation.
+
+### Active Watchlist (next session)
+1. **KAS/USD** — Toccata fork window June 5–20; re-enter if price shows positive 1h momentum post-fork + R:R ≥1.2:1 at entry (need ask above ~$0.030 for 3.5% stop to clear 1.2:1)
+2. **LIT/USD** — Strong real catalysts (RWA perps, US licensing, buybacks); watch for spread to narrow below 1%; entry valid if spread ≤1% + R:R ≥1.2:1
+3. **XRP/USD** — CLARITY Act binary catalyst pending; 7% trail on confirmed Senate floor vote
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+5. **BTC weekly gate reset** — BTC must reclaim ~$65,800+ (5-day high) or ~$75,800 (full reset) to ease entry criteria
+
