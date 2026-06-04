@@ -11094,3 +11094,52 @@ Default strategy is TRADE, but no candidate clears spread + R:R + momentum simul
 4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
 5. **BTC weekly gate reset** — BTC must reclaim ~$65,800+ (5-day high) or ~$75,800 (full reset) to ease entry criteria
 
+
+---
+
+## 2026-06-04 — Session-Open Execution
+
+### Account State (live)
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 | None | None |
+| Alpaca | 0 | None | None |
+
+**BTC:** ask $63,471 | 24h open $64,036.10 | Move: −0.88% | **Crash gate: NOT triggered**
+**BTC weekly gate:** ACTIVE (BTC ~−14% vs May 27 $75,824) → requires catalyst <3h old + 1h momentum >5%
+
+### Live Candidate Screening
+
+| Asset | Live Ask | vs 24h Open | Spread | Catalyst | Issue | Verdict |
+|---|---|---|---|---|---|---|
+| LIT/USD | $0.08920 | +24.2% | **1.68% ❌** | RWA perps, US licensing, buybacks (fresh) | Spread >1% | **HARD SKIP** |
+| KAS/USD | $0.029170 | −8.6% | 0.10% ✓ | Toccata fork window now open | R:R 0.857 < 1.2:1 | **SKIP** |
+| ONDO/USD | $0.35776 | −14.0% | 0.16% ✓ | June 9 perps launch (5 days away) | Future catalyst + reversing | **SKIP** |
+| ZEC/USD | $559.71 | −10.3% | 0.35% ✓ | SEC probe closure May 19 (16 days old) | Stale catalyst + reversing | **SKIP** |
+| HYPE/USD | $67.91 | −8.8% | 0.015% ✓ | Grayscale ETF launch June 3 (yesterday) | Sell-the-news reversal | **SKIP** |
+| XLM/USD | $0.20647 | −1.0% | 0.07% ✓ | DTCC integration May 27 (8 days old) | Stale catalyst | **SKIP** |
+| DEXE | — | — | — | None identified (volume-led only) | No catalyst — banned under weekly gate | **SKIP** |
+| PORTAL/USD | $0.01756 | −10.7% | 0.28% ✓ | Unknown | Reversing | **SKIP** |
+| XRP/USD | $1.16229 | −3.1% | 0.006% ✓ | CLARITY Act (no floor vote confirmed) | Watchlist only | **WATCHLIST** |
+
+### Fresh Catalyst Scan (last 3h)
+- Market-wide $1.8B liquidations — risk-off environment
+- Grayscale HYPE ETF launched June 3 → sell-the-news pattern
+- Stripe/Visa/Mastercard stablecoin platform news → no direct token trade
+- No new catalyst found that is <3h old for any Kraken-listed asset
+
+### Decision: HOLD — NO NEW TRADES
+
+Weekly gate ACTIVE + market-wide liquidation pressure. No asset clears 1h momentum >5% + catalyst <3h old + spread ≤1% + R:R ≥1.2:1 simultaneously.
+
+Default strategy is TRADE, but all candidates fail at least one hard requirement.
+
+**No notification sent. No orders placed.**
+
+### Updated Watchlist
+1. **LIT/USD** — Best real catalyst (RWA perps, US licensing, buybacks); blocked by spread only; re-enter when spread narrows ≤1%
+2. **KAS/USD** — Toccata fork window June 5–20 now active; re-enter when 1h momentum >3% + ask above ~$0.030 (R:R ≥1.2:1 at 3.5% stop)
+3. **XRP/USD** — CLARITY Act Senate floor vote: 7% trailing stop on confirmed vote
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+5. **HYPE/USD** — Grayscale ETF active; wait for sell-the-news reversal to complete and price stabilise
+
