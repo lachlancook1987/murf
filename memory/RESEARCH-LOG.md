@@ -11268,3 +11268,60 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 3. **XRP/USD** — CLARITY Act Senate floor vote pending (July 2026 est.); 7% trailing stop on confirmed vote
 4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
 5. **HYPE/USD** — Bitwise ETF filing catalyst; wait for reversal to complete and price stabilise
+
+---
+
+## 2026-06-04 — Evening Scan
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | 0 | None | None |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Kraken ask) | $64,158 | 24h open $64,036.10 | Move: **+0.19%** (recovered from −2.37% low) |
+| BTC 24h range | $61,255.90 – $64,686.10 |
+| BTC weekly gate | **ACTIVE** — $64,158 vs May 27 $75,824 = −15.4% |
+| Crash gate | **NOT triggered** (+0.19% vs −20% threshold) ✓ |
+| Notable BTC event | BTC bounced from $61,255 low (+4.7% intraday recovery) |
+
+### Step 2 — Positions & Orders
+- Kraken: **0 positions, 0 orders** ✓
+- Alpaca: **0 positions, 0 orders** (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+### Steps 3–5: N/A (no open positions)
+
+### Step 6 — New Entry Scan
+
+| Asset | vs 24h Open | Spread | Issue | Verdict |
+|---|---|---|---|---|
+| LIT/USD | +20.47% ($0.0718→$0.0865) | **0.578% ✓** (tightened from 1.57%!) | Catalyst June 1 = 3 days old (gate <3h); price −15.5% from today's high $0.1023; R:R = 3.0÷3.5 = **0.857 ❌** | SKIP |
+| KAS/USD | −7.15% ($0.0319→$0.0296) | 0.10% ✓ | No positive 1h momentum; R:R 0.857 | SKIP |
+| HYPE/USD | −9.8% ($74.50→$67.20) | 0.030% ✓ | Sell-the-news reversal; Grayscale/Bitwise ETF catalyst spent | SKIP |
+| TON/USD | −6.9% ($1.901→$1.770) | 0.113% ✓ | Telegram/Durov catalyst from May = stale | SKIP |
+| WLD/USD | −5.9% ($0.5408→$0.5088) | 0.177% ✓ | Post-squeeze reversal; no fresh catalyst | SKIP |
+| NEAR/USD | −14.9% ($2.812→$2.394) | 0.10% ✓ | Pure momentum (banned under weekly gate) + reversing | SKIP |
+
+**LIT R:R detail:** At ask $0.0865, T1 = $0.0891 (+3%). Intraday range $0.0707–$0.1023 = 44.8% → high-ATR asset → 3.5% trailing stop mandatory → R:R = 3.0÷3.5 = 0.857 < 1.2:1 minimum. Price also retracing -15.5% from today's peak; not a momentum entry. **Notable: spread tightened from 1.57% (late session) to 0.578%** — one major blocker removed. LIT eligible next session if: (a) spread stays ≤1%, (b) price shows positive 1h momentum, (c) R:R ≥1.2:1 (needs entry below ~$0.0920 with 3.5% trail clearing 1.2:1 T1, or a normal-ATR stop if intraday range settles below 3%), AND (d) fresh catalyst <6h (or protocol upgrade exception).
+
+**KAS detail:** Toccata fork window OPEN (June 5–20). Price $0.0296 → R:R = 3.0÷3.5 = 0.857 ❌. Price needs to recover above ~$0.030 for R:R to clear. No positive intraday momentum — down 7.15% from open.
+
+### Decision: NO NEW TRADES
+
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: ACTIVE (−15.4%) — strict criteria enforced
+- All candidates fail: either stale catalyst, R:R < 1.2:1, or price in retrace
+- **Notable development: LIT spread 0.578%** — spread blocker removed; R:R and catalyst freshness remain blockers
+
+### Updated Watchlist
+1. **LIT/USD** — Spread now 0.578% ✓; blocked by R:R (0.857 with 3.5% stop) and stale catalyst (June 1); re-enter if: spread ≤1%, price shows +1h momentum, fresh catalyst <6h, R:R ≥1.2:1
+2. **KAS/USD** — Toccata fork window June 5–20 OPEN; re-enter when 1h momentum positive + ask >~$0.030 (R:R clears 1.2:1 at 3.5% stop)
+3. **XRP/USD** — CLARITY Act Senate floor vote pending (July 2026 est.); 7% trailing stop on confirmed vote
+4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
+5. **HYPE/USD** — Bitwise ETF active; wait for sell-the-news reversal to complete and price stabilise before re-evaluating
+6. **BTC weekly gate reset** — BTC at $64,158; needs to reclaim ~$65,800 (5-day avg) or ~$75,824 (full reset) to ease entry criteria
+
+**No notification sent. No orders placed.**
