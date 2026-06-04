@@ -11390,4 +11390,118 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
 6. **BTC weekly gate reset** — BTC at $63,804; needs to reclaim ~$75,800 (full reset) or show 5-day recovery for gate relaxation
 
+---
+
+## 2026-06-04 — Pre-Session Research
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC | $63,482 \| 24h change **−3.20%** |
+| BTC 24h range | ~$61,255 – $65,000 est. |
+| ETH | $1,803 \| 24h change **−1.96%** |
+| Fear & Greed | **12 — Extreme Fear** |
+| BTC funding rate | Binance −0.0011%, Bybit −0.0001% (slightly negative / neutral) |
+| BTC weekly gate | **ACTIVE** — BTC $63,482 vs May 27 $75,824 = **−16.3%** → strict entry criteria |
+| Crash gate | **NOT triggered** — BTC −3.2% (threshold −20%) ✓ |
+| Total market volume | $393B (vs $143B prior day — >2× surge, broad-based) |
+
+### Perplexity Research Summary
+- **Top 24h gainers (broad market):** OPN +70%, ORDI +76% (not on Kraken), WLD +41%, ENA +18%, AR +14%, TRAC +16%
+- **Kraken-specific gainers:** LIT +97% 24h (open $0.0718 → high $0.1023, now $0.086), SIDEKICK +79%, PORTAL +35%, VTHO +35%, YALA +28%
+- **Notable catalysts:** WLD — whale accumulation + derivatives squeeze ($1.41B volume); XLM — DTCC announced tokenized securities integration with Stellar blockchain (first half 2027 live); NEAR — dynamic resharding upgrade June 2026; KAS — Toccata hard fork window opens June 5 (TOMORROW); TAO — Subnet 3 Covenant-72B release (+16% 7-day); XRP — CLARITY Act Senate floor vote still pending July 2026 est.
+- **Token unlocks this week:** RAIN $713M on June 10 (major, watch for sell pressure); ME $14M June 10; PUMP $17M June 12 — all future, no immediate impact
+- **Key market structure note:** Despite extreme fear, market volume doubled. WLD had a >40% intraday move (base ~$0.38 → high $0.6314) but has pulled back to $0.542 (essentially flat from today's $0.5408 open). Pattern suggests a violent spike followed by distribution.
+
+### Candidate Screening
+| Asset | Open | Current Ask | vs Open | Spread | Weekly Gate | Catalyst | Verdict |
+|---|---|---|---|---|---|---|---|
+| LIT/USD | $0.07180 | $0.08600 | +19.8% | **0.465% ✓** | Active | RWA perps June 1 (3 days stale) | SKIP — no fresh catalyst |
+| WLD/USD | $0.5408 | $0.5422 | +0.26% | 0.184% ✓ | Active | Whale activity (no fresh <3h catalyst) | SKIP — momentum faded |
+| VTHO/USD | $0.000455 | $0.000451 | −0.6% | **1.35% ❌** | Active | None | HARD SKIP — spread >1% |
+| NEAR/USD | $2.8120 | $2.3270 | −17.2% | 0.047% ✓ | Active | Resharding upgrade (not fresh) | SKIP — heavy sell-off |
+| PORTAL/USD | $0.01967 | $0.01847 | −6.1% | 0.325% ✓ | Active | None | SKIP — declining |
+| HYPE/USD | $74.500 | $66.400 | −10.9% | 0.015% ✓ | Active | Bitwise ETF (stale) | SKIP — heavy sell-off |
+| KAS/USD | $0.031910 | $0.029700 | −6.9% | 0.101% ✓ | Fork exception | Toccata opens June 5 (tomorrow) | WATCHLIST — no positive 1h momentum yet |
+| AR/USD | $2.533 | $2.368 | −6.5% | 0.127% ✓ | Active | None confirmed | SKIP — declining |
+| XLM/USD | $0.20863 | $0.20738 | −0.71% | 0.087% ✓ | Active | DTCC tokenization (prior session, priced in) | SKIP — no fresh momentum |
+| TAO/USD | $225.997 | $213.42 | −5.6% | 0.056% ✓ | Active | Subnet 3 release (stale) | SKIP — declining |
+| ORDI | N/A | N/A | N/A | N/A | N/A | Not on Kraken | HARD SKIP |
+| XRP/USD | — | — | — | 0.006% ✓ | Active | CLARITY Act (July est.) | WATCHLIST — no floor vote yet |
+
+### Trade Ideas (Contingency — Enter If Conditions Met)
+
+**1. KAS/USD — Toccata Fork Pre-Activation (PRIMARY)**
+- **Catalyst:** Toccata hard fork mainnet window opens **June 5 (tomorrow)** — adds native tokens, ZK infrastructure, L1 smart contracts. Protocol upgrade exception to weekly gate. <24h from activation.
+- **Entry:** Market buy when 1h momentum turns positive AND ask price ≥ $0.0300 (R:R threshold)
+- **Stop:** trailing_stop, trail_percent: 3.5 (high-ATR asset — today's range $0.0287–$0.0322 = 12.3%)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1 using 2.5% reference (3.0% T1 / 2.5% ref stop)
+- **Size:** 90–100% equity (~$135–$150)
+- **Pair:** KAS/USD confirmed ✓ | **Spread:** 0.101% ✓
+- **Status:** WATCHLIST — no positive momentum today (−6.9% from open); enter NEXT SESSION if fork confirms activation with fresh price catalyst
+
+**2. LIT/USD — RWA Perps Momentum Resume (HIGH CONVICTION IF CATALYST REFRESHES)**
+- **Catalyst:** RWA perpetuals listing on Litentry — June 1 (currently 3 days old, stale under weekly gate); spread blocker NOW REMOVED (0.465% ✓, was 1.16%)
+- **Entry:** Market buy if fresh catalyst <3h AND 1h momentum >5%
+- **Stop:** trailing_stop, trail_percent: 3.5 (high-ATR — today's range $0.0691–$0.1023 = 48%)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1 (3.0% T1 / 2.5% ref)
+- **Size:** 50–75% equity (~$75–$113)
+- **Pair:** LIT/USD confirmed ✓ | **Spread:** 0.465% ✓
+- **Status:** WATCHLIST — waiting for catalyst refresh + positive 1h momentum
+
+**3. WLD/USD — Whale Momentum Continuation (IF RESUMES)**
+- **Catalyst:** Whale accumulation + aggressive derivatives speculation ($1.41B 24h volume); 40%+ 24h base move
+- **Entry:** Market buy if 1h momentum >5% AND price approaching/above $0.60 with volume confirmation
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1
+- **Size:** 50% equity (~$75)
+- **Pair:** WLD/USD confirmed ✓ | **Spread:** 0.184% ✓
+- **Status:** WATCHLIST — momentum faded (pull-back from $0.6314 to $0.542 flat from open); no fresh catalyst
+
+**4. XLM/USD — DTCC Tokenization (IF MOMENTUM RESUMES)**
+- **Catalyst:** DTCC announced Stellar integration for tokenized securities (major institutional catalyst; assets live H1 2027); price already spiked but pulled back
+- **Entry:** Market buy if 1h momentum >5% + fresh related headline <3h (e.g., adoption announcement, partnership expansion)
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1
+- **Size:** 40–50% equity (~$60–$75)
+- **Pair:** XLM/USD confirmed ✓ | **Spread:** 0.087% ✓
+- **Status:** WATCHLIST — declining from prior catalyst spike, await momentum resumption
+
+**5. ONDO/USD — Perps Launch (June 9)**
+- **Catalyst:** ONDO perpetuals launch scheduled June 9 (5 days out); re-evaluate on/after launch with <6h catalyst
+- **Status:** WATCHLIST — no action until June 9; check spread and momentum at session open on that date
+
+### Risk Factors
+1. **BTC weekly gate ACTIVE** (-16.3%) — strict criteria enforced for all entries; protocol upgrade exception applies only to KAS
+2. **Extreme Fear 12** — market broadly selling; contrarian opportunity but timing risk high
+3. **RAIN unlock June 10** ($713M) — potential broad market headwind into next week; avoid holding into June 10
+4. **WLD pullback pattern** — violent spike-then-distribution; do not chase unless fresh catalyst
+5. **Total crypto volume $393B** — doubled from prior day; suggests elevated volatility continuing
+
+### Decision: **HOLD — NO NEW TRADES**
+- Crash gate: **NOT triggered** ✓ (BTC −3.2%, threshold −20%)
+- BTC weekly gate: **ACTIVE** (−16.3%) — strict criteria enforced
+- No candidate meets weekly gate criteria: none have 1h momentum >5% + catalyst <3h old simultaneously
+- KAS/USD: fork exception applies but no positive 1h momentum today (−6.9%); PRIMARY watch for June 5 session
+- Market risk-off with Extreme Fear 12; forced entry in declining market risks stop-out
+
+### Updated Watchlist
+1. **KAS/USD** — Toccata fork window opens June 5 (TOMORROW); spread 0.101% ✓; enter next session if positive 1h momentum + ask ≥ $0.030; 3.5% trailing stop (high-ATR); PRIMARY setup
+2. **LIT/USD** — Spread blocker REMOVED (0.465% ✓); RWA perps catalyst stale (June 1); re-enter if fresh <3h catalyst + 1h momentum >5% + R:R ≥1.2:1
+3. **WLD/USD** — 40%+ base move from $0.38 yesterday; now $0.542; spread 0.184% ✓; re-enter if whale momentum resumes with catalyst <3h
+4. **XLM/USD** — DTCC tokenization (major catalyst); spread 0.087% ✓; price declining; re-enter on momentum resumption
+5. **XRP/USD** — CLARITY Act pending (July est.); 7% trailing stop on floor vote confirmed; spread 0.006% ✓
+6. **ONDO/USD** — Perps launch June 9; reassess on launch date
+7. **BTC weekly gate** — BTC needs to reclaim ~$75,824 (full reset) for gate removal; currently $63,482
+
 **No notification sent. No orders placed.**
