@@ -11505,3 +11505,66 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 7. **BTC weekly gate** — BTC needs to reclaim ~$75,824 (full reset) for gate removal; currently $63,482
 
 **No notification sent. No orders placed.**
+
+---
+
+## 2026-06-04 — Additional Session-Open Screening
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Kraken ask) | $63,696.80 | 24h open $64,036.10 | Move: **−0.53%** |
+| BTC 24h range | $61,255.90 – $64,686.10 |
+| ETH (Kraken ask) | $1,775.01 | 24h open $1,810.52 | Move: **−1.96%** |
+| Fear & Greed | **12 — Extreme Fear** |
+| BTC funding rate | Binance −0.0011%, Bybit −0.0001% — neutral/slightly negative |
+| BTC weekly gate | **ACTIVE** — BTC $63,697 vs May 27 $75,824 = **−16.1%** → strict entries enforced |
+| Crash gate | **NOT triggered** — BTC −0.53% today (threshold −20%) ✓ |
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| KAS/USD | −7.01% ($0.03191→$0.02967) | 0.067% ✓ | Toccata fork opens June 5 (TOMORROW) | Fork exception OPEN, but no positive 1h momentum | **SKIP — no momentum** |
+| LIT/USD | +17.27% ($0.0718→$0.0842) | 0.475% ✓ | RWA perps June 1 (3 days stale) | Active | **SKIP — stale catalyst** |
+| TRAC/USD | +6.71% ($0.3625→$0.3868) | 0.517% ✓ | INDODAX listing May 28 (7 days stale) | Active | **SKIP — stale catalyst** |
+| HYPE/USD | −9.73% ($74.50→$67.25) | 0.015% ✓ | Bitwise ETF (stale) | Active | SKIP — heavy sell-off |
+| NEAR/USD | −18.0% ($2.812→$2.307) | 0.095% ✓ | Resharding upgrade (stale) | Active | SKIP — heavy sell-off |
+| XLM/USD | −1.0% ($0.20863→$0.20648) | 0.044% ✓ | DTCC tokenization (prior session, stale) | Active | SKIP — no momentum |
+| ADA/USD | −8.2% ($0.2002→$0.1837) | 0.023% ✓ | None | Active | SKIP — declining |
+| XRP/USD | −2.07% ($1.1995→$1.1746) | 0.011% ✓ | CLARITY Act (July 2026 est.) | Active | WATCHLIST — binary trigger not fired |
+| OMNI/USD | N/A | **37.1% ❌** | None | N/A | HARD SKIP — zero liquidity |
+| DOLO/USD | −2.5% | **2.05% ❌** | None | N/A | HARD SKIP — spread >1%, 6 trades |
+| MAT/USD | −7.4% | 0.32% ✓ | None | Active | SKIP — declining, 24 trades |
+| ETH/USD | −1.96% | 0.004% ✓ | None | Active | SKIP — declining |
+
+### Perplexity Research Notes
+- Broad risk-off market continues; Extreme Fear 12; BTC −0.53% intraday
+- TRAC (+6.71% from open): INDODAX listing May 28 (7 days old) + Upbit spillover — catalyst STALE under weekly gate (<3h required)
+- KAS Toccata fork confirmed NOT yet activated — still pending June 5–20 window; price declining −7% from open
+- OMNI listed on Kraken but zero trading volume — no liquidity, untradeable
+- BNB Coinbase listing / XLM DTCC / NEAR resharding — all catalysts from prior sessions, stale
+- No fresh catalyst (<3h old) identified for any Kraken-listed asset this session
+- TRAC is the only partial candidate (spread OK, 6.71% from open) but falls on stale catalyst rule
+
+### Decision: HOLD — NO NEW TRADES
+
+**Crash gate:** NOT triggered (−0.53% vs −20% threshold) ✓
+**BTC weekly gate:** ACTIVE (−16.1%) — requires 1h momentum >5% + catalyst <3h old
+**Result:** No candidate meets weekly gate criteria. TRAC is the closest but INDODAX listing is 7 days old — clearly stale. KAS has fork exception but no positive momentum (−7% from open).
+
+### Updated Watchlist
+1. **KAS/USD** — Toccata fork window NOW OPEN (June 5–20); primary setup; spread 0.067% ✓; re-enter when 1h momentum positive + ask ≥$0.030 (R:R ≥1.2:1 at 3.5% stop); high-ATR (use 3.5% trail); fork exception bypasses weekly gate
+2. **TRAC/USD** — Spread 0.517% ✓, moderate volume; catalyst stale (INDODAX May 28); eligible if fresh <3h catalyst emerges + 1h momentum >5% or weekly gate resets
+3. **LIT/USD** — Spread 0.475% ✓ (blocker removed); RWA perps June 1 (stale); eligible if fresh <3h catalyst + 1h momentum >5% + R:R ≥1.2:1 + price above ~$0.093 (not in retrace)
+4. **XRP/USD** — CLARITY Act Senate floor vote pending (July 2026 est.); 7% trailing stop on confirmed vote; spread 0.011% ✓
+5. **ONDO/USD** — Perps launch June 9; reassess on launch date with fresh catalyst <6h
+6. **BTC weekly gate reset** — BTC at $63,697; needs ~$75,824 (+19%) for full reset
+
+**No notification sent. No orders placed.**
