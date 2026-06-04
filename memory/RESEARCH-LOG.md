@@ -11143,3 +11143,69 @@ Default strategy is TRADE, but all candidates fail at least one hard requirement
 4. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
 5. **HYPE/USD** — Grayscale ETF active; wait for sell-the-news reversal to complete and price stabilise
 
+
+---
+
+## 2026-06-04 — Midday Scan
+
+### Account State
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | 0 | None | None |
+
+### Market Context
+| Metric | Value |
+|---|---|
+| BTC (Perplexity) | ~$63,987 (−3.22% 24h) |
+| BTC 24h open | $64,036.10 |
+| Crash gate | NOT triggered (−3.22% vs −20% threshold) ✓ |
+| BTC weekly gate | ACTIVE (−14% vs May 27 $75,824) |
+| Fear & Greed | ~54 Neutral (Perplexity; morning reading was 12 — may be stale/different source) |
+
+### Step 2 — Position & Order Verification
+- Kraken positions: **none** ✓
+- Kraken orders: **none** ✓
+- Alpaca: no active orders (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+### Step 3 — Trailing Stop Verification: N/A (no open positions)
+### Step 4 — Stop Tightening: N/A
+### Step 5 — Thesis Check: N/A
+
+### Step 6 — New Entry Scan
+
+**Perplexity top movers (1h):** OXYLON +60.75% (not on Kraken), OPN/Opinion +10.34% (pure pump, no catalyst confirmed), ENA +5.47% 1h, PORTAL +2.33% 1h
+
+**Live Kraken quotes:**
+
+| Asset | Ask | vs 24h Open | Spread | Catalyst | Issue | Verdict |
+|---|---|---|---|---|---|---|
+| KAS/USD | $0.029020 | −9.0% ($0.031910) | 0.069% ✓ | Toccata fork June 5–20 (EXEMPT) | Price DOWN; no positive momentum | SKIP |
+| ENA/USD | $0.09960 | −10.9% ($0.11180) | 0.10% ✓ | Coinbase partnership June 2 (2 days old — stale) | Stale catalyst + reverting | SKIP |
+| HYPE/USD | $66.18 | −11.2% ($74.50) | 0.045% ✓ | Bitwise ETF filing / oil perps | Reverting hard from open; no positive momentum | SKIP |
+| NEAR/USD | $2.351 | −16.4% ($2.812) | 0.060% ✓ | Resharding (no activation date) | Pure momentum banned; reverting | SKIP |
+| PORTAL/USD | $0.01723 | −12.4% ($0.01967) | 0.47% ✓ | No catalyst (short squeeze/thin liquidity) | No catalyst → banned; reverting | SKIP |
+| OPN/OPIN | — | — | — | No confirmed catalyst | Pure pump → banned | SKIP |
+
+**KAS detail:** Protocol upgrade exemption applies (Toccata fork window June 5–20). R:R = 3.0% T1 / 2.5% reference = 1.2:1 ✓. BUT: price is DOWN 9% from open with no positive 1h momentum signal — core entry rule (positive intraday momentum) not met. No entry justified into falling price.
+
+**ENA detail:** Coinbase partnership/open-market purchase announced June 2 (2 days ago = >6h old — hard skip on stale catalyst). Price also reverting −10.9% from open.
+
+### Decision: NO NEW TRADES
+
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: ACTIVE — strict rules enforced
+- All screened assets fail at least one hard requirement:
+  - KAS: price DOWN (no momentum to enter into)
+  - ENA: stale catalyst (June 2, >6h old)
+  - HYPE/NEAR/PORTAL: reverting from opens with no fresh qualifying catalysts
+
+**No notification sent. No orders placed.**
+
+### Updated Watchlist
+1. **KAS/USD** — Toccata fork window June 5–20 now OPEN; re-enter if/when price shows positive 1h momentum (>3%) + ask above ~$0.030 for R:R clarity; 3.5% trailing stop (high-ATR)
+2. **ENA/USD** — Coinbase partnership catalyst now stale; re-evaluate if fresh catalyst <6h emerges and price recovers positive momentum
+3. **HYPE/USD** — Bitwise ETF filing catalyst; re-evaluate if price stabilises and shows positive 1h momentum
+4. **LIT/USD** — Best real catalysts (RWA perps, US licensing, buybacks); blocked by spread >1% this morning; check spread again next session
+5. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
+6. **ONDO/USD** — Perps launch June 9; re-evaluate on/after June 9 with fresh <6h catalyst
