@@ -423,3 +423,75 @@ Additionally: for assets with expected intraday ATR >3% (FET, HYPE, WLD-type), u
 **Day trading into a BTC downtrend with tight trailing stops is a reliable way to lose money fast.** The trailing stop system works exactly as designed — every stop protected capital from larger losses. The failure was entry selection: 9 of the 17 losses were assets that recovered past entry after stopping. In a downtrending BTC week, the correct move is to wait for BTC stabilisation above a key level ($75K+) before deploying fresh capital into intraday longs. Cash is a position. The one trade that worked cleanly without active management (NEAR, inherited) and the one catalyst trade that worked (XLM) validate the strategy's core thesis — the churn was entirely from discretionary day-trade entries that violated the "catalyst required" rule.
 
 ---
+
+## Week of 2026-06-01 — Review Date: 2026-06-05
+
+### Context
+**Bear market preservation week.** BTC fell -12.23% ($71,315 Mon → $62,590 Fri) amid sustained Extreme Fear (F&G 11–12 throughout). BTC weekly gate remained ACTIVE all week (gate baseline fixed at May 22 $77,574; actual gate condition ranged -10% to -16.5%). The bot was in cash for ~4.5 of 5 trading days. Only 2 trades executed — both KAS/USD on the Toccata hard fork thesis (fork window opened June 5). No Alpaca exposure; Kraken-only.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $150.65 | $150.65 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Closed May 22 |
+| **Total** | **$150.65** | $150.65 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Mon Jun 1) | $150.55 |
+| Ending Equity (Fri Jun 5) | **$150.65** |
+| **Week Return** | **+0.06%** (+$0.10) |
+| BTC Week Return | **−12.23%** (~$71,315 Mon open → ~$62,590 Fri ask) |
+| **Bot vs BTC** | **+12.29%** |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jun 3 (Thu) | KAS/USD | $0.031300 (3367 KAS) | ~$0.032348 (T1 + 0.5% trail) | **+$2.99** | WIN |
+| 2 | Jun 3→4 | KAS/USD | $0.032022 (4730 KAS) | ~$0.031482 (trailing stop overnight) | **~−$2.56** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 2 |
+| Wins | 1 |
+| Losses | 1 |
+| Win Rate | **50%** |
+| Gross Wins | $2.99 |
+| Gross Losses | $2.56 |
+| Profit Factor | **1.17** |
+| Avg Win | $2.99 |
+| Avg Loss | $2.56 |
+| Largest Win | KAS T1 exit **+$2.99** |
+| Largest Loss | KAS overnight stop **−$2.56** |
+| Net from trades | +$0.43 gross; +$0.09 net after fees |
+| Est. Fees Paid | ~$0.34 (4 fills × ~$128 avg notional × ~0.26%; reconciled vs equity delta) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $150.6460. No open orders.
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Catalyst breakout + T1 tightening (KAS Trade 1):** Toccata hard fork pre-activation entry (+9.44% from 24h open; protocol upgrade exemption fires). T1 hit at +3.4%; 0.5% trailing stop tightened correctly and exited cleanly at +$2.99. Exact strategy workflow executed.
+
+**Entry types that failed:**
+- **Same-day full-size re-entry after T1 exit (KAS Trade 2):** Re-entered 4730 KAS @ $0.032022 (above Trade 1 entry) with 99% equity and 3.5% trailing stop. Thesis intact (Toccata fork window opening next day). Stop buffer noted at 1.18% going into overnight — critically thin for a high-ATR asset with 17.5% intraday range. KAS dropped to $0.028320 overnight (-13.9% from re-entry high watermark), triggering stop at ~$0.031482 (−1.69%). Stop worked as designed; the error was full-size overnight exposure with a compressed buffer.
+
+**Stop quality:**
+- All trailing stops executed correctly. T1 tightening to 0.5% worked perfectly. Overnight stop triggered at correct price. Zero orphaned positions. Stop system validated — no mechanical failures this week.
+
+**No-trade days (Mon Jun 2, Tue Jun 3 morning, Wed, Fri):** BTC weekly gate ACTIVE at −10.3% to −16.5% correctly blocked all screened assets. PORTAL (+173%), ALGO (+7.79%), STG (+12%), ADA, ETH, SOL all below open or stale catalyst. Gate saved capital on a −12% BTC week. Cash was the right position on 4+ days.
+
+**Profile violations:** None. Spread ≤1% confirmed (0.067%–0.167% range). No leverage. BTC weekly gate respected. Protocol upgrade exception applied correctly for KAS (Toccata fork window confirmed).
+
+**Concrete adjustment for next week:**
+**Overnight buffer rule for high-ATR assets:** When re-entering a high-ATR asset (3.5% trail) same-session after a T1 exit, cap re-entry size at **50% equity** if stop buffer is <2% at session-end/overnight. Do not deploy full equity overnight with a compressed stop buffer — KAS's overnight ATR (13–17% ranges this week) can exhaust a 3.5% trail in one candle. This does not change the trail width rule, only overnight sizing.
+
+Also flagged: the BTC weekly gate baseline has been implemented as a fixed reference (May 22 $77,574) in sessions rather than a rolling 5-day window as specified in strategy. With BTC at $62,590 and baseline fixed at $77,574, the gate requires a +24% BTC recovery to deactivate — this does not match the rolling window intent. Sessions should recalculate the 5-day rolling baseline each week. Strategy text is correct; implementation should be fixed.
+
+### Key Lesson
+**Cash preservation in a bear week is the strategy working.** BTC fell −12.23% this week; the bot ended +$0.06% — a 12.3 percentage-point outperformance by sitting in ZUSD. The BTC weekly gate blocked over a dozen entries that would have been immediate losses (every screened asset was declining into lower lows). The two trades taken were on a legitimate protocol upgrade catalyst; the T1 trade was textbook. The overnight re-entry loss was acceptable at −1.69% but avoidable with the new 50% sizing rule for compressed-buffer overnight holds. Next week: BTC at $62,590, weekly gate will remain ACTIVE for any non-catalyst asset. Priority setups: KAS Toccata fork follow-up (window open June 5–20), ONDO perps launch June 9, HYPE post-unlock price action June 7+, XRP CLARITY Act binary trigger.
+
+---

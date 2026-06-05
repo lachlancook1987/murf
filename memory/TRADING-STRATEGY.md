@@ -59,6 +59,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
   - Placed as a market-order sell GTC immediately after the buy fills
   - No exceptions: if a stop is not placed, the trade is not complete
   - **Exception: high-ATR assets** — for assets with expected intraday ATR >3% (e.g. FET, HYPE, WLD-type momentum coins), use **3.5% trailing stop** to avoid noise-stops on otherwise valid trades
+  - **Overnight sizing cap for high-ATR re-entries:** If re-entering a high-ATR asset (3.5% trail) same-session after a prior T1 exit, cap overnight hold size at **50% equity** when stop buffer is <2% at session-end. Full overnight exposure at <2% buffer on a high-ATR asset courts noise-stops (added 2026-06-05)
 - **Profit targets: T1 = +3%, T2 = +5%** from entry
   - At T1 (+3%): tighten trailing stop to 0.5% to lock in gains, let it run toward T2
   - At T2 (+5%): consider closing or tightening further — day trading wins are banked, not held
