@@ -11633,3 +11633,81 @@ No open positions → N/A
 5. **BTC weekly gate reset** — BTC ~$63,900; needs ~$75,824 (+19%) for full reset
 
 **No notification sent. No orders placed.**
+
+---
+
+## 2026-06-05 — Pre-Session Research
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only, last fill 2026-05-22) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$63,297 | −3.21% 24h; well above crash gate (−20%) |
+| ETH | ~$1,730–$1,804 | ~−2% to −4% 24h depending on feed |
+| Fear & Greed | **12 — Extreme Fear** | Up slightly from 11 yesterday |
+| BTC perp funding | +0.0013% (Binance 8h) | Slightly positive; Bybit −0.0024% |
+| BTC weekly gate | **ACTIVE** | BTC ~$63,297 vs May 27 ~$75,824 = −16.5%; strict entry criteria enforced for non-exception assets |
+| Crash gate | **NOT triggered** | −3.21% well above −20% threshold ✓ |
+
+**Top 24h gainers (Perplexity/CoinGecko):** WLD +31.95%, ENA +20.74%, INJ +19.03%, FET +17.71%, TRAC +16.60%, KAS +10.78%, ALGO +7.49%, ARB +6.68%
+
+**Key macro notes:** HYPE token unlock June 6 ($684M) — supply risk tomorrow. Rain ($RAIN) unlock June 10 ($713.59M). No confirmed protocol upgrades this week on Kraken-listed assets except KAS Toccata.
+
+### Candidate Screening
+
+| Asset | Kraken Open | Current | Day Chg | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|---|
+| **KAS/USD** | $0.029510 | $0.029910 | **+1.35%** | **0.167% ✓** | Toccata hard fork window OPENS TODAY (June 5, 2026) — fresh catalyst | Fork exception bypasses weekly gate ✓ | **TRADE ✓** |
+| WLD/USD | $0.5361 | $0.5361 | 0.0% | 0.093% ✓ | Arthur Hayes AI proxy call + Eightco 283M WLD treasury disclosure — pumped to $0.6314 then FULLY RETRACED | Weekly gate: no confirmed 1h surge >5% now | **SKIP — failed breakout** |
+| INJ/USD | $5.390 | $5.107 | −5.2% | 0.039% ✓ | AI/DeFi narrative (stale) | Weekly gate: declining, no <3h catalyst | **SKIP** |
+| FET/USD | $0.2161 | $0.2045 | −5.4% | 0.049% ✓ | AI narrative (stale) | Weekly gate: declining | **SKIP** |
+| ENA/USD | $0.09430 | $0.08810 | −6.6% | 0.113% ✓ | None | Weekly gate: declining | **SKIP** |
+| TRAC/USD | $0.39360 | $0.35800 | −9.0% | **1.057% ❌** | INDODAX listing (stale) | Hard skip — spread >1% | **HARD SKIP** |
+| SOL/USD | $68.80 | $65.86 | −4.3% | 0.030% ✓ | Firedancer audit (stale) | Weekly gate: declining, no fresh <3h catalyst | **SKIP** |
+| HYPE/USD | — | — | — | — | Token unlock June 6 ($684M) | Supply risk tomorrow | **AVOID** |
+
+### Trade Ideas
+
+#### IDEA 1 — KAS/USD (ENTRY ELIGIBLE) ★ Primary
+- **Catalyst:** Toccata hard fork window **opens TODAY** (June 5, 2026). Window: June 5–20. Fork adds programmable Layer-1 capabilities to Kaspa. Fork exception explicitly bypasses BTC weekly gate.
+- **Entry:** Market at ~$0.029910 (ask)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR asset per strategy) — placed immediately after fill
+- **T1:** $0.030807 (+3.0%) | **T2:** $0.031406 (+5.0%)
+- **R:R:** 3.0% / 2.5% = **1.2:1** ✓ (minimum met)
+- **Size:** ~$149 ZUSD (99% equity) → ~4981 KAS at $0.029910
+- **Kraken pair:** KAS/USD confirmed online ✓ | Spread: 0.167% ✓ | Leverage available (2x/3x) — using spot (no leverage)
+- **Notes:** Price recovering from yesterday's low ($0.028320); above $0.030570 24h high = breakout confirmation. Toccata fork is the thesis-defining event for this week.
+
+#### IDEA 2 — WLD/USD (WATCHLIST — not entry eligible today)
+- **Catalyst:** Arthur Hayes called WLD a key AI proxy (sold HYPE/NEAR to buy WLD) + Eightco treasury disclosure (283M WLD = 8.4% circulating supply). Volume surge 96%.
+- **Why skipped:** Pumped to $0.6314 (+17.8% from open) then fully retraced to $0.5361 = open. Failed breakout pattern; no positive 1h momentum. Re-entry requires fresh 1h surge >5% with volume confirmation.
+- **Watch level:** Break and hold above $0.5657 (today's intraday high) on volume = re-entry trigger.
+
+#### IDEA 3 — ONDO/USD (WATCHLIST — June 9 perps launch)
+- **Catalyst:** Perpetuals launch on major exchanges expected June 9. Watch for listing-day momentum.
+- **Status:** Not yet; reassess June 9 with fresh <6h catalyst + 1h momentum >5%.
+
+#### IDEA 4 — XRP/USD (WATCHLIST — binary trigger pending)
+- **Catalyst:** CLARITY Act Senate floor vote (estimated July 2026). Confirmed Senate vote = entry trigger with 7% trailing stop.
+- **Status:** Not yet; trigger not confirmed. Spread 0.011% ✓.
+
+#### IDEA 5 — HYPE/USD (AVOID through June 6 unlock)
+- **Token unlock June 6 ($684M):** ~25–30% of circulating supply unlocking tomorrow. Supply-pressure risk. Re-evaluate June 7+ post-unlock price action.
+
+### Risk Factors
+- BTC weekly gate active (−16.5% from May 27) — broad market weakness; pure momentum plays require strict filter
+- Fear & Greed 12 (Extreme Fear) — extended bearish sentiment; KAS fork thesis is the exception
+- KAS high-ATR (yesterday's range: $0.028320–$0.030570 = 7.8%) — 3.5% trailing stop is correct but noise risk remains
+- KAS stopped out yesterday at −1.69% on same trailing stop; re-entry thesis is the fork window opening today
+- HYPE token unlock June 6 creates broad altcoin supply pressure in next 24h
+
+### Decision: **TRADE — KAS/USD**
+- Crash gate: NOT triggered (BTC −3.21%)
+- BTC weekly gate: ACTIVE but KAS fork exception applies
+- Single entry: KAS/USD market ~$0.029910, 3.5% trailing stop, full equity allocation
+- All other candidates fail weekly gate criteria or have reversed from highs
