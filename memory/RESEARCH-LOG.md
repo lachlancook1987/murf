@@ -11877,3 +11877,123 @@ No open positions → N/A
 4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
 5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
 6. **BTC weekly gate reset** — BTC at $61,156; needs ~$75,824 (+24.0%) to fully reset
+
+---
+
+## 2026-06-05 — Pre-Session Research (Evening Run)
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical only, stop a2b44cf9 cancelled 2026-05-22) |
+
+---
+
+### Market Context
+| Metric | Value | Source |
+|---|---|---|
+| BTC | $60,924 | −3.19% 24h |
+| ETH | ~$1,600–1,730 | −4% to −10% 24h (platform-dependent) |
+| Fear & Greed | **12 (Extreme Fear)** | Unchanged — multi-session lows |
+| BTC Funding (Binance) | −0.0009%/8h | Slightly negative — shorts pay longs |
+| BTC Funding (Bybit) | −0.0027%/8h | Negative; bearish lean |
+| Crash Gate | **NOT triggered** | −3.19% 24h, threshold −20% |
+| BTC Weekly Gate | **ACTIVE** | BTC ~$60,924 vs May 27 ~$75,824 = −19.7%; strict criteria for non-exception entries |
+
+**Top 24h Gainers (CoinGecko):** Bitway +208%, Zest Protocol +83%, Opinion +45%, HOME +30%, Solstice +21%, Zora +21%, Ethena +15% — mostly micro-caps, not on Kraken or with untradeable spreads.
+
+**CoinMarketCap Gainers:** Siren +23%, DeXe +15%, Audiera +14% — no Kraken tradeable names with tight spreads.
+
+**Breaking news:** Broad risk-off selloff; BTC/ETH at multi-week lows; market "bleeding" on macro weakness. CLARITY Act remains XRP binary trigger (July 2026 est.). No verified major DeFi protocol catalysts <3h old as of research run. Volume surges primarily in DOGE and SHIB driven by selloff/liquidations, not accumulation.
+
+**Token Unlocks (current week):**
+| Token | Date | Size |
+|---|---|---|
+| HYPE | Jun 6 | $684M ← major supply risk |
+| RED | Jun 6 | $4.82M |
+| OPN | Jun 5 | $4.24M |
+| ENA | Jun 5 | (size unclear, unlocked today) |
+| RAIN | Jun 10 | $713M (future) |
+
+---
+
+### Candidate Screening
+| Asset | 24h Open | Ask | Move | Spread | Catalyst | BTC Gate | Verdict |
+|---|---|---|---|---|---|---|---|
+| **KAS/USD** | $0.029510 | $0.030510 | **+3.39%** | 0.197% ✓ | Toccata hard fork window OPEN (Jun 5–20) — protocol upgrade, fork exception | **BYPASSED** (protocol upgrade exempt) | **ACTIVE CANDIDATE** |
+| HYPE/USD | $64.390 | $58.680 | −8.89% | 0.034% ✓ | OpenSea perps (Jun 5 — fresh) | $684M unlock Jun 6 in <24h; price declining | **SKIP — unlock + declining** |
+| WLD/USD | $0.5361 | $0.5112 | −4.65% | 0.137% ✓ | Arthur Hayes AI proxy (Jun 3 — 2 days old) | Catalyst stale (>3h) → BANNED | **SKIP — stale catalyst** |
+| ONDO/USD | $0.369860 | $0.329870 | −10.81% | 0.042% ✓ | Perps launch Jun 9 + MetaMask/Chainlink integration | No positive 1h momentum; trigger is Jun 9 | **SKIP today — forward setup Jun 9** |
+| INJ/USD | $5.390 | $4.951 | −8.14% | 0.081% ✓ | No fresh catalyst | Declining, no signal | **SKIP** |
+| NEAR/USD | $2.1975 | $1.9657 | −10.55% | 0.117% ✓ | No fresh catalyst | Declining | **SKIP** |
+| SOL/USD | $68.80 | $63.16 | −8.19% | 0.016% ✓ | No fresh catalyst | Declining | **SKIP** |
+| DOGE/USD | $0.088420 | $0.081478 | −7.85% | 0.076% ✓ | Volume surge from liquidations, not accumulation | Declining, no catalyst | **SKIP** |
+| ENA/USD | $0.094300 | $0.089200 | −5.41% | 0.112% ✓ | Token unlock today (supply pressure) | Declining | **SKIP** |
+
+---
+
+### Trade Ideas
+
+#### Idea 1: KAS/USD — Toccata Hard Fork Active (PRIMARY)
+- **Catalyst:** Kaspa Toccata hard fork window OPENED June 5, 2026 and runs through June 20. Protocol upgrade adds UTXO commitments and parallelism improvements, preparing for Kaspa 2.0. KAS is up +3.39% from 24h open ($0.029510→$0.030510) while BTC and all major alts are down 3-10% today — significant relative strength. Fork exception BYPASSES BTC weekly gate per TRADING-STRATEGY.md.
+- **Entry:** Market buy at current ask ~$0.030510
+- **T1:** $0.031425 (+3.0%)
+- **T2:** $0.032036 (+5.0%)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR asset; today's 24h range $0.028750–$0.031250 = 8.6%; 3.5% trail avoids noise-stops)
+- **R:R:** 1.2:1 (3% T1 / 2.5% stop reference)
+- **Size:** ~$150 full equity (5,000 KAS approx at $0.030510). Overnight sizing cap: if stop buffer <2% at EOD, reduce to 50% equity per strategy update 2026-06-05.
+- **Kraken pair:** KAS/USD ✓ confirmed | **Spread:** 0.197% ✓
+- **KAS volume:** 80.5M KAS traded today ($2.5M+) — healthy
+
+#### Idea 2: ONDO/USD — Pre-Perps Launch Setup (FORWARD, not today)
+- **Catalyst:** Ondo Perps launch June 9, 2026 (4 days away) — perpetual futures for tokenized US stocks/ETFs, 20x leverage for non-US users. MetaMask recently added Ondo tokenized stocks access. Chainlink price feeds went live for Ondo on Ethereum. Multiple converging catalysts for DeFi/RWA sector.
+- **Entry trigger:** Wait for ONDO to show positive 1h momentum >3% (currently down -10.81%); ideal entry June 7-9 window when event approaches. On/after June 9 with confirmed adoption metrics.
+- **T1:** Entry +3%, **T2:** Entry +5%
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard; ONDO not high-ATR class)
+- **R:R:** 1.2:1 at T1
+- **Spread:** 0.042% ✓ | **Pair confirmed:** ONDO/USD ✓
+
+#### Idea 3: HYPE/USD — Post-Unlock Bounce (FORWARD, June 7+)
+- **Catalyst:** OpenSea perpetuals trading via Hyperliquid launched June 5 (fresh). HYPE at $58.68 is down -8.89% from today's open. Once $684M token unlock (June 6) clears and price stabilizes, entry on confirmed bottom + reversal.
+- **Entry trigger:** June 7+ when unlock supply absorbed; look for 1h >3% reversal signal from post-unlock low
+- **T1:** Entry +3%, **T2:** Entry +5%
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR — HYPE 24h range $56.50–$67.66 = 19.7%)
+- **Spread:** 0.034% ✓ | **Pair confirmed:** HYPE/USD ✓
+
+#### Idea 4: XRP/USD — CLARITY Act Binary (STANDING ORDER TRIGGER)
+- **Catalyst:** GENIUS Act signed May 2026; CLARITY Act (crypto regulation) still pending Senate, estimated July 2026 vote. Confirmed floor vote triggers entry.
+- **Entry trigger:** Confirmed Senate floor vote news <3h old
+- **Stop:** `trail_percent: 7` (binary catalyst — headline volatility)
+- **R:R:** Asymmetric on regulatory win; 7% trail accommodates multi-leg moves
+
+---
+
+### Risk Factors
+1. **BTC weekly gate ACTIVE** (−19.7% from May 27) — strict entry criteria for non-exception plays; no pure momentum entries
+2. **HYPE $684M unlock June 6** — major near-term altcoin supply pressure
+3. **Fear & Greed 12 (Extreme Fear)** — market fragile; contrarian signal but does NOT override gate rules
+4. **KAS stop-out history** — two consecutive trades on this thesis (one T1 exit, one stopped -1.69%); fork window still open, thesis intact, no consecutive-loss rules apply
+5. **Negative funding rates** — slight short bias in derivatives; momentum could face headwinds but crash gate not triggered
+6. **KAS high-ATR overnight risk** — if entering KAS, overnight sizing cap: cap at 50% equity if stop buffer <2% at session end (per strategy update 2026-06-05)
+
+---
+
+### Decision: TRADE — KAS/USD is primary candidate
+
+- Crash gate NOT triggered ✓
+- KAS fork exception bypasses BTC weekly gate ✓
+- KAS up +3.39% from open in a broadly down market — relative strength confirmed ✓
+- Spread 0.197% ✓, volume healthy ✓, R:R 1.2:1 ✓
+- Entry valid: market buy ~$0.030510; place 3.5% trailing stop immediately after fill
+
+---
+
+### Active Watchlist
+1. **KAS/USD** — PRIMARY active candidate; Toccata fork window OPEN (Jun 5–20); entry at ~$0.030510; 3.5% trail (high-ATR); fork exception bypasses weekly gate
+2. **ONDO/USD** — June 9 perps launch + MetaMask + Chainlink catalysts; enter on positive 1h momentum >3% in the June 7–9 window
+3. **HYPE/USD** — Await June 6 unlock clearance; reassess June 7+ for OpenSea perps adoption catalyst + post-unlock bounce
+4. **WLD/USD** — Watch for fresh <3h catalyst (new listing/institutional buy); currently down -4.65%, catalyst stale
+5. **XRP/USD** — CLARITY Act standing trigger (July 2026 est.); 7% trail on Senate floor vote confirmation
+6. **BTC weekly gate reset** — BTC at $60,924; needs ~$75,824 (+24.5%) to fully reset
+
