@@ -11877,3 +11877,67 @@ No open positions → N/A
 4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
 5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
 6. **BTC weekly gate reset** — BTC at $61,156; needs ~$75,824 (+24.0%) to fully reset
+
+---
+
+## 2026-06-05 — Session-Open Scan (15:10 UTC)
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $60,847 (ask) | −4.65% from 24h open $63,811.10; crash gate NOT triggered |
+| ETH | $1,592 | −10.0% from 24h open $1,768.61; near 24h lows |
+| BTC weekly gate | **ACTIVE** | BTC ~$60,847 vs May 27 ~$75,824 = −19.7%; strict criteria apply |
+| Crash gate | **NOT triggered** | −4.65% 24h, threshold −20% |
+| Fear & Greed | **12 (Extreme Fear)** | Multi-session lows; broad capitulation |
+| BTC funding rates | Negative (Binance −0.0014%, Bybit −0.0036%) | Shorts paying longs; bearish lean |
+| Market tone | Broad risk-off selloff | BTC/ETH at 2-month lows; "crypto crash" narrative |
+
+### Perplexity Research Summary
+- **24h gainers (broad market):** BTW +208%, ZEST +83%, OPN +45% — micro-caps not on Kraken
+- **Kraken 24h gainers:** OMNI, MAT, DOLO (24h moves from earlier data) — all previously screened with bad spreads or unavailable
+- **News catalysts:** WLD attributed to OpenAI/Anthropic IPO narrative (ongoing, not fresh <6h event); Monero (XMR) volume +20.6% but no confirmed fresh catalyst; Siren volume surge — not available on Kraken; no fresh listing or protocol events <6h on Kraken pairs
+- **Token unlocks:** HYPE unlock June 6 (est. $684M) — avoid; STABLE June 8 ($34M); RAIN June 10 ($713M) — future supply risk
+- **CLARITY Act:** XRP binary trigger remains July 2026 est. — not fired
+
+### Candidate Screening
+| Asset | Ask | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| **KAS/USD** | $0.029770 | +0.95% ($0.029510 open) | 0.168% ✓ | Toccata fork window OPEN (June 5–20) — fork exception | Fork exception bypasses weekly gate; BUT only +0.95% from open — insufficient momentum (need >3% in 1h/4h; post-stop bar >5%) | **SKIP — insufficient momentum** |
+| **WLD/USD** | $0.4956 | −7.4% ($0.5361 open) | 0.020% ✓ | OpenAI/Anthropic IPO narrative — ongoing, not confirmed fresh <3h event | BTC weekly gate: no confirmed fresh <3h catalyst; declining from open | **SKIP — declining + stale catalyst** |
+| **HYPE/USD** | $60.81 | −5.6% ($64.39 open) | 0.033% ✓ | OpenSea perps (June 5 — fresh) | Token unlock June 6 (est. $684M) in <24h; price declining | **SKIP — unlock risk + declining** |
+| **XMR/USD** | $321.74 | −13.8% ($373.60 open) | 0.174% ✓ | Privacy demand narrative (no confirmed fresh <6h catalyst) | Declining sharply; no catalyst meets weekly gate <3h requirement | **SKIP** |
+| **INJ/USD** | $5.059 | −5.7% ($5.390 open) | 0.158% ✓ | No fresh catalyst | Declining | **SKIP** |
+| **ETH/USD** | $1,592 | −10.0% | Tight ✓ | No catalyst | Severe decline | **SKIP** |
+| **BTC/USD** | $60,847 | −4.65% | Tight ✓ | No catalyst | Declining | **SKIP** |
+
+**Key observations:**
+- KAS is the only asset showing relative strength (+0.95% vs broad selloff). Fork window is open and thesis intact, but positive 1h/4h momentum threshold not met (+0.95% is insufficient; post-stop conservative bar is >5% in 1h).
+- WLD declined from $0.5361 open to $0.4964 — the earlier OpenAI/Anthropic IPO narrative that drove the move to $0.6314 (June 4 high) has fully retraced. Not a fresh catalyst.
+- HYPE: avoid confirmed through June 6 unlock regardless of OpenSea catalyst.
+- Broad market in severe risk-off: ETH −10%, XMR −13.8%, INJ −5.7% — no alt is holding up except KAS.
+- BTC funding rates negative for 3+ sessions = structural short bias; longs are not being squeezed upward.
+
+### Decision: NO NEW TRADES
+- BTC weekly gate ACTIVE (−19.7%)
+- KAS fork exception active but momentum threshold not met (+0.95% insufficient)
+- All other assets declining; no catalyst + momentum combo passes
+- HYPE unlock risk persists through June 6
+- Extreme Fear (12) + negative funding rates = unfavorable entry environment
+
+**No WhatsApp notification sent (no action taken).**
+
+### Active Watchlist (updated)
+1. **KAS/USD** — Toccata fork window OPEN (June 5–20); re-entry trigger: 1h >5% positive momentum (conservative post-stop-out bar); 3.5% trail (high-ATR); fork exception bypasses weekly gate; currently showing relative strength vs market
+2. **HYPE/USD** — Avoid through June 6 token unlock; reassess June 7+ for OpenSea perps catalyst post-unlock; watch for post-unlock price action and volume
+3. **WLD/USD** — OpenAI/Anthropic IPO narrative ongoing but not actionable without fresh <3h confirmation event (listing, specific IPO date announced, major partnership); entry requires break above $0.5743 (June 4 high) with volume + fresh catalyst
+4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
+5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
+6. **BTC weekly gate reset** — BTC at $60,847; needs ~$75,824 (+24.6%) to reset; near crash gate threshold (−19.7% weekly)
+
