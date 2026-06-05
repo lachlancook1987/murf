@@ -4038,3 +4038,36 @@ No adjustments. ✓
 **Trades today:** none | **Total since migration:** ~53
 
 **Notes:** No trades executed today. Pre-session research identified KAS/USD as primary candidate (Toccata hard fork window opened June 5, entry ~$0.029910, 3.5% trailing stop, ~$149 full equity); order was not placed this session. Portfolio remains 100% ZUSD $150.6460. BTC dropped −0.93% on the day ($62,808 vs ~$63,400 yesterday close); bot outperformed by +0.93% holding cash. BTC weekly gate active (−16.5% from May 27 peak ~$75,824). Fear & Greed 12 (Extreme Fear). HYPE token unlock June 6 ($684M) adds near-term altcoin supply pressure — avoid HYPE through tomorrow. Alpaca stop a2b44cf9 cancelled since 2026-05-22 — no Alpaca exposure. Phase P&L −$29.13 (−16.21%) from Kraken starting equity $179.78. BTC crash gate NOT triggered (−0.93% today, −3.21% 24h at session open). For June 06: watch KAS/USD for positive 1h momentum >5% + confirmed Toccata fork activation = re-entry trigger (3.5% trail, full equity); reassess HYPE post-unlock price action; ONDO perps launch June 9.
+
+---
+
+## 2026-06-05 — Session-Open Trade (Morning Session)
+
+### KAS/USD — Re-entry | Toccata Fork Active + Relative Strength
+
+**Context:** Account 100% ZUSD $150.6460 — no open positions. KAS at $0.031690 (+7.45% from 24h open $0.029510) while BTC −3.3%, ETH −8.9%, NEAR −8.6% — exceptional relative strength. Toccata hard fork window is OPEN (June 5–20, 2026). Fork exception bypasses BTC weekly gate. Previous KAS positions stopped out on June 3 and June 4; no consecutive-loss rules apply per strategy.
+
+**Pre-trade hard-check:**
+| Check | Result |
+|---|---|
+| Crash gate (BTC -20% / 24h) | BTC −3.3% ($63,811→$61,733) — NOT triggered ✓ |
+| BTC weekly gate | ACTIVE (−18.6% vs May 27 $75,824) — BUT: Toccata protocol upgrade exception applies ✓ |
+| Pair online | KAS/USD confirmed online ✓ |
+| Spread | 0.159% ($0.031340/$0.031390) ✓ |
+| Catalyst <6h | Toccata fork window opened June 5 — ongoing protocol upgrade ✓ |
+| 1h/4h momentum | +6.37%→+7.45% from 24h open; at 24h high — strong ✓ |
+| Volume | 86M KAS ($2.7M) — healthy ✓ |
+| R:R | 3% T1 / 2.5% stop risk = 1.2:1 ✓ |
+
+### 2026-06-05T~UTC | KAS/USD | BUY | 4721.4998 KAS | Entry: ~$0.031690 | Stop: 3.5% trailing | Open
+
+**Order ID (buy):** O5JQVS-SNUOF-AAEOI3
+**Trailing Stop Order ID:** OUYRE3-XJV62-EICEO6 (trailing_stop −3.5%, stopprice $0.030590, HWM $0.031690, GTC)
+**Notional:** ~$149.64 (~99.3% equity)
+**ZUSD remaining:** $0.4985
+**T1:** $0.032641 (+3.0%) | **T2:** $0.033275 (+5.0%)
+**Stop level:** $0.030590 (3.5% trailing from HWM $0.031690; high-ATR asset)
+**R:R:** 1.2:1 (3% T1 gain / 2.5% reference stop risk)
+**Thesis:** Kaspa Toccata hard fork window opened June 5, 2026 — protocol upgrade adds native tokens, covenants, ZK infrastructure, and L1 programmability (Kaspa 2.0 preparation). KAS up +7.45% from 24h open while BTC −3.3%, ETH −8.9% — exceptional relative strength in a broad selloff. Fork exception bypasses BTC weekly gate per strategy. Third entry on this thesis; no consecutive-loss rules apply.
+**Stop rationale:** 3.5% trailing (high-ATR asset — 24h range: $0.028750–$0.031690 = 10.2%; noise-stop protection). Stop trails up as HWM advances.
+**Notes:** At T1 (+3%): cancel 3.5% stop, replace with 0.5% trailing to lock gains. Overnight sizing cap: if stop buffer <2% at EOD, consider reducing to 50% equity per strategy 2026-06-05 note. KAS at day high $0.031690 at time of stop placement.
