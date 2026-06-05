@@ -4025,3 +4025,16 @@ No adjustments. ✓
 **Trades today:** 1) KAS/USD BUY 3367 @ $0.031300 (session open); 2) KAS/USD T1 exit ~$0.032348 (+3.4%, +$2.99); 3) KAS/USD re-entry BUY 4730 @ $0.032022; 4) KAS/USD trailing stop OKGTE3 triggered overnight ~$0.031482 (−1.69%, −$2.56) | **Total since migration:** ~53
 
 **Notes:** Two KAS round trips on the Toccata hard fork thesis (fork window June 5–20, 2026 now open). The first position (3367 KAS @ $0.031300) hit T1 (+3.4%) and was exited via 0.5% trailing stop at ~$0.032348 (+$2.99). Re-entry at $0.032022 (4730 KAS, 99% equity, full conviction one day before fork) was stopped out overnight at $0.031482 (−1.69%, −$2.56) as KAS sold off to an intraday low of $0.028320 before recovering. Net session P&L +$0.10 (+0.06%); bot outperformed BTC by +1.05% (BTC −0.99% on the day). Portfolio 100% ZUSD $150.6460. Alpaca stop a2b44cf9 cancelled since 2026-05-22 — no Alpaca exposure. Phase P&L −$29.13 (−16.21%) from Kraken starting equity $179.78. BTC at $63,400 (24h range $61,256–$64,686). Crash gate NOT triggered. For June 05: Toccata hard fork window is NOW OPEN — KAS eligible for re-entry on fresh <6h catalyst confirming fork activation; R:R ≥1.2:1 required; 3.5% trailing stop (high-ATR).
+
+---
+
+## Jun 05 — EOD Snapshot (Day 16, Friday)
+**Portfolio:** $150.65 | **Cash:** $150.65 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$29.13 (−16.21%) | **vs BTC:** +0.93%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~53
+
+**Notes:** No trades executed today. Pre-session research identified KAS/USD as primary candidate (Toccata hard fork window opened June 5, entry ~$0.029910, 3.5% trailing stop, ~$149 full equity); order was not placed this session. Portfolio remains 100% ZUSD $150.6460. BTC dropped −0.93% on the day ($62,808 vs ~$63,400 yesterday close); bot outperformed by +0.93% holding cash. BTC weekly gate active (−16.5% from May 27 peak ~$75,824). Fear & Greed 12 (Extreme Fear). HYPE token unlock June 6 ($684M) adds near-term altcoin supply pressure — avoid HYPE through tomorrow. Alpaca stop a2b44cf9 cancelled since 2026-05-22 — no Alpaca exposure. Phase P&L −$29.13 (−16.21%) from Kraken starting equity $179.78. BTC crash gate NOT triggered (−0.93% today, −3.21% 24h at session open). For June 06: watch KAS/USD for positive 1h momentum >5% + confirmed Toccata fork activation = re-entry trigger (3.5% trail, full equity); reassess HYPE post-unlock price action; ONDO perps launch June 9.
