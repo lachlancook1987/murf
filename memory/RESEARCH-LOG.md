@@ -11997,3 +11997,67 @@ No open positions → N/A
 5. **XRP/USD** — CLARITY Act standing trigger (July 2026 est.); 7% trail on Senate floor vote confirmation
 6. **BTC weekly gate reset** — BTC at $60,924; needs ~$75,824 (+24.5%) to fully reset
 
+---
+
+## 2026-06-05 — Midday Scan
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $0.4985 (0.3%) + KAS position | KAS/USD 4721.5 KAS @ $0.031690 (open) | OUYRE3-XJV62-EICEO6 trailing stop active |
+| Alpaca | $0 | None | None (stop a2b44cf9 cancelled 2026-05-22) |
+
+### STEP 2 — Live State
+- **Kraken positions:** 0 margin positions (spot KAS held, confirmed via active trailing stop order)
+- **Kraken orders:** OUYRE3-XJV62-EICEO6 — trailing stop sell 4721.49980 KAS @ 3.5% trail, stop $0.030900, GTC — **OPEN ✓**
+- **Alpaca:** 0 positions, 0 active orders (historical only) ✓
+
+### STEP 3 — Trailing Stop Verification
+| Position | Qty | Stop Order | Type | Stop Price | HWM | Buffer | Status |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | 4721.5 | OUYRE3-XJV62-EICEO6 | trailing_stop 3.5% | $0.030900 | $0.032020 | 1.69% | ✓ PROTECTED |
+
+HWM $0.032020 = today's 24h high (confirmed via quote: `h: 0.032020000`). Stop trails correctly.
+**No unprotected positions. No stop placements needed.**
+
+### STEP 4 — Stop Tightening Check
+| Position | Entry | Current (last) | P&L% | +20% Threshold | Action |
+|---|---|---|---|---|---|
+| KAS/USD | $0.031690 | $0.031430 | −0.82% | $0.038028 | **None — well below threshold** |
+
+No tightening warranted. 3.5% trailing stop appropriate for high-ATR KAS.
+
+### STEP 5 — Thesis Check
+- **KAS/USD Toccata thesis:** INTACT ✓
+  - Toccata hard fork window June 5–20 confirmed by Perplexity: "mainnet activation between June 5 and 20, 2026 … add native programmability, covenants, ZK functionality, base-layer token support"
+  - No exploit, rug pull, regulatory action, or token unlock
+  - KAS showing relative strength: up +3.3% from 24h open ($0.029510) while BTC/ETH down significantly
+  - Resistance at $0.032020 (today's high = HWM); price consolidating at $0.031430
+  - Perplexity notes: "traders waiting for confirmation, price near key resistance ~$0.032"
+  - **No thesis break → hold position**
+
+### STEP 6 — New Entry Scan
+- **Available capital:** $0.4985 ZUSD — insufficient for any meaningful new position
+- KAS already held (99.7% equity deployed)
+- No actionable new setups reviewed (no capital to deploy)
+- BTC weekly gate ACTIVE; broad market risk-off; no momentum signals in watchlist
+
+### Risk Notes
+- **Stop buffer 1.69%** — below the 2% overnight cap threshold noted in TRADING-STRATEGY.md
+- The overnight cap rule applies "same-session after a prior T1 exit" — this is a new session (June 5), not same-session T1 exit re-entry. Rule does not strictly apply, but buffer is thin.
+- KAS 24h range $0.028750–$0.032020 (11.4%) — high-ATR confirmed; 3.5% trail is correct stop size
+- If price recovers toward T1 ($0.032641), trailing stop will rise with HWM
+
+### Decision: NO-OP
+- Position protected ✓ | Thesis intact ✓ | Stop tightening not required ✓
+- No capital for new entries ($0.4985 ZUSD)
+- **No WhatsApp notification sent (no action taken)**
+
+### Active Watchlist
+1. **KAS/USD** — HELD (4721.5 KAS, 3.5% trailing stop @ $0.030900). T1 $0.032641, T2 $0.033275. Toccata fork window OPEN June 5–20. At T1: cancel stop, replace with 0.5% trailing to lock gains.
+2. **ONDO/USD** — Forward setup: perps launch June 9. Enter on 1h >3% momentum in Jun 7–9 window.
+3. **HYPE/USD** — Avoid through June 6 unlock ($684M). Reassess June 7+ post-unlock bounce + OpenSea perps catalyst.
+4. **WLD/USD** — Needs fresh <3h catalyst; currently stale (June 3 Arthur Hayes call).
+5. **XRP/USD** — CLARITY Act standing trigger (July 2026 est.); 7% trail on Senate floor vote.
+6. **BTC weekly gate** — BTC at ~$61,400; needs ~$75,824 (+23.5%) to fully reset.
+
