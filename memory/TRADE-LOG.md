@@ -4071,3 +4071,38 @@ No adjustments. ✓
 **Thesis:** Kaspa Toccata hard fork window opened June 5, 2026 — protocol upgrade adds native tokens, covenants, ZK infrastructure, and L1 programmability (Kaspa 2.0 preparation). KAS up +7.45% from 24h open while BTC −3.3%, ETH −8.9% — exceptional relative strength in a broad selloff. Fork exception bypasses BTC weekly gate per strategy. Third entry on this thesis; no consecutive-loss rules apply.
 **Stop rationale:** 3.5% trailing (high-ATR asset — 24h range: $0.028750–$0.031690 = 10.2%; noise-stop protection). Stop trails up as HWM advances.
 **Notes:** At T1 (+3%): cancel 3.5% stop, replace with 0.5% trailing to lock gains. Overnight sizing cap: if stop buffer <2% at EOD, consider reducing to 50% equity per strategy 2026-06-05 note. KAS at day high $0.031690 at time of stop placement.
+
+---
+
+## 2026-06-05 — Overnight Triage Check
+
+**Positions (Kraken):**
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| KAS/USD | 4721.5 | $0.031690 | $0.031350 | **−1.07%** | $0.032020 | $0.030900 (trail 3.5%) | 1.43% | OUYRE3-XJV62-EICEO6 ✓ |
+
+**Alpaca:** Stop a2b44cf9 CANCELLED since 2026-05-22 — no Alpaca positions or orders. ✓
+
+**STEP 2 — Trailing stops verified:**
+- KAS/USD: OUYRE3-XJV62-EICEO6, 4721.49980 KAS, trail 3.5%, HWM $0.032020 (24h high), stop $0.030900 — ✓
+- Stop has trailed up from initial $0.030590 (at entry) → $0.030900 (HWM advance +$0.000330) — working correctly.
+- No unprotected Kraken positions.
+
+**STEP 3 — Emergency exits (>−20% AND stop not triggered):** KAS −1.07% from entry — not applicable.
+
+**STEP 4 — Stop tightening (≥+20% since entry):**
+- Entry $0.031690 → HWM $0.032020 = +1.04% gain to HWM — well below +20% threshold.
+- No adjustments needed. 3.5% trail is appropriate (high-ATR asset, today's range $0.028750–$0.032020 = 11.3%).
+
+**STEP 5 — BTC Crash Gate:**
+- BTC ask: $61,712 | 24h open: $63,811.10 | Move: **−3.29%**
+- 24h range: $59,070.60 – $63,905.30
+- Threshold: −20% | Gate: **NOT triggered** ✓
+
+**KAS/USD context:**
+- 24h open $0.029510 → current $0.031350 (+6.23%) — still well above open
+- Stop buffer 1.43% (thin but expected given HWM at $0.032020)
+- Toccata hard fork window OPEN (June 5–20, 2026) — thesis intact
+- T1 ($0.032641) is 4.11% above current; T2 ($0.033275) is 6.12% above current
+
+**Result: NO-OP. No actions taken. No notification sent.**
