@@ -11771,3 +11771,59 @@ No open positions → N/A
 4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
 5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
 6. **BTC weekly gate reset** — BTC ~$63,300; needs ~$75,824 (+19.8%) for full reset
+
+---
+
+## 2026-06-05 — Session-Open / Evening Scan
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$61,884.90 | −3.02% from 24h open $63,811.10; crash gate NOT triggered |
+| BTC weekly gate | **ACTIVE** | BTC ~$61,885 vs May 27 ~$75,824 = −18.4%; strict entry criteria |
+| Crash gate | **NOT triggered** | −3.02% 24h, well above −20% threshold |
+| Fear & Greed | **12 (Extreme Fear)** | Unchanged from midday; multi-session lows |
+| BTC funding rates | Slightly negative | Binance −0.0014%, Bybit −0.0036% per 8h; bearish lean |
+| ETH | ~$1,728 | −4.25% 24h |
+
+### Perplexity Research Summary
+- **Top 24h gainers (broad market):** OPN +70%, SIREN +26%, NIL +19% — mostly micro-caps not on Kraken or with terrible spreads
+- **Kraken momentum plays:** OMNI, MAT, DOLO mentioned — but OMNI has 37% spread and zero volume on Kraken; MAT/DOLO not available
+- **Breaking news:** Broad risk-off selloff; BTC/ETH hitting 2-month lows; no fresh listing or protocol catalysts <3h old
+- **Token unlocks:** RAIN June 10 ($713M) — future supply risk; STABLE June 8 ($34M); no critical unlock today
+- **CLARITY Act** remains the XRP binary trigger (July 2026 est.)
+
+### Candidate Screening
+| Asset | Last | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| KAS/USD | $0.029070 | −1.49% ($0.029510 open) | 0.136% ✓ | Toccata fork window OPEN (June 5–20) — fork exception | Fork exception applies BUT price declining, no positive 1h momentum | **SKIP — no positive 1h momentum** |
+| OMNI/USD | $0.447 (bid) | N/A | 37.2% ✗ | No fresh catalyst today | Hard spread fail | **SKIP — untradeable spread** |
+| NIL/USD | $0.04510 | −4.04% ($0.04700 open) | 0.44% ✓ | AI privacy narrative from May 30 (6+ days old) | BTC weekly gate: catalyst >3h → BANNED | **SKIP — stale catalyst, declining** |
+| WLD/USD | $0.5371 | +0.19% ($0.5361 open) | 0.17% ✓ | Arthur Hayes June 3 (2+ days old) | BTC weekly gate: catalyst stale → BANNED | **SKIP — catalyst stale** |
+| HYPE/USD | $62.07 | −3.61% ($64.39 open) | 0.048% ✓ | OpenSea perpetuals (June 5) — fresh but price declining | $684M unlock June 6 in <24h — supply pressure risk | **SKIP — declining + unlock risk** |
+| ETH/USD | ~$1,728 | −4.25% 24h | Tight ✓ | No catalyst | Declining across all timeframes | **SKIP** |
+| BTC/USD | $61,884 | −3.02% 24h | Tight ✓ | No catalyst | Declining | **SKIP** |
+
+### Decision: NO NEW TRADES
+- BTC weekly gate ACTIVE (−18.4% from May 27) — strict criteria: 1h >5% momentum + <3h catalyst required
+- No asset meets both criteria
+- KAS fork exception applies but price declining — positive 1h momentum prerequisite not met
+- HYPE fresh catalyst (OpenSea perps) undermined by $684M unlock tomorrow + declining price
+- Market in Extreme Fear (12), broad risk-off; no setup meets risk-reward requirements
+
+**No WhatsApp notification sent (no action taken).**
+
+### Active Watchlist
+1. **KAS/USD** — Toccata fork window OPEN (June 5–20); re-entry when KAS 1h >3% positive momentum appears; 3.5% trail (high-ATR); fork exception bypasses weekly gate
+2. **HYPE/USD** — Avoid until June 6 token unlock clears; reassess June 7+ post-unlock price action. Watch for OpenSea perps adoption metrics as catalyst
+3. **WLD/USD** — Watch for fresh <3h catalyst (new listing, follow-up announcement); entry on break above $0.5743 day high with volume
+4. **NIL/USD** — Kraken listed, tight spread (0.44%); needs fresh <3h AI/privacy catalyst. Watch for Nillion product launch or exchange listing announcement
+5. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
+6. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
+7. **BTC weekly gate reset** — BTC at $61,885; needs ~$75,824 (+22.5%) to fully reset; monitor for weekly recovery
