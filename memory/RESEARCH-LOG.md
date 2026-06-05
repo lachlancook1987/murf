@@ -11711,3 +11711,63 @@ No open positions → N/A
 - BTC weekly gate: ACTIVE but KAS fork exception applies
 - Single entry: KAS/USD market ~$0.029910, 3.5% trailing stop, full equity allocation
 - All other candidates fail weekly gate criteria or have reversed from highs
+
+---
+
+## 2026-06-05 — Midday Scan
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$63,300 | +0.50% 24h; crash gate NOT triggered |
+| BTC weekly gate | **ACTIVE** | BTC ~$63,300 vs May 27 ~$75,824 = −16.5%; strict entry criteria |
+| Crash gate | **NOT triggered** | +0.50% 24h, well above −20% threshold |
+| Fear & Greed | ~12 (Extreme Fear) | Unchanged |
+
+### STEP 3 — Trailing Stop Verification
+No open positions → N/A
+
+### STEP 4 — Stop Tightening
+No open positions → N/A
+
+### STEP 5 — Thesis Check
+No open positions → N/A
+
+### STEP 6 — Midday Entry Scan
+
+| Asset | From Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| KAS/USD | +0.81% ($0.029510→$0.029750) | 0.101% ✓ | Toccata hard fork window OPEN (June 5–20) — fork exception active | Fork exception applies BUT price retreating from $0.030570 day high; no positive 1h momentum | **SKIP — no positive 1h momentum** |
+| HYPE/USD | −4.67% ($64.39→$61.38) | 0.016% ✓ | OpenSea perpetuals via Hyperliquid (June 5 — fresh) | Price declining from open; token unlock June 6 ($684M supply) in <24h — major risk | **SKIP — declining + unlock risk** |
+| WLD/USD | +5.60% ($0.5361→$0.5663) | 0.035% ✓ | Arthur Hayes $10 target + Eightco treasury (June 3 — 2 days old) | Weekly gate active; catalyst >3h old → BANNED; no confirmed listing <3h | **SKIP — catalyst stale** |
+| INJ/USD | Declining from open | 0.039% ✓ | No fresh <3h catalyst | Weekly gate: declining price | **SKIP** |
+| BTC/USD | +0.50% from open | Tight ✓ | No catalyst | Weekly gate: no signal | **SKIP** |
+
+**Key findings:**
+- KAS Toccata fork window is open but price has retreated from $0.030570 day high to $0.029750; no positive 1h momentum to support entry. Re-entry eligible if KAS 1h >3% surge appears.
+- HYPE: OpenSea perpetuals is a fresh catalyst (June 5) but price is declining (-4.67% from open) and $684M token unlock tomorrow creates significant near-term supply risk. Avoid.
+- WLD: Strong 24h move (+5.60% from open) but catalyst (Arthur Hayes June 3) is 2+ days old — does NOT meet BTC weekly gate <3h requirement. No confirmed fresh listing or product event.
+- No asset meets weekly gate criteria (1h >5% momentum + <3h catalyst) or provides a valid fork/binary exception.
+
+### Decision: NO NEW TRADES
+- BTC weekly gate ACTIVE (−16.5%)
+- No fresh catalyst <3h old for any candidate
+- KAS no positive 1h momentum
+- HYPE unlock risk tomorrow
+- WLD catalyst stale
+
+**No WhatsApp notification sent (no action taken).**
+
+### Active Watchlist (unchanged)
+1. **KAS/USD** — Toccata fork window OPEN (June 5–20); re-entry when 1h >3% positive momentum appears; 3.5% trail (high-ATR); fork exception bypasses weekly gate
+2. **WLD/USD** — Watch for fresh <3h catalyst (new listing, Hayes follow-up announcement); current catalyst stale. Entry requires break above $0.5743 day high with volume.
+3. **HYPE/USD** — Avoid until June 6 token unlock clears; reassess June 7+ post-unlock price action
+4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
+5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
+6. **BTC weekly gate reset** — BTC ~$63,300; needs ~$75,824 (+19.8%) for full reset
