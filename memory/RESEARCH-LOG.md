@@ -11827,3 +11827,53 @@ No open positions → N/A
 5. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
 6. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
 7. **BTC weekly gate reset** — BTC at $61,885; needs ~$75,824 (+22.5%) to fully reset; monitor for weekly recovery
+
+---
+
+## 2026-06-05 — Midday Scan #2 (Afternoon)
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $150.6460 (100% cash) | None | None |
+| Alpaca | $0 | None | None (historical orders only) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $61,156 (ask) | −4.15% from 24h open $63,811.10; crash gate NOT triggered |
+| BTC weekly gate | **ACTIVE** | BTC ~$61,156 vs May 27 ~$75,824 = −19.3%; strict entry criteria |
+| Crash gate | **NOT triggered** | −4.15% 24h, well above −20% threshold ✓ |
+| Fear & Greed | ~12 (Extreme Fear) | Unchanged; multi-session lows |
+| ETH | $1,618 | −8.52% from 24h open $1,768.61 |
+| SOL | $65.21 | −5.22% from 24h open $68.80 |
+| AVAX | $7.033 | −8.64% from 24h open $7.698 |
+
+### Candidate Screening
+| Asset | Ask | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| **KAS/USD** | $0.029420 | −0.30% ($0.029510 open) | 0.17% ✓ | Toccata fork window OPEN (June 5–20) — fork exception | Fork exception bypasses weekly gate BUT no positive 1h momentum; pre-session trigger = 1h >5% | **SKIP — no positive 1h momentum** |
+| **WLD/USD** | $0.5486 | +2.33% ($0.5361 open) | 0.44% ✓ | Arthur Hayes AI proxy call (June 3 — 2+ days old) | BTC weekly gate: catalyst stale (>3h) → BANNED | **SKIP — catalyst stale** |
+| ETH/USD | $1,618 | −8.52% | Tight ✓ | No fresh catalyst | Declining; no signal | **SKIP** |
+| SOL/USD | $65.21 | −5.22% | 0.015% ✓ | No fresh catalyst | Declining | **SKIP** |
+| AVAX/USD | $7.033 | −8.64% | 0.028% ✓ | No fresh catalyst | Declining | **SKIP** |
+| TAO/USD | $197.06 | −6.76% ($211.34 open) | 0.13% ✓ | No fresh catalyst | Declining | **SKIP** |
+| HYPE/USD | $62.32 | −3.21% ($64.39 open) | 0.016% ✓ | OpenSea perps (June 5) — fresh, but price declining | $684M unlock June 6 (<24h away) — supply risk | **SKIP — declining + unlock risk** |
+| ONDO/USD | $0.3558 | −3.81% ($0.3699 open) | 0.061% ✓ | Perps launch June 9 (not yet) | Declining; trigger date June 9 | **SKIP** |
+
+### Decision: NO NEW TRADES
+- Broad market risk-off: BTC −4.15%, ETH −8.52%, SOL −5.22%, AVAX −8.64%
+- BTC weekly gate ACTIVE (−19.3% from May 27); strict criteria: 1h >5% momentum + <3h catalyst required for non-exception assets
+- KAS: fork exception bypasses weekly gate but price −0.3% from open with no positive 1h momentum; showing relative strength vs market but does not meet entry trigger (pre-session set bar at 1h >5% post-stop-out)
+- WLD only asset with positive move (+2.3%) but catalyst is 2+ days stale; fails weekly gate <3h requirement
+- Crash gate NOT triggered (BTC −4.15%, threshold −20%)
+
+**No actions taken. No WhatsApp notification sent.**
+
+### Active Watchlist (updated)
+1. **KAS/USD** — Toccata fork window OPEN (June 5–20); re-entry when 1h >3% positive momentum appears (higher bar >5% per pre-session note after stop-out); 3.5% trail; fork exception bypasses weekly gate
+2. **HYPE/USD** — Avoid through June 6 unlock; reassess June 7+ post-unlock price action for OpenSea perps catalyst
+3. **WLD/USD** — Needs fresh <3h catalyst (new listing, follow-up announcement, new institution buy); entry on break above $0.5743 today's high with volume
+4. **XRP/USD** — CLARITY Act binary trigger (July 2026 est.); 7% trail on confirmed Senate floor vote
+5. **ONDO/USD** — Perps launch June 9; re-evaluate on/after launch with fresh <6h catalyst
+6. **BTC weekly gate reset** — BTC at $61,156; needs ~$75,824 (+24.0%) to fully reset
