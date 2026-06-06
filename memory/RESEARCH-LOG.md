@@ -12061,3 +12061,116 @@ No tightening warranted. 3.5% trailing stop appropriate for high-ATR KAS.
 5. **XRP/USD** — CLARITY Act standing trigger (July 2026 est.); 7% trail on Senate floor vote.
 6. **BTC weekly gate** — BTC at ~$61,400; needs ~$75,824 (+23.5%) to fully reset.
 
+---
+
+## 2026-06-06 — Pre-Session Research
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | ZUSD $145.5174 | None (KAS stop triggered overnight) | None |
+| Alpaca | $0 | None | None (stop a2b44cf9 cancelled 2026-05-22) |
+
+**Equity: $145.52 ZUSD (fully flat). KAS trailing stop OUYRE3-XJV62-EICEO6 executed overnight at ~$0.030900 (trail 3.5% from HWM $0.032020). Net loss on KAS June 5 trade: ~−$3.74 (−2.49%). Phase P&L: approx −$34.26 (−19.05%) from Kraken starting equity $179.78.**
+
+### Market Context
+| Asset | 24h Open | Current (Kraken) | Move | Notes |
+|---|---|---|---|---|
+| BTC/USD | $61,038.30 | $60,922 | **−0.19%** | Stabilizing. 24h range $59,071–$63,195. Crash gate NOT triggered |
+| ETH/USD | $1,582.96 | $1,572.13 | **−0.69%** | Recovering from 24h low $1,505.75; near upper range |
+| KAS/USD | $0.030910 | $0.030100 | **−2.6%** | Below 24h open; no fresh KAS-specific catalyst today |
+| NEAR/USD | $1.9679 | $1.9305 | **−1.9%** | Relative strength; recovered from 24h low $1.832 (+5.3%) |
+| SUI/USD | $0.70290 | $0.70110 | **−0.25%** | Exceptional relative strength — essentially flat |
+| WLD/USD | $0.5303 | $0.4309 | **−18.7%** | Arthur Hayes fully EXITED WLD — bearish signal |
+| XLM/USD | $0.20388 | $0.20151 | **−1.2%** | DTCC rally fully faded; back below 24h open |
+
+**BTC Crash Gate: NOT triggered (−0.19% from 24h open). Crash requires >20% 24h decline.**
+**BTC Weekly Gate: ACTIVE. BTC $60,922 vs May 27 peak $75,824 = −19.7% over ~10 days. Gate requires 1h momentum >5% + catalyst <3h old for standard entries; protocol upgrade and catalyst-driven entries remain open.**
+**Fear & Greed: 12 (Extreme Fear).**
+**BTC Funding (Binance): −0.0012%/8h — slight short bias in derivatives.**
+
+### Perplexity Research Summary
+- **BTC:** $60,873–$60,927, flat to slightly down today. Market stabilizing after yesterday's selloff.
+- **ETH:** $1,572 on Kraken, recovering from intraday low $1,505. -0.69% from 24h open.
+- **Top 24h gainers:** Micro-caps dominate (BTW +208%, ZEST +84%, OPN +45%). On Kraken: OMNI +174% but spread is 59% (zero volume — SKIP), DOLO +53% but spread 1.81% (SKIP).
+- **Kraken-notable movers:** OMNI/MAT/DOLO all disqualified by spread. No major Kraken-listed liquid assets up >3% with tight spreads.
+- **WLD:** Arthur Hayes FULLY EXITED WLD → bear signal. WLD −18.7% today. **SKIP.**
+- **XLM/DTCC:** DTCC announced tokenized securities integration with Stellar for H1 2027 (7–14% XLM initial rally). Rally has fully reversed; XLM back below 24h open. Post-catalyst fade = no entry.
+- **NEAR resharding:** Dynamic resharding upgrade "June 2026" — adds automatic shard scaling. Protocol upgrade catalyst qualifies as BTC weekly gate bypass. Price resilient (−1.9% vs ETH −0.69% and market-wide weakness). Perplexity targets $2.8–$3.0 if upgrade executes cleanly.
+- **KAS Toccata:** Fork window still open June 5–20. No fresh KAS-specific headline today — broad crypto weakness driving price. Current $0.030100, below 24h open.
+- **BERA unlock today June 6 at 07:00 UTC** — supply pressure event; BERA not checked for Kraken availability.
+- **RAIN unlock June 10 ($713M)** — future altcoin supply pressure.
+- **HYPE $684M unlock June 6** — today's supply event. HYPE still declining.
+- **Day trade setups (Perplexity):** HYPE, INJ, NEAR, TON cited. NEAR and TON most relevant.
+
+### Candidate Screening
+| Asset | Move vs 24h Open | Spread | Catalyst | BTC Gate | Verdict |
+|---|---|---|---|---|---|
+| **NEAR/USD** | −1.9% (resilient; +5.3% from low) | 0.12% ✓ | Resharding upgrade Jun 2026 (protocol) | **BYPASSED** (protocol upgrade) | **ACTIVE CANDIDATE** |
+| **KAS/USD** | −2.6% | 0.066% ✓ | Toccata fork window OPEN Jun 5–20 | **BYPASSED** (protocol upgrade exception) | **CONDITIONAL** — need 1h positive signal |
+| SUI/USD | −0.25% (exceptional strength) | 0.029% ✓ | None today | BLOCKED — no catalyst | **WATCH ONLY** |
+| ONDO/USD | ~−10% | 0.042% ✓ | Perps launch Jun 9 (3 days) | Forward setup | **FORWARD — Jun 7–9** |
+| XLM/USD | −1.2% (post-rally fade) | 0.11% ✓ | DTCC H1 2027 (stale rally) | No fresh catalyst | **SKIP — rally faded** |
+| WLD/USD | −18.7% | 0.14% ✓ | Arthur Hayes EXIT (bear catalyst) | Bear signal | **SKIP — selling into weakness** |
+| HYPE/USD | still declining | 0.034% ✓ | $684M unlock today | Unlock supply pressure | **SKIP — Jun 7+ per prior plan** |
+| ETH/USD | −0.69% (recovering) | 0.01% ✓ | None today | No specific catalyst | **WATCH ONLY** |
+| OMNI/USD | +174% | 59% spread — SKIP | — | — | **SKIP — illiquid** |
+| DOLO/USD | +53% | 1.81% — SKIP | — | — | **SKIP — spread too wide** |
+
+### Trade Ideas
+
+#### Idea 1: NEAR/USD — Dynamic Resharding Upgrade (PRIMARY)
+- **Catalyst:** NEAR Protocol dynamic resharding upgrade targeting June 2026. Upgrade enables automatic shard scaling as demand increases — core infrastructure improvement (Kaspa-tier protocol event). Qualifies as protocol upgrade bypass of BTC weekly gate. Price showing exceptional relative strength: only −1.9% from 24h open while ETH −12% yesterday, broad alts −5–12%. Recovered +5.3% from intraday low $1.832 to current $1.9305 — active buying.
+- **Entry:** Market buy at current ask ~$1.9274
+- **T1:** $1.9852 (+3.0%) | **T2:** $2.0238 (+5.0%)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR — 24h range $1.832–$2.0047 = 9.3%; 2.5% trail would noise-stop)
+- **R:R:** 1.2:1 (3% T1 / 2.5% reference stop per strategy)
+- **Size:** ~$145 full equity (~75 NEAR at ~$1.93)
+- **Kraken pair:** NEAR/USD ✓ online, margin 2x/3x available (spot preferred)
+- **Spread:** 0.12% ✓
+- **Notes:** At T1 ($1.9852): cancel 3.5% stop, place 0.5% trailing to lock gains. NEAR could test $2.80–$3.40 if upgrade executes (Perplexity targets). Upgrade timing unconfirmed for today specifically — if no specific date, treat as forward catalyst that's already driving relative strength.
+
+#### Idea 2: KAS/USD — Toccata Fork Window (CONDITIONAL RE-ENTRY)
+- **Catalyst:** Kaspa Toccata hard fork window OPEN June 5–20, 2026 (ongoing protocol upgrade). Fork exception bypasses BTC weekly gate per strategy. Three prior trades on this thesis (T1 exit + two stops). No consecutive-loss rules.
+- **Entry trigger:** Wait for KAS 1h candle to close >3% above current $0.030100 (~$0.031003+). Current price is declining — do NOT chase. Set entry alert at $0.031000 reclaim.
+- **T1:** Entry +3% | **T2:** Entry +5%
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR)
+- **R:R:** 1.2:1 (3% T1 / 2.5% reference)
+- **Size:** ~$145 full equity if signal confirms
+- **Spread:** 0.066% ✓
+
+#### Idea 3: ONDO/USD — Pre-Perps Launch Setup (FORWARD — Jun 7–9)
+- **Catalyst:** Ondo perpetual futures launch June 9, 2026 (3 days). Tokenized US stocks/ETFs with 20x leverage for non-US users. MetaMask + Chainlink integrations already live. RWA sector narrative.
+- **Entry trigger:** Positive 1h momentum >3% in June 7–9 window. Standard 2.5% trailing stop (not high-ATR class).
+- **R:R:** 1.2:1 at T1 (+3%) / 2.5% stop reference
+
+#### Idea 4: SUI/USD — Relative Strength Watch (GATE BLOCKED TODAY)
+- **Note:** SUI only −0.25% from 24h open in a broad selloff. Spread 0.029% (best in universe). Volume ~$11M. Exceptional relative strength — next session's first check if any catalyst emerges. Currently BLOCKED by BTC weekly gate (no catalyst today).
+
+#### Idea 5: XRP/USD — CLARITY Act Standing Trigger
+- **Catalyst:** CLARITY Act Senate floor vote (estimated July 2026). On confirmed vote news <3h old: market buy XRP, `trail_percent: 7` (binary catalyst).
+
+### Risk Factors
+1. **BTC weekly gate ACTIVE** (−19.7% from May 27) — only protocol upgrade / catalyst-driven entries allowed; standard momentum plays banned
+2. **Fear & Greed 12 (Extreme Fear)** — market fragile; any macro shock could trigger another selloff
+3. **BERA + HYPE token unlocks June 6** — altcoin supply pressure today; broad sell-off risk
+4. **RAIN $713M unlock June 10** — forward supply pressure event next week
+5. **KAS consecutive thesis stops** — third stop on Toccata thesis raises question of momentum exhaustion; thesis technically still intact but need confirmed signal before re-entry
+6. **NEAR upgrade timing unconfirmed** — "June 2026" without specific date; upgrade may be weeks away, reducing urgency of catalyst entry
+7. **Arthur Hayes WLD exit** — large whale exit in DeFi/AI sector; sector-wide contagion risk
+
+### Decision: TRADE
+- **Crash gate NOT triggered** ✓ (BTC −0.19% today)
+- **Primary:** NEAR/USD — protocol upgrade catalyst (resharding) bypasses weekly gate; relative strength confirmed; spread 0.12% ✓; entry at ~$1.9274, T1 $1.9852, T2 $2.0238, 3.5% trailing stop
+- **Conditional:** KAS/USD — re-entry on confirmed 1h positive momentum >3% (alert at $0.031000 reclaim); Toccata window still open
+- **Forward:** ONDO/USD June 7–9 on pre-perps-launch momentum
+
+### Active Watchlist
+1. **NEAR/USD** — PRIMARY active candidate; resharding upgrade Jun 2026 (protocol); entry ~$1.9274; 3.5% trail (high-ATR); protocol upgrade bypasses weekly gate; T1 $1.9852, T2 $2.0238
+2. **KAS/USD** — CONDITIONAL; Toccata fork window June 5–20; entry ONLY on 1h positive signal >3% from current ($0.031000 reclaim); 3.5% trail
+3. **SUI/USD** — WATCH; exceptional relative strength but gate blocks today; first entry candidate on any fresh catalyst
+4. **ONDO/USD** — Forward Jun 7–9; perps launch June 9; enter on 1h >3% in window; 2.5% trail (standard)
+5. **HYPE/USD** — Forward Jun 7+ post-unlock; OpenSea perps catalyst; 3.5% trail (high-ATR)
+6. **XRP/USD** — CLARITY Act standing trigger; 7% trail on confirmed Senate floor vote <3h old
+7. **BTC weekly gate** — BTC $60,922; needs ~$75,824 (+24.6%) to fully reset
+
