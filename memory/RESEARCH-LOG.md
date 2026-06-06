@@ -12425,3 +12425,35 @@ BTC weekly gate ACTIVE + Extreme Fear (12) + no fresh catalyst (<3h old) across 
 - Jun 9–10: ONDO perps narrative recycling (watch for base formation above $0.32)
 - Jun 10: RAIN ($713.59M unlock) + ME — avoid these assets
 - Jul (est.): XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
+
+---
+
+## 2026-06-06 — Late Scan (Session 5)
+
+**Portfolio:** $139.88 ZUSD (100% cash). No open positions. No open orders. ✓
+**BTC:** $60,601 ask vs $61,038 24h open = **−0.72%** | Crash gate NOT triggered | Weekly gate ACTIVE
+
+### Candidates Screened
+| Asset | vs 24h Open | Current | Spread | Verdict |
+|---|---|---|---|---|
+| TON/USD | +8.2% (at day high $1.6480) | $1.6490 ask | 0.12% ✓ | SKIP — move driven by 6x leveraged long + short squeeze on Hyperliquid; no fundamental catalyst; BTC weekly gate blocks pure technical breakouts |
+| KAS/USD | −1.97% | $0.030300 ask | 0.13% ✓ | SKIP — conditional unmet ($0.031000 reclaim + 1h >3% required) |
+| NEAR/USD | −5.6% (near day low) | $1.8585 ask | 0.08% ✓ | SKIP — Hayes exit pressure ongoing; not stabilized |
+| INJ/USD | −1.3% | $5.09 ask | 0.12% ✓ | SKIP — no catalyst; BTC weekly gate blocks |
+| ONDO/USD | ~−6% | ~$0.33 | 0.04% ✓ | Forward Jun 7–9 only (entry condition unmet) |
+
+### Key Findings
+- **TON +8.2%** intraday but catalyst is a leveraged short squeeze (6x long 768k TON on Hyperliquid) — not a fundamental event. BTC weekly gate requires catalyst-driven entry (protocol upgrade, listing, regulatory win); technical squeeze does not qualify. CoinMarketCap noted potential reversal already in progress.
+- **Perplexity breaking news:** CLARITY Act discussion ongoing (no floor vote), BTC ETF flows positive again (BTC-level tailwind), Ethereum Pectra ongoing — no new Kraken-listed liquid alt catalysts.
+- **NEAR:** $1.8585, down from $1.9305 at midday scan cut. Resharding upgrade confirmed June 9 (Binance suspending deposits), but Hayes exit pressure still driving downside. Not yet stabilized.
+- **KAS:** $0.030300 — still below $0.031000 re-entry trigger.
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+No action taken. No notification sent.
+
+### Forward Calendar (unchanged)
+- **Jun 7 (Mon):** ONDO pre-perps momentum watch; NEAR watch for post-Hayes stabilization ≥$1.92
+- **Jun 9:** NEAR resharding upgrade (Binance deposit suspend 23:00 UTC); ONDO perps launch
+- **Jun 9–10:** ONDO perps narrative watch (base formation above $0.32)
+- **Jun 10:** RAIN $713M unlock — avoid
+- **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
