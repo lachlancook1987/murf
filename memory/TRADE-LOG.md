@@ -4137,3 +4137,18 @@ No adjustments. ✓
 **No tightening, no exits, no crash gate — stop auto-fire is the only event.**
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-06 — EOD Snapshot (Day 17, Saturday)
+
+### Jun 06 — EOD Snapshot (Day 17, Saturday)
+**Portfolio:** $145.52 | **Cash:** $145.52 (100%) | **Day P&L:** −$5.13 (−3.41%) | **Phase P&L:** −$34.26 (−19.06%) | **vs BTC:** −3.79%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** KAS/USD trailing stop auto-executed (OUYRE3-XJV62-EICEO6; 4721.5 KAS sold ~$0.03071, proceeds ~$145.02, loss ~−$4.62 / −3.1% on position) | **Total since migration:** ~55
+
+**Notes:** The KAS/USD position entered on June 05 ($0.031690, ~$149.64 notional, Toccata hard fork thesis) was closed overnight by the 3.5% trailing stop (HWM $0.032020, trigger $0.030900). Actual fill ~$0.030713 — slight slippage below trigger, resulting in −$5.13 Day P&L vs yesterday EOD $150.65. BTC gained +0.38% today ($61,038→$61,268), putting bot at −3.79% vs BTC for the day. Portfolio 100% ZUSD cash, no open positions on any broker. Alpaca stop a2b44cf9 confirmed cancelled since May 22 — no Alpaca residual. Phase P&L −$34.26 (−19.06%) from Kraken starting equity $179.78. This is the 3rd consecutive KAS stop-out (Jun 03, Jun 04, Jun 05/06); Toccata fork window still open (June 5–20) but re-entry requires clear fresh momentum above prior HWM with volume confirmation. ONDO perps launch June 9 — watch for pre-launch momentum play Mon/Tue.
