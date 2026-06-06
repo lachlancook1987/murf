@@ -12271,3 +12271,127 @@ All entry criteria unmet. BTC weekly gate active. No positive catalyst <6h old f
 - **Portfolio:** $139.88 ZUSD (100% cash)
 - **Day P&L:** −$5.64 (NEAR position opened and closed intraday, −3.87%) + KAS stop overnight −$3.74 = **−$9.38 total vs prior EOD**
 - **Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78
+
+---
+
+## 2026-06-07 — Pre-Session Research (Day 18, Sunday)
+
+### Account Snapshot
+- **Kraken:** $139.88 ZUSD (100% cash). No open positions. No open orders.
+- **Alpaca:** No positions, no open orders. Fully flat. ✓
+- **Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $60,527 ask | −0.84% from 24h open ($61,038). Crash gate NOT triggered. |
+| ETH | ~$1,567 | −5–10% in 24h (sources diverge; all confirm significant decline) |
+| Fear & Greed | **12 — Extreme Fear** | Multi-source consensus: 12–15 |
+| BTC Funding Rate | **Negative** (Binance −0.0005%, predicted −0.0014%) | Shorts paying longs — bearish bias in derivatives |
+| BTC Weekly Gate | **ACTIVE** | BTC down >3% over past 5 trading days |
+| Crash Gate | **NOT triggered** | BTC −0.84% from open, far below −20% threshold |
+
+**Top 24h gainers (broad market):** ALLO +128%, HEI +68%, RSC +68%, VELVET +55%, SKYAI +41%, PORTAL +37% — mostly micro-caps not Kraken-liquid.
+
+**Kraken-specific movers:** OMNI +174% (59% spread — illiquid, skip), MAT +66%, DOLO +53%, PORTAL +26% (1.31% spread — hard skip), TON +4.9% (spread 0.063% ✓).
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|
+| **TON/USD** | **+4.9%** | **0.063% ✓** | Telegram "Gram" brand revival + largest validator role | Catalyst-driven (gray area — date unclear) | **CONDITIONAL WATCH** |
+| ONDO/USD | −7.4% | 0.10% ✓ | Perps live on Kraken since Jun 5 — already priced in | Declining | **SKIP** |
+| HYPE/USD | −6.73% | 0.018% ✓ | Post-unlock day; Hayes exit Jun 6 | Declining | **SKIP** |
+| KAS/USD | −2.23% | 0.066% ✓ | Toccata fork window Jun 5–20 | $0.0302 < $0.031000 trigger | **Conditional unmet** |
+| NEAR/USD | −5.49% | 0.075% ✓ | Jun 9 resharding upgrade catalyst | $1.860 < $1.92 threshold | **Not yet — below re-entry level** |
+| INJ/USD | −2.6% | 0.08% ✓ | DeFi narrative only | BTC gate blocks pure momentum | **SKIP** |
+| XRP/USD | −1.63% | 0.017% ✓ | CLARITY Act — floor vote likely July, not today | Trigger unmet | **Standing trigger** |
+| PORTAL/USD | +26.3% | 1.31% ✗ | No identified catalyst | Hard skip — spread >1% | **HARD SKIP** |
+| OMNI/USD | — | ~59% ✗ | +174% 24h but zero volume on Kraken | Illiquid | **HARD SKIP** |
+| SOL/USD | −3.37% | 0.033% ✓ | No fresh catalyst | BTC gate + declining | **SKIP** |
+
+### TON/USD — Detailed Analysis
+
+**Catalyst:** Telegram announced revival of the original "Gram" brand for the TON token AND is becoming TON's largest validator. Secondary: VeVe launched NFT stickers on Telegram via TON (June 4). The Gram brand revival represents a major platform endorsement catalyst.
+
+**Risk factors:**
+- Catalyst date not precisely confirmed as today (<6h); Perplexity did not give a specific time for the Gram announcement — may be 2–4 days old
+- TON already pulled back from intraday high of $1.638 to $1.599 — may have peaked
+- Sunday trading = lower liquidity
+- BTC weekly gate ACTIVE — pure momentum entries banned; "catalyst-driven" exceptions apply but Gram revival is borderline (branding, not protocol upgrade or exchange listing per se)
+- Extreme Fear (12) — adverse macro backdrop
+
+**If entering TON (conditional):**
+- Entry: Market at ~$1.599 (wait for 1h close >3% from current + volume confirmation)
+- Stop: trailing_stop, trail_percent 2.5 (standard)
+- T1: $1.647 (+3%), T2: $1.679 (+5%)
+- R:R: 1.2:1 ✓ (T1 3% gain / 2.5% stop)
+- Size: $139 (100% capital — full conviction if catalyst confirmed fresh)
+- Trigger to enter: 1h price action must hold above $1.60 AND Gram news confirmed <6h old
+
+### NEAR/USD — Forward Setup (June 8–9 Pre-Upgrade Entry)
+- Resharding upgrade: Binance suspending NEAR deposits Jun 9 23:00 UTC confirms upgrade date
+- This IS a protocol upgrade catalyst (qualifies as BTC gate exception)
+- Current price $1.860 — below the $1.92 re-entry threshold from Hayes exit
+- **Entry trigger:** Price stabilizes ≥$1.92 AND shows 1h momentum >3% on Mon Jun 8
+- Stop: trailing_stop 3.5% (high-ATR, same as prior positions) 
+- T1: entry × 1.03, T2: entry × 1.05
+- This setup becomes more attractive as the Jun 9 upgrade approaches
+
+### Trade Ideas — Prioritized
+
+**IDEA 1: TON/USD — Conditional Long (Gram Brand Revival)**
+- Catalyst: Telegram "Gram" revival + validator role (ecosystem development catalyst)
+- Entry: Market ~$1.599 — only if 1h confirms >3% momentum AND catalyst freshness verified <6h
+- Stop: trailing_stop 2.5%
+- T1: $1.647, T2: $1.679
+- R:R: 1.2:1
+- Size: $139.88 (100% equity)
+- Kraken pair: TONUSD ✓ | Spread: 0.063% ✓ | Leverage up to 3x available (use spot for safety)
+- **Gate decision:** Holding as CONDITIONAL. Enter only on intraday confirmation.
+
+**IDEA 2: NEAR/USD — Pre-Upgrade Long (Entry Mon Jun 8)**
+- Catalyst: Protocol resharding upgrade confirmed Jun 9 (qualifies as gate exception)
+- Entry: ~$1.92 if price reclaims that level with volume Mon Jun 8 session
+- Stop: trailing_stop 3.5% (high-ATR)
+- T1: $1.978, T2: $2.016
+- R:R: 1.2:1 (T1 3% / 3.5% stop → 0.86:1 at 2.5% reference — note: 3.5% trail means wider stop; actual R:R to T1 is ~0.86:1 using 3% trail; acceptable if upgrade catalyst qualifies)
+- Size: TBD based on Jun 8 price/spread conditions
+- Kraken pair: NEARUSD ✓ | Spread: 0.075% ✓
+
+**IDEA 3: ONDO/USD — Forward Watch (Perps Narrative Recycle)**
+- Perps already live on Kraken Pro since Jun 5 — price declining −7.4% (thesis stale short-term)
+- Watch for price stabilization above $0.32 + fresh 1h momentum signal as RWA narrative refreshes
+- Do NOT enter while in decline; wait for base formation
+
+**IDEA 4: KAS/USD — Conditional Re-Entry (Toccata Fork)**
+- Fork window June 5–20 still active
+- Entry trigger: $0.031000 reclaim + 1h close >3% positive
+- Current: $0.0302 — trigger unmet
+- Stop: trailing_stop 3.5%
+
+**IDEA 5: XRP/USD — Standing Binary Trigger (CLARITY Act)**
+- Senate floor vote likely July; no date confirmed for June 7
+- Standing trigger: enter on confirmed vote announcement <3h old; use 7% trailing stop (binary catalyst)
+
+### Risk Factors
+- **Extreme Fear (12):** Worst sentiment reading in recent sessions — broad deleveraging environment
+- **Arthur Hayes pattern:** Exited WLD, NEAR, ZEC, HYPE on Jun 6 — broad de-risk; avoid any Hayes-known holdings this week
+- **HYPE June 6 unlock ($689.7M):** Post-unlock selling pressure continuing today
+- **June 10 unlocks:** RAIN ($713.59M) + ME ($14M) next week — broad supply pressure
+- **BTC weekly gate:** Pure momentum entries banned; only catalyst-driven setups qualify
+- **Sunday liquidity:** Lower than weekday; spreads can widen on secondary assets
+- **Negative funding:** BTC shorts paying longs — derivative market bearishly positioned, not supportive of rallies
+
+### Decision: **HOLD ZUSD — Watch TON for Intraday Entry**
+
+BTC weekly gate ACTIVE + Extreme Fear + all major assets declining from open. TON is the only Kraken-liquid asset showing positive momentum with a named catalyst, but catalyst timing is unclear and price is pulling back from the daily high. **No immediate entry — wait for intraday TON confirmation.**
+
+**Action:** Monitor TON/USD intraday. If 1h candle closes above $1.638 (today's high) with volume expansion AND Gram news confirmed as <6h old, enter full position. Otherwise hold ZUSD through the session.
+
+**Forward calendar:**
+- Jun 8 (Mon): NEAR pre-upgrade entry window opens if price ≥$1.92
+- Jun 9: NEAR resharding upgrade + Binance deposit suspension
+- Jun 9–10: ONDO perps narrative recycling opportunity (watch for price base)
+- Jun 10: RAIN ($713.59M unlock) + ME unlock — supply pressure event, avoid these assets
+- Jul (est.): XRP CLARITY Act floor vote
