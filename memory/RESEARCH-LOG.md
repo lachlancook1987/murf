@@ -12206,3 +12206,31 @@ Hayes has now exited **WLD, NEAR, and ZEC** in a single day. This is broad de-ri
 4. **SUI/USD** — WATCH; exceptional relative strength; entry on any fresh catalyst + BTC gate bypass
 5. **HYPE/USD** — Forward Jun 7+ post-unlock; watch for post-unlock price stabilization + OpenSea perps catalyst
 6. **XRP/USD** — Standing CLARITY Act trigger; 7% trail on confirmed Senate floor vote <3h old
+
+---
+
+## 2026-06-06 — PM Scan (Second Midday Check)
+
+**Positions:** 0 Kraken, 0 Alpaca — fully flat. $139.88 ZUSD cash.
+**BTC:** $60,924 ask vs $61,038 24h open = −0.19%. Crash gate NOT triggered. Weekly gate ACTIVE.
+
+### Candidates Screened
+| Asset | vs 24h Open | Spread | Verdict |
+|---|---|---|---|
+| LIT/USD | +55% | 2.95% | Hard skip — spread too wide; no catalyst identified |
+| PORTAL/USD | −8.9% | 0.43% | Declining from earlier peak; skip |
+| VTHO/USD | −2.0% | 0.53% | Below open, no fresh catalyst |
+| YALA/USD | +21.5% | 17.4% | Hard skip — spread too wide |
+| HYPE/USD | −1.7% | 0.017% | Unlock day (per plan: forward Jun 7+) |
+| KAS/USD | −1.1% | 0.098% | $0.030560; re-entry trigger unmet (need $0.031000 reclaim + 1h >3%) |
+| NEAR/USD | −4.6% | 0.064% | $1.8779; Hayes exit pressure ongoing, still declining since cut |
+| INJ/USD | −0.7% | 0.078% | No fresh catalyst; BTC gate blocks pure momentum entries |
+| ONDO/USD | −4.8% | 0.119% | $0.3288; forward setup for Jun 7–9 perps launch window |
+| XRP/USD | — | — | CLARITY Act Senate advancing, no floor vote confirmed today |
+
+**BTC weekly gate active** — LIT's +55% move has no identified catalyst (Perplexity: no tracked headlines, no project-specific news); pure speculation/technical, spread disqualifies regardless.
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+No asset passes spread ≤1% + 1h momentum + fresh catalyst < 6h + BTC gate criteria simultaneously.
+
+**No action taken. No notification sent.**
