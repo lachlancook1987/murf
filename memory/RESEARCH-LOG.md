@@ -12395,3 +12395,33 @@ BTC weekly gate ACTIVE + Extreme Fear + all major assets declining from open. TO
 - Jun 9–10: ONDO perps narrative recycling opportunity (watch for price base)
 - Jun 10: RAIN ($713.59M unlock) + ME unlock — supply pressure event, avoid these assets
 - Jul (est.): XRP CLARITY Act floor vote
+
+---
+
+## 2026-06-06 — Afternoon Session Scan (No Trades)
+
+**Account:** $139.88 ZUSD (100% cash). No open positions, no open orders.
+**BTC:** $60,702 (Kraken), −0.55% from 24h open; Perplexity reports −3.93% (different reference). Crash gate NOT triggered. **BTC weekly gate ACTIVE** (prior session confirmed; Perplexity 24h change consistent with ongoing weekly downtrend).
+**Fear & Greed:** 12 (Extreme Fear) — unchanged from morning session.
+
+### Candidate Scan
+
+| Asset | Kraken Price | vs 24h Open | Spread | Verdict |
+|---|---|---|---|---|
+| TON/USD | $1.606 | +5.38% | 0.125% ✓ | **SKIP** — Telegram catalyst is >1 month old (early May 2026); fails BTC weekly gate <3h catalyst requirement |
+| VVV/USD | $15.388 | −13.4% | 0.078% ✓ | **SKIP** — declining from open; CMC's +13% was stale/misread |
+| KAS/USD | $0.03044 | −1.5% | ~0.10% ✓ | **SKIP** — below $0.031000 trigger; no fresh catalyst today; quiet news day |
+| OMNI/USD | $0.477 mid | — | ~59% ✗ | **HARD SKIP** — zero volume, illiquid |
+| MAT/USD | $0.0774 | +30.3% | 0.39% ✓ | **HARD SKIP** — only 46 trades, ~$2.2K daily volume; un-tradeable |
+| NEAR/USD | — | — | — | **SKIP** — sold this morning on Hayes thesis break; no re-entry until selling pressure stabilizes |
+
+### Decision: **HOLD ZUSD — No Entries**
+
+BTC weekly gate ACTIVE + Extreme Fear (12) + no fresh catalyst (<3h old) across any liquid Kraken pair. All candidates either declining, below entry triggers, illiquid, or carrying stale catalysts that don't meet the weekly gate exception.
+
+**Forward calendar (unchanged):**
+- Jun 8 (Mon): NEAR pre-upgrade entry if price ≥$1.92 with 1h momentum >3%
+- Jun 9: NEAR resharding upgrade + Binance deposit suspension
+- Jun 9–10: ONDO perps narrative recycling (watch for base formation above $0.32)
+- Jun 10: RAIN ($713.59M unlock) + ME — avoid these assets
+- Jul (est.): XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
