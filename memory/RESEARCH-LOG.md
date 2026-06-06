@@ -12174,3 +12174,35 @@ No tightening warranted. 3.5% trailing stop appropriate for high-ATR KAS.
 6. **XRP/USD** — CLARITY Act standing trigger; 7% trail on confirmed Senate floor vote <3h old
 7. **BTC weekly gate** — BTC $60,922; needs ~$75,824 (+24.6%) to fully reset
 
+
+---
+
+## 2026-06-06 — Midday Scan
+
+### Actions Taken
+**NEAR/USD position cut (thesis break).** Arthur Hayes sold his entire NEAR position — confirmed in midday Perplexity research. Same Hayes de-risking pattern as WLD (−18.7%) and ZEC today. This represents a narrative break for the day trade entry (relative strength + resharding upgrade). Stop O2X4KP-EOPWH-VT5OFH cancelled; 74 NEAR sold via market (OTMDUQ-YXHFG-GVN2RL) at ~$1.89. Loss: ~−$5.64 (−3.87%).
+
+### Market Context (Midday)
+- **BTC:** ~$60,900 range, −0.19% from 24h open. Crash gate NOT triggered. Weekly gate ACTIVE.
+- **NEAR:** ~$1.89, declining. Hayes exit = concentrated selling. Binance confirms NEAR network upgrade suspend deposits Jun 9 23:00 UTC (upgrade confirmed but Hayes exit overrides intraday trade).
+- **ZEC:** Declined from $401 high to ~$365 (−6% from 24h open). Hayes also exited ZEC. Critical Orchard shielded-pool vulnerability disclosed — emergency fork executed. SKIP.
+- **BABY:** No catalyst; volume rotation play only. Declining from $0.01763 open to $0.01428 (−19%). SKIP.
+- **ALLO:** Spread 2.0% on Kraken (ask $0.36130 / bid $0.35420) — hard skip. No Kraken-listed liquid alt with fresh catalyst + tight spread found.
+- **KAS:** $0.02996 (below 24h open $0.03091). Re-entry signal NOT triggered. Conditional alert remains at $0.031000 reclaim + 1h >3%.
+
+### Arthur Hayes Pattern (NEW RISK FACTOR)
+Hayes has now exited **WLD, NEAR, and ZEC** in a single day. This is broad de-risking across AI tokens, L1 alts, and privacy coins. Any asset Hayes is known to hold is elevated risk of headline whale-exit selling today.
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+- No Kraken-listed liquid asset passed spread ≤1% + fresh catalyst + 1h momentum >3% today at midday.
+- BTC weekly gate remains active — pure momentum entries banned.
+- Portfolio: $139.88 ZUSD (100% cash).
+- Phase P&L: ~−$39.90 (−22.2%) from Kraken start $179.78.
+
+### Updated Active Watchlist
+1. **ONDO/USD** — PRIMARY forward; perps launch June 9; enter Jun 7–9 on 1h >3% momentum; 2.5% trailing stop (standard); spread 0.042% ✓
+2. **KAS/USD** — CONDITIONAL; Toccata fork window June 5–20; entry ONLY on $0.031000 reclaim + 1h positive signal >3%; 3.5% trail
+3. **NEAR/USD** — WATCH; resharding upgrade confirmed Jun 9 (Binance suspending deposits Jun 9 23:00 UTC); re-entry only after Hayes-exit pressure stabilizes; watch for price stabilization + fresh 1h signal above $1.92
+4. **SUI/USD** — WATCH; exceptional relative strength; entry on any fresh catalyst + BTC gate bypass
+5. **HYPE/USD** — Forward Jun 7+ post-unlock; watch for post-unlock price stabilization + OpenSea perps catalyst
+6. **XRP/USD** — Standing CLARITY Act trigger; 7% trail on confirmed Senate floor vote <3h old
