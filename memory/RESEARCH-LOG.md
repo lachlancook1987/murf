@@ -12234,3 +12234,40 @@ Hayes has now exited **WLD, NEAR, and ZEC** in a single day. This is broad de-ri
 No asset passes spread ≤1% + 1h momentum + fresh catalyst < 6h + BTC gate criteria simultaneously.
 
 **No action taken. No notification sent.**
+
+---
+
+## 2026-06-06 — Evening Scan (Session 4)
+
+**Portfolio:** $139.88 ZUSD (100% cash). No positions. No open orders. Alpaca: flat. ✓
+**BTC:** $60,653 ask vs $61,038 24h open = **−0.63%** | Crash gate NOT triggered | Weekly gate ACTIVE
+
+### New Findings Since PM Scan
+| Asset | Finding | Decision |
+|---|---|---|
+| **SUI/USD** | Mainnet disruption #2 confirmed today (June 6, 2026) — bearish network-stability event | **HARD SKIP today** (was WATCH, now negative catalyst) |
+| **HYPE/USD** | Arthur Hayes exited HYPE — same pattern as WLD, NEAR, ZEC same-day de-risk | **HARD SKIP confirmed** (Jun 7+ forward plan unchanged but caution raised) |
+| **ETH/USD** | Glamsterdam upgrade: tentative Jun 2026, NOT confirmed; could be Q3 2026. No <6h catalyst | **SKIP** — no actionable protocol catalyst today |
+| **XRP/USD** | CLARITY Act: Senate floor ready, no confirmed vote date | Standing trigger unmet — no entry |
+| **KAS/USD** | $0.030540 ask — still below $0.031000 re-entry trigger | Conditional unmet |
+
+### Arthur Hayes De-Risk Pattern (fully updated)
+Hayes exited **WLD, NEAR, ZEC, and HYPE** on June 6 — four separate assets in one session. Broad de-risking event. Any asset Hayes is known to hold is elevated risk of headline whale-exit selling this week. Monitor before re-entry into any of these names.
+
+### Updated Watchlist (carries forward to next session)
+1. **ONDO/USD** — PRIMARY; perps launch June 9; enter Jun 7–9 on 1h >3% momentum; spread 0.042%; 2.5% trailing stop (standard)
+2. **KAS/USD** — CONDITIONAL; Toccata fork window June 5–20; entry ONLY on $0.031000 reclaim + 1h >3% (currently $0.030540 — unmet)
+3. **HYPE/USD** — FORWARD Jun 7+; Hayes exit adds caution; wait for price stabilization post-unlock + OpenSea perps catalyst; 3.5% trail (high-ATR)
+4. **NEAR/USD** — WATCH; resharding upgrade confirms Jun 9 (Binance deposit suspend 23:00 UTC Jun 9); Hayes exit = wait for stabilization above $1.92 + volume confirmation before re-entry
+5. **SUI/USD** — DOWNGRADED; mainnet disruption today; reassess Jun 7+ after stability confirmed
+6. **XRP/USD** — Standing CLARITY Act trigger; 7% trail on confirmed Senate floor vote <3h old
+7. **ETH/USD** — Glamsterdam unconfirmed date; WATCH — enter on confirmed date announcement <6h old + 1h momentum >3%
+
+### Decision: NO TRADES — HOLD ZUSD
+All entry criteria unmet. BTC weekly gate active. No positive catalyst <6h old for any Kraken-listed liquid asset.
+**No WhatsApp notification sent (no action taken).**
+
+### EOD Final State
+- **Portfolio:** $139.88 ZUSD (100% cash)
+- **Day P&L:** −$5.64 (NEAR position opened and closed intraday, −3.87%) + KAS stop overnight −$3.74 = **−$9.38 total vs prior EOD**
+- **Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78
