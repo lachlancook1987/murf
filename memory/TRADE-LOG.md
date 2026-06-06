@@ -4105,4 +4105,35 @@ No adjustments. ✓
 - Toccata hard fork window OPEN (June 5–20, 2026) — thesis intact
 - T1 ($0.032641) is 4.11% above current; T2 ($0.033275) is 6.12% above current
 
+---
+
+## 2026-06-06 — Overnight Triage Check
+
+**Positions (Kraken):** NONE — all flat
+**Positions (Alpaca):** NONE — confirmed flat (stop a2b44cf9 cancelled 2026-05-22, no residual position)
+
+**KAS trailing stop triggered overnight:**
+- Order OUYRE3-XJV62-EICEO6 (trail 3.5%) fired automatically
+- Entry: $0.031690 | HWM: $0.032020 | Stop trigger: $0.030900 (3.5% below HWM)
+- Estimated fill: ~$0.030900
+- Qty: 4721.4998 KAS (~$149.64 notional)
+- P&L from entry: ~−$3.74 (−2.49%) | From HWM: −3.50% (stop functioned correctly)
+- Current KAS: $0.030460 (below trigger — stop fired correctly)
+- Toccata thesis still active (fork window June 5–20) but stop did its job protecting capital
+
+| Date | Pair | Action | Qty | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|---|---|
+| 2026-06-06 | KAS/USD | SELL (trailing stop triggered) | 4721.5 | $0.031690 | ~$0.030900 | ~−$3.74 (−2.49%) | Trail 3.5% from HWM $0.032020; stop OUYRE3-XJV62-EICEO6 auto-executed |
+
+**STEP 2 — Trailing stops:** No open Kraken positions → nothing to verify. ✓
+**STEP 3 — Emergency exits:** No open positions → N/A.
+**STEP 4 — Stop tightening:** No open positions → N/A.
+**STEP 5 — BTC Crash Gate:**
+- BTC ask: $60,876 | 24h open: $61,038.30 | Move: **−0.26%**
+- 24h range: $60,654.60 – $61,496.20 (today) | $59,070.60 – $63,614.60 (24h)
+- Gate: **NOT triggered** ✓
+
+**Portfolio:** Fully in ZUSD cash. No open positions on any broker.
+**No tightening, no exits, no crash gate — stop auto-fire is the only event.**
+
 **Result: NO-OP. No actions taken. No notification sent.**
