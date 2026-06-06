@@ -4176,3 +4176,38 @@ No adjustments. ✓
 **Stop management:** At T1 ($2.0121): cancel 3.5% stop O2X4KP-EOPWH-VT5OFH, place 0.5% trailing stop to lock gains and trail toward T2.
 
 **Notes:** The KAS/USD position entered on June 05 ($0.031690, ~$149.64 notional, Toccata hard fork thesis) was closed overnight by the 3.5% trailing stop (HWM $0.032020, trigger $0.030900). Actual fill ~$0.030713 — slight slippage below trigger, resulting in −$5.13 Day P&L vs yesterday EOD $150.65. BTC gained +0.38% today ($61,038→$61,268), putting bot at −3.79% vs BTC for the day. Portfolio 100% ZUSD cash, no open positions on any broker. Alpaca stop a2b44cf9 confirmed cancelled since May 22 — no Alpaca residual. Phase P&L −$34.26 (−19.06%) from Kraken starting equity $179.78. This is the 3rd consecutive KAS stop-out (Jun 03, Jun 04, Jun 05/06); Toccata fork window still open (June 5–20) but re-entry requires clear fresh momentum above prior HWM with volume confirmation. ONDO perps launch June 9 — watch for pre-launch momentum play Mon/Tue.
+
+---
+
+## 2026-06-06 — Midday Scan
+
+### NEAR/USD — SELL (thesis break — Arthur Hayes exit) | OTMDUQ-YXHFG-GVN2RL
+
+**Thesis break trigger:** Midday Perplexity research confirmed Arthur Hayes sold his ENTIRE NEAR position — same pattern as WLD (−18.7%) and ZEC today. Whale exit = concentrated selling pressure overrides the resharding upgrade catalyst for a day trade.
+
+| Field | Value |
+|---|---|
+| Position closed | NEAR/USD — 74 NEAR spot |
+| Stop cancelled | O2X4KP-EOPWH-VT5OFH (trailing_stop 3.5%, trigger $1.88140) |
+| Sell txid | OTMDUQ-YXHFG-GVN2RL |
+| Side | SELL (market) |
+| Qty | 74 NEAR |
+| Entry | ~$1.9535 (ZUSD $145.14 spent) |
+| Exit | ~$1.8900 (estimated; ZUSD received ~$139.50) |
+| Net proceeds | ~$139.88 ZUSD (account balance post-trade) |
+| P&L | ~−$5.64 (−3.87% from entry notional) |
+| Exit rationale | Thesis break: Arthur Hayes sold entire NEAR position (new info since morning session); per strategy "if narrative broke, cut immediately regardless of P&L" |
+
+**NEAR price at exit:** ~$1.89 (bid $1.8975, 0.70% above former stop $1.88140). Stop cancelled before market sell to prevent orphan order.
+
+**Midday candidate scan (no new entries):**
+| Asset | Verdict | Reason |
+|---|---|---|
+| ZEC/USD | SKIP | Hayes also exited ZEC; critical Orchard vulnerability disclosed; price declining from $401 high |
+| BABY/USD | SKIP | No catalyst; declining −19% from 24h open |
+| ALLO/USD | SKIP | Spread 2.0% (hard skip >1%) |
+| KAS/USD | SKIP | Below 24h open ($0.02996 vs open $0.03091); re-entry signal (1h >3% positive) not triggered |
+
+**Post-midday state:** $139.88 ZUSD (100% cash). No open positions. No open orders.
+**Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78.
+**Forward:** ONDO June 7–9 pre-perps-launch setup; KAS conditional on $0.031000 reclaim + 1h >3% signal; NEAR re-entry only after Hayes-exit selling pressure stabilizes and upgrade confirms specific date.
