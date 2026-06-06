@@ -4151,4 +4151,28 @@ No adjustments. ✓
 
 **Trades today:** KAS/USD trailing stop auto-executed (OUYRE3-XJV62-EICEO6; 4721.5 KAS sold ~$0.03071, proceeds ~$145.02, loss ~−$4.62 / −3.1% on position) | **Total since migration:** ~55
 
+---
+
+## 2026-06-06 — Session-Open Trade
+
+### NEAR/USD — Buy (O643ZB-RWJXH-2LZI56)
+
+| Field | Value |
+|---|---|
+| Date/Time (UTC) | 2026-06-06 session-open |
+| Symbol | NEAR/USD |
+| Side | BUY |
+| Qty | 74.0000 NEAR |
+| Entry Price | ~$1.9535 (estimated; ZUSD spent $145.14 / 74 NEAR) |
+| Trailing Stop % | 3.5% (high-ATR asset) |
+| Stop Order ID | O2X4KP-EOPWH-VT5OFH |
+| Stop Trigger | $1.8814 (current HWM $1.9496) |
+| T1 Target | $2.0121 (+3%) |
+| T2 Target | $2.0512 (+5%) |
+| R:R | 1.2:1 (3% T1 / 2.5% reference stop) |
+| Thesis | NEAR Protocol dynamic resharding upgrade (June 2026) — protocol upgrade catalyst bypasses BTC weekly trend gate; relative strength −1.35% from 24h open vs broad alt weakness −5–12%; spread 0.062%; volume 1.19M NEAR today |
+| Buy Txid | O643ZB-RWJXH-2LZI56 |
+
+**Stop management:** At T1 ($2.0121): cancel 3.5% stop O2X4KP-EOPWH-VT5OFH, place 0.5% trailing stop to lock gains and trail toward T2.
+
 **Notes:** The KAS/USD position entered on June 05 ($0.031690, ~$149.64 notional, Toccata hard fork thesis) was closed overnight by the 3.5% trailing stop (HWM $0.032020, trigger $0.030900). Actual fill ~$0.030713 — slight slippage below trigger, resulting in −$5.13 Day P&L vs yesterday EOD $150.65. BTC gained +0.38% today ($61,038→$61,268), putting bot at −3.79% vs BTC for the day. Portfolio 100% ZUSD cash, no open positions on any broker. Alpaca stop a2b44cf9 confirmed cancelled since May 22 — no Alpaca residual. Phase P&L −$34.26 (−19.06%) from Kraken starting equity $179.78. This is the 3rd consecutive KAS stop-out (Jun 03, Jun 04, Jun 05/06); Toccata fork window still open (June 5–20) but re-entry requires clear fresh momentum above prior HWM with volume confirmation. ONDO perps launch June 9 — watch for pre-launch momentum play Mon/Tue.
