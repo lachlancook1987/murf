@@ -12844,3 +12844,43 @@ BTC weekly gate ACTIVE. No candidate meets entry criteria:
 | **Jun 17** | SPK $61M unlock | Avoid SPK |
 | **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
 
+
+---
+
+## 2026-06-07 — Third Midday Scan
+
+**Portfolio:** $134.7518 ZUSD (100% cash). No open positions. No open orders. ✓
+**BTC:** $61,717 (+1.78% 24h) — crash gate NOT triggered | BTC weekly gate ACTIVE
+
+### Account Verification
+| Account | State |
+|---|---|
+| Kraken positions | 0 (clean) ✓ |
+| Kraken open orders | 0 (clean) ✓ |
+| Alpaca | No active positions or orders; BTC residual fully closed since May 22 |
+
+### Candidate Scan
+
+| Asset | vs Open | Ask | Spread | Verdict |
+|---|---|---|---|---|
+| NEAR/USD | +7.36% | $1.9963 | 0.135% ✓ | SKIP — R:R 0.86:1 with 3.5% high-ATR trail (below 1.2:1 threshold); price chased 7%+ from $1.8594 open; pulled back 5% from day high $2.1007; 4th consecutive attempt; Sunday low liquidity; Mon Jun 8 remains planned entry window |
+| ONDO/USD | +4.25% | $0.3384 | 0.050% ✓ | SKIP — still below prior HWM $0.36039; no re-entry signal |
+| KAS/USD | +0.70% | $0.03018 | 0.013% ✓ | SKIP — $0.031000 trigger unmet ($0.03018 current); day high $0.03101 briefly grazed trigger but pulled back |
+| TON/USD | +1.70% | $1.6740 | 0.060% ✓ | SKIP — Gram revival catalyst >1 month old; Catchain 2.0 Jun 6 (>24h); BTC gate requires catalyst <3h for non-upgrade plays |
+| PI/USD | +0.64% | $0.12877 | 0.109% ✓ | HARD SKIP — Kraken listing catalyst from March 2026 (stale); ~497 trades / ~$37K daily volume (illiquid) |
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+No fresh catalyst (<3h old) on any liquid Kraken pair. NEAR is the only valid gate-exception candidate (Jun 9 Nightshade upgrade) but R:R is 0.86:1 with 3.5% trail (below 1.2:1 threshold), and Sunday thin volume elevates noise-stop risk. Monday AM opening remains the preferred NEAR entry window.
+
+No action taken → No notification sent.
+
+### Forward Calendar
+
+| Date | Event | Action |
+|---|---|---|
+| **Jun 8 (Mon) AM** | NEAR: watch for sustained 1h close above $1.92 with opening volume | Gate exception ✓; T1=$2.056 (+3%), T2=$2.096 (+5%), 3.5% trailing stop |
+| **Jun 9** | NEAR Nightshade 2.0 resharding live; ONDO full retail perps launch | Exit NEAR before/at upgrade; monitor ONDO for HWM reclaim above $0.36039 |
+| **Jun 10** | RAIN $713M unlock; HOME $40.2M; ME $10.4M | Avoid RAIN, HOME, ME |
+| **Jun 17** | SPK $61M unlock | Avoid SPK |
+| **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
