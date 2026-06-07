@@ -4211,3 +4211,17 @@ No adjustments. ✓
 **Post-midday state:** $139.88 ZUSD (100% cash). No open positions. No open orders.
 **Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78.
 **Forward:** ONDO June 7–9 pre-perps-launch setup; KAS conditional on $0.031000 reclaim + 1h >3% signal; NEAR re-entry only after Hayes-exit selling pressure stabilizes and upgrade confirms specific date.
+
+---
+
+## 2026-06-07 — EOD Snapshot (Day 18, Sunday)
+
+### Jun 07 — EOD Snapshot (Day 18, Sunday)
+**Portfolio:** $139.88 | **Cash:** $139.88 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$39.90 (−22.20%) | **vs BTC:** −1.95%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~55
+**Notes:** Full-cash day. No new entries. Portfolio sat at $139.88 ZUSD all day — carried over directly from the NEAR/USD thesis-break exit (Arthur Hayes whale exit) executed mid-session on Jun 06. BTC gained +1.95% today ($61,268→$62,462), putting bot −1.95% vs BTC for the day due to holding cash while market rallied. Alpaca stop a2b44cf9 confirmed cancelled (2026-05-22), no Alpaca residual. Phase P&L now −$39.90 (−22.20%) from Kraken starting equity $179.78. Forward: ONDO perps launch June 9 is the primary watch — potential pre-launch momentum play Mon morning; KAS re-entry conditional on $0.031000 reclaim + 1h >3% signal; NEAR only if Hayes-exit selling stabilises and fresh catalyst emerges.
