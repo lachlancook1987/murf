@@ -12786,3 +12786,61 @@ Forward plan unchanged:
 | **Jun 17** | SPK $61M unlock | Avoid SPK |
 | **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
 
+---
+
+## 2026-06-07 — Session-Open Scan (Session 8 / Late Night)
+
+**Session branch:** claude/clever-allen-zwdXx
+**Account:** $134.7518 ZUSD (100% cash) | No open positions | No open orders ✓
+**Alpaca:** Clean — historical orders only (BTC position closed 2026-05-22) ✓
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $61,870 ask | +1.66% from $60,858 24h open; higher than Session 7 ($60,537) |
+| BTC weekly gate | **ACTIVE** | ~−14% vs Jun 1 $72,145 (~−20% vs May 22 $77,574) |
+| BTC crash gate | NOT triggered | Only triggers at >20% 24h drop |
+| Fear & Greed | 12 (Extreme Fear) | Unchanged; persistent risk-off |
+| BTC funding rate | +0.0010–0.0027%/8h | Slightly positive / neutral; no squeeze signal |
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Current Ask | Spread | Catalyst | Gate Status | Verdict |
+|---|---|---|---|---|---|---|
+| NEAR/USD | +7.98% | $2.0079 | 0.155% ✓ | Nightshade 2.0 Jun 9 (protocol upgrade — gate exception) | R:R = 3%/3.5% = 0.86:1 → FAILS 1.2 minimum; Sunday thin volume; 4th stop-out | **SKIP** |
+| ONDO/USD | +3.16% | $0.33491 | 0.048% ✓ | Ondo Perps Jun 9 (equity perps, not Kraken listing) | Below HWM $0.36039; no re-entry signal | **SKIP** |
+| XMR/USD | +2.65% | $303.51 | 0.135% ✓ | No catalyst (pure momentum) | Weekly gate: pure momentum BANNED | **SKIP** |
+| BCH/USD | +2.25% | $222.34 | 0.058% ✓ | Kraken EU derivatives May 30 (8 days old — stale) | Catalyst stale; price below VWAP $223.39 | **SKIP** |
+| TON/USD | +1.58% | $1.672 | 0.060% ✓ | Catchain 2.0 Jun 6 (>24h old); Durov validator May 4 (stale) | Catalyst aging; +100% weekly exhaustion risk | **SKIP** |
+| TAO/USD | +7.25% | $207.66 | 0.064% ✓ | Covenant-72B (not confirmed fresh today; prior weekly catalyst) | Catalyst freshness unconfirmed; weekly gate | **SKIP** |
+| ZEC/USD | — | — | — | Multicoin Capital disclosure May 6 (31 days old) | Stale catalyst | **SKIP** |
+| XRP/USD | +3.22% | $1.12841 | 0.001% ✓ | CLARITY Act — no floor vote today; R:R = 0.43:1 at 7% trail | Binary trigger not fired; R:R fails | **SKIP** |
+| KAS/USD | — | ~$0.030400 | ~0.10% | Toccata fork window Jun 5–20 (active) | Trigger $0.031000 unmet | **SKIP** |
+
+### Additional Research Findings
+
+- **ZEC / Multicoin Capital:** Disclosure was May 6, 2026 — 31 days ago. Fully priced in. Catalyst stale.
+- **TAO / Covenant-72B:** Model release was the prior-week catalyst (~46% monthly rally); Perplexity confirms no clearly new same-day catalyst today.
+- **BCH derivatives:** OKX (May 27) and Kraken EU (May 30) both old. Coverage dated June 4. All stale.
+- **NEAR:** Protocol upgrade Nightshade 2.0 confirmed for June 9 (2 days away). Price recovered strongly from $1.8142 day low to $2.0079 — well above $1.92 trigger. Gate exception valid. BUT: R:R = 3%/3.5% = 0.86:1 with mandatory high-ATR stop FAILS minimum 1.2:1. Sunday thin volume. 4th consecutive stop-out risk. Monday AM institutional volume preferred.
+- **Token unlocks this week:** WET June 9 (111.4% supply — avoid), HOME June 10 ($40.2M), ME June 10 ($10.4M), RAIN June 10 ($713M — avoid), APT June 12 (minor).
+
+### Decision: NO NEW TRADES
+
+BTC weekly gate ACTIVE. No candidate meets entry criteria:
+- NEAR: only gate-exception candidate with momentum (+7.98% from open), but R:R = 0.86:1 at 3.5% high-ATR stop FAILS minimum 1.2:1. Sunday evening thin volume. Monday AM entry preferred.
+- All other candidates: stale catalysts, declining momentum, or pure momentum (BANNED).
+- Capital: $134.7518 ZUSD (100% cash preserved).
+- No WhatsApp notification sent (no trades).
+
+### Forward Calendar
+
+| Date | Event | Action |
+|---|---|---|
+| **Jun 8 (Mon) AM** | NEAR: watch for sustained 1h close above $1.92 with institutional opening volume | Enter if trigger met; T1=$2.048 (+3%), T2=$2.087 (+5%), trailing stop 3.5%; gate exception valid |
+| **Jun 9** | NEAR Nightshade 2.0 resharding live; ONDO retail perps full launch | Exit NEAR before/at upgrade; monitor ONDO for HWM reclaim |
+| **Jun 10** | RAIN $713M unlock; HOME $40.2M; ME $10.4M | Avoid RAIN, HOME, ME |
+| **Jun 17** | SPK $61M unlock | Avoid SPK |
+| **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
+
