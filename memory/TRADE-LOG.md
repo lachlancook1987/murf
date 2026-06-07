@@ -4389,4 +4389,33 @@ No fresh catalyst (<6h) confirmed for any liquid Kraken pair. BTC weekly gate ac
 - **Jun 9:** NEAR resharding upgrade live; ONDO full retail perps launch on Kraken → position ONDO before launch (buy at market open if +3% with volume); exit both NEAR and ONDO before/at launch to avoid buy-the-news reversal
 - **Jun 10:** RAIN $713M unlock — avoid
 - **Jun 17:** SPK $61M unlock — avoid
+
+---
+
+## 2026-06-07 — Second Midday Scan (Late Session)
+
+**Portfolio:** $134.7518 ZUSD (100% cash). No open positions. No open orders. ✓
+**BTC:** $61,745 ask (+1.46% from $60,858 open) — crash gate NOT triggered; BTC weekly gate ACTIVE
+
+### Account Verification
+| Account | State |
+|---|---|
+| Kraken positions | 0 (clean) ✓ |
+| Kraken open orders | 0 (clean) ✓ |
+| Alpaca positions | 0 — BTC position fully closed |
+| Alpaca stop a2b44cf9 | **CANCELLED since 2026-05-22** — residual BTC position no longer exists; $2.54 cash only |
+
+**Note:** Alpaca BTC residual position fully resolved. Monitoring no longer required.
+
+### Candidate Scan
+| Asset | vs 24h Open | Current Ask | Spread | Verdict |
+|---|---|---|---|---|
+| NEAR/USD | +3.61% | $1.9265 | 0.13% ✓ | SKIP — $0.0065 above $1.92 trigger; R:R 0.86:1 (actual 3.5% stop); Sunday night low liquidity; 4th attempt |
+| ONDO/USD | +6.23% | $0.34488 | 0.06% ✓ | SKIP — below prior HWM $0.36039; no re-entry signal |
+| TON/USD | +2.19% | $1.6820 | 0.06% ✓ | SKIP — below 3% threshold; declining from $1.7710 day high |
+| XLM/USD | −3.84% | $0.20439 | 0.06% ✓ | SKIP — DTCC catalyst confirmed 11 days old (May 27, 2026); declining from open |
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely above trigger with thin R:R on Sunday night. No fresh catalyst (<6h) on any liquid Kraken pair.
 - **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
