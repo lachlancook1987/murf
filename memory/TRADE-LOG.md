@@ -4339,3 +4339,54 @@ No adjustments. ✓
 - Total equity: ~$135.59
 - Day P&L: ~−$4.29 (−3.07%) [ONDO stop-out −$2.62 + NEAR unrealized −$1.26 + fees]
 - Phase P&L: ~−$44.19 (−24.58%) from Kraken starting equity $179.78
+
+---
+
+### NEAR/USD — Trailing Stop Triggered (ODNEDT-XQDZ4-PHHLPF)
+
+| Field | Value |
+|---|---|
+| Event | Trailing stop auto-triggered (post-midday) |
+| Stop Order ID | ODNEDT-XQDZ4-PHHLPF |
+| Stop Type | trailing_stop 3.5% (high-ATR) |
+| HWM at trigger | $1.95850 |
+| Stop trigger price | $1.89000 (HWM $1.95850 × 0.965) |
+| Estimated fill | ~$1.8774 (~$65.71 proceeds / 35 NEAR; derived from ZUSD delta $134.75 − $69.04) |
+| Entry | ~$1.9375 ($68.22 ZUSD / 35 NEAR) |
+| Exit proceeds | ~$65.71 ZUSD |
+| P&L | ~−$2.51 (−3.68% from notional entry) |
+| Exit reason | Price dropped from midday $1.9015 to day low $1.8142 — below stop trigger $1.89000; stop fired and market-sold at ~$1.877 |
+| Day low | $1.8142 (well below trigger) |
+| Thesis status | Jun 9 Nightshade 2.0 upgrade still intact; stop mechanism worked correctly; NEAR recovered to $1.9215 post-stop |
+
+**NEAR position: CLOSED.** Account confirmed: NEAR = 0.00532 (dust). ZUSD = $134.7518.
+
+**Re-entry criteria for NEAR:** Sustained 1h candle close above $1.92 with volume expansion; Monday Jun 8 pre-upgrade positioning opportunity; actual R:R with 3.5% stop = 0.86:1 (below 1.2 threshold on risk-adjusted basis — only valid as gate-exception catalyst play).
+
+---
+
+## 2026-06-07 — Evening Session Scan
+
+**Portfolio:** $134.7518 ZUSD (100% cash). No open positions. No open orders. ✓
+**Day P&L:** ~−$5.02 (−3.60%) [ONDO −$2.62 + NEAR −$2.51 + fees ~$0.50 est.]
+**Phase P&L:** ~−$45.03 (−25.05%) from Kraken starting equity $179.78
+
+### Candidates Screened
+| Asset | vs 24h Open | Current | Spread | Verdict |
+|---|---|---|---|---|
+| NEAR/USD | +3.33% | $1.9215 ask | 0.16% ✓ | SKIP — 4th consecutive stop-out attempt; barely at $1.92 trigger; Sunday low volume; actual R:R with 3.5% stop = 0.86:1 |
+| ONDO/USD | +6.18% | $0.3448 ask | 0.01% ✓ | SKIP — below prior HWM $0.36039; no re-entry signal |
+| TAO/USD | +8.20% | $209.51 ask | 0.07% ✓ | SKIP — ETF filing catalyst is Dec 2025 S-1 (stale >6h); MACD bearish; BTC weekly gate blocks stale catalysts |
+| KAS/USD | +2.88% | $0.030830 ask | 0.10% ✓ | SKIP — $0.031000 trigger unmet ($0.030830 current) |
+| TON/USD | +4.32% | $1.7170 ask | 0.12% ✓ | SKIP — Catchain 2.0 catalyst June 6 (>24h old); exhausted +100% weekly rally |
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+No fresh catalyst (<6h) confirmed for any liquid Kraken pair. BTC weekly gate active. Capital preservation priority with phase P&L at −25.05%.
+
+### Forward Calendar
+- **Jun 8 (Mon):** NEAR $1.92 trigger watch (Nightshade 2.0 upgrade tomorrow); STABLE unlock $34.43M (avoid STABLE); consider NEAR entry only if 1h close above $1.92 with volume expansion + early session institutional volume
+- **Jun 9:** NEAR resharding upgrade live; ONDO full retail perps launch on Kraken → position ONDO before launch (buy at market open if +3% with volume); exit both NEAR and ONDO before/at launch to avoid buy-the-news reversal
+- **Jun 10:** RAIN $713M unlock — avoid
+- **Jun 17:** SPK $61M unlock — avoid
+- **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)

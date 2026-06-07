@@ -12613,3 +12613,39 @@ BTC weekly gate ACTIVE, no confirmed fresh catalyst <3h for any liquid Kraken pa
 - Jun 9: NEAR resharding upgrade (thesis confirmation date); ONDO retail perps full launch → exit ONDO if re-entered before launch
 - Jun 10: RAIN $713M unlock — avoid
 - Jul (est.): XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
+
+---
+
+## 2026-06-07 — Evening Session (Session 6)
+
+**Portfolio:** $134.7518 ZUSD (100% cash). No open positions. No open orders. ✓
+**BTC:** $62,568 ask (+2.81% from 24h open $60,858) | Crash gate NOT triggered | Weekly gate ACTIVE (~−13.2% vs Jun 1 $72,145)
+**Day P&L:** ~−$5.02 (−3.60%) [ONDO trailing stop −$2.62 + NEAR trailing stop −$2.51 + fees ~$0.50 est.]
+**Phase P&L:** ~−$45.03 (−25.05%) from Kraken starting equity $179.78
+
+### NEAR/USD — Post-Midday Stop-Out Confirmed
+
+Stop ODNEDT-XQDZ4-PHHLPF fired when price dropped from $1.9015 (midday) to day low $1.8142 — below trigger $1.89000. Estimated fill ~$1.877. Position fully closed. Account balance confirms: NEAR = 0.00532 (dust), ZUSD = $134.7518.
+
+- Entry: $1.9375 | Exit: ~$1.877 | P&L: ~−$2.51 (−3.68%) | 4th consecutive NEAR stop-out
+
+### Candidate Screen (Evening)
+
+| Asset | vs 24h Open | Current | Spread | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| NEAR/USD | +3.33% | $1.9215 | 0.16% ✓ | Jun 9 Nightshade 2.0 upgrade (protocol gate exception) | **SKIP** — 4th stop-out; barely at trigger; Sunday evening volume; actual R:R 0.86:1 with 3.5% stop |
+| ONDO/USD | +6.18% | $0.3448 | 0.01% ✓ | Jun 9 retail perps launch (exchange listing gate exception) | **SKIP** — below HWM $0.36039; no re-entry signal |
+| TAO/USD | +8.20% | $209.51 | 0.07% ✓ | Grayscale ETF filing (S-1 Dec 2025, Amend Apr 2026) | **SKIP** — catalyst stale (months old); BTC weekly gate blocks; MACD bearish |
+| KAS/USD | +2.88% | $0.030830 | 0.10% ✓ | Toccata fork window Jun 5–20 | **SKIP** — below $0.031000 trigger |
+| TON/USD | +4.32% | $1.7170 | 0.12% ✓ | Catchain 2.0 June 6 (>24h old) | **SKIP** — catalyst aging; +100% weekly = exhaustion risk |
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+BTC weekly gate ACTIVE; no confirmed fresh catalyst (<6h) for any liquid Kraken pair. Capital preservation priority at −25.05% phase P&L. Both Jun 9 catalysts (NEAR upgrade + ONDO perps) are better positioned Monday AM with institutional volume and clearer entry confirmation.
+
+### Forward Calendar (updated)
+- **Jun 8 (Mon):** NEAR watch → entry requires sustained 1h close above $1.92 with volume expansion; STABLE unlock $34.43M (avoid)
+- **Jun 9:** NEAR Nightshade 2.0 resharding live; ONDO retail perps full launch on Kraken → size ONDO if reclaims $0.36039 (prior HWM) before/at launch; exit both before buy-the-news reversal
+- **Jun 10:** RAIN $713M unlock — avoid RAIN
+- **Jun 17:** SPK $61M unlock — avoid SPK
+- **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
