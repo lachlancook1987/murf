@@ -12457,3 +12457,116 @@ No action taken. No notification sent.
 - **Jun 9–10:** ONDO perps narrative watch (base formation above $0.32)
 - **Jun 10:** RAIN $713M unlock — avoid
 - **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
+
+---
+
+## 2026-06-07 — Pre-Session Research (Day 18, Sunday)
+
+### Account Snapshot
+- **Kraken:** $139.88 ZUSD (100% cash) | No open positions | No open orders
+- **Alpaca:** No positions (BTC residual confirmed closed since May 22)
+- **Phase P&L:** ~−$39.90 (−22.2%) from Kraken starting equity $179.78
+
+### Market Context
+| Metric | Value | Note |
+|---|---|---|
+| BTC price | $60,537 | −0.52% 24h → Crash gate NOT triggered |
+| BTC 5-day | −18.6% ($74,409 → $60,537) | Weekly gate ACTIVE (>3% threshold) |
+| ETH | $1,553 | −2.69% 24h |
+| Fear & Greed | 12 (Extreme Fear) | Unchanged from yesterday |
+| BTC funding rate | Binance −0.0028%, Bybit −0.0041% | Negative = shorts paying longs; bearish positioning |
+| BTC crash gate | NOT triggered | Only triggers at >20% 24h drop |
+| BTC weekly gate | ACTIVE | Strict entry rules apply; protocol/listing exceptions open |
+
+### Top Gainers (24h)
+| Asset | 24h Change | Notes |
+|---|---|---|
+| SKYAI | +94.58% | Not on Kraken |
+| Audiera (BEAT) | +32.41% | Not on Kraken |
+| TON | +9.16% | Kraken-listed; Catchain 2.0 + Gram rebrand catalyst |
+| XLM | +8.29% | Kraken-listed; DTCC catalyst but price declining from open |
+| ONDO | +6.77% (from open) | Kraken-listed; Jun 9 retail perps launch catalyst |
+| NEAR | +2.33% (from open) | Kraken-listed; Jun 9 resharding upgrade |
+| KAS | +1.50% (from open) | Trigger unmet ($0.031000 not reclaimed) |
+
+### Catalysts & News
+- **NEAR (resharding / Nightshade 2.0):** Protocol upgrade confirmed June 9; Binance suspending NEAR deposits Jun 9 23:00 UTC confirms date. Price $1.9026, intraday high $1.9532 — touched above $1.92 trigger but pulled back. Protocol upgrade = BTC gate exception.
+- **TON (Catchain 2.0 + Telegram validator + Gram rebrand):** Durov announced Telegram direct control of TON ecosystem; Gram rebrand June 6; Catchain 2.0 block-time improvement live. TON up ~100% this week. Protocol upgrade = BTC gate exception. Spread 0.116%. Already pulled back from $1.771 high.
+- **ONDO (Jun 9 retail perps launch on Kraken):** Perps live on Kraken Pro since June 5; full retail launch June 9. Price recovered from $0.33 decline to $0.346 today (+6.77% from open $0.32466). Exchange listing = BTC gate exception. Spread 0.087% ✓.
+- **XLM (DTCC tokenization + MoneyGram MGUSD stablecoin):** Strong fundamental catalyst but price declining from $0.21255 open to $0.20766. SKIP.
+- **KAS:** Toccata fork window June 5–20 still active; 24h high touched $0.031080 briefly but no sustained reclaim. Current $0.030420 — trigger ($0.031000) unmet. SKIP.
+- **Macro:** SUI unlock ~$229.98M upcoming in 30 days; RAIN $713.59M unlock June 10 (avoid RAIN); SPK June 17; STABLE June 8. CLARITY Act Senate discussion ongoing (no floor vote date).
+
+### Candidate Screen
+| Asset | vs Open | Spread | Catalyst | Gate Status | Verdict |
+|---|---|---|---|---|---|
+| ONDO/USD | +6.77% | 0.087% ✓ | Jun 9 retail perps launch (exchange listing) | Gate exception | **PRIMARY CANDIDATE** |
+| NEAR/USD | +2.33% | 0.084% ✓ | Jun 9 resharding upgrade (protocol upgrade) | Gate exception | **SECONDARY (trigger $1.92)** |
+| TON/USD | +4.81% | 0.116% ✓ | Catchain 2.0 + Gram rebrand (protocol upgrade) | Gate exception | **WATCH only — extended** |
+| XLM/USD | −2.30% | 0.082% ✓ | DTCC tokenization | Active | **SKIP — declining** |
+| KAS/USD | +1.50% | 0.066% ✓ | Toccata fork window | BTC gate (pure momentum) | **SKIP — trigger unmet** |
+
+### Trade Ideas
+
+**IDEA 1: ONDO/USD — Pre-Retail-Perps-Launch Long (Primary)**
+- **Catalyst:** ONDO perpetual futures full retail launch on Kraken June 9 (exchange listing = BTC gate exception); price recovering strongly from $0.32466 open
+- **Entry:** Market ~$0.347 (momentum confirmed +6.77% from open)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard; ONDO is medium-ATR)
+- **T1:** $0.357 (+3%) | **T2:** $0.364 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓
+- **Size:** $139.88 (100% equity)
+- **Kraken pair:** ONDOUSD ✓ (online) | Spread: 0.087% ✓ | No margin needed (spot)
+- **Note:** Perps launched Kraken Pro June 5; retail full launch June 9 is the forward event driving positioning. Do NOT hold past June 9 retail launch date (buy-the-news risk).
+
+**IDEA 2: NEAR/USD — Pre-Upgrade Protocol Long (Secondary)**
+- **Catalyst:** Resharding (Nightshade 2.0) upgrade confirmed June 9; Binance deposit suspension confirms date (protocol upgrade = BTC gate exception)
+- **Entry trigger:** 1h candle close above $1.92 with volume expansion (not yet met; current $1.903)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR asset)
+- **T1:** entry × 1.03 ≈ $1.979 | **T2:** entry × 1.05 ≈ $2.016
+- **R:R:** 3% / 2.5% (ref) = **1.2:1** ✓
+- **Size:** $139.88 if ONDO not entered; reduce to 50% if both entered simultaneously
+- **Kraken pair:** NEARUSD ✓ (online) | Spread: 0.084% ✓
+- **Warning:** Third consecutive stop-out position. Apply strict trigger discipline — no entry below $1.92. Hayes exit selling pressure must be confirmed absent before entering.
+
+**IDEA 3: TON/USD — Protocol Momentum Long (Conditional Only)**
+- **Catalyst:** Catchain 2.0 block-time upgrade + Telegram validator + Gram rebrand (June 6)
+- **Risk:** TON surged ~100% this week — high exhaustion risk; pulled back from $1.771 high to $1.726
+- **Entry trigger:** Only if price reclaims and holds above $1.771 (today's high) with fresh volume spike
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $1.777 (+3%) | **T2:** $1.812 (+5%)
+- **R:R:** 1.2:1 ✓ (but low probability given extended rally)
+- **Size:** 50% equity ($69.94) — low conviction on extended momentum
+- **Kraken pair:** TONUSD ✓ | Spread: 0.116% ✓
+
+**IDEA 4: KAS/USD — Conditional Re-Entry (Standing Trigger)**
+- **Catalyst:** Toccata hard fork window June 5–20 (active)
+- **Entry trigger:** $0.031000 reclaim + 1h close >3% positive — NOT MET today
+- **Stop:** trailing_stop 3.5% | **T1/T2:** +3%/+5% from entry
+- **Status:** SKIP — trigger unmet; monitor through fork window
+
+**IDEA 5: XRP/USD — Binary Catalyst (Standing)**
+- CLARITY Act Senate floor vote → no date confirmed; standing trigger at confirmed vote announcement <3h old; 7% trailing stop
+
+### Risk Factors
+- **Extreme Fear (12):** Worst sentiment backdrop; all rallies face headwinds
+- **BTC −18.6% weekly:** Alts underperform; only protocol/listing exceptions qualify for entry
+- **Arthur Hayes pattern (June 6):** Exited WLD, NEAR, ZEC, HYPE simultaneously; avoid Hayes-known holdings
+- **RAIN $713M unlock June 10:** Broad alt supply pressure next week
+- **ONDO buy-the-news risk:** Retail perps launch June 9 → exit before/at launch to avoid reversal
+- **NEAR:** Third stop-out attempt; strict trigger enforcement critical
+- **Sunday liquidity:** Spreads can widen; ONDO/TON volume monitoring needed
+
+### Decision: **TRADE — Primary entry ONDO/USD; NEAR trigger watch**
+
+BTC crash gate not triggered. BTC weekly gate active but both ONDO (exchange listing) and NEAR (protocol upgrade) qualify as gate exceptions. ONDO is the primary candidate with the clearest momentum (+6.77% from open) and the tightest catalyst-to-date alignment (Jun 9 retail launch). NEAR is the secondary — wait for $1.92 trigger close.
+
+**Planned trades:**
+1. **ONDO/USD:** Market entry ~$0.347, 2.5% trailing stop, T1 $0.357, T2 $0.364 — enter if momentum continues from morning session
+2. **NEAR/USD:** Conditional — enter on 1h close above $1.92 (Jun 9 upgrade catalyst)
+
+**Forward calendar:**
+- Jun 8 (Mon): NEAR $1.92 trigger watch; STABLE unlock $34.43M (avoid)
+- Jun 9: NEAR resharding upgrade; ONDO retail perps full launch on Kraken → exit ONDO before/at launch
+- Jun 10: RAIN $713M unlock — avoid this asset
+- Jun 17: SPK $61M unlock — avoid
+- Jul (est.): XRP CLARITY Act floor vote (7% trail, standing binary trigger)
