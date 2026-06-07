@@ -4225,3 +4225,57 @@ No adjustments. ✓
 
 **Trades today:** none | **Total since migration:** ~55
 **Notes:** Full-cash day. No new entries. Portfolio sat at $139.88 ZUSD all day — carried over directly from the NEAR/USD thesis-break exit (Arthur Hayes whale exit) executed mid-session on Jun 06. BTC gained +1.95% today ($61,268→$62,462), putting bot −1.95% vs BTC for the day due to holding cash while market rallied. Alpaca stop a2b44cf9 confirmed cancelled (2026-05-22), no Alpaca residual. Phase P&L now −$39.90 (−22.20%) from Kraken starting equity $179.78. Forward: ONDO perps launch June 9 is the primary watch — potential pre-launch momentum play Mon morning; KAS re-entry conditional on $0.031000 reclaim + 1h >3% signal; NEAR only if Hayes-exit selling stabilises and fresh catalyst emerges.
+
+---
+
+## 2026-06-07 — Session-Open Trades
+
+### ONDO/USD — Buy (OFMZFC-VI353-WZFNPS)
+
+| Field | Value |
+|---|---|
+| Date/Time (UTC) | 2026-06-07 session-open |
+| Symbol | ONDO/USD |
+| Side | BUY |
+| Qty | 198.0000 ONDO |
+| Entry Price | ~$0.3530 (ZUSD $70.31 spent / 198; HWM at stop $0.35298) |
+| Trailing Stop % | 2.5% (standard) |
+| Stop Order ID | OTQEIG-LAE2N-36SUDK |
+| Stop Trigger | $0.34416 (current HWM $0.35298) |
+| T1 Target | $0.3636 (+3% from entry) |
+| T2 Target | $0.3706 (+5% from entry) |
+| R:R | 1.2:1 (3% T1 / 2.5% stop) |
+| Thesis | ONDO retail perps full launch on Kraken June 9 (exchange listing = BTC weekly gate exception); price +8.49% from 24h open ($0.32466→$0.35238 ask at entry); spread 0.074% ✓; momentum confirmed primary candidate |
+| Buy Txid | OFMZFC-VI353-WZFNPS |
+
+**Stop management:** At T1 ($0.3636): cancel 2.5% stop OTQEIG-LAE2N-36SUDK, place 0.5% trailing stop to lock gains and trail toward T2. Exit fully by June 9 retail launch to avoid buy-the-news reversal.
+
+---
+
+### NEAR/USD — Buy (OQEQAX-YGPDI-SJMGIG)
+
+| Field | Value |
+|---|---|
+| Date/Time (UTC) | 2026-06-07 session-open |
+| Symbol | NEAR/USD |
+| Side | BUY |
+| Qty | 35.0000 NEAR |
+| Entry Price | ~$1.9375 (ZUSD $68.22 spent / 35; HWM at stop $1.93750) |
+| Trailing Stop % | 3.5% (high-ATR asset) |
+| Stop Order ID | ODNEDT-XQDZ4-PHHLPF |
+| Stop Trigger | $1.86970 (current HWM $1.93750) |
+| T1 Target | $1.9956 (+3% from entry) |
+| T2 Target | $2.0344 (+5% from entry) |
+| R:R | 1.2:1 (3% T1 / 2.5% reference stop) |
+| Thesis | NEAR Protocol resharding (Nightshade 2.0) upgrade confirmed June 9 (Binance deposit suspension confirms date; protocol upgrade = BTC weekly gate exception); $1.92 trigger MET (entry $1.939 > trigger); price +4.28% from 24h open $1.85940; spread 0.129% ✓; Hayes selling pressure absorbed (NEAR recovered from $1.89 exit to $1.939, today's high $1.9532) |
+| Buy Txid | OQEQAX-YGPDI-SJMGIG |
+
+**Stop management:** At T1 ($1.9956): cancel 3.5% stop ODNEDT-XQDZ4-PHHLPF, place 0.5% trailing stop to lock gains and trail toward T2. Third consecutive stop-out attempt — strict discipline: cut immediately if price breaks below $1.86970 trigger or thesis breaks.
+
+**Account state post-trade:**
+- ONDO: 198 ONDO (~$69.94 notional at entry)
+- NEAR: 35 NEAR (~$67.81 notional at entry)
+- ZUSD remaining: $1.3468 (cash buffer)
+- Total deployed: ~$137.75 (98.5% of prior equity)
+- BTC 24h change: +3.23% ($60,858→$62,825) — crash gate NOT triggered ✓
+- BTC weekly gate: ACTIVE but both trades are gate exceptions ✓
