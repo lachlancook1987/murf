@@ -12570,3 +12570,46 @@ BTC crash gate not triggered. BTC weekly gate active but both ONDO (exchange lis
 - Jun 10: RAIN $713M unlock — avoid this asset
 - Jun 17: SPK $61M unlock — avoid
 - Jul (est.): XRP CLARITY Act floor vote (7% trail, standing binary trigger)
+
+---
+
+## 2026-06-07 — Midday Scan
+
+**Account:** $135.59 total (35 NEAR ~$66.55 + $69.04 ZUSD) | **Day P&L:** ~−$4.29 (−3.07%) | **Phase P&L:** −$44.19 (−24.58%)
+
+### Market Context (Midday)
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$60,537–$61,451 | Slight pullback; crash gate NOT triggered |
+| BTC weekly gate | **ACTIVE** | ~−15% vs June 1 ($72,145); strict catalyst rule in force |
+| NEAR/USD | $1.9015–$1.9024 | −1.86% from entry; stop live at $1.89000; HWM $1.9585 |
+| ONDO/USD | $0.344 | Trailing stop fired; position exited; declining from HWM $0.36039 |
+| TAO/USD | $210.20 | +8.56% from 24h open $193.62; AI narrative |
+
+### ONDO Stop-Out
+- Trailing stop OTQEIG-LAE2N-36SUDK triggered automatically on pullback from HWM $0.36039
+- Estimated trigger: ~$0.35138 (HWM × 0.975); fill ~$0.342 with slippage
+- Proceeds: ~$67.69 ZUSD | P&L: ~−$2.62 (−3.73%)
+- No re-entry: price below HWM, OI declining, momentum fragile
+
+### NEAR/USD — No Action
+- Stop confirmed open: ODNEDT-XQDZ4-PHHLPF, trigger $1.89000 ✓
+- Thesis intact: Nightshade 2.0 resharding June 9 confirmed
+- Price $1.9015, only 0.6% above stop — tight but above trigger
+- No thesis break; no tighten (not at +20%)
+
+### New Entry Scan
+| Asset | Signal | Gate Status | Verdict |
+|---|---|---|---|
+| TAO/USD | +8.56% from open; AI narrative (Jensen Huang/Chamath) | BTC gate: catalyst timing unclear, not confirmed <3h | SKIP |
+| XLM/USD | −3.2% from open; DTCC tokenization (March 2026 stale) | BTC gate: catalyst stale | SKIP |
+| ONDO/USD | $0.344 declining; perps June 9 still pending | Below prior HWM; OI declining | SKIP |
+| KAS/USD | $0.031000 trigger unmet | N/A | SKIP |
+
+### Decision: No New Entries
+BTC weekly gate ACTIVE, no confirmed fresh catalyst <3h for any liquid Kraken pair.
+
+### Forward Calendar
+- Jun 9: NEAR resharding upgrade (thesis confirmation date); ONDO retail perps full launch → exit ONDO if re-entered before launch
+- Jun 10: RAIN $713M unlock — avoid
+- Jul (est.): XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
