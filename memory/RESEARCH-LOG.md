@@ -12649,3 +12649,43 @@ BTC weekly gate ACTIVE; no confirmed fresh catalyst (<6h) for any liquid Kraken 
 - **Jun 10:** RAIN $713M unlock — avoid RAIN
 - **Jun 17:** SPK $61M unlock — avoid SPK
 - **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
+
+---
+
+## 2026-06-07 — Session-Open Check (Late Night)
+
+**Account:** $134.7518 ZUSD (100% cash). No open positions. No open orders. ✓
+**BTC:** $61,784.90 ask (+1.52% from $60,858.00 open) — crash gate NOT triggered | Weekly gate ACTIVE (~−14% vs Jun 1 $72,145)
+**Alpaca:** Clean — no positions, no active orders (historical filled orders only; last active position closed 2026-05-22). ✓
+
+### Price Updates vs Evening Scan
+| Asset | Evening Price | Current Ask | Change | Notes |
+|---|---|---|---|---|
+| NEAR/USD | $1.9265 | $1.9808 | +2.82% | Above $1.92 trigger; 24h high $1.9903; spread 0.056% ✓ |
+| ONDO/USD | $0.3448 | $0.3466 | +0.52% | Still below HWM $0.36039 — no re-entry signal |
+| KAS/USD | $0.030830 | $0.030520 | −1.00% | Below $0.031000 trigger |
+| TON/USD | $1.7170 | $1.6980 | −1.11% | Declining; Catchain catalyst >24h old |
+
+### Gate Checks
+| Gate | Status |
+|---|---|
+| BTC crash gate | NOT triggered (+1.52% 24h) ✓ |
+| BTC weekly gate | ACTIVE (~−14% 5-day); strict catalyst rule in force |
+| NEAR protocol upgrade exception | ✓ Nightshade 2.0 Jun 9 — gate exception valid |
+
+### Candidate Review
+
+**NEAR/USD — $1.9808 ask (above $1.92 trigger)**
+- Trigger MET: $1.9808 >> $1.92 ✓
+- R:R (strategy ref 2.5%): 3%/2.5% = 1.2:1 ✓; actual with 3.5% stop: 0.86:1 ✗
+- Concerns: 4th consecutive NEAR stop-out; Sunday late session — thin liquidity; "early session institutional volume" condition required by forward plan NOT met; price has already rallied 2.82% since evening scan, reducing upside buffer
+- **Decision: SKIP** — consistent with evening research. Monday AM entry preferred when institutional volume confirms the move and 1h closes above $1.92 are sustained.
+
+**All other candidates:** Unchanged from evening scan — SKIP (below triggers or catalyst stale).
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+Forward plan unchanged:
+- **Jun 8 (Mon) AM:** NEAR entry if 1h close above $1.92 sustained with institutional opening volume; T1 = entry × 1.03, T2 = entry × 1.05, trailing stop 3.5%
+- **Jun 9:** NEAR Nightshade 2.0 upgrade live; ONDO retail perps full launch — exit positions before buy-the-news reversal
+- **Jun 10:** RAIN $713M unlock — avoid
