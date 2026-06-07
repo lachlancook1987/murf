@@ -12689,3 +12689,100 @@ Forward plan unchanged:
 - **Jun 8 (Mon) AM:** NEAR entry if 1h close above $1.92 sustained with institutional opening volume; T1 = entry × 1.03, T2 = entry × 1.05, trailing stop 3.5%
 - **Jun 9:** NEAR Nightshade 2.0 upgrade live; ONDO retail perps full launch — exit positions before buy-the-news reversal
 - **Jun 10:** RAIN $713M unlock — avoid
+
+---
+
+## 2026-06-07 — Pre-Session Research (Session 7 / Final Sunday Check)
+
+**Date:** 2026-06-07 | **Session branch:** claude/affectionate-gates-HYZHU
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $134.7518 |
+| Kraken positions | 0 (100% cash) |
+| Kraken open orders | 0 |
+| Alpaca positions | 0 (resolved — BTC fully closed 2026-05-22) |
+| Alpaca orders | 0 active (historical only) |
+
+**Phase P&L:** ~−$45.03 (−25.05%) from Kraken starting equity $179.78
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $60,537 | −0.52% | Crash gate NOT triggered; weekly gate ACTIVE (−16.1% vs Jun 1 $72,145) |
+| ETH | ~$1,617 | +3.07% from open ($1,569) | CME 24/7 futures live since May 29 (stale) |
+| Fear & Greed | 12 | Extreme Fear | Highly risk-off backdrop |
+| BTC Funding | +0.0010–0.0027%/8h | Slightly positive | Longs paying shorts; no extreme; neutral |
+
+**Top 24h gainers (CoinMarketCap):**
+
+| # | Asset | 24h Gain | Notes |
+|---|---|---|---|
+| 1 | SKYAI | +94.6% | Micro-cap; not on Kraken |
+| 2 | BEAT | +32.4% | Not on Kraken |
+| 3 | SIREN | +19.2% | Not on Kraken |
+| 7 | TON | +9.2% | Kraken: $1.659 ask; catalyst Jun 2 stale |
+| 9 | XLM | +8.3% | Kraken: $0.20128 ask; declining from open |
+
+**BTC weekly gate:** ACTIVE — BTC $60,537 vs Jun 1 high $72,145 = −16.1% over 5 days. Strict entry criteria in force: catalyst-driven entries (protocol upgrade, regulatory event, exchange listing) remain open; pure momentum plays banned.
+
+---
+
+### Token Unlocks / Upgrades This Week
+
+| Date | Event | Size | Action |
+|---|---|---|---|
+| Jun 9 | WET unlock | 111.4% of supply | Avoid WET |
+| Jun 9 | NEAR Nightshade 2.0 resharding live | Protocol upgrade | Monitor NEAR |
+| Jun 9 | Ondo Perps launch | Tokenized equity perps | Monitor ONDO |
+| Jun 10 | HOME unlock | $40.2M / 19.79% supply | Avoid HOME |
+| Jun 10 | ME unlock | $10.4M / 33.99% supply | Avoid ME |
+| Jun 10 | RAIN unlock | $713M | Avoid RAIN |
+| Jun 12 | APT unlock | $7.6M / 0.67% supply | Minor, low impact |
+| Jun 17 | SPK unlock | $61M | Avoid SPK |
+
+---
+
+### Candidate Screening
+
+| Asset | Open | Current Ask | vs Open | Spread | Catalyst | Gate Status | Verdict |
+|---|---|---|---|---|---|---|---|
+| NEAR/USD | $1.8594 | $1.9729 | +6.1% | 0.11% ✓ | Nightshade 2.0 Jun 9 (protocol upgrade — gate exception) | R:R = 3%/3.5% = 0.86:1 → FAILS 1.2 threshold | **SKIP** |
+| ETH/USD | $1,568.94 | $1,617.0 | +3.1% | 0.014% ✓ | CME 24/7 futures (May 29 launch — >6h stale) | No fresh catalyst <3h; weekly gate | **SKIP** |
+| TON/USD | $1.646 | $1.659 | +0.8% | 0.12% ✓ | Gram rebrand vote Jun 2; Telegram validator May 4 (stale) | Declining from $1.771 day high; stale catalyst | **SKIP** |
+| XLM/USD | $0.21255 | $0.20128 | −5.3% | 0.074% ✓ | DTCC May 27; MoneyGram MGUSD Jun 2 (5 days old) | Declining from open; catalyst stale | **SKIP** |
+| XMR/USD | $295.67 | $300.89 | +1.8% | 0.066% ✓ | $23M whale buy (timing unconfirmed by Perplexity) | No verified fresh catalyst; +1.8% below 3% | **SKIP** |
+| ONDO/USD | $0.32466 | $0.33382 | +2.8% | 0.012% ✓ | Ondo Perps launch Jun 9 (equity perps, not Kraken listing) | Below 3% threshold; still below HWM $0.36039 | **SKIP** |
+| BCH/USD | $217.45 | $220.44 | +1.4% | 0.073% ✓ | CME 24/7 futures (stale) | Below 3% threshold | **SKIP** |
+
+---
+
+### Decision: NO NEW ENTRIES — HOLD ZUSD
+
+**Rationale:**
+1. BTC weekly gate ACTIVE at −16.1% vs Jun 1; strict catalyst requirement in force
+2. NEAR: only pass-capable candidate (protocol upgrade exception, +6.1% from open) — but R:R = 0.86:1 at 3.5% stop fails the 1.2 minimum; also 4th consecutive stop-out risk on Sunday thin liquidity
+3. ETH: CME 24/7 catalyst launched May 29 (9 days ago) — stale by definition; no fresh driver <3h
+4. All other candidates either declining from open, below 3% threshold, or have stale catalysts
+5. F&G = 12 (Extreme Fear) confirms risk-off macro; no institutional volume on Sunday
+6. Capital preservation priority at −25.05% phase P&L
+
+---
+
+### Forward Calendar (updated)
+
+| Date | Event | Action |
+|---|---|---|
+| **Jun 8 (Mon) AM** | NEAR entry watch: 1h close above $1.92 sustained with institutional opening volume | Enter if trigger met; T1=$1.97×1.03=$2.03, T2=$1.97×1.05=$2.07, stop 3.5% trail; gate exception valid (protocol upgrade) |
+| **Jun 9** | NEAR Nightshade 2.0 resharding live | Exit NEAR before/at upgrade to avoid buy-the-news reversal |
+| **Jun 9** | Ondo Perps launch (equity-focused) | Monitor ONDO; re-enter only if price reclaims HWM $0.36039 pre-launch; exit before/at launch |
+| **Jun 10** | RAIN $713M unlock; HOME $40.2M unlock | Avoid RAIN, HOME |
+| **Jun 12** | APT $7.6M unlock (0.67% supply) | Minor; low impact |
+| **Jun 17** | SPK $61M unlock | Avoid SPK |
+| **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
+
