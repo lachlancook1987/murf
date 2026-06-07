@@ -4279,3 +4279,63 @@ No adjustments. ✓
 - Total deployed: ~$137.75 (98.5% of prior equity)
 - BTC 24h change: +3.23% ($60,858→$62,825) — crash gate NOT triggered ✓
 - BTC weekly gate: ACTIVE but both trades are gate exceptions ✓
+
+---
+
+## 2026-06-07 — Midday Scan
+
+### ONDO/USD — Trailing Stop Triggered (OTQEIG-LAE2N-36SUDK)
+
+| Field | Value |
+|---|---|
+| Event | Trailing stop auto-triggered |
+| Stop Order ID | OTQEIG-LAE2N-36SUDK |
+| Stop Type | trailing_stop 2.5% |
+| HWM at trigger | ~$0.36039 (today's session high) |
+| Stop trigger price | ~$0.35138 (HWM × 0.975) |
+| Estimated fill | ~$0.34186 (from ZUSD balance: $67.69 / 198) |
+| Entry | ~$0.35308 ($70.31 / 198 ONDO) |
+| Exit proceeds | ~$67.69 ZUSD (ZUSD balance: $69.04 − $1.3468 prior cash) |
+| P&L | ~−$2.62 (−3.73% from notional entry) |
+| Exit reason | Trailing stop auto-fired on pullback from HWM $0.36039 → trigger ~$0.35138 → price continued to $0.344; fill ~$0.342 with slippage |
+| Thesis status | June 9 perps launch still pending; price declining post-HWM with falling OI — stop mechanism worked correctly |
+
+**ONDO position: CLOSED.** Account shows ONDO = 0.00000. Re-entry requires: price reclaim above prior HWM $0.36039 with volume confirmation; currently at $0.344 (declining) — no re-entry signal.
+
+---
+
+### Midday Position Review
+
+**NEAR/USD — Thesis Intact, Stop Confirmed Live**
+
+| Field | Value |
+|---|---|
+| Qty | 35 NEAR |
+| Entry | ~$1.9375 |
+| Current price | ~$1.9015–$1.9024 |
+| Unrealized P&L | ~−$1.26 (−1.86%) |
+| HWM | $1.95850 (session high per quote) |
+| Stop | ODNEDT-XQDZ4-PHHLPF trailing 3.5% — CONFIRMED OPEN ✓ |
+| Stop trigger | $1.89000 (HWM $1.9585 × 0.965) |
+| Distance to stop | ~0.6% ($0.0115 above trigger) |
+| Thesis | NEAR Nightshade 2.0 resharding June 9 — Binance deposit suspension confirms date; no thesis break found |
+| T1 | $1.9956 — not yet reached |
+| Action | No action — stop tighten not triggered (position below entry, far from +20% threshold) |
+
+**Midday candidate scan — no new entries:**
+
+| Asset | Signal | Spread | Verdict |
+|---|---|---|---|
+| TAO/USD | +8.56% from 24h open; Nvidia/Chamath AI narrative | 0.068% ✓ | SKIP — BTC weekly gate active; catalyst timing unconfirmed <3h |
+| XLM/USD | −3.2% from 24h open; DTCC tokenization narrative | 0.058% ✓ | SKIP — declining from open; catalyst stale (March 2026) |
+| ONDO/USD | $0.344; June 9 perps still pending | 0.097% ✓ | SKIP — below prior HWM $0.36039; OI declining; no re-entry signal |
+| KAS/USD | — | — | SKIP — $0.031000 trigger unmet |
+
+**BTC weekly gate:** ACTIVE (BTC ~−15% over 5 days vs June 1 high $72,145). Pure momentum entries banned. No candidate with confirmed fresh catalyst <3h.
+
+**Post-midday account state:**
+- NEAR: 35 NEAR (~$66.55 at $1.9015)
+- ZUSD: $69.04
+- Total equity: ~$135.59
+- Day P&L: ~−$4.29 (−3.07%) [ONDO stop-out −$2.62 + NEAR unrealized −$1.26 + fees]
+- Phase P&L: ~−$44.19 (−24.58%) from Kraken starting equity $179.78
