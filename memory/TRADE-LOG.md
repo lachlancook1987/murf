@@ -4419,3 +4419,22 @@ No fresh catalyst (<6h) confirmed for any liquid Kraken pair. BTC weekly gate ac
 
 XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely above trigger with thin R:R on Sunday night. No fresh catalyst (<6h) on any liquid Kraken pair.
 - **Jul (est.):** XRP CLARITY Act floor vote (standing binary trigger, 7% trail)
+
+---
+
+## 2026-06-07 — Overnight Triage Check (~overnight UTC)
+
+**Kraken positions:** 0 — fully in cash ($134.7518 ZUSD) ✓
+**Kraken open orders:** 0 — no orphaned orders ✓
+**Alpaca positions:** 0 — BTC residual closed 2026-05-22; stop a2b44cf9 cancelled ✓
+
+**BTC Crash Gate:** Open $60,858 → current $62,993 = **+3.48%** overnight — NOT triggered ✓
+
+**STEP 2 — Trailing stops:** No positions → N/A
+**STEP 3 — Emergency exits:** No positions → N/A
+**STEP 4 — Stop tightening:** No positions → N/A
+**STEP 5 — Crash gate:** BTC +3.48% — clear
+
+**Forward:** NEAR $1.92 trigger watch (Nightshade 2.0 resharding upgrade Jun 9); ONDO perps full launch Jun 9 — buy if +3% with volume at open; exit both before launch. KAS re-entry conditional on $0.031000 reclaim + 1h >3% signal.
+
+**Result: NO-OP. No actions taken. No notification sent.**
