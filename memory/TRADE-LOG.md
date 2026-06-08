@@ -4438,3 +4438,21 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Forward:** NEAR $1.92 trigger watch (Nightshade 2.0 resharding upgrade Jun 9); ONDO perps full launch Jun 9 — buy if +3% with volume at open; exit both before launch. KAS re-entry conditional on $0.031000 reclaim + 1h >3% signal.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-08 — EOD Snapshot (Day 19, Monday)
+
+### Jun 08 — EOD Snapshot (Day 19, Monday)
+**Portfolio:** $134.75 | **Cash:** $134.75 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$45.03 (−25.05%) | **vs BTC:** −0.94%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~55
+**Notes:** Full-cash Monday. No new positions opened. Portfolio at $134.7518 ZUSD — actual starting balance after Jun 7 ONDO (−$2.62) and NEAR (−$2.51) intraday exits. BTC rallied +0.94% today ($62,462→$63,050); bot underperformed by −0.94% holding cash. Crash gate NOT triggered (BTC +0.94%, well clear of −20%). Alpaca stop a2b44cf9 confirmed cancelled since 2026-05-22 — no Alpaca residual. Phase P&L −$45.03 (−25.05%) from Kraken starting equity $179.78. Jun 9 is the primary catalyst day: NEAR Nightshade 2.0 resharding upgrade live + ONDO full retail perps launch on Kraken. Entry criteria: NEAR — sustained 1h close above $1.92 with volume expansion; ONDO — buy at market open if +3% with volume, 2.5% trailing stop, exit before/at launch to capture pre-launch momentum (avoid buy-the-news reversal).
+
+---
