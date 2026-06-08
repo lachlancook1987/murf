@@ -4650,3 +4650,49 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **Account after** | ZUSD $9.44, NEAR 30.005, INJ 10.000 |
 | **BTC weekly gate** | ACTIVE — exchange listing + regulated futures + USDC launch = catalyst exemptions ✓ |
 | **Crash gate** | NOT triggered (BTC +2.24% 24h, $63,170) |
+
+
+---
+
+## 2026-06-08 — Overnight Triage Check
+
+### NEAR/USD — Trailing Stop Triggered [Auto-Exit]
+
+| Field | Value |
+|---|---|
+| **Event** | Trailing stop auto-triggered overnight (observed in overnight triage) |
+| **Stop Order ID** | OZUM7J-75WPF-PBVUSL (not visible in open orders — confirmed filled) |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Entry** | ~$2.1670 (30 NEAR, ~$65.27 ZUSD total cost) |
+| **HWM at placement** | $2.1630 → initial stop trigger $2.1089 |
+| **Day high / Day low** | $2.2633 / $2.0132 |
+| **Estimated exit** | ~$2.11 (day low $2.0132 well below stop; ZUSD proceeds ≈ $63.36 from balance delta) |
+| **Est. P&L** | ~−$1.91 (≈ −2.9% on $65.27 cost) |
+| **Exit reason** | Trailing stop auto-triggered; day low $2.0132 < initial stop $2.1089 |
+| **Residual dust** | 0.00533 NEAR (dust, no action) |
+
+### INJ/USD — Position Intact
+
+| Field | Value |
+|---|---|
+| **Status** | OPEN — 10 INJ, entry ~$5.805 |
+| **Stop** | O6ZXY6-6HK7F-7UKZLO active, trail 2.5%, stop price $5.672 (HWM ~$5.817) |
+| **Current price** | $5.748 (−1.0% from entry; above stop) |
+| **Action** | None — protected, no tightening warranted (not up 20%+) |
+
+### Crash Gate / BTC Check
+
+| Field | Value |
+|---|---|
+| **BTC price** | $63,405 (ask) |
+| **24h open** | $63,305 |
+| **24h change** | +0.16% — well within normal range |
+| **Crash gate** | NOT triggered |
+
+### Alpaca Residual
+
+| Field | Value |
+|---|---|
+| **Positions** | None (already fully exited) |
+| **Stop a2b44cf9** | Canceled 2026-05-22 — expected, no action needed |
+
