@@ -13169,3 +13169,45 @@ Ondo Perps platform launches Jun 9. Trailing stop OWTP5B-DTQH4-BAE4D2 currently 
 
 **No notification sent (no action taken this scan).**
 
+
+## 2026-06-08 — Evening Session Check (claude/clever-allen-JYbj9)
+
+**Portfolio:** 2428 KAS + 120 ONDO + $11.00 ZUSD | Phase P&L: ~−$45 (−25%) from $179.78 start
+**BTC:** $63,969 ask (+1.0% 24h) | Crash gate: NOT triggered | BTC weekly gate: ACTIVE (−11.3% vs Jun 1 $72,145)
+
+### Live Account State
+| Asset | Qty | Entry | Ask | P&L% | Stop Order | Trigger | Buffer |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | 2428 | $0.032730 | $0.032760 | +0.09% | OANQVR-ACRCJ-FEJKRO (trail 2.5%) | $0.032270 | 1.50% |
+| ONDO/USD | 120 | ~$0.3621 | $0.367930 | +1.61% | OWTP5B-DTQH4-BAE4D2 (trail 2.5%) | $0.360540 | 2.01% |
+| ZUSD | — | — | $11.00 | — | — | — | — |
+
+**Alpaca:** Clean — no positions, historical orders only (BTC closed 2026-05-22) ✓
+
+### New Candidate Scan
+| Asset | Signal | Verdict |
+|---|---|---|
+| ETH/USD | Ask $1,695.76 — ABOVE day open $1,689.82 trigger ✓; ETHConf NYC Day 1 catalyst | SKIP — only $11 ZUSD available; position would be ~0.006 ETH ($10), fee-destroying; no actionable capital |
+| All others | No candidates with fresh (<3h) catalyst under BTC weekly gate | SKIP |
+
+### Decision: NO NEW TRADES
+All morning plan trades (KAS + ONDO) already placed in earlier sessions. Both trailing stops confirmed active. ETH watchlist trigger technically met but no capital. No new entries this session.
+
+### ⚠️ ONDO CRITICAL EXIT — Jun 9
+- T1 = $0.37296 (+3% from entry) — currently 1.37% away at $0.367930
+- HWM $0.369780 is close to T1
+- If T1 hit today/overnight: cancel OWTP5B, place 0.5% trailing stop
+- If T1 NOT hit by Jun 9 session open: **EXIT ONDO AT MARKET IMMEDIATELY** — Ondo Perps platform launches Jun 9; buy-the-news reversal risk
+- Commands ready:
+  - `bash scripts/kraken.sh cancel OWTP5B-DTQH4-BAE4D2`
+  - `bash scripts/kraken.sh order '{"symbol":"ONDO/USD","qty":"120","side":"sell","type":"market","time_in_force":"gtc"}'`
+
+### KAS Status
+- Toccata protocol upgrade window Jun 5–20 — thesis intact
+- No KAS-specific news today that breaks thesis
+- Stop buffer 1.50% — thin but appropriate given today's range $0.030870–$0.033390 (8.1%)
+- HOLD until stop fires or T1 ($0.033568) is hit
+
+**No notification sent (no trades placed).**
+
+---
