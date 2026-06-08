@@ -4456,3 +4456,59 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Notes:** Full-cash Monday. No new positions opened. Portfolio at $134.7518 ZUSD — actual starting balance after Jun 7 ONDO (−$2.62) and NEAR (−$2.51) intraday exits. BTC rallied +0.94% today ($62,462→$63,050); bot underperformed by −0.94% holding cash. Crash gate NOT triggered (BTC +0.94%, well clear of −20%). Alpaca stop a2b44cf9 confirmed cancelled since 2026-05-22 — no Alpaca residual. Phase P&L −$45.03 (−25.05%) from Kraken starting equity $179.78. Jun 9 is the primary catalyst day: NEAR Nightshade 2.0 resharding upgrade live + ONDO full retail perps launch on Kraken. Entry criteria: NEAR — sustained 1h close above $1.92 with volume expansion; ONDO — buy at market open if +3% with volume, 2.5% trailing stop, exit before/at launch to capture pre-launch momentum (avoid buy-the-news reversal).
 
 ---
+
+## 2026-06-08 — Session-Open Trades (Day 19, Monday — late morning)
+
+**Account at open:** $134.7518 ZUSD | 0 positions | 0 orders
+**BTC:** $63,180 ask | Crash gate: NOT triggered | BTC weekly gate: ACTIVE (BTC −12.4% vs Jun 1)
+
+---
+
+### Trade 1 — KAS/USD BUY
+
+| Field | Value |
+|---|---|
+| **Date/Time (UTC)** | 2026-06-08 09:07 |
+| **Symbol** | KAS/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 2428 KAS |
+| **Entry Price** | $0.032730 |
+| **Cost** | ~$79.47 |
+| **T1 (+3%)** | $0.033712 |
+| **T2 (+5%)** | $0.034367 |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Stop Trigger** | $0.031920 |
+| **Stop Order ID** | OANQVR-ACRCJ-FEJKRO |
+| **Buy Order ID** | ORGDQB-HBMH3-G7YZ7T |
+| **Thesis** | Kaspa Toccata protocol upgrade window Jun 5–20 — adds L1 covenants, native tokens, zk verification; protocol upgrade catalyst bypasses BTC weekly gate; +5.51% from open, near day high |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Spread** | 0.091% ✓ |
+| **Size** | ~$79 (59% equity) |
+
+---
+
+### Trade 2 — ONDO/USD BUY
+
+| Field | Value |
+|---|---|
+| **Date/Time (UTC)** | 2026-06-08 09:08 |
+| **Symbol** | ONDO/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 125 ONDO |
+| **Entry Price** | $0.358270 |
+| **Cost** | ~$44.78 |
+| **T1 (+3%)** | $0.369018 |
+| **T2 (+5%)** | $0.376184 |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Stop Trigger** | $0.349320 |
+| **Stop Order ID** | OYHRV7-WCPDY-TTLWAN |
+| **Buy Order ID** | OER776-SWX4I-CGYMKF |
+| **Thesis** | Ondo Finance Perps platform launch Jun 9 — pre-event positioning for tokenized stocks/ETFs perps platform launch; catalyst-driven, bypasses BTC weekly gate; +3.02% from open |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Spread** | 0.008% ✓ |
+| **Size** | ~$45 (33% equity) |
+
+**Capital deployed:** ~$124.25 / $134.75 (92.2%). Reserve: ~$10.50 ZUSD for fees.
+**Exit note — ONDO:** Exit before or at Jun 9 launch to avoid buy-the-news reversal.
+
+---
