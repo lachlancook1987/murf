@@ -4512,3 +4512,49 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Exit note — ONDO:** Exit before or at Jun 9 launch to avoid buy-the-news reversal.
 
 ---
+
+---
+
+### ONDO/USD — Trailing Stop Triggered (OYHRV7-WCPDY-TTLWAN) [Trade #2 Exit]
+
+| Field | Value |
+|---|---|
+| **Event** | Trailing stop auto-triggered |
+| **Stop Order ID** | OYHRV7-WCPDY-TTLWAN |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **HWM at trigger** | $0.364930 (midday confirmed) |
+| **Stop trigger price** | $0.355810 (HWM × 0.975) |
+| **Est. fill** | ~$0.3551 (market sell at trigger; day fell to $0.342120 low) |
+| **Entry** | $0.358270 (125 ONDO, ~$44.78 cost) |
+| **Est. exit proceeds** | ~$44.27 (125 × ~$0.3542 after fee) |
+| **Est. P&L** | ~−$0.63 (−1.4% net after fees) |
+| **Exit reason** | Price fell from $0.3626 post-midday to day low $0.342120; trailing stop triggered at $0.355810 |
+| **Thesis status** | Jun 9 ONDO Perps launch intact; SEC investigation closure adds regulatory catalyst; re-entry executed |
+
+**ONDO position (Trade #2): CLOSED.** Re-entry executed 12:10 UTC.
+
+---
+
+### Trade 3 — ONDO/USD RE-ENTRY (2026-06-08 12:10 UTC)
+
+| Field | Value |
+|---|---|
+| **Date/Time (UTC)** | 2026-06-08 12:10 |
+| **Symbol** | ONDO/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 120 ONDO |
+| **Entry Price** | ~$0.3621 (est. from ZUSD delta $43.56 / 120, net of 0.26% taker fee) |
+| **Cost** | ~$43.45 notional + ~$0.11 fee = $43.56 total ZUSD |
+| **T1 (+3%)** | $0.37296 |
+| **T2 (+5%)** | $0.38021 |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Stop Trigger** | $0.351820 (confirmed active) |
+| **HWM at placement** | $0.360840 |
+| **Stop Order ID** | OWTP5B-DTQH4-BAE4D2 |
+| **Buy Order ID** | OFTVHQ-5Z5P4-7DDRAG |
+| **Thesis** | (1) SEC closed investigation into Ondo's tokenized equity platform without charges — regulatory clarity catalyst (BTC weekly gate exemption: regulatory event); (2) Ondo Finance Perps platform launch Jun 9 pre-event positioning; (3) Ondo tokenized-stock activity on BNB Chain +440% to $221M; (4) Ripple-Mastercard-JPMorgan-Ondo cross-border tokenized Treasuries pilot |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Spread** | 0.14% ✓ |
+| **Size** | ~$43 (~32% of ~$133 total equity) |
+| **Exit note** | MUST exit before or at Jun 9 ONDO Perps launch — buy-the-news reversal risk; exit at T1 $0.37296 or tighten to 0.5% trail at T1 |
+
