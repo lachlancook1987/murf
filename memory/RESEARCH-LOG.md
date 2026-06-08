@@ -13169,3 +13169,147 @@ Ondo Perps platform launches Jun 9. Trailing stop OWTP5B-DTQH4-BAE4D2 currently 
 
 **No notification sent (no action taken this scan).**
 
+
+---
+
+## 2026-06-08 — Evening Pre-Session Research
+
+**Session branch:** claude/affectionate-gates-usaewx
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $132.7586 — full capital available |
+| Kraken positions | **0 open** — both KAS and ONDO trailing stops triggered since midday scan #2 |
+| Kraken orders | None |
+| Alpaca | Historical orders only (BTC residual cancelled 2026-05-22) |
+
+**KAS exit:** Trailing stop OANQVR-ACRCJ-FEJKRO fired. Entry was $0.032730, stop trailed from HWM ~$0.033090. Est. exit ~$0.032270. Est. P&L: ~−1.4% (minor loss, thesis intact but price weakened below stop).
+
+**ONDO exit (Trade 3):** Trailing stop OWTP5B-DTQH4-BAE4D2 fired. Entry ~$0.3621, HWM $0.369780, stop at $0.360540. Est. exit ~$0.3516. Est. P&L: ~−2.9% net. Exit note respected — position closed before Jun 9 Perps launch.
+
+**Net ZUSD balance consistent** with both stops firing and returning approximately $132.76 ($11.00 reserve + ~$79 KAS + ~$43 ONDO minus minor losses on both).
+
+---
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC | $61,717 / +1.78% 24h |
+| ETH | $1,686.51 / +7.48% 24h (CoinMarketCap) |
+| Fear & Greed | **8 — Extreme Fear** (down from 12 yesterday) |
+| BTC funding rate | ~+0.0001% (Binance 8h, near neutral) |
+| BTC weekly trend gate | **ACTIVE** — BTC −14.5% vs Jun 1 ($72,145 → $61,717) |
+| Crash gate | NOT triggered (BTC −14.5% vs Jun 1 only; 24h change +1.78%) |
+
+**BTC weekly trend gate implications:** Entry requires 1h momentum >5% AND catalyst <3h old. Pure momentum entries banned.
+
+**Top market catalysts:**
+- Macro risk-off: Strong U.S. labor data (Jun 5 payrolls) pushed 10yr yield to ~4.54%
+- Spot BTC ETF outflows: ~$4.3B multi-day net-outflow streak (bearish)
+- Strategy (MicroStrategy) first BTC sale since 2022 (bearish sentiment signal)
+- ETH: Bitmine holds 5.54M ETH, bought 126,971 ETH past week — whale accumulation positive
+- HYPE: 21Shares HYPE ETF debuted; Coinbase launched USDC on Hyperliquid as treasury deployer
+- INJ: Circle native USDC + CCTP live on Injective (May 7); June buyback $315K+ (ongoing)
+- ZEC: Grayscale accumulated ~$46M shielded ZEC + filed to convert trust to spot ETF; Multicoin Capital disclosed ZEC position
+- NEAR: Dynamic resharding (protocol 2.13) went live approximately June 2 — confirmed by "Automated Dynamic Resharding Is Live!" video
+- ONDO: Perps platform launch confirmed Jun 9 (buy-the-news reversal risk — avoid)
+- Token unlocks this week: RAIN $657M (Jun 10), ASTER $58.3M (Jun 9), WET $14M (Jun 9)
+
+**Top 24h gainers (CoinGecko):** DLC +103.7%, PIPPIN +68.6%, SHOW +57.1%, VELVET +51.1%, ALLO +23.8%
+
+---
+
+### Candidate Screening
+
+| Asset | vs Day Open | Ask | Spread | Catalyst | BTC Weekly Gate | Verdict |
+|---|---|---|---|---|---|---|
+| HYPE/USD | +6.21% ($59.77→$63.48) | $63.48 | **0.016%** ✓ | 21Shares ETF debut + Coinbase USDC on Hyperliquid + fee-buyback 98% | Momentum ✓ (>5%); Catalyst ⚠️ timing unclear | **CONDITIONAL BUY** |
+| ETH/USD | −0.19% ($1,689.82→$1,686.51) | $1,686.51 | 0.001% ✓ | Bitmine accumulation; no <3h event | Momentum ✗ (below open) | SKIP |
+| NEAR/USD | +5.44% ($2.057→$2.169) | $2.169 | 0.046% ✓ | Resharding went live ~Jun 2 (6 days old) | Momentum ✓; Catalyst ✗ (>3h) | SKIP |
+| INJ/USD | +5.48% ($5.441→$5.739) | $5.739 | 0.052% ✓ | USDC launch May 7 (32 days old); June buyback ongoing | Momentum ✓; Catalyst ✗ (primary catalyst old) | WATCHLIST |
+| ZEC/USD | +3.96% ($440.43→$457.85) | $457.85 | 0.059% ✓ | Grayscale $46M + ETF filing; Multicoin disclosure | Momentum ✗ (<5%); Catalyst ⚠️ timing unclear | WATCHLIST |
+| ONDO/USD | ~$0.35 / +5.10% 24h | ~$0.35 | 0.14% ✓ | Jun 9 Perps launch tomorrow = buy-the-news reversal risk | SKIP — do not re-enter ahead of Jun 9 launch | SKIP |
+
+---
+
+### Trade Ideas
+
+#### Idea 1 — HYPE/USD (Primary — CONDITIONAL)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | 21Shares HYPE ETF debuted (June 2026) + Coinbase launched USDC on Hyperliquid as AQA treasury deployer + 98% fee-buyback model + CLARITY Act regulatory progress |
+| **Catalyst freshness** | BORDERLINE — ETF debut confirmed June 2026, exact date unclear; Coinbase USDC integration is recent |
+| **Entry** | Market ~$63.48 (if catalyst <3h confirmed) |
+| **Stop** | `trailing_stop`, `trail_percent: 3.5` (high-ATR asset per strategy) |
+| **Stop trigger at entry** | ~$61.26 (3.5% below $63.48) |
+| **T1** | $65.38 (+3%) |
+| **T2** | $66.65 (+5%) |
+| **R:R at T1** | 3% / 3.5% = **0.86:1** ⚠️ — below 1.2:1 minimum (structural for high-ATR 3.5% stop) |
+| **R:R at T2** | 5% / 3.5% = **1.43:1** ✓ — target T2 as primary |
+| **Size** | ~$53 (~40% equity) — conviction medium due to catalyst timing uncertainty |
+| **Kraken pair** | HYPE/USD ✓ online |
+| **Volume** | 405,255 HYPE today / 451,344 24h — strong ✓ |
+| **Day range** | Low $59.32 / High $65.75 / Open $59.77 |
+| **Entry condition** | Confirm 21Shares ETF debut is today's catalyst (<3h); if not confirmed, set limit at $61.50 for re-entry on pullback |
+
+**R:R note:** High-ATR assets require 3.5% stop per strategy. R:R at T1 = 0.86 (below 1.2 minimum). Accept if targeting T2 as primary (+5% / 3.5% = 1.43:1 ✓). Do not enter if only targeting T1.
+
+---
+
+#### Idea 2 — ZEC/USD (Secondary — WATCHLIST)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Grayscale ~$46M shielded ZEC accumulation + spot ETF filing + Multicoin institutional disclosure + SEC investigation cleared |
+| **Catalyst freshness** | Institutional, but exact timing in June unclear — could be days-old |
+| **Entry** | Limit ~$448–$452 (wait for pullback from day high $461.14) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **T1** | Entry +3% |
+| **T2** | Entry +5% |
+| **R:R** | 1.2:1 ✓ |
+| **BTC weekly gate** | Currently +3.96% from open (needs >5% for gate); wait for 1h surge >5% OR fresh Grayscale announcement today |
+| **Spread** | 0.059% ✓ |
+| **Volume** | 48,372 ZEC today — very high ✓ |
+
+---
+
+#### Idea 3 — INJ/USD (Tertiary — WATCHLIST)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | June monthly buyback ($315K+) ongoing; 21Shares INJ ETF at SEC (speculative) |
+| **Catalyst issue** | Primary USDC catalyst from May 7 (32 days old) — fails BTC weekly gate <3h requirement |
+| **Entry** | Only if June buyback announcement confirmed fresh today |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **T1** | Entry +3% |
+| **BTC weekly gate** | Momentum +5.48% ✓; need fresh buyback announcement confirmation |
+| **Spread** | 0.052% ✓ |
+
+---
+
+#### Idea 4 — ETH/USD (Watchlist only)
+
+- Currently −0.19% from day open. Below session open ($1,689.82).
+- Enter only if: hourly close above $1,690 on volume + ETHConf NYC Day 2 specific announcement.
+- Stop: 2.5% trailing. T1 = entry +3%, T2 = entry +5%.
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear (index 8)** — market in deep negative sentiment; moves can reverse violently
+2. **BTC weekly trend gate ACTIVE** — strict entry criteria; most candidates fail catalyst freshness test
+3. **Token unlock headwinds this week:** RAIN $657M Jun 10, ASTER $58.3M Jun 9, WET $14M Jun 9 — could weigh on sentiment
+4. **ETF outflow streak $4.3B** — institutional selling pressure on BTC persists
+5. **ONDO Jun 9 launch** — explicitly avoid re-entry; buy-the-news reversal likely
+6. **HYPE R:R** — structural R:R deficit at T1 with 3.5% high-ATR stop; only viable targeting T2
+
+### Decision
+
+**TRADE CONDITIONAL** — HYPE/USD is the primary candidate if 21Shares ETF debut catalyst is confirmed fresh (≤3h old). All other candidates fail BTC weekly gate (catalyst age or momentum threshold). ZEC and INJ remain on watchlist pending fresh catalyst confirmation. No ONDO re-entry — Jun 9 buy-the-news reversal risk. ETH below day open, skip. Crash gate NOT triggered.
+
+**Primary action:** Enter HYPE/USD market if catalyst timing confirmed. Else set HYPE limit at $61.50 for pullback entry. Target T2 (+5%) as primary to satisfy R:R with 3.5% high-ATR stop.
