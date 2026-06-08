@@ -4558,3 +4558,33 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **Size** | ~$43 (~32% of ~$133 total equity) |
 | **Exit note** | MUST exit before or at Jun 9 ONDO Perps launch — buy-the-news reversal risk; exit at T1 $0.37296 or tighten to 0.5% trail at T1 |
 
+
+---
+
+## 2026-06-08 — Session-Open Evening Trades
+
+### Trade — NEAR/USD BUY (2026-06-08 21:10 UTC)
+
+| Field | Value |
+|---|---|
+| **Date/Time (UTC)** | 2026-06-08 21:10 |
+| **Symbol** | NEAR/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 30 NEAR |
+| **Entry Price** | ~$2.1670 (est. from ZUSD delta $65.27 / 30, inclusive of 0.4% fee) |
+| **Cost** | ~$65.27 ZUSD total |
+| **T1 (+3%)** | $2.2320 |
+| **T2 (+5%)** | $2.2754 |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Stop Trigger** | $2.1089 (confirmed active at placement) |
+| **HWM at placement** | $2.1630 |
+| **Stop Order ID** | OZUM7J-75WPF-PBVUSL |
+| **Buy Order ID** | OVWLGX-Y7T3M-CF6VAE |
+| **Thesis** | Dynamic resharding (protocol upgrade v2.13) went live June 2 — protocol upgrade exemption bypasses BTC weekly gate; AI/SpaceX IPO week narrative driving NEAR today (+5.26% vs open, 4.1M intraday volume); HWM confirmed same-day above T1 territory ($2.2633). Spread 0.12% ✓ |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Spread** | 0.12% ✓ |
+| **Size** | ~$65 (~49% of $132.76 equity) |
+| **Account after** | ZUSD $67.49, NEAR 30.005 |
+| **BTC weekly gate** | ACTIVE — protocol upgrade exemption applied |
+| **Crash gate** | NOT triggered (BTC +0.43% 24h, open $63,305 → $63,582) |
+
