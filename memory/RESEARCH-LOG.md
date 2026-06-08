@@ -12884,3 +12884,159 @@ No action taken → No notification sent.
 | **Jun 10** | RAIN $713M unlock; HOME $40.2M; ME $10.4M | Avoid RAIN, HOME, ME |
 | **Jun 17** | SPK $61M unlock | Avoid SPK |
 | **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
+
+
+---
+
+## 2026-06-08 — Pre-Session Research (Session 9)
+
+**Session branch:** claude/affectionate-gates-0rEo5
+**Account:** $134.7518 ZUSD (100% cash) | No open positions | No open orders ✓
+**Alpaca:** Clean — historical orders only (BTC position closed 2026-05-22) ✓
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $61,717 | +1.78% 24h from ~$60,617; crash gate NOT triggered |
+| ETH | $1,666.01 ask (Kraken) | +5.40% 24h per Perplexity; currently -1.4% below today's Kraken open ($1,689.82) — pulling back |
+| Fear & Greed | 8 (Extreme Fear) | Persistent risk-off; unchanged from prior sessions |
+| BTC funding rate | +0.0035%/8h (Binance) | Neutral; no squeeze signal |
+| BTC weekly gate | **ACTIVE** | BTC ~$61,717 vs Jun 1 ~$72,145 = −14.5% over 5 days (gate threshold: >3% down) |
+| BTC crash gate | NOT triggered | Would require >20% 24h drop |
+
+### Top 24h Gainers (CoinGecko)
+
+| Rank | Asset | 24h Change | Notes |
+|---|---|---|---|
+| 1 | SPLD | +213.5% | Micro-cap, not on Kraken |
+| 2 | RSC | +67.7% | Illiquid |
+| 3 | ALLO | +48.8% | Check Kraken |
+| 4 | OSMO | +14.2% | Check Kraken |
+| 5 | STG | +13.7% | Low Kraken liquidity |
+| 6 | AR | +13.6% | Kraken available but illiquid (147 trades/day) |
+| 7 | ZEC | +14.77% (Perplexity) | Kraken: currently below today's open ($432 vs $440 open); no fresh catalyst |
+| 8 | KAS | +4.35% (from Kraken open) | **STRONG CANDIDATE** — near day high, Toccata upgrade window active |
+| 9 | NEAR | +3.83% (from Kraken open) | R:R 0.86:1 with 3.5% trail — fails minimum |
+| 10 | ONDO | +2.50% (from Kraken open) | **CANDIDATE** — Ondo Perps launch tomorrow Jun 9 |
+
+### Key Catalysts & News
+
+- **ETHConf New York Jun 8–10 (TODAY):** 5,000+ founders/builders; institutional adoption, staking, DeFi narratives. ETH +5.4% 24h but pulling back on Kraken (below day open). Glamsterdam upgrade narrative active.
+- **Kaspa Toccata fork window Jun 5–20:** Protocol upgrade adds L1 covenants, native tokens, zk verification. Price up ~10% on announcement; KAS at $0.03259 (near day high $0.03284). Exact mainnet date disputed (Jun 5–20 or Jun 30), but upgrade window is active catalyst.
+- **NEAR Nightshade 2.0 resharding — Jun 9 (tomorrow):** Protocol upgrade. NEAR at $2.13590 (+3.83% from open). R:R 0.86:1 with mandatory 3.5% high-ATR trail — fails 1.2:1 minimum. Monitor only.
+- **Ondo Perps launch — Jun 9 (tomorrow):** Ondo Finance's onchain equity perps platform (up to 20x leverage on tokenized stocks/ETFs). NOT a Kraken listing — it's Ondo's own platform. Still a product-launch catalyst for ONDO token.
+- **HYPE:** ATH $73.60 Jun 1; +127.4% YTD; SpaceX perps on Coinbase supportive. BUT Arthur Hayes sold $18M stake Jun 7 (bearish signal). 9.92M HYPE unlock Jun 6 ($564.66M). High-ATR (3.5% trail) → R:R 0.86:1 — SKIP.
+- **CLARITY Act:** Renewed Senate attention; prediction markets raised 2026 passage odds. Standing trigger for XRP (7% trail binary event) but no floor vote today.
+- **STABLE unlock today Jun 8:** $34.4M — AVOID STABLE.
+- **RAIN unlock Jun 10:** $657–714M — AVOID.
+- **ASTER unlock Jun 9:** $58.3M — AVOID ASTER.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Kraken Ask | Spread | Catalyst | Gate Status | R:R | Verdict |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | +4.35% | $0.032590 | 0.061% ✓ | Toccata protocol upgrade window (open regardless of weekly gate) | Protocol upgrade → OPEN | 1.2:1 ✓ | **ENTER** |
+| ONDO/USD | +2.50% | $0.357480 | 0.070% ✓ | Ondo Perps launch Jun 9 (product launch catalyst) | Catalyst-driven → OPEN | 1.2:1 ✓ | **ENTER** |
+| ETH/USD | −1.4% (below open) | $1,666.01 | 0.0006% ✓ | ETHConf NYC Jun 8–10 (starts today) | Catalyst-driven → OPEN | 1.2:1 ✓ | **WATCHLIST** — wait for 1h close above $1,689 (day open) with volume |
+| NEAR/USD | +3.83% | $2.13590 | 0.117% ✓ | Nightshade 2.0 upgrade tomorrow (protocol upgrade → open) | R:R 0.86:1 — **FAILS 1.2:1** | 0.86:1 ✗ | SKIP |
+| HYPE/USD | +5.25% | $62.910 | 0.032% ✓ | ATH breakout; SpaceX perps catalyst; BUT Hayes exit Jun 7 + $564M unlock Jun 6 | High-ATR 3.5% trail → R:R 0.86:1 **FAILS** | 0.86:1 ✗ | SKIP |
+| ZEC/USD | −1.87% (below open) | $432.18 | 0.109% ✓ | Multicoin Capital May 6 (32 days stale) | Stale catalyst | — | SKIP |
+| AR/USD | −1.36% (below open) | $1.958 | 0.153% ✓ | Permaweb Names Jun 1 (7 days stale) | 147 trades/day (illiquid); stale catalyst | — | SKIP |
+| KSM/USD | −0.81% (below open) | $3.65 | 0.274% ✓ | No fresh catalyst | Declining from $3.80 high; 111 trades/day | — | SKIP |
+| SOL/USD | −1.0% (below open) | $65.79 | 0.015% ✓ | No specific catalyst today | Below open; no fresh catalyst | — | SKIP |
+
+### Trade Ideas
+
+---
+
+#### IDEA 1 — KAS/USD (HIGH CONVICTION)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Kaspa Toccata protocol upgrade window Jun 5–20: adds L1 covenants, native tokens, zk verification — open regardless of BTC weekly gate |
+| **Entry** | Market ~$0.032590 |
+| **Stop** | trailing_stop, trail_percent: 2.5, GTC (place immediately after fill) |
+| **T1** | $0.033568 (+3%) |
+| **T2** | $0.034220 (+5%) |
+| **R:R** | 3%/2.5% = **1.2:1** ✓ |
+| **Spread** | 0.061% ✓ |
+| **Size** | $80 (~59% of equity) |
+| **At T1** | Tighten trailing stop to 0.5% to lock gains |
+| **Exit note** | No specific hard-date exit; Toccata window runs to Jun 20 or Jun 30; exit if momentum fades or stop fires |
+
+**Order JSON:**
+```json
+{"symbol":"KAS/USD","qty":"2454","side":"buy","type":"market"}
+```
+*(Stop order after fill: `{"symbol":"KAS/USD","qty":"2454","side":"sell","type":"trailing_stop","trail_percent":"2.5","time_in_force":"gtc"}`)*
+
+---
+
+#### IDEA 2 — ONDO/USD (MODERATE CONVICTION)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Ondo Finance Perps platform launch Jun 9 — tokenized stocks/ETFs with up to 20x leverage; pre-event positioning |
+| **Entry** | Market ~$0.357480 |
+| **Stop** | trailing_stop, trail_percent: 2.5, GTC (place immediately after fill) |
+| **T1** | $0.36820 (+3%) |
+| **T2** | $0.37535 (+5%) |
+| **R:R** | 3%/2.5% = **1.2:1** ✓ |
+| **Spread** | 0.070% ✓ |
+| **Size** | $45 (~33% of equity) |
+| **At T1** | Tighten trailing stop to 0.5% to lock gains |
+| **Exit note** | Exit before or at Jun 9 launch to avoid buy-the-news reversal; day high $0.36558 broke prior HWM $0.36039 — this confirms upward bias |
+
+**Order JSON:**
+```json
+{"symbol":"ONDO/USD","qty":"126","side":"buy","type":"market"}
+```
+*(Stop order after fill: `{"symbol":"ONDO/USD","qty":"126","side":"sell","type":"trailing_stop","trail_percent":"2.5","time_in_force":"gtc"}`)*
+
+---
+
+#### IDEA 3 — ETH/USD (WATCHLIST — NO ENTRY YET)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | ETHConf NYC Jun 8–10 (starts TODAY); Glamsterdam upgrade narrative; institutional adoption announcements |
+| **Entry trigger** | Wait for 1h candle close **above $1,689** (today's Kraken open) with volume expansion; THEN enter market |
+| **Stop** | trailing_stop, trail_percent: 2.5, GTC |
+| **T1** | Entry +3% (e.g. $1,739 if entering at $1,689) |
+| **T2** | Entry +5% |
+| **R:R** | 1.2:1 ✓ |
+| **Notes** | Do NOT enter while below day open — ETH is currently $1,666 vs $1,689 open; wait for reclaim with momentum |
+
+---
+
+### Risk Factors
+
+- **BTC weekly gate ACTIVE (−14.5% over 5 days):** All entries must be catalyst-driven (KAS Toccata ✓, ONDO Perps ✓). Pure momentum entries BANNED.
+- **Fear & Greed 8 (Extreme Fear):** Market fragile; any broad BTC selloff can drag alts. Tight stops mandatory.
+- **KAS liquidity thin:** 4.8M KAS / 730 trades today — order for 2,454 KAS ($80) is small relative to book. Market order should fill cleanly.
+- **ONDO buy-the-news risk:** Ondo Perps launch Jun 9 — must exit before or at launch. If ONDO hits T1 ($0.368) before launch, take profit and don't hold through event.
+- **NEAR R:R discipline:** Despite Nightshade 2.0 tomorrow, R:R = 0.86:1 FAILS minimum. Do not chase.
+- **HYPE:** Arthur Hayes $18M exit Jun 7 + $564M unlock Jun 6 are strong bearish overhangs. Avoid.
+- **Token unlocks to avoid:** STABLE (today, $34.4M), ASTER (Jun 9, $58.3M), RAIN (Jun 10, $657-714M).
+
+### Decision
+
+**TRADE** — crash gate NOT triggered (BTC +1.78% 24h). Two catalyst-driven setups pass all gates.
+
+1. **KAS/USD — ENTER** ($80, 59% equity). Protocol upgrade (Toccata) → open regardless of BTC weekly gate.
+2. **ONDO/USD — ENTER** ($45, 33% equity). Ondo Perps launch pre-positioning → catalyst-driven, open.
+3. **ETH/USD — WATCHLIST**. Wait for reclaim of day open ($1,689) with volume; ETHConf catalyst active.
+4. **NEAR/USD — SKIP**. R:R 0.86:1 with 3.5% trail fails 1.2:1 minimum. No exception.
+
+**Capital deployed:** $125 / $134.75 (92.8% equity). Reserve: ~$9.75 ZUSD for fees.
+
+### Forward Calendar
+
+| Date | Event | Action |
+|---|---|---|
+| **Jun 8 (Today)** | ETHConf NYC begins; STABLE $34.4M unlock | Avoid STABLE; watch ETH for day-open reclaim entry |
+| **Jun 9 (Tomorrow)** | NEAR Nightshade 2.0 resharding live; Ondo Perps launch; ASTER $58.3M unlock | Exit ONDO before/at launch; avoid ASTER; NEAR still skip (R:R) |
+| **Jun 10** | RAIN $657–714M unlock; HOME $45.3M unlock | Avoid RAIN, HOME |
+| **Jun 17** | SPK $61M unlock | Avoid SPK |
+| **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
