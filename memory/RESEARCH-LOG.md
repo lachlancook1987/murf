@@ -13040,3 +13040,66 @@ No action taken → No notification sent.
 | **Jun 10** | RAIN $657–714M unlock; HOME $45.3M unlock | Avoid RAIN, HOME |
 | **Jun 17** | SPK $61M unlock | Avoid SPK |
 | **Jul (est.)** | XRP CLARITY Act floor vote | Standing binary trigger; 7% trail on entry |
+
+---
+
+## 2026-06-08 — Midday Scan
+
+**Portfolio:** 2428 KAS + 125 ONDO + $9.72 ZUSD reserve. No open orders besides trailing stops.
+**BTC:** $63,429 ask (+0.2% from day open $63,305; crash gate NOT triggered)
+**BTC weekly gate:** ACTIVE (BTC −12.1% vs Jun 1 ~$72,145)
+**Session branch:** claude/sweet-keller-FXgrP
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken KAS | 2428.00 ✓ |
+| Kraken ONDO | 125.00 ✓ |
+| ZUSD | $9.72 (reserve for fees) |
+| KAS trailing stop | OANQVR-ACRCJ-FEJKRO — 2.5% trailing, trigger $0.032270 ✓ |
+| ONDO trailing stop | OYHRV7-WCPDY-TTLWAN — 2.5% trailing, trigger $0.355810 ✓ |
+| Alpaca | Clean (historical orders only; BTC residual closed 2026-05-22) |
+
+### Open Position Review
+
+| Symbol | Entry | Current Ask | P&L | Stop Trigger | HWM | Tighten Threshold | Action |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | $0.032730 | $0.033090 | +1.10% | $0.032270 | $0.033090 | +20% = $0.039276 | HOLD — thesis intact |
+| ONDO/USD | $0.358270 | $0.362600 | +1.21% | $0.355810 | $0.364930 | +20% = $0.429924 | HOLD — T1 $0.369018 not yet hit; exit before Jun 9 launch |
+
+**Stop tighten check:** Neither position within +20% threshold. No tightening.
+
+**Thesis check:**
+- **KAS:** Toccata protocol upgrade window Jun 5–20 — no exploit, no rug, no dump signal. Day high $0.033390 (+6.9% from day open $0.031230). Thesis intact.
+- **ONDO:** Ondo Perps platform launch confirmed June 9. Price holding above $0.355 support. No thesis break. **MUST EXIT before/at June 9 launch.** 
+
+### New Candidate Scan
+
+| Asset | vs Day Open | Ask | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| ZEC/USD | −2.8% ($428 vs $440 open) | $428.31 | 0.047% ✓ | SEC investigation closure — announced Jan 14, 2026 (5 months stale) | FAIL | SKIP |
+| WLD/USD | −1.0% ($0.467 vs $0.472 open) | $0.4667 | 0.107% ✓ | Maelstrom bullish call early Jun; but Arthur Hayes SOLD entire WLD position Jun 6 — thesis break | FAIL | SKIP |
+| JTO/USD | −0.4% ($0.614 vs $0.616 open) | $0.61386 | 0.138% | Governance/buyback narrative — primary catalyst from Coinpedia Jun 1 (7 days stale); token unlock Jun 7 headwind | FAIL | SKIP |
+| ETH/USD | −1.2% ($1,670 vs $1,690 open) | $1,669.51 | 0.00006% ✓ | ETHConf NYC Day 1 ongoing; Glamsterdam narrative | Below $1,689 trigger | SKIP — watchlist only |
+
+**Rejection rationale:**
+- ZEC: The +20% 24h move is a rebound from an Orchard bug emergency patch selloff. SEC closure was January 14, 2026 — 145 days stale. No fresh catalyst today.
+- WLD: Maelstrom sold entire position June 6 — this inverts the original catalyst. Price below day open. Avoid.
+- JTO: Main catalyst (Jito economy / buyback framing) dates to June 1 article. Token unlock Jun 7 is a headwind. 387 trades today (thin). BTC gate requires <3h catalyst.
+- ETH: Still below day open trigger ($1,669 vs $1,689 required). ETHConf Day 1 announcements could trigger entry later today if ETH reclaims $1,689 with volume — stays on watchlist.
+
+### Decision: NO NEW ENTRIES
+
+All candidates fail BTC weekly gate catalyst freshness test. Existing KAS and ONDO positions held with trailing stops active. No action required.
+
+### ONDO Exit Planning (CRITICAL — Tomorrow Jun 9)
+
+Ondo Perps platform launches Jun 9. **Exit ONDO before or at launch.** T1 = $0.369018 (+3% from entry). If T1 hit today, tighten stop to 0.5% to lock gains; if stop fires, take proceeds. If T1 not hit by Jun 9 morning, exit at market before launch to avoid buy-the-news reversal. Do NOT hold ONDO through the Jun 9 launch event.
+
+### ETH Watchlist Conditions
+
+Enter ETH only if: 1h close above $1,689 (day open) with volume expansion. Catalyst: ETHConf NYC Day 1–2 institutional announcements. Stop: 2.5% trailing GTC. T1 = entry +3%, T2 = entry +5%. Check spread before entry.
+
+### No Notification Sent (no action taken)
+
