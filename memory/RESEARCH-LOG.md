@@ -13103,3 +13103,69 @@ Enter ETH only if: 1h close above $1,689 (day open) with volume expansion. Catal
 
 ### No Notification Sent (no action taken)
 
+
+---
+
+## 2026-06-08 — Midday Scan #2 (~afternoon UTC)
+
+**Portfolio:** 2428 KAS + 120 ONDO (re-entry) + $11.00 ZUSD  
+**BTC:** ~$62,850–$63,190 | Crash gate: NOT triggered | BTC weekly gate: ACTIVE (BTC −12.7% vs Jun 1 $72,145)  
+**Fear & Greed:** 12 (Extreme Fear — up slightly from 8 at open)  
+**Session branch:** claude/sweet-keller-77pBj
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken KAS | 2428.00004 ✓ |
+| Kraken ONDO | 120.00000 ✓ (re-entry Trade 3, entered 12:10 UTC at ~$0.3621) |
+| ZUSD | $11.0014 |
+| KAS trailing stop | OANQVR-ACRCJ-FEJKRO — 2.5% trailing, stopprice $0.032270, HWM $0.033090 ✓ |
+| ONDO trailing stop | OWTP5B-DTQH4-BAE4D2 — 2.5% trailing, stopprice $0.360540, HWM $0.369780 ✓ |
+| Alpaca | Historical orders only — BTC residual and stop a2b44cf9 confirmed cancelled since 2026-05-22 ✓ |
+
+### Open Position Review
+
+| Symbol | Entry | Ask | P&L | Stop Trigger | HWM | +20% Tighten | Action |
+|---|---|---|---|---|---|---|---|
+| KAS/USD | $0.032730 | $0.032620 | −0.34% | $0.032270 | $0.033090 | $0.039276 | HOLD — thesis intact (Toccata upgrade Jun 5–20) |
+| ONDO/USD | ~$0.3621 | $0.365570 | +0.96% | $0.360540 | $0.369780 | $0.43452 | HOLD — T1 $0.37296 nearly reached (day high $0.370230); MUST EXIT BEFORE JUN 9 LAUNCH |
+
+**Stop verification:** Both trailing stops confirmed active. No unprotected positions.  
+**Stop tighten check:** KAS at +1.1% from entry (threshold +20%); ONDO at +2.1% from entry (threshold +20%). No tightening required.
+
+### Thesis Check
+
+- **KAS:** Toccata protocol upgrade window Jun 5–20 still active. No exploit, rug, or dump signal. Price +4.47% from day open ($0.031230→$0.032620). Day high $0.033390 (+6.9% from open). Thesis intact — HOLD.
+- **ONDO:** Ondo Finance Perps platform launch confirmed Jun 9 (tokenized U.S. stocks/ETFs with up to 20x leverage, outside U.S. only). Perplexity confirms launch on track. Day high $0.370230 vs T1 $0.37296 — came within 0.73% of T1 but did not trigger. Pulling back slightly to $0.365570. Thesis intact — HOLD. **⚠️ CRITICAL EXIT TRIGGER: Exit ONDO before or at Jun 9 Perps launch.**
+
+### New Candidate Scan
+
+| Asset | Signal | Catalyst | Gate | Verdict |
+|---|---|---|---|---|
+| XRT/USD | +1,110% 24h | Data anomaly — extreme thin-liquidity spike | N/A | SKIP — price anomaly, not tradeable |
+| ALLO/USD | +57–59% 24h | No confirmed specific catalyst; pure momentum breakout per Binance Square | FAIL (BTC weekly gate: need catalyst <3h) | SKIP — momentum only, no catalyst |
+| SOL/USD | +3.85% 24h | ETHConf NYC Day 1 (ETH-focused, indirect for SOL); Solana Summit Jun 16 | FAIL (no fresh <3h SOL catalyst) | SKIP — no catalyst today |
+| BONK/USD | +3.33% 24h | No catalyst identified | FAIL | SKIP |
+
+**Rejection summary:** BTC weekly gate ACTIVE — all entries require confirmed catalyst <3h old. ALLO's 57% move is pure momentum with no Allora-specific announcement found. SOL has no SOL-specific catalyst today; Solana Summit is Jun 16. XRT move is thin-liquidity anomaly.
+
+### ONDO Exit Plan — CRITICAL (Jun 9)
+
+Ondo Perps platform launches Jun 9. Trailing stop OWTP5B-DTQH4-BAE4D2 currently at $0.360540 (2.5% trail, HWM $0.369780). T1 = $0.37296.
+
+**If T1 ($0.37296) hit before Jun 9 launch:**
+- Tighten ONDO trailing stop from 2.5% to 0.5% to lock gains
+- `bash scripts/kraken.sh cancel OWTP5B-DTQH4-BAE4D2`
+- `bash scripts/kraken.sh order '{"symbol":"ONDO/USD","qty":"120","side":"sell","type":"trailing_stop","trail_percent":"0.5","time_in_force":"gtc"}'`
+
+**If T1 NOT hit and Jun 9 launch approaches:**
+- Exit at market before Ondo Perps goes live to avoid buy-the-news reversal
+- `bash scripts/kraken.sh cancel OWTP5B-DTQH4-BAE4D2` (cancel stop first)
+- `bash scripts/kraken.sh close ONDO/USD`
+- Log exit to TRADE-LOG.md
+
+**Decision: NO NEW ENTRIES. HOLD KAS + ONDO with active trailing stops.**
+
+**No notification sent (no action taken this scan).**
+
