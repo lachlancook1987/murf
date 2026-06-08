@@ -13344,3 +13344,69 @@ NEAR/USD entered at market. Protocol upgrade exemption (dynamic resharding v2.13
 - **HYPE**: ETF catalyst (21Shares THYP) launched May 11 — 28 days old, not fresh. Today's drivers: Arthur Hayes position (unknown timing), ongoing buybacks, short squeeze. No confirmed fresh <3h catalyst under BTC weekly gate. Skip at market per plan; limit at $61.50 not set (HYPE at $63.83, too far above).
 - **ZEC**: Orchard shielded-pool bug (critical, now fixed, no confirmed exploit). Grayscale accumulation catalyst timing unclear. Skip.
 - **INJ**: June buyback ongoing (not a fresh <3h event). 21Shares INJ ETF still speculative/pending. Skip.
+
+---
+
+## 2026-06-08 — Midday Scan (22:11 UTC)
+
+**BTC:** $63,170 +2.24% 24h — crash gate NOT triggered ✓
+**BTC weekly gate:** ACTIVE (BTC ~$63,170 vs Jun 1 ~$72,145 = −12.4% over 5 days) — catalyst-only entries required
+
+### Position Status at Scan
+
+| Asset | Status | Notes |
+|---|---|---|
+| KAS/USD | **CLOSED** — stopped out | Dust balance 0.00004; stop OANQVR-ACRCJ-FEJKRO triggered; day low $0.030870 < initial stop $0.031920. Est. −2.5% |
+| ONDO/USD | **CLOSED** — stop triggered | Zero balance; stop OWTP5B-DTQH4-BAE4D2 triggered; day high $0.379200 > T1 $0.37296; est. exit ~$0.370. Est. +2.2% |
+| NEAR/USD | **OPEN** | 30 NEAR @ ~$2.167; stop OZUM7J-75WPF-PBVUSL active ($2.12530 trigger, 2.5% trail); current ~$2.149; thesis intact (dynamic resharding v2.13). Arthur Hayes NEAR exit noted (not thesis-breaking). |
+
+### Stop Verification
+
+- NEAR: OZUM7J-75WPF-PBVUSL ✓ (trailing 2.5%, stop price $2.12530)
+- KAS/ONDO: Positions already closed — no action needed
+- INJ: O6ZXY6-6HK7F-7UKZLO ✓ (trailing 2.5%, stop price $5.627) — placed immediately after fill
+
+### New Entry — INJ/USD
+
+**Catalyst stack (all fresh, all qualify under BTC weekly gate):**
+1. Binance.US listing — new U.S. exchange listing, strongest recurring crypto catalyst
+2. Bitnomial U.S.-regulated INJ futures — first regulated derivatives in U.S., institutional access
+3. Native USDC on Injective — liquidity/collateral/DeFi improvement
+
+**Execution:**
+- Entry: market ~$5.805 (10 INJ, $58.05 ZUSD)
+- +6.12% from day open ($5.441) at entry
+- Spread: 0.173% ✓ | R:R: 1.2:1 ✓
+- Stop O6ZXY6-6HK7F-7UKZLO placed immediately at 2.5% trail ✓
+- T1: $5.979, T2: $6.095
+
+### NEAR Thesis Check
+
+Protocol upgrade catalyst (dynamic resharding v2.13 live Jun 2) intact. Arthur Hayes fully exited NEAR — bearish sentiment signal but not a thesis invalidation (no rug, no exploit, no protocol failure). Key resistance $2.21 — bullish above that level. Stop at $2.12530 protecting downside.
+
+**No stop tightening needed** — NEAR at ~$2.149, entry ~$2.167, not at +20% threshold.
+
+### Candidates Not Traded
+
+| Asset | Reason Skipped |
+|---|---|
+| SOL | +1.19% vs open; Alpenglow upgrade on testnet only (not mainnet yet); Jun 7 token unlock (624K SOL). Below 3% momentum threshold. |
+| ETH | +0.35% vs open; ETHConf catalyst still active but weak momentum. Insufficient ZUSD remaining after INJ entry ($9.44 left). |
+| DOGE | No fresh catalyst identified; pure sentiment/retail move. BTC weekly gate requires specific catalyst. |
+
+### Account State (post-scan)
+
+| Asset | Qty | Est. Value |
+|---|---|---|
+| NEAR | 30.005 | ~$64.50 |
+| INJ | 10.000 | ~$57.80 |
+| ZUSD | 9.44 | $9.44 |
+| **Total** | | **~$131.74** |
+
+### Forward Calendar
+
+| Date | Event | Action |
+|---|---|---|
+| **Jun 9 (Tomorrow)** | Ondo Perps launch (ONDO already closed ✓); ASTER $58.3M unlock (avoid) | Monitor INJ/NEAR; avoid ASTER |
+| **Jun 10** | RAIN $657–714M unlock; HOME $45.3M unlock | Avoid RAIN, HOME |
+| **Ongoing** | BTC weekly gate active until BTC recovers >$72,145 | All entries must be catalyst-driven |

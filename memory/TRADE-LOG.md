@@ -4588,3 +4588,65 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **BTC weekly gate** | ACTIVE — protocol upgrade exemption applied |
 | **Crash gate** | NOT triggered (BTC +0.43% 24h, open $63,305 → $63,582) |
 
+
+---
+
+## 2026-06-08 — Midday Scan (22:11 UTC)
+
+### KAS/USD — Trailing Stop Triggered [Exit, Trade #1]
+
+| Field | Value |
+|---|---|
+| **Event** | Trailing stop auto-triggered (observed in midday scan) |
+| **Stop Order ID** | OANQVR-ACRCJ-FEJKRO (not visible in open orders) |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Entry** | $0.032730 (2428 KAS, ~$79.47 cost) |
+| **Initial stop trigger** | $0.031920 (entry × 0.975) |
+| **Confirmed trigger** | Day low $0.030870 well below initial stop — stop fired |
+| **Est. exit price** | ~$0.031920 (trailing stop trigger; dust balance 0.00004 KAS confirms exit) |
+| **Est. P&L** | ~−$1.97 (−2.5% on $79.47) |
+| **Exit reason** | Trailing stop triggered; KAS pulled back from session high |
+
+---
+
+### ONDO/USD — Trailing Stop Triggered [Exit, Trade #3 Re-entry]
+
+| Field | Value |
+|---|---|
+| **Event** | Trailing stop auto-triggered (observed in midday scan) |
+| **Stop Order ID** | OWTP5B-DTQH4-BAE4D2 (not visible in open orders) |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Entry** | ~$0.3621 (120 ONDO, ~$43.45 notional) |
+| **T1** | $0.37296 — day high $0.379200 confirms T1 was hit |
+| **HWM (estimated)** | $0.379200 (Kraken day high) |
+| **Est. stop trigger** | ~$0.36972 (HWM × 0.975) |
+| **Est. exit price** | ~$0.370 (trailing trigger on pullback from day high) |
+| **Est. P&L** | ~+$0.96 (+2.2% net after fee on $43.45) |
+| **Exit note** | ONDO Perps launch Jun 9 (tomorrow) — position exited ahead of buy-the-news reversal window ✓ |
+
+---
+
+### Trade — INJ/USD BUY (2026-06-08 22:11 UTC)
+
+| Field | Value |
+|---|---|
+| **Date/Time (UTC)** | 2026-06-08 22:11 |
+| **Symbol** | INJ/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 10 INJ |
+| **Entry Price** | ~$5.805 (est. from ZUSD delta $58.05 / 10, inclusive of 0.26% taker fee) |
+| **Cost** | ~$57.89 notional + ~$0.15 fee = $58.05 total ZUSD |
+| **T1 (+3%)** | $5.979 |
+| **T2 (+5%)** | $6.095 |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Stop Trigger** | $5.627 (confirmed active at placement) |
+| **HWM at placement** | ~$5.771 (stopprice $5.627 / 0.975) |
+| **Stop Order ID** | O6ZXY6-6HK7F-7UKZLO |
+| **Buy Order ID** | OAZPNG-YWUHT-WGSXVO |
+| **Thesis** | (1) Binance.US listing — new U.S. exchange access, strongest exchange listing catalyst; (2) U.S.-regulated INJ futures live via Bitnomial — first regulated derivatives in U.S. market; (3) Native USDC launched on Injective — improves liquidity, collateral, DeFi utility. All three catalysts fresh and qualify under BTC weekly gate. INJ +6.12% vs day open at entry. |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Spread** | 0.173% ✓ |
+| **Size** | ~$58 (~44% of ~$131 total equity) |
+| **Account after** | ZUSD $9.44, NEAR 30.005, INJ 10.000 |
+| **BTC weekly gate** | ACTIVE — exchange listing + regulated futures + USDC launch = catalyst exemptions ✓ |
+| **Crash gate** | NOT triggered (BTC +2.24% 24h, $63,170) |
