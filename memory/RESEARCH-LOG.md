@@ -13313,3 +13313,34 @@ Ondo Perps platform launches Jun 9. Trailing stop OWTP5B-DTQH4-BAE4D2 currently 
 **TRADE CONDITIONAL** — HYPE/USD is the primary candidate if 21Shares ETF debut catalyst is confirmed fresh (≤3h old). All other candidates fail BTC weekly gate (catalyst age or momentum threshold). ZEC and INJ remain on watchlist pending fresh catalyst confirmation. No ONDO re-entry — Jun 9 buy-the-news reversal risk. ETH below day open, skip. Crash gate NOT triggered.
 
 **Primary action:** Enter HYPE/USD market if catalyst timing confirmed. Else set HYPE limit at $61.50 for pullback entry. Target T2 (+5%) as primary to satisfy R:R with 3.5% high-ATR stop.
+
+---
+
+## 2026-06-08 — Session-Open (Evening, ~21:10 UTC)
+
+**Session branch:** claude/clever-allen-nczls7
+
+### Account at Session Open
+- ZUSD: $132.7586 | Positions: 0 | Orders: 0
+- BTC: $63,582 ask (open $63,305 = +0.43%) | Crash gate: NOT triggered
+- BTC weekly gate: ACTIVE (BTC ~−11.9% vs Jun 1 $72,145)
+
+### Live Price Check vs Evening Research Plan
+| Asset | vs Open | Spread | Catalyst Status | Gate |
+|---|---|---|---|---|
+| HYPE | +6.79% | 0.016% ✓ | 21Shares THYP launched May 11 (28 days old) — no fresh catalyst today | FAIL |
+| ZEC | +6.48% | 0.051% ✓ | Grayscale timing unclear + Orchard bug fixed but critical | SKIP |
+| INJ | +5.96% | 0.052% ✓ | June buyback ongoing, no fresh <3h event | FAIL |
+| NEAR | +5.26% | 0.12% ✓ | Dynamic resharding v2.13 (live Jun 2) = protocol upgrade exemption | **TRADE** |
+| ETH | +0.33% | ✓ | Far below open momentum threshold | SKIP |
+
+### Decision
+NEAR/USD entered at market. Protocol upgrade exemption (dynamic resharding v2.13) bypasses BTC weekly gate. Momentum +5.26% vs open, massive 4.1M intraday volume, day high $2.2633 already exceeded T1 territory. All other candidates fail: HYPE catalyst 28 days old, ZEC bug risk, INJ no fresh catalyst.
+
+### Trade Executed
+- **NEAR/USD**: BUY 30 @ ~$2.167 | Stop OZUM7J-75WPF-PBVUSL (2.5% trail, $2.1089) | T1 $2.232, T2 $2.275 | 49% equity
+
+### Candidates Not Traded
+- **HYPE**: ETF catalyst (21Shares THYP) launched May 11 — 28 days old, not fresh. Today's drivers: Arthur Hayes position (unknown timing), ongoing buybacks, short squeeze. No confirmed fresh <3h catalyst under BTC weekly gate. Skip at market per plan; limit at $61.50 not set (HYPE at $63.83, too far above).
+- **ZEC**: Orchard shielded-pool bug (critical, now fixed, no confirmed exploit). Grayscale accumulation catalyst timing unclear. Skip.
+- **INJ**: June buyback ongoing (not a fresh <3h event). 21Shares INJ ETF still speculative/pending. Skip.
