@@ -13793,3 +13793,126 @@ No candidate meets all criteria: fresh catalyst (<6h) + positive momentum + spre
 - XMR: Specific privacy catalyst (protocol upgrade, exchange listing, privacy regulatory news) + holds >$320
 - WLD: Fresh exchange listing or regulatory event <3h old → reassess
 - BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
+
+---
+
+## 2026-06-09 — Pre-Session Research (Evening)
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 |
+| Kraken positions | None (100% cash) |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (historical only — fully exited May 2026) |
+| Total equity | ~$129.14 |
+| Phase P&L | −$50.64 (−28.17%) from Kraken starting equity $179.78 |
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC price | $62,025 ask | −1.65% from day open $63,068 |
+| BTC 24h low | $60,740 | |
+| ETH price | $1,658 | −1.9% from open $1,690 |
+| SOL price | $65.33 | −2.2% from open $66.81 |
+| Fear & Greed | 10 (Extreme Fear) | Unchanged from prior sessions |
+| BTC funding rate | +0.0006% to +0.0017% (8h) | Mildly positive longs paying shorts |
+| Crash gate | NOT triggered | BTC −1.65% intraday |
+| BTC weekly gate | ACTIVE | BTC ~$62,025 vs Jun 1 $72,145 = −14% over 5 trading days (>3% threshold) |
+| BTC weekly gate lift | ~$68,600 | |
+
+### Top 24h Gainers (CoinGecko)
+
+| Asset | 24h Gain | Notes |
+|---|---|---|
+| JCT, SENT, SLX, TX | +29-38% | Micro-caps; not on Kraken |
+| HNT (Helium) | +19.5% (reported) | Kraken quote CONTRADICTS: current $0.375 vs open $0.432 = −13%. Stale/data lag. |
+| OMNI, MAT, DOLO | +53–174% | Likely not on Kraken or illiquid |
+
+### Perplexity Research Summary
+
+**Catalysts identified today:**
+- **NEAR Protocol / Network Upgrade 2.13**: Dynamic resharding (auto shard expansion) + post-quantum-safe signing announced; Perplexity cites "~27–30% surge" triggered by announcement; upgrade window "end of Q2 2026." Classified: protocol upgrade (BTC weekly gate exempt by strategy rule).
+- **ONDO Finance Ondo Perps (Jun 9 launch)**: Launched today — tokenized U.S. stocks/ETFs with up to 20x leverage for non-U.S. users. Reported +9–17% at peak. Currently $0.361 vs open $0.365 = −1.1% on day. Catalyst priced in and fading.
+- **Bittensor TAO / Covenant-72B**: Subnet 3 released 72B param LLM trained by 70+ contributors. TAO currently $210.32 vs open $215.43 = −2.4%. Momentum wrong direction.
+- **DTCC / Stellar XLM**: DTCC announced Stellar integration for tokenized securities (H1 2027). Catalyst is 11+ days old. XLM down on day.
+- **Token unlocks (bearish): ASTER ~$58M Jun 9; STABLE ~$28M Jun 9; MOVE 50M tokens Jun 9; RAIN ~$714M Jun 10** — supply pressure events, avoid these assets.
+
+**Volume surges:**
+- FET: $137M 24h volume but price −2.5% from open ($0.2039 vs $0.2091)
+- XMR: $105M 24h volume but price −2.2% from open ($308.35 vs $315.41)
+
+### Candidate Screening
+
+| Asset | Price | vs Open | Spread | BTC Gate | Catalyst | Verdict |
+|---|---|---|---|---|---|---|
+| NEAR/USD | $2.225 ask | +4.5% ✓ | 0.121% ✓ | EXEMPT (protocol upgrade) | Network Upgrade 2.13 — resharding + PQC signing | WATCHLIST — see below |
+| ONDO/USD | $0.361 ask | −1.1% ✗ | 0.066% ✓ | Catalyst exemption possible | Ondo Perps launched today but price fading | SKIP — negative momentum |
+| TAO/USD | $210.32 ask | −2.4% ✗ | 0.067% ✓ | Would require fresh catalyst | Covenant-72B release | SKIP — negative momentum |
+| HNT/USD | $0.375 ask | −13.1% ✗ | 0.187% ✓ | Irrelevant — down hard | No confirmed live catalyst | SKIP — major reversal from open |
+| XMR/USD | $308.35 ask | −2.2% ✗ | 0.137% ✓ | Pure momentum banned | No fresh catalyst | SKIP |
+| FET/USD | $0.2039 ask | −2.5% ✗ | 0.049% ✓ | Pure momentum banned | No fresh catalyst | SKIP |
+| SOL/USD | $65.33 ask | −2.2% ✗ | 0.015% ✓ | Pure momentum banned | No catalyst | SKIP |
+| ETH/USD | $1,658 ask | −1.9% ✗ | 0.006% ✓ | Pure momentum banned | No catalyst | SKIP |
+
+### Trade Ideas
+
+#### #1 — NEAR/USD (Conditional Watchlist — Not Entering at Open)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Network Upgrade 2.13: dynamic resharding (auto-scaling shards) + post-quantum-safe signing; protocol upgrade exempts from BTC weekly gate; Perplexity reports 27–30% total run triggered by announcement |
+| **Current price** | $2.225 ask; +4.5% from day open $2.130; day HOD $2.247; day low $2.030 |
+| **Entry** | Conditional market order on HOD breakout above $2.247 with volume confirmation; OR limit at $2.225 now (risky — near HOD, catalyst age unclear) |
+| **Stop** | trailing_stop 2.5% GTC immediately after fill |
+| **T1** | Entry +3% |
+| **T2** | Entry +5% |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ (minimum) |
+| **Size** | ~40% equity (~$52) — reduced conviction given 2 consecutive stop-outs on same NEAR thesis (Jun 8 overnight, Jun 9 morning) |
+| **Caution flags** | (1) Back-to-back NEAR stop-outs on same catalyst; (2) BTC down on day; (3) F&G 10 Extreme Fear; (4) Catalyst announcement timing ambiguous — "Q2 2026" window, not confirmed fresh <6h today |
+| **Verdict** | **WATCHLIST** — prefer HOD breakout entry. Do not chase at current price given consecutive stop-outs. |
+
+#### #2 — ONDO/USD (Monitor Only)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Ondo Perps live today — tokenized stock/ETF leverage platform for non-US |
+| **Current price** | $0.361, −1% from open. Catalyst launched but price fading |
+| **Condition for entry** | Price recovers above today's open $0.365 with volume + holds HOD $0.375 |
+| **Verdict** | **MONITOR** — Ondo Perps is a real catalyst. If price reclaims open and builds momentum, this qualifies as catalyst-exempt entry |
+
+#### #3 — BTC/USD (Defensive Watch)
+
+| Field | Value |
+|---|---|
+| **Setup** | BTC at $62,025, bouncing off intraday low $60,740. If BTC reclaims $63,068 (today's open) on volume — short-term reversal long |
+| **Gate status** | BTC weekly gate is measured over 5 days, not intraday — intraday bounce is pure momentum play, requires no catalyst |
+| **Verdict** | **SKIP unless BTC recovers above open** — pure momentum banned under weekly gate; would need institutional or macro catalyst |
+
+### Risk Factors
+
+1. **BTC weekly gate active at −14%** — strictest entry criteria apply; no pure momentum plays
+2. **Extreme Fear (F&G 10)** — market in fear regime; violent reversals normal
+3. **Token unlocks today (ASTER, STABLE, MOVE)** — supply pressure could drag alts
+4. **RAIN $714M unlock tomorrow (Jun 10)** — large event, monitor for market impact
+5. **NEAR consecutive stop-outs** — same catalyst has stopped us out twice; diminishing returns signal
+6. **BTC mildly positive funding** — no squeeze pressure but longs in control at lower price = potential flush
+
+### Decision
+
+**HOLD — No immediate entries at session open.**
+
+Rationale:
+- BTC weekly gate ACTIVE (−14% vs Jun 1); pure momentum entries banned
+- NEAR is the only positive-momentum asset; protocol upgrade catalyst exemption applies but catalyst timing ambiguous (possibly days old, partially priced after 27-30% surge) — two consecutive stop-outs on identical thesis suggest thesis is fading
+- All other candidates: negative momentum vs today's open
+- Extreme Fear regime warrants elevated discipline
+
+**Active monitoring triggers:**
+- **NEAR/USD** > $2.247 (HOD breakout) + volume confirmation → enter market, trail 2.5%
+- **ONDO/USD** > $0.365 (reclaim of open) + holds HOD $0.375 → enter market, trail 2.5%
+- **XRP** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
+
