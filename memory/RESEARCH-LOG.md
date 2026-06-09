@@ -13977,3 +13977,55 @@ BTC weekly gate active (−14%). All candidates fail at least one mandatory crit
 - **XRP** — CLARITY Act Senate floor vote formally confirmed → market entry, trail 7%
 - **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
 - **ZEC** — if price reclaims $462+ (above open) with a confirmed fresh catalyst today → reassess
+
+---
+
+## 2026-06-09 — Midday Scan
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | **None** |
+| Kraken open orders | **None** |
+| Alpaca | No positions (stop a2b44cf9 confirmed cancelled 2026-05-22) |
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC price | $62,110 (−1.70% 24h) |
+| ETH price | $1,646.69 (−2.55% from day open $1,689.81) |
+| Crash gate | **NOT triggered** (need >20% down 24h) |
+| BTC weekly gate | **ACTIVE** (BTC ~$62,110 vs Jun 1 ~$72,145; well below 5-day gate threshold) |
+| Fear & Greed | **10 — Extreme Fear** (hostile for momentum entries) |
+
+### Candidate Screening
+
+| Asset | Price | vs Open | Spread | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| HYPE/USD | $57.83 | −9.4% from open $63.80 | 0.017% ✓ | Citrini Research buyback note + Coinbase USDC treasury (both Jun 8 — 1d old); price selling off all day | **SKIP — price declining, stale catalysts** |
+| ETH/USD | $1,646.69 | −2.55% from open | 0.0006% ✓ | Glamsterdam: no confirmed mainnet date; in development; not a fresh catalyst | **SKIP — no fresh catalyst, down on day** |
+| OSMO/USD | $0.04583 | +5% from open $0.04363 | 1.057% ✗ | No specific catalyst today | **HARD SKIP — spread over 1%** |
+| XRP/USD | — | −0.09% | 0.011% ✓ | CLARITY Act: no new Senate developments today; Senate floor vote not scheduled | **SKIP — no new catalyst, R:R fails at 7% trail** |
+| IO/USD | — | — | N/A | Upbit KRW listing (May 29 = 11d old); listing-driven momentum stale | **SKIP — not on Kraken** |
+| WLD/USD | ~$0.49 | — | — | OpenAI S-1 narrative + Jul 24 unlock cut; Arthur Hayes exit (bearish); bearish 4h trend | **SKIP — bearish technicals, mixed signals** |
+| ORDI | — | — | — | BTC beta only, no specific catalyst | **SKIP — BTC beta, likely not on Kraken** |
+
+### Decision: NO TRADE — No Actionable Setups
+
+All candidates fail mandatory criteria under the BTC weekly gate:
+- No asset showing 1h momentum >5% with fresh catalyst <3h old
+- No catalyst exemptions (exchange listing, protocol upgrade, regulatory event) found today
+- Leading candidate HYPE actively selling off −9.4% from open
+- Fear & Greed Extreme Fear (10) confirms hostile momentum environment
+
+**No orders placed. No stops placed. No notification sent.**
+
+### Active Monitoring Triggers (Updated)
+
+- **XRP** — CLARITY Act Senate floor vote formally confirmed today → market entry, trail 7%
+- **HYPE** — reversal candle + new fresh institutional catalyst <3h old + price back above $61.50 → reassess
+- **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
+- **Any asset** with 1h surge >5% AND catalyst <3h old (exchange listing, protocol upgrade, regulatory event) → immediate screen
