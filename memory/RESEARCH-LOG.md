@@ -13672,3 +13672,60 @@ All watchlist candidates fail at least one mandatory criterion. BTC weekly gate 
 - BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
 
 **STEP 7:** No action taken → no WhatsApp notification sent.
+
+---
+
+## 2026-06-09 — Session-Open Execution (Third Session)
+
+**Session branch:** claude/clever-allen-j20cz7
+**Time:** Late session UTC
+
+### Account State (Confirmed)
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.1411 |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (historical orders only) |
+
+### Market Snapshot
+
+| Metric | Value | Status |
+|---|---|---|
+| BTC ask | $62,740.30 | −0.52% vs open $63,068.50 |
+| ETH ask | $1,678.98 | −0.64% vs open $1,689.81 |
+| Crash gate | NOT triggered | (need >−20%) |
+| BTC weekly gate | ACTIVE | −13% vs Jun 1 $72,145 |
+| Fear & Greed | 8–10 (Extreme Fear) | No change from earlier sessions |
+| BTC funding | Slightly positive | ~0.0020% Coinbase |
+
+### Candidate Screening
+
+| Asset | Price | Day Chg | Spread | Gate | Catalyst | Verdict |
+|---|---|---|---|---|---|---|
+| WLD/USD | $0.5258 | +6.0% | 0.28% | FAIL | No qualifying catalyst (no listing/regulatory/upgrade <3h) — pure AI momentum | SKIP |
+| ZEC/USD | $471.86 | +2.82% | 0.08% | FAIL | ETF filing Nov 2025 (6mo old); Grayscale accumulation unconfirmed fresh | SKIP |
+| SOL/USD | $66.32 | −0.73% | 0.015% | — | Down on day | SKIP |
+| HYPE/USD | $62.00 | −2.82% | 0.016% | — | Down on day, stale catalyst | SKIP |
+| XLM/USD | $0.1984 | −2.09% | 0.08% | — | DTCC catalyst days old, down on day | SKIP |
+| ETH/USD | $1,678.98 | −0.64% | 0.006% | — | Down on day | SKIP |
+| ORDI | — | — | — | — | Not tradeable on Kraken | SKIP |
+
+### WLD Note
+WLD strongest mover (+6% on day, near 24h high $0.5251, spread 0.28%). Fails BTC weekly gate — no qualifying catalyst (no exchange listing, regulatory event, or protocol upgrade <3h old). Arthur Hayes EXITED position Jun 8 (bearish signal). Tokenomics change not until July 24. Pure momentum entry — banned under active weekly gate.
+
+### ZEC Note
+ZEC +2.82% on day, SEC cleared investigation Jan 2026, Grayscale filing Nov 2025, $46M accumulation (timing unconfirmed for today). Not a clean catalyst exemption. +2.82% momentum is below the >5%/1h threshold required under gate if not catalyst-exempt.
+
+### Decision: HOLD — No New Entries
+
+BTC weekly gate ACTIVE. All candidates fail either: (a) no qualifying catalyst exemption, or (b) negative momentum on day. Capital 100% preserved in ZUSD.
+
+**No orders placed. No stops placed. No notification sent. No commit needed (no trades).**
+
+**Active monitoring triggers (unchanged):**
+- XRP: Senate floor vote on CLARITY Act → market entry
+- HYPE: Fresh institutional catalyst <3h old + reclaims above $63.80
+- WLD: Fresh exchange listing or regulatory event <3h old → reassess
+- BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
