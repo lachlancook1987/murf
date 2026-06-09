@@ -4696,3 +4696,21 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **Positions** | None (already fully exited) |
 | **Stop a2b44cf9** | Canceled 2026-05-22 — expected, no action needed |
 
+
+---
+
+### INJ/USD — Trailing Stop Triggered [Exit, Jun 9 Pre-Session Confirm]
+
+| Field | Value |
+|---|---|
+| **Event** | Trailing stop auto-triggered overnight (confirmed at 2026-06-09 pre-session) |
+| **Stop Order ID** | O6ZXY6-6HK7F-7UKZLO |
+| **Stop Type** | trailing_stop 2.5% GTC |
+| **Entry** | ~$5.805 (10 INJ, Jun 8 22:11 UTC) |
+| **HWM at overnight triage** | ~$5.817 → stop price $5.672 |
+| **Confirmed trigger** | Dust balance 0.0000279447 INJ; current price $5.47 < stop $5.672 |
+| **Est. exit price** | ~$5.672 (stop trigger; price continued down to $5.47) |
+| **Est. P&L** | ~−$1.33 (≈ −2.3% on $58.05 cost, net of fee) |
+| **Exit reason** | Trailing stop triggered; INJ lost momentum post-catalysts |
+| **Account state post-exit** | ZUSD $129.14, no open positions, no open orders |
+
