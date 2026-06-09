@@ -13410,3 +13410,158 @@ Protocol upgrade catalyst (dynamic resharding v2.13 live Jun 2) intact. Arthur H
 | **Jun 9 (Tomorrow)** | Ondo Perps launch (ONDO already closed ✓); ASTER $58.3M unlock (avoid) | Monitor INJ/NEAR; avoid ASTER |
 | **Jun 10** | RAIN $657–714M unlock; HOME $45.3M unlock | Avoid RAIN, HOME |
 | **Ongoing** | BTC weekly gate active until BTC recovers >$72,145 | All entries must be catalyst-driven |
+
+---
+
+## 2026-06-09 — Pre-Session Research
+
+**Session branch:** claude/affectionate-gates-g4nf83
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.1411 |
+| Kraken positions | **None** — all positions cleared |
+| Kraken open orders | **None** |
+| Alpaca | No positions (residual BTC fully exited previously) |
+
+**INJ/USD Stop-Out (confirmed this session):**
+- Entry: ~$5.805 (10 INJ, Jun 8)
+- Trailing stop O6ZXY6-6HK7F-7UKZLO triggered: ~$5.627–$5.672 (HWM ~$5.817)
+- Current INJ price: $5.47 (confirms stop fired)
+- Est. P&L: ~−$0.77 to −$1.03 (−1.5% to −2.5% on $58.05 cost)
+- Account: 0.0000279447 INJ dust only
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC price | $63,170 ask (+2.24% 24h) |
+| ETH price | ~$1,685 (+1.74% 24h, Kraken) |
+| Fear & Greed Index | **10 — Extreme Fear** |
+| BTC funding rate | Near-zero to slightly negative (Binance −0.0016%, Bybit +0.0016%) |
+| BTC crash gate | **NOT triggered** (need >20% down 24h) |
+| BTC weekly trend gate | **ACTIVE** (BTC ~$63,170 vs Jun 1 ~$72,145 = −12.4% over 5 days; >3% threshold) |
+
+**BTC weekly gate in force:** All entries require catalyst-driven exemption (exchange listing, protocol upgrade, regulatory event) OR 1h momentum >5% with fresh catalyst <3h old. Pure momentum entries banned.
+
+### Top 24h Gainers (CoinGecko — all micro-caps)
+
+| Asset | 24h Gain | Kraken Status |
+|---|---|---|
+| DLC | +103.7% | Not on Kraken |
+| PIPPIN | +68.6% | Not on Kraken |
+| SHOW | +57.1% | Not on Kraken |
+| MAT | +66% | On Kraken — spread 0.99%, DOWN on Kraken day, illiquid (~$1.2K daily vol) |
+| DOLO | +53.35% | On Kraken — spread 2.15%, ultra-illiquid (~$220 daily vol) |
+| OMNI | +174% | On Kraken — spread **37%**, zero Kraken volume. OMNI catalyst: Binance Wallet staking integration + short squeeze, but no Kraken liquidity |
+| XMR | +3.46% vs open | Spread 0.166% ✓ — no fresh catalyst; privacy narrative only |
+
+### Candidate Screening
+
+| Asset | Price | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| XMR/USD | $326.05 ask | +3.46% | 0.166% ✓ | Privacy narrative only — no specific catalyst today | BTC weekly gate FAILS (pure momentum) | **SKIP** |
+| XRP/USD | $1.16679 ask | −0.09% | 0.011% ✓ | CLARITY Act (passed Senate Banking Committee May 14 = 25 days old); strategy exemption applies at 7% trail | R:R FAILS (3%/7% = 0.43:1 and 5%/7% = 0.71:1 — both < 1.2:1) | **SKIP — R:R** |
+| HYPE/USD | $61.51 ask | −3.5% | 0.016% ✓ | Grayscale HYPE ETF filing Mar 20 (81d old), amendment May 11 (29d old). Stale. | Stale catalyst; downtrending | **SKIP** |
+| SUI/USD | $0.7488 ask | −0.9% | 0.040% ✓ | CME futures May 29 (11d), confidential transfers Jun 6 (3d) — no fresh today catalyst | Down on day | **SKIP** |
+| AVAX/USD | $6.711 ask | −0.81% | 0.015% ✓ | FIFA ticketing live on Avalanche (60K txns, pre-Jun 11 World Cup) — fresh use-case catalyst | Price already below broken support $8.05; sellers in control | **SKIP** |
+| SOL/USD | $66.47 ask | −0.48% | 0.015% ✓ | Alpenglow upgrade testnet only (not live) | Down on day, no fresh catalyst | **SKIP** |
+| INJ/USD | $5.47 | N/A | 0.173% ✓ | Binance.US listing + Bitnomial futures (Jun 8, now 24h+ old); momentum faded | Weakness since stop-out; no re-entry signal | **SKIP** |
+| OMNI/USD | — | — | 37% ✗ | Binance Wallet staking integration (only on Binance, zero Kraken liquidity) | Spread disqualifier | **HARD SKIP** |
+| MAT/USD | $0.0717 | −2.7% | 0.99% (borderline) | Unknown — Perplexity referenced 24h gains on other venues | Down on Kraken, illiquid | **SKIP** |
+| DOLO/USD | $0.023 | Flat | 2.15% ✗ | Unknown | Spread disqualifier | **HARD SKIP** |
+
+### Token Unlock Calendar (Risk Factors)
+
+| Date | Token | Value | Action |
+|---|---|---|---|
+| Jun 9 (today) | ASTER | $58.3M | Avoid |
+| Jun 9 (today) | STABLE | $28.1M | Avoid |
+| Jun 9 (today) | WET | $14.0M | Avoid |
+| Jun 10 | RAIN | $713.6M | Avoid |
+| Jun 10 | ME | $14.0M | Monitor |
+| Jun 12 | PUMP | $14–18M | Monitor |
+
+### Market Catalysts / News
+
+- **CLARITY Act**: Senate Banking Committee passed 15–9 on May 14; now queued for Senate floor vote. Ongoing XRP catalyst (25 days old).
+- **Ondo Perps (ONDO)**: Launched today (Jun 9) — do NOT re-enter ONDO. Buy-the-news reversal expected.
+- **SUI/AVAX CME futures**: CME launched SUI futures May 29 (11d old). Institutional catalyst, but both assets are down today.
+- **FIFA World Cup ticketing on Avalanche**: Live now (60K+ transactions), World Cup opens Jun 11. Catalyst is real but AVAX price already broken and sellers in control.
+- **SPCX (SpaceX pre-IPO perp)**: Listed on Kraken Jun 7 — equity instrument, NOT eligible per crypto-only mandate.
+- **RWA/Ondo narrative**: Ongoing; no fresh trade entry due to Jun 9 Perps launch reversal risk.
+- **Fear & Greed 10**: Extreme Fear — market sentiment hostile for momentum entries; reversals violent.
+- **BTC ETF outflows**: $4.3B outflow streak — institutional selling pressure persists.
+
+### Trade Ideas
+
+**No actionable setups meeting all criteria today.**
+
+#### Watchlist — Conditional Entries (do NOT enter until trigger is confirmed)
+
+**Idea 1 — XRP/USD (Binary Catalyst, Conditional)**
+- **Catalyst required:** CLARITY Act advances to confirmed Senate floor vote date, OR Senate passes the bill (regulatory event of high magnitude)
+- **Entry:** Market on confirmed news, spread 0.011% ✓
+- **Stop:** 7% trailing (binary catalyst exception)
+- **T1:** Entry +3%, T2: Entry +8% (targeting outsized move post-vote)
+- **R:R:** Only viable if targeting >8% gain (8%/7% = 1.14:1 — marginal). Very high conviction only.
+- **Size:** 20% equity max given poor day-trade R:R at standard targets
+- **Note:** XRP is flat −0.09% today; do NOT enter on narrative alone — only on confirmed, fresh Senate vote news
+
+**Idea 2 — HYPE/USD (Institutional Catalyst, Conditional)**
+- **Catalyst required:** New institutional catalyst today (new ETF filing, major exchange listing, or large institutional position announcement <3h old)
+- **Entry:** Market on catalyst confirmation; current level $61.50 is pullback from open
+- **Stop:** 3.5% trailing (high-ATR asset)
+- **T1:** Entry +3%, T2: Entry +5% (target T2 as primary given 3.5% stop; R:R at T2 = 5/3.5 = 1.43:1 ✓)
+- **Size:** 40–50% equity
+- **Avoid:** Entry without confirmed fresh catalyst — gate rules prohibit it
+
+**Idea 3 — XMR/USD (Momentum, Conditional)**
+- **Catalyst required:** Specific privacy-sector catalyst today (protocol upgrade, privacy-related regulatory news, or major exchange support announcement)
+- **Entry:** Market at $326 if catalyst emerges; current +3.46% vs open
+- **Stop:** 2.5% trailing
+- **T1:** $326 × 1.03 = $335.78; T2: $326 × 1.05 = $342.30
+- **R:R:** 3%/2.5% = 1.2:1 ✓ at T1
+- **Size:** 30–40% equity
+- **Note:** Only viable if fresh catalyst appears — currently blocked by BTC weekly gate
+
+**Idea 4 — INJ/USD Re-entry (Conditional)**
+- **Catalyst:** Existing catalysts still valid (Binance.US listing, Bitnomial regulated futures, native USDC); but momentum faded
+- **Trigger:** INJ reclaims $5.70+ with volume surge (confirming momentum revival)
+- **Entry:** Market on breakout above $5.70
+- **Stop:** 2.5% trailing; T1: $5.866, T2: $5.985
+- **R:R:** 3%/2.5% = 1.2:1 ✓
+- **Size:** 30–40% equity
+- **Do NOT enter:** At current $5.47 — entering a downtrending asset with faded catalyst
+
+### Risk Factors
+
+1. **Extreme Fear (index 10)** — second consecutive day at or near index 10; market fragile, reversals violent
+2. **BTC weekly gate ACTIVE** — restricts all entries to catalyst-driven plays; pure momentum banned
+3. **Token unlock headwinds today:** ASTER $58.3M + STABLE $28.1M + WET $14M — supply pressure
+4. **RAIN $713.6M unlock tomorrow (Jun 10)** — massive supply overhang could weigh on broader market
+5. **BTC ETF outflow streak** — institutional selling pressure persists; BTC lacking conviction
+6. **No position cushion:** Account fully in ZUSD after two stop-outs (NEAR, INJ). No unrealized gains to absorb another loss. Sizing discipline critical.
+7. **Ondo Perps launch today** — avoid ONDO, buy-the-news reversal window active
+
+### Decision
+
+**HOLD — No new entries at session open.**
+
+No candidate meets ALL criteria simultaneously:
+1. Fresh catalyst ≤6h old (exchange listing, protocol upgrade, regulatory event)
+2. Positive momentum (not already down on the day)
+3. Spread ≤1%
+4. R:R ≥ 1.2:1 at T1
+
+BTC weekly gate blocks all pure momentum plays. Fear & Greed at 10 (Extreme Fear) signals extreme caution. Account is 100% ZUSD — capital protected.
+
+**Intraday monitoring triggers:**
+- **XRP:** Enter market if CLARITY Act Senate floor vote confirmed today
+- **HYPE:** Enter market if fresh institutional catalyst <3h old + price above $62 (reclaims day open)
+- **XMR:** Enter market if specific privacy catalyst emerges + holds above $320 support
+- **INJ:** Enter market if price reclaims $5.70+ on volume
+- **BTC weekly gate lift:** If BTC recovers above ~$68,600 (within 3% of Jun 1 $72,145 close), gate deactivates and full momentum trading resumes
+
