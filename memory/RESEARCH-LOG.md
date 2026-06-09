@@ -13729,3 +13729,67 @@ BTC weekly gate ACTIVE. All candidates fail either: (a) no qualifying catalyst e
 - HYPE: Fresh institutional catalyst <3h old + reclaims above $63.80
 - WLD: Fresh exchange listing or regulatory event <3h old → reassess
 - BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
+
+---
+
+## 2026-06-09 — Midday Scan
+
+**Session branch:** claude/sweet-keller-vlz9rz
+
+### Account State (confirmed)
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (historical only) |
+
+### Market Snapshot
+
+| Metric | Value |
+|---|---|
+| BTC price | ~$63,084 (−0.43% 24h) |
+| Crash gate | NOT triggered |
+| BTC weekly gate | ACTIVE (BTC ~$63k vs Jun 1 $72,145 = −12.6% over 5d) |
+| BTC weekly gate lift | ~$68,600 |
+
+### Stop Verification
+
+No open positions — no stops to verify. ✓
+
+### Candidate Scan
+
+| Asset | Price | vs Open | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| INJ/USD | $5.837 ask | +3.13% | 0.24% ✓ | USDC/CCTP (Jun 8), Binance.US listing (Jun 7-8), Bitnomial futures (Jun 7-8) — all 24-48h old; morning session-open research explicitly ruled stale | BTC weekly gate: exchange listing exemption borderline; catalysts already deemed stale at session-open | **SKIP** — same catalysts already stopped out this morning; no new fresh catalyst today |
+| XMR/USD | $323.19 ask | +2.46% | 0.077% ✓ | No fresh catalyst; privacy narrative only | BTC weekly gate: pure momentum banned | **SKIP** |
+| XLM/USD | $0.20127 ask | −0.69% | 0.079% ✓ | DTCC/Stellar tokenization (May 29, 11 days old) | Stale catalyst; price down on day | **SKIP** |
+| HBAR/USD | $0.08055 ask | −0.94% | 0.050% ✓ | No fresh catalyst identified | Down on day | **SKIP** |
+| TAO/USD | $214.64 ask | −0.37% | 0.093% ✓ | No fresh catalyst; flat/slightly negative | Below open | **SKIP** |
+| ETH/USD | ~$1,690 | +0.2% | 0.006% ✓ | No institutional or protocol catalyst today | Essentially flat | **SKIP** |
+
+### INJ Re-entry Analysis
+
+INJ recovered from day low $5.43 to HOD $5.841 (+3.13% vs open $5.660), testing HOD at midday. Perplexity confirmed the freshest catalyst is USDC/CCTP (Jun 8, 24h+ old). Decision: **SKIP**.
+- Morning session-open research already classified INJ catalysts as "all stale"
+- Already stopped out on INJ at −2.3% this morning (same catalysts)
+- BTC weekly gate active — exchange listing exemption borderline but catalysts confirmed stale
+- Fear & Greed ~10 (Extreme Fear) — violent reversals expected
+
+### XLM/DTCC Check
+
+DTCC/Stellar announcement was **May 29** — 11 days old. XLM currently down on day (−0.69% vs open). Not a live catalyst.
+
+### Decision: HOLD — No New Entries
+
+No candidate meets all criteria: fresh catalyst (<6h) + positive momentum + spread ≤1% + R:R ≥1.2:1. BTC weekly gate active. Account 100% ZUSD ($129.14).
+
+**No orders placed. No stops placed. No notification sent.**
+
+**Active monitoring triggers:**
+- INJ: Fresh catalyst <6h old + price above $5.85 HOD breakout → reassess entry (catalysts from Jun 7-8 remain in background; need something new today)
+- XRP: CLARITY Act Senate floor vote confirmed → market entry, 7% trail
+- XMR: Specific privacy catalyst (protocol upgrade, exchange listing, privacy regulatory news) + holds >$320
+- WLD: Fresh exchange listing or regulatory event <3h old → reassess
+- BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
