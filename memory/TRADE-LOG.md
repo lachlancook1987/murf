@@ -4714,3 +4714,15 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **Exit reason** | Trailing stop triggered; INJ lost momentum post-catalysts |
 | **Account state post-exit** | ZUSD $129.14, no open positions, no open orders |
 
+---
+
+### Jun 09 — EOD Snapshot (Day 20, Tuesday)
+**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** −$5.61 (−4.16%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −3.85%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today (includes Jun 08 post-EOD session + Jun 09 confirmations):** 1) KAS/USD BUY 2428 @ $0.03273 (Jun 8 09:07Z); 2) ONDO/USD BUY 125 @ $0.35827 (Jun 8 09:08Z); 3) ONDO stop exit OYHRV7 at −1.4% (−$0.63); 4) ONDO re-entry BUY 120 @ $0.3621 (Jun 8 12:10Z); 5) KAS stop exit OANQVR at −2.5% (−$1.97); 6) ONDO re-entry stop exit OWTP5B at +2.2% (+$0.96); 7) NEAR/USD BUY 30 @ ~$2.167 (Jun 8 21:10Z); 8) INJ/USD BUY 10 @ ~$5.805 (Jun 8 22:11Z); 9) NEAR trailing stop OZUM7J triggered overnight (~$2.11, −2.9%, −$1.91); 10) INJ trailing stop O6ZXY6 triggered Jun 9 pre-session (~$5.672, −2.3%, −$1.33) | **Total since migration:** ~65
+**Notes:** Active trading spanning Jun 08 post-EOD and Jun 09 confirmations — 5 buys all ending in stop-outs. KAS (Toccata upgrade thesis, 3rd repeat) stopped at −2.5% (−$1.97); ONDO made brief HWM ratchet to +2.2% before reversing (net +$0.33 across two legs); NEAR (Nightshade 2.0 upgrade + AI/SpaceX IPO narrative, bought Jun 8 21:10Z at $2.167) stopped overnight at ~$2.11 (−2.9%, −$1.91); INJ (Binance.US listing + U.S.-regulated futures + native USDC, bought Jun 8 22:11Z at $5.805) stopped Jun 9 pre-session at ~$5.672 (−2.3%, −$1.33). Net Day P&L −$5.61 (−4.16%) vs Jun 08 EOD $134.75. BTC was −0.31% (24h open $63,068 → $62,871), bot underperformed by −3.85%. Portfolio 100% ZUSD $129.14. Phase P&L −$50.64 (−28.17%) from Kraken starting equity $179.78. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC −0.31%). Tomorrow: 100% cash; primary watches ONDO post-perps-launch action, KAS Toccata re-entry conditional on $0.031+ reclaim; require 1h >3% + fresh <6h catalyst, R:R ≥1.2:1.
+
