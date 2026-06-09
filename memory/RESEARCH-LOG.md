@@ -13615,3 +13615,60 @@ All watchlist conditions remain unmet. BTC weekly gate blocks pure momentum play
 - INJ: Reclaims $5.70+ on volume surge with fresh catalyst
 - XLM: Turns positive on day with confirmed DTCC timing (if announcement <6h old)
 - BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
+
+---
+
+## 2026-06-09 — Midday Scan
+
+**Time:** ~midday UTC
+**Account:** $129.14 ZUSD (100% cash)
+**Positions:** None | **Open Orders:** None
+
+### Market Snapshot (Midday)
+
+| Asset | Price | Day Chg | Spread | Note |
+|---|---|---|---|---|
+| BTC | $62,661 | −0.6% | 0.003% | Weekly gate still active (−12% vs Jun 1) |
+| ETH | ~$1,678 | ~−0.4% | 0.015% | Down on day |
+| XRP | $1.157 | −0.9% | 0.015% | Down from open; R:R fails at 7% trail |
+| HYPE | $62.08 | −2.7% | 0.016% | Down on day, stale catalyst |
+| SOL | $66.08 | −1.1% | 0.015% | Down on day, no fresh catalyst |
+| INJ | $5.681 | +0.4% | 0.123% | Below $5.70 reclaim trigger; catalysts aging |
+| XMR | $321.28 | +1.9% | 0.044% | No fresh catalyst; gate blocks pure momentum |
+
+### Gate Status
+
+- **BTC weekly gate:** ACTIVE — BTC $62,661 vs Jun 1 ~$72,145 = ~−13%; requires catalyst exemption or 1h >5% + fresh <3h catalyst
+- **Crash gate:** NOT triggered (BTC −0.6% on day)
+- **Fear & Greed:** ~10 (Extreme Fear persisting)
+
+### Perplexity Research Summary
+
+- XRP up ~27% 24h cited in one source — **not confirmed**. Kraken shows XRP down 0.9% on day from open $1.168 → $1.157. No Senate floor vote news.
+- Primary catalysts: CLARITY Act optimism (ongoing narrative, 25d+ old), BTC/ETH/SOL flows mixed.
+- No new exchange listings on Kraken, Binance, Coinbase in last 6h.
+- No fresh volume surge alerts confirmed on any watchlist asset.
+- Generic intraday setups (BTC, ETH, SOL, HYPE, DOGE) — none meeting catalyst + momentum criteria simultaneously.
+
+### Candidate Screening
+
+| Asset | Gate | Momentum | Catalyst | Verdict |
+|---|---|---|---|---|
+| XRP | Fail (down on day; R:R 0.43:1 at 7% trail) | −0.9% | CLARITY Act 26d old, no new vote | **SKIP** |
+| HYPE | Fail (down on day) | −2.7% | Grayscale ETF 81d old | **SKIP** |
+| SOL | Fail (down on day) | −1.1% | No fresh catalyst | **SKIP** |
+| INJ | Fail (below trigger) | +0.4%, ask $5.681 < $5.70 | Binance.US listing 24h+ old | **SKIP** |
+| XMR | Fail (BTC weekly gate; no catalyst) | +1.9%, pulling back from $329.92 | No fresh privacy catalyst | **SKIP** |
+
+### Decision: HOLD — No New Entries
+
+All watchlist candidates fail at least one mandatory criterion. BTC weekly gate blocks pure momentum entries. Fear & Greed at Extreme Fear (10). Capital fully protected in ZUSD.
+
+**Intraday triggers remain (unchanged from pre-session):**
+- XRP: Only on confirmed Senate floor vote / CLARITY Act passage news
+- HYPE: Only on fresh institutional catalyst <3h old + price above $63.80
+- XMR: Only on specific privacy catalyst + holds above $320
+- INJ: Only on sustained reclaim of $5.70+ with volume
+- BTC gate lift: BTC recovers above ~$68,600 → full momentum entries resume
+
+**STEP 7:** No action taken → no WhatsApp notification sent.
