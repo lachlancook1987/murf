@@ -13916,3 +13916,64 @@ Rationale:
 - **XRP** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
 - **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
 
+
+---
+
+## 2026-06-09 — Session-Open Execution (Fourth Session)
+
+**Session branch:** claude/clever-allen-7lnszc
+**Time:** Late UTC (this session)
+
+### Account State (Confirmed)
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 |
+| Kraken positions | None (100% cash) |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (historical only) |
+
+### Market Snapshot
+
+| Metric | Value | Status |
+|---|---|---|
+| BTC ask | $62,058.90 | −1.59% vs open $63,068.50 |
+| BTC 24h low | $60,740.90 | |
+| BTC 24h high | $63,467.90 | |
+| Crash gate | NOT triggered | (need >−20%) |
+| BTC weekly gate | ACTIVE | BTC ~$62,058 vs Jun 1 $72,145 = −14% (>3% threshold) |
+| BTC weekly gate lift | ~$68,600 | |
+
+### Candidate Screening
+
+| Asset | Ask | vs Open | Spread | Gate | Catalyst | Verdict |
+|---|---|---|---|---|---|---|
+| NEAR/USD | $2.2346 | +4.9% | 0.07% ✓ | FAIL — catalyst 7 days old | Upgrade 2.13 announced Jun 2 | SKIP — stale catalyst, no gate exemption |
+| ONDO/USD | $0.36695 | +0.66% | 0.074% ✓ | Partial | Ondo Perps launched today | SKIP — HOD $0.375 not reached; buy-the-news spike already faded |
+| ZEC/USD | $446.05 | −2.8% | 0.049% ✓ | n/a | Bug patch (stale); pulled back from HOD $482.29 | SKIP — negative vs open |
+| HYPE/USD | $59.18 | −7.2% | — | n/a | None fresh | SKIP — well below $63.80 trigger |
+| SUI/USD | $0.7533 | −0.34% | 0.040% ✓ | n/a | None | SKIP — flat/negative |
+| XRP/USD | $1.1422 | −2.2% | 0.001% ✓ | n/a | CLARITY Act not voted | SKIP — floor vote not scheduled |
+
+### Key Findings
+
+- **NEAR catalyst age confirmed 7 days old:** Network Upgrade 2.13 / dynamic resharding announced June 2, 2026 — not fresh. Two consecutive stop-outs on this thesis. No exemption under BTC weekly gate.
+- **ONDO Perps:** Launched today (fresh catalyst). Price spiked to $0.37477 HOD then pulled back to $0.347 low, recovered to $0.36695. Buy-the-news pattern already played. HOD condition ($0.375) not reached; monitoring condition partially met (above open ✓, HOD ✗).
+- **ZEC:** Perplexity reported 29.3% 24h gain but Kraken data shows open $458.91, current $446.05 (−2.8%). Peaked at $482.29 and pulling back. Catalyst: bug patch + Multicoin buying (timing unconfirmed fresh).
+- **CLARITY Act:** Added to Senate calendar June 1 but floor vote not yet scheduled. XRP trigger not met.
+
+### Decision: HOLD — No New Entries
+
+BTC weekly gate active (−14%). All candidates fail at least one mandatory criterion:
+- No qualifying catalyst <3h old with ≥3% positive momentum
+- ONDO partially qualifies on catalyst but momentum weak and HOD not reached
+
+**No orders placed. No stops placed. No notification sent. No commit needed.**
+
+### Active Monitoring Triggers (Updated)
+
+- **ONDO/USD** > $0.375 (HOD breakout) + volume surge → market entry, trailing_stop 2.5% GTC
+- **NEAR/USD** > $2.247 HOD + FRESH catalyst <3h old (new upgrade news, not Jun 2 announcement) → only then valid under gate
+- **XRP** — CLARITY Act Senate floor vote formally confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
+- **ZEC** — if price reclaims $462+ (above open) with a confirmed fresh catalyst today → reassess
