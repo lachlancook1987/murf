@@ -14210,3 +14210,66 @@ All candidates fail mandatory criteria under the BTC weekly gate:
 - **BTC weekly gate lift** — BTC closes above ~$75,710 → full momentum criteria resume
 - **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
 
+
+---
+
+## 2026-06-10 — Midday Scan
+
+### Account State
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (fully exited) |
+
+**Steps 3–5 (stop verification, tightening, thesis check):** N/A — no open positions.
+
+### BTC Snapshot
+
+| Metric | Value |
+|---|---|
+| BTC ask | $61,163 |
+| BTC today open | $61,688 |
+| BTC intraday change | −0.85% |
+| BTC 24h low | $60,740 |
+| Crash gate (>20% down) | NOT triggered ✓ |
+| BTC weekly gate | ACTIVE (−16.3% vs Jun 1 close $73,580; need $75,710 to lift) |
+
+### Midday Candidate Scan
+
+| Asset | Current | Open | vs Open | Spread | Fresh Catalyst | Gate Pass? |
+|---|---|---|---|---|---|---|
+| NEAR/USD | $2.068 | $2.152 | −3.9% | 0.04% ✓ | Jun 9 Intents record $223.9M (>24h stale) | FAIL — stale + declining |
+| HYPE/USD | $55.67 | $57.77 | −3.6% | 0.02% ✓ | Arthur Hayes SOLD HYPE Jun 9 (bearish) | FAIL — negative catalyst |
+| ZEC/USD | $418.06 | $429.88 | −2.8% | 0.055% ✓ | SEC close May 19-21 (>3w stale); below $460 entry condition | FAIL — stale + below entry |
+| XLM/USD | $0.18532 | $0.19232 | −3.6% | 0.059% ✓ | Quantum-safe roadmap Jun 9 (>24h stale) | FAIL — stale + below open |
+| TAO/USD | $205.05 | $206.25 | −0.6% | 0.05% ✓ | None identified | FAIL — no catalyst |
+| BTC/USD | $61,163 | $61,688 | −0.85% | ~0% ✓ | Weekly gate active | FAIL — gate active |
+
+**Additional research signals:**
+- 24h gainers (IDOS +92%, WOD +75%, JCT +41%) = micro-caps not on Kraken; not tradeable
+- NEAR Intents $223.9M record Jun 9 — stale (>24h), no entry; Arthur Hayes profit-taking adds headwind
+- HYPE: Arthur Hayes exited Jun 9 — bearish catalyst; declining from open; skip
+- BTC weekly trend gate ACTIVE; no assets show 1h surge >5% with fresh <3h catalyst
+
+### Decision
+
+**HOLD — No new entries at midday. No actions taken.**
+
+**Rationale:**
+- BTC weekly gate ACTIVE: requires 1h momentum >5% + catalyst <3h old, OR catalyst-driven entry
+- All screened assets declining from today's open — zero positive intraday momentum
+- No asset meets the 1h >5% threshold or has a fresh catalyst <3h old
+- Extreme Fear (9) environment continues; no forced entries
+- $129.14 preserved — await qualifying setup
+
+**Active Monitoring Triggers (unchanged from pre-session):**
+- **ZEC/USD** > $460 + fresh catalyst today → market entry, trail 3.5%
+- **XLM/USD** > $0.1923 (reclaim open) + volume → market entry, trail 2.5%
+- **XRP/USD** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
+- **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
+
+**Notification:** None — no action taken per Step 7 protocol.
