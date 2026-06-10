@@ -14367,4 +14367,66 @@ $129.14 ZUSD preserved. Monitoring triggers active.
 - **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
 - **Any Kraken asset** — 1h surge >5% + confirmed catalyst <3h old → immediate screen
 
+---
+
+## 2026-06-10 — Midday Scan
+
+### Market Snapshot (Midday)
+
+| Metric | Value |
+|---|---|
+| BTC ask | $61,224 |
+| BTC today open | $61,688 |
+| BTC 24h change | −0.76% vs open |
+| BTC weekly gate | ACTIVE (−16.8% vs Jun 1 close $73,580) |
+| Crash gate | NOT triggered |
+| ETH | $1,609 (−1.8% vs open $1,638) |
+| Fear & Greed | 9 (Extreme Fear — unchanged) |
+
+### Kraken State
+
+| | |
+|---|---|
+| Positions | None (0) |
+| Open orders | None (0) |
+| ZUSD | $129.14 (100% cash) |
+| Alpaca | Historical orders only; no active positions/stops |
+
+### Stops Verified
+
+N/A — no open positions.
+
+### Candidate Scan
+
+| Asset | 24h Chg | vs Today Open | Spread | Catalyst | Weekly Gate | Decision |
+|---|---|---|---|---|---|---|
+| ZEC/USD | +0% (from ~$429 open) | −5.3% ($407) | 0.10% ✓ | None fresh; bug patch/SEC closure stale (>3wk) | FAIL — no catalyst | SKIP |
+| XLM/USD | −5.4% vs open | $0.182 vs $0.192 | 0.077% ✓ | Quantum-safe roadmap (Jun 9, >24h) | FAIL — stale | SKIP |
+| STG/USD | +44% 24h | $0.40 (below HOD $0.45) | 0.12% ✓ | Whale 8M withdrawal from Gate.io — speculative | FAIL — whale withdrawal ≠ regulatory/listing/upgrade | SKIP |
+| ETH/USD | −1.8% vs open | $1,609 | 0.0006% ✓ | No intraday catalyst | FAIL — declining + no catalyst | SKIP |
+
+### STG/USD — Detailed Assessment
+
+STG (Stargate Finance) is up +44% 24h driven by an 8M STG withdrawal from Gate.io interpreted as whale accumulation. Kraken confirms it's online with spread 0.12%. However:
+- BTC weekly gate is ACTIVE — requires regulatory/listing/upgrade catalyst, not whale activity
+- Price fading from HOD $0.4518 → $0.4007 (−11% from top) — momentum decelerating
+- Described as trading at speculative premium vs ZRO conversion value — fundamental overhang
+- **SKIP** under weekly gate rules
+
+### Decision
+
+**NO ENTRY — no valid setups.**
+
+BTC weekly gate ACTIVE (−16.8% vs Jun 1). All screened assets either lack a qualifying fresh catalyst or are declining from their opens. STG had a large move but is fading and the whale-withdrawal catalyst doesn't meet the regulatory/listing/upgrade standard required under the weekly gate. Extreme Fear (9) persists; no new action warranted.
+
+**No positions opened. No notification sent. $129.14 ZUSD preserved.**
+
+**Monitoring Triggers (unchanged):**
+- **ZEC/USD** — reclaim $460 + confirmed regulatory/upgrade catalyst <3h old → market entry, trail 2.5%
+- **STG/USD** — reclaim HOD $0.45 + volume surge AND qualifying catalyst → re-evaluate
+- **XLM/USD** — reclaim $0.1923 open + volume → market entry, trail 2.5%
+- **XRP/USD** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
+- **Any Kraken asset** — 1h surge >5% + confirmed regulatory/listing/upgrade catalyst <3h old → immediate screen
+
 **Notification:** None — no action taken per Step 7 protocol.
