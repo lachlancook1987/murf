@@ -14272,4 +14272,83 @@ All candidates fail mandatory criteria under the BTC weekly gate:
 - **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
 - **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
 
+---
+
+## 2026-06-10 — Afternoon Session-Open Scan
+
+### Account State
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (fully exited; historical orders from May 22 confirmed) |
+
+### BTC Snapshot
+
+| Metric | Value |
+|---|---|
+| BTC ask | $61,115 |
+| BTC 24h open | $61,688 |
+| BTC intraday change | −0.93% |
+| BTC 24h low | $60,741 |
+| BTC 24h high | $62,799 |
+| Crash gate (>20% down) | NOT triggered ✓ |
+| BTC weekly gate | ACTIVE (current $61,115 vs threshold $75,710; −19.3% away) |
+
+### Market Context
+
+| Signal | Value |
+|---|---|
+| Fear & Greed | 9 — Extreme Fear (unchanged from midday) |
+| BTC funding rate | NEGATIVE (Binance −0.0034%, BitMEX −0.0067%) — shorts dominant; contrarian bullish signal |
+| Token unlocks today | RAIN $714M (4.37% supply), ME 17% supply, HOME $45M — broad supply pressure |
+| Geopolitical | Middle East tensions ongoing; $210M 24h liquidations; risk-off backdrop |
+
+### Candidate Scan
+
+| Asset | Current | 24h Open | vs Open | Spread | Catalyst | Gate Pass? |
+|---|---|---|---|---|---|---|
+| ATOM/USD | $1.8318 | $1.7763 | +3.12% ✓ | 0.09% ✓ | Robinhood spot listing Jun 9 (>24h old) | FAIL — catalyst >24h old, 1h >5% unconfirmed |
+| CRV/USD | $0.20432 | $0.20185 | +1.23% | 0.07% ✓ | Protocol fees/crvUSD fundamentals (stale) | FAIL — no fresh catalyst, <5% 1h momentum |
+| PROS/USD | $0.5924 | $0.5816 | +1.86% | 0.19% ✓ | New Kraken listing Jun 9 | FAIL — $7,452 daily volume dangerously thin |
+| GENIUS/USD | $0.4988 | $0.4428 | +12.6% | 1.72% — TOO WIDE | New Kraken listing Jun 9 | FAIL — spread 1.72% (hard skip >1%) |
+| AI/USD | $0.02486 | $0.02577 | −3.53% | 0.16% ✓ | New Kraken listing Jun 9 | FAIL — declining |
+| XRP/USD | $1.10497 | $1.13714 | −2.83% | 0.009% ✓ | CLARITY Act (no vote scheduled today) | FAIL — declining, no confirmed catalyst |
+| ETH/USD | $1,622.88 | $1,638.31 | −0.94% | 0.015% ✓ | Glamsterdam (Q3 2026, not imminent) | FAIL — declining, stale catalyst |
+| NEAR/USD | $2.0365 | $2.1520 | −5.4% | 0.09% ✓ | None | FAIL — declining |
+| SOL/USD | $63.46 | $64.99 | −2.35% | 0.016% ✓ | None | FAIL — declining |
+| WLD/USD | $0.4912 | $0.5088 | −3.46% | 0.06% ✓ | None | FAIL — declining |
+| ZEC/USD | $414.26 | $429.88 | −3.63% | 0.08% ✓ | SEC closure May 19-21 (stale); below $460 trigger | FAIL — below trigger, declining |
+| OMNI/USD | $0.4945 mid | — | — | 37.2% — ILLIQUID | None confirmed | FAIL — spread 37% (no volume) |
+| BTC/USD | $61,115 | $61,688 | −0.93% | ~0% ✓ | Weekly gate active | FAIL — gate active, no 1h >5% |
+
+**Additional notes:**
+- 24h gainers (TRU +89%, WOD +53%, H +38%) = micro-caps not on Kraken; not tradeable
+- BTC negative funding (shorts paying) is contrarian bullish but not a direct entry trigger
+- ATOM is the strongest legitimate candidate: Robinhood listing catalyst + near HOD + solid volume ($135K on Kraken today). Close miss — disqualified only by catalyst age (>24h) and unconfirmed 1h >5% threshold.
+
+### Decision
+
+**HOLD — No new entries. No actions taken.**
+
+**Rationale:**
+- BTC weekly gate ACTIVE: requires 1h momentum >5% + catalyst <3h old, OR catalyst-driven entry with exchange listing/regulatory/protocol catalyst
+- ATOM is the best candidate (Robinhood listing, +3.12% vs open, near HOD) but Robinhood listing is >24h old — fails the <6h catalyst freshness check for day trades; 1h >5% momentum cannot be confirmed without candle data
+- GENIUS new listing has strong momentum (+12.6%) but 1.72% spread is a hard skip
+- PROS new listing has acceptable spread but only $7,452 daily volume — too thin for safe stop execution
+- All other major assets declining from 24h open
+- Extreme Fear (9) + token unlock pressure + geopolitical risk-off = hostile entry environment
+
+**Updated Monitoring Triggers:**
+- **ATOM/USD** — if 1h surge confirms >5% on Kraken + Robinhood listing still momentum driver → market entry, trail 2.5%; OR if fresh secondary catalyst (upgrade/news <3h old) emerges → immediate entry
+- **ZEC/USD** > $460 + fresh catalyst today → market entry, trail 3.5%
+- **XLM/USD** > $0.1923 (reclaim open) + volume → market entry, trail 2.5%
+- **XRP/USD** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
+- **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
+
+**Notification:** None — no action taken per Step 7 protocol.
+
 **Notification:** None — no action taken per Step 7 protocol.
