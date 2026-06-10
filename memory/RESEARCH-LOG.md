@@ -14272,4 +14272,99 @@ All candidates fail mandatory criteria under the BTC weekly gate:
 - **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
 - **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
 
+---
+
+## 2026-06-10 — Pre-Session Research (Day 21)
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (fully exited; stop a2b44cf9 cancelled 2026-05-22) |
+
+**Phase P&L:** −$50.64 (−28.17%) from Kraken starting equity $179.78
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Notes |
+|---|---|---|---|
+| BTC | $61,743 | +0.09% (from today open $61,688) | 24h high $62,800; 24h low $60,746 |
+| ETH | ~$1,645–$1,656 | −1.1% to −2.8% | Weak vs BTC |
+| Fear & Greed | **9 — Extreme Fear** | Unchanged (was 9 yesterday, 10 day prior) | Persistently extreme |
+| BTC Funding Rate | Mixed: Binance +0.0025%, Bybit +0.0036%, BitMEX −0.0138% | Neutral — no squeeze | Longs marginally paying on most venues |
+| BTC Weekly Gate | **ACTIVE** — BTC $61,743 vs Jun 1 close $73,580 = **−16.1%** | Threshold: >3% down over 5 days | Need BTC >$75,710 to lift gate |
+
+**Top 24h gainers (CoinGecko):** AXION +200.9%, MAGMA +48.9%, HMSTR +47.3%, STG +45.3%, STRAX +43.6% — all micro-caps, not on Kraken or not tradeable.
+
+**Kraken-specific movers (homepage snapshot):** XMR +5.89%, AAVE +1.82% — XMR only asset above 3% threshold.
+
+**Token unlocks today (Jun 10):** RAIN $657–714M (4.37% supply), HOME $45.3M (8.82% supply), ME $10–14M (17% supply) — significant supply pressure across the market today.
+
+**Market catalysts:** DTCC/Stellar tokenized securities integration (XLM, multi-week momentum story), TAO Bittensor Subnet 3 Covenant-72B release (AI narrative, no clean intraday setup), CLARITY Act/XRP event-driven watch still open, NEAR dynamic resharding upgrade (June 2026, ongoing). Privacy coin demand (XMR) driven by structural/delisting dynamics — no verified single catalyst today.
+
+---
+
+### Candidate Screening
+
+| Asset | Direction | vs Open | Spread | Catalyst | Gate Pass? |
+|---|---|---|---|---|---|
+| **XMR/USD** | +4.2% from open $311.46 → $324.38 | Near HOD $328.60 | **0.13% ✓** | Volume +20.6%, technical rebound, privacy narrative — **no verified fresh catalyst** | **FAIL** — BTC weekly gate: pure momentum, no catalyst |
+| **XLM/USD** | −3.6% from open $0.19233 → $0.18510 | Below trigger $0.1923 | 0.032% ✓ | DTCC integration (multi-week, stale) | FAIL — declining, below entry trigger |
+| **TAO/USD** | −2.1% from open $206.25 → $201.97 | Declining | 0.084% ✓ | AI rotation (TAO $180–$240 chop, no inflows) | FAIL — declining, no fresh catalyst |
+| **AAVE/USD** | −0.8% from open $62.14 → $61.64 | Declining | 0.065% ✓ | None | FAIL — declining, no catalyst |
+| **BTC/USD** | +0.09% from open | Flat | ~0% ✓ | Weekly gate active | FAIL — gate active for momentum |
+
+**XMR Detail:** Ask $324.38, Bid $323.96, spread $0.42 (0.13%) ✓. Open $311.46 → current $324.38 = +4.2%. Day high $328.60. Volume 12,317 trades (strong). VWAP $315.94. **High-ATR asset** (daily range $306–$328 = 7.1% ATR) → 3.5% trailing stop if entered. Catalyst research: volume surge +20.6%, technical dip-buying, ongoing privacy-coin demand — **no Monero-specific announcement, listing, regulatory ruling, or protocol upgrade confirmed today**. Under BTC weekly gate, catalyst-driven entries (regulatory/listing/upgrade) remain open, but this is classified as a pure momentum play → **banned**.
+
+---
+
+### Trade Ideas
+
+**No qualifying setups at session open.**
+
+Under the active BTC weekly gate (BTC −16.1% vs Jun 1), pure momentum entries are banned. All screened Kraken assets either lack a verified fresh catalyst or are declining from today's open.
+
+**Conditional entries (require trigger):**
+
+| # | Asset | Trigger | Entry | Stop | T1 | T2 | R:R | Size |
+|---|---|---|---|---|---|---|---|---|
+| 1 | **XMR/USD** | Verified catalyst <3h old (listing, regulatory, protocol upgrade) AND 1h >5% momentum | Market at confirmation | trailing_stop 3.5% (high-ATR) | ~$335 (+3%) | ~$342 (+5%) | 1.2:1 at T1 | $50–$65 (~40–50% equity) |
+| 2 | **XRP/USD** | CLARITY Act Senate floor vote confirmed today | Market immediately on news | trailing_stop 7% (binary catalyst) | ~+3% from entry | ~+5% | 1.2:1 | $65–$80 (50–60% equity) |
+| 3 | **XLM/USD** | Reclaim today's open $0.1923 + volume surge | Market above $0.1923 | trailing_stop 2.5% | ~$0.198 (+3%) | ~$0.202 (+5%) | 1.2:1 | $40–$50 (~35% equity) |
+| 4 | **Any Kraken asset** | 1h surge >5% + fresh catalyst <3h old | Market on confirmation | trailing_stop 2.5% (3.5% if high-ATR) | Entry +3% | Entry +5% | ≥1.2:1 | Size to conviction |
+
+---
+
+### Risk Factors
+
+1. **BTC weekly gate ACTIVE (−16.1%)** — strictest entry criteria; no pure momentum plays
+2. **Extreme Fear (9)** — persisting for multiple sessions; sharp reversals remain likely
+3. **Massive token unlock today** — RAIN $714M (4.37% supply), HOME $45M (8.82% supply), ME $14M (17% supply) — supply overhang dragging risk appetite
+4. **No verified intraday catalysts** — XMR move is volume/technical, not event-driven
+5. **All altcoin candidates declining from open** (XLM, TAO, AAVE) — no positive momentum
+6. **XMR high-ATR risk** — 7.1% intraday ATR; 3.5% trailing stop required; potential noise-stop exposure
+7. **Phase drawdown −28.17%** — capital preservation critical; no forced entries
+
+---
+
+### Decision
+
+**HOLD — No new entries at session open.**
+
+BTC weekly gate is ACTIVE (−16.1% vs Jun 1). XMR is the only Kraken asset showing positive intraday momentum (+4.2%) but has no verified fresh catalyst — classified as pure momentum play, banned under active gate. All other screened assets are declining. Extreme Fear (9) and $714M+ token unlocks today reinforce patience.
+
+$129.14 ZUSD preserved. Monitoring triggers active.
+
+**Active Monitoring Triggers:**
+- **XMR/USD** — verified catalyst <3h old (exchange listing, regulatory ruling, protocol upgrade) AND 1h momentum >5% → market entry, trail 3.5% (high-ATR)
+- **XRP/USD** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **XLM/USD** — reclaim $0.1923 open + volume → market entry, trail 2.5%
+- **BTC weekly gate lift** — BTC above $75,710 → full momentum criteria resume
+- **Any Kraken asset** — 1h surge >5% + confirmed catalyst <3h old → immediate screen
+
 **Notification:** None — no action taken per Step 7 protocol.
