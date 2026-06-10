@@ -14029,3 +14029,184 @@ All candidates fail mandatory criteria under the BTC weekly gate:
 - **HYPE** — reversal candle + new fresh institutional catalyst <3h old + price back above $61.50 → reassess
 - **BTC weekly gate lift** — BTC recovers above ~$68,600 → full momentum entry criteria resume
 - **Any asset** with 1h surge >5% AND catalyst <3h old (exchange listing, protocol upgrade, regulatory event) → immediate screen
+
+---
+
+## 2026-06-10 — Pre-Session Research (Day 21, Wednesday)
+
+### Account Snapshot
+
+| Account | State |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None |
+| Kraken open orders | None |
+| Alpaca | No positions, no orders (fully exited; historical orders only) |
+| Phase P&L | −$50.64 (−28.17%) from Kraken starting equity $179.78 |
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC ask | $61,591.60 | |
+| BTC today open | $61,688.10 | −0.16% vs open; off 24h low $60,740 |
+| BTC 24h high | $62,976.10 | |
+| BTC 24h low | $60,740.90 | |
+| Crash gate (>20% down 24h) | NOT triggered ✓ | ~−0.16% vs today open |
+| BTC vs Jun 1 close ($73,580) | −16.3% | **BTC weekly gate ACTIVE** (>3% threshold) |
+| ETH | ~$1,627 | −2% to −4% 24h depending on source |
+| Fear & Greed Index | 9 (Extreme Fear) | Multiple sources confirm 9–14 range |
+| BTC funding rate | +0.0004%/8h (Binance) | Mildly positive; longs in control |
+| Macro catalyst | Middle East tensions + $210M liquidations 24h | Risk-off selloff |
+| BTC weekly gate lift price | ~$75,710 | BTC must recover 3% above Jun 1 close |
+
+### Token Unlocks Today (Jun 10) — Supply Pressure
+
+| Token | Unlock Value | % Supply | Impact |
+|---|---|---|---|
+| RAIN | ~$714M | ~4.4% | Large supply event |
+| HOME | ~$45M | ~8.8% | Moderate |
+| ME (Magic Eden) | ~$10–14M | ~17% | High % of supply |
+
+### Top 24h Gainers Screened
+
+| Asset | 24h Gain | Source | On Kraken | vs Today Open | Spread | Catalyst | Gate Status |
+|---|---|---|---|---|---|---|---|
+| ZEC/USD | +25% | Perplexity/exchange data | ✓ | −0.1% (flat) | 0.065% ✓ | Bug patch rebound + SEC close (May 19 — STALE >3w) | FAIL — stale catalyst |
+| XLM/USD | +12% | Perplexity | ✓ | −4.9% ↓ | 0.077% ✓ | Quantum-safe roadmap Jun 9, UN initiative Jun 8 (>24h — stale) | FAIL — stale + declining |
+| DOGE/USD | +9.2% | Perplexity | ✓ | Not checked | — | Pure momentum, no confirmed catalyst | FAIL — no catalyst |
+| VVV/USD | +9.45% | Kraken data | ✓ | −5.8% ↓ | 0.076% ✓ | None identified | FAIL — declining |
+| INJ/USD | +6.68% | Kraken data | ✓ | −5.6% ↓ | 0.114% ✓ | Vulcan upgrade Jun 9 (>24h stale) | FAIL — stale + declining |
+| PUMP/USD | +6.26% | Kraken data | ✓ | −4.2% ↓ | 0.137% ✓ | Jun 14 unlock (bearish overhang) | FAIL — negative catalyst |
+| JUP/USD | +4.02% | Kraken data | ✓ | −3.1% ↓ | 0.146% ✓ | None identified | FAIL — declining |
+
+### Candidate Detail Notes
+
+**ZEC/USD — Most Interesting; Currently No Entry**
+- SEC investigation closure announced May 19-21 (>3 weeks old — stale catalyst)
+- Orchard shielded-pool bug: reported near $265 lows, patched, rally to HOD $482.29 today
+- Current price $429.39 — fully round-tripped below HOD; consolidating
+- Under BTC weekly gate: catalyst must be <3h old and regulatory/listing/upgrade in nature
+- SEC catalyst = regulatory win BUT timing stale; bug patch timing unconfirmed as fresh today
+- **SKIP at open. Watch for fresh catalyst confirmation**
+
+**XLM/USD — Stale + Declining**
+- Quantum-safe cryptography roadmap announced Jun 9 (yesterday, >24h ago)
+- UN advisory group participation (Jun 8, >48h ago)
+- Price below today's open at $0.1827 vs open $0.1923
+- **SKIP**
+
+**INJ/USD — Consecutive Stop-Outs + Declining**
+- Vulcan mainnet upgrade went live Jun 9 (>24h ago, stale for day trade)
+- Thailand regulated INJ fund Jun 5 (5 days old, stale)
+- Stopped out of INJ twice in recent sessions; price continuing to decline ($5.541 open → $5.233 current)
+- **SKIP — declining + stale catalysts**
+
+### 3–5 Watchlist Ideas (Conditional — Not Immediate Entries)
+
+#### #1 — ZEC/USD (Top Watch)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Bug patch confirmed complete + privacy coin regulatory relief narrative |
+| **Entry condition** | Price reclaims $460+ (above consolidation range, near HOD $482 breakout) with volume AND fresh catalyst confirmation <3h old |
+| **Entry** | Market order on breakout confirmation |
+| **Stop** | trailing_stop, trail_percent: 3.5 (high-ATR asset; intraday range today $422–$482 = 14%) |
+| **T1** | ~$474 (+3%) |
+| **T2** | ~$483 (+5%) |
+| **R:R** | +3% vs 3.5% stop = 0.86:1 — BELOW threshold at 3.5% trail; use 2.5% trail if entry is tight → R:R = 1.2:1 |
+| **Size** | ~$40 (~30% equity) — moderate; high ATR warrants caution |
+| **Kraken pair** | XZECZUSD — online ✓ |
+| **Spread** | 0.065% ✓ |
+| **Status** | MONITOR — conditions not met at session open |
+
+#### #2 — XLM/USD (Secondary Watch)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Quantum-safe cryptography roadmap (Jun 9) + UN blockchain initiative (Jun 8) |
+| **Entry condition** | Price reclaims today's open $0.1923 AND holds HOD $0.2033 with volume surge |
+| **Entry** | Market order on HOD breakout |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | ~$0.198 (+3%) |
+| **T2** | ~$0.202 (+5%) |
+| **R:R** | +3% vs 2.5% stop = 1.2:1 ✓ |
+| **Size** | ~$45 (~35% equity) |
+| **Kraken pair** | XXLMZUSD — online ✓ |
+| **Spread** | 0.077% ✓ |
+| **Status** | MONITOR — price currently −4.9% below open; must reclaim open first |
+
+#### #3 — XRP/USD (Event Watch — Binary Catalyst Exception)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | CLARITY Act Senate floor vote (exempt from BTC weekly gate as binary regulatory event) |
+| **Entry condition** | Vote confirmed on Senate calendar + scheduled for same-day floor vote |
+| **Entry** | Market order on vote confirmation headline |
+| **Stop** | trailing_stop, trail_percent: 7 (binary catalyst rule) |
+| **T1** | Entry +3% |
+| **T2** | Entry +5% |
+| **R:R** | +3% vs 7% stop = 0.43:1 — low; sized small |
+| **Size** | ~$25 (~19% equity) — small due to binary risk and wide stop |
+| **Kraken pair** | XXRPZUSD — online ✓ |
+| **Spread** | 0.011% ✓ |
+| **Status** | EVENT WATCH — no vote scheduled as of today |
+
+#### #4 — BTC/USD (Opportunistic If Weekly Gate Lifts)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Weekly gate lift: BTC recovers above ~$75,710 (3% above Jun 1 $73,580) — restores full momentum entry criteria |
+| **Entry condition** | BTC closes 1h candle above $75,710 on volume |
+| **Entry** | Market order |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | Entry +3% |
+| **T2** | Entry +5% |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | Up to 60% equity on gate lift |
+| **Status** | INACTIVE — BTC at $61,591, $14,119 below gate lift level |
+
+#### #5 — INJ/USD (Re-Entry Only on Fresh Catalyst)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | New Injective listing, partnership, or DeFi event announced today — fresh <3h |
+| **Entry condition** | Price reclaims $5.60+ (above today's open $5.541) + fresh catalyst confirmed |
+| **Entry** | Market order |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | ~$5.77 (+3%) |
+| **T2** | ~$5.88 (+5%) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | ~$35 (~27% equity) — cautious after 2 consecutive stop-outs |
+| **Status** | MONITOR — currently $5.233, −5.6% vs open; avoid chasing decline |
+
+### Risk Factors
+
+1. **BTC weekly gate ACTIVE (−16%)** — strictest entry criteria; no pure momentum plays allowed
+2. **Extreme Fear (9)** — worst fear reading in recent sessions; violent reversals, panic selling
+3. **RAIN $714M token unlock today** — large supply event; potential to drag broader alt market
+4. **ME (Magic Eden) 17% supply unlock today** — small cap, outsized supply impact
+5. **Middle East tensions** — macro risk-off; liquidation cascade ($210M 24h) still unfolding
+6. **All Kraken candidates declining from today's open** — no positive momentum asset identified
+7. **ZEC high-ATR (14% intraday range)** — 2.5% trailing stop likely to trigger on noise; use 3.5% if entering
+8. **INJ consecutive stop-outs** — same asset stopped three times recently; diminishing conviction
+9. **BTC mildly positive funding** — longs paying but not squeezed; neutral signal
+
+### Decision
+
+**HOLD — No new entries at session open.**
+
+**Rationale:**
+- BTC weekly gate ACTIVE (−16% vs Jun 1): requires 1h momentum >5% + catalyst <3h old, OR catalyst-driven entry (regulatory/listing/protocol)
+- No candidate meets these criteria at session open: all assets declining from today's open
+- ZEC has the best regulatory catalyst story (SEC investigation) but timing is stale (May 19-21, >3 weeks)
+- Extreme Fear (9) + token unlock pressure + geopolitical risk-off = hostile entry environment
+- $129.14 capital is precious at −28% phase drawdown; discipline required
+
+**Active Monitoring Triggers:**
+- **ZEC/USD** > $460 (above consolidation) + fresh catalyst confirmation today → enter market, trail 3.5% (or 2.5% if tight entry)
+- **XLM/USD** > $0.1923 (reclaim open) + volume + holds HOD $0.2033 → enter market, trail 2.5%
+- **XRP/USD** — CLARITY Act Senate floor vote confirmed → market entry, trail 7%
+- **BTC weekly gate lift** — BTC closes above ~$75,710 → full momentum criteria resume
+- **Any Kraken asset** with 1h surge >5% AND confirmed fresh catalyst <3h old → immediate screen
+
