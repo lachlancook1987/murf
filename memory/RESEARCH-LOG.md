@@ -14745,3 +14745,62 @@ Watchlist for next session:
 - **SOL/AVAX:** Re-qualify if 1h >5% + fresh <3h catalyst emerges
 - **XRP:** CLARITY Act Senate floor vote — remains open at 7% trail whenever binary event triggers
 
+
+---
+
+## 2026-06-11 — Pre-Session Research (Third Session Run)
+
+### Account Snapshot
+
+| | |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None (0) |
+| Kraken open orders | None (0) |
+| Alpaca positions | None (fully exited; stop a2b44cf9 cancelled 2026-05-22) |
+| Phase P&L | −$50.64 (−28.17%) from Kraken starting equity $179.78 |
+
+### Market Snapshot
+
+| Asset | Kraken Ask | 24h Open | 24h Change | Note |
+|---|---|---|---|---|
+| BTC | $63,399.20 | $61,459.10 | +3.16% | Intraday high $63,845; within range |
+| ETH | — | — | +1.01% | ~$1,637 (Perplexity) |
+
+**Fear & Greed Index:** 12 — Extreme Fear (3rd consecutive session at this level)
+**BTC funding rate:** +0.0027–0.0100% (mild long bias across exchanges; no squeeze pressure)
+**Crash gate:** NOT triggered (BTC +3.16% 24h)
+**BTC weekly gate:** ACTIVE — BTC $63,399 vs Jun 1 close ~$73,580 = −13.8%; requires 1h >5% AND catalyst <3h old (regulatory/listing/upgrade); pure momentum entries banned
+
+### Candidate Screening
+
+| Asset | 4h Move | Catalyst | Weekly Gate Verdict |
+|---|---|---|---|
+| **XMR** | +12.73% | BTC hack laundering demand (same stale catalyst from prior sessions) | SKIP |
+| **LOCKIN** | +7.57% | No regulatory/listing/upgrade catalyst | SKIP |
+| **GRIFFAIN** | +5.62% | No qualifying catalyst | SKIP |
+| **BCH** | +3.08% | No qualifying catalyst | SKIP |
+| **XRP** | — | CLARITY Act: no Senate floor vote date confirmed (on calendar but no date set) | SKIP |
+| New Kraken listings | — | May 2026 listings (GENIUS, AVA, EV, NEO, EDGEX, BILL) — not fresh today | SKIP |
+
+### Market Context
+
+- BTC +3.16% today, continuing recovery from $61,042 daily low; macro PPI data cited as catalyst
+- PPI release is a macro event, NOT a qualifying catalyst (not regulatory vote, listing, or protocol upgrade)
+- Top 24h CoinGecko gainers (DeepNode +161.7%, Velvet +75.2%, Audiera +58.3%) — micro-caps not on Kraken
+- XMR +12.73% (4h) driven by ongoing BTC hack laundering demand — same non-qualifying catalyst as prior two sessions; high reversal risk
+- CLARITY Act: no floor vote date; Senate calendar timing unsettled; no binary catalyst trigger
+- ARB June 16 unlock (92.65M tokens, ~$7.7M) — near-term bearish overhang remains
+- SpaceX IPO reportedly expected tomorrow — risk-on signal but not a direct crypto catalyst
+
+### Decision
+
+**HOLD — BTC weekly gate ACTIVE. No qualifying catalysts identified. (Third session run today.)**
+
+All candidates fail weekly gate: no Kraken asset shows 1h >5% momentum with a regulatory/listing/upgrade catalyst <3h old. Pure momentum entries banned. $129.14 ZUSD preserved. No notification sent.
+
+Watchlist unchanged:
+- **XRP:** CLARITY Act Senate floor vote — open at 7% trail whenever binary event triggers
+- **ADA:** Van Rossem hard fork (Protocol 11) — watch for late-June confirmation
+- **STG/CRV:** Continued momentum but lack qualifying catalysts; would need protocol catalyst
+- **SOL/AVAX:** Re-qualify if 1h >5% + fresh <3h catalyst emerges
