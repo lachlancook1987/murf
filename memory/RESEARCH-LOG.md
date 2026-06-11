@@ -14667,3 +14667,81 @@ BTC weekly gate ACTIVE (−14.5% vs Jun 1). All candidates fail: either non-qual
 BTC weekly gate ACTIVE. No Kraken asset shows 1h >5% momentum with a qualifying catalyst <3h old. No action taken. No notification sent. $129.14 ZUSD preserved.
 
 **$129.14 ZUSD preserved. No action taken. No notification sent.**
+
+---
+
+## 2026-06-11 — Pre-Session Research (Second Session Run)
+
+### Account Snapshot
+
+| | |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None (0) |
+| Kraken open orders | None (0) |
+| Alpaca positions | None (fully exited; stop a2b44cf9 cancelled 2026-05-22) |
+| Phase P&L | −$50.64 (−28.17%) from Kraken starting equity $179.78 |
+
+### Market Snapshot
+
+| Asset | Kraken Ask | 24h Open | 24h Change | Note |
+|---|---|---|---|---|
+| BTC | $63,549.90 | $61,459.10 | +3.40% | Near daily high $63,845 |
+| ETH | — | — | +1.94% | ~$1,656 (Perplexity) |
+| SOL | $66.93 | $63.14 | +6.00% | Near HOD $67.28 |
+| AVAX | $6.666 | $6.378 | +4.52% | — |
+| ADA | $0.16914 | $0.16055 | +5.35% | — |
+
+**Fear & Greed Index:** 12 — Extreme Fear (unchanged, 2nd consecutive session)
+**BTC funding rate:** +0.0079–0.0148% (mild long bias; no squeeze pressure)
+**Crash gate:** NOT triggered (BTC +3.40% 24h, well clear of −20% threshold)
+**BTC weekly gate:** ACTIVE — BTC $63,549 vs Jun 1 close ~$73,580 = −13.7%; requires 1h >5% AND catalyst <3h old (regulatory/listing/upgrade); pure momentum entries banned
+
+### Candidate Screening
+
+| Asset | 24h Chg (Kraken) | Spread | Catalyst Found | Weekly Gate Verdict |
+|---|---|---|---|---|
+| **STG/USD** | +33.2% ($0.4265→$0.5681) | 0.12% ✓ | Gate.io 8M STG withdrawal + altcoin rotation — NOT qualifying (not regulatory/listing/upgrade) | SKIP |
+| **CRV/USD** | +18.1% ($0.2119→$0.2503) | 0.10% ✓ | Short squeeze / momentum, crvUSD narrative — NOT qualifying | SKIP |
+| **XMR/USD** | +10.2% ($334.71→$368.75) | 0.21% ✓ | BTC hack laundering demand (3,520 BTC hack — same as yesterday midday) — NOT qualifying; high reversal risk | SKIP |
+| **ARB/USD** | +7.9% ($0.0776→$0.0837) | 0.24% ✓ | No fresh catalyst; June 16 token unlock (92.65M ARB, ~bearish) | SKIP |
+| **RENDER/USD** | +7.3% ($1.515→$1.626) | 0.06% ✓ | AI/GPU compute narrative; no specific fresh catalyst confirmed | SKIP |
+| **TRUMP/USD** | +6.3% ($1.644→$1.747) | 0.06% ✓ | Social media sentiment / Truth Social posts — NOT qualifying | SKIP |
+| **SOL/USD** | +6.0% ($63.14→$66.93) | 0.015% ✓ | Macro / older ETF inflows ($763M cumulative); no fresh <3h catalyst | SKIP |
+| **ADA/USD** | +5.4% ($0.1606→$0.1691) | 0.02% ✓ | Van Rossem hard fork / Protocol 11 — scheduled late-June, NOT <3h old | SKIP |
+| **BONK/USD** | +4.9% ($0.00000422→$0.00000443) | 0.05% ✓ | No catalyst (Perplexity +50% claim was stale/wrong vs actual Kraken data) | SKIP |
+| **AVAX/USD** | +4.5% ($6.378→$6.666) | 0.015% ✓ | No fresh catalyst | SKIP |
+
+### Market Context
+
+Broad risk-on rally today (+3–7% across major alts) driven by macro factors:
+- BTC recovering from recent lows ($61,042 daily low to $63,845 intraday high)
+- Macro follow-through from PPI data (noted in prior session)
+- Fear & Greed at 12 (Extreme Fear) — contrarian setup but weekly gate overrides
+- Positive funding rate (+0.0079%) suggests mild long bias; no mania
+- Top Perplexity "gainers" (Jambo +181%, Velvet +162%, DeepNode +162%) all micro-caps not listed on Kraken
+- XMR +10% continues hack-driven demand from prior day — same non-qualifying catalyst
+- STG +33% is the session's standout; catalyst is an exchange withdrawal event (Gate.io 8M STG outflow), not a qualifying catalyst under weekly gate rules
+- CRV +18% is short-squeeze/momentum driven; no protocol-specific fresh catalyst
+- ARB upcoming June 16 unlock (92.65M tokens, ~$7.7M at current prices) is a near-term bearish overhang
+
+### Risk Factors
+
+1. BTC weekly gate remains firmly active (−13.7% below Jun 1); macro rally today is not recovering the weekly trend
+2. Fear & Greed at extreme fear — market is fragile; any negative headline could reverse today's gains quickly
+3. CLARITY Act: Senate "no deal" on three issues confirmed — no binary catalyst trigger for XRP
+4. CRV/STG moves are momentum-driven without qualifying catalysts — high chase risk
+5. No qualifying catalysts (regulatory/listing/upgrade) found for any Kraken pair
+
+### Decision
+
+**HOLD — BTC weekly gate ACTIVE. No qualifying catalysts identified.**
+
+All candidates fail the weekly gate test: broad rally is macro/rotation-driven, not backed by exchange listings, regulatory events, or protocol upgrades <3h old. Pure momentum entries banned under active weekly trend gate. Capital preserved at $129.14 ZUSD pending a qualifying setup.
+
+Watchlist for next session:
+- **STG/CRV:** Monitor for sustained follow-through; would need a protocol catalyst to qualify
+- **ADA:** Van Rossem hard fork (Protocol 11) — watch for confirmation of late-June date; potential binary catalyst entry at 7% trail when announced
+- **SOL/AVAX:** Re-qualify if 1h >5% + fresh <3h catalyst emerges
+- **XRP:** CLARITY Act Senate floor vote — remains open at 7% trail whenever binary event triggers
+
