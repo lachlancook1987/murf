@@ -14586,3 +14586,50 @@ $129.14 ZUSD preserved. Monitoring triggers unchanged from pre-session research.
 
 **No trades placed. No notification sent. No commit required.**
 
+
+---
+
+## 2026-06-11 — Midday Scan
+
+### Account State
+
+| | |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None (0) |
+| Kraken open orders | None (0) |
+| Alpaca | Historical orders only (fully exited) |
+
+**BTC weekly gate:** ACTIVE — BTC $62,871 vs Jun 1 close $73,580 = −14.5%; requires 1h >5% + catalyst <3h old (regulatory/listing/upgrade)
+**Crash gate:** NOT triggered (BTC +2.3% today)
+
+---
+
+### Candidates Reviewed
+
+| Asset | 24h Move | Spread | Catalyst | 1h>5% | Gate Status | Decision |
+|---|---|---|---|---|---|---|
+| **XMR/USD** | +5.89% ($334.71→$354.43) | 0.11% ✓ | 3,520 BTC hack laundering swap — demand-driven, non-qualifying | Unclear | FAIL — hack-driven; not regulatory/listing/upgrade; high reversal risk | SKIP |
+| **CRV/USD** | +21.7% ($0.212→$0.258) | 0.097% ✓ | DeFi rotation + technical breakout — no specific fresh catalyst | No | FAIL — no qualifying catalyst; entering near HOD on +21.7% | SKIP |
+| **BNB/USD** | +2.3% ($585.88→$599.31) | 0.027% ✓ | Coinbase listing April 2025 — 15+ months stale | No | FAIL — stale catalyst; insufficient momentum | SKIP |
+| **XLM/USD** | +3.3% ($0.183→$0.189) | 0.050% ✓ | DTCC tokenized securities integration — announced May 27, 2026 (15 days stale) | No | FAIL — stale catalyst | SKIP |
+| **MORPHO/USD** | +1.74% ($2.002→$2.037) | 0.25% ✓ | $175M raise at $2B valuation (Paradigm/a16z/Ribbit/Apollo/VanEck) — fresh but fading from $2.169 HOD | No (fading) | FAIL — not 1h >5%; currently in pullback from HOD | SKIP |
+| **ENA/USD** | +6.11% ($0.072→$0.0764) | 0.13% ✓ | Ethena + Centrifuge RWA partnership (freshness unclear) | No (fading from $0.080 HOD) | FAIL — fading from high; catalyst freshness unconfirmed | SKIP |
+| **SOL/USD** | ~flat | 0.015% ✓ | Macro/CPI | No | FAIL | SKIP |
+
+### Breaking News Summary
+
+- **FCA proposal:** UK retail funds may hold up to 10% crypto (regulatory shift, BTC/ETH broadly positive, no asset-specific play)
+- **Japan stablecoins:** Big 3 banks plan joint stablecoin by March 2027 (future event, not actionable today)
+- **Morpho $175M raise:** $2B valuation, Paradigm/a16z/Ribbit/Apollo/VanEck — MORPHO fading from HOD, not 1h >5%
+- **Ethena + Centrifuge RWA:** Tokenized CLO ETF integration — ENA fading from HOD, catalyst timing unconfirmed
+- **XMR surge:** 3,520 BTC hack proceeds laundered via XMR — demand-driven spike, high reversal risk, non-qualifying catalyst
+- **"Crypto Week" July 14:** CLARITY Act/GENIUS Act/Anti-CBDC — future legislative event, no immediate binary trigger
+
+### Decision
+
+**HOLD — No new entries at midday.**
+
+BTC weekly gate ACTIVE (−14.5% vs Jun 1). All candidates fail: either non-qualifying catalysts (macro/hack-driven), stale news, or fading from intraday highs without confirmed fresh 1h >5% momentum. No exchange listings, regulatory approvals, or protocol upgrades with active price momentum identified.
+
+**$129.14 ZUSD preserved. No action taken. No notification sent.**
