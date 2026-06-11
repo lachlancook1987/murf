@@ -14804,3 +14804,32 @@ Watchlist unchanged:
 - **ADA:** Van Rossem hard fork (Protocol 11) — watch for late-June confirmation
 - **STG/CRV:** Continued momentum but lack qualifying catalysts; would need protocol catalyst
 - **SOL/AVAX:** Re-qualify if 1h >5% + fresh <3h catalyst emerges
+
+---
+
+## 2026-06-11 — Midday Scan
+
+**State:** 0 positions, 0 open orders, $129.14 ZUSD (100% cash). BTC ~$62,860 (+1.97% 24h, pulled back from $63,399 AM high).
+
+**BTC weekly gate:** ACTIVE (BTC ~−14.5% vs Jun 1 close $73,580). All entries require 1h >5% AND fresh catalyst <3h old (regulatory/listing/upgrade).
+
+### Candidates Screened
+
+| Asset | 24h Move | Spread | Catalyst | Gate Verdict |
+|---|---|---|---|---|
+| **STG/USD** | +44.5% | 0.15% ✓ | Exchange withdrawal speculation; project retired Aug 2025 (LayerZero acquisition) — no protocol catalyst | SKIP |
+| **CRV/USD** | +18.3% | 0.12% ✓ | Technical breakout + 101.9% volume surge; no protocol/listing/regulatory catalyst | SKIP |
+| **NEAR/USD** | +5.3% | 0.09% ✓ | Network upgrade was Jun 10 (stale, not <3h today) | SKIP |
+| **HMSTR/USD** | +1.1% | 1.25% ✗ | No catalyst; spread too wide | SKIP |
+| **XLM/USD** | +4.9% | 0.12% ✓ | No catalyst, <5% | SKIP |
+| **HBAR/USD** | +2.3% | 0.05% ✓ | No catalyst | SKIP |
+| **XRP/USD** | +1.72% | ~0.01% ✓ | CLARITY Act: no Senate floor vote today; bill still in pre-floor negotiations | SKIP |
+| **New Kraken listings** | — | — | Kraken margin pair expansion was Jun 4 (stale); no new listings in last 3h | SKIP |
+
+### Decision
+
+**NO ACTION — BTC weekly gate ACTIVE. No qualifying catalysts found at midday.**
+
+All moves are technical/momentum-driven. No regulatory event, exchange listing, or protocol upgrade <3h old on any Kraken pair. Pure momentum entries remain banned. Capital preserved at $129.14 ZUSD.
+
+Watchlist unchanged: XRP (CLARITY Act vote), ADA (Van Rossem Protocol 11 confirmation), STG/CRV (need protocol catalyst), SOL/AVAX (need 1h >5% + fresh <3h catalyst).
