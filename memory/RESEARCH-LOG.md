@@ -14430,3 +14430,115 @@ BTC weekly gate ACTIVE (−16.8% vs Jun 1). All screened assets either lack a qu
 - **Any Kraken asset** — 1h surge >5% + confirmed regulatory/listing/upgrade catalyst <3h old → immediate screen
 
 **Notification:** None — no action taken per Step 7 protocol.
+
+---
+
+## 2026-06-11 — Pre-Session Research (Day 22, Thursday)
+
+### Account Snapshot
+
+| | |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None (0) |
+| Kraken open orders | None (0) |
+| Alpaca | No positions, no orders (fully exited; historical orders only) |
+
+**Phase P&L:** −$50.64 (−28.17%) from Kraken starting equity $179.78
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Open | 24h Change | 24h High | 24h Low | Notes |
+|---|---|---|---|---|---|---|
+| BTC | $62,671 (ask) | $61,459 | +1.97% | $62,918 | $60,747 | Macro risk-on; CPI print today |
+| ETH | $1,654.51 (ask) | $1,620.01 | +2.13% | $1,661 | $1,602.91 | Sector follow-through; Glamsterdam delayed Q3 |
+| XRP | $1.11505 (ask) | $1.09614 | +1.72% | $1.12155 | $1.08797 | CLARITY Act no floor vote today |
+| SOL | $65.02 (ask) | $63.14 | +2.98% | $65.37 | $62.27 | Near HOD; macro/sector driven |
+| Fear & Greed | 12 | — | — | — | — | Extreme Fear (slight uptick from 9) |
+| BTC Funding Rate | Binance −0.0008%, Bybit −0.0008%, BitMEX +0.0049% | — | Flat/slightly negative | — | — | No squeeze pressure |
+
+**BTC Weekly Gate:** ACTIVE — BTC $62,671 vs Jun 1 close $73,580 = −14.8%; well below 5-trading-day gate threshold. Gate requires 1h >5% AND catalyst <3h old for entry. Crash gate NOT triggered (BTC up +1.97% today).
+
+**CPI/PPI context:** US inflation data window Jun 10–11, FOMC Jun 16–17. Today's broad risk-on move (+2-3% across BTC/ETH/SOL/XRP) appears macro-driven by CPI print. Macro economic data is NOT a "regulatory event, exchange listing, or protocol upgrade" — weekly gate criteria still apply to all entries.
+
+---
+
+### Top 24h Gainers (CoinGecko)
+
+AXION +200.9%, MAGMA +49.8%, HMSTR +47.3%, STG +45.3%, STRAX +43.6% — all micro-caps/memes, not actionable on Kraken.
+
+**Kraken-specific 24h movers (Perplexity):** OMNI +174%, MAT +66%, DOLO +53%, REX/INIT/UFD +30-50%
+
+---
+
+### Token Unlocks This Week
+
+| Date | Token | Amount | % Supply |
+|---|---|---|---|
+| Jun 12 | pump.fun (PUMP) | $17.98M | ~10B tokens |
+| Jun 17 | Spark (SPK) | $61.18M | 2.52B tokens |
+| Jun 25 | Humanity Protocol (H) | $72.40M | 269.73B tokens |
+| Jun 26 | Sahara AI (SAHARA) | ~$35.48M | ~9.6-10.5% |
+
+Supply overhang moderate this week — no massive single-day event today.
+
+---
+
+### Candidate Screening
+
+| Asset | Direction | vs Open | Spread | Catalyst | BTC Weekly Gate | Decision |
+|---|---|---|---|---|---|---|
+| **OMNI/USD** | N/A (no trades) | N/A | **37.2% ✗** | +174% 24h claim unverifiable (0 volume on Kraken) | FAIL | SKIP — illiquid, massive spread |
+| **MAT/USD** | −2.6% vs open | $0.0684 → $0.0666 | 0.30% ✓ | None — declining | FAIL | SKIP — declining, no catalyst |
+| **DOLO/USD** | Flat (+0.04%) | $0.022460 → $0.022470 | **1.82% ✗** | None | FAIL | SKIP — spread >1% |
+| **MORPHO/USD** | +1.50% vs open | $2.0022 → $2.032 | 0.097% ✓ | "Wall Street buying DeFi" — sector rotation, no fresh Morpho-specific catalyst | FAIL | SKIP — weekly gate: no asset-specific catalyst |
+| **SOL/USD** | +2.98% vs open | $63.14 → $65.02 | 0.015% ✓ | Macro risk-on / Interactive Brokers EU (stale) — no fresh <3h catalyst | FAIL | SKIP — weekly gate: no qualifying catalyst; 1h surge <5% |
+| **ETH/USD** | +2.13% vs open | $1,620 → $1,654 | 0.0006% ✓ | Glamsterdam delayed Q3 2026 — not a fresh catalyst | FAIL | SKIP — weekly gate: no fresh catalyst; 1h <5% |
+| **XRP/USD** | +1.72% vs open | $1.096 → $1.115 | 0.013% ✓ | CLARITY Act — no Senate floor vote scheduled | FAIL | SKIP — no binary catalyst trigger today |
+| **BTC/USD** | +1.97% vs open | $61,459 → $62,671 | ~0% ✓ | Macro (CPI) | FAIL | SKIP — weekly gate active; macro not qualifying catalyst |
+
+---
+
+### Trade Ideas
+
+**No qualifying setups at session open.**
+
+Under the active BTC weekly gate (BTC −14.8% vs Jun 1), the requirement is:
+- 1h momentum >5% AND fresh catalyst <3h old (regulatory/listing/upgrade)
+- OR CLARITY Act Senate floor vote for XRP at trail 7%
+
+No Kraken asset currently meets either criterion. All moves are macro/sector driven; no asset-specific catalyst confirmed. All three Kraken high-volume movers (OMNI/MAT/DOLO) fail on spread or momentum grounds.
+
+**Conditional entries (require trigger before acting):**
+
+| # | Asset | Trigger | Entry | Stop | T1 | T2 | R:R | Size |
+|---|---|---|---|---|---|---|---|---|
+| 1 | **XRP/USD** | CLARITY Act Senate floor vote confirmed today | Market immediately on news | trailing_stop 7% (binary catalyst) | ~$1.145 (+3%) | ~$1.170 (+5%) | 1.2:1 | $65–$80 (50–60% equity) |
+| 2 | **SOL/USD** | Extends to 1h +5% surge (>$66.30 from $63.14 open) AND qualifying catalyst <3h old | Market on confirmation | trailing_stop 2.5% | ~$68.50 (+3%) | ~$70 (+5%) | 1.2:1 | $50–$65 (~40-50% equity) |
+| 3 | **ETH/USD** | Glamsterdam mainnet activation date officially confirmed (protocol upgrade catalyst) | Market at confirmation | trailing_stop 2.5% | Entry +3% | Entry +5% | 1.2:1 | $40–$55 (~35-40% equity) |
+| 4 | **MORPHO/USD** | Morpho-specific catalyst <3h old (new integration, major partnership, protocol upgrade) AND 1h surge >5% | Market at confirmation | trailing_stop 3.5% (high-ATR: 12.4% daily range) | Entry +3% | Entry +5% | 1.2:1 | $40–$50 (~35% equity) |
+| 5 | **Any Kraken asset** | 1h surge >5% + confirmed regulatory/listing/upgrade catalyst <3h old | Market on confirmation | trailing_stop 2.5% (3.5% if high-ATR) | Entry +3% | Entry +5% | ≥1.2:1 | Size to conviction |
+
+---
+
+### Risk Factors
+
+1. **BTC weekly gate ACTIVE (−14.8%)** — strictest entry criteria; no pure momentum plays
+2. **Extreme Fear (12)** — persistent; high reversal risk on any spike
+3. **Macro overhang** — FOMC June 16–17 approaching; markets could reprice sharply on guidance
+4. **No asset-specific catalysts confirmed** — all moves appear macro/sector driven (CPI)
+5. **OMNI/MAT/DOLO Perplexity claims unverifiable on Kraken** — OMNI had 0 trades in current session despite alleged +174%
+6. **Phase drawdown −28.17%** — capital preservation remains priority; no forced entries
+
+---
+
+### Decision
+
+**HOLD — No new entries at session open.**
+
+BTC weekly gate ACTIVE (−14.8% vs Jun 1). Today's broad market move (+2-3% across BTC/ETH/SOL/XRP) is macro-driven by CPI data — not a qualifying "regulatory event, exchange listing, or protocol upgrade" catalyst. No Kraken-listed asset shows 1h >5% momentum. XRP CLARITY Act has no scheduled Senate floor vote today. All Perplexity-identified Kraken movers (OMNI/MAT/DOLO) fail on spread or declining momentum.
+
+$129.14 ZUSD preserved. Monitoring conditional triggers above.
+
