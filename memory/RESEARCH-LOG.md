@@ -14667,3 +14667,39 @@ BTC weekly gate ACTIVE (−14.5% vs Jun 1). All candidates fail: either non-qual
 BTC weekly gate ACTIVE. No Kraken asset shows 1h >5% momentum with a qualifying catalyst <3h old. No action taken. No notification sent. $129.14 ZUSD preserved.
 
 **$129.14 ZUSD preserved. No action taken. No notification sent.**
+
+---
+
+## 2026-06-11 — Late Session Scan (Third Pass)
+
+**Account:** $129.14 ZUSD | 0 positions | 0 orders
+**BTC:** $62,733 ask (+2.1% from $61,459 open) | Weekly gate ACTIVE (BTC −14.7% vs Jun 1 $73,580) | Crash gate NOT triggered
+**Note:** Perplexity returning BTC $91,151 (−3.04% 24h) vs Kraken live $62,733 — Kraken authoritative for execution; Perplexity used for catalyst intelligence only.
+
+### Candidates Screened
+
+| Asset | Kraken 24h Move | Spread | Catalyst | Gate Decision |
+|---|---|---|---|---|
+| **STG/USD** | +30.6% ($0.4265→$0.5570) | 0.36% ✓ | 8M STG whale withdrawal from Gate.io (reduced supply pressure) + altcoin rotation; LayerZero acquisition (1 STG = 0.08634 ZRO conversion). No protocol upgrade/listing/regulatory event. | FAIL — catalyst is whale flow + momentum rotation; NOT regulatory/listing/upgrade under weekly gate |
+| **WLD/USD** | +6.97% ($0.4500→$0.4813) | 0.083% ✓ | World App 3.0 user growth (20% DAU increase) + token unlock extension (3yr→5yr) + Eightco Holdings WLD treasury reserve. No fresh <3h Kraken listing or regulatory approval confirmed. | FAIL — catalysts are not fresh <3h regulatory/listing/upgrade; currently off HOD ($0.5164) |
+| **BONK/USD** | +2.94% ($0.000004220→$0.000004344) | 0.046% ✓ | No specific catalyst; memecoin rotation noise | FAIL — insufficient momentum, no catalyst |
+| **XMR/USD** | +5.89% (midday scan finding) | 0.11% ✓ | BTC hack proceeds laundering — demand-driven, non-qualifying, high reversal risk | FAIL (carry-forward from midday scan) |
+| **CRV/USD** | ~+17% (fading from +21.7% HOD) | 0.097% ✓ | DeFi rotation, no specific fresh catalyst | FAIL (carry-forward; fading from HOD) |
+
+### News / Catalyst Summary
+
+- **No exchange listings on Kraken today** — LBank/Bybit futures listings found (ZM, DKNG, RIVN, SPCX) are not Kraken spot
+- **No regulatory approvals** for Kraken-listed assets confirmed today
+- **No protocol upgrades** with active price momentum on Kraken today
+- **STG whale event** is on-chain signal, not a qualifying weekly-gate catalyst
+- **WLD World App 3.0** is stale (Lift Off event was April 17, 2026 — 55 days ago)
+- **Fear & Greed Index: 12** (Extreme Fear, unchanged)
+- **Perplexity 24h gainer claims unreliable** — BONK +50% Perplexity vs +3% Kraken; STG +108% Perplexity vs +30.6% Kraken; likely different reference prices or stale data
+
+### Decision
+
+**HOLD — No new entries. Third pass confirms all prior HOLD decisions.**
+
+BTC weekly gate ACTIVE (−14.7% vs Jun 1). No Kraken asset has 1h >5% momentum with a confirmed qualifying catalyst (regulatory event, exchange listing, or protocol upgrade) <3h old. STG's whale-flow catalyst and WLD's stale upgrade narrative do not meet the weekly gate exception criteria.
+
+**$129.14 ZUSD preserved. No trades placed. No notification sent. No commit required.**
