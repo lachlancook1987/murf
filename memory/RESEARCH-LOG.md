@@ -14632,4 +14632,38 @@ $129.14 ZUSD preserved. Monitoring triggers unchanged from pre-session research.
 
 BTC weekly gate ACTIVE (−14.5% vs Jun 1). All candidates fail: either non-qualifying catalysts (macro/hack-driven), stale news, or fading from intraday highs without confirmed fresh 1h >5% momentum. No exchange listings, regulatory approvals, or protocol upgrades with active price momentum identified.
 
+---
+
+## 2026-06-11 — Midday Scan Update (Second Pass)
+
+**Account:** $129.14 ZUSD | 0 positions | 0 orders
+**BTC:** $62,903 (+2.35% from open) | Weekly gate ACTIVE (BTC −14.5% vs Jun 1 $73,580) | Crash gate NOT triggered
+
+### Additional Candidates Checked
+
+| Asset | 24h Move | Spread | Catalyst | Decision |
+|---|---|---|---|---|
+| **ONDO/USD** | +6.4% ($0.3329→$0.3540) | 0.073% ✓ | Ondo Perps launch June 10 — >24h old, NOT <3h | FAIL — stale catalyst under weekly gate |
+| **KAS/USD** | +0.7% ($0.030350→$0.030570) | 0.033% ✓ | None — flat, below $0.031 re-entry trigger | FAIL — below watchlist trigger, no catalyst |
+| **LIT/USD** | Below open (ask $0.0831 vs open $0.0844) | 1.08% ✗ | None — Perplexity +97% claim was wrong/stale | FAIL — spread >1%, actually declining |
+| **VTHO/USD** | +2.4% | 0.43% ✓ | None — Perplexity +34% claim was wrong | FAIL — no catalyst, insufficient momentum |
+| **PORTAL/USD** | +1.7% | 0.59% ✓ | None — Perplexity +34% claim was wrong | FAIL — no catalyst, insufficient momentum |
+| **SOL/USD** | +3.5% (ask $65.36) | 0.015% ✓ | Macro (PPI) — not a qualifying catalyst | FAIL — weekly gate; not 1h >5%; macro-only |
+| **XRP/USD** | +1.7% | 0.013% ✓ | CLARITY Act — no Senate floor vote ("no deal" confirmed) | FAIL — no binary catalyst trigger |
+
+### News Summary
+
+- **US-Iran tensions** (Strait of Hormuz): geopolitical risk-off — NOT a qualifying catalyst under weekly gate
+- **US PPI (May 2026):** today's macro print driving broad +2–3.5% moves — macro, not qualifying
+- **XRP CLARITY Act:** Sen. Alsobrooks confirms "no deal" on three outstanding issues; vote not imminent
+- **ONDO Perps beta:** June 10 launch (yesterday) — price following through but catalyst too old
+- **No fresh listings, regulatory approvals, or protocol upgrades confirmed in last 3 hours**
+- **Perplexity altcoin claims unreliable today** — LIT/VTHO/PORTAL figures were stale/wrong vs actual Kraken data
+
+### Decision
+
+**HOLD — No new entries. Second-pass confirms prior midday HOLD.**
+
+BTC weekly gate ACTIVE. No Kraken asset shows 1h >5% momentum with a qualifying catalyst <3h old. No action taken. No notification sent. $129.14 ZUSD preserved.
+
 **$129.14 ZUSD preserved. No action taken. No notification sent.**
