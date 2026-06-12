@@ -15019,3 +15019,56 @@ Three consecutive NEAR stop-outs in 7-day window: Jun 6, Jun 7, Jun 8-9 (dynamic
 PYTH missed its entry window (no VWAP pullback offered; price extended). XLM and ONDO have stale catalysts. NEAR blocked by same-thesis entry cap. SOL breakout not triggered. BNB has no momentum. Extreme Fear 12 continues to limit follow-through on all moves. Capital preserved at $129.14 ZUSD.
 
 No notification sent (no action taken).
+
+No notification sent (no action taken).
+
+---
+
+## 2026-06-12 — Afternoon Session-Open Scan
+
+**State:** 0 positions, 0 open orders, $129.14 ZUSD (100% cash). BTC $64,069 (+0.81% from 24h open $63,554; near 24h high $64,125). Alpaca: 0 positions.
+
+**BTC crash gate:** NOT triggered (BTC +0.81% from open).
+**BTC weekly gate:** NOT ACTIVE (BTC +2.3% over 5 trading days — Jun 5 ~$61,965 → Jun 12 ~$64,069).
+
+### Fresh Quotes
+
+| Asset | Ask | 24h Open | Change | Spread | Notes |
+|---|---|---|---|---|---|
+| BTC/USD | $64,069 | $63,554 | +0.81% | 0.001% ✓ | Near 24h high $64,125 |
+| PYTH/USD | $0.03841 | $0.03797 | +1.16% | 0.10% ✓ | Pulled back from midday high $0.04022 |
+| XLM/USD | $0.19371 | $0.19197 | +0.91% | 0.07% ✓ | Below $0.193 recovery target |
+| SOL/USD | $68.56 | $66.86 | +2.54% | 0.06% ✓ | Above pre-session breakout trigger $67.19; near 24h high $68.59 |
+| NEAR/USD | $2.1158 | $2.0631 | +2.56% | 0.009% ✓ | Approaching day high $2.1507 |
+| KAS/USD | $0.03142 | $0.03111 | +1.00% | 0.006% ✓ | Above $0.031 reclaim level; weak momentum |
+| ZEC/USD | $429.45 | $428.25 | +0.28% | 0.11% ✓ | Flat; no momentum |
+| SUI/USD | $0.76750 | $0.75320 | +1.90% | 0.01% ✓ | Moderate move; no catalyst |
+
+### Candidate Screening
+
+| Asset | Verdict | Reason |
+|---|---|---|
+| **PYTH/USD** | SKIP | Pyth Indices launch was June 10 (2 days ago) — stale >6h. Follow-on Pyth Pro migration (today) is operational/minor, not a price catalyst. 1h momentum +0.7% (below >3% threshold). Price pulled back to $0.03841 (near pre-session $0.037–$0.038 entry zone) but no fresh momentum signal. 4h bearish divergence per Binance. |
+| **XLM/USD** | SKIP | DTCC partnership announcement is days old (stale). Price $0.19371 still below $0.193 recovery target. +0.91% from open — insufficient momentum. |
+| **SOL/USD** | SKIP | Pre-session breakout trigger $67.19 has been cleared (current $68.56). However: no fundamental catalyst (purely technical); SpaceX IPO listing today is drawing institutional capital away from crypto (2 weeks of BTC ETF outflows); entering a no-catalyst technical setup in an ETF-outflow environment at/near session high ($68.56 vs high $68.59) has poor risk context. Momentum +2.54% from open but only +1.41% from breakout trigger. |
+| **NEAR/USD** | SKIP | Same-thesis entry cap cooling period has expired (Jun 12 > Jun 11). Investigated potential new catalyst (NEAR Intents + ZEC swaps): verified announcement was February 8, 2025 — over a year old, not a today catalyst. Perplexity hallucinated this as fresh. Resharding remains the only active thesis — still blocked by same-thesis cap. Momentum +2.56% from open (below >3% threshold). |
+| **KAS/USD** | SKIP | Same Toccata/Tokamak upgrade thesis; no materially new catalyst confirmed. Perplexity did not surface any new exchange listing or protocol announcement for KAS today. +1.0% momentum — well below threshold. Same-thesis entry cap cooling expired but no new catalyst. |
+| **ZEC/USD** | SKIP | SEC investigation closure catalyst was already priced in (prior rally). +0.28% from open — completely flat. No intraday momentum signal. |
+| **SUI/USD** | SKIP | +1.90% momentum; no catalyst identified. Below >3% threshold. |
+
+### Macro Context
+
+- **SpaceX IPO today (June 12):** Pre-IPO market cap $1.75–1.77T, expected to break records. Drawing institutional capital away from crypto — 2 consecutive weeks of Bitcoin ETF outflows attributed in part to capital rotation into SpaceX. Negative headwind for crypto momentum plays today.
+- **Extreme Fear index:** 12 (4th consecutive session) — market sentiment deeply negative; rallies fragile.
+- **CLARITY Act:** Senate debate still expected early July; no floor vote today.
+- **No fresh Kraken pair catalysts in last 3h** (no new listings, protocol upgrades, or regulatory events on any tracked pair).
+
+### Decision
+
+**NO ACTION — no qualifying setups this afternoon.**
+
+All candidates fail at least one hard gate: PYTH (catalyst stale), XLM (catalyst stale, below target), SOL (no catalyst + SpaceX IPO macro headwind), NEAR (same thesis, no new catalyst), KAS (same thesis, no new catalyst), ZEC/SUI (no momentum, no catalyst).
+
+Market continues in Extreme Fear with institutional capital rotating to SpaceX IPO. No positions remain on watch for immediate entry. Tomorrow (weekend session): same standards apply — require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entry.
+
+No notification sent (no action taken).
