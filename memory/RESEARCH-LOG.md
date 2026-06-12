@@ -14833,3 +14833,153 @@ Watchlist unchanged:
 All moves are technical/momentum-driven. No regulatory event, exchange listing, or protocol upgrade <3h old on any Kraken pair. Pure momentum entries remain banned. Capital preserved at $129.14 ZUSD.
 
 Watchlist unchanged: XRP (CLARITY Act vote), ADA (Van Rossem Protocol 11 confirmation), STG/CRV (need protocol catalyst), SOL/AVAX (need 1h >5% + fresh <3h catalyst).
+
+---
+
+## 2026-06-12 — Pre-Session Research
+
+### Account Snapshot
+
+| | |
+|---|---|
+| Kraken ZUSD | $129.14 (100% cash) |
+| Kraken positions | None (0) |
+| Kraken open orders | None (0) |
+| Alpaca positions | None (fully exited; stop a2b44cf9 cancelled 2026-05-22) |
+| Phase P&L | −$50.64 (−28.17%) from Kraken starting equity $179.78 |
+
+### Market Snapshot
+
+| Asset | Price | 24h Change | Note |
+|---|---|---|---|
+| BTC | ~$63,400 (Kraken $63,468) | +2.5–2.7% | Recovery from Jun 9-10 lows ~$61,000 |
+| ETH | ~$1,673 | +1.31% | Lagging BTC |
+| Top 24h gainers | PYTH +25%, LIT +97% (Kraken), STG +51%, LUMIA +34% | Various | See screening below |
+
+**Fear & Greed Index:** 12 — Extreme Fear (4th consecutive session at this level)
+**BTC funding rate:** Mixed — Binance −0.0013%, BitMEX −0.0129%, Bybit +0.0086% (8h basis). Mild net negative, slight short-bias environment.
+**Crash gate:** NOT triggered (BTC +2.5% 24h)
+
+### BTC Weekly Gate Re-Assessment
+
+**Weekly gate: NOT ACTIVE today.**
+
+Prior sessions (Jun 10-11) incorrectly compared BTC to the June 1 close ($73,580). The strategy specifies a rolling **5 trading-day** lookback:
+- 5 trading days ago = **June 5, 2026**: BTC ~$61,965
+- Today (June 12): BTC ~$63,400
+- Change: **+2.3%** (BTC UP over 5 trading days)
+- Gate requires BTC down >3% over 5 days — **NOT triggered**
+
+Normal entry criteria apply. No additional filters beyond crash gate.
+
+### Catalyst Inventory
+
+| Catalyst | Asset | Freshness | Strength |
+|---|---|---|---|
+| **Pyth Indices launch** — 24/7 pricing for equities, oil, metals, FX; backed by Coinbase, Kraken, dYdX; $7B TVS milestone | PYTH | Today/recent | ⭐⭐⭐ Strong |
+| **DTCC/Stellar tokenization partnership** — DTC-custodied assets to go live on Stellar network H1 2027; builds on Dec 2025 SEC No-Action Letter | XLM | Recent (days) | ⭐⭐ Moderate |
+| **NEAR dynamic resharding** — Network Upgrade 2.13 scheduled June 2026; no exact date confirmed; may have already activated Jun 10 | NEAR | Stale/uncertain | ⭐ Weak |
+| **CLARITY Act** — Senate debate expected early July; no floor vote today | XRP | Forward-looking | ⭐ Not actionable today |
+| **PUMP token unlock** — 10B tokens June 12 (~$17.98M); bearish pressure | PUMP | Today | N/A (not on Kraken) |
+| **SpaceX IPO narrative** — cross-asset risk-on signal; indirect crypto tailwind | Broad | Days | Background |
+
+### Candidate Screening
+
+| Asset | 24h Move | Spread | Volume | Gate | Verdict |
+|---|---|---|---|---|---|
+| **PYTH/USD** | +17% from low; +2.5% from 24h open | 0.21% ✓ | 9.2M 24h units | No gate | **TRADE — watch entry** |
+| **XLM/USD** | +4% (24h low $0.1846 → high $0.1995); pulling back to $0.1906 | 0.058% ✓ | 14.6M 24h units | No gate | **TRADE — conditional entry** |
+| **SOL/USD** | −0.6% from 24h open | 0.015% ✓ | Liquid | No gate | WATCHLIST (breakout only) |
+| **NEAR/USD** | +1.7% from 24h open | 0.09% ✓ | 4.5M 24h units | No gate | WATCHLIST (upgrade confirmation) |
+| **STG/USD** | +51% 24h (retired LayerZero protocol, speculative) | 1.13% ✗ | — | Spread fail | SKIP |
+| **LIT/USD** | +97% (Kraken) | 1.52% ✗ | 13K units (thin) | Spread + volume fail | SKIP |
+| **PORTAL/USD** | +34% | 1.07% ✗ | Thin | Spread fail | SKIP |
+| **OMNI/USD** | +174% (other exchange data) | 37% ✗ | 0 trades | Untradeable | SKIP |
+| **XRP/USD** | −0.4% from open | 0.001% ✓ | 22K trades | No binary catalyst | SKIP (no catalyst today) |
+| **TAO/USD** | −1.1% from open | 0.046% ✓ | Moderate | No catalyst | SKIP |
+| **VTHO/USD** | +34% (24h) | 0.40% ✓ | 2 trades today | Illiquid | SKIP |
+
+### Trade Ideas
+
+---
+
+**IDEA 1: PYTH/USD — Pyth Indices Launch**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Pyth Indices launch: first oracle to provide 24/7 pricing for U.S. equities, commodities (oil, metals), FX, and thematic baskets. Backed by Coinbase, Kraken, dYdX. $7B TVS milestone confirmed. Expands Pyth's total addressable market from crypto to all global financial assets. |
+| **Current price** | Ask $0.03891; 24h open $0.03797; 24h low $0.03322; 24h high $0.03972 |
+| **Entry** | Preferred: pullback to $0.037–$0.038 range (VWAP retest, currently $0.03681 24h VWAP). Breakout entry: above $0.03972 24h high on volume expansion. Avoid chasing at current price ($0.03891, which is 5.6% above VWAP). |
+| **T1** | Entry +3% |
+| **T2** | Entry +5% |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5`; if high intraday ATR persists, use 3.5% |
+| **R:R** | 1.2:1 at T1 vs 2.5% stop ✓ |
+| **Spread** | 0.21% ✓ |
+| **Size** | $65–$80 (50–60% equity); institutional-grade catalyst justifies conviction sizing |
+| **Risk** | Already 17% off lows; near 24h high; VWAP gap of 5.6%; Extreme Fear index at 12 limits follow-through; entry timing is critical |
+
+---
+
+**IDEA 2: XLM/USD — DTCC Tokenization Partnership**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | DTCC + Stellar Development Foundation announced DTC-tokenized assets will become available on Stellar in H1 2027. Builds on Dec 2025 SEC No-Action Letter. DTCC described as a "multi-chain strategy" — validates XLM as an institutional-grade chain. |
+| **Current price** | Ask $0.19068; 24h open $0.19197; 24h high $0.19950; pulling back |
+| **Entry** | Current ask $0.19068 with acceptance of pullback risk, OR wait for recovery above $0.193 with volume |
+| **T1** | $0.1964 (+3% from $0.1907) |
+| **T2** | $0.2002 (+5% from $0.1907) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.2:1 at T1 ✓ |
+| **Spread** | 0.058% ✓ (best in universe) |
+| **Size** | $40–$50 (30–40% equity); catalyst is genuine but already partially priced in |
+| **Risk** | Catalyst was announced days ago (not today); market already hit $0.1995 high; current price pulling back from high; H1 2027 is distant, not an immediate event |
+
+---
+
+**IDEA 3: SOL/USD — Technical Breakout (Conditional)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Technical only — no fundamental catalyst. Broad market beta play if crypto risk-on continues. |
+| **Entry condition** | ONLY if SOL breaks above $67.19 (24h high) with volume expansion |
+| **Entry** | ~$67.25 on confirmed breakout |
+| **T1** | $69.27 (+3%) |
+| **T2** | $70.61 (+5%) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.2:1 ✓ |
+| **Spread** | 0.015% ✓ (tightest in universe) |
+| **Size** | $30–$40 on breakout confirmation only |
+| **Risk** | No catalyst; purely technical; current price $66.45, down −0.6% from open |
+
+---
+
+**IDEA 4: NEAR/USD — Upgrade Catalyst (Watchlist)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Dynamic resharding (Network Upgrade 2.13) scheduled June 2026 — exact date not confirmed; may have activated Jun 10 |
+| **Entry condition** | ONLY if upgrade goes live + 1h >3% surge with volume confirmation |
+| **Spread** | 0.09% ✓ |
+| **Current** | $2.10; +1.7% from open; weekly trend bearish (−15%) |
+| **Size** | $25–$35 conditional only |
+| **Risk** | Upgrade may be stale (Jun 10 activation rumored in prior sessions); weekly bear trend headwind |
+
+---
+
+### Risk Factors
+
+- **Extreme Fear index 12** (4 sessions now): market sentiment deeply negative; rallies are fragile; momentum may lack follow-through
+- **PUMP.fun token unlock today** (10B tokens ~$18M): could weigh on sentiment for smaller tokens
+- **BTC stalled at $63,400**: not making new highs; SpaceX IPO risk-on narrative not fully catalyzing
+- **None of the candidates are in active 1h momentum right now** at time of research — PYTH made its move earlier; XLM pulling back from high
+- **Best entries are timed, not market orders now**: wait for either PYTH pullback to VWAP or XLM to recover $0.193 before entering
+
+### Decision
+
+**TRADE** — BTC weekly gate NOT active (BTC up +2.3% over 5 days). Normal entry criteria apply.
+
+Primary plan: PYTH/USD on Pyth Indices launch catalyst (entry on pullback to $0.037–$0.038 or breakout above $0.03972). Secondary: XLM/USD on DTCC tokenization narrative (entry on recovery above $0.193 with volume). Conditional: SOL breakout >$67.19.
+
+No positions currently open. All entries are timed — do not chase. Wait for intraday momentum setups to confirm before placing orders.
+
