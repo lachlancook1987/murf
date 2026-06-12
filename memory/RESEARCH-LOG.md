@@ -14983,3 +14983,39 @@ Primary plan: PYTH/USD on Pyth Indices launch catalyst (entry on pullback to $0.
 
 No positions currently open. All entries are timed — do not chase. Wait for intraday momentum setups to confirm before placing orders.
 
+
+---
+
+## 2026-06-12 — Midday Scan
+
+**State:** 0 positions, 0 open orders, $129.14 ZUSD (100% cash). BTC ~$63,623 (+0.1% from open). Alpaca: 0 positions (residual stop a2b44cf9 confirmed cancelled — only filled historical orders visible).
+
+**BTC crash gate:** NOT triggered (BTC +0.1% from open, +2.5% 24h).
+**BTC weekly gate:** NOT ACTIVE (BTC +2.3% over 5 trading days). Normal entry criteria apply.
+
+### Candidate Evaluation
+
+| Asset | Current Price | vs Open | 24h High | Spread | Status | Verdict |
+|---|---|---|---|---|---|---|
+| **PYTH/USD** | $0.03975 (ask) | +4.7% | $0.04022 | 0.23% ✓ | Already ran; 7.1% above VWAP; pre-session said don't chase at $0.03891 | SKIP |
+| **XLM/USD** | $0.19446 (ask) | +1.3% | $0.19950 | 0.16% ✓ | Catalyst (DTCC partnership) is days old — not <6h; pulling back from day high | SKIP |
+| **SOL/USD** | $67.08 (ask) | +0.3% | $67.39 | 0.015% ✓ | Breakout trigger $67.19 not cleared; no catalyst | SKIP |
+| **NEAR/USD** | $2.1328 (ask) | +3.4% | $2.1447 | 0.07% ✓ | Same-thesis entry cap: 3 stop-outs Jun 6/7/8 in 7-day window; dynamic resharding = same old catalyst; no materially new development | DISQUALIFIED |
+| **ONDO/USD** | $0.3675 (ask) | +0.6% | $0.3696 | 0.07% ✓ | New tokenization pilot (Ripple/JPMorgan/Mastercard) announced May 7 — >1 month stale; no momentum; 2 stop-outs in 7-day window | DISQUALIFIED |
+| **BNB/USD** | $606.20 (ask) | +0.2% | $607.19 | 0.023% ✓ | Coinbase listing catalyst — catalyst freshness uncertain; zero price momentum | SKIP |
+
+### PYTH Detail
+
+Intraday move: $0.03322 (24h low) → $0.04022 (24h high) = +21% intraday range before current pullback to $0.03975. At time of midday scan, PYTH is +4.7% from open but 1.2% below its session high. Pre-session warned against chasing at $0.03891 (5.6% above VWAP); current $0.03975 is 7.1% above the 24h VWAP of $0.037068 — even more extended. Perplexity confirms not a clean breakout (price below MA50 $0.0443). Optimal entry window (VWAP pullback to $0.037–$0.038) was not offered; breakout was executed earlier and the move is largely in.
+
+### NEAR Same-Thesis Entry Cap
+
+Three consecutive NEAR stop-outs in 7-day window: Jun 6, Jun 7, Jun 8-9 (dynamic resharding catalyst). Rule: after 2 stop-outs in 7 days, 48h cooling + materially new catalyst required. Cooling period has passed (Jun 12 > Jun 9 + 48h = Jun 11). However, current catalyst is still "dynamic resharding" — identical to the thesis rejected three times. No new exchange listing, regulatory event, or protocol upgrade beyond the same resharding thesis. Entry blocked.
+
+### Decision
+
+**NO ACTION — no qualifying setups at midday.**
+
+PYTH missed its entry window (no VWAP pullback offered; price extended). XLM and ONDO have stale catalysts. NEAR blocked by same-thesis entry cap. SOL breakout not triggered. BNB has no momentum. Extreme Fear 12 continues to limit follow-through on all moves. Capital preserved at $129.14 ZUSD.
+
+No notification sent (no action taken).
