@@ -4777,3 +4777,15 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 
 **Trades today:** none | **Total since migration:** ~65
 **Notes:** Second consecutive full-cash day. Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC surged +2.31% today (Jun 10 close ~$61,431 → $62,853 at EOD Jun 11), so holding cash underperformed BTC by −2.31%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +2.31%, well below 20% threshold). Watchlist: ONDO (post-perps-launch momentum), KAS (re-entry conditional on $0.031+ reclaim + volume), any 1h >3% surge with fresh <6h catalyst. Tomorrow: require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entering.
+
+---
+
+### Jun 12 — EOD Snapshot (Day 23, Friday)
+**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −0.88%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~65
+**Notes:** Third consecutive full-cash day. Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC gained +0.88% today (Jun 11 close ~$62,853 → $63,407 ask at EOD Jun 12), so holding cash underperformed BTC by −0.88%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +0.88%, well within threshold). Kraken open: ask $63,407.20, bid $63,407.10, 24h open $63,553.70 (−0.23% intraday). Watchlist: any 1h >3% surge with fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 required before entry. Tomorrow: weekend session — maintain same entry standards; no relaxation of catalyst or R:R rules.
