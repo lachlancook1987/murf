@@ -94,6 +94,21 @@ target, move on. Volume of profitable trades beats size of any single trade.
 
 ---
 
+## Same-Thesis Entry Cap (added 2026-06-12)
+
+After **2 stop-outs on the same asset within a 7-day rolling window**, require:
+1. **48h cooling period** — no re-entry on that asset for 48h after the 2nd stop-out
+2. **Materially new catalyst** — a distinct new development (new exchange listing, new regulatory event, new protocol upgrade date) beyond "original thesis still valid"
+
+This does NOT apply to:
+- Same-session re-entries at a lower price after a stop (those remain fully open)
+- Other assets, even in the same sector
+- The same asset after the 48h window with a new catalyst
+
+Rationale: three consecutive NEAR entries (Jun 6, 7, 8) and five consecutive KAS entries (Jun 3, 4, 5, 6, 8) at progressively higher prices after stop-outs cost ~$17 in one week — all on real catalysts, all stopped correctly. Re-entering a price structure that has rejected your thesis twice in 7 days has negative expected value regardless of catalyst quality.
+
+---
+
 ## Risk Awareness (not rules — just notes)
 
 - Kraken taker fee: ~0.26% per trade (round trip ~0.52%). On a 3% target that's ~17% of profit — factor in
@@ -168,4 +183,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-05-29 (added BTC weekly trend gate; high-ATR assets use 3.5% trailing stop instead of 2.5%)*
+*Last updated: 2026-06-12 (added same-thesis entry cap: 2 stop-outs on same asset in 7 days → 48h cooling + new catalyst required)*

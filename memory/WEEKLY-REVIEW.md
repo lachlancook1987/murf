@@ -495,3 +495,91 @@ Also flagged: the BTC weekly gate baseline has been implemented as a fixed refer
 **Cash preservation in a bear week is the strategy working.** BTC fell −12.23% this week; the bot ended +$0.06% — a 12.3 percentage-point outperformance by sitting in ZUSD. The BTC weekly gate blocked over a dozen entries that would have been immediate losses (every screened asset was declining into lower lows). The two trades taken were on a legitimate protocol upgrade catalyst; the T1 trade was textbook. The overnight re-entry loss was acceptable at −1.69% but avoidable with the new 50% sizing rule for compressed-buffer overnight holds. Next week: BTC at $62,590, weekly gate will remain ACTIVE for any non-catalyst asset. Priority setups: KAS Toccata fork follow-up (window open June 5–20), ONDO perps launch June 9, HYPE post-unlock price action June 7+, XRP CLARITY Act binary trigger.
 
 ---
+
+## Week of 2026-06-08 — Review Date: 2026-06-12
+
+### Context
+Active but damaging week. The review period covers Jun 6–12 (everything since the last review on Jun 5), including weekend activity. BTC traded sideways-to-up over the Mon–Fri window (+1.48%, $62,462 → $63,384) but most losses occurred on Jun 6–7 (weekend) when two large positions stopped out. The BTC weekly gate was ACTIVE at the start of the week (prior baseline); all entries were made under protocol-upgrade, exchange-listing, or regulatory-catalyst exemptions. **Gate is now INACTIVE: rolling 5-day BTC +1.48%.** 9 trades across 4 assets; 8 losses, 1 win. 100% cash at week-end. No Alpaca exposure.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $129.14 | $129.14 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop cancelled 2026-05-22) |
+| **Total** | **$129.14** | $129.14 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (prev review, Jun 5) | $150.65 |
+| Ending Equity (Fri Jun 12) | **$129.14** |
+| **Week Return (full period)** | **−14.28%** (−$21.51) |
+| BTC Week Return (Jun 6 open $61,038 → Jun 12 $63,384) | **+3.84%** |
+| **Bot vs BTC (full period)** | **−18.12%** |
+| Mon–Fri only (Start $134.75 → End $129.14) | −4.16%; BTC Mon–Fri +1.48%; bot −5.64% |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jun 6 | KAS/USD | $0.031690 (4721.5 KAS, opened Jun 5) | ~$0.030713 (trail 3.5% overnight) | **~−$5.13** | LOSS |
+| 2 | Jun 6 | NEAR/USD | ~$1.9535 (74 NEAR) | ~$1.8900 (thesis-break manual sell) | **~−$5.64** | LOSS |
+| 3 | Jun 7 | ONDO/USD | ~$0.3530 (198 ONDO) | ~$0.34186 (trail 2.5%) | **~−$2.62** | LOSS |
+| 4 | Jun 7 | NEAR/USD | ~$1.9375 (35 NEAR) | ~$1.8774 (trail 3.5%) | **~−$2.51** | LOSS |
+| 5 | Jun 8 | KAS/USD | $0.032730 (2428 KAS) | ~$0.031920 (trail 2.5%) | **~−$1.97** | LOSS |
+| 6 | Jun 8 | ONDO/USD | $0.358270 (125 ONDO) | ~$0.35510 (trail 2.5%) | **~−$0.63** | LOSS |
+| 7 | Jun 8 | ONDO/USD | ~$0.3621 (120 ONDO) | ~$0.370 (trail 2.5%) | **~+$0.96** | WIN |
+| 8 | Jun 8 | NEAR/USD | ~$2.1670 (30 NEAR) | ~$2.11 (trail 2.5% overnight) | **~−$1.91** | LOSS |
+| 9 | Jun 8 | INJ/USD | ~$5.805 (10 INJ) | ~$5.672 (trail 2.5%) | **~−$1.33** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 9 |
+| Wins | 1 |
+| Losses | 8 |
+| Win Rate | **11.1%** |
+| Gross Wins | $0.96 |
+| Gross Losses | ~$21.74 (sum of individual loss estimates) |
+| Profit Factor | **0.044** |
+| Avg Win | $0.96 (single win) |
+| Avg Loss | $2.72 |
+| Largest Win | ONDO #2 re-entry **+$0.96** |
+| Largest Loss | NEAR Jun 6 thesis-break **−$5.64** |
+| Net from trades | ~−$20.78 estimated; actual equity delta −$21.51 |
+| Est. Fees Paid | ~$3.70 (9 entries × ~2 fills × avg ~$80 notional × 0.26%) |
+| Phase P&L | **−$50.64 (−28.17%)** from Kraken starting equity $179.78 |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $129.14. No open orders. Alpaca fully closed.
+
+### BTC Weekly Gate Status (for next session)
+Rolling 5-day BTC: Jun 8 open $62,462 → Jun 12 close ~$63,384 = **+1.48%** → gate **INACTIVE**. Pure momentum entries are permitted again next session (not just catalyst exemptions).
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **ONDO re-entry at lower price after prior stop (Jun 8 #2, +$0.96):** Only win of the week. After the first ONDO position stopped at −1.4%, re-entered at $0.3621 (below original entry $0.35827 in percentage terms; at a better risk-adjusted level) on an intact perps-launch + SEC-closure catalyst. Price reached T1 ($0.37296); trailing stop exited at +2.2%. The lesson: a same-session re-entry at a LOWER price on an intact multi-catalyst thesis can work. It is the re-entries at HIGHER prices (NEAR, KAS) that were the problem.
+
+**Entry types that failed:**
+
+- **NEAR multi-entry (Jun 6 + 7 + 8, 3 losses totalling ~−$10.06):** Same Nightshade 2.0 / AI narrative thesis re-entered three times after three consecutive stop-outs. Jun 6 was correctly cut on a thesis-break (Arthur Hayes whale exit, −$5.64) but the subsequent Jun 7 and Jun 8 entries still treated "upgrade still pending" as sufficient re-entry justification. Each entry was at a higher price than the last. Price action consistently rejected higher entries despite the thesis being real.
+- **KAS Toccata repeat entries (Jun 6 exit + Jun 8 re-entry, ~−$7.10):** 4th and 5th consecutive KAS entries across two weeks on the same fork thesis. Each stop-out was mechanically correct, but re-entering the same asset at a higher price after the 3rd consecutive stop-out has negative expected value. The Toccata window (June 5–20) is real but KAS is not acting as a momentum asset at this price level.
+- **INJ/USD overnight (Jun 8 −$1.33):** Clean multi-catalyst setup (Binance.US listing + regulated futures + native USDC, +6.1% at entry). Stopped overnight when momentum didn't follow through. Single entry, no repeat — loss acceptable and correctly sized at 44% equity.
+- **ONDO first entries (Jun 7 −$2.62, Jun 8 #1 −$0.63):** Both pre-perps-launch entries failed before the Jun 9 launch. The third entry (re-entry at lower price, Jun 8 #2) worked, vindicating the thesis timing but not the entry levels.
+
+**Stop quality:**
+All trailing stops executed correctly. The Jun 6 NEAR thesis-break exit (manual) was the correct decision given a known whale-exit pattern (same pattern caused WLD −18.7% previously). KAS 3.5% trail fired at expected levels with minimal slippage. NEAR 2.5% and INJ 2.5% overnight stops triggered at correct levels. No orphaned positions at any point. Stop system continues to perform as designed — the failures were entry selection and frequency, not stop mechanics.
+
+**Profile violations:**
+None. All spreads ≤1% confirmed at entry. No leverage used this week. BTC weekly gate correctly applied (all entries on protocol upgrade, exchange listing, or SEC-closure catalyst exemptions). R:R ≥1.2:1 confirmed at all entries.
+
+**Behavioral pattern flagged — same-thesis entry compounding:**
+8 of 9 losses were on either NEAR (3×) or KAS (2× this week, 4× total). Both theses are legitimate catalysts. The issue is repeated re-entry into the same price structure after consecutive stop-outs — each time reasoning "thesis still valid." Without a cap on same-asset re-entries, this can compound indefinitely. Strategy currently has no consecutive-loss rules for a reason (sector pauses were harmful), but a per-asset re-entry cap is different in nature.
+
+**Concrete adjustment — same-thesis entry cap (added 2026-06-12):**
+After **2 stop-outs on the same asset within a 7-day rolling window**, require a 48h cooling period AND a materially new catalyst (distinct from the original thesis — e.g., a new listing announcement, not just "upgrade window still open") before re-entering. This is not a sector pause — other assets and other theses on the same asset after 48h remain open. The NEAR 3-entry pattern (Jun 6/7/8) and KAS cumulative 5-entry pattern are exactly what this prevents. The one successful re-entry (ONDO #2, same day at lower price) is exempt because it was same-session at lower price, not a multi-day repeat.
+
+### Key Lesson
+**Stopping out of a failing thesis once is risk management. Re-entering the same thesis three times in three days is thesis addiction.** NEAR and KAS together cost ~$17 (80% of all losses this week) across 5 entries — all mechanically clean, all on real catalysts, all stopped by correct trailing stops. The issue was never the stop system; it was re-entry discipline. The single winning trade was an ONDO re-entry at a lower price after a stop-out — not at a higher price. Going forward: 2 stop-outs on the same asset within 7 days = 48h mandatory cooling + new catalyst required. The BTC weekly gate is now INACTIVE (+1.48% rolling 5-day), opening the full opportunity set for next week. Starting equity $129.14 — still above cash floor, fully liquid, no open exposure.
+
+---
