@@ -15072,3 +15072,145 @@ All candidates fail at least one hard gate: PYTH (catalyst stale), XLM (catalyst
 Market continues in Extreme Fear with institutional capital rotating to SpaceX IPO. No positions remain on watch for immediate entry. Tomorrow (weekend session): same standards apply — require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entry.
 
 No notification sent (no action taken).
+
+---
+
+## 2026-06-12 — Pre-Session Research (Weekend)
+
+**Date:** 2026-06-12 (Friday/Weekend open)
+**Account:** Kraken ZUSD $129.14 (100% cash) | Alpaca: 0 positions (historical orders only, stop a2b44cf9 cancelled 2026-05-22)
+**Open Positions:** None | **Open Orders:** None
+
+---
+
+### Account Snapshot
+
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| **Kraken** | $129.14 ZUSD | 0 | 0 |
+| **Alpaca** | 0 (residual fully exited) | 0 | 0 (historical only) |
+
+Dust balances on Kraken: AVAX $0.0003, BABY $0.002, FET $0.0000006, INJ $0.0001, NEAR $0.006, SOL $0.0000169 — all negligible.
+
+---
+
+### Market Context
+
+| Indicator | Value | Notes |
+|---|---|---|
+| **BTC** | $63,627 ask | 24h open $63,554, +0.11%; high $64,333, low $62,765 |
+| **ETH** | $1,666.58 ask | 24h open $1,671.60, −0.30%; range $1,650–$1,690 |
+| **SOL** | $66.63 ask | 24h open $66.86, −0.35%; high $68.76 |
+| **XRP** | $1.131 ask | 24h open $1.141, −0.89%; below VWAP |
+| **Fear & Greed** | **12 — Extreme Fear** | 5th consecutive day at Extreme Fear |
+| **BTC Funding Rate** | Binance +0.0008%, Bybit +0.0051%, BitMEX −0.0178% | Essentially neutral; no squeeze signal |
+| **BTC Weekly (5d)** | ~$61,965 (Jun 5) → $63,627 (Jun 12) | **+2.7% — weekly gate NOT active** |
+| **Crash gate** | NOT triggered | BTC +0.11% from open, well below −20% threshold |
+
+**Top 24h Gainers (CoinGecko/CMC):** DCK +332%, ESPORTS +106%, H +75%, STG +58%, NAORIS +50%
+
+**Kraken-specific movers (Perplexity):** OMNI +174% (illiquid, spread 59%), MAT +66% (8 trades, no liquidity), DOLO +53%, REX/INIT/UFD +30–50%
+
+**Token unlocks today (Jun 12):** APT 1.22% of market cap (bearish), XWGT 5.55%, INFRA 1.0%
+
+**Macro headwinds:** SpaceX IPO listed today (~$1.75–1.77T market cap) — drawing institutional capital away from crypto; 2 consecutive weeks of Bitcoin ETF outflows attributed partly to capital rotation into SpaceX.
+
+---
+
+### Candidate Screening
+
+| Asset | Ask | vs Open | Spread | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| **STG/USD** | $0.6312 | −2.1% (below) | 0.16% ✓ | LayerZero acquisition + 8M exchange withdrawal; +140% weekly | WATCHLIST — timed entry only above $0.6441 |
+| **INIT/USD** | $0.0623 | +7.4% | 0.32% ✓ | None (pure momentum) | WATCHLIST — needs 1h >3% confirm |
+| **OMNI/USD** | $0.709 ask | — | **59%** ✗ | — | SKIP — illiquid |
+| **MAT/USD** | $0.0707 | +2.5% | 0.28% ✓ | — | SKIP — 8 trades only, no liquidity |
+| **DOGE/USD** | $0.0875 | +1.7% | 0.02% ✓ | None | SKIP — below VWAP, move stalled |
+| **BCH/USD** | $204.20 | −0.42% | 0.005% ✓ | Technical rebound only | SKIP — below open, below VWAP, no catalyst |
+| **SOL/USD** | $66.63 | −0.35% | 0.015% ✓ | Technical only | WATCHLIST — conditional breakout above $68.76 |
+| **APT/USD** | $0.6466 | flat | 0.06% ✓ | Token unlock today (bearish) | SKIP — adverse catalyst |
+| **XRP/USD** | $1.131 | −0.89% | 0.004% ✓ | CLARITY Act (early July) | WATCHLIST — binary catalyst, no new dev today |
+| **NEAR/USD** | — | — | — | Dynamic resharding (same thesis) | BLOCKED — same-thesis cap, no new catalyst |
+| **KAS/USD** | — | — | — | Toccata upgrade (same thesis) | BLOCKED — same-thesis cap, no new catalyst |
+
+---
+
+### Trade Ideas
+
+**IDEA 1: STG/USD — LayerZero Acquisition / DeFi Rotation (Timed Entry)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | LayerZero acquisition of Stargate Finance → STG→ZRO conversion speculation; 8M STG withdrawn from Gate.io (accumulation signal); DeFi rotation as BTC consolidates; +140% on the week |
+| **Entry** | TIMED — recovery above Kraken 24h open $0.6441 with volume confirmation; do NOT market order at current $0.6312 |
+| **T1** | $0.663 (+3% from $0.6441 entry) |
+| **T2** | $0.676 (+5% from $0.6441 entry) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` (placed immediately after fill) |
+| **R:R** | 1.2:1 at T1 ✓ |
+| **Spread** | 0.16% ✓ |
+| **Size** | $40–50 (31–39% equity); caution on extended move + Extreme Fear |
+| **Risk** | Already +140% weekly — chasing an extended move; Extreme Fear reduces follow-through; entry conditional on recovery above open trigger |
+
+**IDEA 2: INIT/USD — Momentum Play (Conditional)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | None confirmed — pure price momentum. +7.4% from 24h open $0.0579. DeFi sector rotation possible. |
+| **Entry** | ONLY on confirmed 1h >3% move from current level ($0.0623); currently consolidating |
+| **T1** | $0.0641 (+3% from $0.0623 entry) |
+| **T2** | $0.0654 (+5%) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.2:1 ✓ |
+| **Spread** | 0.32% ✓ |
+| **Size** | $25–35 (19–27% equity); smaller due to no fundamental catalyst |
+| **Risk** | No catalyst — pure momentum; Extreme Fear 12; BTC flat; momentum-only plays have poor follow-through in current environment; only enter on fresh 1h surge |
+
+**IDEA 3: SOL/USD — Technical Breakout (Conditional)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | None — purely technical |
+| **Entry** | ONLY on breakout above 24h high $68.76 with volume expansion |
+| **T1** | $70.82 (+3% from $68.76 breakout) |
+| **T2** | $72.20 (+5%) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.2:1 ✓ |
+| **Spread** | 0.015% ✓ |
+| **Size** | $30–40 conditional only |
+| **Risk** | No catalyst; SpaceX IPO drawing institutional capital from crypto; current $66.63 = 3.2% below trigger; BTC flat |
+
+**IDEA 4: XRP/USD — CLARITY Act Binary Catalyst (Watchlist Only)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | CLARITY Act Senate floor vote — calendar'd Jun 1, debate expected early July; no new Senate scheduling today |
+| **Entry** | ONLY on Senate floor vote date announced OR bill passes committee |
+| **Stop** | `trail_percent: 7` (binary catalyst) |
+| **Spread** | 0.004% ✓ |
+| **Current** | $1.131 (below open, below VWAP) — not actionable today |
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear 12** (5th consecutive session) — all momentum trades are fragile; rallies lack follow-through
+2. **SpaceX IPO today** — institutional capital rotating away from crypto; Bitcoin ETF outflows 2nd week running
+3. **APT token unlock today** (1.22% market cap) — sector-wide mild headwind
+4. **BTC flat** (+0.11% from open) — no market tailwind for alt momentum
+5. **All entries are timed/conditional** — no setups qualify for immediate market-order entry right now
+6. **Extended STG move** — +140% on the week increases fade risk; entry above $0.6441 only
+
+---
+
+### Decision
+
+**TRADE** — crash gate NOT triggered (BTC +0.11%). Weekly gate NOT active (BTC +2.7% over 5d).
+
+**Immediate action: NONE** — no setup qualifies for market-order entry at session open. All entries are conditional/timed:
+- STG: watch for recovery above $0.6441
+- INIT: watch for 1h >3% surge from current level
+- SOL: watch for breakout above $68.76
+- XRP: watch for CLARITY Act Senate scheduling
+
+Portfolio: $129.14 ZUSD (100% cash). Third consecutive day of no trades (Jun 10, 11, 12). Capital preserved but 3-day opportunity cost vs BTC (+2.7% over period). Primary focus: find a confirming momentum signal, not chase stale moves.
+
