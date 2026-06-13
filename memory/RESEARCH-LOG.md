@@ -15778,3 +15778,47 @@ Portfolio 100% cash. Phase P&L: −$50.64 (−28.17%) from Kraken starting equit
 
 5 consecutive no-trade days have cost ~−0% on capital but opportunity cost is real (BTC +3% since Jun 10). Today's setup is adequate for moderate-conviction entries. Size to conviction, not desperation.
 
+---
+
+## 2026-06-13 — Night Scan (21:07 UTC)
+
+**Account:** $129.14 ZUSD | 0 Kraken positions | 0 Kraken orders | Alpaca: $0 (fully exited)
+**Steps 3–5:** N/A — no positions.
+
+### Live Quotes (Night Refresh vs Evening Scan 15:06 UTC)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | vs 15:06 UTC | Spread | Status |
+|---|---|---|---|---|---|---|---|---|
+| **NEAR** | $2.0969 | $2.0091 | +4.38% | $2.1853 | −4.0% | ~flat | 0.043% ✓ | Above 3% threshold; but 1h momentum flat |
+| **RENDER** | $1.764 | $1.652 | +6.78% | $1.815 | −2.8% | −$0.044 (↓) | 0.057% ✓ | Pulled back from $1.808 peak |
+| **AAVE** | $66.45 | $64.21 | +3.49% | $67.43 | −1.5% | −$0.86 (↓) | 0.015% ✓ | Pulled back from $67.31 peak |
+| **BTC** | $64,253 | $63,543 | +1.12% | $64,294 | −0.06% | ~flat | 0.001% ✓ | $41 below breakout trigger |
+
+### New Catalyst Discovery
+
+- **Grayscale NEAR ETF amendment (Jun 12, 2026):** Amended SEC registration (No. 333-292834) changes custodian from Coinbase Custody to BitGo Bank & Trust N.A. as primary custodian (Coinbase retained as additional). New staking disclosures added. **This is a real institutional catalyst NOT surfaced in prior sessions today.** However, it is ~24–36h old at time of this scan — does not qualify as <6h fresh.
+- **NEAR 2.13 upgrade:** Scheduled "June 2026" for post-quantum-safe signing + AI-agent settlement infrastructure — no confirmed exact date, so not a <6h fresh trigger.
+- **All other catalysts unchanged** from evening scan: SpaceX IPO (risk-on, already priced), Iran deal (Jun 11, stale), Fed Jun 16-17 (still upcoming).
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +1.12% ✓ |
+| BTC Weekly gate (>−3% / 5d) | NOT active ✓ |
+| Fear & Greed | 13 (Extreme Fear — 9th consecutive session) |
+| Same-thesis entry cap | KAS: BLOCKED (5 stop-outs, cooling); NEAR: 1 stop-out Jun 8 — cap NOT triggered ✓ |
+
+### Decision
+
+**NO TRADE** — 6th consecutive no-trade session (Jun 10–15).
+
+- **NEAR:** Above 3% threshold (+4.38%) for the first time today, but current 1h momentum is effectively flat; NEAR peaked at $2.185 earlier and has pulled back to $2.097. The Grayscale ETF amendment (Jun 12) is a genuine institutional catalyst but 24h old — does not satisfy <6h rule. NEAR@3.33 program is multi-week (not fresh). Entering at 21:07 UTC in Extreme Fear 13 on 24h-old catalyst with flat 1h momentum = insufficient edge.
+- **RENDER:** Pulled back $0.044 from evening scan's $1.808 to $1.764 — weakening, not entry-ready. No fresh catalyst.
+- **AAVE:** Pulled back $0.86 from evening scan's $67.31 to $66.45 — same issue.
+- **BTC:** $41 below $64,294 breakout trigger; trigger not yet confirmed.
+
+**Watchlist for next session (Sunday Jun 14):** NEAR remains primary watch — Grayscale ETF catalyst will age into background by morning; require fresh intraday momentum >3% in 1h with volume or a new token-specific development. BTC breakout above $64,294 remains a clean entry signal if confirmed on volume.
+
+Portfolio: $129.14 ZUSD (100% cash). No action taken. **No notification sent.**
+
