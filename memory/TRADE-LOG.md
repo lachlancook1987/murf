@@ -4817,3 +4817,15 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Phase P&L:** −$50.64 (−28.17%) from Kraken starting equity $179.78
 
 **Result: NO-OP. No positions, no orders, no crash gate. No actions taken. No notification sent.**
+
+---
+
+### Jun 13 — EOD Snapshot (Day 24, Saturday)
+**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −0.59%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** none | **Total since migration:** ~65
+**Notes:** Fourth consecutive full-cash day (weekend session). Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC gained +0.59% today (Jun 12 close ~$63,424.80 → $63,800.00 ask at EOD Jun 13), so holding cash underperformed BTC by −0.59%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +0.59% on the day, far below 20% threshold). BTC 24h open $63,543.30, 24h high $64,333.00, 24h low $62,997.50. Market is Saturday — volumes typically lighter. Tomorrow (Sunday): maintain same entry standards; require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entering any position.
