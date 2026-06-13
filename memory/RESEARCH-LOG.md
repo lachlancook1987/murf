@@ -15453,3 +15453,47 @@ All entries remain conditional:
 Market: Extreme Fear 12 (5th consecutive session), ETF outflows, SpaceX IPO overhang, Saturday. No momentum is sustaining through catalyst confirmation. Capital preserved at $129.14 ZUSD.
 
 **No notification sent (no action taken).**
+
+---
+
+## 2026-06-13 — Midday Scan
+
+**Account:** $129.14 ZUSD | 0 Kraken positions | 0 Kraken orders | Alpaca: $0 (historical orders only, no active position)
+**Steps 3–5:** N/A — no positions.
+
+### Live Midday Quotes (vs Session-Open)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| **RENDER** | $1.748 | $1.652 | +5.81% | $1.754 | −0.3% | 0.06% ✓ | Consolidating near high; trigger not fired |
+| **SEI** | $0.054320 | $0.051770 | +4.93% | $0.055680 | −2.6% | 0.07% ✓ | Below $0.055680 trigger; weakened |
+| **NEAR** | $2.026 | $2.009 | +0.84% | $2.051 | −1.2% | 0.05% ✓ | Flat — below 3% threshold |
+| **BTC** | $63,703 | $63,543 | +0.25% | $64,333 | −1.0% | 0.001% ✓ | Below $64,333 trigger |
+| **SOL** | $67.42 | $66.77 | +0.97% | $68.76 | −1.9% | 0.015% ✓ | Low intraday momentum; no catalyst |
+
+### Perplexity Midday Findings
+
+- **RENDER:** Perplexity returned only macro context (Fed Jun 16-17, ETF outflows) — no RENDER-specific catalyst today. AI/GPU narrative remains a multi-week background theme, not a fresh <6h driver.
+- **SEI:** Perplexity notes bearish near-term: open interest fell 7% to $29M, long liquidations topped $553K in 24h, described as "under pressure." Giga upgrade is ongoing roadmap, not fresh news. Case weakened vs session-open.
+- **ORDI (+76.6% 24h):** Not on Kraken (unknown asset pair). Skip.
+- **SOL (+2.82% 24h):** +0.97% intraday only, no confirmed fresh catalyst. Skip.
+- **Breaking news:** Fed Jun 16-17 meeting dominant driver (96.4% odds unchanged rates). SpaceX IPO capital rotation continues. Clarity Act still July. No new exchange listings, protocol upgrades, or regulatory events today.
+
+### Crash Gate / Gates
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +0.25% ✓ |
+| BTC Weekly gate (>−3% / 5d) | NOT active ✓ |
+| Fear & Greed | ~13 (Extreme Fear, 5th consecutive session) |
+
+### Decision
+
+**NO TRADE.** No new setups have developed since session-open. All watchlist conditions unchanged:
+- **RENDER:** Consolidating within 0.3% of $1.754 trigger but no fresh catalyst. Perplexity returned no RENDER news. Breakout trigger not fired; double-top risk remains.
+- **SEI:** Perplexity turned bearish midday (OI falling, long liquidations). Below trigger. Case weakened — removed from active watch.
+- **NEAR:** Flat; no momentum.
+- **BTC:** 1.0% below $64,333 trigger; no catalyst.
+- **SOL:** Intraday momentum insufficient; no catalyst.
+
+Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
