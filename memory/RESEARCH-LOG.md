@@ -15497,3 +15497,47 @@ Market: Extreme Fear 12 (5th consecutive session), ETF outflows, SpaceX IPO over
 - **SOL:** Intraday momentum insufficient; no catalyst.
 
 Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
+
+---
+
+## 2026-06-13 — Afternoon Scan (Second Midday Pass)
+
+**Account:** $129.14 ZUSD | 0 Kraken positions | 0 Kraken orders | Alpaca: $0 (historical only)
+**Steps 3–5:** N/A — no positions.
+
+### Live Quotes (Afternoon Refresh)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| **BTC** | $64,127 | $63,543 | +0.92% | $64,333 | −0.32% | 0.001% ✓ | Approaching $64,333 trigger |
+| **RENDER** | $1.797 | $1.652 | +8.78% | $1.811 | −0.77% | 0.056% ✓ | Surged above $1.754 trigger; near-high consolidation |
+| **SEI** | $0.05451 | $0.051770 | +5.29% | $0.055680 | −2.1% | 0.092% ✓ | Still below $0.055680 trigger |
+| **NEAR** | $2.069 | $2.009 | +2.95% | $2.073 | −0.19% | 0.034% ✓ | Just below 3% threshold |
+| **TRUMP** | $2.219 | $2.153 | +3.07% | $2.383 | −6.9% | 0.09% ✓ | Faded sharply from high — skip |
+
+### Perplexity Findings (Afternoon)
+
+- **RENDER:** No RENDER-specific catalyst found. AI/GPU compute narrative is a multi-week background theme, not fresh <6h news. The +8.78% from open appears to be macro/sentiment driven (Fed Jun 16-17 expectations, risk-on flows). Volume confirming: intraday 264K RENDER (~$459K notional) vs 24h total ~$566K — strong. But no token-level news.
+- **TRUMP:** Fresh catalyst confirmed — Trump's June 14 birthday speculation + spot volume +149%, futures OI +18%. However, price already faded −6.9% from $2.383 high to $2.219. Momentum exhausted at current level; token unlock supply pressure headwind.
+- **Top 24h gainers:** XTER +118%, ESPORTS +107% — both micro-caps, not on Kraken. No Kraken-eligible assets with fresh catalyst and 1h surge.
+- **Market sentiment:** Fear & Greed 12 (Extreme Fear, 6th consecutive session). Fed Jun 16-17 meeting dominant macro driver (96.4% unchanged odds). SpaceX IPO capital rotation continues. No new exchange listings, protocol upgrades, or regulatory events today.
+
+### Crash Gate / Gates
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +0.92% ✓ |
+| BTC Weekly gate (>−3% / 5d) | NOT active ✓ |
+| Fear & Greed | 12 (Extreme Fear) |
+
+### Decision
+
+**NO TRADE.** RENDER is the strongest setup — +8.78% from open, within 0.77% of 24h high, volume confirming, spread tight — but lacks a fresh <6h token-specific catalyst. AI compute is a multi-week narrative, not today's trigger. Entering a no-catalyst momentum play at near-highs in Extreme Fear 12 carries high reversal risk.
+
+- **RENDER** → monitoring; catalyst-less momentum in Extreme Fear = pass. Would re-evaluate if a specific AI/GPU announcement broke <6h.
+- **BTC** → 0.32% below $64,333 trigger. Would enter on confirmed 1h close above with volume.
+- **NEAR** → +2.95%, just below 3% threshold; NEAR@3.33 catalyst remains valid; watch for momentum push.
+- **TRUMP** → birthday catalyst thin; faded −6.9% from high; skip.
+- **SEI** → below trigger; case weakened (Perplexity bearish on OI/liquidations).
+
+Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
