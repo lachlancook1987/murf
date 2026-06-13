@@ -15263,3 +15263,143 @@ Portfolio: $129.14 ZUSD (100% cash). Third consecutive day of no trades (Jun 10,
 Market: BTC flat/slightly red (−0.11%), Extreme Fear 12 (5th day), SpaceX IPO draining institutional capital. No momentum is sustaining. Capital preserved at $129.14 ZUSD.
 
 **No notification sent (no action taken).**
+
+---
+
+## 2026-06-13 — Pre-Session Research (Day 24, Saturday)
+
+### Account Snapshot
+
+| Field | Value |
+|---|---|
+| **Kraken ZUSD** | $129.14 (100% cash) |
+| **Kraken positions** | None |
+| **Kraken open orders** | None |
+| **Alpaca** | $0 (fully exited; stop a2b44cf9 cancelled 2026-05-22) |
+| **Phase P&L** | −$50.64 (−28.17%) from starting equity $179.78 |
+
+---
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| **BTC** | ~$63,489–63,535 ask | +0.2–0.4% 24h |
+| **ETH** | $1,666.73 | −0.55% 24h |
+| **Fear & Greed** | **12 — Extreme Fear** (5th consecutive session unchanged) |
+| **BTC Funding Rate** | +0.01%/8h (Binance/Bybit/OKX) — neutral/slightly bullish |
+| **Crash Gate (>−20% 24h)** | NOT triggered ✓ |
+| **BTC Weekly Gate (>−3% / 5 days)** | NOT active — BTC is UP ~+3.3% over 5 trading days |
+
+**Top 24h global gainers (CoinGecko):** ESPORTS +106%, NAORIS +50%, XPL +42%, UXPL +42% — all micro-caps, none liquid on Kraken.
+
+**Key macro context:**
+- SpaceX IPO overhang continues to draw institutional capital away from crypto (BTC ETF outflows 2nd consecutive week)
+- CLARITY Act (Senate) — debate expected early July; XRP binary catalyst remains open but no new scheduling today
+- BTC perps funding positive but minimal — no overheated long positioning
+- Quantum-resistance sector outperformed BTC ~59% MoM in May — lingering theme
+
+---
+
+### Candidate Screening
+
+| Asset | Ask | vs 24h Open | Spread | vs 24h High | Dollar Vol | Catalyst |
+|---|---|---|---|---|---|---|
+| **SEI** | $0.05490 | **+6.05%** | 0.05% ✓ | −1.4% | ~$233K | Giga upgrade + futures vol +119% + OI +5.33% |
+| **RENDER** | $1.740 | **+5.33%** | 0.06% ✓ | −0.2% (AT high) | ~$421K | AI compute theme; no fresh catalyst today |
+| **JUP** | $0.17371 | **+4.0%** | 0.11% ✓ | −0.7% | ~$390K | Solana ecosystem, no specific catalyst today |
+| **VVV** | $16.898 | **+18.5%** | 0.11% ✓ | −5.0% | ~$4.17M | No fresh <6h catalyst; profit-taking pressure (Perplexity bearish) |
+| **NEAR** | $2.0206 | +0.57% | 0.08% ✓ | −5.5% | ~$2.54M | Same-thesis cap LIFTED; NEAR@3.33 incentive launched Jun 11 |
+| **TRUMP** | $2.179 | +1.2% | 0.09% ✓ | −8.5% | ~$4.75M | Move reversed from $2.383 high; skip |
+| **HYPE** | $58.61 | −1.18% | 0.02% ✓ | −6.0% | — | Below open; June token unlock headwind |
+| **GIGA** | $0.002748 | +0.4% | 0.07% ✓ | −6.9% | ~$169K | No momentum today |
+| **BTC** | ~$63,500 | +0.3% | 0.001% ✓ | −1.3% | Deep | Flat; conditional on $64,333 breakout |
+
+---
+
+### Trade Ideas
+
+**IDEA 1: SEI/USD — Giga Upgrade + Futures Volume Surge (Timed Breakout)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | SEI Giga network upgrade (ongoing roadmap; throughput + EVM compatibility) + futures volume +119% today + open interest +5.33% today; defended $0.049 support, bounce confirmed with volume |
+| **Entry** | TIMED — breakout above 24h high $0.05568 with volume expansion; do NOT market-order at $0.05490 (already 98.6% of high, limited room to trigger) |
+| **T1** | $0.0573 (+3% from $0.05568 trigger) |
+| **T2** | $0.0584 (+5% from trigger) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` (placed immediately after fill) |
+| **R:R** | 1.20:1 at T1 ✓ |
+| **Spread** | 0.05% ✓ |
+| **Kraken pair** | SEI/USD ✓ (online, margin available 2-3x) |
+| **Size** | $40–50 (31–39% equity) — moderate conviction; thin dollar volume ($233K/24h) so $40–50 is safe size |
+| **Risk** | Extreme Fear 12; already 6% above open; T1 requires breakout above prior high; thin dollar liquidity; +119% futures vol could reverse quickly |
+
+**IDEA 2: RENDER/USD — AI Compute Momentum (Timed Breakout)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | AI/decentralized GPU compute narrative; RENDER +5.33% from open, AT its 24h high ($1.744); AI sector seeing renewed interest alongside broader market |
+| **Entry** | TIMED — sustained move above $1.744 (24h high) with volume expansion; breakout from intraday range |
+| **T1** | $1.796 (+3% from $1.744 trigger) |
+| **T2** | $1.831 (+5% from trigger) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.20:1 at T1 ✓ |
+| **Spread** | 0.06% ✓ |
+| **Kraken pair** | RENDER/USD ✓ (online, margin 2-3x available) |
+| **Size** | $30–40 (23–31% equity) — moderate; no specific fresh <6h catalyst weakens conviction |
+| **Risk** | No confirmed single today-news catalyst (AI theme only); Extreme Fear; $1.744 is current 24h high — could be double-top resistance not breakout |
+
+**IDEA 3: NEAR/USD — NEAR@3.33 Incentive Program (Watchlist)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | NEAR@3.33 incentive program launched Jun 11 — rewards Confidential Intents users; non-transferable tokens convert to NEAR 1:1 only if VWAP ≥$3.33 for 3 consecutive days AND TVL ≥$70M. Distinct new catalyst from Nightshade 2.0/Dynamic Resharding thesis (same-thesis cap now LIFTED: 48h since Jun 9 stop has passed, new catalyst confirmed) |
+| **Entry** | WATCHLIST ONLY — await 1h >3% surge from current $2.02 with volume; NO market-order entry today (flat +0.57%, below 3% threshold) |
+| **T1** | $2.082 (+3% from $2.02 entry) |
+| **T2** | $2.121 (+5%) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.22:1 at T1 ✓ (with 2.5% trail) |
+| **Spread** | 0.08% ✓ |
+| **Size** | $35–45 on confirmed momentum |
+| **Risk** | Same-thesis cap has lifted but NEAR has stopped out 2x in 7 days on the same price structure; incentive program targets $3.33 (64% above current) — a long-term catalyst, not today's momentum trigger; flat today |
+
+**IDEA 4: BTC/USD — Range Breakout (Highly Conditional)**
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Technical breakout above $64,333 (Jun 12 24h high / resistance zone) with volume |
+| **Entry** | ONLY on confirmed 1h close above $64,333 with expanding volume |
+| **T1** | $66,263 (+3%), T2: $67,550 (+5%) |
+| **Stop** | `trailing_stop`, `trail_percent: 2.5` |
+| **R:R** | 1.20:1 ✓ |
+| **Spread** | 0.001% ✓ |
+| **Size** | $50–70 on confirmation |
+| **Risk** | 1.3% below trigger; BTC flat today; no fundamental catalyst today; Extreme Fear market |
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear 12** (5th consecutive session) — momentum trades fragile; 5th straight day at Extreme Fear is unusual and suggests sustained institutional de-risking
+2. **BTC ETF outflows** (2nd consecutive week) — macro headwind; institutional selling > buying
+3. **SpaceX IPO capital rotation** — ongoing; drawing capital away from crypto
+4. **All setups are timed/conditional** — no immediate market-order entries; waiting for price confirmation
+5. **Thin alt dollar volumes** — SEI ($233K/24h), RENDER ($421K/24h) adequate for $30–50 size but limited follow-through capacity
+6. **NEAR same-thesis cap history** — stopped 2x in 7 days on same price structure; 3rd re-entry carries path dependency risk
+
+---
+
+### Decision
+
+**TRADE** — crash gate NOT triggered (BTC +0.3%). Weekly gate NOT active (BTC +3.3% over 5d).
+
+**Immediate action: NONE** — no setup qualifies for market-order entry at session open.
+
+**Active conditional watch:**
+- **SEI** → entry on breakout above $0.05568 with volume (primary watch)
+- **RENDER** → entry on sustained move above $1.744 with volume (secondary watch)
+- **NEAR** → entry on 1h >3% surge; same-thesis cap lifted, new catalyst confirmed
+- **BTC** → entry only on $64,333 reclaim with strong volume (lower priority)
+
+Portfolio: $129.14 ZUSD (100% cash). Fourth consecutive no-trade day at session open (Jun 10–13). Extreme Fear environment demands confirmation before entry.
+
