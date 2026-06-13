@@ -15597,3 +15597,184 @@ Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
 
 Portfolio: $129.14 ZUSD (100% cash). No action taken. **No notification sent.**
 
+
+---
+
+## 2026-06-13 — Pre-Session Research (Day 24, Saturday)
+
+**Session branch:** claude/affectionate-gates-8mnjcn
+
+---
+
+### Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| **Kraken** | $129.14 ZUSD | 0 (none) | 0 (none) |
+| **Alpaca** | $0 (fully exited) | None | Historical only (filled May 22) |
+
+Portfolio 100% cash. Phase P&L: −$50.64 (−28.17%) from Kraken starting equity $179.78.
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | Key Level | Spread |
+|---|---|---|---|---|
+| **BTC** | $64,212 | +1.06% | 24h high $64,294 | 0.005% ✓ |
+| **ETH** | ~$1,675 | +0.4-0.6% | — | 0.001% ✓ |
+| **NEAR** | $2.101 | +4.6% (from $2.009 open) | 24h high $2.185 | 0.024% ✓ |
+| **RENDER** | $1.758 | +6.4% (from $1.652 open) | 24h high $1.815 | 0.11% ✓ |
+| **AAVE** | $66.41 | +3.4% (from $64.21 open) | 24h high $67.43 | 0.045% ✓ |
+| **SOL** | $68.12 | +2.0% (from $66.77 open) | 24h high $68.65 | 0.015% ✓ |
+
+**Fear & Greed:** 13 (Extreme Fear — 8th consecutive session)
+**BTC Funding Rate:** +0.01%/8h (mild longs bias, not overheated)
+**BTC Weekly Trend:** +1.82% over 5 days (Jun 8 ~$63,068 → Jun 13 $64,212) — NOT a downtrend; BTC weekly gate NOT triggered
+
+**Volume leaders:**
+- NEAR: 1.97M NEAR = ~$4.1M notional (6,530 trades) — exceptional
+- SOL: 144K SOL = ~$9.8M notional (13,061 trades) — institutional level
+- RENDER: 415K RENDER = ~$728K notional (3,099 trades) — very strong
+- AAVE: 5,550 AAVE = ~$368K notional (1,328 trades) — decent
+- BTC: 941 BTC = ~$60M notional (32,212 trades) — deep liquidity
+
+---
+
+### Perplexity Research Summary
+
+**Top 24h gainers (CoinGecko):** COAI +61%, JCT +51.9%, SN118 +38.3%, POD +36.4%, RIF +33.7% — all micro-caps; none on Kraken at usable spreads.
+
+**Kraken movers flagged by Perplexity:** OMNI +174%, MAT +66%, DOLO +53.35%
+- OMNI: 62.7% bid-ask spread — completely illiquid on Kraken; skip
+- MAT: 26.3% bid-ask spread — illiquid; skip
+- DOLO: 2.0% bid-ask spread — above 1% threshold; skip
+
+**Market catalysts:**
+- SpaceX Nasdaq IPO debut today — capital rotation; risk-on sentiment driver
+- Trump canceled Iran strikes — Jun 11 news (2+ days old, already priced in)
+- Strategy disclosed 845K BTC holdings — institutional accumulation narrative
+- Fed Jun 16-17 meeting — 96.4% probability unchanged; major macro driver next week
+- Clarity Act — still a summer expectation, no vote today
+- TRUMP token (+25% earlier, faded to +2.56%) — birthday catalyst spent; token unlock supply headwind
+
+**Token unlocks this week (Jun 8–14):** RAIN ($714M, Jun 10), ASTER ($58M, Jun 9), HOME ($45M, Jun 10), PUMP ($14M, Jun 14). No Kraken-eligible assets with unlock catalysts.
+
+**No Kraken-eligible asset with confirmed fresh (<6h) token-specific news catalyst today.** All momentum driven by macro (SpaceX IPO, Iran risk-off unwinding) and multi-week sector narratives.
+
+---
+
+### Candidate Screening
+
+| Asset | 24h Change | Volume (24h) | Spread | Catalyst | Leverage | Pass? |
+|---|---|---|---|---|---|---|
+| NEAR | +4.6% | ~$4.1M (6,530 trades) | 0.024% ✓ | NEAR@3.33 incentive (ongoing); Nightshade 2.0 narrative | No | ✓ Watch |
+| RENDER | +6.4% | ~$728K (3,099 trades) | 0.11% ✓ | AI/GPU compute narrative (multi-week) | 2x/3x | ✓ Watch |
+| AAVE | +3.4% | ~$368K (1,328 trades) | 0.045% ✓ | DeFi recovery; V4 launched Mar 2026 | Up to 5x | ✓ Watch |
+| BTC | +1.06% | ~$60M (32,212 trades) | 0.005% ✓ | SpaceX IPO risk-on; Strategy 845K BTC | 2x | Conditional |
+| SOL | +2.0% | ~$9.8M (13,061 trades) | 0.015% ✓ | — | — | Below 3% |
+| OMNI | — | Tiny (4 trades) | 62.7% ✗ | Upbit listing (if real) | None | SKIP |
+| MAT | — | Tiny (63 trades) | 26.3% ✗ | Unknown | None | SKIP |
+| DOLO | — | Tiny (4 trades) | 2.0% ✗ | Unknown | None | SKIP |
+| KAS | — | — | — | Same-thesis cooling (5 stop-outs Jun 3–8) | None | BLOCKED |
+
+---
+
+### Trade Ideas
+
+#### Idea 1: NEAR/USD — Momentum + Incentive Program (PRIMARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | NEAR@3.33 ongoing incentive program (multi-week valid catalyst); 10.4% intraday range with real volume ($4.1M, 6,530 trades) confirms genuine buying |
+| **Entry** | Market ~$2.101 |
+| **Stop** | trailing_stop, trail_percent: 3.5 (high-ATR: 10.4% intraday range today) |
+| **T1** | $2.164 (+3%) |
+| **T2** | $2.206 (+5%) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ (minimum threshold) |
+| **Size** | $70 (~54% equity) — moderate conviction; no fresh today-specific catalyst |
+| **Kraken pair** | NEAR/USD ✓ confirmed online |
+| **Spread** | 0.024% ✓ |
+| **Note** | 1 prior stop-out Jun 8 at $2.167 (within 7d) — same-thesis cap NOT triggered (requires 2 stop-outs); entry now at $2.101 is below prior entry. Perplexity flags "neutral-bearish" tone for NEAR short-term; 24h high $2.185 is ceiling (T1 at $2.164 is just below — achievable if momentum holds). |
+
+#### Idea 2: RENDER/USD — AI Compute Momentum (SECONDARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | AI/GPU compute narrative (multi-week); on-chain 394 daily active addresses + 118 new wallets (12-week highs per prior session data); $728K notional volume with 3,099 trades confirms real buying pressure |
+| **Entry** | Conditional: wait for 1h close above $1.810 (just below 24h high $1.815) to confirm breakout; OR market entry ~$1.758 if NEAR position fills and momentum holds |
+| **Stop** | trailing_stop, trail_percent: 3.5 (high-ATR: 9.9% intraday range today) |
+| **T1** | $1.869 (+3% from $1.815 breakout level) OR $1.811 (+3% from $1.758 entry) |
+| **T2** | $1.906 (+5% from $1.815) OR $1.846 (+5% from $1.758 entry) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Size** | $60 (~46% equity) — second position only if NEAR entry clears |
+| **Kraken pair** | RENDER/USD ✓ confirmed online; margin available (2x/3x) |
+| **Spread** | 0.11% ✓ |
+| **Note** | RENDER has been on watchlist for 4 sessions without fresh catalyst. The 24h high $1.815 is natural resistance; T1 at $1.811 essentially requires breakout. If entering at $1.758, stop fires at ~$1.697 — full 3.5% trail. No fresh token-specific news. Macro AI rotation only. |
+
+#### Idea 3: AAVE/USD — DeFi Recovery (TERTIARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | DeFi sector recovery; AAVE V4 (Mar 2026 launch); +3.4% from open with decent volume |
+| **Entry** | Market ~$66.41 |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | $68.40 (+3%) |
+| **T2** | $69.73 (+5%) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | $35 (~27% equity) — lower conviction; no fresh catalyst; Perplexity notes bearish medium-term trend (−38% from May $102.50 peak) |
+| **Kraken pair** | AAVE/USD ✓ confirmed online; leverage up to 5x |
+| **Spread** | 0.045% ✓ |
+| **Note** | 24h high $67.43 is between entry and T1 — natural resistance. AAVE has been declining from May peak. No fresh DeFi news. Only enter if NEAR + RENDER both stop out and AAVE shows continued momentum. |
+
+#### Idea 4: BTC/USD — Breakout Play (CONDITIONAL)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | SpaceX IPO Nasdaq debut risk-on; Strategy 845K BTC holdings; approaching 24h high $64,294 (only $82 away) |
+| **Entry** | Limit $64,300 (buy on confirmed breakout above $64,294) |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | $66,229 (+3% from $64,300) |
+| **T2** | $67,515 (+5%) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | $65 (~50% equity) — clean, liquid; only if breakout confirmed |
+| **Kraken pair** | BTC/USD ✓ confirmed online |
+| **Spread** | 0.005% ✓ |
+| **Note** | BTC currently $64,212 — within $82 of session high. A close above $64,294 would be a momentum signal. Low risk entry; best executed as a limit order on the breakout. |
+
+---
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +1.06% ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered: BTC +1.82% over 5 days ✓ |
+| Same-thesis cap | KAS: BLOCKED (5 stop-outs Jun 3–8, 48h cooling still active); NEAR: 1 stop-out Jun 8 — cap NOT triggered ✓ |
+| Fear & Greed | 13 (Extreme Fear — 8th consecutive session) — cautionary but NOT a rule-based blocker |
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear (8th consecutive session at 13)** — momentum fades faster in fear environments; stop discipline is critical
+2. **No fresh token-specific catalysts** — all plays are macro/sector momentum; higher reversal risk
+3. **Saturday liquidity** — weekend volumes often thinner; wider effective spreads possible despite tight bid-ask
+4. **Fed Jun 16-17** — macro event approaching; risk-off could accelerate into early next week
+5. **NEAR prior stop-out Jun 8** — same thesis (NEAR@3.33 + L1 momentum) was rejected once at $2.167; entering below prior entry ($2.101) is better positioning but psychological caution warranted
+6. **RENDER near 24h highs** — entering at $1.758 when 24h high is $1.815 leaves only 3.2% to resistance before T1; double-top risk if $1.815 rejected again
+
+---
+
+### Decision
+
+**TRADE** — Crash gate NOT triggered. BTC weekly gate NOT triggered. Default stance is TRADE.
+
+**Primary execution priority:**
+1. **NEAR/USD** ~$70 market entry — strongest volume ($4.1M) and clear intraday momentum (+4.6%). Place 3.5% trailing stop immediately after fill.
+2. **RENDER/USD** ~$60 conditional entry — wait for confirmed 1h hold above $1.810 OR enter market if NEAR fills cleanly and momentum reads strong. 3.5% trailing stop.
+3. **AAVE/USD** ~$35 tertiary — only if NEAR and RENDER both fail/stop and AAVE momentum continues above $66.40.
+4. **BTC/USD** $65 limit at $64,300 — breakout play; activate only on confirmed close above today's $64,294 high.
+
+5 consecutive no-trade days have cost ~−0% on capital but opportunity cost is real (BTC +3% since Jun 10). Today's setup is adequate for moderate-conviction entries. Size to conviction, not desperation.
+
