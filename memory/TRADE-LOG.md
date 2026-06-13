@@ -4851,3 +4851,28 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 | **Spread** | 0.094% ✓ |
 | **Gates check** | Crash gate NOT triggered (BTC +0.99%); BTC weekly gate NOT triggered (+1.82%/5d); Same-thesis cap NOT triggered (1 stop-out Jun 8, <2 threshold) |
 | **Cash remaining** | $43.38 ZUSD (available for RENDER conditional if momentum extends) |
+
+---
+
+## 2026-06-13 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 40 | ~$2.131 | $2.1138 | **−0.81%** | $2.1326 | $2.0580 (trail 3.5%) | 2.64% | O2GR57-B2GSQ-H32QKU ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 CANCELLED since 2026-05-22. ✓
+
+**STEP 2 — Trailing stops verified (Kraken live orders API):**
+- NEAR: O2GR57-B2GSQ-H32QKU, 40.00 NEAR, trail +3.5%, stop $2.0580, HWM $2.1326 — ✓
+- No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>−20% AND stop not triggered):** NEAR −0.81% — well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR ~$2.131 entry: current $2.1138 = −0.81% — threshold: $2.557 (+20%). Not yet. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC ask $64,435 | 24h open $63,543 = **+1.40%** | 24h range $63,385–$64,750. Well under −20% threshold. No crash gate. ✓
+
+**Notes:** NEAR position entered today (Jun 13 midday) at ~$2.131; position is essentially flat overnight (−0.81%). BTC rose +1.40% overnight — positive macro backdrop. Stop HWM at $2.1326 ratcheted slightly above entry, providing early profit protection at $2.0580. Catalysts intact: Dynamic Resharding June 2026 upgrade, Grayscale amended NEAR ETF filing, NEAR@3.33 incentive (Jun 11+). T1 target $2.195 (+3%), T2 $2.238 (+5%) remain open.
+
+**Result: NO-OP. No actions taken. No notification sent.**
