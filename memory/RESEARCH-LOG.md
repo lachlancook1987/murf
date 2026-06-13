@@ -15541,3 +15541,59 @@ Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
 - **SEI** → below trigger; case weakened (Perplexity bearish on OI/liquidations).
 
 Portfolio: $129.14 ZUSD (100% cash). No action taken. No notification sent.
+
+---
+
+## 2026-06-13 — Evening Scan (15:06 UTC)
+
+**Account:** $129.14 ZUSD | 0 Kraken positions | 0 Kraken orders | Alpaca: $0 (historical orders only, no active position)
+**Steps 3–5:** N/A — no positions.
+
+### Live Quotes (Evening Refresh)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | 1h Move | Spread | Status |
+|---|---|---|---|---|---|---|---|---|
+| **RENDER** | $1.808 | $1.652 | +9.44% | $1.811 | −0.17% | ~+0.6% | 0.055% ✓ | Near 24h high; consolidating |
+| **AAVE** | $67.31 | $64.21 | +4.82% | $67.28 | AT high | unknown | 0.059% ✓ | DeFi blue chip; no fresh catalyst |
+| **KMNO** | $0.01876 | $0.01752 | +7.08% | $0.01882 | −0.32% | unknown | 0.16% ✓ | Token unlock today (mixed) |
+| **HYPE** | $60.25 | $59.31 | +1.59% | $60.43 | −0.3% | unknown | 0.017% ✓ | Below 3% threshold |
+| **BTC** | $64,218.60 | $63,543.30 | +1.07% | $64,333 | −0.18% | unknown | 0.001% ✓ | Below 3% threshold |
+| **ETH** | $1,679.01 | $1,665.32 | +0.84% | $1,682.16 | −0.18% | unknown | 0.001% ✓ | Below 3% threshold |
+| **SOL** | $68.35 | $66.77 | +2.37% | $68.44 | −0.13% | unknown | 0.015% ✓ | Below 3% threshold |
+| **TRUMP** | $2.208 | $2.153 | +2.56% | $2.383 | −7.3% | unknown | 0.045% ✓ | Faded from high; birthday catalyst spent |
+
+### Perplexity Findings (Evening)
+
+- **Fear & Greed:** 12 (Extreme Fear, 7th consecutive session)
+- **BTC funding rate:** ~+0.01%/8h across major venues — mild longs bias, not overheated
+- **Iran deal catalyst:** Trump canceled Iran strikes — broke **June 11** (2+ days old, NOT fresh today)
+- **SpaceX IPO:** Nasdaq debut today; capital rotation pulling from BTC (ETF outflow pressure continues)
+- **Strategy (FBKS845K BTC):** Long-term bullish narrative but no day-trade catalyst
+- **TRUMP token:** +25% earlier driven by birthday + Iran risk-on; now at $2.208, faded −7.3% from $2.383 high; catalyst spent
+- **RENDER:** Perplexity found on-chain: 394 daily active addresses + 118 new wallets (12-week highs); AI/GPU compute narrative; "demand outstripping supply." No confirmed single news event <6h old; on-chain data timing unclear.
+- **AAVE:** No fresh catalyst; $20B+ TVL; V4 launched March 2026 (months old); April exploit overhang; rotation OUT of DeFi blue chips
+- **KMNO (+7.08%):** Token unlock TODAY (Jun 13) per CryptoRank; institutional/RWA narrative (Anchorage custody partnership); technical recovery. Mixed catalyst — unlocks often bearish/volatile; no clean fresh news.
+- **Top 24h gainers (CoinGecko):** ESPORTS +107%, NAORIS +51%, XPL +43%, AIN +42%, KMNO +27%, RIF +26% — most micro-caps or not on Kraken; RIF and NAORIS not on Kraken.
+- **No Kraken-eligible asset with confirmed fresh (<6h) catalyst AND 1h momentum >3%.**
+
+### Crash Gate / Gates
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +1.07% ✓ |
+| BTC Weekly gate (>−3% / 5d) | NOT active ✓ |
+| Fear & Greed | 12 (Extreme Fear, 7th consecutive session) |
+| Same-thesis entry cap | KAS: 5 stop-outs in 7d → cooling period; NEAR: 1 stop-out Jun 8 (within 7d) |
+
+### Decision
+
+**NO TRADE.** Fifth consecutive no-trade day (Jun 10–14). No setups pass all pre-trade gates:
+
+- **RENDER (+9.44% from open):** Best setup on paper — very strong 24h move, near 24h high, excellent spread, high intraday volume (85% of daily done). BUT: 1h momentum is ~+0.6% (not >3%); no confirmed fresh <6h token-specific catalyst; on-chain signals unverified as same-day. Same conclusion as session-open, midday, and afternoon scans today. Entering at near-highs without fresh catalyst in Extreme Fear 12 = high reversal risk.
+- **AAVE (+4.82%):** No fresh catalyst; DeFi rotation headwind; passing.
+- **KMNO (+7.08%):** On Kraken ✓, spread ✓, but token unlock is a mixed/ambiguous catalyst; only 109 trades in session (thin intraday activity); no leverage available. Not enough conviction.
+- **All others:** Below 3% threshold.
+- **Iran deal:** June 11 news — not fresh; already priced in over 2 days.
+
+Portfolio: $129.14 ZUSD (100% cash). No action taken. **No notification sent.**
+
