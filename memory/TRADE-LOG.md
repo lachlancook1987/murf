@@ -4820,12 +4820,34 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 
 ---
 
-### Jun 13 — EOD Snapshot (Day 24, Saturday)
-**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −0.59%
+### Jun 13 — Midday Snapshot (Day 24, Saturday) [updated by midday scan]
+**Portfolio:** ~$128.49 (NEAR mark-to-market) | **Cash:** $43.38 ZUSD | **Day P&L:** TBD (position open) | **Phase P&L:** TBD | **vs BTC:** TBD
 
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
 |---|---|---|---|---|---|---|
-| — | — | — | — | No positions | — | — |
+| NEAR/USD | 40 | ~$2.131 | $2.130 (midday) | +6.0% | ~$0 (just entered) | O2GR57-B2GSQ-H32QKU @ −3.5% trail ($2.057 stop) |
 
-**Trades today:** none | **Total since migration:** ~65
-**Notes:** Fourth consecutive full-cash day (weekend session). Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC gained +0.59% today (Jun 12 close ~$63,424.80 → $63,800.00 ask at EOD Jun 13), so holding cash underperformed BTC by −0.59%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +0.59% on the day, far below 20% threshold). BTC 24h open $63,543.30, 24h high $64,333.00, 24h low $62,997.50. Market is Saturday — volumes typically lighter. Tomorrow (Sunday): maintain same entry standards; require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entering any position.
+**Trades today:** 1) NEAR/USD BUY 40 @ ~$2.131 (midday scan, Jun 13) | **Total since migration:** ~66
+**Notes:** Broke 4-day cash streak at midday. NEAR entry triggered by fresh stacked catalysts (Dynamic Resharding June 2026 upgrade + Grayscale amended NEAR ETF filing + NEAR@3.33 incentive launched Jun 11). Price +6% from 24h open $2.009 with $4.23M notional volume (6,491 trades). Buy order ONJUUM-MOH33-HIOCXG filled @ ~$2.131; trailing stop O2GR57-B2GSQ-H32QKU placed at 3.5% (high-ATR). T1=$2.195 (+3%), T2=$2.238 (+5%). Size $85.37 (~66% equity). BTC at $64,247 (+0.99% 24h) — crash gate NOT triggered. BTC weekly gate NOT triggered (+1.82% over 5 days). Same-thesis cap NOT triggered (1 prior stop-out Jun 8, need 2 within 7d). Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22.
+
+---
+
+### NEAR/USD — Buy Entry [Jun 13 Midday Scan]
+
+| Field | Value |
+|---|---|
+| **Buy Order ID** | ONJUUM-MOH33-HIOCXG |
+| **Stop Order ID** | O2GR57-B2GSQ-H32QKU |
+| **Entry** | ~$2.131/NEAR (market fill, Jun 13 midday) |
+| **Qty** | 40 NEAR |
+| **Notional** | ~$85.37 (~66% equity of $129.14) |
+| **Stop Type** | trailing_stop 3.5% GTC (high-ATR: 24h range 9.8%) |
+| **Initial stop level** | $2.057 (3.5% below entry HWM) |
+| **T1** | $2.195 (+3%) |
+| **T2** | $2.238 (+5%) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Catalysts** | 1) Dynamic Resharding (adaptive sharding) scheduled June 2026 — major scalability upgrade; 2) Grayscale amended NEAR ETF registration (new custodian + staking disclosures); 3) NEAR@3.33 incentive launched Jun 11 (Confidential Intents users rewarded; tokens convert 1:1 at TVL $70M + price ≥$3.33 for 3 consecutive days) |
+| **Volume** | $4.23M notional / 6,491 trades (24h Kraken) — institutional-level |
+| **Spread** | 0.094% ✓ |
+| **Gates check** | Crash gate NOT triggered (BTC +0.99%); BTC weekly gate NOT triggered (+1.82%/5d); Same-thesis cap NOT triggered (1 stop-out Jun 8, <2 threshold) |
+| **Cash remaining** | $43.38 ZUSD (available for RENDER conditional if momentum extends) |

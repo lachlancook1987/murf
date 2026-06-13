@@ -15778,3 +15778,49 @@ Portfolio 100% cash. Phase P&L: −$50.64 (−28.17%) from Kraken starting equit
 
 5 consecutive no-trade days have cost ~−0% on capital but opportunity cost is real (BTC +3% since Jun 10). Today's setup is adequate for moderate-conviction entries. Size to conviction, not desperation.
 
+---
+
+## 2026-06-13 — Midday Scan
+
+**Execution time:** ~midday UTC, Jun 13 2026
+**Account at scan:** $129.14 ZUSD (100% cash), 0 Kraken positions, 0 Kraken orders
+
+### Market Update (vs Pre-Session)
+
+| Asset | Pre-Session | Midday | Change | Spread | Volume (24h) |
+|---|---|---|---|---|---|
+| BTC | $64,212 / +1.06% | $64,247 / +0.99% | Flat | 0.005% ✓ | Deep |
+| NEAR | $2.101 / +4.6% | $2.130 / +6.0% | +1.4% higher | 0.094% ✓ | $4.23M / 6,491 trades |
+| RENDER | $1.758 / +6.4% | $1.782 / +7.9% | +1.4% higher | 0.112% ✓ | $742K / 3,153 trades |
+| AAVE | $66.41 / +3.4% | $67.12 / +4.5% | +1.1% higher | 0.075% ✓ | $397K / 1,284 trades |
+| STORJ | Not in pre-session | $0.07818 / +0.4% | New scan — THIN vol | 0.58% ✓ | ~$11K / 63 trades — SKIP |
+
+**Crash gate:** BTC +0.99% 24h — NOT triggered ✓
+**BTC weekly gate:** +1.82% over 5 days — NOT triggered ✓
+
+### New Catalysts vs Pre-Session
+
+**NEAR — Fresh catalysts discovered at midday (not in pre-session):**
+1. **Dynamic Resharding** — NEAR Protocol implementing adaptive sharding in June 2026; major scalability upgrade; market reaction +27% noted on some venues (Perplexity; Kraken shows +6% from open — trusted the Kraken live price)
+2. **Grayscale amended NEAR ETF filing** — new custodian + updated staking disclosures; institutional signal
+3. **NEAR@3.33 incentive** — confirmed launched Jun 11 (2 days old; still fresh within 6h window on catalyst impact)
+
+These catalysts materially upgrade NEAR conviction from "moderate" to "high."
+
+**RENDER** — No fresh RENDER-specific catalyst found. Still multi-week AI narrative only. Conditional entry condition (1h close above $1.810) NOT yet met; holding.
+
+**STORJ** — Perplexity cited +30% but Kraken shows only +0.4% from 24h open with 63 trades ($11K notional). Data mismatch — Perplexity likely stale. SKIP.
+
+### Action Taken
+
+**NEAR/USD entry placed:**
+- Buy: ONJUUM-MOH33-HIOCXG — 40 NEAR @ market (~$2.131 fill)
+- Trailing stop: O2GR57-B2GSQ-H32QKU — sell 40 NEAR @ trailing_stop 3.5% GTC → stop $2.057
+- T1: $2.195 (+3%), T2: $2.238 (+5%), R:R: 1.2:1 ✓
+- Cash remaining: $43.38 ZUSD (available for RENDER conditional)
+
+**Watchlist remaining:**
+- RENDER: enter if 1h close confirms above $1.810 with remaining $43 cash
+- AAVE: tertiary; only if NEAR stops and RENDER fails
+- BTC: limit $64,300 breakout; only if cash available after NEAR/RENDER
+
