@@ -4821,11 +4821,11 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 ---
 
 ### Jun 13 — EOD Snapshot (Day 24, Saturday)
-**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −0.59%
+**Portfolio:** $129.14 | **Cash:** $129.14 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$50.64 (−28.17%) | **vs BTC:** −1.31%
 
 | Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
 |---|---|---|---|---|---|---|
 | — | — | — | — | No positions | — | — |
 
 **Trades today:** none | **Total since migration:** ~65
-**Notes:** Fourth consecutive full-cash day (weekend session). Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC gained +0.59% today (Jun 12 close ~$63,424.80 → $63,800.00 ask at EOD Jun 13), so holding cash underperformed BTC by −0.59%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +0.59% on the day, far below 20% threshold). BTC 24h open $63,543.30, 24h high $64,333.00, 24h low $62,997.50. Market is Saturday — volumes typically lighter. Tomorrow (Sunday): maintain same entry standards; require 1h >3% surge + fresh <6h catalyst + spread ≤1% + R:R ≥1.2:1 before entering any position.
+**Notes:** Fourth consecutive full-cash day (weekend session). Portfolio unchanged at $129.14 ZUSD. No positions, no open orders. BTC gained +1.31% today (Jun 12 close ~$63,424.80 → $64,253.20 ask at 21:07 UTC Jun 13), so holding cash underperformed BTC by −1.31%. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — no Alpaca residual. Crash gate NOT triggered (BTC +1.12% vs 24h open $63,543.30, far below 20% threshold). BTC 24h open $63,543.30, 24h high $64,294.00, 24h low $63,385.40. Sessions ran all day (pre-session, session-open, midday, afternoon, evening 15:06 UTC, night 21:07 UTC) — all NO TRADE. Key finding: Grayscale NEAR ETF custodian amendment filed Jun 12 (24h old at night scan) — genuine institutional catalyst for NEAR, but not <6h fresh. NEAR above 3% threshold (+4.38%) at night scan but 1h momentum flat. Tomorrow (Sunday): NEAR primary watch — require fresh 1h >3% momentum + volume; BTC breakout above $64,294 remains conditional entry signal.
