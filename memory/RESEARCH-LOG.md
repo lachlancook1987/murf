@@ -15824,3 +15824,151 @@ These catalysts materially upgrade NEAR conviction from "moderate" to "high."
 - AAVE: tertiary; only if NEAR stops and RENDER fails
 - BTC: limit $64,300 breakout; only if cash available after NEAR/RENDER
 
+---
+
+## 2026-06-14 — Pre-Session Research
+
+**Execution time:** Pre-session UTC, Jun 14 2026 (Sunday)
+**Account at open:** $126.60 ZUSD (100% cash — NEAR trailing stop fired overnight)
+
+### NEAR Stop-Out Recap
+
+| Field | Value |
+|---|---|
+| **Position** | 40 NEAR/USD, entry ~$2.131, trailing stop 3.5% |
+| **Stop fired** | ~$2.0968 (HWM was $2.1728; 3.5% trail triggered on overnight dip) |
+| **Exit proceeds** | ~$83.87 (40 × $2.0968) |
+| **Trade P&L** | ~−$1.37 (−1.6% on notional) |
+| **Net after fees** | ~−$2.54 total account drawdown |
+| **Cash now** | $126.60 ZUSD |
+| **Phase P&L** | ~−$53.18 (−29.6%) from Kraken starting equity $179.78 |
+
+**Same-thesis cap TRIGGERED for NEAR:** Stop-out Jun 8 (1st) + stop-out Jun 14 (2nd) = 2 within 7-day rolling window. 48h cooling period required — NEAR re-entry BLOCKED until Jun 16. Materially new catalyst (distinct from Dynamic Resharding / NEAR@3.33 / Grayscale ETF amendment) required to re-enter after cooling.
+
+Note: NEAR 2.13 upgrade (AI agents + post-quantum signing) is a slightly different upgrade announcement but is fundamentally the same June upgrade thesis — does NOT qualify as materially new catalyst for same-thesis cap purposes.
+
+---
+
+### Market Snapshot (Jun 14 Pre-Session)
+
+| Asset | Price | 24h Open | 24h Move | 24h High | 24h Volume | Spread |
+|---|---|---|---|---|---|---|
+| BTC | $64,247 | $63,543 | +1.10% | n/a | Deep | 0.005% ✓ |
+| ETH | $1,673.65 | $1,680.35 | −0.40% | $1,688.99 | $23.2M | 0.001% ✓ |
+| SOL | $68.11 | $68.92 | −1.17% | $69.07 | $12.5M | 0.015% ✓ |
+| XRP | $1.1442 | $1.1502 | −0.52% | $1.1566 | $9.6M | 0.016% ✓ |
+| TAO | $268.43 | $263.26 | +1.96% | $282.06 | $19.9M (32,388 trades) | 0.057% ✓ |
+| SYN | $0.03990 | $0.03760 | +6.1% | $0.04760 | $297K (1,798 trades) | 0.50% ✓ |
+| OMNI | ~$0.36 | $0.445 | −19% | — | 4 trades | 85% ✗ SKIP |
+| WAR | $0.00081 | $0.00086 | −5.8% | — | 177 trades | 2.44% ✗ SKIP |
+| XLM | $0.18611 | $0.18704 | −0.50% | $0.18946 | $2.1M | 0.038% ✓ (down on day) |
+| INIT | $0.05880 | $0.05920 | −0.68% | — | 20 trades | 0.34% ✓ (illiquid SKIP) |
+
+**Fear & Greed Index:** 13 (Extreme Fear — 9th consecutive session)
+**BTC funding rate (Kraken):** +0.0148% / 8h (positive, longs paying — modest bullish bias)
+**Top 24h gainers (CoinGecko):** COAI +61%, JCT +52%, Ditto +38%, RIF +34% — micro/Bittensor subnets, not Kraken-liquid
+**Kraken top movers:** WAR +413% (spread 2.44% ✗), SYN +30% (pulled back from highs), OMNI +174% (orderbook broken ✗)
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +1.10% ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered: BTC +~1–2% over 5 days ✓ |
+| Same-thesis cap NEAR | **BLOCKED 48h (until Jun 16)** — 2nd stop-out Jun 14 within 7-day window |
+| Fear & Greed | 13 (Extreme Fear — cautionary, not rule-based blocker) |
+
+### Key Catalysts Today
+
+| Catalyst | Asset | Age | Signal Strength |
+|---|---|---|---|
+| NVIDIA Jensen Huang GTC 2026 keynote — AI-agent future + inference infrastructure | TAO/Bittensor | <24h | Medium |
+| Bittensor permissionless LLM trained across subnet network — first of kind | TAO | <48h | Medium |
+| Cortex Protocol integration with SYN — AI-tools for cross-chain swaps | SYN | ~11 days old | Weak |
+| NEAR 2.13 upgrade (AI agents + post-quantum signing) — scheduled June 2026 | NEAR | Fresh | BLOCKED (same-thesis cap) |
+| Glamsterdam ETH upgrade (ePBS + BALs) pushed to Q3/H2 2026 | ETH | Old | Weak |
+| DTCC Stellar integration (tokenized assets on XLM, first half 2027) | XLM | Days old | Long-dated, weak intraday |
+| U.S. Clarity Bill Senate debate expected early July | XRP | Upcoming | Event risk, not today |
+| Tokenized U.S. Treasuries cross-border settlement pilot (Ripple/Mastercard/JPMorgan/Ondo) | RWA narrative | Recent | No Kraken pair impact |
+| Spot BTC ETF outflows drag | BTC | Ongoing | Negative |
+
+---
+
+### Trade Ideas
+
+#### Idea 1: TAO/USD — AI Narrative Pullback Buy (Primary)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | NVIDIA Jensen Huang GTC 2026 keynote positioning AI-agent/inference future; Bittensor released permissionless LLM trained across network. Decentralised AI sector spotlight — multiple sources citing TAO as key AI-infra play. |
+| **Entry** | Market at ~$268–269 (buying pullback from $282 24h high) |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | $276.50 (+3%) |
+| **T2** | $281.85 (+5%) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | $63 (~50% equity) — moderate conviction; AI narrative is broad not TAO-specific |
+| **Kraken pair** | TAO/USD ✓ online |
+| **Spread** | 0.057% ✓ |
+| **Volume** | $19.9M 24h, 32,388 trades — institutional-grade liquidity |
+| **Concern** | Pulled back 4.97% from $282 high. Jensen Huang catalyst is AI-sector broad, not TAO-specific protocol event. Extreme Fear (13) environment — momentum fades faster. Weekend (Sunday) liquidity. |
+| **Condition** | Enter only if price holds above $268 with buy pressure visible; skip if breaks below $264 (would signal distribution) |
+
+#### Idea 2: SYN/USD — Cortex Protocol AI Integration (Conditional)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Integration with Cortex Protocol (AI tools for cross-chain swaps); recognized top cross-chain bridge Jun 3. RSI at 75 and 93% volume increase cited in research. |
+| **Entry** | Conditional — only if SYN reclaims $0.041 with sustained volume |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | entry × 1.03 |
+| **T2** | entry × 1.05 |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | $40 (~32% equity) — secondary position |
+| **Kraken pair** | SYN/USD ✓ online |
+| **Spread** | 0.50% ✓ (borderline — top of acceptable range) |
+| **Volume** | $297K 24h, 1,798 trades — moderate |
+| **Concern** | Price pulled back 16% from $0.0476 session high to $0.0399. Cortex integration catalyst is 11 days old — outside 6h fresh catalyst window. No new SYN-specific catalyst found today. |
+| **Assessment** | Below threshold for catalyst freshness — do NOT enter unless SYN breaks above $0.0430+ with new catalyst confirmed |
+
+#### Idea 3: ETH/USD — Glamsterdam Consolidation Breakout (Conditional/Fallback)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Glamsterdam upgrade (H2 2026): ePBS + Block-Level Access Lists. ETH recovered from $1,743 Feb lows; narrative building but upgrade delayed to Q3. |
+| **Entry** | Limit $1,682 (break above 24h open $1,680.35 with momentum) |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | $1,733 (+3%) |
+| **T2** | $1,766 (+5%) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | $40 (~32% equity) — fallback only |
+| **Kraken pair** | ETH/USD ✓ online |
+| **Spread** | 0.001% ✓ |
+| **Volume** | $23.2M 24h, 17,386 trades — excellent |
+| **Concern** | ETH down −0.4% from open at time of research. Upgrade pushed to H2 2026 — not imminent catalyst. No day-trade catalyst fresh enough. Only valid if ETH breaks back above open with volume. |
+| **Assessment** | LOW conviction. Enter only if ETH reclaims $1,682 AND BTC shows momentum. |
+
+---
+
+### Risk Factors
+
+1. **Extreme Fear 9th consecutive session (13)** — risk-off momentum; setups that work in neutral markets fail faster here; stop discipline critical
+2. **NEAR same-thesis cap** — lost $2.54 on a repeat entry thesis. The asset is now blocked. Discipline required to not force NEAR re-entry.
+3. **Sunday thin liquidity** — weekend volumes lower across the board; effective spreads and slippage risk higher
+4. **Best movers already ran** — pre-session research is post-surge for WAR, SYN, OMNI; all pulled back from highs
+5. **TAO pullback risk** — $282 → $268 may continue lower; no hard floor visible; AI narrative is sentiment not fundamental
+6. **BTC ETF outflow drag** — ongoing headwind on BTC, depressing broader risk appetite
+7. **Fed Jun 16-17 approaching** — macro risk event Monday; risk-off positioning could accelerate Sunday evening
+
+---
+
+### Decision
+
+**TRADE** — Crash gate NOT triggered. BTC weekly gate NOT triggered. Default stance is TRADE.
+
+**Execution priority (weak setup — conditional entries only):**
+1. **TAO/USD** ~$63 market entry at $268–269 — primary setup. AI narrative (Jensen Huang/Bittensor). Enter if TAO holds $268+ support. 2.5% trailing stop immediately after fill. T1=$276, T2=$282.
+2. **SYN/USD** CONDITIONAL — only if SYN reclaims $0.041+ AND a fresh (<6h) catalyst is confirmed. Current setup does not meet catalyst freshness. Skip at current price.
+3. **ETH/USD** CONDITIONAL fallback — limit $1,682 only if price action breaks back above 24h open. Low conviction.
+
+**Overall conviction: LOW.** Setup quality is below average — all major alts flat to down, top movers pulled back from highs, Extreme Fear environment. TAO is the only Kraken pair with a real catalyst and positive momentum vs 24h open, but it too has pulled back from highs. Size conservatively; do not over-extend in a fear environment. NEAR blocked until Jun 16.
+
