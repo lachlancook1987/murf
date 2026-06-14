@@ -4901,3 +4901,15 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Notes:** NEAR holding steady overnight. Price touched 24h high $2.1728 (ratcheting stop HWM up from $2.1326 to $2.1728), then pulled back slightly to $2.1359. Entry still +0.23% in the green. T1 $2.195 (+3%) and T2 $2.238 (+5%) remain open. BTC macro flat (+0.10%) — neutral backdrop. Catalysts still intact (Dynamic Resharding upgrade, Grayscale NEAR ETF filing, NEAR@3.33 incentive).
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+### Jun 14 — EOD Snapshot (Day 25, Saturday)
+**Portfolio:** $126.61 | **Cash:** $126.60 (100%) | **Day P&L:** −$2.53 (−1.96%) vs Jun 12 EOD [no Jun 13 EOD; 2-day comparison] | **Phase P&L:** −$53.17 (−29.58%) | **vs BTC:** −3.57% (BTC +1.61% over same 2-day window)
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** NEAR/USD trailing stop triggered — 40 NEAR @ ~$2.0805 net exit (stop O2GR57-B2GSQ-H32QKU, 3.5% trail from HWM $2.1728; 24h low $2.0906 breached stop $2.0968); trade P&L: −$2.54 (−2.98% on $85.24 position). No new entries. | **Total since migration:** ~66
+**Notes:** NEAR position entered Jun 13 midday at $2.131 stopped out today as price pulled back to 24h low $2.0906, triggering the 3.5% trailing stop at $2.0968 (HWM was $2.1728 from overnight ratchet). Exit proceeds ~$83.22 (net of Kraken fees ≈ 0.26%). Portfolio now 100% cash at $126.60 ZUSD. Day P&L covers 2 days (Jun 12 EOD → Jun 14) as Jun 13 had only a midday snapshot. Phase P&L −29.58% vs Kraken starting equity $179.78. BTC gained +1.61% over the same window (Jun 12 EOD $63,407 → $64,425 now), so bot underperformed BTC by −3.57%. Alpaca: no positions, stop a2b44cf9 cancelled 2026-05-22 — confirmed. Crash gate NOT triggered (BTC 24h open $64,416 → current $64,425, +0.01%). Tomorrow: full-cash day. NEAR catalysts (Dynamic Resharding upgrade, Grayscale ETF filing, NEAR@3.33 incentive) may still be fresh — confirm age <6h before any re-entry. Scan full altcoin universe for 1h >3% surge + fresh catalyst + spread ≤1%.
