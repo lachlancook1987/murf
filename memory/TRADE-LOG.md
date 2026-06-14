@@ -4913,3 +4913,63 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 
 **Trades today:** NEAR/USD trailing stop triggered — 40 NEAR @ ~$2.0805 net exit (stop O2GR57-B2GSQ-H32QKU, 3.5% trail from HWM $2.1728; 24h low $2.0906 breached stop $2.0968); trade P&L: −$2.54 (−2.98% on $85.24 position). No new entries. | **Total since migration:** ~66
 **Notes:** NEAR position entered Jun 13 midday at $2.131 stopped out today as price pulled back to 24h low $2.0906, triggering the 3.5% trailing stop at $2.0968 (HWM was $2.1728 from overnight ratchet). Exit proceeds ~$83.22 (net of Kraken fees ≈ 0.26%). Portfolio now 100% cash at $126.60 ZUSD. Day P&L covers 2 days (Jun 12 EOD → Jun 14) as Jun 13 had only a midday snapshot. Phase P&L −29.58% vs Kraken starting equity $179.78. BTC gained +1.61% over the same window (Jun 12 EOD $63,407 → $64,425 now), so bot underperformed BTC by −3.57%. Alpaca: no positions, stop a2b44cf9 cancelled 2026-05-22 — confirmed. Crash gate NOT triggered (BTC 24h open $64,416 → current $64,425, +0.01%). Tomorrow: full-cash day. NEAR catalysts (Dynamic Resharding upgrade, Grayscale ETF filing, NEAR@3.33 incentive) may still be fresh — confirm age <6h before any re-entry. Scan full altcoin universe for 1h >3% surge + fresh catalyst + spread ≤1%.
+
+---
+
+## 2026-06-14 — Midday Scan
+
+**Execution time:** ~midday UTC, Jun 14 2026 (Sunday)
+**Account at scan:** $126.60 ZUSD (100% cash), 0 Kraken positions, 0 Kraken orders
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC $64,517 / +0.16% 24h ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered ✓ |
+| NEAR same-thesis cap | BLOCKED until Jun 16 (2nd stop-out Jun 14 within 7d) |
+| Fear & Greed | 13 (Extreme Fear — 9th consecutive session) |
+
+### Position / Order Verification
+
+| Step | Result |
+|---|---|
+| STEP 2 — Trailing stops | No positions → N/A |
+| STEP 3 — Thesis check | No positions → N/A |
+| STEP 4 — Stop tightening | No positions → N/A |
+
+### Midday Market Snapshot
+
+| Asset | 24h Open | Current | Move | Spread | Assessment |
+|---|---|---|---|---|---|
+| BTC | $64,415.60 | $64,517.60 | +0.16% | 0.002% ✓ | Flat; crash gate clear |
+| TAO | $263.26 | $267.99 | +1.80% | 0.057% ✓ | Fading — bearish MACD, weak OBV; "buy pressure visible" condition NOT met |
+| SYN | $0.03760 | $0.03780 | +0.53% | 0.26% ✓ | Below $0.041 reclaim trigger → SKIP |
+| ETH | $1,680.35 | $1,675.62 | −0.28% | 0.001% ✓ | Below $1,682 limit trigger → SKIP |
+| XLM | $0.18704 | $0.18506 | −1.06% | 0.043% ✓ | Down on day; DTCC catalyst stale → SKIP |
+| TRUMP | $2.1810 | $2.0410 | −6.40% | 0.049% ✓ | Reversed off 24h high $2.29; fading hard → SKIP |
+
+### Candidate Assessment
+
+**TAO/USD (primary candidate):** Pre-session condition was "enter only if price holds above $268 with buy pressure visible." Perplexity midday read: bearish MACD crossover confirmed; CMF below −0.05; weak OBV implying fragile rally. Price at $268 is at the threshold but WITHOUT positive buy pressure — condition NOT met. Jensen Huang/Bittensor catalyst now >24h old (GTC keynote was Jun 13). Sunday Extreme Fear environment (F&G 13). **SKIP.**
+
+**SYN/USD:** Price $0.0378 — below $0.041 reclaim trigger. No fresh SYN-specific catalyst. **SKIP.**
+
+**ETH/USD:** Price $1,675 — below $1,682 limit trigger. No fresh intraday catalyst. **SKIP.**
+
+**XLM/USD:** Down −1.06% from open. DTCC Stellar integration catalyst days old. No new development. **SKIP.**
+
+**TRUMP/USD:** Down −6.4% from 24h open $2.181. Post-surge reversal. Chasing a fading memecoin = no edge. **SKIP.**
+
+**Fresh 1h movers:** Perplexity unable to provide live 1h data. No other Kraken-liquid candidates identified with >3% 1h surge + fresh <6h catalyst.
+
+### Decision: NO-OP
+
+No entries placed. No stops to manage. No positions to protect.
+
+- All pre-session candidates failed midday confirmation conditions
+- Extreme Fear environment + Sunday thin liquidity confirmed as no-catalyst-no-entry environment
+- Next potential entry: TAO re-entry if buy pressure confirms on Monday session with refreshed catalyst; NEAR re-entry opens Jun 16 with distinct new catalyst
+
+**Notification:** Not sent — no action taken.
+
