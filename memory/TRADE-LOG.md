@@ -4973,3 +4973,39 @@ No entries placed. No stops to manage. No positions to protect.
 
 **Notification:** Not sent — no action taken.
 
+---
+
+## 2026-06-14 — Midday Scan (2nd run, afternoon UTC)
+
+**Account:** $126.60 ZUSD (100% cash), 0 Kraken positions, 0 Kraken orders.
+
+**Positions/stops:** None — N/A.
+
+### Fresh Perplexity Scan Results
+
+**New Perplexity candidates (24h movers on Kraken):** OMNI +174%, MAT +66%, DOLO +53%, INIT +30-50%, UFD +30-50%.
+
+| Asset | Quote Check | Assessment |
+|---|---|---|
+| TAO/USD | Ask $263.43, spread 0.034% ✓ | NOW $263.55 — broke BELOW $264 distribution signal from pre-session. Condition "skip if breaks below $264" triggered → **SKIP** |
+| MAT/USD | Ask $0.0611, bid $0.0609, spread 0.33% ✓ | Only 15 trades in 24h — illiquid. Down from $0.0612 open → **SKIP** |
+| DOLO/USD | Ask $0.02516, bid $0.02414 | Spread 4.05% (>1% hard rule) → **SKIP** |
+| UFD/USD | Ask $0.01266, bid $0.01259, spread 0.55% ✓ | Down −3.6% from $0.01299 open, 126 trades → **SKIP** |
+| INIT/USD | Ask $0.05820, bid $0.05810, spread 0.17% ✓ | Down −2% from $0.05920 open, 132 trades → **SKIP** |
+| REX/USD | EQuery: Unknown asset pair | Not on Kraken → **SKIP** |
+| JUP (Jupiter unlock) | — | 1.78% circulating supply unlock at 2 PM UTC = selling pressure event, not a buy setup → **SKIP** |
+
+**STORJ:** Perplexity showed ~+30% in earlier 24h window — current price $0.077–$0.078, +1.4%, no specific catalyst. Macro-driven move only → **SKIP.**
+
+**Breaking catalysts:** Bitcoin ETF outflows ongoing (almost 2 weeks consecutive); U.S. Clarity Bill Senate watch (no vote today); Fed Jun 16-17 FOMC approaching; stronger U.S. employment data reducing rate-cut odds. All macro headwinds — no actionable crypto-specific catalyst for long entries.
+
+### Decision: NO-OP (confirmed)
+
+TAO broke below the $264 distribution floor — the one conditional entry from pre-session is now a confirmed skip. All other candidates fail spread, liquidity, or directional criteria. No new catalyst emerged.
+
+- NEAR: BLOCKED until Jun 16 (same-thesis cap, 2nd stop-out)
+- TAO: $263.55 < $264 distribution signal → SKIP
+- All other candidates: spread >1%, illiquid, or down on day
+
+**Notification:** Not sent — no action taken.
+
