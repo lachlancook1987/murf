@@ -15972,3 +15972,37 @@ Note: NEAR 2.13 upgrade (AI agents + post-quantum signing) is a slightly differe
 
 **Overall conviction: LOW.** Setup quality is below average — all major alts flat to down, top movers pulled back from highs, Extreme Fear environment. TAO is the only Kraken pair with a real catalyst and positive momentum vs 24h open, but it too has pulled back from highs. Size conservatively; do not over-extend in a fear environment. NEAR blocked until Jun 16.
 
+---
+
+## 2026-06-14 — Session-Open Scan (Evening UTC)
+
+**Account:** $126.60 ZUSD (100% cash), 0 Kraken positions, 0 Kraken orders.
+**BTC:** Ask $64,097 / 24h open $64,416 = **−0.49%** | Crash gate NOT triggered ✓
+
+### Live Asset Check
+
+| Asset | Ask | 24h Open | 24h Move | Gate/Condition | Decision |
+|---|---|---|---|---|---|
+| TAO/USD | $261.01 | $263.26 | −0.84% | Broke below $264 distribution floor (24h low $257) | **SKIP** |
+| ETH/USD | $1,661.65 | $1,680.35 | −1.11% | Below $1,682 limit trigger | **SKIP** |
+| SYN/USD | $0.03970 | $0.03760 | +5.6% | Below $0.041 reclaim; no fresh catalyst | **SKIP** |
+| SOL/USD | $67.37 | $68.92 | −2.25% | Down on day; no fresh catalyst | **SKIP** |
+| INJ/USD | $5.023 | $5.258 | −4.47% | Down on day; no fresh catalyst | **SKIP** |
+| ONDO/USD | $0.3484 | $0.3641 | −4.32% | Down on day; no fresh catalyst | **SKIP** |
+| NEAR/USD | — | — | — | BLOCKED until Jun 16 (same-thesis cap) | **BLOCKED** |
+
+### Decision: NO-OP
+
+No candidates pass day-trading entry criteria:
+- No 1h >3% surge on Kraken with volume confirmation
+- No fresh <6h catalyst for any actionable asset
+- TAO (primary) broke further below the $264 distribution floor set mid-afternoon; now $261 — distribution confirmed
+- All broad alts (SOL, INJ, ONDO) down 2–4% on day; risk-off tape
+- Extreme Fear 13 (9th consecutive session) + Sunday evening thin liquidity
+- Fed Jun 16-17 FOMC approaching — macro risk-off positioning
+
+**Next potential entries:** NEAR re-entry opens Jun 16 (48h cooling expires) if materially new catalyst confirms. TAO re-entry if price recovers above $264+ with buy pressure on Monday session.
+
+**Notification:** Not sent — no action taken.
+
+---
