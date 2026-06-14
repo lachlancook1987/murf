@@ -16006,3 +16006,141 @@ No candidates pass day-trading entry criteria:
 **Notification:** Not sent — no action taken.
 
 ---
+
+## 2026-06-14 — Pre-Session Research (Evening Run)
+
+**Execution time:** Evening UTC, Jun 14 2026 (Sunday)
+**Session branch:** claude/affectionate-gates-meo8sv
+
+### Account Snapshot
+
+| Account | Balance | Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $126.60 ZUSD | 0 | 0 |
+| Alpaca (residual) | No positions | — | — (historic orders only, all filled/cancelled) |
+
+100% cash. No stops to manage. Clean slate.
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC +0.99% 24h ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered: BTC positive over 5 days ✓ |
+| NEAR same-thesis cap | BLOCKED until Jun 16 (2nd stop-out Jun 14, 7-day window) |
+
+### Market Snapshot
+
+| Asset | 24h Open | Current | 24h Move | Notes |
+|---|---|---|---|---|
+| BTC | ~$63,611 | $64,247 | +0.99% | Crash gate clear; positive backdrop |
+| ETH | ~$1,664 | $1,678 | +0.85% | Mild upside |
+| TAO | $263.26 | $264.07 | +0.31% open | Day high $282 / low $257; recovering from pullback |
+| FET | $0.2082 | $0.2016 | −3.2% open | Below open; AI move already faded |
+| RENDER | $1.772 | $1.747 | −1.4% open | Below open |
+| ENA | $0.0837 | $0.0801 | −4.3% open | Below open; weak |
+| ALGO | $0.0897 | $0.0897 | flat | No fresh catalyst |
+| WLD | $0.5021 | $0.4988 | −0.66% open | Below open; institutional catalyst |
+| NEAR | — | ~$2.10 | — | BLOCKED |
+
+**Fear & Greed Index:** 18 (Extreme Fear — improved from 13 yesterday; 9th+ day in EF zone)
+**BTC Perpetual Funding Rate (Kraken):** +0.0148% / 8h (positive; longs paying, modest bullish bias)
+
+### Perplexity Research Summary
+
+**Top 24h Gainers (CoinMarketCap):**
+1. TAO +27.14% — AI infrastructure breakout
+2. SKYAI +25.77% — not Kraken-liquid
+3. Humanity (H) +20.98% — not Kraken-liquid
+4. FET +12.24% — Kraken-liquid, but currently below 24h open
+5. ENA +8.95% — below open
+6. PI +8.10% — not tradeable
+7. NEAR +7.38% — BLOCKED
+8. ALGO +7.25% — flat from open, no fresh catalyst
+9. RENDER +6.44% — below open
+10. WLD +6.08% — slight decline from open; institutional catalyst
+
+**Key Catalysts:**
+- **NVIDIA Jensen Huang GTC 2026 keynote** — positioned AI-agent/inference infrastructure as the future; directly catalyzed Bittensor (TAO) as the leading decentralised AI compute play. TAO broke a 7-month downtrend on heavy volume June 13 (<24h old) ✓
+- **Bittensor permissionless LLM** — trained across subnet network; first of kind; reinforces TAO as infrastructure play
+- **Eightco 283M WLD position disclosure** — institutional signal for WLD digital identity narrative; fresh catalyst
+- **Iran peace deal narrative (fragile)** — geopolitical risk-on spark; Tehran disputed the claim; treat as binary/unreliable
+- **Clarity Act (US regulation)** — Senate watch; no vote today; background positive for XRP but not actionable intraday
+- **Token unlock today:** PUMP $14.2M (selling pressure, not a buy setup)
+- **Continuing drag:** BTC ETF outflows, FOMC Jun 16-17 approaching (macro risk-off overhang)
+
+**TAO 4h Technical Read:**
+- MACD: BUY | ADX: 28.83 (strong trend) | RSI: ~57.6 (neutral, not overbought)
+- StochRSI: elevated (short-term caution flag)
+- Current $264 near breakout support level; recovered +2.7% from day low $257
+- Strong volume: 18,134 trades in 24h; average 24h price $267.66
+
+### Candidate Screening
+
+| Asset | Spread | 24h Vol (trades) | vs Open | Assessment |
+|---|---|---|---|---|
+| TAO/USD | 0.08% ✓ | 18,134 ✓ | +0.31% | PRIMARY — AI catalyst <24h; high volume; recovering from $257 low |
+| WLD/USD | 0.08% ✓ | 2,689 ✓ | −0.66% | CONDITIONAL — institutional catalyst but below open |
+| FET/USD | 0.10% ✓ | 3,077 ✓ | −3.2% | SKIP — below open; AI move faded |
+| RENDER/USD | 0.057% ✓ | 2,068 ✓ | −1.4% | SKIP — below open; no fresh catalyst |
+| ENA/USD | 0.12% ✓ | 1,090 | −4.3% | SKIP — down on day; weak technicals |
+| ALGO/USD | 0.056% ✓ | 2,579 ✓ | flat | SKIP — no fresh catalyst |
+| NEAR/USD | — | — | — | BLOCKED (same-thesis cap until Jun 16) |
+
+### Trade Ideas
+
+#### Idea 1: TAO/USD — AI Narrative Momentum Recovery (PRIMARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | NVIDIA Jensen Huang GTC 2026 keynote (<24h) + Bittensor permissionless LLM launch. TAO broke 7-month downtrend on heavy volume Jun 13. Decentralised AI infrastructure narrative driving institutional and retail interest. |
+| **Entry** | Market at ~$264 (recovering from $257 day low; back near 24h open $263.26) |
+| **Stop** | trailing_stop, trail_percent: 2.5 (high-ATR asset; day range $257–$282 = 9.5%; at current $264 this puts initial stop floor ~$257.40 — near day low support) |
+| **T1** | $271.80 (+3%) |
+| **T2** | $277.30 (+5%) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Size** | ~$63 (~50% equity) — moderate conviction; AI narrative is broad and fresh |
+| **Kraken pair** | TAO/USD ✓ confirmed |
+| **Spread** | 0.08% ✓ |
+| **Condition** | Enter only if price is moving up at time of order; skip if price is below $262 (would indicate distribution resuming) |
+| **High-ATR note** | Day range = 9.5%; strategy allows 3.5% trail for high-ATR. Using 2.5% default (better R:R); accept risk of noise-stop near day low. Size accordingly. |
+
+#### Idea 2: WLD/USD — Eightco Institutional Buy (CONDITIONAL)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Eightco disclosed 283M WLD position — large institutional entry signal for WLD digital identity narrative. Technical breakout from +120% May recovery. |
+| **Entry** | Conditional: only if WLD reclaims $0.503+ (above 24h open $0.5021) with upward momentum. Current $0.4988 — below open. |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | Entry × 1.03 (~$0.518 at $0.503 entry) |
+| **T2** | Entry × 1.05 (~$0.528 at $0.503 entry) |
+| **R:R** | 1.2:1 ✓ |
+| **Size** | ~$40 (~32% equity) — secondary position |
+| **Kraken pair** | WLD/USD ✓ confirmed |
+| **Spread** | 0.08% ✓ |
+
+#### Idea 3: FET/USD — Watchlist Only (NOT entering today)
+
+FET was the +12.24% gainer but current price $0.2016 is below 24h open $0.2082 (−3.2%). The AI move that drove the initial surge has already priced in. No new FET-specific catalyst in the last 6h. SKIP unless fresh development emerges.
+
+### Risk Factors
+
+1. **TAO highly extended** — +27% in 24h; already saw $282 high → $257 low (−9%); entering at $264 means catching after a large move. Second leg requires sustained AI narrative momentum.
+2. **Extreme Fear environment (18)** — improving from 13 but still risk-off; fast-money exits are more common; trailing stop discipline critical.
+3. **AI sector rotation complete?** — FET, RENDER, ENA all below their 24h opens despite strong 24h gains. Suggests the AI surge was largely a single session move that may not extend.
+4. **Sunday thin liquidity** — lower volumes; slippage risk elevated; prefer market orders for small size.
+5. **FOMC June 16-17** — macro risk event Monday evening; risk-off positioning likely into weekend. May suppress crypto risk appetite.
+6. **BTC ETF outflows** — ongoing multi-week drag on BTC and broad market sentiment.
+7. **Iran peace narrative fragility** — geopolitical catalyst was disputed; if unwound could reverse brief risk-on move.
+
+### Decision
+
+**TRADE** — Crash gate NOT triggered (BTC +0.99%). BTC weekly gate NOT triggered. Default stance is TRADE.
+
+**Planned trades:**
+1. **TAO/USD** — Market entry ~$264; 2.5% trailing stop immediately after fill; T1=$272, T2=$277. Size ~$63 (50% equity). **PRIMARY.**
+2. **WLD/USD** — Conditional. Enter ONLY if WLD reclaims $0.503+. 2.5% trailing stop; T1~$0.518, T2~$0.528. Size ~$40. **SECONDARY — conditional.**
+
+**NEAR:** BLOCKED until Jun 16. Do not re-enter before then regardless of price action.
+
+---
