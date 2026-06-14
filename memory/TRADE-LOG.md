@@ -5009,3 +5009,30 @@ TAO broke below the $264 distribution floor — the one conditional entry from p
 
 **Notification:** Not sent — no action taken.
 
+---
+
+## 2026-06-14T21:08:15Z | TAO/USD | BUY | 0.2396 TAO | Entry: ~$264.17 | Trailing Stop 2.5%: $257.57 | Open
+
+**Buy Order ID:** OWNQIN-VNSHG-KJQDV5
+**Trailing Stop Order ID:** OVKWJU-NRQRV-UD2KOG (trail −2.5%, stop $257.57, HWM $264.17, GTC ✓)
+**Notional:** ~$63.72 (~50% of $126.60 ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $257.57 (2.5% trail from HWM $264.17)
+**T1 Target:** $272.09 (+3% from ~$264.17 entry) | **T2 Target:** $277.38 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** NVIDIA Jensen Huang GTC 2026 keynote (Jun 13) directly catalysed Bittensor (TAO) as the leading decentralised AI compute play + Bittensor permissionless LLM launch (first of kind across subnet network). TAO broke 7-month downtrend on heavy volume Jun 13. 24h volume 17,636 trades on Kraken (institutional-level). Spread 0.064% ✓. Evening pre-session research confirmed TRADE with TAO as primary entry.
+**Spread at entry:** ~0.064% ✓ | **Pair:** TAO/USD ✓ (Kraken online)
+**Crash gate:** BTC −0.64% 24h — NOT triggered ✓
+**Cash remaining:** $62.88 ZUSD
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC −0.64%) ✓
+- [x] Spread ≤1%: 0.064% ✓
+- [x] Asset on Kraken: TAO/USD online ✓
+- [x] Catalyst: NVIDIA GTC 2026 keynote + Bittensor permissionless LLM + 7-month downtrend break ✓
+- [x] Entry condition: price above $262 threshold ($264.17) ✓
+- [x] T1/T2 defined: $272.09 / $277.38 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OVKWJU ✓
+- [x] WLD/USD: SKIP — price $0.5002 below $0.503 reclaim threshold ✓
+
