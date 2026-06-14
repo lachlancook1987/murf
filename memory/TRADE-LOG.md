@@ -4876,3 +4876,28 @@ XLM DTCC-Stellar announcement confirmed May 27 (11 days stale). NEAR barely abov
 **Notes:** NEAR position entered today (Jun 13 midday) at ~$2.131; position is essentially flat overnight (−0.81%). BTC rose +1.40% overnight — positive macro backdrop. Stop HWM at $2.1326 ratcheted slightly above entry, providing early profit protection at $2.0580. Catalysts intact: Dynamic Resharding June 2026 upgrade, Grayscale amended NEAR ETF filing, NEAR@3.33 incentive (Jun 11+). T1 target $2.195 (+3%), T2 $2.238 (+5%) remain open.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-14 — Overnight Triage Check
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 40 | ~$2.131 | $2.1359 | **+0.23%** | $2.1728 | $2.0968 (trail 3.5%) | 1.83% | O2GR57-B2GSQ-H32QKU ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 CANCELLED since 2026-05-22. ✓
+
+**STEP 2 — Trailing stops verified (Kraken live orders API):**
+- NEAR: O2GR57-B2GSQ-H32QKU, 40.00 NEAR, trail +3.5%, stop $2.0968, HWM $2.1728 (24h high confirmed) — ✓
+- No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>−20% AND stop not triggered):** NEAR +0.23% from entry — well within threshold. ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR entry $2.131, HWM $2.1728 = +1.97% — threshold: $2.558 (+20%). Not yet. No adjustments. ✓
+
+**STEP 5 — BTC Crash Gate:** BTC ask $64,480 | 24h open $64,415.60 = **+0.10%** | 24h range $63,418–$64,750. Well under −20% threshold. No crash gate. ✓
+
+**Notes:** NEAR holding steady overnight. Price touched 24h high $2.1728 (ratcheting stop HWM up from $2.1326 to $2.1728), then pulled back slightly to $2.1359. Entry still +0.23% in the green. T1 $2.195 (+3%) and T2 $2.238 (+5%) remain open. BTC macro flat (+0.10%) — neutral backdrop. Catalysts still intact (Dynamic Resharding upgrade, Grayscale NEAR ETF filing, NEAR@3.33 incentive).
+
+**Result: NO-OP. No actions taken. No notification sent.**
