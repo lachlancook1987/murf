@@ -5245,3 +5245,46 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 - [x] Stop placed immediately post-fill: O4WH4Z ✓
 - [x] Same-thesis cap: OPEN (no prior XRP stop-outs in 7-day window) ✓
 - [x] Binary catalyst rule: trail_percent 7 applied (ETF launch + regulatory) ✓
+
+---
+
+## 2026-06-15 | HYPE/USD | EXIT (Trailing Stop Triggered) | ~$67.41 est. | +1.25% gain | CLOSED
+
+**Exit Order:** OWHYLU-5NFM7-32WMFR (0.5% trailing stop triggered automatically)
+**Entry:** $66.58 | **Qty:** 0.4547 HYPE | **Exit:** ~$67.41 (estimated from ZUSD change: $78.5915 − $47.94 = $30.6515 returned / 0.4547 = $67.41/HYPE)
+**Trailing Stop %:** 0.5% (tightened at T1 from 2.5%) | **HWM at exit:** ~$67.75 ($67.41 / 0.995) | **Stop trigger:** $67.41
+**P&L:** +$0.38 est. (+1.25% from entry $66.58 → exit ~$67.41)
+**T1 ($68.58):** HIT ✓ (stop tightened to 0.5% after T1 reached $68.61 24h high) | **T2 ($69.91):** NOT reached
+**Note:** HYPE peaked at $68.61 (24h high, T1 ✓), stop tightened to 0.5% trailing per strategy rule. Price then faded — HWM at trail locked to ~$67.75, stop triggered at $67.41 as price returned to session open levels. Stop-out count: 1st HYPE stop-out; re-entry open (cap triggers at 2nd within 7d).
+
+---
+
+## 2026-06-15 — Midday Scan (~12:xx UTC)
+
+**Portfolio at scan time:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Buffer | Status |
+|---|---|---|---|---|---|---|---|
+| XRP/USD | 40.65 | $1.2276 | $1.2350 | +0.60% | O4WH4Z (7% trail, $1.1614 trigger) | 6.0% | HOLD |
+| Cash | — | — | $78.59 ZUSD | — | — | — | Available |
+
+**Stop verification:**
+- XRP: O4WH4Z active ✓ (stopprice $1.16136, HWM $1.24877, 7% trail confirmed in orders API)
+- No unprotected positions ✓
+- Alpaca: no open positions, no active stops (residual BTC position long-since closed)
+
+**Stop tightening check:**
+- XRP +0.60% from entry — far below +20% threshold ($1.4731) → no tightening needed
+
+**Thesis check:**
+- XRP: ETF launch catalyst + XRPL upgrade + CLARITY Act advancement all intact. Perplexity midday confirms XRP in $1.21–$1.30 consolidation range; no narrative breaks, no exploit, no regulatory reversal. HOLD. ✓
+
+**Candidate scan for new entries:**
+- WLD ($0.6118): Extended +17% from 24h open, pulling back from $0.6298 high. No fresh catalyst vs morning (same Eightco/unlock thesis). Momentum fading. SKIP — no new catalyst.
+- TAO ($272.34): Faded from $291 intraday high to +0.8% from open. NVIDIA catalyst >48h old, momentum gone. SKIP.
+- SOL ($73.21): +2.75% from open — below 3% threshold. No fresh catalyst. SKIP.
+- HYPE ($66.72): Back near entry, stop fired already at $67.41. No fresh catalyst for re-entry. SKIP.
+- ZEC: +13% 24h but no same-day catalyst (main catalysts from Jan/May 2026). Strategy requires catalyst <6h old for day trades. SKIP.
+- NEAR: Same-thesis cap in effect until Jun 16. SKIP.
+
+**Result: NO NEW ENTRIES. XRP held with 7% trailing stop. $78.59 ZUSD in reserve.**
+**No notification sent (no stop tightened, no position cut, no new entry placed).**
