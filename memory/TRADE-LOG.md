@@ -5378,3 +5378,36 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 - ZUSD: $14.9635
 - Total: ~$129.04
 - Phase P&L: ~−$50.74 (−28.22%) from Kraken starting equity $179.78
+
+---
+
+## 2026-06-15 — Overnight Triage Check
+
+**Execution time:** 2026-06-15 (overnight routine)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| SOL/USD | 0.85 | ~$74.66 | $73.74 | **−1.23%** | $74.41 | $72.55 (OTCEZJ, 2.5% trail) | ⚠️ 1.61% | ✓ |
+| XRP/USD | 40.65 | ~$1.2276 | $1.23794 | **+0.84%** | $1.25839 | $1.21435 (O6JOQ6, 3.5% trail) | 1.91% | ✓ |
+
+**Alpaca:** No positions. Stop a2b44cf9 CANCELLED since 2026-05-22. ✓
+
+**STEP 2 — Trailing stops verified (Kraken live orders API):**
+- SOL: OTCEZJ-4GBK2-KLJYB3, 0.85 SOL, trail +2.5%, stop $72.55, HWM $74.41 ✓
+- XRP: O6JOQ6-MPSMC-BIUEEI, 40.65 XRP, trail +3.5%, stop $1.21435, HWM $1.25839 ✓
+- No unprotected positions. No orphaned orders.
+
+**STEP 3 — Emergency exits (>−20% AND stop not triggered):**
+- SOL: −1.23% → well within threshold ✓
+- XRP: +0.84% → above entry ✓
+- No emergency exits.
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- SOL: −1.23% → threshold $89.59 (+20%) — not reached. No adjustment.
+- XRP: +0.84% → threshold $1.4731 (+20%) — not reached. No adjustment.
+
+**STEP 5 — BTC Crash Gate:** BTC ask $66,152 | 24h open $65,715 = **+0.67%** | 24h range $65,222–$67,264. Well under −20% threshold. No crash gate. ✓
+
+**Notes:** SOL entered yesterday at $74.66; pulled back slightly to $73.74 overnight (−1.23%). Stop buffer 1.61% — thin but stop working as designed. XRP entered yesterday at $1.2276 on US spot XRP ETF launch catalyst; currently +0.84% in the green at $1.23794. Stop self-ratcheted to $1.21435 (HWM $1.25839). XRP T2 ($1.2890) was hit yesterday and stop was tightened from 7% to 3.5% per strategy rules. BTC flat/slightly up overnight (+0.67%) — macro neutral. No crash gate. Both theses intact (SOL: SEC multi-asset ETF + Solana CLO fund; XRP: US spot XRP ETF launch June 15 + XRPL upgrade + CLARITY Act).
+
+**Result: NO-OP. No actions taken. No notification sent.**
