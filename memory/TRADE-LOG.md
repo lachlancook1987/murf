@@ -5195,3 +5195,53 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 - [x] R:R ≥1.2:1: 1.2:1 ✓
 - [x] Stop placed immediately post-fill: OEEA55 ✓
 - [x] Same-thesis cap: OPEN (no prior HYPE stop-outs in 7-day window) ✓
+
+---
+
+## 2026-06-15 | WLD/USD | EXIT (Trailing Stop Triggered) | ~$0.6125 est. | +4.1% gain | CLOSED
+
+**Exit Order:** OKAYII-CBOO2-NO7VXE (trailing stop triggered automatically)
+**Entry:** $0.5892 | **Qty:** 68.1400 WLD | **Exit:** ~$0.6125 (estimated from ZUSD change: $98.10 − $56.52 = $41.58 returned / 68.14 = $0.6101 net; gross ~$0.6125)
+**Trailing Stop %:** 2.5% | **HWM at exit:** ~$0.6298 (24h high) | **Stop trigger:** ~$0.6141 (2.5% from HWM $0.6298)
+**P&L:** +$1.59 est. (+4.1% from entry $0.5892 → exit ~$0.6125) ✓ (stop trail carried well above T1 $0.6069)
+**T1 ($0.6069):** HIT ✓ | **T2 ($0.6187):** NOT reached
+**Note:** WLD trailed from morning HWM ~$0.5985 → continued to ~$0.6298 (24h high), trailing stop rose to ~$0.6141; price pulled back through stop trigger → position closed with gain. Stop-out count: 1st WLD stop-out (re-entry open; 2nd would trigger 48h cap).
+
+---
+
+## 2026-06-15 | HYPE/USD | STOP TIGHTENED (T1 hit) | 2.5% → 0.5% trailing stop
+
+**Trigger:** HYPE reached $68.610 (24h high) = T1 target $68.58 (+3% from entry $66.58) ✓
+**Action:** Cancelled OEEA55-SQ42Z-5EQF33 (2.5% trail, stop $66.90) → placed OWHYLU-5NFM7-32WMFR (0.5% trail)
+**New stop:** OWHYLU-5NFM7-32WMFR | Stop price: $67.47 | HWM at placement: ~$67.81
+**Buffer above entry:** $67.47 vs entry $66.58 = +1.34% locked-in gain if triggered ✓
+**Strategy rule applied:** "At T1 (+3%): cancel 2.5% stop and replace with 0.5% trailing stop to lock in gains and trail toward T2 (+5%)"
+**T2 target:** $69.91 (+5% from $66.58 entry) — still valid; stop trailing at 0.5% from new highs
+
+---
+
+## 2026-06-15 | XRP/USD | BUY | 40.6500 XRP | Entry: ~$1.2276 | Trailing Stop 7%: $1.1417 | Open
+
+**Buy Order ID:** ONYP6O-XWOGA-6CLNWN
+**Trailing Stop Order ID:** O4WH4Z-NRWQG-HD75AO (trail −7.0%, stop $1.1417, HWM ~$1.2276, GTC ✓)
+**Notional:** ~$50.00 (~39% of remaining $128.84 portfolio)
+**Trailing Stop %:** 7% (BINARY CATALYST — first US spot XRP ETF launch + XRPL upgrade June 15 + CLARITY Act Senate advancement)
+**Stop trigger:** $1.1417 (7% trail from HWM $1.2276)
+**T1 Target:** $1.2644 (+3% from ~$1.2276 entry) | **T2 Target:** $1.2890 (+5%)
+**R:R:** 3%/7% = 0.43:1 at T1 — binary-catalyst exception (7% trail to absorb headline volatility) ✓
+**Thesis:** (1) First US spot XRP ETF launched today (June 15) with $58M day-one volume — significant institutional adoption catalyst; (2) XRPL protocol upgrade June 15 (improved transaction efficiency, institutional adoption support); (3) Senate Banking Committee advanced CLARITY Act (regulatory classification improvement for XRP). XRP +3.79% from 24h open $1.1853 → $1.2302. Volume: 11,643 trades today (deep liquidity on Kraken).
+**Spread at entry:** 0.001% ✓ | **Pair:** XRP/USD ✓ (Kraken online, leverage to 10x available, using spot)
+**Crash gate:** BTC $66,232 / +0.79% 24h — NOT triggered ✓
+**BTC ETF flows:** +$85.8M inflows June 15 (reversal of multi-week outflows) — positive macro tailwind ✓
+**Cash remaining after fill:** $47.94 ZUSD
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC +0.79%) ✓
+- [x] Spread ≤1%: 0.001% ✓
+- [x] Asset on Kraken: XRP/USD online (XXRPZUSD) ✓
+- [x] Catalyst: US spot XRP ETF launch + XRPL upgrade June 15 + CLARITY Act advanced — all fresh, same-day ✓
+- [x] Momentum: +3.79% from 24h open, above 3% threshold ✓
+- [x] T1/T2 defined: $1.2644 / $1.2890 ✓
+- [x] Stop placed immediately post-fill: O4WH4Z ✓
+- [x] Same-thesis cap: OPEN (no prior XRP stop-outs in 7-day window) ✓
+- [x] Binary catalyst rule: trail_percent 7 applied (ETF launch + regulatory) ✓
