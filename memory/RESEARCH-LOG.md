@@ -16585,3 +16585,112 @@ Cash $78.59 ZUSD in reserve. FOMC June 16-17 tomorrow creates macro risk that wa
 No trades placed. No notification sent.
 
 ---
+
+## 2026-06-15 — Morning Session (Pre-Session Research)
+
+**Execution time:** ~2026-06-15T06:00Z (scheduled session-open routine)
+**Session branch:** claude/affectionate-gates-e774y1
+
+### Account Snapshot
+
+| Account | Balance | Notes |
+|---|---|---|
+| Kraken ZUSD | $78.5915 | Available for new trades |
+| XRP/USD | 40.65 XRP | Entry $1.2276; current $1.27550 (+3.91%); 7% trailing stop O4WH4Z active ✓ |
+| HYPE/USD | 0 | Closed earlier today (+1.25%) |
+| WLD/USD | 0 | Closed earlier today (+4.1%) |
+| Alpaca BTC | 0 | No open positions, no active orders |
+| Total est. | ~$130.44 | |
+
+**Open Order (XRP):** O4WH4Z — trailing stop 7%, stopprice $1.20285, HWM $1.29338 (24h high), GTC ✓
+**XRP T2 status:** T2 ($1.2890) WAS HIT — 24h high $1.29338 > T2. Current price $1.27550 has since pulled back ~1.4% from HWM. Strategy note: "At T2 (+5%): consider closing or tightening further." Action: flag for stop tightening to 3.5% from current price to lock in partial gain.
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC $63,994 / −0.38% 24h ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered: BTC $61,658 (Jun 10) → $63,994 (Jun 15) = +3.79% ✓ |
+| NEAR same-thesis cap | BLOCKED until Jun 16 (lifts tomorrow AM) |
+| HYPE same-thesis cap | 1 stop-out → re-entry OPEN (no fresh catalyst) |
+| ZEC same-thesis cap | OPEN — catalyst stale (May 2026) |
+| XLM same-thesis cap | OPEN — catalyst stale (Jun 13) |
+| JTO same-thesis cap | OPEN — first entry opportunity |
+
+### Market Context
+
+| Asset | 24h Open | Current | vs Open | 24h High | Spread | Notes |
+|---|---|---|---|---|---|---|
+| BTC/USD | ~$64,237 | $63,994 | −0.38% | — | — | Slightly negative; crash gate clear |
+| ETH/USD | — | $1,815 | +2.61% | — | 0.008% | Below 3% threshold this session |
+| XRP/USD | $1.18530 | $1.27550 | +7.61% | $1.29338 | 0.0008% | HELD; T2 HIT at $1.29338 |
+| SOL/USD | $71.25 | $75.40 | +5.83% | $76.02 | 0.027% | ETF + tokenized fund catalyst |
+| JTO/USD | $0.56268 | $0.77649 | +38.0% | $0.81926 | 0.35% | Bitget incentive only — weak catalyst |
+| ZEC/USD | $473.06 | $525.49 | +11.1% | $545.00 | 0.04% | SEC catalyst from May 2026 — stale |
+| ADA/USD | $0.18297 | $0.18626 | +1.79% | $0.18979 | 0.034% | Below 3% threshold |
+
+**Fear & Greed Index:** 20 (Extreme Fear — same level as prior sessions)
+**BTC Funding Rate:** ~+0.0100% per 8h (neutral/healthy across most exchanges)
+**BTC ETF flows:** $85.9M net inflows June 12 (ended 5-day outflow streak) — positive institutional tailwind
+
+### Key Catalysts & News
+
+- **XRP (held):** US spot XRP ETF launched June 15 ($58M day-one volume) — still fresh, thesis intact; XRPL protocol upgrade June 15; CLARITY Act advancing in Senate
+- **SOL:** SEC approved actively managed multi-asset crypto ETF (T. Rowe Price, June 13) + $250M tokenized CLO fund launching on Solana (timing uncertain — may be stale if June 13)
+- **JTO:** Bitget time-limited PoolX campaign with 35,000 JTO reward pool — exchange incentive driven, NOT a Kraken-specific catalyst; move is largely momentum-trading amplified by scanners
+- **ZEC:** SEC investigation closure from May 2026 — stale catalyst (3+ weeks old)
+- **BTC/ETH:** Macro tailwinds — US–Iran geopolitical de-escalation (Strait of Hormuz reopen narrative) + regulatory optimism from CLARITY Act advancement; no asset-specific fresh catalysts
+- **Token Unlocks this week:** Spark (SPK) 2.52B tokens June 17 (~$61M, 25.3% supply) — monitor for dilution pressure
+
+### Candidate Screening
+
+| Asset | 24h Move | 1h Signal | Catalyst Age | Spread | Decision |
+|---|---|---|---|---|---|
+| XRP (held) | +7.61% | — | Same-day ETF launch ✓ | 0.0008% | HOLD; consider tightening stop to 3.5% post-T2 |
+| SOL | +5.83% | Near highs | ETF Jun 13 (2d), tokenized fund timing unclear | 0.027% | CONDITIONAL — skip unless $250M fund is today's news |
+| JTO | +38.0% | Pulled back 5% from high | Bitget incentive (different exchange) | 0.35% | SKIP — weak catalyst, extended move, Bitget-specific |
+| ZEC | +11.1% | Pulled back from $545 high | May 2026 SEC closure (stale) | 0.04% | SKIP — stale catalyst |
+| ADA | +1.79% | — | None | 0.034% | SKIP — below 3% threshold |
+
+### Trade Ideas
+
+#### Idea 1: XRP/USD — STOP TIGHTEN (Post-T2 Action)
+- **Status:** HELD, T2 ($1.2890) hit at HWM $1.29338 during prior session
+- **Current price:** $1.27550 | Entry: $1.2276 | P&L: +3.91%
+- **Recommendation:** Cancel O4WH4Z (7% trail, stop $1.20285) and replace with 3.5% trailing stop (high-ATR tightening post-T2). New stop at ~$1.2729 × 0.965 = ~$1.2284 (locks in near breakeven or small gain vs −2.02% current exposure)
+- **Rationale:** T2 passed; strategy mandates "consider closing or tightening further." Binary catalyst (XRP ETF) still valid for further upside — don't close, tighten. A 3.5% trail on a $1.2755 handle stops at ~$1.23 — near entry, better than $1.20285
+- **T2:** $1.2890 not currently exceeded at market; allow price to re-test via tighter trail
+- **Thesis:** First US spot XRP ETF ($58M day-one volume) + XRPL upgrade + CLARITY Act — all intact; XRP consolidating above T1 ($1.2644)
+
+#### Idea 2: SOL/USD — CONDITIONAL ENTRY (Verify Catalyst Timing)
+- **Catalyst:** SEC multi-asset ETF (T. Rowe Price, Jun 13 — potentially stale); $250M tokenized CLO fund on Solana (timing uncertain)
+- **Entry:** Market ~$75.40 if catalyst confirmed <6h old
+- **Stop:** Trailing 2.5%, ~$73.51 trigger
+- **T1:** $77.66 (+3%) | **T2:** $79.17 (+5%)
+- **R:R:** 3%/2.5% = 1.2:1 ✓
+- **Size:** ~$78 notional (~60% of available cash) if entering
+- **Kraken pair:** SOL/USD online ✓ | Spread: 0.027% ✓
+- **Decision:** CONDITIONAL — requires confirmation that at least one catalyst is <6h old. ETF approval appears June 13 (2 days ago). If $250M CLO fund is today's news, enter. Otherwise SKIP — momentum alone below June 13 news is stale catalyst.
+
+#### Idea 3: JTO/USD — SKIP
+- **Reason:** 38% move driven by Bitget exchange incentive campaign (not Kraken-specific); largely momentum/scanner amplification. Pulling back 5% from $0.819 high. Weak catalyst, extended entry. Skip.
+
+#### Idea 4: ZEC/USD — MONITOR ONLY
+- **Reason:** SEC investigation closure was May 2026 (3+ weeks ago). Pure momentum continuation without fresh catalyst. Strategy requires catalyst <6h old for day trades. Skip.
+
+### Risk Factors
+
+- **FOMC June 16–17:** Federal Reserve meeting starts tomorrow — may create overnight macro volatility. Conservative cash reserve ($78.59 ZUSD) appropriate.
+- **XRP 7% trail below entry:** Current stop $1.20285 is below entry $1.2276 — if XRP reverses without new highs, stop gives back the +3.91% gain plus costs. Tightening addresses this.
+- **Fear & Greed at 20 (Extreme Fear):** Weak market sentiment; new entries require strong catalysts to offset headwinds.
+- **SPK unlock June 17:** 25.3% supply unlock (~$61M) — monitor any correlated tokens.
+- **BTC slightly negative (−0.38%):** Minor headwind; not blocking entries but confirms cautious posture for new positions.
+
+### Decision
+
+**TRADE** (crash gate NOT triggered). Actions:
+1. **XRP stop tighten** — cancel O4WH4Z (7% trail at $1.20285), replace with 3.5% trailing stop post-T2 to protect gain ← PRIMARY ACTION
+2. **SOL conditional** — enter only if $250M tokenized CLO fund on Solana is confirmed today's catalyst (<6h old); otherwise skip
+3. **No other new entries** — JTO and ZEC rejected (weak/stale catalysts); cash reserve appropriate ahead of FOMC
+
+---
