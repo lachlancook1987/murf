@@ -5287,4 +5287,18 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 - NEAR: Same-thesis cap in effect until Jun 16. SKIP.
 
 **Result: NO NEW ENTRIES. XRP held with 7% trailing stop. $78.59 ZUSD in reserve.**
+
+---
+
+## 2026-06-15 | XRP/USD | STOP TIGHTENED (Post-T2 Action) | 7% → 3.5% trailing stop (~15:xx UTC)
+
+**Trigger:** XRP T2 ($1.2890) confirmed hit at 24h HWM $1.29338; current price $1.25542 (pulled back ~3.0% from HWM). Strategy: "At T2 (+5%): consider closing or tightening further."
+**Action:** Cancelled O4WH4Z-NRWQG-HD75AO (7% trail, stop $1.20285, HWM $1.29338) → placed O6JOQ6-MPSMC-BIUEEI (3.5% trail)
+**New stop:** O6JOQ6-MPSMC-BIUEEI | Stop price: $1.21120 | HWM ref at placement: $1.25512 | 3.5% trail | GTC ✓
+**Floor improvement:** $1.21120 vs old $1.20285 = +$0.0084/XRP tighter floor (×40.65 = +$0.34 net improvement)
+**vs entry:** $1.21120 vs entry $1.2276 — stop still below entry; if price recovers to T2 $1.2890, stop moves to ~$1.2429 (+1.25% above entry, gain locked)
+**Rationale:** Binary catalyst (XRP ETF) warranted initial 7% trail; T2 confirmed hit → tighten to 3.5% (high-ATR default per strategy). SOL conditional entry SKIPPED — Securitize/Ethena CLO fund date unconfirmed as <6h old; SEC ETF approval Jun 13 (stale). No other entries.
+**T2 target:** $1.2890 — hit once at HWM $1.29338; tighter trail allows re-test without giving back full gain
+**Thesis intact:** US spot XRP ETF ($58M day-one) + XRPL upgrade June 15 + CLARITY Act — all active ✓
+**Cash:** $78.5915 ZUSD (unchanged — no new buy executed)
 **No notification sent (no stop tightened, no position cut, no new entry placed).**
