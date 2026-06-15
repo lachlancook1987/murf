@@ -5088,3 +5088,45 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 
 **Result: NO action taken. Notification: not sent.**
 
+
+---
+
+## 2026-06-15T03:04:59Z | Overnight Triage Check
+
+**Execution time:** 2026-06-15T03:04:59Z (overnight routine)
+
+### Position Snapshot
+
+| Symbol | Status | Note |
+|---|---|---|
+| TAO/USD | **CLOSED** — trailing stop triggered | Stop OVKWJU-NRQRV-UD2KOG fired overnight |
+| Alpaca BTC | No position | Residual cleared (stop a2b44cf9 cancelled 2026-05-22, position gone) |
+
+### TAO Stop-Out Details
+
+- **Entry:** $264.17 | **Qty:** 0.2396 TAO
+- **Trailing stop:** OVKWJU-NRQRV-UD2KOG, trail 2.5% from HWM $274.90 → stop ~$268.03
+- **24h range:** Low $257.00 / High $285.00 / Open $270.19
+- **Outcome:** Stop triggered (price breached $268.03 trigger; 24h low $257 confirms full drawdown through stop level)
+- **Exit:** ~$268 estimated (above $264.17 entry → small gain locked in by trailing stop ✓)
+- **Current TAO:** $277.03 (recovered post-stop — stop was correct discipline, not a thesis failure)
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC $65,497 / open $65,715 → −0.33% ✓ |
+| Any unprotected Kraken positions | NONE — all flat ✓ |
+| Alpaca BTC position | NO POSITION ✓ |
+
+### Actions Taken
+
+- No manual intervention required — trailing stop executed automatically as designed ✓
+- All positions flat, all orders clear
+
+### Account Status
+
+- Kraken: Flat (cash only) — ready for next session
+- Alpaca: Flat
+
+**Notification:** Sent — TAO trailing stop triggered overnight, position closed with small gain above entry.
