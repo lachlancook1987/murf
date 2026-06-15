@@ -5302,3 +5302,79 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 **Thesis intact:** US spot XRP ETF ($58M day-one) + XRPL upgrade June 15 + CLARITY Act — all active ✓
 **Cash:** $78.5915 ZUSD (unchanged — no new buy executed)
 **No notification sent (no stop tightened, no position cut, no new entry placed).**
+
+---
+
+## 2026-06-15 — Midday Scan #2 (~afternoon UTC)
+
+**Execution time:** ~Afternoon UTC, Jun 15 2026 (Monday)
+**Account at scan:** $78.5915 ZUSD cash + 40.65 XRP open position
+
+### Position Snapshot
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| XRP/USD | 40.65 | ~$1.2276 | $1.2515 | **+1.95%** | $1.2584 | $1.2144 (trail 3.5%) | 2.97% | O6JOQ6-MPSMC-BIUEEI ✓ |
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC $66,422 / +1.06% from today's open $65,715 ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered ✓ (BTC trending up this week) |
+| NEAR same-thesis cap | BLOCKED until Jun 16 (2nd stop-out Jun 14 within 7-day window) |
+
+**STEP 2 — Trailing stops verified:**
+- XRP: O6JOQ6-MPSMC-BIUEEI, 40.65 XRP, trail 3.5%, stop $1.2144, HWM $1.2584 ✓
+- No unprotected positions. No orphaned orders.
+
+**STEP 3 — Thesis check (XRP):** US spot XRP ETF ($58M day-one June 15) + XRPL upgrade June 15 + CLARITY Act advancing in Senate. Perplexity confirms $10.7M ETP inflows week ending Jun 12, CLARITY Act Senate Banking Committee advancement. No thesis break ✓
+
+**STEP 4 — Stop tightening:** XRP +1.95% from entry. +20% threshold = $1.4731. NOT reached. No adjustments ✓
+
+### STEP 6 — New Entry Scan
+
+| Asset | Current | vs Open | Spread | Catalyst | ATR | Decision |
+|---|---|---|---|---|---|---|
+| ZEC/USD | $523.93 | +10.75% | 0.0004% ✓ | Emergency hard fork June 15 (patched Orchard vulnerability; $13M short squeeze) | HIGH | **AU RESTRICTED — cannot trade** |
+| XLM/USD | $0.21929 | +14.9% | 0.082% ✓ | DTCC-Stellar from May 27 (recycled — confirmed stale) | High (24.9% range) | SKIP — stale catalyst; 3.5% trail gives 0.86:1 R:R |
+| JTO/USD | $0.73618 | +30.8% | 0.074% ✓ | Jito Labs SEC meeting Jun 13 (2d old); Bitget incentive | — | SKIP — -10% off day high, momentum declining |
+| SOL/USD | $74.34 | +4.35% | 0.013% ✓ | SEC multi-asset ETF (T. Rowe Price, Jun 13) + $250M Solana CLO fund (Jun 13) | Normal | **ENTER — weekly gate clear, 1.2:1 R:R ✓** |
+| SYN/USD | $0.05140 | +37.8% | 0.58% ✓ | None confirmed | — | SKIP — only 1,810 trades (illiquid) |
+
+**ZEC Note:** ZEC had the strongest fresh catalyst today (emergency hard fork June 15, AI audit clearance June 14) but AU account restriction prevents trading. $13M short squeeze confirmed. Would have been primary entry had it been tradeable.
+
+---
+
+## 2026-06-15T~PM | SOL/USD | BUY | 0.8500 SOL | Entry: ~$74.66 | Trailing Stop 2.5%: $72.55 | Open
+
+**Buy Order ID:** OH435B-MN2SV-H5XUN4
+**Trailing Stop Order ID:** OTCEZJ-4GBK2-KLJYB3 (trail −2.5%, stop $72.55, HWM $74.41, GTC ✓)
+**Notional:** ~$63.63 (~80.9% of $78.5915 available ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $72.55 (2.5% trail from HWM $74.41)
+**T1 Target:** $76.90 (+3% from ~$74.66 entry) | **T2 Target:** $78.39 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** (1) SEC approved first actively managed multi-asset crypto ETF including SOL exposure (T. Rowe Price, Jun 13); (2) $250M tokenized CLO fund launching on Solana (Securitize/Ethena, Jun 13). BTC weekly gate NOT triggered (BTC weekly trend positive); standard momentum entries valid without <6h catalyst requirement. SOL +4.35% from 24h open $71.25 with 24,429 trades (deep institutional volume).
+**Spread at entry:** ~0.013% ✓ | **Pair:** SOL/USD ✓ (Kraken online)
+**Crash gate:** BTC $66,422 / +1.06% from open — NOT triggered ✓
+**Cash remaining after fill:** $14.9635 ZUSD
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC +1.06%) ✓
+- [x] Spread ≤1%: 0.013% ✓
+- [x] Asset on Kraken: SOL/USD online ✓
+- [x] Catalyst: SEC multi-asset ETF approval + $250M Solana CLO fund ✓
+- [x] Momentum: +4.35% from 24h open, 24.4K trades ✓
+- [x] T1/T2 defined: $76.90 / $78.39 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OTCEZJ ✓
+- [x] Same-thesis cap: OPEN (no prior SOL stop-outs in 7-day window) ✓
+- [x] BTC weekly gate: NOT triggered → standard momentum entries valid ✓
+
+**Portfolio after entry:**
+- SOL: 0.85 SOL (~$63.18 mark-to-market at ~$74.33 current)
+- XRP: 40.65 XRP (~$50.88 at $1.2515 current)
+- ZUSD: $14.9635
+- Total: ~$129.04
+- Phase P&L: ~−$50.74 (−28.22%) from Kraken starting equity $179.78

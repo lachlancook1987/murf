@@ -16694,3 +16694,58 @@ No trades placed. No notification sent.
 3. **No other new entries** — JTO and ZEC rejected (weak/stale catalysts); cash reserve appropriate ahead of FOMC
 
 ---
+
+## 2026-06-15 — Midday Scan #2 (~afternoon UTC)
+
+### Account Snapshot
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $14.9635 ZUSD + 0.85 SOL + 40.65 XRP | SOL/USD + XRP/USD open | OTCEZJ + O6JOQ6 active |
+| Alpaca | $0 | None | None (stop a2b44cf9 cancelled 2026-05-22) |
+
+### Market Context
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $66,422 (ask) | +1.06% from today's open $65,715; crash gate NOT triggered |
+| BTC weekly gate | **NOT triggered** | BTC trending up this week; standard momentum entries valid |
+| Crash gate | **NOT triggered** | +1.06% intraday; far from -20% threshold |
+| Fear & Greed | ~20 (Extreme Fear) | Persistent risk-off backdrop |
+| XRP | $1.2515 | +5.57% from 24h open $1.18530; T2 hit earlier at $1.29338 |
+| SOL | $74.34 | +4.35% from 24h open $71.25; 24.4K trades |
+
+### Candidate Screening
+
+| Asset | vs Open | Current | Spread | Catalyst | Gate | Decision |
+|---|---|---|---|---|---|---|
+| **ZEC/USD** | +10.75% | $523.93 | 0.0004% ✓ | Emergency hard fork June 15 (patched Orchard vulnerability + $13M short squeeze + AI audit clearance Jun 14) | Fresh catalyst — STRONG | **AU RESTRICTED** — would be primary entry |
+| **SOL/USD** | +4.35% | $74.34 | 0.013% ✓ | SEC multi-asset ETF (Jun 13) + $250M Solana CLO fund (Jun 13) | Weekly gate clear | **ENTERED** — OH435B buy, OTCEZJ stop |
+| XLM/USD | +14.9% | $0.21929 | 0.082% ✓ | DTCC-Stellar May 27 — **confirmed stale (recycled)** | 24.9% ATR → 3.5% trail → R:R 0.86:1 FAILS | SKIP |
+| JTO/USD | +30.8% | $0.73618 | 0.074% ✓ | Jito Labs SEC meeting Jun 13 (2d old) | -10.1% off day high; declining | SKIP |
+| SYN/USD | +37.8% | $0.05140 | 0.58% ✓ | None confirmed | Only 1,810 trades (illiquid) | SKIP |
+| NEAR/USD | +3.82% | — | — | Resharding upgrade (ongoing) | Same-thesis cap BLOCKED until Jun 16 | SKIP |
+
+### ZEC AU-Restriction Note
+ZEC (Zcash) has the cleanest fresh catalyst today — emergency hard fork June 15 patching a critical Orchard vulnerability that had caused a ~50% price drop to ~$300 in early June. The fix + $13M short squeeze drove recovery from $300 to $545 (24h high). ZEC at $524 would have been the primary entry (spread 0.0004% ✓, 32K trades, fresh same-day protocol catalyst). Blocked by AU account restriction.
+
+### Decision: SOL/USD ENTRY
+- BTC weekly gate NOT triggered → standard momentum entries valid without <6h catalyst
+- SOL: +4.35% from open, 24.4K trades, SEC ETF + CLO fund (Jun 13 — valid catalyst under clear weekly gate)
+- R:R: 3%/2.5% = 1.2:1 ✓ | Spread 0.013% ✓
+- Entry: ~$74.66 | T1: $76.90 | T2: $78.39 | Stop: 2.5% trailing at $72.55
+
+### Portfolio State
+| Symbol | Qty | Entry | Current | P&L% | Stop | Buffer |
+|---|---|---|---|---|---|---|
+| XRP/USD | 40.65 | $1.2276 | $1.2515 | +1.95% | $1.2144 (3.5% trail) | 2.97% |
+| SOL/USD | 0.85 | ~$74.66 | $74.34 | −0.43% | $72.55 (2.5% trail) | 2.40% |
+| ZUSD cash | — | — | $14.96 | — | — | — |
+| **Total** | — | — | **~$129.04** | — | — | — |
+| Phase P&L | — | — | ~−$50.74 | **−28.22%** | — | — |
+
+### Forward Watch
+- **XRP:** T2 ($1.2890) was hit earlier; 3.5% trailing stop locking gains; CLARITY Act + ETF thesis intact
+- **SOL:** T1 $76.90 is above today's high $76.02 — needs new high break
+- **NEAR:** Eligible for re-entry Jun 16+ if 48h cap clears and fresh catalyst confirmed
+- **ZEC:** Monitor for catalyst continuation; AU restriction means no entry possible
+- **FOMC Jun 16–17:** Fed meeting starts tomorrow — macro volatility risk; 2 open positions into FOMC
+
