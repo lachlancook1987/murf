@@ -5130,3 +5130,15 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 - Alpaca: Flat
 
 **Notification:** Sent — TAO trailing stop triggered overnight, position closed with small gain above entry.
+
+---
+
+### Jun 15 — EOD Snapshot (Day 26, Monday)
+**Portfolio:** $126.94 | **Cash:** $126.94 (100%) | **Day P&L:** +$0.33 (+0.26%) | **Phase P&L:** −$52.84 (−29.39%) | **vs BTC:** −1.63% (BTC +1.89%, Jun 14 EOD $64,425 → $65,641)
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | No positions | — | — |
+
+**Trades today:** TAO/USD trailing stop OVKWJU-NRQRV-UD2KOG triggered overnight (Jun 14→15); exit ~$268 vs entry $264.17 → small gain locked. No new entries. | **Total since migration:** ~68
+**Notes:** TAO 2.5% trailing stop fired overnight as price pulled back from HWM $274.90 (triggered ~$268.03). Exit above entry confirmed small gain; account cleared to 100% cash at $126.94. BTC gained +1.89% on the day (Jun 14 EOD $64,425 → $65,641), bot underperformed by −1.63% — stop discipline prioritised capital protection. Phase P&L −29.39% vs Kraken starting equity $179.78 (May 21). Alpaca: stop a2b44cf9 CANCELLED 2026-05-22, no position. NEAR same-thesis gate lifts Jun 16. Tomorrow: full cash, scan for 1h surge >3% + fresh catalyst <6h + spread ≤1%; confirm NEAR gate clear before any re-entry.
