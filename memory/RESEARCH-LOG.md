@@ -16144,3 +16144,137 @@ FET was the +12.24% gainer but current price $0.2016 is below 24h open $0.2082 (
 **NEAR:** BLOCKED until Jun 16. Do not re-enter before then regardless of price action.
 
 ---
+
+## 2026-06-15 — Pre-Session Research (Morning Run)
+
+**Execution time:** Morning UTC, Jun 15 2026 (Monday)
+**Session branch:** claude/affectionate-gates-rcaus6
+
+### Account Snapshot
+
+| Account | Balance | Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $126.94 ZUSD | 0 | 0 |
+| Alpaca (residual) | No positions | — | — (historic orders only) |
+
+100% cash. TAO trailing stop closed position overnight (OVKWJU-NRQRV-UD2KOG, ~$268, above $264.17 entry → small locked-in gain). Clean slate.
+
+### Gates Check
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered: BTC $63,994 / −0.38% 24h ✓ |
+| BTC weekly trend (>−3% / 5 days) | NOT triggered (clear yesterday, BTC minimal change) ✓ |
+| NEAR same-thesis cap | BLOCKED until Jun 16 (2nd stop-out Jun 14, 7-day window) |
+| TAO same-thesis cap | OPEN — only 1 stop-out in 7-day window (overnight) ✓ |
+| WLD same-thesis cap | OPEN — no prior WLD stop-outs ✓ |
+| HYPE same-thesis cap | OPEN — no prior HYPE stop-outs ✓ |
+
+### Market Snapshot
+
+| Asset | Open (24h) | Current | vs Open | 24h Range | Notes |
+|---|---|---|---|---|---|
+| BTC | — | $63,994 | −0.38% | — | Crash gate clear; mild negative |
+| ETH | $1,725.10 | $1,718.53 | −0.38% | $1,653–$1,731 | Below open, skip |
+| TAO | $270.19 | $281.00 | +4.00% | $266.88–$290.66 | AI narrative; re-entry open |
+| WLD | $0.5226 | $0.5916 | +13.2% | $0.4912–$0.6045 | Major intraday surge |
+| HYPE | $63.94 | $65.45 | +2.36% | $59.66–$65.86 | At resistance; Circle catalyst |
+| SOL | $71.25 | $71.38 | +0.18% | $66.91–$71.66 | Flat intraday, skip |
+| HBAR | $0.08119 | $0.0816 | +0.50% | $0.0767–$0.0821 | Flat, skip |
+| ADA | $0.18297 | $0.1809 | −1.13% | $0.1652–$0.1867 | Below open, skip |
+| XRP | $1.18530 | $1.1820 | −0.28% | $1.1265–$1.1926 | Flat, skip |
+| NEAR | — | ~$2.10 | — | — | BLOCKED until Jun 16 |
+
+**Fear & Greed Index:** 18 (Extreme Fear)
+**BTC Perpetual Funding Rate (Kraken):** +0.0148% / 8h (positive; modest bullish bias from longs)
+
+### Perplexity Research Summary
+
+**Top 24h Gainers (CoinGecko):** CLO +33.8%, BANANAS31 +33.8%, H +32.4% — all micro-caps, not Kraken-liquid.
+
+**CoinMarketCap top gainers with Kraken pairs:** WLD, HYPE, JUP, ADA — all above 5% 24h.
+
+**Key Catalysts:**
+- **WLD — Eightco 283M position disclosure** (~1-2 days old) + July 24 token unlock reduction (43% daily cut scheduled): structural supply tailwind. WLD now +13.2% from today's open on strong intraday momentum.
+- **HYPE — Circle/USDC partnership** with Hyperliquid + deflationary buyback model driving $60→$65 range. Token unlock (238M) mostly absorbed via staking rather than sold. 24h +5.3%.
+- **TAO — NVIDIA Jensen Huang GTC 2026 keynote** (Jun 12-13, ~48-72h old) positioned decentralised AI infrastructure as future; Bittensor permissionless LLM launched. +27.14% in prior 24h; now recovered from overnight stop-out ($268) to $281. Strong volume (6,808 trades today).
+- **CLARITY Act** — Senate watch upcoming; no vote today; XRP background positive but no intraday catalyst.
+- **Token unlocks this week:** SUI $184M (Jun 14, already absorbed); SPK 2.52B tokens Jun 17 ($61M, ~25.3% supply — selling pressure risk if holding SPK).
+- **Macro headwinds:** BTC ETF outflows continuing; strong US jobs data reducing Fed cut expectations; AI IPO capital rotation (SpaceX) pulling liquidity from crypto.
+
+### Candidate Screening
+
+| Asset | Spread | Trades (today/24h) | vs Open | Same-Thesis | Assessment |
+|---|---|---|---|---|---|
+| TAO/USD | 0.018% ✓ | 6,808 / 17,436 ✓ | +4.00% | OPEN (1 stop-out) | PRIMARY — AI catalyst, strong volume, clean re-entry |
+| WLD/USD | 0.10% ✓ | 3,465 / 5,762 ✓ | +13.2% | OPEN | SECONDARY — institutional catalyst, huge intraday momentum |
+| HYPE/USD | 0.015% ✓ | 5,036 / 12,585 ✓ | +2.36% | OPEN | WATCHLIST — at $65 resistance; enter on break |
+| SOL/USD | 0.014% ✓ | 5,180 / 16,728 ✓ | +0.18% | — | SKIP — flat intraday, no fresh catalyst |
+| NEAR/USD | — | — | — | BLOCKED | SKIP — same-thesis cap until Jun 16 |
+| ETH/USD | 0.006% ✓ | — | −0.38% | — | SKIP — below open |
+
+### Trade Ideas
+
+#### Idea 1: TAO/USD — AI Narrative Re-Entry (PRIMARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | NVIDIA Jensen Huang GTC 2026 keynote (Jun 12-13) + Bittensor permissionless LLM. AI infrastructure narrative driving institutional and retail interest. TAO recovering strongly from overnight stop-out low ($266.88). |
+| **Entry** | Market at ~$281 (currently $281.00; +4% from 24h open $270.19) |
+| **Stop** | trailing_stop, trail_percent: 2.5 (high-ATR asset; 24h range 8.9%; 2.5% trail for better R:R, accept noise risk on normal intraday volatility) |
+| **T1** | $289.5 (+3%) |
+| **T2** | $295 (+5%) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Size** | ~$65 (51% equity) — primary conviction position |
+| **Kraken pair** | TAO/USD ✓ confirmed |
+| **Spread** | 0.018% ✓ |
+| **Same-thesis** | 1 prior stop-out in 7-day window → re-entry OPEN (cap triggers at 2) ✓ |
+| **Note** | Stop-out was at ~$268 (above $264.17 entry); current $281 is 4.8% above stop-out price. If re-entering, accept that price is extended from yesterday's entry — this is a new leg, not a reversal of the stop-out. |
+
+#### Idea 2: WLD/USD — Institutional Momentum Play (SECONDARY)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Eightco 283M WLD institutional position disclosure (Jun 13-14, ~1-2d old) + July 24 token unlock reduction (43% daily supply cut upcoming — structural supply tailwind) |
+| **Entry** | Market at ~$0.592 (currently at $0.5916 bid; +13.2% from $0.5226 24h open) |
+| **Stop** | trailing_stop, trail_percent: 2.5 |
+| **T1** | ~$0.610 (+3% from $0.592 entry) |
+| **T2** | ~$0.622 (+5%) |
+| **R:R** | 3% / 2.5% = 1.2:1 ✓ |
+| **Size** | ~$40 (32% equity) — secondary position; reduced size given extended move |
+| **Kraken pair** | WLD/USD ✓ confirmed |
+| **Spread** | 0.10% ✓ |
+| **Note** | Entering after +13.2% intraday move — elevated risk of exhaustion. 24h high was $0.6045; current $0.5916 has pulled back slightly. Only enter if price is still above $0.575 (not rolling over). Skip if WLD is declining at time of order. |
+
+#### Idea 3: HYPE/USD — Watchlist (NOT entering immediately)
+
+| Field | Value |
+|---|---|
+| **Catalyst** | Circle/USDC partnership + deflationary buyback model + token unlock absorbed into staking. 24h +5.3%, but only +2.36% from today's open. |
+| **Condition** | Enter ONLY if HYPE breaks above $65.86 (24h high) with clear volume expansion. At $65.45 it is at resistance — no edge entering here. |
+| **If triggered** | Market entry above $65.86; trailing stop 2.5%; T1 $67.89 (+3%), T2 $69.15 (+5%); size ~$30 (24% equity) |
+| **Kraken pair** | HYPE/USD ✓ confirmed, leverage available |
+| **Spread** | 0.015% ✓ |
+
+### Risk Factors
+
+1. **Extreme Fear environment (18)** — 10th+ consecutive session in Extreme Fear. Fast exits, momentum can reverse quickly. Trailing stops are critical.
+2. **TAO extended** — Overnight stop-out was the 1st (out of 2 allowed); re-entering at $281 after a prior $264 entry means accepting current elevated price. The 7-month downtrend breakout on Jun 13 is still intact but price is volatile.
+3. **WLD entering after +13% move** — Classic late-entry risk. Ensure price is still moving up at order time; skip if rolling over.
+4. **BTC ETF outflows** — Multi-week drag on broad crypto sentiment; BTC -0.38% today may signal continued institutional selling.
+5. **AI IPO capital rotation** — SpaceX IPO capital draws from crypto. May cap near-term TAO upside despite narrative strength.
+6. **FOMC June 16-17** — Major macro event tomorrow/Wednesday. Risk-off positioning may suppress crypto into FOMC. Consider tighter sizing or accepting that trailing stops may get triggered into event.
+7. **SPK unlock June 17** — Not a held position, but broad unlock events can depress alt sentiment.
+
+### Decision
+
+**TRADE** — Crash gate NOT triggered (BTC −0.38%, far from −20%). BTC weekly gate NOT triggered. FOMC tomorrow is a known risk but not a gate. Default stance is TRADE.
+
+**Planned trades:**
+1. **TAO/USD** — Market entry ~$281; 2.5% trailing stop immediately after fill; T1=$289.5, T2=$295. Size ~$65 (51% equity). **PRIMARY.**
+2. **WLD/USD** — Market entry ~$0.592 IF price still above $0.575 at order time. 2.5% trailing stop; T1=$0.610, T2=$0.622. Size ~$40 (32% equity). **SECONDARY — conditional.**
+3. **HYPE/USD** — Watchlist only. Enter IF/WHEN price breaks $65.86 with volume. 2.5% trailing stop; T1=$67.89, T2=$69.15. Size ~$30. **CONDITIONAL.**
+
+**NEAR:** BLOCKED until Jun 16. Do not re-enter before then.
+
+---
