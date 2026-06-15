@@ -5142,3 +5142,56 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 
 **Trades today:** TAO/USD trailing stop OVKWJU-NRQRV-UD2KOG triggered overnight (Jun 14→15); exit ~$268 vs entry $264.17 → small gain locked. No new entries. | **Total since migration:** ~68
 **Notes:** TAO 2.5% trailing stop fired overnight as price pulled back from HWM $274.90 (triggered ~$268.03). Exit above entry confirmed small gain; account cleared to 100% cash at $126.94. BTC gained +1.89% on the day (Jun 14 EOD $64,425 → $65,641), bot underperformed by −1.63% — stop discipline prioritised capital protection. Phase P&L −29.39% vs Kraken starting equity $179.78 (May 21). Alpaca: stop a2b44cf9 CANCELLED 2026-05-22, no position. NEAR same-thesis gate lifts Jun 16. Tomorrow: full cash, scan for 1h surge >3% + fresh catalyst <6h + spread ≤1%; confirm NEAR gate clear before any re-entry.
+
+---
+
+## 2026-06-15T09:11:35Z | WLD/USD | BUY | 68.1400 WLD | Entry: ~$0.5892 | Trailing Stop 2.5%: $0.5713 | Open
+
+**Buy Order ID:** OAQ3KK-MVAAV-RNGIGY
+**Trailing Stop Order ID:** OKAYII-CBOO2-NO7VXE (trail −2.5%, stop $0.5713, HWM ~$0.5859, GTC ✓)
+**Notional:** ~$40.15 (~31.6% of $126.94 ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $0.5713 (2.5% trail from HWM ~$0.5859)
+**T1 Target:** $0.6069 (+3% from ~$0.5892 entry) | **T2 Target:** $0.6187 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** Eightco 283M WLD institutional position disclosure (Jun 13-14) + July 24 token unlock reduction (43% daily supply cut — structural supply tailwind). WLD +12.3% from today's open ($0.5226), well above pre-session $0.575 conditional entry threshold. Spread 0.085% ✓. Strong intraday momentum with 3,670 trades today.
+**Spread at entry:** ~0.085% ✓ | **Pair:** WLD/USD ✓ (Kraken online)
+**Crash gate:** BTC −0.11% 24h — NOT triggered ✓
+**Cash remaining after fill:** $86.79 ZUSD
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC −0.11%) ✓
+- [x] Spread ≤1%: 0.085% ✓
+- [x] Asset on Kraken: WLD/USD online ✓
+- [x] Momentum: +12.3% from 24h open, above $0.575 conditional threshold ✓
+- [x] T1/T2 defined: $0.6069 / $0.6187 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OKAYII ✓
+- [x] Same-thesis cap: OPEN (no prior WLD stop-outs in 7-day window) ✓
+- [x] TAO/USD: SKIP — momentum faded to +0.27% from open (was +4% at morning research), below VWAP $277.37, NVIDIA catalyst >48h old ✓
+
+---
+
+## 2026-06-15T09:11:35Z | HYPE/USD | BUY | 0.4547 HYPE | Entry: ~$66.58 | Trailing Stop 2.5%: $64.50 | Open
+
+**Buy Order ID:** OUPBFY-IOJWB-7S4N53
+**Trailing Stop Order ID:** OEEA55-SQ42Z-5EQF33 (trail −2.5%, stop $64.50, HWM ~$66.15, GTC ✓)
+**Notional:** ~$30.27 (~23.8% of $126.94 ZUSD)
+**Trailing Stop %:** 2.5% (day trading default)
+**Stop trigger:** $64.50 (2.5% trail from HWM ~$66.15)
+**T1 Target:** $68.58 (+3% from ~$66.58 entry) | **T2 Target:** $69.91 (+5%)
+**R:R:** 1.2:1 at T1 (3% reward / 2.5% trail risk) ✓
+**Thesis:** Circle/USDC partnership with Hyperliquid + deflationary buyback model. HYPE broke above pre-session $65.86 resistance trigger, +3.17% from today's $63.94 open. 24h momentum +5.3%, 5,597 trades today on Kraken. Spread 0.015% ✓. Entry at breakout above pre-session 24h high.
+**Spread at entry:** ~0.015% ✓ | **Pair:** HYPE/USD ✓ (Kraken online)
+**Crash gate:** BTC −0.11% 24h — NOT triggered ✓
+**Cash remaining after fill:** $56.52 ZUSD
+
+**Pre-trade checklist:**
+- [x] Crash gate: NOT triggered (BTC −0.11%) ✓
+- [x] Spread ≤1%: 0.015% ✓
+- [x] Asset on Kraken: HYPE/USD online ✓
+- [x] Momentum: +3.17% from 24h open, broke above $65.86 pre-session trigger ✓
+- [x] T1/T2 defined: $68.58 / $69.91 ✓
+- [x] R:R ≥1.2:1: 1.2:1 ✓
+- [x] Stop placed immediately post-fill: OEEA55 ✓
+- [x] Same-thesis cap: OPEN (no prior HYPE stop-outs in 7-day window) ✓
