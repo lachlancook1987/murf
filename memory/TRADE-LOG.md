@@ -5678,4 +5678,26 @@ FOMC decision pending today — additional macro event risk.
 
 **Watch list for next scan:** FOMC reaction (BTC/ETH moves), SOL re-entry if catalyst + momentum setup emerges post-FOMC, JTO if price pulls back and R:R improves with fresh specific catalyst.
 
+---
+
+## 2026-06-16 — Overnight Triage Check (~UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Order |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+
+**Open orders (status: new):**
+- Kraken: NONE
+- Alpaca stop a2b44cf9: CANCELED (prior session — Alpaca BTC position long closed; no action needed)
+
+**Emergency exits:** None (no open positions).
+**Stop tightening:** None (no open positions).
+
+**BTC Crash Gate:** BTC $65,739 (ask) vs 24h open $66,284 = **−0.82%** — well under −20% threshold. Crash gate NOT triggered.
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $124.0846 | No open positions on any platform.
+
+**Result: NO-OP. No actions taken. No notification sent.**
+
 **WhatsApp notification sent** — SOL stop-out logged.
