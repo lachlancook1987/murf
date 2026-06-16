@@ -5411,3 +5411,63 @@ No new entries. No stops to adjust. TAO trailing stop functioning correctly.
 **Notes:** SOL entered yesterday at $74.66; pulled back slightly to $73.74 overnight (−1.23%). Stop buffer 1.61% — thin but stop working as designed. XRP entered yesterday at $1.2276 on US spot XRP ETF launch catalyst; currently +0.84% in the green at $1.23794. Stop self-ratcheted to $1.21435 (HWM $1.25839). XRP T2 ($1.2890) was hit yesterday and stop was tightened from 7% to 3.5% per strategy rules. BTC flat/slightly up overnight (+0.67%) — macro neutral. No crash gate. Both theses intact (SOL: SEC multi-asset ETF + Solana CLO fund; XRP: US spot XRP ETF launch June 15 + XRPL upgrade + CLARITY Act).
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-16 — Overnight Triage Check
+
+**Execution time:** 2026-06-16 (overnight routine)
+
+### STEP 1 — Positions & Orders
+
+**Kraken positions API:** `{}` (no margin positions — SOL held as spot)
+**Kraken open orders:**
+| Order ID | Symbol | Type | Qty | Trail | Stop Trigger | HWM |
+|---|---|---|---|---|---|---|
+| OTCEZJ-4GBK2-KLJYB3 | SOL/USD | trailing_stop sell | 0.85 | 2.5% | $72.55 | $74.41 |
+
+**Alpaca orders:** No positions. Stop a2b44cf9 CANCELLED since 2026-05-22. ✓
+
+**Kraken account balances:** SOL 0.8500168682 | ZUSD $64.03 | All other balances dust/zero
+**XRP balance: 0.00000000** — XRP trailing stop O6JOQ6-MPSMC-BIUEEI fired overnight (no longer in open orders).
+
+### XRP Stop-Out (Overnight Jun 15→16)
+
+**Symbol:** XRP/USD
+**Entry:** $1.2276 | **Qty:** 40.6500 XRP
+**Stop triggered:** O6JOQ6-MPSMC-BIUEEI (3.5% trail from HWM $1.25839)
+**Estimated exit:** ~$1.2143 (stop trigger price; actual fill may differ slightly)
+**P&L:** ~−$0.54 est. (−1.08% from entry) | Cost basis $49.90 vs proceeds ~$49.36
+**Context:** XRP hit T2 target $1.2890 (+5%) during the trade (Jun 15); stop was tightened from 7% to 3.5% per strategy rule. Price faded back and the 3.5% trailing stop was swept.
+**Stop-out count:** 1st XRP stop-out (re-entry open; 2nd within 7d triggers same-thesis gate)
+
+### STEP 2 — Trailing Stops Verified
+
+- SOL: OTCEZJ-4GBK2-KLJYB3, 0.85 SOL, trail +2.5%, stop $72.55, HWM $74.41 ✓
+- XRP: Stop fired overnight — position closed, no orphaned order remaining ✓
+- No unprotected positions.
+
+### STEP 3 — Emergency Exits
+
+- SOL: −2.32% from entry — well under −20% threshold. Stop working correctly. No action.
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+
+- SOL: −2.32% → +20% threshold = $89.59 — not reached. No adjustment.
+
+### STEP 5 — BTC Crash Gate
+
+BTC ask $65,780 | 24h open $66,284 = **−0.76%** | 24h range $65,463–$67,263. Well under −20% threshold. No crash gate. ✓
+
+### Portfolio State
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| SOL/USD | 0.85 | ~$74.66 | $72.93 | −2.32% | $74.41 | $72.55 | ⚠️ 0.52% | OTCEZJ ✓ |
+
+**Cash:** $64.03 | **SOL mark-to-market:** ~$61.99 | **Total equity est.:** ~$126.02
+**Phase P&L:** ~−$50.74 − $0.54 (XRP loss) = ~−$51.28 (−28.52%) from Kraken starting equity $179.78
+
+**Notes:** XRP trailing stop O6JOQ6 fired overnight (Jun 15→16) at ~$1.2143 — small loss (−1.08%) from entry $1.2276. XRP had hit T2 ($1.2890) earlier so stop was appropriately tightened to 3.5%; price faded and stop was swept. SOL still open at $72.93, stop at $72.55 — buffer is very thin (0.52%) and a minor dip could trigger the stop. Both SOL catalyst theses technically intact (SEC multi-asset ETF + Solana CLO fund). BTC down −0.76% overnight — macro neutral. No crash gate.
+
+**Result: XRP stop-out logged. SOL protected with active 2.5% trailing stop. WhatsApp notification sent.**
