@@ -5471,3 +5471,15 @@ BTC ask $65,780 | 24h open $66,284 = **−0.76%** | 24h range $65,463–$67,263.
 **Notes:** XRP trailing stop O6JOQ6 fired overnight (Jun 15→16) at ~$1.2143 — small loss (−1.08%) from entry $1.2276. XRP had hit T2 ($1.2890) earlier so stop was appropriately tightened to 3.5%; price faded and stop was swept. SOL still open at $72.93, stop at $72.55 — buffer is very thin (0.52%) and a minor dip could trigger the stop. Both SOL catalyst theses technically intact (SEC multi-asset ETF + Solana CLO fund). BTC down −0.76% overnight — macro neutral. No crash gate.
 
 **Result: XRP stop-out logged. SOL protected with active 2.5% trailing stop. WhatsApp notification sent.**
+
+---
+
+### Jun 16 — EOD Snapshot (Day 27, Tuesday)
+**Portfolio:** $127.53 | **Cash:** $64.03 (50.2%) | **Day P&L:** +$0.59 (+0.46%) | **Phase P&L:** −$52.25 (−29.07%) | **vs BTC:** −0.88% (BTC +1.34%, Jun 15 close ~$65,641 → $66,521)
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| SOL/USD | 0.8500 | ~$74.66 | $74.71 | +1.03% | +$0.04 (+0.06%) | OTCEZJ 2.5% @ $73.13 (HWM ~$75.00) |
+
+**Trades today:** XRP stop-out O6JOQ6-MPSMC-BIUEEI overnight (~$1.2143, −1.08%) | No new entries | **Total since migration:** ~75
+**Notes:** XRP 3.5% trailing stop swept overnight Jun 15→16 at ~$1.2143 — small loss of ~$0.54 (−1.08% from entry $1.2276), acceptable given T2 was hit earlier and stop was appropriately tightened. SOL recovered strongly during the Jun 16 session, reaching intraday high of $75.00 (HWM ratcheted up from $74.41, trailing stop advanced from $72.55 → $73.13), now at $74.71 — fractionally above entry $74.66. Stop buffer comfortable at 2.11% vs the razor-thin 0.52% overnight. BTC gained +1.34% today ($65,641 → $66,521) on continued ETF inflow momentum; bot underperformed by −0.88% due to the XRP stop-out occurring in this measurement period. Phase P&L −29.07% from Kraken starting equity $179.78 (May 21). Alpaca: stop a2b44cf9 CANCELLED since 2026-05-22, no position. Tomorrow: hold SOL with 2.5% trailing stop — T1 $76.90 (+3%) and T2 $78.39 (+5%) remain valid targets; BTC macro support positive; scan fresh 1h >3% setups with catalyst <6h.
