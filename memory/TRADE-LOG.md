@@ -5522,3 +5522,93 @@ BTC ask $65,780 | 24h open $66,284 = **−0.76%** | 24h range $65,463–$67,263.
 
 **Total equity est.:** ~$66.40 ($3.39 + SOL $75.32×0.85=$64.02 + WLD $0.6713×89.8469=$60.29 ≈ $127.70)
 **Phase P&L:** ~−$52.08 (−28.97%) from Kraken starting equity $179.78
+
+---
+
+## 2026-06-16 | WLD/USD | EXIT (Trailing Stop Triggered) | ~$0.6508 est. | −3.56% | CLOSED
+
+**Entry:** $0.6750 | **Qty:** 89.8469 WLD | **Exit:** ~$0.6508 est.
+**Stop ID:** OZWYUD-GYFOC-UB5767 (2.5% trailing stop)
+**Entry cost:** $60.64 | **Proceeds:** ~$58.48 | **P&L:** ~−$2.16 (−3.56%)
+**Exit price calc:** ZUSD changed $3.39 → $61.87; recovered $58.48 / 89.8469 WLD = ~$0.6508
+**Thesis:** Eightco 8.4% WLD stake (Jun 16 fresh catalyst). WLD initially approached HWM ~$0.6734 (24h high), then reversed. 2.5% trailing stop triggered as price faded back from the open-session high.
+**Stop-out count:** 1st WLD stop-out. Re-entry window open (same-thesis cap triggers at 2nd within 7d).
+**Notes:** Stop worked as designed. WLD 24h low was $0.5775 — potentially a deep intraday flush that swept the trailing stop before recovery. Catalyst remains potentially valid (Eightco stake still a fact), but stop-out occurred before T1 ($0.6953) was reached.
+
+---
+
+## 2026-06-16 — Midday Scan
+
+**Execution time:** 2026-06-16 (midday routine)
+
+### STEP 1 — Memory Review
+- WLD entered at session-open (~$0.6750, 89.8469 WLD, stop OZWYUD 2.5%)
+- SOL held from prior session (~$74.66, 0.85 SOL, stop OTCEZJ 2.5%)
+- XRP: 1st stop-out overnight Jun 15→16. Re-entry window open.
+
+### STEP 2 — Current State
+
+**Kraken positions:** `{}` (no margin; all spot)
+
+**Kraken open orders:**
+| Order ID | Symbol | Type | Qty | Trail | Stop Trigger | HWM (limitprice) |
+|---|---|---|---|---|---|---|
+| OTCEZJ-4GBK2-KLJYB3 | SOL/USD | trailing_stop sell | 0.85 | 2.5% | $73.68 | $75.56 |
+
+**WLD (OZWYUD):** Not in open orders — trailing stop fired, WLD position closed.
+**WLD balance: 0.000000** ✓ (confirmed sold)
+**ZUSD: $61.8662** (up from $3.39 post-WLD entry → proceeds ~$58.48)
+
+**Alpaca:** Historical fills only. Stop a2b44cf9 CANCELLED since 2026-05-22 ✓
+
+**Current prices (midday):**
+- SOL: ask $74.88 (24h open $73.95, 24h high $75.56, 24h low $72.75)
+- WLD: ask $0.6593 (24h open $0.5893, 24h high $0.6734, stopped out ~$0.6508 est.)
+- HYPE: ask $73.43 (24h open $66.88, +9.8% from open)
+- BTC: ~$66,544 +4.15% 24h
+
+### STEP 3 — Trailing Stops Verified
+
+- SOL: OTCEZJ active, trail 2.5%, stop $73.68, HWM $75.56 ✓
+- WLD: OZWYUD fired — no orphaned order remaining ✓
+- **No unprotected positions.**
+
+### STEP 4 — Stop Tightening (≥+20% from entry)
+
+- SOL: entry $74.66, current $74.88 = +0.29%. Threshold $89.59 (+20%) — not reached. No adjustment.
+
+### STEP 5 — Thesis Check
+
+- SOL: Thesis intact. SpaceX tokenization on Solana + SEC multi-asset ETF + Anodos Finance ecosystem expansion. No negative catalyst detected.
+- WLD: Position already closed (stop fired). No action needed.
+
+### STEP 6 — New Entry Scan
+
+**Market context:**
+- BTC: $66,544 +4.15% 24h — no crash gate ✓
+- BTC weekly gate: NOT triggered (BTC trending up) — standard momentum entries valid
+- FOMC: Fed decision Jun 16–17 — market expects hold; dot plot + Powell presser creates intraday volatility risk today
+
+**Candidates screened:**
+
+| Asset | 24h from Open | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| HYPE/USD | +9.8% | 0.014% ✓ | Protocol growth + buybacks (ongoing narrative; no fresh <6h catalyst) | 3% / 3.5% = 0.857:1 ❌ | **SKIP** — R:R fails + no fresh catalyst |
+| ETH/USD | ~+0% intraday | 0.00056% ✓ | Glamsterdam upgrade pushed to Q3 2026 (Aug) — no near-term date | No momentum | **SKIP** — no catalyst |
+| WLD/USD | +11.9% 24h | 0.075% ✓ | Eightco 8.4% stake — catalyst >6h old; already stopped once today | 1st stop-out | **SKIP** — catalyst stale, re-entry requires fresh event |
+| ZRO/USD | modest | — | Jun 20 token unlock ($29M) headwind | Headwind | **SKIP** |
+
+**Decision: NO NEW ENTRIES.** HYPE R:R = 0.857:1 (fails 1.2:1 minimum due to required 3.5% high-ATR stop). No fresh catalyst <6h on any other name. FOMC event risk today adds extra caution.
+
+### Portfolio State (Midday)
+
+| Symbol | Qty | Entry | Current | P&L% | HWM | Stop | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| SOL/USD | 0.8500 | ~$74.66 | $74.88 | +0.29% | $75.56 | $73.68 (2.5% trail) | 1.60% | OTCEZJ ✓ |
+
+**Cash:** $61.87 | **SOL mark-to-market:** ~$63.65 | **Total equity est.:** ~$125.52
+**Phase P&L:** ~−$54.26 (−30.18%) from Kraken starting equity $179.78
+
+**Notes:** WLD trailing stop OZWYUD fired this morning — loss ~$2.16 (−3.56%). Stop worked correctly; WLD rejected from the open-session high ($0.6734) and the 2.5% trail was swept on the pullback. SOL advancing (+0.29% from entry, HWM ratcheted to $75.56 from $74.41 overnight), stop now at $73.68 (up from $73.13 yesterday). FOMC today: market expects hold. HYPE +9.8% intraday but R:R still fails at required 3.5% high-ATR stop. No new trades.
+
+**Result: WLD stop-out documented. No actions taken this scan. WhatsApp notification sent.**

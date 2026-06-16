@@ -16854,3 +16854,58 @@ Actions:
 1. **WLD/USD ENTER** ~$60 market, trailing stop 2.5% immediately after fill ← PRIMARY ACTION
 2. **SOL/USD HOLD** — no changes, stop OTCEZJ active at $72.62
 3. **All other candidates SKIP** — no actionable momentum or fresh catalyst meeting criteria
+
+---
+
+## 2026-06-16 — Midday Scan Research
+
+**Execution time:** 2026-06-16 (midday routine)
+
+### Market Context (Midday)
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $66,544 | +4.15% 24h — no crash gate |
+| SOL | $74.88 | +0.29% from entry $74.66; HWM $75.56 |
+| WLD | $0.6593 ask | Stopped out this morning ~$0.6508 |
+| HYPE | $73.43 ask | +9.8% from 24h open $66.88 |
+| ETH | ~$1,773 | Glamsterdam upgrade pushed to Q3 2026 |
+| FOMC | Jun 16–17 | Fed decision today — market expects hold; vol risk |
+| BTC Crash Gate | NOT triggered | BTC +4.15% |
+| BTC Weekly Gate | NOT triggered | BTC trending up |
+
+### Positions Verified
+
+- **SOL:** OTCEZJ trailing stop active, stop $73.68, HWM $75.56, buffer 1.60% ✓
+- **WLD:** Trailing stop OZWYUD fired this morning. WLD balance = 0. ZUSD = $61.87 (recovered ~$58.48 from 89.8469 WLD → ~$0.6508/WLD). Loss ~−$2.16 (−3.56% from entry $0.6750).
+
+### New Entry Research
+
+**HYPE (Hyperliquid):**
+- +9.8% from 24h open ($66.88 → $73.43). High volume ($1.19B 24h).
+- No fresh catalyst <6h identified — protocol growth + buybacks is ongoing narrative.
+- 1st HYPE stop-out was Jun 15 — re-entry window open.
+- High-ATR asset: required 3.5% trailing stop.
+- R:R: 3% / 3.5% = 0.857:1 ❌ — fails 1.2:1 minimum. **SKIP.**
+
+**ETH:**
+- Glamsterdam upgrade pushed to end of August 2026 (Q3). No near-term confirmed date.
+- No price catalyst today. **SKIP.**
+
+**WLD re-entry:**
+- Eightco catalyst now >6h old.
+- 1st stop-out today — re-entry requires fresh <6h catalyst. None identified.
+- Current WLD $0.6593 (above stop-out $0.6508 but below entry $0.6750). **SKIP.**
+
+**ZRO:** Jun 20 token unlock ($29M) headwind active. **SKIP.**
+
+### Decision
+
+**NO NEW ENTRIES.** Portfolio: SOL only (0.85 SOL) + $61.87 cash. FOMC event today warrants caution. Revisit after FOMC announcement.
+
+### Tomorrow Watch
+
+- SOL: T1 = $76.90 (+3%), T2 = $78.39 (+5%). Stop self-manages via OTCEZJ trailing.
+- HYPE: R:R issue remains at $73+ levels with 3.5% stop. Only enters if pullback to ~$70 or lower creates 1.2:1 R:R, combined with fresh catalyst.
+- WLD: Watch for fresh catalyst post-FOMC (Eightco stake + OpenAI proxy narrative could re-energize). 2nd stop-out would trigger 48h cooling period.
+- XRP: CLARITY Act Senate debate expected early July — not catalytic today.
