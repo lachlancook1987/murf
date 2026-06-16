@@ -16970,3 +16970,83 @@ Buffer on SOL is thin (0.50%) — potential stop-out if SOL drifts further below
 
 **No WhatsApp notification** — no actions taken this scan.
 
+---
+
+## 2026-06-17 — Session-Open Research
+
+**Execution time:** 2026-06-17 (session-open routine)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,774 (ask) | −0.77% from 24h open $66,284; crash gate NOT triggered |
+| SOL | $73.25 (ask) | −0.95% from 24h open $73.95 |
+| ETH | $1,783.61 (ask) | −0.62% from 24h open $1,795.37 |
+| JTO | $0.8163 (last) | +11.8% from 24h open $0.7299; HWM $0.8787, now fading |
+| ZEC | $495.55 (ask) | −4.31% from 24h open $517.86; continuing to fade |
+| Fear & Greed | 23 (Extreme Fear) | Slight improvement from 20 yesterday, 10 last week |
+| BTC Funding Rate | ~+0.0100–0.0148%/8h | Mild long bias; not crowded |
+| BTC Crash Gate | NOT triggered | BTC −0.77% from open; far from −20% threshold |
+| BTC Weekly Gate | NOT triggered | BTC trending up over recent days |
+| FOMC | Jun 16–17 (today) | Fed decision pending; market expects hold at 4.25–4.50% |
+
+**Portfolio update:** SOL trailing stop OTCEZJ-4GBK2-KLJYB3 fired overnight/this morning. ZUSD: $124.0846 (fully cash). No open positions. Alpaca: clean (no live positions or orders). Phase P&L: ~−$55.70 (−30.98%) from Kraken starting equity $179.78.
+
+**SOL stop-out reconstruction:**
+- Pre-sale ZUSD: $61.8662 (confirmed midday Jun 16 after WLD stop-out)
+- Post-sale ZUSD: $124.0846
+- Proceeds: $62.22 → implied fill: ~$73.39/SOL
+- HWM had advanced to $76.02 (new peak from $75.56 EOD); stop ratcheted to ~$74.12
+- Market order gapped $0.73 below trigger on the fast decline to intraday low $72.27
+- P&L: ~−$1.08 (−1.70%) from entry $74.66 — near-breakeven stop-out
+
+**Token unlock headwinds today:**
+- SPK: $61M unlock Jun 17 (today) — avoid
+- ZRO: $23M unlock Jun 20 — headwind approaching
+- ARB: $8M unlock this week — minor
+
+**Top movers (24h, Kraken):**
+- OMNI: +174% (spread 57.7% — 2 trades, completely illiquid)
+- ZEX: +78.64% (sunset protocol — discontinued May 2025; speculative BULLET migration pump)
+- JTO: +11.8% from open (HWM $0.8787, now pulling back; Robinhood listing stale 8 days; high-ATR)
+- ZEC: −4.31% from open (was +5.3% at 24h high $545; now fading through open)
+
+### Candidate Screening
+
+| Asset | Change | Spread | Catalyst | R:R | Gate | Decision |
+|---|---|---|---|---|---|---|
+| OMNI/USD | +174% 24h | 57.7% ❌ | No fundamental — 2 trades in 24h, illiquid | N/A | Spread fail | **SKIP** — untradeable |
+| JTO/USD | +11.8% from open (HWM +20%) | 0.24% ✓ | Bitget PoolX campaign (current); Robinhood listing Jun 9 (8d stale) | 3%/3.5%=0.857:1 ❌ | High-ATR + R:R fail | **SKIP** |
+| ZEX/USD | +71.2% from open | 0.965% ✓ | Sunset protocol (discontinued May 2025); speculative migration to BULLET | No fundamental | Stale/speculative | **SKIP** |
+| ZEC/USD | −4.31% from open | 0.097% ✓ | Halo Arc mainnet (technical) — price reversing through open | Reversing | Momentum gone | **SKIP** |
+| ETH/USD | −0.62% from open | 0.020% ✓ | No fresh catalyst; Glamsterdam still Aug 2026 | No momentum | — | **SKIP** |
+| XLM/USD | +26.2% 24h (est.) | — | DTCC-Stellar from May 27 (21d stale) | Stale | — | **SKIP** |
+| SPK | — | — | $61M token unlock TODAY | Headwind | Hard headwind | **SKIP** |
+| ZRO/USD | — | — | Jun 20 unlock ($23M) approaching | Headwind | — | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.** Crash gate NOT triggered (BTC −0.77%). BTC weekly gate NOT triggered.
+
+All candidates fail on at least one hard gate:
+- OMNI: spread 57.7% — immediately disqualified
+- JTO: high-ATR (overnight range 14.6% + intraday rally 23.8%); required 3.5% stop → R:R 0.857:1 ❌; catalyst stale
+- ZEX: no fundamental catalyst (sunset protocol); pure speculation
+- ZEC: price reversing on the day (−4.31% from open after peak fade)
+- ETH: flat/down, no catalyst
+- XLM: catalyst 21 days stale
+- SPK/ZRO/ARB: token unlock headwinds
+
+FOMC decision pending today adds macro event risk — extra caution warranted on any aggressive entries.
+
+### Tomorrow Watch
+
+- **FOMC reaction**: If Fed holds rates (expected), watch BTC for post-announcement momentum. ETH could move on macro clarity.
+- **SOL re-entry**: Thesis (SpaceX tokenization + ecosystem growth) intact. Watch for fresh catalyst + price recovering above $74-75 with confirmation.
+- **JTO**: Valid re-entry only if price pulls back to ~$0.76–0.77 (improving R:R) AND fresh catalyst <6h emerges beyond Bitget PoolX. Not today.
+- **HYPE**: Same issue as prior days — high-ATR 3.5% stop → R:R 0.857:1 ❌ at current levels ($73+). Valid only on pullback to ~$68–70 range.
+- **WLD**: 1st stop-out Jun 16. Re-entry window open (no 48h cooling after 1st stop-out). Eightco stake catalyst still valid; watch for WLD momentum + fresh development.
+
+**WhatsApp notification sent** — SOL stop-out logged.
+

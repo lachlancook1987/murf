@@ -5612,3 +5612,70 @@ BTC ask $65,780 | 24h open $66,284 = **−0.76%** | 24h range $65,463–$67,263.
 **Notes:** WLD trailing stop OZWYUD fired this morning — loss ~$2.16 (−3.56%). Stop worked correctly; WLD rejected from the open-session high ($0.6734) and the 2.5% trail was swept on the pullback. SOL advancing (+0.29% from entry, HWM ratcheted to $75.56 from $74.41 overnight), stop now at $73.68 (up from $73.13 yesterday). FOMC today: market expects hold. HYPE +9.8% intraday but R:R still fails at required 3.5% high-ATR stop. No new trades.
 
 **Result: WLD stop-out documented. No actions taken this scan. WhatsApp notification sent.**
+
+---
+
+### Jun 16 → Jun 17 — SOL/USD Trailing Stop Triggered
+
+**Stop Order ID:** OTCEZJ-4GBK2-KLJYB3 (2.5% trailing stop)
+**Symbol:** SOL/USD | **Qty:** 0.8500 SOL | **Side:** SELL (automated trailing stop)
+**Entry:** ~$74.66 | **Exit:** ~$73.39 est.
+**HWM:** $76.02 (Jun 17 intraday peak, advanced from $75.56 EOD Jun 16)
+**Stop trigger:** ~$74.12 ($76.02 × 0.975) | **Fill:** ~$73.39 (market order gap-fill below trigger)
+**P&L:** ~−$1.08 (−1.70% on position) | **Proceeds:** ~$62.22 | **ZUSD after:** $124.0846
+**Stop-out count:** 1st SOL stop-out this week.
+**Notes:** SOL rallied to $76.02 overnight/this morning (new HWM from $75.56), advancing the trailing stop to ~$74.12. Price then dropped rapidly to intraday low $72.27. Market order filled at ~$73.39 — gapped $0.73 below the $74.12 trigger on fast decline. Entry to stop-out near-breakeven (−1.70%). SOL thesis (SpaceX tokenization + Anodos Finance) intact; stop worked correctly.
+
+---
+
+## 2026-06-17 — Session-Open Research
+
+**Execution time:** 2026-06-17 (session-open routine)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,774 (ask) | −0.77% from 24h open $66,284; crash gate NOT triggered |
+| SOL | $73.25 (ask) | −0.95% from 24h open $73.95; stopped out this session |
+| ETH | $1,783.61 (ask) | −0.62% from 24h open $1,795.37 |
+| JTO | $0.8163 (last) | +11.8% from 24h open $0.7299; HWM $0.8787, now fading |
+| ZEC | $495.55 (ask) | −4.31% from 24h open $517.86; continuing to fade |
+| Fear & Greed | 23 (Extreme Fear) | Improving from 20 yesterday, 10 last week |
+| BTC Funding Rate | ~+0.0100–0.0148%/8h | Mild long bias |
+| BTC Crash Gate | NOT triggered | BTC −0.77% from open; far from −20% threshold |
+| BTC Weekly Gate | NOT triggered | BTC trending up over recent days |
+| FOMC | Jun 16–17 (today) | Fed decision pending; market expects hold at 4.25–4.50% |
+
+**Portfolio update:** SOL OTCEZJ stop fired overnight → fully cash. ZUSD $124.0846. Alpaca clean.
+
+### Candidate Screening
+
+| Asset | Change | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| OMNI/USD | +174% 24h | 57.7% ❌ | 2 trades only — completely illiquid | N/A | **SKIP** — untradeable |
+| JTO/USD | +11.8% from open | 0.24% ✓ | Bitget PoolX + Robinhood (8d stale); high-ATR | 3%/3.5%=0.857:1 ❌ | **SKIP** — R:R fails + catalyst stale |
+| ZEX/USD | +71% from open | 0.965% ✓ | Sunset protocol — speculative pump, migration to BULLET | No fundamental | **SKIP** — no catalyst |
+| ZEC/USD | −4.31% from open | 0.097% ✓ | Halo Arc mainnet — price fading on the day | Reversing | **SKIP** — momentum gone |
+| ETH/USD | −0.62% from open | 0.020% ✓ | No fresh <6h catalyst | Flat/down | **SKIP** |
+| XLM/USD | +26.2% 24h (ref) | — | DTCC-Stellar from May 27 (21d stale) | Stale | **SKIP** |
+| SPK | — | — | $61M token unlock TODAY (Jun 17) | Hard headwind | **SKIP** |
+| ZRO/USD | — | — | Jun 20 unlock ($23M) headwind | Headwind | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.** No candidate passes all three gates:
+1. Momentum >3% in 1-4h with upward price action — nothing qualifies; BTC/ETH/SOL all down from open
+2. Fresh catalyst <6h — no verified fresh catalyst on any Kraken-tradeable asset
+3. R:R ≥ 1.2:1 — JTO fails (high-ATR requires 3.5% stop → R:R 0.857:1 ❌)
+FOMC decision pending today — additional macro event risk.
+
+### Portfolio State (Session-Open Jun 17)
+
+**Cash:** $124.0846 | **Open positions:** None | **Total equity:** ~$124.08
+**Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$1.08 (SOL stop-out at ~$73.39 vs entry $74.66)
+
+**Watch list for next scan:** FOMC reaction (BTC/ETH moves), SOL re-entry if catalyst + momentum setup emerges post-FOMC, JTO if price pulls back and R:R improves with fresh specific catalyst.
+
+**WhatsApp notification sent** — SOL stop-out logged.
