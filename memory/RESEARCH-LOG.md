@@ -17142,3 +17142,76 @@ All candidates fail on at least one hard gate:
 **Cash:** $124.0846 ZUSD | **Open positions:** None | **Total equity:** ~$124.08
 **Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
 **Alpaca BTC residual:** Fully closed — no positions, no orders.
+
+---
+
+## 2026-06-16 — Session-Open Execution (2nd run)
+
+**Execution time:** 2026-06-16 (session-open routine)
+
+### Account State (STEP 2)
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $124.0846 ZUSD | None (dust balances only) | None |
+| Alpaca | N/A | None | None (historical fills from May 2026 only) |
+
+**Confirmed:** All trailing stops closed (SOL OTCEZJ fired Jun 16→17, WLD OZWYUD fired Jun 16 midday). Fully cash.
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,803.90 ask | −0.73% from 24h open $66,284; crash gate NOT triggered |
+| SOL | $73.99 ask | +0.05% from 24h open $73.95; essentially flat |
+| HYPE | $73.31 ask | +9.6% from 24h open $66.88; high-ATR |
+| XRP | $1.22234 ask | −1.20% from 24h open $1.23717; declining |
+| ZEC | $501.88 ask | −3.08% from 24h open $517.86; fading |
+| Fear & Greed | 23 (Extreme Fear) | Same as prior session |
+| BTC Funding Rate | +0.0148%/8h (Kraken) | Mild long bias; not crowded |
+| BTC Crash Gate | NOT triggered | −0.73% from 24h open |
+| BTC Weekly Gate | NOT triggered | BTC trending sideways in $65–67K range |
+| FOMC | Jun 16–17 (today) | Decision pending; market expects hold at 4.25–4.50% |
+
+**Key catalysts:**
+- **US-Iran ceasefire** (prior session): macro tailwind; already priced in
+- **Mastercard RLUSD + XRP Ledger** (Ripple X post): expanding settlement to include stablecoin, intraday, holiday/weekend options. XRP price DOWN despite this — institutional catalyst not driving momentum today
+- **FOMC risk**: macro event risk; extra caution warranted on aggressive entries
+- **SPK unlock**: $61.18M scheduled Jun 17 (tomorrow) — avoid SPK
+- **ZRO unlock**: $23–29M Jun 20 — headwind approaching
+- **SOL catalysts**: Alpenglow/Firedancer upgrade narrative + SpaceX tokenization (still valid; no *fresh* <6h catalyst confirmed today)
+
+### Candidate Screening (STEP 3)
+
+| Asset | 24h from Open | Spread | Catalyst | Stop Required | R:R | Decision |
+|---|---|---|---|---|---|---|
+| XRP/USD | −1.20% ($1.23717→$1.22234) | 0.0008% ✓ | Mastercard RLUSD + XRP Ledger (general; age unclear; price not responding) | 2.5% std | N/A | **SKIP** — price DECLINING; momentum gate FAILS |
+| SOL/USD | +0.05% ($73.95→$73.99) | 0.013% ✓ | Alpenglow/Firedancer narratives; SpaceX tokenization (ongoing) | 2.5% std | 1.2:1 ✓ | **SKIP** — essentially flat; no fresh <6h catalyst |
+| HYPE/USD | +9.6% ($66.88→$73.31) | 0.014% ✓ | ETF inflows (ongoing; no fresh <6h specific catalyst) | 3.5% (high-ATR) | 3%/3.5%=0.857:1 ❌ | **SKIP** — R:R fails; no fresh catalyst |
+| ZEC/USD | −3.08% ($517.86→$501.88) | 0.038% ✓ | Orchard audit positive (minor/general; price reversing) | 2.5% std | N/A | **SKIP** — price DECLINING; momentum gate FAILS |
+| SPK | — | — | $61M unlock TOMORROW (Jun 17) | Hard headwind | Hard headwind | **SKIP** |
+| ZRO/USD | — | — | Jun 20 unlock ($23–29M) headwind | Headwind | Headwind | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.** All candidates fail at least one hard gate:
+1. **Momentum gate** — XRP and ZEC both declining through 24h open (-1.2%, -3.1%)
+2. **R:R gate** — HYPE requires 3.5% high-ATR stop → 3%/3.5% = 0.857:1 ❌
+3. **Catalyst gate** — SOL flat with no fresh <6h confirmed catalyst; HYPE has no fresh <6h specific catalyst
+4. **FOMC event risk** — decision pending today/tomorrow; extra caution on aggressive entries warranted
+
+### Portfolio State
+
+**Cash:** $124.0846 ZUSD | **Open positions:** None | **Total equity:** ~$124.08
+**Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
+
+### Watch List for Next Session
+
+| Asset | Trigger for Entry | Notes |
+|---|---|---|
+| **BTC/ETH** | Post-FOMC momentum: +3% in 1h with volume surge, if Fed holds + Powell dovish | Key macro catalyst event; if risk-on bounce fires → enter with speed |
+| **SOL** | Fresh confirmed catalyst <6h (new SpaceX tokenization detail, Alpenglow date, Anodos update) + price above $74.50 with 1h momentum >3% | 1st stop-out Jun 17; re-entry eligible; standard 2.5% stop |
+| **XRP** | Price turning positive above $1.23717 open AND building 1h momentum >3% with Mastercard/RLUSD catalyst confirmed fresh | Declining today; wait for momentum reversal before entry; 1st stop-out Jun 15→16; re-entry eligible |
+| **HYPE** | Pullback to ~$64–66 improving R:R to ≥1.2:1 at 3.5% stop; OR specific fresh catalyst <6h at current level | High-ATR constraint → need either lower price OR wider R:R justification |
+
+**No trades placed. No WhatsApp notification sent.**
