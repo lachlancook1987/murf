@@ -16909,3 +16909,64 @@ Actions:
 - HYPE: R:R issue remains at $73+ levels with 3.5% stop. Only enters if pullback to ~$70 or lower creates 1.2:1 R:R, combined with fresh catalyst.
 - WLD: Watch for fresh catalyst post-FOMC (Eightco stake + OpenAI proxy narrative could re-energize). 2nd stop-out would trigger 48h cooling period.
 - XRP: CLARITY Act Senate debate expected early July — not catalytic today.
+
+---
+
+## 2026-06-16 — Afternoon Scan
+
+**Execution time:** 2026-06-16 (second midday/afternoon routine)
+
+### Market Context (Afternoon)
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $66,121 | Slight pullback from $66,544 earlier; open $66,284; no crash gate |
+| SOL | $74.05 | Below entry $74.66 (−0.82%); HWM $75.56; stop $73.68; buffer 0.50% — thin |
+| HYPE | $76.12 | +13.8% from 24h open $66.88; continued to run since midday $73.43 |
+| ETH | $1,800.63 | +0.3% from open $1,795; mild upward drift |
+| JTO | $0.8548 | +17.1% from 24h open $0.7299; no JTO-specific catalyst |
+| XLM | $0.2243 | +5.1% from open $0.2135; DTCC-Stellar catalyst still stale |
+| ZRO | $1.1900 | +6.7% from open $1.1150; Zero blockchain catalyst from Feb 2026 (stale) |
+| ZEC | $506.20 | −2.2% from 24h open $517.86; fading from high $545 |
+| BTC Crash Gate | NOT triggered | BTC well above −20% threshold |
+| BTC Weekly Gate | NOT triggered | BTC trending up; standard momentum entries valid |
+| FOMC | Jun 16–17 | Fed decision underway; market expects hold |
+
+### Positions Verified
+
+- **SOL:** OTCEZJ trailing stop confirmed active. Trail 2.5%, stop $73.68, HWM $75.56. ✓
+  - Buffer: ($74.05 − $73.68) / $74.05 = 0.50% — very thin. Normal noise risk. Stop working correctly.
+- **WLD:** OZWYUD already fired (confirmed earlier). WLD balance = 0. No orphaned orders. ✓
+- **Alpaca:** Historical fills only — no live orders, no active positions. ✓
+
+### Stop Tightening Check (STEP 4)
+
+- SOL: entry $74.66, current $74.05 = −0.82%. Threshold for tightening: +20% = $89.59. Not reached. **No action.**
+
+### Thesis Check (STEP 5)
+
+- **SOL:** Thesis intact. Solana Summit: Washington x Wall Street on Jun 16 (today) — fresh institutional catalyst. SpaceX tokenization on Solana. Anodos Finance ecosystem. No negative catalyst detected. **Hold.**
+
+### New Entry Scan (STEP 6)
+
+| Asset | From 24h Open | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| JTO/USD | +17.1% ($0.730→$0.855) | 0.22% ✓ | Altcoin rotation only — no JTO-specific news | 3%/2.5%=1.2:1 but high-ATR suspect | **SKIP** — no specific catalyst; late to +17% move |
+| HYPE/USD | +13.8% ($66.88→$76.12) | 0.013% ✓ | ETF inflows (ongoing) + SpaceX perps on HYPE DEX | 3%/3.5%=0.857:1 ❌ | **SKIP** — R:R fails (high-ATR 3.5% required) |
+| XLM/USD | +5.1% ($0.213→$0.224) | 0.054% ✓ | DTCC-Stellar catalyst stale | No momentum | **SKIP** — stale catalyst |
+| ZRO/USD | +6.7% ($1.115→$1.190) | 0.084% ✓ | Zero blockchain = Feb 2026 announcement; Jun 20 unlock headwind | Stale + headwind | **SKIP** — catalyst stale, unlock approaching |
+| ZEC/USD | −2.2% ($517.86→$506.20) | 0.059% ✓ | Pump faded — now below open | Reversing | **SKIP** — fading |
+| ETH/USD | +0.3% ($1,795→$1,800) | 0.00056% ✓ | No fresh catalyst; Glamsterdam Aug 2026 | Weak momentum | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.** No candidate meets all three gates simultaneously:
+1. Momentum (price up >3% in 1-4h) ✓ — JTO and HYPE qualify
+2. Fresh catalyst <6h old ✗ — JTO has no specific catalyst; others have stale catalysts
+3. R:R ≥ 1.2:1 ✗ — HYPE fails at required 3.5% high-ATR stop
+
+Portfolio remains: SOL only (0.85 SOL, stop OTCEZJ active) + $61.87 ZUSD cash.
+Buffer on SOL is thin (0.50%) — potential stop-out if SOL drifts further below $73.68.
+
+**No WhatsApp notification** — no actions taken this scan.
+
