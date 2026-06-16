@@ -17215,3 +17215,83 @@ All candidates fail on at least one hard gate:
 | **HYPE** | Pullback to ~$64–66 improving R:R to ≥1.2:1 at 3.5% stop; OR specific fresh catalyst <6h at current level | High-ATR constraint → need either lower price OR wider R:R justification |
 
 **No trades placed. No WhatsApp notification sent.**
+
+---
+
+## 2026-06-17 — Midday Scan
+
+**Execution time:** 2026-06-17 (midday routine)
+
+### Account State
+
+**ZUSD:** $124.0846 | **Open positions:** None | **Open orders:** None
+**Alpaca:** Historical orders only (a2b44cf9 cancelled 2026-05-22) — clean
+
+### Market Context (Midday)
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | ~$65,705 (Kraken) | −1.37% 24h — no crash gate; slight pullback from yesterday's +4.15% |
+| ETH | ~$1,793 (ask) | −0.12% from $1,795.37 open; essentially flat |
+| SOL | ~$73.78 (ask) | −0.23% from $73.95 open; flat |
+| HYPE | ~$73.72 (ask) | +10.22% from $66.88 open; fading from $76.90 high |
+| JTO | ~$0.8098 (ask) | +10.93% from $0.7299 open; fading from $0.8787 high |
+| XLM | ~$0.2193 (ask) | +2.73% from $0.2135 open; faded hard from $0.2338 high (−6.2%) |
+| XRP | ~$1.2176 (ask) | −1.58% from $1.2372 open; pulling back |
+| Fear & Greed | 23 (Extreme Fear) | Unchanged from session-open |
+| BTC Crash Gate | NOT triggered | −1.37% from 24h open; far from −20% |
+| BTC Weekly Gate | NOT triggered | BTC trending up over recent sessions |
+| FOMC | Jun 16–17 | Decision today; market expects hold at 4.25–4.50% |
+| Macro catalyst | US-Iran ceasefire | Risk-on boost; falling oil prices ease inflation pressure |
+
+### STEP 2 — Position & Order Audit
+
+- **Kraken positions:** None (SOL trailing stop OTCEZJ fired overnight Jun 16→17)
+- **Kraken orders:** None
+- **Alpaca:** No active positions or orders — clean
+
+### STEP 3 — Trailing Stop Verification
+
+No open positions → skip.
+
+### STEP 4 — Stop Tightening
+
+No open positions → skip.
+
+### STEP 5 — Thesis Check
+
+No open positions → skip.
+
+### STEP 6 — New Entry Scan
+
+**Candidate screening:**
+
+| Asset | From Open | Spread | Catalyst (<6h) | High-ATR | R:R | Decision |
+|---|---|---|---|---|---|---|
+| HYPE/USD | +10.22% | 0.014% ✓ | ETF inflows ($153M net) + HIP-4 options expansion — ongoing narrative, not single <6h event | Yes → 3.5% stop | 3%/3.5% = 0.857:1 ❌ | **SKIP** |
+| JTO/USD | +10.93% | 0.080% ✓ | Bitget PoolX event ending soon (fading catalyst); JTX buyback ongoing | Yes → 3.5% stop | 3%/3.5% = 0.857:1 ❌ | **SKIP** |
+| XLM/USD | +2.73% | 0.077% ✓ | DTCC tokenization (May 27 — 21d stale); XRP payments narrative rehash | No | 1.2:1 ✓ | **SKIP** — catalyst stale; price fading from $0.234 high |
+| XRP/USD | −1.58% | 0.0099% ✓ | CLARITY Act ongoing; no fresh <6h event | No | N/A | **SKIP** — below open, pullback |
+| ETH/USD | −0.12% | 0.0039% ✓ | Glamsterdam pushed Q3 2026 — no near-term date | No | N/A | **SKIP** — flat, no catalyst |
+| ZEC/USD | −2.31% | 0.077% ✓ | Halo Arc post-patch (ongoing) | No | N/A | **SKIP** — below open |
+| DASH/USD | −1.68% | 0.021% ✓ | None identified | No | N/A | **SKIP** — below open |
+| TON/USD | −2.97% | 0.120% ✓ | None | No | N/A | **SKIP** — below open |
+| SOL/USD | −0.23% | 0.014% ✓ | SpaceX tokenization (ongoing, no fresh update) | No | N/A | **SKIP** — flat, no fresh <6h catalyst |
+
+**Decision: NO NEW ENTRIES.**
+
+Gate failures:
+1. **R:R gate** — Only assets with >3% upward momentum (HYPE, JTO) are high-ATR; 3.5% stop → R:R 0.857:1 ❌
+2. **Catalyst gate** — HYPE ETF inflows are ongoing narrative (no single <6h event); JTO Bitget PoolX catalyst is ending/fading; all other assets have stale or no catalyst
+3. **Momentum gate** — XLM, XRP, ETH, SOL, ZEC, DASH, TON all below their opens or flat
+
+**FOMC event risk** active today — further caution warranted on aggressive entries ahead of decision.
+
+### Portfolio State (Midday Jun 17)
+
+**Cash:** $124.0846 ZUSD | **Open positions:** None | **Total equity:** ~$124.08
+**Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
+
+**Watch list:** BTC/ETH for post-FOMC momentum bounce; SOL if fresh catalyst + price recovery above $74.50; HYPE if pullback to ~$64–66 improves R:R to ≥1.2:1 at 3.5% stop
+
+**No trades placed. No WhatsApp notification sent.**
