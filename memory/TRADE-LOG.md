@@ -5483,3 +5483,42 @@ BTC ask $65,780 | 24h open $66,284 = **−0.76%** | 24h range $65,463–$67,263.
 
 **Trades today:** XRP stop-out O6JOQ6-MPSMC-BIUEEI overnight (~$1.2143, −1.08%) | No new entries | **Total since migration:** ~75
 **Notes:** XRP 3.5% trailing stop swept overnight Jun 15→16 at ~$1.2143 — small loss of ~$0.54 (−1.08% from entry $1.2276), acceptable given T2 was hit earlier and stop was appropriately tightened. SOL recovered strongly during the Jun 16 session, reaching intraday high of $75.00 (HWM ratcheted up from $74.41, trailing stop advanced from $72.55 → $73.13), now at $74.71 — fractionally above entry $74.66. Stop buffer comfortable at 2.11% vs the razor-thin 0.52% overnight. BTC gained +1.34% today ($65,641 → $66,521) on continued ETF inflow momentum; bot underperformed by −0.88% due to the XRP stop-out occurring in this measurement period. Phase P&L −29.07% from Kraken starting equity $179.78 (May 21). Alpaca: stop a2b44cf9 CANCELLED since 2026-05-22, no position. Tomorrow: hold SOL with 2.5% trailing stop — T1 $76.90 (+3%) and T2 $78.39 (+5%) remain valid targets; BTC macro support positive; scan fresh 1h >3% setups with catalyst <6h.
+
+---
+
+## 2026-06-16 — Session-Open Entry: WLD/USD
+
+**Execution time:** 2026-06-16 (session-open routine)
+
+### Trade: WLD/USD BUY
+
+| Field | Value |
+|---|---|
+| Date/Time (UTC) | 2026-06-16 session-open |
+| Symbol | WLD/USD |
+| Side | BUY |
+| Qty | 89.8469 WLD |
+| Entry price | ~$0.6750 (computed: $60.64 spent / 89.8469 WLD, incl. 0.4% taker fee) |
+| Buy order ID | O6HPCN-GWL4D-GTPS53 |
+| Trailing stop % | 2.5% |
+| Stop order ID | OZWYUD-GYFOC-UB5767 |
+| Initial stop trigger | $0.6546 (HWM $0.6713 at placement) |
+| T1 target (+3%) | $0.6953 |
+| T2 target (+5%) | $0.7088 |
+| Thesis | Eightco disclosed 8.4% WLD stake (283M tokens) today (Jun 16) — institutional-scale accumulation; amplified by OpenAI IPO proxy narrative. Fresh catalyst <6h old. WLD +13.3% from 24h open $0.5893 on strong institutional buying momentum. |
+| R:R | 3% / 2.5% = 1.2:1 ✓ |
+| Size | $60.64 (~95% of available $64.03 cash) |
+| Spread at entry | 0.075% ✓ |
+| BTC crash gate | NOT triggered (+0.77% 24h) ✓ |
+| BTC weekly gate | NOT triggered ✓ |
+
+### Portfolio State After Entry
+
+| Symbol | Qty | Entry | Current | P&L% | Stop | Stop ID | Buffer |
+|---|---|---|---|---|---|---|---|
+| SOL/USD | 0.8500 | ~$74.66 | $75.32 | +0.88% | $73.68 (2.5% trail) | OTCEZJ | 2.17% |
+| WLD/USD | 89.8469 | ~$0.6750 | $0.6713 | −0.55% | $0.6546 (2.5% trail) | OZWYUD | 2.49% |
+| ZUSD cash | — | — | $3.39 | — | — | — | — |
+
+**Total equity est.:** ~$66.40 ($3.39 + SOL $75.32×0.85=$64.02 + WLD $0.6713×89.8469=$60.29 ≈ $127.70)
+**Phase P&L:** ~−$52.08 (−28.97%) from Kraken starting equity $179.78
