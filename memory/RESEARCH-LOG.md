@@ -17050,3 +17050,95 @@ FOMC decision pending today adds macro event risk — extra caution warranted on
 
 **WhatsApp notification sent** — SOL stop-out logged.
 
+
+---
+
+## 2026-06-16 — Pre-Session Research
+
+**Execution time:** 2026-06-16 (session-open routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $124.0846 ZUSD | None | None |
+| Alpaca | N/A | None (BTC position long closed) | None |
+
+**Portfolio context:** Fully cash on Kraken after SOL trailing stop (OTCEZJ) fired Jun 16→17 overnight at ~$73.39 (entry ~$74.66, −1.70%, near-breakeven). Alpaca clean — no live positions or orders. Total equity: ~$124.08. Phase P&L: ~−$55.70 (−30.98%) from Kraken starting equity $179.78.
+
+**Same-thesis cooling check:** SOL (1st stop-out Jun 17) — no 48h cooling required until 2nd stop-out. WLD (1st stop-out Jun 16) — no 48h cooling required.
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $66,504.88, +1.53% 24h | Crash gate NOT triggered (far from −20%) |
+| ETH | $1,791.34 (ask), −0.22% from 24h open | Slightly down from open; high was $1,837 |
+| XLM | $0.21784 (ask), +2.04% from open | Faded from intraday high $0.23376 (+9.5%) |
+| HYPE | $72.27 (ask), +8.1% from open ($66.88) | Volume surge +138%; high-ATR |
+| JTO | $0.8018 (ask), +9.84% from open ($0.7299) | High-ATR; intraday range 23.9% |
+| WLD | $0.6565 (ask), +11.4% from open ($0.5893) | High-ATR; catalyst age uncertain |
+| ZEC | $497.20 (ask), −3.98% from open ($517.86) | Fading despite audit news |
+| XRP | $1.21676 (ask), −1.65% from open | Volume +70% 24h but price falling |
+| Fear & Greed | 23 (Extreme Fear) | Improving slightly (was 20 yesterday, 10 last week) |
+| BTC Funding Rate | +0.0125–0.0148%/8h (Kraken) | Mild long bias; not crowded |
+| BTC Crash Gate | NOT triggered | BTC +1.53% from 24h open |
+| BTC Weekly Gate | NOT triggered | BTC trending up |
+| FOMC | Jun 16–17 (decision pending) | Market expects hold at 4.25–4.50%; event risk today |
+
+### Key Catalysts
+
+- **US-Iran ceasefire confirmed**: Strait of Hormuz reopening; added ~$60B to crypto market cap. Macro positive for risk assets. Fresh catalyst.
+- **XLM (Stellar)**: DTCC tokenization rollout catalyst (21+ days old — confirmed stale from previous research logs). Today's XLM move (+2% from open, faded from +9.5% high) driven by catalyst age and XRP spillover.
+- **WLD**: Eightco 8.4% stake (stale 1–2 days); APMC quantum-secure initiative with KAIST/UC Berkeley (age uncertain); July 24 unlock reduction (43% cut to daily unlocks — supply positive).
+- **JTO**: Bitget PoolX campaign (ongoing); Robinhood listing Jun 9 (stale, 7d old).
+- **ZEC**: Orchard vulnerability audit found no additional critical issues — minor positive, but price fading.
+- **Token unlock headwinds**: SPK $61M TODAY (Jun 17); ZRO $29M Jun 20; ARB $8M this week.
+
+### Candidate Screening
+
+| Asset | Change from Open | Spread | Catalyst | Stop Required | R:R | Decision |
+|---|---|---|---|---|---|---|
+| HYPE/USD | +8.1% ($66.88→$72.27) | 0.014% ✓ | Volume +138%; ETF inflows ongoing (no fresh <6h specific catalyst) | 3.5% (high-ATR, named explicitly in strategy) | 3%/3.5% = 0.857:1 ❌ | **SKIP** — R:R fails |
+| JTO/USD | +9.84% ($0.7299→$0.8018) | 0.036% ✓ | Bitget PoolX (ongoing); Robinhood listing stale (7d) | 3.5% (high-ATR; 23.9% intraday range) | 0.857:1 ❌ | **SKIP** — R:R fails + stale catalyst |
+| WLD/USD | +11.4% ($0.5893→$0.6565) | 0.107% ✓ | Eightco stake stale; APMC uncertain age; US-Iran macro (not WLD-specific) | 3.5% (high-ATR, named in strategy) | 0.857:1 ❌ | **SKIP** — R:R fails; 1st stop-out Jun 16 (re-entry eligible but fails gate) |
+| XLM/USD | +2.04% ($0.21348→$0.21784) | 0.060% ✓ | DTCC catalyst 21+ days stale; momentum faded from +9.5% intraday high | 2.5% std | No momentum from entry | **SKIP** — momentum gone; stale catalyst |
+| ZEC/USD | −3.98% ($517.86→$497.20) | 0.054% ✓ | Audit news (minor positive); price reverting below open | 2.5% std | Negative momentum | **SKIP** — falling through open |
+| XRP/USD | −1.65% ($1.23717→$1.21676) | 0.005% ✓ | Institutional adoption (general); volume +70% 24h but no 1h momentum | 2.5% std | Negative momentum | **SKIP** — price declining |
+| ETH/USD | −0.22% ($1,795→$1,791) | 0.001% ✓ | US-Iran macro tailwind; Glamsterdam Aug 2026 (not imminent) | 2.5% std | No momentum | **SKIP** — flat/down, no specific catalyst |
+| SPK | — | — | $61M unlock TODAY (Jun 17) | Hard headwind | Hard headwind | **SKIP** — unlock headwind |
+| ZRO/USD | — | — | Jun 20 $29M unlock approaching | Headwind | Headwind | **SKIP** — unlock headwind |
+
+### Decision
+
+**NO NEW ENTRIES.** Crash gate NOT triggered (BTC +1.53%). BTC weekly gate NOT triggered.
+
+All candidates fail on at least one hard gate:
+1. **R:R gate** — HYPE, JTO, WLD all require 3.5% trailing stop (high-ATR, per strategy); 3%/3.5% = 0.857:1 fails 1.2:1 minimum
+2. **Momentum gate** — XLM, ZEC, XRP, ETH all showing negative or faded momentum from 24h open
+3. **Catalyst gate** — No fresh <6h specific catalyst confirmed on any Kraken-tradeable asset with qualifying momentum
+4. **FOMC event risk** — Decision pending today/tomorrow; macro event risk warrants extra caution on aggressive entries
+
+### Risk Factors
+
+- **FOMC (Jun 16–17)**: Market expects hold at 4.25–4.50%, but Powell presser tone is the real swing. Hawkish dot plot or language could pressure BTC/risk assets.
+- **SPK unlock ($61M today)**: Large supply event; avoid SPK. Potential contagion to similar AI/DeFi names if sell pressure is visible.
+- **ZRO unlock ($29M, Jun 20)**: Headwind approaching this week.
+- **Extreme Fear (23)**: Market sentiment weak; capitulation risk if BTC loses $65K support.
+- **WLD**: Approaching 2nd stop-out territory — re-entry requires fresh confirmed catalyst (APMC age unconfirmed).
+
+### Watch List for Next Session
+
+| Asset | Trigger for Entry | Notes |
+|---|---|---|
+| **BTC/ETH** | Post-FOMC momentum +3% in 1h with volume | If Fed holds + dovish Powell → risk-on bounce; watch the announcement |
+| **HYPE** | Pullback to ~$68–70 improving R:R to margin; OR fresh specific catalyst <6h | Still high-ATR; any entry needs 3.5% stop + R:R check at pullback price |
+| **WLD** | Confirmed fresh catalyst <6h (new APMC press release, new institutional buyer, or development update) + price above $0.67 with momentum | 1 stop-out in 7-day window; re-entry open; high-ATR → 3.5% stop applies |
+| **SOL** | Thesis intact. Fresh catalyst (SpaceX tokenization update, Anodos development) + price recovering above $74–75 with volume | 1 stop-out Jun 17; re-entry eligible. Standard 2.5% stop. |
+| **JTO** | Pullback to ~$0.76–0.78 (improving R:R); fresh catalyst beyond Bitget PoolX | High-ATR → 3.5% stop; check R:R at pullback price |
+
+### Portfolio State
+
+**Cash:** $124.0846 ZUSD | **Open positions:** None | **Total equity:** ~$124.08
+**Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
+**Alpaca BTC residual:** Fully closed — no positions, no orders.
