@@ -16749,3 +16749,108 @@ ZEC (Zcash) has the cleanest fresh catalyst today — emergency hard fork June 1
 - **ZEC:** Monitor for catalyst continuation; AU restriction means no entry possible
 - **FOMC Jun 16–17:** Fed meeting starts tomorrow — macro volatility risk; 2 open positions into FOMC
 
+
+---
+
+## 2026-06-16 — Pre-Session Research
+
+**Execution time:** 2026-06-16 (scheduled pre-session routine)
+
+### Account Snapshot
+
+| Venue | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $64.03 ZUSD + 0.85 SOL | SOL/USD spot | OTCEZJ (trailing stop 2.5%, $72.62) active |
+| Alpaca | $0 | None | Historical fills only (no live orders) |
+
+**SOL position:** 0.85 SOL, entry ~$74.66, current ask $74.44 (−0.29% from entry), HWM $74.48, stop $72.62. Buffer 2.44% — recovered strongly from overnight low of $72.75 (near-stop).  
+**XRP:** Stop O6JOQ6 fired overnight Jun 15→16 at ~$1.2143 (−1.08% from entry). 1st XRP stop-out (re-entry window open; 2nd within 7d triggers 48h gate).  
+**Total equity est.:** ~$126.50 ($64.03 cash + $74.44×0.85 SOL mark-to-market $63.27 ≈ $127.30)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $66,544 | +4.15% 24h — strong green day |
+| ETH | $1,773.62 | −1.21% from today's open (pullback from $1,795 open) |
+| SOL | $74.44 | +0.66% from today's open; recovered from $72.75 overnight low |
+| Fear & Greed | 23 (Extreme Fear) | Lagging sentiment; market action more bullish than index reflects |
+| BTC Funding Rate | ~+0.0100%/8h avg | Mild long bias; not crowded |
+| Crash Gate | **NOT triggered** | BTC +4.15% 24h; far from −20% threshold |
+| BTC Weekly Gate | **NOT triggered** | BTC trending up; standard momentum entries valid |
+| FOMC | Today (Jun 16) | Fed decision possible today — macro event risk |
+
+**Top movers (24h):**
+- WLD: +8.1% (Kraken live) / +16% cross-market — Eightco 8.4% stake disclosure + OpenAI IPO proxy
+- JTO: −0.7% from today's open (pulled back from $0.819 high to $0.725; catalyst Jun 13 stale)
+- ZRO: +1.35% from today's open (off $1.223 high; Jun 20 unlock headwind)
+- XLM: +10.7% (24h) — DTCC-Stellar catalyst stale; skip
+- DOGE: −0.5% from today's open
+- ETH: −1.2% from today's open
+
+**Catalysts:**
+- **WLD today**: Eightco disclosed 8.4% WLD stake (283M tokens); framed as institutional validation + OpenAI IPO proxy speculation
+- **Solana**: Tokenized SpaceX shares on Solana; Anodos Finance joining network (today's Kraken market page)
+- **FOMC**: Fed decision Jun 16–17 — macro risk event, could create cross-asset volatility
+- **ZRO Jun 20 unlock**: 25.71M ZRO (~$29M) — headwind for ZRO
+- **SPK Jun 17 unlock**: 2.52B SPK (~$61M) — headwind for SPK
+- **XRP CLARITY Act**: Senate debate expected early July — forward catalyst, not yet catalytic
+
+### Candidate Screening
+
+| Asset | 24h From Open | Spread | Trades (24h) | Catalyst | Gate | Decision |
+|---|---|---|---|---|---|---|
+| **WLD/USD** | +8.1% | 0.126% ✓ | 8,859 ✓ | Eightco 8.4% stake today + OpenAI proxy | Clear | **ENTER** |
+| SOL/USD | +0.66% today | 0.027% ✓ | 27,594 ✓ | SpaceX tokenization + Anodos (today) | HELD | **HOLD** — stop active |
+| ETH/USD | −1.21% today | 0.00056% ✓ | 42,104 | — | Not momentum | **SKIP** — pullback |
+| DOGE/USD | −0.50% today | 0.0032% ✓ | 8,247 | Community momentum | Not momentum | **SKIP** — pullback |
+| JTO/USD | −0.7% today | 0.215% ✓ | 12,257 | SEC meeting Jun 13 (stale 3d) | Pullback from high | **SKIP** — reversal |
+| ZRO/USD | +1.35% today | 0.177% ✓ | 4,220 | Short squeeze (fading); Jun 20 unlock ahead | Off high | **SKIP** — headwind |
+
+### Trade Ideas
+
+#### Idea 1: WLD/USD — NEW ENTRY (Primary)
+- **Catalyst:** Eightco disclosed 8.4% WLD stake today (283M tokens — institutional-scale accumulation); amplified by OpenAI IPO proxy narrative (fresh, <6h old)
+- **Entry:** Market ~$0.637 (ask $0.6371)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard)
+- **T1:** $0.6562 (+3%) | **T2:** $0.6690 (+5%)
+- **R:R:** 3% / 2.5% = 1.2:1 ✓
+- **Size:** ~$60 (~94% available cash) — high conviction, institutional catalyst
+- **Kraken pair:** WLDUSD ✓ (status: online; leverage 2x/3x available but not needed)
+- **Spread:** 0.126% ✓ (≤1% gate passed)
+- **Stop placement:** Immediately after fill — no exceptions
+- **Risk note:** AI/OpenAI proxy narrative is speculative; no confirmed OpenAI IPO. Stop is defence.
+
+#### Idea 2: SOL/USD — HOLD + MONITOR (Existing Position)
+- **Position:** 0.85 SOL, entry $74.66, stop OTCEZJ at $72.62 (2.5% trail)
+- **Current:** $74.44 — recovered to near entry; HWM $74.48
+- **Catalyst refresh:** Tokenized SpaceX shares on Solana + Anodos Finance ecosystem expansion (today's Kraken market commentary)
+- **Status:** Stop managing correctly. Buffer 2.44% — adequate.
+- **If price breaks $74.66 (entry) and pushes to T1 $76.90:** Stop self-ratchets; no manual action.
+- **No new capital deployed** — existing 0.85 SOL consumes no cash.
+
+#### Idea 3: XRP/USD — MONITOR (Re-entry candidate, not today)
+- **Status:** 1st stop-out Jun 15→16. Re-entry gate open (no 48h cooling after 1st stop-out).
+- **Forward catalyst:** CLARITY Act Senate debate expected early July.
+- **Today:** No fresh <6h catalyst identified. XRP direction unclear post-stop.
+- **Decision:** Not entering today — WLD is the better use of cash. Watch XRP for fresh catalyst.
+
+#### Idea 4: ETH/USD / DOGE/USD / JTO/USD / ZRO/USD — SKIP
+- All either pulling back from open or catalyst stale. Not meeting entry criteria.
+
+### Risk Factors
+- **FOMC today (Jun 16):** Fed decision could create cross-asset volatility. WLD entry is a smaller ($60) position — appropriate sizing into an event day.
+- **WLD AI narrative risk:** OpenAI IPO speculation is unconfirmed; if narrative fades, sharp reversal possible. 2.5% stop is defence.
+- **SOL buffer at 2.44%:** Recovered from 0.52% overnight — now reasonable. Normal intraday noise should not trigger. But FOMC could spike volatility.
+- **Fear & Greed at 23:** Persistent extreme fear despite green BTC day — underlying sentiment fragile; stick to tight stops.
+- **SPK Jun 17 unlock:** $61M; no direct exposure here.
+- **Phase drawdown:** −$51.28 (−28.52%) from $179.78 starting equity. Capital preservation remains critical — sized accordingly.
+
+### Decision
+
+**TRADE** — crash gate NOT triggered (BTC +4.15%). BTC weekly gate NOT triggered.
+
+Actions:
+1. **WLD/USD ENTER** ~$60 market, trailing stop 2.5% immediately after fill ← PRIMARY ACTION
+2. **SOL/USD HOLD** — no changes, stop OTCEZJ active at $72.62
+3. **All other candidates SKIP** — no actionable momentum or fresh catalyst meeting criteria
