@@ -17451,3 +17451,76 @@ Gate failures:
 **Phase P&L:** ~−$55.86 (−31.07%) from Kraken starting equity $179.78
 **Day P&L Jun 17:** ~−$1.08 realized (SOL) + UNI unrealized $0 at entry
 
+
+---
+
+## 2026-06-17 — Evening Scan
+
+**Execution time:** 2026-06-17 (evening routine)
+
+### Account State
+
+**ZUSD:** $122.5847 | **Open positions:** None (UNI trailing stop OH2KH3-VCPYG-LGNKDK fired) | **Open orders:** None
+**Alpaca:** No active positions or orders — clean (historical orders only from May 22)
+
+### UNI Stop-Out Confirmed
+
+UNI/USD position (17 UNI @ $3.617, stop OH2KH3-VCPYG-LGNKDK) has fired. UNI balance 0, ZUSD $122.5847.
+- Entry: $3.617 | Exit: ~$3.538 (implied from ZUSD: $122.5847 − $62.43 = $60.15 / 17)
+- P&L: ~−$1.50 net | Stop fired near initial trigger ($3.5262) — HWM never advanced significantly
+- UNI fell from $3.7262 24h high (pre-entry) all the way to $3.1902 intraday low
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $64,799 (ask) | −1.24% from 24h open $65,609; crash gate NOT triggered |
+| ETH | $1,762.65 (ask) | −1.64% from 24h open $1,792.17 |
+| SOL | $72.20 (ask) | −1.71% from 24h open $73.46 |
+| UNI | $3.2876 (ask) | −0.04% from 24h open $3.2888; gave back all gains |
+| WLD | $0.6557 (ask) | −2.86% from 24h open $0.6750; below open |
+| ZEC | $489.99 (ask) | −2.92% from 24h open $504.69; below open |
+| HYPE | $70.92 (ask) | −3.66% from 24h open $73.60; below open |
+| KAS | $0.03206 (ask) | −1.32% from 24h open $0.032490; below open |
+| RENDER | $1.7100 (ask) | −1.16% from 24h open $1.7300; below open |
+| Fear & Greed | 22 (Extreme Fear) | Unchanged from morning |
+| BTC Funding Rate | +0.0044–0.0148%/8h | Mild long bias, no extreme leverage |
+| BTC Crash Gate | NOT triggered | BTC −1.24% from open; far from −20% threshold |
+| FOMC | HELD 4.25–4.50% | Decision already passed; market failed to rally |
+
+### Candidate Screening
+
+| Asset | Change | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| UNI/USD | −0.04% from open | 0.058% ✓ | UNIfication catalyst stale; 1st stop-out today; no momentum | N/A | **SKIP** — below entry; no momentum; 1st stop-out (re-entry requires fresh <6h catalyst + 1h >3%) |
+| HYPE/USD | −3.66% from open | 0.014% ✓ | Ongoing protocol growth (no fresh <6h event); high-ATR → 3.5% trail → R:R 0.857:1 ❌ | Fails | **SKIP** |
+| ZEC/USD | −2.92% from open | 0.097% ✓ | Orchard recovery (>2 weeks old); buying volume mention but price BELOW open | N/A | **SKIP** — momentum negative |
+| WLD/USD | −2.86% from open | 0.029% ✓ | Eightco stake (>6h old); 1st stop-out today; below open | N/A | **SKIP** — no momentum |
+| KAS/USD | −1.32% from open | 0.031% ✓ | No fresh catalyst | N/A | **SKIP** — below open |
+| RENDER/USD | −1.16% from open | 0.059% ✓ | No fresh catalyst | N/A | **SKIP** — below open |
+| ETH/USD | −1.64% from open | 0.020% ✓ | No fresh <6h catalyst | N/A | **SKIP** |
+| SOL/USD | −1.71% from open | 0.014% ✓ | No fresh catalyst (SpaceX tokenization stale) | N/A | **SKIP** |
+| SPK | N/A | — | $61M token unlock TODAY (headwind) | Headwind | **SKIP** |
+| ZRO | — | — | $23M unlock headwind this week | Headwind | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+Gate failures:
+1. **Momentum gate** — ALL assets below their 24h opens; market broadly down post-FOMC despite rate hold as expected
+2. **Catalyst gate** — No fresh <6h catalyst on any Kraken-tradeable asset
+3. **R:R gate** — HYPE R:R 0.857:1 ❌ (high-ATR requires 3.5% trail)
+4. **BTC context** — Crash gate NOT triggered (−1.24%), but market failing to hold post-FOMC bounce
+
+**Note on UNI:** "Buy the rumor, sell the news" pattern. UNIfication was a real catalyst but the market had already repriced before the bot's midday entry. The 24h high ($3.7262) was pre-entry; the trailing stop was entered at the local top of the price fade. Same-thesis cap: 1 UNI stop-out in 7-day window — re-entry eligible but requires fresh specific catalyst <6h + >3% 1h momentum.
+
+### Portfolio State (Evening Jun 17)
+
+**Cash:** $122.5847 ZUSD | **Open positions:** None | **Total equity:** ~$122.58
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$2.58 (SOL −$1.08 + UNI −$1.50)
+
+**Watch list:** BTC/ETH for post-FOMC recovery if momentum returns; UNI re-entry on fresh catalyst <6h + 1h momentum >3%; ZEC if buying volume converts to sustained price recovery above $504 open.
+
+**No trades placed. No WhatsApp notification sent.**
