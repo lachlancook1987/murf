@@ -5712,4 +5712,31 @@ FOMC decision pending today — additional macro event risk.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | No open positions |
 **Trades today:** SOL/USD trailing stop OTCEZJ-4GBK2-KLJYB3 triggered overnight (0.85 SOL exit ~$73.39, −1.70% on position, −$1.08 realized) | **Total since migration:** ~76
-**Notes:** SOL trailing stop fired overnight (Jun 16→17). SOL rallied to new HWM $76.02 (from EOD $75.56), advancing the 2.5% trail to ~$74.12, then sold off sharply to intraday low $72.27; market fill gapped to ~$73.39 (~$0.73 below trigger). Realized P&L vs entry −1.70% (−$1.08); vs Jun 16 EOD mark the day loss was −$3.45 (−2.70%). Bot underperformed BTC by 0.61% (BTC −2.09% from $66,521). Fully in ZUSD cash $124.08 at EOD. No new entries on Jun 17 — BTC/ETH/SOL all in pullback mode, Fear & Greed ~23 (Extreme Fear), FOMC held rates at 4.25–4.50% as expected, no fresh <6h catalyst on any Kraken-tradeable name meeting R:R ≥1.2:1. Alpaca: clean (stop a2b44cf9 previously canceled). Plan Jun 18: monitor post-FOMC market reaction; SOL re-entry if SpaceX/Anodos catalyst refreshes + momentum; scan ETH/BTC intraday breakout on FOMC follow-through volume.
+**Notes:** SOL trailing stop fired overnight (Jun 16→17). SOL rallied to new HWM $76.02 (from EOD $75.56), advancing the 2.5% trail to ~$74.12, then sold off sharply to intraday low $72.27; market fill gapped to ~$73.39 (~$0.73 below trigger). Realized P&L vs entry −1.70% (−$1.08); vs Jun 16 EOD mark the day loss was −$3.45 (−2.70%). Bot underperformed BTC by 0.61% (BTC −2.09% from $66,521). FOMC held rates at 4.25–4.50% as expected. Alpaca: clean (stop a2b44cf9 previously canceled). **UPDATE (midday scan):** UNI/USD position opened in midday scan — see entry below.
+
+---
+
+### Jun 17 — UNI/USD BUY (Midday Scan)
+
+**Buy Order ID:** OFCCHC-KQDQL-NYI6II
+**Stop Order ID:** OH2KH3-VCPYG-LGNKDK (2.5% trailing stop)
+**Symbol:** UNI/USD | **Qty:** 17 UNI | **Side:** BUY
+**Entry:** ~$3.617 (market fill; stop trigger $3.5262 = fill × 0.975)
+**T1:** $3.726 (+3%) | **T2:** $3.798 (+5%)
+**Stop:** trailing_stop, trail_percent: 2.5, GTC — placed immediately after fill ✓
+**Size:** ~$61.49 (~50% equity of $124.08)
+**ZUSD after:** ~$62.43 | **Total equity:** ~$124.08 (UNI mark ~$61.49 + ZUSD ~$62.59)
+**Stop-out count:** 0 UNI stop-outs in 7-day window (same-thesis cap: clear)
+
+**Catalyst:** UNIfication tokenomics shift — 100M UNI burned (governance-approved), protocol fee-switch activated → UNI now earns direct protocol fee revenue (value accrual, not just governance). Standard Chartered bullish coverage. +10.3% from 24h open ($3.289 → $3.629) with $520M+ global volume today. FOMC rate hold (as expected) — macro environment neutral to mildly positive.
+
+**Screening:**
+- Momentum: +10.3% from 24h open ✓ (well above >3% threshold)
+- Spread: 0.058% ✓
+- Catalyst: UNIfication/burn/fee-switch ✓ (ongoing structural event, price action today = market repricing)
+- R:R: 3% / 2.5% = 1.2:1 ✓
+- BTC crash gate: NOT triggered (BTC −0.77% from 24h open)
+- BTC weekly gate: NOT triggered
+- Same-thesis cap: Not applicable (no prior UNI stop-outs in 7-day window)
+
+**Skipped candidates:** WLD (−3.6% from open, below 24h open, no momentum), STG (no fundamental catalyst, pure rotation pump), SPX6900 (meme, no catalyst), HYPE (R:R fails at 3.5% stop → 0.857:1 ❌).

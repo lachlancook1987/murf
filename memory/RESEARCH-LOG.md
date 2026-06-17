@@ -17395,3 +17395,59 @@ Gate failures:
 **Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
 **Day P&L Jun 17:** ~−$1.08 (SOL stop-out) | **Planned trade:** UNI/USD buy ~$62
 
+---
+
+## 2026-06-17 — Midday Scan
+
+**Execution time:** 2026-06-17 (midday routine)
+
+### Account State
+
+**ZUSD:** ~$62.43 | **Open positions:** UNI/USD 17 UNI @ ~$3.617 | **Open orders:** OH2KH3-VCPYG-LGNKDK (trailing stop 2.5% GTC, trigger $3.5262)
+**Alpaca:** No active positions or orders — clean
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,730 | ~flat from 24h open; crash gate NOT triggered |
+| UNI | $3.617 fill / $3.630 ask | +10.3% from 24h open $3.289; setup confirmed ✓ |
+| WLD | $0.6505 | −3.6% from 24h open; below open, no momentum |
+| STG | ~$0.25 | +21-24% 24h but no fundamental catalyst |
+| HYPE | ~$76+ | High-ATR; R:R 0.857:1 ❌ at 3.5% trail |
+| Fear & Greed | 22 (Extreme Fear) | Slight deterioration from 23 this morning |
+| FOMC | CONFIRMED HOLD 4.25–4.50% | As expected; market neutral to mildly positive |
+| BTC Crash Gate | NOT triggered | |
+| BTC Weekly Gate | NOT triggered | |
+
+### Steps Completed
+
+**STEP 2 — State:** No open Kraken positions/orders at scan start. Alpaca clean (historical orders only).
+**STEP 3 — Stop check:** No positions to protect at scan start.
+**STEP 4 — Stop tightening:** N/A (no positions).
+**STEP 5 — Thesis check:** N/A (no positions).
+
+### STEP 6 — New Entry Scan
+
+| Asset | Change | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| **UNI/USD** | +10.3% from 24h open | 0.058% ✓ | UNIfication: 100M burn + fee-switch; $520M+ volume; StanChart bullish | 3%/2.5%=1.2:1 ✓ | **TRADED** — BUY 17 UNI @ $3.617 |
+| WLD/USD | −3.6% from 24h open | ~0.06% ✓ | Price below open; 1st stop-out today; no momentum; trigger $0.70+ not met | N/A | **SKIP** |
+| STG/USD | +21-24% 24h | online ✓ | No fundamental catalyst — pure altcoin rotation pump | N/A | **SKIP** |
+| HYPE/USD | +9% 24h | 0.014% ✓ | High-ATR → 3.5% trail → R:R 0.857:1 ❌ | Fails | **SKIP** |
+| SPX6900/USD | +19.7% 24h | 0.128% ✓ | Meme/social, no fundamental | N/A | **SKIP** |
+
+### Trade Executed
+
+**UNI/USD BUY:**
+- Buy: OFCCHC-KQDQL-NYI6II | 17 UNI @ ~$3.617 market
+- Stop: OH2KH3-VCPYG-LGNKDK | trailing_stop 2.5% GTC | trigger $3.5262
+- T1: $3.726 (+3%) | T2: $3.798 (+5%)
+- R:R: 1.2:1 ✓ | Size: ~$61.49 (~50% equity)
+
+### Portfolio State (Post-Trade)
+
+**ZUSD:** ~$62.43 | **UNI/USD:** 17 UNI @ $3.617 (~$61.49 mark) | **Total equity:** ~$123.92
+**Phase P&L:** ~−$55.86 (−31.07%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$1.08 realized (SOL) + UNI unrealized $0 at entry
+
