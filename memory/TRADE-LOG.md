@@ -5754,3 +5754,30 @@ FOMC decision pending today — additional macro event risk.
 **Stop-out count:** 1st UNI stop-out in 7-day window.
 **Notes:** UNI entered at $3.617 (midday Jun 17) on UNIfication catalyst (100M burn + fee-switch). The 24h high of $3.7262 was reached BEFORE the bot's entry — price was already fading from that peak when the buy was placed. Trailing stop (2.5%, placed immediately after fill) had minimal HWM advance. UNI subsequently reversed hard, falling to $3.1902 intraday low (back to the 24h open of $3.2888). Stop fired at approximately initial trigger level ($3.5262), fill ~$3.538. UNIfication catalyst was real but price action reflected "buy the rumor, sell the news" — the peak repricing had already occurred before entry.
 **Same-thesis cap status:** 1 UNI stop-out in 7-day window. Re-entry eligible (no 48h cooling yet). Requires fresh catalyst <6h and 1h momentum >3% to re-enter.
+
+---
+
+## 2026-06-17 — Overnight Triage Check (late session)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+
+**Kraken open orders:** NONE (confirmed via `kraken.sh orders`).
+**Alpaca open orders:** NONE. Stop a2b44cf9 CANCELED 2026-05-22 — previously documented; Alpaca BTC position long since closed. No action needed.
+
+**STEP 2 — Stop verification:** No open Kraken positions → N/A.
+**STEP 3 — Emergency exits:** No open positions → N/A.
+**STEP 4 — Stop tightening:** No open positions → N/A.
+
+**STEP 5 — BTC Crash Gate:**
+- BTC ask $64,349.90 | bid $64,349.80 | 24h open $65,609.60
+- 24h change: **−1.92%** — well under −20% crash gate threshold.
+- 24h range: $63,866.50 – $66,370.90
+- Crash gate: **NOT triggered**.
+
+**Portfolio state:** Fully in cash — Kraken ZUSD ~$122.5847. No open positions on any platform.
+**Phase P&L:** ~−$57.20 est. (−31.82%) from Kraken starting equity $179.78.
+
+**Result: NO-OP. No actions taken. No notification sent.**
