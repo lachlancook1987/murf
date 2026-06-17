@@ -5701,3 +5701,15 @@ FOMC decision pending today — additional macro event risk.
 **Result: NO-OP. No actions taken. No notification sent.**
 
 **WhatsApp notification sent** — SOL stop-out logged.
+
+---
+
+## 2026-06-17 — EOD Snapshot (Day 28, Wednesday)
+
+### Jun 17 — EOD Snapshot (Day 28, Wednesday)
+**Portfolio:** $124.08 | **Cash:** $124.08 (100%) | **Day P&L:** −$3.45 (−2.70%) | **Phase P&L:** −$55.70 (−30.98%) | **vs BTC:** −0.61% (BTC −2.09%, Jun 16 close ~$66,521 → $65,132)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+**Trades today:** SOL/USD trailing stop OTCEZJ-4GBK2-KLJYB3 triggered overnight (0.85 SOL exit ~$73.39, −1.70% on position, −$1.08 realized) | **Total since migration:** ~76
+**Notes:** SOL trailing stop fired overnight (Jun 16→17). SOL rallied to new HWM $76.02 (from EOD $75.56), advancing the 2.5% trail to ~$74.12, then sold off sharply to intraday low $72.27; market fill gapped to ~$73.39 (~$0.73 below trigger). Realized P&L vs entry −1.70% (−$1.08); vs Jun 16 EOD mark the day loss was −$3.45 (−2.70%). Bot underperformed BTC by 0.61% (BTC −2.09% from $66,521). Fully in ZUSD cash $124.08 at EOD. No new entries on Jun 17 — BTC/ETH/SOL all in pullback mode, Fear & Greed ~23 (Extreme Fear), FOMC held rates at 4.25–4.50% as expected, no fresh <6h catalyst on any Kraken-tradeable name meeting R:R ≥1.2:1. Alpaca: clean (stop a2b44cf9 previously canceled). Plan Jun 18: monitor post-FOMC market reaction; SOL re-entry if SpaceX/Anodos catalyst refreshes + momentum; scan ETH/BTC intraday breakout on FOMC follow-through volume.
