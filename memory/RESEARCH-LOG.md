@@ -17817,3 +17817,53 @@ Gate failures:
 | UNI/USD | Fresh <6h catalyst (beyond UNIfication — protocol fee revenue announcement, new partnership) + 1h momentum >3%; 1 stop-out, re-entry eligible |
 | HYPE/USD | Price advance from new catalyst + R:R improvement only possible if higher fee tier (currently 0.40%) — not structurally eligible at current fee tier |
 | BTC/ETH | Recovery above 24h opens on day with positive macro catalyst (Clarity Act vote, ETF inflow reversal) |
+
+---
+
+## 2026-06-17 — Midday Scan #2 (~afternoon)
+
+**Execution time:** 2026-06-17 (second midday pass — scheduled routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | ~$122.5847 ZUSD | None | None |
+| Alpaca | N/A | None | None (a2b44cf9 previously canceled) |
+
+### Market Context (current Kraken quotes)
+
+| Asset | 24h Open | Current Ask | Change from Open |
+|---|---|---|---|
+| BTC | $65,609.60 | $64,112.70 | −2.28% |
+| ETH | $1,792.17 | $1,733.76 | −3.26% |
+| SOL | $73.46 | $71.23 | −3.04% |
+| UNI | $3.28880 | $3.25020 | −1.17% (already stopped out this session) |
+| WLD | $0.6750 | $0.6397 | −5.21% |
+| HYPE | $73.60 | $70.48 | −4.24% |
+| TAO | $257.47 | $243.83 | −5.29% |
+| SUI | $0.7971 | $0.7641 | −4.14% |
+| ONDO | $0.3700 | $0.3605 | −2.57% |
+
+**BTC crash gate:** −2.28% from open — NOT triggered (threshold: −20%).
+
+### Candidate Screening
+
+All candidates assessed: **every asset** is currently trading **below its 24h open**. The morning's momentum (UNI +10%, WLD +11%, HYPE +8%) has fully reversed into broad intraday sell-off. No asset passes the >3% momentum gate in the current direction.
+
+| Asset | Status | Gate Failed |
+|---|---|---|
+| UNI/USD | −1.17% from open | Momentum gate (negative); 1st stop-out this session |
+| WLD/USD | −5.21% from open | Momentum gate (negative) |
+| HYPE/USD | −4.24% from open | Momentum gate (negative); high-ATR 3.5% trail → R:R 0.857:1 ❌ |
+| TAO/USD | −5.29% from open | Momentum gate (negative) |
+| SUI/USD | −4.14% from open | Momentum gate (negative) |
+| ONDO/USD | −2.57% from open | Momentum gate (negative) |
+| ETH/USD | −3.26% from open | Momentum gate (negative) |
+| SOL/USD | −3.04% from open | Momentum gate (negative) |
+
+### Decision
+
+**NO NEW ENTRIES.** Universal sell-off — no candidate has positive momentum from open. No fresh catalyst identified on any Kraken-tradeable asset. Fully cash position maintained ($122.5847 ZUSD).
+
+**No actions taken. No notification sent.**
