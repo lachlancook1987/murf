@@ -5740,3 +5740,17 @@ FOMC decision pending today — additional macro event risk.
 - Same-thesis cap: Not applicable (no prior UNI stop-outs in 7-day window)
 
 **Skipped candidates:** WLD (−3.6% from open, below 24h open, no momentum), STG (no fundamental catalyst, pure rotation pump), SPX6900 (meme, no catalyst), HYPE (R:R fails at 3.5% stop → 0.857:1 ❌).
+
+---
+
+### Jun 17 → Jun 17 — UNI/USD Trailing Stop Triggered
+
+**Stop Order ID:** OH2KH3-VCPYG-LGNKDK (2.5% trailing stop)
+**Symbol:** UNI/USD | **Qty:** 17 UNI | **Side:** SELL (automated trailing stop)
+**Entry:** ~$3.617 | **Exit:** ~$3.538 est.
+**HWM:** ~$3.617–$3.620 (minimal advance from entry — UNI 24h high $3.7262 was pre-entry; price faded immediately post-buy)
+**Stop trigger:** ~$3.5262 (initial trigger = $3.617 × 0.975) | **Fill:** ~$3.538 (slight above-trigger fill on market order)
+**P&L:** ~−$1.50 net (−2.43% on position, including ~0.52% round-trip fee drag) | **Proceeds:** ~$60.15 | **ZUSD after:** $122.5847
+**Stop-out count:** 1st UNI stop-out in 7-day window.
+**Notes:** UNI entered at $3.617 (midday Jun 17) on UNIfication catalyst (100M burn + fee-switch). The 24h high of $3.7262 was reached BEFORE the bot's entry — price was already fading from that peak when the buy was placed. Trailing stop (2.5%, placed immediately after fill) had minimal HWM advance. UNI subsequently reversed hard, falling to $3.1902 intraday low (back to the 24h open of $3.2888). Stop fired at approximately initial trigger level ($3.5262), fill ~$3.538. UNIfication catalyst was real but price action reflected "buy the rumor, sell the news" — the peak repricing had already occurred before entry.
+**Same-thesis cap status:** 1 UNI stop-out in 7-day window. Re-entry eligible (no 48h cooling yet). Requires fresh catalyst <6h and 1h momentum >3% to re-enter.
