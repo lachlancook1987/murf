@@ -17728,3 +17728,92 @@ Gate failures:
 | AERO/USD | Momentum exceeds 3% from open with volume confirmation + catalyst |
 | XLM/USD | Fresh catalyst <6h (new DTCC news or banking integration) + momentum >3% |
 
+
+---
+
+## 2026-06-17 — Session-Open Scan (Final, ~UTC late)
+
+**Execution time:** 2026-06-17 (session-open routine — fourth pass)
+
+### Account State
+
+**ZUSD:** $122.5847 | **Open positions:** None | **Open orders:** None
+**Alpaca:** Historical orders only (May 22); no active positions or orders.
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** −$2.58 (SOL −$1.08 + UNI −$1.50)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $64,306 (ask) | −1.99% from 24h open $65,609; crash gate NOT triggered |
+| ETH | $1,746.29 (ask) | −2.6% from 24h open $1,792.17 |
+| SOL | $72.10 (ask) | −1.85% from 24h open $73.46 |
+| HYPE | $72.22 (ask) | −1.88% from 24h open $73.60 (peaked $76.63 intraday) |
+| TAO | $246.32 (ask) | −4.33% from 24h open $257.47 |
+| ONDO | $0.3694 (ask) | −0.16% from 24h open $0.3700 |
+| PORTAL | $0.01420 (ask) | −11.7% from 24h open $0.01607 |
+| TIA | $0.3964 (ask) | −2.1% from 24h open $0.4049 |
+| AERO | $0.4681 (ask) | −0.45% from 24h open $0.4702 |
+| XLM | $0.22487 (ask) | +3.81% from 24h open $0.21661 (peaked $0.23391) |
+| WLD | $0.6444 (ask) | −4.53% from 24h open $0.6750 |
+| UNI | $3.286 (ask) | −0.09% from 24h open; 1 stop-out today |
+| Fear & Greed | 22 (Extreme Fear) | Unchanged all day |
+| BTC Crash Gate | NOT triggered | −1.99% from open; far from −20% |
+| BTC Weekly Gate | NOT triggered | BTC +4.5% over 5 trading days |
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Fee Tier | Catalyst | Adj R:R | Decision |
+|---|---|---|---|---|---|---|
+| XLM/USD | +3.81% | 0.036% ✓ | **0.40% taker** | DTCC-Stellar partnership (May 27 — 21d stale); peaked at +8% ($0.2339) and now fading to $0.2249 | (3−0.8)/(2.5+0.4)=**0.76:1 ❌** | **SKIP** — stale catalyst + fee-adj R:R fails |
+| HYPE/USD | −1.88% | 0.014% ✓ | 0.26% taker | HYPE ETF launch + HIP-4 upgrade (ongoing narrative, no fresh <6h event); high-ATR → 3.5% trail → 0.857:1 ❌ | Fails + below open | **SKIP** |
+| TAO/USD | −4.33% | ~0.07% ✓ | 0.40% taker | Grayscale endorsement + AI narrative; price significantly below open | N/A | **SKIP** — below open, no momentum |
+| ONDO/USD | −0.16% | ~0.06% ✓ | 0.40% taker | No fresh <6h catalyst; near flat | 0.40% fee → fails | **SKIP** |
+| PORTAL/USD | −11.7% | 0.42% ✓ | 0.40% taker | No fundamental catalyst; crashed from 24h spike | N/A | **SKIP** — fading hard |
+| TIA/USD | −2.1% | 0.025% ✓ | 0.26% taker | Celestia Lotus upgrade (cross-chain + 33% inflation cut); price BELOW open | N/A | **SKIP** — no upward momentum; "buy the rumor" likely over |
+| AERO/USD | −0.45% | 0.09% ✓ | 0.40% taker | No fresh <6h catalyst | 0.40% fee → fails | **SKIP** — flat/below open |
+| ETH/USD | −2.6% | 0.016% ✓ | 0.26% taker | No fresh <6h catalyst | N/A | **SKIP** — below open |
+| SOL/USD | −1.85% | 0.014% ✓ | 0.26% taker | No fresh catalyst; 1 stop-out this week | N/A | **SKIP** — below open |
+| TAO/USD | −4.33% | ~0.07% ✓ | 0.40% taker | AI narrative stale; Grayscale endorsement not specific date <6h | N/A | **SKIP** — below open |
+| WLD/USD | −4.53% | 0.009% ✓ | 0.26% taker | Eightco catalyst >6h; 1 prior stop-out today | N/A | **SKIP** — below open |
+| UNI/USD | −0.09% | 0.003% ✓ | 0.26% taker | UNIfication catalyst stale; 1 stop-out today; no momentum | N/A | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+Gate failures:
+1. **Momentum gate** — Only XLM passes >3% from open (+3.81%), but has since pulled back from its $0.2339 (+8%) intraday high. All other assets below 24h opens.
+2. **Fee-adjusted R:R gate** — XLM's 0.40% taker fee yields fee-adj R:R = (3%−0.8%) / (2.5%+0.4%) = 2.2%/2.9% = **0.76:1 ❌** (same fee issue that blocked ENA, SPX6900, ONDO, PORTAL, AERO today).
+3. **Catalyst gate** — XLM's DTCC catalyst is 21 days old (stale). No fresh <6h catalyst on any Kraken asset.
+4. **Price structure** — XLM peaked at $0.2339 and is fading; entering a pullback without fresh catalyst is the same "buy the rumor, sell the news" trap that caught UNI this morning.
+5. **Market context** — BTC down −1.99% from open; Fear & Greed 22 (Extreme Fear); market broadly risk-off; post-FOMC selling pressure.
+
+### Perplexity Research Summary
+
+- **Macro**: Fed held 4.25–4.50% as expected; market failed to rally post-decision; BTC ETF net outflows continue
+- **BlackRock BITA ETF** launched Jun 16 (Bitcoin Premium Income product) — structural positive but not enough for intraday momentum
+- **Clarity Act** (XRP/crypto legislation) remains a potential catalyst — congressional movement still pending
+- **HYPE**: HYPE ETF inflows + HIP-4 upgrade driving 25% 7-day gain; but intraday now below 24h open (−1.88%)
+- **Fear & Greed**: 22 — Extreme Fear all day; unchanged across all scans
+- **Top 24h gainers** (CMC): UNI +25.9% (already stopped out) | WLD +16.7% (fading) | HYPE +11.1% (below open)
+- **Volume surges**: UNI $520M, WLD $1.21B, SPX6900 $98M — all peaked pre-scan and now reversing
+
+### Portfolio State
+
+**Cash:** $122.5847 ZUSD | **Open positions:** None | **Total equity:** ~$122.58
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** −$2.58 (SOL −$1.08 + UNI −$1.50) — unchanged
+
+**No trades placed. No WhatsApp notification sent. No commit required.**
+
+### Watch List (Jun 18)
+
+| Asset | Condition for Entry |
+|---|---|
+| XLM/USD | Fresh <6h catalyst beyond DTCC (new institutional adoption, banking integration, regulatory event) + 1h momentum >3% — then reassess fee impact |
+| TIA/USD | Lotus mainnet activation triggers price recovery above open + 1h momentum >3% |
+| UNI/USD | Fresh <6h catalyst (beyond UNIfication — protocol fee revenue announcement, new partnership) + 1h momentum >3%; 1 stop-out, re-entry eligible |
+| HYPE/USD | Price advance from new catalyst + R:R improvement only possible if higher fee tier (currently 0.40%) — not structurally eligible at current fee tier |
+| BTC/ETH | Recovery above 24h opens on day with positive macro catalyst (Clarity Act vote, ETF inflow reversal) |
