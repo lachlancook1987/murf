@@ -17628,3 +17628,103 @@ Gate failures:
 **Day P&L Jun 17:** ~−$2.58 (SOL −$1.08 + UNI −$1.50) — unchanged.
 
 **No trades placed. No WhatsApp notification sent.**
+
+---
+
+## 2026-06-17 — Pre-Session Research (Evening Scan)
+
+**Execution time:** 2026-06-17 (evening pre-session routine)
+
+### Account State
+
+**ZUSD:** $122.5847 | **Open positions:** None | **Open orders:** None
+**Alpaca:** Historical orders only (May 22 BTC buy — closed); no active positions.
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** −$2.58 (SOL −$1.08 + UNI −$1.50 from earlier session scans)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,705 | −1.37% 24h; crash gate NOT triggered |
+| ETH | $1,757.60 | −1.44% 24h |
+| SOL | $71.83 | −2.2% from 24h open $73.46 |
+| Fear & Greed | 22 (Extreme Fear) | Unchanged all day |
+| BTC Funding Rate | Binance −0.0026%, Bybit +0.0004%, Kraken +0.0148% | Mixed/mild |
+| BTC 5-day trend | +6.8% (Jun 10 $61,531 → now $65,705) | Weekly gate NOT triggered |
+| BTC Crash Gate | NOT triggered | −1.37% from open; far from −20% |
+| FOMC | Held 4.25–4.50% as expected | Market failed to rally post-decision |
+
+### Top 24h Gainers (CoinMarketCap)
+
+| Rank | Asset | 24h Gain | Kraken Status |
+|---|---|---|---|
+| 1 | UNI | +25.92% | Listed; 1 stop-out today; see below |
+| 2 | SKYAI | +21.53% | Not on Kraken |
+| 3 | WLD | +16.72% | Listed; price NOW below open (−5.2%) |
+| 4 | AERO | +14.58% | Listed; price NOW only +1.9% from open |
+| 5 | TIA | +12.86% | Listed; price NOW below open (−3.3%) |
+| 6 | JTO | +11.60% | Listed; price NOW −9.4% from open |
+| 7 | HYPE | +11.11% | Listed; price NOW −1.7% from open |
+| 8 | VVV | +9.76% | Not confirmed on Kraken |
+| 9 | XLM | +9.40% | Listed; price only +2.3% from open |
+| 10 | LUNC | +9.27% | Thin liquidity — skipped |
+
+**Note:** The 24h CMC gains reflect peak-to-now comparisons; most of these assets have since reversed significantly from their intraday highs. The broad market remains weak post-FOMC.
+
+### Token Unlocks (Headwinds)
+
+| Asset | Unlock | Amount | Impact |
+|---|---|---|---|
+| SPK | Jun 17 (today) | $61.18M (2.52B tokens, 25.3% supply) | Hard headwind — avoid |
+| ZRO | This week | $23.16M | Headwind |
+| ARB | This week | $8.04M | Minor headwind |
+
+### Candidate Screening (Full Universe Checked)
+
+| Asset | vs Open | Spread | Catalyst | Fee Tier | Adj R:R | Decision |
+|---|---|---|---|---|---|---|
+| ENA/USD | +5.9% ($0.0912 vs $0.0861) | 0.11% ✓ | $250M Securitize CLO fund (Jun 16 >6h); restaking pool Jun 26; Coinbase integration ongoing | **0.40% taker** | (3−0.8)/(2.5+0.4)=**0.76:1 ❌** | **SKIP** — fee-adjusted R:R fails same as SPX6900 |
+| TIA/USD | −3.3% ($0.3915 vs $0.4049 open) | 0.026% ✓ | Celestia Lotus upgrade announced Jun 17 (fresh), BUT price fading BELOW open — "buy the rumor, sell the news" | 0.26% | N/A | **SKIP** — no upward momentum |
+| XLM/USD | +2.3% ($0.2216 vs $0.2166 open) | 0.058% ✓ | DTCC-Stellar partnership (May 27 — 21 days stale) | 0.26% | N/A | **SKIP** — below 3% threshold; stale catalyst |
+| AERO/USD | +1.9% ($0.4793 vs $0.4702 open) | 0.23% ✓ | No fresh <6h catalyst | 0.26% | N/A | **SKIP** — below 3% threshold |
+| ALGO/USD | +2.6% ($0.09698 vs $0.09450 open) | 0.14% ✓ | No fresh catalyst | 0.26% | N/A | **SKIP** — below 3% threshold |
+| INJ/USD | −2.3% ($5.424 vs $5.550 open) | 0.13% ✓ | No fresh catalyst | 0.26% | N/A | **SKIP** — below open |
+| HYPE/USD | −1.7% ($72.36 vs $73.60 open) | 0.014% ✓ | No fresh <6h catalyst; high-ATR | 0.26% | 3%/3.5%=0.857:1 ❌ | **SKIP** — below open + R:R fails |
+| WLD/USD | −5.2% ($0.6400 vs $0.6750 open) | 0.09% ✓ | No fresh catalyst; price fading hard | 0.26% | N/A | **SKIP** — below open |
+| JTO/USD | −9.4% ($0.71877 vs $0.7930 open) | 0.033% ✓ | Rotation only — no specific catalyst confirmed | 0.26% | N/A | **SKIP** — below open; no catalyst |
+| SOL/USD | −2.2% ($71.83 vs $73.46 open) | 0.014% ✓ | No fresh catalyst (1 prior stop-out this week) | 0.26% | N/A | **SKIP** — below open |
+| ETH/USD | −2.9% ($1,740 vs $1,792 open) | 0.010% ✓ | No fresh <6h catalyst | 0.26% | N/A | **SKIP** — below open |
+| BTC/USD | −1.37% ($65,705) | 0.013% ✓ | Macro weak; no BTC-specific catalyst | 0.26% | N/A | **SKIP** — below open |
+| UNI/USD | ~−8% from stop price $3.538 | 0.058% ✓ | SC $100 target (stale for re-entry — same as morning); 1 stop-out today | 0.26% | N/A | **SKIP** — no momentum; same-catalyst re-entry blocked |
+| SPK | Headwind | — | $61M token unlock today | — | — | **AVOID** |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+Gate failures:
+1. **Momentum gate** — Only ENA passes the >3%-from-open threshold (+5.9%). All other assets are below their 24h opens or below the 3% minimum.
+2. **Fee-adjusted R:R gate** — ENA's 0.4% taker fee (same structure as SPX6900) makes fee-adjusted R:R = (3%−0.8%) / (2.5%+0.4%) = 2.2% / 2.9% = **0.76:1** → fails minimum 1.2:1.
+3. **Catalyst gate** — TIA has a fresh announcement (Lotus upgrade Jun 17) but price is fading below open. No other asset has a fresh <6h catalyst with positive momentum.
+4. **Sentiment** — Fear & Greed 22 (Extreme Fear); market broadly weak post-FOMC rate hold.
+5. **BTC crash gate** — NOT triggered (−1.37%); BTC weekly gate NOT triggered (+6.8% 5-day).
+
+### Risk Factors
+
+- SPK $61M unlock today applying supply pressure to Solana ecosystem
+- Extreme Fear (22/100) — institutional money sitting on sidelines
+- FOMC held rates; market had hoped for forward guidance that wasn't provided
+- ENA's 0.4% taker fee structure makes it uneconomical at the account's current fee tier
+- UNI "buy the rumor, sell the news" pattern: peaked before bot's midday entry; same-day re-entry requires fresh <6h catalyst + 1h >3% (not yet present)
+
+### Watch List (Next Scan)
+
+| Asset | Condition for Entry |
+|---|---|
+| ENA/USD | Price extends >7% from open (making net T1 profit positive at 0.4% fee tier) OR fee tier improves to ≤0.26% |
+| TIA/USD | Price recovers above 24h open + fresh momentum >3% in 1h (Lotus mainnet activation could be the re-trigger) |
+| UNI/USD | Fresh <6h catalyst (beyond SC target) + 1h momentum >3%; 1 stop-out, re-entry eligible |
+| AERO/USD | Momentum exceeds 3% from open with volume confirmation + catalyst |
+| XLM/USD | Fresh catalyst <6h (new DTCC news or banking integration) + momentum >3% |
+
