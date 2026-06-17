@@ -17524,3 +17524,58 @@ Gate failures:
 **Watch list:** BTC/ETH for post-FOMC recovery if momentum returns; UNI re-entry on fresh catalyst <6h + 1h momentum >3%; ZEC if buying volume converts to sustained price recovery above $504 open.
 
 **No trades placed. No WhatsApp notification sent.**
+
+---
+
+## 2026-06-17 — Second Midday Scan (14:07 UTC)
+
+**Execution time:** 2026-06-17 14:07 UTC (midday routine — second pass)
+
+### Account State
+
+**ZUSD:** $122.5847 | **Open positions:** None | **Open orders:** None
+**Alpaca:** Historical orders only (May 22); no active positions or orders.
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,705 | −1.37% 24h; crash gate NOT triggered |
+| XION | $0.1508 (ask) | +21.6% from open $0.1240; peaked $0.1805, now retracing |
+| ADA | $0.1681 (ask) | −2.5% from open $0.1724; below open |
+| ZEC | $482.66 (ask) | −4.17% from open $504.69; well below open |
+| HYPE | $71.66 (ask) | −2.64% from open $73.60; below open |
+| UNI | $3.2817 (ask) | −0.22% from open $3.2888; catalyst stale; 1 stop-out today |
+| SOL | $72.21 (ask) | −1.71% from open $73.46; below open |
+| AVAX | $6.83 (ask) | −0.77% from open $6.883; flat/below open |
+| Fear & Greed | 22 (Extreme Fear) | Unchanged |
+| BTC Crash Gate | NOT triggered | |
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| XION/USD | +21.6% | 0.597% ✓ | Bithumb rebrand (XION→VERONA) + Bybit network upgrade v30.0.0 (deposits suspended); price peaked $0.1805, now retracing to $0.1508; no leverage; 0.4% taker fee | Ambiguous; price fading from peak; fee drag worsens R:R | **SKIP** |
+| ADA/USD | −2.5% | 0.033% ✓ | No fresh <6h catalyst | No momentum | **SKIP** |
+| ZEC/USD | −4.17% | 0.066% ✓ | No fresh catalyst; down hard from open | No momentum | **SKIP** |
+| HYPE/USD | −2.64% | 0.014% ✓ | No fresh catalyst; high-ATR → 3.5% trail → R:R 0.857:1 ❌ | Fails + below open | **SKIP** |
+| UNI/USD | −0.22% | 0.003% ✓ | SC $100 target is same catalyst from morning — NOT fresh for re-entry; 1 stop-out today; no 1h momentum | Re-entry blocked (no fresh catalyst) | **SKIP** |
+| SOL/USD | −1.71% | 0.014% ✓ | No fresh catalyst | No momentum | **SKIP** |
+| AVAX/USD | −0.77% | 0.014% ✓ | No fresh catalyst | No momentum | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+1. **Momentum gate** — All assets below or flat vs their 24h opens. Market remains weak post-FOMC.
+2. **Catalyst gate** — No fresh <6h catalyst on any Kraken asset. UNI SC coverage is same catalyst from morning (stale for re-entry). XION rebrand is ambiguous technical event, not fundamental positive.
+3. **XION skip rationale** — +21.6% from open is compelling but: (a) price already peaked at +45% and is retracing; (b) rebrand/ticker-change at Bithumb + deposit suspensions at Bybit create liquidity fragmentation, not fundamental value; (c) 0.4% taker fee reduces net R:R; (d) no leverage available.
+4. **BTC context** — Crash gate NOT triggered (−1.37%), but market broadly risk-off post-FOMC.
+
+### Portfolio State
+
+**Cash:** $122.5847 ZUSD | **Open positions:** None | **Total equity:** ~$122.58
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$2.58 (SOL −$1.08 + UNI −$1.50) — unchanged from evening scan.
+
+**No trades placed. No WhatsApp notification sent.**
