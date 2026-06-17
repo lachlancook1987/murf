@@ -17579,3 +17579,52 @@ Gate failures:
 **Day P&L Jun 17:** ~−$2.58 (SOL −$1.08 + UNI −$1.50) — unchanged from evening scan.
 
 **No trades placed. No WhatsApp notification sent.**
+
+---
+
+## 2026-06-17 — Session-Open Scan (15:08 UTC)
+
+**Execution time:** 2026-06-17 15:08 UTC (session-open routine — third pass)
+
+### Account State
+
+**ZUSD:** $122.5847 | **Open positions:** None | **Open orders:** None
+**Alpaca:** Historical orders only; no active positions or orders.
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,038 (ask) | −0.87% from 24h open $65,609; crash gate NOT triggered |
+| ETH | $1,750.68 (ask) | −2.3% from 24h open $1,792.17 |
+| SOL | $72.36 (ask) | −1.5% from 24h open $73.46 |
+| SPX6900 | $0.4362 (ask) | +11.6% from 24h open $0.3907; peaked $0.497 (+27%), now retracing |
+| Fear & Greed | ~22 (Extreme Fear) | Unchanged from prior scans |
+| BTC Crash Gate | NOT triggered | BTC −0.87% from open; far from −20% threshold |
+| BTC Weekly Gate | NOT triggered | |
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Catalyst | Fee | Adj R:R | Decision |
+|---|---|---|---|---|---|---|
+| SPX6900/USD | +11.6% | 0.275% ✓ | Macro risk-on (US-Iran peace deal) — broad crypto catalyst, not token-specific; NO Kraken listing event | 0.4% taker | 2.2%/2.9% = 0.76:1 ❌ | **SKIP** — high fee destroys R:R; price fading from +27% peak; no token-specific catalyst |
+| ETH/USD | −2.3% | 0.016% ✓ | No fresh <6h catalyst | 0.26% | N/A | **SKIP** — below 24h open, no momentum |
+| SOL/USD | −1.5% | 0.014% ✓ | No fresh catalyst; 1st SOL stop-out this week (re-entry eligible but no momentum) | 0.26% | N/A | **SKIP** — below 24h open, no momentum |
+| RDNT/USD | Not on Kraken | — | 342% data anomaly — surge unconfirmed, no catalyst found | — | — | **SKIP** — not listed |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+1. **Momentum gate** — BTC/ETH/SOL all below 24h opens. SPX6900 +11.6% but fading from +27% peak — momentum is decelerating, not building.
+2. **Fee-adjusted R:R** — SPX6900 taker fee 0.4% per leg (round-trip 0.8%): net T1 profit = 3% − 0.8% = 2.2% vs stop loss = 2.5% + 0.4% = 2.9% → adjusted R:R **0.76:1** (fails ≥1.2:1 minimum).
+3. **Catalyst gate** — No token-specific fresh <6h catalyst on any Kraken asset. US-Iran macro catalyst is broad, not crypto-targeted.
+4. **Price structure** — SPX6900 peaked at $0.497 and is now at $0.436; entering a retracement without confirmation of resumption.
+
+### Portfolio State
+
+**Cash:** $122.5847 ZUSD | **Open positions:** None | **Total equity:** ~$122.58
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$2.58 (SOL −$1.08 + UNI −$1.50) — unchanged.
+
+**No trades placed. No WhatsApp notification sent.**
