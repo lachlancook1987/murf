@@ -17295,3 +17295,103 @@ Gate failures:
 **Watch list:** BTC/ETH for post-FOMC momentum bounce; SOL if fresh catalyst + price recovery above $74.50; HYPE if pullback to ~$64–66 improves R:R to ≥1.2:1 at 3.5% stop
 
 **No trades placed. No WhatsApp notification sent.**
+
+---
+
+## 2026-06-17 — Late-Day Pre-Session Research
+
+**Execution time:** 2026-06-17 (late-day routine)
+
+### Account State
+
+**ZUSD:** $124.0846 | **Open positions:** None | **Open orders:** None
+**Alpaca:** No active positions or orders — clean (historical orders only)
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $65,400 (ask) | −0.32% from 24h open $65,609; crash gate NOT triggered |
+| ETH | $1,781.91 (ask) | −0.57% from 24h open $1,792.17; slightly soft |
+| SOL | $73.03 (ask) | −0.59% from 24h open $73.46; flat |
+| UNI | $3.6139 (ask) | +9.89% from 24h open $3.2888; strong momentum with volume |
+| WLD | $0.6831 (ask) | +1.2% from 24h UTC open $0.6750; recovering post stop-out (~+16% rolling 24h per Perplexity) |
+| SPX6900 | $0.4676 (ask) | +19.67% from 24h open $0.3907; meme momentum, no fundamental catalyst |
+| Fear & Greed | 22 (Extreme Fear) | Slight deterioration from 23 this morning |
+| BTC Funding Rate | ~+0.0044–0.0100%/8h | Mild long bias, no extreme leverage |
+| BTC Crash Gate | NOT triggered | BTC −0.32% from open; far from −20% |
+| BTC Weekly Gate | NOT triggered | BTC trending positive over recent sessions |
+| FOMC | Jun 17 (today) | Decision pending; market expects hold at 4.25–4.50%; pre-decision muted action |
+
+**Portfolio update:** Fully cash ($124.0846 ZUSD). No open positions on any platform.
+
+### Candidate Screening
+
+| Asset | Change | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| **UNI/USD** | +9.89% from 24h open | 0.058% ✓ | UNIfication: 100M token burn + fee-switch live → value accrual; Standard Chartered bullish; $520M global volume today | 3%/2.5%=1.2:1 ✓ | **TRADE — Idea #1** |
+| **SPX6900/USD** | +19.67% from 24h open | 0.128% ✓ | Social/meme/whale accumulation — no fundamental catalyst | N/A | **SKIP** — blind meme chase, no catalyst |
+| **WLD/USD** | +1.2% from today open | 0.029% ✓ | Price recovery post stop-out; Perplexity rolling 24h ~+16%; no fresh <6h specific catalyst | N/A | **WATCHLIST** — 1st stop-out today; no 1h momentum yet |
+| **SOL/USD** | −0.59% from open | 0.014% ✓ | SpaceX tokenization ongoing (no fresh update); below open | N/A | **WATCHLIST** — wait for fresh catalyst + recovery above $73.50 |
+| **BTC/ETH** | −0.32% / −0.57% | 0.000% / 0.003% | FOMC hold (expected today) + dovish Powell = risk-on bounce (conditional catalyst) | TBD | **WATCHLIST** — enter post-FOMC if +2%+ in 30 min |
+| **RDNT** | +342% (not on Kraken) | N/A | Radiant Capital — not available on Kraken | N/A | **SKIP** — unavailable |
+| **HYPE/USD** | −0.60% from 24h open | 0.014% ✓ | Fading from $76.90 high; high-ATR → 3.5% stop; no fresh <6h catalyst | 3%/3.5%=0.857:1 ❌ | **SKIP** — R:R fails + momentum gone |
+
+### Trade Ideas
+
+#### Idea #1 — UNI/USD BUY (Primary — actionable now)
+- **Catalyst:** UNIfication tokenomics shift — 100M UNI burned (governance-approved), fee-switch activated → UNI now has direct protocol fee value accrual (not just governance). Standard Chartered bullish coverage. Market repricing with +9.89% from open and ~$520M global volume today.
+- **Entry:** Market ~$3.614 (ask $3.6139, spread 0.058% ✓)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` — placed immediately after fill (GTC)
+- **T1:** ~$3.722 (+3%) | **T2:** ~$3.795 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1 ✓** (at threshold)
+- **Size:** ~$62 (~50% equity) — moderate conviction; FOMC macro risk present
+- **Kraken pair:** UNIUSD — ONLINE ✓ | Leverage available 2x–5x (spot entry recommended)
+- **FOMC risk:** If hawkish surprise → broad crypto dump could fire 2.5% stop (~$3.52). Max loss ~$1.55. Acceptable.
+
+#### Idea #2 — Post-FOMC BTC/USD (Conditional — watch, do not pre-place)
+- **Catalyst:** FOMC rate hold + dovish Powell tone → risk-on bounce. BTC has been flat pre-decision at $65,400.
+- **Entry:** Market if BTC +2%+ in first 30 min post-announcement from $65,400 baseline (~$66,700+)
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** Entry +3% | **T2:** Entry +5%
+- **Size:** 40–60% of remaining equity after UNI position
+- **Skip if:** Hawkish, no clear momentum, or BTC fails to break $66,000 cleanly
+
+#### Idea #3 — WLD/USD (Watchlist — re-entry on confirmation only)
+- **Context:** 1st stop-out today (OZWYUD). Price recovering to $0.6831. Rolling 24h per Perplexity ~+16%.
+- **Entry trigger:** 1h close >$0.70 with momentum >3% AND fresh specific catalyst <6h
+- **Stop:** trailing_stop 2.5% | **T1:** entry +3% | **T2:** entry +5%
+- **Same-thesis cap status:** 1st stop-out Jun 17 — re-entry eligible (no 48h cooling yet)
+
+#### Idea #4 — SOL/USD (Watchlist — stale, needs catalyst)
+- **Context:** 1st stop-out Jun 17 (morning). Currently $73.03, -0.59% from open.
+- **Entry trigger:** Fresh confirmed catalyst <6h + price above $73.50 + 1h momentum >3%
+- **Stop:** trailing_stop 2.5%
+
+### Risk Factors
+
+1. **FOMC event risk** — Decision today; if hawkish surprise, broad crypto selloff could stop out UNI immediately
+2. **Extreme Fear (22)** — Low sentiment; individual asset moves driven by specific catalysts, not macro tailwind
+3. **UNI catalyst freshness** — UNIfication/burn is ongoing narrative (not single <6h event); price action today validates market repricing but not time-stamped
+4. **WLD re-entry** — Only 1 stop-out visible in 7-day window, but need to confirm not 2nd stop-out before re-entering
+5. **Capital base** — Only $124.08 ZUSD; max equity deployment limits position sizing. Each 2.5% stop-out = ~$1.55 loss at 50% size.
+
+### Decision
+
+**TRADE** — UNI/USD is the actionable setup. BTC crash gate NOT triggered. BTC weekly trend gate NOT triggered.
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20% 24h) | NOT triggered — BTC −0.32% |
+| BTC weekly downtrend gate | NOT triggered |
+| Same-thesis entry cap | Not applicable (no prior UNI stop-outs in 7-day window) |
+| FOMC macro risk | PRESENT but not a formal gate — manage via 2.5% trailing stop |
+
+**Planned trade:** BUY UNI/USD at market ~$3.614, ~$62 size, trailing stop 2.5% immediately after fill.
+
+### Portfolio State (Late-Day Jun 17)
+
+**Cash:** $124.0846 ZUSD | **Open positions:** None | **Total equity:** ~$124.08
+**Phase P&L:** ~−$55.70 (−30.98%) from Kraken starting equity $179.78
+**Day P&L Jun 17:** ~−$1.08 (SOL stop-out) | **Planned trade:** UNI/USD buy ~$62
+
