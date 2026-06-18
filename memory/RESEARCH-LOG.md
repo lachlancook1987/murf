@@ -17961,3 +17961,75 @@ Gate failures:
 | XRP/USD | Clarity Act vote scheduled/announced imminently (binary event) → 7% trail, binary catalyst protocol |
 | BTC/ETH | Breakout above today's high ($64,740 BTC / $1,761 ETH) on positive macro catalyst (ETF inflow reversal, Fed commentary) |
 
+---
+
+## 2026-06-18 — Midday Scan
+
+**Execution time:** 2026-06-18 midday routine
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A | None | Historical only |
+
+**Context:** XLM/USD position (opened session-open scan at $0.24128) was stopped out earlier today at ~$0.23936 (est.) — see TRADE-LOG for stop-out entry. Net P&L from XLM: −$0.74.
+
+### Market Context (Midday)
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $64,041 (ask) | −0.64% from 24h open $64,452 |
+| BTC Crash Gate | NOT triggered | −0.64% from open; far from −20% |
+| BTC Weekly Gate | NOT triggered | −0.52% from Jun 14 close $64,377 |
+| Fear & Greed | 15 (Extreme Fear) | Unchanged from session-open |
+| XLM | $0.23943 | +5.98% from open; below session entry $0.24128 |
+| NEAR | $2.223 | +1.97% from open; below 3% gate |
+| HYPE | $71.65 | +0.76% from open; flat |
+| ZEC | $469.61 | −1.57% from open (vol surge already faded) |
+| ENA | $0.09430 | −0.95% from open |
+| SYN | $0.0994 | +18.47% from open — Bitget DELISTING catalyst (bearish) |
+| JUP | $0.18745 | −1.40% from open |
+
+### Perplexity Findings
+
+- **BTC:** $64,041–$64,422 range; −1.79% to −2.08% 24h depending on source. Fed held rates 4.25–4.50% (Jun 17–18 meeting). No post-FOMC rally sustained.
+- **Key macro:** ETF net outflows continuing; strong Treasury yields/dollar weighing on crypto risk assets. Clarity Act (XRP/crypto) expected early July.
+- **Top 24h gainers (global):** SYND +449%, ESPORTS +173%, BELIEVE +131% — all micro-caps not on Kraken.
+- **Volume surges (4h):** ZEC (volume spike already faded in price), Humanity Protocol (not on Kraken), JUP ($72K inflows but below open).
+- **SYN:** +65% 24h on Bitget DELISTING of SYN/USDT — bearish catalyst masquerading as a pump. Binance Monitoring Tag on SYN = further delisting risk.
+- **BTC intraday setups (Perplexity):** ETH (Glamsterdam, already known), SOL (DEX recovery), BTC breakout above $65,000–$67,180. None actionable midday with BTC below open.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|
+| XLM/USD | +5.98% | 0.004% ✓ | Spiko/Zebec/VersaBank (same-session catalysts, now >6h stale) | 1.2:1 technically ✓ | **SKIP** — stale catalyst; consolidating at stop-out level; same-thesis caution |
+| SYN/USD | +18.47% | 0.70% ✓ | Bitget DELISTING — bearish speculative pump | N/A | **SKIP** — bearish/speculative catalyst; no fundamental thesis |
+| NEAR/USD | +1.97% | 0.063% ✓ | No fresh catalyst | N/A | **SKIP** — below 3% threshold ($2.245 needed) |
+| HYPE/USD | +0.76% | 0.014% ✓ | No fresh catalyst; high-ATR requires 3.5% trail | N/A | **SKIP** — flat; no momentum |
+| ZEC/USD | −1.57% | 0.034% ✓ | Vol surge — faded (24h high $508 vs current $470) | N/A | **SKIP** — below open |
+| ENA/USD | −0.95% | 0.21% ✓ | USDe vault / fee-switch (stale catalyst) | N/A | **SKIP** — below open |
+| JUP/USD | −1.40% | 0.12% ✓ | No catalyst | N/A | **SKIP** — below open |
+| BTC/USD | −0.64% | ~0.00% ✓ | No fresh intraday catalyst | N/A | **SKIP** — below open |
+
+### Decision
+
+**NO NEW ENTRIES.** Extreme Fear market (F&G 15) with BTC down from open. No candidate meets all gates: (1) momentum >3% from 24h open with upward price action, (2) fresh catalyst <6h, (3) R:R ≥ 1.2:1. XLM has the best momentum (+5.98%) but catalysts are stale and price is at the same level where the morning trailing stop fired — not a valid re-entry without a fresh breakout. SYN's pump is on a delisting catalyst (fundamentally bearish).
+
+### Portfolio State (Midday Jun 18)
+
+**Cash:** $121.8486 ZUSD | **Open positions:** None | **Total equity:** ~$121.85
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
+**Day P&L Jun 18:** −$0.74 (XLM stop-out, −0.80% on position)
+
+### Watch List (Jun 18 Afternoon)
+
+| Asset | Condition for Entry |
+|---|---|
+| XLM/USD | Fresh catalyst <6h (distinct from today's Spiko/Zebec news) + price breaking above 24h high $0.24704 on volume |
+| NEAR/USD | Price at $2.245+ (+3% from open) with any fresh catalyst |
+| BTC/USD | Breakout above $64,740 (24h high) on positive catalyst (ETF inflows, macro reversal) — triggers broader alt momentum |
+| SYN/USD | DO NOT ENTER — delisting catalyst, bearish |
+

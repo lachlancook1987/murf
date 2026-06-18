@@ -5848,3 +5848,58 @@ FOMC decision pending today — additional macro event risk.
 - Same-thesis cap: Not applicable (no prior XLM stop-outs in 7-day window)
 - All other candidates screened (ENA, ETHFI, ALGO, NEAR, HYPE) — failed momentum gate (below daily open or <3% from open)
 **Notes:** Fully in cash all day. No trades placed. BTC consolidated slightly higher (+0.26% from yesterday's late close of $64,350). Bot was flat (0.00%) resulting in −0.26% underperformance vs BTC. Portfolio unchanged at $122.58 ZUSD. Phase P&L remains −31.82% from Kraken starting equity $179.78. Alpaca: stop a2b44cf9 confirmed canceled (Alpaca BTC position closed May 22, 2026). No actionable intraday setups identified — market lacked clear momentum signals with BTC in tight consolidation range.
+
+---
+
+### Jun 18 → Jun 18 — XLM/USD Trailing Stop Triggered (Session-Open Entry)
+
+**Stop Order ID:** OE4BZU-4ZCVW-QGSLVC (2.5% trailing stop)
+**Symbol:** XLM/USD | **Qty:** 384 XLM | **Side:** SELL (automated trailing stop)
+**Entry:** $0.24128 | **Exit:** ~$0.23936 est. (derived: ZUSD reconciliation $121.8486 − $29.9335 = $91.9151 / 384)
+**HWM:** ~$0.24554 est. (XLM advanced ~+1.76% from entry before trailing stop engaged)
+**Stop trigger:** ~$0.23940 (HWM $0.24554 × 0.975) | **Fill:** ~$0.23936 (estimated)
+**P&L:** ~−$0.74 net (−0.80% on position, round-trip fee drag ~0.52%) | **Proceeds:** ~$91.92 | **ZUSD after:** $121.8486
+**Stop-out count:** 1st XLM stop-out in 7-day window.
+**Notes:** XLM entered at $0.24128 (session-open second pass ~09:05 UTC) on Spiko $1B tokenization + Zebec payroll + VersaBank catalysts. Trailing stop (2.5%) advanced to ~$0.23940 HWM basis before XLM reversed. Price fell through stop, triggering exit at ~$0.23936 — minimal gain capture vs entry. XLM's 24h high was $0.24704 (suggesting it peaked above entry briefly) then faded on BTC weakness and Extreme Fear sentiment (F&G 15). This was a legitimate entry on real catalysts but stop fired on normal intraday reversal in a fear market.
+**Same-thesis cap status:** 1 XLM stop-out in 7-day window. Re-entry eligible (no 48h cooling after 1st stop-out). Requires fresh catalyst <6h and 1h momentum >3% to re-enter same session.
+
+---
+
+## 2026-06-18 — Midday Scan
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions (XLM stopped out earlier today) |
+
+**Kraken open orders:** NONE (confirmed via `kraken.sh orders`).
+**Alpaca open orders:** NONE.
+
+**BTC Crash Gate:** BTC $64,041 (ask) vs 24h open $64,452 = **−0.64%** — well under −20% threshold. NOT triggered.
+**BTC Weekly Gate:** BTC $64,041 vs Jun 14 close $64,377 = **−0.52%** — well above −3% threshold. NOT triggered.
+
+**Stop verification (STEP 3):** No open positions → N/A.
+**Stop tightening (STEP 4):** No open positions → N/A.
+**Thesis check (STEP 5):** No open positions → N/A.
+
+### Midday Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst | Decision |
+|---|---|---|---|---|
+| XLM/USD | +5.98% ($0.23943) | 0.004% ✓ | Spiko/Zebec/VersaBank — same as this morning, now >6h stale + consolidating at stop-out level | **SKIP** — stale catalyst; same-thesis caution; not showing breakout momentum |
+| SYN/USD | +18.47% ($0.0994) | 0.70% ✓ | Bitget DELISTING today — bearish catalyst, delisting pump | **SKIP** — bearish/speculative catalyst; no fundamental basis |
+| NEAR/USD | +1.97% ($2.223) | 0.063% ✓ | No fresh catalyst | **SKIP** — below 3% threshold ($2.245 needed) |
+| HYPE/USD | +0.76% ($71.65) | 0.014% ✓ | No fresh catalyst | **SKIP** — below 3% threshold |
+| ZEC/USD | −1.57% ($469.61) | 0.034% ✓ | Vol surge (already faded; 24h high $508 well above current) | **SKIP** — below open |
+| ENA/USD | −0.95% ($0.0943) | 0.21% ✓ | USDe vault (stale) | **SKIP** — below open |
+| JUP/USD | −1.40% ($0.18745) | 0.12% ✓ | No catalyst | **SKIP** — below open |
+| BTC/USD | −0.64% ($64,041) | ~0.00% ✓ | No fresh catalyst | **SKIP** — below open; waiting for $64,740+ breakout |
+
+### Decision
+
+**NO NEW ENTRIES.** Market remains in Extreme Fear (F&G 15). BTC down −0.64% from open, weighing on entire alt space. No candidate meets all three gates simultaneously: (1) momentum >3% from open, (2) fresh catalyst <6h, (3) R:R ≥ 1.2:1. XLM still has the strongest momentum (+5.98%) but catalysts are now stale and price is consolidating at the morning stop-out level — not showing the renewed breakout needed for re-entry. SYN's +18.47% is disqualified by a bearish delisting catalyst.
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | No open positions.
+**Phase P&L:** ~−$57.94 est. (−32.23%) from Kraken starting equity $179.78 (−$0.74 from XLM stop-out today).
+
+**No notification sent (no actionable trades; existing stop-out already occurred before this scan).**
