@@ -5808,3 +5808,15 @@ FOMC decision pending today — additional macro event risk.
 **Portfolio state:** Fully in cash. No open positions on any platform.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-18 — EOD Snapshot (Day 29, Thursday)
+
+### Jun 18 — EOD Snapshot (Day 29, Thursday)
+**Portfolio:** $122.58 | **Cash:** $122.58 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$57.20 (−31.82%) | **vs BTC:** −0.26% (BTC +0.26%, prev close ~$64,350 → $64,519)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+**Trades today:** none | **Total since migration:** ~76
+**Notes:** Fully in cash all day. No trades placed. BTC consolidated slightly higher (+0.26% from yesterday's late close of $64,350). Bot was flat (0.00%) resulting in −0.26% underperformance vs BTC. Portfolio unchanged at $122.58 ZUSD. Phase P&L remains −31.82% from Kraken starting equity $179.78. Alpaca: stop a2b44cf9 confirmed canceled (Alpaca BTC position closed May 22, 2026). No actionable intraday setups identified — market lacked clear momentum signals with BTC in tight consolidation range.
