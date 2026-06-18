@@ -18124,3 +18124,64 @@ Gate failures:
 
 **No notification sent (no trades placed).**
 
+
+---
+
+## 2026-06-18 — Second Afternoon Scan
+
+**Execution time:** 2026-06-18 (second afternoon scan; BTC ~$63,903)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A | None | Historical only (May 22) |
+
+**Positions:** No open positions (XLM stopped out earlier today at ~$0.23936).
+**Crash gate:** BTC $63,903 vs open $64,452 = −0.85% — NOT triggered.
+**BTC weekly gate:** BTC $63,903 vs Jun 14 $64,377 = −0.74% — NOT triggered (threshold −3%).
+**Steps 3–5:** N/A — no open positions.
+
+### Market Context
+
+| Asset | Ask | vs 24h Open | Notes |
+|---|---|---|---|
+| BTC | $63,903 | −0.85% | Below open; declining since last scan ($63,901 → $63,903, flat) |
+| XLM | $0.24525 | +8.55% | Re-accelerated from afternoon low $0.23651 → new near-intraday high; 24h high $0.24979 |
+| NEAR | $2.26820 | +4.04% | Above $2.245 watch list trigger; surged from $2.20890 since previous scan |
+| ETH | $1,733 | −0.91% | Below open |
+| SOL | $70.91 | −1.49% | Below open |
+| ENA | $0.09190 | −3.47% | Below open |
+| F&G | 15 | — | Extreme Fear; unchanged all day |
+
+### Candidate Screening (Second Afternoon Pass)
+
+| Asset | vs 24h Open | 1h Move (vs prev scan) | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| XLM/USD | +8.55% | +3.49% ($0.23651→$0.24525) ✓ | 0.057% ✓ | Spiko $1B + Zebec + VersaBank (>6h stale) | **SKIP** — watch list condition on price met; catalyst <6h gate fails; T1 ($0.25261) above 24h high ($0.24979) → needs new high to reach T1; second stop-out risk → would trigger 2-stop-out 48h cooling |
+| NEAR/USD | +4.04% | +2.68% ($2.20890→$2.26820) | 0.054% ✓ | TVL $60M→$177M (Jun 17, >24h stale) | **SKIP** — watch list trigger ($2.245+) met on price; no fresh catalyst <6h; weaker narrative than XLM |
+| All others | Below open | Declining or flat | — | — | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+1. **XLM catalyst gate fails:** CLAUDE.md requires catalyst <6h old for day trades. Perplexity confirmed "no major new XLM catalyst in last 6 hours." Morning catalysts (Spiko $1B, Zebec payroll, VersaBank) are >6h stale.
+2. **XLM breakout risk:** T1 ($0.25261) is above the 24h intraday high ($0.24979). T1 requires a new daily high — not yet confirmed. Risk of second stop-out today is significant.
+3. **Second stop-out consequence:** A second XLM stop-out in one day would trigger the same-thesis cap 48h cooling + new catalyst requirement, blocking XLM re-entry through June 20.
+4. **NEAR catalyst:** No fresh catalyst <6h. Price trigger met but thesis unsupported by fresh news.
+5. **BTC weak all day:** −0.85% from open, F&G 15 (Extreme Fear), no reversal catalyst.
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | No open positions.
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78.
+
+**Watch List (Jun 18 Evening):**
+| Asset | Condition |
+|---|---|
+| XLM/USD | Fresh distinct catalyst <6h (new announcement, not rehash) AND price above 24h high $0.24979 — breakout confirmed |
+| NEAR/USD | Fresh catalyst <6h AND price sustaining above $2.245 |
+| ENA/USD | Recovery above 24h open $0.09520 AND extending to +3%; fee tier headwind still applies |
+| BTC/USD | Break above $64,740 (24h high) with volume |
+
+**No notification sent (no trades placed; scan confirms no-op).**
