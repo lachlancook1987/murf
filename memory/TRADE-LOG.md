@@ -5781,3 +5781,30 @@ FOMC decision pending today — additional macro event risk.
 **Phase P&L:** ~−$57.20 est. (−31.82%) from Kraken starting equity $179.78.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-18 — Overnight Triage Check
+
+**Execution time:** 2026-06-18 (overnight routine)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+
+**Kraken open orders:** NONE (confirmed via `kraken.sh orders`).
+**Alpaca open orders:** NONE. Stop a2b44cf9 CANCELED 2026-05-22 — previously documented; Alpaca BTC position long since closed. No action needed.
+
+**STEP 2 — Stop verification:** No open Kraken positions → N/A.
+**STEP 3 — Emergency exits:** No open positions → N/A.
+**STEP 4 — Stop tightening:** No open positions → N/A.
+
+**STEP 5 — BTC Crash Gate:**
+- BTC ask $64,491.00 | bid $64,490.90 | last $64,491.00 | today's open $64,452.00
+- Today's change: **+0.06%** — flat; 24h high $66,370.90, 24h low $63,866.50
+- Crash gate: **NOT triggered**.
+
+**Portfolio state:** Fully in cash. No open positions on any platform.
+
+**Result: NO-OP. No actions taken. No notification sent.**
