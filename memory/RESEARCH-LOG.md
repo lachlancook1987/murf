@@ -18277,3 +18277,146 @@ XLM is the strongest candidate by 24h momentum (+8.88%) but catalysts are stale 
 
 **No trades executed. No notification sent. No commit required.**
 
+
+---
+
+## 2026-06-18 — Pre-Session Research (Morning)
+
+**Execution time:** 2026-06-18 (morning pre-session routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A | None | Historical only (May 22) |
+
+**Positions:** No open positions (XLM stopped out Jun 18 at ~$0.23936; 1st XLM stop-out in 7-day window).
+**Open orders:** None on either platform.
+
+### Crash Gate Check
+
+- **BTC ask:** $63,140.90 | **24h open:** $64,452.00 | **24h change:** −2.03%
+- **Crash gate (BTC >20% down 24h):** NOT triggered — far below −20% threshold
+- **BTC weekly gate (BTC >3% down 5 trading days):** BTC ~$63,141 vs Jun 14 close ~$64,377 = −1.92% — NOT triggered (threshold −3%)
+
+### Market Context
+
+| Asset | Ask | 24h Open | 24h Change | 24h High | 24h Low | Notes |
+|---|---|---|---|---|---|---|
+| BTC | $63,140.90 | $64,452.00 | −2.03% | $64,740.90 | $62,187.00 | Hawkish Fed/FOMC dot plot; ETF outflows 2 weeks consecutive |
+| ETH | $1,712.49 | $1,748.97 | −2.09% | $1,761.20 | $1,669.56 | Glamsterdam upgrade final dev phase (H2 2026 mainnet) |
+| XLM | $0.23820 | $0.22592 | +5.44% | $0.25158 | $0.22010 | Only major gainer; faded −5.3% from 24h high |
+| NEAR | $2.21740 | $2.18000 | +1.72% | $2.29870 | $2.12770 | Below 3% threshold |
+| SOL | $69.70 | $71.98 | −3.17% | $72.60 | $68.14 | DEX volume recovery narrative; price below open |
+| XRP | $1.14790 | $1.18546 | −3.17% | $1.19118 | $1.13203 | CLARITY Act Senate vote timing unclear (possibly July) |
+| ENA | $0.09280 | $0.09520 | −2.52% | $0.09800 | $0.08840 | Below open; Coinbase Ventures catalyst stale |
+| ZEC | $456.48 | $477.08 | −4.31% | $489.29 | $440.00 | Volume surge overnight — fully faded by session open |
+
+**Fear & Greed Index:** 15 (Extreme Fear) — unchanged from all of Jun 18.
+**BTC funding rate:** ~+0.01%/8h (Binance/Bybit/OKX); slight positive bias, no extreme leverage signal.
+
+### Perplexity Research Summary
+
+**Market catalyst:** Dominant driver is **hawkish FOMC dot plot** from yesterday — markets pricing in tighter policy persisting longer than expected. BTC ETF outflows for nearly 2 weeks straight. Strategy disclosed selling 32 BTC (dividend), then buying 1,550 BTC — added intraday confusion.
+
+**Top 24h gainers (CoinGecko):** Cortex (CX) +99.8%, Synapse (SYN) +91.6%, Velvet (VELVET) +49.3% — all micro/low-cap. Not on Kraken in tradeable status.
+
+**Top Kraken gainers (Perplexity):** RIZE +167% (cancel_only status on Kraken — untradeable), OMNI +174% (158% spread — illiquid noise), XLM +7.41%, ZEC +6.67% (faded to −4.3% by session open).
+
+**H (Humanity Protocol):** +11% on $38M volume — Binance Alpha exchange swap after June 8 exploit migration. H/USD on Kraken shows **cancel_only** status → **hard skip; cannot place orders**.
+
+**Token unlocks this week (headwinds):**
+- ZRO (LayerZero): $23.16M unlock Jun 20 — potential selling pressure
+- SPK (Spark): $18.49M this week
+- ARB (Arbitrum): $8.04M this week
+
+**XLM/DTCC:** Perplexity flagged "DTCC/Stellar integration headline" as a current XLM narrative. However, the underlying news is a Dec 2025 SEC No-Action Letter; DTCC said assets won't be available on Stellar until **H1 2027**. This appears to be ongoing background narrative recycled by CMC/media, NOT a fresh same-day announcement. NOT confirmed as <6h catalyst.
+
+**ZEC volume surge:** Was flagged as having a "significant surge in buying volume over the past 60 minutes" in Perplexity's scan — but live Kraken quote shows ZEC at $456 vs open $477 (−4.31%). The surge happened overnight and has fully reversed before session open.
+
+**ETH Glamsterdam:** Final development phase; test networks running all planned EIPs. Mainnet launch H2 2026 (Q3 target per some sources). Not a fresh intraday catalyst.
+
+**XRP CLARITY Act:** Added to Senate legislative calendar Jun 1. Vote timing speculated "mid-June to recess" or July 4 as a target — no confirmed date. Binary catalyst remains on watch.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst <6h? | R:R | Decision |
+|---|---|---|---|---|---|
+| XLM/USD | +5.44% ($0.23820) | 0.006% ✓ | DTCC headline = recycled Dec 2025 news, NOT confirmed fresh <6h | 1.2:1 ✓ | **SKIP** — catalyst gate fails; price −5.3% from 24h high ($0.25158); declining momentum; 1 stop-out in 7-day window |
+| NEAR/USD | +1.72% ($2.21740) | 0.081% ✓ | No fresh catalyst <6h | N/A | **SKIP** — below 3% threshold |
+| ZEC/USD | −4.31% ($456.48) | 0.074% ✓ | No catalyst; overnight surge faded | N/A | **SKIP** — below open |
+| ETH/USD | −2.09% ($1,712) | 0.014% ✓ | Glamsterdam H2 2026 (not fresh) | N/A | **SKIP** — below open |
+| SOL/USD | −3.17% ($69.70) | 0.014% ✓ | DEX volume narrative (stale) | N/A | **SKIP** — below open |
+| XRP/USD | −3.17% ($1.14790) | 0.001% ✓ | CLARITY Act vote date not confirmed | N/A | **SKIP** — below open; binary catalyst watch only |
+| ENA/USD | −2.52% ($0.09280) | 0.108% ✓ | Coinbase Ventures stale | N/A | **SKIP** — below open |
+| H/USD | N/A | N/A | Exchange swap after exploit | N/A | **HARD SKIP** — cancel_only on Kraken |
+| BTC/USD | −2.03% ($63,141) | ~0% ✓ | Hawkish Fed (bearish catalyst) | N/A | **SKIP** — below open; declining |
+
+### Gate Analysis
+
+1. **BTC crash gate:** NOT triggered (−2.03%).
+2. **BTC weekly trend gate:** NOT triggered (−1.92% over 5 trading days, threshold −3%).
+3. **Momentum gate:** Only XLM above +3% from open, but price is −5.3% below its 24h high and declining.
+4. **Catalyst gate:** No candidate has a confirmed fresh catalyst <6h today. DTCC/Stellar is recycled Dec 2025 news. ZEC volume surge faded before session open.
+5. **Same-thesis cap:** 1 XLM stop-out in 7-day window (eligible for re-entry, not blocked). Would trigger 48h cooling + new catalyst requirement only on a 2nd stop-out.
+
+### Trade Ideas (Watch List — Conditional Entries)
+
+**Idea 1 — XLM/USD (WATCH — do not enter until conditions met)**
+- **Catalyst:** DTCC/Stellar integration (Dec 2025 authorization, ongoing narrative) + Spiko $1B tokenization + Zebec payroll + VersaBank. Catalysts are stale. Entry blocked until a fresh, distinct announcement is confirmed <6h.
+- **Entry condition:** Renewed upward momentum above $0.24 with volume, AND a fresh Stellar-specific announcement confirmed within the last 6 hours
+- **Entry:** market at confirmation
+- **Stop:** trailing_stop, trail_percent: 2.5, GTC (placed immediately after fill)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1 (minimum)
+- **Size:** ~75% equity (~$91.50) — same conviction as yesterday's entry if conditions met
+- **Spread:** 0.006% ✓
+- **Same-thesis cap:** 1 stop-out in 7-day window — re-entry eligible, not blocked
+
+**Idea 2 — XRP/USD (WATCH — binary catalyst only)**
+- **Catalyst:** CLARITY Act Senate vote. Bill on legislative calendar since Jun 1. Vote timing speculated "mid-June to recess" — could happen any day.
+- **Entry condition:** Confirmed Senate floor vote scheduled/announced for CLARITY Act; enter on the announcement day
+- **Entry:** market
+- **Stop:** trailing_stop, trail_percent: 7 (binary catalyst rule)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 3%/7% = 0.43:1 at T1 — binary catalyst events use 7% trail per strategy; wider trail required for headline risk
+- **Size:** 25–50% equity on confirmation
+- **Spread:** 0.001% ✓
+
+**Idea 3 — BTC/USD (WATCH — macro reversal only)**
+- **Catalyst:** Any positive macro resolution (CPI miss, FOMC pivot signal, ETF inflows resuming)
+- **Entry condition:** BTC breaks above $64,452 (24h open) AND closes 1h candle above on volume
+- **Entry:** limit $64,500
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** $66,385 (+3%) | **T2:** $67,725 (+5%)
+- **R:R:** 1.2:1
+- **Size:** up to 100% equity on strong macro catalyst
+- **Spread:** ~0% ✓
+
+**Idea 4 — ZEC/USD (WATCH — renewed buying interest)**
+- **Catalyst:** Privacy coin momentum, institutional/short-squeeze narrative, Grayscale ETF filing thesis
+- **Entry condition:** ZEC recovers above $477 (24h open) with renewed volume surge AND a confirmed catalyst <6h
+- **Entry:** limit $478
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** $492 (+3%) | **T2:** $502 (+5%)
+- **R:R:** 1.2:1
+- **Size:** 50% equity on confirmation
+- **Spread:** 0.074% ✓
+
+### Decision
+
+**NO NEW ENTRIES — WATCH LIST SESSION.**
+
+Market is in Extreme Fear (F&G 15, unchanged for 3 consecutive sessions). BTC has weakened to −2.03% from yesterday's open, with no macro reversal catalyst in sight. All major alts are below their 24h opens. The only above-open asset is XLM (+5.44%), but:
+1. Catalyst gate fails — DTCC/Stellar headline is a recycled Dec 2025 narrative, not a fresh <6h announcement
+2. Price is −5.3% from its 24h high of $0.25158, indicating declining intraday momentum
+3. Entering into declining momentum on stale catalysts in an Extreme Fear environment has negative expected value
+
+Token unlock headwinds (ZRO $23M, SPK $18M Jun 20) add sell pressure to the alt space.
+
+**Stance:** Flat in cash ($121.8486 ZUSD). Watch for: (a) XLM fresh distinct catalyst + momentum renewal, (b) CLARITY Act vote date confirmation for XRP binary play, (c) BTC recovery above $64,452 to unlock broader alt momentum.
+
+**Portfolio state:** $121.8486 ZUSD | No open positions | Total equity: ~$121.85
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
+
