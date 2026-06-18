@@ -5819,4 +5819,32 @@ FOMC decision pending today — additional macro event risk.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | No open positions |
 **Trades today:** none | **Total since migration:** ~76
+
+---
+
+### Jun 18 — XLM/USD BUY (Session-Open Scan, second pass ~09:05 UTC)
+
+**Buy Order ID:** OYJMV7-BQ4QB-UJRCLU
+**Stop Order ID:** OE4BZU-4ZCVW-QGSLVC (2.5% trailing stop)
+**Symbol:** XLM/USD | **Qty:** 384 XLM | **Side:** BUY
+**Entry:** $0.24128 (market fill; 24h open $0.22592; +5.93% from open at scan time)
+**T1:** $0.24852 (+3%) | **T2:** $0.25334 (+5%)
+**Initial stop trigger:** $0.23525 ($0.24128 × 0.975)
+**Stop:** trailing_stop, trail_percent: 2.5, GTC — placed immediately after fill ✓
+**Size:** ~$92.65 (~75.6% of $122.58 equity)
+**ZUSD after:** $29.9335 | **Total equity:** ~$122.58 (XLM mark ~$92.65 + ZUSD $29.93)
+**Stop-out count:** 0 XLM stop-outs in 7-day window (same-thesis cap: clear)
+**R:R:** 3% / 2.5% = 1.2:1
+
+**Catalyst:** Multiple real catalysts today — (1) **Spiko Finance tokenizing $1 billion on Stellar**, (2) **Zebec launching enterprise payroll platform on Stellar** expanding payment use cases, (3) **VersaBank adding Stellar to tokenized deposit initiative**, (4) XRP/RLUSD correlation momentum. XLM +5.93% from 24h daily open ($0.22592 → $0.23931 at scan; filled $0.24128 on market). Spread 0.004% ✓. Fear & Greed 15 (Extreme Fear) — contrarian entry on real catalysts with defined stop.
+
+**Screening:**
+- Momentum: +5.93% from 24h daily open ✓ (above >3% threshold)
+- Spread: 0.004% ✓
+- Catalyst: Spiko $1B + Zebec payroll + VersaBank + XRP correlation — real fundamental news today ✓
+- R:R: 1.2:1 ✓ (minimum threshold met)
+- BTC crash gate: NOT triggered (BTC −0.23% from 24h open)
+- BTC weekly gate: NOT triggered (BTC +0.07% over 5 trading days)
+- Same-thesis cap: Not applicable (no prior XLM stop-outs in 7-day window)
+- All other candidates screened (ENA, ETHFI, ALGO, NEAR, HYPE) — failed momentum gate (below daily open or <3% from open)
 **Notes:** Fully in cash all day. No trades placed. BTC consolidated slightly higher (+0.26% from yesterday's late close of $64,350). Bot was flat (0.00%) resulting in −0.26% underperformance vs BTC. Portfolio unchanged at $122.58 ZUSD. Phase P&L remains −31.82% from Kraken starting equity $179.78. Alpaca: stop a2b44cf9 confirmed canceled (Alpaca BTC position closed May 22, 2026). No actionable intraday setups identified — market lacked clear momentum signals with BTC in tight consolidation range.
