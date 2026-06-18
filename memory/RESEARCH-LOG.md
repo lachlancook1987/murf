@@ -18033,3 +18033,94 @@ Gate failures:
 | BTC/USD | Breakout above $64,740 (24h high) on positive catalyst (ETF inflows, macro reversal) — triggers broader alt momentum |
 | SYN/USD | DO NOT ENTER — delisting catalyst, bearish |
 
+---
+
+## 2026-06-18 — Afternoon Session-Open Scan
+
+**Execution time:** 2026-06-18 (afternoon session-open routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A | None | Historical only (May 22) |
+
+### Market Context (Afternoon)
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $63,901 (ask) | −0.85% from 24h open $64,452; further weakness since midday −0.64% |
+| BTC Crash Gate | NOT triggered | −0.85% from open; far from −20% |
+| BTC Weekly Gate | NOT triggered | BTC $63,901 vs Jun 14 close $64,377 = −0.74%; threshold is −3% |
+| Fear & Greed | 15 (Extreme Fear) | Unchanged all day — persistent fear |
+| ETH | $1,741.72 (ask) | −0.41% from 24h open $1,748.97 |
+| SOL | $70.91 (ask) | −1.49% from 24h open $71.98 |
+| XLM | $0.23651 (ask) | +4.69% from 24h open $0.22592; declining from 24h high $0.24704 (midday $0.23943 → now lower) |
+| ENA | $0.09230 (ask) | −3.04% from 24h open $0.09520; peaked at $0.09800 (+2.94%) then reversed |
+| ETHFI | $0.35910 (ask) | −5.62% from 24h open $0.38050; peaked $0.39450, now collapsed |
+| NEAR | $2.20890 (ask) | +1.33% from 24h open $2.180; failed 3% threshold |
+| HYPE | $70.79 (ask) | −0.45% from 24h open $71.11; slipped below open since midday |
+| ATOM | $1.8291 (ask) | −3.64% from 24h open $1.8982; Perplexity +7.85% figure was stale/from different baseline |
+| ALGO | $0.10028 (ask) | +1.08% from 24h open $0.09921; below 3% threshold |
+| CAKE | $1.3500 (ask) | −1.89% from 24h open $1.3760; extremely illiquid (10 trades in period) |
+
+### Perplexity Research Summary (Afternoon)
+
+- **BTC:** $63,901–$64,395 range; −0.85% from today's Kraken open. Fed held 4.25–4.50% (Jun 17–18). ETF outflows continuing — no reversal catalyst yet.
+- **Top 24h CMC gainers:** ENA +10.04%, ETHFI +8.73%, XLM +4.49%, ALGO +4.06% — but these are CMC "day" figures from UTC 00:00, not Kraken rolling 24h open. Kraken live data shows ENA −3%, ETHFI −5.6% from Kraken's rolling 24h open.
+- **ENA:** Fresh catalysts — (1) Coinbase Ventures open-market ENA purchase + strategic partnership, (2) $250M allocation to Securitize STAC tokenized CLO, (3) fee-switch governance vote conditions confirmed met. Strong fundamental news. Price peaked $0.09800 (+2.94% from Kraken open) then reversed to $0.09230 (−3.04% from open). Sellers absorbing the news.
+- **ETHFI:** Sentiment-driven re-rating (social media, $1.1B card spend, Glamsterdam narrative). No hard catalyst. Peaked $0.39450 then faded to $0.35910 (−5.62% from open).
+- **ATOM:** Robinhood listing + Mintscan acquisition (Jun 11) already reflected in price. Currently −3.64% from open. No fresh catalyst.
+- **XLM:** Zebec GBP stablecoin on Stellar mentioned in Perplexity but appears to be related to / reframing of the morning Zebec payroll catalyst — not confirmed as a distinct fresh announcement. XLM declining from high.
+- **Volume surges:** Humanity Protocol ($310K net inflows, $38M volume — not on Kraken), ZEC volume (faded), JUP ($72K net inflows). ETH ETF: $2.85B inflows claimed this week by one Perplexity source but ETH price still below open.
+- **Macro:** Stronger USD, higher Treasury yields, Fed meeting noise all weighing on risk assets. Clarity Act (XRP/crypto broadly) still weeks away (early July).
+
+### Candidate Screening (Afternoon)
+
+| Asset | vs 24h Open | Spread | Catalyst | 1h Trend | Decision |
+|---|---|---|---|---|---|
+| XLM/USD | +4.69% | 0.008% ✓ | Spiko/Zebec (stale >6h; Zebec GBP stablecoin unconfirmed as distinct) | DECLINING ($0.23943→$0.23651) | **SKIP** — 1h momentum negative; no confirmed fresh catalyst; same-session re-entry below stop-out level not showing breakout |
+| ENA/USD | −3.04% | 0.217% ✓ | Fresh: Coinbase Ventures partnership + $250M CLO + fee-switch | DECLINING from peak | **SKIP** — below 24h open; 0.40% fee tier → fee-adj R:R 0.76:1 ❌; sellers absorbing news |
+| NEAR/USD | +1.33% | 0.054% ✓ | No fresh catalyst | Flat | **SKIP** — below 3% threshold ($2.245 needed) |
+| HYPE/USD | −0.45% | 0.014% ✓ | No fresh catalyst | Declining | **SKIP** — below open; high-ATR 3.5% trail |
+| ETHFI/USD | −5.62% | 0.195% ✓ | Sentiment (no hard catalyst) | Declining from peak | **SKIP** — below open; no hard catalyst |
+| ATOM/USD | −3.64% | 0.082% ✓ | Robinhood listing (stale); no fresh catalyst | Below open | **SKIP** — below open |
+| ALGO/USD | +1.08% | 0.110% ✓ | No catalyst | Below 3% threshold | **SKIP** — insufficient momentum |
+| CAKE/USD | −1.89% | 0.22% ✓ | No catalyst | Below open; extremely illiquid | **SKIP** — below open; 10 trades in period (illiquid) |
+| ENA same-session | — | — | Coinbase Ventures fresh | FADING | **NOT CONSIDERED** — momentum gate fails (below open); buying into fading move on catalyst |
+| BTC/USD | −0.85% | ~0.00% ✓ | No fresh intraday catalyst | Below open | **SKIP** — below open and weakening |
+| ETH/USD | −0.46% | 0.003% ✓ | ETF inflows narrative unclear | Below open | **SKIP** — below open |
+| SOL/USD | −1.49% | 0.014% ✓ | No catalyst | Below open | **SKIP** — below open |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+Gate failures:
+1. **Momentum gate (primary):** XLM is the sole asset above 24h open meeting the >3% threshold (+4.69%). However, XLM's 1h trend is decisively NEGATIVE — price declined from $0.23943 (midday) to $0.23651 (now), well off the $0.24704 daily high. The strategy requires "1h surge >3% OR 4h momentum >5%" for momentum-only entries, and "fresh catalyst <6h" for catalyst-driven entries. XLM fails both sub-gates.
+2. **ENA fresh catalyst but wrong price action:** ENA has the strongest catalysts (Coinbase Ventures + CLO + fee-switch), but price is −3.04% from open, declining from its $0.09800 peak. Sellers are absorbing the news. Additionally, ENA's 0.40% taker fee tier destroys R:R: fee-adj R:R = 2.2%/(2.5%+0.4%) = 0.76:1 ❌.
+3. **Universal weakness:** All other assets are below 24h opens. BTC has weakened further to $63,901 (−0.85% from open). Market remains in Extreme Fear (F&G 15).
+4. **No fresh structural breakout:** BTC has not broken above its 24h high ($64,740) which was identified as the trigger for broader alt momentum. BTC is actually moving away from that level to the downside.
+5. **XLM same-session re-entry:** Technically eligible at lower price (stop-out ~$0.23936, current $0.23651). But catalyst gates not met — morning catalysts are >6h stale and Zebec GBP stablecoin news is not confirmed as distinct from morning news. 1h momentum gate fails (declining, not surging).
+
+**Crash gate:** NOT triggered. BTC −0.85% from open (well under −20% threshold).
+**BTC weekly gate:** NOT triggered. BTC −0.74% over 5 trading days (threshold: −3%).
+
+### Portfolio State (Afternoon Jun 18)
+
+**Cash:** $121.8486 ZUSD | **Open positions:** None | **Total equity:** ~$121.85
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
+**Day P&L Jun 18 so far:** −$0.74 (XLM stop-out only; no new trades)
+
+### Watch List (Jun 18 Evening/EOD)
+
+| Asset | Condition for Entry |
+|---|---|
+| ENA/USD | Recovery above 24h open $0.09520 AND extending to $0.09806 (+3%) — needs fee tier to be 0.26% or price momentum to be undeniable; 0.40% tier remains a headwind |
+| XLM/USD | Fresh distinct catalyst <6h (not just Zebec rehash) AND price re-accelerating above $0.23943 (midday high) toward 24h high $0.24704 |
+| BTC/USD | Break and hold above $64,740 (24h high) with volume — triggers alt momentum wave |
+| NEAR/USD | Price at $2.245+ (+3% from open $2.180) with any fresh catalyst |
+
+**No notification sent (no trades placed).**
+
