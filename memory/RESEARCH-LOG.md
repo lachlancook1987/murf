@@ -18185,3 +18185,95 @@ Gate failures:
 | BTC/USD | Break above $64,740 (24h high) with volume |
 
 **No notification sent (no trades placed; scan confirms no-op).**
+
+---
+
+## 2026-06-18 — Evening Session-Open Scan
+
+**Execution time:** 2026-06-18 (evening session-open routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A | None | Historical only (May 22) |
+
+**Crash gate:** BTC $63,517 vs open $64,452 = **−1.45%** — NOT triggered.
+**BTC weekly gate:** BTC $63,517 vs Jun 14 close ~$64,377 = **−1.33%** — NOT triggered (threshold −3%).
+
+### Market Context (Evening)
+
+| Asset | Ask | vs 24h Open | Notes |
+|---|---|---|---|
+| BTC | $63,517 | −1.45% | Weakened further since afternoon scan ($63,901 → $63,517); support at $63,500 held so far |
+| XLM | $0.24600 | +8.88% | NEW 24h intraday high $0.25158 reached (was $0.24704 morning); now declining from high |
+| NEAR | $2.27160 | +4.20% | Above $2.245 watch list trigger; 24h intraday high $2.29870; +0.15% in last ~1h (fading) |
+| RIZE | $0.005134 | +91.2% | Kraken top gainer; peaked at intraday high $0.007, now −26.7% from peak |
+| ZEC | $468.71 | −1.76% | Below open; buying volume spike from Perplexity appears to have faded |
+| ENA | $0.09470 | −0.53% | Nearly back to 24h open $0.09520; Coinbase Ventures catalyst still active |
+| SYN | $0.12860 | +53% | Spread 1.02% (>1%); bearish delisting catalyst |
+| ETH | $1,733.40 | −0.89% | Below open |
+| F&G | 15 | — | Extreme Fear; unchanged all day |
+
+### Perplexity Research Summary (Evening)
+
+- **BTC:** $64,319 (Perplexity; Kraken showing $63,517 live — gap suggests Perplexity data is slightly stale). −1.45%–2.08% from 24h open depending on source. Fed held 4.25–4.50%, ETF outflows continuing, USD/yields weighing on risk assets.
+- **Top 24h CMC gainers (established):** ENA +10.04%, ETHFI +8.73%, UNI +7.44% — all from CMC "day" figures; Kraken live shows ENA −0.53%, ETHFI further down. CMC figures vs Kraken open diverge.
+- **Kraken top gainers (Perplexity):** SYN +93% (bearish delisting catalyst), RIZE (top gainer), OMNI +174% (1 trade, 158% spread — illiquid noise).
+- **RIZE:** +91% from Kraken open; no confirmed project catalyst ("surge looks driven by momentum, liquidity, and speculation rather than a confirmed catalyst news event" — Perplexity). Market cap ~$4.78M. Peaked $0.007 intraday, now $0.00513 (declining).
+- **XLM:** No new XLM-specific catalyst in last 6h confirmed. Morning catalysts (Spiko $1B, Zebec tGBP stablecoin on Jun 17, VersaBank) remain stale.
+- **NEAR:** Dynamic resharding "expected June 2026" (ongoing narrative, not a fresh <6h announcement). TVL $177M (Jun 17, stale). NEAR@3.33 incentive program — no announcement date confirmed. No fresh catalyst <6h confirmed.
+- **Volume surges:** BTC volume +36% on selling pressure. SYND +510% volume (not on Kraken). ZEC buying spike appears faded.
+- **Token unlocks this week:** LayerZero (ZRO) 25.7M tokens Jun 20; KAITO 17.6M Jun 20 — potential headwinds for those assets. Not actionable for entry.
+
+### Candidate Screening (Evening)
+
+| Asset | vs 24h Open | 1h Momentum | Spread | Catalyst | Fee-adj R:R | Decision |
+|---|---|---|---|---|---|---|
+| RIZE/USD | +91.2% | Declining (−26.7% from $0.007 peak) | 0.88% ✓ | None confirmed — pure speculative pump | Fails (0.40% fee; no catalyst) | **SKIP** — no catalyst; micro-cap ($4.78M) pump-and-dump risk; declining from peak |
+| XLM/USD | +8.88% | +0.31% ($0.24525→$0.24600) stalling | ~0% ✓ | No fresh catalyst <6h (morning catalysts stale) | 1.2:1 nominal ✓; 0.76:1 fee-adj | **SKIP** — catalyst gate fails; momentum stalling after hitting $0.25158 high; 1 stop-out today in same-thesis window |
+| NEAR/USD | +4.20% | +0.15% (fading) | 0.11% ✓ | Dynamic resharding "June 2026" — ongoing narrative, not <6h fresh | 0.76:1 (0.40% fee tier) | **SKIP** — 1h momentum fails (<3%); no confirmed fresh catalyst <6h; fee-adj R:R fails |
+| OMNI/USD | ~+174% | N/A | 158% ❌ | Unknown; 1 trade in 24h period | N/A | **SKIP** — untradeable spread; illiquid noise trade |
+| ZEC/USD | −1.76% | Below open | 0.10% ✓ | Volume spike faded | N/A | **SKIP** — below open |
+| ENA/USD | −0.53% | Flat (near open) | 0.11% ✓ | Coinbase Ventures + CLO fresh but price below open | N/A | **SKIP** — below open; fee-adj R:R fails at 0.40% tier |
+| SYN/USD | +53% | Declining | 1.02% ❌ | Delisting (bearish) | N/A | **SKIP** — bearish catalyst; spread >1% |
+| ETH/USD | −0.89% | Below open | ~0% ✓ | None | N/A | **SKIP** — below open |
+| BTC/USD | −1.45% | Below open | ~0% ✓ | None | N/A | **SKIP** — below open; declining |
+
+### Gate Analysis
+
+**BTC crash gate:** NOT triggered. BTC −1.45% (far below −20% threshold).
+**BTC weekly gate:** NOT triggered. BTC −1.33% over 5 trading days (threshold: −3%).
+
+1. **RIZE disqualified:** No catalyst. Pure speculative micro-cap pump (market cap $4.78M). Price already declined 26.7% from intraday high $0.007 to $0.00513. Fee-adjusted R:R fails at 0.40% taker tier. Buying into declining price with no thesis = gambling. SKIP.
+2. **XLM catalyst gate fails:** XLM DID breach the watch list trigger (hit $0.25158, above watch list trigger $0.24979). But morning catalysts are now stale (>6h), and Perplexity confirmed "no clearly verified major Stellar-specific development in the last 6h." Momentum stalling (+0.31% in last ~1h). One stop-out in 7-day window — re-entry requires fresh catalyst <6h. SKIP.
+3. **NEAR momentum fading:** Price +4.2% from 24h open but only +0.15% in last ~1h — momentum clearly decelerating. No confirmed fresh catalyst <6h. Fee-adjusted R:R at 0.40% tier = 0.76:1 (below minimum 1.2:1). SKIP.
+4. **Universal alt weakness:** All other candidates below 24h opens. BTC declined further to $63,517 (−1.45%), compressing the risk-reward for momentum plays.
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+F&G 15 (Extreme Fear) has persisted all day. BTC has weakened throughout every scan, now at −1.45% from open. No candidate passes ALL gates simultaneously: momentum gate (>3% in last 1h or 4h) + catalyst gate (<6h fresh news/event) + fee-adjusted R:R gate (≥1.2:1 at 0.40% taker).
+
+XLM is the strongest candidate by 24h momentum (+8.88%) but catalysts are stale and momentum has stalled. NEAR cleared the price trigger but catalyst timing is unconfirmed and 1h momentum is near zero.
+
+### Portfolio State (Evening Jun 18)
+
+**Cash:** $121.8486 ZUSD | **Open positions:** None | **Total equity:** ~$121.85
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
+**Day P&L Jun 18:** −$0.74 (XLM stop-out only; no further trades)
+
+### Watch List (Jun 19 Morning / Next Session)
+
+| Asset | Condition for Entry |
+|---|---|
+| XLM/USD | Fresh distinct catalyst <6h (new announcement beyond Spiko/Zebec/VersaBank) AND intraday momentum >3% in 1h |
+| NEAR/USD | Fresh confirmed catalyst <6h (upgrade going live, new partnership announcement, etc.) AND sustained >3% 1h momentum |
+| ENA/USD | Recovery above 24h open $0.09520 AND extending to +3% ($0.09806) — still faces fee-adj R:R headwind at 0.40% taker |
+| BTC/USD | Break above $64,452 (today's open) and sustained recovery — catalyst for broader alt momentum |
+| RIZE/USD | DO NOT ENTER — no confirmed catalyst; micro-cap pump at high risk of reversal |
+
+**No trades executed. No notification sent. No commit required.**
+
