@@ -17867,3 +17867,97 @@ All candidates assessed: **every asset** is currently trading **below its 24h op
 **NO NEW ENTRIES.** Universal sell-off — no candidate has positive momentum from open. No fresh catalyst identified on any Kraken-tradeable asset. Fully cash position maintained ($122.5847 ZUSD).
 
 **No actions taken. No notification sent.**
+
+---
+
+## 2026-06-18 — Session-Open Scan
+
+**Execution time:** 2026-06-18 (session-open routine)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $122.5847 ZUSD | None | None |
+| Alpaca | N/A | None | Historical orders only (May 22 — closed) |
+
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+
+### Market Context
+
+| Metric | Value | Notes |
+|---|---|---|
+| BTC | $64,336 (ask) | −0.18% from 24h open $64,452; crash gate NOT triggered |
+| ETH | $1,745 (ask) | −0.18% from 24h open $1,749 |
+| SOL | $71.60 (ask) | −0.53% from 24h open $71.98 |
+| ENA | $0.09360 (ask) | −1.68% from 24h open $0.09520 (24h high $0.09800) |
+| ATOM | $1.856 (ask) | −2.21% from 24h open $1.898 |
+| KAS | $0.03111 (ask) | −2.48% from 24h open $0.03190 |
+| INJ | $5.254 (ask) | −3.60% from 24h open $5.448 |
+| NEAR | $2.209 (ask) | +1.32% from 24h open $2.180 — only positive mover |
+| HYPE | $71.270 (ask) | +0.23% from 24h open $71.110 (peaked $73.63, +3.55%) |
+| WLD | $0.6276 (ask) | −5.91% from 24h open $0.6636 |
+| ETHFI | $0.3573 (ask) | −6.60% from 24h open $0.3805 |
+| XRP | $1.176 (ask) | −0.79% from 24h open $1.185 |
+| TRUMP | $1.874 (ask) | −2.14% from 24h open $1.915 (was +18% intraday earlier per Perplexity — had since reversed) |
+| Fear & Greed | 15 (Extreme Fear) | Down from 22 yesterday — increasing fear |
+| BTC Crash Gate | NOT triggered | −0.18% from open; far from −20% threshold |
+| BTC Weekly Gate | NOT triggered | BTC Jun 14 $64,377 → Jun 18 $64,422 (+0.07% over 5 days; gate triggers at −3%) |
+| BTC Funding Rate | ~+0.010%/8h | Slightly positive — longs paying, mildly bullish bias |
+
+### Perplexity Research Summary
+
+- **Macro:** Market in "cautious equilibrium." Fed (Jun 17 meeting context) held rates at 4.25–4.50%; market failed to sustain post-decision rally. BTC ETF net outflows continuing.
+- **Clarity Act:** U.S. Senate debate expected early July — ongoing potential binary catalyst for XRP/crypto broadly.
+- **ENA:** Coinbase-Ethena USDe vault crossed $100M in 4 days. $250M allocation to Securitize Tokenized CLO Fund. Q3 2026 fee switch + ENA buybacks target confirmed. Price was up earlier (24h high $0.09800, +3.6% vs VWAP basis) but has since pulled back below 24h open.
+- **ATOM:** Robinhood listing + Cosmos Labs acquired Mintscan. Trading below 24h open; near-term bearish sentiment.
+- **Token unlocks:** ZRO Jun 20 (25.71M tokens, ~$23M) — structural headwind for ZRO. ARB unlock ~$8M this week. SPK 900M tokens Jun 17 (already hit).
+- **Volume surges:** TRUMP surged +18% intraday on access-to-dinner speculation but has reversed to below 24h open. HYPE peaked +3.55% from open earlier but faded back.
+- **Top CMC 24h gainers:** Most are micro-caps not listed on Kraken (OMNI, MAT, DOLO). Among Kraken assets, ENA showed the largest CryptoSlate-listed 24h gain (~+10%) but that was from a different base time — live Kraken data shows ENA −1.68% from today's open.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Fee Tier | Catalyst | R:R | Decision |
+|---|---|---|---|---|---|---|
+| NEAR/USD | +1.32% | 0.095% ✓ | 0.40% | Momentum only; no fresh catalyst | (3−0.8)/(2.5+0.4)=0.76:1 ❌ | **SKIP** — below 3% threshold AND fee-adj R:R fails |
+| HYPE/USD | +0.23% | 0.042% ✓ | 0.26% | HYPE ETF narrative ongoing; no fresh <6h event | High-ATR: (3−0.26)/(3.5+0.26)=0.73:1 ❌ | **SKIP** — below 3% threshold; R:R fails at 3.5% trail |
+| ENA/USD | −1.68% | 0.213% ✓ | 0.40% | USDe vault milestone + Q3 fee switch; real catalyst but price BELOW open | N/A | **SKIP** — below open, momentum gate fails |
+| ATOM/USD | −2.21% | 0.038% ✓ | 0.40% | Robinhood listing (stale); near-term bearish | N/A | **SKIP** — below open |
+| KAS/USD | −2.48% | 0.064% ✓ | 0.26% | No fresh catalyst; 5 prior stop-outs Jun 3–8 | N/A | **SKIP** — below open; poor track record |
+| INJ/USD | −3.60% | 0.038% ✓ | 0.40% | No fresh <6h catalyst | N/A | **SKIP** — below open |
+| XRP/USD | −0.79% | 0.009% ✓ | 0.26% | Clarity Act expected July — no specific vote today | N/A | **SKIP** — below open; catalyst not <6h |
+| TRUMP/USD | −2.14% | 0.107% ✓ | 0.40% | Access-to-dinner speculation; move already reversed | N/A | **SKIP** — below open; speculative non-fundamental catalyst |
+| WLD/USD | −5.91% | 0.009% ✓ | 0.26% | No fresh catalyst | N/A | **SKIP** — down hard |
+| ETHFI/USD | −6.60% | ~0.25% ✓ | 0.40% | No fresh catalyst | N/A | **SKIP** — down hard |
+| BTC/USD | −0.18% | ~0.0002% ✓ | 0.26% | No fresh intraday catalyst | N/A | **SKIP** — flat |
+| ETH/USD | −0.18% | 0.005% ✓ | 0.26% | No fresh catalyst | N/A | **SKIP** — flat |
+| ZRO/USD | N/A checked | online ✓ | 0.40% | Jun 20 unlock $23M — BEARISH | N/A | **SKIP** — structural headwind |
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+Gate failures:
+1. **Momentum gate (primary):** No candidate is up >3% from 24h open. NEAR at +1.32% and HYPE at +0.23% are the only assets above their 24h opens, and both fall short of the 3% threshold.
+2. **Fee-adjusted R:R:** Even NEAR and HYPE fail — NEAR's 0.40% taker tier yields fee-adj R:R = 0.76:1 ❌; HYPE's 3.5% trail (high-ATR) yields 0.73:1 ❌.
+3. **Market structure:** Fear & Greed 15 (Extreme Fear, lowest this session series). Universal weakness across alts. ETF outflows continuing. Market in cautious equilibrium awaiting macro signals.
+4. **Catalyst freshness:** No asset has a fresh <6h catalyst that would override the missing momentum. ZRO has a near-term bearish unlock. Clarity Act is weeks away.
+
+**Crash gate:** NOT triggered. BTC −0.18% from open.
+**BTC weekly gate:** NOT triggered. BTC flat (+0.07%) over 5 trading days.
+
+### Portfolio State
+
+**Cash:** $122.5847 ZUSD | **Open positions:** None | **Total equity:** ~$122.58
+**Phase P&L:** ~−$57.20 (−31.82%) from Kraken starting equity $179.78
+
+### Watch List (Jun 18 Intraday)
+
+| Asset | Condition for Entry |
+|---|---|
+| NEAR/USD | Price advances to +3% from open ($2.18 × 1.03 = $2.245) with volume + any fresh catalyst; re-check fee tier impact |
+| HYPE/USD | Fresh catalyst <6h (HIP-5, new ETF news, major integration) + price advancing above $73.24 (+3% from open) |
+| ENA/USD | Price recovers above open $0.09520 and extends to $0.09806 (+3%) — note 0.40% fee tier still creates R:R headwind unless fee tier improves |
+| XRP/USD | Clarity Act vote scheduled/announced imminently (binary event) → 7% trail, binary catalyst protocol |
+| BTC/ETH | Breakout above today's high ($64,740 BTC / $1,761 ETH) on positive macro catalyst (ETF inflow reversal, Fed commentary) |
+
