@@ -18508,3 +18508,110 @@ Market conditions have deteriorated further since prior scans. BTC now at $62,85
 
 **No trades executed. No notification sent.**
 
+
+---
+
+## 2026-06-19 — Pre-Session Research
+
+**Execution time:** 2026-06-19 pre-session (UTC morning)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | N/A — retired | None | Historical only (BTC closed May 22) |
+
+**XLM same-thesis cap status:** 1 stop-out (Jun 18) — re-entry eligible if fresh catalyst <6h AND 1h momentum >3%.
+
+### Market Context
+
+| Asset | Ask (Kraken) | 24h Open | vs Open | Notes |
+|---|---|---|---|---|
+| BTC | $62,563.70 | $62,885.70 | **−0.51%** | Range $62,187–$64,563 |
+| ETH | $1,694.00 | $1,709.03 | **−0.88%** | "Glamsterdam" upgrade delayed to Q3 2026 (late Aug) — not a fresh catalyst |
+| SOL | $68.25 | $69.64 | **−2.0%** | Securitize CLO + Ethena $250M + Circle 1B USDC catalysts present; price below open |
+| XRP | $1.12493 | $1.14492 | **−1.75%** | CLARITY Act cleared committee May 14; Senate floor vote pending but not imminent |
+| AVAX | $5.998 | $6.309 | **−4.9%** | Below open; Perplexity "9.38%" figure was stale |
+| ADA | $0.15968 | $0.16347 | **−2.32%** | Below open |
+| NEAR | $2.11920 | $2.23520 | **−5.19%** | Below open |
+| XLM | $0.21820 | $0.23396 | **−6.7%** | Was +6.1% earlier but reversed; declining from 24h high $0.25158; DTCC catalyst stale |
+| SYN | $0.12190 | $0.13710 | **−11.1%** | Post-delisting pump fading; below open |
+| UNI | $3.03450 | $3.20690 | **−5.4%** | Below open; $814M volume but price declining |
+
+**Assets above 24h open (Kraken):**
+
+| Asset | Ask | vs Open | Spread | Status |
+|---|---|---|---|---|
+| LIT | $0.13870 | +51.3% | **1.23%** | **HARD SKIP** — spread >1%; catalyst likely Lighter ticker confusion, not Litentry |
+| OBOL | $0.003990 | +8.1% | **2.78%** | **HARD SKIP** — spread >1% |
+
+**Macro / Sentiment:**
+- **Fear & Greed:** 14 (Extreme Fear) — 4th consecutive session at extreme fear
+- **BTC Funding Rate (Kraken):** +0.0148% per 8h (modestly positive, no extreme leverage)
+- **BTC Crash Gate:** NOT triggered (−0.51% vs −20% threshold)
+- **BTC Weekly Gate:** BTC $62,563 vs ~$64,377 (Jun 12–14 reference) = **~−2.82%** — approaching −3% threshold but NOT triggered. Watch: if BTC drops another ~$110, entries will require >5% 1h momentum AND fresh catalyst <3h.
+- **Token Unlock Headwind:** ZRO unlock $29.4M scheduled Jun 20 (tomorrow) — adds sell pressure to alt space
+- **Macro:** Hawkish Fed/higher-for-longer rates backdrop. No macro reversal catalyst in sight.
+
+### Perplexity Research Summary
+
+- **BTC:** $62,506–$63,048 across exchanges, ~−2% 24h. Consolidating near $62,000–$63,000 support zone.
+- **ETH:** $1,692–$1,694, −2.2% 24h. ETH "Glamsterdam" upgrade confirmed **delayed to Q3 2026 (late August)** — not an intraday catalyst today.
+- **Top 24h Gainers (CoinGecko):** CX +99.8%, SYN +91.6%, VELVET +49.3%, WOJAK +28%, ZEREBRO +26%, BP +25.7% — none confirmed on Kraken with acceptable spreads.
+- **Kraken-specific gainers (Perplexity):** LIT +47% (spread 1.23% → skip), OBOL (spread 2.78% → skip), XLM +6.1% (reversed to −6.7% current), AVAX +9.38% (stale; now −4.9%).
+- **Volume Surges:** SYN $85.83M (delisting pump, now fading), LAB $62.33M (not on Kraken), UNI $814.3M (+7.44% 24h volume surge, but UNI price −5.4% from open).
+- **LIT catalyst check:** Perplexity finds no confirmed Litentry-specific catalyst. The "Lighter using protocol fees to buy back LIT tokens" narrative is for a **different project** (Lighter, not Litentry). The LIT move on Kraken appears to be ticker-confusion-driven. Spread 1.23% makes it a hard skip regardless.
+- **SOL catalysts:** Securitize expanding tokenized AAA CLO fund to Solana + Ethena considering $250M allocation + Circle minting 1B USDC on Solana. Real ecosystem catalysts, but SOL −2% from open — need price to recover above $69.64 before entry.
+- **XRP / CLARITY Act:** Senate committee passed May 14; Senate floor vote not yet scheduled. Not an imminent binary event today.
+- **Token unlocks this week:** ZRO $29.4M (Jun 20), Humanity Protocol $72.4M (Jun 25), Sahara AI $35.5M (Jun 26) — significant headwinds for alts.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst <6h | Decision |
+|---|---|---|---|---|
+| LIT/USD | +51.3% | 1.23% ❌ | None confirmed (Lighter ≠ Litentry) | **HARD SKIP** — spread >1% + likely ticker confusion pump |
+| OBOL/USD | +8.1% | 2.78% ❌ | Unknown | **HARD SKIP** — spread >1% |
+| SOL/USD | −2.0% | 0.015% ✓ | Securitize CLO + Ethena + Circle (real, <24h) | **SKIP** — below open; need recovery above $69.64 |
+| XRP/USD | −1.75% | 0.019% ✓ | CLARITY Act vote pending but not imminent | **SKIP** — below open; vote not scheduled today |
+| ETH/USD | −0.88% | 0.012% ✓ | Glamsterdam delayed to Q3 — not today | **SKIP** — below open; no fresh catalyst |
+| XLM/USD | −6.7% | 0.001% ✓ | DTCC recycled Dec 2025 — stale | **SKIP** — below open; declining from high |
+| BTC/USD | −0.51% | ~0% ✓ | Hawkish Fed — bearish macro | **SKIP** — below open |
+| AVAX/USD | −4.9% | 0.017% ✓ | None fresh | **SKIP** — below open |
+| ADA/USD | −2.32% | 0.013% ✓ | None fresh | **SKIP** — below open |
+| NEAR/USD | −5.19% | 0.057% ✓ | None fresh | **SKIP** — below open |
+| SYN/USD | −11.1% | 0.41% ✓ | Bitget delisting pump fading | **SKIP** — below open; pump reversing |
+| UNI/USD | −5.4% | 0.076% ✓ | High volume but price declining | **SKIP** — below open |
+| LAB | N/A | N/A | Strategic partnership | **NOT ON KRAKEN** |
+
+### Trade Ideas / Decision
+
+**NO NEW ENTRIES — HOLD (cash $121.8486 ZUSD)**
+
+Gate analysis:
+1. **Momentum gate:** No Kraken-listed asset with spread ≤1% is above its 24h open by >3%.
+2. **Catalyst gate:** No confirmed fresh <6h catalyst for any above-open Kraken asset. LIT move is ticker-confusion; all other above-open names have excessive spreads.
+3. **Extreme Fear (x4):** F&G 14 — entering on negative-open assets in an extended fear market has negative expected value.
+4. **ZRO unlock tomorrow:** $29.4M unlock Jun 20 adds downward pressure to alt space today.
+5. **BTC weekly gate watch:** −2.82% from 5-day reference, approaching −3% trigger. If triggered, entries require 5%+ 1h momentum AND fresh catalyst <3h.
+
+**Crash gate:** NOT triggered (BTC −0.51% vs −20% threshold).
+
+### Watch List (Session Remainder)
+
+| Asset | Condition for Entry |
+|---|---|
+| SOL/USD | Recovery above 24h open $69.64 AND sustained above; Securitize/Ethena/Circle catalyst already confirmed |
+| XRP/USD | CLARITY Act Senate floor vote announced/scheduled TODAY → 7% trail binary play; need price above $1.14492 (open) |
+| BTC/USD | Recovery above $62,885 (24h open) AND macro catalyst reversal |
+| Any asset | Fresh listing, partnership, or upgrade announcement <6h old AND 1h momentum >3% AND spread ≤1% |
+
+### Risk Factors
+
+- BTC weekly gate tipping point: −$110 from current BTC would trigger; entries would then require >5% 1h surge AND fresh <3h catalyst
+- ZRO unlock $29.4M Jun 20 — largest near-term unlock headwind
+- Four straight days of Extreme Fear suggests no immediate catalyst reversal
+- LIT/OBOL: both appear to have real upside momentum but are untradeable due to spread; watch if spreads compress intraday
+
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
+**Portfolio:** $121.8486 ZUSD | No open positions
