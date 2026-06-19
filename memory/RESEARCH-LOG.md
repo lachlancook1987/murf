@@ -18615,3 +18615,69 @@ Gate analysis:
 
 **Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78
 **Portfolio:** $121.8486 ZUSD | No open positions
+
+---
+
+## 2026-06-19 — Midday Scan
+
+**Execution time:** 2026-06-19 midday
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired — historical orders only | None | N/A |
+
+### Market Context
+
+| Asset | Ask | 24h Open | vs Open | Notes |
+|---|---|---|---|---|
+| BTC | $62,361.20 | $62,885.70 | **−0.84%** | Below open; weekly gate triggered |
+| ETH | $1,687.93 | $1,709.03 | **−1.23%** | Below open; Glamsterdam delayed |
+| SOL | $68.27 | $69.64 | **−1.97%** | Below open; catalysts stale |
+| XRP | $1.12342 | $1.14492 | **−1.88%** | Below open; CLARITY vote not imminent |
+| NEAR | $2.10950 | $2.23520 | **−5.62%** | Below open |
+| ZEC | $449.10 | $455.40 | **−1.38%** | Below open; Binance US listing catalyst >6h old |
+| UNI | $3.05800 | $3.20690 | **−4.64%** | Below open; high volume but price declining |
+| SYN | $0.13230 | $0.13710 | **−3.50%** | Below open; delisting pump fading |
+
+### Gate Status
+
+| Gate | Status | Details |
+|---|---|---|
+| BTC Crash Gate | **NOT triggered** | BTC −0.84% vs −20% threshold |
+| BTC Weekly Gate | **⚠️ TRIGGERED** | BTC $62,361 vs ~$64,377 (5-day ref) = **−3.14%** (was −2.82% at pre-session; crossed −3% threshold during morning session) |
+| Fear & Greed | 14 — Extreme Fear | 5th+ consecutive session at extreme fear |
+
+**BTC Weekly Gate now active:** All new entries require >5% 1h momentum AND fresh catalyst <3h old. Pure momentum plays are banned until gate resets.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | 1h Momentum | Catalyst <3h | Decision |
+|---|---|---|---|---|---|
+| BTC | −0.84% | ~0% ✓ | Not +5% | None | **SKIP** — below open |
+| ETH | −1.23% | 0.006% ✓ | Not +5% | None | **SKIP** — below open |
+| SOL | −1.97% | 0.015% ✓ | Not +5% | None fresh | **SKIP** — below open |
+| XRP | −1.88% | 0.019% ✓ | Not +5% | Senate vote not imminent | **SKIP** — below open |
+| NEAR | −5.62% | 0.052% ✓ | Not +5% | None | **SKIP** — below open |
+| ZEC | −1.38% | ~0.007% ✓ | Not +5% | Binance US listing >24h old | **SKIP** — below open; no fresh catalyst |
+| UNI | −4.64% | 0.043% ✓ | Not +5% | None | **SKIP** — below open |
+| SYN | −3.50% | 0.53% ✓ | Not +5% | Delisting pump reversing | **SKIP** — below open; bearish catalyst |
+
+No Kraken-listed asset with spread ≤1% is above its 24h open today. Weekly gate requirement (>5% 1h + fresh <3h catalyst) is moot — nothing clears even the basic momentum threshold.
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash ($121.8486 ZUSD).**
+
+Gate analysis:
+1. **Momentum gate failed for all assets:** No Kraken-listed asset with spread ≤1% is above its 24h open by any meaningful amount. Zero candidates clear the basic >3% threshold; the weekly gate's >5% 1h requirement is academic today.
+2. **BTC Weekly Gate confirmed triggered:** At −3.14% below 5-day reference, any future entry this session requires >5% 1h surge AND fresh catalyst <3h. Pure momentum entries (no specific catalyst) are banned.
+3. **Fear & Greed 14 (Extreme Fear):** Five or more consecutive sessions. No contrarian entry eligible without a strong volume/catalyst breakout above the 24h open.
+4. **ZEC:** Real catalysts (Binance US listing, short squeeze) but listing occurred Jun 18 — now >24h old, not a fresh <3h catalyst. Price also below its 24h open. Skip.
+5. **ZRO unlock headwind:** $29.4M unlock scheduled Jun 20 — adds continued downward alt pressure.
+
+**Crash gate:** NOT triggered (BTC −0.84% vs −20% threshold).
+**Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
+**No notification sent (no actions taken).**
