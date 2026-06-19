@@ -18830,3 +18830,87 @@ No Kraken-listed asset with spread ≤1% clears the >3% above open momentum thre
 **Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
 **Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78.
 
+---
+
+## 2026-06-19 — Pre-Session Research (Session-Open)
+
+**Date:** 2026-06-19 | **Phase:** Day 30
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | None | N/A |
+
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78.
+
+### Gate Status
+
+| Gate | Status | Details |
+|---|---|---|
+| BTC Crash Gate | **NOT triggered** | BTC $62,971 vs open $62,885 = +0.14% (threshold −20%) |
+| BTC Weekly Gate | **NOT triggered** | BTC $62,971 vs Jun 14 close ~$64,377 = −2.18% (threshold −3%) |
+| Fear & Greed | **14 — Extreme Fear** | 5th+ consecutive session in extreme fear territory |
+
+### Market Context
+
+| Asset | Price | vs 24h Open | Spread | Notes |
+|---|---|---|---|---|
+| BTC/USD | $62,971 | +0.14% | ~0% ✓ | Consolidating; 24h range $62,236–$63,345 |
+| ETH/USD | $1,701.73 | −0.43% | 0.001% ✓ | Weak; below open |
+| SOL/USD | $68.92 | −1.03% | 0.014% ✓ | Below open; Securitize/Ethena catalysts stale |
+| XRP/USD | $1.13119 | −1.19% | 0.016% ✓ | CLARITY Act July 4 target; not imminent |
+| HYPE/USD | $70.59 | +3.43% | 0.014% ✓ | Post-ATH profit-taking; double-top risk |
+| RE/USD | $0.789 | +81.2% | 0.674% ✓ | Listing/marketing pump; −10% off $0.877 high |
+| XLM/USD | $0.21893 | −6.43% | 0.044% ✓ | Perplexity data stale; well below open |
+| ALGO/USD | $0.09481 | −1.64% | 0.084% ✓ | Stale data from Perplexity; below open |
+| ZEC/USD | $452.34 | −0.67% | 0.073% ✓ | Volume surge signal stale; below open |
+| NEAR/USD | $2.129 | −4.74% | 0.066% ✓ | Below open |
+| SUI/USD | $0.7095 | −2.65% | 0.014% ✓ | Below open |
+
+**Perplexity Research Summary:**
+- **BTC:** $63,037 / +0.73% 24h. Consolidating around $62,885–$63,345 range.
+- **ETH:** $1,703–$1,707 / −1.7% to −4.8% 24h across sources.
+- **Top 24h gainers (CoinGecko):** CX +99.8%, SYN +91.6%, VELVET +49.3%, KINS +36%, WOJAK +28%, LAB +26%, ZEREBRO +26%, BP +25.7%, XEF +24.5%, GUA +22.6% — none confirmed on Kraken with viable spreads.
+- **Fear & Greed:** 14 (Extreme Fear) — unchanged.
+- **BTC funding rate:** Binance +0.0028% / BitMEX −0.0063%; weighted avg ~+0.01% / 8h. Slightly positive — neutral signal.
+- **Key market catalysts:** Hawkish Fed (fewer rate cuts signaled), BTC/ETH under pressure, JPMorgan mining cost concern, SYN technical repricing, SIREN BNB AI narrative (social-driven, no hard catalyst).
+- **Token unlocks this week:** ZRO $29.4M (Jun 20 — tomorrow), H $72.4M (Jun 25), SAHARA $35.5M (Jun 26). ZRO unlock tomorrow is a near-term headwind for that asset; no Kraken positions affected.
+- **Kraken top movers (Perplexity, partially stale):** RE +56.41%, ZEREBRO listed, XLM +11.83% (stale — confirmed −6.43% live), ALGO +7.16% (stale — confirmed −1.64% live). Live Kraken quotes override Perplexity data.
+- **Volume surges:** ZEC had 60-min volume spike (confirmed via Perplexity) but live quote shows it −0.67% below open. ETH/BTC 24h volume up ~53% — broad market activity increase but not a directional signal.
+- **Best day-trade setups (generic):** Perplexity suggested BTC, ETH, SOL, XRP — none meeting >3% from open threshold.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Gate | Decision |
+|---|---|---|---|---|
+| RE/USD | +81.2% | 0.674% ✓ | Momentum peak rule: price −10% off $0.877 high; VWAP $0.602 suggests peak set hours ago; no fundamental catalyst (listing/marketing pump); timing of 24h high unknown | **SKIP** — momentum peak rule applies; unclear catalyst |
+| HYPE/USD | +3.43% | 0.014% ✓ | High-ATR asset → 3.5% trail required → R:R at T1 = 3%/3.5% = 0.857:1 < 1.2:1 threshold; Perplexity reports bearish outlook (double-top risk, profit-taking post-ATH) | **SKIP** — R:R < 1.2:1 with required 3.5% trail; bearish news |
+| BTC/USD | +0.14% | ~0% ✓ | Below 3% momentum threshold | **SKIP** |
+| All others | Below open | — | — | **SKIP** — below 24h open |
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash ($121.8486 ZUSD).**
+
+Only two Kraken assets cleared the spread filter with positive momentum: RE (+81.2%) and HYPE (+3.43%). Both fail entry criteria:
+
+- **RE/USD**: The +81% move is real and confirmed live. However: (1) no fundamental catalyst identified — Perplexity describes a listing/marketing pump; (2) price is −10% below the 24h high of $0.877, and VWAP of $0.602 suggests the main spike occurred earlier in the session — momentum peak rule applies; (3) entering a speculative micro-cap pump at −10% off its high, with the repricing already widely distributed, has negative expected value.
+- **HYPE/USD**: +3.43% from open just clears the momentum threshold, but HYPE is a named high-ATR asset requiring 3.5% trailing stop. At 3.5% trail, R:R at T1 (+3%) = 0.857:1, which fails the 1.2:1 minimum. Perplexity also reports a bearish double-top setup with downside targets at $62–$65.
+
+**Crash gate:** NOT triggered. **Weekly gate:** NOT triggered.
+
+### Watch List
+
+| Asset | Condition for Entry |
+|---|---|
+| RE/USD | Clean breakout above $0.877 (24h high) on confirmed fundamental catalyst <2h old AND spread still ≤1% |
+| HYPE/USD | Pullback to $68.25 (today's open), then bounce with volume confirmation and catalyst; OR a fresh catalyst that supports T2 (+5%) target improving R:R beyond 1.2:1 |
+| BTC/USD | Sustained break and hold above $63,345 (24h high) with continuation toward +3% from open ($64,772) |
+| XRP/USD | Any CLARITY Act vote confirmation or signing news → binary event at 7% trail |
+| ZRO/USD | Post-unlock dip on Jun 20 if price overshoots to downside with a bounce catalyst |
+
+**Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
+**Notification:** Sending pre-session summary via WhatsApp.
+
