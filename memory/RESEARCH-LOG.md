@@ -18681,3 +18681,81 @@ Gate analysis:
 **Crash gate:** NOT triggered (BTC −0.84% vs −20% threshold).
 **Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
 **No notification sent (no actions taken).**
+
+---
+
+## 2026-06-19 — Midday Scan (Second Pass)
+
+**Execution time:** 2026-06-19 midday (second scan)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | None | N/A |
+
+### Live Market Snapshot (Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | Notes |
+|---|---|---|---|---|---|
+| BTC | $63,138.70 | $62,885.70 | **+0.40%** | $64,115.70 | Above open; recovering from $62,361 lows |
+| ETH | $1,701.79 | $1,709.03 | **−0.42%** | $1,742.64 | Below open |
+| SOL | $69.23 | $69.64 | **−0.59%** | $71.61 | Near today's high $69.99; below open |
+| ZEC | $454.12 | $455.40 | **−0.28%** | $475.65 | Recovering; nearly at open |
+| XRP | $1.13791 | $1.14492 | **−0.61%** | $1.16849 | Below open |
+| SUI | $0.71530 | $0.72880 | **−1.85%** | $0.74410 | Below open |
+| ONDO | $0.35646 | $0.36566 | **−2.52%** | $0.37769 | Below open |
+| NEAR | $2.163 | $2.235 | **−3.23%** | $2.290 | Below open |
+| HYPE | $68.55 | $68.25 | **+0.44%** | $70.83 | Above open; well below 3% |
+| XLM | $0.22134 | $0.23396 | **−5.40%** | $0.25158 | Well below open |
+
+### Gate Status
+
+| Gate | Status | Details |
+|---|---|---|
+| BTC Crash Gate | **NOT triggered** | BTC +0.40% vs 24h open (−20% threshold) |
+| BTC Weekly Gate | **NOT triggered** | BTC $63,138 vs ~$64,377 (5-day ref) = **−1.92%** — UN-triggered vs prior scan (was −3.14% when BTC at $62,361) |
+| Fear & Greed | ~14 — Extreme Fear | Consistent with prior scan |
+
+**Key change:** BTC weekly gate has UN-triggered since the earlier midday scan. BTC recovered from $62,361 to $63,138 (+1.25% intraday recovery), pulling the 5-day comparison back inside the −3% threshold.
+
+### News / Catalyst Check
+
+- **BTC macro:** ETF outflows for ~2 consecutive weeks. BTC selling linked to AI IPO subscriptions (investors liquidating BTC to fund Anthropic, xAI, OpenAI IPOs). Hawkish Fed/high-for-longer rates backdrop.
+- **CLARITY Act:** Senate vote pending but not imminent (no scheduled floor date today).
+- **ZRO unlock:** $29.4M tomorrow (Jun 20) — ongoing alt headwind.
+- **No fresh <6h catalysts** identified for any Kraken-listed asset with spread ≤1%.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | 1h Momentum | Catalyst <6h | Decision |
+|---|---|---|---|---|---|
+| BTC | +0.40% | ~0% ✓ | Not +3% | None fresh | **SKIP** — below 3% threshold |
+| HYPE | +0.44% | 0.03% ✓ | Not +3% | None fresh | **SKIP** — below 3% threshold |
+| ZEC | −0.28% | 0.04% ✓ | Not +3% | Binance US listing >24h old | **SKIP** — below open |
+| SOL | −0.59% | 0.014% ✓ | Not +3% | Securitize CLO / Ethena / Circle (>6h old) | **SKIP** — below open |
+| XRP | −0.61% | 0.019% ✓ | Not +3% | CLARITY vote not imminent | **SKIP** — below open |
+| ETH | −0.42% | 0.012% ✓ | Not +3% | None fresh | **SKIP** — below open |
+| All others | Below open | — | — | None | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash ($121.8486 ZUSD).**
+
+No Kraken-listed asset with spread ≤1% clears the >3% above open momentum threshold. The only assets above their 24h opens are BTC (+0.40%) and HYPE (+0.44%), both well below the entry bar. BTC has recovered from its session lows, which un-triggered the weekly gate, but the broader alt market remains flat to down. No fresh catalyst <6h on any candidate.
+
+**Crash gate:** NOT triggered.
+**BTC Weekly Gate:** NOT triggered (recovered to −1.92% vs −3% threshold).
+**Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
+**No notification sent (no actions taken).**
+
+### Watch List (Remainder of Session)
+
+| Asset | Condition for Entry |
+|---|---|
+| BTC/USD | Break and hold above 24h open $62,885 with continuation to +3% ($64,772) |
+| SOL/USD | Recovery above open $69.64 AND push toward $71+ with Securitize/Ethena momentum |
+| ZEC/USD | Recovery above open $455.40 AND fresh catalyst <6h beyond the now-stale Binance US listing |
+| Any asset | Fresh listing, partnership, or upgrade announcement <6h old AND 1h momentum >3% AND spread ≤1% |
+
