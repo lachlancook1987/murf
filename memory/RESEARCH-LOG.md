@@ -18998,3 +18998,66 @@ BTC is near its 24h high ($63,103 vs $63,345 high) in a slight consolidation, bu
 | HYPE/USD | Requires specific fresh catalyst enabling T2 (+5%) to improve R:R above 1.2:1 at 3.5% trail; OR pullback to $68.25 open then bounce |
 | BTC/USD | Hold above $63,345 (24h high) with continuation to $64,772 (+3% from open) |
 | XRP/USD | CLARITY Act vote/signing confirmation — binary event at 7% trail |
+
+---
+
+## 2026-06-19 — Midday Scan
+
+**Execution time:** 2026-06-19 midday UTC
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | Historical only | — |
+
+### Market Context (Midday)
+
+| Asset | Ask | 24h Open | vs Open | Notes |
+|---|---|---|---|---|
+| BTC | $63,016.60 | $62,885.70 | **+0.21%** | Recovered slightly from pre-session −0.51%; below 3% threshold |
+| ETH | $1,700.17 | $1,709.03 | **−0.52%** | Below open; Glamsterdam delayed to Q3 — no intraday catalyst |
+| SOL | $68.97 | $69.64 | **−0.96%** | Below open; Securitize/Ethena catalysts present but price not confirming |
+| ZEC | $451.85 | $455.40 | **−0.78%** | Volume surge reported but price below open — skip |
+| ASTER | $0.62726 | $0.63677 | **−1.49%** | Token buyback narrative — price declining; below open |
+| KMNO | $0.01903 | $0.01745 | **+9.06%** | Upbit listing at 07:00 UTC (5h ago); 24h high $0.020330 already set; price declining from peak → fails momentum peak check |
+
+**Sentiment:** Fear & Greed unchanged at ~14 (Extreme Fear, Day 4+).
+**BTC Crash Gate:** NOT triggered (BTC +0.21% vs −20% threshold).
+**BTC Weekly Gate:** NOT triggered (~−2.82% from 5-day reference; threshold −3%).
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Catalyst | Momentum Peak Check | Decision |
+|---|---|---|---|---|---|
+| KMNO/USD | +9.06% ✓ | 0.1% ✓ | Upbit listing (07:00 UTC, 5h ago) | **FAIL** — 24h high $0.020330 set >60min ago; current $0.01903 declining from peak; no fresh 1h breakout above high; no new catalyst <2h | **SKIP** |
+| BTC/USD | +0.21% | ~0% | None fresh | — | **SKIP** — below 3% momentum threshold |
+| ETH/USD | −0.52% | 0.012% | Glamsterdam delayed (not intraday catalyst) | — | **SKIP** — below open |
+| SOL/USD | −0.96% | 0.015% | Securitize/Ethena/Circle (real but >6h) | — | **SKIP** — below open |
+| ZEC/USD | −0.78% | 0.002% | Volume surge (already faded) | — | **SKIP** — below open |
+| ASTER/USD | −1.49% | 0.065% | Token buyback (stale) | — | **SKIP** — below open |
+| BICO | N/A | N/A | No specific catalyst (altcoin rotation only) | — | **SKIP** — no valid catalyst |
+| SIREN | N/A | N/A | BNB Chain / Binance Alpha listing — NOT on Kraken | — | **NOT ON KRAKEN** |
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.8486 ZUSD**
+
+Gate analysis:
+1. **Momentum gate:** Only KMNO above open by >3% with acceptable spread.
+2. **Momentum peak check (new rule, Jun 19):** KMNO fails — Upbit listing repricing event occurred at 07:00 UTC (~5h ago). Price ran to $0.020330 (24h high) and has since declined to $0.01903 (−6.3% from peak). No fresh breakout above the 24h high and no new distinct catalyst within the past 2h. Entering here would be buying into a fading post-listing move.
+3. **BTC/ETH/SOL:** All near or below 24h open; no momentum meets 3% gate.
+4. **Extreme Fear (x4+):** F&G ~14 — persistent fear environment depressing alt follow-through.
+5. **ZRO unlock tomorrow $29.4M:** Ongoing headwind for alt space.
+
+**No positions opened. No stops to manage. No notification sent.**
+
+### Watch List (Midday)
+
+| Asset | Condition for Entry |
+|---|---|
+| KMNO/USD | Fresh 1h candle breakout ABOVE $0.020330 (prior 24h high) with volume surge; OR new distinct catalyst event <2h old; spread 0.1% ✓ |
+| SOL/USD | Recovery AND sustained hold above $69.64 (24h open); Securitize/Ethena catalysts already on file |
+| BTC/USD | +3% above open → $64,772; strong volume confirmation |
+| XRP/USD | CLARITY Act Senate floor vote announced/scheduled today → 7% trail binary play |
