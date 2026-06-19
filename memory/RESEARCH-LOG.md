@@ -18914,3 +18914,87 @@ Only two Kraken assets cleared the spread filter with positive momentum: RE (+81
 **Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
 **Notification:** Sending pre-session summary via WhatsApp.
 
+
+---
+
+## 2026-06-19 — Evening Session-Open Scan (21:04 UTC)
+
+**Execution time:** 2026-06-19 21:04 UTC | **Phase:** Day 30 (3rd scan of day)
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | None | N/A |
+
+### Gate Status
+
+| Gate | Status | Details |
+|---|---|---|
+| BTC Crash Gate | **NOT triggered** | BTC $63,103 vs 24h open $62,885 = +0.35% (threshold −20%) |
+| BTC Weekly Gate | **NOT triggered** | BTC ~$63,103 vs Jun 14 close ~$64,377 = −1.99% (threshold −3%) |
+| Fear & Greed | **14 — Extreme Fear** | 5th+ consecutive session |
+
+### Live Market Snapshot (Kraken quotes, 21:04 UTC)
+
+| Asset | Ask | 24h Open | vs Open | Spread | Notes |
+|---|---|---|---|---|---|
+| BTC/USD | $63,103.60 | $62,885.70 | **+0.35%** | ~0% ✓ | Near 24h high $63,345; slight bullish consolidation |
+| ETH/USD | $1,704.33 | $1,709.03 | **−0.28%** | 0.001% ✓ | Below open; −2% to −5% per external sources |
+| SOL/USD | $69.05 | $69.64 | **−0.85%** | 0.014% ✓ | Below open |
+| XRP/USD | $1.13260 | $1.14492 | **−1.08%** | 0.011% ✓ | Below open; CLARITY Act July 4 (not imminent) |
+| HYPE/USD | $70.09 | $68.25 | **+2.70%** | 0.014% ✓ | High-ATR; R:R fails with required 3.5% trail |
+| RENDER/USD | $1.7240 | $1.6760 | **+2.87%** | 0.058% ✓ | Just below 3% threshold; no fresh catalyst |
+| QNT/USD | $71.19 | $70.00 | **+1.70%** | 0.098% ✓ | Below 3%; Perplexity data was stale |
+| POL/USD | $0.07927 | $0.07781 | **+1.88%** | 0.101% ✓ | Below 3%; Perplexity data was stale |
+| VET/USD | $0.004881 | $0.004829 | **+1.08%** | 0.123% ✓ | Below 3% |
+| ZEREBRO/USD | $0.04307 | $0.04297 | **+0.23%** | 0.256% ✓ | Spike passed; well below 24h high $0.04904 |
+| XLM/USD | $0.21789 | $0.23396 | **−6.87%** | 0.009% ✓ | Collapsed from morning session high |
+| BICO/USD | $0.03478 | $0.01957 | **+77.7%** | **1.16% ❌** | Spread >1% — hard skip |
+
+### Perplexity Research Summary
+
+- **BTC:** ~$62,900–$63,100; slightly positive on Kraken (24h open basis). Hawkish Fed, ETF outflows, JPMorgan mining cost concern — macro headwinds unchanged.
+- **Top 24h gainers (CoinGecko):** SIREN +144%, BICO +82.6%, ASTEROID +74%, BTW +56.5% — none on Kraken with spread ≤1%.
+- **Catalysts today:** SIREN (social/BNB AI narrative), ASTEROID (WEEX airdrop). No fresh Kraken-listed catalyst <6h.
+- **Volume surges:** SYN, BTW, ASTEROID, SIREN — none Kraken-listed at viable spreads.
+- **Token unlocks:** ZRO $23M on Jun 20 (tomorrow) — near-term alt headwind continues.
+- **RENDER:** No fresh catalyst <6h; only old "AI compute / decentralized GPU" narrative. Multiple sources show RENDER down −2.5% to −5.5% 24h (different reference windows vs Kraken 24h open).
+- **BTC funding rate:** Binance +0.0028%, BitMEX −0.0063% — neutral.
+- **Fear & Greed:** 14 (Extreme Fear) — unchanged from all prior scans today.
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Gate | Decision |
+|---|---|---|---|---|
+| BICO | +77.7% | **1.16% ❌** | Spread >1% | **HARD SKIP** |
+| RENDER | +2.87% | 0.058% ✓ | Below +3% threshold; no fresh catalyst <6h; multiple sources show negative 24h; 24h high $1.760 set earlier (declining from peak) | **SKIP** — threshold not met + stale catalyst |
+| HYPE | +2.70% | 0.014% ✓ | High-ATR: 3.5% trail required → R:R = 3%/3.5% = 0.857:1 < 1.2:1 | **SKIP** — R:R fails + below 3% threshold |
+| QNT | +1.70% | 0.098% ✓ | Below 3% threshold | **SKIP** |
+| POL | +1.88% | 0.101% ✓ | Below 3% threshold | **SKIP** |
+| VET | +1.08% | 0.123% ✓ | Below 3% threshold | **SKIP** |
+| ZEREBRO | +0.23% | 0.256% ✓ | Spike passed; below 24h high by >10% | **SKIP** |
+| All others | Below open | — | — | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash ($121.8486 ZUSD).**
+
+Third scan of the day (after pre-session open and late-session check) yields the same result: no Kraken-listed asset with spread ≤1% clears the >3% from open momentum threshold with a fresh catalyst <6h. The two closest candidates are RENDER (+2.87%, $0.023 away from the 3% trigger) and HYPE (+2.70%), both below threshold and lacking the required catalysts. BICO's +77.7% pump is excluded on spread alone (1.16% > 1% hard limit).
+
+BTC is near its 24h high ($63,103 vs $63,345 high) in a slight consolidation, but no alt momentum has followed. ZRO unlock tomorrow ($23M) remains a near-term headwind. F&G 14 unchanged.
+
+**Crash gate:** NOT triggered.
+**BTC Weekly Gate:** NOT triggered.
+**Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
+**No notification sent (no trades placed). No commit needed.**
+
+### Watch List (End of Day)
+
+| Asset | Condition for Entry |
+|---|---|
+| RENDER/USD | Confirmed break above $1.7263 (+3% from open $1.6760) with volume surge AND fresh catalyst <6h |
+| HYPE/USD | Requires specific fresh catalyst enabling T2 (+5%) to improve R:R above 1.2:1 at 3.5% trail; OR pullback to $68.25 open then bounce |
+| BTC/USD | Hold above $63,345 (24h high) with continuation to $64,772 (+3% from open) |
+| XRP/USD | CLARITY Act vote/signing confirmation — binary event at 7% trail |
