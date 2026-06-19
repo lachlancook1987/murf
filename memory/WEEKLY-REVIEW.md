@@ -583,3 +583,87 @@ After **2 stop-outs on the same asset within a 7-day rolling window**, require a
 **Stopping out of a failing thesis once is risk management. Re-entering the same thesis three times in three days is thesis addiction.** NEAR and KAS together cost ~$17 (80% of all losses this week) across 5 entries — all mechanically clean, all on real catalysts, all stopped by correct trailing stops. The issue was never the stop system; it was re-entry discipline. The single winning trade was an ONDO re-entry at a lower price after a stop-out — not at a higher price. Going forward: 2 stop-outs on the same asset within 7 days = 48h mandatory cooling + new catalyst required. The BTC weekly gate is now INACTIVE (+1.48% rolling 5-day), opening the full opportunity set for next week. Starting equity $129.14 — still above cash floor, fully liquid, no open exposure.
 
 ---
+
+## Week of 2026-06-13 — Review Date: 2026-06-19
+
+### Context
+Mixed week. BTC fell -1.24% ($63,384 → $62,600). BTC weekly gate inactive all week — momentum entries permitted. Extreme Fear (F&G 15–23) dominated the macro backdrop throughout. 9 trades across 8 assets. No Alpaca exposure (fully closed May 22). All Kraken spot — no leverage.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $121.85 | $121.85 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (May 22) |
+| **Total** | **$121.85** | $121.85 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jun 12 EOD) | $129.14 |
+| Ending Equity (Fri Jun 19) | **$121.85** |
+| **Week Return** | **−5.64%** (−$7.29) |
+| BTC Week Return | **−1.24%** ($63,384 → $62,600) |
+| **Bot vs BTC** | **−4.40%** |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jun 13→14 | NEAR/USD | $2.131 (40u) | ~$2.097 (trail 3.5%) | **~−$2.53** | LOSS |
+| 2 | Jun 14→15 | TAO/USD | $264.17 (0.2396u) | ~$268.00 (trail 2.5%) | **~+$0.33** | WIN |
+| 3 | Jun 15 | WLD/USD (1st) | $0.5892 (68.14u) | ~$0.6125 (trail 2.5%) | **~+$1.44** | WIN |
+| 4 | Jun 15 | HYPE/USD | $66.58 (0.4547u) | ~$67.41 (trail 0.5% post-T1) | **~+$0.22** | WIN |
+| 5 | Jun 15→16 | XRP/USD | $1.2276 (40.65u) | ~$1.2143 (trail 3.5% post-T2) | **~−$0.80** | LOSS |
+| 6 | Jun 16 | WLD/USD (2nd) | $0.6750 (89.85u) | ~$0.6508 (trail 2.5%) | **~−$2.16** | LOSS |
+| 7 | Jun 16→17 | SOL/USD | $74.66 (0.85u) | ~$73.39 (trail 2.5%, gap fill) | **~−$1.08** | LOSS |
+| 8 | Jun 17 | UNI/USD | $3.617 (17u) | ~$3.538 (trail 2.5%) | **~−$1.50** | LOSS |
+| 9 | Jun 18 | XLM/USD | $0.24128 (384u) | ~$0.23936 (trail 2.5%) | **~−$0.74** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 9 |
+| Wins | 3 (TAO, WLD-1, HYPE) |
+| Losses | 6 (NEAR, XRP, WLD-2, SOL, UNI, XLM) |
+| Win Rate | **33.3%** |
+| Gross Wins | **$1.99** |
+| Gross Losses | **$8.81** |
+| Profit Factor | **0.23** |
+| Avg Win | $0.66 |
+| Avg Loss | $1.47 |
+| Largest Win | WLD-1 trailing stop **+$1.44 (+4.1%)** |
+| Largest Loss | NEAR trailing stop **−$2.53** |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$3.04** (18 fills × avg ~$65 notional × 0.26%) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $121.85. No open orders on Kraken or Alpaca.
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Catalyst breakout (TAO, +1.39%):** Jensen Huang / NVIDIA GTC keynote directly catalysed Bittensor as the leading decentralised AI compute network. TAO broke a 7-month downtrend on institutional volume. Trailing stop managed exit cleanly — early entry relative to the repricing event.
+- **Institutional catalyst momentum (WLD-1, +4.1%):** Eightco 8.4% WLD stake (Jun 15) + OpenAI IPO proxy narrative. T1 not confirmed hit but trailing stop exited at +4.1% — best capture of the week. Clean entry timing vs the repricing event.
+- **T1 tightening (HYPE, +1.25%):** T1 hit; stop tightened to 0.5% per strategy rules; exited at +1.25%. Small gain but correct workflow executed.
+
+**Entry types that failed:**
+
+- **Late momentum entry after 24h high already set (UNI, −2.43%):** The 24h high of $3.7262 was reached BEFORE the bot's market order at $3.617. Price was already declining from the peak when the position was taken. The UNIfication catalyst (100M burn + fee-switch) was real; the error was entering into a fading repricing rather than a fresh breakout. "Buy the rumour, sell the news" dynamic — the news had already been absorbed by the market.
+- **Same-asset second entry at higher price (WLD-2, −3.56%):** Re-entered WLD on Jun 16 ($0.6750) above the prior Jun 15 exit ($0.6125) on a refreshed Eightco catalyst. Price rejected from $0.6734 session high and stop swept. First entry captured the move; second entry chased into fading price action at a structurally higher level.
+- **NEAR same-thesis repeat (−$2.53):** 3rd NEAR position since Jun 6 (Jun 8 was the 2nd stop-out, triggering the 48h cooling; Jun 13 opened post-cooling with a distinct Grayscale ETF catalyst). Dynamic Resharding upgrade thesis intact but price action consistently rejecting higher levels. Stop-out on Jun 14 triggered the same-thesis cap (2nd stop-out within 7d) — correctly blocked until Jun 16.
+- **XRP binary catalyst overnight (−0.80%):** T2 hit (+5%); stop correctly tightened from 7% to 3.5%. Price faded overnight and 3.5% trail was swept at −1.08% from entry. A trade that reached T2 ending as a small net loss due to stop tightening sweep — mechanics were correct, overnight fade was unavoidable.
+- **SOL overnight gap fill (−1.70%):** SEC multi-asset ETF + Solana CLO fund — solid catalysts. HWM $76.02 ratcheted trail well above entry, but price gapped sharply to $72.27 intraday low; fill was $0.73 below the $74.12 trigger. Gap risk on overnight holds not avoidable with trailing stops, but the gap magnitude exceeded the trail buffer.
+- **XLM Extreme Fear market (−0.80%):** Spiko $1B + Zebec payroll + VersaBank — multiple real catalysts. F&G 15 (Extreme Fear) meant every rally was met with immediate selling. Minimal HWM advance before reversal.
+
+**Stop quality:**
+All trailing stops placed immediately after every fill. All stops executed at expected levels. SOL gap fill ($0.73 below trigger) is unavoidable market structure — not a mechanics failure. XRP tightening to 3.5% post-T2 was correct per strategy. No orphaned positions at any point. Stop system mechanically sound throughout.
+
+**Profile violations:**
+None. All spreads ≤1% at entry. No leverage. BTC crash gate not triggered all week. BTC weekly gate inactive. R:R ≥1.2:1 confirmed at all entries. NEAR same-thesis cap applied correctly post-Jun 14 stop-out.
+
+**Concrete adjustment — momentum peak check (added 2026-06-19):**
+Before any momentum entry, confirm that the 24h high was set within the last **60 minutes**. If the 24h high is >60 min old and price is declining from it, classify as **fading momentum** — skip unless (a) there is a fresh 1h candle breakout above the prior 24h high, OR (b) a new distinct catalyst event within the last 2h. This directly prevents "buy the rumour, sell the news" entries (UNI) where the repricing is already complete before the position is opened.
+
+### Key Lesson
+**Five of six losing trades this week had valid catalysts and textbook stop mechanics. The failures were timing, not thesis.** UNI (the clearest example) had a real structural catalyst but entered after the 24h high had already been set — the repricing event had occurred before the bot's order. WLD-2 repeated a similar pattern: the first entry captured the catalyst move, the second entered at a higher price on a stale version of the same catalyst. TAO, WLD-1, and HYPE all worked because they entered early in the repricing window. Going forward: verify the 24h high was recent (≤60 min ago) before entering any momentum trade. If price is already declining from the high, wait for a fresh breakout or a new catalyst event.
+
+---

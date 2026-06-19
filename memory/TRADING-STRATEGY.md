@@ -49,6 +49,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - Spread check mandatory before every order: `bash scripts/kraken.sh quote SYM/USD`
 - **Target: 3–5% gain from entry.** Define T1 (3%) and T2 (5%) before entering
 - Skip any setup where the projected gain to T1 is less than 2× the 2.5% stop risk (R:R < 1.2:1)
+- **Momentum peak check (added 2026-06-19):** Before entry, confirm the 24h high was set within the last **60 minutes**. If the 24h high is >60 min old and current price is declining from it, the repricing event has already occurred — skip unless (a) there is a fresh 1h candle breakout above the prior 24h high, or (b) a new distinct catalyst event <2h old. Prevents "buy the rumour, sell the news" entries where momentum is fading rather than accelerating.
 
 ---
 
@@ -183,4 +184,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-06-12 (added same-thesis entry cap: 2 stop-outs on same asset in 7 days → 48h cooling + new catalyst required)*
+*Last updated: 2026-06-19 (added momentum peak check: 24h high must be ≤60 min old at entry, or require fresh 1h breakout/new catalyst <2h)*
