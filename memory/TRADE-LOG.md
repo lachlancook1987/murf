@@ -5923,3 +5923,15 @@ FOMC decision pending today — additional macro event risk.
 **Phase P&L:** ~−$57.94 est. (−32.23%) from Kraken starting equity $179.78.
 
 **No notification sent (no actions taken; no crash gate triggered; all positions flat/cash).**
+
+---
+
+## 2026-06-19 — EOD Snapshot (Day 30, Friday)
+
+### Jun 19 — EOD Snapshot (Day 30, Friday)
+**Portfolio:** $121.85 | **Cash:** $121.85 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$57.93 (−32.23%) | **vs BTC:** +2.94% (BTC −2.94%, Jun 18 close ~$64,519 → $62,620)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | No open positions | — |
+**Trades today:** none | **Total since migration:** ~78
+**Notes:** Fully in cash all day. No trades placed. BTC sold off sharply, dropping approximately −2.94% from yesterday's close of ~$64,519 to $62,620 (24h range $62,188–$64,510). Bot held cash (0.00%), outperforming BTC by +2.94% simply by being flat. Phase P&L −32.23% from Kraken starting equity $179.78. Alpaca: stop a2b44cf9 confirmed canceled (status=canceled, 2026-05-22; Alpaca BTC position fully closed). No actionable intraday setups identified — BTC pullback dominated market, no candidate met momentum >3% + fresh catalyst <6h + R:R ≥1.2:1. Crash gate NOT triggered (BTC −0.42% from 24h rolling open $62,886; EOD-vs-EOD decline is a multi-day move, not a 24h −20% crash). Total ~78 trades includes XLM buy+stop-out on Jun 18 (not captured in Jun 18 EOD snapshot which was written before those trades).
