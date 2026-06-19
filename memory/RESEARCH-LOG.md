@@ -18759,3 +18759,74 @@ No Kraken-listed asset with spread ≤1% clears the >3% above open momentum thre
 | ZEC/USD | Recovery above open $455.40 AND fresh catalyst <6h beyond the now-stale Binance US listing |
 | Any asset | Fresh listing, partnership, or upgrade announcement <6h old AND 1h momentum >3% AND spread ≤1% |
 
+
+---
+
+## 2026-06-19 — Session-Open Check (Late Session)
+
+**Execution time:** 2026-06-19 late session
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | None (historical only) | N/A |
+
+### Live Market Snapshot (Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | Spread | Notes |
+|---|---|---|---|---|---|
+| BTC | $63,083.80 | $62,885.70 | **+0.31%** | ~0% ✓ | Recovered from $62,236 session lows |
+| SOL | $69.12 | $69.64 | **−0.75%** | 0.03% ✓ | Securitize/Ethena/Circle catalysts; below open |
+| XRP | $1.13489 | $1.14492 | **−0.88%** | 0.001% ✓ | CLARITY Act July 4 target; not imminent today |
+| ZEC | $454.45 | $455.40 | **−0.21%** | 0.06% ✓ | Binance US listing >24h old; stale catalyst |
+| ALGO | $0.09404 | $0.09639 | **−2.44%** | 0.13% ✓ | Perplexity +9.37% data was stale |
+| ENA | $0.08930 | $0.09560 | **−6.59%** | 0.11% ✓ | Perplexity +4.65% data was stale |
+| KAS | $0.03005 | $0.03042 | **−1.22%** | 0.03% ✓ | Perplexity +3.12% data was stale |
+| OMNI | $0.706 | N/A | N/A | **61%** ❌ | Dead market — skip; Perplexity +174% was meaningless |
+
+### Gate Status
+
+| Gate | Status | Details |
+|---|---|---|
+| BTC Crash Gate | **NOT triggered** | BTC +0.31% vs 24h open (−20% threshold) |
+| BTC Weekly Gate | **NOT triggered** | BTC $63,083 vs ~$64,377 (5-day ref) = **−1.99%** (threshold −3%) |
+| Fear & Greed | 14 — Extreme Fear | Unchanged; 5th+ consecutive session |
+
+### Perplexity Research Summary
+
+- **BTC:** $63,048 / -1.96% 24h (CoinGecko); Kraken shows +0.31% vs 24h open
+- **Top 24h gainers:** CX +99.8%, SYN +91.6%, VELVET +49.3%, WOJAK +28%, LAB +26%, ZEREBRO +26% — none on Kraken with acceptable spreads
+- **Catalysts today:** US-Iran peace deal postponed → risk-off reversal; hawkish Fed; ETF outflows ($5.72B cumulative since May); CLARITY Act July 4 signing target (not imminent today); ZRO $29.4M unlock tomorrow (Jun 20)
+- **"Kraken gainers" (Perplexity):** OMNI, MAT, DOLO, ALGO, ENA, KAS — all confirmed stale/below-open via live Kraken quotes
+- **Volume surges:** SIREN, ASTEROID, SYN — none on Kraken with viable spreads
+- **Token unlocks this week:** ZRO $29.4M (Jun 20 tomorrow), ARB $8M — near-term headwinds
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst <6h | Decision |
+|---|---|---|---|---|
+| OMNI | N/A | **61%** ❌ | None | **HARD SKIP** — spread >1% |
+| ALGO | −2.44% | 0.13% ✓ | AI/DePIN narrative (stale) | **SKIP** — below open |
+| ENA | −6.59% | 0.11% ✓ | USDe vault (stale) | **SKIP** — below open |
+| KAS | −1.22% | 0.03% ✓ | None fresh | **SKIP** — below open |
+| SOL | −0.75% | 0.03% ✓ | Securitize/Ethena/Circle (>6h old) | **SKIP** — below open |
+| XRP | −0.88% | 0.001% ✓ | CLARITY Act (July 4; not today) | **SKIP** — below open |
+| ZEC | −0.21% | 0.06% ✓ | Binance US listing (>24h stale) | **SKIP** — below open |
+| BTC | +0.31% | ~0% ✓ | None fresh | **SKIP** — below 3% threshold |
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash ($121.8486 ZUSD).**
+
+- No Kraken-listed asset with spread ≤1% is above its 24h open by ≥3%
+- Perplexity's 24h gainer data was stale for all named candidates — none confirmed above open via live quotes
+- F&G 14 (Extreme Fear) unchanged; ZRO unlock tomorrow adds near-term alt headwind
+- US-Iran peace deal postponement = risk-off reversal, weighing on risk assets
+
+**No trades placed. No notification sent. No commit needed.**
+
+**Portfolio:** $121.8486 ZUSD | No open positions | No actions taken.
+**Phase P&L:** ~−$57.94 (−32.23%) from Kraken starting equity $179.78.
+
