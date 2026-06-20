@@ -19446,3 +19446,124 @@ No position moves, no stop tightenings, no thesis breaks. No notification sent.
 **No notification sent (no trades executed).**
 
 **Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
+
+---
+
+## 2026-06-20 — Pre-Session Research (Sunday Morning)
+
+**Execution time:** 2026-06-20 (morning)
+**Portfolio:** Kraken ZUSD $121.8486 | No open positions | Alpaca: fully closed (historical only)
+
+### STEP 2 — Account State
+
+**Kraken account:** ZUSD $121.8486. Dust positions (sub-cent): AVAX 0.0003, BABY 0.00193, SOL 0.0000475, etc. — all negligible, no open trades.
+**Kraken open positions:** NONE
+**Kraken open orders:** NONE
+**Alpaca positions:** NONE (BTC position fully closed 2026-05-22; stop a2b44cf9 canceled; Alpaca monitoring retired)
+**Alpaca orders:** Historical only (oldest fill 2026-05-22)
+
+### STEP 3 — Market Research (Perplexity)
+
+**Bitcoin:** $62,940 | 24h change: −0.19% | Rolling 24h range ~$62,236–$63,720 (prior data); 24h open $63,486 per Kraken
+**Ethereum:** $1,726.76 | 24h change: +1.95%
+**Fear & Greed Index:** 23 — Extreme Fear (consistent for multiple sessions)
+**BTC Funding Rate:** Positive overall (Binance +0.0026%/8h, Bybit +0.0002%/8h) — no extreme squeeze pressure; BitMEX slightly negative (−0.011%)
+**BTC Crash Gate:** BTC −0.19% 24h — well under −20% threshold. **NOT triggered.**
+**BTC Weekly Gate:** BTC $62,940 vs Jun 14 close ~$64,377 = −2.23% — under −3% threshold. **NOT triggered.** Pure momentum entries remain open.
+
+**Top 24h Gainers (CoinGecko):**
+| Rank | Token | 24h Gain |
+|---|---|---|
+| 1 | UWU (Unicorn) | +133.2% |
+| 2 | BTW (Bitway) | +89.3% |
+| 3 | BICO (Biconomy) | +60.9% |
+| 4 | CLO (Yei Finance) | +32.1% |
+| 5 | SLX (Solstice) | +31.2% |
+| 6 | RE | +30.5% |
+| 7 | CX (Cortex) | +25.7% |
+| 8 | SYN (Synapse) | +25.2% |
+| 9 | AXS (Axie Infinity) | +25.0% |
+| 10 | BURN (BurnedFi) | +21.2% |
+
+**Market Catalysts Today:**
+- BTC ETF outflows persistent (~2 weeks consecutive) — headwind for BTC, weighing on sentiment
+- Fed rate-cut expectations weakened (strong US employment data)
+- CLARITY Act/crypto regulation: Senate debate expected early July — active background narrative
+- SOL highlighted as "clearest large-cap momentum leader" with +5.17% and 67% volume surge; HYPE +4.65%
+- Upcoming Solana upgrades: Alpenglow + Firedancer (scalability) driving ecosystem optimism
+- Securitize expanding tokenized fund to Solana; Moody's credit ratings on Solana
+- Stabilizing ETF inflows into Solana products
+
+**Token Unlocks This Week:**
+- Humanity Protocol (H) — Jun 25 — ~$72.4M unlock (bearish supply pressure)
+- LayerZero (ZRO) — ~$29.4M unlock
+- No major protocol upgrades flagged for this week
+
+**Volume Surge Alerts:**
+- BICO: $78–148M 24h volume, +89–101% — dominant vol anomaly
+- RE: $728–740M 24h volume, +90–111% — extreme spike
+- AVAX: $532M 24h volume but −6.07% — selling pressure signal
+- ZEC: $448–474M at modest positive price — unusual vol
+- XLM: $356–362M but −7–9% — continued net selling
+- NEAR, SUI: $280–287M 24h volume
+
+### STEP 4 — Candidate Screening
+
+| Asset | vs 24h Open | 24h High | Current | vs High | Spread | Catalyst | Momentum Peak Check | Decision |
+|---|---|---|---|---|---|---|---|---|
+| **SOL/USD** | **+3.12%** ($69.67→$71.85) | $72.52 | $71.85 ask | −0.93% | 0.014% ✓ | Multi-factor: vol surge (+67%), ETF inflow stabilization, Alpenglow/Firedancer narrative, Securitize expansion | CONDITIONAL PASS — only 0.93% below 24h high (new high above yesterday's $72.37 ceiling, suggesting recent push); need to confirm high <60 min old or entry on breakout above $72.52 | **PRIMARY CANDIDATE** |
+| BICO/USD | +72.6% ($0.03556→$0.06139) | $0.06692 | $0.06139 | −8.3% | 0.29% ✓ | Speculative spike — Perplexity: "listing-related items on Biconomy exchange platform"; no major exchange listing or protocol announcement confirmed; same "no fundamental catalyst" finding as yesterday | FAIL — 8.3% below 24h high, multi-day speculative spike with no hard catalyst; has been running since Jun 18 | **SKIP** |
+| AXS/USD | +20.9% ($0.952→$1.151) | $1.206 | $1.151 | −4.6% | 0.087% ✓ | Perplexity: "no specific catalyst today" — bAXS rewards Jun 19 (1d stale); AXS consolidating $1.14–1.15 for ~15h | FAIL — 24h high $1.206 was set ~12–15h ago (per cross-referencing yesterday's log: AXS at $1.149 at 12:05 UTC Jun 19); declining from peak | **SKIP** |
+| OMNI/USD | ~0% | $0.490 | $0.492 ask / $0.300 bid | ~0% | **39% SPREAD** | Perplexity claimed +174% — but Kraken shows only 1 trade (39 OMNI) in 24h | N/A | **HARD SKIP** — 39% spread, 1 trade in 24h; zero liquidity on Kraken |
+| JST/USD | +3.28% ($0.08144→$0.08411) | $0.08428 | $0.08411 | −0.20% | 0.73% ✓ | No identified catalyst; only 24 trades in 24h | NEAR-PASS on peak check (0.2% below high) | **SKIP** — 24 trades/24h is dangerously thin liquidity; slippage risk unacceptable |
+| MORPHO/USD | −5.5% ($1.930→$1.822) | $1.934 | $1.822 | −5.7% | 0.084% ✓ | Perplexity +3.84% claim — Kraken shows BELOW open; opened near high, declining all day | FAIL — below open | **SKIP** |
+| HYPE/USD | −0.56% ($70.22→$69.83) | $71.38 | $69.83 | −2.17% | 0.014% ✓ | CFTC Selig on-chain perps framework (Jun 15, 5d stale) | N/A — below open | **SKIP** |
+| ASTER/USD | +1.63% ($0.635→$0.645) | $0.662 | $0.645 | −2.57% | 0.081% ✓ | No catalyst identified | N/A — below 3% threshold | **SKIP** |
+| BTC/USD | −0.19% | — | $62,940 | — | ~0% ✓ | ETF outflows (headwind); macro hawkishness | N/A — slightly below open | **SKIP** |
+| ETH/USD | +1.95% | — | $1,727 | — | ~0% ✓ | No fresh catalyst | N/A — below 3% threshold | **SKIP** |
+
+### STEP 5 — Trade Ideas
+
+#### Idea 1 (PRIMARY): SOL/USD — Momentum Continuation
+- **Catalyst:** Multi-factor (no single hard catalyst): 67% volume surge, stabilizing SOL ETF inflows, Alpenglow/Firedancer upgrade narrative, Securitize tokenized fund expansion to Solana. Perplexity confirms "+3–5% intraday vs 24h ago with 67% volume surge." Volume-confirmed momentum with ecosystem backing.
+- **Entry:** Market at $71.85 ask — OR conditional breakout entry above $72.52 (cleaner momentum peak check: condition (a), fresh 1h candle breakout above prior 24h high). Prefer conditional entry to eliminate momentum peak ambiguity.
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` — SOL qualifies as high-ATR asset (intraday range 4.8%, $69.37–$72.52). Use 3.5% trail to avoid noise-stops.
+- **T1:** Entry +3% → ~$74.01 (at $71.85 entry) or ~$74.70 (at $72.55 conditional entry)
+- **T2:** Entry +5% → ~$75.44 (at $71.85 entry) or ~$76.18 (at $72.55 conditional entry)
+- **R:R:** 5%/3.5% = 1.43:1 at T2 ✓ (T1 at 3%/3.5% = 0.86:1 is below minimum — target T2 as primary; at T1 tighten to 1% trail)
+- **Size:** 50% equity (~$61) — no hard catalyst reduces conviction; moderate size
+- **Kraken pair:** SOLUSD ✓ (spread 0.014%, volume 240K SOL/24h, margin available 2x)
+- **Risk note:** Extreme Fear (23) environment; BTC slightly negative; no single news catalyst. Pure volume/momentum/ecosystem play. Entry on breakout above $72.52 reduces timing risk.
+
+#### Idea 2 (WATCH): SOL/USD — Breakout Trigger
+- Same as Idea 1, but conditioned on SOL printing a new 24h high above $72.52 with volume expansion.
+- If triggered, immediately place trailing stop after fill — no open unprotected positions.
+- Cancel if SOL reverses below $71 (failed breakout signal).
+
+#### Idea 3 (MONITOR, NO ENTRY): BICO/USD
+- +72.6% from open on Kraken; massive volume ($148M 24h). Looks spectacular but:
+  - No confirmed fundamental catalyst (speculative exchange listing noise on Biconomy's own platform)
+  - 8.3% below 24h high — momentum peak already occurred
+  - This spike has been running since Jun 18 sessions — 2-3 day parabolic with no backing
+  - Re-entry after a multi-day speculative run with no fundamental catalyst has strongly negative EV
+- **Decision: SKIP.** Monitor for a potential "second wave" only if a hard catalyst (Binance/Coinbase listing announcement) appears.
+
+### Risk Factors
+1. **Extreme Fear (23):** Sunday thin books — spreads can widen intraday; use limit orders or be patient
+2. **BTC ETF outflows:** 2 weeks of consecutive outflows is a structural headwind for the whole market
+3. **Macro:** Strong US employment reduced rate-cut expectations → mild USD/risk-off headwind
+4. **SOL momentum peak ambiguity:** Without 1-minute candle data, cannot confirm the $72.52 high is <60 min old. Mitigated by using conditional entry above $72.52 (condition (a) of momentum peak rule).
+5. **Humanity Protocol unlock Jun 25:** Not immediately actionable but adds to supply-side pressure next week across alt universe
+
+### Decision
+
+**TRADE — Primary candidate: SOL/USD.**
+
+Crash gate: NOT triggered (BTC −0.19%). BTC weekly gate: NOT triggered (−2.23% vs Jun 14). Default stance is TRADE.
+
+SOL/USD is the only candidate meeting the full checklist: >3% from open ✓, spread ✓, volume ✓, Kraken available ✓, R:R ≥ 1.2:1 at T2 ✓. Recommended entry: conditional breakout above $72.52 (fresh 24h high) to satisfy the momentum peak rule cleanly. Immediate trailing stop (3.5%) after fill — mandatory.
+
+**Account state:** $121.85 ZUSD cash. Phase P&L: −$57.93 (−32.23%) from $179.78 starting equity.
+
+
+**STEP 6 — Notification:** WhatsApp notification FAILED — CallMeBot API quota exhausted (0 messages remaining). Subscription renewal required at callmebot.com. Pre-session summary not delivered to phone.
