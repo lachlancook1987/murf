@@ -19061,3 +19061,118 @@ Gate analysis:
 | SOL/USD | Recovery AND sustained hold above $69.64 (24h open); Securitize/Ethena catalysts already on file |
 | BTC/USD | +3% above open → $64,772; strong volume confirmation |
 | XRP/USD | CLARITY Act Senate floor vote announced/scheduled today → 7% trail binary play |
+
+---
+
+## 2026-06-20 — Pre-Session Research
+
+**Execution time:** 2026-06-20 pre-session UTC
+
+### Account Snapshot
+
+| Source | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $121.8486 ZUSD | None | None |
+| Alpaca | Retired | None (historical orders only, BTC position fully closed May 22) | — |
+
+**Kraken dust balances:** AVAX 0.0003, BABY 0.00193, FET 0.00000064, HYPE 0.0000013, INJ 0.0000591, NEAR 0.00635, SUI 0.00061, TAO 0.00000285, XETH 0.0000018 (all negligible)
+
+### Market Context
+
+| Asset | Ask | 24h Open | vs Open | 24h High | 24h Low | Notes |
+|---|---|---|---|---|---|---|
+| BTC | $63,500 | $63,486 | **+0.02%** | $63,824 | $62,236 | Essentially flat; crash gate clear |
+| ETH | $1,723 | $1,709 | **+0.79%** | $1,730.87 | $1,678 | Best-performing major; institutional buy narrative |
+| AVAX | $6.095 | $5.889 | **+3.50%** | $6.267 | $5.679 | Above 3% threshold but declining from daily high |
+| NEAR | $2.137 | $2.183 | **−2.09%** | $2.190 | $2.084 | Below open; resharding upgrade upcoming |
+| XLM | $0.21557 | $0.21848 | **−1.33%** | $0.22402 | $0.21053 | DTCC catalyst priced in; faded from peak |
+| TAO | $230.69 | $228.74 | **+0.85%** | $234.80 | $221.78 | Covenant-72B catalyst offset by governance controversy |
+| ZEC | $468.39 | $476.87 | **−1.78%** | $480.19 | $444.34 | Below open; volume surge faded |
+| BICO | $0.04007 | $0.03556 | **+12.68%** | $0.04451 | $0.03130 | No specific catalyst; −10% from daily peak |
+| ZEREBRO | $0.04113 | $0.04452 | **−7.60%** | $0.05500 | $0.03862 | Declining from massive peak |
+
+**Sentiment:** Crypto Fear & Greed Index **23** (Extreme Fear — slight improvement from 14–15 yesterday).
+
+**BTC Funding Rates:** Cross-exchange average ~+0.0100%/8h (neutral); Kraken +0.0148%. Not overleveraged.
+
+**BTC Crash Gate:** +0.02% vs −20% threshold → **NOT triggered**.
+
+**BTC Weekly Gate:** BTC $63,500 vs Jun 14 close ~$64,377 = **−1.36%** (threshold −3%) → **NOT triggered**.
+
+### Top 24h Gainers (CoinGecko)
+
+| Rank | Asset | 24h Gain | Kraken Listed | Notes |
+|---|---|---|---|---|
+| 1 | SIREN | +144.0% | No (BNB Chain) | — |
+| 2 | BICO | +82.6% | Yes | No specific catalyst; sector rotation only |
+| 3 | ASTEROID | +74.0% | Unknown | — |
+| 4 | BTW | +56.5% | No | — |
+| 5 | 3LON | +54.0% | No | — |
+| 6 | OMNI | ~+174% (Kraken) | Yes | Illiquid — spread 67%; skip |
+| 7 | ZEREBRO | +17.5% | Yes | −7.6% from open; declining |
+| 8 | KMNO | +17.0% | Yes | Upbit listing (stale, from yesterday) |
+
+### Key Catalysts Today
+
+| Catalyst | Asset | Freshness | Assessment |
+|---|---|---|---|
+| DTCC–Stellar tokenization partnership | XLM | Announced today (exact hour unknown) | Strong institutional narrative; XLM faded from +7–14% spike to below open |
+| Payments Collective + FIFA anti-scalping pilot on Avalanche | AVAX | June 18 (48h old) | Stale; technical bounce driving today's move, not fresh news |
+| Bittensor Covenant-72B (Subnet 3 Templar) | TAO | Recent | Mixed: bullish AI milestone OFFSET by Covenant AI exit + governance allegations → net neutral |
+| Bitmine bought 101,901 ETH (~$236M) | ETH | This past week | Meaningful institutional signal; 1+ week old — stale for day trade |
+| NEAR dynamic resharding upgrade | NEAR | Scheduled "June 2026" | Upcoming catalyst; no confirmed date; price below open |
+| Bitcoin ETF outflows overhang | BTC | Ongoing ($5.72B since mid-May) | Headwind for BTC; explains flat price action |
+| CLARITY Act regulatory progress | XRP | Ongoing | Binary event; no confirmed vote date today |
+| Ripple/JPMorgan/Ondo tokenization pilot | Various | Announced recently | Broader RWA/tokenization narrative boost |
+
+### Token Unlock Headwinds This Week
+
+- **ZRO (LayerZero):** $23.16M unlock (large % of market cap) — bearish headwind
+- **SPK (Spark):** $18.49M unlock
+- **ARB (Arbitrum):** $8.04M unlock
+- Total week unlock pressure: ~$86.2M across 31 assets → suppresses alt recoveries
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | Catalyst | Momentum Peak Check | R:R | Decision |
+|---|---|---|---|---|---|---|
+| BICO/USD | +12.68% | 0.37% ✓ | Sector rotation ONLY (no specific catalyst) | FAIL — 24h high $0.04451 vs current $0.04007 (−10%); no fresh <2h catalyst | — | **SKIP** — no catalyst; price declining from peak |
+| AVAX/USD | +3.50% | 0.033% ✓ | Payments Collective + FIFA pilot (June 18, 48h stale) | FAIL — 24h high $6.267 vs current $6.095 (−2.74%); no fresh <2h catalyst; no breakout | 1.20:1 ✓ | **SKIP** — stale catalyst; momentum peak check fails |
+| ETH/USD | +0.79% | <0.01% ✓ | Bitmine $236M buy (1 week old) | N/A — below 3% threshold | — | **SKIP** — below 3% threshold; no fresh catalyst |
+| XLM/USD | −1.33% | 0.023% ✓ | DTCC tokenization partnership | N/A — below open; declining from peak | — | **SKIP** — below open; news already priced in |
+| TAO/USD | +0.85% | 0.077% ✓ | Covenant-72B (mixed; governance controversy) | N/A — below 3% threshold | — | **SKIP** — thesis mixed; below threshold |
+| NEAR/USD | −2.09% | 0.037% ✓ | Upcoming resharding upgrade (date unclear) | N/A — below open | — | **SKIP** — below open |
+| OMNI/USD | Large gain | ~67% ❌ | Unknown | — | — | **HARD SKIP** — spread ≫ 1% |
+| ZEREBRO/USD | −7.60% | 0.56% ✓ | None | N/A — declining | — | **SKIP** — below open; fading |
+| ZEC/USD | −1.78% | 0.066% ✓ | Volume surge (faded) | N/A — below open | — | **SKIP** — below open |
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.8486 ZUSD**
+
+No qualifying setups at pre-session open. Two assets clear the 3% from open threshold (BICO +12.68%, AVAX +3.50%) but both fail the momentum peak check: price is declining from the daily high on both, and neither has a fresh catalyst <2h old or a confirmed 1h breakout above the prior daily high.
+
+The momentum peak check rule (added Jun 19) is doing its job — preventing "buy the top of a fading pump" entries. AVAX's intraday driver (Payments Collective + FIFA, June 18) is 48h stale; BICO has no identified catalyst at all.
+
+XLM has the day's strongest institutional catalyst (DTCC) but has already faded below its open — the news has been priced in and price is now declining. This is exactly the "buy the rumour, sell the news" pattern the momentum peak check targets.
+
+Overall environment: Extreme Fear (23), BTC flat (+0.02%), $86.2M in alt unlocks suppressing recovery, multiple catalysts >24h stale. Not the right day to force entries — the strategy requires a catalyst, and today's candidates offer either stale catalysts or none at all.
+
+### Watch Setups (Conditional Entry Criteria)
+
+| Asset | Entry Trigger | Stop | T1 | T2 | Size | Notes |
+|---|---|---|---|---|---|---|
+| **ETH/USD** | Break AND hold above $1,730.87 (24h high) + fresh catalyst OR sustained momentum above $1,761 (+3% from open) | trailing_stop 2.5% | Entry +3% | Entry +5% | 50% equity (~$61) | Best-performing major; lowest spread; institutional narrative |
+| **AVAX/USD** | Fresh breakout above $6.267 (daily high) AND new catalyst <2h OR confirmed +3% from current price with fresh news | trailing_stop 2.5% | Entry +3% | Entry +5% | 35% equity (~$43) | Payments Collective + FIFA are real catalysts but stale; monitor for follow-on news |
+| **XLM/USD** | Recovery above $0.21848 (today's open) AND sustained break above $0.22402 (daily high) on fresh DTCC follow-on or new Stellar partnership news | trailing_stop 2.5% | Entry +3% | Entry +5% | 30% equity (~$37) | DTCC partnership is a durable institutional narrative — worth re-entry if momentum resumes |
+| **BTC/USD** | +3% above open → $65,391 | trailing_stop 2.5% | Entry +3% | Entry +5% | 40% equity (~$49) | Momentum reference; enter only if BTC leads the market |
+
+### Risk Factors
+
+1. **Extreme Fear (F&G 23):** Persistent fear environment since June 15; follow-through on pumps weak — XLM and AVAX both faded from their session highs today
+2. **BTC flat (+0.02%):** No macro tailwind for altcoins; alts need BTC above open to sustain momentum
+3. **$86.2M token unlocks this week:** ZRO, SPK, ARB unlock pressure suppresses alt recovery
+4. **Momentum peak check:** Multiple assets (BICO, AVAX, XLM, ZEREBRO, KMNO yesterday) show the pattern of sharp early pump then fade — the intraday window for entries is narrow
+5. **Stale catalyst problem:** Most of today's narrative (AVAX, ETH, NEAR) is 24–48h+ old; without fresh news, price action is technical only
+6. **TAO governance risk:** Covenant AI exit allegation is a negative X-factor for the Bittensor AI narrative
+7. **Phase P&L:** −$57.93 (−32.23%) from $179.78 starting equity — context for sizing discipline
