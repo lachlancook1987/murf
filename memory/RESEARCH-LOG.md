@@ -19340,3 +19340,60 @@ No qualifying setups. Same environmental headwinds: Extreme Fear (23), BTC flat 
 
 **No notification sent (no trades executed).**
 
+
+---
+
+## 2026-06-20 — Midday Scan (14:07 UTC)
+
+**Execution time:** 2026-06-20 14:07 UTC
+**Positions:** NONE — fully in cash ($121.8486 ZUSD)
+**Kraken open orders:** NONE (confirmed)
+**Alpaca positions:** NONE — BTC position closed May 22; stop a2b44cf9 canceled (historical only). Clean.
+
+**BTC Crash Gate:** BTC $63,225 ask (−0.41% from 24h open $63,486) — **NOT triggered** (threshold: −20%)
+**BTC Weekly Gate:** BTC $63,225 vs Jun 14 close ~$64,377 = −1.79% — **NOT triggered** (threshold: −3%)
+**Fear & Greed:** ~23 (Extreme Fear — consistent all session)
+
+### Stop Verification (STEP 3)
+No open Kraken positions → N/A.
+
+### Stop Tightening (STEP 4)
+No open positions → N/A.
+
+### Thesis Check (STEP 5)
+No open positions → N/A.
+
+### Midday Candidate Screening (14:07 UTC — STEP 6)
+
+| Asset | vs 24h Open | 24h High | Current Ask | vs 24h High | Spread | Catalyst | Momentum Peak Check | Decision |
+|---|---|---|---|---|---|---|---|---|
+| AXS/USD | +19.85% ($0.952→$1.141) | $1.200 | $1.141 | −4.92% | 0.088% ✓ | bAXS rewards (Jun 19, 1d+ stale); Terrariums V1 (Jun 17, 3d stale) | FAIL — price well below 24h high set >60 min ago; no fresh catalyst <2h; declining from peak all day | **SKIP** |
+| BICO/USD | +11.87% ($0.03556→$0.03978) | $0.04638 | $0.03978 | −14.2% | 0.45% ✓ | Altcoin rotation only — Perplexity: no fundamental catalyst identified | FAIL — 14.2% below 24h high; no fundamental catalyst; pure momentum rotation | **SKIP** |
+| ZEC/USD | −2.45% ($476.87→$465.18) | $480.19 | $465.18 | −3.14% | 0.086% ✓ | SEC closure May 21 (30d stale); Grayscale ETF filing Nov 2025 (stale) | N/A — below open | **SKIP** |
+| TON/USD | +0.56% ($1.606→$1.615) | $1.624 | $1.615 | −0.55% | 0.062% ✓ | Telegram validator/fee-cut (>1 month stale) | N/A — below 3% threshold | **SKIP** |
+| SOL/USD | +1.52% ($69.67→$70.73) | $72.37 | $70.73 | −2.26% | 0.014% ✓ | Technical rebound (no news) | N/A — fell below 3% threshold (was +3.06% at 12:05 UTC, now +1.52%) | **SKIP** |
+| ETH/USD | +0.19% ($1709→$1713) | $1,730.87 | $1,712.76 | −1.04% | <0.01% ✓ | No fresh catalyst | N/A — below 3% threshold | **SKIP** |
+| EIGEN/USD | −0.84% ($0.2478→$0.2457) | $0.2835 | $0.2457 | −13.3% | 0.41% ✓ | TVL news Jun 15 (5d stale) | N/A — full reversal; now below open (was +8.6% at 12:05 UTC) | **SKIP** |
+| BTC/USD | −0.41% | $63,824 | $63,225 | Below open | ~0% ✓ | No fresh catalyst | N/A — below open | **SKIP** |
+
+### Key Findings
+
+- **EIGEN fully reversed:** Was +8.6% at 12:05 UTC; now −0.84% from open ($0.2457 vs $0.2478 open). Short-squeeze dynamic confirmed — no underlying fundamental support.
+- **SOL faded:** Crossed the +3% trigger earlier (+3.06% at 12:05 UTC, high $72.37) but has since retreated to $70.73 (+1.52%). No news catalyst confirmed; technical bounce running out of momentum.
+- **BICO strong 24h move but peaked:** +11.87% from open; however 14.2% below the 24h high of $0.04638 — the repricing event already occurred earlier in the session. No specific fundamental catalyst (pure rotation per Perplexity).
+- **AXS declining since early AM:** Peaked at $1.200 24h high; at $1.141 now (same as 12:05 UTC check at $1.149 — sideways to down). bAXS rewards catalyst is 1 day stale; no new ecosystem news.
+- **ZEC/TON/ETH:** All below relevant thresholds or failing.
+- **BTC weekly gate NOT triggered** (−1.79% vs Jun 14) → standard momentum entries are open, but no candidate passes the full checklist.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.8486 ZUSD**
+
+Saturday Extreme Fear (23) environment with thin books. Every candidate either:
+1. Is below its 24h open (ZEC, EIGEN, BTC, ETH), OR
+2. Cleared 3% from open but fails momentum peak check (AXS, BICO — prices declining sharply from 24h highs set hours ago, no fresh catalysts <2h), OR
+3. Has since fallen back below the 3% entry threshold (SOL at +1.52%, was +3.06% at 12:05)
+
+No position moves, no stop tightenings, no thesis breaks. No notification sent.
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
