@@ -5971,3 +5971,41 @@ FOMC decision pending today — additional macro event risk.
 | — | — | — | — | — | No open positions | — |
 **Trades today:** none | **Total since migration:** ~78
 **Notes:** Fully in cash all day. No trades placed. BTC recovered +1.28% from yesterday's close of ~$62,620 to $63,424 (24h range $63,280–$63,824). Bot held cash flat (0.00%), underperforming BTC by −1.28% on a recovery day. Phase P&L −32.23% from Kraken starting equity $179.78. Alpaca: stop a2b44cf9 confirmed canceled (2026-05-22; Alpaca BTC position fully closed; Alpaca monitoring retired). No intraday setups met the triple gate: momentum >3% + fresh catalyst <6h + R:R ≥1.2:1. Cash position preserved through BTC's continued consolidation around $63,000–$64,000 range. Crash gate not triggered (BTC 24h change −0.10%, well under −20% threshold).
+
+---
+
+### Jun 20 — SOL/USD BUY (Session-Open, 21:09 UTC)
+
+**Buy Order ID:** O6AZIQ-PONPE-HJU2CY
+**Stop Order ID:** OM6G7A-4TADL-2E2SLP (3.5% trailing stop — high-ATR)
+**Symbol:** SOL/USD | **Qty:** 0.8462 SOL | **Side:** BUY
+**Entry:** ~$72.15 (market fill; estimated from ZUSD reconciliation: $61.2920 / 0.8462 / 1.004)
+**24h open:** $69.67 | **vs open:** +3.52% at fill
+**T1:** $74.31 (+3%) | **T2:** $75.76 (+5%)
+**Initial stop trigger:** $69.48 ($72.00 ref × 0.965 = 3.5% trail)
+**Stop:** trailing_stop, trail_percent: 3.5, GTC — placed immediately after fill ✓ (high-ATR: SOL 24h range ~4.5%)
+**Size:** ~$61.05 (~50.1% of $121.85 equity)
+**ZUSD after:** $60.5566 | **Total equity:** ~$121.61 (SOL mark ~$61.05 + ZUSD $60.56)
+**Stop-out count:** 0 SOL stop-outs in 7-day window (same-thesis cap: clear)
+**R:R:** 5%/3.5% = 1.43:1 at T2 ✓ (T2 primary target; T1 tighten to 0.5% trail)
+
+**Catalyst:** Multi-factor — (1) SOL volume surge +67% (confirmed Perplexity/Coinbase), outpacing market average of 38% over 5h; (2) stabilizing Solana ETF inflows; (3) Alpenglow + Firedancer upgrade narrative; (4) Securitize tokenized fund expansion to Solana; (5) **U.S.-Iran peace deal signed Jun 19** creating fresh macro risk-on tailwind (BTC recovered from $62,940 to $63,862 since morning session). SOL +3.33–3.52% from 24h open at entry. Spread 0.014% ✓.
+
+**Screening:**
+- Momentum: +3.52% from 24h open at fill ✓ (>3% threshold)
+- Spread: 0.014% ✓
+- Volume: 67% surge vs average ✓
+- Catalyst: Multi-factor (volume + ecosystem + macro peace deal) ✓
+- R:R: 1.43:1 at T2 ✓ (primary target; T1 R:R 0.86:1 acknowledged — tighten to 0.5% trail at T1)
+- BTC crash gate: NOT triggered (BTC +1.35% 24h, $63,862)
+- BTC weekly gate: NOT triggered (BTC ~−2.23% vs Jun 14 close, under −3% threshold)
+- Momentum peak check: SOL only 0.73% below 24h high $72.52 at entry; BTC rising +1.35%; U.S.-Iran peace deal macro tailwind; price NOT declining from peak — hovering near high. Fill at $72.15 confirms SOL was trading into the high zone.
+- Same-thesis cap: No prior SOL stop-outs in 7-day window ✓
+- Pair confirmed online on Kraken ✓
+
+**Candidates screened and rejected:**
+- XLM/USD: −2.68% from open (DTCC catalyst already priced into 7-day 72% run) → SKIP
+- NEAR/USD: −1.27% from open (resharding narrative, price not moving) → SKIP
+- TAO/USD: +0.73% from open (Subnet 3 release, below 3% threshold) → SKIP
+- HYPE/USD: −0.58% from open → SKIP
+- BTC/USD: +1.35% but below 3% threshold → SKIP
