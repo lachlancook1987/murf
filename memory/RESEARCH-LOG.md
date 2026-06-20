@@ -19298,3 +19298,45 @@ Saturday volume dynamics (thinner books, higher slippage risk) reinforce the cas
 **No notification sent (no actions taken).**
 
 **Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
+
+---
+
+## 2026-06-20 — Afternoon Check (12:05 UTC)
+
+**Execution time:** 2026-06-20 12:05 UTC
+**Positions:** NONE — fully in cash ($121.8486 ZUSD)
+**Kraken open orders:** NONE (confirmed)
+**Alpaca positions:** NONE — BTC position closed May 22; historical orders only. Clean.
+
+**BTC Crash Gate:** BTC $63,668 ask (+0.29% from 24h open $63,486) — **NOT triggered** (threshold: −20%)
+**BTC Weekly Trend Gate:** BTC ~$63,668 vs Jun 14 close ~$64,377 = −1.10% — **NOT triggered** (threshold: −3%)
+**Fear & Greed:** 23 — Extreme Fear (same as morning)
+
+### Live Candidate Screening (12:05 UTC)
+
+| Asset | vs 24h Open | 24h High | Current | vs 24h High | Spread | Catalyst | Momentum Peak | Decision |
+|---|---|---|---|---|---|---|---|---|
+| AXS/USD | +20.7% ($0.952→$1.149) | $1.200 | $1.149 | −4.25% | 0.087% ✓ | bAXS rewards (Jun 19, 1d old) | FAIL — declining from peak; stale catalyst | **SKIP** |
+| EIGEN/USD | +8.60% ($0.2478→$0.2691) | $0.2835 | $0.2691 | −5.08% | 0.11% ✓ | EigenLayer TVL (Jun 15, 5d old) | FAIL — declining from peak; catalyst stale | **SKIP** — elevated volume (1.52× avg) but peak already passed |
+| SOL/USD | +3.06% ($69.67→$71.81) | $72.37 | $71.81 | −0.79% | 0.014% ✓ | Technical rebound (no news — confirmed Perplexity) | BORDERLINE — price rising toward high but volume only 89% of avg; high set >60 min ago | **SKIP** — no news catalyst; no volume confirmation; Saturday thin market |
+| HYPE/USD | +1.41% ($70.22→$71.21) | $71.27 | $71.21 | −0.08% | 0.014% ✓ | N/A | Below 3% threshold | **SKIP** |
+| ETH/USD | +1.03% ($1709→$1727) | $1,730.87 | $1,727 | −0.22% | <0.01% ✓ | N/A | Below 3% threshold | **SKIP** |
+| TAO/USD | +1.07% ($228.74→$231.18) | $234.80 | $231.18 | −1.54% | 0.05% ✓ | N/A | Below threshold | **SKIP** |
+| ZEC/USD | −1.13% ($476.87→$471.48) | $477.84 | $471.48 | Below open | 0.044% ✓ | N/A | Below open | **SKIP** |
+| SUI/USD | +0.34% ($0.716→$0.718) | $0.722 | $0.718 | −0.55% | 0.014% ✓ | N/A | Below threshold | **SKIP** |
+| NEAR/USD | −1.94% ($2.183→$2.140) | $2.190 | $2.140 | Below open | 0.042% ✓ | N/A | Below open | **SKIP** |
+
+### Key Notes
+
+**SOL borderline:** SOL crossed the pre-session watch trigger (+3% from open = $71.76), reaching $71.81 (+3.06%). However: (1) Perplexity confirmed no specific news catalyst — "technical rebound attempt, not a major single-news event"; (2) volume running at 89% of 24h average pace (not elevated); (3) the pre-session entry condition required "volume confirmation"; (4) R:R exactly 1.2:1 with no margin; (5) Saturday thin market amplifies slippage. Conditional entry trigger remains: break AND hold above $72.37 (new 24h high) + elevated volume.
+
+**EIGEN volume elevated but peak too old:** EIGEN running 1.52× average daily volume pace (4.52M vs 5.95M 24h rolling in 12h) but price is 5.08% below 24h high with a 5-day stale catalyst. Momentum peak check fails.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.8486 ZUSD**
+
+No qualifying setups. Same environmental headwinds: Extreme Fear (23), BTC flat (+0.29%), Saturday liquidity, $86.2M token unlock pressure. SOL is the only asset at threshold but lacks volume confirmation and news catalyst. No action taken.
+
+**No notification sent (no trades executed).**
+
