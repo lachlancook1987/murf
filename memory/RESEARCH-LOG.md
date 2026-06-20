@@ -19397,3 +19397,52 @@ Saturday Extreme Fear (23) environment with thin books. Every candidate either:
 No position moves, no stop tightenings, no thesis breaks. No notification sent.
 
 **Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
+
+---
+
+## 2026-06-20 — Afternoon Scan (15:04 UTC)
+
+**Execution time:** 2026-06-20 15:04 UTC
+**Positions:** NONE — fully in cash ($121.8486 ZUSD)
+**Kraken open orders:** NONE (confirmed)
+**Alpaca positions:** NONE — BTC position closed May 22; stop a2b44cf9 canceled (historical only). Clean.
+
+**BTC Crash Gate:** BTC $63,967 ask (+0.76% from 24h open $63,486) — **NOT triggered** (threshold: −20%)
+**BTC Weekly Trend Gate:** BTC $63,967 vs Jun 14 close ~$64,377 = −0.64% — **NOT triggered** (threshold: −3%)
+**Fear & Greed:** 20 — Extreme Fear (consistent all day Saturday)
+
+### Live Candidate Screening (15:04 UTC)
+
+| Asset | vs 24h Open | 24h High | Current Ask | vs 24h High | Spread | Catalyst | Momentum Peak Check | Decision |
+|---|---|---|---|---|---|---|---|---|
+| BICO/USD | +19.2% ($0.03556→$0.04239) | $0.04638 | $0.04239 | −8.6% | 0.38% ✓ | No confirmed catalyst — Perplexity: "speculative spike, no fundamental announcement identified" | FAIL — 8.6% below 24h high set hours ago; no catalyst | **SKIP** |
+| SOL/USD | +2.99% ($69.67→$71.75) | $72.37 | $71.75 | −0.86% | 0.014% ✓ | Technical/sector momentum — Perplexity confirmed "no specific catalyst today, technical rebound" | N/A — just below 3% threshold; high set >60 min ago | **SKIP** (watch: breakout above $72.37 + volume) |
+| HYPE/USD | +0.97% ($70.22→$70.90) | $71.38 | $70.90 | −0.67% | 0.014% ✓ | CFTC Chairman Selig on-chain perpetuals framework — **confirmed Jun 15 (5d stale)** | N/A — below 3% threshold | **SKIP** — stale catalyst, below threshold |
+| ZEC/USD | −0.43% ($476.87→$474.84) | $478.12 | $474.84 | Below open | 0.048% ✓ | SEC closure (30d stale); Grayscale ETF (7mo stale) | N/A — below open | **SKIP** |
+| EIGEN/USD | +0.24% ($0.2478→$0.2484) | $0.2835 | $0.2484 | −12.3% | 0.003% ✓ | EigenLayer TVL (5d stale); fully reversed from morning high | N/A — flat/below threshold | **SKIP** |
+| BTC/USD | +0.76% ($63,486→$63,967) | $64,141 | $63,967 | −0.27% | ~0% ✓ | ETF outflows (headwind); macro hawkishness | N/A — below 3% threshold | **SKIP** |
+| ETH/USD | ~+1.05% ($1,709→$1,727) | $1,731 | $1,727 | −0.23% | ~0% ✓ | No fresh catalyst | N/A — below 3% threshold | **SKIP** |
+
+### Key Findings
+
+- **BICO +19.2% but peaked:** 24h high $0.04638 set earlier in the session; current $0.04239 is 8.6% below peak. Perplexity found no fundamental catalyst for this move — "speculative spike, possible short-term listing hype" — fails both momentum peak check AND catalyst requirement simultaneously. Prior midday scan (14:07 UTC) noted BICO at +11.87% with 14.2% below peak — the spike ran further but has not sustained.
+- **SOL approaching but not crossing 3% threshold:** $71.75 (+2.99% from open $69.67). Watch for breakout above $72.37 (24h high, condition (a) per strategy momentum peak rule) with volume. Not triggered as of this scan.
+- **HYPE CFTC catalyst confirmed stale:** The CFTC Chairman Selig announcement was June 15 (5 days ago), not today — HYPE's +0.97% from open does not represent a fresh repricing on new information.
+- **EIGEN fully reversed:** Peaked at $0.2835 this morning, now $0.2484 (+0.24% from $0.2478 open) — essentially fully given back the day's gains.
+- **ZEC recovered from −2.45% (14:07 UTC) to −0.43%** but still below open; stale catalysts unchanged.
+
+### Watch Setup (Conditional)
+
+| Asset | Entry Trigger | Stop | T1 | T2 | Size | Notes |
+|---|---|---|---|---|---|---|
+| **SOL/USD** | Breaks AND holds above $72.37 (new 24h high) with volume surge (>1.2× pace) | trailing_stop 2.5% | Entry +3% | Entry +5% | 40% equity (~$49) | Currently at $71.75; needs +0.86% more to trigger; no catalyst but momentum peak rule allows fresh 1h breakout above prior high as entry condition |
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.8486 ZUSD**
+
+5th check of the day (overnight, morning, 12:05, 14:07, 15:04). No qualifying setups. Extreme Fear (F&G 20), Saturday thin volume, no fresh catalysts <6h anywhere in the universe. BICO is the biggest mover (+19.2%) but is a speculative spike with no catalyst declining from its high — exactly the pattern the momentum peak check is designed to filter out. SOL is the closest candidate but is 0.01% short of the 3% threshold with no news driver.
+
+**No notification sent (no trades executed).**
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
