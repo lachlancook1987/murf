@@ -19567,3 +19567,69 @@ SOL/USD is the only candidate meeting the full checklist: >3% from open ✓, spr
 
 
 **STEP 6 — Notification:** WhatsApp notification FAILED — CallMeBot API quota exhausted (0 messages remaining). Subscription renewal required at callmebot.com. Pre-session summary not delivered to phone.
+
+---
+
+## 2026-06-20 — Midday Scan #2 (Post-Entry)
+
+**Execution time:** 2026-06-20 midday UTC (second midday scan — after session-open SOL entry)
+
+### Portfolio State
+
+| Asset | Qty | Entry | Current | P&L | Stop |
+|---|---|---|---|---|---|
+| SOL/USD | 0.8462 | ~$72.15 | $72.41 | +0.37% | OM6G7A-4TADL-2E2SLP (3.5% trail, stop $69.90) |
+| ZUSD | $60.5566 | — | — | — | — |
+
+**Total equity:** ~$121.74 (SOL ~$61.24 mark + ZUSD $60.56)
+
+### STEP 2 — Live State
+
+- **Kraken positions:** 0.8462 SOL (spot; confirmed via account balance)
+- **Kraken open orders:** OM6G7A-4TADL-2E2SLP — trailing stop SELL 0.84620 SOLUSD @ 3.5% trail, GTC (stopprice $69.90, limitprice $72.43, status: open) ✓
+- **Alpaca:** Historical only — BTC position fully closed May 22; stop a2b44cf9 canceled. No action required.
+
+### STEP 3 — Stop Verification
+
+Stop OM6G7A-4TADL-2E2SLP confirmed active. No unprotected positions. ✓
+
+### STEP 4 — Stop Tightening Check
+
+- Entry $72.15 | Current $72.41 | Gain: +0.37%
+- T1 trigger ($74.31 = +3%): **NOT reached** — no 0.5% trail tightening needed
+- +20% trigger ($86.58): not reached — no 3% trail replacement needed
+- +40% trigger ($101.01): not reached
+- **No stop changes.** Existing 3.5% trail is correct (high-ATR designation from entry).
+
+### STEP 5 — Thesis Check (SOL)
+
+Original thesis: (1) volume surge +67%; (2) stabilizing ETF inflows; (3) Alpenglow/Firedancer upgrade narrative; (4) Securitize tokenized fund on Solana; (5) U.S.-Iran peace deal macro risk-on.
+
+Perplexity midday update:
+- SOL trading ~$71–72; ETF inflows "stabilizing" ✓ (Kraken Solana Pulse confirms)
+- No exploit, rug, token unlock dump, or adverse regulatory action
+- Bearish technicals noted (4h trend bearish, MAs sloping down, near 2.5-year low) — these are structural concerns but NOT thesis-breaking events that trigger an immediate exit
+- Ecosystem activity intact: Arcium + Umbra launches referenced
+
+**Verdict: thesis intact. No emergency exit.** Trailing stop protecting capital.
+
+### STEP 6 — Midday Entry Scan
+
+**BTC:** $63,595 (+0.17% vs open) — crash gate NOT triggered. BTC weekly gate NOT triggered (−1.28% vs Jun 14).
+
+| Candidate | Move | Catalyst | Momentum Peak | Decision |
+|---|---|---|---|---|
+| STORJ/USD | +30% 24h | Minimum payment increase to $50 (Jul 1) — minor operational change, not a fundamental catalyst | Unknown; needs quote check | **SKIP** — weak catalyst (fee change ≠ protocol upgrade/listing/regulatory win) |
+| ZEC/USD | +29% 24h | SEC investigation closure (May 21 — 30d old) + possible short squeeze | Likely fading from peak; exploit concern (Orchard pool outflows noted) | **SKIP** — stale catalyst (same reason as pre-session); exploit concern adds downside risk |
+| BICO/USD | +85% 24h | No fundamental catalyst; speculative exchange listing noise | −8–10% from daily high | **SKIP** — no catalyst; fading from peak |
+| Top 24h gainers (A2Z, BTW, RE, MAPO, etc.) | +54–100% | Unknown; likely illiquid micro-caps | N/A | **SKIP** — not on Kraken or illiquid |
+
+**Result: NO NEW ENTRIES.** No qualifying setup meets the triple gate (>3% from open + fresh catalyst <6h + R:R ≥1.2:1 + momentum peak check ≤60 min old).
+
+### STEP 7 — Notification
+
+No actions taken (no stop tightening, no exit, no new entry). No WhatsApp notification sent. (Note: WhatsApp quota exhausted anyway — renewal required.)
+
+### Summary
+
+SOL/USD position holding at +0.37%, trailing stop active. Market environment unchanged (Extreme Fear 23, BTC flat). Midday scan complete — no action required. Next check at EOD or if T1 ($74.31) is hit.
