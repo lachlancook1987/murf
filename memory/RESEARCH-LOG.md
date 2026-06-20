@@ -19249,3 +19249,52 @@ Extreme Fear (23) persists; Saturday trading is lower volume; same $86.2M token 
 5. **$86.2M token unlock pressure:** Ongoing suppression of alt recoveries (ZRO, SPK, ARB)
 6. **AXS spike risk:** +20.8% gap from open on thin Saturday market; could reverse sharply
 7. **Phase P&L:** −$57.93 (−32.23%) from $179.78 starting equity — context for sizing discipline
+
+---
+
+## 2026-06-20 — Midday Scan
+
+**Execution time:** 2026-06-20 midday UTC
+
+**Positions:** NONE — fully in cash ($121.8486 ZUSD)
+**Kraken open orders:** NONE
+**Alpaca orders:** Historical only (BTC position fully closed May 22; stop a2b44cf9 canceled)
+
+**BTC Crash Gate:** BTC ~$63,548, −0.5% 24h — **NOT triggered** (threshold: −20%)
+**BTC Weekly Gate:** BTC ~$63,548 vs Jun 14 close ~$64,377 = −1.28% — **NOT triggered** (threshold: −3%)
+
+### Stop Verification (STEP 3)
+No open positions → N/A.
+
+### Stop Tightening (STEP 4)
+No open positions → N/A.
+
+### Thesis Check (STEP 5)
+No open positions → N/A.
+
+### Midday Candidate Screening (STEP 6)
+
+| Asset | vs 24h Open | 24h High | Current | Below Peak | Spread | Catalyst | Momentum Peak Check | Decision |
+|---|---|---|---|---|---|---|---|---|
+| AXS/USD | +19.43% ($0.952→$1.137) | $1.186 | $1.137 | −4.1% from high | 0.18% ✓ | bAXS rewards (Jun 19, 1d old); Terrariums V1 (Jun 17, 3d old); **no fresh catalyst today** | FAIL — price declining from 24h high; short-squeeze driven, no catalyst <6h | **SKIP** |
+| SAND/USD | +11.1% ($0.0514→$0.0571) | $0.0583 | $0.0571 | −2.1% from high | 0.18% ✓ | Sandbox Studio AI launch (Jun 9, 11d old); no fresh catalyst today | FAIL — AI catalyst is 11 days stale; no confirmed fresh catalyst <6h | **SKIP** |
+| EIGEN/USD | +5.5% ($0.2478→$0.2615) | $0.2835 | $0.2615 | −7.7% from high | 0.08% ✓ | TVL growth (5d old); declining from peak | FAIL — price declined sharply from 24h high; catalyst stale | **SKIP** |
+| GMX/USD | +2.5% | $6.29 | $6.23 | — | **4.0% ❌** | No catalyst | N/A — spread >1% | **HARD SKIP** |
+| SOL/USD | +2.7% ($69.67→$71.57) | $72.37 | $71.57 | −1.1% from high | 0.03% ✓ | No fresh catalyst | N/A — below 3% threshold | **SKIP** |
+| HNT/USD | +2.9% ($0.2758→$0.2838) | $0.289 | $0.2838 | −1.8% from high | 0.21% ✓ | No catalyst identified | N/A — below 3% threshold | **SKIP** |
+| BTC/USD | −0.5% | $63,824 | ~$63,548 | Below open | ~0% ✓ | No fresh catalyst | N/A — below open | **SKIP** |
+
+### Decision
+
+**NO NEW ENTRIES. Fully in cash $121.8486 ZUSD.**
+
+Market remains in Extreme Fear (F&G ~20). BTC −0.5% from 24h open provides no macro tailwind. Every candidate that clears the 3% momentum threshold fails on either:
+1. **Stale catalyst:** AXS (bAXS rewards 1d old, no announcement today), SAND (AI launch 11d old)
+2. **Short-squeeze structure:** AXS move is liquidity-driven with no confirmed fundamental catalyst <6h — "past sentiment-driven rallies without product milestones have faded within 48–72 hours"
+3. **Momentum peak check:** AXS (4.1% below 24h high), EIGEN (7.7% below 24h high) — repricing events have already occurred, price declining from peak
+
+Saturday volume dynamics (thinner books, higher slippage risk) reinforce the case to hold cash rather than chase deteriorating momentum in an Extreme Fear environment.
+
+**No notification sent (no actions taken).**
+
+**Portfolio state:** Fully in cash — Kraken ZUSD $121.8486 | Phase P&L: ~−$57.93 (−32.23%) from $179.78 starting equity.
