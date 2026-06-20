@@ -19176,3 +19176,76 @@ Overall environment: Extreme Fear (23), BTC flat (+0.02%), $86.2M in alt unlocks
 5. **Stale catalyst problem:** Most of today's narrative (AVAX, ETH, NEAR) is 24–48h+ old; without fresh news, price action is technical only
 6. **TAO governance risk:** Covenant AI exit allegation is a negative X-factor for the Bittensor AI narrative
 7. **Phase P&L:** −$57.93 (−32.23%) from $179.78 starting equity — context for sizing discipline
+
+---
+
+## 2026-06-20 — Pre-Session Research (Session Open)
+
+**Date:** 2026-06-20 (Saturday, Day 31) | **Cash:** $121.85 ZUSD | **Open positions:** None
+
+### Market Overview
+
+| Asset | Price | vs Open | 24h High | Notes |
+|---|---|---|---|---|
+| BTC | $63,402 | −0.13% | $63,824 | Open $63,486; 24h range $62,236–$63,824; 24h change +1.46% per Perplexity |
+| ETH | $1,723.76 | +0.84% | $1,730.87 | Open $1,709.46; Kraken +1.95% 24h |
+| SOL | $71.39 | +2.43% | $72.37 | Open $69.67 |
+
+**Fear & Greed Index:** 23 — Extreme Fear (third consecutive session)
+**BTC Funding Rate:** +0.01%/8h (neutral; Kraken +0.0125–0.0148%)
+**BTC Crash Gate:** −0.13% from open → **NOT triggered** (threshold: −20%)
+**BTC Weekly Trend Gate:** BTC ~$63,402 vs Jun 14 close ~$64,377 = −1.51% → **NOT triggered** (threshold: −3%)
+
+### Key Catalysts
+
+| Catalyst | Asset | Freshness | Assessment |
+|---|---|---|---|
+| EigenLayer TVL $4.67B (+$291M weekly) | EIGEN | Jun 15, 2026 (5d old) | Stale; price declining −7.8% from 24h high |
+| bAXS first reward distribution | AXS | Jun 19, 2026 (1d old) | Stale (<6h rule fails); technical/short-squeeze spike |
+| Terrariums V1 launch (AXS ecosystem) | AXS | Jun 17, 2026 (3d old) | Stale |
+| SEC closed Zcash investigation | ZEC | May 21, 2026 (30d old) | Very stale; fully priced in |
+| Grayscale ZEC spot ETF filing | ZEC | Nov 2025 (7mo old) | Very stale |
+| CLARITY Act regulatory progress | XRP | Ongoing | No confirmed vote date today |
+| Bitcoin ETF outflows | BTC | Ongoing | Headwind; Fed hawkishness suppressing demand |
+
+### Token Unlock Headwinds
+
+Same week as Jun 19–21: ZRO $23.16M, SPK $18.49M, ARB $8.04M; total ~$86.2M across 31 assets.
+
+### Candidate Screening
+
+| Asset | vs Open | Spread | 24h High | vs 24h High | Catalyst | Momentum Peak | Decision |
+|---|---|---|---|---|---|---|---|
+| EIGEN/USD | +5.04% | 0.23% ✓ | $0.2835 | −7.8% | TVL news Jun 15 (5d old) | FAIL — declining from peak | **SKIP** — stale catalyst; price well below 24h high |
+| AXS/USD | +20.8% | 0.087% ✓ | $1.186 | −3.0% | bAXS rewards Jun 19 (1d old) | FAIL — declining from peak | **SKIP** — stale catalyst; technical spike fading |
+| ZEC/USD | −0.97% | 0.11% ✓ | $480.19 | −1.6% | SEC closure May 21 (30d old) | FAIL — below open | **SKIP** — below open; all catalysts very stale |
+| SOL/USD | +2.43% | 0.014% ✓ | $72.37 | −1.4% | Sector momentum | Below 3% threshold | **HOLD** — approaching threshold; monitor |
+| ETH/USD | +0.84% | <0.01% ✓ | $1,730.87 | −0.4% | Bitmine buy 1 week old | Below 3% threshold | **SKIP** — below threshold; no fresh catalyst |
+| BTC/USD | −0.13% | <0.01% ✓ | $63,824 | −0.66% | ETF flows | Below open | **SKIP** — below open |
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH $121.85 ZUSD**
+
+No qualifying setups. The two strongest movers (EIGEN +5%, AXS +20.8%) both fail the momentum peak check — prices are declining from their 24h highs, and neither has a catalyst <6h old. AXS's +20.8% spike appears to be a technical/short-squeeze move (bAXS rewards launched Jun 19, stale by 1 day) that has already peaked at $1.186 and is declining to $1.150. ZEC's regulatory and ETF catalysts are months old — the move has been fully priced in. SOL at +2.43% has not yet crossed the 3% entry threshold.
+
+Extreme Fear (23) persists; Saturday trading is lower volume; same $86.2M token unlock pressure as prior sessions.
+
+### Watch Setups (Conditional Entry Criteria)
+
+| Asset | Entry Trigger | Stop | T1 | T2 | Size | Notes |
+|---|---|---|---|---|---|---|
+| **AXS/USD** | Reclaims AND holds above $1.186 (24h high) + fresh ecosystem news <2h | trailing_stop 2.5% | Entry +3% | Entry +5% | 35% equity (~$43) | bAXS rewards real but stale; watch for follow-on news |
+| **SOL/USD** | Breaks +3% from open ($71.76) with volume confirmation and holds | trailing_stop 2.5% | Entry +3% | Entry +5% | 40% equity (~$49) | Approaching threshold (+2.43%); +3.95% seen in 4h momentum screen |
+| **ETH/USD** | Break above $1,730.87 (24h high) + fresh catalyst OR +3% from open ($1,761) | trailing_stop 2.5% | Entry +3% | Entry +5% | 40% equity (~$49) | Tightest spread; best R:R if macro lifts |
+| **EIGEN/USD** | Reclaims $0.2835 (24h high) with fresh protocol news <2h | trailing_stop 2.5% | Entry +3% | Entry +5% | 25% equity (~$30) | TVL growth real; needs fresh headline to re-accelerate |
+
+### Risk Factors
+
+1. **Extreme Fear (F&G 23):** Third consecutive session; follow-through on pumps remains weak
+2. **BTC flat (−0.13% from open):** No macro tailwind for altcoins; alts need BTC leadership
+3. **Saturday trading:** Lower volume; thinner order books increase slippage risk on alt entries
+4. **Stale catalyst problem:** EIGEN (5d), AXS (1d), ZEC (30d) — momentum runs already mature
+5. **$86.2M token unlock pressure:** Ongoing suppression of alt recoveries (ZRO, SPK, ARB)
+6. **AXS spike risk:** +20.8% gap from open on thin Saturday market; could reverse sharply
+7. **Phase P&L:** −$57.93 (−32.23%) from $179.78 starting equity — context for sizing discipline
