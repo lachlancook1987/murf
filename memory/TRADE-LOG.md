@@ -6009,3 +6009,35 @@ FOMC decision pending today — additional macro event risk.
 - TAO/USD: +0.73% from open (Subnet 3 release, below 3% threshold) → SKIP
 - HYPE/USD: −0.58% from open → SKIP
 - BTC/USD: +1.35% but below 3% threshold → SKIP
+
+---
+
+## 2026-06-20 — Overnight Triage Check (2nd run)
+
+**SOL position confirmed OPEN:** 0.8462 SOL | Entry ~$72.15 | Current $73.50 (+1.87%) | HWM $74.20
+
+**⚠️ ERROR — Stop inadvertently cancelled:**
+- Overnight triage saw Kraken `positions` return `{}` and incorrectly classified trailing stop `OM6G7A-4TADL-2E2SLP` as an orphan.
+- Root cause: Kraken `positions` endpoint only returns MARGIN positions — spot holdings are shown in `account` (balances), not `positions`.
+- The stop was cancelled before account balance was checked.
+
+**Corrective action — Replacement trailing stop placed immediately:**
+- New Stop Order ID: `OZXH23-FVRDV-JVT3BH`
+- Type: trailing_stop, trail_percent: 3.5%, GTC
+- New HWM resets to current price ~$73.50 → trigger ~$70.93 (vs prior $71.61 from HWM $74.20)
+- Protection restored within same triage session.
+
+**STEP 4 — Stop tightening:** SOL +1.87% from entry (~$72.15 → $73.50). Under +20% threshold → no tightening. Trail stays at 3.5%.
+
+**STEP 5 — BTC Crash Gate:**
+- BTC last $64,194.70 | 24h open $63,486.30 → +1.11% — NOT triggered.
+- 24h range: $63,141.30 – $64,336.40
+
+**Alpaca:** No open positions. Stop a2b44cf9 confirmed canceled 2026-05-22. Alpaca BTC position fully closed. No action required.
+
+**Portfolio state:**
+- SOL: 0.8462 SOL at entry ~$72.15, now ~$73.50, unrealized +$1.14 (+1.87%)
+- ZUSD cash: $60.5566
+- Trailing stop: OZXH23-FVRDV-JVT3BH (3.5% trail, trigger ~$70.93)
+
+**Actions taken:** Cancelled orphaned-looking stop OM6G7A-4TADL-2E2SLP (error), placed replacement stop OZXH23-FVRDV-JVT3BH. WhatsApp alert sent.
