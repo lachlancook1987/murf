@@ -19633,3 +19633,111 @@ No actions taken (no stop tightening, no exit, no new entry). No WhatsApp notifi
 ### Summary
 
 SOL/USD position holding at +0.37%, trailing stop active. Market environment unchanged (Extreme Fear 23, BTC flat). Midday scan complete — no action required. Next check at EOD or if T1 ($74.31) is hit.
+
+---
+
+## 2026-06-21 — Pre-Session Research (Day 32, Sunday)
+
+**Execution time:** 2026-06-21 pre-session UTC
+
+### STEP 1 — Memory Context
+
+Active strategy: Kraken day trading (activated 2026-05-21). SOL/USD position carried from Jun 20 session — entered ~$72.15, 0.8462 SOL, 3.5% trailing stop (high-ATR). Phase P&L: −32% from $179.78 starting equity.
+
+### STEP 2 — Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Notes |
+|---|---|---|
+| SOL | 0.8462475614 | Open position from Jun 20 entry ~$72.15 |
+| ZUSD | $60.5566 | Cash |
+| Dust | Various | AVAX, BABY, FET, INJ, NEAR, SUI, TAO (all negligible) |
+
+- **Open margin positions:** NONE (SOL is spot)
+- **Open orders:** OZXH23-FVRDV-JVT3BH — trailing-stop SELL 0.84620 SOLUSD @ 3.5% trail, GTC. Stop trigger: $71.18, limit ref: $73.76. ✓ Stop confirmed active.
+
+**SOL live quote:** Ask $73.12 / Bid $73.11 | Spread $0.01 = 0.014% ✓
+- 24h open: $73.14 | 24h range: $72.80–$73.76 (today) / $70.44–$74.20 (rolling 24h)
+- SOL vs entry $72.15: +$0.97 (+1.35%) unrealized
+- T1 = $74.31 (NOT reached) | T2 = $75.76
+
+**Total equity estimate:** SOL ($61.87 mark) + ZUSD ($60.56) = ~$122.43
+**Phase P&L:** −$57.35 (−31.89%) from $179.78 starting equity
+
+**Alpaca:** No open positions. No open orders. BTC position fully closed 2026-05-22. Alpaca monitoring retired.
+
+### STEP 3 — Market Research (Perplexity)
+
+**BTC:** ~$64,200 | 24h: +1.4% — healthy recovery, not near crash gate
+**ETH:** ~$1,731 | 24h: +1.1–2.2% (consensus across CoinGecko, Binance, CoinMarketCap)
+**Fear & Greed Index:** 23 — Extreme Fear (unchanged from prior sessions; Alt.me/Binance consensus)
+**BTC Funding Rate:** +0.0100%/8h (Kraken +0.0148%) — slight long bias; neutral-to-bullish
+**BTC weekly trend gate:** BTC ~−1.1% vs Jun 14 close (well under −3% threshold) → NOT triggered
+**Crash gate:** BTC +1.4% 24h → NOT triggered
+
+**Top 24h gainers (CoinGecko):**
+1. UWU (Unicorn) +133%
+2. BTW (Bitway) +89%
+3. BICO (Biconomy) +61%
+4. CLO (Yei Finance) +32%
+5. SLX (Solstice) +31%
+6. RE +31%
+7. CX (Cortex) +26%
+8. SYN (Synapse) +25%
+9. AXS (Axie Infinity) +25%
+10. BURN (BurnedFi) +21%
+
+**Token unlocks this week:** ZRO $23.2M, SPK $18.5M, ARB $8.0M, KAITO $7.4M — supply-side pressure across alts mid-week.
+
+**Key catalysts:**
+- **Clarity Act:** 66% passage probability (Polymarket); Senate debate expected early July. Approaching binary catalyst event for broader crypto market.
+- **BTC ETF flows:** Turned positive — $1.32B in March 2026; structural institutional tailwind.
+- **MicroStrategy:** Continuing BTC acquisition ($42B program, 762K BTC held). Spot buying support.
+- **SOL ecosystem:** Alpenglow upgrade narrative, Securitize tokenized fund, ETF investor interest cited as constructive.
+- **U.S.-Iran peace deal (Jun 19):** Risk-on macro tailwind still active; BTC recovering.
+
+### STEP 4 — Trade Opportunity Scan
+
+**Decision gates:**
+- Crash gate (BTC >20% down): NOT triggered ✓
+- BTC weekly downtrend gate (BTC >3% down 5d): NOT triggered ✓
+- Default stance: **TRADE — find best setups**
+
+**Candidates screened:**
+
+| Candidate | Kraken Status | 24h Move | vs Open | Spread | Decision |
+|---|---|---|---|---|---|
+| OMNI/USD | Online | +174% (CoinGecko) | Fading | 32% ($0.330 bid / $0.485 ask) | **HARD SKIP** — spread 32%, only 3 trades today; Kraken OMNI is a different/illiquid token vs the Upbit-listed one |
+| SYN/USD | Online | +25% | −1.7% from open ($0.133 → $0.1306) | 0.23% ✓ | **SKIP** — fading hard from $0.196 24h high; momentum peak long past; SKIP per peak rule |
+| AXS/USD | Online | +25% | −1.4% from open ($1.164 → $1.148) | 0.087% ✓ | **SKIP** — below open, fading from $1.277 24h high; momentum reversed |
+| BICO/USD | (not checked) | +61% | Unknown | Not checked | **SKIP** — no fundamental catalyst; speculative; repeatedly rejected across 3 sessions |
+| BTC/USD | Online | +1.4% | +1.4% | Tight | **WATCH** — below 3% threshold; no entry signal |
+| ETH/USD | Online | +1.1–2.2% | Flat-to-positive | Tight | **WATCH** — below 3% threshold |
+| SOL/USD | HELD | — | ≈flat from 24h open | 0.014% ✓ | **HOLD** — existing position; thesis intact; stop active |
+
+**No new entries qualify.** The OMNI surge (Upbit listing catalyst) is not actionable on Kraken due to the extreme spread (32%) and illiquid book (3 trades/day). SYN and AXS both failed momentum peak check — each well off their 24h highs when screened.
+
+**Existing SOL position review:**
+- Thesis (multi-factor: volume surge, ETF inflows, Alpenglow narrative, U.S.-Iran macro): ✓ still intact
+- Technical concern noted (SOL -40% YTD, below $76 channel support per CryptoRank): acknowledged but NOT thesis-breaking; trailing stop handles downside
+- T1 ($74.31) not yet hit — no stop tightening needed
+- Trailing stop OZXH23-FVRDV-JVT3BH confirmed active at $71.18 trigger
+- Action: **HOLD, no changes**
+
+### STEP 5 — Risk Factors
+
+1. **Extreme Fear (23):** Market environment structurally cautious; weekend thin books risk wider intraday spreads
+2. **SOL technical fragility:** CryptoRank notes SOL well below $86–90 overhead resistance; $76 is first major target; current $73 shows lack of follow-through
+3. **Token unlock pressure:** ZRO, ARB, SPK unlocks mid-week add alt supply-side headwind
+4. **Clarity Act binary risk:** If Act fails vote in July, broad market sell-off possible — watch for XRP binary catalyst window
+5. **HWM reset on SOL stop:** Overnight error on Jun 20 reset HWM from $74.20 to $73.50; current stop trigger $71.18 reflects $73.76 daily high today rather than prior $74.20 — this is acceptable but means protection is slightly looser than it would have been
+
+### Decision
+
+**HOLD SOL, NO NEW ENTRIES.**
+
+Crash gate: NOT triggered. Weekly gate: NOT triggered. Default stance is TRADE but no qualifying setup available: top gainers either lack Kraken liquidity (OMNI 32% spread), are fading past momentum peak (SYN, AXS), or have no catalyst (BICO). BTC/ETH sub-3% moves don't trigger entry signal.
+
+SOL position maintained with trailing stop. Let T1 ($74.31) or stop ($71.18) resolve the trade.
+
+**Planned trades today:** HOLD SOL — monitoring for T1 hit or stop exit. Will add second position from cash ($60.56 ZUSD) if a qualifying 4h momentum candidate with fresh catalyst emerges intraday.
