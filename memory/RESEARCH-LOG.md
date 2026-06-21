@@ -19741,3 +19741,48 @@ Crash gate: NOT triggered. Weekly gate: NOT triggered. Default stance is TRADE b
 SOL position maintained with trailing stop. Let T1 ($74.31) or stop ($71.18) resolve the trade.
 
 **Planned trades today:** HOLD SOL — monitoring for T1 hit or stop exit. Will add second position from cash ($60.56 ZUSD) if a qualifying 4h momentum candidate with fresh catalyst emerges intraday.
+
+---
+
+## 2026-06-21 — Midday Scan
+
+**Execution time:** 2026-06-21 midday UTC
+
+### Market State
+
+**BTC:** $64,161 | 24h: +1.08% — healthy. Crash gate NOT triggered. Weekly gate NOT triggered.
+**SOL:** $73.83 ask / $73.82 bid | Day open $73.14 | Day high $74.00 | 24h high $74.20 | 24h range $70.44–$74.20
+**Fear & Greed:** ~23 (Extreme Fear — unchanged from pre-session)
+**BTC funding rate:** +0.0100%/8h (slight long bias, neutral-to-bullish)
+
+### Position Review
+
+**SOL/USD (held since Jun 20 ~$72.15):**
+- Current: $73.83 | Unrealized: +$1.68 (+2.33%) on 0.8462 SOL
+- T1: $74.31 (+3%) — 0.65% away; T2: $75.76 (+5%)
+- Stop: OZXH23-FVRDV-JVT3BH, trailing 3.5%, stopprice $71.41, HWM $74.00 — ACTIVE ✓
+- Thesis: Intact — Alpenglow upgrade, $540M ETF institutional exposure, Securitize RWA, WSOP partnership, U.S.-Iran macro tailwind
+- Action: HOLD. At T1 → tighten to 0.5% trail.
+
+### Candidates Screened
+
+**TNSR/USD:** +62% from 24h open ($0.03060 → $0.04960), spread 0.20% ✓. BUT:
+- 9.8% below 24h high ($0.0550) — momentum peak appears to have passed hours ago
+- Catalyst: vague Solana NFT market recovery / Tensor platform activity (no specific news <6h)
+- Momentum peak check: FAILED → SKIP
+
+**DOLO/USD:** 24h +53.35%, but spread 12.9% → HARD SKIP
+
+**XRP/USD:** $1.1476, −0.12% from open. CLARITY Act is pending (66% probability Polymarket) but not moving price today. Binary catalyst awaiting vote in early July. Not actionable intraday. → SKIP
+
+**UNI/USD:** $3.048, +1.47% from open — below 3% threshold → SKIP
+
+**BTC:** +1.08% — below threshold → SKIP
+
+### Decision
+
+**NO NEW ENTRIES.** HOLD SOL with trailing stop. Await T1 ($74.31) or stop resolution.
+
+Top gainer TNSR's 62% open-to-current move is stale (9.8% off peak, no identifiable catalyst <6h). Other candidates below momentum thresholds. SOL protecting unrealized gain; at $73.83 it is well above the $71.41 stop trigger and closing in on T1.
+
+**Watch for:** SOL break above $74.31 (T1) → tighten stop to 0.5% trail. Fresh catalyst on TNSR (if a specific announcement emerges) or XRP (CLARITY Act floor vote).

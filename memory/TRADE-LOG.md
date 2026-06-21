@@ -6054,3 +6054,45 @@ FOMC decision pending today — additional macro event risk.
 **Trades today:** none (SOL carried overnight from Jun 20 buy) | **Total since migration:** ~78
 **Notes:** Passive Sunday — no new trades placed. SOL/USD position opened Jun 20 at ~$72.15 continued to trade in a narrow range. SOL opened at $73.14 and dipped to $72.94 by EOD (−0.28% on the day), remaining well above trailing stop trigger $71.18 (3.5% below HWM $73.76). Unrealized gain from entry: +$0.66 (+1.09%). BTC slid −0.43% over 24h (open $64,250 → $63,974), and bot outperformed by +0.78% on a down-BTC day as SOL held better than BTC. Phase P&L −31.98% from Kraken starting equity $179.78. Crash gate not triggered (BTC 24h −0.43%, far under −20% threshold). Alpaca BTC position fully closed (2026-05-22); stop a2b44cf9 previously cancelled; no Alpaca monitoring needed. Tomorrow: watch for SOL break above HWM $73.76 (stop upgrades automatically); scan for fresh intraday catalysts with momentum >3% and volume surge >2× average across alt universe before entering new positions.
 
+
+---
+
+## 2026-06-21 — Midday Scan
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| SOL/USD | 0.8462 | ~$72.15 | $73.83 | +2.33% | OZXH23 · 3.5% trail · stopprice $71.41 · HWM $74.00 | OPEN |
+
+**Kraken open orders:** OZXH23-FVRDV-JVT3BH — trailing-stop SELL 0.84620 SOLUSD @ 3.5% trail, GTC. stopprice $71.41, limitref $74.00 ✓
+**Alpaca open orders:** NONE (BTC position fully closed 2026-05-22; Alpaca monitoring retired).
+
+**BTC Crash Gate:** BTC $64,161 (ask) | 24h +1.08% — NOT triggered.
+**BTC Weekly Gate:** BTC well under −3% vs Jun 14 close — NOT triggered.
+
+**STEP 3 — Stop verification:** OZXH23-FVRDV-JVT3BH confirmed active. SOL protected ✓. No gaps.
+**STEP 4 — Stop tightening:** SOL +2.33% from entry. Under +20% tightening threshold. Trail stays at 3.5%.
+**STEP 5 — Thesis check:** SOL thesis intact — Alpenglow consensus upgrade, $540M institutional ETF exposure (30 institutions), Securitize tokenized fund, WSOP 2026 sponsorship, RWA $2.8B on Solana, U.S.-Iran peace deal macro tailwind. No rug/exploit/unlock dump/regulatory action. HOLD.
+
+### Midday Candidate Screening
+
+| Asset | vs 24h Open | Spread | Catalyst | Decision |
+|---|---|---|---|---|
+| TNSR/USD | +62.1% ($0.03060 → $0.04960) | 0.20% ✓ | Solana NFT market recovery / Tensor platform activity — vague sentiment, no specific catalyst <6h | **SKIP** — 9.8% below 24h high ($0.0550); momentum peak check FAILED; no specific news catalyst |
+| DOLO/USD | +53.35% (24h) | 12.9% ✗ | Unknown | **HARD SKIP** — spread 12.9% |
+| XRP/USD | −0.12% ($1.1476) | 0.01% ✓ | CLARITY Act narrative (66% passage probability, Senate vote expected early July) — structural catalyst, not intraday | **SKIP** — price below open; CLARITY Act is pending but not moving XRP today |
+| UNI/USD | +1.47% ($3.048) | 0.003% ✓ | Volume pickup noted but no specific catalyst | **SKIP** — below 3% threshold |
+| BTC/USD | +1.08% ($64,161) | tight ✓ | No fresh catalyst | **SKIP** — below 3% threshold |
+
+### Decision
+
+**NO NEW ENTRIES. HOLD SOL.**
+
+SOL at $73.83 (+2.33% from entry $72.15). T1 = $74.31 is only $0.48 away — trailing stop at $71.41 handles protection. When T1 hits: tighten trail to 0.5% to lock in gains and let position run toward T2 $75.76.
+
+No candidate passes all gates: TNSR's 62% move is real but 9.8% off its 24h high with only sentiment as catalyst (momentum peak check failed). DOLO has 12.9% spread. XRP is flat-to-down from open. UNI below threshold.
+
+**Portfolio state:** SOL 0.8462 @ entry $72.15, current $73.83, unrealized +$1.42 (+2.33%) | ZUSD $60.5566 | Total ~$122.87
+**Phase P&L:** ~−$56.91 est. (−31.66%) from Kraken starting equity $179.78.
+
+**No notification sent (no actionable trades; hold-only midday).**
