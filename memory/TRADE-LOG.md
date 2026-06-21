@@ -6041,3 +6041,16 @@ FOMC decision pending today — additional macro event risk.
 - Trailing stop: OZXH23-FVRDV-JVT3BH (3.5% trail, trigger ~$70.93)
 
 **Actions taken:** Cancelled orphaned-looking stop OM6G7A-4TADL-2E2SLP (error), placed replacement stop OZXH23-FVRDV-JVT3BH. WhatsApp alert sent.
+
+---
+
+## 2026-06-21 — EOD Snapshot (Day 32, Sunday)
+
+### Jun 21 — EOD Snapshot (Day 32, Sunday)
+**Portfolio:** $122.28 | **Cash:** $60.56 (49.5%) | **Day P&L:** +$0.43 (+0.35%) | **Phase P&L:** −$57.50 (−31.98%) | **vs BTC:** +0.78% (BTC −0.43% 24h, open $64,250 → $63,974)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| SOL/USD | 0.8462 | ~$72.15 | $72.94 | −0.28% | +$0.66 (+1.09%) | OZXH23 · 3.5% trail · trigger $71.18 · HWM $73.76 |
+**Trades today:** none (SOL carried overnight from Jun 20 buy) | **Total since migration:** ~78
+**Notes:** Passive Sunday — no new trades placed. SOL/USD position opened Jun 20 at ~$72.15 continued to trade in a narrow range. SOL opened at $73.14 and dipped to $72.94 by EOD (−0.28% on the day), remaining well above trailing stop trigger $71.18 (3.5% below HWM $73.76). Unrealized gain from entry: +$0.66 (+1.09%). BTC slid −0.43% over 24h (open $64,250 → $63,974), and bot outperformed by +0.78% on a down-BTC day as SOL held better than BTC. Phase P&L −31.98% from Kraken starting equity $179.78. Crash gate not triggered (BTC 24h −0.43%, far under −20% threshold). Alpaca BTC position fully closed (2026-05-22); stop a2b44cf9 previously cancelled; no Alpaca monitoring needed. Tomorrow: watch for SOL break above HWM $73.76 (stop upgrades automatically); scan for fresh intraday catalysts with momentum >3% and volume surge >2× average across alt universe before entering new positions.
+
