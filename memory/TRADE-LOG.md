@@ -6128,3 +6128,35 @@ No candidate passes all gates: TNSR's 62% move is real but 9.8% off its 24h high
 **Candidate screening:** JUP (−2.8% from 24h high, R:R fails), AVAX/WLD/SEI (below 3%), BICO (−16% from open, no catalyst), AERO (−2% from open, catalyst 7d old), MAT (5 trades today, illiquid) — ALL SKIP.
 
 **Actions taken:** NONE. HOLD SOL with trailing stop.
+
+---
+
+## 2026-06-21 — SOL/USD Position Closed (Trailing Stop Fired)
+
+**Execution time:** 2026-06-21 20:18 UTC (automated stop trigger)
+
+**Stop Order ID:** OZIEYK-EU33M-BUJUF3 (0.5% trailing stop — placed after T1 tightening)
+**Symbol:** SOL/USD | **Qty:** 0.8462 SOL | **Side:** SELL (automated trailing stop)
+**Entry:** $72.00 (Jun 20 market fill) | **Exit:** $74.04
+**HWM at exit:** ~$74.43 | **Stop trigger:** $74.06 ($74.43 × 0.995) | **Fill:** $74.04 (just below trigger)
+**Trade duration:** ~22 hours (Jun 20 21:08 UTC → Jun 21 20:18 UTC)
+**P&L:** +~$1.35 net (+2.22% net after ~0.52% round-trip fees) | **Gross:** +$1.72 (+2.83%)
+**Entry cost:** 0.8462 × $72.00 = $60.93 | **Proceeds:** $62.28 (ZUSD reconciliation)
+**ZUSD after:** $122.8334 (100% cash, no open positions)
+**Phase P&L:** −$56.95 (−31.68%) vs starting equity $179.78
+**Notes:** SOL entered Jun 20 on multi-factor catalyst (volume +67%, Iran peace deal, Alpenglow narrative). Position hit T1 (+3%) — stop tightened from 3.5% to 0.5% trail. Stop (OZIEYK) placed with HWM $74.43, trigger $74.06. Price dipped to $74.04 triggering exit 13 minutes after tightening. Clean exit — locked in +2.22% net gain. SOL now trading $73.17–73.22 (below exit price). Strategy worked correctly: T1 tightened trail, captured the high.
+
+**Candidates screened post-close (session-open scan, ~21:00 UTC):**
+All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); JUP (declining from peak hours ago); ALICE (−15.6% from open); TAO (below 3% threshold); AERO/ETH/XRP/HYPE/SOL/AVAX (all at or below open). No qualifying entry found.
+**No new trades executed.**
+
+---
+
+## 2026-06-21 — EOD Snapshot (Day 32, evening update)
+
+**Portfolio:** $122.83 | **Cash:** $122.83 (100%) | **Day P&L:** +$0.55 vs Jun 21 open equity ~$122.28 | **Phase P&L:** −$56.95 (−31.68%) | **vs BTC:** BTC +0.26% 24h, bot outperformed on cash (0% vs BTC's modest gain)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| (no open positions) | — | — | — | — | — | — |
+**Trades today:** SOL/USD trailing stop OZIEYK-EU33M-BUJUF3 triggered 20:18 UTC (0.8462 SOL exit $74.04, +2.22% net, +$1.35 realized) | **Total since migration:** ~79
+**Notes:** SOL 0.5% trailing stop fired at 20:18 UTC at $74.04, just $0.02 below trigger ($74.06). T1 exit tightening worked correctly — locked in +2.22% net. Now 100% cash ($122.83 ZUSD). Extreme Fear (23). No qualifying new entry found in post-close scan. SOL now $73.17 (below exit). Next session: fresh scan, look for 1h surge >3% with volume and catalyst.

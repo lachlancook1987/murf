@@ -20015,3 +20015,79 @@ All candidates fail at least one of: spread, momentum threshold, R:R gate, momen
 - SOL resistance at $75.45–$75.95 may cap T2 run without fresh catalyst
 - CLARITY Act vote uncertain; if delayed → XRP long thesis weakens short-term
 
+
+---
+
+## 2026-06-21 — Session-Open Scan (Post-SOL-Close Run)
+
+**Execution time:** 2026-06-21 ~21:00 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ZUSD | $122.8334 | 100% cash — SOL stop fired 20:18 UTC |
+| SOL dust | 0.0000475614 | Negligible |
+
+**Kraken open orders:** NONE — OZIEYK-EU33M-BUJUF3 closed (trailing stop triggered at $74.04)
+**Alpaca:** No open positions. Monitoring retired.
+
+**SOL exit confirmed:** OZIEYK-EU33M-BUJUF3 sold 0.8462 SOL @ $74.04 at 20:18 UTC. Net gain ~+$1.35 (+2.22%). HWM was $74.43, trigger $74.06, fill $74.04.
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $63,757 ask | +0.26% 24h from open $64,250 — crash gate NOT triggered |
+| ETH | $1,717 | −1.26% from 24h open $1,739 — declining |
+| SOL | $73.20 | +0.08% from 24h open $73.14 — flat, below exit price $74.04 |
+| XRP | $1.1375 | −1.0% from 24h open $1.1490 — declining |
+| Fear & Greed | 23 | Extreme Fear — 4th consecutive day |
+| BTC Funding Rate | +0.010–0.015%/8h | Neutral-to-mild long bias |
+| Crash Gate (BTC >20% down) | NOT TRIGGERED | BTC +0.26% 24h |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED | BTC flat vs Jun 16 (~$64,000 range) |
+
+---
+
+### Candidate Screening
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| TNSR/USD | +52.6% ($0.0306→$0.0467) | −15.1% from $0.055 | 0.21% ✓ | Solana NFT platform activity — sentiment only, no specific <6h catalyst | **SKIP** — momentum peak check FAILED; 15% below 24h high set hours ago; no verifiable catalyst |
+| OBOL/USD | +26.1% ($0.003976→$0.005014) | −10.2% from $0.005584 | 2.07% ✗ | Obol distributed validator protocol — general narrative | **HARD SKIP** — spread 2.07% (>1% gate); also declining from peak |
+| JUP/USD | +3.81% ($0.20987→$0.21787) | −3.9% from $0.22670 | 0.11% ✓ | $1T cumulative volume milestone (age unconfirmed) | **SKIP** — momentum peak check FAILED; 24h high set hours ago; price declining |
+| ALICE/USD | −15.6% ($0.16510→$0.13940) | −31.9% from $0.20470 | 0.57% ✓ | My Neighbor Alice gaming — spike already reversed | **HARD SKIP** — collapsed from open; 24h high hours ago |
+| TAO/USD | +1.53% ($231.37→$234.90) | −2.8% from $241.70 | 0.09% ✓ | Bittensor AI narrative | **SKIP** — below 3% threshold; Perplexity +4.27% was stale data |
+| UXLINK/USD | spike then crash | −38.9% from $0.00198 | 11.6% ✗ | Social Web3 — unclear | **HARD SKIP** — spread 11.6%; collapsed from peak |
+| SOL/USD | +0.08% | −1.9% from $74.58 | 0.01% ✓ | Alpenglow/ETF (ongoing) | **SKIP** — below 3% threshold; stop already fired |
+| ETH/USD | −1.26% ($1,739→$1,717) | −1.3% from $1,739 | <0.01% ✓ | Pectra/Fusaka (ongoing) | **SKIP** — declining from open |
+| XRP/USD | −1.0% ($1.1490→$1.1375) | −1.1% from $1.152 | 0.013% ✓ | CLARITY Act (early July) | **SKIP** — flat-to-down; CLARITY Act not moving today |
+| HYPE/USD | −4.0% ($70.72→$67.89) | −4.2% from $70.84 | 0.015% ✓ | None fresh | **SKIP** — declining significantly from open |
+| AERO/USD | −5.2% ($0.5493→$0.5209) | −6.2% from $0.5553 | 0.13% ✓ | Predictive Allocation (7d old catalyst) | **SKIP** — declining from open; catalyst stale |
+| AVAX/USD | −0.7% ($6.235→$6.190) | −10.2% from $6.892 | 0.02% ✓ | None | **SKIP** — below open |
+| SEI/USD | −0.1% (flat) | −3.4% from $0.0564 | 0.07% ✓ | SEI unlock Jun 20 headwind | **SKIP** — flat, no momentum |
+| LIT/USD | −13.9% ($0.1068→$0.0919) | −14.2% from $0.1071 | 1.41% ✗ | None | **HARD SKIP** — spread >1% + collapsing |
+| BTC/USD | +0.26% ($64,250→$64,072) | −0.7% from $64,493 | <0.01% ✓ | ETF flows/ceasefire (ongoing) | **SKIP** — below 3% threshold |
+
+---
+
+### Decision
+
+**NO NEW ENTRIES.**
+
+All candidates fail at least one gate. Market in Extreme Fear (F&G 23) — 4th consecutive day. ETH declining. Most momentum leaders (TNSR, OBOL, ALICE, UXLINK) had their peaks hours ago. JUP is the only asset near the 3% threshold but is declining from its 24h high (momentum peak check fails). No fresh intraday catalyst <6h old for any asset.
+
+Default stance is TRADE but no qualifying setup available.
+
+**Portfolio state:** ZUSD $122.83 (100% cash) | Total ~$122.83
+**Phase P&L:** −$56.95 (−31.68%) vs starting equity $179.78
+
+**No notification sent (no trades executed).**
+
+**Next triggers:**
+- Any asset with 1h surge >3% + volume >2× average + catalyst <6h → screen per checklist
+- XRP CLARITY Act Senate vote date announced → enter with 7% trailing stop
+- BTC crash gate: if BTC drops >20% in 24h → preserve cash, no new entries
