@@ -6096,3 +6096,16 @@ No candidate passes all gates: TNSR's 62% move is real but 9.8% off its 24h high
 **Phase P&L:** ~−$56.91 est. (−31.66%) from Kraken starting equity $179.78.
 
 **No notification sent (no actionable trades; hold-only midday).**
+
+---
+
+## 2026-06-21 — Midday Scan (2nd Run)
+
+**SOL/USD position:** 0.8462 SOL | Entry ~$72.15 | Current $73.77 | Unrealized +$1.62 (+2.25%)
+**Stop:** OZXH23-FVRDV-JVT3BH — 3.5% trail, stopprice $71.69, HWM $74.28 (auto-tightened from $71.41/$74.00 on 1st run)
+**T1:** $74.31 (not yet hit — $0.54 away) | **T2:** $75.76
+**Alpaca:** No open positions. Stop a2b44cf9 confirmed canceled 2026-05-22. Alpaca monitoring retired.
+
+**Candidates screened:** JUP (+7.54% vs open, spread 0.15%) — SKIP (high-ATR 3.5% stop → T1 R:R 0.86:1, catalyst timing unconfirmed). ENA/AVAX/SEI/APT — all below 3% threshold.
+
+**Actions taken:** NONE. Hold SOL with trailing stop. No stop adjustments (under +20% tightening threshold).

@@ -19786,3 +19786,49 @@ SOL position maintained with trailing stop. Let T1 ($74.31) or stop ($71.18) res
 Top gainer TNSR's 62% open-to-current move is stale (9.8% off peak, no identifiable catalyst <6h). Other candidates below momentum thresholds. SOL protecting unrealized gain; at $73.83 it is well above the $71.41 stop trigger and closing in on T1.
 
 **Watch for:** SOL break above $74.31 (T1) → tighten stop to 0.5% trail. Fresh catalyst on TNSR (if a specific announcement emerges) or XRP (CLARITY Act floor vote).
+
+---
+
+## 2026-06-21 — Midday Scan (2nd Run)
+
+**Execution time:** 2026-06-21 midday UTC (2nd scheduled run)
+
+### Market State
+
+**BTC:** ~$64,200 | 24h: +1.1% — crash gate NOT triggered. Weekly gate NOT triggered (BTC ~−1.1% vs Jun 14, well under −3%).
+**SOL:** $73.77 ask / $73.76 bid | Day open $73.14 | 24h high $74.28 | Day range $72.65–$74.28
+**Stop (OZXH23-FVRDV-JVT3BH):** 3.5% trail, stopprice $71.69, HWM ref $74.28 — auto-tightened since prior run (was $71.41/HWM $74.00). ACTIVE ✓
+
+### Position Review
+
+**SOL/USD (held since Jun 20 ~$72.15):**
+- Current: $73.77 | Unrealized: +$1.62 (+2.25%) on 0.8462 SOL
+- T1: $74.31 (+3% from entry) — only $0.54 away
+- T2: $75.76 (+5%)
+- Stop: OZXH23-FVRDV-JVT3BH, 3.5% trail, stopprice $71.69, HWM $74.28 — ACTIVE ✓
+- Thesis: Intact — Alpenglow upgrade, ETF institutional inflows, Securitize RWA, WSOP partnership, U.S.-Iran macro tailwind. No exploit/rug/unlock dump/regulatory action.
+- Action: HOLD. At T1 → cancel OZXH23, place new 0.5% trailing stop to lock in gain.
+
+### Candidates Screened (2nd Run)
+
+| Asset | vs 24h Open | 24h High | Current vs High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|---|
+| JUP/USD | +7.54% ($0.2099→$0.2257) | $0.2267 | −0.44% (near peak) | 0.15% ✓ | $1T cumulative vol milestone + Solana DEX rotation | **SKIP** — catalyst timing unconfirmed (<6h?); high-ATR 8.4% range → 3.5% stop required → T1 R:R 0.86:1 < 1.2:1 gate |
+| ENA/USD | +2.13% ($0.0892→$0.0911) | $0.0940 | −3.1% | 0.11% ✓ | None specific | **SKIP** — below 3% threshold; fading from peak |
+| AVAX/USD | +0.98% ($6.235→$6.296) | $6.892 | −8.7% | 0.016% ✓ | None | **SKIP** — below 3% threshold; well below day high |
+| SEI/USD | +1.10% ($0.05459→$0.05519) | $0.05638 | −2.1% | 0.07% ✓ | None | **SKIP** — below 3% threshold |
+| APT/USD | +1.86% ($0.6441→$0.6561) | $0.6654 | −1.4% | 0.11% ✓ | None | **SKIP** — below 3% threshold |
+
+### Decision
+
+**NO NEW ENTRIES. HOLD SOL.**
+
+JUP is the only candidate with meaningful momentum (+7.54%) and acceptable spread (0.15%), but fails the R:R gate: high-ATR asset (8.4% intraday range) requires 3.5% stop, giving T1 R:R of only 0.86:1. Catalyst timing ($1T milestone) unconfirmed as <6h old — may be stale news already priced in. Broader intraday setup scan did not flag JUP as top pick. SKIP.
+
+All other candidates below the 3% vs-open threshold or deep off their day highs.
+
+**Portfolio state:** SOL 0.8462 @ entry $72.15, current $73.77, unrealized +$1.62 (+2.25%) | ZUSD $60.5566 | Total ~$122.87
+**Phase P&L:** ~−$56.91 est. (−31.66%) from Kraken starting equity $179.78.
+
+**No notification sent (hold-only; no actionable action taken).**
+**Next trigger:** SOL T1 at $74.31 → tighten stop to 0.5% trail (cancel OZXH23, place new stop).
