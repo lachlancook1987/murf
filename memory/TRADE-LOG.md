@@ -6109,3 +6109,22 @@ No candidate passes all gates: TNSR's 62% move is real but 9.8% off its 24h high
 **Candidates screened:** JUP (+7.54% vs open, spread 0.15%) — SKIP (high-ATR 3.5% stop → T1 R:R 0.86:1, catalyst timing unconfirmed). ENA/AVAX/SEI/APT — all below 3% threshold.
 
 **Actions taken:** NONE. Hold SOL with trailing stop. No stop adjustments (under +20% tightening threshold).
+
+---
+
+## 2026-06-21 — Evening Scan (Session-Open 3rd Run)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop | Status |
+|---|---|---|---|---|---|---|
+| SOL/USD | 0.8462 | ~$72.15 | $74.08 | +2.68% | OZXH23 · 3.5% trail · stopprice $71.69 · HWM $74.28 | OPEN |
+
+**Kraken open orders:** OZXH23-FVRDV-JVT3BH — trailing-stop SELL 0.84620 SOLUSD @ 3.5% trail, GTC. stopprice $71.69, limitref (HWM) $74.28 ✓
+**Alpaca:** No open positions. Monitoring retired.
+
+**BTC Crash Gate:** BTC $64,146 (ask) | 24h open $64,250 | −0.16% — NOT triggered.
+**BTC Weekly Gate:** NOT triggered.
+
+**Candidate screening:** JUP (−2.8% from 24h high, R:R fails), AVAX/WLD/SEI (below 3%), BICO (−16% from open, no catalyst), AERO (−2% from open, catalyst 7d old), MAT (5 trades today, illiquid) — ALL SKIP.
+
+**Actions taken:** NONE. HOLD SOL with trailing stop.

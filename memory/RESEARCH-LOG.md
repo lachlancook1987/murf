@@ -19832,3 +19832,63 @@ All other candidates below the 3% vs-open threshold or deep off their day highs.
 
 **No notification sent (hold-only; no actionable action taken).**
 **Next trigger:** SOL T1 at $74.31 → tighten stop to 0.5% trail (cancel OZXH23, place new stop).
+
+---
+
+## 2026-06-21 — Evening Scan (Session-Open 3rd Run)
+
+**Execution time:** 2026-06-21 evening UTC
+
+### Market State
+
+**BTC:** $64,146 ask | 24h open $64,250 | −0.16% from open | Crash gate NOT triggered | Weekly gate NOT triggered (BTC well under −3% vs Jun 14)
+**ETH:** ~$1,731 | +0.3% 24h
+**SOL:** $74.08–74.09 ask | Open $73.14 | 24h High $74.28 | +1.29% from open | T1 = $74.31 only $0.23 away!
+**Fear & Greed:** 23 (Extreme Fear)
+**BTC Funding Rate:** ~+0.0100%/8h (neutral-to-slight long bias)
+**Token unlock headwinds this week:** ZRO $23.16M (Jun 20, 53% market cap), SPK $18.49M (Jun 17, 33% market cap), ARB $8M — alt supply pressure but doesn't affect SOL thesis directly
+
+### Decision Gates
+
+- Crash gate (BTC >20% down): NOT triggered ✓
+- BTC weekly downtrend gate (BTC >3% down 5d): NOT triggered ✓
+- Default stance: **TRADE — find best setups**
+
+### Position Review
+
+**SOL/USD (held since Jun 20 ~$72.15):**
+- Current: $74.08 | Unrealized: +$1.93 (+2.68%) on 0.8462 SOL
+- T1: $74.31 (+3% from entry) — only $0.23 away
+- T2: $75.76 (+5%)
+- Stop: OZXH23-FVRDV-JVT3BH, 3.5% trail, stopprice $71.69, HWM $74.28 — ACTIVE ✓
+- Thesis: Intact — Alpenglow upgrade, $540M institutional ETF exposure (30 institutions), Securitize RWA, WSOP 2026, U.S.-Iran macro tailwind
+- Action: HOLD. At T1 → cancel OZXH23, place 0.5% trailing stop to lock in gains, trail toward T2
+
+### Candidates Screened (Evening Run)
+
+| Asset | vs Daily Open | 24h High | Current vs High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|---|
+| JUP/USD | +5.0% ($0.2099→$0.2204) | $0.2267 | −2.8% (declining) | 0.11% ✓ | $1T vol milestone (unconfirmed timing) | **SKIP** — declining from peak, momentum peak check FAILED; high-ATR R:R 0.86:1 still fails gate; catalyst age unconfirmed |
+| AVAX/USD | +1.57% ($6.235→$6.333) | $6.892 | −8.1% | 0.03% ✓ | None | **SKIP** — below 3% threshold; well below 24h high |
+| WLD/USD | +1.56% ($0.6096→$0.6191) | $0.6205 | −0.2% | 0.11% ✓ | None confirmed | **SKIP** — below 3% threshold |
+| SEI/USD | +2.02% ($0.0546→$0.0557) | $0.0564 | −1.2% | 0.09% ✓ | None | **SKIP** — below 3% threshold |
+| BICO/USD | −16.1% ($0.0629→$0.0528) | $0.0669 | −21% | 0.48% ✓ | No verified catalyst — speculative momentum/listings only | **HARD SKIP** — collapsed from prior surge; -16% from today's open; repeated sessions with no verifiable catalyst |
+| AERO/USD | −2.1% ($0.5493→$0.5380) | $0.5577 | −3.5% | 0.11% ✓ | Predictive Allocation upgrade (announced Jun 14, 7d old) | **SKIP** — price declining from open; catalyst is 7d old (>6h); not an intraday catalyst |
+| MAT/USD | +2.9% ($0.0621→$0.0639) | $0.0640 | −0.2% | 0.31% ✓ | None | **HARD SKIP** — only 5 trades on Kraken today; effectively illiquid; below 3% threshold |
+
+### Decision
+
+**NO NEW ENTRIES. HOLD SOL.**
+
+Crash gate and weekly gate both clear — default stance is TRADE but no qualifying setup available. Top candidates all fail:
+- JUP (+5% from open) — momentum peaked and reversing (−2.8% from 24h high); R:R gate fails for high-ATR asset; no verified fresh catalyst
+- BICO (Perplexity shows +74% 24h) — actual Kraken price shows it COLLAPSED from today's open (−16.1%), surge already done hours ago
+- AERO (Perplexity shows +11%) — Kraken shows −2.1% from today's open; upgrade catalyst 7d old
+- AVAX/WLD/SEI — all below 3% threshold
+- MAT — 5 trades today, illiquid
+
+**Portfolio state:** SOL 0.8462 @ entry $72.15, current $74.08, unrealized +$1.93 (+2.68%) | ZUSD $60.5566 | Total ~$123.14
+**Phase P&L:** ~−$56.64 est. (−31.51%) from Kraken starting equity $179.78
+
+**Next trigger:** SOL cross above $74.31 (T1) → immediately cancel OZXH23-FVRDV-JVT3BH and place new 0.5% trailing stop GTC.
+**No notification sent (no trades; hold-only session).**
