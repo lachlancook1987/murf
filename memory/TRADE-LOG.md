@@ -6160,3 +6160,20 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 | (no open positions) | — | — | — | — | — | — |
 **Trades today:** SOL/USD trailing stop OZIEYK-EU33M-BUJUF3 triggered 20:18 UTC (0.8462 SOL exit $74.04, +2.22% net, +$1.35 realized) | **Total since migration:** ~79
 **Notes:** SOL 0.5% trailing stop fired at 20:18 UTC at $74.04, just $0.02 below trigger ($74.06). T1 exit tightening worked correctly — locked in +2.22% net. Now 100% cash ($122.83 ZUSD). Extreme Fear (23). No qualifying new entry found in post-close scan. SOL now $73.17 (below exit). Next session: fresh scan, look for 1h surge >3% with volume and catalyst.
+
+---
+
+## 2026-06-21 — Overnight Triage Check (~23:04 UTC)
+
+**Kraken positions:** NONE (100% cash $122.83 ZUSD)
+**Kraken orders:** NONE
+**Alpaca positions:** NONE (BTC closed 2026-05-22; monitoring retired)
+**Alpaca stop a2b44cf9:** Confirmed canceled — consistent with prior closure, no action needed.
+
+**BTC Crash Gate:** BTC mid ~$63,628 | 24h open $64,250 | **−0.97%** — NOT triggered (threshold −20%).
+
+**STEP 2 — Stop verification:** No open positions → N/A
+**STEP 3 — Emergency exits:** No open positions → N/A
+**STEP 4 — Stop tightening:** No open positions → N/A
+
+**Result: NO-OP. No actions taken. No notification sent.**
