@@ -20091,3 +20091,49 @@ Default stance is TRADE but no qualifying setup available.
 - Any asset with 1h surge >3% + volume >2× average + catalyst <6h → screen per checklist
 - XRP CLARITY Act Senate vote date announced → enter with 7% trailing stop
 - BTC crash gate: if BTC drops >20% in 24h → preserve cash, no new entries
+
+---
+
+## 2026-06-21 — Midday Scan (4th Run, 22:04 UTC)
+
+**Execution time:** 2026-06-21 22:04 UTC (late evening scan)
+
+### Account State
+
+**ZUSD:** $122.8334 (100% cash — SOL trailing stop OZIEYK fired at 20:18 UTC, +2.22% net)
+**Open positions:** NONE
+**Open orders:** NONE
+**Alpaca:** No open positions. Monitoring retired.
+
+### Market Gates
+
+**BTC:** $63,707 ask | Open $64,250 | −0.84% — crash gate NOT triggered (far from −20%)
+**BTC weekly gate:** NOT triggered (BTC well under −3% vs Jun 14 close)
+**Default stance:** TRADE — find best setup
+
+### Candidate Scan
+
+| Asset | vs Open | vs 24h High | Spread | Decision |
+|---|---|---|---|---|
+| TNSR/USD | +47.5% ($0.0306→$0.0452) | −17.9% (peak $0.0550) | 0.22% ✓ | **SKIP** — momentum peaked midday; now 17.9% off high and declining; same rejection as prior runs |
+| SOL/USD | −0.15% ($73.14→$73.03) | −2.08% (high $74.58) | 0.014% ✓ | **SKIP** — below open; 24h high set hours ago; no re-entry signal |
+| HYPE/USD | −4.34% ($70.72→$67.66) | −4.48% (high $70.96) | 0.015% ✓ | **SKIP** — outright decline, near day low |
+| TAO/USD | +0.67% ($231.37→$232.92) | −3.64% (high $241.70) | 0.066% ✓ | **SKIP** — below 3% threshold |
+| XLM/USD | −1.45% ($0.2156→$0.2125) | −2.49% (high $0.2180) | 0.06% ✓ | **SKIP** — below open, declining |
+| BTC/USD | −0.84% ($64,250→$63,709) | −1.22% (high $64,494) | tight ✓ | **SKIP** — below threshold |
+
+### Decision
+
+**NO NEW ENTRIES. HOLD CASH OVERNIGHT.**
+
+Late evening (22:04 UTC) — market in cooling phase. No asset shows 1h surge >3% with momentum peak set within last 60 minutes. TNSR had the best day performance (+47.5%) but momentum peaked 6+ hours ago at $0.0550 and price is now declining at $0.0452 (−17.9% from peak). All other candidates flat or declining vs open.
+
+**Portfolio state:** $122.83 ZUSD (100% cash). No open positions. No open orders.
+**Phase P&L:** −$56.95 (−31.68%) from Kraken starting equity $179.78.
+**Realized today:** +$1.35 (+2.22% net on SOL/USD day trade, Jun 20 entry → Jun 21 20:18 UTC exit)
+
+**Next triggers:**
+- Any asset with 1h surge >3% + volume >2× average + catalyst <6h → screen per checklist
+- XRP CLARITY Act Senate vote date announced → enter with 7% trailing stop
+- BTC crash gate: if BTC drops >20% in 24h → preserve cash, no new entries
+- SOL re-entry: if SOL breaks back above $74.58 (new 24h high) with volume catalyst in AM session
