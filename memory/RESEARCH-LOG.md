@@ -19892,3 +19892,126 @@ Crash gate and weekly gate both clear — default stance is TRADE but no qualify
 
 **Next trigger:** SOL cross above $74.31 (T1) → immediately cancel OZXH23-FVRDV-JVT3BH and place new 0.5% trailing stop GTC.
 **No notification sent (no trades; hold-only session).**
+
+---
+
+## 2026-06-22 — Pre-Session Research
+
+**Execution time:** 2026-06-22 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| SOL | 0.8462 | Open position, entry ~$72.15 |
+| ZUSD | $60.5566 | Available cash |
+
+**Kraken open orders (POST stop tightening):**
+- OZIEYK-EU33M-BUJUF3 — trailing-stop SELL 0.84620 SOLUSD @ 0.5% trail, stopprice $74.06, HWM $74.43, GTC ✓
+- (Old stop OZXH23-FVRDV-JVT3BH cancelled — 3.5% trail superseded by T1 action)
+
+**Stop tightening executed:** T1 ($74.31) was definitively crossed overnight (prior HWM $74.58 > T1 $74.31). Per strategy, cancelled 3.5% trailing stop and placed 0.5% trailing stop immediately. Locked-in floor: $74.06 (+2.65% from entry $72.15, net ~+2.4% after fees).
+
+**Alpaca:** No open positions. Monitoring retired (BTC closed 2026-05-22).
+
+**Portfolio:**
+- SOL 0.8462 × $74.30 = ~$62.87
+- ZUSD $60.5566
+- Total Kraken: ~$123.43
+- Day vs yesterday EOD ($122.28): +$1.15 (+0.94%)
+- Phase P&L: −$56.35 (−31.35%) vs starting equity $179.78
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | ~$64,000 | +0.87% 24h — crash gate NOT triggered |
+| ETH | ~$1,726 | +1.63% 24h |
+| Fear & Greed | 23 | Extreme Fear |
+| BTC Funding Rate | +0.0043%/8h | Neutral-to-slight long bias, room to run |
+| Crash Gate (BTC >20% down) | NOT TRIGGERED | BTC +0.87% 24h |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED | BTC flat vs Jun 16 |
+
+**Top 24h gainers (CoinGecko):**
+1. MSUSD +132% (micro, not on Kraken)
+2. TNSR +51.3% (on Kraken — spread 1.52%, SKIP)
+3. UB +41.8% (not on Kraken)
+4. PUMPCADE +37.7% (not on Kraken)
+5. BOX +24.5%, WOJAK +23.3%, CSPR +22.8%, others
+
+**Macro catalysts:** Ceasefire/geopolitical de-escalation → lower oil → mild risk relief. Spot BTC ETF flows mixed (institutional accumulation vs macro allocator selling). CLARITY Act Senate vote expected early July — XRP binary catalyst still building.
+
+**Token unlock headwinds this week:** ZRO $23.16M, SPK $18.49M, ARB $8.04M — alt supply pressure; none affecting SOL directly.
+
+**SOL thesis:** Intact — Alpenglow consensus upgrade, $540M institutional ETF exposure (30 institutions), Securitize RWA $2.8B, WSOP 2026 partnership, U.S.-Iran macro tailwind. SOL key resistance: $75.45–$75.95; target T2 $75.76.
+
+---
+
+### Candidate Screening
+
+| Asset | vs 24h Open | Current vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| TNSR/USD | +72.5% ($0.0306→$0.0528) | −3.9% | 1.52% ✗ | Solana NFT sentiment, no specific news | **HARD SKIP** — spread >1%; also 72% spike already priced in |
+| PUMP/USD | +7.15% ($0.001413→$0.001517) | −1.6% | 0.07% ✓ | No fresh catalyst; token unlock overhang (10B PUMP Jun 12), platform revenue falling, 80% drop in token graduation rates, regulatory scrutiny on GO platform; CoinCodex forecast bearish | **HARD SKIP** — negative fundamental catalyst; high-ATR 8.9% intraday range → 3.5% stop required → T1 R:R 0.86:1 < 1.2:1 gate |
+| MXC/USD | −7.8% vs open (crashed) | −37% from 24h high | 1.05% ✗ | None — spike already reversed hours ago | **HARD SKIP** — spread >1%; price collapsed from 24h high |
+| ENA/USD | +1.45% | −3.7% | 0.11% ✓ | None | **SKIP** — below 3% threshold |
+| ASTER/USD | −1.21% (declining) | −2.3% | 0.08% ✓ | None | **SKIP** — below 3%, declining from open |
+| AVAX/USD | ~+2.6% | off high | tight ✓ | None | **SKIP** — below 3% threshold |
+| XRP/USD | ~flat | below open | tight ✓ | CLARITY Act (early July Senate vote) | **SKIP** — binary catalyst not moving today; price flat-to-down |
+| BTC/USD | +0.87% | near high | tight ✓ | Ceasefire tailwind, ETF flow | **SKIP** — below 3% threshold; no intraday breakout |
+
+---
+
+### Actionable Trade Ideas
+
+**1. SOL/USD — HOLD (T1 tightening executed)**
+- Entry: $72.15 (Jun 20) | Current: $74.30 | Unrealized: +$1.82 (+2.52%)
+- T1 ✓ HIT (HWM $74.58 > T1 $74.31) — stop tightened to 0.5% trail EXECUTED
+- Stop: OZIEYK, 0.5% trail, floor $74.06 (locks in +$1.62 / +2.25% minimum)
+- T2: $75.76 — requires break above resistance $75.45–$75.95
+- Action: HOLD. Let trailing stop manage the position to T2 or exit.
+
+**2. TNSR/USD — WATCH (spread issue, not entering)**
+- If spread tightens below 1%: reassess. +72% move largely priced in; momentum peak check will likely fail.
+- More suitable as an EOD check than an intraday re-entry.
+
+**3. XRP/USD — WATCH (CLARITY Act)**
+- Binary catalyst: U.S. Senate CLARITY Act vote expected early July (~10 days away).
+- Setup: no intraday momentum today. Better entry when price shows 1h breakout >3% on news.
+- If Senate debate begins or vote date confirmed: enter market, 7% trailing stop (binary catalyst), T1 +5%, T2 +10%.
+- Spread confirmed tight (<0.1%). Pair available on Kraken. Not entering today.
+
+**4-5. No other qualifying setups.** All momentum leaders either have spread >1%, high-ATR R:R failure, negative catalyst, or price already collapsed from peak.
+
+---
+
+### Decision Gates
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >20% down) | NOT TRIGGERED ✓ |
+| BTC weekly downtrend gate (>3% down 5d) | NOT TRIGGERED ✓ |
+| Default stance | TRADE — but no qualifying new entry found |
+
+**DECISION: HOLD SOL (stop tightened). No new entries.**
+
+All candidates fail at least one of: spread, momentum threshold, R:R gate, momentum peak check, or negative catalyst. Fear & Greed at 23 (Extreme Fear) is a contrarian signal, but in the absence of a specific entry setup, waiting for the market to offer a cleaner opportunity is correct.
+
+**Next triggers:**
+- SOL T2 at $75.76 → consider full or partial close
+- XRP CLARITY Act vote date announced → enter with 7% trailing stop
+- Any asset with 1h surge >3% + volume >2× average + catalyst <6h → screen per checklist
+
+---
+
+### Risk Factors
+
+- Extreme Fear (F&G 23) → possible continued downward pressure or sudden snap-back
+- BTC ETF outflows offsetting institutional accumulation — net flows uncertain
+- ZRO/SPK/ARB unlock pressure on alts this week
+- SOL resistance at $75.45–$75.95 may cap T2 run without fresh catalyst
+- CLARITY Act vote uncertain; if delayed → XRP long thesis weakens short-term
+
