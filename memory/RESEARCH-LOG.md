@@ -20256,3 +20256,98 @@ Crash gate: NOT triggered (BTC +1.28%). BTC weekly gate: NOT triggered. Default 
 
 **Portfolio state (pre-trade):** $122.83 ZUSD (100% cash) | Phase P&L: −$56.95 (−31.68%)
 
+
+---
+
+## 2026-06-22 — Midday Scan (~midday UTC)
+
+**Execution time:** 2026-06-22 midday UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ENA | 828.00 | Open position, entry ~$0.0958 |
+| ZUSD | $43.20 | Available cash |
+
+**Kraken open orders:**
+- OQ637U-NH7YH-X6UAVN — trailing-stop SELL 828.00 ENA @ 2.5% trail, stopprice $0.09360, HWM ~$0.0960, GTC ✓
+
+**Alpaca:** No open positions. Stop a2b44cf9 previously confirmed canceled (BTC position closed 2026-05-22). Monitoring retired.
+
+**Portfolio:**
+- ENA 828 × $0.09475 = ~$78.45
+- ZUSD $43.20
+- Total Kraken: ~$121.65
+- vs session-open ($122.83): −$1.18 (−0.96%)
+- Phase P&L: ~−$58.13 (−32.34%) vs starting equity $179.78
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | ~$63,232 | −1.57% 24h — crash gate NOT triggered |
+| ETH | ~$1,726 | flat/slight decline |
+| Fear & Greed | 23 | Extreme Fear (unchanged) |
+| Crash Gate (BTC >20% down) | NOT TRIGGERED ✓ | |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED ✓ | Morning scan confirmed; borderline but not >3% |
+
+---
+
+### ENA/USD Position Review (STEP 3–5)
+
+| Field | Value |
+|---|---|
+| Entry | ~$0.0958 |
+| Current (mid) | ~$0.0948 |
+| vs entry | −1.05% unrealized |
+| T1 | $0.0987 (+3%) — NOT reached |
+| T2 | $0.1006 (+5%) — NOT reached |
+| 24h high | $0.0968 (+1.04% from entry, set this morning) |
+| Stop | OQ637U, 2.5% trail, stopprice $0.09360, HWM $0.0960 |
+| Stop status | Active ✓ |
+
+**STEP 3 (verify stops):** Stop OQ637U-NH7YH-X6UAVN active at 2.5% trail, stopprice $0.09360 ✓. No action needed.
+
+**STEP 4 (tighten stops):** HWM $0.0960 = only +0.2% above entry. Far below +20% threshold ($0.1150). No tightening.
+
+**STEP 5 (thesis check):** ENA catalyst intact — Coinbase Ventures accumulation confirmed, Janus Henderson institutional position confirmed, fee-switch/buyback governance vote still planned Q3 2026. New data point: monthly token unlocks continue through 2027, next unlock early July — near-term dilution headwind. No catastrophic narrative break (no exploit, no rug, no regulatory negative). Perplexity: "short-term outlook cautiously positive, but upside looks limited unless volume stays elevated." HOLD.
+
+**Near-term resistance per Perplexity:** $0.093–$0.095 (current price is at this resistance — price needs to break above to reach T1). Support: $0.085–$0.088.
+
+---
+
+### New Entry Scan (STEP 6)
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| SYN/USD | +64.5% | −2.15% | 0.56% ✓ | None (pure speculative pump, 3rd time reviewed — rejected session-open at +57.9%) | **HARD SKIP** — no catalyst, pump structure, momentum peak failed |
+| ARB/USD | +4.03% | −0.23% | 0.117% ✓ | None — purely technical/momentum; token unlock headwind ($8.04M this week) | **SKIP** — no fundamental catalyst; BTC weekly gate borderline; token unlock headwind; only $43.20 ZUSD available (position would be negligible) |
+| HYPE/USD | +0.96% | −1.90% | 0.01% ✓ | None | **SKIP** — below 3% threshold |
+| SUI/USD | +2.29% | −0.74% | 0.03% ✓ | None | **SKIP** — below 3% threshold |
+| XRP/USD | +1.01% | −1.47% | <0.1% ✓ | CLARITY Act (early July) — no intraday breakout today | **SKIP** — below 3% threshold |
+| SOL/USD | +1.91% | −1.48% | 0.01% ✓ | None | **SKIP** — below 3% threshold |
+| AVAX/USD | +2.01% | −1.95% | 0.02% ✓ | None | **SKIP** — below 3% threshold |
+| TAIKO | N/A | N/A | N/A | +156% 24h (other exchange) | **SKIP** — not available on Kraken |
+
+**ARB detail:** +4.03% from $0.0819 open, at $0.0852–$0.0855 (−0.23% from 24h high $0.0854). R:R exactly 1.20:1 at T1. Perplexity: "mostly technical and sentiment-driven, no fresh Arbitrum-specific fundamental catalyst." Token unlock $8.04M this week = supply headwind. Strategy requires catalyst for entry. SKIP.
+
+---
+
+### Decision
+
+**NO ACTION. HOLD ENA with existing stop.**
+
+No new entries qualify. ENA position is slightly underwater (−1.05%) with trailing stop protecting downside at $0.09360. Thesis intact. Early July token unlock is a headwind to monitor. If ENA reclaims momentum above $0.0960 and breaks toward $0.0987, position may still reach T1.
+
+**Next triggers:**
+- ENA breaks $0.0960 HWM → trailing stop advances; monitors T1 $0.0987
+- ENA drops to $0.09360 → stop fires; exit at ~−2.1% net loss
+- ARB fresh fundamental catalyst (governance vote, exchange listing) → re-screen
+- XRP CLARITY Act vote date confirmed → enter with 7% trailing stop
+
+**STEP 7 (notification):** No action taken → no WhatsApp alert sent.
+
