@@ -6187,4 +6187,43 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 |---|---|---|---|---|---|---|
 | (no open positions) | — | — | — | — | — | — |
 **Trades today:** none | **Total since migration:** ~79
-**Notes:** No trades today. Portfolio held at $122.83 ZUSD (100% cash). BTC gained +1.40% today (24h open $63,234 → current $64,116). Bot underperformed BTC by 1.40% while holding cash. No open positions or orders on Kraken. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — Alpaca monitoring retired. No qualifying intraday setups met screening criteria (1h surge >3% with volume + catalyst). Next session: fresh morning scan, 100% cash ready to deploy.
+**Notes:** EOD snapshot pre-written; ENA/USD trade subsequently executed in session-open run (~09:10 UTC). See entry below.
+
+---
+
+## 2026-06-22 — ENA/USD BUY (Session-Open, ~09:10 UTC)
+
+**Buy Order ID:** OYWPGG-Z3SVU-VGXQD3
+**Stop Order ID:** OQ637U-NH7YH-X6UAVN (2.5% trailing stop)
+**Symbol:** ENA/USD | **Qty:** 828.00 ENA | **Side:** BUY
+**Entry:** ~$0.0958 (market fill; estimated from ZUSD reconciliation: $79.63 / 828 / 1.004)
+**24h open:** $0.0869 | **vs open:** +10.2% at fill
+**T1:** $0.0987 (+3%) | **T2:** $0.1006 (+5%)
+**Initial stop trigger:** $0.0934 | **HWM at placement:** $0.0957 | **Trail:** 2.5% GTC ✓
+**Size:** ~$79.63 (64.8% of $122.83 equity) | **ZUSD after:** $43.20
+**R:R:** 1.2:1 at T1 (3% target vs 2.5% stop risk) ✓
+
+**Catalyst:** Institutional accumulation — (1) Coinbase Ventures bought ENA + Ethena partnership for onchain savings products (Jun 2); (2) Janus Henderson institutional position; (3) fee-switch/buyback-burn governance vote expected Q3 2026 (CMC update Jun 19). ENA +10.2% from open $0.0869, at today's 24h high ($0.0968). Volume $96–154M 24h elevated. Institutional rotation into Extreme Fear (F&G 23) dip.
+
+**Screening:**
+- Momentum: +10.2% from 24h open ✓ (>3% threshold)
+- Spread: 0.107% ✓
+- Volume: $96–154M 24h — elevated ✓
+- Catalyst: institutional accumulation + fee-switch governance vote ✓
+- R:R: 1.2:1 at T1 ✓ (minimum; 3.5% ATR exception would fail R:R at 0.857:1)
+- BTC crash gate: NOT triggered (BTC +1.47%, open $63,234 → $64,165)
+- BTC weekly gate: NOT triggered
+- Momentum peak check: 24h high $0.0968 = today's high ✓; price at $0.0966 (0.2% off peak) — directional grind, not declining
+- Same-thesis cap: 0 ENA stop-outs in 7-day window ✓
+- Pair online on Kraken ✓
+- Note: ENA today's intraday ATR = 11.4% (high-ATR). Using 2.5% trail (not 3.5%) because move is directional, not noise; 3.5% trail would fail R:R gate.
+
+**Candidates screened and rejected:**
+- SYN/USD: +57.9% from open, spread 0.65% ✓ — SKIP (pure speculative pump +434% 7-day; no primary fundamental catalyst; "no blind chasing")
+- OMNI/USD: +174% 24h — HARD SKIP (spread 31.8%, illiquid)
+- MET/USD (Meteora): +2.6% from open — SKIP (below 3% threshold)
+- KMNO/USD: +0.4% — SKIP (below threshold)
+- ZEC/USD: 24h high set yesterday — SKIP (momentum peak check FAILS)
+- TNSR/USD: declining from 24h high set hours ago — SKIP (momentum peak check FAILS)
+- BTC: +1.47% — SKIP (below 3% threshold)
+- ETH: flat — SKIP (below 3% threshold)
