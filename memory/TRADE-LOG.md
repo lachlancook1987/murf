@@ -6227,3 +6227,20 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 - TNSR/USD: declining from 24h high set hours ago — SKIP (momentum peak check FAILS)
 - BTC: +1.47% — SKIP (below 3% threshold)
 - ETH: flat — SKIP (below 3% threshold)
+
+---
+
+## 2026-06-22 — ENA/USD Position Closed (Trailing Stop Fired)
+
+**Execution time:** 2026-06-22 ~14:30–15:06 UTC (automated stop trigger, exact time between 14:12 and 15:06 UTC)
+
+**Stop Order ID:** OQ637U-NH7YH-X6UAVN (2.5% trailing stop)
+**Symbol:** ENA/USD | **Qty:** 828.00 ENA | **Side:** SELL (automated trailing stop)
+**Entry:** ~$0.0958 (Jun 22 09:10 UTC market fill) | **Exit:** ~$0.09528 (estimated from ZUSD reconciliation)
+**HWM at exit:** ~$0.09830 (new 24h high set after 14:12 UTC) | **Stop trigger:** ~$0.09584 ($0.09830 × 0.975) | **Fill:** ~$0.09528 (slippage below trigger — market order on thin alt)
+**Trade duration:** ~5.5 hours (Jun 22 09:10 UTC → ~14:30–15:06 UTC)
+**P&L:** −~$0.95 net (−1.19% on equity) | **Gross:** −$0.45 (−0.54%)
+**Entry cost:** 828 × $0.0958 = $79.32 + fees (~$0.21) = $79.63 ZUSD | **Proceeds:** $78.69 net (ZUSD reconciliation: $121.88 − $43.20 = $78.68)
+**ZUSD after:** $121.8836 (100% cash, no open positions)
+**Phase P&L:** −$57.90 (−32.21%) vs starting equity $179.78
+**Notes:** ENA entered Jun 22 09:10 UTC on institutional accumulation (Coinbase Ventures + Janus Henderson + fee-switch governance Q3 2026). Position ran to HWM $0.09830 (new 24h high, just above prior HWM $0.09810). Trailing stop auto-advanced to ~$0.09584 and fired on retracement. Price rebounded to $0.09630 post-stop — classic whipsaw on thin alt. Catalyst was 3–20 days old; no fresh <6h catalyst available to justify re-entry. ENA first stop-out in 7-day window (same-thesis cap not yet triggered). No re-entry taken.
