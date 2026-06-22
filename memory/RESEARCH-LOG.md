@@ -20435,3 +20435,91 @@ No new entries qualify. ENA position is slightly underwater (−1.05%) with trai
 - XRP CLARITY Act vote confirmed → enter with 7% trailing stop
 
 **STEP 7 (notification):** No action taken → no WhatsApp alert sent.
+
+---
+
+## 2026-06-22 — Midday Scan #2 (~14:12 UTC)
+
+**Execution time:** 2026-06-22 14:12 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ENA | 828.00 | Open position, entry ~$0.0958 |
+| ZUSD | $43.20 | Available cash |
+
+**Open orders:**
+- OQ637U-NH7YH-X6UAVN — trailing-stop SELL 828.00 ENA @ 2.5% trail, stopprice **$0.09570** (HWM $0.09810 = today's 24h high), GTC ✓
+
+**Stop advance vs scan #1 (~12:12 UTC):** Stop advanced from $0.09440 (HWM $0.09682) → $0.09570 (HWM $0.09810). Trailing stop tracked ENA to its session high correctly.
+
+**Alpaca:** No open positions. Monitoring retired. Orders list confirmed (historical fills only).
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $65,309 | Crash gate NOT triggered |
+| ENA | $0.09660 | +11.2% from open $0.0869; +0.83% from entry $0.0958 |
+| ENA 24h high | $0.09810 | Unchanged — peak still from earlier this session |
+| ENA current vs T1 | −1.0% from T1 ($0.09867) | Not hit |
+| ENA stop | $0.09570 | 2.5% trail (HWM $0.09810) ✓ |
+| Fear & Greed | 23 | Extreme Fear |
+| Crash Gate | NOT TRIGGERED ✓ | |
+| BTC Weekly Gate | NOT TRIGGERED ✓ | |
+
+---
+
+### STEP 3 — Stop Verification
+
+| Position | Qty | Stop Order | Trail | Stop Price | Status |
+|---|---|---|---|---|---|
+| ENA/USD | 828 | OQ637U-NH7YH-X6UAVN | 2.5% | $0.09570 | ✓ ACTIVE |
+
+All positions protected. ✓
+
+### STEP 4 — Stop Tightening Check
+
+- ENA vs entry: +0.83% — well below +20% threshold. No tightening needed.
+
+### STEP 5 — Thesis Check
+
+- ENA thesis: institutional accumulation (Coinbase Ventures, Janus Henderson) + fee-switch/buyback-burn governance vote Q3 2026.
+- Perplexity ENA update: short-term forecasts cluster $0.089–$0.094 today; no new negative catalyst (no exploit, rug, unlock dump, or regulatory action identified).
+- Thesis intact. HOLD.
+
+---
+
+### New Entry Scan
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| LAYER/USD | +18.6% (open $0.0657) | **−31.6%** ($0.1139 peak) | **4.18% ✗** | None | **HARD SKIP** — spread >1%; collapsed from peak |
+| SYN/USD | +38.5% (open $0.1747) | **−19.3%** ($0.3000 peak) | 0.53% ✓ | None — speculative pump, no catalyst | **SKIP** — momentum peak FAILS; reviewed 4× |
+| SOL/USD | +2.65% ($72.38→$74.30) | −0.81% ($74.91) | 0.014% ✓ | None | **SKIP** — below 3% threshold |
+| XRP/USD | +2.77% ($1.1237→$1.1548) | −0.59% ($1.1625) | 0.011% ✓ | CLARITY Act (full Senate floor vote still weeks away) | **SKIP** — below 3% threshold; binary catalyst not imminent |
+| BTC/USD | ~+2.4% | near high | tight ✓ | None | **SKIP** — below 3% threshold |
+| RDNT/USD | +57% (Binance) | — | **Not on Kraken** ✗ | Radiant Capital | **HARD SKIP** — not on Kraken |
+| ARX/USD | +215% (Binance) | — | **Not on Kraken** ✗ | None | **HARD SKIP** — not on Kraken |
+
+**No new entries qualify.** All candidates below 3% threshold, failed momentum peak, spread >1%, or not on Kraken.
+
+---
+
+### Decision
+
+**NO ACTION. HOLD ENA with existing trailing stop.**
+
+- ENA: +0.83% from entry, T1 $0.09867 still the target. Stop $0.09570 (HWM $0.09810). Thesis intact.
+- $43.20 ZUSD idle — no qualifying setup found.
+
+**Next triggers:**
+- ENA breaks $0.09867 (T1) → tighten stop to 0.5% trailing
+- ENA drops to $0.09570 → stop fires; exit at ~−1.4% net loss
+- XRP CLARITY Act Senate floor vote scheduled → enter market, 7% trailing stop
+
+**STEP 7 (notification):** No action taken → no WhatsApp alert sent.
