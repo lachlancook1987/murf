@@ -20351,3 +20351,87 @@ No new entries qualify. ENA position is slightly underwater (−1.05%) with trai
 
 **STEP 7 (notification):** No action taken → no WhatsApp alert sent.
 
+
+---
+
+## 2026-06-22 — Afternoon Scan (~12:12 UTC)
+
+**Execution time:** 2026-06-22 ~12:12 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ENA | 828.00 | Open position, entry ~$0.0958 |
+| ZUSD | $43.20 | Available cash |
+
+**Open orders:**
+- OQ637U-NH7YH-X6UAVN — trailing-stop SELL 828.00 ENA @ 2.5% trail, stopprice **$0.09440** (advanced from $0.09360 at session-open), GTC ✓
+
+**Alpaca:** No open positions. Monitoring retired.
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $64,679 | +2.28% from open $63,234 — crash gate NOT triggered |
+| ETH | $1,763 | +3.41% from open $1,704.99 — cleared 3% threshold |
+| SOL | $73.97 | +2.21% from open $72.38 — below threshold |
+| ENA | $0.09615 | +10.6% from open $0.08690 — position +0.37% from entry |
+| Fear & Greed | 23 | Extreme Fear (5th consecutive day) |
+| Crash Gate (BTC >20% down 24h) | NOT TRIGGERED ✓ | BTC +2.28% |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED ✓ | Current $64,679 vs Jun 17 close $65,599 = −1.40% |
+
+---
+
+### ENA/USD Position Review
+
+| Field | Value |
+|---|---|
+| Entry | ~$0.0958 |
+| Current (mid) | ~$0.09615 |
+| vs entry | **+0.37%** (recovered from −1.05% at midday) |
+| T1 | $0.0987 (+3%) — NOT reached |
+| T2 | $0.1006 (+5%) — NOT reached |
+| 24h high | $0.09680 (set today ✓) |
+| Stop | OQ637U, 2.5% trail, stopprice **$0.09440** (advanced; HWM ~$0.09682) |
+| Stop status | Active ✓ — stop advanced as ENA touched today's 24h high |
+
+**Stop advance detail:** HWM advanced from $0.0960 (session-open) to $0.09682 (ENA hit today's 24h high $0.09680). Stop trigger accordingly moved up from $0.09360 → $0.09440. Trailing stop is working correctly.
+
+**Thesis check:** Perplexity confirms on-chain activity at multi-month highs (>5,000 daily active addresses, >3,000 new wallets). Thesis intact. Key resistance $0.097 = our T1. No new negative catalyst. HOLD.
+
+---
+
+### New Entry Scan
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| ETH/USD | +3.41% ($1,704.99→$1,763) | −0.54% ($1,772.86 24h high set today ✓) | ~0% ✓ | Glamsterdam upgrade narrative (H2 2026, no date) — **no fresh catalyst <6h confirmed by Perplexity** | **SKIP** — broke above $1,760 monitor trigger but no fresh catalyst; $43.20 ZUSD = negligible position |
+| SYN/USD | +59.1% ($0.1747→$0.2779) | −7.4% ($0.3000 24h high set earlier) | 0.505% ✓ | None (pure speculative pump — 4th consecutive review, same conclusion) | **HARD SKIP** — momentum peak failed, no catalyst |
+| ARB/USD | +5.0% ($0.0819→$0.0860) | −0.35% ($0.0863 24h high set today ✓) | 0.116% ✓ | None — purely technical; $8.04M token unlock headwind this week | **SKIP** — no catalyst; $43.20 ZUSD negligible position |
+| HYPE/USD | +1.49% ($66.89→$67.89) | −1.38% ($68.84 24h high) | 0.015% ✓ | Perplexity cited +11.6% surge (stale/different exchange data) — Kraken actual only +1.49% | **SKIP** — below 3% threshold on Kraken |
+| SOL/USD | +2.21% | below 3% | 0.014% ✓ | None | **SKIP** — below threshold |
+
+**ETH detail:** ETH broke above the $1,760.12 monitor trigger set at session-open. However, no fresh catalyst was confirmed by Perplexity (last 6h scan). Available ZUSD $43.20 → ~0.0245 ETH → max net T1 gain ~$1.08 after fees. Negligible. SKIP.
+
+---
+
+### Decision
+
+**NO ACTION. HOLD ENA with existing trailing stop.**
+
+- ENA recovered from −1.05% (midday) to +0.37% from entry. Trailing stop advanced to $0.09440 (HWM $0.09682). T1 at $0.0987 remains the target.
+- ETH cleared the 3% threshold and broke above the $1,760 monitor trigger but no fresh catalyst exists. Position would be $43.20 (negligible). SKIP.
+- All other candidates below threshold or no catalyst.
+
+**Next triggers:**
+- ENA breaks $0.0987 (T1) → tighten stop to 0.5% trailing
+- ENA drops to $0.09440 → stop fires; exit at ~−1.35% net loss (improved from morning)
+- ETH fresh catalyst <6h (ETF flow news, Glamsterdam mainnet announcement) → enter with ~$43 ZUSD
+- XRP CLARITY Act vote confirmed → enter with 7% trailing stop
+
+**STEP 7 (notification):** No action taken → no WhatsApp alert sent.
