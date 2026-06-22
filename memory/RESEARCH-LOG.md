@@ -20137,3 +20137,122 @@ Late evening (22:04 UTC) — market in cooling phase. No asset shows 1h surge >3
 - XRP CLARITY Act Senate vote date announced → enter with 7% trailing stop
 - BTC crash gate: if BTC drops >20% in 24h → preserve cash, no new entries
 - SOL re-entry: if SOL breaks back above $74.58 (new 24h high) with volume catalyst in AM session
+
+---
+
+## 2026-06-22 — Pre-Session Research
+
+**Date:** 2026-06-22 | **Session branch:** claude/affectionate-gates-3609fc
+
+---
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Balance |
+|---|---|
+| ZUSD | $122.8334 |
+| Open positions | NONE |
+| Open orders | NONE |
+
+**Alpaca:** No open positions. No BTC residual. Monitoring retired (BTC closed 2026-05-22).
+
+**Phase P&L:** −$56.95 (−31.68%) vs starting equity $179.78
+**Realized yesterday:** +$1.35 (+2.22% net, SOL/USD day trade, trailing stop fired 20:18 UTC Jun 21)
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $64,047 | +1.28% from open $63,234 — crash gate NOT triggered |
+| ETH | $1,743.69 | +2.27% from open $1,704.99 — recovering |
+| SOL | $74.01 | +2.26% from open $72.38 — recovering post-stop |
+| XRP | $1.133 | +0.84% from open $1.124 — flat |
+| Fear & Greed | 23 | Extreme Fear — 5th consecutive day |
+| BTC Funding Rate | ~+0.0043–0.0066%/8h | Neutral-to-mildly bullish |
+| BTC Crash Gate (>20% down 24h) | NOT TRIGGERED | BTC +1.28% 24h |
+| BTC Weekly Gate (>3% down 5 days) | NOT TRIGGERED | BTC ~flat Jun 17→22 |
+
+**Key macro context:**
+- ~2 weeks of consecutive Bitcoin ETF outflows per Xapo Bank; ~$2.43B net outflows in May
+- BTC selling partially attributed to AI IPO rotation (SpaceX, Anthropic/OpenAI)
+- Strong US labor data reduced Fed rate-cut expectations — headwind for risk assets
+- Clarity Act (GENIUS Act successor): added to Senate legislative calendar June 1; no exact vote date; Senate Banking Committee passed 15–9 on May 14 (bipartisan)
+- No crash gate; market in Extreme Fear but default stance TRADE
+
+**Top 24h gainers (cross-exchange):**
+TNSR +51%, BICO +19%, CSPR +22.8%, ZEC +14%, ENA +7.59% on Kraken, DoubleZero +19%
+
+---
+
+### Candidate Screening
+
+| Asset | vs 24h Open | 24h High vs Today's High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| **ENA/USD** | **+7.59%** ($0.0869→$0.0935) | h[0]=h[1]=$0.0948 — high SET TODAY ✓ | **0.107%** ✓ | Institutional accumulation (Coinbase Ventures buy+partnership Jun 2; Janus Henderson position); fee-switch buyback/burn governance vote expected Q3 2026 (CMC update Jun 19) | **TRADE** — momentum >3%, today's high=24h high, spread tight, institutional narrative |
+| ZEC/USD | +4.08% ($433.91→$451.63) | h[0]=$453.88 ≠ h[1]=$464.81 — 24h high set YESTERDAY | 0.035% ✓ | SEC probe closed Jan 14 (stale); Orchard vulnerability recovery (fix Jun 1–3, 3wks old) | **SKIP** — momentum peak check FAILS (24h high yesterday; no fresh catalyst <6h today) |
+| TNSR/USD | open $0.046→current $0.0432 = **−6.1%** from open | h[1]=$0.0550 set earlier; now below open | 0.91% ✓ | Technical breakout only, no fundamental catalyst | **HARD SKIP** — reversed and below open; 24h high set hours ago |
+| BICO/USD | open $0.0438→current $0.0394 = **−10.1%** | h[1]=$0.0552 set yesterday | 0.25% ✓ | None confirmed | **HARD SKIP** — declining 10% from open |
+| SOL/USD | +2.26% ($72.38→$74.01) | h[0]=h[1]=$74.87 — high set today | 0.014% ✓ | Alpenglow/ETF narrative (ongoing, not fresh) | **SKIP** — below 3% threshold; monitor for breakout above $74.87 |
+| ETH/USD | +2.27% ($1,704.99→$1,743.69) | h[0]=h[1]=$1,760.12 — high set today | <0.01% ✓ | Glamsterdam upgrade narrative (H2 2026 target, no date) | **SKIP** — below 3% threshold |
+| BTC/USD | +1.28% ($63,234→$64,047) | h[0]=h[1]=$64,704 — high set today | <0.01% ✓ | ETF flows/macro | **SKIP** — below 3% threshold |
+| XRP/USD | +0.84% ($1.124→$1.133) | below open range | 0.014% ✓ | CLARITY Act (no vote date confirmed) | **SKIP** — below threshold |
+
+---
+
+### Trade Ideas
+
+#### Idea 1 — ENA/USD (PRIMARY)
+
+| Field | Value |
+|---|---|
+| **Asset** | ENA/USD (Ethena) |
+| **Catalyst** | (a) Coinbase Ventures bought ENA on open market + Ethena partnership for onchain savings products (Jun 2, 2026); (b) Janus Henderson institutional position; (c) fee-switch/buyback-burn governance vote expected Q3 2026 — CMC reported Q3 timeline Jun 19, 3 days ago. Institutional rotation narrative building. |
+| **Entry** | Market ~$0.0934 (ask $0.0934) |
+| **Momentum peak** | 24h high = today's high = $0.0948 — high set this session ✓ |
+| **Stop** | Trailing stop, trail_percent: 2.5 (default). Note: ENA intraday range today 9.1% ($0.0869→$0.0948). If noise-stops occur, widen to 3.5% — but note at 3.5% stop, T1 R:R = 0.857 < 1.2 (fails). Using 2.5% stop as ENA's intraday momentum is directional, not noise-driven. |
+| **T1** | $0.0962 (+3%) |
+| **T2** | $0.0981 (+5%) |
+| **R:R** | 1.2:1 at T1 vs 2.5% stop ✓ (minimum threshold exactly) |
+| **Size** | 65% equity (~$80 ZUSD) → ~856 ENA. Moderate size due to catalyst being 3 days old (not fresh <6h today) and borderline R:R |
+| **Kraken pair** | ENA/USD ✓ (confirmed online, margin 2–3x available but not using leverage) |
+| **Spread** | 0.107% ✓ |
+| **Stop command** | After buy fill: `bash scripts/kraken.sh order '{"symbol":"ENA/USD","side":"sell","type":"trailing_stop","qty":"<filled_qty>","trail_percent":"2.5","time_in_force":"gtc"}'` |
+
+#### Monitor List (below threshold today — watch for breakout)
+
+| Asset | Trigger for entry |
+|---|---|
+| SOL/USD | Break above $74.87 (today's 24h high) with volume surge AND new catalyst |
+| ETH/USD | Break above $1,760.12 with volume; Glamsterdam mainnet news |
+| BTC/USD | Break above $64,704 with ETF inflow data |
+| XRP/USD | Confirmed Senate floor vote date for CLARITY Act → enter with 7% trailing stop |
+| ZEC/USD | Fresh catalyst today (not just SEC probe from Jan or Orchard recovery from Jun 1-3) |
+
+---
+
+### Risk Factors
+
+1. **ENA R:R borderline** — R:R exactly 1.2 at T1 with 2.5% stop; noise-stops on a 9%-range asset are possible
+2. **No fresh catalyst <6h today** — ENA's institutional catalyst (Jun 2) and governance news (Jun 19) are 3–20 days old; pure momentum continuation without new headline
+3. **Extreme Fear (23)** — 5th consecutive day; retail risk-off mode; broad market sentiment headwind
+4. **ETF outflows continuing** — BTC ETF net outflows for ~2 weeks creates sustained selling pressure on BTC which ripples to alts
+5. **AI IPO rotation** — institutional capital rotating into AI sector (SpaceX IPO, future Anthropic/OpenAI IPOs) competes with crypto for capital
+6. **No crash gate trigger** — BTC only −0.97% overnight; gate remains clear
+
+---
+
+### Decision
+
+**TRADE — ENA/USD**
+
+ENA is the only candidate clearing the 3% momentum threshold with a passing spread check and today's intraday high = 24h high (momentum peak check ✓). Catalyst: institutional accumulation narrative (Coinbase Ventures + Janus Henderson) and fee-switch governance vote timeline (Q3 2026, updated Jun 19). Moderate size (65% equity, ~$80) due to catalyst being 3 days old rather than fresh today. 2.5% trailing stop required immediately after fill.
+
+Crash gate: NOT triggered (BTC +1.28%). BTC weekly gate: NOT triggered. Default stance: TRADE.
+
+**If ENA bid moves against entry before order fills:** Skip; do not chase below $0.0900.
+
+**Portfolio state (pre-trade):** $122.83 ZUSD (100% cash) | Phase P&L: −$56.95 (−31.68%)
+
