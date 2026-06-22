@@ -20597,3 +20597,132 @@ No qualifying new entries across the full Kraken universe.
 - Any Kraken alt: 1h surge >3% with volume + catalyst <6h → screen and enter
 
 **STEP 7 (notification):** No new trades placed → no WhatsApp alert sent.
+
+---
+
+## 2026-06-22 — Pre-Session Research #2 (Evening)
+
+**Execution time:** 2026-06-22 pre-session UTC
+
+---
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ZUSD | $121.8836 | 100% cash |
+| (dust balances) | AVAX 0.0003, FET 0.0000006, INJ 0.000059, NEAR 0.00635, SOL 0.0000475, etc. | Residual dust from prior trades, negligible |
+
+**Open orders:** NONE
+**Open positions:** NONE
+
+**Alpaca:** No open positions. Monitoring retired. Historical orders only (BTC closed 2026-05-22).
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $64,567 | 24h open $63,234 → **+2.11%** — crash gate NOT triggered |
+| BTC 24h high | $65,542 | Current -1.50% from high |
+| BTC 24h low | $63,234 | = 24h open (found bottom at open) |
+| ETH | $1,731 | 24h change **−0.40%** — below threshold |
+| SOL | $72.85 | 24h open $72.38 → **+0.65%** — below threshold |
+| ENA | $0.0931 | 24h open $0.0869 → +7.14%; 24h high $0.09830 (set earlier today, -5.3% from high) |
+| SUI | $0.7228 | 24h open $0.6929 → +4.31%; 24h high $0.7435 (-2.78% from high) |
+| ZEC | $449.75 | 24h open $433.91 → +3.65%; 24h high $465.08 (-3.3% from high) |
+| HYPE | $67.58 | 24h open $66.89 → +1.02% — below threshold |
+| ARB | $0.0836 | 24h open $0.0819 → +2.07% — below threshold |
+| Fear & Greed | **20** | Extreme Fear (down from 23 yesterday — deteriorating) |
+| BTC Funding Rate | +0.004–0.013%/8h | Positive (longs paying slightly); not at extreme levels |
+| Crash Gate (BTC >20% 24h) | **NOT TRIGGERED** ✓ | BTC +2.11% |
+| BTC Weekly Gate (>3% down 5d) | **NOT TRIGGERED** ✓ | ~−1.57% from Jun 17 close $65,599 |
+
+**Macro headwinds:**
+- BTC ETF outflows: **6th consecutive week** of outflows — persistent bearish institutional sentiment
+- Geopolitical risk: Strait of Hormuz tensions cited as risk-off pressure on crypto
+- Fed: holding 3.5–3.75%, signaling patience on cuts — liquidity not improving
+- Leveraged longs vulnerable below $59–60K (>$4B exposed) — crowded long book
+
+---
+
+### Perplexity Research Summary
+
+**Top 24h gainers (market-wide):** Black Phoenix (BPX) +3,738%, ARCS (ARX) +1,825%, Bitads (SN16) +363%, Arcium (ARX) +143%, Synapse (SYN) +95%, Cortex (CX) +73%, DeXe (DEXE) +27%, Lumia (LUMIA) +26%, Naoris Protocol (NAORIS) +25%, Bless (BLESS) +25%
+
+**Kraken-specific movers (Perplexity):** OMNI +174%, MAT +66%, DOLO +53%, REX +30–50%, INIT +30–50%, UFD +30–50%
+
+**Token unlocks this week:** MBGI today (~$5.96M), MEGA Jun 23 (~$13.54M), NEWT Jun 24 (~$7.55M), H Jun 25 (~$54.77M, major) — supply headwinds building through week
+
+**News catalysts:**
+- BTC ETF outflows week 6 (bearish macro)
+- Geopolitical risk, Strait of Hormuz
+- Japan stablecoin launch (March 2027 — long-term bullish, not actionable today)
+- Japan BSP local exchange directive
+- INIT: Gate.io listing + Binance Launchpool airdrop ending today
+
+**Best intraday setups per Perplexity:** BTC/ETH/SOL/XRP VWAP reclaims — all below 3% threshold, not actionable under strategy rules
+
+---
+
+### Candidate Screening
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst (<6h?) | Decision |
+|---|---|---|---|---|---|
+| OMNI/USD | +174% | extreme decline | 31.8% | None | **HARD SKIP** — spread >1% |
+| SYN/USD | +95% | declining | 0.53% | None (speculative pump, 4th review) | **SKIP** — no fundamental catalyst |
+| MAT/USD | −3.7% | declining | 1.70% | None | **HARD SKIP** — spread >1%, negative |
+| INIT/USD | +4.18% | −8.5% ($0.0574→$0.0655→$0.0598) | 0.33% ✓ | Gate.io listing + airdrop ending today | **SKIP** — momentum peak FAILS (−8.5% from 24h high set hours ago); airdrop-ending mechanics often sell pressure |
+| UFD/USD | −1.6% | declining | 0.067% ✓ | None | **SKIP** — negative from open |
+| DOLO/USD | −1.6% | declining | 3.66% | None | **HARD SKIP** — spread >1% |
+| DEXE/USD | — | — | Not on Kraken | — | **HARD SKIP** |
+| LUMIA/USD | — | — | Not on Kraken | — | **HARD SKIP** |
+| REX/USD | — | — | Not on Kraken | — | **HARD SKIP** |
+| CX/USD | — | — | Not on Kraken | — | **HARD SKIP** |
+| NAORIS/USD | — | — | Not on Kraken | — | **HARD SKIP** |
+| BLESS/USD | +24.5% | −4.1% | 1.56% | None | **HARD SKIP** — spread >1% |
+| ZEC/USD | +3.65% | −3.3% ($465.08 peak) | 0.018% ✓ | Short squeeze (older); technical only | **SKIP** — no fresh catalyst <6h; Perplexity: "neutral momentum RSI 48.51, cautious grind not strong breakout"; momentum peak FAILS |
+| SUI/USD | +4.31% | −2.78% ($0.7435 peak) | 0.014% ✓ | CME futures (May, old); short-covering only | **SKIP** — no fresh catalyst <6h; Perplexity: "mostly short squeeze/BTC-led bounce, not confirmed trend breakout"; momentum peak timing uncertain |
+| ARB/USD | +2.07% | −3.2% | 0.119% ✓ | None — pure technical; $8M token unlock headwind | **SKIP** — below 3% threshold; no catalyst; unlock supply headwind |
+| ETH/USD | −0.40% | declining | ~0% ✓ | Glamsterdam (no firm date, >2 weeks old) | **SKIP** — negative from open, no fresh catalyst |
+| SOL/USD | +0.65% | declining | 0.014% ✓ | None | **SKIP** — below 3% threshold |
+| BTC/USD | +2.11% | −1.5% | ~0% ✓ | None | **SKIP** — below 3% threshold |
+| XRP/USD | below 3% | declining | 0.01% ✓ | CLARITY Act (Senate vote weeks away) | **SKIP** — below threshold; binary catalyst not imminent |
+| HYPE/USD | +1.02% | −2.84% | 0.044% ✓ | Protocol revenue/buybacks (multi-month) | **SKIP** — below 3% threshold |
+| ENA/USD | +7.14% | −5.3% ($0.09830 peak) | 0.107% ✓ | Institutional accum. (Coinbase Ventures Jun 2, Janus Henderson, fee-switch Q3 2026) — **3–20 days old** | **SKIP** — no fresh catalyst <6h; momentum peak FAILS; current $0.09310 below stop-out price $0.09528; Perplexity: "bearish 4h trend" |
+
+---
+
+### Risk Factors
+
+1. **BTC ETF outflow streak (week 6)** — institutional selling pressure sustained; not a one-off
+2. **Extreme Fear at 20** (vs 23 yesterday) — sentiment deteriorating, not bottoming
+3. **Geopolitical risk (Strait of Hormuz)** — macro tail risk on global risk assets
+4. **Fed on hold at 3.5–3.75%** — no imminent liquidity catalyst
+5. **Token unlock headwinds** — H ($54.77M) on Jun 25 is significant; MEGA today ($13.54M)
+6. **Momentum peak rule filtering most gainers** — all major up-movers had their high set well before session open; price action is fading, not accelerating
+
+---
+
+### Decision
+
+**NO ACTION. HOLD CASH. 100% ZUSD ($121.88).**
+
+**Rationale:** No qualifying entry found across the full Kraken universe. Every candidate with sufficient % gain either fails:
+- **Spread >1%** (OMNI, MAT, DOLO, BLESS)
+- **Not on Kraken** (DEXE, LUMIA, REX, CX, NAORIS)
+- **Momentum peak FAILS** — 24h high set >60 min ago and price declining (INIT −8.5%, ENA −5.3%, ZEC −3.3%, SUI −2.8%)
+- **No fresh catalyst <6h** (ZEC, SUI, ENA, ARB, ETH)
+- **Below 3% threshold** (BTC, ETH, SOL, XRP, ARB, HYPE)
+
+Neither crash gate nor BTC weekly gate applies — the NO ACTION decision is purely from no qualifying setup meeting the strategy's technical + catalyst standards, not from any risk block.
+
+**Next triggers:**
+- Any Kraken alt surging >3% in 1h with volume and fresh catalyst <6h → screen and enter
+- XRP CLARITY Act Senate floor vote scheduled → enter, 7% trailing stop
+- ETH Glamsterdam mainnet date announced → enter with fresh catalyst
+- BTC reclaims $65K+ with volume confirmation and >3% 1h move → consider BTC entry
+- ENA fresh catalyst announced (distinct from existing institutional play) → re-entry eligible (same-thesis cap: 1 stop-out, no cooling required yet; but need fresh catalyst)
+
