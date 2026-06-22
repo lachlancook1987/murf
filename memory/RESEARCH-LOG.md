@@ -20726,3 +20726,71 @@ Neither crash gate nor BTC weekly gate applies — the NO ACTION decision is pur
 - BTC reclaims $65K+ with volume confirmation and >3% 1h move → consider BTC entry
 - ENA fresh catalyst announced (distinct from existing institutional play) → re-entry eligible (same-thesis cap: 1 stop-out, no cooling required yet; but need fresh catalyst)
 
+---
+
+## 2026-06-22 — Midday Scan #3 (~22:08 UTC)
+
+**Execution time:** 2026-06-22 22:08 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ZUSD | $121.88 | 100% cash — no open positions |
+
+**Kraken open orders:** NONE ✓
+**Kraken open positions:** NONE ✓
+**Alpaca:** No open positions. Monitoring retired. Historical orders only.
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $64,582 | +0.68% 24h — crash gate NOT triggered |
+| ETH | ~$1,726 | below 3% threshold |
+| Fear & Greed | 21 | Extreme Fear (6th+ consecutive day) |
+| Crash Gate (BTC >20% down) | NOT TRIGGERED ✓ | |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED ✓ | ~−1.57% from Jun 17 close $65,599 |
+
+**Macro context (unchanged from prior scan):** Fed hawkish repricing (median 3.8%), BTC ETF outflows 6th straight week, Extreme Fear 21, H token unlock Jun 25 $54.77M supply headwind approaching.
+
+---
+
+### STEP 2–5 (Positions / Stops / Thesis)
+
+No open positions → Steps 3–5 N/A.
+
+---
+
+### Candidate Screening (STEP 6)
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst (<6h?) | Decision |
+|---|---|---|---|---|---|
+| SYN/USD | +54% ($0.1747→$0.2693) | −10.3% ($0.3000 peak) | 0.41% ✓ | None (speculative bounce from ATL; Bitget delisted; 7d +434%, security score 18%) | **SKIP** — momentum peak FAILS (-10.3% from high, 5th review); no fundamental catalyst |
+| WLD/USD | +4.3% ($0.6049→$0.6309) | −3.5% ($0.6540 peak) | 0.063% ✓ | Unlock reduction Jul 24 (32 days away — not <6h); OI declining $550M→$450M | **SKIP** — no catalyst <6h; momentum peak timing uncertain but likely FAILS; OI unwinding bearish |
+| HYPE/USD | −0.28% ($66.89→$66.70) | −4.1% ($69.54 peak) | 0.015% ✓ | None | **SKIP** — negative from open |
+| SOL/USD | +0.36% ($72.38→$72.64) | −3.0% ($74.91 peak) | 0.014% ✓ | None | **SKIP** — below 3% threshold |
+| XRP/USD | +0.61% ($1.1237→$1.1306) | −2.75% ($1.1625 peak) | 0.012% ✓ | CLARITY Act (Senate vote weeks away) | **SKIP** — below threshold; binary catalyst not imminent |
+| NEAR/USD | +0.28% ($2.099→$2.105) | −4.0% ($2.192 peak) | 0.052% ✓ | None | **SKIP** — below 3% threshold |
+| ONDO/USD | +0.43% ($0.3301→$0.3315) | −3.5% ($0.3437 peak) | 0.078% ✓ | None | **SKIP** — below 3% threshold |
+| BTC/USD | +0.68% | below threshold | ~0% ✓ | None fresh | **SKIP** — below 3% threshold |
+
+---
+
+### Decision
+
+**NO ACTION. 100% CASH ($121.88 ZUSD).**
+
+No qualifying entry across Kraken universe. All candidates fail one or more gates:
+- **Momentum peak FAILS** — SYN 10.3% off high, WLD 3.5% off high (timing >60 min old)
+- **No catalyst <6h** — WLD, SYN, all majors
+- **Below 3% threshold** — BTC, SOL, XRP, NEAR, ONDO, HYPE
+
+**Portfolio state:** $121.88 ZUSD | 0 open positions | Phase P&L: −$57.90 (−32.21%) vs starting equity $179.78
+
+**STEP 7 (notification):** No action taken → no WhatsApp alert sent.
+
+
