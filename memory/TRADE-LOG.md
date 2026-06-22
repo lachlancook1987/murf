@@ -6177,3 +6177,14 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 **STEP 4 — Stop tightening:** No open positions → N/A
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-22 — EOD Snapshot (Day 33, Monday)
+
+**Portfolio:** $122.83 | **Cash:** $122.83 (100%) | **Day P&L:** +$0.00 (0.00%) | **Phase P&L:** −$56.95 (−31.68%) | **vs BTC:** −1.40%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| (no open positions) | — | — | — | — | — | — |
+**Trades today:** none | **Total since migration:** ~79
+**Notes:** No trades today. Portfolio held at $122.83 ZUSD (100% cash). BTC gained +1.40% today (24h open $63,234 → current $64,116). Bot underperformed BTC by 1.40% while holding cash. No open positions or orders on Kraken. Alpaca stop a2b44cf9 confirmed canceled 2026-05-22 — Alpaca monitoring retired. No qualifying intraday setups met screening criteria (1h surge >3% with volume + catalyst). Next session: fresh morning scan, 100% cash ready to deploy.
