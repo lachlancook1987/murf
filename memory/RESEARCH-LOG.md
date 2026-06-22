@@ -20523,3 +20523,77 @@ All positions protected. ✓
 - XRP CLARITY Act Senate floor vote scheduled → enter market, 7% trailing stop
 
 **STEP 7 (notification):** No action taken → no WhatsApp alert sent.
+
+---
+
+## 2026-06-22 — Afternoon Scan #2 (~15:06 UTC)
+
+**Execution time:** 2026-06-22 15:06 UTC
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Note |
+|---|---|---|
+| ZUSD | $121.88 | 100% cash — ENA trailing stop fired ~14:30–15:06 UTC |
+
+**Open orders:** NONE ✓
+**Open positions:** NONE ✓
+
+**ENA stop-out summary:** OQ637U-NH7YH-X6UAVN triggered between 14:12 and 15:06 UTC. HWM advanced to $0.09830 (new 24h high), stop at ~$0.09584, fill ~$0.09528. Net P&L: −$0.95 (−1.19% equity). ZUSD reconciliation confirms close: $121.88.
+
+**Alpaca:** No open positions. Monitoring retired. Historical orders only.
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $64,891 | 24h open $63,234 → +2.62% — crash gate NOT triggered |
+| ETH | $1,752 | 24h open $1,705 → +2.75% — below 3% threshold |
+| SOL | $73.31 | 24h open $72.38 → +1.28% — below threshold |
+| ENA | $0.09630 | 24h open $0.0869 → +10.8% (stopped out at ~$0.09528) |
+| ZEC | $452.94 | 24h open $433.91 → +4.38% |
+| ARB | $0.08560 | 24h open $0.08190 → +4.52% |
+| Fear & Greed | 23 | Extreme Fear (6th consecutive day) |
+| Crash Gate (BTC >20% down 24h) | NOT TRIGGERED ✓ | BTC +2.62% |
+| BTC Weekly Gate (>3% down 5d) | NOT TRIGGERED ✓ | ~−1.08% from Jun 17 close $65,599 |
+
+---
+
+### Candidate Screening
+
+| Asset | vs 24h Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|
+| ENA/USD | +10.8% ($0.0869→$0.09630) | −2.04% ($0.09830 peak set <54 min ago) | 0.104% ✓ | Institutional accumulation (Coinbase Ventures Jun 2, Janus Henderson, fee-switch Q3 2026 — now 3–20 days old) | **SKIP** — re-entering above stop-out price ($0.09528→$0.09630); catalyst stale (>6h old); Perplexity confirms "bearish 4h trend, neutral to slightly bearish"; whipsaw re-entry risk |
+| ZEC/USD | +4.38% ($433.91→$452.94) | −2.61% ($465.08 peak) | 0.077% ✓ | Short squeeze (Jun 21 data) + Orchard pool security fix (older) | **SKIP** — Perplexity: "fading rather than extending right now," "no clear 2-hour continuation signal," "drifting lower from higher intraday levels"; momentum peak check FAILS |
+| ARB/USD | +4.52% ($0.0819→$0.0856) | −1.27% ($0.0867 peak) | 0.234% ✓ | None — purely technical/momentum; $8.04M token unlock headwind this week | **SKIP** — no catalyst; token unlock supply headwind; momentum peak timing uncertain (peak likely set hours ago) |
+| ETH/USD | +2.75% ($1,705→$1,752) | −1.45% ($1,777.82) | ~0% ✓ | Glamsterdam upgrade (H2 2026, no specific date) — no fresh catalyst <6h | **SKIP** — below 3% threshold; no fresh catalyst |
+| XLM/USD | +0.28% ($0.20966→$0.21025) | −1.12% ($0.21675) | <0.1% ✓ | DTCC tokenization integration (announced earlier this week — not fresh today) | **SKIP** — effectively flat on Kraken today; multi-day move already occurred |
+| SOL/USD | +1.28% | below 3% | 0.014% ✓ | None | **SKIP** — below threshold |
+| XRP/USD | +1.82% ($1.1237→$1.1441) | −1.57% ($1.1625) | 0.01% ✓ | CLARITY Act (Senate vote weeks away) | **SKIP** — below threshold; binary catalyst not imminent |
+| HYPE/USD | +1.76% ($66.89→$68.07) | −2.11% ($69.54) | 0.044% ✓ | Protocol revenue/buybacks (multi-month driver, not fresh today) | **SKIP** — below threshold |
+| ONDO/USD | +1.75% ($0.3301→$0.3359) | −2.3% ($0.3437) | 0.089% ✓ | None | **SKIP** — below threshold |
+| JUP/USD | −3.71% ($0.2140→$0.2061) | declining | 0.131% ✓ | None | **SKIP** — negative from open |
+| TAO/USD | +0.98% | below threshold | 0.069% ✓ | None | **SKIP** — below threshold |
+
+---
+
+### Decision
+
+**NO ACTION. 100% CASH ($121.88 ZUSD).**
+
+ENA trailing stop fired (whipsaw: price hit new HWM $0.09830, retraced through stop, then bounced to $0.09630 post-fill). No re-entry taken: catalyst is now 3–20 days old, Perplexity confirms bearish 4h trend, and re-entry would be above the stop-out price. ZEC and ARB fail momentum peak check and catalyst requirement, respectively.
+
+No qualifying new entries across the full Kraken universe.
+
+**Portfolio state:** $121.88 ZUSD | 0 open positions | Phase P&L: −$57.90 (−32.21%) vs starting equity $179.78
+
+**Next triggers:**
+- ETH fresh catalyst <6h (ETF flow confirmation, Glamsterdam mainnet announcement) → enter with ~$120 ZUSD
+- XRP CLARITY Act Senate floor vote scheduled → enter market, 7% trailing stop  
+- ENA reclaims $0.09830+ with fresh catalyst → consider re-entry (same-thesis cap: 1st stop-out, 48h cooling NOT yet required)
+- Any Kraken alt: 1h surge >3% with volume + catalyst <6h → screen and enter
+
+**STEP 7 (notification):** No new trades placed → no WhatsApp alert sent.
