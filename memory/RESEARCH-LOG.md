@@ -20929,3 +20929,33 @@ No qualifying entry across Kraken universe. All candidates fail one or more gate
 
 **Planned action:** Place trailing stop on BTC (0.00185888 BTC, trail 2.5% GTC)
 
+
+---
+
+### EXECUTION — Session-Open 2026-06-23
+
+**Executed:** 2026-06-23 UTC (session-open)
+
+**BTC Trailing Stop Placed:** OFVAFJ-6EUUQ-FQ7C5F
+- Qty: 0.00185888 BTC | Trail: 2.5% GTC
+- Trigger at placement: $60,776.40 | BTC HWM at placement: $62,334
+- BTC at execution: $62,334–$62,348 (Kraken real-time)
+- Stop ACTIVE and protecting position ✓
+
+**Market update vs earlier research:**
+- BTC: $62,348 (Kraken real-time) vs $62,806 at pre-session research time — further decline
+- Perplexity quote ($63,929–$64,248) is stale/cached; Kraken real-time data used for all decisions
+- BTC weekly gate TRIGGERED: BTC ~−4.96% vs Jun 17 close $65,599 (threshold >3% down in 5 days)
+  - Applies stricter criteria for new entries (>5% 1h surge + catalyst <3h required)
+  - Moot: no ZUSD available for new entries
+- Fear & Greed: 20 (Extreme Fear, unchanged)
+- No Kraken alts up >3% in 4h found (Perplexity confirmed no candidates)
+- OMNI +174% 24h: spread still >30% (confirmed hard skip); MAT illiquid; DOLO not screened (no ZUSD anyway)
+
+**Actions taken:**
+1. ✅ 2.5% trailing stop placed on BTC (OFVAFJ-6EUUQ-FQ7C5F)
+2. ✅ No new entries (zero ZUSD)
+3. ✅ WhatsApp alert sent: stop placed on unprotected BTC position
+4. ✅ Memory files updated and committed
+
+**Outcome:** Strategy violation corrected. BTC position now protected. Holding for ETF-inflow-driven recovery or stop fires at $60,776 → cash.
