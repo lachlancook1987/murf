@@ -6335,3 +6335,21 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 
 **Actions taken:** NONE. Hold BTC with trailing stop. No stop adjustments (losing position; tightening thresholds +20%/+40% not met).
 
+
+---
+
+## 2026-06-23 — Overnight Triage Check (~23:04 UTC)
+
+**Kraken position:** BTC/USD | 0.00185888 BTC | Entry ~$65,566 | Current ~$62,514 | Unrealized −$5.68 (−4.66% on equity)
+**Kraken trailing stop:** OFVAFJ-6EUUQ-FQ7C5F — 2.5% trail | stopprice $61,198.90 | HWM $62,768.10 ✅ ACTIVE (unchanged since evening scan)
+**Alpaca:** No positions. Stop a2b44cf9 confirmed canceled 2026-05-22. Monitoring retired.
+
+**BTC Crash Gate:** BTC mid ~$62,514 | 24h open $63,953.60 | **−2.25%** | 24h low $61,881 | 24h high $64,200 — NOT triggered (threshold −20%).
+
+**STEP 2 — Stop verification:** Stop OFVAFJ-6EUUQ-FQ7C5F active at 2.5% trail ✅ — no action needed.
+**STEP 3 — Emergency exits:** Position −4.66% from entry — below 20% emergency threshold. Thesis intact (ETF inflows, Iran de-escalation). No action.
+**STEP 4 — Stop tightening:** Position is a loser (−4.66%) — tightening thresholds (+20%/+40%) not met. No action.
+
+**Stop buffer:** $62,514 − $61,199 = $1,315 (2.10% above trigger). Stop has not advanced overnight (BTC has not exceeded HWM $62,768 since evening scan).
+
+**Result: NO-OP. No actions taken. No notification sent.**
