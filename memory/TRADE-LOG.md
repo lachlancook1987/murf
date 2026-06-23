@@ -6266,3 +6266,33 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 | BTC/USD | 0.001858880 | ~$65,566 | $62,158 | −2.81% | ~−$6.30 (−5.19% on equity) | ⚠️ NONE — strategy violation |
 **Trades today:** BTC/USD buy (post-Jun22 EOD unlogged session; ~$121.88 ZUSD → 0.001858880 BTC @ ~$65,566) | **Total since migration:** ~80
 **Notes:** BTC spot position (0.001858880 BTC, implied entry ~$65,566) entered in an untracked session after Jun 22 EOD, deploying all $121.88 ZUSD. Jun 23 session-open research cited ETF inflow reversal ($39.2M, first positive flow in 6 weeks) and Iran de-escalation as catalysts supporting HOLD. However BTC continued sliding — from $62,806 at research time to $62,158 at EOD (24h open $63,953.60, down −2.81%). Critical strategy violation: no 2.5% trailing stop was placed (Kraken orders empty). Position is unprotected and currently −5.19% on equity (−$6.30 vs Jun 22 ref $121.88). BTC crash gate NOT triggered (−2.81% vs −20% threshold). Bot underperformed BTC by −2.36% (bot −5.17%, BTC −2.81%) due to entry near the 30h high. Alpaca stop a2b44cf9 confirmed canceled (2026-05-22). Tomorrow: place 2.5% trailing stop on BTC immediately at session open; T1 recovery $63,953 (today's open, +2.8%); if stop fires at current price trigger ~$60,604, account returns to cash — reassess before re-deploying.
+
+---
+
+## 2026-06-23 — BTC Trailing Stop Placed (Session-Open Execution)
+
+**Stop Order ID:** OFVAFJ-6EUUQ-FQ7C5F
+**Symbol:** BTC/USD | **Qty:** 0.00185888 BTC | **Side:** SELL (trailing stop)
+**Trail:** 2.5% GTC
+**Trigger at placement:** $60,776.40 | **HWM (BTC price at placement):** ~$62,334
+**BTC price at session-open:** $62,334–$62,348 (Kraken real-time)
+**Status:** ✅ ACTIVE — stop placed and protecting position
+
+**Context:** Stop was required from BTC entry (~$65,566, post-Jun22 EOD unlogged session) but was not placed. Strategy violation resolved. Stop now active GTC. If BTC recovers, trail advances upward. If BTC declines to $60,776, stop fires → full position exits → 100% cash.
+
+**Market context at execution:**
+- BTC $62,348 | 24h open $63,953.60 | −2.52% from open
+- BTC weekly gate: TRIGGERED (BTC ~−4.96% vs Jun17 close $65,599 — >3% down in 5 days)
+  - Consequence: pure momentum entries banned; require 1h surge >5% AND catalyst <3h for new entries
+  - Moot: ZUSD = $0.0036, no new entries possible regardless
+- BTC crash gate: NOT triggered (−2.52% vs −20% threshold)
+- Fear & Greed: 20 (Extreme Fear, 7th+ consecutive day)
+- Catalysts supporting hold: ETF inflow reversal +$39.2M (first positive in 6 weeks), Iran de-escalation, crude <$80
+
+**Account state post-execution:**
+- XXBT: 0.0018588800 BTC (~$115.88 @ $62,348)
+- ZUSD: $0.0036
+- Open orders: OFVAFJ-6EUUQ-FQ7C5F (trailing stop 2.5% GTC) ✓
+- No new entries possible (zero ZUSD)
+
+**Cumulative Phase P&L:** ~−$63.90 (−35.54%) vs starting equity $179.78
