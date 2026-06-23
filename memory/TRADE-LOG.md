@@ -6312,3 +6312,26 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 
 **Actions taken:** NONE. Hold BTC with trailing stop. No stop adjustments (losing position, tightening thresholds not met).
 
+---
+
+## 2026-06-23 — Evening Scan (~22:05 UTC)
+
+**BTC/USD position:** 0.00185888 BTC | Entry ~$65,566 | Current $62,578 | Unrealized −$5.55 (−4.55% on equity)
+**Stop:** OFVAFJ-6EUUQ-FQ7C5F — 2.5% trail, stopprice $61,198.90, HWM $62,768.10 ✅ ACTIVE
+**T1:** $67,533 (entry +3%) | **T2:** $68,844 (entry +5%) — not yet reached
+**Alpaca:** No open positions. Monitoring retired.
+
+**Stop advanced since Midday Scan #2:** trigger $60,987.30 → $61,198.90; HWM $62,551.00 → $62,768.10 (BTC touched $62,768 since last scan).
+
+**Market context:** BTC $62,578 | 24h open $63,953.60 | −2.15% from open | 24h high $64,200 (set earlier) | 24h low $61,881.10 | Buffer to stop: 2.19% ($1,379). Crash gate NOT triggered. Weekly gate TRIGGERED (−4.75% vs Jun 17 close $65,599).
+
+**Thesis check:**
+- ETF inflow reversal: continuing — positive flows post Jun 12; no reversal of reversal
+- Iran de-escalation: intact (no news of breakdown)
+- Institutional accumulation (Strategy 520 BTC, Strive 759 BTC): unchanged
+- No protocol exploit, rug, or regulatory action — thesis NOT broken
+
+**Candidates screened:** No qualifying setups found. ZUSD = $0.0036 — no new entries possible regardless. Altcoin screener returned no Kraken assets with 4h momentum >3%. Top 24h movers (DEXE +49%, BEAT +47%) not on Kraken or illiquid.
+
+**Actions taken:** NONE. Hold BTC with trailing stop. No stop adjustments (losing position; tightening thresholds +20%/+40% not met).
+
