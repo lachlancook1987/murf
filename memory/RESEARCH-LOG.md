@@ -21116,3 +21116,93 @@ No qualifying setup meets both the BTC weekly gate elevated bar (1h >5% + cataly
 
 **Notification: NOT sent (no position changes, no new entries, no stop tightening).**
 
+
+---
+
+## 2026-06-23 — Afternoon Scan #3 (15:08 UTC)
+
+**Execution time:** 2026-06-23 15:08 UTC (3rd run today — session-open routine)
+
+---
+
+### Account Snapshot
+
+| Asset | Qty | Value (USD) | Note |
+|---|---|---|---|
+| XXBT (BTC) | 0.0018588800 | ~$115.88 @ $62,300 | Long spot — trailing stop active |
+| ZUSD | $0.0036 | $0.00 | Essentially zero — all capital in BTC |
+
+**Total portfolio:** ~$115.88 | **Phase P&L:** ~−$63.90 (−35.54%) vs starting equity $179.78
+**BTC P&L vs entry (~$65,566):** −$6.07 (−4.97% on equity) — underwater; trailing stop managing risk
+
+---
+
+### Market Context (Kraken real-time 15:08 UTC)
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC spot (Kraken) | $62,300 | −2.58% from 24h open $63,953.60 |
+| BTC 24h high | $64,200 | Set earlier today |
+| BTC 24h low | $61,881 | Session low (touched earlier) |
+| BTC spread | $0.10 on $62,298 | 0.00016% — well within 1% ✓ |
+| BTC crash gate (>20% 24h down) | NOT triggered | −2.58% only |
+| BTC weekly gate (>3% 5-day down) | TRIGGERED | ~−4.72% vs Jun 17 close $65,599 |
+| Fear & Greed Index | 19–23 (Extreme Fear) | Multiple sources 19-23 |
+
+*Note: Perplexity price data remains stale/cached (quoted $61,833–$64,000 range across queries). All decisions use Kraken real-time ($62,300).*
+
+---
+
+### STEP 3 — Stop Verification
+
+| Position | Stop Order | Trail | Trigger | HWM | Status |
+|---|---|---|---|---|---|
+| BTC/USD 0.00185888 | OFVAFJ-6EUUQ-FQ7C5F | 2.5% GTC | $61,198.90 | $62,768.10 | ✅ ACTIVE |
+
+- Stop has **advanced** since Midday Scan #2 (trigger $60,987.30 → $61,198.90; HWM $62,551.00 → $62,768.10)
+- BTC touched HWM of ~$62,768 since last scan before pulling back to $62,300
+- Buffer: ~$1,101 (~1.77%) from current $62,300 to stop trigger $61,198.90
+- Distance from 24h low ($61,881) to stop trigger: $682 — stop is ABOVE the 24h low
+
+### STEP 4 — Stop Tightening (Winners Only)
+
+- BTC entry ~$65,566 | Current $62,300 = **−5.0% from entry — LOSING position**
+- T1 = $67,533 (entry +3%) — not yet reached. No tightening criteria met. N/A.
+
+### STEP 5 — Thesis Check
+
+**Thesis: ETF inflow reversal + Iran de-escalation + crude <$80**
+
+| Thesis Leg | Status | Detail |
+|---|---|---|
+| BTC ETF inflow reversal (+$39.2M) | ✅ INTACT | Perplexity confirms same +$39.2M figure across multiple queries — first positive flow day in 6 weeks |
+| Iran de-escalation | ✅ INTACT | VP JD Vance + Iranian FM Araghchi "deconfliction" agreement; IAEA inspectors back in; 60-day US Treasury waiver on Iranian oil sanctions; Strait of Hormuz open |
+| Crude <$80 | ✅ INTACT | Oil below $80 confirmed — de-escalation unwound speculative war premium |
+| MicroStrategy "sold 32 BTC" flag | ⚠️ STALE DATA | Perplexity referenced this but data appears from earlier period; 17% weekly drop narrative inconsistent with Kraken 5-day data (~−4.72%). Not a confirmed adverse event today. |
+| Protocol exploit / rug / hack | None | No adverse BTC events |
+| $7B liquidations (Perplexity) | ⚠️ STALE | May reference prior weekly volatility, not a fresh cascade today |
+
+**Decision: HOLD BTC with trailing stop.** All three thesis legs intact. Perplexity stale-data alerts (17% weekly drop, MicroStrategy sale) inconsistent with Kraken data — using real-time Kraken only for decisions. No thesis-breaking event confirmed.
+
+### STEP 6 — New Entry Scan
+
+**ZUSD: $0.0036 — NO NEW ENTRIES POSSIBLE without first closing BTC.**
+
+| Asset | Signal | Decision |
+|---|---|---|
+| Top 24h gainers (SYND +73%, VERONA +60%, DEXE +48%) | Likely not on Kraken; no ZUSD | SKIP — no capital |
+| No 1h surge data available from Perplexity | Real-time data unavailable | SKIP |
+| BTC weekly gate TRIGGERED | Elevated bar: require >5%/1h + catalyst <3h | Moot (no ZUSD) |
+
+### Alpaca Status
+
+| Check | Result |
+|---|---|
+| Alpaca positions | CLEAN ([] empty) ✓ |
+| Alpaca orders | Historical fills only (May 22, 2026) — all confirmed closed |
+| Stop a2b44cf9 | Retired and canceled 2026-05-22 |
+
+### Actions Taken: NONE
+
+**Notification: NOT sent (no position changes, no new entries, no stop tightening executed).**
+
