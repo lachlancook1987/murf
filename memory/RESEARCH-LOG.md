@@ -20794,3 +20794,138 @@ No qualifying entry across Kraken universe. All candidates fail one or more gate
 **STEP 7 (notification):** No action taken → no WhatsApp alert sent.
 
 
+
+---
+
+## 2026-06-23 — Pre-Session Research (Day 34)
+
+**Execution time:** 2026-06-23 UTC
+
+---
+
+### ⚠️ CRITICAL — UNPROTECTED BTC SPOT POSITION (NO STOP)
+
+**Kraken account shows:** XXBT 0.00185888 BTC (~$116.78 at $62,806) | ZUSD $0.0036
+**Last logged state (Jun 22 22:08 UTC):** 100% ZUSD $121.88, no open positions
+**Gap:** BTC spot position was entered between Jun 22 22:08 UTC and Jun 23 session open — NOT logged in memory. No stop order placed. Strategy violation: "stop mandatory immediately after fill."
+
+**Implied entry price:** $121.88 / 0.00185888 = ~$65,566/BTC (near 30h high $65,542)
+**Current BTC price:** $62,805.90 | **Unrealized P&L on position:** ~−$5.09 (−4.18% from implied entry)
+**MANDATORY ACTION:** Place 2.5% trailing stop on XXBT 0.00185888 BTC IMMEDIATELY.
+
+---
+
+### Account Snapshot
+
+**Kraken:**
+| Asset | Qty | Value (USD) | Note |
+|---|---|---|---|
+| XXBT (BTC) | 0.00185888 | ~$116.78 | **Unprotected spot position — NO STOP** |
+| ZUSD | 0.0036 | $0.00 | Essentially zero — all capital deployed |
+| Dust (AVAX, BABY, FET, etc.) | — | ~$0.02 | Negligible |
+
+**Total portfolio:** ~$116.80 | **Phase P&L vs starting equity $179.78:** ~−$62.98 (−35.03%)
+**Kraken open margin positions:** NONE | **Kraken open orders:** NONE (no stop placed)
+
+**Alpaca:** NONE (monitoring retired; historical orders only, no live exposure)
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC | $62,805.90 | −1.79% from 24h open $63,953.60 |
+| BTC 24h high | $64,200.00 | Set earlier today; current −2.18% from high |
+| BTC 30h high | $65,542.10 | Near implied BTC entry price |
+| BTC 24h low | $62,510.00 | Current price near low of range |
+| ETH | ~$1,726 | −0.62% 24h |
+| Fear & Greed | 20 | Extreme Fear (20 vs 20 yesterday — flat) |
+| BTC Crash Gate (>20% down 24h) | NOT TRIGGERED | −1.79% only |
+| BTC Weekly Gate (>3% down 5d) | Check needed | BTC 5d trend unclear |
+| BTC Perp Funding Rate | +0.0003% to +0.01% | Slightly positive → mild bullish futures bias |
+
+---
+
+### Key Catalysts Today (2026-06-23)
+
+1. **BTC ETF inflow REVERSAL (+$39.2M)** — FRESH (<6h). After **6 consecutive weeks of net outflows totalling $5.94B**, spot Bitcoin ETFs posted $39.2M net inflows today. First positive flow day in 6 weeks. Institutions buying the dip. **Bullish for BTC and risk appetite.**
+
+2. **Middle East de-escalation** — U.S.-Iran "deconfliction" mechanism secured in 18h Switzerland talks (60-day sanctions waiver; IAEA inspectors returning). Crude oil fell below $80/barrel → eases inflation fears → macro risk-on environment. **Broad positive for crypto.**
+
+3. **CLARITY Act (XRP)** — Senate monitoring ongoing; no imminent vote date confirmed. Not yet actionable as a fresh <6h catalyst.
+
+4. **Solana RWA surge** — gamified RWA on-chain platforms. Background narrative, not intraday-specific.
+
+5. **Token unlock headwinds approaching:**
+   - H ($72.4M) — June 25 (2 days)
+   - SAHARA AI ($35.48M) — June 26 (3 days)
+   - Supply pressure building into end of week
+
+---
+
+### Candidate Screening
+
+**Available capital for new trades:** $0.0036 ZUSD — NO NEW ENTRIES POSSIBLE without first exiting BTC.
+
+| Asset | vs 24h Open | vs 24h High | Spread | Momentum Peak | Catalyst (<6h?) | Decision |
+|---|---|---|---|---|---|---|
+| BTC/USD | −1.79% | −2.18% | 0.0002% ✓ | FAILS (high set earlier, declining) | ETF inflows +$39.2M TODAY ✓ | **HOLD + place stop** — catalyst is real; BTC near session low, may recover |
+| WLD/USD | −4.89% | −6.35% | 0.119% ✓ | FAILS | None fresh | **SKIP** — declining, Perplexity "+13%" appears inaccurate/stale |
+| SOL/USD | −2.75% | −2.85% | 0.014% ✓ | FAILS (high $71.95 earlier) | None fresh | **SKIP** — declining, below threshold |
+| XRP/USD | −1.44% | −4.31% | 0.003% ✓ | FAILS | CLARITY Act not imminent | **SKIP** — below threshold, no fresh catalyst |
+| DEXE | +59.18% | Declining | NOT on Kraken | — | Governance demand | **SKIP** — not available |
+| SYN/USD | +72.1% | Declining (reviewed 5×) | 0.41% ✓ | FAILS | No fundamental catalyst | **SKIP** — pure speculative pump, no catalyst |
+| OMNI/USD | +174% | Extreme decline | 31.8% | — | None | **HARD SKIP** — spread >1% |
+
+---
+
+### Trade Ideas
+
+**No new trade entries are possible today.** ZUSD = $0.0036. All capital is deployed in BTC spot.
+
+**The only actionable trade today is managing the existing unprotected BTC position:**
+
+#### ACTION REQUIRED: BTC/USD — Place 2.5% Trailing Stop
+- **Position:** 0.00185888 BTC spot (long)
+- **Current price:** $62,805.90 (−1.79% from open, −2.18% from today's high)
+- **Implied entry:** ~$65,566 (near 30h high)
+- **Unrealized P&L:** ~−$5.09 (−4.18% vs implied entry)
+- **Stop:** Place `trailing_stop`, `trail_percent: 2.5`, GTC immediately — strategy-mandatory
+- **Stop trigger at current price:** $62,805.90 × 0.975 = $61,235.75
+- **T1 recovery target:** $64,100 (+2.1% from current) — below T1 threshold from entry but recovering ground
+- **Catalyst supporting hold:** ETF inflow reversal ($39.2M today) + Iran de-escalation + crude <$80
+- **Rationale for holding vs selling:** The ETF inflow reversal is a genuine fresh catalyst (<6h). BTC is near session lows and may recover. The stop protects from further downside. If BTC recovers and breaks back above $64,200 (today's high) with volume, the trailing stop trails up.
+- **Risk:** Momentum peak fails; BTC entered near the 30h high and has retraced 4.2%; stop may fire on continued pullback. In that case, ~−4.2% loss realized (larger than the 2.5% strategy loss budget — this is because no stop was placed at entry, a strategy violation).
+
+**If BTC recovers and ZUSD becomes available (stop fires or BTC sold):**
+- No qualifying alt setups exist currently — all below threshold or declining
+- Wait for a fresh momentum surge >3% in 1h with catalyst before re-entering
+
+---
+
+### Risk Factors
+
+1. **CRITICAL: No stop on BTC** — position entered near 30h high, now down 4.18%. Mandatory stop must be placed this session.
+2. **ETF inflows $39.2M are small** — relative to 6-week outflow of $5.94B, today's inflow is a rounding error. Reversal signal unconfirmed.
+3. **Extreme Fear index 20** — sustained fear, not bottoming signal. Capital preservation priority.
+4. **BTC at session lows** ($62,806, near 24h low $62,510) — support is shallow; break below $62,500 targets $60K.
+5. **Token unlock headwinds** — H ($72.4M) Jun 25, SAHARA ($35.48M) Jun 26 — supply pressure building.
+6. **Zero ZUSD** — no flexibility for new trades; if stop fires, need to reassess before re-deploying.
+7. **Macro uncertainty** — Iran deal is fragile (60-day waiver, not a full deal); crude could reverse.
+
+---
+
+### Decision
+
+**HOLD BTC + PLACE TRAILING STOP IMMEDIATELY.**
+
+- BTC held spot (0.00185888 BTC, ~$116.78)
+- No new entries possible (no ZUSD)
+- Crash gate NOT triggered (BTC −1.79%, threshold −20%)
+- ETF inflow reversal is a valid bullish catalyst — holding through the catalyst with stop protection is the correct approach
+- 2.5% trailing stop is mandatory per strategy; this must be placed now
+- **If stop fires:** move to 100% cash, reassess; likely no re-entry until alt shows >3%/1h surge with fresh catalyst
+
+**Planned action:** Place trailing stop on BTC (0.00185888 BTC, trail 2.5% GTC)
+
