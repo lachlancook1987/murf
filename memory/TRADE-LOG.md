@@ -6244,3 +6244,25 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 **ZUSD after:** $121.8836 (100% cash, no open positions)
 **Phase P&L:** −$57.90 (−32.21%) vs starting equity $179.78
 **Notes:** ENA entered Jun 22 09:10 UTC on institutional accumulation (Coinbase Ventures + Janus Henderson + fee-switch governance Q3 2026). Position ran to HWM $0.09830 (new 24h high, just above prior HWM $0.09810). Trailing stop auto-advanced to ~$0.09584 and fired on retracement. Price rebounded to $0.09630 post-stop — classic whipsaw on thin alt. Catalyst was 3–20 days old; no fresh <6h catalyst available to justify re-entry. ENA first stop-out in 7-day window (same-thesis cap not yet triggered). No re-entry taken.
+
+---
+
+## 2026-06-22 — BTC/USD BUY (Post-EOD, Unlogged Session)
+
+**Symbol:** BTC/USD (spot) | **Qty:** 0.001858880 BTC | **Side:** BUY
+**Entry:** ~$65,566 (implied from ZUSD reconciliation: $121.88 / 0.001858880) | **Source:** untracked session post-Jun22 EOD
+**ZUSD deployed:** ~$121.88 (100% of available cash)
+**Catalyst (per Jun 23 research log):** ETF inflow reversal ($39.2M — first positive flow day in 6 weeks) + U.S.-Iran de-escalation (crude <$80, macro risk-on)
+**Trailing stop:** ⚠️ NOT PLACED — strategy violation (mandatory 2.5% trail not executed at entry)
+**Notes:** Position discovered in Jun 23 session-open research. Entry appears to have occurred in a late-Jun22 or early-Jun23 untracked session. Session-open research recommended HOLD + place stop immediately; stop was not placed before this EOD run.
+
+---
+
+## 2026-06-23 — EOD Snapshot (Day 34, Tuesday)
+
+**Portfolio:** $115.58 | **Cash:** $0.00 (0%) | **Day P&L:** −$6.30 (−5.17%) | **Phase P&L:** −$64.20 (−35.71%) | **vs BTC:** −2.36%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.001858880 | ~$65,566 | $62,158 | −2.81% | ~−$6.30 (−5.19% on equity) | ⚠️ NONE — strategy violation |
+**Trades today:** BTC/USD buy (post-Jun22 EOD unlogged session; ~$121.88 ZUSD → 0.001858880 BTC @ ~$65,566) | **Total since migration:** ~80
+**Notes:** BTC spot position (0.001858880 BTC, implied entry ~$65,566) entered in an untracked session after Jun 22 EOD, deploying all $121.88 ZUSD. Jun 23 session-open research cited ETF inflow reversal ($39.2M, first positive flow in 6 weeks) and Iran de-escalation as catalysts supporting HOLD. However BTC continued sliding — from $62,806 at research time to $62,158 at EOD (24h open $63,953.60, down −2.81%). Critical strategy violation: no 2.5% trailing stop was placed (Kraken orders empty). Position is unprotected and currently −5.19% on equity (−$6.30 vs Jun 22 ref $121.88). BTC crash gate NOT triggered (−2.81% vs −20% threshold). Bot underperformed BTC by −2.36% (bot −5.17%, BTC −2.81%) due to entry near the 30h high. Alpaca stop a2b44cf9 confirmed canceled (2026-05-22). Tomorrow: place 2.5% trailing stop on BTC immediately at session open; T1 recovery $63,953 (today's open, +2.8%); if stop fires at current price trigger ~$60,604, account returns to cash — reassess before re-deploying.
