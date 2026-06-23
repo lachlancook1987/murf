@@ -21206,3 +21206,135 @@ No qualifying setup meets both the BTC weekly gate elevated bar (1h >5% + cataly
 
 **Notification: NOT sent (no position changes, no new entries, no stop tightening executed).**
 
+
+---
+
+## 2026-06-23 — Pre-Session Research (Day 35, Tuesday)
+
+**Session open:** 2026-06-23 UTC | **Branch:** claude/affectionate-gates-ayiwe4
+
+---
+
+### STEP 1 — Account Snapshot
+
+| Account | Balance | Note |
+|---|---|---|
+| Kraken XXBT | 0.0018588800 BTC | Long spot position |
+| Kraken ZUSD | $0.0036 | Effectively zero — 100% deployed |
+| Kraken total | ~$115.80 @ $62,402 | All capital in BTC |
+| Alpaca | $0.00 positions | Clean — all historical fills May 22; monitoring retired |
+
+**Open Kraken orders:**
+- OFVAFJ-6EUUQ-FQ7C5F: sell 0.00185888 BTC/USD trailing stop +2.5% GTC
+  - stopprice: $61,198.90 | HWM (limitprice field): $62,768.10 | Status: ACTIVE ✓
+
+**Phase P&L:** ~−$63.90 (−35.54%) vs starting equity $179.78
+
+---
+
+### STEP 2 — Market Context
+
+| Metric | Value | Source |
+|---|---|---|
+| BTC spot (Kraken) | $62,402 | Kraken real-time |
+| BTC 24h open | $63,953.60 | Kraken |
+| BTC 24h change | −2.43% | Kraken |
+| BTC 24h high | $64,200 (today) / $64,591 (rolling 24h) | Kraken |
+| BTC 24h low | $61,881 | Kraken |
+| BTC crash gate (>20% down 24h) | NOT triggered | −2.43% only |
+| BTC weekly gate (>3% down 5-day) | TRIGGERED | ~−4.87% vs Jun 17 close $65,599 |
+| ETH spot | ~$1,725 | Perplexity (Kraken shows $1,728.76) |
+| ETH 24h change | ~−0.6% to +0.8% (mixed sources) | Perplexity |
+| Fear & Greed Index | 23 (Extreme Fear) | Perplexity |
+| BTC funding rate | +0.005% (8h, near-neutral) | Perplexity |
+| BTC trading volume 24h | $18–30B | Perplexity |
+
+**Note on Perplexity data quality:** Some queries returned stale/cached data (BTC >$95k references, DOGE +8% from prior periods, $7B liquidation narrative from past week). All price decisions use Kraken real-time data exclusively.
+
+---
+
+### STEP 3 — Catalysts & News
+
+**Bullish:**
+- Strategy (MicroStrategy rebranded) purchased 520 BTC ($35M) — fresh institutional accumulation
+- Strive acquired 759 BTC (~$50M) — institutional buying
+- Iran de-escalation intact: U.S.-Iran "deconfliction" mechanism, IAEA inspectors back in, 60-day oil sanctions waiver; crude <$80; macro risk-on
+- Structural narrative shift to RWA tokenization and decentralized AI (TAO/Bittensor) — medium-term tailwind, not actionable today
+
+**Bearish / Headwinds:**
+- ETF outflows: $228M net redemptions week ending Jun 19 (sixth consecutive week of net outflows, $5.94B total since peak)
+- Fear & Greed 23 = Extreme Fear, 7th+ consecutive day in this range — sentiment suppressed
+- BTC weekly gate triggered (−4.87% / 5 days) — elevated entry criteria required
+
+**Token unlocks this week (potential sell pressure):**
+- $MEGA (Jun 23): $13.55M, 22.1% of supply — bearish pressure on MEGA today
+- $H / Humanity Protocol (Jun 24): $32.17M, 14.7% supply — bearish for H tomorrow
+- $GRAM (Jun 23): simultaneous unlock with MEGA
+- Plume Foundation: unlock schedule pushed back to later in 2026
+
+---
+
+### STEP 4 — BTC Position Analysis
+
+| Item | Value |
+|---|---|
+| Entry price | ~$65,566 (unlogged post-Jun22 session) |
+| Current price | $62,402 |
+| Unrealized P&L | −$5.89 (−4.83% from entry; −5.09% on equity) |
+| Trailing stop trigger | $61,198.90 |
+| HWM (highest trailing ref) | $62,768.10 |
+| Buffer to stop | $1,203.10 = 1.93% |
+| T1 recovery target | $67,533 (entry +3%) — needs +8.2% from here |
+| T2 recovery target | $68,844 (entry +5%) — needs +10.3% from here |
+| Thesis legs | Strategy 520 BTC buy ✓ | Iran de-escalation ✓ | Crude <$80 ✓ |
+| ETF flow update | Week net outflows $228M — bearish overlay, but institutional corporate buys offset |
+| Stop status | ✅ ACTIVE, protecting position |
+
+**BTC thesis INTACT (3/3 legs):** No thesis-breaking event. Hold with stop.
+
+---
+
+### STEP 5 — New Entry Scan
+
+**Capital available: $0.0036 ZUSD — NO NEW ENTRIES POSSIBLE**
+
+Top Kraken gainers screened (for post-stop planning):
+
+| Asset | 24h Gain | Spread | Verdict |
+|---|---|---|---|
+| OMNI/USD | +174% | ~31.8% (prior session) | HARD SKIP — illiquid |
+| MAT/USD | +66% | 2.95% ($0.0625/$0.0644) | SKIP — spread >1% |
+| DOLO/USD | +53% | 21.3% ($0.02328/$0.02957), 3 trades only | HARD SKIP — illiquid |
+| DEXE | +65% | Not on Kraken | SKIP |
+| MAT: only 15 trades today | thin volume | confirms illiquidity | SKIP |
+
+**BTC weekly gate effect:** Even if cash were available, new entries require 1h surge >5% AND catalyst <3h old (pure momentum banned). No qualifying setups identified from Perplexity research.
+
+**If BTC stop fires at $61,198:**
+- Cash recovery: ~$113.80
+- Reassess immediately: if BTC macro still intact (no new crash catalyst), potential BTC re-entry at lower support
+- All spread-screened Kraken alts currently illiquid — would need fresh scan at that time
+
+---
+
+### STEP 6 — Decision
+
+**HOLD BTC/USD position with 2.5% trailing stop (OFVAFJ-6EUUQ-FQ7C5F)**
+
+- Crash gate: NOT triggered
+- BTC weekly gate: TRIGGERED — no pure momentum new entries
+- Zero ZUSD: no new entries regardless
+- Thesis: intact (3/3 legs)
+- Stop: ACTIVE at $61,198.90 (1.93% buffer from $62,402)
+
+**Candidates for when/if BTC stop fires:** None qualifying today. Full re-scan required at that time — all 24h momentum leaders have illiquid spreads (>1%). If stop fires, go to 100% cash and wait for a qualifying setup.
+
+**Risk factors:**
+- Stop is only 1.93% away from current price — a single sharp wick could fire it
+- BTC 24h low was $61,881, just $683 above the stop trigger
+- ETF outflows ($228M/week) are sustained headwind
+- No imminent catalyst to recover BTC to T1 ($67,533) same-session
+- If stop fires: account drops to ~$113.80 — phase P&L worsens to ~−$66 (−37%)
+
+**Planned trades today:** NONE (zero cash, HOLD BTC with stop)
+
