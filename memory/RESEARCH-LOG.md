@@ -21039,3 +21039,80 @@ No qualifying setup meets both the BTC weekly gate elevated bar (1h >5% + cataly
 ### Actions Taken: NONE
 
 **Notification: Not required (no position changes, no new entries, no stop tightening).**
+
+---
+
+## 2026-06-23 — Midday Scan #2
+
+**Execution time:** 2026-06-23 midday UTC (2nd run)
+
+---
+
+### Account Snapshot
+
+| Asset | Qty | Value (USD) | Note |
+|---|---|---|---|
+| XXBT (BTC) | 0.00185888 | ~$116.00 @ $62,381 | Long spot — trailing stop active |
+| ZUSD | $0.0036 | $0.00 | Essentially zero — all capital in BTC |
+
+**Total portfolio:** ~$116.00 | **Phase P&L:** ~−$64.78 (−36.03%) vs starting equity $179.78
+**BTC P&L vs entry (~$65,566):** −$5.94 (−4.86% on equity) — underwater; trailing stop managing risk
+
+---
+
+### Market Context (Kraken real-time)
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC spot (Kraken) | $62,381 | −2.46% from 24h open $63,953.60 |
+| BTC 24h high | $64,200 | Set earlier today |
+| BTC 24h low | $61,881 | Session low |
+| BTC crash gate (>20% 24h down) | NOT triggered | −2.46% only |
+| BTC weekly gate (>3% 5-day down) | TRIGGERED | ~−4.90% vs Jun 17 close $65,599 |
+| Alpaca stop a2b44cf9 | Confirmed canceled | Historical (May 2026 closure) — no action |
+
+*Note: Perplexity returned stale/cached data (quoting $64,017–$64,398). All decisions use Kraken real-time.*
+
+---
+
+### STEP 3 — Stop Verification
+
+| Position | Stop Order | Trail | Trigger | HWM | Status |
+|---|---|---|---|---|---|
+| BTC/USD 0.00185888 | OFVAFJ-6EUUQ-FQ7C5F | 2.5% GTC | $60,987.30 | $62,551.00 | ✅ ACTIVE |
+
+- Stop has **advanced** since first midday scan (trigger $60,937.50 → $60,987.30; HWM ~$62,500 → $62,551.00) — BTC touched new intraday high of ~$62,551 since last scan before pulling back
+- Buffer: ~$1,393 (~2.23%) from current price $62,381 to stop trigger $60,987
+
+### STEP 4 — Stop Tightening (Winners Only)
+
+- BTC entry ~$65,566 | Current $62,381 = **−4.86% from entry — LOSING position**
+- No tightening criteria met (requires +20% or +40% from entry). N/A.
+
+### STEP 5 — Thesis Check
+
+**Thesis: ETF inflow reversal + Iran de-escalation + crude <$80**
+
+| Thesis Leg | Status | Detail |
+|---|---|---|
+| BTC ETF inflow reversal | ⚠️ UNVERIFIABLE TODAY | Perplexity data lags — most recent confirmed is $85.85M Jun 12. Jun 23 inflow figure ($39.2M cited at session open) cannot be re-confirmed via search. Thesis not invalidated — no new outflow news. |
+| Iran de-escalation | ✅ INTACT (from first midday scan) | Brent crude $79.25, Strait of Hormuz open, peace memorandum holding |
+| Crude <$80 | ✅ INTACT | Consistent with de-escalation holding |
+| Protocol exploit / rug / hack | None | No adverse BTC events |
+| $1.23B liquidations (Perplexity) | ⚠️ STALE/UNCERTAIN | Perplexity referenced mass liquidations but data quality unclear — may be from yesterday's volatility. BTC 24h low $61,881 consistent with brief dip. No confirmed cascade event today. |
+
+**Decision: HOLD BTC with trailing stop.** No thesis-breaking event confirmed. Stop is active and advancing.
+
+### STEP 6 — New Entry Scan
+
+**ZUSD: $0.0036 — NO NEW ENTRIES POSSIBLE without first closing BTC.**
+
+| Asset | Signal | Decision |
+|---|---|---|
+| No alts with 1h surge >3% | Perplexity: "no significant 1-hour spikes" | SKIP — nothing qualifies |
+| BTC weekly gate TRIGGERED | Elevated bar: require >5%/1h + catalyst <3h | Moot (no ZUSD) |
+
+### Actions Taken: NONE
+
+**Notification: NOT sent (no position changes, no new entries, no stop tightening).**
+
