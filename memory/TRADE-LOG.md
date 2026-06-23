@@ -6296,3 +6296,19 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 - No new entries possible (zero ZUSD)
 
 **Cumulative Phase P&L:** ~−$63.90 (−35.54%) vs starting equity $179.78
+
+---
+
+## 2026-06-23 — Midday Scan #2 (~midday UTC)
+
+**BTC/USD position:** 0.00185888 BTC | Entry ~$65,566 | Current $62,381 | Unrealized −$5.94 (−4.86% on equity)
+**Stop:** OFVAFJ-6EUUQ-FQ7C5F — 2.5% trail, stopprice $60,987.30, HWM $62,551.00 ✅ ACTIVE
+**T1:** $67,533 (entry +3%) | **T2:** $68,844 (entry +5%) — not yet reached
+**Alpaca:** No open positions. Stop a2b44cf9 confirmed canceled 2026-05-22. Alpaca monitoring retired.
+
+**Stop advanced since first midday scan:** trigger $60,937.50 → $60,987.30; HWM ~$62,500 → $62,551.00 (BTC briefly touched $62,551 since last scan).
+
+**Candidates screened:** No qualifying 1h surge >3% found. ZUSD = $0.0036 — no new entries possible regardless.
+
+**Actions taken:** NONE. Hold BTC with trailing stop. No stop adjustments (losing position, tightening thresholds not met).
+
