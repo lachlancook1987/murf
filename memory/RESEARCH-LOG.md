@@ -21338,3 +21338,65 @@ Top Kraken gainers screened (for post-stop planning):
 
 **Planned trades today:** NONE (zero cash, HOLD BTC with stop)
 
+
+---
+
+## 2026-06-23 — Session Scan (claude/clever-allen-28355p)
+
+**Execution time:** 2026-06-23 UTC | **Branch:** claude/clever-allen-28355p
+
+### Account State
+
+| Account | Balance | Note |
+|---|---|---|
+| Kraken XXBT | 0.0018588800 BTC | Long spot position |
+| Kraken ZUSD | $0.0036 | Effectively zero — 100% deployed |
+| Kraken total | ~$115.98 @ $62,504.90 | All capital in BTC |
+| Alpaca | $0.00 positions | Clean — historical fills only (May 22); monitoring retired |
+
+**Open Kraken orders:**
+- OFVAFJ-6EUUQ-FQ7C5F: sell 0.00185888 BTC/USD trailing stop 2.5% GTC
+  - stopprice: $61,198.90 | HWM: $62,768.10 | Status: ACTIVE ✓
+
+### Market Context
+
+| Metric | Value |
+|---|---|
+| BTC spot (Kraken) | $62,504.90 (ask) / $62,504.80 (bid) |
+| BTC 24h open | $63,953.60 |
+| BTC 24h change | −2.27% (Kraken) |
+| BTC 24h high | $64,200.00 |
+| BTC 24h low | $61,881.10 |
+| Buffer to stop trigger | $1,306 (2.09% — slightly improved vs 1.93% at prior scan) |
+| BTC crash gate (>20% 24h) | NOT triggered |
+| BTC weekly gate (>3% 5-day) | TRIGGERED (~−4.72% vs Jun 17 close $65,599) |
+| Fear & Greed | 23 (Extreme Fear) — unchanged |
+
+### Research Findings
+
+**Catalysts — unchanged from prior scan:**
+- Bullish: Strategy 520 BTC ($35M), Strive 759 BTC ($50M) institutional accumulation; Iran de-escalation intact; crude <$80
+- Bearish: ETF outflows $228M/week (6th consecutive week); Extreme Fear sustained
+- New: Swellchain mandatory shutdown (asset bridging required EOD Jun 23) — not actionable (SWELL not a Kraken play; not a trade catalyst)
+
+**Altcoin momentum scan — same as prior sessions:**
+- OMNI/USD: +174% 24h, spread ~31.8% — HARD SKIP
+- MAT/USD: +66% 24h, spread 2.95% — SKIP
+- DOLO/USD: +53% 24h, spread 21.3% — HARD SKIP
+- REX/INIT/UFD: 30–50% 24h — not screened (zero ZUSD; moot)
+
+**Note:** Perplexity BTC price data returned stale/cached values ($63,957 "up 1.15%") — inconsistent with Kraken real-time data ($62,504.90, −2.27%). All price decisions use Kraken exclusively.
+
+### Decision
+
+**HOLD BTC/USD with 2.5% trailing stop (OFVAFJ-6EUUQ-FQ7C5F). NO new entries.**
+
+- Crash gate: NOT triggered
+- BTC weekly gate: TRIGGERED (pure momentum entries banned)
+- ZUSD: $0.0036 — no new entries possible regardless
+- Thesis: intact (3/3 legs: institutional accumulation, Iran de-escalation, crude <$80)
+- Stop: ACTIVE at $61,198.90 (2.09% buffer from $62,504.90)
+- BTC unrealized P&L: −$5.70 (−4.66% from entry $65,566; −4.92% on equity)
+
+**Actions taken:** NONE. No commits (no trades executed).
+
