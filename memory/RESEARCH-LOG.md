@@ -20959,3 +20959,83 @@ No qualifying entry across Kraken universe. All candidates fail one or more gate
 4. ✅ Memory files updated and committed
 
 **Outcome:** Strategy violation corrected. BTC position now protected. Holding for ETF-inflow-driven recovery or stop fires at $60,776 → cash.
+
+---
+
+## 2026-06-23 — Midday Scan
+
+**Execution time:** 2026-06-23 midday UTC
+
+---
+
+### Account Snapshot
+
+| Asset | Qty | Value (USD) | Note |
+|---|---|---|---|
+| XXBT (BTC) | 0.00185888 | ~$116.18 @ $62,479 | Long spot — trailing stop active |
+| ZUSD | $0.0036 | $0.00 | Essentially zero — all capital in BTC |
+
+**Total portfolio:** ~$116.18 | **Phase P&L:** ~−$64.60 (−35.93%) vs starting equity $179.78
+**BTC P&L vs entry (~$65,566):** −$5.74 (−4.7% on equity) — underwater; trailing stop managing risk
+
+---
+
+### Market Context
+
+| Metric | Value | Note |
+|---|---|---|
+| BTC spot (Kraken real-time) | $62,479 | −2.3% from 24h open $63,953.60 |
+| BTC 24h high | $64,200 | Set earlier today |
+| BTC 24h low | $61,881 | Session low |
+| BTC crash gate (>20% 24h down) | NOT triggered | −2.3% only |
+| BTC weekly gate (>3% 5-day down) | TRIGGERED | ~−4.75% vs Jun 17 close $65,599 |
+| Alpaca stop a2b44cf9 | Confirmed canceled | Historical (May 2026 closure) — no action |
+
+---
+
+### STEP 3 — Stop Verification
+
+| Position | Stop Order | Trail | Trigger | Status |
+|---|---|---|---|---|
+| BTC/USD 0.00185888 | OFVAFJ-6EUUQ-FQ7C5F | 2.5% GTC | $60,937.50 | ✅ ACTIVE |
+
+- Stop has **advanced** since placement (from $60,776.40 to $60,937.50), meaning BTC touched ~$62,500 HWM after stop was placed
+- Buffer: ~$1,542 (~2.47%) from current price $62,479 to stop trigger $60,937
+
+### STEP 4 — Stop Tightening (Winners Only)
+
+- BTC entry ~$65,566 | Current $62,479 = **−4.7% from entry — LOSING position**
+- No tightening criteria met (requires +20% or +40% from entry). N/A.
+
+### STEP 5 — Thesis Check
+
+**Thesis: ETF inflow reversal + Iran de-escalation + crude <$80**
+
+| Thesis Leg | Status | Detail |
+|---|---|---|
+| BTC ETF inflow reversal (+$39.2M) | ✅ INTACT | First positive flow day in 6 weeks; tentative reversal signal; no new outflow news |
+| Iran de-escalation | ✅ INTACT | Perplexity confirms Brent crude $79.25, WTI $74.14; Strait of Hormuz open; peace memorandum holding |
+| Crude <$80 | ✅ INTACT | Brent $79.25, WTI $74.14; de-escalation unwound $25–30 speculative war premium |
+| Protocol exploit / rug / hack | None | No adverse BTC events |
+| Regulatory action against BTC | None | Clarity Act Senate vote expected early July — background, not adverse |
+
+**Note:** Earlier conflicting Perplexity response claimed "oil to $97 / Iran thesis broken" — verified incorrect via follow-up crude oil query. Data was stale/mixed from different dates. Current confirmed state is de-escalation intact and crude below $80.
+
+**Decision: HOLD BTC with trailing stop.** Thesis intact. No emergency exit.
+
+### STEP 6 — New Entry Scan
+
+**ZUSD: $0.0036 — NO NEW ENTRIES POSSIBLE without first closing BTC.**
+
+| Asset | 24h Change | Signal | Decision |
+|---|---|---|---|
+| ARX (Arcium) | +154% | Binance Alpha listing | NOT on Kraken — skip |
+| DEXE | +59.18% | Governance demand | NOT on Kraken — skip |
+| WLD | +13% (conflicting) | None fresh <6h | No ZUSD + data unreliable — skip |
+| TIA (Celestia) | +6.58% | None confirmed | No ZUSD — skip |
+
+No qualifying setup meets both the BTC weekly gate elevated bar (1h >5% + catalyst <3h) and capital availability. If BTC stop fires → 100% cash → fresh scan required before redeployment.
+
+### Actions Taken: NONE
+
+**Notification: Not required (no position changes, no new entries, no stop tightening).**
