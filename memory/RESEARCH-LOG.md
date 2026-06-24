@@ -21847,3 +21847,31 @@ Dust balances (sub-$0.01 residuals): AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI,
 
 ### Decision: HOLD CASH ($113.74 ZUSD). No new entries. Crash gate NOT triggered.
 
+
+---
+
+## 2026-06-24 — Session-Open Scan #2 (~UTC, branch claude/clever-allen-3htqn5)
+
+**Portfolio:** $113.7415 ZUSD (100% cash) | No open positions | No open orders | Alpaca retired.
+
+**BTC/USD:** $60,668 | 24h open $62,650 | **−3.17%** | Range $59,001–$63,139 | Crash gate NOT triggered.
+**BTC weekly gate:** TRIGGERED — BTC $60,668 vs Jun 17 close $65,599 = **−7.51%** (threshold >3%).
+
+| Asset | 24h From Open | Spread | Catalyst | Verdict |
+|---|---|---|---|---|
+| BERA/USD | −7.26% (Fusaka upgrade today — sell-the-news) | 0.098% ✅ | Protocol upgrade (price declining) | SKIP |
+| G/USD | +9.34% from open; −9.9% off 24h high | 0.125% ✅ | Bybit listing Jun 22 (2d old, stale; weekly gate fails) | SKIP |
+| HYPE/USD | +0.40% from open | tight ✅ | None | SKIP |
+| XRP/USD | −4.33% | tight ✅ | CLARITY Act vote expected late July/early Aug | SKIP |
+| BTC, ETH, SOL, TAO, ZEC | All declining | ✅ | None fresh / ZEC security bug | SKIP/AVOID |
+
+**XRP CLARITY Act update:** Emergency Senate talks week of Jun 24 re: Section 604 dispute. Vote target July 4 (optimistic) or first week of August (likely). Binary catalyst still alive but NOT imminent today.
+
+**Decision: HOLD CASH. No new entries.** No candidate meets BTC weekly gate criteria (1h momentum >5% + catalyst <3h old).
+
+**Re-entry triggers (unchanged):**
+1. BTC recovers above ~$67,666 (weekly gate clears) OR
+2. Catalyst-driven entry with spread ≤1%, confirmed 1h momentum >5%, catalyst <3h old
+3. Best upcoming binary catalyst: XRP/CLARITY Act when Senate vote date confirmed within 48h (July 4 or first week August window)
+4. AVOID: ZEC (security bug), SAHARA (Jun 26 unlock), H/Humanity (Jun 25 unlock)
+
