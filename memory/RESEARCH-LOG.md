@@ -21741,3 +21741,109 @@ All screened assets declining from 24h opens. Market broadly risk-off. No qualif
 2. Catalyst-driven setup (protocol upgrade, regulatory event, exchange listing) with spread ≤1%, 1h momentum >5%, catalyst <3h old
 3. Best upcoming catalyst: XRP/CLARITY Act when Senate vote date confirmed within 48h
 4. AVOID H/USD (Humanity Protocol) — $72.4M unlock today Jun 25; AVOID SAHARA — $35.48M unlock Jun 26
+
+---
+
+## 2026-06-24 — Pre-Session Research (~UTC)
+
+**Execution time:** 2026-06-24 (pre-session) | **Branch:** claude/affectionate-gates-4h7x0c
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | XXBT = 0 | No open Kraken positions | No open orders | Alpaca monitoring retired
+
+---
+
+### Account Snapshot
+
+| Account | Balance | Open Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $113.74 ZUSD | None | None |
+| Alpaca | Retired | None | None |
+
+Dust balances (sub-$0.01 residuals): AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO, XETH — all negligible.
+
+---
+
+### Market Context (Kraken live)
+
+| Asset | Ask/Last | 24h Open | 24h Change | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $60,130 | $62,650 | **−4.02%** | $59,001–$63,138 | 0.0002% ✅ |
+| ETH/USD | $1,592 | $1,665 | **−4.33%** | $1,551–$1,689 | 0.041% ✅ |
+| SOL/USD | $66.63 | $69.61 | **−4.28%** | $64.60–$70.36 | 0.030% ✅ |
+| XRP/USD | $1.061 | $1.109 | **−4.33%** | $1.045–$1.112 | 0.020% ✅ |
+| DYDX/USD | $0.14605 | $0.14984 | **−2.53%** | $0.138–$0.154 | 0.129% ✅ |
+| ZEC/USD | $407.82 | $415.48 | **−1.84%** | $386.69–$423 | 0.128% ✅ |
+| G/USD | $0.003128 | $0.002923 | **+7.01%** | $0.002868–$0.003549 | 0.160% ✅ |
+| PEPE/USD | $0.000002501 | $0.000002690 | **−7.03%** | $0.00000242–$0.00000271 | 0.080% ✅ |
+
+**Crash gate:** BTC −4.02% in 24h — NOT triggered (threshold −20%) ✅
+**BTC weekly gate:** TRIGGERED — BTC $60,130 vs Jun 17 close $65,599 = **−8.28%** (threshold >3%)
+- Requires: 1h momentum >5% AND catalyst <3h old for new entries
+- Pure momentum entries BANNED
+
+**Fear & Greed Index:** 17 (Extreme Fear) — declined from 23 yesterday
+**BTC funding rate:** +0.005% near-neutral (Binance +0.01%, Bybit −0.006%)
+**BTC 24h volume:** ~$30B | Market cap: ~$1.19T
+
+---
+
+### Market Catalysts & News
+
+**Negative:**
+- **ZEC security vulnerability:** 4-year bug disclosed in Zcash Orchard shielded pool allowing undetectable ZEC counterfeiting. ZEC −1.84% but volume surging ($433M 24h). → AVOID ZEC
+- **Taiko (TKO) bridge exploit:** $1.7M exploited via forged withdrawal proofs. Taiko halted block production; exchanges suspended deposits. → AVOID TKO
+- **Middle East tensions:** U.S.-Iran ceasefire talks stalled (Strait of Hormuz, oil export waivers). Risk-off macro pressure.
+- **ETF outflows:** 6th consecutive week of BTC ETF outflows (~$228M), $5.94B cumulative. Persistent headwind.
+- **ETH Glamsterdam:** DELAYED to Q3 2026 (late Aug). Catalyst invalidated for current ETH entries.
+
+**Token unlocks this week (AVOID):**
+- SAHARA AI: $35.48M unlock June 26
+- H (Humanity Protocol): $72.4M unlock June 25 (today per prior sessions)
+
+**Positive (limited):**
+- XRP CLARITY Act: Senate debate expected early July (binary catalyst still live, not imminent today)
+- ZEC structural: HSCS/Fortitude merger creating first public ZEC mining platform (DCG ~95%)
+- G (Gravity): +24.73% 24h on $72.2M volume (no specific catalyst confirmed)
+- DEXE: +32.88% 24h per Perplexity (not available on Kraken)
+
+---
+
+### Candidate Screen
+
+| Asset | 24h Chg | From Open | Spread | 1h Trend | Momentum Peak | Catalyst | Weekly Gate | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| BTC/USD | −4.02% | Declining | 0.0002% ✅ | Down from $63,138 | 24h high >60 min ago | No fresh catalyst | Fails (no >5% 1h up) | **SKIP** |
+| ETH/USD | −4.33% | Declining | 0.041% ✅ | Down from $1,689 | 24h high >60 min ago | Glamsterdam delayed Q3 | Fails | **SKIP** |
+| SOL/USD | −4.28% | Declining | 0.030% ✅ | Down from $70.36 | 24h high >60 min ago | ETF divergence (stale) | Fails | **SKIP** |
+| XRP/USD | −4.33% | Declining | 0.020% ✅ | Down from $1.112 | 24h high >60 min ago | CLARITY Act (not imminent) | Fails | **SKIP** |
+| DYDX/USD | −2.53% | Declining | 0.129% ✅ | Down from $0.154 | 24h high >60 min ago | No catalyst | Fails | **SKIP** |
+| ZEC/USD | −1.84% | Declining | 0.128% ✅ | Down from $423 | 24h high >60 min ago | **Security exploit** (negative) | N/A | **AVOID** |
+| G/USD | +7.01% | Above open | 0.160% ✅ | Down from $0.003549 (−12% from peak) | 24h high SET EARLIER, price declining | No confirmed catalyst found | Fails (no >5% 1h up, peak faded) | **SKIP** |
+| PEPE/USD | −7.03% | Declining | 0.080% ✅ | Down sharply | 24h high >60 min ago | No catalyst | Fails | **SKIP** |
+| DEXE | +32.88% | N/A | — | — | — | — | Not on Kraken | **N/A** |
+| BEAT | +58% | N/A | — | — | — | KuCoin campaign | Not on Kraken | **N/A** |
+
+**No qualifying setup exists.** Every screened asset on Kraken is either declining from its 24h high (momentum peak rule fails) or lacks the >5% 1h upward momentum + fresh <3h catalyst required by the BTC weekly gate.
+
+---
+
+### Trade Ideas
+
+**None actionable today.** Decision: **HOLD CASH**
+
+**Re-entry criteria (unchanged):**
+1. BTC weekly gate clears: BTC must recover above ~$67,666 for 5-day change <−3% (requires +12.7% from current $60,130)
+2. Catalyst-driven entry: protocol upgrade, regulatory event, exchange listing with spread ≤1%, 1h momentum >5%, catalyst <3h old
+3. Best upcoming catalyst: XRP/CLARITY Act when Senate vote date confirmed within 48h
+4. AVOID: ZEC (security bug), TKO (bridge exploit), SAHARA (Jun 26 unlock), H (unlock)
+
+**Risk factors:**
+- BTC approaching Jun 25 session low of $61,127 — breached today ($59,001 low seen)
+- Extreme Fear (17) may indicate oversold bounce potential but no actionable signal today
+- Middle East tensions and ETF outflow trend = macro headwinds
+- Capital too small ($113.74) for meaningful leveraged trades, so sized conservatively
+
+---
+
+### Decision: HOLD CASH ($113.74 ZUSD). No new entries. Crash gate NOT triggered.
+
