@@ -21400,3 +21400,172 @@ Top Kraken gainers screened (for post-stop planning):
 
 **Actions taken:** NONE. No commits (no trades executed).
 
+
+---
+
+## 2026-06-24 — Pre-Session Research (claude/affectionate-gates-md7aaj)
+
+**Execution time:** 2026-06-24 ~07:00 UTC | **Branch:** claude/affectionate-gates-md7aaj
+
+---
+
+### STEP 2 — Account Snapshot
+
+| Account | Balance | Note |
+|---|---|---|
+| Kraken XXBT | 0.0018588800 BTC | Spot position; entry ~$65,566 |
+| Kraken ZUSD | $0.0036 | Effectively zero — 100% deployed |
+| Kraken total | ~$116.35 @ $62,594.90 | All capital in BTC spot |
+| Alpaca | No positions | Historical fills only; monitoring retired |
+
+**Correction from overnight triage (Jun 24 06:00):** The overnight scan incorrectly reported the BTC position as "cleared". Kraken's `/openPositions` endpoint shows margin positions only — it returned `{}` but the spot XXBT balance of 0.0018588800 BTC was always intact. The prior stop OFVAFJ-6EUUQ-FQ7C5F was cancelled as "orphaned" in error. **New stop placed immediately this session:**
+- **OATQNB-YV2N6-DTOUHF** — sell 0.00185888 XBTUSD @ trailing stop 2.5% GTC
+- stopprice: $61,030.10 | limitprice: $62,594.90 (at placement) | Status: ACTIVE ✅
+
+**No open orders prior to this session. BTC was unprotected since overnight triage cancelled the prior stop. Remedied.**
+
+**Cumulative Phase P&L:** ~−$63 (−35% vs starting equity $179.78)
+
+---
+
+### STEP 3 — Market Context
+
+| Metric | Value | Source |
+|---|---|---|
+| BTC (Kraken) | $62,594.90 | Real-time Kraken |
+| BTC 24h open | $62,650.30 | Kraken |
+| BTC 24h change | −0.09% | Kraken |
+| BTC 24h range | $61,881.10 – $63,040.00 | Kraken |
+| BTC vs Jun 17 close | −4.58% ($65,599 → $62,594) | Weekly gate: TRIGGERED |
+| ETH (Kraken) | $1,671.70 | Real-time Kraken |
+| ETH 24h open | $1,665.12 | Kraken |
+| ETH 24h change | +0.39% | Kraken |
+| ETH 24h range | $1,633.10 – $1,680.70 | Kraken |
+| SOL (Kraken) | $69.35 | Real-time Kraken |
+| SOL 24h change | −0.36% from open | Kraken |
+| Fear & Greed | 17 (Extreme Fear) | Perplexity — worsening from 20 yesterday, 23 last week |
+| Funding rate | ~+0.003% (near zero) | Perplexity — neutral, not driving |
+| BTC crash gate | NOT triggered (−0.09% vs −20% threshold) | |
+| BTC weekly gate | TRIGGERED (−4.58% over 5 days) | Pure momentum banned; catalyst-driven exempt |
+
+**Perplexity note:** BTC prices from Perplexity ranged $62,320–$62,738 (consistent with Kraken); ETH showed -3.33% 24h in some sources vs Kraken's +0.39% from 24h open — discrepancy reflects different 24h reference windows. Kraken real-time used for all price decisions.
+
+---
+
+### STEP 3B — Catalysts & News
+
+**Bullish:**
+- **Ethereum "Glamsterdam" upgrade** — cited as current momentum catalyst for ETH; protocol upgrade catalyst (weekly gate exempt category)
+- SOL ETF inflow divergence — ETF inflows into SOL products diverging positively vs BTC
+- XRP CLARITY Act (US crypto market structure bill) — cleared Senate Banking Committee May 14; on Senate calendar June 1; vote expected late July/early August; White House targets July 4 passage; Polymarket at 59%
+- BTC short-term price model: $64,287 projected by June 26 (Wallet Investor forecast)
+- ZEC: unusual buying volume surge in last 60 minutes (Perplexity)
+
+**Bearish:**
+- Strategy (MicroStrategy) sold 32 BTC ($2.5M) to fund dividends — minor, not thesis-breaking
+- May 2026 was biggest monthly BTC ETF outflow of 2026
+- Fear & Greed at 17 — worsening trend (was 20 yesterday, 23 last week)
+- BTC 200-day MA falling since June 20 — weak longer-term trend
+- BTC 4h chart bearish, 50-day MA falling
+- Key BTC support: $61,965 — between current price and stop trigger ($61,030)
+
+**Token unlocks this week (supply pressure):**
+- **$H (Humanity Protocol)** — Jun 25: $54.77M unlock, 2.7% of supply → AVOID H/USD
+- **$SAHARA (Sahara AI)** — Jun 26: $35.48M, 9.58–10.5% of supply → AVOID SAHARA
+- $MEGA, $XPL, $NEWT: elevated unlock-to-cap ratios this week
+
+---
+
+### STEP 4 — Trade Candidates & Spread Screening
+
+**Capital available: $0.0036 ZUSD — NO NEW ENTRIES POSSIBLE TODAY**
+
+All setups are contingency plans for if/when BTC trailing stop fires (~$61,030).
+
+| Asset | 24h Change (Kraken) | Ask | Bid | Spread | Gate status | Verdict |
+|---|---|---|---|---|---|---|
+| ETH/USD | +0.39% from open | $1,671.89 | $1,671.70 | 0.011% | Glamsterdam upgrade = catalyst-driven, weekly gate EXEMPT | ✅ QUALIFIED (contingent) |
+| SOL/USD | −0.36% from open | $69.36 | $69.35 | 0.014% | ETF inflow divergence catalyst = catalyst-driven, weekly gate EXEMPT | ✅ QUALIFIED (contingent) |
+| XRP/USD | −0.97% from open | $1.09800 | $1.09799 | <0.01% | CLARITY Act binary event → vote late July/Aug; 7% trail when triggered | ✅ QUALIFIED (when vote scheduled, not today) |
+| ZEC/USD | −0.50% from open | $415.24 | $414.94 | 0.072% | Buying surge noted but no specific catalyst | Weekly gate bars pure momentum — needs >5% 1h surge |
+| DYDX/USD | −4.01% from open | $0.14412 | $0.14371 | 0.28% | No fresh catalyst <6h; currently declining | SKIP — declining from peak |
+| UNI/USD | −0.89% from open | $2.89580 | $2.89480 | <0.01% | Volume surge data was stale (from prior 24h) | SKIP — no live momentum |
+
+**Momentum peak check (strategy rule):** For any entry, 24h high must have been set within last 60 minutes. At time of writing, no Kraken altcoin is showing fresh 24h high activity. All current candidates show prices well below 24h highs set earlier. This gate must be re-checked at time of any actual entry.
+
+---
+
+### STEP 5 — BTC Position Analysis
+
+| Item | Value |
+|---|---|
+| Entry price | ~$65,566 |
+| Current price | $62,594.90 |
+| Unrealized P&L | ~−$5.52 (−4.53% from entry; −4.74% on equity) |
+| Trailing stop trigger | $61,030.10 (new stop placed this session) |
+| Trail from current | 2.5% below current = $61,029.53 |
+| Buffer to stop | $62,594.90 − $61,030.10 = $1,564.80 (2.50%) |
+| Key support (Perplexity) | $61,965 — above our stop, below current price |
+| T1 recovery target | $67,533 (entry +3%) — needs +7.9% from here |
+| T2 recovery target | $68,844 (entry +5%) — needs +10.0% from here |
+| Thesis legs | Strategy sold 32 BTC (minor −) | ETF outflows ongoing (−) | Iran/crude unclear |
+
+**Thesis status:** 2 of 3 original legs weakened. Strategy sale is minor ($2.5M vs ~$15B holdings). ETF outflows are sustained headwind. Iran/crude not updated today. No thesis-breaking event (no large exchange hack, no regulatory ban, no breakdown of BTC macro). Hold with stop.
+
+**Risk flag:** BTC key support at $61,965 sits between current price ($62,594) and stop trigger ($61,030). A break of $61,965 support could cascade quickly to the stop trigger. Buffer is only 2.5% — a sharp wick could fire the stop intraday.
+
+---
+
+### STEP 5B — Post-Stop Contingency Trade Ideas (IF BTC stop fires → ~$113 ZUSD)
+
+**Weekly gate active** — pure momentum entries BANNED. Catalyst-driven (protocol upgrade, regulatory event, exchange listing) remain open.
+
+**Idea 1: ETH/USD — Glamsterdam Protocol Upgrade Play**
+- **Catalyst:** Ethereum "Glamsterdam" upgrade (protocol upgrade = catalyst-driven, weekly gate EXEMPT)
+- **Entry:** Market order when showing 1h momentum recovery after BTC sell-off settles; confirm 24h high set within 60 min
+- **Stop:** trailing_stop, trail_percent: 2.5 (ETH ATR is manageable; standard trail)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1 at T1 vs 2.5% trail ✅
+- **Spread:** 0.011% ✅
+- **Kraken pair:** ETH/USD ✅
+- **Size:** 100% of available ZUSD (~$113) — full conviction given liquidity and catalyst
+- **Gate:** Catalyst-driven, weekly gate exempt. Still need to confirm 1h momentum >0% before entry.
+
+**Idea 2: SOL/USD — ETF Inflow Divergence**
+- **Catalyst:** SOL ETF inflow divergence (positive institutional flows vs BTC outflows)
+- **Entry:** Market order on recovery momentum; confirm 24h high within 60 min
+- **Stop:** trailing_stop, trail_percent: 2.5
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 1.2:1 at T1 vs 2.5% trail ✅
+- **Spread:** 0.014% ✅
+- **Kraken pair:** SOL/USD ✅
+- **Size:** 100% of available ZUSD if ETH not the stronger setup at that time
+
+**Idea 3: XRP/USD — CLARITY Act Binary Play (Pre-Position)**
+- **Catalyst:** CLARITY Act Senate vote expected late July/early August (White House targeting July 4); Standard Chartered projects $4–8B ETF inflows on passage
+- **Entry:** Market order when Senate vote date is confirmed OR XRP shows intraday momentum on CLARITY Act news
+- **Stop:** trailing_stop, trail_percent: 7 (binary catalyst → wider trail)
+- **T1:** entry +3% | **T2:** entry +5%
+- **R:R:** 0.43:1 at T1 vs 7% trail — FAILS standard R:R. However: binary catalyst events use wider trail by design; target should be 7%+ (T2) to make R:R viable. Wait for pre-vote momentum with tight intraday catalyst.
+- **Spread:** <0.01% ✅
+- **Note:** Not actionable today (no vote date confirmed <6h); best to enter when vote date is within 48h
+
+---
+
+### STEP 6 — Decision
+
+**HOLD BTC/USD with 2.5% trailing stop (OATQNB-YV2N6-DTOUHF). NO NEW ENTRIES.**
+
+- Crash gate: NOT triggered
+- BTC weekly gate: TRIGGERED — pure momentum entries banned; catalyst-driven exempt
+- ZUSD: $0.0036 — no new entries regardless
+- BTC stop: NEW stop ACTIVE at $61,030.10 (2.5% buffer) ✅
+- Planned trades: NONE (zero cash). Post-stop watchlist: ETH → SOL → XRP (in order of today's catalyst strength)
+
+**Risk factors:**
+- BTC support at $61,965 → if broken, stop at $61,030 could trigger quickly
+- Extreme Fear at 17 and worsening — no positive sentiment catalyst today
+- ETF outflows sustained: biggest monthly outflow of 2026 in May
+- Key upcoming: CLARITY Act timeline (July 4 White House target); Humanity Protocol $54.77M unlock Jun 25 (avoid H/USD)
+- Prior overnight stop cancellation error: future sessions must check SPOT balance (account endpoint) not just positions/orders endpoint to confirm BTC holdings
+
