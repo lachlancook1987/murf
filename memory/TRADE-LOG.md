@@ -6386,3 +6386,31 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 | BTC/USD | 0.00185888 | ~$65,566 | $62,606 | +0.72% | −$5.49 (−4.50%) | OATQNB-YV2N6-DTOUHF 2.5% trail, trigger $61,064, HWM $62,630 ✅ |
 **Trades today:** none | **Total since migration:** ~80
 **Notes:** BTC spot position (0.00185888 BTC) continues to be held. An error in the Jun 24 overnight triage (~06:00 UTC) incorrectly concluded the position was closed — the Kraken `positions` API endpoint returns only margin positions, not spot balances; the BTC was always present as XXBT balance. The triage cancelled the then-active trailing stop OFVAFJ-6EUUQ-FQ7C5F (HWM $63,040, trigger $61,464) as "orphaned." A subsequent session today recognised the error and placed a new trailing stop OATQNB-YV2N6-DTOUHF (2.5% trail, HWM $62,629.90, trigger $61,064.20). The new stop's HWM is lower than the cancelled one ($62,630 vs $63,040), meaning the protection floor dropped slightly; as BTC advances the trail will recover. BTC ended the day +0.72% from the Jun 23 EOD price of $62,158 (24h open $62,650, high $63,040, low $61,885). Portfolio tracked BTC almost exactly (−0.02% relative). Crash gate NOT triggered. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — Alpaca monitoring retired. Tomorrow: hold BTC with 2.5% trailing stop; new entries still impossible (ZUSD = $0.0036). If BTC regains $65,566 entry, trailing stop at +2.5% × HWM will lock in break-even; T1 = $67,533 (+3%), T2 = $68,844 (+5%).
+
+---
+
+## 2026-06-24 — Midday Scan (~midday UTC)
+
+**BTC/USD position:** 0.00185888 BTC | Entry ~$65,566 | Current $62,545.60 | Unrealized ~−$5.62 (−4.60% from entry)
+**Stop:** OATQNB-YV2N6-DTOUHF — 2.5% trail | stopprice $61,151.20 | HWM $62,719.10 ✅ ACTIVE
+**Buffer:** ($62,545.60 − $61,151.20) / $62,545.60 = **2.23%** | 24h low $61,885 held above stop ✓
+**T1:** $67,533 (entry +3%) | **T2:** $68,844 (entry +5%) — not yet reached
+**ZUSD:** ~$0.0036 — no new entries possible
+**Alpaca:** No positions. Monitoring retired.
+
+**Stop advancement since pre-session:** trigger $61,030.10 → $61,151.20; HWM $62,594.90 → $62,719.10 (BTC touched $62,719 intraday). Stop ratcheting correctly ✅
+
+**STEP 4 — Stop tightening:** BTC at −4.6% from entry; +20% threshold ($78,679) not met. No adjustments.
+
+**STEP 5 — Thesis check:**
+- ETF outflows: $228M this week (6th consecutive week) — ETF inflow reversal thesis now back negative; weakened further
+- U.S.-Iran talks: stalled on oil export waivers / Strait of Hormuz — de-escalation thesis weakening
+- Institutional accumulation (Strategy, Strive): unchanged
+- No protocol exploit, rug, or regulatory ban — strategy Step 5 exit triggers NOT met. Trailing stop managing risk. HOLD.
+
+**STEP 6 — Candidates screened:**
+- ZEC +29.3% 24h, TON +23.6%, STORJ +30% noted from Perplexity — all large moves but ZUSD = $0.0036 makes entry impossible regardless
+- BTC weekly gate still TRIGGERED (BTC ~−4.6% vs Jun 17 close $65,599): pure momentum entries banned
+- No actionable setup even if capital were available
+
+**Actions taken:** NONE. Hold BTC with trailing stop. No notification sent.

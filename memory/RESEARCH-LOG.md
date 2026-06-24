@@ -21569,3 +21569,26 @@ All setups are contingency plans for if/when BTC trailing stop fires (~$61,030).
 - Key upcoming: CLARITY Act timeline (July 4 White House target); Humanity Protocol $54.77M unlock Jun 25 (avoid H/USD)
 - Prior overnight stop cancellation error: future sessions must check SPOT balance (account endpoint) not just positions/orders endpoint to confirm BTC holdings
 
+---
+
+## 2026-06-24 — Midday Research Update
+
+**Execution time:** 2026-06-24 ~midday UTC | **Branch:** claude/sweet-keller-ebwku0
+
+**BTC:** $62,545.60 ask | 24h open $62,650.30 | −0.17% | 24h range $61,885–$63,040
+**Stop OATQNB:** stopprice $61,151.20 | HWM $62,719.10 | buffer 2.23% ✅
+**ZUSD:** $0.0036 — no new entries possible
+
+**New market data since pre-session:**
+- ETF outflows: $228M this week — 6th consecutive week of outflows. The Jun 22 positive flow ($39.2M) was a single-day reversal, not a trend change. Thesis leg further weakened.
+- U.S.-Iran talks: stalled on oil export waivers and Strait of Hormuz security. Crude uncertainty rising. De-escalation thesis weakening.
+- MiCA enforcement: European regulators advancing restrictions on unlicensed exchanges — additional regulatory headwind.
+- CLARITY Act: U.S. Senate debate expected early July — XRP binary catalyst still alive. No change.
+- AI IPO capital drain: SpaceX/Anthropic/OpenAI IPOs drawing crypto liquidity. New headwind.
+
+**24h top movers (Perplexity — reference only, ZUSD = $0):**
+- ZEC: +29.3% 24h | TON: +23.6% | STORJ: +30% | SkyAI: +28.4%
+- None actionable (BTC weekly gate active; capital at zero)
+
+**Conclusion:** No new catalysts justifying position changes. BTC thesis weakening on both legs (ETF flows, Iran) but no strategy-defined exit triggers met. Trailing stop managing downside. HOLD.
+
