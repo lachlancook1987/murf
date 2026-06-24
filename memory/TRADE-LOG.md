@@ -6353,3 +6353,25 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 **Stop buffer:** $62,514 − $61,199 = $1,315 (2.10% above trigger). Stop has not advanced overnight (BTC has not exceeded HWM $62,768 since evening scan).
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-24 — Overnight Triage Check (~06:00 UTC)
+
+**Kraken positions:** NONE (BTC/USD position cleared since June 23 23:04 UTC overnight scan)
+**Alpaca positions:** NONE
+
+**BTC/USD:** $62,557 | 24h open $62,650 | 24h range $61,881–$63,040 | **−0.15% overnight** | Crash gate NOT triggered
+
+**STEP 2 — Stop verification:** No open positions — no stops required.
+**STEP 3 — Emergency exits:** No open positions — no action.
+**STEP 4 — Stop tightening:** No open positions — no action.
+**STEP 5 — Crash gate:** BTC −0.15% overnight — well below −20% threshold. No action.
+
+**Orphaned order found and CANCELLED:** `OFVAFJ-6EUUQ-FQ7C5F` — 2.5% trailing stop sell 0.00185888 XBTUSD (stopprice $61,464, HWM $63,040). Position it protected no longer exists on Kraken. Cancelled successfully.
+
+**Note on missing position:** The 0.00185888 BTC position (entry ~$65,566) visible at June 23 23:04 UTC is no longer on Kraken. The trailing stop did NOT trigger (24h low $61,881 > stopprice $61,464). Position appears closed manually or via another session. Approximate loss at ~$62,557: −$5.60 (−4.6% on notional, −4.6% on equity ~$121.67).
+
+**Alpaca stop a2b44cf9:** Confirmed cancelled since 2026-05-22. No Alpaca BTC position. Monitoring retired.
+
+**Actions taken:** Cancelled orphaned order OFVAFJ-6EUUQ-FQ7C5F. WhatsApp alert sent.
