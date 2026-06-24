@@ -21592,3 +21592,57 @@ All setups are contingency plans for if/when BTC trailing stop fires (~$61,030).
 
 **Conclusion:** No new catalysts justifying position changes. BTC thesis weakening on both legs (ETF flows, Iran) but no strategy-defined exit triggers met. Trailing stop managing downside. HOLD.
 
+---
+
+## 2026-06-24 — Evening Scan (~session-open UTC)
+
+**BTC/USD position:** 0.00185888 BTC | Entry ~$65,566 | Current $62,820.50 | Unrealized ~−$5.09 (−4.16% from entry)
+**Stop:** OATQNB-YV2N6-DTOUHF — 2.5% trail | stopprice $61,560.30 | HWM $63,138.70 ✅ ACTIVE (advanced since midday)
+**T1:** $67,533 (entry +3%) | **T2:** $68,844 (entry +5%) — not reached
+**ZUSD:** $0.0036 — no new entries possible
+**Alpaca:** No positions. Monitoring retired.
+
+**Stop advancement since midday scan:** trigger $61,151.20 → $61,560.30 (+$409.10); HWM $62,719.10 → $63,138.70 (+$419.60). BTC hit new 24h high of $63,138.70 post-midday — stop ratcheted correctly ✅
+**Buffer:** ($62,820.50 − $61,560.30) / $62,820.50 = **2.00%** above trigger.
+
+**Market context:**
+| Metric | Value |
+|---|---|
+| BTC (Kraken bid) | $62,820.50 |
+| BTC 24h open | $62,650.30 |
+| BTC 24h range | $61,885.00 – $63,138.70 |
+| BTC vs 24h open | +0.27% |
+| BTC vs Jun 17 close | ~−4.2% | Weekly gate: TRIGGERED |
+| BTC Perplexity | ~$62,691, -2.0% (different 24h reference) |
+| ETH | ~$1,670, −3.0% 24h |
+| Fear & Greed | 17 (Extreme Fear) — unchanged from midday |
+| Funding rate | +0.005% — slightly positive, near neutral |
+| Crash gate | NOT triggered (−2% vs −20% threshold) |
+| BTC weekly gate | TRIGGERED (−4.2% vs Jun 17 close $65,599) |
+
+**Evening catalyst screen:**
+- **OMNI +174% (Perplexity):** Kraken OMNI/USD shows ask $0.711 / bid $0.247 — spread 65%, zero volume, 0 recent trades. DATA ANOMALY — not tradeable.
+- **MAT +4.5% 24h:** Kraken spread 2.0% (ask $0.064 / bid $0.0627) — HARD SKIP (>1% spread threshold). Volume ~$540 total — illiquid.
+- **DOLO −15.9% from 24h open:** Declining, spread 1.98%, 2 trades total. SKIP.
+- **DYDX +1.3% from 24h open:** Spread 0.08% ✅, but momentum only +1.3% (threshold >3%). Volume solid (8M DYDX). SKIP — insufficient momentum.
+- **BEAT +58%, DEXE +32%:** Not on Kraken or no liquidity.
+- ZEC, TON, STORJ — not rescreened (ZUSD = $0 makes entry impossible regardless).
+
+**BTC weekly gate status:** TRIGGERED (−4.2% over 5 days). Pure momentum entries banned. Catalyst-driven entries remain open — but no capital.
+
+**Token unlock risk tomorrow:**
+- H (Humanity Protocol): $72.40M unlock Jun 25 — AVOID H/USD
+- SAHARA: $35.48M unlock Jun 26 — AVOID SAHARA
+
+**Thesis check (BTC hold):**
+- ETF outflows: $228M this week (6th consecutive week), $5.94B cumulative since ETF launch. Bearish headwind persisting.
+- U.S.-Iran stall: Strait of Hormuz security and oil export waivers unresolved. De-escalation thesis further weakened.
+- AI IPO capital drain (SpaceX/Anthropic/OpenAI): crypto selling pressure continuing.
+- NFP (strong US employment): reduced Fed rate-cut odds — negative macro for BTC.
+- Institutional accumulation (Strategy, Strive): unchanged.
+- No protocol exploit, rug, regulatory ban — strategy Step 5 exit triggers NOT met.
+- CLARITY Act: Senate debate expected early July. XRP binary catalyst intact.
+- BTC RSI: oversold per Perplexity — potential relief rally catalyst.
+
+**Actions taken:** NONE. Hold BTC with trailing stop. Stop advancing correctly with BTC moves. No notification sent (no new trades).
+
