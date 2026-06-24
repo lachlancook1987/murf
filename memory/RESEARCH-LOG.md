@@ -21847,3 +21847,32 @@ Dust balances (sub-$0.01 residuals): AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI,
 
 ### Decision: HOLD CASH ($113.74 ZUSD). No new entries. Crash gate NOT triggered.
 
+
+---
+
+## 2026-06-24 — Midday Scan #2 (claude/sweet-keller-qdjomm)
+
+**Execution time:** 2026-06-24 midday UTC | **Branch:** claude/sweet-keller-qdjomm
+
+**Portfolio:** $113.74 ZUSD (100% cash) | XXBT = 0 | No open Kraken positions | No open orders
+
+**BTC/USD (Kraken live):** ask $60,993.10 | 24h open $62,650.30 | 24h range $59,001–$63,138.70 | −2.64% from open (slight recovery from prior scan's −4.02% at $60,130)
+
+**Crash gate:** NOT triggered (−2.64% vs −20% threshold) ✅
+**BTC weekly gate:** TRIGGERED (BTC $60,993 vs Jun 17 close $65,599 = −7.02%) — pure momentum entries banned; catalyst-driven exempt
+
+**STEP 3:** No open positions → no trailing stops needed ✅
+**STEP 4:** No open positions → no tightening ✅
+**STEP 5:** No open positions → no thesis check ✅
+
+**STEP 6 — Candidate screen (confirmatory):**
+- No Kraken altcoin showing >3% momentum in 4h (Perplexity confirmed)
+- XLM: −4.18% from 24h open ($0.18678) | March catalyst (SEC/CFTC, Amundi) NOT fresh | SKIP
+- ETH: −2.64% from open ($1,621) | Glamsterdam delayed Q3 | SKIP
+- ZEC: security vulnerability active (avoid)
+- G/USD: +7% 24h but declining from peak ($0.003128 vs peak $0.003549, −12%) — momentum peak rule fails
+- DEXE +32.88%, BEAT +58%: not on Kraken
+
+**All gates/rules confirm prior session's analysis. No entries.** HOLD CASH.
+
+**Actions taken:** NONE. No notification sent.
