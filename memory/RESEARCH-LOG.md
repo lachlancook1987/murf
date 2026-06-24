@@ -21684,3 +21684,60 @@ No Kraken altcoin shows >3% momentum in last 4h. All screened assets below 24h o
 
 Re-entry criteria: (1) Catalyst-driven setup (protocol upgrade, regulatory event, listing) with spread ≤1% + momentum confirmation, OR (2) BTC weekly gate clears AND 1h momentum >3% with volume. XRP/CLARITY Act remains best upcoming binary catalyst.
 
+
+---
+
+## 2026-06-24 — Session-Open Scan (~15:07 UTC)
+
+**Execution time:** 2026-06-24 15:07 UTC | **Branch:** claude/clever-allen-35g8kf
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | XXBT = 0 | No open positions | No open orders
+
+Note: A prior session (running ~midday local AEST = ~01:00-02:00 UTC) labeled its entries "Jun 25" due to timezone offset; account state was already confirmed correct (BTC trailing stop fired, ZUSD = $113.74).
+
+### Market Snapshot (Kraken live — 15:07 UTC)
+| Asset | Ask | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $60,862.90 | $62,650.30 | −2.85% | $60,809–$63,138 |
+| ETH/USD | $1,639.73 | $1,665.12 | −1.52% | $1,635–$1,689 |
+| SOL/USD | $68.56 | $69.61 | −1.51% | $68.32–$70.36 |
+| XRP/USD | $1.07144 | $1.10866 | −3.36% | $1.070–$1.112 |
+| DYDX/USD | $0.14553 | $0.14984 | −2.88% | $0.134–$0.154 |
+| ZEC/USD | $411.80 | $415.48 | −0.89% | $406–$423 |
+| ATOM/USD | $1.6562 | $1.7157 | −3.47% | $1.618–$1.743 |
+
+**Crash gate:** BTC −2.85% in 24h — NOT triggered (threshold −20%)
+**BTC weekly gate:** TRIGGERED — BTC $60,862 vs Jun 17 close $65,599 = −7.22% (threshold >3%)
+**Fear & Greed:** 17 (Extreme Fear) — unchanged
+**Funding rate:** ~+0.005% near-neutral
+
+### Candidate Screen
+| Asset | 24h Chg | From Open | Spread | 1h Trend | Verdict |
+|---|---|---|---|---|---|
+| DYDX | +18% (Perplexity) | −2.88% (Kraken) | 0.14% ✅ | Declining from $0.154 high | SKIP — momentum peaked; 24h high >60 min old; currently declining |
+| ZEC | −5.1% (Perplexity) | −0.89% (Kraken) | 0.080% ✅ | Declining | SKIP — no positive momentum |
+| ATOM | +5.79% (Perplexity) | −3.47% (Kraken) | 0.042% ✅ | Declining near low | SKIP — declining; stale Perplexity data |
+| ETH | −2.3% 24h | −1.52% | 0.018% ✅ | Declining | SKIP — Glamsterdam delayed Q3 2026; no fresh catalyst |
+| SOL | +0.5% 24h | −1.51% | 0.029% ✅ | Declining near low | SKIP — no momentum >3% |
+| XRP | +2.3% 24h | −3.36% | 0.030% ✅ | Declining near low | SKIP — CLARITY Act not imminent; no 1h catalyst |
+| H (Humanity) | +11.1% 24h | — | — | — | SKIP — $72.4M token unlock Jun 25 (today) |
+
+**Perplexity top 24h gainers:** BEAT +58% (KuCoin GemSlot campaign — not on Kraken), DEXE +32.88% (not Kraken liquid), DYDX +12.61% (peaked per Kraken data above).
+
+### Decision
+**HOLD CASH ($113.74 ZUSD). No new entries.**
+
+All screened assets declining from 24h opens. Market broadly risk-off. No qualifying setup exists:
+- Momentum peak rule fails on all candidates (24h highs >60 min old, prices declining)
+- BTC weekly gate blocks pure momentum entries
+- No catalyst-driven setup (protocol upgrade, regulatory event, listing) with confirmed 1h momentum >5%
+- ETH Glamsterdam delayed to Q3 2026 — catalyst invalidated
+- XRP CLARITY Act Senate debate not imminent (expected early July)
+
+**Actions taken:** NONE.
+
+**Re-entry criteria (unchanged):**
+1. BTC weekly gate clears (BTC must recover above ~$67,666 for 5-day change <−3%) OR
+2. Catalyst-driven setup (protocol upgrade, regulatory event, exchange listing) with spread ≤1%, 1h momentum >5%, catalyst <3h old
+3. Best upcoming catalyst: XRP/CLARITY Act when Senate vote date confirmed within 48h
+4. AVOID H/USD (Humanity Protocol) — $72.4M unlock today Jun 25; AVOID SAHARA — $35.48M unlock Jun 26
