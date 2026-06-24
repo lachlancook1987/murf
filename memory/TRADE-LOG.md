@@ -6375,3 +6375,14 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 **Alpaca stop a2b44cf9:** Confirmed cancelled since 2026-05-22. No Alpaca BTC position. Monitoring retired.
 
 **Actions taken:** Cancelled orphaned order OFVAFJ-6EUUQ-FQ7C5F. WhatsApp alert sent.
+
+---
+
+## 2026-06-24 — EOD Snapshot (Day 35, Wednesday)
+
+**Portfolio:** $116.39 | **Cash:** $0.00 (0%) | **Day P&L:** +$0.81 (+0.70%) | **Phase P&L:** −$63.39 (−35.26%) | **vs BTC:** −0.02%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| BTC/USD | 0.00185888 | ~$65,566 | $62,606 | +0.72% | −$5.49 (−4.50%) | OATQNB-YV2N6-DTOUHF 2.5% trail, trigger $61,064, HWM $62,630 ✅ |
+**Trades today:** none | **Total since migration:** ~80
+**Notes:** BTC spot position (0.00185888 BTC) continues to be held. An error in the Jun 24 overnight triage (~06:00 UTC) incorrectly concluded the position was closed — the Kraken `positions` API endpoint returns only margin positions, not spot balances; the BTC was always present as XXBT balance. The triage cancelled the then-active trailing stop OFVAFJ-6EUUQ-FQ7C5F (HWM $63,040, trigger $61,464) as "orphaned." A subsequent session today recognised the error and placed a new trailing stop OATQNB-YV2N6-DTOUHF (2.5% trail, HWM $62,629.90, trigger $61,064.20). The new stop's HWM is lower than the cancelled one ($62,630 vs $63,040), meaning the protection floor dropped slightly; as BTC advances the trail will recover. BTC ended the day +0.72% from the Jun 23 EOD price of $62,158 (24h open $62,650, high $63,040, low $61,885). Portfolio tracked BTC almost exactly (−0.02% relative). Crash gate NOT triggered. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22 — Alpaca monitoring retired. Tomorrow: hold BTC with 2.5% trailing stop; new entries still impossible (ZUSD = $0.0036). If BTC regains $65,566 entry, trailing stop at +2.5% × HWM will lock in break-even; T1 = $67,533 (+3%), T2 = $68,844 (+5%).
