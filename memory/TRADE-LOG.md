@@ -6414,3 +6414,64 @@ All fail: TNSR (15% below 24h high, momentum peak FAILED); OBOL (spread 2.07%); 
 - No actionable setup even if capital were available
 
 **Actions taken:** NONE. Hold BTC with trailing stop. No notification sent.
+
+---
+
+## 2026-06-25 — BTC Trailing Stop Fired + Midday Scan
+
+### STOP-OUT: BTC/USD trailing stop OATQNB-YV2N6-DTOUHF executed overnight Jun 24→25
+
+**Event:** Trailing stop OATQNB-YV2N6-DTOUHF (2.5% trail, last known stopprice $61,560.30, HWM $63,138.70) triggered between the Jun 24 evening scan (~22:05 UTC) and the Jun 25 midday scan.
+
+| Field | Value |
+|---|---|
+| Pair | BTC/USD (XXBT) |
+| Action | SELL (trailing stop triggered) |
+| Qty | 0.00185888 BTC |
+| Entry price | ~$65,566 |
+| Implied fill | ~$61,347 |
+| Stop order ID | OATQNB-YV2N6-DTOUHF |
+| ZUSD received | $113.74 |
+| Realized P&L vs EOD Jun 24 ($116.39) | −$2.65 |
+| Realized P&L vs entry (~$121.67) | ~−$7.93 |
+| Phase P&L (cumulative) | ~−$66.04 (−36.74% vs starting equity $179.78) |
+
+**Stop trigger context:** BTC 24h low today = $61,127.90. Stop was at $61,560.30 (set at Jun 24 evening scan). BTC broke below $61,560 overnight, firing the trailing stop. Fill at ~$61,347 reflects market sell with minor slippage below trigger. Stop functioned correctly.
+
+**Kraken positions confirmed:** XXBT = 0.0000000000 | No open margin positions | Orders = empty.
+
+---
+
+### Midday Scan (~midday UTC, Jun 25)
+
+**Portfolio:** $113.74 (100% ZUSD) | **Open positions:** NONE | **Open orders:** NONE
+**BTC/USD:** ask $61,227 | 24h open $62,650 | 24h range $61,127–$63,138 | **−2.27% from open**
+**Crash gate:** NOT triggered (−2.27% vs −20% threshold)
+**BTC weekly gate:** TRIGGERED (BTC ~−6.7% vs Jun 17 close $65,599) — pure momentum banned; catalyst-driven exempt
+
+**STEP 2 — Stop verification:** No open positions — no stops required ✅
+**STEP 4 — Stop tightening:** No open positions — N/A
+
+**STEP 5 — Thesis check (scan for entry catalyst):**
+- ETH Glamsterdam upgrade: **DELAYED to Q3 2026 (late August)** — catalyst invalidated for current entry
+- U.S.-Iran talks: stalled (Strait of Hormuz, oil export waivers) — bearish macro
+- ETF outflows: 6th consecutive week, $228M, $5.94B cumulative — persistent headwind
+- CLARITY Act: Senate debate expected early July — XRP binary catalyst still live, not imminent today
+
+**STEP 6 — New entry candidates screened:**
+
+| Asset | 24h chg (Kraken) | 1h trend | Spread | Catalyst | Gate | Verdict |
+|---|---|---|---|---|---|---|
+| DYDX/USD | −4.2% from open | Declining | 0.077% ✅ | Volume surge 24h ago; peaked | Momentum peak check FAILS (24h high not within 60 min) | SKIP |
+| ETH/USD | −1.3% from open | Declining | 0.015% ✅ | Glamsterdam delayed Q3 | No fresh catalyst | SKIP |
+| SOL/USD | −1.1% from open | Declining | 0.029% ✅ | ETF divergence (weak) | No momentum >3% | SKIP |
+| UNI/USD | −2.0% from open | Declining | 0.080% ✅ | Prior-day whale rally; over | Momentum peaked prior session | SKIP |
+| ZEC/USD | −0.9% from open | Flat | 0.083% ✅ | Perplexity data stale (price $536 vs $411 actual) | No confirmed catalyst | SKIP |
+| H/Humanity | Volume surge | — | — | $72.4M token unlock Jun 25 | **AVOID — unlock today** | SKIP |
+
+Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.** Market broadly down. BTC weekly gate active. Glamsterdam delay eliminates ETH catalyst.
+
+**Actions taken:** NONE. Capital preserved at $113.74 ZUSD. No new entries placed.
+
+**Next session:** All cash. Re-enter when: (a) BTC momentum recovers >3% 1h with catalyst <3h AND weekly gate clears, OR (b) a catalyst-driven setup (protocol upgrade, regulatory event, exchange listing) with spread ≤1% and volume confirmation. XRP/CLARITY Act best remaining binary catalyst when Senate vote date confirmed.
+

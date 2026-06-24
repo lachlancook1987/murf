@@ -21646,3 +21646,41 @@ All setups are contingency plans for if/when BTC trailing stop fires (~$61,030).
 
 **Actions taken:** NONE. Hold BTC with trailing stop. Stop advancing correctly with BTC moves. No notification sent (no new trades).
 
+
+---
+
+## 2026-06-25 — Midday Scan (~midday UTC)
+
+**Execution time:** 2026-06-25 ~midday UTC | **Branch:** claude/sweet-keller-c2j44g
+
+**Portfolio state:** $113.74 (100% ZUSD) | XXBT = 0 (trailing stop fired overnight) | No open orders
+
+### Market Snapshot (Kraken)
+| Asset | Price | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $61,227 ask | $62,650 | −2.27% | $61,127–$63,138 |
+| ETH/USD | $1,643.82 ask | $1,665.12 | −1.28% | $1,636–$1,689 |
+| SOL/USD | $68.87 ask | $69.61 | −1.06% | $68.32–$70.36 |
+| DYDX/USD | $0.14355 ask | $0.14984 | −4.20% | $0.134–$0.155 |
+| UNI/USD | $2.862 ask | $2.921 | −2.03% | $2.834–$2.961 |
+| ZEC/USD | $411.78 ask | $415.48 | −0.89% | $406–$428 |
+
+**Crash gate:** NOT triggered | **BTC weekly gate:** TRIGGERED (BTC −6.7% vs Jun 17 $65,599)
+
+### Key Catalysts & News
+- **BTC trailing stop OATQNB fired overnight** (trigger $61,560.30) — fill ~$61,347, proceeds $113.74 ZUSD
+- **ETH Glamsterdam delayed to Q3 2026 (late Aug)** — protocol upgrade catalyst invalidated for near-term ETH entries
+- **ETF outflows:** $228M 6th consecutive week, $5.94B cumulative — sustained BTC headwind
+- **U.S.-Iran talks stalled:** Strait of Hormuz/oil export waivers unresolved — risk-off macro
+- **DYDX +10-17% 24h (Perplexity) but declining on Kraken now** — momentum peaked, 24h high not within 60 min, momentum peak rule FAILS
+- **H (Humanity Protocol):** $72.4M unlock today Jun 25 — AVOID
+- **CLARITY Act:** Senate debate expected early July — XRP binary catalyst intact but not imminent
+
+### Altcoin Screen Results
+No Kraken altcoin shows >3% momentum in last 4h. All screened assets below 24h opens. BTC weekly gate blocks pure momentum entries. Glamsterdam delay kills ETH catalyst. No qualifying setup exists today.
+
+### Decision
+**HOLD CASH ($113.74 ZUSD). No new entries.**
+
+Re-entry criteria: (1) Catalyst-driven setup (protocol upgrade, regulatory event, listing) with spread ≤1% + momentum confirmation, OR (2) BTC weekly gate clears AND 1h momentum >3% with volume. XRP/CLARITY Act remains best upcoming binary catalyst.
+
