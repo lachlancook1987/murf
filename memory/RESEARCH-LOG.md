@@ -22308,3 +22308,110 @@ Micro-cap gainers (CX +283%, MERC +269%, RIZE +110%): not listed on Kraken.
 2. **XRP/CLARITY Act:** Senate vote confirmed ≤48h out + 1h momentum >3% + spread ≤1%
 3. **Catalyst-driven entry:** fresh event <3h old (exchange listing, regulatory win, protocol upgrade) + 1h surge >5% + spread ≤1%
 
+
+---
+
+## 2026-06-25 — Late-Night Scan #6 (~23:30 UTC)
+
+**Execution time:** 2026-06-25 23:30 UTC | **Branch:** claude/clever-allen-41o1yj
+
+### Account Snapshot
+| Item | Value |
+|---|---|
+| Kraken ZUSD | $113.74 |
+| Kraken open positions | NONE |
+| Kraken open orders | NONE |
+| Alpaca | Historical orders only (no positions) |
+
+### Market Snapshot (Kraken live quotes)
+| Asset | Ask | 24h Open | 24h Change | 24h High | vs 24h High |
+|---|---|---|---|---|---|
+| BTC/USD | $59,411.30 | $60,984.30 | −2.58% | $61,858.80 | −3.95% |
+| ETH/USD | ~$1,558 | ~$1,620 | −3.8% | — | — |
+| SOL/USD | $66.28 | $68.04 | −2.59% | $69.53 | −4.67% |
+| XRP/USD | $1.0323 | $1.07198 | −3.71% | $1.08799 | −5.12% |
+| SLX/USD | $0.3936 | $0.32536 | +20.98% | $0.42313 | −6.97% |
+| TON/USD | $1.567 | $1.578 | −0.70% | $1.624 | −3.52% |
+| INIT/USD | $0.0523 | $0.0533 | −1.88% | $0.0544 | −3.86% |
+| LINK/USD | $7.183 | $7.416 | −3.14% | $7.536 | −4.69% |
+| INJ/USD | $4.220 | $4.257 | −0.87% | $4.341 | −2.79% |
+| NEAR/USD | $1.8054 | $1.9639 | −8.07% | $1.9777 | −8.72% |
+| OMNI/USD | $0.711 ask / $0.247 bid | — | — | — | DEAD — 65% spread, zero volume |
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | NOT TRIGGERED | BTC −2.58% from 24h open |
+| BTC weekly gate (BTC >3% down 5d) | **TRIGGERED** | BTC $59,411 vs Jun 17 close $65,599 = −9.4% — requires 1h >5% + catalyst <3h for standard entries; catalyst-driven entries (listing, regulatory, protocol upgrade) exempt |
+
+### Market Context
+| Signal | Value | Implication |
+|---|---|---|
+| Fear & Greed | 12 (Extreme Fear) | 8th+ consecutive day in extreme fear zone |
+| BTC funding rate | Binance +0.0016%, Bybit −0.0075% | Mixed; slight lean negative |
+| ETF outflows | $469M/24h; 7 consecutive weeks | Persistent institutional headwind |
+| Liquidations | ~$1.8B in 24h ($1.57B longs) | Continued leveraged unwind, largest recent event |
+| BTC 24h volume | $45.6B | High due to sell-off activity |
+| BTC options volume | +83% in 24h | Hedging activity on drop |
+
+### Token Unlocks (Avoid)
+| Token | Date | Value |
+|---|---|---|
+| H (Humanity Protocol) | Jun 25 (TODAY) | $72.4M |
+| SAHARA AI | Jun 26 (tomorrow) | $35.5M |
+| HANA Network | Jun 26 (tomorrow) | $11.6M |
+| ZORA | Jun 30 | $41.9M |
+| ZAMA | Jul 2 | $83.2M |
+
+### Key Market Catalysts Today
+- Trump refused to sign CBDC ban provision bill — minor headwind for legislative clarity
+- SBI Group/Startale launched Japan's first yen-backed stablecoin (JPYSC) on Solana — SOL narrative positive but price declining
+- Chainlink "Pangea" cross-border FX settlement project announced — LINK declining anyway
+- Meta forming "Arena" prediction market app — minimal direct crypto impact
+- Polymarket integrating with TON via Telegram — fresh news but TON flat/declining on Kraken
+- KG Inicis (South Korea) planning stablecoin payments on Solana — SOL catalyst, but price declining
+- Hana Bank acquired Dunamu (Upbit operator) — XRP volume surge on Upbit; XRP declining on Kraken −3.71%
+- ETH Glamsterdam upgrade delayed to Q3 2026 — catalyst invalidated for ETH entry
+- Standard Chartered AAVE $3,500 target by 2030 — multi-day old, already priced in
+
+### Candidate Screen
+
+| Asset | 24h vs Open | vs 24h High | Spread | Catalyst | Gate Check | Verdict |
+|---|---|---|---|---|---|---|
+| OMNI/USD | +174% (CoinGecko) | N/A | **65% — DEAD** | Pure technical/momentum (no news catalyst) | Weekly gate: pure momentum banned + illiquid | **SKIP — dead pair on Kraken** |
+| SLX/USD | +20.98% | −6.97% | 0.54% ✅ | Bybit listing Jun 22 (3 days old — stale) | Catalyst >6h old; momentum peaked $0.42313, now $0.3936 | **SKIP — stale catalyst, momentum peaked** |
+| INIT/USD | −1.88% (Kraken) | −3.86% | 0.38% ✅ | Binance Launchpool + Gate.io listing; airdrop ends 23:59 UTC | 49 total trades — too thin; declining on Kraken; listing effects priced in elsewhere | **SKIP — illiquid on Kraken, declining** |
+| TON/USD | −0.70% | −3.52% | 0.064% ✅ | Polymarket TON integration (fresh, <12h) | Declining from open; no 1h surge >5% | **SKIP — declining** |
+| XRP/USD | −3.71% | −5.12% | 0.016% ✅ | Hana Bank/Dunamu (volume surge, not regulatory); CLARITY Act not ≤48h | Declining −3.7%; CLARITY Act binary trigger not met | **SKIP — declining, trigger not met** |
+| SOL/USD | −2.59% | −4.67% | 0.015% ✅ | KG Inicis stablecoin payments on Solana (fresh) | Fresh catalyst but SOL declining −2.59%, peaked $69.53; no 1h >5% | **SKIP — declining despite catalyst** |
+| LINK/USD | −3.14% | −4.69% | 0.028% ✅ | Chainlink Pangea project (fresh today) | Fresh catalyst but LINK declining −3.14%; no upward momentum | **SKIP — declining** |
+| INJ/USD | −0.87% | −2.79% | 0.047% ✅ | "Banking/central bank cooperation" (vague) | Flat/declining; catalyst unsubstantiated | **SKIP — declining, vague catalyst** |
+| NEAR/USD | −8.07% | −8.72% | 0.033% ✅ | None | Sharply declining from $1.9638 open | **SKIP — declining sharply** |
+| H/USD | — | — | — | $72.4M unlock TODAY | AVOID unlock event | **AVOID** |
+| SAHARA/USD | — | — | — | $35.5M unlock Jun 26 | AVOID | **AVOID** |
+| HYPE/USD | — | — | — | $689M unlock Jun 26 | AVOID | **AVOID** |
+
+### Why Fresh Catalysts (SOL, LINK, TON) Don't Qualify
+SOL (KG Inicis), LINK (Pangea), and TON (Polymarket) all have fresh catalysts today, but:
+1. All three are declining from their 24h highs — momentum peaked earlier
+2. None shows 1h surge >5% — the weekly gate minimum for non-catalyst-exempted entries
+3. The "catalyst-driven entry exemption" under the weekly gate still requires the normal pre-trade checks: price must be rising, momentum not peaked, spread ≤1%. These fail the momentum check.
+
+### Decision: HOLD CASH ($113.74 ZUSD) — No new entries
+
+1. BTC weekly gate TRIGGERED (−9.4% vs Jun 17 close $65,599)
+2. No asset with 1h surge >5% confirmed on Kraken live quotes
+3. Fresh catalysts (SOL, LINK, TON) exist but all are declining — momentum peaked before this scan
+4. SLX catalyst (Bybit listing) is 3 days stale — not a fresh catalyst
+5. OMNI: dead pair on Kraken (65% spread, zero volume)
+6. INIT: negligible Kraken volume (49 trades), declining locally
+7. Heavy unlock pressure: H today, SAHARA/HANA/HYPE/MEGA tomorrow
+8. Extreme Fear (12), $1.8B liquidations, 7-week ETF outflows — hostile environment
+
+**Actions taken:** NONE. No trades placed. No notification sent.
+
+### Re-entry Criteria (unchanged)
+1. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.9% from current $59,411)
+2. **XRP/CLARITY Act:** Senate vote confirmed ≤48h out + 1h momentum >3% + spread ≤1%
+3. **Catalyst-driven entry with momentum:** fresh event <6h old + 1h surge >3% + price still rising + spread ≤1%
+4. **Next best watch:** SOL (KG Inicis stablecoin) or LINK (Chainlink Pangea) IF price reverses and shows fresh 1h >3% momentum; TON if Polymarket integration drives user adoption metrics
