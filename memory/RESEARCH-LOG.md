@@ -21876,3 +21876,107 @@ Dust balances (sub-$0.01 residuals): AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI,
 **All gates/rules confirm prior session's analysis. No entries.** HOLD CASH.
 
 **Actions taken:** NONE. No notification sent.
+
+---
+
+## 2026-06-25 — Pre-Session Research
+
+**Execution time:** 2026-06-25 pre-session UTC | **Branch:** claude/affectionate-gates-1o2kyl
+
+---
+
+### Account Snapshot
+
+| Exchange | Balance | Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $113.74 ZUSD (100% cash) | None | None |
+| Alpaca | Retired | None | Historical only |
+
+Dust balances (sub-$0.01): AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO, XETH — all negligible.
+
+Previous session: BTC/USD trailing stop OATQNB-YV2N6-DTOUHF fired overnight Jun 24→25. Fill ~$61,347. Realized P&L vs entry ~−$7.93. Phase P&L cumulative: ~−$66.04 (−36.74% vs starting equity $179.78).
+
+---
+
+### Market Context (Kraken live)
+
+| Asset | Ask | 24h Open | Current vs Open | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $61,776.80 | $60,984.30 | **+1.30%** | $59,001–$63,138.70 | 0.0002% ✅ |
+| ETH/USD | $1,654.85 | $1,619.86 | **+2.16%** | $1,551–$1,689.37 | 0.004% ✅ |
+
+**BTC weekly gate:** TRIGGERED — BTC $61,776 vs Jun 17 close ~$65,599 = **−5.83%** (>3% threshold). Requires 1h momentum >5% AND catalyst <3h old for any new entries; pure momentum banned.
+
+**Crash gate:** NOT triggered (BTC −5.83% from Jun 17, well short of −20% in 24h threshold) ✅
+
+**Fear & Greed Index:** 12 (Extreme Fear) — declined from 17 yesterday. Extreme bearish sentiment.
+
+**BTC funding rates:** NEGATIVE across major exchanges — Binance −0.0014%, Bybit −0.0037%, BitMEX −0.0125%. Shorts paying longs = contrarian mild bullish signal. Market net short at these levels.
+
+**Liquidations (24h):** ~$1.8B total, $1.6B in long positions wiped. BTC hit two-month low of $59,001. Significant deleveraging event.
+
+**Top 24h gainers (global — NOT Kraken):** CX +283%, MERC +269%, RIZE +110%, AIC +42% — all micro-cap, not on Kraken in tradeable form.
+
+---
+
+### Market Catalysts & News
+
+**Negative (active):**
+- **AI IPO liquidity drain:** Investors selling BTC to subscribe to SpaceX/Anthropic/OpenAI IPOs — 2+ weeks of consecutive BTC ETF outflows, cumulative ~$5.94B. Persistent headwind.
+- **Saylor narrative:** Strategy sold only 32 BTC ($2.5M) for dividends — market treated as symbolic bearish signal.
+- **US NFP (June 5):** Strong employment data reduced Fed rate cut odds — historically negative for BTC.
+- **Middle East tensions:** U.S.–Iran talks stalled on Strait of Hormuz/oil waivers — risk-off macro pressure.
+- **Negligible futures basis:** Funding arb removed as a BTC demand driver.
+- **ZEC security vulnerability:** 4-year bug in Zcash Orchard shielded pool allowing undetectable ZEC counterfeiting. AVOID ZEC.
+- **Taiko (TKO) bridge exploit:** $1.7M via forged withdrawal proofs — exchange deposits suspended. AVOID TKO.
+
+**Positive (limited):**
+- **XRP CLARITY Act:** US Senate debate expected early July — defines crypto as commodities, potential institutional catalyst. Binary event not imminent today.
+- **Negative funding rates:** Contrarian signal — when market is net short at these levels, short squeezes can occur.
+- **$1.8B liquidations:** Significant deleveraging may clear sellers; potential for oversold bounce in hours/days.
+
+**Token unlocks (AVOID this week):**
+- **H (Humanity Protocol):** $72.4M unlock TODAY Jun 25 — sell pressure active. AVOID.
+- **SAHARA AI:** $35.5M unlock Jun 26 (tomorrow) — AVOID.
+
+---
+
+### Candidate Screen
+
+| Asset | Kraken Ask | 24h Open | vs Open | Spread | Momentum Peak Check | Weekly Gate | Verdict |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $61,776 | $60,984 | +1.30% | 0.0002% ✅ | 24h high $63,138 set earlier, current 2.3% below | Fails (only +1.3%, need >5% 1h) | **SKIP** |
+| ETH/USD | $1,654.85 | $1,619.86 | +2.16% | 0.004% ✅ | 24h high $1,689 set earlier, declining | Fails (2.16%, no catalyst) | **SKIP** |
+| INIT/USD | $0.0543 | $0.0533 | +1.69% | 0.18% ✅ | 24h high $0.0582, currently −6.9% below | Fails (1.69%, no fresh catalyst) | **SKIP** |
+| OMNI/USD | $0.711 ask / $0.247 bid | $0.000 | No trades | **~97% spread** | Zero volume, zero trades on Kraken | N/A — illiquid | **SKIP** |
+| DOLO/USD | $0.02419 | $0.02936 | −18.4% | **2.00%** | Declining sharply from open | Fails entirely | **SKIP** |
+| ZEC/USD | — | — | — | — | Security vulnerability (undetectable counterfeiting bug) | N/A | **AVOID** |
+| H/USD | — | — | — | — | $72.4M token unlock today | N/A | **AVOID** |
+| SAHARA/USD | — | — | — | — | $35.5M unlock tomorrow | N/A | **AVOID** |
+
+**Perplexity-cited Kraken top gainers (OMNI +174%, MAT +66%, DOLO +53%) are Perplexity hallucinations/stale data.** Live Kraken verification shows: OMNI illiquid (no trades, 97% spread), DOLO actually down −18% from open with 2% spread, INIT only +1.69%.
+
+---
+
+### Trade Ideas
+
+**None actionable.** Decision: **HOLD CASH ($113.74 ZUSD)**
+
+**Why no entries:**
+1. BTC weekly gate TRIGGERED (−5.83% weekly) — requires >5% 1h momentum + <3h catalyst, neither present
+2. No Kraken alt showing >3% sustained 1h momentum
+3. Every screened asset is either below its 24h peak (momentum peak rule fails) or has a spread >1%, or has a security/unlock issue
+4. H token unlock active today — sell pressure
+5. Capital $113.74 — any meaningful entry uses 100% of equity with no room for error
+
+**Risk factors:**
+- Extreme Fear (12) + negative funding rates + $1.8B liquidations = potential near-term bottom forming; but "potential bottom" ≠ entry signal under strategy rules
+- If BTC reclaims $63,138 (24h high) with volume confirmation, that would constitute a fresh breakout + probable catalyst event
+- XRP binary catalyst (CLARITY Act) remains live for early July — best upcoming defined catalyst
+
+**Re-entry criteria:**
+1. BTC weekly gate clears: BTC must recover above ~$67,666 (5-day <3% decline) — requires +9.5% from current
+2. Catalyst-driven entry: fresh event <3h old (listing, upgrade, regulatory), 1h momentum >5%, spread ≤1%
+3. Best upcoming: XRP/CLARITY Act — re-enter watch mode when Senate vote date confirmed ≤48h out
+
+---
