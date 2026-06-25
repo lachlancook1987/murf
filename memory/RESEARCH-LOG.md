@@ -22415,3 +22415,44 @@ SOL (KG Inicis), LINK (Pangea), and TON (Polymarket) all have fresh catalysts to
 2. **XRP/CLARITY Act:** Senate vote confirmed ≤48h out + 1h momentum >3% + spread ≤1%
 3. **Catalyst-driven entry with momentum:** fresh event <6h old + 1h surge >3% + price still rising + spread ≤1%
 4. **Next best watch:** SOL (KG Inicis stablecoin) or LINK (Chainlink Pangea) IF price reverses and shows fresh 1h >3% momentum; TON if Polymarket integration drives user adoption metrics
+
+---
+
+## 2026-06-25 — Midday Scan #2 (~afternoon UTC)
+
+**Branch:** claude/sweet-keller-0ozgqa | **Portfolio:** $113.74 ZUSD (100% cash) | No open positions | No open orders
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $60,040 | $60,984 | −1.5% | $58,033–$61,859 | 0.0002% ✅ |
+| ETH/USD | $1,578 | $1,620 | −2.6% | $1,530–$1,657 | 0.041% ✅ |
+| SOL/USD | $67.10 | $68.04 | −1.4% | $63.72–$69.53 | 0.015% ✅ |
+| AAVE/USD | $81.89 | $80.19 | +2.1% | $77.35–$89.00 | 0.11% ✅ |
+| LINK/USD | $7.265 | $7.416 | −2.0% | $7.002–$7.536 | 0.049% ✅ |
+| XRP/USD | $1.0416 | $1.0720 | −2.8% | $1.011–$1.088 | 0.014% ✅ |
+
+**Crash gate:** BTC −1.5% from 24h open — NOT triggered (threshold −20%) ✅
+**BTC weekly gate:** TRIGGERED — BTC $60,040 vs Jun 17 close $65,599 = **−8.4%**
+
+### Candidate Screen
+| Asset | Verdict |
+|---|---|
+| AAVE/USD | +2.1% from open (only positive name), but 24h high $89 set hours ago, current $82 (−8% from peak). BTC weekly gate requires 1h >5% — not met. Standard Chartered $3,500 by-2030 target is not an intraday catalyst. SKIP |
+| LINK/USD | −2% from open. Chainlink Pangea FX settlement launch mentioned in Perplexity but LINK declining. SKIP |
+| SOL/USD | −1.4% from open. KG Inicis stablecoin catalyst noted but price declining. SKIP |
+| XRP/USD | −2.8% from open. CLARITY Act: NO Senate vote today; reconciliation between Agriculture and Banking committee versions still pending; White House July 4 deadline "tight." SKIP |
+| OMNI/USD | Ask $0.711, bid $0.247 — ~188% spread, zero volume. SKIP |
+| BTC/USD | −1.5%; 24h intraday low $58,033 (new session low vs yesterday's $59,001 floor). No momentum. SKIP |
+
+**New intel from this scan:**
+- Trump refused to sign CBDC ban bill → delays broader crypto market structure legislation
+- Japan's first yen stablecoin JPYSC launched (SBI Group + Startale)
+- Ethereum Foundation 40% budget cut + governance restructuring
+- Meta "Arena" prediction market app in development
+- Perplexity price data unreliable this session (showed BTC $120K, XRP $1.30–$1.50 — clearly stale cache). Kraken live data is authoritative.
+
+### Decision
+**HOLD CASH. No new entries. No actions taken.**
+
+All screened assets declining. BTC weekly gate blocks pure momentum entries. No catalyst-driven setup with 1h momentum >5% + catalyst <3h old. AAVE's Standard Chartered coverage is a long-horizon target (2030), not an intraday catalyst. XRP/CLARITY Act remains the best upcoming binary catalyst but no Senate vote today.
