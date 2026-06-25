@@ -22157,3 +22157,77 @@ Micro-cap gainers (CX +283%, MERC +269%, RIZE +110%): not listed on Kraken.
 1. BTC weekly gate clears: BTC must recover to ~$67,666 (requires +12.8% from current $58,929)
 2. XRP/CLARITY Act: Senate vote date confirmed ≤48h out — best upcoming binary catalyst
 3. Catalyst-driven entry: fresh event <3h old, 1h momentum >5%, spread ≤1%
+
+---
+
+## 2026-06-25 — Session-Open Scan #5 (15:10 UTC)
+
+**Execution time:** 2026-06-25 15:10 UTC | **Branch:** claude/clever-allen-j0yw5f
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | No Kraken positions | No Kraken orders | Alpaca: historical closed orders only
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $59,184.20 | $60,984.30 | −2.95% | $58,033–$61,858.80 |
+| XLM/USD | $0.17638 | $0.18526 | −4.79% | $0.17386–$0.18982 |
+| XMR/USD | $301.70 | $314.70 | −4.13% | $298.95–$320.84 |
+| ZEC/USD | $396.08 | $416.35 | −4.87% | $386.00–$420.23 |
+| AAVE/USD | $81.46 | $80.19 | +1.58% | $72.08–$89.00 |
+| XRP/USD | $1.02997 | $1.07198 | −3.92% | $1.01061–$1.08799 |
+| SLX/USD | $0.39892 | $0.32536 | +22.6% | $0.30940–$0.41050 |
+
+**Crash gate:** NOT triggered (BTC −2.95%; 24h low $58,033 = −4.84%, not −20%)
+**BTC weekly gate:** TRIGGERED (BTC $59,184 vs Jun 17 close $65,599 = −9.78%) — pure momentum banned; requires 1h surge >5% + catalyst <3h
+
+### Market Context
+| Signal | Value | Implication |
+|---|---|---|
+| Fear & Greed | 12 (Extreme Fear) | 8th+ consecutive Extreme Fear day |
+| ETF outflows | $469M/24h; 7 consecutive weeks | Persistent institutional headwind |
+| Liquidations | ~$1B in 24h ($780M+ longs) | Continued leveraged unwind |
+| BTC funding rate | −0.0018% (Binance) | Slight negative (longs reducing) |
+| Fed expectations | 3 rate hikes in 2026 priced in | USD strength headwind |
+
+**Token unlocks (avoid):**
+- H/Humanity Protocol: $54-72M unlock TODAY Jun 25 — AVOID
+- SAHARA AI: $14.75M unlock Jun 26 — AVOID
+- MegaETH ($MEGA): unlock active — AVOID
+- HYPE: $689.7M unlock Jun 26 — AVOID
+
+### Candidate Screen
+
+| Asset | 24h vs Open | vs 24h High | Spread | Catalyst | Gate Check | Verdict |
+|---|---|---|---|---|---|---|
+| SLX/USD | +22.6% | −2.8% | 0.48% ✅ | Bybit listing Jun 22 (3 days old — STALE) | Weekly gate: no fresh <3h catalyst | **SKIP — stale catalyst** |
+| XLM/USD | −4.79% | −7.1% | <0.01% ✅ | None confirmed | Declining from open | **SKIP — declining** |
+| XMR/USD | −4.13% | −6.0% | 0.12% ✅ | None confirmed | Declining from open | **SKIP — declining** |
+| ZEC/USD | −4.87% | −5.7% | 0.083% ✅ | Perplexity showed +4.31% (stale) | Declining on Kraken | **SKIP — Perplexity stale** |
+| AAVE/USD | +1.58% | −8.5% from $89 | 0.086% ✅ | Standard Chartered target (days old) | Momentum peaked earlier | **SKIP — peak passed** |
+| XRP/USD | −3.92% | −5.3% | 0.040% ✅ | CLARITY Act (vote not imminent) | Binary trigger: vote not ≤48h out | **SKIP — trigger not met** |
+| H/USD | — | — | — | $54-72M unlock today | **AVOID** | SKIP |
+| HYPE/USD | — | — | — | $689.7M unlock tomorrow | **AVOID** | SKIP |
+| Micro-caps (CX +283%, MERC +269%, RIZE +110%) | — | — | — | Not on Kraken | Not listed | SKIP |
+
+**SLX deep dive:** Solstice (SLX) is listed on Kraken (status: online). 24h surge +22.6%, only 2.8% below 24h high $0.41050. Spread 0.48% ✅. However, the catalyst is the Bybit listing from June 22 — 3 days ago, not <3h old. Under BTC weekly gate, fresh catalyst <3h is mandatory alongside 1h surge >5%. Bybit listing is stale. Additionally, SLX taker fee at our volume tier is 0.40% (vs 0.26% for major pairs), making round-trip ~0.80% — eats significantly into the 3% T1 target. SKIP.
+
+**XRP/CLARITY Act:** Senate emergency talks scheduled for next week; full floor vote expected late July / first week of August 2026. Polymarket 59% passage odds. Entry trigger (vote confirmed ≤48h out) NOT met. Continue watch mode.
+
+### Decision
+**HOLD CASH ($113.74 ZUSD). No new entries.**
+
+1. BTC weekly gate TRIGGERED (−9.78%) — bans pure momentum; no qualifying catalyst <3h found
+2. SLX only candidate with strong 24h momentum (+22.6%), but Bybit catalyst 3 days old — gate bars entry
+3. All other assets declining from 24h opens (XLM, XMR, ZEC, XRP all down >3%)
+4. AAVE +1.58% but momentum peaked at $89 earlier; Standard Chartered catalyst stale
+5. Token unlock pressure: H today, SAHARA+HYPE+MEGA tomorrow
+6. Macro: Extreme Fear (12), 7-week ETF outflows, $1B liquidations, Fed hawkish
+7. XRP CLARITY Act entry trigger not met; watch for Senate vote date confirmed ≤48h
+
+**Actions taken:** NONE. No trades placed. No notification sent.
+
+**Re-entry criteria:**
+1. BTC weekly gate clears: BTC must recover to ~$67,666 (requires +14.3% from current $59,184)
+2. XRP/CLARITY Act: Senate vote confirmed ≤48h out + spread ≤1% + 1h momentum >3%
+3. Catalyst-driven entry: fresh event <3h old (exchange listing, regulatory win, protocol upgrade), 1h momentum >5%, spread ≤1%
+
