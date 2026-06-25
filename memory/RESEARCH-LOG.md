@@ -22102,3 +22102,58 @@ Perplexity top gainers (CX +283%, MERC +268%, RIZE +109%) — micro-caps not on 
 2. XRP/CLARITY Act: watch for Senate vote date confirmed ≤48h out — best upcoming binary catalyst
 3. Catalyst-driven entry: fresh event <3h old (listing, upgrade, regulatory win), 1h momentum >5%, spread ≤1%
 
+
+---
+
+## 2026-06-25 — Midday Scan #4
+
+**Execution time:** 2026-06-25 (fourth session run — midday scan workflow) | **Branch:** claude/sweet-keller-4jc6dd
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | No Kraken positions | No Kraken orders | Alpaca: historical closed orders only
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $58,960 | $60,984.30 | −3.37% | $58,033–$61,858 |
+| AAVE/USD | $80.14 | $80.19 | −0.06% | $72.08–$89.00 |
+| NEAR/USD | $1.8533 | $1.96390 | −5.64% | $1.8006–$1.9777 |
+
+**Crash gate:** NOT triggered (BTC −3.37% from 24h open; 24h low $58,033 = −4.85%, not −20%)
+**BTC weekly gate:** TRIGGERED (BTC $58,929 vs Jun 17 close $65,599 = −10.17%) — pure momentum banned; requires 1h surge >5% + catalyst <3h
+
+### STEP 3/4/5 — N/A
+No open positions — stop verification, tightening, and thesis check all N/A ✅
+
+### Market Context
+| Signal | Value | Implication |
+|---|---|---|
+| BTC 24h change | −3.37% from open | Continuing downtrend; new intraday low $58,033 |
+| ETF outflows | −$469M/24h; 7 consecutive weeks | Persistent institutional headwind |
+| Liquidations | $1B in 24h ($780M longs) | Leveraged unwind accelerating |
+| Fear & Greed | 12 (Extreme Fear) | No buy signal under gate rules |
+| NFP/Fed | Strong employment = fewer rate cuts | USD strength, bearish macro |
+
+### STEP 6 — Candidate Screen
+
+| Asset | Live Quote | vs 24h Open | Spread | Gate / Momentum Check | Verdict |
+|---|---|---|---|---|---|
+| AAVE/USD | $80.14 ask | −0.06% | 0.16% ✅ | Standard Chartered $3,500 target catalyst (real, <24h); 24h high $89 peaked earlier, currently −10.1% below peak; momentum reversed | **SKIP — momentum peak passed, −10% from high** |
+| NEAR/USD | $1.8533 ask | −5.64% | 0.092% ✅ | No fresh catalyst; declining sharply from $1.9777 high; weekly gate + no 1h >5% | **SKIP — declining, no catalyst** |
+| H/USD | — | — | — | $54-72M token unlock today | **AVOID** |
+| Top-20 alts | All declining | — | — | BTC weekly gate active; no 1h surge >5% identified | **SKIP** |
+
+Micro-cap gainers (CX +283%, MERC +269%, RIZE +110%): not listed on Kraken.
+
+### Decision: HOLD CASH ($113.74 ZUSD)
+1. BTC weekly gate TRIGGERED (−10.17%) — pure momentum banned
+2. AAVE: genuine Standard Chartered catalyst but momentum peaked at $89 and reversed sharply; momentum peak check fails
+3. NEAR: declining -5.64% from open, no catalyst
+4. Extreme Fear (12), $1B liquidations, ETF outflows — hostile environment
+5. No 1h surge >5% with fresh catalyst <3h anywhere on Kraken
+
+**Actions taken:** NONE. No trades placed. No notification sent.
+
+**Re-entry criteria (unchanged):**
+1. BTC weekly gate clears: BTC must recover to ~$67,666 (requires +12.8% from current $58,929)
+2. XRP/CLARITY Act: Senate vote date confirmed ≤48h out — best upcoming binary catalyst
+3. Catalyst-driven entry: fresh event <3h old, 1h momentum >5%, spread ≤1%
