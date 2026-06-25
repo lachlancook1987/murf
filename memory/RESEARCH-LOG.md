@@ -21980,3 +21980,49 @@ Previous session: BTC/USD trailing stop OATQNB-YV2N6-DTOUHF fired overnight Jun 
 3. Best upcoming: XRP/CLARITY Act — re-enter watch mode when Senate vote date confirmed ≤48h out
 
 ---
+
+## 2026-06-25 — Midday Scan #2 (~afternoon UTC)
+
+**Execution time:** 2026-06-25 (second midday run) | **Branch:** claude/sweet-keller-z34bn1
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | No Kraken positions | No Kraken orders | Alpaca: historical closed orders only (no active stops)
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $61,597.70 | $60,984.30 | +1.01% | $59,001–$63,138 |
+| JUP/USD | $0.23081 | $0.21821 | +5.77% | $0.19485–$0.23529 |
+| HBAR/USD | $0.07378 | $0.07554 | −2.28% | $0.07311–$0.07715 |
+| HYPE/USD | $63.69 | $63.88 | −0.30% | $59.00–$64.56 |
+| INJ/USD | $4.248 | $4.257 | −0.21% | $4.14–$4.494 |
+
+**Crash gate:** NOT triggered (BTC +1.01% from 24h open; 24h low $59,001)
+**BTC weekly gate:** TRIGGERED (BTC $61,597 vs Jun 17 close $65,599 = −6.10%)
+
+### STEP 3–5: No open positions — stop verification, tightening, thesis check all N/A ✅
+
+### STEP 6 — Candidate Screen
+
+| Asset | 24h Chg (Kraken) | Spread | Catalyst | Gate Check | Verdict |
+|---|---|---|---|---|---|
+| JUP/USD | +5.77% | 0.056% ✅ | "Jupiter Goes Green" + buybacks = **Feb 2026 DAO vote — STALE** | Gate requires fresh catalyst <3h; none confirmed | **SKIP — stale catalyst** |
+| HBAR/USD | −2.28% | 0.027% ✅ | None | Declining | **SKIP** |
+| HYPE/USD | −0.30% | 0.016% ✅ | $689.7M unlock tomorrow Jun 26 (negative) | Unlock pressure | **SKIP — unlock event** |
+| INJ/USD | −0.21% | 0.047% ✅ | Vague "banking integration" (Perplexity unverified) | Declining, no momentum | **SKIP** |
+| NEAR/TON | Not checked | — | Vague Perplexity catalyst, unverified | No Kraken confirmation | **SKIP** |
+
+**Top 24h gainers (Perplexity):** Cortex (CX) +283.8%, Liquid Mercury (MERC) +268.9% — micro-caps not on Kraken. JUP +12.4% (Perplexity; Kraken shows +5.77%) — only meaningful candidate.
+
+**JUP deep dive:** $5.7M buybacks + emission pause + delayed Jupuary airdrop are all from **Feb 21, 2026 DAO vote** — 4+ months old. No fresh JUP catalyst confirmed <6h today. Volume up 141.8% but 24h high $0.23529 set earlier in session; current $0.23081 is 1.9% below high. Momentum peak rule applies. Under BTC weekly gate, pure momentum (no fresh <3h catalyst) is banned. SKIP.
+
+### Decision
+**HOLD CASH ($113.74 ZUSD). No new entries.**
+
+1. BTC weekly gate TRIGGERED (−6.10% vs Jun 17 close) — bans pure momentum entries
+2. JUP only candidate; stale catalysts (Feb 2026); momentum peak concern; gate blocks entry
+3. HYPE: $689.7M unlock tomorrow — structural sell pressure, avoid
+4. No other assets showing qualifying momentum
+
+**Actions taken:** NONE. No notification sent.
+
+---
