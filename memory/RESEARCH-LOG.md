@@ -22026,3 +22026,79 @@ Previous session: BTC/USD trailing stop OATQNB-YV2N6-DTOUHF fired overnight Jun 
 **Actions taken:** NONE. No notification sent.
 
 ---
+
+---
+
+## 2026-06-25 — Session-Open Scan #3 (evening UTC)
+
+**Execution time:** 2026-06-25 (third session run) | **Branch:** claude/clever-allen-a8kc1b
+
+**Portfolio state:** $113.74 ZUSD (100% cash) | No Kraken positions | No Kraken orders | Alpaca: historical closed orders only (no active stops)
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h Range |
+|---|---|---|---|---|
+| BTC/USD | $61,151.10 | $60,984.30 | +0.27% | $59,001–$62,826 |
+| ETH/USD | $1,629.69 | $1,619.86 | +0.61% | $1,551–$1,677 |
+| SOL/USD | $68.14 | $68.04 | +0.15% | $64.60–$69.83 |
+| JUP/USD | $0.22803 | $0.21821 | +4.49% | $0.1949–$0.2353 |
+
+**Crash gate:** NOT triggered (BTC +0.27% from 24h open; 24h low $59,001 = −2.73%, not −20%)
+**BTC weekly gate:** TRIGGERED (BTC $61,151 vs Jun 17 close $65,599 = −6.78%) — pure momentum banned; requires 1h surge >5% + catalyst <3h
+
+### STEP 3 — Hard-check gate status
+- No open positions — stop verification, tightening, thesis check all N/A ✅
+
+### Market Context (Perplexity-filtered)
+| Signal | Value | Implication |
+|---|---|---|
+| Fear & Greed | 12 (Extreme Fear) | Extreme pessimism; no buy signal under gate rules |
+| ETF outflows | $469M/24h; 7 consecutive weeks | Persistent institutional headwind |
+| Funding rate | +0.0027% (positive; longs pay shorts) | Mild; no strong contrarian signal |
+| Fed rate hike expectations | 3 hikes in 2026 priced in | USD strength, bearish for crypto |
+| AI IPO rotation | SpaceX, Anthropic, OpenAI (capital leaving crypto) | Medium-term headwind |
+| BTC technical | Testing $60k support zone | Key level; break below = new leg down |
+
+**Token unlocks (avoid):**
+- H/Humanity Protocol: $54-72M unlock TODAY Jun 25 — AVOID
+- SAHARA AI: $14.75M unlock Jun 26 — AVOID
+- HYPE: $689.7M unlock Jun 26 — AVOID
+
+### Candidate Screen
+
+| Asset | Live Ask | 24h Open | vs Open | Spread | Gate / Momentum Check | Verdict |
+|---|---|---|---|---|---|---|
+| JUP/USD | $0.22803 | $0.21821 | +4.49% | 0.044% ✅ | 24h high $0.23529 set earlier; current −3.1% below peak; catalyst = Feb 2026 DAO vote (STALE, 4 months old); weekly gate bans pure momentum | **SKIP — stale catalyst, peak declined** |
+| ETH/USD | $1,629.69 | $1,619.86 | +0.61% | 0.010% ✅ | 24h high $1,657; current −1.7% below; Glamsterdam delayed to Q3 | **SKIP — declining from high, no catalyst** |
+| SOL/USD | $68.14 | $68.04 | +0.15% | 0.029% ✅ | Essentially flat; 24h high $69.53; −2.0% below | **SKIP — no momentum** |
+| H/USD | — | — | — | — | $54-72M unlock today | **AVOID** |
+| SAHARA/USD | — | — | — | — | $14.75M unlock tomorrow | **AVOID** |
+| HYPE/USD | — | — | — | — | $689.7M unlock tomorrow | **AVOID** |
+
+Perplexity top gainers (CX +283%, MERC +268%, RIZE +109%) — micro-caps not on Kraken, unverifiable.
+
+### XRP / CLARITY Act Status
+- No confirmed vote date. Emergency Senate meetings "next week" (late June 2026) to finalize.
+- Full Senate floor vote expected late July or first week of August 2026.
+- Polymarket odds: 59% passage in 2026.
+- If passed: $4-8B institutional ETF inflows projected.
+- Entry trigger: vote date confirmed ≤48h out + spread ≤1% + 1h momentum >3%
+
+### Trade Ideas
+**None actionable.**
+
+### Decision: HOLD CASH ($113.74 ZUSD)
+1. BTC weekly gate TRIGGERED (−6.78%) — bans pure momentum; catalyst-driven exempt but none present today
+2. JUP only candidate with any momentum (+4.49%) but stale catalyst (Feb 2026), momentum peaked earlier, gate bars entry
+3. All major assets flat to declining (ETH +0.61%, SOL +0.15%, BTC +0.27%)
+4. Token unlock risk active (H today, SAHARA+HYPE tomorrow)
+5. Macro headwinds: 7-week ETF outflows, Fed rate hike expectations, AI IPO rotation
+6. Fear & Greed 12 (Extreme Fear) — contrarian but no confirming signal under gate rules
+
+**Actions taken:** NONE. No trades placed. No notification sent.
+
+**Re-entry criteria:**
+1. BTC weekly gate clears: BTC must recover to ~$67,666 (requires +9.5%)
+2. XRP/CLARITY Act: watch for Senate vote date confirmed ≤48h out — best upcoming binary catalyst
+3. Catalyst-driven entry: fresh event <3h old (listing, upgrade, regulatory win), 1h momentum >5%, spread ≤1%
+
