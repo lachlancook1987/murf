@@ -22231,3 +22231,80 @@ Micro-cap gainers (CX +283%, MERC +269%, RIZE +110%): not listed on Kraken.
 2. XRP/CLARITY Act: Senate vote confirmed ≤48h out + spread ≤1% + 1h momentum >3%
 3. Catalyst-driven entry: fresh event <3h old (exchange listing, regulatory win, protocol upgrade), 1h momentum >5%, spread ≤1%
 
+
+---
+
+## 2026-06-25 — Evening Pre-Session Scan (20:04 UTC)
+
+**Execution time:** 2026-06-25 20:04 UTC | **Branch:** claude/affectionate-gates-obx5qu
+
+### Account Snapshot
+| Item | Value |
+|---|---|
+| Kraken ZUSD | $113.74 |
+| Kraken open positions | NONE |
+| Kraken open orders | NONE |
+| Alpaca | Historical orders only (no positions) |
+
+### Market Snapshot (Kraken live quotes)
+| Asset | Ask | 24h Open | 24h Change | 24h High | vs 24h High |
+|---|---|---|---|---|---|
+| BTC/USD | $59,549.30 | $60,984.30 | −2.35% | $61,858.80 | −3.7% |
+| ETH/USD | $1,564.27 | $1,619.86 | −3.43% | $1,657.06 | −5.6% |
+| SLX/USD | $0.38070 | $0.32536 | +16.98% | $0.42313 | −10.0% |
+| AAVE/USD | $81.01 | $80.19 | +1.02% | $89.00 | −9.0% |
+| XLM/USD | $0.17558 | $0.18526 | −5.22% | $0.18982 | −7.5% |
+| LIT/USD | $0.17860 | $0.11340 | +57.5% | $0.18900 | −5.5% |
+| TNSR/USD | $0.04120 | $0.03630 | +13.5% | $0.04730 | −12.9% |
+| SYN/USD | $0.40200 | $0.32170 | +24.96% | $0.62000 | −35.2% |
+
+### Market Context
+| Signal | Value | Implication |
+|---|---|---|
+| Fear & Greed | 12 (Extreme Fear) | 8th+ consecutive day in extreme fear zone |
+| BTC 24h funding rate | ~flat (Binance +0.0016%, BitMEX -0.0053%, Bybit -0.0075%) | Mixed; slight lean negative |
+| ETF outflows | $469M/24h; 7 consecutive weeks | Persistent institutional headwind |
+| Liquidations | ~$1B in 24h ($833M BTC longs) | Continued leveraged unwind |
+| ETH DEX volume | +36% surge on sell-off | Whale buying at lows; inconclusive |
+| Token unlocks | H today $54-72M; SAHARA $14.75M Jun 26; MEGA/HYPE Jun 26 | Heavy supply pressure this week |
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | NOT TRIGGERED | BTC −2.35% from 24h open |
+| BTC weekly gate (BTC >3% down 5d) | **TRIGGERED** | BTC $59,529 vs Jun 17 close $65,599 = −9.2%; requires 1h >5% momentum + catalyst <3h for entry |
+
+### Candidate Screen
+
+| Asset | 24h vs Open | vs 24h High | Spread | Gate Check | Verdict |
+|---|---|---|---|---|---|
+| LIT/USD | +57.5% | −5.5% | **1.51% — HARD SKIP** | Spread exceeds 1% threshold | **SKIP — wide spread** |
+| SYN/USD | +24.96% | −35.2% | 0.15% ✅ | Pump-and-dump pattern; momentum peaked at $0.62 | **SKIP — momentum peaked** |
+| SLX/USD | +16.98% | −10.0% | 0.18% ✅ | Bybit listing Jun 22 = 3 days old (stale under weekly gate) | **SKIP — stale catalyst** |
+| TNSR/USD | +13.5% | −12.9% | 0.49% ✅ | No fresh catalyst; declining from 24h high $0.04730 | **SKIP — momentum peaked** |
+| AAVE/USD | +1.02% | −9.0% | 0.099% ✅ | SC target catalyst (days old); peaked $89, now $81 | **SKIP — momentum peaked** |
+| XLM/USD | −5.22% | −7.5% | ~0% ✅ | Declining from open; no catalyst | **SKIP — declining** |
+| ETH/USD | −3.43% | −5.6% | 0.015% ✅ | DEX volume surge is capitulation selling, not bullish | **SKIP — declining** |
+| H/USD | — | — | — | $54-72M unlock today | **AVOID — unlock event** |
+| SAHARA/USD | — | — | — | $14.75M unlock Jun 26 | **AVOID — unlock tomorrow** |
+| HYPE/USD | — | — | — | $689M unlock Jun 26 | **AVOID — unlock tomorrow** |
+
+### Notable Findings
+- **LIT/USD (Litentry) +57.5%** is the only asset near its 24h high, but the spread of 1.51% exceeds the 1% hard skip threshold. Even if spread were tighter, it's a low-cap asset with no confirmed catalyst and momentum that may be fading from $0.189 peak.
+- **SYN/USD (Synapse) +25%** intraday but classic pump-and-dump shape: spiked to $0.62 on speculative short liquidations, now back to $0.40 — 35% off the high. No fundamental catalyst.
+- **TNSR/USD (Tensor) +13.5%** from open but peaked at $0.04730, now $0.04120. No catalyst confirmed.
+- **BTC at two-month low** ($58,033 24h low). ETF outflows now $878M+ over 7 days. Macro headwind persists.
+
+### Decision: HOLD CASH ($113.74 ZUSD) — No new entries
+1. BTC weekly gate TRIGGERED (−9.2% from Jun 17 close) — bans pure momentum entries; no qualifying catalyst <3h found
+2. LIT only asset near 24h high but spread 1.51% hard-skips it
+3. All other gainers (SYN, TNSR, SLX) peaked well before current scan; momentum reversed
+4. All broad market alts declining (XLM, ETH, BTC all red from open)
+5. Heavy unlock pressure: H unlock active today, SAHARA/HYPE/MEGA tomorrow
+6. Extreme Fear (12), 7-week ETF outflows, ~$1B liquidations — hostile environment
+
+### Re-entry Criteria (unchanged)
+1. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.7% from current $59,529)
+2. **XRP/CLARITY Act:** Senate vote confirmed ≤48h out + 1h momentum >3% + spread ≤1%
+3. **Catalyst-driven entry:** fresh event <3h old (exchange listing, regulatory win, protocol upgrade) + 1h surge >5% + spread ≤1%
+
