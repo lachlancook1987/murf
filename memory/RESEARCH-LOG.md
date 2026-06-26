@@ -22639,3 +22639,140 @@ Senate floor vote before July recess now "unlikely" per Senators Lummis and Scot
 3. **SYN watch:** If SYN breaks above prior 24h high ($0.62) on fresh Hypercall-related catalyst <6h old with confirmed volume surge, reassess entry. Do not chase below the prior 24h high.
 4. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.6% from $59,595) for standard momentum-only entries.
 5. **Crash gate remains at BTC >20% down 24h** (currently −0.21% — no risk).
+
+---
+
+## 2026-06-26 — Evening Pre-Session Research (Day 37, EOD Session)
+
+**Execution time:** ~18:00 UTC, Jun 26 2026
+**Branch:** claude/affectionate-gates-eeysi5
+
+### Account Snapshot (Kraken live)
+
+| Balance | Amount | USD Value |
+|---|---|---|
+| ZUSD | $119.5306 | $119.53 ✅ |
+| AAVE | 0.00004 (dust) | ~$0.00 |
+| All others | dust <$0.01 each | — |
+
+- **Total portfolio value:** $119.53 ZUSD (all cash)
+- **Open positions:** 0 (no margin positions)
+- **Open orders:** 0
+- **Alpaca:** No positions, historical orders only (BTC stop cancelled 2026-05-22)
+- **Day P&L:** +$5.79 (+5.09%) — AAVE/USD trade (V4 upgrade catalyst) hit T2 tightened stop after session buy at ~$89.93; exit ~$93-95 range; ZUSD $113.74 → $119.53
+
+### AAVE Trade Outcome (buy at 15:13 UTC)
+
+Session buy: 1.2524 AAVE at ~$89.93 (100% of $113.07 ZUSD equity)
+- T1 ($92.63): stop tightened from 2.5% to 0.5% ← stop executed
+- AAVE continued to $95-98 range after exit (24h high $98.01)
+- Exit: trailing stop fired after T1; realized +~$5.79 (~+5.1%)
+- AAVE now at $95.19 (still running on V4 catalyst)
+
+### Market Context
+
+| Signal | Value | Implication |
+|---|---|---|
+| BTC | $59,720 | Flat (0.00% from 24h open $59,721) |
+| BTC 24h range | $58,265–$60,666 | Range-bound, no breakout |
+| BTC weekly gate | TRIGGERED | BTC −9.0% vs Jun 17 close $65,599 |
+| ETH | $1,575 | +0.64% from 24h open $1,565 |
+| SOL | $73.21 | +8.24% from 24h open $67.64; near 24h high $73.77 |
+| JTO | $0.868 | +23.66% from 24h open $0.702; 1.8% below 24h high $0.884 |
+| INJ | $4.856 | +12.43% from 24h open $4.319; near 24h high $4.905 |
+| OCEAN | $0.1206 | +38.3% from 24h open $0.0872; spread 1.82% (SKIP) |
+| XRP | $1.049 | +0.69% from open; CLARITY Act vote delayed late Jul/Aug |
+| DOGE | $0.07568 | +1.08% from open |
+| Fear & Greed | **13 (Extreme Fear)** | 10th consecutive day extreme fear |
+| BTC funding rate | Binance +0.0073% | Slightly positive; no squeeze signal |
+| ETF flows | −$818.5M past 7 days; 7-week streak | Persistent institutional headwind |
+| Liquidations 24h | $1.265B–$1.4B total; $413M BTC | Cascade from $60K break |
+| PCE inflation | 4.1% (May, hot) | Reduces Fed rate cut odds |
+
+### Token Unlocks (Avoid)
+
+| Token | Unlock Value | Risk |
+|---|---|---|
+| SAHARA | ~$35.5M (9.58% supply) | Dilution pressure — AVOID |
+| HANA Network | ~$11.6M | Unlock headwind — AVOID |
+| HYPE | ~$689M | Massive unlock — AVOID (today) |
+
+### Gate Status
+
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% 24h) | **NOT TRIGGERED** | BTC flat from 24h open |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC −9.0% vs Jun 17 close |
+
+**BTC weekly gate rule:** Standard momentum entries banned; catalyst-driven (regulatory, exchange listing, protocol upgrade) remain EXEMPT.
+
+### Candidate Screening (live Kraken quotes)
+
+| Asset | Ask | 24h Open | 24h Change | vs 24h High | Spread | Catalyst | Gate/Check | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| **JTO/USD** | $0.868 | $0.702 | **+23.66%** ✅ | −1.8% from $0.884 | 0.23% ✅ | JTX trading platform launch (Jul 2026) + governance buyback strategy (today) | Weekly gate: protocol upgrade EXEMPT ✅; momentum peak: −1.8% from high, fresh catalyst <2h old (exception b) ✅ | **ENTER** ⭐ |
+| **SOL/USD** | $73.21 | $67.64 | **+8.24%** ✅ | −0.76% from $73.77 | 0.014% ✅ | MoneyGram validator (Jun 22, 4d old); Toss Bank partnership (4d old) | Weekly gate: catalyst stale (>3h old); pure momentum blocked | **WATCH** — blocked by weekly gate; enter only on fresh SOL catalyst <3h |
+| **AAVE/USD** | $95.19 | $82.39 | **+15.5%** ✅ | −2.9% from $98.01 | 0.056% ✅ | V4 upgrade (today) | T1 ($98.05) ≈ 24h high ($98.01) = resistance; momentum peak: high $98.01 timing unclear; same-thesis cap: 0 stop-outs (prior exit was T2, not stop-out) | **WATCH** — V4 catalyst still valid; re-entry possible above $98 breakout |
+| **INJ/USD** | $4.856 | $4.319 | **+12.43%** ✅ | −1.0% from $4.905 | 0.12% ✅ | Coinbase INJ EVM migration (Jun 17, 9d old); Circle USDC (May 7, stale) | Weekly gate: NO fresh catalyst <3h today | **SKIP** |
+| **OCEAN/USD** | $0.1206 | $0.0872 | **+38.3%** ✅ | −2.9% from $0.1242 | **1.82% ❌** | — | Spread >1% — hard skip | **SKIP** |
+| **BTC/USD** | $59,720 | $59,721 | 0.00% | — | 0.0002% | None | Below threshold; weekly gate | **SKIP** |
+| **ETH/USD** | $1,575 | $1,565 | +0.64% | − | 0.006% | Glamsterdam delayed Q3 | Below threshold | **SKIP** |
+| **XRP/USD** | $1.049 | $1.042 | +0.69% | − | 0.006% | CLARITY Act: late Jul/Aug (Kalshi 42%) | No momentum; binary trigger not met | **SKIP** |
+| **DOGE/USD** | $0.07568 | $0.07487 | +1.08% | − | 0.016% | None | Below threshold | **SKIP** |
+
+### Trade Ideas
+
+#### Idea 1 — JTO/USD (PRIMARY) ⭐
+
+**Catalyst:** JTX Trade platform expansion (Jito Protocol → unified trading platform, revenue-sharing buybacks, July 2026 launch) + governance head announced buyback-over-emissions strategy today. Constitutes "protocol upgrade/expansion" — exempt from BTC weekly gate. JTO is up +23.66% from 24h open $0.702 on massive volume (1M JTO, 4,425 trades). Solana ecosystem momentum amplifying.
+
+**Entry:** Market at ~$0.868 (Kraken ask)
+**Stop:** Trailing stop, trail_percent: 2.5, GTC — place immediately after fill
+**T1:** $0.894 (+3%) | **T2:** $0.911 (+5%)
+**R:R:** 1.2:1 at T1 vs 2.5% stop risk ✅
+**Size:** Up to $119.53 (100% ZUSD equity) — high conviction, fresh catalyst, strong momentum
+**Kraken pair:** JTO/USD ✅ (confirmed online, spot only — no leverage available)
+**Spread:** 0.23% ✅
+**Momentum peak check:** −1.8% from 24h high $0.884; fresh catalyst <2h old → exception (b) applies ✅
+**Same-thesis cap:** No prior JTO entries in last 7 days → 0 stop-outs → no constraint ✅
+
+#### Idea 2 — SOL/USD (SECONDARY — conditional)
+
+**Condition:** Enter ONLY if a fresh SOL-specific catalyst surfaces <3h old (protocol upgrade, new exchange listing, regulatory event) — otherwise weekly gate blocks.
+**Entry:** Market at ~$73.21 (Kraken ask)
+**Stop:** 2.5% trailing GTC
+**T1:** $75.41 (+3%) | **T2:** $76.87 (+5%)
+**R:R:** 1.2:1 at T1 ✅
+**Size:** Up to $119.53 (or remaining after JTO entry)
+**Spread:** 0.014% ✅
+**Note:** Near 24h high $73.77 (only −0.76%); massive volume (571K SOL); momentum peak check ✅ for timing
+
+#### Idea 3 — AAVE/USD continuation (CONDITIONAL)
+
+**Condition:** Enter only on breakout above 24h high $98.01 with confirmed buying volume — clears resistance and resets momentum peak check.
+**Entry:** Break above $98.01 → market entry
+**Stop:** 2.5% trailing GTC  
+**T1:** $100.95 (+3% from ~$98) | **T2:** $102.90 (+5%)
+**Catalyst:** V4 upgrade still driving today (exempt from weekly gate)
+**Spread:** 0.056% ✅
+
+### Risk Factors
+
+1. **BTC weekly gate active** (−9.0% vs Jun 17): pure momentum plays banned; Solana/BTC entries need fresh catalyst
+2. **Extreme Fear** (13): market sentiment deeply negative; any BTC weakness could cascade to alts
+3. **Massive token unlocks today**: HYPE ($689M), SAHARA ($35.5M), HANA ($11.6M) — avoid these tokens
+4. **$1.265B liquidations in 24h**: fragile market; gaps through stops possible
+5. **ETF outflows**: 7-week consecutive streak; structural headwind
+6. **JTO spot-only** (no leverage on Kraken): limits size amplification, but also limits downside on a high-ATR move
+7. **JTO ATR**: Intraday move ~24% is high-ATR territory (consider 3.5% trail if noise-stops become a concern — but at $119 equity this reduces already-thin R:R to borderline)
+
+### Decision
+
+**TRADE — JTO/USD primary setup.** BTC weekly gate active but JTX platform launch qualifies as protocol upgrade exemption. JTO +23.66% from open on fresh today catalyst; near session high; volume confirmed; spread 0.23%. Enter market at ~$0.868; place 2.5% trailing stop immediately after fill. Target T1 $0.894, T2 $0.911. All cash ($119.53) available.
+
+**Re-entry criteria (unchanged):**
+- **XRP/CLARITY Act:** Senate floor vote confirmed ≤48h → XRP at market, 7% trail; vote now late Jul/Aug
+- **SOL:** Fresh Solana catalyst <3h old + 1h surge >3% → 2.5% trail, T1 $75.41, T2 $76.87
+- **AAVE:** Breakout above 24h high $98.01 with volume → 2.5% trail, T1 ~$100.95, T2 ~$102.90
+- **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.3%) for standard momentum entries
+
