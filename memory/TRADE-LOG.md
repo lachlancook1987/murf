@@ -6540,3 +6540,42 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 **Decision: NO NEW ENTRIES.** Weekly gate active; no asset meets momentum peak check; no fresh catalyst <6h on any Kraken pair.
 
 **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-26T15:13:00Z — AAVE/USD BUY (Session-Open, ~15:13 UTC)
+
+**Buy Order ID:** OB4QWW-KI6Y3-5QA4ZO
+**Stop Order ID:** O5TPYW-SFE5T-VDNITZ (2.5% trailing stop)
+**Symbol:** AAVE/USD | **Qty:** 1.2524 AAVE | **Side:** BUY
+**Entry:** ~$89.93 (market fill; estimated from ZUSD reconciliation: $113.085 / (1.2524 × 1.004))
+**24h open:** $82.39 | **vs open:** +9.1% at fill
+**T1:** $92.63 (+3%) | **T2:** $94.43 (+5%)
+**Initial stop trigger:** $87.61 | **HWM at placement:** $89.85 | **Trail:** 2.5% GTC ✓
+**Size:** ~$113.07 (100% of $113.74 equity) | **ZUSD after:** $0.66
+**R:R:** 1.2:1 at T1 (3% target vs 2.5% stop risk) ✓
+
+**Catalyst:** AAVE V4 protocol upgrade — community approved V4 (Hub & Spoke architecture: separated lending pools, modular risk isolation, structured lending, fixed-rate borrowing). V4 is live on Ethereum following on-chain AIP governance vote. Active governance expansion on June 26 (supply/borrow cap increases, PT-USDG-24SEP2026 onboarding to V4 on governance forum). AAVE +9.1% from 24h open $82.39, breaking above $90 intraday (24h high $90.05). Technical breakout as fresh catalyst.
+
+**Screening:**
+- Momentum: +9.1% from 24h open ✓ (>3% threshold)
+- Spread: 0.056% ✓
+- Volume: 27,866 AAVE (5,183 trades today) — solid ✓
+- Catalyst: V4 protocol upgrade (exempt from BTC weekly gate) + technical breakout at new 24h high ✓
+- R:R: 1.2:1 at T1 ✓ (minimum threshold met)
+- BTC crash gate: NOT triggered (BTC −0.18% from 24h open $59,721)
+- BTC weekly gate: TRIGGERED (BTC −9.1% vs Jun 17 close $65,599) — BUT AAVE exempt (protocol upgrade catalyst)
+- Momentum peak check: 24h high $90.05 set moments before entry; current price $89.86 (0.2% off peak) — at new 24h highs ✓
+- Same-thesis cap: 0 AAVE stop-outs in 7-day window ✓
+- Pair online on Kraken ✓
+- Note: AAVE intraday ATR high (80.67–90.05 = 11.6% range) but using 2.5% trail; AAVE is a DeFi blue chip (not high-ATR momentum coin like FET/HYPE/WLD); 3.5% trail would fail R:R gate (0.857:1)
+
+**Candidates screened and rejected:**
+- SOL/USD: +4.39% from open — SKIP (no exempt catalyst today; catalysts KG Inicis/SBI stablecoin >24h old; not in regulatory/listing/upgrade exemption)
+- XRP/USD: −0.51% from open — SKIP (CLARITY Act vote slipped to late July/August; binary trigger not met)
+- NEAR/USD: −2.83% from open — SKIP (dynamic resharding v2.13 no confirmed today deployment; declining price)
+- SYN/USD: −1.0% from open, −17% from 24h high $0.395 — SKIP (momentum peaked)
+- ETH/USD: +0.23% — SKIP (below 3% threshold)
+- BTC/USD: −0.18% — SKIP (weekly gate active; no fresh catalyst)
+- ENA/USD: −4.0% from open — SKIP (declining)
+
