@@ -22776,3 +22776,80 @@ Session buy: 1.2524 AAVE at ~$89.93 (100% of $113.07 ZUSD equity)
 - **AAVE:** Breakout above 24h high $98.01 with volume → 2.5% trail, T1 ~$100.95, T2 ~$102.90
 - **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.3%) for standard momentum entries
 
+
+---
+
+## 2026-06-26 — Session-Open Execution (~21:05 UTC)
+
+**Execution time:** ~21:05 UTC, Jun 26 2026
+**Branch:** claude/clever-allen-tfdk75
+
+### Account Snapshot (Kraken live)
+
+| Balance | Amount | USD Value |
+|---|---|---|
+| ZUSD | $119.5306 | $119.53 ✅ |
+| All others | dust <$0.01 each | — |
+
+- **Open positions:** 0 (no margin positions)
+- **Open orders:** 0
+- **Alpaca:** No open positions, historical orders only
+
+### Gate Status
+
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% 24h) | **NOT TRIGGERED** | BTC $59,605 (ask), −0.19% from 24h open $59,721 |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC −9.1% vs Jun 17 close $65,599 |
+
+### Live Market Scan (21:05 UTC)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Catalyst | Decision |
+|---|---|---|---|---|---|---|---|
+| **JTO/USD** | $0.8534 | $0.7019 | +21.6% | $0.8839 | −3.45% | JTX platform launch (Solana Accelerate, days ago); governance buyback (date unclear) | **SKIP** — dual fail: (1) momentum peak check: high >3h old, price declined $0.868→$0.853 since 18:00 UTC, no fresh catalyst <2h; (2) high-ATR → 3.5% trail → R:R 0.86:1 < 1.2:1 minimum |
+| **SOL/USD** | $71.79 | $67.64 | +6.15% | $73.77 | −2.67% | KG Inicis/SBI stablecoin (>24h stale) | **SKIP** — weekly gate: no exempt catalyst <3h old |
+| **AAVE/USD** | $93.29 | $82.39 | +13.24% | $98.01 | −4.8% | V4 upgrade (today) | **SKIP** — below $98.01 re-entry breakout condition |
+| **INJ/USD** | $4.732 | $4.319 | +9.57% | $4.905 | −3.52% | Coinbase EVM migration (Jun 17, 9d old) | **SKIP** — catalyst stale, declining from peak |
+| **ETH/USD** | $1,567 | $1,565 | +0.13% | $1,592 | — | None | **SKIP** — below threshold |
+| **BTC/USD** | $59,605 | $59,721 | −0.19% | $60,666 | — | None | **SKIP** — weekly gate, below threshold |
+| **XLM/USD** | $0.1777 | $0.1791 | −0.80% | $0.1806 | — | DTCC (stale >24h) | **SKIP** — declining |
+| **TAO/USD** | $212.01 | $212.35 | −0.16% | $216.97 | — | None | **SKIP** — declining |
+| **CHZ/USD** | $0.01788 | $0.01796 | −0.45% | $0.01841 | — | None | **SKIP** — declining |
+| **NEAR/USD** | $1.787 | $1.837 | −2.77% | $1.861 | — | None | **SKIP** — declining |
+| **SYN/USD** | $0.3231 | $0.3314 | −2.50% | $0.3953 | −18.3% | Hypercall rebrand (peaked) | **SKIP** — way off peak |
+| **ZEC/USD** | $418.28 | $416.69 | +0.38% | $427.85 | — | None | **SKIP** — below threshold |
+| **STORJ/USD** | $0.07193 | $0.07135 | +0.81% | $0.07253 | — | None (35 trades/24h = illiquid) | **SKIP** — below threshold, illiquid |
+
+### JTO Pre-Trade Check (PRIMARY CANDIDATE — evening research)
+
+JTO at 18:00 UTC: ask $0.868, 24h high $0.884 (−1.8% from high), research decision: TRADE
+JTO at 21:05 UTC: ask $0.853, same 24h high $0.884 (−3.45% from high)
+
+**Gate 1 — Momentum peak check (FAILS):**
+- 24h high $0.8839 set before 18:00 UTC → now >3h old
+- Current price $0.8534 is declining FROM the high (not approaching it)
+- Exception (a): No fresh 1h candle breakout above $0.8839 ❌
+- Exception (b): No new distinct catalyst event <2h old — JTX Solana Accelerate announcement was days ago; governance buyback "today" claim from Perplexity was stale (not verified fresh <2h) ❌
+- **RESULT: Momentum peak check FAILS → SKIP**
+
+**Gate 2 — R:R check (FAILS independently):**
+- JTO intraday range: $0.694–$0.884 = 27.3% intraday ATR → HIGH-ATR asset
+- High-ATR rule: use 3.5% trailing stop to avoid noise-stops
+- T1: entry $0.853 × 1.03 = $0.879; T2: $0.853 × 1.05 = $0.896
+- With 3.5% trail: R:R at T1 = 3.0% / 3.5% = 0.857:1 → BELOW 1.2:1 minimum ❌
+- **RESULT: R:R gate FAILS at 3.5% trail → SKIP**
+
+### Decision: HOLD CASH ($119.53 ZUSD) — No new entries
+
+- Crash gate: NOT triggered ✓
+- All candidates fail at least one hard gate (momentum peak, R:R, weekly gate, or stale catalyst)
+- JTO: fails both momentum peak check AND R:R gate simultaneously
+- No notification sent (no trades placed)
+
+### Re-entry Criteria (unchanged from evening session)
+
+1. **JTO:** New 1h candle breakout above $0.8839 (new 24h high) with confirmed volume → enter market, 3.5% trail (high-ATR), T1 $0.921, T2 $0.943; or fresh distinct JTO catalyst <2h old
+2. **XRP/CLARITY Act:** Senate floor vote confirmed ≤48h → XRP at market, 7% trail; vote late Jul/Aug
+3. **SOL:** Fresh Solana catalyst <3h old + 1h surge >3% → 2.5% trail, T1 $75.41, T2 $76.87
+4. **AAVE:** Breakout above $98.01 with volume → 2.5% trail, T1 ~$100.95, T2 ~$102.90
+5. **BTC weekly gate clears:** BTC must recover to ~$67,666 for standard momentum entries
