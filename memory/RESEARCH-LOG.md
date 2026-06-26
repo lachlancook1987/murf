@@ -22456,3 +22456,101 @@ SOL (KG Inicis), LINK (Pangea), and TON (Polymarket) all have fresh catalysts to
 **HOLD CASH. No new entries. No actions taken.**
 
 All screened assets declining. BTC weekly gate blocks pure momentum entries. No catalyst-driven setup with 1h momentum >5% + catalyst <3h old. AAVE's Standard Chartered coverage is a long-horizon target (2030), not an intraday catalyst. XRP/CLARITY Act remains the best upcoming binary catalyst but no Senate vote today.
+
+---
+
+## 2026-06-26 — Pre-Session Research
+
+**Execution time:** 2026-06-26 UTC | **Branch:** claude/affectionate-gates-mx9g6r
+
+### Account Snapshot
+| Item | Value |
+|---|---|
+| Kraken ZUSD | $113.74 |
+| Kraken open positions | NONE |
+| Kraken open orders | NONE |
+| Alpaca | No positions (monitoring retired) |
+
+### Market Snapshot (Kraken live quotes)
+| Asset | Ask | 24h Open | 24h Change | 24h Range | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $60,330 | $59,721 | **+1.06%** | $58,033–$61,760 | 0.0002% ✅ |
+| ETH/USD | $1,575.73 | $1,565.17 | +0.68% | $1,510–$1,654 | 0.002% ✅ |
+| SOL/USD | $70.57 | $67.64 | **+4.33%** | $63.72–$70.89 | 0.014% ✅ |
+| XRP/USD | $1.04690 | $1.04206 | +0.48% | $1.008–$1.084 | 0.0124% ✅ |
+| SLX/USD | $0.3606 | $0.3833 | −5.8% | $0.309–$0.428 | 0.41% ✅ |
+| ENA/USD | $0.08080 | $0.08220 | −1.7% | $0.0784–$0.0862 | 0.12% ✅ |
+| OMNI/USD | $0.71 ask / $0.138 bid | — | 0 trades | Dead pair | 65%+ ❌ |
+
+**Note:** BTC, ETH, and SOL all up from their 24h opens — broad intraday recovery from yesterday's multi-day lows.
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC +1.06% from 24h open |
+| BTC weekly gate (BTC >3% down 5d) | **TRIGGERED** | BTC $60,330 vs Jun 17 close $65,599 = **−8.0%** — requires 1h >5% + catalyst <3h for standard entries; catalyst-driven entries (regulatory, listing, protocol upgrade) exempt |
+
+### Market Context (Perplexity)
+| Signal | Value | Implication |
+|---|---|---|
+| BTC price | ~$59,710–$60,330 (CoinGecko/Kraken live) | Recovering from $58,033 intraday low |
+| ETH price | ~$1,552–$1,576 | −4.5% to −5.7% 24h; recovering from $1,510 low |
+| Fear & Greed | **12 (Extreme Fear)** | 9th+ consecutive day in extreme fear zone |
+| BTC funding rate | Binance +0.0053%, Bybit +0.0022%, aggregate +0.0013% | Slight positive — not signalling imminent squeeze |
+| ETF flows | −$469M/24h; **7 consecutive weeks of outflows** | Persistent institutional headwind |
+| Top 24h gainers (global) | SIREN +191%, UP +87%, HEI +38%, SLX +30% | None tradeable on Kraken with good liquidity |
+
+### Token Unlocks (Avoid Today — Jun 26)
+| Token | Value | Risk |
+|---|---|---|
+| $SAHARA | ~$35.5M (9.58% of supply) | Major dilution pressure — AVOID |
+| $HANA Network | ~$11.6M | Unlock headwind — AVOID |
+| $HYPE | ~$689M | Massive unlock — AVOID |
+
+### Key Catalysts
+- **CLARITY Act (XRP):** Senate floor vote eligible (Calendar No. 423), **July 4 White House signing deadline is "real"** per Perplexity. 48–72% Polymarket passage probability. Vote NOT yet scheduled; requires 60 Senate votes (~7 Democratic crossovers). Most significant binary catalyst in near-term.
+- **SWIFT blockchain adoption:** 25+ major banks going live with XRP/blockchain infrastructure for 24/7 cross-border payments — ongoing narrative support.
+- **Morgan Stanley BTC Trust + Strategy $42B BTC buying program** — ongoing bullish institutional flows.
+- **Solana ecosystem:** KG Inicis stablecoin payments on Solana + Japan's first yen stablecoin (JPYSC, SBI/Startale on Solana) — >24h old, priced in.
+- **Chainlink Pangea FX settlement project** — >24h old, LINK still declining.
+- **ETF outflows:** 7 weeks consecutive, $5.94B+ cumulative — persistent structural headwind.
+
+### Candidate Screen (STEP 4)
+| Asset | 24h vs Open | vs 24h High | Spread | Catalyst | Gate Check | Verdict |
+|---|---|---|---|---|---|---|
+| **SOL/USD** | +4.33% ✅ | −0.45% (session/24h high $70.89 — very recent) | 0.014% ✅ | KG Inicis + SBI stablecoin on Solana (>24h old) | Weekly gate: catalyst >6h old, not in exempt categories; 1h >5% unconfirmed | **WATCH — not actionable; catalyst stale** |
+| **XRP/USD** | +0.48% | −3.4% vs $1.084 24h high | 0.0124% ✅ | CLARITY Act binary — Senate floor eligible, Jul 4 deadline | Explicit strategy exemption ✅ BUT vote not scheduled today; no 1h momentum >3% | **WATCH — enter when vote confirmed ≤48h** |
+| ETH/USD | +0.68% | −4.7% vs $1,654 high | 0.002% ✅ | Glamsterdam delayed to Q3 2026 | No fresh catalyst, no 1h >5% | SKIP |
+| BTC/USD | +1.06% | −2.3% vs $61,760 high | 0.0002% ✅ | Morgan Stanley Trust (ongoing) | No catalyst <3h old, no 1h >5% | SKIP |
+| SLX/USD | −5.8% | Declining | 0.41% ✅ | Bybit listing Jun 22 (4 days stale) | Declining below open; stale catalyst | SKIP |
+| OMNI/USD | 0 volume | Dead | **65%+ ❌** | None | Illiquid dead pair | SKIP |
+| ENA/USD | −1.7% | Declining | 0.12% ✅ | None | Declining | SKIP |
+| ALGO/USD | −0.24% | Flat | 0.11% ✅ | None | Flat | SKIP |
+| SAHARA/HANA/HYPE | — | — | — | Major token unlocks today | AVOID unlock event | AVOID |
+
+### Why SOL Doesn't Qualify Today
+SOL is the strongest momentum name (+4.33%, near session high $70.89), but:
+1. Catalysts (KG Inicis, SBI Group stablecoin on Solana) announced >24h ago — not fresh (<3h)
+2. These catalysts don't fit the "regulatory event / exchange listing / protocol upgrade" exemption categories under the BTC weekly gate
+3. Without confirmed 1h >5% surge OR catalyst <3h old, the weekly gate standard-entry criteria are not met
+
+If SOL breaks above $70.89 (new 24h high) with a fresh Solana ecosystem catalyst <6h old, upgrade to entry (2.5% trail, T1 $72.69, T2 $74.10).
+
+### Decision: HOLD CASH ($113.74 ZUSD) — No new entries
+
+1. Crash gate NOT triggered
+2. BTC weekly gate TRIGGERED (−8.0% vs Jun 17 close)
+3. SOL closest to setup but catalyst stale (>24h)
+4. XRP CLARITY Act binary catalyst live but vote not imminent today; insufficient intraday momentum
+5. No asset showing confirmed 1h >5% surge on Kraken
+6. Triple token unlock pressure today (SAHARA/HANA/HYPE ~$736M)
+7. Fear & Greed 12, 7-week ETF outflow streak — hostile structural environment
+
+**Positive shift:** BTC/ETH/SOL all up from their 24h opens for the first time in days — intraday recovery underway. If BTC holds above $60K and SOL sustains above $70, market tone could shift into the next session.
+
+### Re-entry Criteria (updated)
+1. **XRP/CLARITY Act (primary):** CLARITY Act Senate floor vote confirmed ≤48h out → enter XRP at market, 7% trailing stop GTC. Capital: up to $113.74. Expected R:R: ~6:1 if passage.
+2. **SOL (secondary):** Break above $70.89 with fresh Solana catalyst <6h old + 1h surge confirms → 2.5% trail, T1 $72.69, T2 $74.10.
+3. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+12.2% from $60,330) for standard entry criteria to ease.
+4. **Crash gate remains at BTC >20% down 24h** (currently +1.06% — no risk).
+
