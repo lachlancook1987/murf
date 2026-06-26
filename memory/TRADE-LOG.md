@@ -6497,3 +6497,46 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 | — | — | — | — | — | — | No open positions |
 **Trades today:** none | **Total since migration:** ~81
 **Notes:** Flat day — all-cash position ($113.74 ZUSD) unchanged from Jun 25 EOD. BTC fell −2.31% from ~$61,648 to ~$60,223 today, with a 24h range of $58,033–$61,698 and current ask $60,223. Portfolio outperformed BTC by +2.31% simply by being fully in cash. No new entries placed: BTC weekly gate still active (BTC ~−8.5% vs Jun 17 close $65,599), broader market bearish, and no intraday catalyst meeting the 1h surge >3% + catalyst <6h criteria. Capital too thin ($113.74) for diversified positions in this environment. CLARITY Act Senate vote (XRP binary catalyst) remains the primary near-term catalyst but no vote date confirmed. Next entry criteria: BTC 1h momentum >3% with catalyst <6h old AND weekly gate clears, OR high-conviction binary catalyst (protocol upgrade, exchange listing, regulatory win) with spread ≤1% and volume confirmation. Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22; no Alpaca exposure. BTC 24h open $59,721 with today's high $61,698 tested early before rolling over — downtrend intact short-term.
+
+---
+
+## 2026-06-26 — Midday Scan (2nd Pass)
+
+**Execution time:** Midday UTC, Jun 26 2026
+
+**Portfolio:** $113.74 ZUSD (100% cash) | 0 positions | 0 orders
+**BTC:** ask $59,822 | 24h open $59,721 | **+0.16%** | 24h range $58,265–$60,666 | Crash gate NOT triggered ✓
+**BTC weekly gate:** TRIGGERED (BTC −8.8% vs Jun 17 close $65,599) — pure momentum banned; catalyst-driven entries exempt ✓
+
+### STEP 2 — Positions & Orders Verified
+
+- Kraken positions: `{}` (no margin positions) ✓
+- Kraken orders: `{}` (no open orders) ✓
+- Kraken account: ZUSD $113.7415 | all other balances dust (<$0.01 value) ✓
+- Alpaca: historical orders only — stop a2b44cf9 CANCELLED 2026-05-22 ✓
+
+**STEP 3 — Stop verification:** No open positions → N/A ✓
+**STEP 4 — Stop tightening:** No open positions → N/A ✓
+**STEP 5 — Thesis check:** No open positions → N/A ✓
+
+### STEP 6 — Candidate Screening (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Decision |
+|---|---|---|---|---|---|---|
+| SYN/USD | $0.3539 | $0.3314 | +6.79% | $0.4630 | −23.5% | **SKIP** — momentum peak FAILS (24h high −23.5% above current; not within 60 min) |
+| XLM/USD | $0.1741 | $0.1791 | −2.68% | $0.1796 | −3.1% | **SKIP** — below open; declining |
+| ZEC/USD | $405.52 | $416.69 | −2.68% | $421.24 | −3.7% | **SKIP** — below open |
+| XRP/USD | $1.0356 | $1.0421 | −0.62% | $1.0511 | −1.5% | **SKIP** — below open; CLARITY Act vote slipped to late July/August |
+| DOGE/USD | $0.0741 | $0.0749 | −1.0% | $0.0752 | −1.5% | **SKIP** — below open |
+| BTC/USD | $59,822 | $59,721 | +0.16% | $60,666 | −1.4% | **SKIP** — below 3% threshold; weekly gate active |
+
+**Note on Perplexity data reliability:** Perplexity reported XLM +5.77%, ZEC +3.90%, DOGE +3.33% as Kraken gainers — all contradicted by live Kraken quotes (all assets DOWN from 24h open). Perplexity market data continues to be stale/unreliable; live Kraken quotes are authoritative.
+
+**Macro context:**
+- Fear & Greed: 12–15 (Extreme Fear)
+- CLARITY Act: Senate floor vote slipped to late July/August (Kalshi 42% probability); no imminent binary trigger
+- SYN: best Kraken mover at +6.79% from open but momentum peaked at $0.463 (−23.5% above current); momentum peak check FAILS per strategy rule (24h high >60 min old, price declining from it, no fresh catalyst <2h old)
+
+**Decision: NO NEW ENTRIES.** Weekly gate active; no asset meets momentum peak check; no fresh catalyst <6h on any Kraken pair.
+
+**Actions taken: NONE. No notification sent.**
