@@ -22554,3 +22554,39 @@ If SOL breaks above $70.89 (new 24h high) with a fresh Solana ecosystem catalyst
 3. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+12.2% from $60,330) for standard entry criteria to ease.
 4. **Crash gate remains at BTC >20% down 24h** (currently +1.06% — no risk).
 
+
+---
+
+## 2026-06-26 — Session-Open Scan
+
+**Branch:** claude/clever-allen-ugwahd | **Portfolio:** $113.74 ZUSD (100% cash) | No open positions | No open orders
+
+### Live Quotes (session-open)
+| Asset | Ask | 24h Open | 24h Change | 24h High | Spread |
+|---|---|---|---|---|---|
+| BTC/USD | $60,009 | $59,721 | +0.48% | $61,695 | 0.0002% ✅ |
+| SOL/USD | $69.48 | $67.64 | +2.72% | $70.89 | 0.014% ✅ |
+| AAVE/USD | $85.32 | $82.39 | +3.56% | $88.20 | 0.082% ✅ |
+| SYN/USD | $0.3712 | $0.3314 | +12.0% | $0.6200 | 0.27% ✅ |
+| XRP/USD | $1.0354 | $1.0421 | −0.64% | $1.082 | 0.01% ✅ |
+| ETH/USD | $1,558.67 | $1,565.17 | −0.42% | $1,652 | 0.011% ✅ |
+
+### Gate Status
+- **Crash gate:** NOT triggered (BTC +0.48%) ✅
+- **BTC weekly gate:** TRIGGERED — BTC $60,009 vs Jun 17 close $65,599 = −8.5% ❌
+
+### Candidate Screen
+| Asset | Verdict |
+|---|---|
+| SYN | +12% from today's open BUT 24h high was $0.62; current $0.37 = −40% from 24h peak. Repricing event already occurred. Momentum peak check FAILS. SKIP |
+| AAVE | +3.56% from open. Grayscale Research $80–$100 valuation report — not in exempt categories (not regulatory/listing/protocol upgrade). Weekly gate requires 1h >5% + catalyst <3h; unconfirmed. SKIP |
+| SOL | +2.72% from open (was +4.33% pre-session; pulled back from $70.89). Catalyst stale (>24h). SKIP |
+| XRP | −0.64% from open. CLARITY Act: emergency talks launched, vote now potentially delayed to late July/August 2026. No 1h momentum. SKIP |
+| BTC | +0.48%. No catalyst <3h old. Weekly gate blocks. SKIP |
+| ETH | −0.42%. No catalyst. Declining. SKIP |
+
+### Decision: HOLD CASH — No new entries
+
+BTC weekly gate blocks all standard momentum entries. No catalyst-driven setup in exempt categories (regulatory vote, exchange listing, protocol upgrade). SYN's 40% crash from 24h peak is the biggest disqualifier for the top short-term gainer. XRP CLARITY Act timeline extended — no imminent vote trigger. Capital: $113.74 ZUSD preserved.
+
+**No trades placed. No notification sent. No commit needed.**
