@@ -667,3 +667,79 @@ Before any momentum entry, confirm that the 24h high was set within the last **6
 **Five of six losing trades this week had valid catalysts and textbook stop mechanics. The failures were timing, not thesis.** UNI (the clearest example) had a real structural catalyst but entered after the 24h high had already been set — the repricing event had occurred before the bot's order. WLD-2 repeated a similar pattern: the first entry captured the catalyst move, the second entered at a higher price on a stale version of the same catalyst. TAO, WLD-1, and HYPE all worked because they entered early in the repricing window. Going forward: verify the 24h high was recent (≤60 min ago) before entering any momentum trade. If price is already declining from the high, wait for a fresh breakout or a new catalyst event.
 
 ---
+
+## Week of 2026-06-20 — Review Date: 2026-06-26
+
+### Context
+Heavy-loss week driven by a single critical violation: BTC entered without a trailing stop in an unlogged session, then the active replacement stop was erroneously cancelled overnight by a recurring `kraken.sh positions` API bug (endpoint returns only margin positions, not spot balances). BTC fell −6.51% from entry before the second replacement stop fired. Two other trades (SOL win, ENA loss) were mechanically clean. BTC weekly gate triggered mid-week (Jun 23) on BTC falling −4.96% vs Jun 17 close $65,599 and remained active through week-end at −8.0%. Market in Extreme Fear (F&G 12) for the full week. 7 consecutive weeks of ETF outflows ($5.94B+ cumulative). $1.8B in liquidations on Jun 25.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $113.74 | $113.74 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (May 22) |
+| **Total** | **$113.74** | $113.74 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jun 19 EOD) | $121.85 |
+| Ending Equity (Fri Jun 26) | **$113.74** |
+| **Week Return** | **−6.65%** (−$8.11) |
+| BTC Week Return | **−4.05%** ($62,620 → $60,083) |
+| **Bot vs BTC** | **−2.60%** (underperformed) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jun 20→21 | SOL/USD | ~$72.15 (0.8462u) | $74.04 (0.5% trail post-T1) | **+$1.35** | WIN |
+| 2 | Jun 22 | ENA/USD | ~$0.0958 (828u) | ~$0.09528 (2.5% trail) | **−$0.95** | LOSS |
+| 3 | Jun 22→25 | BTC/USD | ~$65,566 (0.001859u) | ~$61,347 (2.5% trail) | **~−$7.93** ⚠️ | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 3 |
+| Wins | 1 (SOL) |
+| Losses | 2 (ENA, BTC) |
+| Win Rate | **33.3%** |
+| Gross Wins | **$1.35** |
+| Gross Losses | **$8.88** (ENA $0.95 + BTC $7.93) |
+| Profit Factor | **0.15** |
+| Avg Win | $1.35 |
+| Avg Loss | $4.44 |
+| Largest Win | SOL +$1.35 (+2.22% net) |
+| Largest Loss | BTC −$7.93 (−6.51% on notional) ⚠️ violation |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$1.37** (3 trades × ~$88 avg notional × 0.52% round-trip) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $113.74. No open orders. BTC weekly gate TRIGGERED (BTC −8.0% vs Jun 17 close $65,599; requires BTC recovery to ~$67,666 to clear).
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Multi-factor momentum + macro catalyst (SOL, +2.22%):** Volume +67% surge, Iran peace deal risk-on macro tailwind, Alpenglow upgrade narrative, Securitize tokenized fund expansion. SOL +3.52% from 24h open at entry. T1 (+3%) hit at $74.31; stop tightened from 3.5% to 0.5% per strategy rules; exit at $74.04 — clean execution of T1-tighten workflow. 22-hour hold. Minor error: initial stop OM6G7A erroneously cancelled as "orphan" in Jun 20 overnight triage; replacement OZXH23 placed immediately, protection restored.
+
+**Entry types that failed:**
+- **Stale institutional catalyst (ENA, −1.19%):** Coinbase Ventures + Janus Henderson + fee-switch governance vote — all catalysts 3–20 days old, not <6h fresh at entry. ENA was only 0.2% off its 24h high (momentum peak check barely passed), but the underlying catalysts predated the <6h freshness requirement for a day-trade entry. Small loss because 2.5% trailing stop managed risk correctly; HWM $0.09830 reached before whipsaw. This was a marginal/borderline entry that should have been skipped.
+- **Unlogged entry with no stop + orphan-stop bug repeated (BTC, −6.51%):** ⚠️ **Three concurrent violations.** (1) No trailing stop placed at entry — the single most critical mandatory rule. (2) Entry in an unlogged session (~Jun 22 late UTC) with no audit trail. (3) Entry at ~$65,566 was near the 30h high in a market already in a weekly downtrend (BTC weekly gate was at risk level at entry). Replacement stop OFVAFJ placed next session-open at $62,334 BTC, then cancelled overnight Jun 24 by the orphan-stop bug (triage found `positions: {}` and cancelled the stop as orphaned — same error as SOL Jun 20). Replacement stop OATQNB had lower HWM ($62,630 vs $63,040 of cancelled stop). BTC dropped to 24h low $61,127 on Jun 25, firing OATQNB at ~$61,347.
+
+**Stop quality:**
+- SOL: Excellent execution. 3.5% trail (high-ATR, correctly applied) → T1 tighten to 0.5% → clean exit near the peak. Minor orphan-cancel corrected promptly.
+- ENA: Correct. 2.5% trail; HWM reached; swept on whipsaw. No mechanics failure.
+- BTC: Two separate stop failures — (1) mandatory stop not placed at entry, (2) replacement stop cancelled as false orphan due to `positions` endpoint limitation. Second replacement OATQNB functioned correctly when it eventually fired.
+
+**Profile violations:**
+- ⚠️ BTC: trailing stop NOT placed at entry — mandatory rule violated
+- ⚠️ BTC: entry in unlogged session — audit trail missing
+- ⚠️ BTC: entry at 30h high in a downtrending market (weekly gate approaching trigger level at entry)
+- ENA: catalyst freshness borderline (3–20 days old vs <6h requirement) — marginal entry
+
+**Concrete adjustment — orphan-stop detection fix (added 2026-06-26):**
+Before cancelling any trailing stop as an "orphan," verify the underlying asset BALANCE via `kraken.sh account`. The `kraken.sh positions` endpoint returns ONLY margin positions — spot holdings are visible only as non-zero balances (XXBT, XSOL, XETH, etc.) in the `account` output. A stop is an orphan ONLY if: (a) `positions: {}` AND (b) the asset balance in `account` = 0 (dust only). This bug caused two unnecessary stop cancellations this week — SOL Jun 20 (corrected same session) and BTC Jun 24 (not corrected; led to lower HWM on replacement stop and ultimately larger loss on the final stop-out).
+
+### Key Lesson
+**One mandatory rule violation (no stop at entry) plus a recurring operational bug (positions endpoint ≠ spot balances) combined to destroy 70% of the week's P&L in a single trade.** The SOL trade was the blueprint: multi-factor catalyst, correct high-ATR stop, T1 tighten, clean exit. ENA was marginal but loss-limited. BTC broke three rules simultaneously and the orphan-stop bug compounded the damage. The fix is not a new strategy rule — both rules already existed — but an operational discipline: always check `kraken.sh account` balances before cancelling any stop order, and never enter a trade without placing the stop in the same session, same workflow step.
+
+---

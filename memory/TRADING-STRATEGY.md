@@ -67,6 +67,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - **Binary catalyst assets (regulatory votes, ETF filings):** use `trail_percent: 7` for the initial stop — headline volatility can blow through 2.5%; widen only on binary events, not routine trades
 - No fixed hold time — exit when thesis is invalidated, target is hit, or stop fires
 - Cancel orders any time: `bash scripts/kraken.sh cancel <order_id>`
+- **Orphan-stop check (added 2026-06-26):** Before cancelling any trailing stop as an "orphan" (no matching position), FIRST verify the underlying asset BALANCE via `bash scripts/kraken.sh account`. The `kraken.sh positions` endpoint returns ONLY margin positions — spot holdings appear only as non-zero balances (XXBT, XSOL, XETH, etc.) in the account output. A stop is orphaned ONLY IF: (a) `positions: {}` AND (b) the asset balance in `account` = 0 (dust < $0.01). Do NOT cancel stops based on `positions: {}` alone.
 
 ---
 
@@ -184,4 +185,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-06-19 (added momentum peak check: 24h high must be ≤60 min old at entry, or require fresh 1h breakout/new catalyst <2h)*
+*Last updated: 2026-06-26 (added orphan-stop check: verify account balances before cancelling any stop; `positions` endpoint = margin only, not spot)*
