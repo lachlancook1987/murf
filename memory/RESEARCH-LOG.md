@@ -22554,3 +22554,88 @@ If SOL breaks above $70.89 (new 24h high) with a fresh Solana ecosystem catalyst
 3. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+12.2% from $60,330) for standard entry criteria to ease.
 4. **Crash gate remains at BTC >20% down 24h** (currently +1.06% — no risk).
 
+
+---
+
+## 2026-06-26 — Midday Scan (~midday UTC)
+
+**Branch:** claude/sweet-keller-gte6ob | **Portfolio:** $113.74 ZUSD (100% cash) | No open positions | No open orders
+
+### Account Snapshot (Kraken live)
+- ZUSD: $113.74 ✅ (confirmed; all other balances are dust < $0.01)
+- XXBT: 0.0000000000 — no BTC spot holding
+- No margin positions | No open orders
+
+### Market Snapshot (Kraken live)
+| Asset | Ask | 24h Open | 24h Change | 24h High | Today High | Spread |
+|---|---|---|---|---|---|---|
+| BTC/USD | $59,595 | $59,721 | **−0.21%** | $61,657 | $60,666 | 0.0002% ✅ |
+| ETH/USD | $1,549 | $1,565 | −1.03% | $1,647 | $1,583 | 0.008% ✅ |
+| SOL/USD | $68.97 | $67.64 | +1.95% | $70.89 | $70.89 | 0.015% ✅ |
+| ZEC/USD | $400.27 | $416.69 | **−3.97%** | $421 | $420 | 0.040% ✅ |
+| NEAR/USD | $1.802 | $1.837 | **−1.90%** | $1.947 | $1.861 | 0.050% ✅ |
+| XLM/USD | $0.1753 | $0.1791 | −2.13% | $0.1846 | $0.1796 | 0.0001% ✅ |
+| SYN/USD | $0.3657 | $0.3314 | **+10.35%** | $0.6200 | $0.3953 | 0.109% ✅ |
+
+**Gate Status:**
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC −0.21% from 24h open |
+| BTC weekly gate (BTC >3% down 5d) | **TRIGGERED** | BTC $59,595 vs Jun 17 close $65,599 = **−9.2%** |
+
+### STEP 2 — Stop Verification
+No open positions → no stops required ✅
+
+### STEP 3 — Emergency Exits
+No open positions → no action ✅
+
+### STEP 4 — Stop Tightening
+No open positions → N/A ✅
+
+### STEP 5 — Thesis Check
+No open positions → N/A ✅
+
+### STEP 6 — New Entry Candidates
+
+| Asset | 24h Change | vs 24h High | Spread | Catalyst | Gate / Check | Verdict |
+|---|---|---|---|---|---|---|
+| **SYN/USD** | +10.35% ✅ | −41% from $0.62 high | 0.109% ✅ | Synapse → Hypercall rebranding (on-chain options on Hyperliquid); multi-day catalyst | **Momentum peak check FAILS:** 24h high $0.62 set hours ago; current $0.365 declining; no fresh catalyst <2h old today | **SKIP** |
+| **SOL/USD** | +1.95% | −2.7% from $70.89 | 0.015% ✅ | KG Inicis + SBI stablecoin on Solana (>24h old, stale) | Weekly gate: requires 1h >5% + catalyst <3h for non-exempt entry; stale catalyst; SOL declining from pre-session $70.57 | **SKIP** |
+| **ZEC/USD** | −3.97% | Declining | 0.040% ✅ | SEC investigation closed Jan 2026 (multi-month stale); ETF filing expected Q2 (already priced) | Declining from 24h open; no fresh catalyst today | **SKIP** |
+| **NEAR/USD** | −1.90% | Declining | 0.050% ✅ | None confirmed today (Perplexity +13% data was stale cache) | Declining | **SKIP** |
+| **XLM/USD** | −2.13% | Declining | 0.0001% ✅ | DTCC integration (>24h stale) | Declining | **SKIP** |
+| **ETH/USD** | −1.03% | Declining | 0.008% ✅ | Glamsterdam delayed Q3 2026 — no catalyst | Declining | **SKIP** |
+| **BTC/USD** | −0.21% | −1.0% from $60,666 | 0.0002% ✅ | None fresh | Weekly gate active; no 1h >5% | **SKIP** |
+| **XRP/USD** | (not checked live) | — | — | CLARITY Act: vote slipped to **late July/August** (Kalshi 42% probability); no floor vote ≤48h | Binary trigger NOT met; no imminent vote date | **SKIP — catalyst delayed** |
+
+**Perplexity Research Summary:**
+- MYRO, KYVE, CLV, DEXE: top 24h gainers globally — **not on Kraken** (DEXE, MYRO: unknown asset pair)
+- NEAR +13% from Perplexity = **stale cache** — Kraken live shows NEAR −1.9% from 24h open
+- ZEC +25% from Perplexity = stale 30d data; ZEC −3.97% on Kraken today
+- XLM DTCC integration: narrative >24h old; XLM declining −2.13% today
+- SYN: best Kraken mover at +10.35%, but 24h high $0.62 >> current $0.365; momentum peaked; no fresh catalyst <2h old
+
+**Why SYN Doesn't Qualify:**
+The Hypercall rebranding catalyst (Synapse Protocol → on-chain options exchange on Hyperliquid) drove the initial surge to $0.62 (24h high). Current price $0.3657 is −41% from that peak. The momentum peak check requires the 24h high to have been set within the last 60 minutes for standard entry; it was not. Price is declining, not accelerating. No distinct new catalyst event <2h old exists. Entry here would be chasing a faded momentum move.
+
+**CLARITY Act / XRP Update:**
+Senate floor vote before July recess now "unlikely" per Senators Lummis and Scott. Vote slipped to late July or August due to reconciliation disputes (ethics provision on Trump crypto holdings, stablecoin yield debates). Kalshi probability fell to 42%. Binary trigger (vote ≤48h out) is NOT met. Re-entry criteria unchanged — enter only when floor vote confirmed ≤48h.
+
+### Decision: HOLD CASH ($113.74 ZUSD) — No new entries
+
+1. Crash gate NOT triggered ✅
+2. BTC weekly gate TRIGGERED (−9.2% vs Jun 17 close $65,599)
+3. SYN: only Kraken pair with meaningful 24h gain, but momentum peaked at $0.62 (−41% from peak); fails momentum peak check; no fresh catalyst <2h old
+4. All other major Kraken pairs declining from 24h opens/highs
+5. CLARITY Act vote slipped to late July/August — binary trigger not met
+6. Fear & Greed 12 (Extreme Fear); 7-week consecutive ETF outflows; hostile macro
+7. Heavy unlock pressure: SAHARA ($35.5M), HANA ($11.6M), HYPE ($689M) today
+
+**Actions taken: NONE. No notification sent.**
+
+### Re-entry Criteria (updated)
+1. **XRP/CLARITY Act (primary):** Senate floor vote confirmed ≤48h out → enter XRP at market, 7% trailing stop GTC. Capital up to $113.74. Vote now expected late July/August at earliest.
+2. **SOL (secondary):** Break above $70.89 with fresh Solana catalyst <6h old + confirmed 1h surge >3% → 2.5% trail, T1 $72.69, T2 $74.10.
+3. **SYN watch:** If SYN breaks above prior 24h high ($0.62) on fresh Hypercall-related catalyst <6h old with confirmed volume surge, reassess entry. Do not chase below the prior 24h high.
+4. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.6% from $59,595) for standard momentum-only entries.
+5. **Crash gate remains at BTC >20% down 24h** (currently −0.21% — no risk).
