@@ -22853,3 +22853,84 @@ JTO at 21:05 UTC: ask $0.853, same 24h high $0.884 (−3.45% from high)
 3. **SOL:** Fresh Solana catalyst <3h old + 1h surge >3% → 2.5% trail, T1 $75.41, T2 $76.87
 4. **AAVE:** Breakout above $98.01 with volume → 2.5% trail, T1 ~$100.95, T2 ~$102.90
 5. **BTC weekly gate clears:** BTC must recover to ~$67,666 for standard momentum entries
+
+---
+
+## 2026-06-26 — Midday Scan (3rd Pass, session claude/sweet-keller-e9kn28)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+**BTC/USD:** ask $59,727 | 24h open $59,721 | **+0.01%** | 24h range $58,265–$60,666 | Crash gate NOT triggered ✓
+**BTC weekly gate:** TRIGGERED (BTC ~−8.9% vs Jun 17 close $65,599) — pure momentum banned; exempt catalysts still open ✓
+
+### STEP 1 — Portfolio Summary
+
+- AAVE trailing stop O5TPYW-SFE5T-VDNITZ fired (detected this scan) — AAVE sold ~$95.16 from entry ~$89.93 (+5.82%, above T2)
+- Aavenomics 3.0 catalyst (~10 AM UTC today: 100% protocol revenue to AAVE holders, $50M/year buyback) drove AAVE to 24h high $98.01; trailing stop HWM ~$97.60, fired on retreat
+- ZUSD now $119.53 (up from $0.66 after buy, +$5.79 net vs $113.08 invested = +5.10%)
+- Phase P&L updated: ~−$60.25 (−33.52% vs $179.78 starting equity)
+
+### STEP 2 — Positions & Orders (Live Kraken)
+
+- Positions: `{}` (no margin positions) ✓
+- Orders: `{}` (no open orders) ✓
+- Account balances: ZUSD $119.53 | AAVE $0.00004 (dust) | all others dust only ✓
+- Alpaca: historical orders only — stop a2b44cf9 confirmed cancelled 2026-05-22 ✓
+
+### STEP 3 — Stop Verification
+
+No open positions → no stops required ✓
+
+### STEP 4 — Stop Tightening
+
+No open positions → N/A ✓
+
+### STEP 5 — Thesis Check
+
+No open positions → N/A ✓
+
+### STEP 6 — New Entry Candidates (Live Kraken Quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| **OCEAN/USD** | $0.1249 | $0.0872 | **+43.2%** ✓✓ | $0.1256 | −0.6% ✓ | **1.44%** ❌ | **SKIP — spread >1% hard limit** |
+| **AAVE/USD** | $92.57 | $82.39 | +12.4% | $98.01 | −5.6% | 0.056% ✓ | **SKIP — momentum peak check FAILS** (24h high set hours ago; declining 5.6% from peak; no fresh catalyst <2h old; Aavenomics 3.0 announced ~10 AM UTC, now >2h) |
+| **SOL/USD** | $71.54 | $67.64 | **+5.76%** | $73.77 | −3.0% | 0.015% ✓ | **SKIP — weekly gate** (no exempt catalyst; KG Inicis/SBI stablecoin >24h old; no confirmed 1h >5% from a verified 1h open) |
+| **BTC/USD** | $59,727 | $59,721 | +0.01% | $60,666 | −1.5% | 0.0002% ✓ | SKIP — below 3% threshold; weekly gate active |
+| **ETH/USD** | — | — | — | — | — | — | SKIP — Glamsterdam delayed Q3; no momentum |
+
+**OCEAN analysis:** Best momentum name at +43.2% from open, only −0.6% off 24h high, and near-term peak likely recent. However **spread = 1.44%** (ask $0.1249, bid $0.1231, spread = $0.0018 / $0.1249 = 1.44%). Hard skip per strategy rule — spread >1% is a non-negotiable gate regardless of momentum quality.
+
+**AAVE re-entry analysis:** Additional bullish catalyst found (Aavenomics 3.0 — 100% revenue to holders + $50M buyback + Standard Chartered $3,500 target). However:
+- 24h high $98.01 set hours ago; current $92.57 = −5.6% off peak
+- No fresh catalyst within last 2h (Perplexity confirmed)
+- Momentum peak check: 24h high >60 min old, price declining — FAILS
+- Exception criteria not met: no fresh 1h breakout above $98.01, no new catalyst <2h old
+- SKIP for now. **AAVE re-entry trigger: breakout above $98.01 new 24h high with volume, OR fresh distinct catalyst <2h old**
+
+**SOL analysis:** Broke above prior watch level of $70.89 (now trading $71.54, new 24h high $73.77). But no fresh Solana catalyst today (confirmed via Perplexity: no new announcement in last 6h). Weekly gate standard entry requires confirmed 1h >5% + catalyst <3h old. Catalyst exemption does not apply. **SKIP.**
+
+**Decision: NO NEW ENTRIES.** ZUSD $119.53 (100% cash). Capital preserved.
+
+### Macro Context
+
+- BTC: $59,727 (+0.01% from 24h open), 24h range $58,265–$60,666 — essentially flat/slight recovery
+- Fear & Greed: Extreme Fear (~12–15) — 9th+ consecutive day
+- BTC weekly gate: active (−8.9% vs Jun 17)
+- CLARITY Act: Senate vote delayed to late July/August; no imminent binary trigger
+- ETF flows: 7+ consecutive weeks outflows
+- OCEAN: Perplexity reported WAR +302%, OCEAN +41% as Kraken top gainers — OCEAN confirmed live on Kraken, but spread rules it out
+
+### Actions Taken This Scan
+
+1. ✅ Detected AAVE trailing stop exit (O5TPYW-SFE5T-VDNITZ fired) — +5.10% net gain, above T2
+2. ✅ Trade log updated with AAVE exit details
+3. ✅ WhatsApp notification sent
+4. ✅ No new entries placed (all candidates fail at least one hard gate)
+
+### Re-entry Criteria (updated)
+
+1. **OCEAN/USD:** Spread must compress to ≤1% (currently 1.44%) AND price hold near 24h high → only viable if spread tightens
+2. **AAVE/USD:** Breakout above $98.01 (new 24h high) with volume, OR fresh distinct catalyst <2h old → 2.5% trail, T1 $100.95, T2 $102.90
+3. **SOL/USD:** Fresh Solana catalyst <3h old (Alpenglow launch, major partnership) + confirmed 1h >5% surge → 2.5% trail, T1 $73.69, T2 $75.12
+4. **XRP/CLARITY Act:** Senate floor vote confirmed ≤48h → enter market, 7% trail (binary catalyst)
+5. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.3% from $59,727) for unrestricted momentum entries

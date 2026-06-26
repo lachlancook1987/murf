@@ -6579,3 +6579,28 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 - BTC/USD: −0.18% — SKIP (weekly gate active; no fresh catalyst)
 - ENA/USD: −4.0% from open — SKIP (declining)
 
+---
+
+## 2026-06-26 — AAVE/USD TRAILING STOP EXIT (Midday Scan)
+
+**Stop Order ID:** O5TPYW-SFE5T-VDNITZ (fired automatically)
+**Symbol:** AAVE/USD | **Qty sold:** 1.2524 AAVE | **Side:** SELL (trailing stop)
+**Entry:** ~$89.93 | **Exit:** ~$95.16 (estimated from ZUSD reconciliation)
+**HWM at trigger:** ~$97.60 | **Trigger level:** ~$95.16 (HWM × 0.975) | **Trail:** 2.5% ✓
+**24h high (AAVE):** $98.01 — stop fired on retreat from peak
+**ZUSD received (net of fees):** ~$118.87 | **ZUSD before:** ~$0.66 | **ZUSD after:** $119.53
+
+| Metric | Value |
+|---|---|
+| Entry price | ~$89.93 |
+| Exit price | ~$95.16 |
+| Gain per AAVE | +$5.23 (+5.82% gross) |
+| Net ZUSD gain | +$5.79 (+5.10% of invested capital) |
+| T1 target ($92.63) | EXCEEDED ✓ |
+| T2 target ($94.43) | EXCEEDED ✓ |
+| Phase P&L (cumulative) | ~−$60.25 (−33.52% vs starting equity $179.78) |
+
+**Outcome:** Aavenomics 3.0 announcement (~10 AM UTC Jun 26: 100% protocol revenue to AAVE holders + $50M/year buyback) drove AAVE from the ~$89.93 entry to a 24h high of $98.01. Trailing stop HWM reached ~$97.60 before price retreated; stop fired at ~$95.16. Exit slightly above T2 ($94.43). Trade completed per strategy — stop protected the gain and captured above-target profit without manual intervention.
+
+**Portfolio after exit:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
