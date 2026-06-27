@@ -6604,3 +6604,17 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 
 **Portfolio after exit:** $119.53 ZUSD (100% cash) | No open positions | No open orders
 
+---
+
+## 2026-06-27 — EOD Snapshot (Day 38, Saturday)
+
+### Jun 27 — EOD Snapshot (Day 38, Saturday)
+**Portfolio:** $119.53 | **Cash:** $119.53 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$60.25 (−33.52%) | **vs BTC:** −0.57% (BTC +0.57%, 24h open $60,013 → $60,356)
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+**Trades today:** none | **Total since migration:** ~83
+**Notes:** Flat Saturday — no trades placed on Jun 27. Portfolio holds at $119.53 ZUSD (100% cash) following yesterday's successful AAVE/USD round trip (+$5.79, +5.10% on Jun 26). BTC recovered +0.57% on the day (24h open $60,013 → current $60,356; 24h high $60,472, 24h low $59,800). Bot underperformed BTC by −0.57% by holding cash, though this is expected on quiet recovery days with no qualifying catalyst. Phase P&L −33.52% from Kraken starting equity $179.78. BTC weekly gate remains active (BTC ~−8.0% vs Jun 17 close $65,599 — pure momentum banned; catalyst-driven entries exempt). Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22; no Alpaca exposure. Total ~83 trades includes the AAVE buy + trailing stop exit completed yesterday (Jun 26). Tomorrow (Sunday Jun 28): weekend volume typically thin; scan for catalyst-driven opportunities only — momentum >3% from 24h open + fresh catalyst <6h + spread ≤1% + R:R ≥1.2:1. Crash gate NOT triggered (BTC +0.57% today, far from −20% threshold).
+
+---
+
