@@ -23323,3 +23323,42 @@ No asset passes all gates simultaneously:
 
 **AAVE watchlist entry:** Above $97.94 + at/near new 24h high + confirmed catalyst <6h old → consider entry with 2.5% trailing stop; T1 $100.89; T2 $102.73; size ~100% equity ($119.53)
 
+
+---
+
+## 2026-06-27 — Midday Scan (~12:00 UTC)
+
+**Session branch:** claude/sweet-keller-qvf0h2  
+**Portfolio:** $119.53 ZUSD | No open positions | No open orders
+
+### Gate Status
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >20% down 24h) | NOT TRIGGERED |
+| BTC weekly gate (>3% down 5d) | TRIGGERED — BTC ~−8.6% vs Jun 17 close $65,599 |
+
+### Live Kraken Quote Screening
+
+| Asset | Open | Ask | vs Open | 24h High | vs High | Decision |
+|---|---|---|---|---|---|---|
+| INJ/USD | $4.853 | $4.736 | −2.41% | $5.07 | −6.6% | SKIP — below open, momentum peaked |
+| ETH/USD | $1,576.47 | $1,571.53 | −0.31% | $1,608.55 | −2.3% | SKIP — below open |
+| SOL/USD | $71.79 | $70.65 | −1.59% | $73.09 | −3.3% | SKIP — below open |
+| BTC/USD | $60,013 | $60,005 | −0.013% | $60,856 | −1.4% | SKIP — flat, weekly gate |
+| SUI/USD | $0.6974 | $0.6820 | −2.2% | $0.7164 | −4.8% | SKIP — below open |
+| TAO/USD | $214.41 | $208.98 | −2.53% | $215.10 | −2.8% | SKIP — below open |
+| HYPE/USD | $64.29 | $62.25 | −3.17% | $64.72 | −3.8% | SKIP — below open |
+| AVAX/USD | $6.621 | $6.378 | −3.67% | $6.660 | −4.2% | SKIP — below open |
+
+**INJ catalyst check:** USDC/CCTP integration (Jun 16, 2026) = 11 days stale. Coinbase EVM migration = 10 days stale. Injective Summit Jul 16 = not today. No fresh catalyst <6h confirmed.
+
+### Decision: NO NEW ENTRIES
+
+- Market broadly lower from open across all screened assets
+- No asset meets >3% from 24h open threshold
+- BTC weekly gate active — pure momentum blocked; catalyst-driven only
+- No fresh catalyst <6h on any Kraken pair
+- Alpaca: historical orders confirmed (BTC sold May 2026), no active exposure
+
+**Actions taken: NONE. No notification sent (no trades placed).**
