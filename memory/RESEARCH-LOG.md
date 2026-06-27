@@ -23091,3 +23091,60 @@ BTC weekly gate active: pure momentum entries BANNED; only catalyst-driven entri
 **NO NEW ENTRIES.** BTC weekly gate active (−7.9% vs Jun 17 close $65,599). No exempt catalyst found. No asset at or above 3% from 24h open with a fresh catalyst. INJ best candidate but fading and no new catalyst. Capital holds at $119.53 ZUSD.
 
 **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-27 — Midday Scan (2nd Pass, ~14:00 UTC)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No positions | No open orders
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC $60,413 vs 24h open $59,721 = +1.16% |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC $60,413 vs Jun 17 close $65,599 = −7.9% |
+
+### Market Snapshot (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,413 | $59,721 | +1.16% | — | — | ~0% | SKIP — below 3%; weekly gate active |
+| ETH/USD | $1,587 | $1,576.47 | +0.67% | — | — | 0.001% | SKIP — below 3% |
+| SOL/USD | $72.15 | $71.79 | +0.50% | — | — | 0.014% | SKIP — below 3% |
+| XRP/USD | $1.063 | $1.048 | +1.47% | — | — | 0.011% | SKIP — below 3%; no CLARITY trigger |
+| INJ/USD | $4.95 | $4.853 | +2.00% | — | — | 0.061% | SKIP — below 3%; faded from +4% at pre-session; no exempt catalyst |
+| JTO/USD | $0.802 | $0.804 | −0.34% | — | — | 0.103% | SKIP — declining |
+| **AAVE/USD** | **$96.87** | **$95.09** | **+1.87%** | **$98.95** | **−2.11%** | 0.083% | **SKIP** — below 3% threshold; below 24h high |
+| **SYN/USD** | **$0.3608** | **$0.3274** | **+10.20%** | **$0.3748** | **−3.74%** | **0.111%** | **SKIP** — weekly gate: no exempt catalyst (short squeeze + risk-on only; Bitget delisted Jun 18) |
+| VELVET/USD | $1.4408 | — | +107% | — | −1.69% | **1.916%** | SKIP — spread >1% hard rule |
+| UFD/USD | $0.01293 | $0.01218 | +6.16% | $0.01340 | −3.51% | 0.232% | SKIP — momentum peaked; weekly gate blocks (no exempt catalyst) |
+| DOLO/USD | $0.02348 | $0.02384 | −1.51% | — | — | **1.874%** | SKIP — declining; spread >1% |
+| INIT/USD | $0.05390 | $0.05540 | −2.71% | $0.05770 | −6.6% | 0.371% | SKIP — declining |
+| MAT/USD | $0.0602 | $0.0606 | −0.66% | — | — | **5.98%** | SKIP — spread far >1% |
+
+### Notable Findings
+
+**SYN/USD — Strong price action but blocked:**
+- +10.20% from 24h open; spread 0.111%; vol 7.1M ZUSD (high)
+- BTC weekly gate BLOCKS: Perplexity confirms no project-specific catalyst — move driven by short squeeze + broad risk-on sentiment
+- Negative context: Bitget delisted SYN Jun 18, Coinbase delisted 2025; RSI 89.62 (overbought); open interest at all-time high (leverage risk)
+- Could qualify if BTC weekly gate clears (~$67,666 BTC needed) — but not today
+
+**AAVE/USD — Fresh catalysts, price below threshold:**
+- NEW CATALYSTS (June 27, unverified timing): Kraken parent (Payward Inc.) reportedly in talks to acquire 15% equity stake in Aave Group at ~$385M valuation; Grayscale filed for AAVE ETF; Aavenomics 3.0 confirmed (100% protocol revenue to AAVE holders + $50M/year buyback)
+- Current price +1.87% from 24h open — below 3% entry threshold
+- 24h high $98.95 set earlier today; current $96.87 = −2.11% below peak
+- WATCH: if AAVE breaks above $97.94 (3% from today's open $95.09) AND approaches/makes new 24h high above $98.95, consider re-entry — Aavenomics 3.0 protocol revenue change arguably qualifies as BTC weekly gate exempt (protocol upgrade)
+- Same-thesis cap: 0 stop-outs in 7d window (yesterday's AAVE exit was a WIN) ✓
+- Entry trigger: AAVE above $97.94 + at/near new 24h high + Kraken equity news confirmed <6h old
+
+**VELVET/USD — Illiquid, spread disqualified:**
+- +107% from 24h open but spread 1.916% (hard skip >1%)
+- Catalyst: Trade.xyz SpaceX/OpenAI/Anthropic pre-IPO synthetic futures integration
+- Insider selling flagged (22M tokens moved to exchanges); token unlock Jul 10 — risk of dump
+
+### Decision
+**NO NEW ENTRIES.** BTC weekly gate active (−7.9% vs Jun 17 close $65,599). Best opportunity (SYN) blocked by weekly gate with no exempt catalyst. AAVE below 3% threshold. Capital holds at $119.53 ZUSD.
+
+**Actions taken: NONE. No notification sent.**
+
