@@ -23058,3 +23058,36 @@ BTC weekly gate active: pure momentum entries BANNED; only catalyst-driven entri
 - Best candidate (INJ) lacks the fresh catalyst required for BTC weekly gate exemption
 - All other assets below 3% threshold or failing other hard gates
 - Capital preserved at $119.53; awaiting catalyst-driven setup or BTC weekly gate clearance
+
+---
+
+## 2026-06-27 — Midday Scan (~12:00 UTC)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No positions | No open orders
+
+### Market Snapshot (live Kraken quotes, ~12:00 UTC)
+
+| Asset | vs 24h Open | vs 24h High | Spread | Notes |
+|---|---|---|---|---|
+| BTC/USD | +0.51% | −0.25% | ~0% | Weekly gate still active (−7.9% vs Jun 17) |
+| ETH/USD | +0.23% | −0.73% | 0.001% | Below 3% threshold |
+| SOL/USD | −0.04% | −2.72% | 0.014% | Declining |
+| INJ/USD | +2.27% | −2.11% | 0.081% | Faded from +4% at pre-session; no catalyst |
+| XRP/USD | +0.82% | −0.90% | 0.011% | Below threshold; CLARITY Act still far out |
+| AVAX/USD | −1.68% | −2.25% | 0.015% | Declining |
+| HYPE/USD | −2.15% | −3.75% | 0.016% | Declining |
+| AAVE/USD | −0.18% | −3.15% | 0.011% | Flat after yesterday's run |
+| RENDER/USD | +2.16% | −1.83% | 0.062% | Below threshold; no fresh catalyst |
+| FET/USD | +0.79% | −1.92% | 0.056% | Below threshold |
+
+### Catalysts Checked
+- **Elon Musk / Nasdaq bell / AI tokens:** Event was June 12 — 15 days stale. Not exempt.
+- **OMNI/USD:** 80% spread (confirmed illiquid; zero volume).
+- **MAT/USD:** −0.50% from open; spread 2.99% — double skip.
+- **Perplexity-flagged volume surges (COAI, SQD, TIG, AIN):** All on Hyperliquid DEX, not Kraken.
+- No fresh catalyst <6h old identified for any Kraken-tradeable asset.
+
+### Decision
+**NO NEW ENTRIES.** BTC weekly gate active (−7.9% vs Jun 17 close $65,599). No exempt catalyst found. No asset at or above 3% from 24h open with a fresh catalyst. INJ best candidate but fading and no new catalyst. Capital holds at $119.53 ZUSD.
+
+**Actions taken: NONE. No notification sent.**
