@@ -22934,3 +22934,127 @@ No open positions → N/A ✓
 3. **SOL/USD:** Fresh Solana catalyst <3h old (Alpenglow launch, major partnership) + confirmed 1h >5% surge → 2.5% trail, T1 $73.69, T2 $75.12
 4. **XRP/CLARITY Act:** Senate floor vote confirmed ≤48h → enter market, 7% trail (binary catalyst)
 5. **BTC weekly gate clears:** BTC must recover to ~$67,666 (+13.3% from $59,727) for unrestricted momentum entries
+
+---
+
+## 2026-06-27 — Pre-Session Research (Session claude/affectionate-gates-pl8tys)
+
+**Timestamp:** 2026-06-27 ~07:00 UTC  
+**Session branch:** claude/affectionate-gates-pl8tys
+
+### Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD (100% cash) | None | None |
+| Alpaca | Residual — historical orders only (BTC sold May 2026) | None | None |
+
+All Kraken non-ZUSD balances are dust (<$0.01 value each). No open margin positions. No open orders.
+
+**Phase P&L (cumulative):** ~−$60.25 (−33.52% vs starting equity $179.78)  
+Last trade: AAVE/USD 2026-06-26 +5.10% net gain (+5.82% gross), T2 exceeded.
+
+### Gate Status
+
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC −0.14% from 24h open |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC ~$59,919 vs Jun 17 close $65,599 = −8.6% |
+
+BTC weekly gate active: pure momentum entries BANNED; only catalyst-driven entries (regulatory event, exchange listing, protocol upgrade) remain open.
+
+### Market Context
+
+| Asset | Live Kraken Ask | 24h Open | vs Open | 24h High | vs High |
+|---|---|---|---|---|---|
+| BTC/USD | $59,919 | $59,721 | −0.14% | $60,666 | −1.2% |
+| ETH/USD | $1,582 | $1,576.47 | +0.35% | $1,591.70 | −0.6% |
+| SOL/USD | $72.12 | $71.79 | +0.46% | $73.77 | −2.2% |
+| XRP/USD | $1.0575 | $1.0476 | +0.94% | $1.0657 | −0.8% |
+| INJ/USD | $5.047 | $4.853 | +4.00% | $5.048 | −0.02% |
+| JTO/USD | $0.8162 | $0.8042 | +1.49% | $0.8839 | −7.65% |
+| OCEAN/USD | $0.1157 | $0.1191 | −2.86% | $0.1256 | −7.87% |
+
+**Fear & Greed Index:** 13 (Extreme Fear) — consistent with prior 9+ days  
+**BTC Funding Rate:** +0.0053% (Binance), +0.0148% (Kraken) — slightly positive; longs pay shorts but not overheated  
+**BTC 24h Volume:** ~$34.8B  
+**BTC ATH:** $126,080 (Oct 6, 2025); current price ~52% below ATH
+
+### Perplexity Research Summary
+
+**BTC/ETH:** Perplexity claimed ETH +3.66% — contradicted by live Kraken data (only +0.35%). Perplexity market data remains unreliable; live quotes used for all decisions.
+
+**Top 24h gainers (Perplexity vs live Kraken):**
+- JTO: Perplexity +23.22% — live Kraken only +1.49% (fading significantly from 24h high −7.65%)
+- INJ: Perplexity +12.39% — live Kraken +4.00% (AT 24h high, strongest confirmed gainer)
+- OCEAN: Perplexity +38.6% — live Kraken −2.86%, spread 1.64% (declining AND wide spread)
+- OMNI: Perplexity +174% — live Kraken ILLIQUID (ask $0.71 / bid $0.139 = 48% spread, zero volume, zero trades) — completely unenterable
+
+**Catalysts (verified):**
+- **CLARITY Act:** NOT imminent. Senate has NOT passed it. Still needs: Senate Agriculture Committee markup, Senate floor vote (60-vote threshold), House reconciliation, Presidential signature. Significant midterm delay risk (Jan 2027 possible). July 4 signing date claimed by Perplexity is FICTION — bill hasn't passed Senate.
+- **Solana Firedancer:** Launched Dec 2025, now running on 20%+ of validators. Not a new catalyst today.
+- **INJ/Injective:** No new announcement on June 26–27. Last notable news: Coinbase EVM migration support (Jun 17, 10d old). Next major event: Injective Summit Jul 16 in Washington D.C.
+- **Token unlocks today:** HOPR 90M tokens (~$10.67M, 1.5% of market cap), YGG 9.52M tokens (~$18.58M, 1.19% of market cap) — minor selling pressure risk, not trade setups.
+- **Morgan Stanley Bitcoin Trust:** Ongoing institutional access driver; not a same-day catalyst.
+
+### Candidate Screening
+
+| Asset | vs Open | vs 24h High | Spread | BTC Weekly Gate | Catalyst | Decision |
+|---|---|---|---|---|---|---|
+| **INJ/USD** | +4.00% ✓ | −0.02% ✓ | 0.119% ✓ | **BLOCKED** | No fresh catalyst today | **SKIP** — weekly gate: no exempt catalyst <3h old; Coinbase EVM migration Jun 17 = 10d stale |
+| **ETH/USD** | +0.35% | −0.6% | 0.013% ✓ | BLOCKED | Glamsterdam delayed; no news | **SKIP** — below 3% threshold |
+| **XRP/USD** | +0.94% | −0.8% | 0.002% ✓ | BLOCKED | CLARITY Act: not imminent | **SKIP** — below threshold; binary trigger not met |
+| **SOL/USD** | +0.46% | −2.2% | 0.014% ✓ | BLOCKED | Firedancer old (Dec 2025) | **SKIP** — below threshold, no fresh catalyst |
+| **JTO/USD** | +1.49% | −7.65% | 0.131% ✓ | BLOCKED | JTX July launch (not today) | **SKIP** — momentum peaked; −7.65% from high; below threshold; weekly gate |
+| **OCEAN/USD** | −2.86% | −7.87% | 1.64% ❌ | — | None | **SKIP** — declining; spread >1% |
+| **OMNI/USD** | N/A | N/A | ~48% ❌ | — | None confirmed | **SKIP** — illiquid on Kraken (zero volume) |
+| **BTC/USD** | −0.14% | −1.2% | 0.0002% ✓ | BLOCKED | None | **SKIP** — below threshold; weekly gate |
+
+### Trade Ideas (Watch Conditions — not executable today)
+
+**1. INJ/USD — Momentum watch (await catalyst)**
+- Setup: INJ at 24h highs (+4%), excellent spread 0.119%, strong volume
+- Blocker: BTC weekly gate requires fresh catalyst <3h old
+- Watch for: Injective protocol announcement, new exchange listing, ETF approval news
+- Entry trigger: Confirmed catalyst <3h old + price above $5.048 (new 24h high) + spread ≤1%
+- Entry: Market | Stop: 2.5% trailing | T1: entry×1.03 | T2: entry×1.05
+- R:R: 1.2:1 at T1 ✓ | Size: up to 100% equity ($119.53)
+
+**2. XRP/USD — Binary catalyst (CLARITY Act Senate vote)**
+- Setup: XRP at $1.058, CLARITY Act on Senate Legislative Calendar
+- Trigger: Senate floor vote confirmed ≤48h away
+- Entry: Market | Stop: 7% trailing (binary catalyst) | T1: entry×1.03 | T2: entry×1.05
+- Note: Midterm delay to Jan 2027 is a significant risk; no floor vote scheduled yet
+
+**3. ETH/USD — Momentum recovery play**
+- Setup: ETH at $1,582, only 0.6% off 24h high $1,591.70
+- Trigger: ETH builds to +3% from daily open ($1,576.47 → above $1,623) + catalyst exemption OR BTC weekly gate clears
+- Entry: Market above $1,623 | Stop: 2.5% trailing | T1: entry×1.03 | T2: entry×1.05
+
+**4. SOL/USD — Ecosystem catalyst play**
+- Setup: SOL at $72.12, Firedancer running on 20%+ of validators
+- Trigger: Fresh Solana-specific catalyst <3h old (new partnership, listing, Alpenglow launch update)
+- Entry: Market | Stop: 2.5% trailing | T1: entry×1.03 | T2: entry×1.05
+
+**5. BTC weekly gate clear**
+- Trigger: BTC recovers to ~$67,666 (+12.9% from $59,919) → standard momentum entries re-enabled
+- No imminent path: BTC flat/mildly negative today
+
+### Risk Factors
+
+- Extreme Fear (index 13) for 9+ consecutive days — sentiment headwind for all entries
+- BTC weekly gate blocks momentum entries; catalyst-driven entries require specific fresh news
+- CLARITY Act delayed (potential Jan 2027) — XRP binary trigger remains far out
+- Perplexity data continues to be unreliable for real-time prices; all entries verified via live Kraken quotes
+- Token unlocks today (HOPR ~$10.67M, YGG ~$18.58M) — minor selling pressure, not a factor
+- No open positions = no stop management required
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH ($119.53 ZUSD)**
+
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: TRIGGERED — pure momentum entries banned
+- Best candidate (INJ) lacks the fresh catalyst required for BTC weekly gate exemption
+- All other assets below 3% threshold or failing other hard gates
+- Capital preserved at $119.53; awaiting catalyst-driven setup or BTC weekly gate clearance
