@@ -23148,3 +23148,101 @@ BTC weekly gate active: pure momentum entries BANNED; only catalyst-driven entri
 
 **Actions taken: NONE. No notification sent.**
 
+
+---
+
+## 2026-06-27 — Pre-Session Research (~UTC session open)
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC $60,143 vs 24h open $60,013 = +0.22% |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC $60,143 vs Jun 17 close $65,599 = −8.3% |
+
+### Account Snapshot
+| Account | Balance | Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD (100% cash) | None | None |
+| Alpaca | $0 (no positions) | None | None (historical orders only from May 22) |
+
+All dust balances (AAVE 0.00004, AVAX 0.00033, FET 0.0000006, etc.) are negligible (<$0.01 combined). Portfolio 100% cash.
+
+### Market Context
+
+**BTC:** $60,143 | 24h open $60,013 | +0.22% | 24h range $59,800–$60,856 | Weekly: −8.3% vs Jun 17 close $65,599 → **weekly gate active**
+
+**ETH:** $1,577 | 24h open $1,576 | +0.06% | Flat — not in play
+
+**Fear & Greed Index:** 15 (Extreme Fear) — unchanged from yesterday
+
+**BTC Funding Rate:** Binance +0.0037% (slightly positive, longs paying shorts slightly); Kraken +0.0148% — neutral to mildly long-biased; no frothy signal
+
+**ETF Flows:** Spot BTC ETFs saw $1.3B outflows this week (13-day total $4.4B); ETH ETFs outflowing for 6–7 consecutive days ($81M Jun 25, $12.2M Jun 26) — institutional sellers active
+
+**CLARITY Act:** White House targeting July 4 for signing; uncertainty over Trump's signing due to competing legislative priorities. Binary XRP trigger remains late July/August.
+
+**Token Unlocks:** No major unlocks this week; only minor (HOPR 10M, YGG 9.5M, INFRA 50K) — no market-moving supply event.
+
+### Live Kraken Quote Screening
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| VELVET/USD | $1.369 | $0.695 | +97% | $1.466 | −6.6% | **2.04%** | SKIP — spread >1% hard rule |
+| UFD/USD | $0.01273 | $0.01218 | **+4.52%** | $0.01340 | −5.0% | 0.55% | SKIP — momentum peaked (−5% from high, only 58 trades today); no exempt catalyst |
+| JTO/USD | $0.8092 | $0.8042 | +0.63% | $0.8475 | −4.5% | 0.096% | SKIP — below 3% threshold; momentum peaked −4.5% from high; SEC meeting catalyst old |
+| INJ/USD | $4.759 | $4.853 | −1.94% | $5.070 | −6.1% | 0.063% | SKIP — declining from open |
+| AAVE/USD | $93.83 | $95.09 | −1.32% | $98.95 | −5.2% | 0.043% | SKIP — below 24h open; watching for break above $97.94 |
+| SYN/USD | $0.2956 | $0.3274 | −9.71% | $0.3748 | −21.2% | 0.10% | SKIP — dump in progress |
+| XRP/USD | $1.054 | $1.048 | +0.58% | $1.076 | −2.1% | 0.012% | SKIP — below 3%; no CLARITY trigger |
+| BTC/USD | $60,143 | $60,013 | +0.22% | $60,856 | −1.2% | ~0% | SKIP — below 3%; weekly gate active |
+| ETH/USD | $1,577 | $1,576 | +0.06% | $1,609 | −2.0% | 0.003% | SKIP — below 3% |
+| SOL/USD | $71.09 | $71.79 | −0.97% | $73.09 | −2.7% | 0.014% | SKIP — declining |
+| AVAX/USD | $6.425 | $6.621 | −2.96% | $6.660 | −3.5% | 0.016% | SKIP — declining |
+| HYPE/USD | $62.13 | $64.29 | −3.36% | $64.72 | −3.9% | 0.016% | SKIP — declining |
+| OMNI/USD | $0.71 | — | — | — | — | **>400%** | SKIP — illiquid, zero trades |
+| MAT/USD | $0.0632 | $0.0606 | +4.3% | — | — | **13.77%** | SKIP — spread far >1% |
+| DOLO/USD | $0.02312 | $0.02384 | −3.0% | — | — | **1.90%** | SKIP — spread >1%; declining |
+| INIT/USD | $0.05270 | $0.05540 | −4.87% | $0.05540 | −4.9% | 0.19% | SKIP — declining |
+
+### Notable Catalysts Identified
+
+**AAVE — Multiple fresh catalysts (strongest setup, but price below threshold):**
+- Kraken's parent (Payward Inc.) reportedly acquiring 15% equity stake in Aave Group (~$385M valuation) — major exchange partnership / business catalyst
+- Grayscale filed for AAVE ETF; published $179 price target (vs current ~$94)
+- Aavenomics 3.0 confirmed: 100% protocol revenue to AAVE holders + $50M/year buyback
+- V4 Tokenization Spoke security audit published (no critical vulnerabilities) — on-chain securities finance expansion
+- RSI 71.89 (overbought); current price $93.83 = −1.32% from 24h open $95.09
+- **Entry trigger:** AAVE > $97.94 (3% above today's open) AND at/near new 24h high above $98.95 AND catalyst confirmed <6h old
+- **If triggered:** 2.5% trailing stop; T1 $100.89; T2 $102.73; R:R 1.2:1 at T1; size ~100% equity ($119.53)
+
+**JTO — SEC engagement catalyst (interesting but price action failed):**
+- Jito Labs met with SEC Crypto Task Force → regulatory engagement (weekly gate exempt category)
+- But live price only +0.63% from 24h open; peaked at $0.8475 (−4.5% below peak) → momentum peak check FAILS
+- Monitor: if JTO re-accelerates above $0.847 on volume, re-evaluate
+
+**VELVET — Extraordinary move but illiquid:**
+- +97% from 24h open; catalyst: Trade.xyz pre-IPO synthetic futures (SpaceX/OpenAI/Anthropic)
+- Spread 2.04% — disqualified; insider selling risk and token unlock risk noted
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH ($119.53 ZUSD)**
+
+Gates:
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: TRIGGERED (−8.3% vs Jun 17) — pure momentum blocked; catalyst-driven only
+
+No asset passes all gates simultaneously:
+- Only asset with exempt catalyst AND positive momentum (AAVE): price −1.32% from open → below 3% threshold
+- Only asset above 3% AND tradeable (UFD): no exempt catalyst AND momentum peaked AND thin volume
+- Only asset with exempt catalyst AND recovering momentum (JTO): peak >60 min ago → momentum peak check fails
+- Top percentage mover (VELVET): spread >1% hard skip
+
+**WATCHLIST for intraday monitoring:**
+1. **AAVE/USD above $97.94** — if BTC stabilizes and AAVE breaks $98.95 on fresh catalyst confirmation
+2. **JTO/USD above $0.847** — if SEC engagement drives second leg with volume
+3. **BTC/USD above $61,813** (~+3% from today's open) — would signal market-wide strength
+
+**Actions: NONE. No trades placed.**
+
+---
