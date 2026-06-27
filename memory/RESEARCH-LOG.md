@@ -23246,3 +23246,80 @@ No asset passes all gates simultaneously:
 **Actions: NONE. No trades placed.**
 
 ---
+
+---
+
+## 2026-06-27 — Late Session Scan (~UTC late session)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No positions | No open orders
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC $60,233 vs 24h open $60,013 = +0.37% |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC $60,233 vs Jun 17 close $65,599 = −8.2% |
+
+### Account Verified
+- Kraken positions: `{}` (no margin positions) ✓
+- Kraken orders: `{}` (no open orders) ✓
+- Kraken account: ZUSD $119.5306 | all other balances dust (<$0.01 value) ✓
+- Alpaca: historical orders only — stop a2b44cf9 CANCELLED 2026-05-22 ✓
+
+### Live Kraken Quote Screening
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,233 | $60,013 | +0.37% | $60,856 | −1.0% | ~0% | SKIP — below 3%; weekly gate active |
+| ETH/USD | $1,581 | $1,576 | +0.29% | $1,608 | −1.7% | 0.001% | SKIP — below 3% |
+| SOL/USD | $71.36 | $71.79 | −0.60% | $73.09 | −2.4% | 0.014% | SKIP — declining |
+| XRP/USD | $1.054 | $1.048 | +0.65% | $1.076 | −2.0% | 0.012% | SKIP — below 3%; no CLARITY trigger |
+| JTO/USD | $0.819 | $0.804 | +1.84% | $0.848 | −3.4% | 0.013% | SKIP — below 3% threshold |
+| INJ/USD | $4.767 | $4.853 | −1.77% | $5.070 | −6.0% | 0.063% | SKIP — declining |
+| AAVE/USD | $93.69 | $95.09 | −1.47% | $98.95 | −5.3% | 0.043% | SKIP — below 24h open; entry trigger $97.94 not met |
+| DOGE/USD | $0.0747 | $0.0757 | −1.27% | $0.0764 | −2.2% | 0.009% | SKIP — declining |
+| UFD/USD | $0.01279 | $0.01218 | +5.01% | $0.01340 | −4.6% | 0.55% | SKIP — momentum peaked (−4.6% from high); only 43 trades; no exempt catalyst |
+| INIT/USD | $0.05270 | $0.05540 | −4.87% | $0.05540 | −4.9% | 0.38% | SKIP — declining; 25 trades only |
+| OMNI/USD | — | — | — | — | — | >400% | SKIP — illiquid, zero volume |
+| VELVET/USD | — | — | ~+47% | — | — | >1% | SKIP — spread far >1% |
+
+### Perplexity Research Summary
+
+**Fear & Greed Index:** 15 (Extreme Fear) — unchanged from earlier today
+
+**BTC Funding Rate:** Binance +0.0037%/8h, Kraken +0.0148%/8h — neutral, no frothy signal
+
+**Top 24h Movers (Perplexity):** VELVET +47%, JTO +23% (NOT confirmed by Kraken live data), INJ +12% (Kraken shows −1.77%) — Perplexity data stale/unreliable as usual; live Kraken quotes are authoritative
+
+**AGLD:** Not listed on Kraken (EQuery: Unknown asset pair) — skip
+
+**REX:** Not listed on Kraken (EQuery: Unknown asset pair) — skip
+
+**Token Unlocks Today:** HOPR $10.67M, YGG $18.58M, INFRA $284K — minor, not market-moving
+
+**ETF Flows:** Spot BTC ETFs $1.3B outflow this week (13-day total $4.4B); ETH ETFs 6–7 days consecutive outflow — institutional selling ongoing
+
+### AAVE Catalyst Update (new from this scan)
+
+**Additional catalyst identified:** Standard Chartered Bank initiated AAVE coverage with **$3,500 price target by 2030** (citing tokenized RWA market growth toward $2.7T). Combined with Aavenomics 3.0, Kraken equity stake talks, and Grayscale ETF filing — catalyst set remains compelling but stale relative to yesterday's Jun 26 entry.
+
+**AAVE re-entry check:**
+- Current: $93.69 vs 24h open $95.09 = −1.47% (below open)
+- Entry trigger: AAVE > $97.94 (3% above today's open) AND at/near new 24h high (>$98.95) AND catalyst <6h old
+- Status: Price is −5.3% below today's 24h high; momentum declining — entry trigger NOT met
+- Same-thesis cap: 0 stop-outs this 7d window; re-entry open when trigger met ✓
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH ($119.53 ZUSD)**
+
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: TRIGGERED (−8.2% vs Jun 17) — pure momentum blocked; catalyst-driven only
+- UFD only asset above 3% threshold: momentum peaked (−4.6% from high), only 43 trades (extremely thin volume), no exempt catalyst → SKIP
+- AAVE: strongest catalyst set but price −1.47% from open and −5.3% from today's high → entry trigger $97.94 not met
+- All other assets: below 3% from open or actively declining
+- Saturday weekend thin volume environment; market broadly bearish (Fear & Greed 15)
+
+**Actions taken: NONE. No notification sent (no trades placed).**
+
+**AAVE watchlist entry:** Above $97.94 + at/near new 24h high + confirmed catalyst <6h old → consider entry with 2.5% trailing stop; T1 $100.89; T2 $102.73; size ~100% equity ($119.53)
+
