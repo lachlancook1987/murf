@@ -23148,3 +23148,43 @@ BTC weekly gate active: pure momentum entries BANNED; only catalyst-driven entri
 
 **Actions taken: NONE. No notification sent.**
 
+
+---
+
+## 2026-06-27 — Afternoon Scan (3rd Pass, ~15:05 UTC)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No positions | No open orders
+
+### Gate Status
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC $60,486 vs 24h open $60,013 = +0.79% |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC $60,486 vs Jun 17 close $65,599 = −7.8% |
+
+### Market Snapshot (live Kraken quotes, ~15:05 UTC)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,486 | $60,013 | +0.79% | $60,619 | −0.22% | ~0% | SKIP — below 3%; weekly gate |
+| ETH/USD | $1,593.58 | $1,576.47 | +1.09% | $1,595.94 | −0.15% | 0.003% | SKIP — below 3%; weekly gate |
+| SOL/USD | $72.74 | $71.79 | +1.32% | $72.79 | −0.07% | 0.014% | SKIP — below 3%; weekly gate |
+| XRP/USD | $1.0678 | $1.0476 | +1.93% | $1.0679 | −0.01% | 0.004% | SKIP — below 3%; no binary trigger |
+| INJ/USD | $4.905 | $4.853 | +1.07% | $5.07 | −3.24% | 0.102% | SKIP — faded from +4% pre-session; below 3% |
+| SYN/USD | $0.3412 | $0.3274 | +4.22% | $0.3748 | −8.97% | 0.088% | SKIP — momentum peaked; no exempt catalyst |
+| AAVE/USD | $97.02 | $95.09 | +2.03% | $98.95 | −1.96% | 0.010% | SKIP — below $97.94 trigger; momentum peak not recent |
+
+### Catalyst Check
+- **AAVE:** Fresh catalysts present (Kraken 15% stake at $385M valuation, Grayscale AAVE ETF, Aavenomics 3.0) but AAVE at $97.02 is below the 3% trigger ($97.94) and 1.96% off 24h high — momentum peak check fails. CAPO oracle error ($27M liquidation) also noted as a negative. WATCH if AAVE breaks $97.94 AND makes new 24h high above $98.95.
+- **SYN:** +4.22% from open but momentum peaked at $0.3748 early session; now −8.97% from 24h high. No BTC weekly gate exempt catalyst.
+- **INJ:** Faded from pre-session high +4.00% to +1.07% now. No fresh catalyst; Injective Summit Jul 16 not an exempt trigger.
+- **AGLD:** +55% per Perplexity but NOT on Kraken (pair unknown).
+- **Perplexity gainers (DARIK, MWC, XCX):** Micro-caps — not on Kraken.
+
+### Decision
+**NO NEW ENTRIES.** BTC weekly gate active (−7.8% vs Jun 17 close $65,599). No asset qualifies:
+- SYN above 3% but momentum peaked; no exempt catalyst
+- AAVE below 3% trigger; momentum peak check fails
+- All other assets below 3% or declining
+Capital holds at $119.53 ZUSD.
+
+**Actions taken: NONE. No notification sent.**
