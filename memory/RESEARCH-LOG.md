@@ -23471,3 +23471,43 @@ Systematic screening results:
 
 **Actions taken: NONE.**
 
+
+---
+
+## 2026-06-28 — Midday Scan (~12:00 UTC, Sunday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
+### Step 2-3 — State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None (no stops needed) ✓
+- **Alpaca orders:** Historical only (May 2026) — no active exposure ✓
+- **Crash gate:** NOT triggered (BTC $60,111, +0.28% vs 24h open $59,941) ✓
+- **BTC weekly gate:** STILL TRIGGERED (BTC $60,111 vs Jun 17 close $65,599 = −8.3%) — pure momentum banned
+
+### Step 6 — Midday Momentum Scan
+
+**Note on Perplexity data:** Perplexity flagged XLM +72% weekly and ZEC +25% to $532 — both contradicted by live Kraken data. Stale data confirmed again; Kraken quotes authoritative.
+
+| Asset | Ask | 24h Open | vs Open | 24h High | Spread | Decision |
+|---|---|---|---|---|---|---|
+| BTC/USD | $60,111 | $59,941 | +0.28% | $60,856 | ~0% | SKIP — below 3% threshold |
+| ETH/USD | $1,575 | $1,572 | +0.21% | $1,609 | ~0% | SKIP — below 3% threshold |
+| SOL/USD | $71.22 | $70.40 | +1.17% | $73.09 | 0.014% | SKIP — below 3%; no exempt catalyst |
+| NEAR/USD | $1.870 | $1.870 | −0.03% | $1.941 | 0.059% | SKIP — flat/declining from high |
+| XLM/USD | $0.1711 | $0.1736 | −1.44% | $0.1791 | 0.044% | SKIP — below open |
+| ZEC/USD | $386.54 | $395.28 | −2.21% | $414.00 | 0.062% | SKIP — below open |
+
+**New catalysts noted:** None actionable vs pre-session. CFTC/Coinbase perp futures news insufficient to drive specific token >3% intraday. XLM DTCC integration (weekly catalyst) not producing intraday momentum vs 24h open.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+- No asset meets 3% momentum threshold from 24h open
+- BTC weekly gate blocks pure momentum entries
+- No exempt catalyst (regulatory vote, listing, protocol upgrade) driving >5% 1h momentum on any Kraken pair
+- Consistent with pre-session decision
+
+**Actions taken: NONE. No notification sent.**
