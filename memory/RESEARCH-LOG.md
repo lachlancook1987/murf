@@ -23511,3 +23511,56 @@ Systematic screening results:
 - Consistent with pre-session decision
 
 **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-28 — Second Midday Scan (~afternoon UTC, Sunday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
+### State Confirmed (2nd scan)
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca orders:** Historical only (May 2026) — no active exposure ✓
+- **Crash gate:** NOT triggered (BTC $59,999, +0.10% vs 24h open $59,941) ✓
+- **BTC weekly gate:** STILL TRIGGERED (BTC $59,999 vs Jun 17 close $65,599 = −8.5%) — pure momentum banned
+
+### Step 6 — Updated Momentum Scan
+
+| Asset | Ask | 24h Open | vs Open | 24h High | Spread | Decision |
+|---|---|---|---|---|---|---|
+| BTC/USD | $59,999 | $59,941 | +0.10% | $60,856 | ~0% | SKIP — below 3% threshold |
+| SOL/USD | $71.62 | $70.40 | +1.73% | $73.09 | 0.014% | SKIP — below 3%; below 24h high by 2.0% |
+| ETH/USD | $1,576 | $1,572 | +0.27% | $1,609 | ~0% | SKIP — below 3% |
+| AAVE/USD | $88.52 | $93.89 | −5.72% | $98.12 | 0.056% | SKIP — declining from prior run |
+| AXS/USD | $0.983 | $0.973 | +1.03% | $0.993 | 0.1% | SKIP — below 3% |
+| **SYN/USD** | **$0.3812** | **$0.2983** | **+27.8%** | **$0.4834** | **0.047%** | **SKIP — see below** |
+| ARB/USD | $0.0736 | $0.0733 | +0.41% | $0.0757 | ~0% | SKIP — below 3% |
+| FET/USD | $0.1715 | $0.1725 | −0.58% | $0.1814 | ~0% | SKIP — declining |
+| All other scanned alts | — | — | <0% or <2% | — | — | SKIP — flat/declining |
+
+**SYN/USD deep-screen:**
+- 24h open: $0.2983 → current ask: $0.3812 (+27.8%) — headline number is large
+- 24h high: $0.4834 — current price is 21.1% below the intraday peak
+- **Momentum peak check: FAIL** — peak set hours earlier, price has since retreated 21% from high; no fresh 1h breakout above prior high
+- **Catalyst check: FAIL** — Perplexity confirms no confirmed protocol event; only "speculative DeFi rotation, short-covering, possible listing changes"; no catalyst <2h old
+- **BTC weekly gate: ACTIVE** — pure momentum banned; catalyst exemption does not apply (no regulatory/listing/upgrade catalyst confirmed)
+- Spread 0.047% ✓ — only qualifying metric
+- Volumes high (~$73M 24h) indicating real activity but activity peaked and is unwinding
+- **Verdict: SKIP** — all three exit conditions met simultaneously: peak passed, no catalyst, weekly gate active
+
+**7-day context:** SYN has been up +136% in 7 days (Perplexity). This is a multi-day momentum move now in a significant intraday retracement. Buying -21% off peak without a catalyst is chasing a past move, not a fresh setup.
+
+**Market context:** Fear & Greed Index 18 (Extreme Fear). CLARITY Act at 48% Polymarket (not imminent). American Reserve Modernization Act (H.R. 8957) — 20-year BTC lockup bill — published but no floor vote scheduled. No binary catalyst imminent on any Kraken pair.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+- SYN +28% from open but -21% from 24h high with no catalyst — fails momentum peak check, weekly gate, and catalyst requirement simultaneously
+- No other asset meets 3% threshold from 24h open
+- BTC weekly gate remains active (−8.5% vs Jun 17)
+- No exempt catalyst on any Kraken pair
+
+**Actions taken: NONE. No notification sent.**
