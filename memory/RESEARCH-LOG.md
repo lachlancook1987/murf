@@ -23362,3 +23362,112 @@ No asset passes all gates simultaneously:
 - Alpaca: historical orders confirmed (BTC sold May 2026), no active exposure
 
 **Actions taken: NONE. No notification sent (no trades placed).**
+
+---
+
+## 2026-06-28 — Pre-Session Research (Sunday)
+
+**Session branch:** claude/affectionate-gates-p4ixok
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
+### STEP 1 — Account Snapshot
+
+**Kraken:**
+- ZUSD: $119.5306 (100% cash)
+- Open positions: none (no margin)
+- Open orders: none
+- Dust balances only (<$0.01 value): AAVE, AVAX, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH
+
+**Alpaca:**
+- Positions: none (residual BTC sold May 2026, stop cancelled 2026-05-22)
+- Orders: historical only (BTC buy/sell from May 2026 migration)
+
+### STEP 2 — Gate Status
+
+| Gate | Status | Detail |
+|---|---|---|
+| Crash gate (BTC >20% down 24h) | **NOT TRIGGERED** | BTC $60,134 vs 24h open $59,941 = +0.32% |
+| BTC weekly gate (>3% down 5d) | **TRIGGERED** | BTC $60,134 vs Jun 17 close $65,599 = −8.3% |
+
+Weekly gate effect: pure momentum entries banned; catalyst-driven entries (regulatory event, exchange listing, protocol upgrade) remain open with 1h momentum >5% AND catalyst <3h old.
+
+### STEP 3 — Market Context
+
+**BTC:** $60,134 | 24h open $59,941 | +0.32% | 24h range $59,675–$60,856
+**ETH:** $1,572 | 24h open ~$1,576 | −0.25% | 24h range $1,567–$1,606
+**Fear & Greed Index:** 15 — Extreme Fear (unchanged from prior days)
+**BTC Funding Rate:** Binance +0.0043%/8h — neutral (longs paying shorts minimally)
+
+**Top 24h Gainers (CoinGecko/CMC):**
+| Rank | Asset | 24h Change |
+|---|---|---|
+| 1 | VELVET | +92.78% |
+| 2 | PALLADIUM (PLLDV3) | +100.4% |
+| 3 | KLED | +50.2% |
+| 4 | DEXE | +65.17% |
+| 5 | DUAL | +31.7% |
+| 6+ | INIT, UFD, MAT, DOLO | +30–53% |
+
+**Key Catalysts & News (today, Jun 28):**
+- **CFTC cleared Coinbase** to offer global crypto perpetual futures — first US exchange with offshore derivatives access (breaking today)
+- **OP vesting schedule ends today** (Jun 28, 2026) — final day of 49-month schedule; 4.29B OP total released across 46 events — potential selling pressure
+- **CLARITY Act** — expected Senate debate early July; no imminent vote today
+- **Multicoin Capital** dumping 338K AAVE (sell pressure — negative for AAVE)
+- **Token unlocks this week:** H $46M (Jun 25), GT $45M (Jun 26), SAHARA $13M (Jun 26), GUA (Jun 27) — all passed; net minor selling pressure absorbed
+
+### STEP 4 — Live Kraken Quote Screening
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| OMNI/USD | $0.71 | $0.00 | n/a | $0.00 | n/a | ~410% | **SKIP** — zero volume/trades; completely illiquid |
+| MAT/USD | $0.0598 | $0.0606 | −1.3% | $0.0613 | −2.4% | 10.5% | **SKIP** — spread 10.5% (hard skip); below open; 28 trades |
+| DOLO/USD | $0.02343 | $0.02384 | −1.7% | $0.02384 | −1.7% | 1.91% | **SKIP** — spread 1.91% (hard skip); 1 trade; below open |
+| VELVET/USD | $1.5571 | $1.5259 | +2.04% | $1.7261 | −9.8% | 1.18% | **SKIP** — spread 1.18% (hard skip); below 3%; peaked −9.8% |
+| REX/USD | — | — | — | — | — | n/a | **SKIP** — not listed on Kraken |
+| UFD/USD | $0.01227 | $0.01230 | −0.24% | $0.01340 | −8.4% | 0.57% | **SKIP** — below open; peaked −8.4%; 37 trades (extremely thin) |
+| INIT/USD | $0.05360 | $0.05270 | +1.71% | $0.05420 | −1.1% | 0.37% | **SKIP** — below 3% threshold; 28 trades (thin) |
+| OP/USD | $0.1011 | $0.10050 | +0.60% | $0.10510 | −3.8% | 0.099% | **SKIP** — below 3%; vesting end = selling pressure; momentum peaked |
+| AAVE/USD | $90.80 | $93.89 | −3.29% | $98.95 | −8.2% | 0.077% | **SKIP** — well below open; Multicoin dump ongoing; entry trigger $96.71 not met |
+| SOL/USD | $71.10 | $70.40 | +0.99% | $73.09 | −2.7% | 0.014% | **SKIP** — below 3%; no fresh catalyst; weekly gate active |
+| BTC/USD | $60,134 | $59,941 | +0.32% | $60,856 | −1.2% | ~0% | **SKIP** — below 3%; weekly gate active |
+| ETH/USD | $1,572 | ~$1,576 | −0.25% | $1,608 | −2.2% | ~0% | **SKIP** — below open; declining |
+
+**Note on Perplexity data reliability:** Perplexity reported OMNI +174%, MAT +66%, DOLO +53% as top Kraken gainers — all contradicted by live Kraken data (OMNI illiquid/zero volume, MAT below open, DOLO below open). Perplexity market data remains stale; live Kraken quotes are authoritative.
+
+### STEP 5 — Trade Ideas Assessment
+
+**No qualifying setups identified.**
+
+Systematic screening results:
+- **Spread gate:** MAT (10.5%), DOLO (1.91%), VELVET (1.18%) — all hard skip
+- **Liquidity gate:** OMNI (zero trades/volume), UFD (37 trades), INIT (28 trades) — insufficient
+- **Momentum threshold (3% from open):** No Kraken-listed asset meets threshold except illiquid/wide-spread pairs
+- **Momentum peak check:** UFD −8.4%, VELVET −9.8%, OP −3.8%, AAVE −8.2% below 24h high — all failed
+- **Weekly gate (catalyst required):** Only CFTC/Coinbase news qualifies as fresh catalyst today — but no specific Kraken token shows >3% momentum from this catalyst; BTC/ETH barely moved
+
+**Watchlist for intraday monitoring:**
+1. **AAVE/USD above $96.71** (3% above today's open $93.89) — if Aavenomics 3.0 / V4 catalyst re-activates on fresh news; Multicoin dump is current headwind
+2. **SOL/USD above $72.51** (3% above today's open $70.40) — if BTC rallies and SOL breaks $73.09 new 24h high on volume
+3. **BTC/USD above $61,739** (3% above today's open) — would signal broad market strength and lift altcoins
+
+### STEP 6 — Risk Factors
+
+- **Extreme Fear (15):** Market broadly risk-off; any positive catalyst needed for momentum
+- **BTC weekly gate active:** -8.3% vs Jun 17 — pure momentum banned; requires 1h >5% + fresh catalyst <3h
+- **Multicoin Capital selling AAVE:** 338K AAVE dump adds near-term sell pressure to our primary watchlist candidate
+- **OP vesting end (today):** No short thesis on OP but sell pressure possible; avoid being long OP today
+- **CFTC/Coinbase news:** Positive for long-term sentiment but insufficient to drive specific token >3% intraday momentum on Sunday (thin weekend volume)
+- **Weekend volume:** Thin — fewer qualifying setups, wider effective spreads on smaller pairs
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH ($119.53 ZUSD)**
+
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: TRIGGERED (−8.3% vs Jun 17) — pure momentum blocked
+- No asset passes momentum threshold (>3% from open) with spread ≤1% and sufficient liquidity
+- No exempt catalyst drives any specific Kraken pair above threshold today
+- Sunday thin volume environment — unfavorable for new entries
+
+**Actions taken: NONE.**
+
