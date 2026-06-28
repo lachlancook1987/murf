@@ -23564,3 +23564,53 @@ Systematic screening results:
 - No exempt catalyst on any Kraken pair
 
 **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-28 — Late Afternoon Scan (~15:04 UTC, Sunday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca orders:** Historical only (May 2026) — no active exposure ✓
+- **Crash gate:** NOT triggered (BTC $59,986, +0.07% vs 24h open $59,942) ✓
+- **BTC weekly gate:** STILL TRIGGERED (BTC $59,986 vs Jun 17 close $65,599 = −8.5%) — pure momentum banned
+- **BTC funding rate:** 0.0017% (slightly positive, near balanced — no directional signal)
+- **Fear & Greed:** 18 (Extreme Fear)
+
+### Step 6 — Momentum Scan
+
+| Asset | Ask | 24h Open | vs Open | 24h High | Spread | Decision |
+|---|---|---|---|---|---|---|
+| ACT/USD | $0.01323 | $0.00789 | +67.7% | $0.01720 | 0.83% | SKIP — see below |
+| HYPE/USD | $62.92 | $61.60 | +2.14% | $64.72 | 0.016% | SKIP — below 3% threshold |
+| SOL/USD | $71.75 | $70.40 | +1.92% | $73.09 | 0.014% | SKIP — below 3% threshold |
+| ETH/USD | $1,581 | $1,572 | +0.62% | $1,609 | ~0% | SKIP — below 3% threshold |
+| BTC/USD | $59,986 | $59,942 | +0.07% | $60,856 | ~0% | SKIP — below 3% threshold |
+| ZEC/USD | $388.70 | $395.28 | −1.67% | $414.00 | 0.036% | SKIP — below open |
+
+**ACT/USD deep-screen (Act I: The AI Prophecy):**
+- 24h open: $0.00789 → current ask: $0.01323 (+67.7%) — headline large
+- 24h high: $0.01720 — current price is 23.1% below intraday peak
+- **Momentum peak check: FAIL** — peak set earlier (hours ago), price retraced 23% from high; no fresh 1h breakout above prior high; same failure pattern as SYN rejection earlier today
+- **Catalyst: NONE confirmed** — AI narrative/meme coin; no regulatory event, exchange listing, or protocol upgrade catalyst
+- **BTC weekly gate: ACTIVE** — pure momentum banned; no exempt catalyst to bypass gate
+- Spread 0.83% ✓ — sole qualifying metric
+- Volume: ~29.3M ACT (~$350K USD) — moderate for micro-cap ($8.7M market cap per Perplexity)
+- **Verdict: SKIP** — momentum peak passed, no BTC-gate-exempt catalyst, micro-cap pump risk
+
+**Perplexity data quality note:** Multiple queries returned stale/contradictory data (BTC referenced at $122,800; SOL +9% which contradicts Kraken's +1.92%). Kraken live quotes authoritative as always. Top CoinGecko gainers (VELVET, ANSEM, EDGE etc.) are not tradeable on Kraken.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+- ACT/USD only asset >3% from open; fails momentum peak check + catalyst requirement + BTC weekly gate
+- No other asset meets 3% momentum threshold
+- BTC weekly gate remains active (−8.5% vs Jun 17)
+- Sunday afternoon thin volume — consistent with full-day findings
+
+**Actions taken: NONE. No notification sent.**
