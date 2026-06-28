@@ -23614,3 +23614,146 @@ Systematic screening results:
 - Sunday afternoon thin volume — consistent with full-day findings
 
 **Actions taken: NONE. No notification sent.**
+
+## 2026-06-29 — Pre-Session Research (Monday Open)
+
+**Timestamp:** 2026-06-29T00:00Z (automated pre-session)
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders | No Alpaca exposure
+**Session branch:** claude/affectionate-gates-lpqhci
+
+---
+
+### Account Snapshot
+
+| Account | Balance | Positions | Open Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD | None | None |
+| Alpaca | $0 (closed May 2026) | None | None |
+
+**Phase P&L:** −$60.25 (−33.52% vs starting equity $179.78)
+**Last trade:** AAVE/USD round trip Jun 26, +$5.79 (+5.10%)
+
+---
+
+### Market Context (live Kraken quotes + Perplexity)
+
+| Asset | 24h Open | Current Ask | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $59,941 | $59,442 | −0.83% | $60,441 | −1.7% | ~0% | Below 3% |
+| ETH/USD | $1,572 | $1,564 | −0.46% | $1,586 | −1.4% | ~0% | Below 3% |
+| SOL/USD | $70.40 | $70.68 | +0.40% | $72.27 | −2.2% | 0.014% | Below 3% |
+| HYPE/USD | $61.60 | $61.93 | +0.54% | $63.45 | −2.4% | 0.016% | Below 3% |
+| FET/USD | $0.1725 | $0.1773 | +2.8% | $0.1774 | −0.1% | 0.11% | Below 3% threshold |
+| SYN/USD | $0.2983 | $0.3494 | +17.1% | $0.4834 | −27.7% | 0.17% | Peak check FAIL |
+| ACT/USD | $0.00789 | $0.01242 | +57.4% | $0.01720 | −27.8% | 1.22% | Spread >1% + peak FAIL |
+| JTO/USD | $0.8118 | $0.8212 | +1.2% | $0.8680 | −5.4% | 0.12% | Below 3% |
+| AVAX/USD | $6.422 | $6.342 | −1.25% | $6.449 | −1.7% | 0.016% | Negative |
+| INJ/USD | — | $4.598 | −1.3% | — | −4.6% | 0.04% | Negative |
+| AAVE/USD | $93.89 | $90.11 | −4.0% | $95.74 | −5.8% | 0.06% | Negative (post-run) |
+
+**Fear & Greed Index:** 18 (Extreme Fear) — per Perplexity + Alternative.me
+**BTC Funding Rate:** +0.0044% per 8h (Binance) — slightly positive, balanced/mild longs
+**BTC Weekly Gate:** ACTIVE — BTC $59,442 vs Jun 17 close $65,599 = −9.4% (gate triggers at >3%)
+**Crash Gate:** NOT triggered — BTC −0.83% from 24h open, far below −20% threshold
+
+---
+
+### Perplexity Research Summary
+
+**Top Perplexity-reported 24h gainers (cross-referenced Kraken):**
+- ANSEM: +1,651.7% — meme coin, not on Kraken
+- VELVET: +30.2% — not on Kraken
+- SYN (Synapse): +20.7% — Kraken data: +17.1% from 24h open but −27.7% from intraday peak $0.4834
+- MAGIC (Treasure): +20.3% — not on Kraken
+- MANTA: +17.6% — not on Kraken
+- OMNI: reportedly +174% on Kraken — live Kraken quote shows bid/ask spread ~411% with zero volume (phantom market, no real price action)
+- DOLO: reportedly +53% on Kraken — live Kraken quote shows +0% from open ($0.0227), spread 2.0%
+
+**Note on Perplexity reliability:** Named Kraken gainers (OMNI +174%, DOLO +53%) are completely contradicted by live quotes. Kraken live data is authoritative.
+
+**Token unlocks today (Jun 28/29 weekend):**
+- OP (Optimism): end of major vesting schedule on Jun 28 — sell pressure risk on OP/USD
+- PROS: 0.99% supply ($5.44M) — Jun 28
+- GRASS: 3.16% supply — Jun 28
+
+**Key catalysts:**
+- CLARITY Act: ~66% Polymarket probability — still not imminent (no floor vote scheduled)
+- Morgan Stanley Bitcoin Trust: new institutional BTC access channel (medium-term bullish)
+- Sharplink purchased 5,000 ETH: corporate ETH demand signal
+- FET: bearish token unlock today (2.59M FET / ~$465K for AGIX migration); bullish AI-sector narrative (US AI regulatory disruption driving DeFi AI inflows)
+- JTO: JTX platform launch expected July 2026 — pre-launch catalyst building
+
+---
+
+### Candidate Screening
+
+**SYN/USD:**
+- +17.1% from 24h open; spread 0.17% ✓; volume 8.3M SYN ✓
+- **SKIP** — momentum peak check FAIL: 24h high $0.4834 was set hours earlier; current $0.3494 = −27.7% below peak; no fresh catalyst <2h; classic pump-and-dump structure
+- BTC weekly gate also bans pure momentum entry (no exempt catalyst)
+
+**ACT/USD (Act I: The AI Prophecy — micro-cap AI meme):**
+- +57.4% from 24h open; volume 40.7M ACT ✓
+- **SKIP** — spread 1.22% (>1% hard limit); momentum peak FAIL (−27.8% from $0.01720 peak); no confirmed catalyst <6h; micro-cap pump risk
+- Both hard disqualifiers: spread + peak check
+
+**FET/USD:**
+- +2.8% from 24h open; spread 0.11% ✓; at 24h high (−0.1% from $0.1774 peak) ✓
+- **SKIP** — below 3% momentum threshold; weekly gate requires >5% 1h momentum + catalyst <3h; bearish token unlock today (2.59M FET)
+- Watch: if AI sector inflows push FET >5% from 24h open with a specific fresh catalyst, could qualify under catalyst exemption
+
+**JTO/USD:**
+- +1.2% from 24h open — well below threshold; spread 0.12% ✓
+- **SKIP** — below 3% threshold; JTX launch catalyst is "July" (not <6h old); no imminent trigger today
+
+**HYPE/USD:**
+- +0.54% from 24h open — below threshold
+- **SKIP**
+
+**XRP/USD:**
+- Not checked live (CLARITY Act probability 66% on Polymarket, no floor vote imminent)
+- **SKIP** — binary catalyst not triggered
+
+**OP/USD:**
+- −0.2% from 24h open (tested: ask $0.10030 vs open $0.10050); token unlock on Jun 28 is headwind
+- **SKIP** — flat/negative, supply headwind
+
+---
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+**Rationale:**
+1. **Crash gate:** NOT triggered (BTC −0.83%, far below −20% threshold)
+2. **BTC weekly gate:** ACTIVE (−9.4% vs 5-day reference $65,599) — pure momentum banned; only catalyst-exempt entries allowed
+3. **No qualifying catalyst setup:** No Kraken pair has >5% 1h momentum + fresh catalyst <3h required by weekly gate
+4. **Momentum peaked:** SYN and ACT both >15% from 24h open but −27-28% from intraday peaks — entering on declining momentum with no catalyst = chasing
+5. **Sunday/Monday boundary:** Thin weekend volume rolling into Monday open — wait for genuine Monday momentum with volume confirmation
+
+---
+
+### Conditional Watch List (not trades — monitoring for session)
+
+| Asset | Watch Level | Trigger | Catalyst |
+|---|---|---|---|
+| FET/USD | >$0.185 with 1h +>5% | AI-sector catalyst <3h old | US AI regulatory inflows, ASI Alliance upgrade news |
+| JTO/USD | >$0.90 with 1h +>5% | JTX launch date confirmed or live | JTX platform launch (expected July) |
+| BTC/USD | >$61,500 Monday open | Monday institutional buying + ETF inflows | Morgan Stanley Trust, CLARITY Act progress |
+| SYN/USD | New 24h high + fresh catalyst | Only if price reclaims $0.48+ with new news | None currently confirmed |
+
+---
+
+### Risk Factors
+
+- **Extreme Fear (18):** Entire market risk-off; dip buyers absent; momentum plays can reverse violently
+- **BTC weekly gate (-9.4%):** No pure momentum trades; only catalyst exemptions
+- **Weekend volume:** Thin markets amplify both upside and false breakouts
+- **Perplexity unreliability:** Multiple Kraken pair % moves completely wrong vs live data — always verify with live quotes
+- **Token unlocks (Jun 28):** OP, PROS, GRASS supply releases could weigh on alts
+- **No FET entry:** Token unlock today is bearish near-term; avoid chasing AI narrative without price confirmation
+
+---
+
+### Decision: HOLD CASH — No new entries. Monitor for Monday catalyst setups.
+
