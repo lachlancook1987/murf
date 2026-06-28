@@ -23757,3 +23757,61 @@ Systematic screening results:
 
 ### Decision: HOLD CASH — No new entries. Monitor for Monday catalyst setups.
 
+---
+
+## 2026-06-28 — Evening Scan (~21:05 UTC, Sunday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/clever-allen-u4jl5h
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca:** Historical orders only (May 2026) — no active exposure ✓
+- **Crash gate:** NOT triggered (BTC $59,560, −0.64% vs 24h open $59,941) ✓
+- **BTC weekly gate:** ACTIVE (BTC $59,560 vs Jun 17 close $65,599 = −9.1%) — pure momentum banned; catalyst-driven entries exempt
+
+### Momentum Scan (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $59,560 | $59,941 | −0.64% | $60,441 | −1.5% | ~0% | SKIP — below open |
+| ETH/USD | $1,569 | $1,571 | −0.17% | $1,585 | −1.0% | ~0% | SKIP — below open |
+| SOL/USD | $70.73 | $70.40 | +0.47% | $72.27 | −2.1% | 0.014% | SKIP — below 3% threshold |
+| SYN/USD | $0.3579 | $0.2983 | +19.98% | $0.4834 | −26.0% | 0.084% | SKIP — momentum peak FAIL |
+| ZEC/USD | $380.41 | $395.28 | −3.78% | $401.29 | −5.2% | 0.040% | SKIP — declining from open |
+| HYPE/USD | $61.66 | $61.60 | +0.10% | $63.45 | −2.8% | 0.016% | SKIP — below threshold |
+| FET/USD | $0.1756 | $0.1725 | +1.80% | $0.1794 | −2.1% | 0.057% | SKIP — below 3% threshold |
+| AAVE/USD | $89.98 | $93.89 | −4.16% | $95.21 | −5.5% | 0.044% | SKIP — declining post-Jun26 run |
+| KGEN/USD | $0.1912 | $0.2256 | −15.24% | $0.2340 | −18.3% | 0.73% | SKIP — declining, thin volume |
+| OMNI/USD | — | — | — | — | — | ~47% | SKIP — phantom market (0 volume) |
+| DOLO/USD | $0.02312 | $0.02274 | +1.67% | $0.02274 | — | 2.2% | SKIP — spread >1%, 2 trades today |
+
+**SYN/USD note:** +19.98% from 24h open is the only headline mover but 24h high $0.4834 was set hours ago; current $0.3579 is −26.0% below peak. Momentum peaked mid-morning. No fresh catalyst <2h. BTC weekly gate still bans pure momentum entries. Same SKIP verdict as all prior Jun 28 scans.
+
+**Perplexity data quality (evening):** KGEN reported as +25.42% — contradicted by Kraken live quote (−15.24% from open). OMNI reported +174% on Kraken — confirmed phantom market (47% bid/ask spread, 0 trades, 0 volume). DOLO reported +53% — contradicted by Kraken (spread 2.2%, 2 trades, essentially dead). Bitcoin referenced at $60,095–$64,248 depending on Perplexity source vs Kraken $59,560. Perplexity stale/unreliable as always; Kraken data authoritative.
+
+**Fear & Greed Index:** 18 (Extreme Fear) — confirmed by multiple sources (Alternative.me, Binance Square)
+
+**Key catalysts assessed:**
+- Sharplink $7.85M ETH purchase (8 months gap) → bullish long-term signal but ETH −0.17% from open; no intraday momentum
+- CLARITY Act: August recess deadline erodes Polymarket probability; no imminent floor vote
+- American Reserve Modernization Act (HR 8957): 20-year BTC lockup; no floor vote scheduled
+- SYN: +19.98% from open — no confirmed catalyst; speculative/short-covering narrative only
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **Crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−9.1%) — pure momentum banned
+3. **No qualifying setup:** SYN only meaningful mover (+20% from open) but peak passed −26% ago; no exempt catalyst
+4. **Extreme Fear (18):** Risk-off environment
+5. **Sunday evening thin volume:** Consistent with full-day findings (all four prior Jun 28 scans reached same conclusion)
+
+**Pre-session research for Monday Jun 29 open already documented above (automated entry).**
+**Watch list for Monday:** FET >$0.185 with fresh AI-sector catalyst; JTO >$0.90 with JTX launch confirmation; BTC >$61,500 with institutional inflows/CLARITY Act progress; SYN — only if price reclaims $0.48+ with confirmed new catalyst.
+
+**Actions taken: NONE. No notification sent.**
+
