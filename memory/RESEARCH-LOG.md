@@ -23815,3 +23815,58 @@ Systematic screening results:
 
 **Actions taken: NONE. No notification sent.**
 
+
+---
+
+## 2026-06-28 — Midday Scan (Sunday, automated)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/sweet-keller-n95x0j
+
+### State (STEP 2)
+
+- **Kraken positions:** `{}` ✓
+- **Kraken orders:** `{}` ✓
+- **Kraken account:** ZUSD $119.5306; all other balances dust (<$0.01) ✓
+- **Alpaca:** Historical orders only (stop a2b44cf9 cancelled 2026-05-22) ✓
+
+**STEP 3 — Stop verification:** No open positions → N/A ✓
+**STEP 4 — Stop tightening:** No open positions → N/A ✓
+**STEP 5 — Thesis check:** No open positions → N/A ✓
+
+### STEP 6 — Candidate Screening (live Kraken quotes)
+
+**Macro:**
+- BTC: $59,695 | 24h open $59,941.50 | **−0.41%** | 24h high $60,441.10 | 24h low $59,193.20
+- BTC weekly gate: ACTIVE (BTC −8.93% vs Jun 17 close $65,599) — pure momentum banned; catalyst-exempt only
+- Crash gate: NOT triggered (−0.41%, far from −20%) ✓
+- Fear & Greed: 18 (Extreme Fear)
+
+| Asset | Ask | vs 24h Open | 24h High | vs High | Spread | Gate | Decision |
+|---|---|---|---|---|---|---|---|
+| ACT/USD | $0.01129 | +43.1% | $0.01720 | −34.4% | 0.35% ✓ | Momentum peak FAIL (peaked hrs ago, no catalyst <6h) | **SKIP** |
+| VELVET/USD | $1.8362 | +20.3% | $1.8999 | −3.35% | 1.9% | Spread >1% → hard skip | **SKIP** |
+| SYN/USD | $0.3577 | +19.91% | $0.4834 | −26.0% | 0.11% ✓ | Momentum peak FAIL | **SKIP** |
+| FET/USD | $0.1774 | +2.84% | $0.1794 | −1.11% | 0.11% ✓ | Below 3% threshold | **SKIP** |
+| ZEC/USD | $377.49 | −4.50% | $401.29 | −5.93% | 0.11% ✓ | Declining from open | **SKIP** |
+| PI/USD | $0.12469 | −3.30% | $0.13199 | −5.53% | 0.10% ✓ | Declining from open | **SKIP** |
+| ONDO/USD | $0.30977 | −0.40% | $0.3129 | −1.00% | 0.09% ✓ | Declining/flat | **SKIP** |
+| SUI/USD | $0.6843 | +0.16% | $0.6904 | −0.88% | 0.06% ✓ | Below threshold | **SKIP** |
+| JTO/USD | $0.82274 | +1.34% | $0.86797 | −5.21% | 0.14% ✓ | Below threshold, below daily high | **SKIP** |
+| ETH/USD | $1,574.87 | +0.20% | $1,585.80 | −0.69% | 0.04% ✓ | Below threshold | **SKIP** |
+| SOL/USD | $71.15 | +1.07% | $72.27 | −1.55% | 0.01% ✓ | Below threshold | **SKIP** |
+| BTC/USD | $59,695 | −0.41% | $60,441 | −1.23% | ~0% | Weekly gate active, below threshold | **SKIP** |
+
+**ACT note:** +43% from 24h open is the largest Kraken mover but price has crashed −34.4% from the $0.01720 intraday peak. No confirmed catalyst <6h. Weekly gate requires exempt catalyst for any entry. Momentum peak check FAILS per strategy (24h high >60 min old, price declining sharply from it).
+
+**VELVET note:** +20.3% from open with only −3.35% from high — but bid/ask spread is 1.9%, a hard skip.
+
+**Decision: NO NEW ENTRIES — HOLD CASH**
+
+1. BTC weekly gate ACTIVE (−8.93% vs Jun 17) — pure momentum banned
+2. No asset with >3% from open AND near 24h high (momentum peak check)
+3. No catalyst-exempt setup (no protocol upgrade, exchange listing, or regulatory event <6h confirmed on Kraken pair)
+4. Fear & Greed 18 (Extreme Fear) — risk-off environment
+5. Sunday thin volume — consistent with all prior Jun 28 scans
+
+**Actions taken: NONE. No notification sent.**
