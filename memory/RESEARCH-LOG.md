@@ -24347,3 +24347,109 @@ No open positions, no open orders — Steps 2 (state pull), 3 (stop verification
 
 **Actions taken: NONE. No notification sent.**
 
+
+---
+
+## 2026-06-29 — Midday Scan (~12:00 UTC, Monday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/sweet-keller-fyeoip
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca:** Historical orders only (May 2026, all filled) — no active exposure ✓
+- **Stop verification:** N/A (no open positions) ✓
+- **Crash gate:** NOT triggered (BTC $60,388, +1.51% vs 24h open $59,489) ✓
+- **BTC weekly gate:** ACTIVE (BTC $60,388 vs Jun 17 close $65,599 = −7.9%) — pure momentum banned; catalyst-driven entries exempt
+
+### Market Snapshot (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,388 | $59,489 | +1.51% | $60,687 | −0.5% | ~0% | Below 3% threshold |
+| ETH/USD | $1,617 | $1,570 | +3.03% | $1,634 | −1.1% | ~0% | Borderline; weak catalyst |
+| SOL/USD | $75.49 | $71.29 | +5.79% | $76.34 | −1.1% | 0.013% | No exempt catalyst |
+| HYPE/USD | $67.38 | $61.39 | +10.12% | $67.74 | −0.5% | 0.015% | Catalyst too old / MAS bearish |
+| XRP/USD | $1.062 | $1.047 | +1.45% | $1.075 | −1.2% | 0.003% | Below threshold |
+| FET/USD | $0.1768 | $0.1774 | −0.34% | $0.1823 | −3.0% | 0.17% | Negative |
+| AAVE/USD | $92.00 | $91.54 | +0.50% | $94.55 | −2.7% | 0.044% | Below threshold |
+
+**Fear & Greed Index:** 18 (Extreme Fear) — unchanged from pre-session
+**BTC Weekly Gate:** ACTIVE (−7.9% vs Jun 17 close $65,599)
+
+### Candidate Analysis
+
+**HYPE/USD (+10.12%, at 24h high):**
+- Volume: 314k+ HYPE, 14k+ trades — very high ✓
+- Spread: 0.015% ✓
+- Peak check: at 24h high $67.74 (−0.5% below) ✓
+- **Catalyst assessment:**
+  - Grayscale HYPE ETF (GHYP on Nasdaq): launched **June 3, 2026** — 26 days old, NOT fresh ✗
+  - Hyper Foundation $10M USDH grant program: **June 28** — 24h+ old, borderline ✗
+  - MAS (Singapore) Investor Alert for Hyperliquid: **June 29 (today)** — fresh but BEARISH ✗
+  - Six consecutive weeks of spot ETF inflows (most recent Jun 22): 7 days old ✗
+- **BTC weekly gate verdict:** No valid exempt catalyst today (only today-catalyst is bearish MAS alert)
+- **SKIP** — pure momentum entry banned; no qualifying exempt catalyst
+
+**SOL/USD (+5.79%, near 24h high):**
+- Volume: 415k+ SOL, 29k+ trades — extremely high ✓
+- Spread: 0.013% ✓
+- Peak check: 24h high $76.34, current $75.49 = −1.1% below (borderline) ⚠
+- **Catalyst assessment:**
+  - Firedancer upgrade: mainnet since **December 2024**, full rollout ongoing — NOT a fresh today catalyst ✗
+  - Alpenglow consensus upgrade: expected Q1 2026 — past event ✗
+  - RWA/DePIN growth narrative: ongoing, no specific today event ✗
+  - Whale $15M short: bearish pressure ✗
+- **BTC weekly gate verdict:** No exempt catalyst — pure momentum entry
+- **SKIP** — no qualifying catalyst; pure momentum banned by weekly gate
+
+**ETH/USD (+3.03%, near 24h high):**
+- Volume: 23.7k ETH — decent ✓
+- Spread: ~0% ✓
+- Peak check: 24h high $1,634, current $1,617 = −1.1% below ⚠
+- **Catalyst assessment:**
+  - BlackRock + Ethena Staked USDe launch (Jun 29, today): ETH ecosystem event — indirect, not a direct ETH protocol upgrade or listing ✗
+  - Sharplink 5,000 ETH purchase: Jun 26, >72h old ✗
+  - Vitalik selling ETH (early 2026): bearish historical ✗
+- **BTC weekly gate verdict:** Catalyst is indirect (ETH ecosystem but not regulatory/listing/upgrade for ETH itself)
+- **SKIP** — +3.03% barely meets threshold; catalyst is too weak/indirect for gate exemption; weak setup
+
+**XRP/USD (+1.45%):**
+- **CLARITY Act news today:** Senate Banking Committee placed bill on Legislative Calendar (No. 423); Chairman Tim Scott declared floor-ready; White House targeting July 4 signing
+- **However:** Probability dropped to ~50% (from 66%); needs 7 Democratic cloture votes (only 2 secured); "third week of June" floor deadline passed → July 4 target now "logistically impossible"
+- Price reflects uncertainty: only +1.45% from open — well below 3% threshold ✗
+- Binary trigger: Senate floor VOTE (not committee advancement) — NOT triggered ✗
+- **SKIP** — below threshold; binary catalyst not triggered
+
+**BTC/USD (+1.51%):**
+- Below 3% threshold ✗
+- **SKIP**
+
+### Today's CLARITY Act Update (Contextual)
+
+Senate Banking Committee advanced the CLARITY Act and placed it on the Senate Legislative Calendar today (June 29). This is bullish progress but probability has declined to ~50% from prior 66%. The July 4 signing target is now logistically unlikely (floor debate missed the third-week-of-June window). No Senate floor vote scheduled. Continue monitoring: if a floor vote is scheduled and XRP breaks above $1.10 with 1h momentum >5%, revisit at 7% trail.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **BTC crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−7.9%) — pure momentum banned; only catalyst-exempt entries allowed
+3. **HYPE** (+10.12%): Spectacular momentum but no valid exempt catalyst (Grayscale ETF 26 days old; today's only fresh event is a bearish MAS regulatory warning) → SKIP
+4. **SOL** (+5.79%): Strong momentum but no specific today catalyst (Firedancer is 2024 deployment, long-running story) → SKIP
+5. **ETH** (+3.03%): Barely meets threshold; BlackRock/Ethena launch is indirect for ETH price; catalyst too weak for gate exemption → SKIP
+6. **XRP** (+1.45%): CLARITY Act committee advancement is progress but not the binary floor vote trigger; price below threshold → SKIP
+
+### Watch List (updated)
+
+| Asset | Watch Level | Trigger | Catalyst |
+|---|---|---|---|
+| XRP/USD | >$1.10 with 1h +>5% | Senate floor vote scheduled or CLARITY Act floor debate begins | CLARITY Act (binary, 7% trail) |
+| SOL/USD | >$78 (new 24h breakout) with 1h +>5% + fresh catalyst | Alpenglow or specific protocol event <2h old | Broad ecosystem strength |
+| HYPE/USD | Wait for daily reset | Needs fresh catalyst <6h + BTC weekly gate lifted or catalyst exemption | MAS warning resolved; new institutional catalyst |
+| BTC/USD | >$62,000 Monday close | Weekly gate lifted (BTC recovers >$63,700) | Institutional inflows, CLARITY Act floor vote |
+
+**Actions taken: NONE. No notification sent.**
+
