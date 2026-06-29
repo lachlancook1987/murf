@@ -24125,3 +24125,140 @@ No open positions, no open orders — Steps 2 (state pull), 3 (stop verification
 5. **No other qualifying setups:** All other tracked assets negative or below threshold
 6. **EU MiCA enforcement vs Binance:** Broad regulatory headwind; Extreme Fear (18) per F&G
 7. **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-29 — Pre-Session Research (Day 40, Monday)
+
+**Execution time:** 2026-06-29 UTC | **Branch:** claude/affectionate-gates-r1zfmj
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders | No Alpaca exposure
+
+---
+
+### Account Snapshot
+
+| Account | Balance / State |
+|---|---|
+| Kraken ZUSD | $119.53 |
+| Kraken open positions | None (positions: {}) |
+| Kraken open orders | None (orders: {}) |
+| Alpaca | No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) |
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | 24h High | vs High | Spread | Notes |
+|---|---|---|---|---|---|---|
+| BTC/USD | $60,407 | +1.54% | $60,687 | −0.46% | ~0% | Near 24h high; reclaimed $60K |
+| ETH/USD | ~$1,573 | −0.14% | $1,595 | — | — | Flat/slight decline |
+| SOL/USD | $75.75 | +6.25% | $76.34 | −0.77% | 0.013% | Near 24h high ✓ |
+| SYN/USD | $0.5155 | +35.9% | $0.5443 | −5.3% | 0.70% | Arthur Hayes whale buy |
+| TAC/USD | $0.05859 | +121.9% | $0.06229 | −5.9% | 0.19% | No fresh catalyst |
+| AVAX/USD | $6.722 | +4.41% | $6.806 | −1.2% | 0.015% | No specific catalyst |
+| OMNI/USD | $0.89 ask / $0.39 bid | — | — | — | 56% | Hard skip — illiquid |
+
+**Fear & Greed Index:** 12 — Extreme Fear (cycle low per Perplexity)
+**BTC perpetual funding rate:** +0.0074% / 8h (Binance) — mildly positive (longs paying shorts)
+**BTC weekly gate:** ACTIVE — BTC $60,407 vs Jun 17 ref $65,599 = −7.9% (>3% threshold) → pure momentum entries banned; only catalyst-exempt entries allowed (regulatory/listing/protocol upgrade)
+**Crash gate:** NOT triggered — BTC +1.54% from 24h open, far below −20% threshold ✓
+
+---
+
+### Perplexity Research Summary
+
+- **BTC:** ~$60,407 on Kraken. Reclaimed $60K today — significant technical level. BTC volume +52% vs prior session. 24h high $60,687.
+- **ETH:** ~$1,573, −0.14% 24h. Flat, volume elevated +29%.
+- **Top 24h gainers (broad market):** TAC +173%, Superfortune +45%, Unibase +38%, ORDI +35.5%, RaveDAO +30.5%, Synapse (SYN) +30.4%. Most are not available on Kraken (ORDI confirmed unavailable).
+- **Kraken top gainers:** OMNI +174% (spread 56% — illiquid), TAC +122% (no fresh catalyst), SYN +30-36% (Arthur Hayes whale buy).
+- **SOL:** +6.25% from open on Kraken. Drivers: memecoin frenzy on Solana ecosystem, ANSEM airdrop driving DEX volume, 100 billion lifetime transactions milestone achieved. Alpenglow protocol upgrade (new consensus, 150ms finality) in validator voting targeting Q3 2026 mainnet — protocol upgrade catalyst.
+- **CLARITY Act / XRP:** Senate floor vote timing ~July 2026; Polymarket 48%. Not today's catalyst.
+- **Token unlocks (week of Jun 23-29):** Humanity $54.7M (Jun 25), MegaETH $13.5M (Jun 23), Sahara AI $14.8M (Jun 26) — all prior to today. Jun 29 only minor unlocks.
+- **Fed policy:** Kevin Warsh (Fed Chair) signaling inflation focus; rate hike by Sep priced in — macro headwind for risk assets.
+- **Intraday setups suggested by Perplexity:** SOL, BTC, ETH, AVAX — general liquidity leaders. Specific targets per Perplexity were stale/inconsistent.
+- **Volume surges:** BTC +52%, ETH +29%, SOL elevated, XRP first positive session in 4 days.
+- **SYN/Synapse:** Arthur Hayes-linked wallet $2.2M buy, Hypercall Derivatives Platform backing confirmed. SIN Mainnet + buyback program driving ~80% weekly surge. RSI 89.62 — deeply overbought.
+- **TAC:** No fresh catalyst today. Binance Alpha inclusion (May 1) was prior catalyst; current +122% move is pure momentum/self-reinforcing cycle. All-time high set ~1h ago.
+
+---
+
+### Candidate Screening
+
+| Asset | 24h from Open | vs 24h High | Spread | Weekly Gate Status | Decision |
+|---|---|---|---|---|---|
+| SOL/USD | +6.25% | −0.77% | 0.013% ✓ | Catalyst-exempt (protocol upgrade: Alpenglow) | **PRIMARY TRADE CANDIDATE** |
+| SYN/USD | +35.9% | −5.3% | 0.70% ✓ | Not exempt — needs 1h >5% + catalyst <3h; RSI 89.62 | SKIP — overbought, not exempt |
+| TAC/USD | +121.9% | −5.9% | 0.19% ✓ | Pure momentum, no catalyst → BANNED | SKIP |
+| AVAX/USD | +4.41% | −1.2% | 0.015% ✓ | No fresh catalyst — momentum only | SKIP |
+| BTC/USD | +1.54% | −0.46% | ~0% ✓ | CLARITY Act not today; below 3% threshold | SKIP — below threshold |
+| OMNI/USD | — | — | 56% ✗ | — | HARD SKIP — illiquid |
+| ORDI/USD | — | — | N/A | Not listed on Kraken | SKIP — not available |
+
+---
+
+### Trade Ideas
+
+#### IDEA 1 — SOL/USD: Alpenglow Protocol Upgrade + Ecosystem Momentum (PRIMARY)
+
+- **Catalyst:** Solana Alpenglow upgrade in validator voting — new consensus mechanism targeting 150ms finality, Q3 2026 mainnet. Protocol upgrade = catalyst-exempt from BTC weekly gate. Supporting: 100 billion lifetime transactions milestone, ANSEM airdrop driving DEX volume surge, memecoin ecosystem activity.
+- **Kraken pair:** SOL/USD ✓ (confirmed online)
+- **Spread:** 0.013% ✓ (well under 1%)
+- **Entry:** Market at ~$75.75
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC (place immediately after fill)
+- **T1:** $75.75 × 1.03 = **$78.02** (+3%)
+- **T2:** $75.75 × 1.05 = **$79.54** (+5%)
+- **R:R:** 3% gain / 2.5% stop = **1.2:1** ✓ (at minimum threshold)
+- **Momentum peak check:** 24h high $76.34, current $75.75 (−0.77% from high) — near peak, still running ✓
+- **Size:** 100% equity ($119.53) — highest conviction single setup; full deployment
+- **Risk notes:** BTC weekly gate active (Alpenglow exempts this). F&G 12 = Extreme Fear environment. SOL already +6.25% from open — late entry risk. Trailing stop protects immediately.
+
+#### IDEA 2 — SYN/USD: Arthur Hayes Whale Catalyst (SECONDARY / WATCHLIST)
+
+- **Catalyst:** Arthur Hayes-linked wallet $2.2M SYN buy (Hypercall Derivatives Platform backing). SIN Mainnet + buyback program. ~80% weekly surge.
+- **Kraken pair:** SYN/USD ✓
+- **Spread:** 0.70% ✓
+- **Entry:** Market at ~$0.5155 (if RSI cools and weekly gate criteria met)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $0.5155 × 1.03 = $0.5310 | **T2:** $0.5155 × 1.05 = $0.5413
+- **R:R:** 3% / 2.5% = 1.2:1 ✓
+- **Weekly gate assessment:** Arthur Hayes buy is NOT exempt (not regulatory/listing/protocol upgrade). Needs 1h momentum >5% AND catalyst <3h old for entry. Catalyst timing unclear.
+- **SKIP for now** — RSI 89.62 is extreme; momentum peaked at $0.5443; weekly gate enhanced criteria likely not met. Monitor for reset to $0.43-$0.45 and renewed momentum before reconsidering.
+
+#### IDEA 3 — TAC/USD: Pure Momentum (BANNED)
+
+- **24h move:** +121.9% from open; ATH set today; spread 0.19% ✓
+- **Catalyst:** NONE — pure momentum, self-reinforcing cycle. Binance Alpha inclusion (May 1) was prior catalyst, already fully priced.
+- **Decision:** BANNED under BTC weekly gate (pure momentum, no catalyst). RSI 82.6 = overbought. Do not enter.
+
+#### IDEA 4 — BTC/USD: Technical Recovery (CONTINGENT)
+
+- **Status:** +1.54% from open, near 24h high $60,687. Reclaimed $60K.
+- **Why skip now:** Below 3% momentum threshold for weekly gate entry. No specific catalyst today (CLARITY Act still weeks away, Fed = headwind).
+- **Trigger:** Watch for breakout above $60,687 with volume confirmation + CLARITY Act news or macro catalyst. If BTC breaks $61,500 on new catalyst, re-evaluate.
+
+---
+
+### Risk Factors
+
+1. **F&G 12 (Extreme Fear)** — risk-off environment; markets prone to sharp reversals
+2. **BTC weekly gate active** — BTC down 7.9% over past 12 days; only catalyst-exempt entries allowed
+3. **Fed potential rate hike (Sep)** — macro headwind suppressing risk appetite
+4. **SOL late entry** — already +6.25%; trailing stop at 2.5% means stop fires at ~$73.86; could be triggered by normal intraday volatility
+5. **Thin alts liquidity** — Extreme Fear = wider real spreads under stress; Kraken quotes may not reflect fill quality on size
+6. **No diversification** — single 100% SOL bet; if thesis fails, full capital at risk (but stop limits to ~−2.5% = ~−$3 loss)
+
+---
+
+### Decision
+
+**TRADE — Enter SOL/USD at market**
+
+- Crash gate: NOT triggered ✓ (BTC +1.54%)
+- BTC weekly gate: ACTIVE but SOL entry is CATALYST-EXEMPT (Alpenglow protocol upgrade)
+- Primary setup: SOL/USD market entry ~$75.75, 100% equity ($119.53), trailing stop 2.5% GTC immediately after fill
+- All other candidates screened and rejected (pure momentum, overbought, unavailable, or spread too wide)
+- Net expected P&L at T1: +$3.59 (+3%) | at T2: +$5.98 (+5%)
+- Phase P&L context: −$60.25 (−33.52%); starting equity $179.78
+
+**Planned trade for today's notification:** BUY SOL/USD ~$75.75 (100% equity, ~1.577 SOL), trailing stop 2.5% immediately after fill. T1: $78.02, T2: $79.54.
+
