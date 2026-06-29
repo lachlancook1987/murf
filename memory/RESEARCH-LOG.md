@@ -23995,3 +23995,72 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
 - Any Kraken listing announcement (check Kraken blog) → first-mover entry
 - CLARITY Act floor vote news → XRP at 7% trail (binary catalyst)
 
+
+---
+
+## 2026-06-29 — Midday Scan (~12:00 UTC, Monday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/sweet-keller-a418ga
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca:** Historical orders only (May 2026) — no active exposure ✓
+- **BTC:** $60,071 ask | 24h open: $59,488.90 | 24h high: $60,348.70 | vs open: +0.98%
+- **Crash gate:** NOT triggered (BTC +0.98%, far below −20%) ✓
+- **BTC weekly gate:** ACTIVE (BTC $60,071 vs Jun 17 close $65,599 = −8.4%) — pure momentum banned; catalyst-driven entries exempt
+
+### Steps 2–5 (position management)
+
+No open positions, no open orders — Steps 2 (state pull), 3 (stop verification), 4 (stop tightening), 5 (thesis check) all N/A.
+
+### Midday Momentum Scan (live Kraken quotes)
+
+| Asset | Ask | vs 24h Open | vs 24h High | Spread | Decision |
+|---|---|---|---|---|---|
+| BTC/USD | $60,071 | +0.98% | −0.46% | ~0% | SKIP — below 3% threshold |
+| ETH/USD | $1,577 | +0.49% | −0.55% | ~0% | SKIP — below threshold |
+| SOL/USD | $72.95 | +2.33% | −0.34% | 0.014% | SKIP — below 3% threshold (near high) |
+| AVAX/USD | $6.586 | +2.30% | −0.99% | 0.015% | SKIP — below threshold |
+| HYPE/USD | $62.76 | +2.23% | −1.09% | 0.016% | SKIP — below threshold |
+| OP/USD | $0.1023 | +2.51% | −0.39% | 0.196% | SKIP — below 3% threshold |
+| ENA/USD | $0.0791 | +3.27% | −0.13% | 0.127% | SKIP — no fresh catalyst (on-chain spike was Jun 18, 11 days ago) |
+| TIA/USD | $0.3877 | +3.69% | −0.51% | 0.052% | SKIP — no specific catalyst today; Perplexity confirms macro-driven move only |
+| SYN/USD | $0.4191 | +10.46% | −13.30% | 0.143% | SKIP — momentum peaked (−13.30% from 24h high $0.4834) |
+| RAVE/USD | $0.4014 | +22.88% | −24.84% | 0.755% | SKIP — momentum peaked (−24.84% from $0.5340 high) |
+| TAC/USD | $0.0527 | +99.81% | −9.28% | 2.235% | SKIP — spread 2.235% (>1% hard limit) |
+| ACT/USD | $0.0137 | +25.00% | −20.35% | 1.022% | SKIP — spread >1% + momentum peaked |
+| DOGE/USD | $0.0729 | −0.23% | −1.36% | 0.011% | SKIP — below open |
+| XRP/USD | $1.0506 | +0.35% | −0.52% | 0.001% | SKIP — below threshold |
+| SHIB/USD | $4.21e-6 | +1.40% | −0.12% | 0.071% | SKIP — below threshold |
+| KAVA/USD | $0.0430 | +1.65% | 0.00% | 0.233% | SKIP — below threshold |
+| FET/USD | $0.1778 | +0.23% | −2.47% | 0.112% | SKIP — below watch trigger ($0.185) |
+| JTO/USD | $0.8228 | +0.71% | −5.20% | 0.072% | SKIP — below watch trigger ($0.90) |
+
+**Watch list triggers (unmet):** FET <$0.185, JTO <$0.90, BTC <$61,500.
+
+### Perplexity Research Notes
+
+- **Fear & Greed Index:** 16 (Extreme Fear) — market risk-off
+- **BTC liquidations:** $768M in 24h (mostly longs) — per Perplexity (data may lag)
+- **DOGE volume:** +116% reported — not confirmed by Kraken live data (DOGE −0.23% from open)
+- **XRP on-chain activity:** +71.7% spike (2-week), no CLARITY Act floor vote imminent
+- **ENA catalyst confirmed stale:** On-chain spike was June 18 (not today); no new event today
+- **TIA:** No protocol news; macro-driven only; Perplexity reported 0.5-1.7% decline (contradicts Kraken +3.69% — Perplexity stale as usual)
+- **Perplexity intraday setups:** SOL, AVAX, LINK, ENA suggested — all below 3% threshold or no catalyst
+- **TAC/RAVE/ACT/SYN:** All pump-and-dump patterns (>20% from open but -10-25% from 24h highs)
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **Crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−8.4%) — pure momentum banned
+3. **No weekly-gate-exempt catalyst setup:** ENA on-chain spike was Jun 18 (stale); TIA macro-driven only; no Kraken listing/regulatory event/protocol upgrade <6h old
+4. **Momentum movers all peaked:** TAC/RAVE/ACT/SYN all well below 24h highs — no entry-ready momentum
+5. **Fear & Greed 16:** Extreme Fear; risk-off environment; cascading liquidations
+6. **Watch list triggers unmet:** FET, JTO, BTC all below their entry triggers
+7. **Actions taken: NONE. No notification sent.**
+
