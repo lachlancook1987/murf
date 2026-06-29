@@ -6652,3 +6652,25 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 - No crash gate triggered.
 
 **Result: NO-OP. No actions taken. No notification sent.**
+
+---
+
+## 2026-06-29 — Overnight Triage Check
+
+**Portfolio:** $119.53 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+
+**STEP 1 — Positions & Orders:**
+- Kraken positions: `{}` — no open positions ✅
+- Kraken orders: `{}` — no open orders ✅
+- Alpaca positions: `[]` — no Alpaca exposure (stop a2b44cf9 cancelled 2026-05-22; fully retired) ✅
+
+**STEP 2 — Trailing stop verification:** No open positions — N/A ✅
+**STEP 3 — Emergency exits:** No open positions — N/A ✅
+**STEP 4 — Stop tightening:** No open positions — N/A ✅
+
+**STEP 5 — Crash gate check:**
+- BTC bid: $59,793.80 | 24h open: $59,488.90 | 24h range: $58,818.60–$60,441.10
+- 24h move: **+0.51%** — well under ±20% crash gate threshold ✅
+- No crash gate triggered.
+
+**Result: NO-OP. No actions taken. No notification sent.**
