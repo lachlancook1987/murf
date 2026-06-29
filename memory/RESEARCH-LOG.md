@@ -24125,3 +24125,50 @@ No open positions, no open orders — Steps 2 (state pull), 3 (stop verification
 5. **No other qualifying setups:** All other tracked assets negative or below threshold
 6. **EU MiCA enforcement vs Binance:** Broad regulatory headwind; Extreme Fear (18) per F&G
 7. **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-29 — Session-Open Scan (Evening UTC)
+
+**Execution time:** 2026-06-29 evening UTC | **Branch:** claude/clever-allen-6q8yuf
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+
+### State Confirmed
+
+- Kraken positions: `{}` — no open positions ✅
+- Kraken orders: `{}` — no open orders ✅
+- Alpaca: historical orders only (stop a2b44cf9 cancelled 2026-05-22) ✅
+- BTC: ask $59,046 | 24h open $59,489 | 24h high $60,687 | vs open: **−0.74%**
+- Crash gate: NOT triggered (−0.74%, far below −20%) ✅
+- BTC weekly gate: **ACTIVE** (BTC −10.0% vs Jun 17 close $65,599) — pure momentum BANNED
+
+### Candidate Screening (live Kraken quotes)
+
+| Asset | Ask | vs 24h Open | vs 24h High | Spread | Decision |
+|---|---|---|---|---|---|
+| HYPE/USD | $64.04 | +4.32% | −1.32% | 0.016% ✓ | **SKIP** — high-ATR: 3.5% trail → R:R 0.86 FAIL; $10M USDH grant catalyst Jun 28 (>24h old) |
+| SYN/USD | $0.4379 | +15.4% | −2.69% | 0.32% ✓ | **SKIP** — Arthur Hayes buy peaked this morning at $0.45; price declined and recovered but weekly gate needs 1h>5% + fresh catalyst <3h; whale buy ≠ protocol exempt |
+| GWEI/USD | $0.2114 | +27.8% | −23.1% | 0.77% ✓ | **SKIP** — momentum peak catastrophic (−23.1% from high); pump-and-dump |
+| SOL/USD | $72.88 | +2.23% | −2.07% | 0.014% ✓ | SKIP — below 3% threshold |
+| ETH/USD | $1,564 | −0.35% | −2.1% | ~0% | SKIP — negative vs open |
+| BTC/USD | $59,046 | −0.74% | −2.41% | ~0% | SKIP — weekly gate; negative |
+| XRP/USD | $1.042 | −0.47% | −1.9% | 0.015% ✓ | SKIP — negative vs open |
+
+### Research Findings
+
+- **Fear & Greed:** 17–18 (Extreme Fear) — multi-source consensus
+- **BTC ETF flows:** −$444.5M today (7th consecutive outflow day); −$1.96B cumulative 7-day; −$6.89B 30-day; 26 of last 30 days negative
+- **CLARITY Act:** White House targets July 4 but NO Senate floor vote scheduled; needs 60 votes, has 2/7 Democrats needed; aspirational date not a confirmed binary catalyst
+- **Token unlocks today:** TREE $1.61M, WODO-XWGT, INFRA, HVLO — all minor; Falcon Finance $155.6M (FF not on Kraken)
+- **No new protocol upgrade, exchange listing, or regulatory event <6h** on any Kraken pair
+
+### Decision: NO NEW ENTRIES — HOLD CASH
+
+1. BTC weekly gate ACTIVE (−10.0%): pure momentum BANNED
+2. HYPE only asset near threshold meeting spread/volume but fails R:R (3.5% trail = 0.86:1)
+3. SYN momentum peaked hours ago; whale catalyst not protocol-exempt; weekly gate not met
+4. GWEI pump-and-dumped; all other assets negative vs open
+5. Fear & Greed 17 + 7th consecutive ETF outflow day = hostile environment
+6. CLARITY Act aspirational (July 4) — not a confirmed binary trigger today
+
+**Actions taken: NONE. No trade, no commit, no notification sent (per workflow: skip step 7-8 if no trades).**
