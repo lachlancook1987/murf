@@ -23870,3 +23870,128 @@ Systematic screening results:
 5. Sunday thin volume — consistent with all prior Jun 28 scans
 
 **Actions taken: NONE. No notification sent.**
+
+
+---
+
+## 2026-06-29 — Pre-Session Research (Monday, Day 40)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+**Session branch:** claude/affectionate-gates-eia10m
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD (100% cash) | None | None |
+| Alpaca | Historical only (stop a2b44cf9 cancelled 2026-05-22) | None | N/A |
+
+All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
+
+---
+
+### STEP 2 — Market Context (live Kraken quotes, Perplexity cross-referenced)
+
+**BTC/USD:** Ask $59,981 | 24h open $59,489 | **+0.83%** | 24h high $60,441 | 24h low $58,819
+**ETH/USD:** Ask $1,579 | 24h open $1,570 | **+0.59%** | 24h high $1,586
+**SOL/USD:** Ask $72.78 | 24h open $71.29 | **+2.09%** | 24h high $73.20
+**HYPE/USD:** Ask $62.56 | 24h open $61.39 | **+1.90%** | 24h high $63.45
+
+**Fear & Greed Index:** 12–16 (Extreme Fear) — multi-source consensus
+**BTC Perp Funding Rate:** +0.0013% to +0.0031% (mildly positive; longs paying shorts)
+**BTC Market Cap:** ~$1.20 trillion
+
+**Weekly gate check:** BTC $59,981 vs Jun 17 close $65,599 = **−8.6%** → **WEEKLY GATE ACTIVE**
+(pure momentum entries banned; catalyst-exempt entries remain open)
+
+**Crash gate check:** BTC +0.83% from 24h open — far from −20% → **NOT triggered** ✅
+
+---
+
+### STEP 3 — Key Catalysts & Market Drivers
+
+**Bearish headwinds:**
+- **7 consecutive days of U.S. spot ETF outflows:** Cumulative −$1.96B, with today's outflow at −$444.5M (BlackRock IBIT contributing ~$1.30B weekly)
+- **Investors selling BTC to fund AI IPOs** (SpaceX, Anthropic, OpenAI) and STRC dividends
+- **Hawkish macro:** Hot PCE + NFP data flipped Fed expectations to "higher-for-longer" under Chair Kevin Warsh; DXY strengthening
+- **BTC failed to hold $60K support**; 5.97% weekly decline
+
+**Token unlocks today (Jun 29):**
+- Falcon Finance ($FF): $155.6M unlock at 03:00 UTC (5.26% of market value — inflationary pressure)
+- Treehouse ($TREE): $1.61M (24.56% of market value)
+- Midnight ($NIGHT): $3.80M (12.84% of market value)
+- B-Squared ($B2): $1.72M unlock Jun 30
+
+**No new listing or regulatory catalysts** identified for Kraken assets in last 6h.
+
+---
+
+### STEP 4 — Candidate Screening (live Kraken quotes)
+
+| Asset | Ask | vs 24h Open | 24h High | vs High | Spread | Weekly Gate | Decision |
+|---|---|---|---|---|---|---|---|
+| ACT/USD | $0.01413 | **+28.9%** | $0.01720 | −17.8% | 0.83% ✓ | Momentum peak FAIL (peak >60min ago, no catalyst <3h) | **SKIP** |
+| SYN/USD | $0.3911 | +3.1% | $0.48340 | −19.1% | 0.18% ✓ | Momentum peak FAIL (−19% from high, no catalyst) | **SKIP** |
+| OMNI/USD | $1.045 | — | — | — | 63% bid/ask | Phantom market — hard skip | **SKIP** |
+| DOLO/USD | $0.02345 | — | — | — | 2.1% | Spread >1% — hard skip | **SKIP** |
+| SOL/USD | $72.78 | +2.09% | $73.20 | −0.57% | 0.01% ✓ | Below 3% threshold; weekly gate active | **WATCH** |
+| HYPE/USD | $62.56 | +1.90% | $63.45 | −1.40% | 0.016% ✓ | Below 3% threshold; weekly gate active | **WATCH** |
+| ETH/USD | $1,579 | +0.59% | $1,586 | −0.44% | 0.013% ✓ | Below threshold | **SKIP** |
+| BTC/USD | $59,981 | +0.83% | $60,441 | −0.76% | ~0% | Weekly gate active; below threshold | **SKIP** |
+| WAVES/USD | — | — | — | — | Unknown asset pair on Kraken | **SKIP** |
+
+**OMNI note:** Perplexity reported +174% — confirmed phantom market on Kraken (63% bid/ask spread, minimal volume). OMNI has been phantom throughout prior sessions.
+
+**ACT note (Act I: The AI Prophecy):** +29% from 24h open is the largest Kraken mover with tradeable spread (0.83%). However, 24h high $0.01720 was set >60min ago; current $0.01413 is −17.8% from peak. No confirmed catalyst <3h. Momentum peak check FAILS. Weekly gate requires fresh catalyst <3h for exempt entry. **SKIP.**
+
+**SYN note:** +3.1% from open but −19.1% from 24h high ($0.48340). Momentum peaked well before session open. **SKIP.**
+
+---
+
+### STEP 5 — Trade Ideas
+
+**Conditions assessment:**
+- Crash gate: NOT triggered ✅
+- Weekly gate: ACTIVE (BTC −8.6% from Jun 17) — pure momentum banned
+- Fear & Greed: 12 (Extreme Fear)
+- ETF outflows: 7 consecutive days, −$444.5M today
+- All top movers either phantom, peaked, or below 3% threshold
+
+**No qualifying setups at session open.** Weekly gate + momentum peak check eliminate all candidates.
+
+**Watch list for Monday session (enter only on fresh catalyst <3h):**
+
+1. **SOL/USD** — $72.78, approaching $73.20 24h high. Watch for breakout above $73.20 with volume confirmation + fresh catalyst (Solana ecosystem news, institutional buy). Entry on break above $73.20, stop: 2.5% trail, T1: $75.40, T2: $76.80, R:R: 1.4:1 ✓. Only if SOL crosses 3% from open (~$73.47+) with catalyst.
+
+2. **HYPE/USD** — $62.56, near 24h high $63.45. High-ATR asset (use 3.5% trail if entering). Catalyst needed: perpetuals volume surge, new listing, ecosystem upgrade. Entry >$63.50 breakout, stop: 3.5% trail (high-ATR), T1: $65.15, T2: $66.60, R:R: 1.2:1. Only catalyst-exempt entry.
+
+3. **BTC/USD** — If BTC reclaims $60,441 (24h high) with resuming ETF inflows or CLARITY Act progress, long side opens. Entry >$60,500, stop: 2.5% trail, T1: $62,315, T2: $63,525. Note: weekly gate requires catalyst <3h, not pure momentum.
+
+4. **ACT/USD** — Watch for recovery toward $0.01600–$0.01720 range with confirmed AI narrative catalyst. Only enter if: (a) new 24h high set within last 60min, (b) specific AI catalyst <2h. Otherwise ACT has peaked for today's session.
+
+5. **Macro reversal play (if ETF outflows stop):** Any Bloomberg/Reuters headline confirming net inflows to spot BTC ETFs would be a catalyst-exempt entry for BTC and ETH. Watch for that signal throughout the day.
+
+**Risk factors:**
+- BTC weekly gate compresses tradeable setups to catalyst-only — thin opportunity set
+- Extreme Fear (12) signals broad risk-off; alts may keep underperforming
+- Massive token unlocks today (Falcon Finance $155.6M) add sell pressure
+- Hawkish macro trajectory continues; rate cut hopes further delayed
+- ETF outflows structural, not temporary — institutional distribution ongoing
+
+---
+
+### Decision: **HOLD CASH — NO ENTRIES AT OPEN**
+
+1. Crash gate: NOT triggered ✅
+2. Weekly gate ACTIVE (−8.6%): pure momentum banned; no catalyst-exempt setup confirmed at session open
+3. All top movers fail momentum peak check (ACT −17.8%, SYN −19.1% from 24h highs)
+4. OMNI/DOLO confirmed phantom/illiquid — no usable setup there
+5. Fear & Greed 12 (Extreme Fear) + ETF outflows + hawkish macro = hostile entry conditions
+6. Capital preserved at $119.53 for next qualifying setup with fresh catalyst
+
+**Catalyst watchlist triggers (enter same day if any fires):**
+- ETF inflow headline → BTC/ETH long
+- SOL/HYPE breakout to new 24h high with volume → entry with 2.5%/3.5% trail
+- Any Kraken listing announcement (check Kraken blog) → first-mover entry
+- CLARITY Act floor vote news → XRP at 7% trail (binary catalyst)
+
