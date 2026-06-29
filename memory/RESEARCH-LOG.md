@@ -24064,3 +24064,64 @@ No open positions, no open orders — Steps 2 (state pull), 3 (stop verification
 6. **Watch list triggers unmet:** FET, JTO, BTC all below their entry triggers
 7. **Actions taken: NONE. No notification sent.**
 
+---
+
+## 2026-06-29 — Midday Scan (2nd Pass, ~afternoon UTC)
+
+**Execution time:** 2026-06-29 afternoon UTC | **Branch:** claude/sweet-keller-ulppb5
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders
+
+### State Confirmed
+
+- Kraken positions: `{}` — no open positions ✅
+- Kraken orders: `{}` — no open orders ✅
+- Alpaca orders: confirmed residual filled/historical orders only (stop a2b44cf9 cancelled 2026-05-22) ✅
+- STEPS 2–5 all N/A (no open positions to protect or tighten)
+
+### Market Context (updated live Kraken quotes)
+
+| Asset | 24h Open | Ask | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $59,489 | $59,226 | −0.44% | $60,687 | −2.41% | ~0% | Declining |
+| ETH/USD | $1,570 | $1,561 | −0.55% | $1,595 | −2.14% | ~0% | Declining |
+| SOL/USD | $71.29 | $73.09 | +2.52% | $74.42 | −1.79% | 0.014% | Below 3% |
+| HYPE/USD | $61.39 | $63.56 | **+3.53%** | $64.90 | −2.06% | 0.016% | ✓ threshold — no catalyst |
+| SYN/USD | $0.3794 | $0.4158 | +9.6% | $0.4500 | −7.6% | 0.58% | Catalyst priced in, peaked |
+| XRP/USD | $1.0470 | $1.0449 | −0.19% | $1.0643 | −1.82% | 0.015% | Negative |
+| LINK/USD | $7.257 | $7.239 | −0.24% | $7.395 | −2.13% | 0.045% | Negative |
+| TAO/USD | $204.14 | $203.36 | −0.38% | $208.75 | −2.57% | 0.030% | Negative |
+| ZEC/USD | $375.65 | $381.78 | +1.63% | $390.26 | −2.17% | 0.12% | Below 3% |
+
+**BTC weekly gate:** ACTIVE — BTC $59,226 vs Jun 17 close $65,599 = −9.7% (>3% gate)
+**Crash gate:** NOT triggered — BTC −0.44% from 24h open, well below −20% threshold
+
+### Candidate Analysis
+
+**HYPE/USD (+3.53%):**
+- Only asset above 3% threshold; spread 0.016% ✓; high-ATR asset (3.5% trail rule applies)
+- BTC weekly gate ACTIVE: requires 1h momentum >5% OR catalyst-exempt entry (regulatory, listing, upgrade)
+- No fresh HYPE catalyst <3h old — pure momentum play → **BANNED under weekly gate**
+- **SKIP**
+
+**SYN/USD (+9.6%):**
+- Named catalyst: Arthur Hayes-linked wallet $2.2M SYN buy (reported by Perplexity)
+- However: 24h high was $0.45 and current $0.4158 = −7.6% from peak; momentum declining
+- Catalyst is NOT catalyst-exempt (not regulatory/listing/protocol upgrade) — needs 1h >5% + fresh <3h
+- The Arthur Hayes buy is the same catalyst that drove the initial spike to $0.45 (already priced in)
+- Momentum peak check FAILS: price declining from 24h high; no fresh 1h breakout above $0.45
+- RSI 87 (overbought per Perplexity); low trust score (18%); volume concerns
+- **SKIP**
+
+**Other assets:** All negative vs open or below 3% threshold — no further screening required.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **Crash gate:** NOT triggered ✓ (BTC −0.44%)
+2. **BTC weekly gate:** ACTIVE (−9.7% vs Jun 17) — pure momentum banned; only catalyst-exempt allowed
+3. **HYPE:** Meets 3% threshold but has no catalyst → blocked by weekly gate
+4. **SYN:** Catalyst (Arthur Hayes buy) already priced in; price declining from peak; momentum peak check fails; low trust score
+5. **No other qualifying setups:** All other tracked assets negative or below threshold
+6. **EU MiCA enforcement vs Binance:** Broad regulatory headwind; Extreme Fear (18) per F&G
+7. **Actions taken: NONE. No notification sent.**
