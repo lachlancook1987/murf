@@ -24262,3 +24262,88 @@ No open positions, no open orders — Steps 2 (state pull), 3 (stop verification
 
 **Planned trade for today's notification:** BUY SOL/USD ~$75.75 (100% equity, ~1.577 SOL), trailing stop 2.5% immediately after fill. T1: $78.02, T2: $79.54.
 
+
+---
+
+## 2026-06-29 — Session-Open (2nd Pass, ~evening UTC)
+
+**Execution time:** 2026-06-29 UTC | **Branch:** claude/clever-allen-evd9ka
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders | No Alpaca exposure
+
+### Account Snapshot
+
+| Account | Balance / State |
+|---|---|
+| Kraken ZUSD | $119.53 |
+| Kraken open positions | None (positions: {}) |
+| Kraken open orders | None (orders: {}) |
+| Alpaca | Historical orders only — no active exposure |
+
+### Market Context (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,188 | $59,489 | +1.18% | $60,687 | −0.83% | ~0% | Below 3% threshold |
+| SOL/USD | $75.15 | $71.29 | +5.42% | $76.34 | −1.56% | 0.013% | Peak >60min old; catalyst stale |
+| HYPE/USD | $66.43 | $61.39 | +8.21% | $67.20 | −1.15% | 0.015% | No exempt catalyst |
+| ZEC/USD | $405.31 | $375.65 | +7.90% | $408.95 | −0.89% | 0.069% | Catalyst (Jun 3-5) stale |
+| SYN/USD | $0.4992 | $0.3794 | +31.6% | $0.5443 | −8.3% | 0.48% | Peaked; not exempt |
+| AVAX/USD | $6.659 | $6.438 | +3.43% | $6.806 | −2.16% | 0.015% | Pure momentum — banned |
+| SUI/USD | $0.7011 | $0.6807 | +3.00% | $0.7065 | −0.76% | 0.014% | Short squeeze — not exempt |
+| XLM/USD | $0.1757 | $0.1727 | +1.73% | $0.1787 | −1.72% | 0.051% | Below 3% threshold |
+| NEAR/USD | $1.8624 | $1.8300 | +1.77% | $1.9117 | −2.58% | 0.059% | Below 3% threshold |
+| ONDO/USD | $0.3161 | $0.3094 | +2.19% | $0.3224 | −1.93% | 0.057% | Below 3% threshold |
+
+**BTC crash gate:** NOT triggered (BTC +1.18% from 24h open, far below −20%) ✅
+**BTC weekly gate:** ACTIVE — BTC $60,188 vs Jun 17 ref $65,599 = **−8.2%** (>3%) → pure momentum banned; catalyst-exempt entries only
+
+### Candidate Screening
+
+**SOL/USD (+5.42%) — SKIP:**
+- Meets 3% threshold ✓ | Spread ✓ | Alpenglow is catalyst-exempt category ✓
+- BUT momentum peak check FAILS: 24h high $76.34 set >60 min ago (same high since pre-session research); current $75.15 is −1.56% from peak and declining
+- Alpenglow last major update: May 11, 2026 (validator testing began) — NOT a fresh catalyst <2h old
+- No fresh 1h candle breakout above $76.34 ✗ | No new distinct catalyst <2h old ✗
+- **SKIP — momentum peak check fails**
+
+**ZEC/USD (+7.90%) — SKIP:**
+- Meets 3% threshold ✓ | Spread 0.069% ✓ | Near 24h high (−0.89%) ✓
+- BUT catalyst (NU6.2 hard fork security fix, Orchard vulnerability) was deployed June 3, disclosed June 5 — **24-26 days old**, NOT <6h
+- Current +7.90% is recovery/short-covering from prior crash, NOT driven by fresh catalyst today
+- BTC weekly gate ACTIVE: pure momentum recovery without fresh catalyst → BANNED
+- **SKIP — catalyst stale (Jun 3-5, 24-26d old)**
+
+**HYPE/USD (+8.21%) — SKIP:**
+- Meets 3% threshold ✓ | Spread ✓ | Near peak (−1.15%) ✓
+- No catalyst at all — pure momentum + high-ATR asset
+- BTC weekly gate ACTIVE: pure momentum banned ✗
+- **SKIP — no exempt catalyst**
+
+**SYN/USD (+31.6%) — SKIP:**
+- Meets 3% threshold ✓ | Spread 0.48% ✓ | BUT −8.3% from 24h high (peaked)
+- Arthur Hayes $2.2M whale buy: not exempt category (not regulatory/listing/protocol upgrade)
+- Momentum peak check fails (−8.3% from peak) ✗
+- **SKIP — peaked; not exempt category**
+
+**AVAX, SUI, XLM, NEAR, ONDO:** No exempt catalyst or below 3% threshold — all skipped
+
+### Decision: NO NEW ENTRIES — HOLD CASH
+
+1. **Crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−8.2%) — pure momentum banned ✓
+3. **SOL:** Alpenglow catalyst exempt from gate BUT momentum peak check fails (high >60 min old, price declining, no fresh catalyst <2h) ✗
+4. **ZEC:** Best near-peak candidate (+7.90%, −0.89% from high) but catalyst 24-26 days old; recovery momentum only ✗
+5. **HYPE/SYN/AVAX/SUI:** No exempt catalyst or momentum peaked ✗
+6. **All others:** Below 3% threshold ✗
+
+**Capital preserved at $119.53 for next qualifying setup.**
+
+**Catalyst watchlist triggers:**
+- BTC breakout above $61,500 with CLARITY Act/ETF inflow news → long BTC
+- SOL breakout above $76.34 (new 24h high) with fresh Alpenglow/ecosystem news <2h → SOL re-evaluate
+- Any Kraken listing announcement → first-mover entry
+- ZEC Ironwood upgrade announcement (date TBD) → ZEC at 2.5% trail
+- CLARITY Act Senate floor vote → XRP at 7% trail (binary catalyst)
+
+**Actions taken: NONE. No notification sent.**
+
