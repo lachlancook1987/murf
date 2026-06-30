@@ -6720,3 +6720,46 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 | — | — | — | — | — | — | No open positions |
 **Trades today:** none | **Total since migration:** ~83
 **Notes:** Flat Tuesday (last day of Q2) — no trades on Jun 30. Portfolio holds at $119.53 ZUSD (100% cash). BTC fell −0.69% on the day ($59,706.80 → $59,295.60; 24h open $60,169.70, 24h high $60,687.00, 24h low $58,918.90). Bot outperformed BTC by +0.69% by holding cash on a down day — Q2 closes with BTC retracing from its intraday highs. BTC weekly gate remains active (BTC ~−9.6% vs Jun 17 close $65,599 — pure momentum banned; catalyst-driven entries exempt). Phase P&L unchanged at −$60.25 (−33.52% vs starting equity $179.78). Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22; no Alpaca exposure. Tomorrow (Wed Jul 1): first trading day of Q3 — watch for institutional repositioning, quarter-change flows, and potential volatility spike. Scan for catalyst-driven momentum: >3% from 24h open + fresh catalyst <6h + spread ≤1% + R:R ≥1.2:1. Crash gate NOT triggered (BTC −0.69%, far from −20% threshold).
+
+---
+
+## 2026-06-30 — Midday Scan (Day 41, Tuesday)
+
+**Time:** 10:04 UTC | **Action:** NEW ENTRY — KAS/USD
+
+### ENTRY: KAS/USD (Toccata Hard Fork Catalyst)
+
+| Field | Value |
+|---|---|
+| **Entry order TXID** | O72IUV-PG6JN-DVUIHD |
+| **Stop order TXID** | OHWCC7-QVXYP-4TKRCP |
+| **Qty** | 3,650 KAS |
+| **Fill price (est.)** | ~$0.031776 (market) |
+| **Total cost** | ~$115.98 (~97% equity) |
+| **ZUSD remaining** | $3.55 |
+| **Stop type** | trailing_stop, trail_percent: 3.5 (high-ATR exception) |
+| **T1** | $0.032729 (+3%) |
+| **T2** | $0.033365 (+5%) |
+| **R:R at T2** | 5% / 3.5% = 1.43:1 ✓ |
+
+**Catalyst:** Kaspa Toccata hard fork activates at 16:15 UTC today (Jun 30, 2026). Introduces native tokens, SilverScript (L1 programmability), covenants, ZK proofs — making Kaspa fully programmable. Explicitly catalyst-exempt from BTC weekly gate (protocol upgrade).
+
+**Entry rationale:**
+- Pre-session plan: enter if KAS breaks above 24h high $0.031220 → TRIGGERED ($0.031500+)
+- Current KAS: $0.031500 ask, +3.89% from 24h open $0.030320
+- 1h volume: 34.7% of 24h total → momentum surging pre-fork
+- Spread: 0.10% ✓
+- BTC crash gate: NOT triggered (BTC −1.46% from 24h open) ✓
+- BTC weekly gate: ACTIVE but Toccata is catalyst-exempt ✓
+
+**Stop rationale:** 3.5% trail (high-ATR exception: KAS intraday range 5.6% today, above 3% ATR threshold)
+
+**Same-thesis cap:** CLEAR — last KAS entries were Jun 3–8, well beyond 7-day window
+
+**Exit plan:**
+- T1 (+3%, $0.032729): tighten trail to 0.5%
+- T2 (+5%, $0.033365): close or tighten further
+- Thesis invalidated if: price drops below $0.028 on fork activation (sell-the-news dump)
+- Fork activation at 16:15 UTC: monitor for reaction; cut if sharp decline
+
+**Portfolio after entry:** ~$115.98 KAS + $3.55 ZUSD | Open positions: 1
