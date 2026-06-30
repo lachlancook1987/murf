@@ -24604,3 +24604,32 @@ Senate Banking Committee advanced the CLARITY Act and placed it on the Senate Le
 6. No major unlock pressure today (minor only)
 7. OMNI was a Perplexity false positive — 114% spread confirms always verify with Kraken live quote before any trade
 
+
+---
+
+## 2026-06-30 — PM Midday Scan Research Update (14:10 UTC)
+
+**Portfolio:** $115.36 ZUSD | **State:** 100% cash, no positions, no orders
+
+### Gate Status
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20%) | ✅ NOT triggered (BTC −1.13%) |
+| BTC weekly gate (−9.8% vs Jun 17) | ⚠ ACTIVE — catalyst-exempt entries only |
+| Fear & Greed | 13 (Extreme Fear) |
+
+### Market Data (14:10 UTC)
+- **BTC:** ~$59,195 (Kraken), −1.13% from 24h open $60,169 | Strategy ($12.5B BTC sales authorized, purchases suspended) = bearish overhang
+- **KAS:** $0.031120, +2.64% from 24h open | Toccata fork activated 16:15 UTC — post-event decline; R:R fails at 3.5% ATR stop
+- **SOL:** $73.24, −2.41% from 24h open $75.05 — confirmed declining, Perplexity data was stale
+- **OMNI:** Kraken spread 53.3% (ask $0.889, bid $0.415) — completely illiquid, 2 trades in 24h
+
+### Key News (today)
+- **Strategy (MSTR):** Authorized up to $12.5B BTC sales, purchases suspended — near-term BTC sell pressure
+- **ETH restructuring:** Major restructuring announcement pushing ETH lower (~$1,567 area)
+- **Clarity Act:** Senate debate expected early July, not today — XRP not triggered
+- **BNY Mellon + USDC:** Expanded partnership — no immediate tradeable impact
+- **Fear & Greed at 13:** Market in Extreme Fear, broad risk-off
+
+### Decision
+**NO NEW TRADES** — no qualifying catalyst-exempt setup found. Holding $115.36 ZUSD.
