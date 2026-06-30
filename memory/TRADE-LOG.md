@@ -6822,3 +6822,39 @@ All candidates failed at least one mandatory gate:
 
 **Result:** Holding $115.36 ZUSD (100% cash). No WhatsApp notification sent (no trade placed).
 
+
+---
+
+## 2026-06-30 — PM Midday Scan (14:10 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ~$59,195, −1.13% from 24h open $60,169) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−9.8% vs Jun 17 close $65,599 — catalyst entries only) ⚠
+- **Fear & Greed:** 13 (Extreme Fear) — risk-off
+- **Alpaca:** Historical orders only (fully retired May 2026) ✅
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Live Price | 24h Chg | Gate Status | Reason Skipped |
+|---|---|---|---|---|
+| OMNI/USD | ask $0.889, bid $0.415 | +174% claimed | ✗ HARD SKIP | Spread 53.3% (2 trades in 24h, completely illiquid) |
+| KAS/USD | $0.0311 | +2.64% | ✗ SKIP | R:R 0.86:1 fails (3.5% ATR stop req'd); declining from 24h high $0.031990; Toccata fork already activated post-catalyst |
+| SOL/USD | $73.24 | −2.41% | ✗ SKIP | Declining from 24h open $75.05; no momentum threshold met |
+| ORDI | N/A | ~+20% | ✗ SKIP | Not on Kraken |
+| BNB/USD | N/A | N/A | ✗ SKIP | VanEck ETP catalyst stale (May 28, >1 month old) |
+| XRP/USD | ~$1.046 | −1.09% | ✗ SKIP | Declining; Clarity Act Senate floor vote not occurring today |
+
+**Decision: NO NEW TRADES**
+
+All candidates failed at least one mandatory gate:
+- OMNI: 53.3% spread — illiquid, untradeable
+- KAS: R:R 0.86:1 < 1.2:1 minimum (high-ATR 3.5% stop required on KAS), post-fork sell-the-news decline
+- SOL: Declining 2.41% from 24h open, no momentum
+- Others: Off-Kraken, stale catalysts, or below threshold
+
+**No WhatsApp notification sent (no action taken).**
