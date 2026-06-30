@@ -24453,3 +24453,154 @@ Senate Banking Committee advanced the CLARITY Act and placed it on the Senate Le
 
 **Actions taken: NONE. No notification sent.**
 
+
+---
+
+## 2026-06-30 — Pre-Session Research (Day 41, Tuesday)
+
+**Date:** 2026-06-30 | **Session branch:** claude/affectionate-gates-jh20uk
+
+---
+
+### ACCOUNT SNAPSHOT
+
+| Platform | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD (100% cash) | None | None |
+| Alpaca | $0 (fully retired May 2026) | None | None |
+
+**Kraken dust balances:** AVAX 0.000332 ($0.00), SOL 0.0000917 ($0.00), NEAR 0.00635 ($0.00), SUI 0.00061 ($0.00), XETH 0.0000017 ($0.00) — all negligible
+**Phase P&L:** −$60.25 (−33.52%) vs Kraken starting equity $179.78
+**Total trades since migration:** ~83
+
+---
+
+### MARKET CONTEXT
+
+**BTC/USD (Kraken live):**
+- Ask: $59,441 | 24h open: $60,170 | Change: **−1.21%** | 24h range: $58,919–$60,687
+- 7-day: **−9.37%** vs Jun 17 close $65,599 → **BTC weekly gate ACTIVE**
+- Crash gate: **NOT triggered** (−1.21%, far below −20% threshold) ✓
+
+**ETH/USD (Kraken live):**
+- Ask: $1,590 | 24h open: $1,611 | Change: **−1.26%** | 24h range: $1,555–$1,634
+- Declining; below day-trade threshold
+
+**XRP/USD (Kraken live):**
+- Ask: $1.046 | 24h open: $1.057 | Change: **−1.09%** | 24h range: $1.038–$1.075
+- Declining; below threshold
+
+**KAS/USD (Kraken live):**
+- Ask: $0.030080 | Bid: $0.030050 | 24h open: $0.030320 | Change: **−0.79%** | 24h range: $0.02776–$0.03122
+- Spread: 0.10% ✓ | Volume 24h: 32.2M KAS, 4,816 trades
+
+**SYN/USD (Kraken live):**
+- Ask: $0.5450 | 24h open: $0.5074 | Change: **+7.41%** | 24h range: $0.3858–$0.5584
+- Spread: 0.24% ✓ | Volume 24h: 9.1M SYN, 12,347 trades
+
+**Macro signals:**
+- Fear & Greed Index: **12–15 (Extreme Fear)** — unchanged from prior days
+- BTC Funding Rate (8h): Binance +0.0062%, Bybit +0.01%, BitMEX −0.0079% — slight long bias overall
+- 5 consecutive weeks of US spot BTC ETF outflows ($2.43B net outflows in May 2026)
+- Whale offloading 21,881 BTC; whales stopped accumulating
+- Strong US NFP data (+172k vs +85k forecast) → reduced Fed rate-cut odds (BTC negative)
+- SpaceX IPO driving liquidity toward equities
+
+**Top 24h gainers (selected):**
+| Asset | 24h Change | Notes |
+|---|---|---|
+| TAC | +168% | Not on Kraken / micro-cap |
+| Gensyn AI (GNS) | +80% | Not on Kraken |
+| UNFI | +75% | Not on Kraken |
+| SYN | +29–53% | On Kraken; pure short squeeze, no catalyst |
+| KAS | +8–10% | On Kraken; Toccata hard fork TODAY |
+| MORPHO | +6.83% | On Kraken; only +1.49% from 24h open by session open |
+
+**Token unlocks today:** Minor daily vesting unlocks only (Bware Labs, Wodo Gaming). No major unlock pressure.
+
+---
+
+### CANDIDATE ANALYSIS
+
+**Gates applied:**
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: ACTIVE (−9.37% vs Jun 17) — pure momentum entries BANNED; only catalyst-exempt entries allowed (regulatory event, exchange listing, protocol upgrade)
+
+---
+
+**1. KAS/USD — TOCCATA HARD FORK (PRIMARY CANDIDATE)**
+
+- **Catalyst:** Kaspa Toccata hard fork activates at **16:15 UTC TODAY (June 30, 2026)**. This is the most significant upgrade in Kaspa's history: introduces native assets, covenants, and ZK proofs — making Kaspa fully programmable with smart contracts. Officially confirmed activation time. This is a genuine protocol upgrade catalyst, explicitly exempt from BTC weekly gate.
+- **Kraken pair:** KASUSD online ✓ | Margin available: up to 2x/3x
+- **Spread:** 0.10% ✓ (well under 1%)
+- **Price action:** Current $0.030080, 24h open $0.030320 (−0.79%). 24h high was $0.031220 (+3.3% above current). Declined from peak as market consolidated pre-fork.
+- **Momentum peak check:** 24h high set earlier in session, current price −3.65% below peak. Exception (b) applies: Toccata activation is a distinct protocol event at 16:15 UTC (not already happened). Position for activation reaction rather than chasing the earlier spike.
+- **Volume:** 32.2M KAS in 24h, 4,816 trades — healthy, genuine interest
+- **Same-thesis entry cap:** CLEAR — last KAS entries were Jun 3–8, well beyond the 7-day rolling window
+- **Entry trigger:** Market order AT or immediately AFTER 16:15 UTC fork activation confirmation, IF price is stable or recovering. If price breaks above 24h high $0.03122, enter breakout immediately. Skip if price sharply declines on activation (sell-the-news).
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **Entry estimate:** ~$0.030 (market) | T1: $0.03090 (+3%) | T2: $0.03150 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓ (exactly minimum; acceptable for strong protocol upgrade catalyst)
+- **Size:** 80–100% equity ($96–$120) — Toccata is a genuine first-in-kind catalyst for KAS
+- **Risk:** "Sell the news" dump possible if market has fully front-run the event; price already declined from $0.03122 peak. If price drops below $0.028 on fork activation, thesis invalidated — do not enter.
+
+---
+
+**2. SYN/USD — SHORT SQUEEZE (SKIP)**
+- +7.41% from 24h open, spread 0.24% ✓
+- Pure short squeeze, negative funding rate — **no fundamental catalyst** (no upgrade, no listing, no regulatory event)
+- BTC weekly gate bans pure momentum entries
+- **SKIP** ✗
+
+---
+
+**3. XRP/USD — CLARITY ACT BINARY WATCH (NOT ACTIVE TODAY)**
+- Ask: $1.046, −1.09% from 24h open — price declining, below threshold
+- CLARITY Act status: Placed on Senate Legislative Calendar (Cal. No. 423) June 1; needs 60 votes (7 Democratic still withholding); July floor vote possible but August more likely; July 4 signing target now logistically impossible
+- Binary trigger condition NOT met today: no Senate floor vote scheduled
+- **CONDITIONAL WATCH:** If Senate floor vote announced + XRP breaks above $1.10 with 1h momentum >5% → enter at `trail_percent: 7`. Not an active trade today.
+- **SKIP today** ✗
+
+---
+
+**4. ETH/USD (SKIP)**
+- −1.26% from 24h open; declining. No fresh catalyst. **SKIP** ✗
+
+---
+
+**5. OMNI/USD (SKIP — ILLIQUID)**
+- Perplexity cited +174% on Kraken, but live quote shows bid $0.415 vs ask $0.889 = 114% spread. Only 21 OMNI traded in 24h. Completely illiquid. **SKIP** ✗
+
+---
+
+### DECISION: TRADE — KAS/USD CONDITIONAL
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC −20%) | ✅ NOT triggered |
+| BTC weekly gate (−9.37%) | ⚠ ACTIVE — catalyst-exempt entries only |
+| Primary trade | **KAS/USD — Toccata hard fork at 16:15 UTC** |
+
+**Action plan:**
+1. Hold cash until 16:15 UTC (or when fork activation confirmed live)
+2. If KAS at/above $0.029 and showing any strength: enter market order, ~80–100% equity
+3. Immediately place `trailing_stop`, `trail_percent: 2.5`, GTC after fill
+4. Monitor: if price drops below $0.028 on activation → no entry / thesis invalidated
+5. T1 = entry +3% (tighten trail to 0.5%), T2 = entry +5% (close or tighten further)
+
+**Standby watchlist:**
+- XRP: Watch for Senate floor vote announcement → binary trigger at 7% trail
+- SYN: Wait for fundamental catalyst before re-considering
+
+---
+
+### RISK FACTORS
+
+1. BTC weekly gate active (−9.37%) — broad risk-off sentiment; alts generally underperforming
+2. Extreme Fear (12–15) — market not positioned for risk-on rallies
+3. KAS "sell-the-news" risk: price already hit $0.031220 during pre-fork buying, now consolidating below open
+4. ETF outflows (5 consecutive weeks) + whale selling = structural BTC headwind
+5. NFP beat reduced rate-cut expectations — macro risk-off
+6. No major unlock pressure today (minor only)
+7. OMNI was a Perplexity false positive — 114% spread confirms always verify with Kraken live quote before any trade
+
