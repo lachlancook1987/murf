@@ -6686,3 +6686,25 @@ Perplexity confirms: **no Kraken altcoin showing >3% momentum in last 4 hours.**
 | — | — | — | — | — | — | No open positions |
 **Trades today:** none | **Total since migration:** ~83
 **Notes:** Flat Monday — no trades on Jun 29. Portfolio holds at $119.53 ZUSD (100% cash). BTC ticked up +0.37% on the day (24h open $59,488.90 → $59,706.80; 24h high $60,224.40, 24h low $58,818.60). Bot underperformed BTC by −0.37% by holding cash on a mildly positive day. BTC weekly gate remains active (BTC ~−8.9% vs Jun 17 close $65,599 — pure momentum banned; catalyst-driven entries exempt). Phase P&L unchanged at −$60.25 (−33.52% vs starting equity $179.78). Alpaca stop a2b44cf9 confirmed cancelled 2026-05-22; no Alpaca exposure. Tomorrow (Tue Jun 30): first trading week continues; monitor for catalyst-driven momentum plays — >3% from 24h open + fresh catalyst <6h + spread ≤1% + R:R ≥1.2:1. Crash gate NOT triggered (BTC +0.37%, far from −20% threshold).
+
+---
+
+## 2026-06-30 — Overnight Triage Check
+
+**Portfolio:** $119.53 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+
+**STEP 1 — Positions & Orders:**
+- Kraken positions: `{}` — no open positions ✅
+- Kraken orders: `{}` — no open orders ✅
+- Alpaca positions: `[]` — no Alpaca exposure (stop a2b44cf9 cancelled 2026-05-22; fully retired) ✅
+
+**STEP 2 — Trailing stop verification:** No open positions — N/A ✅
+**STEP 3 — Emergency exits:** No open positions — N/A ✅
+**STEP 4 — Stop tightening:** No open positions — N/A ✅
+
+**STEP 5 — Crash gate check:**
+- BTC ask: $59,866.00 | 24h open: $60,169.70 | 24h range: $58,918.90–$60,687.00
+- 24h move: **−0.50%** — well under −20% crash gate threshold ✅
+- No crash gate triggered.
+
+**Result: NO-OP. No actions taken. No notification sent.**
