@@ -24779,3 +24779,29 @@ No open positions → no stop verification, tightening, or thesis checks require
 **No WhatsApp notification sent (no action taken, per Step 7).**
 
 ---
+
+## 2026-07-01 — Midday Scan (14:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,228, 24h open $58,531.90 → +1.19% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| XLM/USD | ask 0.19795, bid 0.19781 (spread ~0.07%) | +4.85% vs 24h open, but −4.5% off 24h high $0.2074 — declining, momentum peak check fails | SKIP |
+| ADA/USD | ask 0.15441, bid 0.15430 (spread ~0.07%) | +6.6% 24h but only +0.5% 1h — fails weekly-gate 1h>5% requirement; catalyst is generic "early July rebound," not a specific event <3h old | SKIP |
+| BTC/USD | $59,228, +1.19% intraday | No momentum/catalyst signal on majors | SKIP |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate clears the 1h>5% + catalyst<3h bar. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
