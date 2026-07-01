@@ -24832,3 +24832,48 @@ No open positions → no stop verification, tightening, or thesis checks require
 **No WhatsApp notification sent (no action taken, per Step 7).**
 
 ---
+
+## 2026-07-01 — Pre-Session Research (Evening, ~20:04 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,880.30, 24h open $58,531.90 → +2.30% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−8.7% vs Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 11 (Extreme Fear, unchanged from this morning)
+- **BTC funding rate:** Slightly positive across venues (Binance/BitMEX/OKX/Huobi ~+0.01%, Bybit +0.0091%, Kraken +0.0148%, WOO X +0.0112%) — mild bullish bias
+
+### Market Context
+- BTC $59,880 (Kraken, +2.30% intraday from $58,532 open), ETH $1,612 (+2.72% intraday) — both grinding up off yesterday's Extreme Fear lows, still well below Jun 17 levels
+- CLARITY Act: White House symbolic July 4 signing target remains uncertain — Senate cloture math still short of 60 votes
+- Stablecoin regulation: 5 US regulators jointly proposed bank-grade KYC rules for stablecoin issuers under GENIUS Act (USDC/USDT scrutiny) — not a tradeable catalyst for this bot
+- Ethereum Glamsterdam upgrade targeted H2 2026 (testnet July/August) — too far out to trade
+- Token unlocks this week: BEAT ($49.7M, today, dilution not buy signal), HYPE ($630M, Jul 6, not today) — no fresh unlock catalyst today
+- Perplexity's "top gainers"/"1h surge" queries again surfaced illiquid/off-Kraken microcaps (VOOI, Checkmate, BASED, Apertum, Memecore) and one clearly hallucinated data point ("BTC new ATH above $123,000") — discarded as noise, contradicted by live Kraken BTC quote
+
+### Candidates Screened (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off 24h high | Catalyst | Status |
+|---|---|---|---|---|---|
+| XLM/USD | 0.05% | +5.97% vs open $0.188852 | −3.5% off $0.20740 high | None fresh — high was already set earlier today (per 15:01/14:03 UTC scans); ask price actually *lower* now (0.200113) than at 15:01 UTC (0.200765) | SKIP — momentum peak check fails, fading not breaking out |
+| ADA/USD | 0.03% | +6.4% vs open $0.14420 | −3.0% off $0.158177 high | None specific <3h old | SKIP — fails 1h>5% weekly-gate requirement (24h gain only, not fresh) |
+| ZEC/USD | 0.04% | +2.86% vs open | −1.9% off high | None | SKIP — below 3% threshold |
+| ATOM/USD | 0.06% | +2.12% vs open | — | None | SKIP — below threshold |
+| AAVE/USD | 0.05% | +0.38% vs open | −2.7% off high | None | SKIP — flat |
+| DYDX/USD | 0.16% | −18.4% vs open (already faded from $0.24348 high) | −39.7% off high | None (pre-crash peak) | SKIP — thesis dead, same as prior scans |
+| SEI/USD | 0.10% | +1.94% vs open | — | None | SKIP — below threshold |
+| STX/USD | 0.12% | +3.68% vs open | −2.9% off high | None | SKIP — below 5% 1h requirement |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (−8.7% vs Jun 17); BTC/ETH are both up modestly today but no altcoin candidate clears the required 1h>5% momentum + catalyst<3h combo, and the strongest 24h movers (XLM, ADA) are fading off highs set earlier in the session rather than breaking out fresh. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+### Risk Factors
+1. BTC weekly gate remains active — broad risk-off backdrop, pure momentum entries banned
+2. Extreme Fear (11) persists — sentiment has not turned despite today's modest BTC/ETH bounce
+3. CLARITY Act July 4 target looks unlikely to hit (Senate votes short) — no near-term XRP-style regulatory catalyst
+4. Perplexity continues to surface stale/hallucinated data (fictitious BTC ATH, off-Kraken microcaps) — live Kraken quotes remain the only reliable filter
+5. BEAT unlock today is dilutive, not a buy signal
+
+**Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
+
+---
