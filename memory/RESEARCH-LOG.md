@@ -24877,3 +24877,31 @@ No open positions → no stop verification, tightening, or thesis checks require
 **Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
 
 ---
+
+## 2026-07-01 — Midday Scan (22:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $60,751.70, 24h open $58,531.90 → +3.79% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 (~−7.4%) — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| BTC/USD | $60,751.70, +3.79% intraday | Broad market up-move, no altcoin-specific catalyst; majors don't day-trade under this strategy | SKIP |
+| XLM/USD | ask 0.20196, bid 0.20178 (spread ~0.09%) | +7.0% vs 24h open $0.188852, −2.6% off 24h high $0.2074 — no fresh catalyst identified | SKIP — fails weekly-gate catalyst requirement |
+| ADA/USD | ask 0.15743, bid 0.15734 (spread ~0.06%) | +9.2% vs 24h open $0.14420, only −0.5% off 24h high $0.158177 — near breakout but no specific catalyst <3h old (Perplexity surfaced none) | SKIP — fails weekly-gate catalyst requirement despite strong momentum |
+| SOL/JTX, ZEC Ironwood, XRP CLARITY Act | — | Catalysts identified are all forward-dated (Jito JTX "July 2026", Ironwood "late July", CLARITY Act deadline Jul 4) — none is a fresh <3h event today | SKIP — no immediate catalyst |
+| Memecore, vooi, Alchemix | — | 24h gainers per Perplexity, all off-Kraken/illiquid microcaps (recurring pattern) | SKIP — not tradeable on Kraken or unverifiable |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (~−7.4% vs Jun 17); ADA and XLM show the strongest 24h momentum (ADA now only 0.5% off its 24h high) but neither has a specific catalyst <3h old, which the weekly gate requires alongside 1h>5% momentum. No qualifying setup. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
