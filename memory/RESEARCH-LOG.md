@@ -24708,3 +24708,43 @@ No open Kraken or Alpaca positions → no stop verification, no stop tightening,
 **Decision: NO NEW TRADES.** Fifth consecutive scan today reaching the same conclusion. Every screened candidate that Perplexity flagged as "surging" is actually flat-to-down today on live Kraken data — repeated pattern of Perplexity returning stale weekly/monthly gain figures framed as real-time. BTC weekly downtrend gate remains active, Extreme Fear sentiment persists, no fresh (<3h) catalyst on any candidate. Holding $115.36 ZUSD (100% cash).
 
 **No WhatsApp notification — no action taken (Step 7 N/A).**
+
+## 2026-07-01 — Pre-Session Research (08:04 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ~$58,800, 24h change ≈ −1.7% to −2.5% across venues) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−10.3% vs Jun 17 close $65,599 — catalyst-exempt entries only; require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 11 (Extreme Fear, down from 15 yesterday / 17 last week)
+- **BTC funding rate:** Slightly positive across venues (Binance +0.0033%, BitMEX/OKX +0.0100%, Bybit +0.0058%, Kraken +0.0177%) — mild bullish bias, not decisive
+
+### Market Context
+- BTC ~$58,800 (Kraken $58,812, −1.70%), ETH ~$1,569 (−1.42%) — both still declining, no day-trade signal on majors
+- Breaking news: BTC fell to $58,640 amid collapsed U.S.–Iran negotiations, rising oil prices, geopolitical risk-off (Strait of Hormuz tensions)
+- Token unlocks this week: BEAT ($49.7M, today, 2.71% supply — bearish supply pressure, not a buy catalyst), HYPE ($630M cliff unlock Jul 6 — not today), TRUMP/CC/WLD ongoing daily dilution
+- Top "24h gainers" per Perplexity (VOOI, Checkmate, dYdX, BASED, Apertum, Collaterize, ZEROBASE, Grok, RIF) are mostly illiquid microcaps not on Kraken or unverifiable
+- "1h surge" query returned no real-time data — only stale/contradictory 24h figures (one source claimed BTC $75k/$113k — clearly hallucinated, discarded as noise)
+
+### Candidates Screened (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off high | Catalyst | Status |
+|---|---|---|---|---|---|
+| DYDX/USD | ~0.25% | +5.9% vs open, but −21.8% off 24h high $0.24348 | Faded hard | Perplexity's "+43.85%" was the pre-crash peak — already reversed | SKIP — momentum peak check fails, classic pump-and-dump already unwound |
+| ADA/USD | ~0.015% | +4.0% vs open $0.1442, −1.75% off high $0.152668 | Near high, not fresh 1h>5% | None identified | SKIP — weekly gate requires 1h>5%+catalyst; this is 24h momentum only |
+| SOL/USD | ~0.01% | +1.75% vs open, −1.1% off high | Flat | None | SKIP — below all thresholds |
+| DOGE/USD | ~0.006% | −0.9% vs open | Declining | None | SKIP — declining, no signal |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (−10.3% vs Jun 17), Extreme Fear (11) persists, and every screened candidate either lacks a fresh (<3h) catalyst + 1h>5% momentum combo required under the gate, or already peaked and reversed (DYDX). No qualifying setup. Holding $115.36 ZUSD (100% cash).
+
+### Risk Factors
+1. BTC weekly gate active (~−10.3% vs Jun 17) — broad risk-off, pure momentum entries banned
+2. Extreme Fear (11) — lowest reading in over a week, no risk-on catalyst yet
+3. Geopolitical risk-off (U.S.–Iran talks collapsed) adding fresh macro headwind on top of existing BTC weakness
+4. BEAT token unlock today is a dilution event, not a buy signal — bearish if anything
+5. Perplexity's "top gainers" continue to surface illiquid/off-Kraken microcaps or stale peak data (DYDX) — live Kraken quotes remain the only reliable filter
+
+**No WhatsApp trade specifics — notifying HOLD status per Step 6.**
+
+---
