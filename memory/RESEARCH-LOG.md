@@ -24748,3 +24748,34 @@ No open Kraken or Alpaca positions → no stop verification, no stop tightening,
 **No WhatsApp trade specifics — notifying HOLD status per Step 6.**
 
 ---
+
+## 2026-07-01 — Midday Scan (Day 42, Wednesday)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $58,817, 24h open $58,531.90 → +0.49% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| BTC/USD | $58,817 | Perplexity claimed $78,101/2.31% 15-min gain — contradicts live Kraken quote, discarded as hallucinated noise | SKIP |
+| SOL/USD | ask $75.22, +2.24% vs open | Below 1h>5% weekly-gate threshold; off 24h high | SKIP |
+| HYPE/USD | — | 24h +20.5% but buyback catalyst already stale (>24h, per Jun 30 log) | SKIP |
+| OMNI/USD | — | Known illiquid (53%+ spread, prior session) | SKIP |
+| MAT/USD | ask 0.0828 / bid 0.048 | Spread ~72% — illiquid | SKIP |
+| DOLO/USD | ask 0.0225 / bid 0.02201 | Spread ~2.2% — exceeds 1% cap | SKIP |
+| REX/USD | N/A | Not on Kraken (unknown asset pair) | SKIP |
+| INIT/USD | ask 0.0526 / bid 0.0524 | Spread ~0.4% OK, but no confirmed catalyst <3h old or 1h>5% momentum data — fails weekly gate | SKIP |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate meets the strict 1h>5%+catalyst<3h combo required, and several are illiquid or have stale catalysts. Holding $115.36 ZUSD (100% cash).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
