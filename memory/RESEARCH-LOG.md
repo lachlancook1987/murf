@@ -24805,3 +24805,30 @@ No open positions → no stop verification, tightening, or thesis checks require
 **No WhatsApp notification sent (no action taken, per Step 7).**
 
 ---
+
+## 2026-07-01 — Session-Open Execution (15:01 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,513, 24h open $58,531.90 → +1.68% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** not re-queried this scan (11 as of this morning, Extreme Fear)
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| XLM/USD | ask 0.200765, bid 0.200594 (spread ~0.09%) | +6.3% vs 24h open $0.188852, but only ~+1.4% in the last hour (vs 14:03 UTC ask $0.19795) and still −3.2% off 24h high $0.2074 | SKIP — fails weekly-gate 1h>5% requirement, fading off high not fresh breakout |
+| JTO/USD | ask 0.78547, bid 0.78475 (spread ~0.09%) | +10.3% vs 24h open $0.71235, −3.1% off 24h high $0.81046. Catalyst: Jito JTX terminal launch "July 2026" | SKIP — catalyst is a month-scale launch window, not a specific event <3h old; no 1h>5% confirmation available |
+| Memecore / vooi / Zerobase | N/A | Perplexity "biggest 1h surge" query again surfaced these off-Kraken/illiquid microcaps (recurring pattern from prior sessions) | SKIP — not tradeable on Kraken or unverifiable |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate clears the 1h>5% + catalyst<3h bar. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
