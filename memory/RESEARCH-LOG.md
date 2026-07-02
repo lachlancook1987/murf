@@ -24989,3 +24989,32 @@ No open positions → no stop verification, no stop tightening, no thesis checks
 **No WhatsApp notification sent (no action taken, per Step 7).**
 
 ---
+
+## 2026-07-02 — Midday Scan #2 (~14:xx UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC $61,938.80, 24h open $59,964.30 → +3.29% intraday, 24h high $62,003.30) ✅
+- **BTC weekly gate:** Treated as still ACTIVE (pre-session 7-day −6.29%; no confirmed reversal above −3% threshold) — catalyst<3h + 1h>5% momentum required for entries ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Live Kraken | Catalyst | Status |
+|---|---|---|---|
+| WLD/USD | $0.3973, 24h open $0.3606 → **+10.2% intraday**, near 24h high $0.3991 | Perplexity data quality failure: claims WLD "down 9-11%" contradicting live Kraken price by full sign-reversal (discarded per established pattern — Kraken is ground truth). Only identifiable WLD-specific catalysts (Thirty Seconds to Mars ticketing partnership, Eightco treasury expansion) are "earlier in the week," not <3h old. Move looks tied to broad market short-squeeze rebound ($445M liquidation wave), not a WLD-specific event | SKIP — fails catalyst-freshness requirement despite strong momentum |
+| SOL/USD | $81.17, 24h open $77.38 → +4.9% intraday, 24h high $82.65 (−1.8% off high) | Jito JTX terminal, Alpenglow upgrade — both forward-dated ("this month"/Q3) | SKIP — no <3h catalyst, below 1h>5% confirmed |
+| BTC/USD | +3.29% intraday, $65 below 24h high — momentum-peak risk if high already set >60min ago | Broad rebound: $445M short liquidation wave, US-Iran channel reopening (oil), MiCA enforcement inflows — market-wide, not BTC-specific <3h event; move built up over hours not concentrated in last 1h | SKIP — below 1h>5% confirmed threshold; near 24h high (peak-check caution) |
+| Other (ENA, JTO, ZEC, ADA, XLM) | — | Unchanged from pre-session/earlier midday scan — unlock/stale/forward-dated | SKIP — no change |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered. BTC weekly downtrend gate still treated as active; no candidate clears the required 1h>5% momentum + catalyst<3h combo. WLD shows the strongest live momentum (+10.2% intraday) but has no fresh WLD-specific catalyst — its move ties to a broad market short-squeeze rebound rather than a discrete event. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+**Data quality note:** Perplexity again produced a sign-reversed claim for WLD (claimed −9-11% vs live Kraken +10.2%) — third consecutive session with material Perplexity hallucinations. Live Kraken quotes used as ground truth throughout.
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
