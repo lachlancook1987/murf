@@ -24876,6 +24876,8 @@ No open positions → no stop verification, tightening, or thesis checks require
 
 **Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
 
+**Notification status:** WhatsApp/CallMeBot send FAILED — API returned "0 messages left, please subscribe" (quota exhausted). Notification channel needs resubscription at callmebot.com/61477788635. User alerted directly via push notification instead.
+
 ---
 
 ## 2026-07-01 — Midday Scan (22:03 UTC)
@@ -24903,5 +24905,57 @@ No open positions → no stop verification, tightening, or thesis checks require
 **Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (~−7.4% vs Jun 17); ADA and XLM show the strongest 24h momentum (ADA now only 0.5% off its 24h high) but neither has a specific catalyst <3h old, which the weekly gate requires alongside 1h>5% momentum. No qualifying setup. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
 
 **No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-02 — Pre-Session Research (08:05 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $60,144, 24h open $59,964.30 → +0.30% intraday, essentially flat) ✅
+- **BTC weekly gate:** ACTIVE (Kraken 7-day change −6.29%, beyond the −3% threshold — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 19 (Extreme Fear per FearGreedMeter/BitcoinFear; Alternative.me shows 11) — sentiment still deeply negative
+- **BTC funding rate:** Mildly positive across venues (Binance +0.008%, Kraken +0.0148%, avg ~+0.01% per 8h) — no bearish skew, no crowded-long risk either
+
+### Data Quality Note
+Perplexity again produced internally contradictory/hallucinated figures this session: one query claimed BTC "+3.72% to $60,744" while another (same session) claimed a "20% drop to a 21-month low of $58,188" and a third claimed BTC "dropping below $70,000 threatening $60,000" with ETH/XRP/ADA/SOL down 12–20%. All three contradict each other and the live Kraken quote (BTC $60,144, +0.30% 24h, essentially flat). Live Kraken quotes used as ground truth throughout; Perplexity narrative claims discarded where contradicted.
+
+### Market Context
+- BTC $60,144 (flat, +0.30% 24h) — 7-day change −6.29%, still in a mild weekly downtrend
+- ETH ~$1,600–1,625 (sources vary +2–3% 24h) — tracking BTC, no independent catalyst
+- CLARITY Act: White House symbolic July 4 signing target remains uncertain, Polymarket odds down to 48% (Senate cloture math still short)
+- Solana: Jito JTX terminal launch "this month" (no specific date), Alpenglow upgrade targeted Q3 2026 — both forward-dated, not <3h catalysts
+- Zcash Ironwood (NU7) upgrade activates late July — not today
+- Token unlocks today: ENA (94.18M tokens, ~$7.25M, 1.01% of market cap), INFRA/Bware Labs (~$3K, negligible) — unlocks are dilutive events, not buy catalysts (per strategy: "90% of unlock events lead to negative price impact")
+- Perplexity's "top gainers"/"1h surge" queries again surfaced off-Kraken/illiquid microcaps (VOOI, Checkmate, Memecore, BASED, Apertum, Collaterize) — recurring noise pattern, not actionable
+
+### Candidates Screened (live Kraken quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off 24h high | Catalyst | Status |
+|---|---|---|---|---|---|
+| ENA/USD | 0.13% | +7.4% vs open $0.0713 | −1.8% off $0.078 high | Token unlock TODAY (94.18M ENA, ~$7.25M) — dilutive/bearish type event, not a bullish catalyst despite price holding up | SKIP — catalyst quality fails (unlock ≠ bullish catalyst); no confirmed 1h>5% |
+| JTO/USD | 0.07% | +4.16% vs open $0.76503 | −2.2% off $0.81456 high | Jito JTX terminal "launch this month" — forward-dated, not <3h old | SKIP — fails weekly-gate catalyst-freshness requirement; below 1h>5% |
+| ZEC/USD | 0.07% | +1.28% vs open | −1.2% off high | Ironwood upgrade late July — not today | SKIP — below momentum threshold, catalyst not imminent |
+| ADA/USD | 0.02% | +0.81% vs open | −1.9% off high | None fresh | SKIP — flat, no catalyst |
+| XLM/USD | 0.04% | −0.34% vs open | −3.5% off high | None fresh | SKIP — declining, not a mover |
+| SOL/USD | 0.01% | +0.71% vs open | −1.2% off high | None fresh (JTX/Alpenglow forward-dated) | SKIP — flat |
+| DOLO/USD | ~2.0% | — | — | — | SKIP — spread exceeds 1% cap, illiquid (2 trades) |
+| OMNI/USD | ~57% | — | — | — | SKIP — illiquid (confirmed again, recurring) |
+| MAT/USD | ~3.2% | — | — | — | SKIP — spread exceeds 1% cap |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered (BTC essentially flat today). BTC weekly downtrend gate remains active (Kraken 7-day −6.29%); no candidate clears the required 1h>5% momentum + catalyst<3h combo. ENA's unlock-driven move fails on catalyst quality (dilutive event, not bullish), JTO and the rest are flat-to-modest with no fresh catalyst. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+### Risk Factors
+1. BTC weekly downtrend gate remains active — pure momentum entries banned, catalyst-only bar is high
+2. Extreme Fear persists (19/11 depending on source) — sentiment has not turned
+3. Perplexity data quality continues to degrade — three contradictory BTC price/direction claims in one session; live Kraken quotes are the only reliable filter
+4. ENA unlock today is a headwind for that asset going forward, not a signal to chase current strength
+5. CLARITY Act July 4 target looks increasingly unlikely (Polymarket odds falling) — no near-term XRP-style regulatory catalyst materializing
+
+**Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
+
+**Notification status:** WhatsApp/CallMeBot send FAILED — API returned "0 messages left, please subscribe" (quota exhausted). Notification channel needs resubscription at callmebot.com/61477788635. User alerted directly via push notification instead.
 
 ---
