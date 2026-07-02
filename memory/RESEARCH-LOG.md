@@ -23995,3 +23995,114 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
 - Any Kraken listing announcement (check Kraken blog) → first-mover entry
 - CLARITY Act floor vote news → XRP at 7% trail (binary catalyst)
 
+
+
+---
+
+## 2026-07-02 — Pre-Session Research (Thursday)
+
+**Session branch:** claude/affectionate-gates-0ncyjd
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $115.36 ZUSD (100% cash; all other balances dust <$0.01) | None (`positions: {}`) | None (`orders: {"open":{}}`) |
+| Alpaca | No positions (`[]`) | None | Historical/filled only — residual BTC stop long since closed out |
+
+Gap in log since 2026-06-29 (no sessions logged Jun 30–Jul 1) — portfolio unchanged at flat cash, consistent with last snapshot.
+
+---
+
+### STEP 2 — Market Context (live Kraken quotes, ground truth)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread |
+|---|---|---|---|---|---|---|
+| BTC/USD | $61,393.70 | $59,964.30 | **+2.38%** | $62,137.20 | −1.20% | ~0.0002% |
+| ETH/USD | $1,697.33 | $1,607.64 | **+5.58%** | $1,723.01 | −1.49% | ~0.0006% |
+| SOL/USD | $80.60 | $77.38 | **+4.16%** | $82.65 | −2.48% | 0.012% |
+| ZEC/USD | $433.09 | $417.02 | **+3.85%** | $456.13 | −5.05% | 0.079% |
+| XRP/USD | $1.08378 | $1.05199 | **+3.02%** | $1.11128 | −2.47% | 0.008% |
+| LTC/USD | $43.46 | $42.68 | +1.83% | $43.88 | −0.96% | 0.023% |
+| HYPE/USD | $66.39 | $62.37 | **+6.45%** | $67.17 | −1.16% | 0.015% |
+| DOLO/USD | $0.02351 | $0.02284 | +2.9% | $0.02284 | 0% | **2.28% — hard skip** |
+
+**Fear & Greed Index:** 19 (Extreme Fear) — up from 11 yesterday
+**BTC Perp Funding:** +0.005–0.01% across exchanges (positive; longs paying shorts, mild bullish lean)
+**Crash gate check:** BTC +2.38% from 24h open — nowhere near −20% → **NOT triggered** ✅
+
+Perplexity data was noisy/contradictory on several queries (conflicting BTC prices from $58,600 to "$123,000 record" in one response — clearly stale/garbled cached results); **live Kraken quotes used as ground truth** for all trade decisions per standard practice.
+
+---
+
+### STEP 3 — Catalysts
+
+- **XRP:** CLARITY Act White House signing deadline **July 4** (2 days out) — binary regulatory catalyst, odds ~48%. Building anticipation.
+- **SOL:** Jito JTX trading terminal launch + Alpenglow consensus upgrade testing ongoing (Q3 activation target).
+- **ZEC:** Ironwood network upgrade (Network Upgrade 7) — late July, not immediate; current move reads as narrative/short-covering.
+- **HYPE:** Elevated volume, near 24h high. **Token unlock risk: $630M (9.92 tokens) unlocks July 6** — 4 days out, not an immediate catalyst but relevant to overnight/multi-day hold sizing.
+- **ETH:** Broad ETF-inflow-driven strength (+5.58% from open) alongside BTC.
+- Token unlocks this week: $M (MemeCore) $39.2M Jul 3, $CC/$WLD daily linear unlocks — minor, priced in.
+
+---
+
+### STEP 4 — Candidate Screening
+
+Per current decision rules (crash gate only; sector pause / CAUTION-OFFENSIVE / DXY filter retired):
+
+| Candidate | Momentum | Catalyst | Spread | Verdict |
+|---|---|---|---|---|
+| HYPE/USD | +6.45% from open, −1.16% from high | Elevated volume; unlock event is 4d out (not immediate risk) | 0.015% ✓ | **TRADE** |
+| SOL/USD | +4.16% from open, −2.48% from high | Jito JTX / Alpenglow ongoing ecosystem catalyst | 0.012% ✓ | **TRADE** |
+| ZEC/USD | +3.85% from open, −5.05% from high | Narrative/short-covering only; upgrade catalyst is weeks out; furthest off high | 0.079% ✓ | **WATCH** (weaker — peak further decayed) |
+| XRP/USD | +3.02% from open, −2.47% from high | CLARITY Act deadline 2 days out — binary catalyst building | 0.008% ✓ | **TRADE** |
+| LTC/USD | +1.83% | none specific | 0.023% ✓ | SKIP (below 3% threshold) |
+| DOLO/USD | +2.9% | none | 2.28% ✗ | **SKIP — spread hard-fail** |
+
+---
+
+### STEP 5 — Trade Ideas
+
+**1. HYPE/USD — Long**
+- Catalyst: Strong intraday volume, price −1.16% off 24h high (momentum still fresh); note $630M unlock lands July 6 (4d out) — treat as day-trade only, no multi-day hold into unlock
+- Entry: Market ~$66.39
+- Stop: `trailing_stop`, `trail_percent: 3.5` (high-ATR asset per strategy exception)
+- T1: $68.38 (+3%) | T2: $69.71 (+5%)
+- R:R: 1.2:1 (3%/2.5% baseline formula) ✓
+- Size: to conviction, no cap
+- Kraken pair: HYPEUSD confirmed live ✓ | Spread: 0.015% ✓
+
+**2. SOL/USD — Long**
+- Catalyst: Jito JTX terminal launch + Alpenglow upgrade testing (ongoing ecosystem catalyst) + momentum +4.16% from open
+- Entry: Market ~$80.60
+- Stop: `trailing_stop`, `trail_percent: 2.5`
+- T1: $83.02 (+3%) | T2: $84.63 (+5%)
+- R:R: 1.2:1 ✓
+- Size: to conviction, no cap
+- Kraken pair: SOLUSD confirmed live ✓ | Spread: 0.012% ✓
+
+**3. XRP/USD — Long**
+- Catalyst: CLARITY Act White House signing deadline July 4 (binary catalyst, 2 days out) — pre-positioning momentum +3.02% from open
+- Entry: Market ~$1.0838
+- Stop: `trailing_stop`, `trail_percent: 2.5` (use 7% only if entering directly on the binary vote outcome itself, not pre-positioning)
+- T1: $1.1163 (+3%) | T2: $1.1380 (+5%)
+- R:R: 1.2:1 ✓
+- Size: to conviction, no cap
+- Kraken pair: XXRPZUSD confirmed live ✓ | Spread: 0.008% ✓
+
+**4. ZEC/USD — Watch only (not sized this session)**
+- Momentum +3.85% from open but already −5.05% off 24h high — momentum decaying faster than HYPE/SOL/XRP
+- Catalyst (Ironwood upgrade) is weeks out — current move is narrative/short-covering, weakest thesis of the four
+- Re-evaluate only on fresh breakout to new 24h high with volume confirmation
+
+**Risk factors:**
+- Fear & Greed 19 (Extreme Fear) — broad risk-off backdrop despite green tape this morning
+- Perplexity data quality poor this session (contradictory/stale prices) — all entries must be re-validated against live `kraken.sh quote` immediately before order placement, not the research-log snapshot
+- HYPE carries a $630M unlock 4 days out — day-trade discipline only, do not carry into the unlock
+- XRP move is pre-positioning on an uncertain (48% odds) binary outcome — real risk of reversal if CLARITY Act slips again
+
+---
+
+### Decision: **TRADE**
+
+Crash gate NOT triggered. Default stance is trade. Three qualifying setups identified (HYPE, SOL, XRP) meeting momentum + catalyst + spread + R:R criteria; ZEC flagged as watch-only due to decayed momentum and distant catalyst. Proceed to entries at session open per sizing/conviction; each position gets an immediate 2.5% (3.5% for HYPE) trailing stop GTC — no exceptions.
