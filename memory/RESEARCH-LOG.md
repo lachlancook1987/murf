@@ -24959,3 +24959,33 @@ Perplexity again produced internally contradictory/hallucinated figures this ses
 **Notification status:** WhatsApp/CallMeBot send FAILED — API returned "0 messages left, please subscribe" (quota exhausted). Notification channel needs resubscription at callmebot.com/61477788635. User alerted directly via push notification instead.
 
 ---
+
+## 2026-07-02 — Midday Scan (~12:xx UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC $61,031.30 ask, 24h open $59,964.30 → +1.78% intraday) ✅
+- **BTC weekly gate:** Treated as still ACTIVE (pre-session 7-day −6.29%; BTC ticked up modestly since, no evidence of a >3% weekly reversal) — catalyst<3h + 1h>5% momentum required for entries ⚠
+- **Data quality:** Perplexity's 7-day BTC query returned wildly hallucinated figures this session ("$104,388 a week ago," "$91,151 today") that contradict live Kraken price ($61,031) by ~50%. Discarded per prior session's established pattern — live Kraken quotes are ground truth.
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Liquidity | 24h/intraday chg | Catalyst | Status |
+|---|---|---|---|---|
+| NEAR/USD | 0.06% spread, tight | +7.47% vs 24h open $1.8061, near 24h high $1.9466 | Broad "AI narrative" (Nvidia rally, TAO/ICP co-movement) — no discrete event <3h old | SKIP — fails weekly-gate catalyst-freshness requirement (narrative ≠ discrete catalyst); no confirmed 1h>5% |
+| OMNI/USD | ~57% spread | +174% claimed | None specific | SKIP — illiquid, recurring noise (flagged repeatedly) |
+| MAT/USD | ~3.2% spread | +66% claimed | None specific | SKIP — spread exceeds 1% cap |
+| DOLO/USD | ~2% spread | +53% claimed | None specific | SKIP — spread exceeds 1% cap |
+| REX/INIT/UFD | Not screened | 30–50% claimed | None specific | SKIP — no catalyst, likely illiquid microcaps consistent with prior noise pattern |
+| SOL/ZEC/HYPE/ONDO | N/A | N/A | Jito JTX, Ironwood NU7, HIP-3, tokenization — all forward-dated (late July / "this month") | SKIP — catalysts not <3h old |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered. BTC weekly downtrend gate still treated as active; no candidate clears the required 1h>5% momentum + catalyst<3h combo. NEAR is the only liquid, tight-spread mover but its catalyst is a broad narrative, not a discrete <3h event. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
