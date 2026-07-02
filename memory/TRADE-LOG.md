@@ -6872,3 +6872,15 @@ All candidates failed at least one mandatory gate:
 **Notes:** First trading day of Q3, and a flat one — no new entries found. Portfolio held at $115.36 ZUSD (100% cash), unchanged from the previous session-close (Jun 30 PM scan). BTC fell from ~$59,195 to $58,550.40 (−1.09%) on the day, so the bot outperformed BTC by +1.09% simply by sitting in cash. Kraken account shows only dust residuals across ~20 prior-position assets (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH — all sub-cent, negligible). No open Kraken positions or orders. Alpaca BTC stop a2b44cf9 remains cancelled (confirmed 2026-05-22); zero Alpaca exposure. Phase P&L holds at −$64.42 (−35.84% vs starting equity $179.78). BTC crash gate not triggered; BTC weekly gate status unchanged pending fresh research next session. Tomorrow: resume catalyst-driven momentum scans (>3% from 24h open + fresh catalyst <6h + spread ≤1% + R:R ≥1.2:1); watch for Q3 institutional flow follow-through.
 
 ---
+
+## 2026-07-02 — EOD Snapshot (Day 43, Thursday)
+
+### Jul 02 — EOD Snapshot (Day 43, Thursday)
+**Portfolio:** $115.36 | **Cash:** $115.36 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.42 (−35.84%) | **vs BTC:** −2.99%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | No open positions |
+**Trades today:** none | **Total since migration:** ~83
+**Notes:** Second straight flat day — pre-session research (08:05 UTC) found no qualifying setup and no midday/PM scans triggered a trade either. Portfolio unchanged at $115.36 ZUSD (100% cash). BTC rallied from ~$58,550.40 to $60,298.20 (+2.99%) on the day, so the bot underperformed BTC by −2.99% by sitting in cash while BTC recovered. BTC weekly downtrend gate was active all session (7-day −6.29% at time of research), requiring catalyst<3h + 1h>5% momentum for entries; ENA's unlock-driven pop, JTO's Jito JTX narrative, and other candidates all failed on catalyst freshness or momentum threshold. No open Kraken positions or orders; only dust residuals across ~20 prior-position assets remain. Alpaca BTC stop a2b44cf9 remains cancelled; zero Alpaca exposure. Phase P&L holds at −$64.42 (−35.84% vs starting equity $179.78). Note: WhatsApp/CallMeBot notification failed earlier in the session (quota exhausted, "0 messages left") — needs resubscription at callmebot.com/61477788635; this EOD send may also fail. Tomorrow: resume catalyst-driven scans; watch whether BTC's recovery breaks the weekly downtrend gate (would open up pure-momentum entries again).
+
+---
