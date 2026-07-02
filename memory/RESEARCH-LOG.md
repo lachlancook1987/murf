@@ -25152,3 +25152,39 @@ Per strategy's momentum-peak check and the research's own risk note ("all entrie
 All three candidates identified in the 20:07 UTC research had already peaked and were fading by the time of execution (~21:00 UTC, ~1h+ later). None shows a fresh 1h breakout above its prior 24h high or a new catalyst <2h old, so per the mandatory momentum-peak check (TRADING-STRATEGY.md, added 2026-06-19) all three are skipped rather than chased.
 
 **Decision: NO NEW TRADES.** Holding $115.36 ZUSD (100% cash). No open positions to manage. No WhatsApp notification sent (no trade placed, per Step 7).
+
+---
+
+## 2026-07-02 — Midday Scan #3 (~22:00 UTC)
+
+**Session branch:** claude/sweet-keller-2ogslu
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ask $61,482.30, 24h open $59,964.30 → +2.53%) ✅
+- **BTC weekly gate:** Re-confirmed via daily OHLC: 2026-06-27 close $59,941.50 vs today's close $61,493.70 → **+2.59% over 5 days** — BTC is up, not down >3%. **Weekly downtrend gate remains NOT active** (consistent with the 21:00 UTC check this session).
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+Re-checked all candidates flagged earlier in today's sessions (pre-session 08:05, midday ~12:xx, midday #2 ~14:xx, session-open execution ~21:00) against live 15m OHLC:
+
+| Candidate | Live Kraken | 24h high timing | Trend since high | Verdict |
+|---|---|---|---|---|
+| BTC/USD | $61,482.30, +2.53% from open | High $62,137.20 set well before this window | Essentially flat vs 21:00 UTC check ($61,580→$61,482) | SKIP — no fresh breakout, momentum-peak check fails |
+| HYPE/USD | $65.85, +5.58% from open | High $67.17, >2h old | Flat vs 21:00 UTC ($66.27→$65.85), still fading | SKIP — momentum-peak check fails |
+| SOL/USD | $80.68, +4.27% from open | High $82.65, well off | Flat vs 21:00 UTC ($80.93→$80.68), chopping | SKIP — momentum-peak check fails |
+| XRP/USD | $1.0794, +2.61% from open | High $1.11128, well off | Continued slow decline vs 21:00 UTC ($1.08212→$1.0794) | SKIP — momentum-peak check fails, thesis fading as flagged |
+| ZEC/USD | $432.74, +3.77% from open | High $456.13, furthest off-high (5.1%) | Weakest of the group, narrative-only catalyst weeks out | SKIP — decayed momentum |
+| NEAR/USD | $1.9223 (last), 24h open $1.8061 | High $1.9518 set >4h before this window (before 18:15) | 15m candles 18:15→22:00 show a steady **decline** from $1.9457→$1.9223 (~1.2% over 4h), no breakout | SKIP — momentum-peak check fails; catalyst is still only a broad "AI narrative," not a discrete event |
+| WLD/USD | $0.3976 (last), 24h open $0.3606 | High $0.4032 set at 20:00 UTC (~2h ago) | Chopping sideways $0.394–$0.402 since the high, no new breakout above $0.4032 | SKIP — momentum stalled, no WLD-specific catalyst (still tied to broad short-squeeze rebound per prior scan) |
+
+**Fresh catalyst check:** Perplexity query for breaking news in the last 2h returned only a generic Trump/crypto-ventures disclosure story (bearish-framed, not asset-specific) plus internally contradictory price data (claimed BTC ~$58,586, directly contradicting live Kraken $61,482 — same hallucination pattern flagged in every session today). No actionable new catalyst identified. Live Kraken quotes used as ground truth throughout.
+
+**Decision: NO NEW TRADES.** Fourth consecutive scan today reaching the same conclusion — BTC/HYPE/SOL/XRP remain in the same fading pattern first identified at 21:00 UTC (all essentially flat to slightly down since), and the two next-best candidates (NEAR, WLD) both fail the momentum-peak check (highs set 2–4h ago, no fresh breakout, no new catalyst <2h). Weekly BTC downtrend gate re-confirmed lifted (+2.59% over 5 days) but did not open any new qualifying setup this scan. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
