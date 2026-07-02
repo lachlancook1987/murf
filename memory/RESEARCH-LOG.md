@@ -23996,6 +23996,1029 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
 - CLARITY Act floor vote news → XRP at 7% trail (binary catalyst)
 
 
+---
+
+## 2026-06-29 — Midday Scan (~12:00 UTC, Monday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/sweet-keller-a418ga
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca:** Historical orders only (May 2026) — no active exposure ✓
+- **BTC:** $60,071 ask | 24h open: $59,488.90 | 24h high: $60,348.70 | vs open: +0.98%
+- **Crash gate:** NOT triggered (BTC +0.98%, far below −20%) ✓
+- **BTC weekly gate:** ACTIVE (BTC $60,071 vs Jun 17 close $65,599 = −8.4%) — pure momentum banned; catalyst-driven entries exempt
+
+### Steps 2–5 (position management)
+
+No open positions, no open orders — Steps 2 (state pull), 3 (stop verification), 4 (stop tightening), 5 (thesis check) all N/A.
+
+### Midday Momentum Scan (live Kraken quotes)
+
+| Asset | Ask | vs 24h Open | vs 24h High | Spread | Decision |
+|---|---|---|---|---|---|
+| BTC/USD | $60,071 | +0.98% | −0.46% | ~0% | SKIP — below 3% threshold |
+| ETH/USD | $1,577 | +0.49% | −0.55% | ~0% | SKIP — below threshold |
+| SOL/USD | $72.95 | +2.33% | −0.34% | 0.014% | SKIP — below 3% threshold (near high) |
+| AVAX/USD | $6.586 | +2.30% | −0.99% | 0.015% | SKIP — below threshold |
+| HYPE/USD | $62.76 | +2.23% | −1.09% | 0.016% | SKIP — below threshold |
+| OP/USD | $0.1023 | +2.51% | −0.39% | 0.196% | SKIP — below 3% threshold |
+| ENA/USD | $0.0791 | +3.27% | −0.13% | 0.127% | SKIP — no fresh catalyst (on-chain spike was Jun 18, 11 days ago) |
+| TIA/USD | $0.3877 | +3.69% | −0.51% | 0.052% | SKIP — no specific catalyst today; Perplexity confirms macro-driven move only |
+| SYN/USD | $0.4191 | +10.46% | −13.30% | 0.143% | SKIP — momentum peaked (−13.30% from 24h high $0.4834) |
+| RAVE/USD | $0.4014 | +22.88% | −24.84% | 0.755% | SKIP — momentum peaked (−24.84% from $0.5340 high) |
+| TAC/USD | $0.0527 | +99.81% | −9.28% | 2.235% | SKIP — spread 2.235% (>1% hard limit) |
+| ACT/USD | $0.0137 | +25.00% | −20.35% | 1.022% | SKIP — spread >1% + momentum peaked |
+| DOGE/USD | $0.0729 | −0.23% | −1.36% | 0.011% | SKIP — below open |
+| XRP/USD | $1.0506 | +0.35% | −0.52% | 0.001% | SKIP — below threshold |
+| SHIB/USD | $4.21e-6 | +1.40% | −0.12% | 0.071% | SKIP — below threshold |
+| KAVA/USD | $0.0430 | +1.65% | 0.00% | 0.233% | SKIP — below threshold |
+| FET/USD | $0.1778 | +0.23% | −2.47% | 0.112% | SKIP — below watch trigger ($0.185) |
+| JTO/USD | $0.8228 | +0.71% | −5.20% | 0.072% | SKIP — below watch trigger ($0.90) |
+
+**Watch list triggers (unmet):** FET <$0.185, JTO <$0.90, BTC <$61,500.
+
+### Perplexity Research Notes
+
+- **Fear & Greed Index:** 16 (Extreme Fear) — market risk-off
+- **BTC liquidations:** $768M in 24h (mostly longs) — per Perplexity (data may lag)
+- **DOGE volume:** +116% reported — not confirmed by Kraken live data (DOGE −0.23% from open)
+- **XRP on-chain activity:** +71.7% spike (2-week), no CLARITY Act floor vote imminent
+- **ENA catalyst confirmed stale:** On-chain spike was June 18 (not today); no new event today
+- **TIA:** No protocol news; macro-driven only; Perplexity reported 0.5-1.7% decline (contradicts Kraken +3.69% — Perplexity stale as usual)
+- **Perplexity intraday setups:** SOL, AVAX, LINK, ENA suggested — all below 3% threshold or no catalyst
+- **TAC/RAVE/ACT/SYN:** All pump-and-dump patterns (>20% from open but -10-25% from 24h highs)
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **Crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−8.4%) — pure momentum banned
+3. **No weekly-gate-exempt catalyst setup:** ENA on-chain spike was Jun 18 (stale); TIA macro-driven only; no Kraken listing/regulatory event/protocol upgrade <6h old
+4. **Momentum movers all peaked:** TAC/RAVE/ACT/SYN all well below 24h highs — no entry-ready momentum
+5. **Fear & Greed 16:** Extreme Fear; risk-off environment; cascading liquidations
+6. **Watch list triggers unmet:** FET, JTO, BTC all below their entry triggers
+7. **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-29 — Midday Scan (2nd Pass, ~afternoon UTC)
+
+**Execution time:** 2026-06-29 afternoon UTC | **Branch:** claude/sweet-keller-ulppb5
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders
+
+### State Confirmed
+
+- Kraken positions: `{}` — no open positions ✅
+- Kraken orders: `{}` — no open orders ✅
+- Alpaca orders: confirmed residual filled/historical orders only (stop a2b44cf9 cancelled 2026-05-22) ✅
+- STEPS 2–5 all N/A (no open positions to protect or tighten)
+
+### Market Context (updated live Kraken quotes)
+
+| Asset | 24h Open | Ask | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $59,489 | $59,226 | −0.44% | $60,687 | −2.41% | ~0% | Declining |
+| ETH/USD | $1,570 | $1,561 | −0.55% | $1,595 | −2.14% | ~0% | Declining |
+| SOL/USD | $71.29 | $73.09 | +2.52% | $74.42 | −1.79% | 0.014% | Below 3% |
+| HYPE/USD | $61.39 | $63.56 | **+3.53%** | $64.90 | −2.06% | 0.016% | ✓ threshold — no catalyst |
+| SYN/USD | $0.3794 | $0.4158 | +9.6% | $0.4500 | −7.6% | 0.58% | Catalyst priced in, peaked |
+| XRP/USD | $1.0470 | $1.0449 | −0.19% | $1.0643 | −1.82% | 0.015% | Negative |
+| LINK/USD | $7.257 | $7.239 | −0.24% | $7.395 | −2.13% | 0.045% | Negative |
+| TAO/USD | $204.14 | $203.36 | −0.38% | $208.75 | −2.57% | 0.030% | Negative |
+| ZEC/USD | $375.65 | $381.78 | +1.63% | $390.26 | −2.17% | 0.12% | Below 3% |
+
+**BTC weekly gate:** ACTIVE — BTC $59,226 vs Jun 17 close $65,599 = −9.7% (>3% gate)
+**Crash gate:** NOT triggered — BTC −0.44% from 24h open, well below −20% threshold
+
+### Candidate Analysis
+
+**HYPE/USD (+3.53%):**
+- Only asset above 3% threshold; spread 0.016% ✓; high-ATR asset (3.5% trail rule applies)
+- BTC weekly gate ACTIVE: requires 1h momentum >5% OR catalyst-exempt entry (regulatory, listing, upgrade)
+- No fresh HYPE catalyst <3h old — pure momentum play → **BANNED under weekly gate**
+- **SKIP**
+
+**SYN/USD (+9.6%):**
+- Named catalyst: Arthur Hayes-linked wallet $2.2M SYN buy (reported by Perplexity)
+- However: 24h high was $0.45 and current $0.4158 = −7.6% from peak; momentum declining
+- Catalyst is NOT catalyst-exempt (not regulatory/listing/protocol upgrade) — needs 1h >5% + fresh <3h
+- The Arthur Hayes buy is the same catalyst that drove the initial spike to $0.45 (already priced in)
+- Momentum peak check FAILS: price declining from 24h high; no fresh 1h breakout above $0.45
+- RSI 87 (overbought per Perplexity); low trust score (18%); volume concerns
+- **SKIP**
+
+**Other assets:** All negative vs open or below 3% threshold — no further screening required.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **Crash gate:** NOT triggered ✓ (BTC −0.44%)
+2. **BTC weekly gate:** ACTIVE (−9.7% vs Jun 17) — pure momentum banned; only catalyst-exempt allowed
+3. **HYPE:** Meets 3% threshold but has no catalyst → blocked by weekly gate
+4. **SYN:** Catalyst (Arthur Hayes buy) already priced in; price declining from peak; momentum peak check fails; low trust score
+5. **No other qualifying setups:** All other tracked assets negative or below threshold
+6. **EU MiCA enforcement vs Binance:** Broad regulatory headwind; Extreme Fear (18) per F&G
+7. **Actions taken: NONE. No notification sent.**
+
+---
+
+## 2026-06-29 — Pre-Session Research (Day 40, Monday)
+
+**Execution time:** 2026-06-29 UTC | **Branch:** claude/affectionate-gates-r1zfmj
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders | No Alpaca exposure
+
+---
+
+### Account Snapshot
+
+| Account | Balance / State |
+|---|---|
+| Kraken ZUSD | $119.53 |
+| Kraken open positions | None (positions: {}) |
+| Kraken open orders | None (orders: {}) |
+| Alpaca | No positions, no active orders (stop a2b44cf9 cancelled 2026-05-22) |
+
+---
+
+### Market Context
+
+| Asset | Price | 24h Change | 24h High | vs High | Spread | Notes |
+|---|---|---|---|---|---|---|
+| BTC/USD | $60,407 | +1.54% | $60,687 | −0.46% | ~0% | Near 24h high; reclaimed $60K |
+| ETH/USD | ~$1,573 | −0.14% | $1,595 | — | — | Flat/slight decline |
+| SOL/USD | $75.75 | +6.25% | $76.34 | −0.77% | 0.013% | Near 24h high ✓ |
+| SYN/USD | $0.5155 | +35.9% | $0.5443 | −5.3% | 0.70% | Arthur Hayes whale buy |
+| TAC/USD | $0.05859 | +121.9% | $0.06229 | −5.9% | 0.19% | No fresh catalyst |
+| AVAX/USD | $6.722 | +4.41% | $6.806 | −1.2% | 0.015% | No specific catalyst |
+| OMNI/USD | $0.89 ask / $0.39 bid | — | — | — | 56% | Hard skip — illiquid |
+
+**Fear & Greed Index:** 12 — Extreme Fear (cycle low per Perplexity)
+**BTC perpetual funding rate:** +0.0074% / 8h (Binance) — mildly positive (longs paying shorts)
+**BTC weekly gate:** ACTIVE — BTC $60,407 vs Jun 17 ref $65,599 = −7.9% (>3% threshold) → pure momentum entries banned; only catalyst-exempt entries allowed (regulatory/listing/protocol upgrade)
+**Crash gate:** NOT triggered — BTC +1.54% from 24h open, far below −20% threshold ✓
+
+---
+
+### Perplexity Research Summary
+
+- **BTC:** ~$60,407 on Kraken. Reclaimed $60K today — significant technical level. BTC volume +52% vs prior session. 24h high $60,687.
+- **ETH:** ~$1,573, −0.14% 24h. Flat, volume elevated +29%.
+- **Top 24h gainers (broad market):** TAC +173%, Superfortune +45%, Unibase +38%, ORDI +35.5%, RaveDAO +30.5%, Synapse (SYN) +30.4%. Most are not available on Kraken (ORDI confirmed unavailable).
+- **Kraken top gainers:** OMNI +174% (spread 56% — illiquid), TAC +122% (no fresh catalyst), SYN +30-36% (Arthur Hayes whale buy).
+- **SOL:** +6.25% from open on Kraken. Drivers: memecoin frenzy on Solana ecosystem, ANSEM airdrop driving DEX volume, 100 billion lifetime transactions milestone achieved. Alpenglow protocol upgrade (new consensus, 150ms finality) in validator voting targeting Q3 2026 mainnet — protocol upgrade catalyst.
+- **CLARITY Act / XRP:** Senate floor vote timing ~July 2026; Polymarket 48%. Not today's catalyst.
+- **Token unlocks (week of Jun 23-29):** Humanity $54.7M (Jun 25), MegaETH $13.5M (Jun 23), Sahara AI $14.8M (Jun 26) — all prior to today. Jun 29 only minor unlocks.
+- **Fed policy:** Kevin Warsh (Fed Chair) signaling inflation focus; rate hike by Sep priced in — macro headwind for risk assets.
+- **Intraday setups suggested by Perplexity:** SOL, BTC, ETH, AVAX — general liquidity leaders. Specific targets per Perplexity were stale/inconsistent.
+- **Volume surges:** BTC +52%, ETH +29%, SOL elevated, XRP first positive session in 4 days.
+- **SYN/Synapse:** Arthur Hayes-linked wallet $2.2M buy, Hypercall Derivatives Platform backing confirmed. SIN Mainnet + buyback program driving ~80% weekly surge. RSI 89.62 — deeply overbought.
+- **TAC:** No fresh catalyst today. Binance Alpha inclusion (May 1) was prior catalyst; current +122% move is pure momentum/self-reinforcing cycle. All-time high set ~1h ago.
+
+---
+
+### Candidate Screening
+
+| Asset | 24h from Open | vs 24h High | Spread | Weekly Gate Status | Decision |
+|---|---|---|---|---|---|
+| SOL/USD | +6.25% | −0.77% | 0.013% ✓ | Catalyst-exempt (protocol upgrade: Alpenglow) | **PRIMARY TRADE CANDIDATE** |
+| SYN/USD | +35.9% | −5.3% | 0.70% ✓ | Not exempt — needs 1h >5% + catalyst <3h; RSI 89.62 | SKIP — overbought, not exempt |
+| TAC/USD | +121.9% | −5.9% | 0.19% ✓ | Pure momentum, no catalyst → BANNED | SKIP |
+| AVAX/USD | +4.41% | −1.2% | 0.015% ✓ | No fresh catalyst — momentum only | SKIP |
+| BTC/USD | +1.54% | −0.46% | ~0% ✓ | CLARITY Act not today; below 3% threshold | SKIP — below threshold |
+| OMNI/USD | — | — | 56% ✗ | — | HARD SKIP — illiquid |
+| ORDI/USD | — | — | N/A | Not listed on Kraken | SKIP — not available |
+
+---
+
+### Trade Ideas
+
+#### IDEA 1 — SOL/USD: Alpenglow Protocol Upgrade + Ecosystem Momentum (PRIMARY)
+
+- **Catalyst:** Solana Alpenglow upgrade in validator voting — new consensus mechanism targeting 150ms finality, Q3 2026 mainnet. Protocol upgrade = catalyst-exempt from BTC weekly gate. Supporting: 100 billion lifetime transactions milestone, ANSEM airdrop driving DEX volume surge, memecoin ecosystem activity.
+- **Kraken pair:** SOL/USD ✓ (confirmed online)
+- **Spread:** 0.013% ✓ (well under 1%)
+- **Entry:** Market at ~$75.75
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC (place immediately after fill)
+- **T1:** $75.75 × 1.03 = **$78.02** (+3%)
+- **T2:** $75.75 × 1.05 = **$79.54** (+5%)
+- **R:R:** 3% gain / 2.5% stop = **1.2:1** ✓ (at minimum threshold)
+- **Momentum peak check:** 24h high $76.34, current $75.75 (−0.77% from high) — near peak, still running ✓
+- **Size:** 100% equity ($119.53) — highest conviction single setup; full deployment
+- **Risk notes:** BTC weekly gate active (Alpenglow exempts this). F&G 12 = Extreme Fear environment. SOL already +6.25% from open — late entry risk. Trailing stop protects immediately.
+
+#### IDEA 2 — SYN/USD: Arthur Hayes Whale Catalyst (SECONDARY / WATCHLIST)
+
+- **Catalyst:** Arthur Hayes-linked wallet $2.2M SYN buy (Hypercall Derivatives Platform backing). SIN Mainnet + buyback program. ~80% weekly surge.
+- **Kraken pair:** SYN/USD ✓
+- **Spread:** 0.70% ✓
+- **Entry:** Market at ~$0.5155 (if RSI cools and weekly gate criteria met)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **T1:** $0.5155 × 1.03 = $0.5310 | **T2:** $0.5155 × 1.05 = $0.5413
+- **R:R:** 3% / 2.5% = 1.2:1 ✓
+- **Weekly gate assessment:** Arthur Hayes buy is NOT exempt (not regulatory/listing/protocol upgrade). Needs 1h momentum >5% AND catalyst <3h old for entry. Catalyst timing unclear.
+- **SKIP for now** — RSI 89.62 is extreme; momentum peaked at $0.5443; weekly gate enhanced criteria likely not met. Monitor for reset to $0.43-$0.45 and renewed momentum before reconsidering.
+
+#### IDEA 3 — TAC/USD: Pure Momentum (BANNED)
+
+- **24h move:** +121.9% from open; ATH set today; spread 0.19% ✓
+- **Catalyst:** NONE — pure momentum, self-reinforcing cycle. Binance Alpha inclusion (May 1) was prior catalyst, already fully priced.
+- **Decision:** BANNED under BTC weekly gate (pure momentum, no catalyst). RSI 82.6 = overbought. Do not enter.
+
+#### IDEA 4 — BTC/USD: Technical Recovery (CONTINGENT)
+
+- **Status:** +1.54% from open, near 24h high $60,687. Reclaimed $60K.
+- **Why skip now:** Below 3% momentum threshold for weekly gate entry. No specific catalyst today (CLARITY Act still weeks away, Fed = headwind).
+- **Trigger:** Watch for breakout above $60,687 with volume confirmation + CLARITY Act news or macro catalyst. If BTC breaks $61,500 on new catalyst, re-evaluate.
+
+---
+
+### Risk Factors
+
+1. **F&G 12 (Extreme Fear)** — risk-off environment; markets prone to sharp reversals
+2. **BTC weekly gate active** — BTC down 7.9% over past 12 days; only catalyst-exempt entries allowed
+3. **Fed potential rate hike (Sep)** — macro headwind suppressing risk appetite
+4. **SOL late entry** — already +6.25%; trailing stop at 2.5% means stop fires at ~$73.86; could be triggered by normal intraday volatility
+5. **Thin alts liquidity** — Extreme Fear = wider real spreads under stress; Kraken quotes may not reflect fill quality on size
+6. **No diversification** — single 100% SOL bet; if thesis fails, full capital at risk (but stop limits to ~−2.5% = ~−$3 loss)
+
+---
+
+### Decision
+
+**TRADE — Enter SOL/USD at market**
+
+- Crash gate: NOT triggered ✓ (BTC +1.54%)
+- BTC weekly gate: ACTIVE but SOL entry is CATALYST-EXEMPT (Alpenglow protocol upgrade)
+- Primary setup: SOL/USD market entry ~$75.75, 100% equity ($119.53), trailing stop 2.5% GTC immediately after fill
+- All other candidates screened and rejected (pure momentum, overbought, unavailable, or spread too wide)
+- Net expected P&L at T1: +$3.59 (+3%) | at T2: +$5.98 (+5%)
+- Phase P&L context: −$60.25 (−33.52%); starting equity $179.78
+
+**Planned trade for today's notification:** BUY SOL/USD ~$75.75 (100% equity, ~1.577 SOL), trailing stop 2.5% immediately after fill. T1: $78.02, T2: $79.54.
+
+
+---
+
+## 2026-06-29 — Session-Open (2nd Pass, ~evening UTC)
+
+**Execution time:** 2026-06-29 UTC | **Branch:** claude/clever-allen-evd9ka
+**Portfolio:** $119.53 ZUSD (100% cash) | No open Kraken positions | No open orders | No Alpaca exposure
+
+### Account Snapshot
+
+| Account | Balance / State |
+|---|---|
+| Kraken ZUSD | $119.53 |
+| Kraken open positions | None (positions: {}) |
+| Kraken open orders | None (orders: {}) |
+| Alpaca | Historical orders only — no active exposure |
+
+### Market Context (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Status |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,188 | $59,489 | +1.18% | $60,687 | −0.83% | ~0% | Below 3% threshold |
+| SOL/USD | $75.15 | $71.29 | +5.42% | $76.34 | −1.56% | 0.013% | Peak >60min old; catalyst stale |
+| HYPE/USD | $66.43 | $61.39 | +8.21% | $67.20 | −1.15% | 0.015% | No exempt catalyst |
+| ZEC/USD | $405.31 | $375.65 | +7.90% | $408.95 | −0.89% | 0.069% | Catalyst (Jun 3-5) stale |
+| SYN/USD | $0.4992 | $0.3794 | +31.6% | $0.5443 | −8.3% | 0.48% | Peaked; not exempt |
+| AVAX/USD | $6.659 | $6.438 | +3.43% | $6.806 | −2.16% | 0.015% | Pure momentum — banned |
+| SUI/USD | $0.7011 | $0.6807 | +3.00% | $0.7065 | −0.76% | 0.014% | Short squeeze — not exempt |
+| XLM/USD | $0.1757 | $0.1727 | +1.73% | $0.1787 | −1.72% | 0.051% | Below 3% threshold |
+| NEAR/USD | $1.8624 | $1.8300 | +1.77% | $1.9117 | −2.58% | 0.059% | Below 3% threshold |
+| ONDO/USD | $0.3161 | $0.3094 | +2.19% | $0.3224 | −1.93% | 0.057% | Below 3% threshold |
+
+**BTC crash gate:** NOT triggered (BTC +1.18% from 24h open, far below −20%) ✅
+**BTC weekly gate:** ACTIVE — BTC $60,188 vs Jun 17 ref $65,599 = **−8.2%** (>3%) → pure momentum banned; catalyst-exempt entries only
+
+### Candidate Screening
+
+**SOL/USD (+5.42%) — SKIP:**
+- Meets 3% threshold ✓ | Spread ✓ | Alpenglow is catalyst-exempt category ✓
+- BUT momentum peak check FAILS: 24h high $76.34 set >60 min ago (same high since pre-session research); current $75.15 is −1.56% from peak and declining
+- Alpenglow last major update: May 11, 2026 (validator testing began) — NOT a fresh catalyst <2h old
+- No fresh 1h candle breakout above $76.34 ✗ | No new distinct catalyst <2h old ✗
+- **SKIP — momentum peak check fails**
+
+**ZEC/USD (+7.90%) — SKIP:**
+- Meets 3% threshold ✓ | Spread 0.069% ✓ | Near 24h high (−0.89%) ✓
+- BUT catalyst (NU6.2 hard fork security fix, Orchard vulnerability) was deployed June 3, disclosed June 5 — **24-26 days old**, NOT <6h
+- Current +7.90% is recovery/short-covering from prior crash, NOT driven by fresh catalyst today
+- BTC weekly gate ACTIVE: pure momentum recovery without fresh catalyst → BANNED
+- **SKIP — catalyst stale (Jun 3-5, 24-26d old)**
+
+**HYPE/USD (+8.21%) — SKIP:**
+- Meets 3% threshold ✓ | Spread ✓ | Near peak (−1.15%) ✓
+- No catalyst at all — pure momentum + high-ATR asset
+- BTC weekly gate ACTIVE: pure momentum banned ✗
+- **SKIP — no exempt catalyst**
+
+**SYN/USD (+31.6%) — SKIP:**
+- Meets 3% threshold ✓ | Spread 0.48% ✓ | BUT −8.3% from 24h high (peaked)
+- Arthur Hayes $2.2M whale buy: not exempt category (not regulatory/listing/protocol upgrade)
+- Momentum peak check fails (−8.3% from peak) ✗
+- **SKIP — peaked; not exempt category**
+
+**AVAX, SUI, XLM, NEAR, ONDO:** No exempt catalyst or below 3% threshold — all skipped
+
+### Decision: NO NEW ENTRIES — HOLD CASH
+
+1. **Crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−8.2%) — pure momentum banned ✓
+3. **SOL:** Alpenglow catalyst exempt from gate BUT momentum peak check fails (high >60 min old, price declining, no fresh catalyst <2h) ✗
+4. **ZEC:** Best near-peak candidate (+7.90%, −0.89% from high) but catalyst 24-26 days old; recovery momentum only ✗
+5. **HYPE/SYN/AVAX/SUI:** No exempt catalyst or momentum peaked ✗
+6. **All others:** Below 3% threshold ✗
+
+**Capital preserved at $119.53 for next qualifying setup.**
+
+**Catalyst watchlist triggers:**
+- BTC breakout above $61,500 with CLARITY Act/ETF inflow news → long BTC
+- SOL breakout above $76.34 (new 24h high) with fresh Alpenglow/ecosystem news <2h → SOL re-evaluate
+- Any Kraken listing announcement → first-mover entry
+- ZEC Ironwood upgrade announcement (date TBD) → ZEC at 2.5% trail
+- CLARITY Act Senate floor vote → XRP at 7% trail (binary catalyst)
+
+**Actions taken: NONE. No notification sent.**
+
+
+---
+
+## 2026-06-29 — Midday Scan (~12:00 UTC, Monday)
+
+**Portfolio:** $119.53 ZUSD (100% cash) | No open positions | No open orders
+**Session branch:** claude/sweet-keller-fyeoip
+
+### State Confirmed
+
+- **Kraken positions:** None ✓
+- **Kraken orders:** None ✓
+- **Alpaca:** Historical orders only (May 2026, all filled) — no active exposure ✓
+- **Stop verification:** N/A (no open positions) ✓
+- **Crash gate:** NOT triggered (BTC $60,388, +1.51% vs 24h open $59,489) ✓
+- **BTC weekly gate:** ACTIVE (BTC $60,388 vs Jun 17 close $65,599 = −7.9%) — pure momentum banned; catalyst-driven entries exempt
+
+### Market Snapshot (live Kraken quotes)
+
+| Asset | Ask | 24h Open | vs Open | 24h High | vs High | Spread | Decision |
+|---|---|---|---|---|---|---|---|
+| BTC/USD | $60,388 | $59,489 | +1.51% | $60,687 | −0.5% | ~0% | Below 3% threshold |
+| ETH/USD | $1,617 | $1,570 | +3.03% | $1,634 | −1.1% | ~0% | Borderline; weak catalyst |
+| SOL/USD | $75.49 | $71.29 | +5.79% | $76.34 | −1.1% | 0.013% | No exempt catalyst |
+| HYPE/USD | $67.38 | $61.39 | +10.12% | $67.74 | −0.5% | 0.015% | Catalyst too old / MAS bearish |
+| XRP/USD | $1.062 | $1.047 | +1.45% | $1.075 | −1.2% | 0.003% | Below threshold |
+| FET/USD | $0.1768 | $0.1774 | −0.34% | $0.1823 | −3.0% | 0.17% | Negative |
+| AAVE/USD | $92.00 | $91.54 | +0.50% | $94.55 | −2.7% | 0.044% | Below threshold |
+
+**Fear & Greed Index:** 18 (Extreme Fear) — unchanged from pre-session
+**BTC Weekly Gate:** ACTIVE (−7.9% vs Jun 17 close $65,599)
+
+### Candidate Analysis
+
+**HYPE/USD (+10.12%, at 24h high):**
+- Volume: 314k+ HYPE, 14k+ trades — very high ✓
+- Spread: 0.015% ✓
+- Peak check: at 24h high $67.74 (−0.5% below) ✓
+- **Catalyst assessment:**
+  - Grayscale HYPE ETF (GHYP on Nasdaq): launched **June 3, 2026** — 26 days old, NOT fresh ✗
+  - Hyper Foundation $10M USDH grant program: **June 28** — 24h+ old, borderline ✗
+  - MAS (Singapore) Investor Alert for Hyperliquid: **June 29 (today)** — fresh but BEARISH ✗
+  - Six consecutive weeks of spot ETF inflows (most recent Jun 22): 7 days old ✗
+- **BTC weekly gate verdict:** No valid exempt catalyst today (only today-catalyst is bearish MAS alert)
+- **SKIP** — pure momentum entry banned; no qualifying exempt catalyst
+
+**SOL/USD (+5.79%, near 24h high):**
+- Volume: 415k+ SOL, 29k+ trades — extremely high ✓
+- Spread: 0.013% ✓
+- Peak check: 24h high $76.34, current $75.49 = −1.1% below (borderline) ⚠
+- **Catalyst assessment:**
+  - Firedancer upgrade: mainnet since **December 2024**, full rollout ongoing — NOT a fresh today catalyst ✗
+  - Alpenglow consensus upgrade: expected Q1 2026 — past event ✗
+  - RWA/DePIN growth narrative: ongoing, no specific today event ✗
+  - Whale $15M short: bearish pressure ✗
+- **BTC weekly gate verdict:** No exempt catalyst — pure momentum entry
+- **SKIP** — no qualifying catalyst; pure momentum banned by weekly gate
+
+**ETH/USD (+3.03%, near 24h high):**
+- Volume: 23.7k ETH — decent ✓
+- Spread: ~0% ✓
+- Peak check: 24h high $1,634, current $1,617 = −1.1% below ⚠
+- **Catalyst assessment:**
+  - BlackRock + Ethena Staked USDe launch (Jun 29, today): ETH ecosystem event — indirect, not a direct ETH protocol upgrade or listing ✗
+  - Sharplink 5,000 ETH purchase: Jun 26, >72h old ✗
+  - Vitalik selling ETH (early 2026): bearish historical ✗
+- **BTC weekly gate verdict:** Catalyst is indirect (ETH ecosystem but not regulatory/listing/upgrade for ETH itself)
+- **SKIP** — +3.03% barely meets threshold; catalyst is too weak/indirect for gate exemption; weak setup
+
+**XRP/USD (+1.45%):**
+- **CLARITY Act news today:** Senate Banking Committee placed bill on Legislative Calendar (No. 423); Chairman Tim Scott declared floor-ready; White House targeting July 4 signing
+- **However:** Probability dropped to ~50% (from 66%); needs 7 Democratic cloture votes (only 2 secured); "third week of June" floor deadline passed → July 4 target now "logistically impossible"
+- Price reflects uncertainty: only +1.45% from open — well below 3% threshold ✗
+- Binary trigger: Senate floor VOTE (not committee advancement) — NOT triggered ✗
+- **SKIP** — below threshold; binary catalyst not triggered
+
+**BTC/USD (+1.51%):**
+- Below 3% threshold ✗
+- **SKIP**
+
+### Today's CLARITY Act Update (Contextual)
+
+Senate Banking Committee advanced the CLARITY Act and placed it on the Senate Legislative Calendar today (June 29). This is bullish progress but probability has declined to ~50% from prior 66%. The July 4 signing target is now logistically unlikely (floor debate missed the third-week-of-June window). No Senate floor vote scheduled. Continue monitoring: if a floor vote is scheduled and XRP breaks above $1.10 with 1h momentum >5%, revisit at 7% trail.
+
+### Decision
+
+**NO NEW ENTRIES — HOLD CASH**
+
+1. **BTC crash gate:** NOT triggered ✓
+2. **BTC weekly gate:** ACTIVE (−7.9%) — pure momentum banned; only catalyst-exempt entries allowed
+3. **HYPE** (+10.12%): Spectacular momentum but no valid exempt catalyst (Grayscale ETF 26 days old; today's only fresh event is a bearish MAS regulatory warning) → SKIP
+4. **SOL** (+5.79%): Strong momentum but no specific today catalyst (Firedancer is 2024 deployment, long-running story) → SKIP
+5. **ETH** (+3.03%): Barely meets threshold; BlackRock/Ethena launch is indirect for ETH price; catalyst too weak for gate exemption → SKIP
+6. **XRP** (+1.45%): CLARITY Act committee advancement is progress but not the binary floor vote trigger; price below threshold → SKIP
+
+### Watch List (updated)
+
+| Asset | Watch Level | Trigger | Catalyst |
+|---|---|---|---|
+| XRP/USD | >$1.10 with 1h +>5% | Senate floor vote scheduled or CLARITY Act floor debate begins | CLARITY Act (binary, 7% trail) |
+| SOL/USD | >$78 (new 24h breakout) with 1h +>5% + fresh catalyst | Alpenglow or specific protocol event <2h old | Broad ecosystem strength |
+| HYPE/USD | Wait for daily reset | Needs fresh catalyst <6h + BTC weekly gate lifted or catalyst exemption | MAS warning resolved; new institutional catalyst |
+| BTC/USD | >$62,000 Monday close | Weekly gate lifted (BTC recovers >$63,700) | Institutional inflows, CLARITY Act floor vote |
+
+**Actions taken: NONE. No notification sent.**
+
+
+---
+
+## 2026-06-30 — Pre-Session Research (Day 41, Tuesday)
+
+**Date:** 2026-06-30 | **Session branch:** claude/affectionate-gates-jh20uk
+
+---
+
+### ACCOUNT SNAPSHOT
+
+| Platform | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $119.53 ZUSD (100% cash) | None | None |
+| Alpaca | $0 (fully retired May 2026) | None | None |
+
+**Kraken dust balances:** AVAX 0.000332 ($0.00), SOL 0.0000917 ($0.00), NEAR 0.00635 ($0.00), SUI 0.00061 ($0.00), XETH 0.0000017 ($0.00) — all negligible
+**Phase P&L:** −$60.25 (−33.52%) vs Kraken starting equity $179.78
+**Total trades since migration:** ~83
+
+---
+
+### MARKET CONTEXT
+
+**BTC/USD (Kraken live):**
+- Ask: $59,441 | 24h open: $60,170 | Change: **−1.21%** | 24h range: $58,919–$60,687
+- 7-day: **−9.37%** vs Jun 17 close $65,599 → **BTC weekly gate ACTIVE**
+- Crash gate: **NOT triggered** (−1.21%, far below −20% threshold) ✓
+
+**ETH/USD (Kraken live):**
+- Ask: $1,590 | 24h open: $1,611 | Change: **−1.26%** | 24h range: $1,555–$1,634
+- Declining; below day-trade threshold
+
+**XRP/USD (Kraken live):**
+- Ask: $1.046 | 24h open: $1.057 | Change: **−1.09%** | 24h range: $1.038–$1.075
+- Declining; below threshold
+
+**KAS/USD (Kraken live):**
+- Ask: $0.030080 | Bid: $0.030050 | 24h open: $0.030320 | Change: **−0.79%** | 24h range: $0.02776–$0.03122
+- Spread: 0.10% ✓ | Volume 24h: 32.2M KAS, 4,816 trades
+
+**SYN/USD (Kraken live):**
+- Ask: $0.5450 | 24h open: $0.5074 | Change: **+7.41%** | 24h range: $0.3858–$0.5584
+- Spread: 0.24% ✓ | Volume 24h: 9.1M SYN, 12,347 trades
+
+**Macro signals:**
+- Fear & Greed Index: **12–15 (Extreme Fear)** — unchanged from prior days
+- BTC Funding Rate (8h): Binance +0.0062%, Bybit +0.01%, BitMEX −0.0079% — slight long bias overall
+- 5 consecutive weeks of US spot BTC ETF outflows ($2.43B net outflows in May 2026)
+- Whale offloading 21,881 BTC; whales stopped accumulating
+- Strong US NFP data (+172k vs +85k forecast) → reduced Fed rate-cut odds (BTC negative)
+- SpaceX IPO driving liquidity toward equities
+
+**Top 24h gainers (selected):**
+| Asset | 24h Change | Notes |
+|---|---|---|
+| TAC | +168% | Not on Kraken / micro-cap |
+| Gensyn AI (GNS) | +80% | Not on Kraken |
+| UNFI | +75% | Not on Kraken |
+| SYN | +29–53% | On Kraken; pure short squeeze, no catalyst |
+| KAS | +8–10% | On Kraken; Toccata hard fork TODAY |
+| MORPHO | +6.83% | On Kraken; only +1.49% from 24h open by session open |
+
+**Token unlocks today:** Minor daily vesting unlocks only (Bware Labs, Wodo Gaming). No major unlock pressure.
+
+---
+
+### CANDIDATE ANALYSIS
+
+**Gates applied:**
+- Crash gate: NOT triggered ✓
+- BTC weekly gate: ACTIVE (−9.37% vs Jun 17) — pure momentum entries BANNED; only catalyst-exempt entries allowed (regulatory event, exchange listing, protocol upgrade)
+
+---
+
+**1. KAS/USD — TOCCATA HARD FORK (PRIMARY CANDIDATE)**
+
+- **Catalyst:** Kaspa Toccata hard fork activates at **16:15 UTC TODAY (June 30, 2026)**. This is the most significant upgrade in Kaspa's history: introduces native assets, covenants, and ZK proofs — making Kaspa fully programmable with smart contracts. Officially confirmed activation time. This is a genuine protocol upgrade catalyst, explicitly exempt from BTC weekly gate.
+- **Kraken pair:** KASUSD online ✓ | Margin available: up to 2x/3x
+- **Spread:** 0.10% ✓ (well under 1%)
+- **Price action:** Current $0.030080, 24h open $0.030320 (−0.79%). 24h high was $0.031220 (+3.3% above current). Declined from peak as market consolidated pre-fork.
+- **Momentum peak check:** 24h high set earlier in session, current price −3.65% below peak. Exception (b) applies: Toccata activation is a distinct protocol event at 16:15 UTC (not already happened). Position for activation reaction rather than chasing the earlier spike.
+- **Volume:** 32.2M KAS in 24h, 4,816 trades — healthy, genuine interest
+- **Same-thesis entry cap:** CLEAR — last KAS entries were Jun 3–8, well beyond the 7-day rolling window
+- **Entry trigger:** Market order AT or immediately AFTER 16:15 UTC fork activation confirmation, IF price is stable or recovering. If price breaks above 24h high $0.03122, enter breakout immediately. Skip if price sharply declines on activation (sell-the-news).
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`
+- **Entry estimate:** ~$0.030 (market) | T1: $0.03090 (+3%) | T2: $0.03150 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** ✓ (exactly minimum; acceptable for strong protocol upgrade catalyst)
+- **Size:** 80–100% equity ($96–$120) — Toccata is a genuine first-in-kind catalyst for KAS
+- **Risk:** "Sell the news" dump possible if market has fully front-run the event; price already declined from $0.03122 peak. If price drops below $0.028 on fork activation, thesis invalidated — do not enter.
+
+---
+
+**2. SYN/USD — SHORT SQUEEZE (SKIP)**
+- +7.41% from 24h open, spread 0.24% ✓
+- Pure short squeeze, negative funding rate — **no fundamental catalyst** (no upgrade, no listing, no regulatory event)
+- BTC weekly gate bans pure momentum entries
+- **SKIP** ✗
+
+---
+
+**3. XRP/USD — CLARITY ACT BINARY WATCH (NOT ACTIVE TODAY)**
+- Ask: $1.046, −1.09% from 24h open — price declining, below threshold
+- CLARITY Act status: Placed on Senate Legislative Calendar (Cal. No. 423) June 1; needs 60 votes (7 Democratic still withholding); July floor vote possible but August more likely; July 4 signing target now logistically impossible
+- Binary trigger condition NOT met today: no Senate floor vote scheduled
+- **CONDITIONAL WATCH:** If Senate floor vote announced + XRP breaks above $1.10 with 1h momentum >5% → enter at `trail_percent: 7`. Not an active trade today.
+- **SKIP today** ✗
+
+---
+
+**4. ETH/USD (SKIP)**
+- −1.26% from 24h open; declining. No fresh catalyst. **SKIP** ✗
+
+---
+
+**5. OMNI/USD (SKIP — ILLIQUID)**
+- Perplexity cited +174% on Kraken, but live quote shows bid $0.415 vs ask $0.889 = 114% spread. Only 21 OMNI traded in 24h. Completely illiquid. **SKIP** ✗
+
+---
+
+### DECISION: TRADE — KAS/USD CONDITIONAL
+
+| Gate | Status |
+|---|---|
+| Crash gate (BTC −20%) | ✅ NOT triggered |
+| BTC weekly gate (−9.37%) | ⚠ ACTIVE — catalyst-exempt entries only |
+| Primary trade | **KAS/USD — Toccata hard fork at 16:15 UTC** |
+
+**Action plan:**
+1. Hold cash until 16:15 UTC (or when fork activation confirmed live)
+2. If KAS at/above $0.029 and showing any strength: enter market order, ~80–100% equity
+3. Immediately place `trailing_stop`, `trail_percent: 2.5`, GTC after fill
+4. Monitor: if price drops below $0.028 on activation → no entry / thesis invalidated
+5. T1 = entry +3% (tighten trail to 0.5%), T2 = entry +5% (close or tighten further)
+
+**Standby watchlist:**
+- XRP: Watch for Senate floor vote announcement → binary trigger at 7% trail
+- SYN: Wait for fundamental catalyst before re-considering
+
+---
+
+### RISK FACTORS
+
+1. BTC weekly gate active (−9.37%) — broad risk-off sentiment; alts generally underperforming
+2. Extreme Fear (12–15) — market not positioned for risk-on rallies
+3. KAS "sell-the-news" risk: price already hit $0.031220 during pre-fork buying, now consolidating below open
+4. ETF outflows (5 consecutive weeks) + whale selling = structural BTC headwind
+5. NFP beat reduced rate-cut expectations — macro risk-off
+6. No major unlock pressure today (minor only)
+7. OMNI was a Perplexity false positive — 114% spread confirms always verify with Kraken live quote before any trade
+
+
+---
+
+## 2026-06-30 — PM Midday Scan Research Update (14:10 UTC)
+
+**Portfolio:** $115.36 ZUSD | **State:** 100% cash, no positions, no orders
+
+### Gate Status
+| Gate | Status |
+|---|---|
+| Crash gate (BTC >−20%) | ✅ NOT triggered (BTC −1.13%) |
+| BTC weekly gate (−9.8% vs Jun 17) | ⚠ ACTIVE — catalyst-exempt entries only |
+| Fear & Greed | 13 (Extreme Fear) |
+
+### Market Data (14:10 UTC)
+- **BTC:** ~$59,195 (Kraken), −1.13% from 24h open $60,169 | Strategy ($12.5B BTC sales authorized, purchases suspended) = bearish overhang
+- **KAS:** $0.031120, +2.64% from 24h open | Toccata fork activated 16:15 UTC — post-event decline; R:R fails at 3.5% ATR stop
+- **SOL:** $73.24, −2.41% from 24h open $75.05 — confirmed declining, Perplexity data was stale
+- **OMNI:** Kraken spread 53.3% (ask $0.889, bid $0.415) — completely illiquid, 2 trades in 24h
+
+### Key News (today)
+- **Strategy (MSTR):** Authorized up to $12.5B BTC sales, purchases suspended — near-term BTC sell pressure
+- **ETH restructuring:** Major restructuring announcement pushing ETH lower (~$1,567 area)
+- **Clarity Act:** Senate debate expected early July, not today — XRP not triggered
+- **BNY Mellon + USDC:** Expanded partnership — no immediate tradeable impact
+- **Fear & Greed at 13:** Market in Extreme Fear, broad risk-off
+
+### Decision
+**NO NEW TRADES** — no qualifying catalyst-exempt setup found. Holding $115.36 ZUSD.
+
+---
+
+## 2026-06-30 — Pre-Session Research (Evening, 20:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+**Alpaca:** Positions [], orders historical-only (May 2026) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ~$59,398, 24h change −0.40%) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−9.4% vs Jun 17 close $65,599 — catalyst-exempt entries only) ⚠
+- **Fear & Greed:** 15 (Extreme Fear, up slightly from 12)
+- **BTC funding rate:** Mixed/near-flat (Binance +0.0033%, Bybit +0.0030%, BitMEX −0.0038%) — no strong bias
+
+### Market Context
+- BTC $59,398 (−0.40% 24h), ETH $1,567 (−0.6% 24h) — both declining, no day-trade signal
+- Divergence in top 10: SOL +6.19% and HYPE +4.35% on the *week*, but BTC/ETH/XRP/BNB/DOGE all red
+- No major token unlocks/protocol upgrades scheduled this week (largest unlocks already happened Jun 8–26)
+- CLARITY Act odds dropped to 42%; Senate in recess until **July 13** — XRP binary catalyst now off the table for weeks, not days
+- Top 24h gainers (TAC +157%, INFINIT +76%, HFUN +74%) not on Kraken or untradeable
+
+### Candidates Screened (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live) | Off high | Catalyst | Status |
+|---|---|---|---|---|---|
+| DOLO/USD | ~2.1% | n/a | — | None (pure pump) | SKIP — spread fails 1% hard limit |
+| INIT/USD | 0.38% | −0.75% | −5.9% off $0.0562 high | None confirmed | SKIP — already reversed, declining |
+| RENDER/USD | 0.07% | −2.6% | −3.9% off high | None | SKIP — declining, no catalyst |
+| ALGO/USD | 0.09% | −3.9% | −5.1% off high | None | SKIP — declining, no catalyst |
+| SOL/USD | 0.01% | −1.73% | −2.4% off high | None (weekly-only strength) | SKIP — intraday declining despite weekly gain |
+| SYN/USD | 0.47% | +5.3% (was +7.4% earlier) | **−25.7% off $0.7191 high** | None (short squeeze) | SKIP — blown-off top, pure momentum banned under BTC weekly gate |
+| KAS/USD | 0.07% | −2.7% | −7.8% off $0.03199 high | Toccata fork (already activated, already stopped out this AM) | SKIP — post-fork dump deepening, thesis dead |
+| OMNI/USD | n/a | — | — | — | SKIP — confirmed illiquid in prior scans (~53% spread) |
+
+**Decision: NO NEW TRADES.** Fourth consecutive scan today reaching the same conclusion — BTC weekly downtrend gate active, Extreme Fear sentiment, and every screened candidate is either spread-disqualified, already reversed from its high, or lacks a fresh (<3h) catalyst required under the weekly gate. Holding $115.36 ZUSD (100% cash).
+
+### Risk Factors
+1. BTC weekly gate remains active (~−9.4% vs Jun 17) — broad risk-off, alts underperforming
+2. Extreme Fear (15) — no risk-on catalyst in sight
+3. CLARITY Act delayed to Senate recess return (July 13) — removes near-term XRP catalyst
+4. Several "top gainer" assets (SYN, KAS, INIT) are well past their intraday peak — chasing now would be buying the dump, not the move
+5. No new unlocks/upgrades this week to generate fresh catalysts
+
+**No WhatsApp notification of a trade — sending HOLD status per Step 6.**
+
+---
+
+## 2026-06-30 — Midday Scan (22:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+**Alpaca:** Positions [], orders historical-only (May 2026) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ~$58,300–$59,600, 24h change roughly −0.4% to −3.1% depending on venue) ✅
+- **BTC weekly gate:** ACTIVE (BTC still ~−9.5% to −10% vs Jun 17 close $65,599 — catalyst-exempt entries only) ⚠
+- **Fear & Greed:** 15 (Extreme Fear)
+
+### Steps 3–5: N/A
+No open Kraken or Alpaca positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off high | Catalyst | Status |
+|---|---|---|---|---|---|
+| ZEC/USD | 0.07% | −2.7% (c $395.34 vs o $406.41) | −4.5% off $413.71 high | None fresh — Perplexity's "+25% in a day" figure contradicted by live Kraken data (weekly framing, not today) | SKIP — declining from high, no real surge |
+| TAO/USD | 0.07% | −3.4% (c $201.37 vs o $208.46) | −3.6% off $208.95 high | None fresh — Perplexity's "+28% weekly" is not a today signal | SKIP — declining, no catalyst |
+| SOL/USD | 0.01% | −2.0% (c $73.54 vs o $75.05) | −2.7% off $75.55 high | Perplexity claimed whale buy pushing >$75 (+4%) — contradicted by live Kraken quote | SKIP — declining, stale/false research signal |
+| KAS/USD | 0.07% | −3.3% (c $0.02925 vs o $0.03032) | −8.4% off $0.03199 high | Toccata fork already activated, already stopped out this AM | SKIP — same asset, no new catalyst, declining further |
+| TAC/INFINIT/Hypurr Fun/Synapse/Unibase/etc. | n/a | claimed +30–157% | — | Pure pump, no fundamental catalyst | SKIP — not on Kraken / untradeable micro-caps |
+
+**Note:** Perplexity returned one clearly garbage/hallucinated data point (a fictitious "Claude" token claiming a >99,900% price increase) in the volume-surge query — ignored as noise, not actionable, not a real Kraken-tradeable asset.
+
+**Decision: NO NEW TRADES.** Fifth consecutive scan today reaching the same conclusion. Every screened candidate that Perplexity flagged as "surging" is actually flat-to-down today on live Kraken data — repeated pattern of Perplexity returning stale weekly/monthly gain figures framed as real-time. BTC weekly downtrend gate remains active, Extreme Fear sentiment persists, no fresh (<3h) catalyst on any candidate. Holding $115.36 ZUSD (100% cash).
+
+**No WhatsApp notification — no action taken (Step 7 N/A).**
+
+## 2026-07-01 — Pre-Session Research (08:04 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC ~$58,800, 24h change ≈ −1.7% to −2.5% across venues) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−10.3% vs Jun 17 close $65,599 — catalyst-exempt entries only; require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 11 (Extreme Fear, down from 15 yesterday / 17 last week)
+- **BTC funding rate:** Slightly positive across venues (Binance +0.0033%, BitMEX/OKX +0.0100%, Bybit +0.0058%, Kraken +0.0177%) — mild bullish bias, not decisive
+
+### Market Context
+- BTC ~$58,800 (Kraken $58,812, −1.70%), ETH ~$1,569 (−1.42%) — both still declining, no day-trade signal on majors
+- Breaking news: BTC fell to $58,640 amid collapsed U.S.–Iran negotiations, rising oil prices, geopolitical risk-off (Strait of Hormuz tensions)
+- Token unlocks this week: BEAT ($49.7M, today, 2.71% supply — bearish supply pressure, not a buy catalyst), HYPE ($630M cliff unlock Jul 6 — not today), TRUMP/CC/WLD ongoing daily dilution
+- Top "24h gainers" per Perplexity (VOOI, Checkmate, dYdX, BASED, Apertum, Collaterize, ZEROBASE, Grok, RIF) are mostly illiquid microcaps not on Kraken or unverifiable
+- "1h surge" query returned no real-time data — only stale/contradictory 24h figures (one source claimed BTC $75k/$113k — clearly hallucinated, discarded as noise)
+
+### Candidates Screened (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off high | Catalyst | Status |
+|---|---|---|---|---|---|
+| DYDX/USD | ~0.25% | +5.9% vs open, but −21.8% off 24h high $0.24348 | Faded hard | Perplexity's "+43.85%" was the pre-crash peak — already reversed | SKIP — momentum peak check fails, classic pump-and-dump already unwound |
+| ADA/USD | ~0.015% | +4.0% vs open $0.1442, −1.75% off high $0.152668 | Near high, not fresh 1h>5% | None identified | SKIP — weekly gate requires 1h>5%+catalyst; this is 24h momentum only |
+| SOL/USD | ~0.01% | +1.75% vs open, −1.1% off high | Flat | None | SKIP — below all thresholds |
+| DOGE/USD | ~0.006% | −0.9% vs open | Declining | None | SKIP — declining, no signal |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (−10.3% vs Jun 17), Extreme Fear (11) persists, and every screened candidate either lacks a fresh (<3h) catalyst + 1h>5% momentum combo required under the gate, or already peaked and reversed (DYDX). No qualifying setup. Holding $115.36 ZUSD (100% cash).
+
+### Risk Factors
+1. BTC weekly gate active (~−10.3% vs Jun 17) — broad risk-off, pure momentum entries banned
+2. Extreme Fear (11) — lowest reading in over a week, no risk-on catalyst yet
+3. Geopolitical risk-off (U.S.–Iran talks collapsed) adding fresh macro headwind on top of existing BTC weakness
+4. BEAT token unlock today is a dilution event, not a buy signal — bearish if anything
+5. Perplexity's "top gainers" continue to surface illiquid/off-Kraken microcaps or stale peak data (DYDX) — live Kraken quotes remain the only reliable filter
+
+**No WhatsApp trade specifics — notifying HOLD status per Step 6.**
+
+---
+
+## 2026-07-01 — Midday Scan (Day 42, Wednesday)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $58,817, 24h open $58,531.90 → +0.49% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| BTC/USD | $58,817 | Perplexity claimed $78,101/2.31% 15-min gain — contradicts live Kraken quote, discarded as hallucinated noise | SKIP |
+| SOL/USD | ask $75.22, +2.24% vs open | Below 1h>5% weekly-gate threshold; off 24h high | SKIP |
+| HYPE/USD | — | 24h +20.5% but buyback catalyst already stale (>24h, per Jun 30 log) | SKIP |
+| OMNI/USD | — | Known illiquid (53%+ spread, prior session) | SKIP |
+| MAT/USD | ask 0.0828 / bid 0.048 | Spread ~72% — illiquid | SKIP |
+| DOLO/USD | ask 0.0225 / bid 0.02201 | Spread ~2.2% — exceeds 1% cap | SKIP |
+| REX/USD | N/A | Not on Kraken (unknown asset pair) | SKIP |
+| INIT/USD | ask 0.0526 / bid 0.0524 | Spread ~0.4% OK, but no confirmed catalyst <3h old or 1h>5% momentum data — fails weekly gate | SKIP |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate meets the strict 1h>5%+catalyst<3h combo required, and several are illiquid or have stale catalysts. Holding $115.36 ZUSD (100% cash).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-01 — Midday Scan (14:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,228, 24h open $58,531.90 → +1.19% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| XLM/USD | ask 0.19795, bid 0.19781 (spread ~0.07%) | +4.85% vs 24h open, but −4.5% off 24h high $0.2074 — declining, momentum peak check fails | SKIP |
+| ADA/USD | ask 0.15441, bid 0.15430 (spread ~0.07%) | +6.6% 24h but only +0.5% 1h — fails weekly-gate 1h>5% requirement; catalyst is generic "early July rebound," not a specific event <3h old | SKIP |
+| BTC/USD | $59,228, +1.19% intraday | No momentum/catalyst signal on majors | SKIP |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate clears the 1h>5% + catalyst<3h bar. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-01 — Session-Open Execution (15:01 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,513, 24h open $58,531.90 → +1.68% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** not re-queried this scan (11 as of this morning, Extreme Fear)
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| XLM/USD | ask 0.200765, bid 0.200594 (spread ~0.09%) | +6.3% vs 24h open $0.188852, but only ~+1.4% in the last hour (vs 14:03 UTC ask $0.19795) and still −3.2% off 24h high $0.2074 | SKIP — fails weekly-gate 1h>5% requirement, fading off high not fresh breakout |
+| JTO/USD | ask 0.78547, bid 0.78475 (spread ~0.09%) | +10.3% vs 24h open $0.71235, −3.1% off 24h high $0.81046. Catalyst: Jito JTX terminal launch "July 2026" | SKIP — catalyst is a month-scale launch window, not a specific event <3h old; no 1h>5% confirmation available |
+| Memecore / vooi / Zerobase | N/A | Perplexity "biggest 1h surge" query again surfaced these off-Kraken/illiquid microcaps (recurring pattern from prior sessions) | SKIP — not tradeable on Kraken or unverifiable |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active; no candidate clears the 1h>5% + catalyst<3h bar. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-01 — Pre-Session Research (Evening, ~20:04 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $59,880.30, 24h open $58,531.90 → +2.30% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC ~−8.7% vs Jun 17 close $65,599 — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 11 (Extreme Fear, unchanged from this morning)
+- **BTC funding rate:** Slightly positive across venues (Binance/BitMEX/OKX/Huobi ~+0.01%, Bybit +0.0091%, Kraken +0.0148%, WOO X +0.0112%) — mild bullish bias
+
+### Market Context
+- BTC $59,880 (Kraken, +2.30% intraday from $58,532 open), ETH $1,612 (+2.72% intraday) — both grinding up off yesterday's Extreme Fear lows, still well below Jun 17 levels
+- CLARITY Act: White House symbolic July 4 signing target remains uncertain — Senate cloture math still short of 60 votes
+- Stablecoin regulation: 5 US regulators jointly proposed bank-grade KYC rules for stablecoin issuers under GENIUS Act (USDC/USDT scrutiny) — not a tradeable catalyst for this bot
+- Ethereum Glamsterdam upgrade targeted H2 2026 (testnet July/August) — too far out to trade
+- Token unlocks this week: BEAT ($49.7M, today, dilution not buy signal), HYPE ($630M, Jul 6, not today) — no fresh unlock catalyst today
+- Perplexity's "top gainers"/"1h surge" queries again surfaced illiquid/off-Kraken microcaps (VOOI, Checkmate, BASED, Apertum, Memecore) and one clearly hallucinated data point ("BTC new ATH above $123,000") — discarded as noise, contradicted by live Kraken BTC quote
+
+### Candidates Screened (Kraken live quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off 24h high | Catalyst | Status |
+|---|---|---|---|---|---|
+| XLM/USD | 0.05% | +5.97% vs open $0.188852 | −3.5% off $0.20740 high | None fresh — high was already set earlier today (per 15:01/14:03 UTC scans); ask price actually *lower* now (0.200113) than at 15:01 UTC (0.200765) | SKIP — momentum peak check fails, fading not breaking out |
+| ADA/USD | 0.03% | +6.4% vs open $0.14420 | −3.0% off $0.158177 high | None specific <3h old | SKIP — fails 1h>5% weekly-gate requirement (24h gain only, not fresh) |
+| ZEC/USD | 0.04% | +2.86% vs open | −1.9% off high | None | SKIP — below 3% threshold |
+| ATOM/USD | 0.06% | +2.12% vs open | — | None | SKIP — below threshold |
+| AAVE/USD | 0.05% | +0.38% vs open | −2.7% off high | None | SKIP — flat |
+| DYDX/USD | 0.16% | −18.4% vs open (already faded from $0.24348 high) | −39.7% off high | None (pre-crash peak) | SKIP — thesis dead, same as prior scans |
+| SEI/USD | 0.10% | +1.94% vs open | — | None | SKIP — below threshold |
+| STX/USD | 0.12% | +3.68% vs open | −2.9% off high | None | SKIP — below 5% 1h requirement |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (−8.7% vs Jun 17); BTC/ETH are both up modestly today but no altcoin candidate clears the required 1h>5% momentum + catalyst<3h combo, and the strongest 24h movers (XLM, ADA) are fading off highs set earlier in the session rather than breaking out fresh. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+### Risk Factors
+1. BTC weekly gate remains active — broad risk-off backdrop, pure momentum entries banned
+2. Extreme Fear (11) persists — sentiment has not turned despite today's modest BTC/ETH bounce
+3. CLARITY Act July 4 target looks unlikely to hit (Senate votes short) — no near-term XRP-style regulatory catalyst
+4. Perplexity continues to surface stale/hallucinated data (fictitious BTC ATH, off-Kraken microcaps) — live Kraken quotes remain the only reliable filter
+5. BEAT unlock today is dilutive, not a buy signal
+
+**Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
+
+**Notification status:** WhatsApp/CallMeBot send FAILED — API returned "0 messages left, please subscribe" (quota exhausted). Notification channel needs resubscription at callmebot.com/61477788635. User alerted directly via push notification instead.
+
+---
+
+## 2026-07-01 — Midday Scan (22:03 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Historical orders only, fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $60,751.70, 24h open $58,531.90 → +3.79% intraday) ✅
+- **BTC weekly gate:** ACTIVE (BTC still well below Jun 17 close $65,599 (~−7.4%) — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Quote | Signal | Status |
+|---|---|---|---|
+| BTC/USD | $60,751.70, +3.79% intraday | Broad market up-move, no altcoin-specific catalyst; majors don't day-trade under this strategy | SKIP |
+| XLM/USD | ask 0.20196, bid 0.20178 (spread ~0.09%) | +7.0% vs 24h open $0.188852, −2.6% off 24h high $0.2074 — no fresh catalyst identified | SKIP — fails weekly-gate catalyst requirement |
+| ADA/USD | ask 0.15743, bid 0.15734 (spread ~0.06%) | +9.2% vs 24h open $0.14420, only −0.5% off 24h high $0.158177 — near breakout but no specific catalyst <3h old (Perplexity surfaced none) | SKIP — fails weekly-gate catalyst requirement despite strong momentum |
+| SOL/JTX, ZEC Ironwood, XRP CLARITY Act | — | Catalysts identified are all forward-dated (Jito JTX "July 2026", Ironwood "late July", CLARITY Act deadline Jul 4) — none is a fresh <3h event today | SKIP — no immediate catalyst |
+| Memecore, vooi, Alchemix | — | 24h gainers per Perplexity, all off-Kraken/illiquid microcaps (recurring pattern) | SKIP — not tradeable on Kraken or unverifiable |
+
+**Decision: NO NEW TRADES.** BTC weekly downtrend gate remains active (~−7.4% vs Jun 17); ADA and XLM show the strongest 24h momentum (ADA now only 0.5% off its 24h high) but neither has a specific catalyst <3h old, which the weekly gate requires alongside 1h>5% momentum. No qualifying setup. Holding $115.36 ZUSD (100% cash). No open positions to manage (Steps 3–5 N/A).
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-02 — Pre-Session Research (08:05 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Positions [], orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (Kraken BTC $60,144, 24h open $59,964.30 → +0.30% intraday, essentially flat) ✅
+- **BTC weekly gate:** ACTIVE (Kraken 7-day change −6.29%, beyond the −3% threshold — catalyst-exempt entries only, require 1h momentum >5% AND catalyst <3h old) ⚠
+- **Fear & Greed:** 19 (Extreme Fear per FearGreedMeter/BitcoinFear; Alternative.me shows 11) — sentiment still deeply negative
+- **BTC funding rate:** Mildly positive across venues (Binance +0.008%, Kraken +0.0148%, avg ~+0.01% per 8h) — no bearish skew, no crowded-long risk either
+
+### Data Quality Note
+Perplexity again produced internally contradictory/hallucinated figures this session: one query claimed BTC "+3.72% to $60,744" while another (same session) claimed a "20% drop to a 21-month low of $58,188" and a third claimed BTC "dropping below $70,000 threatening $60,000" with ETH/XRP/ADA/SOL down 12–20%. All three contradict each other and the live Kraken quote (BTC $60,144, +0.30% 24h, essentially flat). Live Kraken quotes used as ground truth throughout; Perplexity narrative claims discarded where contradicted.
+
+### Market Context
+- BTC $60,144 (flat, +0.30% 24h) — 7-day change −6.29%, still in a mild weekly downtrend
+- ETH ~$1,600–1,625 (sources vary +2–3% 24h) — tracking BTC, no independent catalyst
+- CLARITY Act: White House symbolic July 4 signing target remains uncertain, Polymarket odds down to 48% (Senate cloture math still short)
+- Solana: Jito JTX terminal launch "this month" (no specific date), Alpenglow upgrade targeted Q3 2026 — both forward-dated, not <3h catalysts
+- Zcash Ironwood (NU7) upgrade activates late July — not today
+- Token unlocks today: ENA (94.18M tokens, ~$7.25M, 1.01% of market cap), INFRA/Bware Labs (~$3K, negligible) — unlocks are dilutive events, not buy catalysts (per strategy: "90% of unlock events lead to negative price impact")
+- Perplexity's "top gainers"/"1h surge" queries again surfaced off-Kraken/illiquid microcaps (VOOI, Checkmate, Memecore, BASED, Apertum, Collaterize) — recurring noise pattern, not actionable
+
+### Candidates Screened (live Kraken quotes)
+
+| Candidate | Spread | 24h chg (live Kraken) | Off 24h high | Catalyst | Status |
+|---|---|---|---|---|---|
+| ENA/USD | 0.13% | +7.4% vs open $0.0713 | −1.8% off $0.078 high | Token unlock TODAY (94.18M ENA, ~$7.25M) — dilutive/bearish type event, not a bullish catalyst despite price holding up | SKIP — catalyst quality fails (unlock ≠ bullish catalyst); no confirmed 1h>5% |
+| JTO/USD | 0.07% | +4.16% vs open $0.76503 | −2.2% off $0.81456 high | Jito JTX terminal "launch this month" — forward-dated, not <3h old | SKIP — fails weekly-gate catalyst-freshness requirement; below 1h>5% |
+| ZEC/USD | 0.07% | +1.28% vs open | −1.2% off high | Ironwood upgrade late July — not today | SKIP — below momentum threshold, catalyst not imminent |
+| ADA/USD | 0.02% | +0.81% vs open | −1.9% off high | None fresh | SKIP — flat, no catalyst |
+| XLM/USD | 0.04% | −0.34% vs open | −3.5% off high | None fresh | SKIP — declining, not a mover |
+| SOL/USD | 0.01% | +0.71% vs open | −1.2% off high | None fresh (JTX/Alpenglow forward-dated) | SKIP — flat |
+| DOLO/USD | ~2.0% | — | — | — | SKIP — spread exceeds 1% cap, illiquid (2 trades) |
+| OMNI/USD | ~57% | — | — | — | SKIP — illiquid (confirmed again, recurring) |
+| MAT/USD | ~3.2% | — | — | — | SKIP — spread exceeds 1% cap |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered (BTC essentially flat today). BTC weekly downtrend gate remains active (Kraken 7-day −6.29%); no candidate clears the required 1h>5% momentum + catalyst<3h combo. ENA's unlock-driven move fails on catalyst quality (dilutive event, not bullish), JTO and the rest are flat-to-modest with no fresh catalyst. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+### Risk Factors
+1. BTC weekly downtrend gate remains active — pure momentum entries banned, catalyst-only bar is high
+2. Extreme Fear persists (19/11 depending on source) — sentiment has not turned
+3. Perplexity data quality continues to degrade — three contradictory BTC price/direction claims in one session; live Kraken quotes are the only reliable filter
+4. ENA unlock today is a headwind for that asset going forward, not a signal to chase current strength
+5. CLARITY Act July 4 target looks increasingly unlikely (Polymarket odds falling) — no near-term XRP-style regulatory catalyst materializing
+
+**Decision: always TRADE unless crash gate triggered — crash gate NOT triggered, but no qualifying setup exists under the BTC weekly downtrend gate's stricter catalyst-only criteria.** Holding cash.
+
+**Notification status:** WhatsApp/CallMeBot send FAILED — API returned "0 messages left, please subscribe" (quota exhausted). Notification channel needs resubscription at callmebot.com/61477788635. User alerted directly via push notification instead.
+
+---
+
+## 2026-07-02 — Midday Scan (~12:xx UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC $61,031.30 ask, 24h open $59,964.30 → +1.78% intraday) ✅
+- **BTC weekly gate:** Treated as still ACTIVE (pre-session 7-day −6.29%; BTC ticked up modestly since, no evidence of a >3% weekly reversal) — catalyst<3h + 1h>5% momentum required for entries ⚠
+- **Data quality:** Perplexity's 7-day BTC query returned wildly hallucinated figures this session ("$104,388 a week ago," "$91,151 today") that contradict live Kraken price ($61,031) by ~50%. Discarded per prior session's established pattern — live Kraken quotes are ground truth.
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Spread/Liquidity | 24h/intraday chg | Catalyst | Status |
+|---|---|---|---|---|
+| NEAR/USD | 0.06% spread, tight | +7.47% vs 24h open $1.8061, near 24h high $1.9466 | Broad "AI narrative" (Nvidia rally, TAO/ICP co-movement) — no discrete event <3h old | SKIP — fails weekly-gate catalyst-freshness requirement (narrative ≠ discrete catalyst); no confirmed 1h>5% |
+| OMNI/USD | ~57% spread | +174% claimed | None specific | SKIP — illiquid, recurring noise (flagged repeatedly) |
+| MAT/USD | ~3.2% spread | +66% claimed | None specific | SKIP — spread exceeds 1% cap |
+| DOLO/USD | ~2% spread | +53% claimed | None specific | SKIP — spread exceeds 1% cap |
+| REX/INIT/UFD | Not screened | 30–50% claimed | None specific | SKIP — no catalyst, likely illiquid microcaps consistent with prior noise pattern |
+| SOL/ZEC/HYPE/ONDO | N/A | N/A | Jito JTX, Ironwood NU7, HIP-3, tokenization — all forward-dated (late July / "this month") | SKIP — catalysts not <3h old |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered. BTC weekly downtrend gate still treated as active; no candidate clears the required 1h>5% momentum + catalyst<3h combo. NEAR is the only liquid, tight-spread mover but its catalyst is a broad narrative, not a discrete <3h event. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
+## 2026-07-02 — Midday Scan #2 (~14:xx UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE
+**Alpaca:** Orders historical-only (all May 2026 fills) — fully retired ✅
+
+### Gate Checks
+- **BTC crash gate:** NOT triggered (BTC $61,938.80, 24h open $59,964.30 → +3.29% intraday, 24h high $62,003.30) ✅
+- **BTC weekly gate:** Treated as still ACTIVE (pre-session 7-day −6.29%; no confirmed reversal above −3% threshold) — catalyst<3h + 1h>5% momentum required for entries ⚠
+
+### Steps 3–5: N/A
+No open positions → no stop verification, no stop tightening, no thesis checks required.
+
+### Step 6 — New Entry Scan
+
+| Candidate | Live Kraken | Catalyst | Status |
+|---|---|---|---|
+| WLD/USD | $0.3973, 24h open $0.3606 → **+10.2% intraday**, near 24h high $0.3991 | Perplexity data quality failure: claims WLD "down 9-11%" contradicting live Kraken price by full sign-reversal (discarded per established pattern — Kraken is ground truth). Only identifiable WLD-specific catalysts (Thirty Seconds to Mars ticketing partnership, Eightco treasury expansion) are "earlier in the week," not <3h old. Move looks tied to broad market short-squeeze rebound ($445M liquidation wave), not a WLD-specific event | SKIP — fails catalyst-freshness requirement despite strong momentum |
+| SOL/USD | $81.17, 24h open $77.38 → +4.9% intraday, 24h high $82.65 (−1.8% off high) | Jito JTX terminal, Alpenglow upgrade — both forward-dated ("this month"/Q3) | SKIP — no <3h catalyst, below 1h>5% confirmed |
+| BTC/USD | +3.29% intraday, $65 below 24h high — momentum-peak risk if high already set >60min ago | Broad rebound: $445M short liquidation wave, US-Iran channel reopening (oil), MiCA enforcement inflows — market-wide, not BTC-specific <3h event; move built up over hours not concentrated in last 1h | SKIP — below 1h>5% confirmed threshold; near 24h high (peak-check caution) |
+| Other (ENA, JTO, ZEC, ADA, XLM) | — | Unchanged from pre-session/earlier midday scan — unlock/stale/forward-dated | SKIP — no change |
+
+**Decision: NO NEW TRADES.** BTC crash gate not triggered. BTC weekly downtrend gate still treated as active; no candidate clears the required 1h>5% momentum + catalyst<3h combo. WLD shows the strongest live momentum (+10.2% intraday) but has no fresh WLD-specific catalyst — its move ties to a broad market short-squeeze rebound rather than a discrete event. Holding $115.36 ZUSD (100% cash). No open positions to manage.
+
+**Data quality note:** Perplexity again produced a sign-reversed claim for WLD (claimed −9-11% vs live Kraken +10.2%) — third consecutive session with material Perplexity hallucinations. Live Kraken quotes used as ground truth throughout.
+
+**No WhatsApp notification sent (no action taken, per Step 7).**
+
+---
+
 
 ---
 
