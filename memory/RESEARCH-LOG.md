@@ -25129,3 +25129,26 @@ Per current decision rules (crash gate only; sector pause / CAUTION-OFFENSIVE / 
 ### Decision: **TRADE**
 
 Crash gate NOT triggered. Default stance is trade. Three qualifying setups identified (HYPE, SOL, XRP) meeting momentum + catalyst + spread + R:R criteria; ZEC flagged as watch-only due to decayed momentum and distant catalyst. Proceed to entries at session open per sizing/conviction; each position gets an immediate 2.5% (3.5% for HYPE) trailing stop GTC — no exceptions.
+
+---
+
+## 2026-07-02 — Session-Open Execution Attempt (~21:00 UTC)
+
+**Portfolio:** $115.36 ZUSD (100% cash) | **Open Kraken positions:** NONE | **Open Kraken orders:** NONE | **Alpaca:** clean (no positions, historical fills only) ✅
+
+### Gate re-check
+- **BTC crash gate:** NOT triggered (BTC ask $61,580.20, 24h open $59,964.30 → +2.70%) ✅
+- **BTC weekly gate:** Re-verified via Kraken public daily OHLC (this session's Pre-Session Research above did not check it). 5-trading-day-ago close (2026-06-27) $59,941.50 vs current $61,580.20 → **+2.73%**, i.e. BTC is now UP over the trailing 5 days, not down >3%. **Weekly downtrend gate is NOT active** — confirms the EOD-snapshot note that BTC's rally would lift this gate. Pure-momentum entries are open again.
+
+### Re-validation of the 08:05/20:07 research plan (HYPE, SOL, XRP) against live 15m OHLC
+Per strategy's momentum-peak check and the research's own risk note ("all entries must be re-validated against live kraken.sh quote immediately before order placement, not the research-log snapshot"), pulled Kraken 15m candles for the trailing ~3h on each planned candidate:
+
+| Candidate | 24h high | Time high was set | Current price | Trend since high | Verdict |
+|---|---|---|---|---|---|
+| HYPE/USD | $67.17 | ~18:30 UTC (~2.5h ago) | $66.27 | Declining/consolidating since 18:30, no fresh breakout, no new catalyst <2h | **SKIP — momentum peak check fails** |
+| SOL/USD | $82.65 | earlier in session (well before 18:15 window) | $80.93 | Chopped in a $80.5–81.2 range for 3h, well off the 24h high, no breakout | **SKIP — momentum peak check fails** |
+| XRP/USD | $1.11128 | earlier in session | $1.08212 | Steady decline from $1.0905 (18:15) to $1.0821 (21:00) — classic pre-positioning fade the research itself flagged as a risk | **SKIP — momentum peak check fails, thesis decaying as warned** |
+
+All three candidates identified in the 20:07 UTC research had already peaked and were fading by the time of execution (~21:00 UTC, ~1h+ later). None shows a fresh 1h breakout above its prior 24h high or a new catalyst <2h old, so per the mandatory momentum-peak check (TRADING-STRATEGY.md, added 2026-06-19) all three are skipped rather than chased.
+
+**Decision: NO NEW TRADES.** Holding $115.36 ZUSD (100% cash). No open positions to manage. No WhatsApp notification sent (no trade placed, per Step 7).
