@@ -25301,3 +25301,76 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value each).
 5. HYPE/XRP/SOL held as watch-list — weaker conviction or R:R conflicts, enter only on confirmation
 
 **Planned trades for today: ETH/USD (primary), DOGE/USD (secondary), both with 2.5% trailing stops per strategy.**
+
+
+---
+
+## 2026-07-03 — Pre-Session Research #2 (Late Session, Capital-Constrained)
+
+**Session branch:** claude/affectionate-gates-sjih8d
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$0.95 ZUSD cash** + 0.0578 ETH + 180 DOGE + dust (~20 assets <$0.01 each) | ETH/USD, DOGE/USD (spot, both open) | 2 open trailing stops (ETH, DOGE) |
+| Alpaca | `positions: []` — zero exposure | None | Historical fills only (stop `a2b44cf9` cancelled since 2026-05-22) |
+
+Portfolio is **~99% deployed** from earlier sessions today: 0.0578 ETH (entry ~$1,727.67, txid `OH6ZJJ-F262W-MJUHEB`) and 180 DOGE (entry ~$0.0772089, txid `OQZ6Q2-DMEKY-ZOTJ7C`), both filled and stopped in prior sessions today per RESEARCH-LOG history above. No new capital available for fresh entries.
+
+### STEP 2 — Open Position Stop Verification (live Kraken)
+
+| Position | Entry | Live Price | Unrealized | Trailing Stop | Stop Price | Status |
+|---|---|---|---|---|---|---|
+| ETH (0.0578) | ~$1,727.67 | bid $1,742.73 | **+0.87%** | `O44WNM-PJFPJ-HG76BQ` @ 2.5% | $1,706.98 | ✅ Open, protected |
+| DOGE (180) | ~$0.0772089 | bid $0.077131 | **~−0.10%** | `OISJWY-U4JNP-YFEBR6` @ 2.5% | $0.0756395 | ✅ Open, protected |
+
+Neither position has reached T1 (+3%) — no stop-tightening triggered. Both stops confirmed live and correctly sized. No action required on existing positions.
+
+### STEP 3 — Market Context (live Kraken quotes, ground truth — Perplexity again showed data anomalies: BTC $90,866/$91,151 outlier reads mixed with correct ~$61-62k reads)
+
+| Asset | Live Ask | Today's Open | Chg | 24h High | Off High |
+|---|---|---|---|---|---|
+| BTC/USD | $62,132.60 | $61,484.50 | +1.05% | $62,359.00 | −0.36% |
+| ETH/USD | $1,742.84 | $1,699.07 | +2.58% | $1,750.74 | −0.45% |
+| DOGE/USD | $0.077157 | $0.074157 | +4.05% | $0.077579 | −0.54% |
+| SOL/USD | $82.29 | $80.64 | +2.03% | $83.13 | −1.01% |
+| XRP/USD | $1.12778 | $1.08709 | +3.71% | $1.14399 | −1.42% |
+| HYPE/USD | $70.28 | $66.90 | +5.05% | $70.75 | −0.66% |
+
+**Crash gate:** BTC +1.05% — NOT triggered ✅
+**Weekly gate:** BTC ~$62,133 vs ~5-trading-day reference (~$59,721, per prior session checks) → **+4.0%** — weekly downtrend gate remains **NOT active**, pure-momentum entries would be open (moot given no cash).
+**Fear & Greed:** 19–21 (Extreme Fear), one outlier source (CFGI) at 57 (Neutral) — sentiment/price divergence continues.
+**BTC funding rate:** +0.0074% to +0.0148% (8h, mildly positive across exchanges) — not overheated.
+
+### STEP 4 — Catalyst Roundup
+
+- **ETH:** ETF inflows resumed — $169M net inflow (largest in 2 months) on top of the $1B/Jul-2 and $2.85B weekly figures already priced into the existing ETH position. SharpLink added 10,000 ETH. Thesis intact, price above entry.
+- **DOGE:** Broad risk-on momentum + Grayscale Dogecoin Trust debut expected next week (forward catalyst, not yet live). Thesis intact, price roughly flat vs entry.
+- **CLARITY Act:** July 4 signing deadline still live per Perplexity, but Polymarket odds down to 48% and per the strategy's new scheduled-catalyst rule (added today), pre-positioning >2h ahead of a dated event is banned — **XRP entry would be disqualified even with cash available.**
+- **HYPE:** +5.05%, only 0.66% off 24h high — would otherwise qualify on momentum, but $630M unlock lands Jul 6 (high-ATR asset, avoid multi-day carry) — moot, no cash.
+- **Token unlocks this week:** MemeCore ($M, 56.1M tokens, today) — no Kraken listing confirmed, not actionable. HYPE unlock Jul 6 already noted.
+- Top 24h gainers (IKA, Metaplex, MAGA, TLM, MemeCore, Magma, NEXUS, Allora) are all micro-cap/illiquid names, none newly confirmed on Kraken with acceptable spread — consistent with prior sessions' skips.
+
+### STEP 5 — New Entry Scan
+
+**Available capital: $0.95 ZUSD.** This is below Kraken's minimum order cost for every pair checked (ordermin/costmin all >$0.50–$1+ notional after accounting for realistic fills) and would not survive the ~0.52% round-trip taker fee on any conceivable trade. **No new entry is mechanically possible this session regardless of setup quality.**
+
+For the record, had capital been available, ETH/DOGE (already held) and HYPE (momentum, unlock caveat) would have been the top candidates; XRP is disqualified by the new scheduled-catalyst rule ahead of the Jul 4 CLARITY Act deadline.
+
+### Risk Factors
+
+- Portfolio concentration: 100% of deployable equity in ETH + DOGE, no diversification headroom until a stop fires and frees cash
+- Fear & Greed still Extreme Fear (19–21) despite broad rally — reversal risk if this is short-covering rather than durable demand
+- DOGE position essentially flat (−0.10%) — closest of the two to testing the 2.5% stop if momentum fades
+- HYPE $630M unlock Jul 6 — irrelevant to current holdings but flagged for future re-entry timing
+- WhatsApp/CallMeBot notification quota has been failing in recent sessions (flagged Jul 2/Jul 3) — verifying in Step 6 below
+
+### Decision: **HOLD — no new trades (capital fully deployed)**
+
+Crash gate NOT triggered, weekly gate NOT active, but **effectively no deployable cash ($0.95 ZUSD)** makes new entries impossible this session. Both existing positions (ETH +0.87%, DOGE −0.10%) are correctly stopped at 2.5% trailing and require no adjustment — neither has reached the +3% T1 tighten trigger. Action for this session is monitoring only: let the trailing stops manage risk, watch for a stop-out to free capital for the next qualifying setup.
+
+### Step 6 — Notification
+
+WhatsApp/CallMeBot send **FAILED again** — API returned "0 messages left," same quota exhaustion flagged in the Jul 2 and Jul 3 earlier-session logs. Resubscription still needed at callmebot.com/61477788635. This has now failed across multiple consecutive sessions; treating as a standing known issue rather than re-flagging each time until resubscribed.
+
