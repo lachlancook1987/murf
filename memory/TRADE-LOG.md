@@ -6975,3 +6975,33 @@ DOGE momentum revived since the 14:04 PM scan (was +1.05%, skipped): now **+3.59
 Post-trade: $0.95 ZUSD cash remaining + 0.0578 ETH + 180 DOGE, both positions protected by trailing stops. Portfolio now fully deployed (~99% equity in ETH+DOGE).
 
 ---
+
+## 2026-07-03 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $0.9509 ZUSD + 0.0578017829 ETH + 180 XXDG + dust | **Open positions:** ETH/USD, DOGE/USD (spot) | **Open orders:** trailing stops `O44WNM-PJFPJ-HG76BQ` (ETH), `OISJWY-U4JNP-YFEBR6` (DOGE)
+
+### Steps 1-2 — Context
+Confirmed against memory: both positions from earlier today's sessions (ETH entry ~$1,727.67 txid `OH6ZJJ-F262W-MJUHEB`; DOGE entry ~$0.0772089 txid `OQZ6Q2-DMEKY-ZOTJ7C`) still open. `kraken.sh positions` returns `{}` (margin-only endpoint, expected) — verified via `account`: XETH 0.0578017829, XXDG 180.00000000 ✓ both match fill qty, not orphaned. Alpaca stop `a2b44cf9` confirmed still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Step 3 — Stop Verification
+Both trailing stops confirmed open and correctly ratcheted upward as price rose:
+- ETH `O44WNM-PJFPJ-HG76BQ`: stopprice $1,728.76, limitprice $1,773.08 (trailing off a $1,773.11 high)
+- DOGE `OISJWY-U4JNP-YFEBR6`: stopprice $0.076401, limitprice $0.078360 (trailing off a $0.078360 high)
+Both protected. ✓
+
+### Step 4 — Stop Tightening Check
+- ETH: bid $1,758.35 vs entry $1,727.67 = **+1.78%** unrealized — below +20%/+40% tightening thresholds and below strategy T1 (+3%). No change.
+- DOGE: bid $0.077948 vs entry $0.0772089 = **+0.96%** unrealized — below thresholds. No change.
+Both stops left at 2.5% trail.
+
+### Step 5 — Thesis Check
+Perplexity queries for both ETH and DOGE returned stale/contradictory data (claimed ETH down ~25% to $1,571-1,700 with "negative ETF flows," DOGE forecast declining to $0.0655 on "ETF outflows") that directly conflicts with live Kraken prices — both assets are up on the day and within ~2% of fresh 24h highs. This is the same Perplexity data-quality issue flagged in the prior 14:04 UTC scan and earlier sessions today. No specific hard-negative event (exploit, hack, rug, regulatory action) reported for either asset — live price action confirms uptrend is intact. **No action** — theses not invalidated.
+
+### Step 6 — New Entry Scan
+Available cash: **$0.95 ZUSD** — below any realistic order minimum after fees, no new entry mechanically possible. Portfolio remains ~99% deployed in ETH+DOGE. **No new trades.**
+
+### Decision: **HOLD — monitoring only, no action taken**
+
+No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred).
+
+---
