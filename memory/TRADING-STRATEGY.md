@@ -50,6 +50,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - **Target: 3–5% gain from entry.** Define T1 (3%) and T2 (5%) before entering
 - Skip any setup where the projected gain to T1 is less than 2× the 2.5% stop risk (R:R < 1.2:1)
 - **Momentum peak check (added 2026-06-19):** Before entry, confirm the 24h high was set within the last **60 minutes**. If the 24h high is >60 min old and current price is declining from it, the repricing event has already occurred — skip unless (a) there is a fresh 1h candle breakout above the prior 24h high, or (b) a new distinct catalyst event <2h old. Prevents "buy the rumour, sell the news" entries where momentum is fading rather than accelerating.
+- **Scheduled-catalyst pre-positioning caution (added 2026-07-03):** For catalysts with a known, publicly-scheduled activation time (hard forks, mainnet upgrades, token unlocks with a fixed date/time), do not enter more than **~2 hours ahead** of the event on anticipatory momentum alone. Pre-event momentum on dated catalysts is frequently front-run and sold into before the event fires. Prefer entering on confirmed post-event price reaction, or require a fresh breakout above the pre-event high with volume confirmation if entering ahead of the scheduled time. Does not apply to unscheduled/reactive catalysts (news, listings, protocol votes with no fixed announcement time), which remain governed by the momentum peak check above.
 
 ---
 
@@ -185,4 +186,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-06-26 (added orphan-stop check: verify account balances before cancelling any stop; `positions` endpoint = margin only, not spot)*
+*Last updated: 2026-07-03 (added scheduled-catalyst pre-positioning caution: don't enter >2h ahead of a known-time event like a hard fork or unlock on anticipation alone)*
