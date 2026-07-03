@@ -24004,7 +24004,7 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
 **Portfolio:** $115.36 ZUSD (100% cash) + dust balances (<$0.01 each, ZAUD $0.11) | **Open positions:** NONE | **Open orders:** NONE
 **Session branch:** claude/affectionate-gates-t7mb13
 
-**Note:** No logged entries between 2026-06-29 EOD ($119.53) and today ($115.36) — gap of −$4.17 (−3.5%) with no trade record in this window. No open positions/orders now on Kraken or Alpaca, so nothing currently at risk, but the gap is unexplained and should be investigated in a future session (possible unlogged session or dust/fee drift).
+**Note:** Two flat days behind us (Jun 30 Toccata/KAS stop-out took equity from $119.53→$115.36; Jul 1–2 both fully flat, no qualifying setups). WhatsApp/CallMeBot notification quota is still exhausted as of this session (also flagged in Jul 2 EOD notes) — needs resubscription at callmebot.com/61477788635.
 
 ### STEP 1 — Account Snapshot
 
@@ -24095,7 +24095,7 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value each).
 - HYPE $630M unlock lands Jul 6 — avoid multi-day HYPE holds into that date
 - CLARITY Act delay removes a previously-assumed catalyst — don't size XRP as if binary catalyst still applies
 - Citi's BTC forecast cut ($112k → $82k) and ongoing ETF outflow narrative from prior week — broader macro still cautious even as price recovers
-- $4.17 unexplained equity drift since last logged snapshot (Jun 29) — no position/order to account for it; flag for next session to investigate transaction history
+- Notification channel down (CallMeBot quota exhausted) — trade alerts won't reach WhatsApp until resubscribed; rely on this log for trade record
 
 ---
 
