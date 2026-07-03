@@ -6895,4 +6895,37 @@ All candidates failed at least one mandatory gate:
 **Trades today:** none | **Total since migration:** ~83
 **Notes:** Third consecutive flat day — no session logs found for today's date in TRADE-LOG/RESEARCH-LOG, indicating no pre-session, midday, or PM scan triggered an entry (or scans did not run). Portfolio unchanged at $115.36 ZUSD (100% cash); only dust residuals remain across ~20 prior-position assets (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH), all sub-cent and negligible. No open Kraken positions or orders. BTC rallied from $60,298.20 (Jul 02 EOD) to $61,686.80 (+2.30%) on the day, so the bot underperformed BTC by −2.30% by sitting in cash during the continued BTC recovery. Alpaca BTC stop a2b44cf9 remains cancelled (confirmed again this session); zero Alpaca exposure. Phase P&L holds at −$64.42 (−35.84% vs starting equity $179.78). Tomorrow: resume catalyst-driven scans; BTC's multi-day recovery may be closing the weekly downtrend gate, worth confirming at next pre-session research to re-open pure-momentum entries.
 
+**Correction:** the "no session logs found" note above was written before this session ran — the 2026-07-03 pre-session research log (RESEARCH-LOG.md, 08:xx UTC-ish) did exist and planned ETH/DOGE entries, but neither was actually executed before this EOD note was logged. See midday entry below.
+
+---
+
+## 2026-07-03 — Midday Scan (Day 44, Friday)
+
+**Portfolio pre-trade:** $115.36 ZUSD (100% cash) | **Open positions:** NONE | **Open orders:** NONE
+
+### Steps 1-2 — Context
+Pre-session research (same date) had planned ETH/USD (primary) and DOGE/USD (secondary) entries on a fresh $1B ETH ETF inflow catalyst (Jul 2) + weekly BTC gate reopening (BTC +3.3% trailing week). Neither trade was actually placed — Kraken positions/orders both confirmed empty at midday session start. Alpaca: `positions: []`, stop a2b44cf9 confirmed still cancelled (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — N/A
+No open positions at session start → no stop verification, tightening, or thesis checks required.
+
+### Step 6 — New Entry
+
+**Re-screened ETH/USD:** Kraken ask $1,727.67, today's open $1,699.07 (+1.68%), 24h high $1,732.29 (0.27% off — momentum peak check passes), spread ~0.0006% ✓. Perplexity confirmed catalyst still live: spot ETH ETFs reversing from outflows to net inflows, driven by dovish Fed rhetoric; 24h change +5.5–6.6% per broader market data. Catalyst <24h old, real and current — the pre-session top pick was still valid at midday.
+
+**DOGE/USD re-check:** +1.05% vs open (weaker than pre-session's +1.42%, pulling back from 24h high by 0.68%) — below momentum threshold, no distinct catalyst. **SKIP.**
+
+**Other candidates screened:** Memecore (M, +36.55% 24h) — not evaluated further (no Kraken listing confirmed, no catalyst detail). UNI (+13% 24h per one source) — Perplexity confirmed catalyst (Standard Chartered price target, fee-switch burn) is stale, dated Jun 20; UNI has already retraced ~12% off that move. **SKIP — stale catalyst.**
+
+**Decision: TRADE — ETH/USD only.**
+
+- **Entry:** Market buy, 0.0578 ETH @ ~$1,727.67 (~$99.86 notional, 87% of equity) — txid `OH6ZJJ-F262W-MJUHEB`
+- **Stop:** Trailing stop 2.5%, GTC, placed immediately after fill — txid `O44WNM-PJFPJ-HG76BQ`, stop price ~$1,685.30
+- **T1:** ~$1,779.50 (+3%) | **T2:** ~$1,814.05 (+5%)
+- **R:R:** 1.2:1 at T1 vs 2.5% stop ✓ (at threshold)
+- **Catalyst:** ETH ETF inflow reversal (net positive after months of outflows) + dovish Fed rhetoric, <24h old
+- **Kraken pair:** XETHZUSD, spread ~0.0006% ✓
+
+Post-trade: $15.50 ZUSD cash remaining + 0.0578 ETH position protected by trailing stop. WhatsApp/CallMeBot notification FAILED — quota still exhausted (0 messages left, same issue flagged Jul 2/Jul 3 sessions), needs resubscription at callmebot.com/61477788635.
+
 ---
