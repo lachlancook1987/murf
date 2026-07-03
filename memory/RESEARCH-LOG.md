@@ -23995,3 +23995,116 @@ All Kraken non-ZUSD balances confirmed dust (<$0.01 value).
 - Any Kraken listing announcement (check Kraken blog) → first-mover entry
 - CLARITY Act floor vote news → XRP at 7% trail (binary catalyst)
 
+
+
+---
+
+## 2026-07-03 — Pre-Session Research (Friday, Day 44)
+
+**Portfolio:** $115.36 ZUSD (100% cash) + dust balances (<$0.01 each, ZAUD $0.11) | **Open positions:** NONE | **Open orders:** NONE
+**Session branch:** claude/affectionate-gates-t7mb13
+
+**Note:** No logged entries between 2026-06-29 EOD ($119.53) and today ($115.36) — gap of −$4.17 (−3.5%) with no trade record in this window. No open positions/orders now on Kraken or Alpaca, so nothing currently at risk, but the gap is unexplained and should be investigated in a future session (possible unlogged session or dust/fee drift).
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | $115.36 ZUSD (100% cash) | None | None |
+| Alpaca | `positions: []` — no exposure (stop a2b44cf9 cancelled 2026-05-22) | None | None (history only) |
+
+All Kraken non-ZUSD balances confirmed dust (<$0.01 value each).
+
+---
+
+### STEP 2 — Market Context (live Kraken quotes, Perplexity cross-referenced)
+
+**BTC/USD:** Ask $61,672 | Today's open $61,484.50 | 24h high $62,137.20 | 24h low $60,118.90 | 24h change (Perplexity consensus) **+1.0% to +1.15%**
+**ETH/USD:** Ask $1,715.79 | Today's open $1,699.07 | 24h high $1,723.01 | 24h low $1,614.85 | 24h change **+6.1% to +6.3%**
+**SOL/USD:** Ask $81.16 | Today's open $80.64 | 24h high $82.65 | 24h low $77.93 | 24h change **~+4%**
+**HYPE/USD:** Ask $67.34 | Today's open $66.90 | 24h high $67.69 | 24h low $63.03 | 24h change **~+6.8%**
+**XRP/USD:** Ask $1.10055 | Today's open $1.08709 | 24h high $1.11128 | 24h low $1.05730 | 24h change **~+4.1%**
+**DOGE/USD:** Ask $0.0752067 | Today's open $0.0741567 | 24h high $0.0753192 | 24h low $0.0724719 | 24h change **~+3.8%**
+
+**Fear & Greed Index:** 19–21 (Extreme Fear) — notable divergence: prices broadly rallying while sentiment reading stays fearful (one outlier source reports Neutral 57, majority consensus is Extreme Fear)
+**BTC Perp Funding Rate:** +0.01% to +0.0148% (8h, mildly positive; longs paying shorts, not overheated)
+
+**Weekly gate check:** BTC ~$61,672 vs ~5-trading-day-ago reference (Jun 26 ~$59,721) = **+3.3%** → BTC is UP over the trailing week, not down. **WEEKLY DOWNTREND GATE NOT ACTIVE.** This is a change from every session Jun 26–29, where the gate was active. Pure-momentum entries are open today (no catalyst requirement beyond standard entry rules).
+
+**Crash gate check:** BTC +1.0–1.15% from 24h — nowhere near −20% → **NOT triggered** ✅
+
+---
+
+### STEP 3 — Key Catalysts & Market Drivers
+
+- **ETH ETF inflows:** Confirmed fresh — **$1B single-day inflow Jul 2** (largest single day in ETH ETF history), **$2.85B weekly**. Strong, current institutional-demand catalyst driving the ETH rally.
+- **CLARITY Act:** Checked directly — **NOT signed**, and per Jul 1 reporting **"no longer projected to be signed into law in 2026."** Senate floor vote still pending, Polymarket odds down to ~48–59%. **XRP binary-catalyst thesis is dead for now** — any XRP entry today must be scored as pure momentum, not binary-catalyst (no 7% trail justification).
+- **Ethereum "Glamsterdam" upgrade:** Devnet-5 testing underway, public testnet targeted Jul/Aug — narrative tailwind for ETH, not an immediate trigger.
+- **HYPE unlock:** 9.92 tokens (~$630M, ~1.04% of supply) scheduled **Jul 6** — not yet in effect today, but a headwind to watch into next week if holding HYPE multi-day.
+- Bearish background noise (Citi BTC forecast cut to $82k, Iran exchange sanctions) — priced in already given the rally; not blocking today's setups.
+
+---
+
+### STEP 4 — Candidate Screening (live Kraken quotes)
+
+| Asset | Ask | vs Today's Open | vs 24h High | Spread | Catalyst | Decision |
+|---|---|---|---|---|---|---|
+| ETH/USD | $1,715.79 | +0.98% | −0.42% | 0.007% ✓ | $1B ETF inflow (Jul 2, fresh) + Glamsterdam narrative | **TRADE** |
+| DOGE/USD | $0.0752067 | +1.42% | −0.28% | 0.0007% ✓ | Broad risk-on momentum, near 24h high | **TRADE** |
+| HYPE/USD | $67.34 | +0.66% | −0.52% | 0.015% ✓ | Momentum only; high-ATR asset (FET/HYPE/WLD-type) | **WATCH — R:R caveat** |
+| XRP/USD | $1.10055 | +1.24% | −0.97% | 0.001% ✓ | Momentum only — CLARITY Act catalyst confirmed dead, no binary trail justified | **WATCH** |
+| SOL/USD | $81.16 | +0.65% | −1.83% | ~0% ✓ | Momentum weaker, further off high than others | **WATCH** |
+| BTC/USD | $61,672 | +0.30% | −0.75% | ~0% | Below 3% momentum threshold | **SKIP** |
+
+---
+
+### STEP 5 — Trade Ideas
+
+**1. ETH/USD — BUY (top pick)**
+- **Catalyst:** $1B single-day ETH ETF inflow (Jul 2, largest on record) + $2.85B weekly inflow + Glamsterdam upgrade narrative — fresh, confirmed <24h
+- **Entry:** Market ~$1,715.79 (only 0.42% off 24h high $1,723.01 — momentum peak check passes, not a faded spike)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC — placed immediately after fill
+- **T1:** $1,767.27 (+3%) | **T2:** $1,801.59 (+5%)
+- **R:R:** 1.2:1 at T1 vs 2.5% stop ✓
+- **Kraken pair:** XETHZUSD, status online, margin available up to 10x (strategy caps at 2x)
+- **Spread:** 0.007% ✓
+- **Size:** High conviction — largest allocation of the three ideas, sized to conviction (no cap)
+
+**2. DOGE/USD — BUY**
+- **Catalyst:** Momentum only (broad altseason risk-on) — +1.4% intraday, only 0.28% off 24h high, sustained move not a spike
+- **Entry:** Market ~$0.0752067
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC
+- **T1:** $0.07746 (+3%) | **T2:** $0.07897 (+5%)
+- **R:R:** 1.2:1 ✓
+- **Kraken pair:** XDGUSD, spread 0.0007% ✓
+- **Size:** Moderate — secondary allocation
+
+**3. XRP/USD — WATCH (momentum only, catalyst dead)**
+- +1.24% intraday, 0.97% off 24h high — qualifies on pure momentum now that weekly gate is off, but CLARITY Act catalyst confirmed NOT imminent (contradicts earlier watch-list assumption). No binary-catalyst justification for 7% trail today. If entered, standard 2.5% trail only. Weaker conviction than ETH/DOGE — enter only if it breaks to a fresh 24h high with volume.
+
+**4. HYPE/USD — WATCH (R:R caveat)**
+- +0.66% intraday, 0.52% off 24h high, ~6.8% 24h move — high-ATR asset per strategy (FET/HYPE/WLD-type), strategy default suggests 3.5% trail. At 3.5% trail, R:R at T1 = 3%/3.5% = 0.86:1 — **fails the 1.2:1 gate** (same issue flagged on the Jun 26 AAVE trade). At 2.5% trail, R:R passes (1.2:1) but risks a noise-stop on a volatile asset. Flagging for manual judgment at entry time rather than pre-committing.
+
+**5. SOL/USD — WATCH (weaker signal)**
+- +0.65% intraday, 1.83% off 24h high — momentum less fresh than ETH/DOGE/HYPE/XRP. Only enter on a fresh breakout above $82.65 with volume confirmation.
+
+---
+
+**Risk factors:**
+- Fear & Greed still Extreme Fear (19–21) despite the rally — sentiment/price divergence; a reversal could be sharp if it's short-covering rather than genuine demand
+- HYPE $630M unlock lands Jul 6 — avoid multi-day HYPE holds into that date
+- CLARITY Act delay removes a previously-assumed catalyst — don't size XRP as if binary catalyst still applies
+- Citi's BTC forecast cut ($112k → $82k) and ongoing ETF outflow narrative from prior week — broader macro still cautious even as price recovers
+- $4.17 unexplained equity drift since last logged snapshot (Jun 29) — no position/order to account for it; flag for next session to investigate transaction history
+
+---
+
+### Decision: **TRADE — weekly gate now open, ETH and DOGE are actionable momentum setups**
+
+1. Crash gate: NOT triggered ✅
+2. Weekly gate: **NOT ACTIVE today** (BTC +3.3% over trailing week) — first session since Jun 25 without the gate restricting entries to catalyst-only
+3. Top setup: ETH/USD — real ETF-inflow catalyst, strong momentum, tight spread, passes R:R
+4. Secondary setup: DOGE/USD — pure momentum, near 24h high, passes R:R
+5. HYPE/XRP/SOL held as watch-list — weaker conviction or R:R conflicts, enter only on confirmation
+
+**Planned trades for today: ETH/USD (primary), DOGE/USD (secondary), both with 2.5% trailing stops per strategy.**
