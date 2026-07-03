@@ -6929,3 +6929,26 @@ No open positions at session start → no stop verification, tightening, or thes
 Post-trade: $15.50 ZUSD cash remaining + 0.0578 ETH position protected by trailing stop. WhatsApp/CallMeBot notification FAILED — quota still exhausted (0 messages left, same issue flagged Jul 2/Jul 3 sessions), needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-03 — PM Midday Scan #2 (14:04 UTC)
+
+**Portfolio:** $14.85 ZUSD + 0.0578 ETH (from earlier midday entry) | **Open positions:** ETH/USD only | **Open orders:** trailing stop `O44WNM-PJFPJ-HG76BQ`
+
+### Steps 1-2 — Context
+Confirmed against memory: ETH/USD entry from earlier today's midday scan (0.0578 ETH @ ~$1,727.67, txid `OH6ZJJ-F262W-MJUHEB`) still open. Kraken `positions: {}` (margin-only endpoint, expected empty for spot) — verified via `account` balance instead: XETH = 0.0578017829 ✓ matches fill qty, confirming the position is real and not orphaned. Alpaca `orders` re-checked: stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure, no action needed.
+
+### Step 3 — Stop Verification
+Trailing stop `O44WNM-PJFPJ-HG76BQ` confirmed open: sell 0.0578 ETHUSD @ trailing 2.5%, stopprice $1,706.98, limitprice $1,750.74. Position is protected. ✓
+
+### Step 4 — Stop Tightening Check
+Current ETH bid $1,740.68 vs entry ~$1,727.67 = **+0.75% unrealized**. Below both the +20%/+40% tightening thresholds and below the strategy's T1 (+3%) tighten-to-0.5% trigger. **No stop change — left at 2.5% trail.**
+
+### Step 5 — Thesis Check
+Perplexity ETH query returned a conflicting/stale read (cited "ETF outflows," bearish 70% sentiment, 24h range capped at $1,717.88) that does not match live Kraken data — current bid $1,740.68 is *above* that cited range and only $10 off today's high ($1,750.74), i.e. price action still confirms the uptrend. No specific negative event (exploit, rug, unlock dump, regulatory action) reported — original ETF-inflow thesis not invalidated by a hard catalyst break, just noisy secondary sourcing. **No action** — trailing stop remains the risk control.
+
+### Step 6 — New Entry Scan
+Perplexity momentum query returned only extreme, already-blown-out movers (OMNI +174%, MAT +66%, DOLO +53%, TALUS +94%, ALLORA +40%, REX/INIT/UFD +30-50%) with no specific fresh catalyst beyond the price pump itself — fails the "catalyst required" entry rule and likely fails the momentum-peak check (multi-hour moves, not fresh 1h breakouts). OMNI previously hard-skipped for 53% spread/illiquidity. Available cash is also only $14.85 ZUSD (87% already deployed into ETH), making any new entry marginal after fees. **Decision: NO NEW TRADES.**
+
+**No WhatsApp notification sent (no action taken — stop unchanged, no cut, no new entry).**
+
+---
