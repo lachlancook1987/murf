@@ -743,3 +743,72 @@ Before cancelling any trailing stop as an "orphan," verify the underlying asset 
 **One mandatory rule violation (no stop at entry) plus a recurring operational bug (positions endpoint ≠ spot balances) combined to destroy 70% of the week's P&L in a single trade.** The SOL trade was the blueprint: multi-factor catalyst, correct high-ATR stop, T1 tighten, clean exit. ENA was marginal but loss-limited. BTC broke three rules simultaneously and the orphan-stop bug compounded the damage. The fix is not a new strategy rule — both rules already existed — but an operational discipline: always check `kraken.sh account` balances before cancelling any stop order, and never enter a trade without placing the stop in the same session, same workflow step.
 
 ---
+
+## Week of 2026-06-27 — Review Date: 2026-07-03
+
+### Context
+Quiet week — only two trades all week, both same-day round trips. AAVE (Jun 26, protocol upgrade + revenue-buyback catalyst) hit both profit targets cleanly. KAS (Jun 30, Toccata hard fork) was a pre-positioning entry ahead of a scheduled activation time that faded before the fork even fired, stopped out at −3.6%. The remaining five sessions (Jun 27–29, Jul 1–3) were flat cash days with no qualifying setup. BTC spent the first half of the week still under the weekly downtrend gate (triggered Jun 23) but the gate cleared mid-week — Jul 2 research confirmed BTC's 5-day trend flipped positive (+2.6–2.7%) — reopening pure-momentum entries for the coming week. BTC rallied through Q3's open, which the bot mostly missed by holding cash on non-qualifying days.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $115.36 | $115.36 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (May 22) |
+| **Total** | **$115.36** | $115.36 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jun 26 EOD, pre-AAVE) | $113.74 |
+| Ending Equity (Fri Jul 3 EOD) | **$115.36** |
+| **Week Return** | **+1.42%** (+$1.62) |
+| BTC Week Return | **+2.43%** ($60,223 → $61,687) |
+| **Bot vs BTC** | **−1.01%** (underperformed) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jun 26 | AAVE/USD | ~$89.93 (1.2524u) | ~$95.16 (2.5% trail) | **+$5.79** | WIN |
+| 2 | Jun 30 | KAS/USD | ~$0.031776 (3,650u) | ~$0.030664 (3.5% trail) | **−$4.17** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 2 |
+| Wins | 1 (AAVE) |
+| Losses | 1 (KAS) |
+| Win Rate | **50.0%** |
+| Gross Wins | **$5.79** |
+| Gross Losses | **$4.17** |
+| Profit Factor | **1.39** |
+| Avg Win | $5.79 |
+| Avg Loss | $4.17 |
+| Largest Win | AAVE +$5.79 (+5.10% net) |
+| Largest Loss | KAS −$4.17 (−3.60% net) |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$1.19** (2 trades × ~$114.5 avg notional × 0.52% round-trip) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $115.36. No open orders. BTC weekly downtrend gate CLEARED mid-week (Jul 2 research: BTC +2.6–2.7% over trailing 5 days vs the prior −3% trigger) — pure-momentum entries reopened for next week.
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **Protocol-upgrade catalyst + technical breakout (AAVE, +5.10%):** Aave V4 Hub & Spoke architecture live plus an Aavenomics 3.0 revenue-share/buyback announcement mid-session. Entered at a fresh 24h high (0.2% off peak) — momentum peak check passed cleanly. 2.5% trail (correctly kept at the standard rate rather than the 3.5% high-ATR exception, since AAVE is a DeFi blue chip, not a momentum-coin) rode the move through both T1 and T2; stop fired on the retreat from the $98.01 high. Textbook execution end to end.
+
+**Entry types that failed:**
+- **Scheduled-catalyst pre-positioning (KAS, −3.60%):** Entered ~6 hours ahead of the Kaspa Toccata hard fork's known 16:15 UTC activation, on pre-fork momentum (+3.89% from open, volume surging to 34.7% of 24h total). Price faded before the fork even activated — a "buy the rumour, sell the news" pattern on a scheduled, publicly-known event, where speculators front-run and exit ahead of the catalyst firing. The 3.5% high-ATR trail (correctly sized for KAS's 5.6% intraday range) capped the loss as designed, but the entry timing was the underlying problem: anticipatory momentum ahead of a dated, known-time catalyst is lower-quality than momentum confirmed by news that has already broken.
+
+**Stop quality:**
+Both stops placed immediately after fill. AAVE's 2.5% trail (blue-chip, not high-ATR) and KAS's 3.5% trail (high-ATR exception, correctly applied) both fired at their expected levels with no orphan-stop or mechanical issues. Clean week for stop discipline.
+
+**Profile violations:**
+None. AAVE spread 0.056%, KAS spread 0.10% — both well inside the 1% cap. No leverage used. R:R confirmed ≥1.2:1 at both entries (AAVE 1.2:1 at T1, KAS 1.43:1 at T2). Same-thesis cap not applicable — no repeat entries this week.
+
+**Concrete adjustment — scheduled-catalyst pre-positioning caution (added 2026-07-03):**
+For catalysts with a known, publicly-scheduled activation time (hard forks, mainnet upgrades, token unlocks with a fixed date/time), do not enter more than ~2 hours ahead of the event on anticipatory momentum alone. Pre-event momentum on dated catalysts is frequently front-run and sold into before the event fires (KAS this week). Prefer entering on confirmed post-event price reaction, or require a fresh breakout above the pre-event high with volume confirmation if entering ahead of the scheduled time. This does not apply to unscheduled/reactive catalysts (news, listings, protocol votes with no fixed announcement time), where the existing momentum peak check (24h high set within 60 min) already governs entry timing.
+
+### Key Lesson
+**The one clean, well-timed catalyst trade (AAVE) outweighed the one anticipatory pre-positioning trade (KAS), keeping the week net positive, but the bot still underperformed BTC by −1.01% because BTC's Q3-opening recovery ran mostly on days with no qualifying setup.** The KAS loss is a distinct failure mode from the existing "buy the rumour, sell the news" lesson: entering ahead of a *scheduled* catalyst (known activation time) carries the same repricing risk as entering after a *reactive* one has already peaked. Going forward: treat dated events (forks, unlocks, scheduled upgrades) with the same "has this already been priced in" scrutiny as spontaneous news, and don't chase pre-event anticipation without a live breakout confirming genuine incremental demand.
+
+---
