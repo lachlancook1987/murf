@@ -25599,3 +25599,40 @@ This is the same tightening procedure used previously for the SOL T1 event (2026
 ### Step 7 — Notification
 
 WhatsApp/CallMeBot send **FAILED** — this time with `403 Forbidden` from `cmb-app.callmebot.com` (previously it was "0 messages left" quota exhaustion; now the endpoint itself rejects the request). Same unresolved standing issue flagged continuously since Jul 2 — resubscription/access needed at callmebot.com. Not re-flagging further per prior convention until resolved by the user.
+
+---
+
+## 2026-07-04T[session-open] — ETH Stop-Out Discovered, New Entry Scan, No Trade
+
+### STEP 1-2 — State Check
+
+Read `memory/TRADING-STRATEGY.md` (Kraken day trading profile, active) and today's prior research (pre-session#2 above: ETH T1 tightening to 0.5% trail). Pulled live Kraken state:
+
+- `kraken.sh account`: ZUSD **$103.4983** (was $0.9509 at pre-session#2), XETH **0.0000000029** (dust — was 0.0578017829), XXDG **180.00000000** (unchanged), no other balances of note.
+- `kraken.sh positions`: `{}` (spot only, expected).
+- `kraken.sh orders`: only `OISJWY-U4JNP-YFEBR6` (DOGE, 2.5% trail) open. The ETH 0.5% trail `O4UBFK-2DG67-OHVYDQ` placed at pre-session#2 (stopprice $1,784.27) is gone from open orders — **it filled**, closing the ETH position. See `memory/TRADE-LOG.md` for the reconstructed fill/P&L (no closed-orders/trade-history endpoint is exposed by `scripts/kraken.sh`, so this is inferred from the balance delta): net proceeds $102.5474, effective net fill ≈$1,774.02, **P&L ≈+$2.69 (+2.69%)** — a profitable T1-locked exit.
+- Alpaca: `positions []`, `orders` only historical filled entries from 2026-05-22 — confirmed clean, zero exposure. ✓
+
+**Crash gate:** BTC $63,180 (live Kraken), no crash condition. **NOT triggered.**
+**BTC weekly trend gate:** BTC uptrending (multi-day rally continuing) — **NOT active**, pure-momentum entries remain open in principle.
+
+### STEP 3-5 — New Entry Scan (capital now freed to $103.4983)
+
+Perplexity ("biggest 1h surge" query, no true 1h granularity available) surfaced **ETHFI** (+15.97% 24h, liquid-restaking demand) and **BONK** (+9.97% 24h claimed, meme rotation) as top 24h movers. Verified both live on Kraken before considering any order:
+
+| Asset | Spread | Live Kraken 24h move | Check | Verdict |
+|---|---|---|---|---|
+| ETHFI/USD | 0.28% ✓ | $0.4288 vs high $0.4448 (open $0.379) — **−3.6% off the 24h high** | Fails momentum-peak check (TRADING-STRATEGY.md §Entry Rules) — no evidence of a fresh 1h breakout above the prior high; repricing already occurred | **SKIP** |
+| BONK/USD | ~0.1% ✓ | $0.000004922 vs open $0.000004976 — **actually down** −1.1%, contradicting Perplexity's +9.97% claim | No live momentum confirmed; same Perplexity price-hallucination pattern flagged repeatedly this week (Jul 2/3/4 sessions) | **SKIP** |
+
+BTC (+~1%) and ETH (+~1.7%) both only modest gains, no qualifying surge. No other candidate cleared the 1h>3%/4h>5%+volume bar with a live-verified fresh catalyst <6h old.
+
+### Decision: **NO NEW TRADE**
+
+Freed capital ($103.4983 ZUSD) held as cash — no setup passed live-data verification today (both Perplexity-flagged candidates failed on-exchange checks). DOGE position unchanged and verified not orphaned: bid $0.0779673 vs entry $0.0772089 = **+0.99%** unrealized, below T1 (+3%), 2.5% trail `OISJWY-U4JNP-YFEBR6` left as-is.
+
+**Portfolio after this session:** $103.4983 ZUSD (100% cash minus DOGE) + 180 XXDG (2.5% trail, +0.99% unrealized) + dust. No open ETH exposure — closed profitably via trailing stop since the last check.
+
+### Step 7 — Notification
+
+WhatsApp/CallMeBot send **FAILED** again — `0 messages left`, quota exhausted (back to this failure mode vs the 403 seen at pre-session#2). Standing unresolved issue since Jul 2 — needs resubscription at callmebot.com/61477788635. Not re-flagging further per prior convention.
