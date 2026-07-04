@@ -25444,3 +25444,30 @@ Crash gate NOT triggered. Both existing positions (ETH +1.71%, DOGE −0.50%) ar
 ### Step 6 — Notification
 
 WhatsApp/CallMeBot send **FAILED again** — "0 messages left," same quota exhaustion flagged continuously since Jul 2. Resubscription still needed at callmebot.com/61477788635. Standing known issue, not re-flagging further until resolved.
+
+---
+
+## 2026-07-04 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $0.9509 ZUSD + 0.0578017829 ETH + 180 XXDG + dust | **Open positions:** ETH/USD, DOGE/USD (spot) | **Open orders:** trailing stops `O44WNM-PJFPJ-HG76BQ` (ETH), `OISJWY-U4JNP-YFEBR6` (DOGE)
+
+### Steps 1-3 — Context & Stop Verification
+Confirmed against memory: both positions from Jul 03 (ETH entry ~$1,727.67 txid `OH6ZJJ-F262W-MJUHEB`; DOGE entry ~$0.0772089 txid `OQZ6Q2-DMEKY-ZOTJ7C`) still open. `kraken.sh positions` returns `{}` (margin-only endpoint, expected) — verified via `account`: XETH 0.0578017829, XXDG 180.00000000 ✓ both match fill qty, not orphaned. Both trailing stops confirmed open: ETH `O44WNM-PJFPJ-HG76BQ` stopprice $1,728.76; DOGE `OISJWY-U4JNP-YFEBR6` stopprice $0.076401. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure, no action needed.
+
+### Step 4 — Stop Tightening Check
+- ETH: bid $1,756.80 vs entry $1,727.67 = **+1.69%** unrealized — below +20%/+40% tightening thresholds and below T1 (+3%). No change.
+- DOGE: bid $0.076790 vs entry $0.0772089 = **-0.55%** unrealized — below thresholds. No change.
+Both stops left at 2.5% trail.
+
+### Step 5 — Thesis Check
+Perplexity ETH query: ETF outflows vs institutional accumulation tug-of-war, no hard-negative event; price ($1,746-1,758) still above entry. Perplexity DOGE query: up 3-4% on acquisition rumor/short-squeeze/SpaceX IPO speculation, no hard-negative event. No exploit, rug, unlock dump, or regulatory action for either asset. **No action** — both theses intact.
+
+### Step 6 — New Entry Scan
+Available cash: **$0.9509 ZUSD** — below every Kraken order minimum, no new entry mechanically possible (same constraint as prior sessions today).
+
+### Crash Gate
+BTC $62,415, well within range — **not triggered**.
+
+### Decision: **HOLD — monitoring only, no action taken**
+
+No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred).
