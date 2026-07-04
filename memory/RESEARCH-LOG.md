@@ -25374,3 +25374,73 @@ Crash gate NOT triggered, weekly gate NOT active, but **effectively no deployabl
 
 WhatsApp/CallMeBot send **FAILED again** — API returned "0 messages left," same quota exhaustion flagged in the Jul 2 and Jul 3 earlier-session logs. Resubscription still needed at callmebot.com/61477788635. This has now failed across multiple consecutive sessions; treating as a standing known issue rather than re-flagging each time until resubscribed.
 
+
+
+---
+
+## 2026-07-04 — Pre-Session Research
+
+**Session branch:** claude/affectionate-gates-pj3g6b
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$0.9509 ZUSD cash** + 0.0578017829 ETH + 180 XXDG + dust (~20 assets <$0.01 each) | ETH/USD, DOGE/USD (spot, both open) | 2 open trailing stops (ETH `O44WNM-PJFPJ-HG76BQ`, DOGE `OISJWY-U4JNP-YFEBR6`) |
+| Alpaca | `positions: []` — zero exposure | None | Historical fills only (residual BTC position previously closed, stop cancelled 2026-05-22) |
+
+Portfolio unchanged from the last several sessions: still ~99% deployed in ETH (entry ~$1,727.67, txid `OH6ZJJ-F262W-MJUHEB`) and DOGE (entry ~$0.0772089, txid `OQZ6Q2-DMEKY-ZOTJ7C`), both filled and stopped in prior sessions. No new capital available.
+
+### STEP 2 — Stop Verification (live Kraken)
+
+| Position | Entry | Live Ask | Unrealized | Trailing Stop | Stop Price | Status |
+|---|---|---|---|---|---|---|
+| ETH (0.0578) | ~$1,727.67 | $1,757.21 | **+1.71%** | `O44WNM-PJFPJ-HG76BQ` @ 2.5% | $1,728.76 | ✅ Open, protected |
+| DOGE (180) | ~$0.0772089 | $0.0768247 | **−0.50%** | `OISJWY-U4JNP-YFEBR6` @ 2.5% | $0.076401 | ✅ Open, protected |
+
+Neither position has reached T1 (+3%) — no stop-tightening triggered. Both stops confirmed live via `kraken.sh orders`, correctly sized, no action required.
+
+### STEP 3 — Market Context
+
+| Asset | Live Ask | Today's Open | 24h High | Off High |
+|---|---|---|---|---|
+| BTC/USD | $62,478.60 | $62,539.00 | $62,881.70 | −0.64% |
+| ETH/USD | $1,757.21 | $1,756.30 | $1,773.11 | −0.90% |
+| DOGE/USD | $0.0768247 | $0.0774651 | $0.078360 | −1.96% |
+
+**Crash gate:** BTC 24h change **+2.30%** (per Perplexity CoinGecko read; other sources +0.5–1.3%) — nowhere near −20% → **NOT triggered** ✅
+**Fear & Greed Index:** **21** (Extreme Fear) — consistent with recent sessions, sentiment/price divergence continues as BTC/ETH hold near multi-day highs.
+**BTC perp funding rate:** +0.0074% to +0.0148% (8h) across exchanges — mildly positive, not overheated.
+**Top 24h gainers:** IKA (+104%), Metaplex (+99%), MAGA (+86%), Alien Worlds (+58%), MemeCore (+43%), Magma (+41%), NEXUS (+36%), Allora (+35%), Nomina (+30%), Chill House (+29%) — all micro-cap/illiquid, no fresh Kraken-listing or catalyst confirmation, consistent with prior sessions' hard-skips on this cohort.
+
+### STEP 4 — Catalyst Roundup
+
+- **CLARITY Act:** Senate **failed to secure 60 votes for cloture today** — passage odds down to 48%, July 4 symbolic deadline missed. **XRP binary-catalyst thesis remains dead** (confirmed dead in the 2026-07-03 late session too) — any XRP entry would be pure momentum only, no 7% trail justification.
+- **ETH:** ETF flows stabilizing — $169M net inflow mid-week (2-month high) on top of the $1B single-day / $2.85B weekly inflows already priced into the existing position. Thesis intact, price above entry and holding near 24h high.
+- **DOGE:** Broad risk-on momentum continues; Grayscale Dogecoin Trust debut still pending (forward catalyst, not live yet). Price down slightly vs today's open but still well above entry and stop.
+- **Token unlocks this week:** HYPE unlock **July 6** ($630M, 1.04% of supply) — 2 days out, not held, flagged only if re-entering HYPE (avoid multi-day carry into that date). MemeCore ($M) unlock already occurred July 3. No major protocol upgrades scheduled this week.
+- **Macro:** BofA flagging possible Fed rate hikes later in 2026 (Sept/Oct/Dec) — background risk, not an immediate trigger.
+
+### STEP 5 — New Entry Scan
+
+**Available capital: $0.9509 ZUSD.** This remains below Kraken's minimum order cost for every pair (ordermin/costmin ≥$0.50–$1+ notional) and would not survive the ~0.52% round-trip taker fee on any conceivable trade. **No new entry is mechanically possible this session, regardless of setup quality** — same constraint as the two prior 2026-07-03 sessions.
+
+For the record, had capital been available: ETH and DOGE (already held) remain the strongest theses (ETF inflows, altseason momentum); XRP is disqualified by the dead CLARITY Act catalyst (pure momentum only, weaker conviction); HYPE is a watch-only due to the Jul 6 unlock overhang: top-24h gainers list is entirely illiquid microcaps with no Kraken listing or catalyst confirmation — hard skip.
+
+### Risk Factors
+
+- Portfolio concentration: 100% of deployable equity in ETH + DOGE, zero diversification headroom until a stop fires and frees cash
+- Fear & Greed still Extreme Fear (21) despite the multi-day rally — sentiment/price divergence persists; a reversal could be sharp if this is short-covering rather than durable demand
+- DOGE position is the closer of the two to its stop (−0.50% unrealized, stop at −1.05% from current price) — most likely to free capital first if momentum fades further
+- HYPE $630M unlock lands Jul 6 — irrelevant to current holdings but flagged for future re-entry timing
+- CLARITY Act cloture failure removes any remaining basis for an XRP binary-catalyst trade
+- WhatsApp/CallMeBot notification quota has been failing across multiple consecutive sessions (Jul 2, Jul 3 ×2) — verifying status in Step 6 below
+
+### Decision: **HOLD — no new trades (capital fully deployed, $0.95 cash insufficient for any order)**
+
+Crash gate NOT triggered. Both existing positions (ETH +1.71%, DOGE −0.50%) are correctly stopped at 2.5% trailing and require no adjustment — neither has reached the +3% T1 tighten trigger. Action for this session is monitoring only: let the trailing stops manage risk, watch for a stop-out to free capital for the next qualifying setup (ETH/DOGE momentum intact; XRP catalyst dead; HYPE watch-only due to unlock).
+
+
+### Step 6 — Notification
+
+WhatsApp/CallMeBot send **FAILED again** — "0 messages left," same quota exhaustion flagged continuously since Jul 2. Resubscription still needed at callmebot.com/61477788635. Standing known issue, not re-flagging further until resolved.
