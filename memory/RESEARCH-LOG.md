@@ -25492,3 +25492,35 @@ Available cash: **$0.9509 ZUSD** — below every Kraken order minimum after fees
 ### Decision: **HOLD — no action, monitoring only**
 
 No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred). No trades → STEP 8 commit/push skipped per session instructions (memory already in sync with `main` as of the last midday-scan commit).
+
+---
+
+## 2026-07-04 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $0.9509 ZUSD + 0.0578017829 ETH + 180 XXDG + dust | **Open positions:** ETH/USD, DOGE/USD (spot) | **Open orders:** trailing stops `O44WNM-PJFPJ-HG76BQ` (ETH), `OISJWY-U4JNP-YFEBR6` (DOGE)
+
+### Steps 1-2 — Context & Live State
+Confirmed against memory: both positions unchanged (ETH entry ~$1,727.67 txid `OH6ZJJ-F262W-MJUHEB`; DOGE entry ~$0.0772089 txid `OQZ6Q2-DMEKY-ZOTJ7C`). Kraken `account`: XETH 0.0578017829, XXDG 180.00000000, ZUSD 0.9509 — all match, no orphans. Alpaca: `positions: []`, cash $2.54, zero exposure — confirmed clean (the one filled order in Alpaca order history is the historical BTC close from prior sessions, not new activity).
+
+### Step 3 — Stop Verification
+Both trailing stops confirmed open and correctly ratcheted:
+- ETH `O44WNM-PJFPJ-HG76BQ`: stopprice $1,732.03, limitprice $1,776.44 (trailing off the $1,776.44 24h high)
+- DOGE `OISJWY-U4JNP-YFEBR6`: stopprice $0.076401, limitprice $0.078360 (unchanged)
+Both protected. ✓
+
+### Step 4 — Stop Tightening Check
+- ETH: bid $1,765.97 vs entry $1,727.67 = **+2.22%** unrealized — below +20%/+40% tightening thresholds and below T1 (+3%). No stop change.
+- DOGE: bid $0.0772012 vs entry $0.0772089 = **-0.01%** (flat) — below thresholds. No stop change.
+
+### Step 5 — Thesis Check
+Perplexity queries for both ETH and DOGE confirm **no exploit, hack, rug, or regulatory action** for either asset today. Only crypto-related incident cited was the unrelated April 2026 Drift Protocol (Solana) exploit. CLARITY Act remains blocked (already priced in, no new development). DOGE headlines today are dominated by the unrelated US government DOGE agency sunset — no Dogecoin-specific news. **No thesis break — no action.**
+
+### Step 6 — New Entry Scan
+Available cash: **$0.9509 ZUSD** — still below every Kraken order minimum after fees, no new entry mechanically possible (same constraint as every session today).
+
+### Crash Gate
+BTC $62,576.20 vs open $62,539.00 — flat, **not triggered**.
+
+### Decision: **HOLD — monitoring only, no action taken**
+
+No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred). No trades → STEP 8 commit/push skipped per session instructions.
