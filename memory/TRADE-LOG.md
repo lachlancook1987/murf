@@ -7034,3 +7034,29 @@ No WhatsApp notification sent per Step 7 rule (only notify on action taken; none
 **Precedent:** Same procedure as SOL T1 event 2026-06-20 (cancel 3.5%/2.5% trail → place 0.5% trail on same qty, txid `OZIEYK-EU33M-BUJUF3`).
 
 **Portfolio after action:** $0.9509 ZUSD + 0.0578017829 ETH (now 0.5% trail) + 180 XXDG (2.5% trail, unchanged) + dust. No new entries — cash below every Kraken order minimum.
+
+---
+
+## 2026-07-04T[session-open] — ETH/USD Stop-Out (discovered) + New Entry Scan
+
+**Discovery:** `kraken.sh account` shows XETH balance now dust (0.0000000029, was 0.0578017829) and ZUSD risen to $103.4983 (was $0.9509). `kraken.sh orders` shows only the DOGE trailing stop `OISJWY-U4JNP-YFEBR6` open — the ETH 0.5% trailing stop `O4UBFK-2DG67-OHVYDQ` (placed pre-session#2 at stopprice $1,784.27) is no longer open, i.e. it filled between the pre-session#2 check and this session. No `trades`/`closed-orders` endpoint is exposed by `scripts/kraken.sh`, so the exact fill price/time can't be pulled directly — reconstructed from the balance delta.
+
+- **Symbol:** ETH/USD | **Side:** sell (trailing stop fill) | **Qty:** 0.0578017829
+- **Entry:** $1,727.67 (txid `OH6ZJJ-F262W-MJUHEB`) | **Cost basis:** ≈$99.86
+- **Net proceeds:** $102.5474 (= $103.4983 − $0.9509) → **effective net fill ≈$1,774.02/ETH** (after ~0.26% taker fee; consistent with a fill inside the $1,784.27 stopprice / $1,793.23 limit band given spread+fee drag)
+- **P&L: +$2.69 (+2.69%)** — profitable exit, consistent with the 0.5% trail locking in the T1 tighten from the pre-session#2 event (peak +3.79% → net +2.69% after the pullback that triggered it)
+- **Stop order:** `O4UBFK-2DG67-OHVYDQ` — filled (closed, not cancelled)
+
+**Capital freed:** ZUSD now $103.4983 — first time above Kraken order minimums since 2026-07-03.
+
+### New Entry Scan (cash now available)
+
+Perplexity flagged **ETHFI** (+15.97% 24h, restaking demand) and **BONK** (+9.97% 24h claimed, meme rotation) as top movers. Checked both live on Kraken:
+- **ETHFI/USD:** spread 0.28% ✓, but price $0.4288 vs 24h high $0.4448 (open $0.379) — already **−3.6% off the high**, no evidence of a fresh 1h breakout above it. **Fails momentum-peak check** (TRADING-STRATEGY.md) — repricing has already occurred. **SKIP.**
+- **BONK/USD:** spread ~0.1% ✓, but live Kraken shows price $0.000004922 vs 24h open $0.000004976 — actually **down** −1.1% on Kraken, contradicting Perplexity's claimed +9.97% surge. Same recurring Perplexity data-quality/hallucination issue flagged repeatedly this week. **No live momentum confirmed — SKIP.**
+- BTC (+~1%) and ETH (+~1.7%) modest gains only, no qualifying surge.
+- BTC weekly trend gate: not active (BTC uptrending), so pure-momentum entries remain open in principle — no candidate cleared the bar.
+
+**Decision: NO NEW TRADE.** Freed capital ($103.4983 ZUSD) held as cash pending a setup that passes live-data verification (not just Perplexity headline claims). DOGE position unchanged: +0.99% unrealized (bid $0.0779673 vs entry $0.0772089), below T1, 2.5% trail (`OISJWY-U4JNP-YFEBR6`) untouched, balance-verified not orphaned (XXDG 180.00000000 matches). Alpaca reconfirmed clean (positions `[]`, only historical filled orders from 2026-05-22).
+
+**Portfolio after this session:** $103.4983 ZUSD + 180 XXDG (2.5% trail) + dust. No open ETH exposure.
