@@ -25471,3 +25471,24 @@ BTC $62,415, well within range — **not triggered**.
 ### Decision: **HOLD — monitoring only, no action taken**
 
 No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-04 — Session-Open Execution
+
+**Portfolio:** $0.9509 ZUSD + 0.0578017829 ETH + 180 XXDG + dust | **Open positions:** ETH/USD, DOGE/USD (spot) | **Open orders:** trailing stops `O44WNM-PJFPJ-HG76BQ` (ETH), `OISJWY-U4JNP-YFEBR6` (DOGE)
+
+### Steps 1-2 — Context & Live State
+Confirmed against memory: both positions unchanged (ETH entry ~$1,727.67 txid `OH6ZJJ-F262W-MJUHEB`; DOGE entry ~$0.0772089 txid `OQZ6Q2-DMEKY-ZOTJ7C`). Kraken `account`: XETH 0.0578017829, XXDG 180.00000000, ZUSD 0.9509 — all match, no orphans. `positions: {}` (margin-only endpoint, expected empty for spot). Both trailing stops confirmed open and unchanged: ETH stopprice $1,728.76/limitprice $1,773.08; DOGE stopprice $0.076401/limitprice $0.078360. Alpaca: `positions: []`, zero exposure, historical orders only — clean.
+
+### Step 3 — Live Quotes & Crash Gate
+BTC ask $62,454.00 (open $62,539.00, 24h high $62,881.70) — essentially flat/-0.14% vs open. **Crash gate NOT triggered.**
+ETH ask $1,757.87 vs entry $1,727.67 = **+1.75%** unrealized — below T1 (+3%) tighten trigger. No stop change.
+DOGE ask $0.0769107 vs entry $0.0772089 = **-0.39%** unrealized — below thresholds. No stop change.
+
+### Step 4-5 — Entry Check
+Available cash: **$0.9509 ZUSD** — below every Kraken order minimum after fees. No new entry mechanically possible, same constraint as every session today (pre-session, midday). No trades executed.
+
+### Decision: **HOLD — no action, monitoring only**
+
+No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred). No trades → STEP 8 commit/push skipped per session instructions (memory already in sync with `main` as of the last midday-scan commit).
