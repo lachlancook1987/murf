@@ -25524,3 +25524,78 @@ BTC $62,576.20 vs open $62,539.00 — flat, **not triggered**.
 ### Decision: **HOLD — monitoring only, no action taken**
 
 No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred). No trades → STEP 8 commit/push skipped per session instructions.
+
+---
+
+## 2026-07-04 — Pre-Session Research #2
+
+**Session branch:** claude/affectionate-gates-o4jt0e
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$0.9509 ZUSD cash** + 0.0578017829 ETH + 180 XXDG + dust (~20 assets <$0.01 each, incl. $0.1066 ZAUD) | ETH/USD, DOGE/USD (spot, both open) | 2 open trailing stops: ETH `O44WNM-PJFPJ-HG76BQ` (stopprice $1,760.39, limitprice $1,805.52), DOGE `OISJWY-U4JNP-YFEBR6` (stopprice $0.0773405, limitprice $0.0793235) |
+| Alpaca | `positions: []` — zero exposure | None | Historical fills only (residual BTC position closed, stop cancelled 2026-05-22) |
+
+Portfolio unchanged from every session earlier today: still ~99% deployed in ETH (entry ~$1,727.67, txid `OH6ZJJ-F262W-MJUHEB`) and DOGE (entry ~$0.0772089, txid `OQZ6Q2-DMEKY-ZOTJ7C`). Both stops have ratcheted up further since the last midday scan (ETH now $1,760.39 vs prior $1,732.03; DOGE now $0.0773405 vs prior $0.076401), confirming continued upward price movement.
+
+### STEP 2 — Stop Verification (live Kraken)
+
+Both trailing stops confirmed open via `kraken.sh orders`, correctly sized at 2.5%, tracking new highs. No orphans — `account` balances (XETH 0.0578017829, XXDG 180.00000000) match fill quantities exactly.
+
+### STEP 3 — Market Context
+
+| Asset | Live Price | 24h Change |
+|---|---|---|
+| BTC/USD | ~$62,511.31 | +2.4% (range +1.5% to +2.4% across sources) |
+| ETH/USD | ~$1,771–1,785 | +2.08% to +3.57% (source spread) |
+| DOGE/USD | ~$0.077–0.078 | +2.2% to +4.2% (whale accumulation cited, ~200M tokens) |
+
+**Crash gate:** BTC +2.4% 24h — nowhere near −20% → **NOT triggered** ✅
+**Fear & Greed Index:** **21** (Extreme Fear) — unchanged from prior sessions; sentiment/price divergence persists as BTC/ETH/DOGE all trend up.
+**BTC perp funding rate:** 0.0041%–0.0148% across exchanges (Kraken 0.0148%) — mildly positive, not overheated.
+**Top 24h gainers:** MITCH (+128%), ANSEM (+104%), DHN (+73%), SAROS (+70%), HMSTR (+64%), GLMR (+52%), RKC (+50%), MPLX (+49%), TLM (+42%), EPIC (+36%) — all micro-cap/meme/illiquid, no Kraken-listing or fresh-catalyst confirmation. Consistent hard-skip pattern from every prior session today.
+**Note on data quality:** the "top catalysts" query returned an internally contradictory/stale read (cited "Bitcoin retreating 2.2% to $90,866... after a 21-month low of $58,188") that conflicts with live Kraken/CoinGecko prices (~$62,511) — same Perplexity data-quality issue flagged repeatedly across recent sessions (Jul 2, Jul 3, Jul 4 earlier). Treated as noise; live exchange data takes precedence.
+
+### STEP 4 — Catalyst Roundup
+
+- **CLARITY Act:** still stuck — Senate lacks 60 votes for cloture despite a symbolic July 4 White House deadline; passage odds ~48%. **XRP binary-catalyst thesis remains dead** (confirmed dead in 2026-07-03 and earlier 2026-07-04 sessions) — not held, no change.
+- **ETH:** ETF inflows continuing ($169M net Wednesday), IRS/Treasury staking guidance adds regulatory clarity, "Glamsterdam" upgrade progressing (H2 2026, not imminent). No hard-negative event. Thesis intact, price above entry near highs.
+- **DOGE:** Bullish on technical signals + whale accumulation (~200M tokens) + SpaceX IPO speculation. Some ETF outflow caution (~$871k) and negative MACD noted, but no hard-negative event (no exploit/rug/regulatory action). Thesis intact.
+- **Token unlocks this week:** HYPE unlock **July 6** ($630M, 1.04% of supply) — 2 days out, not held, watch-only for future re-entry timing (scheduled-catalyst pre-positioning rule applies if considering entry before then). No major protocol upgrades this week otherwise.
+
+### STEP 5 — New Entry Scan
+
+**Available capital: $0.9509 ZUSD.** Same mechanical constraint as every session today (pre-session, midday x2, session-open) — below Kraken's minimum order cost for any pair after the ~0.52% round-trip taker fee. **No new entry possible regardless of setup quality.**
+
+For the record: top-24h gainers are entirely illiquid microcaps with no Kraken listing/catalyst confirmation (hard skip). ETH and DOGE (already held) remain the strongest theses. XRP disqualified (dead catalyst). HYPE watch-only (Jul 6 unlock overhang).
+
+### Risk Factors
+
+- Zero diversification headroom until a stop fires and frees cash
+- Fear & Greed still Extreme Fear (21) despite multi-day rally across BTC/ETH/DOGE — sentiment/price divergence persists
+- HYPE $630M unlock lands Jul 6 — irrelevant to current holdings, flagged for future timing only
+- CLARITY Act cloture still stuck — no change to XRP thesis
+- Perplexity data-quality issue (stale/contradictory BTC price citation) — same recurring pattern, live Kraken data used instead
+
+### Decision: **HOLD on new entries — but ACTION taken on existing position (stop tightening)**
+
+Crash gate NOT triggered.
+
+**Correction to initial draft above:** Perplexity's approximate ETH price ($1,771–1,785) undersold the actual move — live Kraken quote confirmed **ETH bid $1,793.11 vs entry $1,727.67 = +3.79% unrealized**, which **exceeds the strategy's mandatory T1 (+3%) tighten trigger** (`memory/TRADING-STRATEGY.md` Exit & Stop Rules). DOGE bid $0.078553 vs entry $0.0772089 = **+1.74%** unrealized — below T1, no action needed there.
+
+### Step 6 (T1 Stop Tightening) — ETH
+
+- Cancelled existing 2.5% trailing stop `O44WNM-PJFPJ-HG76BQ` (stopprice was $1,760.39)
+- Placed new 0.5% trailing stop for full position (0.0578017829 ETH): txid `O4UBFK-2DG67-OHVYDQ`, stopprice **$1,784.27**, limitprice $1,793.23, GTC
+- This locks in a floor of **+3.27%** from entry ($1,727.67 → $1,784.27) regardless of any pullback, while leaving room to ride toward T2 (+5%, ~$1,814.05)
+- DOGE trailing stop `OISJWY-U4JNP-YFEBR6` left unchanged at 2.5% (stopprice $0.0773405) — position has not reached T1
+
+This is the same tightening procedure used previously for the SOL T1 event (2026-06-20, txid `OZIEYK-EU33M-BUJUF3`): cancel wide trail, replace with 0.5% trail on the same quantity.
+
+**No new entries** — cash remains $0.9509 ZUSD, below every Kraken order minimum, same constraint as every session today.
+
+### Step 7 — Notification
+
+WhatsApp/CallMeBot send **FAILED** — this time with `403 Forbidden` from `cmb-app.callmebot.com` (previously it was "0 messages left" quota exhaustion; now the endpoint itself rejects the request). Same unresolved standing issue flagged continuously since Jul 2 — resubscription/access needed at callmebot.com. Not re-flagging further per prior convention until resolved by the user.

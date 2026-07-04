@@ -7018,3 +7018,19 @@ No WhatsApp notification sent per Step 7 rule (only notify on action taken; none
 **Notes:** Quiet Saturday, no trades — pre-session research found no mechanically possible entry (available cash $0.9509 ZUSD sits below every Kraken order minimum). Both positions carried from Jul 03 remain open and protected: ETH +1.78% unrealized, DOGE −0.53% unrealized, neither near T1 (+3%) so no stop-tightening triggered. Portfolio essentially flat day-over-day (−0.18%) since both holdings are unchanged in size and prices barely moved overnight; BTC continued its multi-day rally (+1.32% since Jul 03 EOD, now $62,502.90), so the bot underperformed BTC by −1.51% by sitting fully deployed in ETH/DOGE rather than BTC. Note: the Jul 03 "EOD Snapshot" entry above was logged before that day's midday ETH/DOGE trades executed (see correction note) and is stale ($115.36, 100% cash) — this session reconstructed yesterday's true closing equity (~$116.62) from the last verified Jul 03 log entry's live prices to compute today's Day P&L correctly. Alpaca BTC stop `a2b44cf9` reconfirmed still cancelled (since 2026-05-22); zero Alpaca exposure. CLARITY Act cloture failed today — XRP binary-catalyst thesis stays dead. Tomorrow: resume catalyst-driven momentum scans; watch for capital recycling opportunity if either position hits T1 or stops out, freeing cash above order minimums. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged Jul 2/Jul 3 sessions, needs resubscription at callmebot.com/61477788635.
 
 ---
+
+---
+
+## 2026-07-04T[pre-session#2] — ETH/USD T1 Stop Tightening
+
+**Trigger:** Live Kraken quote showed ETH bid $1,793.11 vs entry $1,727.67 = **+3.79% unrealized**, exceeding the strategy's mandatory T1 (+3%) tighten-to-0.5% rule. DOGE checked simultaneously (+1.74%, below T1 — no action).
+
+**Action:**
+- Cancelled ETH trailing stop `O44WNM-PJFPJ-HG76BQ` (2.5% trail, stopprice $1,760.39)
+- Placed new trailing stop `O4UBFK-2DG67-OHVYDQ` (0.5% trail, full qty 0.0578017829 ETH), GTC
+  - stopprice $1,784.27, limitprice $1,793.23
+  - Locks in floor of **+3.27%** from entry regardless of pullback; leaves room to ride toward T2 (+5%, ~$1,814.05)
+
+**Precedent:** Same procedure as SOL T1 event 2026-06-20 (cancel 3.5%/2.5% trail → place 0.5% trail on same qty, txid `OZIEYK-EU33M-BUJUF3`).
+
+**Portfolio after action:** $0.9509 ZUSD + 0.0578017829 ETH (now 0.5% trail) + 180 XXDG (2.5% trail, unchanged) + dust. No new entries — cash below every Kraken order minimum.
