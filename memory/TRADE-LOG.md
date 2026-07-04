@@ -7005,3 +7005,16 @@ Available cash: **$0.95 ZUSD** — below any realistic order minimum after fees,
 No WhatsApp notification sent per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-04 — EOD Snapshot (Day 45, Saturday)
+
+### Jul 04 — EOD Snapshot (Day 45, Saturday)
+**Portfolio:** $116.41 | **Cash:** $0.95 (0.8%) | **Day P&L:** −$0.21 (−0.18%) | **Phase P&L:** −$63.37 (−35.25%) | **vs BTC:** −1.51%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.0578017829 | $1,727.67 | $1,758.31 | −0.00% | +$1.77 (+1.78%) | `O44WNM-PJFPJ-HG76BQ` @ $1,728.76 (2.5%) |
+| DOGE/USD | 180.00 | $0.0772089 | $0.0767989 | −0.19% | −$0.07 (−0.53%) | `OISJWY-U4JNP-YFEBR6` @ $0.076401 (2.5%) |
+**Trades today:** none | **Total since migration:** ~85
+**Notes:** Quiet Saturday, no trades — pre-session research found no mechanically possible entry (available cash $0.9509 ZUSD sits below every Kraken order minimum). Both positions carried from Jul 03 remain open and protected: ETH +1.78% unrealized, DOGE −0.53% unrealized, neither near T1 (+3%) so no stop-tightening triggered. Portfolio essentially flat day-over-day (−0.18%) since both holdings are unchanged in size and prices barely moved overnight; BTC continued its multi-day rally (+1.32% since Jul 03 EOD, now $62,502.90), so the bot underperformed BTC by −1.51% by sitting fully deployed in ETH/DOGE rather than BTC. Note: the Jul 03 "EOD Snapshot" entry above was logged before that day's midday ETH/DOGE trades executed (see correction note) and is stale ($115.36, 100% cash) — this session reconstructed yesterday's true closing equity (~$116.62) from the last verified Jul 03 log entry's live prices to compute today's Day P&L correctly. Alpaca BTC stop `a2b44cf9` reconfirmed still cancelled (since 2026-05-22); zero Alpaca exposure. CLARITY Act cloture failed today — XRP binary-catalyst thesis stays dead. Tomorrow: resume catalyst-driven momentum scans; watch for capital recycling opportunity if either position hits T1 or stops out, freeing cash above order minimums. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged Jul 2/Jul 3 sessions, needs resubscription at callmebot.com/61477788635.
+
+---
