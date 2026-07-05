@@ -25636,3 +25636,70 @@ Freed capital ($103.4983 ZUSD) held as cash — no setup passed live-data verifi
 ### Step 7 — Notification
 
 WhatsApp/CallMeBot send **FAILED** again — `0 messages left`, quota exhausted (back to this failure mode vs the 403 seen at pre-session#2). Standing unresolved issue since Jul 2 — needs resubscription at callmebot.com/61477788635. Not re-flagging further per prior convention.
+
+---
+
+## 2026-07-05 — Pre-Session Research
+
+**Session branch:** claude/affectionate-gates-2qprq6
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (~20 assets <$0.01 each incl. $0.1066 ZAUD) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical fills only (residual BTC closed, stop cancelled 2026-05-22) |
+
+**Discovery:** the DOGE trailing stop (`OISJWY-U4JNP-YFEBR6`, last seen at Midday Scan #3 on 07-04 with 180 XXDG open) has filled — XXDG balance is now 0, ZUSD rose from $103.4983 to $117.3351. Reconstructed fill (balance-delta method, no trade-history endpoint available): net proceeds $13.8368 on cost basis $13.8976 → **P&L −$0.0608 (−0.44%)**, essentially breakeven. Full detail logged in `memory/TRADE-LOG.md`. Portfolio is now **100% cash** — no open positions on either exchange.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Value |
+|---|---|
+| BTC | ~$62,850–63,240 (Kraken $63,238), 24h **+0.87% to +1.45%** |
+| ETH | ~$1,764, 24h **+0.58% to +1.03%** |
+| Fear & Greed Index | **22** (Extreme Fear) — persistent sentiment/price divergence, unchanged pattern from all prior sessions this week |
+| BTC perp funding rate | +0.0095% avg (8h), Kraken +0.0148% — mildly bullish, not overheated |
+| Top 24h gainers (Perplexity) | MITCH +128%, ANSEM +104%, DHN +73%, SAROS +70%, HMSTR +64%, GLMR +52%, RKC +50%, MPLX +49%, TLM +42%, EPIC +36% — all illiquid micro-cap/meme, no Kraken listing confirmed |
+| Catalysts | CLARITY Act still stuck (Senate cloture ~48% odds, XRP thesis remains dead per prior sessions); ETH Glamsterdam upgrade (H2 2026, not imminent); Solana Alpenglow (Q3 2026); Zcash Ironwood (late July); **HYPE unlock July 6** ($630M, 1.04% supply) — 1 day out |
+| Token unlocks this week | Routine/minor only; heavier unlock month (July) still ahead — PUMP cliff Jul 12, WLD linear, XPL Jul 28 |
+
+**Crash gate:** BTC +0.87% to +1.45% 24h — nowhere near −20% → **NOT triggered.**
+**BTC weekly trend gate:** BTC in continued multi-day uptrend — **not active**, pure-momentum entries remain open in principle.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity's momentum/gainer lists were checked live on Kraken; standard data-quality gap persisted (stale/contradictory prices, illiquid names) — same pattern flagged every session this week:
+
+| Symbol | Spread | Live 24h move (open→last) | Off 24h high | Verdict |
+|---|---|---|---|---|
+| ETHFI/USD | 0.65% ✓ | +5.0% | **−3.5%** off high | Fails momentum-peak check (repricing already occurred) — same fail as 07-04 sessions. **SKIP** |
+| ADA/USD | ~0.001% ✓ | +0.23% (flat) | — | Perplexity claimed +7%; live data shows flat. No momentum. **SKIP** |
+| BCH/USD | 0.09% ✓ | +2.2% | −0.4% (near high) | Below 3% intraday threshold; no specific catalyst beyond generic gainer list. **SKIP** |
+| HBAR/USD | 0.04% ✓ | **−2.9%** | — | Down on the day. **SKIP** |
+| SOL/USD | 0.01% ✓ | **−1.3%** | — | Down on the day. **SKIP** |
+| XRP/USD | ~0.001% ✓ | **−1.4%** | — | Down; CLARITY Act catalyst confirmed dead. **SKIP** |
+| AERO/USD | 0.09% ✓ | **−1.8%** | — | Down on the day. **SKIP** |
+| OMNI/USD | **~80%** ✗ | n/a | n/a | Illiquid (2 trades/24h) — hard-skip, matches prior OMNI skip. **SKIP** |
+| DOLO/USD | **~5.7%** ✗ | n/a | n/a | Fails 1% spread cap. **SKIP** |
+| MAT/USD | **~31%** ✗ | −1.8% | — | Fails spread cap and down on the day. **SKIP** |
+| INIT/USD | 0.35% ✓ | **−2.2%** | — | Perplexity implied momentum play; live data shows it's actually down. **SKIP** |
+| HYPE | — | — | — | Unlock July 6 (~1 day out) — scheduled-catalyst pre-positioning rule bars anticipatory entry. **Watch-only.** |
+
+No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, spread ≤1%). Every "top mover" surfaced by Perplexity today either failed on live spread, was actually flat/down on Kraken, or had already faded from its 24h high — consistent with the recurring Perplexity data-quality issue flagged across every session this week.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage; full flexibility on next entry
+- Fear & Greed still Extreme Fear (22) despite continued BTC/ETH uptrend — sentiment/price divergence persists
+- HYPE $630M unlock lands Jul 6 — no entry today per scheduled-catalyst rule; re-evaluate post-unlock for a confirmed reaction trade
+- CLARITY Act cloture still stuck — XRP thesis stays dead
+- Recurring Perplexity data-quality/hallucination issue on momentum and gainer queries — live Kraken data used as source of truth throughout
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash ($117.3351 ZUSD). No candidate today passed the live-verified momentum/spread/catalyst bar. Will resume scanning at the next scheduled session for a setup that clears the bar on live data, not headline claims.
+
+### Step 6 — Notification
+
+Attempted via `scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
