@@ -25790,3 +25790,62 @@ No candidate cleared the entry bar. **No new trades.**
 ### Decision: **HOLD — no new entries; crash gate not triggered**
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
+
+## 2026-07-05 — Pre-Session Research (Additional Run)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (~20 assets <$0.01 each incl. $0.1066 ZAUD) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical fills only (residual BTC closed, stop cancelled 2026-05-22) |
+
+No change since the last scan today — still 100% cash, no open positions on either exchange.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Value |
+|---|---|
+| BTC | ~$62,600–63,000 (live Kraken), 24h **+0.2% to +0.8%** depending on source |
+| ETH | ~$1,765–1,775, 24h **+0.15% to +0.9%** |
+| Fear & Greed Index | **22–23** (Extreme Fear) — unchanged from every prior session this week |
+| BTC perp funding rate | ~0.0065–0.01% aggregate, mildly positive — not overheated |
+| Top 24h gainers (Perplexity) | Gaia Token +81%, VITA INU +71%, LAB LAB +63%, SPURS +60%, DADDY TATE +50%, VANRY +46%, ULTIMA +45%, Nesa +35% — same illiquid meme/micro-cap pattern as every prior session |
+| Catalysts | CLARITY Act Senate markup now dated ~July 14 (odds trimmed to 48%); Zcash Ironwood (NU7) upgrade late July; Jito JTX terminal launch (Solana); ETH Glamsterdam devnet-5 testing, public testnet Jul/Aug; **HYPE unlock July 6** ($630M, 1.04% supply) — now <24h out |
+| Token unlocks this week | HYPE Jul 6 ($630M); RAIN Jul 11 (~$812M); PUMP cliff running through July (21.35% supply); JTO ~$14M running through July |
+
+**Crash gate:** BTC +0.2% to +0.8% 24h — nowhere near −20% → **NOT triggered.**
+**BTC weekly trend gate:** BTC continuing multi-day uptrend — **not active**, pure-momentum entries remain open in principle.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+| Symbol | Spread | Live 24h move (open→last) | Off 24h high | Verdict |
+|---|---|---|---|---|
+| GAIA/USD | ~0.98% ✓ | **-7.3%** (down, contradicts Perplexity's +81% claim) | −70% off high $0.028 | Same recurring faded-spike pattern flagged repeatedly. **SKIP** |
+| VANRY/USD | ~0.92% ✓ | +18.9% | **−22.6%** off high $0.007 | Momentum already faded hard from spike. Fails momentum-peak check. **SKIP** |
+| ZEC/USD | tight ✓ | -0.21% (flat) | — | No momentum. **SKIP** |
+| ETHFI/USD | tight ✓ | +3.4% | **−31.8%** off high $0.62 | Same recurring massive fade pattern (07-04, 07-05 sessions). **SKIP** |
+| BCH/USD | ~0.09% ✓ | **+4.19%** | −1.4% (near high) | Tight spread, near 24h high, steadily climbing all session (was +0.04% at Midday Scan, +2.2% at pre-session, now +4.19%) — genuine sustained grind, not a spike-and-fade. But below the 5%/4h momentum threshold and no distinct catalyst (only generic "gainer list" mention). **Close watch, not yet a clear entry — SKIP** |
+| ADA/USD | tight ✓ | **-1.6%** | — | Down; contradicts Perplexity's stale gainer claim. **SKIP** |
+| OMNI, MAT, DOLO | wide (~30-80%) ✗ | — | — | Previously confirmed illiquid/spread-cap fails, unchanged. **SKIP** |
+| HYPE | — | — | — | Unlock July 6 (<24h out) — scheduled-catalyst pre-positioning rule still bars anticipatory entry. **Watch-only.** |
+
+No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, spread ≤1%, momentum-peak check). BCH is the closest thing to a real signal today — sustained, non-faded climb — but hasn't hit the 5% momentum threshold and lacks a specific catalyst; worth a follow-up check next scan in case it breaks out further.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed still Extreme Fear (22-23) despite continued BTC/ETH uptrend — sentiment/price divergence persists
+- HYPE $630M unlock lands tomorrow (Jul 6) — no entry today per scheduled-catalyst rule; re-evaluate post-unlock for a confirmed reaction trade
+- BCH showing genuine sustained (non-spike) momentum — below threshold today but worth rechecking next scan
+- Recurring Perplexity data-quality/hallucination issue on momentum and gainer queries persists (GAIA, VANRY, ADA all showed live Kraken data materially different from Perplexity's claims) — live Kraken data used as source of truth throughout
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash ($117.3351 ZUSD). No candidate today passed the live-verified momentum/spread/catalyst bar; BCH is the closest miss and worth rechecking. Will resume scanning next session.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635. Not re-flagging further per prior convention.
