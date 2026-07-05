@@ -7109,3 +7109,13 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 **Capital freed:** ZUSD now $117.3351 — **portfolio is 100% cash**, no open Kraken positions or orders. Alpaca reconfirmed `positions: []`, zero exposure.
 
 **Portfolio after this discovery:** $117.3351 ZUSD + dust only. No open positions on either exchange.
+
+---
+
+## 2026-07-05 — EOD Snapshot (Day 46, Sunday)
+
+### Jul 05 — EOD Snapshot (Day 46, Sunday)
+**Portfolio:** $117.34 | **Cash:** $117.34 (100%) | **Day P&L:** +$0.93 (+0.79%) | **Phase P&L:** −$62.44 (−34.73%) | **vs BTC:** +0.12%
+No open positions — 100% cash, no open Kraken orders.
+**Trades today:** DOGE/USD stop-out (trailing stop `OISJWY-U4JNP-YFEBR6` filled, reconstructed from balance delta, −$0.06/−0.44%, see discovery log above) | **Total since migration:** ~86
+**Notes:** Quiet Sunday, fully cash after the DOGE trailing stop fired (discovered at pre-session, exact fill time unknown — no trade-history endpoint exposed by `kraken.sh`). No new entries this session; `kraken.sh account`/`positions`/`orders` reconfirmed unchanged all day (ZUSD $117.3351, no positions, `orders: {}`). BTC rose +0.67% ($62,502.90 → $62,921.10), and with equity flat aside from the already-booked DOGE exit, the bot essentially matched cash-drag against BTC (+0.12% vs BTC). Phase P&L now −$62.44 (−34.73%) from Kraken starting equity $179.78. Alpaca BTC stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22); zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
