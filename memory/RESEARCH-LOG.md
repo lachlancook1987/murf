@@ -25849,3 +25849,24 @@ No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, s
 ### Step 6 — Notification
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635. Not re-flagging further per prior convention.
+
+## 2026-07-05 — Session-Open Execution Check #2 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust | **Open positions:** none | **Open orders:** none (Kraken + Alpaca both reconfirmed clean)
+
+### Steps 1-2 — State Check
+Reconfirmed via `kraken.sh account`/`positions`/`orders`: ZUSD $117.3351 unchanged, all other balances dust, `positions: {}`, `orders: {"open": {}}`. Alpaca `positions: []`, only historical filled/canceled orders — zero Alpaca exposure. No change since the last two checks today.
+
+### Step 3 — Crash Gate
+BTC live $62,634.30 vs open $63,085.40 = **-0.72%** — not triggered.
+
+### Step 4 — Candidate Recheck
+BCH/USD (today's closest watch candidate): live $244.03 vs open $235.81 = **+3.49%**, spread ~0.07% ✓, but now **-2.04%** off 24h high $249.12 (was -1.4% at the pre-session additional run) — momentum fading further from the high rather than accelerating, still below the 5%/4h threshold, no distinct catalyst beyond generic gainer-list mention. Fails momentum-peak check. **SKIP.** No other candidates re-screened; nothing changed to warrant a fresh Perplexity sweep this soon after two prior checks today.
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — no new entries; crash gate not triggered**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
