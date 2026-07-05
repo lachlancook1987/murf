@@ -25870,3 +25870,26 @@ No candidate cleared the entry bar. **No new trades.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
 
 ---
+
+## 2026-07-05 — Midday Scan #4 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust | **Open positions:** none | **Open orders:** none (Kraken confirmed via `positions`/`orders`; Alpaca `a2b44cf9` reconfirmed still `canceled` since 2026-05-22, zero exposure)
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. No change since Session-Open Execution Check #2. Nothing to protect or tighten (Steps 3-4); no thesis to invalidate (Step 5).
+
+### Step 6 — New Entry Scan
+Crash gate: BTC live $63,044.10 vs open $63,085.40 = **-0.06%** — not triggered.
+
+Perplexity again hallucinated BTC at "$118,000-$123,000 ATH" vs live Kraken $63,044 — same recurring data-quality issue flagged all week; live Kraken used as source of truth. Perplexity flagged OMNI (+174%), MAT (+66%), DOLO (+53%), REX/INIT/UFD (+30-50%), ADA (+5.10%) as movers:
+- **OMNI, MAT, DOLO:** previously confirmed illiquid/wide-spread fails (30-80% spreads) multiple times today. No re-check needed. **SKIP.**
+- **ADA/USD:** live $0.190025 vs open $0.192008 = **-1.03%** — actually down, directly contradicting Perplexity's claimed +5.10%. Same recurring pattern. **SKIP.**
+- REX, INIT, UFD: not previously screened, but consistent with today's pattern of Perplexity gainer claims failing live verification (INIT already confirmed -2.2%/-3.4% down in two earlier scans today) — no live check run given the established unreliability and no distinct catalyst offered beyond generic gainer-list mentions.
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — no new entries; crash gate not triggered**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
