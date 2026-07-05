@@ -25737,3 +25737,35 @@ No candidate cleared the entry bar (1h>3%/4h>5%+volume/fresh catalyst, spread �
 ### Decision: **HOLD — monitoring only, no action taken**
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
+
+## 2026-07-05 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh account` confirms ZUSD $117.3351 unchanged, all other balances dust (largest AVAX/NEAR/SUI fragments, all <$0.01). `kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Step 3-4 — Stop Verification / Tightening
+No open positions — nothing to protect or tighten.
+
+### Step 5 — Thesis Check
+No open positions — no thesis to invalidate.
+
+### Step 6 — New Entry Scan
+Crash gate: BTC live $62,673.70 vs open $63,085.40 = **-0.65%** — nowhere near -20%. **Not triggered.**
+
+Perplexity ("biggest 1h surge", "altcoin momentum >3%/4h") returned only 24h-window data plus a hallucinated claim of BTC "8% surge to $74,000" — directly contradicted by live Kraken price ($62,673.70, actually down slightly today). Same recurring data-quality issue flagged every session this week; live Kraken data used as source of truth.
+- **BTC/USD:** -0.65% today, off 24h high -1.2%. No momentum.
+- **ETH/USD:** -0.75% today (open $1778.72 → last $1765.40), -2.2% off 24h high $1805.52. No momentum.
+- **GAIA/USD:** re-checked — spread now **~20%** (ask $0.01250 / bid $0.01001), price +38.9% today but **-55% off 24h high** ($0.028) — already crashed from spike. Double-fail (spread + faded momentum), same as prior skip. **SKIP.**
+- **OMNI/USD:** re-checked — spread **~57%** (ask $0.89 / bid $0.383), 2 trades/24h. Still illiquid. **SKIP.**
+- MAT, DOLO: previously confirmed spread-cap fails, no material change expected — not re-queried.
+- HYPE: unlock July 6 (<24h out) — scheduled-catalyst pre-positioning rule still bars anticipatory entry.
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — monitoring only, no action taken**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
