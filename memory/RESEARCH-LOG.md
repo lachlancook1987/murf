@@ -25769,3 +25769,24 @@ No candidate cleared the entry bar. **No new trades.**
 ### Decision: **HOLD — monitoring only, no action taken**
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
+
+## 2026-07-05 — Session-Open Execution Check (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust | **Open positions:** none | **Open orders:** none (Kraken + Alpaca both confirmed clean)
+
+### Steps 1-2 — State Check
+`kraken.sh account`/`positions`/`orders` reconfirmed: ZUSD $117.3351 unchanged, all other balances dust, `positions: {}`, `orders: {"open": {}}`. Alpaca `positions: []`, only historical filled/canceled orders — zero Alpaca exposure.
+
+### Step 3 — Crash Gate
+BTC live $62,742.30 vs open $63,085.40 = **-0.54%** — not triggered.
+
+### Step 4 — New Entry Scan
+Re-ran momentum/gainer Perplexity queries. Same candidates surfaced as every prior scan today (OMNI, MAT, DOLO, GAIA, ADA, AERO, BCH) — all previously live-verified and skipped this session for spread-cap fails, faded-momentum (already off 24h high), or flat/down on live Kraken data contradicting Perplexity's stale claims. Perplexity also hallucinated BTC at "$120,000-123,000 ATH" vs live Kraken price $62,742 — same recurring data-quality issue flagged all week; live Kraken data used as source of truth. No new candidates, no live changes to previously-skipped ones.
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — no new entries; crash gate not triggered**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
