@@ -25703,3 +25703,37 @@ No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, s
 ### Step 6 — Notification
 
 Attempted via `scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-05 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $117.3351 unchanged, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Step 3-4 — Stop Verification / Tightening
+No open positions — nothing to protect or tighten.
+
+### Step 5 — Thesis Check
+No open positions — no thesis to invalidate.
+
+### Step 6 — New Entry Scan
+Crash gate: BTC ~$62,700-63,240, 24h +0.87% to +1.45% — nowhere near -20%. **Not triggered.**
+
+Perplexity flagged ETHFI, ADA, AERO, BCH, INIT, GAIA, OMNI, MAT, DOLO as movers. Checked live on Kraken:
+- **ETHFI/USD:** live +2.57% today, but c=$0.4195 vs 24h high $0.62 → **-32% off high** — spike already faded hard. Fails momentum-peak check. **SKIP.**
+- **ADA/USD:** live **-3.02%** (open $0.192 → last $0.1862) — contradicts Perplexity's claimed +7.28%. **SKIP.**
+- **AERO/USD:** live **-4.3%** (open $0.5839 → last $0.5586). **SKIP.**
+- **BCH/USD:** live flat (+0.04%), no momentum. **SKIP.**
+- **INIT/USD:** live **-3.4%** (open $0.0582 → last $0.0562) — contradicts Perplexity claim. **SKIP.**
+- **GAIA/USD:** live +10.5% today but c=$0.009942 vs 24h high $0.01536 → **-35% off high** (already faded from a spike/dump, 24h low $0.0057 shows extreme volatility); spread ~1.4% also **fails the 1% cap**. Double-fail. **SKIP.**
+- OMNI, MAT, DOLO: previously confirmed illiquid / wide-spread fails (repeat skips from pre-session). No re-check needed, same pairs.
+- HYPE: unlock event July 6 (~1 day out, now <24h) — scheduled-catalyst pre-positioning rule still bars anticipatory entry.
+
+No candidate cleared the entry bar (1h>3%/4h>5%+volume/fresh catalyst, spread ≤1%, momentum-peak check). Same recurring Perplexity data-quality pattern — several claimed gainers are flat/down live, others already faded 30%+ off their spike highs.
+
+### Decision: **HOLD — monitoring only, no action taken**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
