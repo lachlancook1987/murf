@@ -7093,3 +7093,19 @@ No candidate cleared the entry bar. **No new trades.**
 ### Decision: **HOLD — monitoring only, no action taken**
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-05 — DOGE/USD Stop-Out (discovered, reconstructed) + Pre-Session Research
+
+**Discovery:** `kraken.sh account` shows XXDG balance now `0.00000000` (was 180.00000000 at Midday Scan #3 on 07-04) and ZUSD risen to **$117.3351** (was $103.4983). `kraken.sh orders` returns `{}` — no open orders at all; the DOGE trailing stop `OISJWY-U4JNP-YFEBR6` (stopprice $0.0773405 as of the last check) is gone, i.e. it filled sometime between Midday Scan #3 (07-04) and this session. No trade-history endpoint is exposed by `scripts/kraken.sh`, so the fill is reconstructed from the balance delta (same method used for the ETH stop-out on 07-04).
+
+- **Symbol:** DOGE/USD | **Side:** sell (trailing stop fill) | **Qty:** 180.00000000
+- **Entry:** $0.0772089 (txid `OQZ6Q2-DMEKY-ZOTJ7C`) | **Cost basis:** $13.8976
+- **Net proceeds:** $13.8368 (= $117.3351 − $103.4983) → **effective net fill ≈$0.0768711/DOGE**
+- **P&L: −$0.0608 (−0.44%)** — small loss; consistent with the 2.5% trail ratcheting up on prior gains (bid was +1.15% at last check) then giving back the move on a pullback, landing the stop close to breakeven after the ~0.26% taker fee
+- **Stop order:** `OISJWY-U4JNP-YFEBR6` — filled (closed, not cancelled)
+
+**Capital freed:** ZUSD now $117.3351 — **portfolio is 100% cash**, no open Kraken positions or orders. Alpaca reconfirmed `positions: []`, zero exposure.
+
+**Portfolio after this discovery:** $117.3351 ZUSD + dust only. No open positions on either exchange.
