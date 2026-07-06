@@ -7152,3 +7152,33 @@ No open positions — 100% cash, no open Kraken orders.
 No open positions — 100% cash, no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~86
 **Notes:** Fully flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC ticked up slightly (+0.05%, $62,921.10 → $62,953.00), so with equity flat the bot lagged BTC marginally (−0.05% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure, consistent with every prior session. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-06 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` → ZUSD $117.3351 unchanged, all other balances dust. Alpaca `orders` reconfirmed `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Market-wide selloff has **deepened** since the session-open check (BTC was -2.22% then, now worse):
+- BTC $61,744.60 vs open $63,593.00 = **-2.90%**, -3.4% off 24h high $63,925.90
+- ETH $1,742.18 vs open $1,784.41 = -2.37%, -3.05% off high
+- SOL $80.04 vs open $81.52 = -1.82%, -2.68% off high
+- ADA $0.179672 vs open $0.189368 = -5.12%, -5.61% off high
+- XRP $1.11309 vs open $1.15618 = -3.73%, -4.07% off high
+- DOGE $0.0752264 vs open $0.0778286 = -3.34%, -3.77% off high
+- **HYPE unlock watch:** $69.68 vs open $71.33 = -2.31%, still -4.0% off 24h high $72.60 — decline continuing since pre-session, no post-unlock bounce/breakout. **SKIP.**
+
+Crash gate: BTC -2.90% — nowhere near -20%, **not triggered**. Every tracked asset is red, no momentum-surge candidate anywhere (all signals require >3% *positive* 1h/4h moves — none present). Perplexity 1h-surge query returned an obviously hallucinated result (claimed BTC "jumped 16% to $4,773.91" — off by >10x from live Kraken $61,744.60) — same recurring data-quality issue, disregarded; live Kraken used as source of truth.
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — monitoring only, no action taken.** Broad market pullback deepening intraday; crash gate not triggered; no qualifying setup.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
