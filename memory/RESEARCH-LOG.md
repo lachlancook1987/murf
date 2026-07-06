@@ -25951,3 +25951,25 @@ No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, s
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-06 — Session-Open Execution Check (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none (Kraken + Alpaca both reconfirmed clean)
+
+### Steps 1-2 — State Check
+`kraken.sh account`/`positions`/`orders` reconfirmed: ZUSD $117.3351 unchanged, all other balances dust, `positions: {}`, `orders: {"open": {}}`. Alpaca `positions: []`, only historical filled/canceled orders — zero Alpaca exposure.
+
+### Step 3 — Crash Gate
+BTC live $62,178.90 vs open $63,593.00 = **-2.22%** — not triggered. Broad market continues red across the board (worse than pre-session): ETH $1,754.28 vs open $1,784.41 = -1.69%, SOL $80.43 vs open $81.52 = -1.34%.
+
+### Step 4 — New Entry Scan
+- **HYPE/USD unlock watch:** $69.82 vs open $71.33 = **-2.12%**, still -3.8% off 24h high $72.60 — no bounce, decline continuing since pre-session (-0.62%) and midday (-3.5%). No post-unlock reaction breakout materialized. **SKIP.**
+- BTC, ETH, SOL all down on the day, no momentum signal anywhere. No fresh candidates surfaced beyond what pre-session already screened and skipped (GAIA spread fail, VANRY down not up).
+
+No candidate cleared the entry bar. **No new trades.**
+
+### Decision: **HOLD — no new entries; crash gate not triggered**
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
+
+---
