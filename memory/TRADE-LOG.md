@@ -7119,3 +7119,13 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No open positions — 100% cash, no open Kraken orders.
 **Trades today:** DOGE/USD stop-out (trailing stop `OISJWY-U4JNP-YFEBR6` filled, reconstructed from balance delta, −$0.06/−0.44%, see discovery log above) | **Total since migration:** ~86
 **Notes:** Quiet Sunday, fully cash after the DOGE trailing stop fired (discovered at pre-session, exact fill time unknown — no trade-history endpoint exposed by `kraken.sh`). No new entries this session; `kraken.sh account`/`positions`/`orders` reconfirmed unchanged all day (ZUSD $117.3351, no positions, `orders: {}`). BTC rose +0.67% ($62,502.90 → $62,921.10), and with equity flat aside from the already-booked DOGE exit, the bot essentially matched cash-drag against BTC (+0.12% vs BTC). Phase P&L now −$62.44 (−34.73%) from Kraken starting equity $179.78. Alpaca BTC stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22); zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-06 — EOD Snapshot (Day 47, Monday)
+
+### Jul 06 — EOD Snapshot (Day 47, Monday)
+**Portfolio:** $117.34 | **Cash:** $117.34 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$62.44 (−34.73%) | **vs BTC:** −0.05%
+No open positions — 100% cash, no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~86
+**Notes:** Fully flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC ticked up slightly (+0.05%, $62,921.10 → $62,953.00), so with equity flat the bot lagged BTC marginally (−0.05% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure, consistent with every prior session. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry. WhatsApp/CallMeBot notification FAILED again this session — quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
