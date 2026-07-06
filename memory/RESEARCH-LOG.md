@@ -25973,3 +25973,59 @@ No candidate cleared the entry bar. **No new trades.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
 
 ---
+
+## 2026-07-06 — Pre-Session Research #2
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical fills only (residual BTC closed, stop cancelled 2026-05-22) |
+
+No change since prior checks today — still 100% cash, no open positions on either exchange. No held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $63,055–$63,622, +0.49% to +1.39% | $63,577.40, open $63,593.00 → **-0.02%**, -0.55% off 24h high $63,925.90 | Flat, no crash gate |
+| ETH | ~$1,782, -1.99% | $1,787.41, open $1,784.41 → **+0.17%**, -1.05% off high $1,806.34 | Flat |
+| Fear & Greed | 24 (Extreme Fear), alt sources 23-26 | — | Extreme Fear persists all week |
+| BTC funding rate | ~+0.01% (8h), Kraken +0.0148% | — | Mildly positive, not overheated |
+| Catalysts | CLARITY Act deadline missed/stalled (Senate short of cloture, odds 48%); Ethereum Glamsterdam devnet-5; alleged "Zcash +25% to $532" and "Stellar +72%" moves | **ZEC $448.05 (open $461.88) → -3.00%**; **XLM $0.19972 (open $0.20276) → -1.49%** | Both claims **hallucinated** — live data shows both DOWN, not up. Same recurring Perplexity data-quality issue. |
+| Unlocks | HYPE $630M (1.04% supply) unlocked today; RAIN $812M Jul 11; PUMP $117M Jul 12 | HYPE $71.12, open $71.33 → -0.29%, -2.04% off 24h high $72.60 | Still soft post-unlock, no bounce |
+
+**Crash gate:** BTC -0.02% — nowhere near -20% → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+| Symbol | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|
+| ZEC/USD | tight | **-3.00%** (Perplexity claimed +25%) | -4.08% | Hallucinated claim; actually down. **SKIP** |
+| XLM/USD | ~0.03% ✓ | **-1.49%** (Perplexity claimed +72%) | -3.68% | Hallucinated claim; actually down. **SKIP** |
+| HYPE/USD (unlock watch) | ~0.014% ✓ | -0.29% | -2.04% | Still no positive post-unlock reaction across three checks today. **SKIP** |
+| OMNI/USD | **~80%** ✗ (ask 0.89 / bid 0.383) | — | — | Confirmed illiquid, same as every prior session. **SKIP** |
+| VANRY/USD | ~0.40% ✓ | **+34.1%** (open $0.0056 → $0.00751) | **-22.7%** off high $0.00972 | Real 24h gain but momentum-peak check fails hard — high was set well over 60min ago and price has faded sharply since. Same recurring faded-spike pattern flagged all week. **SKIP** |
+| SOL/USD | tight ✓ | +0.27% | -0.74% | No momentum. **SKIP** |
+| XRP/USD | tight ✓ | -1.15% | -1.75% | No momentum. **SKIP** |
+
+Other Perplexity gainers (DATA/Streamr, LAT, ZEUS, GUA, NAKA, AI, UCN, DUCK) not individually re-queried — same illiquid micro-cap pattern that has failed live verification every session this week.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed still Extreme Fear (24) despite BTC holding ~$63.5k — sentiment/price divergence persists
+- HYPE unlock day: three checks today (pre-session, midday, this scan) all show continued softness, no bounce or breakout — thesis for a reaction trade not yet valid
+- Perplexity hallucination rate remains high today: ZEC and XLM both flagged as major gainers (+25%, +72%) when live data shows both down — live Kraken used as source of truth throughout
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash. No candidate passed the live-verified momentum/spread/catalyst bar this scan. HYPE remains the key watch item for a delayed post-unlock reaction.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
+
+---
