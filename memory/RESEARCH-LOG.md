@@ -25893,3 +25893,61 @@ No candidate cleared the entry bar. **No new trades.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
 
 ---
+
+## 2026-07-06 — Pre-Session Research
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (~20 assets <$0.01 each incl. $0.1066 ZAUD) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical fills only (residual BTC closed, stop cancelled 2026-05-22) |
+
+No change since 07-05 EOD — still 100% cash, no open positions on either exchange. No held-position news queries needed (nothing open).
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Value |
+|---|---|
+| BTC | Live Kraken $63,089.30, open $63,593 → **-0.79%** today, -1.3% off 24h high $63,840.90 |
+| ETH | Live Kraken $1,773.82, open $1,784.41 → **-0.59%** today, -1.7% off 24h high $1,797.00 |
+| Fear & Greed Index | **23** (Extreme Fear) — persistent all week, essentially unchanged |
+| BTC perp funding rate | ~+0.005% to +0.008% (8h, various exchanges) — mildly positive, not overheated |
+| Top 24h gainers (Perplexity) | Gaia Token +81%, VITA INU +71%, LAB +63%, SPURS +60%, DADDY TATE +50%, VANRY +46%, ULTIMA +45%, Nesa +35% — same illiquid meme/micro-cap list as every prior session |
+| Catalysts | Ethereum Glamsterdam upgrade (devnet-5 testing, public testnet Jul/Aug); CLARITY Act odds trimmed to 48%, Senate cloture unresolved; GENIUS Act stablecoin KYC scrutiny; Jito JTX terminal launch (Solana); BTC ETF outflows ~$7B May–June pushed BTC to a 21-month low $58,188 in late June, since rebounded to ~$63k |
+| Token unlocks | **HYPE $630M (1.04% supply) unlocked TODAY (Jul 6)** — primary catalyst watch; INFRA/XWGT (minor, Jul 5); PUMP cliff Jul 12; WLD linear all month |
+
+**Crash gate:** BTC -0.79% 24h — nowhere near -20% → **NOT triggered.**
+**BTC weekly trend gate:** BTC roughly flat/mild-down over the week, not a clear >3% 5-day downtrend — treated as not active; no evidence requiring the stricter catalyst-only filter.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+| Symbol | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|
+| **HYPE/USD** (unlock-day watch) | ~0.014% ✓ (tight) | **-0.62%** ($70.89 vs open $71.33) | -2.4% off high $72.60 | Unlock landed today — price is **down**, not showing a bullish post-event reaction. No breakout above pre-event high. Per scheduled-catalyst rule, need a confirmed positive reaction or fresh breakout — neither present. **SKIP, re-check later today for a reaction breakout.** |
+| BTC/USD | tight ✓ | -0.79% | -1.3% | No momentum. **SKIP** |
+| ETH/USD | tight ✓ | -0.59% | -1.7% | No momentum. **SKIP** |
+| GAIA/USD | **~1.58%** ✗ | -1.2% (contradicts Perplexity's +81% claim) | -11.4% off high $0.0082 | Fails spread cap; faded, not surging. Same recurring pattern flagged all week. **SKIP** |
+| VANRY/USD | ~0.57% ✓ | **-6.25%** (contradicts Perplexity's +46% claim) | -25.7% off high $0.00595 | Actually down on live data; momentum-peak check fails hard. **SKIP** |
+
+Other Perplexity gainers (VITA INU, LAB, SPURS, DADDY TATE, ULTIMA, Nesa) not individually re-queried — same illiquid meme/micro-cap pattern that has failed live verification every session this week; no reason to expect this session differs.
+
+No candidate cleared the entry bar (1h>3% / 4h>5%+volume / fresh catalyst <6h, spread ≤1%, momentum-peak check).
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed still Extreme Fear (23) despite BTC/ETH holding well above the late-June $58,188 low — sentiment/price divergence persists
+- **HYPE $630M unlock live today** — price soft (-0.62%), not yet a tradeable reaction; watch remaining sessions today for either a confirmed bounce (dip absorbed, buyers stepping in) or a breakdown continuation
+- Recurring Perplexity data-quality/hallucination issue on gainer/momentum queries persists (GAIA, VANRY both showed live Kraken data materially worse than Perplexity's claims) — live Kraken data used as source of truth throughout
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash ($117.3351 ZUSD). No candidate today passed the live-verified momentum/spread/catalyst bar. HYPE unlock is today's key watch item — re-check for a post-unlock reaction (bounce or breakout) in later scans.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
+
+---
