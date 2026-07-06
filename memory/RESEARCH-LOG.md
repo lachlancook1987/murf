@@ -26029,3 +26029,31 @@ Other Perplexity gainers (DATA/Streamr, LAT, ZEUS, GUA, NAKA, AI, UCN, DUCK) not
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-06 — Midday Scan #3 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none (Kraken + Alpaca both reconfirmed clean; Alpaca `a2b44cf9` still `canceled`)
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` unchanged. Alpaca `orders` reconfirmed zero live exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Market has **bounced** since the prior scan's deepening selloff (BTC was -2.90% at Midday Scan #2):
+- BTC $64,318.90 vs open $63,593.00 = **+1.14%**, only -0.55% off 24h high $64,675.00
+- ETH $1,812.83 vs open $1,784.41 = +1.59%, -1.19% off high
+- SOL $82.73 vs open $81.52 = +1.48%, -1.10% off high
+- ADA -1.98%, XRP -0.32%, DOGE -0.61% — alts still lagging/red, no outperformance
+- HYPE unlock watch: $71.47 vs open $71.33 = +0.20%, still -1.56% off 24h high $72.60 — still no bounce/breakout reaction across four checks today. **SKIP.**
+
+Checked public Kraken OHLC (1h candles) for BTC to verify the move is real: 21:00 UTC candle open $63,783.2 → close $64,453.0 (+1.05%, high $64,675) on volume 305 BTC vs ~60-70 BTC/hr in the prior several hours (~5x volume surge) — a genuine volume-confirmed move, but the price magnitude (~1-1.6% on BTC/ETH/SOL) falls well short of the 3% 1h / 5% 4h entry thresholds. 4h move (18:00→now) only +1.15%. This reads as a broad, BTC-led recovery off the day's low ($61,271) already substantially priced in (current price near the 24h high), not a fresh single-asset catalyst breakout — momentum-peak check fails. No altcoin is outperforming BTC/ETH; alts are flat-to-red while majors bounce, so there's no rotation signal either.
+
+Crash gate: BTC +1.14% — not applicable (nowhere near -20% down). No candidate cleared the entry bar (no 1h>3%, no 4h>5%, no altcoin outperformance, no fresh catalyst).
+
+### Decision: **HOLD — monitoring only, no action taken.** Broad BTC-led market bounce off intraday lows, but magnitude and timing (near 24h high already) fail entry criteria; alts show no outperformance/rotation signal.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
