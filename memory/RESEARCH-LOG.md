@@ -26207,3 +26207,28 @@ Every genuine live-verified candidate either faded from an already-peaked move (
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 5+ consecutive days) — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-07 — Midday Scan #3 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` → ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $63,285.20 vs $64,005.10 = **-1.12%** (-1.51% off 24h high $64,258); ETH $1,769.84 vs $1,798.49 = -1.59%; SOL $80.50 vs $81.90 = -1.71%; HYPE $69.19 vs $70.58 = -1.97%. Broad market still red, consistent with every prior check today.
+
+Perplexity "1h surge" query again failed to return real 1h data (fell back to 24h changes) and claimed **TON +7.49%** — live Kraken directly contradicts this: TON $1.6330 vs open $1.7800 = **-8.26%**, -9.5% off 24h high $1.8050. Same recurring hallucination pattern.
+
+Perplexity catalyst query surfaced **ZEC** (Ironwood Network Upgrade 7, late July) as a live gainer. Live Kraken: ZEC $482.44 vs open $452.51 = **+6.61%**, a genuine 24h move — but 15-min OHLC shows the peak ($500.49) was set at 19:45 UTC and price has declined steadily for ~2.25h since (500.49 → 481.55), currently -5.6% off the 24h high with no fresh breakout. **Momentum-peak check fails** — this is a faded spike, not accelerating momentum. **SKIP.**
+
+No other candidate showed live 1h/4h momentum, volume surge, or a fresh (<6h) catalyst passing the live-verification bar. Crash gate: BTC -1.12% — not triggered.
+
+### Decision: **HOLD — monitoring only, no action taken.** Broad market still red; ZEC was the closest candidate but has already faded from its peak ~2h+ ago.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
