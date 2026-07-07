@@ -26144,3 +26144,66 @@ No candidate clears the entry bar. **No new trades.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred this session).
 
 ---
+
+## 2026-07-07 — Pre-Session Research #2
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled orders only (`b7f70b08`/`a2b44cf9` etc. still canceled since 2026-05-22) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$63,276, +2.36% (Yahoo); Kraken quoted +0.81% within Perplexity's own text | $63,806.90, open $64,005.10 → **-0.31%**, -0.70% off 24h high $64,258 | Perplexity headline overstated; live Kraken roughly flat |
+| ETH | ~$1,790.89, +1.5% | $1,789.76, open $1,798.49 → **-0.49%** | Roughly flat, not up |
+| Fear & Greed | 27 (Fear, up from 23 yesterday / 12 last week) | — | Sentiment improving slightly off extreme fear |
+| BTC funding rate | 24h avg +0.0062%, Kraken +0.0148% (8h) | — | Mildly positive, normal range |
+| Catalysts | CLARITY Act / GENIUS Act regulatory framing, ETF inflows, AI/RWA narrative — no fresh single-asset catalyst <6h old. Query also returned a hallucinated "BTC $90,866 -2.2%" fragment, disregarded | — | No actionable single-asset catalyst |
+| Unlocks | RAIN ~$800M Jul 11, PUMP ~$120-135M Jul 12, HYPE unlock already fired Jul 6, ADI/STABLE Jul 9 | HYPE $70.35, open $70.58 → -0.33%, -3.59% off 24h high $72.97 | Still no post-unlock bounce, 7th consecutive flat/negative check — dropped as watch item |
+
+**Crash gate:** BTC -0.31% — nowhere near -20% → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity gainer/momentum/volume-surge/best-setup queries surfaced: OMNI (+174%, known ~80% spread, chronically illiquid — skip without re-check), MAT (+66%, known ~14.6% spread — skip without re-check), DOLO (known ~5.4% spread/dust volume — skip without re-check), LIT/Litentry (+97%), SIDEKICK (+79%), PORTAL (+35%), UNI (+11%, "volume doubled"), M/Memecore, BEAT, Venice (none Kraken-listed, not re-checked), LINK, AVAX, ENA, HYPE, DOGE, SOL, BNB.
+
+| Symbol | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|
+| UNI/USD | ~0.037% ✓ | **+2.78%** (claimed +11%) | -1.41% off high $3.3156 (set 18:00 UTC) | 1h OHLC check: high volume spike (25.6k) hit at 18:00, price has since faded/consolidated 2+ hrs with no fresh breakout above it — **momentum-peak check fails**. 1h move only +0.78%, 4h move only +0.5%, both below threshold. **SKIP** |
+| LIT/USD | — | **-8.48%** (claimed +97%) | — | Hallucinated; actually down hard. **SKIP** |
+| SIDEKICK/USD | **~7.2%** ✗ | -8.56% (claimed +79%) | — | Spread catastrophically fails cap; hallucinated direction. **SKIP** |
+| PORTAL/USD | tight ✓ | **-4.53%** (claimed +35%) | — | Hallucinated; actually down. **SKIP** |
+| LINK/USD | tight ✓ | -1.18% | — | No momentum. **SKIP** |
+| AVAX/USD | tight ✓ | -2.54% | — | No momentum. **SKIP** |
+| ENA/USD | tight ✓ | -0.38% | — | Flat. **SKIP** |
+| HYPE/USD | tight ✓ | -0.33% | -3.59% off high | Still no unlock bounce, de-prioritized. **SKIP** |
+| DOGE/USD | tight ✓ | -2.40% | — | Down (same asset that stopped out yesterday). **SKIP** |
+| SOL/USD | tight ✓ | -0.75% | — | No momentum. **SKIP** |
+| OMNI, MAT, DOLO | known-illiquid | — | — | Skipped without re-check — same chronic spread failures every session this week. **SKIP** |
+
+Every genuine live-verified candidate either faded from an already-peaked move (UNI, 2+ hrs post-high), is directly contradicted by Kraken data (LIT, SIDEKICK, PORTAL), or shows no momentum at all (LINK, AVAX, ENA, HYPE, DOGE, SOL). No 1h>3%/4h>5%+volume/fresh-catalyst setup survived verification.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed ticked up to 27 (Fear) from extreme-fear readings earlier in the week — sentiment improving slightly but still cautious
+- Perplexity hallucination rate remains high: LIT, SIDEKICK, PORTAL all claimed as major gainers (+97%, +79%, +35%) when live Kraken shows all down 4-9% — live Kraken used as sole source of truth throughout
+- UNI is the closest genuine candidate but its volume-driven move already peaked ~2h ago (18:00 UTC candle) and price has been fading/consolidating since — momentum-peak check correctly excludes it
+- HYPE unlock reaction thesis has now failed to materialize across 7 checks over 2 sessions — fully dropped as an active watch item barring a new catalyst
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash. No candidate today passed the live-verified momentum/spread/catalyst bar. UNI was the closest but fails the momentum-peak check (high set 2+ hrs ago, no fresh breakout). Will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 5+ consecutive days) — needs resubscription at callmebot.com/61477788635.
+
+---
