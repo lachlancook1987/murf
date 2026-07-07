@@ -7215,3 +7215,26 @@ No candidate clears the entry bar (no 1h>3%, no 4h>5%+volume, no clean fresh cat
 ### Decision: **HOLD — monitoring only, no action taken.** Broad market still red, HYPE the only asset near flat/positive but below entry threshold with a mixed catalyst picture.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-07 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open (further deteriorated since the earlier midday check): BTC $63,002.70 vs open $64,005.10 = **-1.57%** (-1.95% off 24h high $64,258); ETH -1.50% (-2.06% off high $1,808.62); SOL -1.28% (-2.51% off high $82.43); XRP -2.04% (-2.58% off high $1.15078); DOGE -2.95% (-3.42% off high $0.076976); ADA -3.38% (-3.81% off high $0.184942). **HYPE** ticked up to $71.17 vs open $70.58 = +0.84%, but a new 24h high of $72.50 was set and price is now -1.83% off it — momentum fading, not accelerating (fails momentum-peak-check). No fresh catalyst update since the earlier scan.
+
+Perplexity 1h-surge query again returned only 24h-change figures (claiming BTC +2.63%, ETH +2.36%, SOL +2.56% — all directly contradicted by live Kraken showing every one red), same recurring hallucination/data-quality issue flagged every session this week. Live Kraken used as source of truth; no usable candidate surfaced.
+
+Crash gate: BTC -1.57% — not triggered. No candidate clears the entry bar (no 1h>3%, no 4h>5%+volume, no clean fresh catalyst).
+
+### Decision: **HOLD — monitoring only, no action taken.** Market pullback deepening slightly since the earlier scan; crash gate not triggered; no qualifying setup.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
