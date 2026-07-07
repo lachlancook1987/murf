@@ -26057,3 +26057,69 @@ Crash gate: BTC +1.14% — not applicable (nowhere near -20% down). No candidate
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-07 — Pre-Session Research
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.11) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled orders only (`a2b44cf9` still canceled since 2026-05-22) |
+
+No open positions on either exchange — nothing to protect, no stops to verify, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$63,150, +0.46% (Kraken quoted $64,241 +0.81% within Perplexity's own text) | $63,009.70, open $64,005.10 → **-1.56%**, -1.94% off 24h high $64,258.00 | Down, not up — hallucinated direction again |
+| ETH | ~$1,775.60, +1.09% | $1,769.40, open $1,798.49 → **-1.62%**, -2.16% off 24h high $1,808.62 | Down, not up |
+| Fear & Greed | 24 (Extreme Fear) | — | Persistent all week, unchanged |
+| BTC funding rate | ~+0.01% (8h), Kraken +0.0125% | — | Mildly positive, not overheated |
+| Catalysts | CLARITY Act deadline July 4 passed with no resolution (Senate cloture math unresolved, odds 48%); Ethereum Glamsterdam testnet Jul/Aug; Solana Alpenglow Q3; GENIUS Act stablecoin KYC rules; BTC $58,188 low (late June) → rebounded to ~$63-64k | — | No fresh single-asset catalyst <6h old identified |
+| Unlocks | $1.1B+ this week (Jul 6-12): RAIN $796M Jul 11, PUMP $135.5M Jul 12, ADI $40.5M Jul 9, STABLE $31.3M Jul 9, HYPE $30.9M Jul 6 (already fired), RED $4.07M Jul 6, APT $7.02M Jul 12 | HYPE $70.53, open $70.58 → **-0.07%** (flat), -2.04% off 24h high $72.00 | HYPE unlock fired yesterday (Jul 6) — still no bounce, 6th consecutive flat/negative check across two sessions. De-prioritizing as a watch item; thesis for a reaction trade has not materialized |
+| "1h surge" query | Hallucinated: claimed BTC "jumped 16% to $4,773.91" and "topped $79,000" with $51.9B volume in the volume-surge query | Live Kraken BTC $63,009.70 | Both off by >10x / directionally wrong — same recurring hallucination pattern, disregarded |
+
+**Crash gate:** BTC -1.56% 24h — nowhere near -20% → **NOT triggered.**
+**BTC weekly trend gate:** Not clearly in a >3% 5-day downtrend (choppy $61k-$64k range this week) — treated as not active.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity "top gainers"/"momentum"/"volume surge"/"best setup" queries surfaced: Streamr DATA (+83,895%, absurd), PlatON LAT (+133%), ZEUS (+102%), SUPERFORTUNE GUA (+79%), VANRY (+66.5%), NAKA (+37.78%), Sleepless AI (+30.44%), UCN (+29.46%), DUCK, Omni OMNI (+174%), Matchain MAT (+66%), Dolomite DOLO (+53.35%), Renzo REX, Initia INIT, DeXe DEXE, Pyth PYTH (+11.02%), LayerZero ZRO (+8.05%), XRP (claimed +6.9% breakout above SMA-50).
+
+| Symbol | On Kraken? | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|---|
+| DATA, LAT, GUA, NAKA, UCN | **Not listed** | — | — | — | Unknown asset pair on Kraken. **SKIP** |
+| XRP/USD | ✓ | tight | **-1.66%** (claimed +6.9%) | -2.2% | Hallucinated claim; actually down. **SKIP** |
+| VANRY/USD | ✓ | ~0.39% ✓ | +2.54% (claimed +66.5%) | **-14.4%** off high | Momentum-peak check fails hard — same recurring faded-spike pattern all week. **SKIP** |
+| DOLO/USD | ✓ | **~5.4%** ✗ | +3.09% (last trade) but only 442 tokens (~$11) 24h volume | — | Fails spread cap hard; dust-level liquidity, only 4 trades. **SKIP** |
+| PYTH/USD | ✓ | tight | **-2.39%** (claimed +11.02%) | — | Hallucinated; actually down. **SKIP** |
+| ZRO/USD | ✓ | tight | -0.49% (claimed +8.05%) | — | Down slightly, no momentum. **SKIP** |
+| MAT/USD | ✓ | **~14.6%** ✗ | +12.2% (at 24h high) | 0% (at high) | Genuine intraday move but spread catastrophically fails cap; 24h volume ~$538, illiquid. **SKIP** |
+| INIT/USD | ✓ | — | **-2.43%** (claimed strong momentum) | — | Down, not up. **SKIP** |
+| DEXE/USD | **Not listed** | — | — | — | Unknown asset pair on Kraken. **SKIP** |
+| ZEUS/USD | ✓ | **~1.66%** ✗ | +0.83% (claimed +102%) | -24.4% off high | Spread fails cap; massively faded from claimed surge. **SKIP** |
+| DUCK/USD | ✓ | **~1.63%** ✗ | 0% flat | -12.3% off high | Spread fails cap; flat, no momentum. **SKIP** |
+| HYPE/USD (unlock watch) | ✓ | tight ✓ | -0.07% | -2.04% | Still no post-unlock reaction, 2nd session running. De-prioritized. **SKIP** |
+
+Every candidate this session either isn't Kraken-listed, fails the 1% spread cap on dust-level liquidity, or directly contradicts Perplexity's claimed direction/magnitude once checked against live Kraken data. No 1h>3%/4h>5%+volume/fresh-catalyst setup survived verification.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed still Extreme Fear (24), unchanged all week despite BTC holding $61-64k range — sentiment/price divergence persists
+- Perplexity hallucination rate remains severe: every single "gainer"/"momentum" claim this session was either non-existent on Kraken, wrong-direction, or wildly overstated in magnitude (DATA's +83,895% claim, BTC "topped $79,000" claim) — live Kraken used as sole source of truth throughout
+- HYPE unlock reaction thesis has failed to materialize across 6 checks over 2 sessions (Jul 6 pre-session/midday/midday#2/midday#3/session-open, Jul 7 pre-session) — dropping as an active watch item unless a new catalyst emerges
+- Broad market red today (BTC -1.56%, ETH -1.62%, SOL -0.73%, ADA -2.56%, DOGE -2.24%) — no rotation/outperformance signal in any alt
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash. No candidate today passed the live-verified momentum/spread/catalyst bar — same pattern as every session this week. Will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously since Jul 2 — needs resubscription at callmebot.com/61477788635.
+
+---
