@@ -7238,3 +7238,13 @@ Crash gate: BTC -1.57% — not triggered. No candidate clears the entry bar (no 
 ### Decision: **HOLD — monitoring only, no action taken.** Market pullback deepening slightly since the earlier scan; crash gate not triggered; no qualifying setup.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-08 — EOD Snapshot (Day 49, Wednesday)
+
+### Jul 08 — EOD Snapshot (Day 49, Wednesday)
+**Portfolio:** $117.34 | **Cash:** $117.34 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$62.44 (−34.73%) | **vs BTC:** +1.65%
+No open positions — 100% cash, no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~86
+**Notes:** Third consecutive flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC fell from $62,998.80 to $61,959.30 (−1.65%), so with equity flat the bot outperformed BTC on the day (+1.65% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry.
