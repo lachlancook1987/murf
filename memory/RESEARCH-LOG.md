@@ -26346,3 +26346,66 @@ Crash gate: BTC -2.19% — nowhere near -20%, **not triggered.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-08 — Pre-Session Research #2
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled orders only (`b7f70b08`/`a2b44cf9` still canceled since 2026-05-22) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$62,103, -2.2% (one source claimed ATH >$123k — nonsense) | $62,200.00, open $63,319.70 → **-1.77%**, -2.57% off 24h high $63,840.90 | Direction consistent, magnitude close |
+| ETH | ~$1,730-1,735, -3.5% to -4% | $1,737.06, open $1,769.70 → **-1.84%** | Down, Perplexity overstated the decline |
+| SOL | claimed +2.30% | $77.40, open $80.53 → **-3.89%** | Down, not up — Perplexity wrong again |
+| Fear & Greed | 20 (Extreme Fear), down from 27 yesterday | — | Unchanged from earlier pre-session check today — sentiment still deteriorated |
+| BTC funding rate | ~+0.01% normalized (Kraken +0.0148%) | — | Mildly positive, normal range, not overheated |
+| Catalysts | Softer US labor data / Fed rate-hike odds down; Bitcoin ETF inflow rebound narrative (directly contradicted by live BTC being down, not up); Strategy Inc. partial BTC sale; EU MiCA transition; SOL Jito JTX/Alpenglow, ZEC Ironwood (late July), HYPE HIP-3 — all multi-week narratives, no fresh single-asset trigger <6h old | — | No actionable fresh catalyst |
+| Unlocks | Same PUMP $116-127M cliff unlock **Jul 12** flagged in this morning's pre-session entry — still 4 days out, outside pre-positioning window | — | No change, remains on watch list for Jul 12 |
+
+**Crash gate:** BTC -1.77% 24h — nowhere near -20% → **NOT triggered.**
+**BTC weekly trend gate:** Still a choppy $61-64k range, not a clear >3% 5-day downtrend — not active.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity's "top gainers" query returned the **identical hallucinated list** already checked and skipped in this morning's Pre-Session Research entry (人生K线, EVAA, 黑马, BLUR, CLO, 老子, EDGE, RDNT, DOYR, SWEAT) — not re-checked, same conclusion stands. Volume-surge and momentum queries surfaced several new names, live-verified below; "best setups" and "altcoin momentum" queries returned OMNI/MAT/DOLO/LIT/SIDEKICK/PORTAL/VTHO/YALA-style triple-digit claims — OMNI/MAT/DOLO/LIT/SIDEKICK are the same chronically illiquid/wide-spread pairs flagged every session this week, skipped without re-check; the rest checked live below.
+
+| Symbol | On Kraken? | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|---|
+| PORTAL/USD | ✓ | ~0.34% ✓ | **-0.60%** (claimed +34.67%) | -3.99% off high | Hallucinated; flat/down. **SKIP** |
+| VTHO/USD | ✓ | ~2.8% ✗ | +1.65% (claimed +34.59%) | — | Spread fails cap regardless; move not real either. **SKIP** |
+| YALA/USD | ✓ | ~23% ✗✗ | **-21.2%** (claimed +27.74%) | — | Severely hallucinated — actual crash, not surge; spread grotesquely wide. **SKIP** |
+| MON/USD | ✓ | ~0.09% ✓ | **-6.19%** (claimed +12.02% / "ATH") | — | Hallucinated direction; genuinely down. **SKIP** |
+| ME/USD | ✓ | ~0.32% ✓ | -1.11% (claimed +1.53%) | — | Roughly flat, no momentum. **SKIP** |
+| EDGE/USD | ✓ | ~0.35% ✓ | +2.53% vs open, but faded further since this morning's check | -10.4% off high $0.08063 | Momentum-peak check fails harder than this morning — continuing to fade, no breakout. **SKIP** |
+| ZEC/USD | ✓ | ~0.05% ✓ | **-3.70%** (fully reversed from earlier gainer status) | -4.87% off high $489.34 | No longer even a gainer — thesis dead. **SKIP** |
+| CODEX, JU, CLAUDE (from volume-surge query) | — | — | — | — | Not standard Kraken tickers / not checked, consistent with convention of skipping non-Kraken exotic names |
+
+No candidate anywhere shows genuine 1h>3% or 4h>5%+volume momentum, a clean fresh (<6h) catalyst, or an acceptable spread with real upside movement. Every "surge" claim checked live was either flat, negative, or wildly hallucinated.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed still 20 (Extreme Fear) — unchanged from this morning, sentiment remains poor
+- Perplexity hallucination rate remains severe and is worsening: YALA claimed +27.74% but is actually **-21.2%** with a ~23% spread — the largest single divergence seen this week. Live Kraken used as sole source of truth throughout
+- PUMP's Jul 12 cliff unlock remains the week's biggest scheduled catalyst — still 4 days out, on watch list only
+- EDGE and ZEC (yesterday/this morning's closest candidates) have both continued to fade — EDGE deeper off its high, ZEC now outright negative — confirms momentum-peak check correctly avoided stale entries
+- Broad market red across majors (BTC -1.77%, ETH -1.84%, SOL -3.89%) — no rotation/outperformance signal in any live-verified alt
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash, unchanged since this morning. No candidate passed the live-verified momentum/spread/catalyst bar; several "surge" claims were live-checked and found to be substantially or completely hallucinated (YALA worst case: claimed +27.74%, actually -21.2%). Will continue scanning intraday for a fresh, live-confirmed setup. PUMP Jul 12 post-unlock reaction remains the primary watch item.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 7+ consecutive days) — needs resubscription at callmebot.com/61477788635.
+
+---
