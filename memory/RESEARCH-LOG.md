@@ -26232,3 +26232,71 @@ No other candidate showed live 1h/4h momentum, volume surge, or a fresh (<6h) ca
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-08 — Pre-Session Research
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled orders only (`b7f70b08`/`a2b44cf9` still canceled since 2026-05-22) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$62,936 (varies $62,493–$91,151 across sources, Coinbase figure clearly bad) | $62,837.10, open $63,319.70 → **-0.76%**, -2.12% off 24h high $64,196.60 | Roughly consistent direction (down), magnitude close enough |
+| ETH | ~$1,758, -0.88% | $1,754.66, open $1,769.70 → **-0.85%** | Consistent |
+| SOL | claimed +0.91% (contradicts BTC "ATH $123k" fragment in same response — disregarded as noise) | $78.26, open $80.53 → **-2.82%** | Down, not up — Perplexity wrong again |
+| Fear & Greed | 20 (Extreme Fear), down from 27 yesterday | — | Sentiment worsening again after brief improvement |
+| BTC funding rate | ~0.0065% (stale, dated Jul 5); live cross-exchange 0.0046–0.01% | — | Mildly positive, normal range, not overheated |
+| Catalysts | Strategy Inc. (MicroStrategy) partial BTC sale triggering treasury-strategy sentiment shift; BTC closed below 200-week MA in June, stabilizing $60-64k; Solana JTX terminal launch + Alpenglow upgrade (Q3) narrative; ZEC Ironwood Network Upgrade 7 (late July, not yet) | — | No fresh single-asset catalyst <6h old; ZEC/SOL narratives are multi-week, not immediate triggers |
+| Unlocks | PUMP $124.32M cliff unlock **Jul 12** (20.21% of released supply) — biggest this week; HYPE $29.41M linear (ongoing, already priced in); ZRO, JTO, H linear unlocks | PUMP listed on Kraken, live-checked below | PUMP unlock is 4 days out — outside the "~2h ahead" pre-positioning window, not actionable yet |
+
+**Crash gate:** BTC -0.76% 24h — nowhere near -20% → **NOT triggered.**
+**BTC weekly trend gate:** Choppy $61k-$64k range this week, not a clear >3% 5-day downtrend — treated as not active.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity gainer/momentum/volume-surge/best-setup queries surfaced: 人生K线, EVAA, 黑马, BLUR, CLO/Yei Finance, 老子, EDGE/edgeX, RDNT, DOYR, SWEAT, OMNI, MAT, DOLO, ANON, REX/Renzo, INIT, UFD, SPCX, TRUMP, GRIFFAIN, SPACEX, DOGE (2x volume), SOL, ZEC.
+
+| Symbol | On Kraken? | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|---|
+| 人生K线, 黑马, 老子, EVAA, DOYR, RDNT | — | — | — | — | Not Kraken-listed / non-standard tickers, not checked. **SKIP** |
+| SPCX, SPACEX | — | Unknown asset pair (Kraken API error) | — | — | Not listed. **SKIP** |
+| BLUR/USD | ✓ | ~0.31% ✓ | **-2.60%** (claimed +47.68%) | — | Hallucinated; actually down. **SKIP** |
+| SWEAT/USD | ✓ | tight ✓ | +0.58% (claimed +23.72%) | — | No real move. **SKIP** |
+| EDGE/USD | ✓ | ~0.54% ✓ | **+7.62%** (genuine, claimed +29.88%/+31.89%) | -5.9% off high $0.08063 | 15-min OHLC check: high was set well before 05:15 UTC window; price has been flat-consolidating $0.0755-0.0761 for 2.5h+ with no fresh breakout above the 24h high. **Momentum-peak check fails** — faded move, not accelerating. No fresh catalyst identified. **SKIP** |
+| INIT/USD | ✓ | tight ✓ | -0.55% (claimed 30-50%) | — | Hallucinated; flat. **SKIP** |
+| ANON/USD | ✓ | wide (b 0.34/a 0.35 ≈2.9%) ✗ | **-6.07%** (claimed +32.55%) | — | Hallucinated direction + spread fails cap. **SKIP** |
+| TRUMP/USD | ✓ | tight ✓ | -3.09% | — | Down, no momentum. **SKIP** |
+| GRIFFAIN/USD | ✓ | tight ✓ | 0.00% | — | Flat. **SKIP** |
+| ZEC/USD | ✓ | tight ✓ | -1.29%, -6.65% off high $511.06 | — | Still fading from the peak flagged in yesterday's Midday Scan #3 (peaked 19:45 UTC Jul 7) — no reversal. **SKIP** |
+| HYPE/USD | ✓ | tight ✓ | -1.36%, -6.5% off high $72.97 | — | Unlock-reaction thesis still dead (8+ consecutive flat/negative checks) — fully de-prioritized. **SKIP** |
+| DOGE/USD | ✓ | tight ✓ | -2.27% (claimed 2x volume surge) | — | Volume claim unverifiable via kraken.sh; price direction is down, no momentum regardless. **SKIP** |
+| OMNI, MAT, DOLO | ✓ (known) | chronically >5-15% ✗ | — | — | Same illiquid pairs flagged every session this week — skipped without re-check. **SKIP** |
+
+EDGE was the only genuine live-verified mover (+7.62% vs open) but fails the momentum-peak check on a 2.5h+ stale high with flat consolidation since. No 1h>3%/4h>5%+volume/fresh-catalyst setup survived verification.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed dropped back to 20 (Extreme Fear) from 27 yesterday — sentiment deteriorating again
+- Perplexity hallucination rate remains severe: BLUR, SWEAT, INIT, ANON, EDGE, TRUMP magnitudes/directions were all wrong or overstated once checked against live Kraken — live Kraken used as sole source of truth throughout
+- PUMP's $124.32M cliff unlock (Jul 12, 20.21% of released supply) is the week's biggest scheduled catalyst — too far out (4 days) to pre-position now per the scheduled-catalyst rule; add to watch list for Jul 12 post-unlock reaction
+- HYPE unlock-reaction thesis now dead across 8+ checks over 3 sessions — fully dropped
+- Broad market red across majors (BTC -0.76%, ETH -0.85%, SOL -2.82%, DOGE -2.27%) — no rotation/outperformance signal in any live-verified alt
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **HOLD — no new entries; crash gate NOT triggered**
+
+100% cash. No candidate today passed the live-verified momentum/spread/catalyst bar. EDGE was the closest genuine mover but already faded 2.5h+ off its high with no fresh breakout. Will continue scanning intraday for a fresh, live-confirmed setup. Watch PUMP for a post-unlock reaction trade around Jul 12.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 6+ consecutive days) — needs resubscription at callmebot.com/61477788635.
+
+---
