@@ -26300,3 +26300,26 @@ EDGE was the only genuine live-verified mover (+7.62% vs open) but fails the mom
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 6+ consecutive days) — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-08 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Selloff has deepened since pre-session: BTC $61,925.90 vs open $63,319.70 = **-2.20%** (-3.53% off 24h high $64,196.60); ETH $1,733.53 vs open $1,769.70 = **-2.05%**; SOL $77.08 vs open $80.53 = **-4.28%**.
+
+Perplexity 1h-surge query again returned only non-Kraken/hallucinated tickers (Anoma, Aster, ICP — not fresh candidates, plus a recycled false claim of BTC "jumping 16% to $4,773.91"). Perplexity altcoin-momentum query claimed RENDER +5.40% and BONK +6.88% (24h) — both live-checked against Kraken and found **false**: RENDER $1.5180 vs open $1.5640 = **-2.94%**; BONK $0.000003945 vs open $0.000004150 = **-4.94%**. OMNI/MAT/DOLO/LIT/SIDEKICK not re-checked (same chronically illiquid/wide-spread pairs flagged every session this week).
+
+Crash gate: BTC -2.20% — not triggered. No candidate clears the entry bar (no 1h>3% positive, no 4h>5%+volume, no clean fresh catalyst, every live-checked "gainer" claim was actually red).
+
+### Decision: **HOLD — monitoring only, no action taken.** Broad market red and deepening; crash gate not triggered; no qualifying setup; Perplexity hallucination pattern continues (RENDER/BONK direction wrong on live check).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
