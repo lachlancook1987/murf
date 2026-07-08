@@ -26409,3 +26409,21 @@ No candidate anywhere shows genuine 1h>3% or 4h>5%+volume momentum, a clean fres
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Same standing unresolved issue flagged continuously every session since Jul 2 (now 7+ consecutive days) — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-08 — Session-Open Execution Check (21:01 UTC, monitoring only, no trades)
+
+### STEP 1-2 — State Check
+Env vars all confirmed set. `kraken.sh account`: ZUSD $117.3351 (100% cash) unchanged, all other balances dust. `kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `positions` → `[]`, `orders` shows only historical filled/canceled entries (`a2b44cf9` still `canceled` since 2026-05-22) — zero Alpaca exposure, consistent with every prior session.
+
+### STEP 3 — Entry Scan (live Kraken quotes vs today's open)
+BTC $62,040.00 vs open $63,319.70 = **-2.02%** (-2.61% off 24h high $63,706.40); ETH $1,734.29 vs open $1,769.70 = **-2.00%** (-2.97% off high $1,787.37); SOL $77.07 vs open $80.53 = **-4.30%** (-5.28% off high); XRP $1.08782 vs open $1.11159 = **-2.14%** (-2.94% off high); ADA $0.165904 vs open $0.174702 = **-5.04%** (-5.77% off high); DOGE $0.0722679 vs open $0.0740984 = **-2.47%** (-3.21% off high); HYPE $66.89 vs open $69.15 = **-3.27%** (-5.01% off high).
+
+Every tracked major is red with no 1h>3%/4h>5%+volume/fresh-catalyst setup anywhere — consistent with every scan logged today (Pre-Session #1, #2, Midday #1, #2, EOD). No new Perplexity query run — live Kraken data alone is sufficient to confirm no reversal since the EOD snapshot 1h ago; hallucination pattern from every prior query today makes a repeat query low-value.
+
+Crash gate: BTC -2.02% — nowhere near -20%, **not triggered.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Broad market red persists unchanged from EOD; no qualifying setup on any tracked asset.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
+
+---
