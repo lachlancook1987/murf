@@ -26323,3 +26323,26 @@ Crash gate: BTC -2.20% — not triggered. No candidate clears the entry bar (no 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-08 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), Alpaca `positions` → `[]` — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open — selloff essentially unchanged/still deep: BTC $61,934.90 vs open $63,319.70 = **-2.19%** (-3.53% off 24h high $64,196.60); ETH $1,735.91 vs open $1,769.70 = **-1.91%** (-4.12% off high $1,810.52); SOL $77.18 vs open $80.53 = **-4.16%** (-6.71% off high $82.73); XRP $1.08096 vs open $1.11159 = **-2.76%** (-4.68% off high $1.13407); ADA $0.168413 vs open $0.174702 = **-3.60%** (-5.60% off high $0.178398); DOGE $0.0720739 vs open $0.0740984 = **-2.73%** (-4.73% off high $0.0756503); HYPE $67.71 vs open $69.15 = **-2.08%** (-7.21% off high $72.97).
+
+Perplexity 1h-surge query returned the same recycled hallucinated result as every prior session this week (Anoma, Aster, Internet Computer as "top surge leaders", plus a stale false claim of BTC "surging 16%") — Anoma not Kraken-listed, ASTER/ICP previously verified as non-movers. No fresh candidate. Live Kraken used as sole source of truth; every tracked asset is red with no 1h>3%/4h>5%+volume/fresh-catalyst setup anywhere.
+
+Crash gate: BTC -2.19% — nowhere near -20%, **not triggered.**
+
+### Decision: **HOLD — monitoring only, no action taken.** Broad market still deeply red across the board; crash gate not triggered; no qualifying setup; Perplexity hallucination pattern persists unchanged.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
