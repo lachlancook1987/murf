@@ -7238,3 +7238,27 @@ Crash gate: BTC -1.57% — not triggered. No candidate clears the entry bar (no 
 ### Decision: **HOLD — monitoring only, no action taken.** Market pullback deepening slightly since the earlier scan; crash gate not triggered; no qualifying setup.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-09 — Midday Scan — ARB Entry
+
+**Portfolio pre-trade:** $117.3351 ZUSD (100% cash) | **Open positions:** none | **Open orders:** none
+
+### Steps 1-5 — State Check / Stop Verify / Tighten / Thesis
+No open positions on Kraken or Alpaca (Alpaca `a2b44cf9` still `canceled` since 2026-05-22, zero exposure). Nothing to protect or re-evaluate.
+
+### Step 6 — New Entry: ARB/USD
+- **Catalyst:** LG Electronics selected Arbitrum to build a custom L2 for its blockchain ad platform; Robinhood's Arbitrum-powered L2 (launched Jul 1) crossed >$200M TVL in its first week. Corroborated independently by both live Kraken price action (+15.9% vs today's open) and Perplexity (+~12% 24h, consistent direction/magnitude) — first candidate all week where the two sources agreed instead of contradicting.
+- **Live data:** ARB/USD $0.0890 vs open $0.0768 = **+15.9%**, only **-2.3%** off 24h high $0.0911 (momentum-peak check passes — still near highs, not faded). Spread ~0.11% (well under 1% cap). 24h volume ~7.6M ARB (~$680k) — real liquidity, not thin.
+- **Risk flags:** exact hour of LG announcement unconfirmed (can't verify strictly <6h); Robinhood Chain launch itself is >1 week old (stale, not the fresh trigger); market-wide Fear & Greed at 20 (Extreme Fear); ARB token unlock (~0.93% supply) scheduled Jul 16 — not an immediate risk but noted; Kraken taker fee at this account's volume tier is 0.4% (round trip ~0.8%), higher than the 0.26% assumed in strategy notes — factored into sizing, not blocking.
+- **Entry:** market buy, 655 ARB @ ~$0.0890 (fill confirmed via balance delta: ZUSD $117.3351 → $58.7058, ARB balance 655.00000)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC — order `OTPECS-ZSGEI-C7Q4K7`, stop reference price $0.0866 confirmed live in `orders`
+- **T1:** $0.0917 (+3%) | **T2:** $0.0934 (+5%)
+- **R:R:** ~1.2:1 (3% target vs 2.5% stop) — meets minimum bar exactly
+- **Size:** ~50% of equity (~$58.5 of $117.3351) — moderate conviction: strongest corroborated signal seen all week, but sized below max given unconfirmed catalyst freshness and bearish macro backdrop
+- **Leverage:** none (spot) — R:R is only at the minimum bar, leverage not warranted on a borderline setup
+
+### Decision: **ENTER — ARB/USD, 655 units, 2.5% trailing stop placed immediately.**
+
+WhatsApp notification attempted per Step 7 (action taken) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
