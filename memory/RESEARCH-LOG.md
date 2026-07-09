@@ -26505,3 +26505,23 @@ No other tracked asset shows any surge. Crash gate: BTC +0.98% — not triggered
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
 
 ---
+
+## 2026-07-09 — Session-Open Execution Check (12:01 UTC, monitoring only, no trades)
+
+### STEP 1-2 — State Check
+
+Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD unchanged at $117.3351, all other balances dust. Alpaca: `positions: []`, orders history-only — zero exposure both exchanges. Matches prior scans today; no change.
+
+### STEP 3 — Entry Scan (live Kraken quotes vs today's open)
+
+BTC $62,693.60 vs open $62,236.60 = +0.73% (off 24h high $63,190.30 by -0.79%). ETH $1,741.85 vs open $1,742.00 = -0.01% (flat). SOL $77.53 vs open $77.77 = -0.31%. XRP $1.09234 vs open $1.08991 = +0.22%. DOGE $0.072422 vs open $0.0723844 = +0.05%. ADA $0.169341 vs open $0.166974 = +1.42%. HYPE $67.320 vs open $67.610 = -0.43%.
+
+**AVAX** re-checked: $6.704 vs open $6.471 = +3.60%, but off 24h high ($6.804) by -1.47% — a wider gap than the -0.54% seen at the 09:01 UTC check 3h ago, confirming momentum is continuing to fade, not accelerating. Still fails the momentum-peak check with no fresh breakout or new catalyst. **SKIP**, consistent with the earlier scan.
+
+No other tracked asset shows any move approaching the 3%/1h or 5%/4h thresholds. Crash gate: BTC +0.73% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Market is flat/low-volatility across the board; AVAX momentum continues to decay since the last check. Continues the flat streak (6th consecutive session-open/scan with no qualifying setup).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
+
+---
