@@ -26545,3 +26545,69 @@ No other tracked asset shows any surge. Crash gate: BTC +0.59% — not triggered
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
 
 ---
+
+## 2026-07-09 — Pre-Session Research (20:06 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only (`b7f70b08` filled 2026-05-22, nothing open) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Portfolio unchanged at $117.34, 8th consecutive scan today with no capital deployed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $62,689–$63,576 across sources, -0.88% to +2.48% (wide disagreement) | $63,133.40, open $62,236.60 → **+1.44%**, -0.56% off 24h high $63,490.30 | Mild green day, consistent with recent range |
+| ETH | $1,730–$1,791 across sources, -4% to +4.05% (wide disagreement) | $1,744.92, open $1,742.00 → **+0.17%** | Flat |
+| Fear & Greed | 22 (Extreme Fear), up slightly from 19-20 earlier in week | — | Sentiment still poor despite flat-to-mildly-green tape |
+| BTC funding rate | +0.0049% to +0.0099% (8h normalized) across major exchanges | — | Normal range, no crowded skew |
+| Catalysts | XRP CLARITY Act deadline (odds dropped to 48%), Ethereum Glamsterdam upgrade (H2 2026, not imminent), Stellar+DTCC tokenized-securities integration (assets expected H1 2027, driving a reported 72% *weekly* narrative move in XLM), HYPE claimed "new ATH above $70" | Live HYPE $66.96 vs open $67.61 = **-0.96%**, -2.49% off 24h high $68.67 — **hallucinated**, HYPE is red and well off its high, not at an ATH | HYPE claim flatly contradicted by live data; XLM catalyst is a multi-day narrative, not fresh <6h news |
+| Unlocks | RAIN ($593–812M, Jul 10–11), PUMP ($116–126M, Jul 12–14), ADI Chain (Jul 9, today), HYPE ($29M, Jul 6, already passed) | — | PUMP Jul 12 remains the primary dated watch item, ~2.5 days out — still outside 2h pre-positioning window |
+
+**Crash gate:** BTC +1.44% today — not a decline → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 1h OHLC verification)
+
+Perplexity's "top gainers," "altcoin momentum," and "volume surge" queries repeated the same hallucination pattern flagged every session this week (OMNI +174%, MAT +66%, DOLO +53%, LIT +97%, SIDEKICK +79%, PERP/DUCK/TAKE/REKT/VANRY — all previously live-checked today and rejected as hallucinated, illiquid, spread-failing, or already-faded). New candidates from this round, live-verified via Kraken quote + 1h OHLC candles:
+
+| Symbol | Move vs open | Off 24h high | Spread | Volume | Catalyst freshness | Verdict |
+|---|---|---|---|---|---|---|
+| **XLM/USD** | **+3.33%** ($0.187249 vs $0.181171) | **-0.26%** — high set in the hour candle that just closed (~5 min ago), current price still ticking to new local highs | **0.043%** (well within cap) | Latest complete hourly candle volume 2.43M vs ~200-900k prior hours — clear multi-x surge, independently corroborates Perplexity's flagged "303% volume surge" | Stellar-DTCC tokenized-securities integration is a multi-day narrative (not <6h news), but volume-confirmed momentum itself qualifies as the catalyst per entry rules | **PASSES** momentum-peak check (high fresh, not declining), spread, and volume-confirmation. Closest to a qualifying setup in 8 scans today |
+| ARB/USD | +17.06% ($0.0899 vs $0.0768) | -0.99% — high set ~65-70 min ago, price has been flat/consolidating (not declining, not breaking out) since | 0.11% (within cap) | Elevated but declining hour-over-hour (315k → 17k in the incomplete candle) | Checked directly: Robinhood Chain mainnet actually launched **Jul 1-2** — over a week old, not a fresh catalyst; the "11% gain" cited by Perplexity is stale news re-surfacing | **SKIP** — momentum-peak check borderline-fails (high >60min old, no fresh breakout) and the only catalyst identified is stale, not <6h |
+| ZEC/USD | +3.83% ($483.94 vs $465.93) | -2.41% — high set ~65 min ago, price declining hard since (495.74 → 484.55 → 483.94, new lower lows each hour) | tight | Volume spiked on the up-move, now fading | None identified <6h | **SKIP** — clearly fails momentum-peak check, textbook fading pattern |
+| HYPE/USD | -0.96% | -2.49% | — | — | Perplexity claimed new ATH >$70 | **SKIP** — hallucinated, live data shows red and well off high |
+| TON/USD | +2.65% | -1.34% | — | — | — | **SKIP** — below 3% threshold, off high |
+| STORJ/USD | +0.83% | -3.4% | — | — | — | **SKIP** — no momentum |
+
+### Trade Idea: XLM/USD
+
+- **Catalyst:** Volume-confirmed momentum breakout (hourly volume ~3-10x prior hours) layered on the ongoing Stellar-DTCC tokenized-securities integration narrative
+- **Entry:** Market order, ~$0.1872 (current live ask $0.187306)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC — placed immediately after fill (standard default; XLM is not a flagged high-ATR asset)
+- **T1:** entry +3% (~$0.1928) — tighten stop to 0.5% on hit
+- **T2:** entry +5% (~$0.1966)
+- **R:R:** 3% / 2.5% = **1.2:1** — meets the minimum threshold exactly
+- **Kraken pair:** XXLMZUSD, confirmed `status: online`, margin available up to 2x
+- **Spread:** 0.043% — confirmed well within the 1% cap
+- **Size:** Full $117.3351 available, no position cap per strategy; sizing to conviction given this is a moderate (not high-conviction) signal — R:R is at the minimum bar rather than comfortably above it, and the specific catalyst is a multi-day narrative rather than fresh single-asset news
+
+### STEP 4 — Risk Factors
+
+- XLM's R:R sits exactly at the 1.2:1 floor with no margin of safety — a normal 0.3-0.5% slippage/fee friction on entry could erode the effective R:R below the floor in practice
+- The catalyst is a rolling multi-day narrative (DTCC/Stellar), not a fresh single-event trigger — the setup rests primarily on the volume/price momentum signal, which is real and live-verified but less durable than a discrete news catalyst
+- Fear & Greed at 22 (Extreme Fear) despite the mild green tape — broad sentiment remains poor
+- Perplexity hallucination rate remains severe and consistent with every session this week (HYPE "ATH" claim flatly contradicted; OMNI/MAT/DOLO/LIT/SIDEKICK all previously found fabricated) — live Kraken OHLC used as sole source of truth for all screening decisions
+- PUMP's Jul 12 unlock (~2.5 days out) and RAIN's Jul 10-11 unlock remain outside the pre-positioning window — watch list only
+- $117.3351 ZUSD fully available — no capital constraint
+
+### Decision: **TRADE stance — XLM/USD is the primary actionable idea this session**, the first setup in 8 consecutive scans today to clear the full live-verified bar (momentum + volume confirmation + tight spread + fresh/non-faded high + R:R ≥1.2:1). Crash gate not triggered (BTC +1.44%). This research log documents the candidate per the pre-session research workflow; execution (order placement + mandatory stop) is a separate step outside this workflow's scope.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
