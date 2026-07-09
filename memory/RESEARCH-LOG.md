@@ -26427,3 +26427,61 @@ Crash gate: BTC -2.02% — nowhere near -20%, **not triggered.**
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
 
 ---
+
+## 2026-07-09 — Pre-Session Research
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$117.3351 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only (`a2b44cf9`/`b7f70b08` still canceled since 2026-05-22) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Portfolio unchanged at $117.34 for a 4th consecutive session-open (flat since 2026-07-06 EOD, Phase P&L −34.73%).
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$62,200–63,600 depending on source, -0.88% to +2.11% (wide disagreement across exchanges cited) | $62,940.00, open $62,236.60 → **+1.13%**, off 24h high $63,190.30 by -0.40% | Roughly in range; live shows a mild green day, not a selloff |
+| ETH | ~$1,730–1,752, -0.97% to +4.05% (wide disagreement) | $1,752.05, open $1,742.00 → **+0.58%** | Consistent with mild green day |
+| SOL | not queried directly | $78.11, open $77.77 → **+0.44%** | Flat/mildly green |
+| Fear & Greed | 20 (Extreme Fear), down from 27 yesterday, 11 last week | — | Sentiment still poor despite today's mild green tape — divergence, not a reversal signal on its own |
+| BTC funding rate | +0.0008% to +0.0090% (stablecoin-margined, various exchanges), +0.01% coin-margined | — | Normal range, not overheated, no crowded-long/short skew |
+| Catalysts | Solana Jito JTX terminal launch + Alpenglow testing (Q3); Zcash Ironwood upgrade (late July); HYPE HIP-3/Q3 options; Ondo tokenization; TRON post-quantum mainnet (Q3) — all multi-week/forward-looking, no fresh <6h single-asset trigger; BlackRock IBIT >$200M inflow reversal noted as today's most concrete headline but is BTC-wide, not a specific tradeable spike | — | No actionable fresh catalyst |
+| Unlocks | PUMP unlock **Jul 12** reconfirmed (~$134.65M / 29% of released supply per one source, ~$123.65M / 21.35% per another — figures inconsistent across sources but event date consistent) — now **3 days out** | — | Still outside the ~2h pre-positioning window; remains on watch list for Jul 12 |
+
+**Crash gate:** BTC +1.13% today — not a decline at all → **NOT triggered.**
+**BTC weekly trend gate:** Choppy $61–64k range continues per research-log history this week — no clear >3% 5-day downtrend evident — not active.
+
+### STEP 3 — Candidate Screening (live Kraken verification)
+
+Perplexity "top gainers" query returned NEM/XEM (+65.61%, not Kraken-listed), Power (not Kraken-listed), PERP (+26.21% claimed), 哈基米/HAKIMI (not Kraken-listed), Cellframe/CELL (not Kraken-listed), DuckChain/DUCK (+22.17% claimed), TAKE (+19.32% claimed), quq/QUQ (not Kraken-listed), REKT (+15.46% claimed), Vanar/VANRY (+14.37% claimed). Of the Kraken-listed names, all live-checked below:
+
+| Symbol | On Kraken? | Spread | Live move vs open | Off 24h high | Verdict |
+|---|---|---|---|---|---|
+| PERP/USD | ✓ | ~1.9% ✗ | **-8.30%** (claimed +26.21%) | — | Severely hallucinated — actually down hard, and spread fails cap anyway. **SKIP** |
+| DUCK/USD | ✓ | ~1.3% ✗ | **-1.28%** (claimed +22.17%) | — | Hallucinated; flat/down. **SKIP** |
+| TAKE/USD | ✓ | ~0.7% ✓ | **-1.13%** (claimed +19.32%) | — | Hallucinated; flat/down, no momentum. **SKIP** |
+| REKT/USD | ✓ | ~1.18% ✗ (borderline) | **+7.13%** (claimed +15.46%) — genuine real gain, direction correct | -1.08% off high $0.00000012 — near session high | Real momentum, but spread fails the 1% hard cap by a hair and no catalyst identified (pure meme ticker, no news). **SKIP** on spread + no-catalyst grounds |
+| VANRY/USD | ✓ | ~0.26% ✓ | **+6.17%** (claimed +14.37%) — real gain, overstated | -7.0% off high $0.00814 | Genuine mover but momentum-peak check fails — already well off high with no fresh breakout, no catalyst found (gaming/AI L1, nothing dated <6h in today's catalyst query). **SKIP** |
+| NEM/XEM, Power, HAKIMI, Cellframe/CELL, quq/QUQ | ✗ not Kraken-listed | — | — | — | Not tradeable on Kraken. **SKIP** |
+
+No candidate clears the full bar (1h>3%/4h>5%+volume, fresh <6h catalyst, spread ≤1%, momentum-peak check passed) simultaneously. REKT and VANRY were the only genuine (non-hallucinated) movers; both fail on spread or peak-freshness respectively.
+
+### STEP 4 — Risk Factors
+
+- Zero open positions — no thesis to invalidate, no stop to manage
+- Fear & Greed at 20 (Extreme Fear) despite today's mildly green tape (BTC +1.13%, ETH +0.58%, SOL +0.44%) — sentiment/price divergence, not itself a signal either way
+- Perplexity hallucination rate remains severe and consistent with every session this week: 4 of 6 Kraken-listed "gainer" candidates checked were flatly contradicted by live price (PERP claimed +26% but actually -8.3%; DUCK and TAKE both claimed double-digit gains but were actually slightly down). Live Kraken used as sole source of truth throughout
+- PUMP's Jul 12 cliff unlock is now 3 days out — still outside the pre-positioning window, add urgency to watch list for a post-unlock reaction trade
+- $117.3351 ZUSD fully available — no capital constraint on next qualifying setup
+- Portfolio has been flat (zero trades) for 4 consecutive session-opens now — no forced-trade bias; the strategy's "TRADE is the default stance" is being honored by continuing to scan intraday rather than forcing a sub-bar entry
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC actually up on the day). No candidate today passed the full live-verified momentum + spread + catalyst + peak-freshness bar — REKT (real +7.13% move) and VANRY (real +6.17% move) were the closest, failing on spread-cap and peak-freshness respectively. Will continue scanning intraday for a fresh, live-confirmed setup. PUMP Jul 12 post-unlock reaction remains the primary watch item, now 3 days out.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ consecutive days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
