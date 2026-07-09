@@ -7294,3 +7294,30 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No open positions — 100% cash, no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~86
 **Notes:** Fourth consecutive flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC rose from $61,959.30 (Jul 08 EOD) to $62,965.50 (+1.62%), so with equity flat the bot underperformed BTC on the day (−1.62% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry.
+
+---
+
+## 2026-07-09 — Midday Scan (Monitoring Only, 14:04 UTC)
+
+**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $62,984.50 vs $62,236.60 = **+1.20%** (-0.33% off 24h high $63,190.30); ETH +0.19%; SOL +0.53%; ICP +1.9% (-0.7% off high); XRP +0.91%; DOGE +0.33%; XLM +0.85%; NEAR +2.70% (closest to threshold, -0.55% off high, still short of 3%); ZEC +0.38%. No asset clears the 1h>3% / 4h>5% momentum bar.
+
+Perplexity again produced claims flatly contradicted by live Kraken data — same hallucination pattern flagged every session this week:
+- "1h surge" query claimed Anoma, Aster, ICP leaders and "BTC hit new ATH above $123,000" — live BTC $62,984.50, off by ~2x; ICP live only +1.9%, not a surge; Anoma not on Kraken
+- "Altcoin momentum >3% in 4h" query returned OMNI +174%, MAT +66%, DOLO +53%, REX/INIT/UFD 30-50% — REX not a valid Kraken pair; OMNI spread ~76% with ~$8 24h volume (untradeable dust, consistent with prior session's finding); INIT 24h volume ~$1.4k (illiquid)
+- "Volume surge" query claimed SOL +9%, DOGE +8%, XRP +3.7% to $1.13 today — live SOL +0.53%, DOGE +0.33%, XRP +0.91% to $1.0998, all contradicted
+- Catalyst query surfaced only forward-looking/scheduled items (CLARITY Act delayed to late July, Grayscale spot ADA ETF filing, DEXE/LIT tokenomics) — none a fresh <6h catalyst driving price now; CLARITY Act delay is bearish/neutral for XRP, not an entry signal
+
+No candidate clears the entry bar (no 1h>3%, no 4h>5%+volume, no clean fresh catalyst, no spread-compliant momentum). Crash gate: BTC +1.20% — not triggered (not remotely close).
+
+### Decision: **HOLD — monitoring only, no action taken.** Market broadly flat-to-slightly-up, NEAR the closest candidate at +2.70% but below the 3% threshold; Perplexity data quality remains unreliable and was cross-checked against live Kraken prices throughout.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
