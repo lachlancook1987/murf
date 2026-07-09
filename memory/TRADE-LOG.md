@@ -7241,83 +7241,24 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 
 ---
 
-## 2026-07-08 — EOD Snapshot (Day 49, Wednesday)
+## 2026-07-09 — Midday Scan — ARB Entry
 
-### Jul 08 — EOD Snapshot (Day 49, Wednesday)
-**Portfolio:** $117.34 | **Cash:** $117.34 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$62.44 (−34.73%) | **vs BTC:** +1.65%
-No open positions — 100% cash, no open Kraken orders.
-**Trades today:** none | **Total since migration:** ~86
-**Notes:** Third consecutive flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC fell from $62,998.80 to $61,959.30 (−1.65%), so with equity flat the bot outperformed BTC on the day (+1.65% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry.
+**Portfolio pre-trade:** $117.3351 ZUSD (100% cash) | **Open positions:** none | **Open orders:** none
 
+### Steps 1-5 — State Check / Stop Verify / Tighten / Thesis
+No open positions on Kraken or Alpaca (Alpaca `a2b44cf9` still `canceled` since 2026-05-22, zero exposure). Nothing to protect or re-evaluate.
 
----
+### Step 6 — New Entry: ARB/USD
+- **Catalyst:** LG Electronics selected Arbitrum to build a custom L2 for its blockchain ad platform; Robinhood's Arbitrum-powered L2 (launched Jul 1) crossed >$200M TVL in its first week. Corroborated independently by both live Kraken price action (+15.9% vs today's open) and Perplexity (+~12% 24h, consistent direction/magnitude) — first candidate all week where the two sources agreed instead of contradicting.
+- **Live data:** ARB/USD $0.0890 vs open $0.0768 = **+15.9%**, only **-2.3%** off 24h high $0.0911 (momentum-peak check passes — still near highs, not faded). Spread ~0.11% (well under 1% cap). 24h volume ~7.6M ARB (~$680k) — real liquidity, not thin.
+- **Risk flags:** exact hour of LG announcement unconfirmed (can't verify strictly <6h); Robinhood Chain launch itself is >1 week old (stale, not the fresh trigger); market-wide Fear & Greed at 20 (Extreme Fear); ARB token unlock (~0.93% supply) scheduled Jul 16 — not an immediate risk but noted; Kraken taker fee at this account's volume tier is 0.4% (round trip ~0.8%), higher than the 0.26% assumed in strategy notes — factored into sizing, not blocking.
+- **Entry:** market buy, 655 ARB @ ~$0.0890 (fill confirmed via balance delta: ZUSD $117.3351 → $58.7058, ARB balance 655.00000)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5`, GTC — order `OTPECS-ZSGEI-C7Q4K7`, stop reference price $0.0866 confirmed live in `orders`
+- **T1:** $0.0917 (+3%) | **T2:** $0.0934 (+5%)
+- **R:R:** ~1.2:1 (3% target vs 2.5% stop) — meets minimum bar exactly
+- **Size:** ~50% of equity (~$58.5 of $117.3351) — moderate conviction: strongest corroborated signal seen all week, but sized below max given unconfirmed catalyst freshness and bearish macro backdrop
+- **Leverage:** none (spot) — R:R is only at the minimum bar, leverage not warranted on a borderline setup
 
-## 2026-07-08 — Midday Scan (Monitoring Only)
+### Decision: **ENTER — ARB/USD, 655 units, 2.5% trailing stop placed immediately.**
 
-**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
-
-### Steps 1-2 — State Check
-`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
-
-### Steps 3-5 — Stop Verification / Tightening / Thesis Check
-N/A — no open positions on either exchange, nothing to protect or re-evaluate.
-
-### Step 6 — New Entry Scan
-Live Kraken quotes vs today's open: BTC $62,237.40 vs $63,319.70 = **-1.71%** (-2.31% off 24h high $63,706.40); ETH -1.68% (-2.44% off high $1,783.52); SOL -4.05% (-4.26% off high); AVAX -3.28%; OP -3.33%; ADA -4.41%; XRP -1.88%; DOGE -1.92%; ARB -0.78%. Every tracked asset red, broad market pullback deepened versus prior sessions this week.
-
-Perplexity "1h surge" and "altcoin momentum" queries again returned claims flatly contradicted by live Kraken data — same hallucination pattern flagged every session this week:
-- Claimed BTC "hit new ATH above $123,000" — live Kraken shows $62,237.40 (off by ~2x)
-- Claimed "BTC rebounded to $63,300" on a separate query — also contradicted by live price
-- OMNI claimed +174%/24h — live: -57% (open $0.89 → close $0.38), essentially no liquidity (24h volume ~$20)
-- MAT claimed +66% — live: -1.9%, spread ~45% (illiquid)
-- SIDEKICK claimed +79% — live: -5.2%
-- PORTAL claimed +34.67% — live: -0.7%
-- RENDER claimed +3.75% — live: -2.0%
-- JITOSOL claimed +5.12% — live: -4.5%
-- LIT claimed +97% — live: actually up +8.5% (real move, right direction) but spread ~1.5% fails the 1% hard cap, and price is -9.2% off its 24h high — fails momentum-peak check (already faded, not fresh)
-- DOLO: thin volume, ~11% spread — untradeable
-
-News catalyst query surfaced only forward-looking/scheduled items (Jito JTX terminal launch, Solana Alpenglow testing, Zcash Ironwood upgrade late July, HYPE HIP-3 growth) — none is a fresh <6h catalyst driving price now; per the scheduled-catalyst caution rule, no pre-positioning warranted this far ahead of any dated event anyway.
-
-No candidate clears the entry bar (no 1h>3%, no 4h>5%+volume, no clean fresh catalyst, no spread-compliant momentum). Crash gate: BTC -1.71% — not triggered.
-
-### Decision: **HOLD — monitoring only, no action taken.** Broad market red across the board; crash gate not triggered; no qualifying setup; Perplexity data quality remains unreliable and was cross-checked against live Kraken prices throughout.
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-09 — EOD Snapshot (Day 50, Thursday)
-
-### Jul 09 — EOD Snapshot (Day 50, Thursday)
-**Portfolio:** $117.34 | **Cash:** $117.34 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$62.44 (−34.73%) | **vs BTC:** −1.62%
-No open positions — 100% cash, no open Kraken orders.
-**Trades today:** none | **Total since migration:** ~86
-**Notes:** Fourth consecutive flat day — `kraken.sh account`/`positions`/`orders` confirm ZUSD unchanged at $117.3351, zero open positions, `orders: {}`. BTC rose from $61,959.30 (Jul 08 EOD) to $62,965.50 (+1.62%), so with equity flat the bot underperformed BTC on the day (−1.62% vs BTC). Alpaca BTC order `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $117.34 available for a fresh entry.
-
----
-
-## 2026-07-09 — Midday Scan (Monitoring Only, 14:04 UTC)
-
-**Portfolio:** $117.3351 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
-
-### Steps 1-2 — State Check
-`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD unchanged at $117.3351, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
-
-### Steps 3-5 — Stop Verification / Tightening / Thesis Check
-N/A — no open positions on either exchange, nothing to protect or re-evaluate.
-
-### Step 6 — New Entry Scan
-Live Kraken quotes vs today's open: BTC $62,984.50 vs $62,236.60 = **+1.20%** (-0.33% off 24h high $63,190.30); ETH +0.19%; SOL +0.53%; ICP +1.9% (-0.7% off high); XRP +0.91%; DOGE +0.33%; XLM +0.85%; NEAR +2.70% (closest to threshold, -0.55% off high, still short of 3%); ZEC +0.38%. No asset clears the 1h>3% / 4h>5% momentum bar.
-
-Perplexity again produced claims flatly contradicted by live Kraken data — same hallucination pattern flagged every session this week:
-- "1h surge" query claimed Anoma, Aster, ICP leaders and "BTC hit new ATH above $123,000" — live BTC $62,984.50, off by ~2x; ICP live only +1.9%, not a surge; Anoma not on Kraken
-- "Altcoin momentum >3% in 4h" query returned OMNI +174%, MAT +66%, DOLO +53%, REX/INIT/UFD 30-50% — REX not a valid Kraken pair; OMNI spread ~76% with ~$8 24h volume (untradeable dust, consistent with prior session's finding); INIT 24h volume ~$1.4k (illiquid)
-- "Volume surge" query claimed SOL +9%, DOGE +8%, XRP +3.7% to $1.13 today — live SOL +0.53%, DOGE +0.33%, XRP +0.91% to $1.0998, all contradicted
-- Catalyst query surfaced only forward-looking/scheduled items (CLARITY Act delayed to late July, Grayscale spot ADA ETF filing, DEXE/LIT tokenomics) — none a fresh <6h catalyst driving price now; CLARITY Act delay is bearish/neutral for XRP, not an entry signal
-
-No candidate clears the entry bar (no 1h>3%, no 4h>5%+volume, no clean fresh catalyst, no spread-compliant momentum). Crash gate: BTC +1.20% — not triggered (not remotely close).
-
-### Decision: **HOLD — monitoring only, no action taken.** Market broadly flat-to-slightly-up, NEAR the closest candidate at +2.70% but below the 3% threshold; Perplexity data quality remains unreliable and was cross-checked against live Kraken prices throughout.
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+WhatsApp notification attempted per Step 7 (action taken) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
