@@ -26611,3 +26611,63 @@ Perplexity's "top gainers," "altcoin momentum," and "volume surge" queries repea
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-10 — Pre-Session Research
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only, nothing open |
+
+**Note:** The 2026-07-09 midday ARB/USD entry (655 units, 2.5% trailing stop `OTPECS-ZSGEI-C7Q4K7`) is no longer open — ARB balance is now 0 and no open orders remain, confirming the trailing stop fired since the last trade-log entry. ZUSD moved $117.3351 → $115.5598 (**-1.51%** on total equity), consistent with a stop-out on the ~50%-sized position plus round-trip fees. No exit was separately logged to TRADE-LOG.md when the stop fired (outside this session); flagging here for continuity. Currently 1 stop-out on ARB within the 7-day window — below the 2-stop-out threshold that would trigger the Same-Thesis Entry Cap cooling period, but see ARB screening note below.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $62,700–$91,151 across sources (Coinbase figure a clear outlier/error), consensus ~$63,100-64,100, +1.3% to +2.9% | $63,958.10, open $63,174.00 → **+1.24%**, -0.30% off 24h high $64,150.60 | Consistent — mild green day |
+| ETH | $1,739-$1,772 across sources, -4% to +1.65% (wide disagreement) | $1,772.51, open $1,743.94 → **+1.64%**, -0.35% off 24h high $1,778.81 | Consistent with the higher end of the range |
+| Fear & Greed | 22 (Extreme Fear), up slightly from 20 yesterday | — | Sentiment still poor despite green tape |
+| BTC funding rate | +0.0072% to +0.0148% (8h, Kraken +0.0148%) | — | Normal range, no crowded skew |
+| Catalysts | CLARITY Act still stalled (Senate cloture unresolved, 48% odds); Solana institutional/tokenized-stock momentum + Alpenglow testing; Zcash Ironwood upgrade "late July" | — | No fresh <6h single-asset catalyst identified; CLARITY Act and Ironwood are both multi-day/scheduled, not immediate triggers |
+| Unlocks | PUMP ~$134.65M cliff unlock **Jul 12** (2 days out); WLD linear ongoing; XPL Jul 28 | — | PUMP unlock still outside the ~2h pre-positioning window; primary watch item, 2 days out |
+| Top gainers (24h) | NEM +65.6%, Power +53.4%, PERP +26.2%, HAKIMI +22.7%, CELL +22.6%, DUCK +22.2%, TAKE +19.3%, QUQ +15.8%, REKT +15.5%, VANRY +14.4% | PERP live: $0.01980 vs open $0.02050 = **-3.4%** (down, not up) | **Hallucinated** — PERP flatly contradicted by live data, consistent with the pattern flagged every session this week; others previously confirmed illiquid/hallucinated/spread-failing in prior scans, not re-checked today |
+| Altcoin momentum >3%/4h | ARB +13.23%, ENA +3.91%, TAC +59.45%, TALUS +52.64%, OMNI +36.77% | ARB live +6.75% vs open (overstated); ENA live +3.41% vs open (roughly right); TAC live $0.004039 vs open $0.004723 = **-14.5%** (down, not up); TALUS not a valid Kraken pair | **Mixed/hallucinated** — TAC claim inverted from reality (down 14.5%, not up 59%), TALUS untradeable, ARB overstated, only ENA roughly correct |
+| Volume surge | XRP broke $1.10 resistance on late-session volume; ETH/USDC/SOL high volume; ZEC +3.3% with $331-421M volume; Blur +66.47% | XRP live flat/rangebound $1.104-1.111 all last 6h, no breakout; ZEC live +3.55% vs open but fading off high (see below) | XRP claim not supported by live 1h OHLC (no breakout, just noise); ZEC direction correct but timing (fading, not surging) not captured |
+
+**Crash gate:** BTC +1.24% today — not a decline → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 1h OHLC verification)
+
+| Symbol | Move vs open | Off 24h high | 1h OHLC pattern | Catalyst freshness | Verdict |
+|---|---|---|---|---|---|
+| **ARB/USD** | +6.75% ($0.0933 vs $0.0874) | -0.64% | High ($0.0939) set ~1-2h ago; last 2 candles show price plateaued/flat (0.0934→0.0933), volume dropped sharply in the current incomplete candle (455k→6.2k) — momentum stalling, not accelerating | No fresh catalyst found today; the LG Electronics/Robinhood thesis from the Jul 9 entry is now >24h old, stale. This exact asset stopped out the last position 655 units, entry $0.089 | **SKIP** — momentum-peak check borderline (plateaued, not fresh breakout), no new catalyst, and re-chasing the same thesis that just stopped out at a similar price level is poor practice even though the 2-stop-out cooling threshold isn't formally triggered |
+| **ZEC/USD** | +3.55% ($498.19 vs $481.09) | -1.45% | High ($505.54) set ~3h ago; price has declined for 2 consecutive candles since (505.54→500.46→498.19) | Ironwood upgrade is "late July," >2 weeks out — fails scheduled-catalyst caution rule (not within 2h pre-positioning window) | **SKIP** — clearly fails momentum-peak check, textbook fade pattern |
+| **ENA/USD** | +3.41% ($0.0788 vs $0.0762) | -0.76% | Flat/rangebound $0.0786-0.0794 for the entire last 6h — the day's gain happened earlier and has since gone nowhere, no 1h/4h momentum | No specific catalyst identified ("steady upward trend" only) | **SKIP** — fails 1h/4h momentum requirement despite decent vs-open number; move already priced in, not live |
+| **XRP/USD** | +1.18% ($1.1053 vs $1.0924) | -0.54% | Flat/rangebound $1.104-1.111 for 6h, no breakout | Perplexity's "late-session volume surge" claim not corroborated by live OHLC | **SKIP** — no momentum, claim unsupported |
+| **TAC/USD** | **-14.5%** (claimed +59.45%) | — | — | — | **SKIP** — hallucinated; actually down sharply |
+| **PERP/USD** | **-3.4%** (claimed +26.21%) | — | — | — | **SKIP** — hallucinated; actually down |
+| **TALUS** | not a valid Kraken pair | — | — | — | **SKIP** — not tradeable |
+| BTC/USD, ETH/USD, SOL/USD | +1.24%, +1.64%, +1.06% vs open | all within -1% of 24h high | broad market drift, not single-asset outperformance | — | **SKIP** — below momentum thresholds, market-wide beta not a day-trade setup |
+
+No candidate clears the full live-verified bar (1h/4h momentum + fresh catalyst + spread + momentum-peak freshness) simultaneously. ARB was the closest but is plateauing rather than breaking out, has no new catalyst since it stopped out this account 1.5 days ago, and re-entering the identical thesis near the same price level that already failed once carries weak expected value even without the formal 2-stop-out cooling period being triggered.
+
+### STEP 4 — Risk Factors
+
+- Just stopped out of ARB (-1.51% on total equity) — no open positions currently, no thesis to invalidate, no stop to manage
+- Fear & Greed at 22 (Extreme Fear) despite a broadly green tape (BTC +1.24%, ETH +1.64%) — sentiment/price divergence persists
+- Perplexity hallucination rate remains severe and consistent with every session this week: PERP and TAC both claimed large gains but are live-confirmed down (-3.4% and -14.5% respectively); TALUS isn't even a real Kraken pair. Live Kraken OHLC used as sole source of truth throughout
+- PUMP's Jul 12 cliff unlock (~$134.65M, 2 days out) is the primary dated watch item — still outside the pre-positioning window
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- ARB re-entry risk: if ARB does break out fresh above $0.0939 with volume confirmation later in the session, a re-entry would need to clear the bar on its own merits (fresh breakout + real catalyst), not just "it's up again"
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +1.24%). No candidate today passed the full live-verified momentum + spread + catalyst + peak-freshness bar. ARB, ZEC, and ENA were the closest movers but each fails on plateaued momentum / fading momentum / stale-move respectively. Will continue scanning intraday for a fresh, live-confirmed setup. PUMP Jul 12 unlock remains the primary watch item, 2 days out.
+
+### Step 6 — Notification
+
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
