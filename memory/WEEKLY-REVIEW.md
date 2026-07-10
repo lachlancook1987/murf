@@ -812,3 +812,78 @@ For catalysts with a known, publicly-scheduled activation time (hard forks, main
 **The one clean, well-timed catalyst trade (AAVE) outweighed the one anticipatory pre-positioning trade (KAS), keeping the week net positive, but the bot still underperformed BTC by −1.01% because BTC's Q3-opening recovery ran mostly on days with no qualifying setup.** The KAS loss is a distinct failure mode from the existing "buy the rumour, sell the news" lesson: entering ahead of a *scheduled* catalyst (known activation time) carries the same repricing risk as entering after a *reactive* one has already peaked. Going forward: treat dated events (forks, unlocks, scheduled upgrades) with the same "has this already been priced in" scrutiny as spontaneous news, and don't chase pre-event anticipation without a live breakout confirming genuine incremental demand.
 
 ---
+
+## Week of 2026-07-04 — Review Date: 2026-07-10
+
+### Context
+Quiet week — only one fresh entry (ARB, Jul 9) plus two carried-over positions (ETH, DOGE) from the prior week's Jul 3 session that stopped out early in the week. Seven of the week's ten scan sessions (Jul 4–9) found no qualifying setup and held cash, with Perplexity research returning hallucinated/contradictory data (wrong prices, wrong direction, non-Kraken tickers) in nearly every single session — live Kraken cross-checks correctly rejected all of it. BTC trended up through the week (Monday open $63,593 → Friday $64,155, +0.88%), which the bot mostly missed by sitting in cash or in a stopped-out ARB position.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $115.56 | $115.56 ZUSD | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (May 22) |
+| **Total** | **$115.56** | $115.56 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jul 03 EOD) | $115.36 |
+| Ending Equity (Fri Jul 10 EOD) | **$115.56** |
+| **Week Return** | **+0.17%** (+$0.20) |
+| BTC Week Return | **+0.88%** (Mon open $63,593.00 → Fri $64,154.60) |
+| **Bot vs BTC** | **−0.71%** (underperformed) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Jul 04 (discovered) | ETH/USD | $1,727.67 | ~$1,774.02 (0.5% trail, T1-tightened) | **+$2.69** | WIN |
+| 2 | Jul 05 (discovered) | DOGE/USD | $0.0772089 | ~$0.0768711 (2.5% trail) | **−$0.06** | LOSS |
+| 3 | Jul 09 → Jul 10 | ARB/USD | ~$0.0888 (655u) | ~$0.0876 (2.5% trail, ~66min hold) | **−$1.78** | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 3 |
+| Wins | 1 (ETH) |
+| Losses | 2 (DOGE, ARB) |
+| Win Rate | **33.3%** |
+| Gross Wins | **$2.69** |
+| Gross Losses | **$1.84** |
+| Profit Factor | **1.46** |
+| Avg Win | $2.69 |
+| Avg Loss | $0.92 |
+| Largest Win | ETH +$2.69 (+2.69%) |
+| Largest Loss | ARB −$1.78 (round trip incl. fees) |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$0.45** (3 trades × ~$57.4 avg notional × 0.26%; actual ARB fee tier measured live at 0.4% taker — higher than the 0.26% assumed in strategy notes) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $115.5598 (+dust). No open orders. BTC weekly trend gate: not triggered (BTC up over the week).
+
+### Trade Quality Review
+
+**Entry types that worked:**
+- **T1-tighten mechanic (ETH, +2.69%):** Carried position from the prior week. Live Kraken quote crossed +3.79% unrealized, triggering the mandatory T1 tighten (2.5%→0.5% trail). Locked in a clean profit on the subsequent pullback. Correct, mechanical execution of an existing rule — not a sourcing win.
+
+**Entry types that failed:**
+- **Borderline momentum+catalyst (ARB, −1.78%):** LG Electronics/Arbitrum L2 news plus Robinhood Chain TVL growth — the first candidate all week where Perplexity and live Kraken data actually agreed (+15.9% live vs open, +2.3% off 24h high, spread 0.11%). But R:R was only at the bare 1.2:1 floor, the exact catalyst hour couldn't be confirmed as <6h fresh, and market Fear & Greed was at 20 (Extreme Fear) — all flagged as risk at entry. Faded and stopped out ~66 minutes later. Sizing discipline (50% equity, no leverage, given the marginal signal) limited the damage but didn't prevent the loss.
+- **Carried DOGE position (−0.44%):** Ordinary 2.5% trail whipsaw on a multi-day hold, no mechanical issue.
+
+**Stop quality:**
+Clean week — every position (ETH, DOGE, ARB) had a stop in place at all times, the ETH T1-tighten fired correctly, and no orphan-stop errors occurred.
+
+**Profile violations:**
+None outright. ARB was a marginal entry (R:R exactly at the 1.2:1 floor, catalyst freshness unverified <6h) — same category as the ENA marginal entry flagged in the week of Jun 20 review — but not a hard rule violation.
+
+**Recurring operational issues (not strategy rules, but worth flagging):**
+- Perplexity returned hallucinated or flatly contradicted data in nearly every session this week (e.g. "BTC hit new ATH above $123,000" vs live $62–64k, wrong-direction gainer claims, non-Kraken tickers). Live Kraken cross-checks correctly caught and rejected all of it, but the volume of noise is a recurring cost.
+- WhatsApp/CallMeBot notifications have failed every session since Jul 2 (CallMeBot quota exhausted) — over a week with zero successful trade alerts, including the ARB entry. Needs resubscription at callmebot.com/61477788635; the bot cannot self-resolve an external API quota issue.
+
+**Concrete adjustment (added 2026-07-10):**
+When a catalyst's freshness (<6h) can't be confirmed AND market-wide Fear & Greed is in "Extreme Fear" territory (≤25), require R:R ≥ 1.5:1 rather than the standard 1.2:1 floor — the ARB entry met only the bare minimum on both counts and reversed almost immediately. Also corrected a stale assumption: TRADING-STRATEGY.md's Risk Awareness section assumed a 0.26% taker fee, but this account's actual measured taker fee (confirmed at the ARB entry) is 0.4% (round trip ~0.8%), which erodes the R:R bar more than previously assumed. Both changes applied to TRADING-STRATEGY.md.
+
+### Key Lesson
+**A quiet week (3 closed trades, 7 of 10 sessions flat) barely broke even (+0.17%) and lagged BTC's uptrend (−0.71% vs BTC) because the week's only fresh entry (ARB) was also its most marginal one — bare-minimum R:R, unconfirmed catalyst freshness, and an Extreme Fear backdrop all present simultaneously.** The one clean win (ETH) came from risk-management mechanics (the T1 tighten), not sourcing skill. Going forward, marginal setups in a bearish-sentiment environment need a higher R:R bar, not just a smaller position size — sizing discipline limited this week's damage but didn't prevent the loss.
+
+---
