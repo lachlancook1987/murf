@@ -7357,3 +7357,28 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** ARB/USD round trip from Jul 09 (655 units bought $0.0888, stopped out via 2.5% trailing stop at $0.0876 ~66min later, realized ≈−$1.78 after fees) closed *after* the Jul 09 EOD snapshot was recorded, so it lands in today's Day P&L instead of yesterday's — explains the delta between the flat $117.34 Jul 09 EOD figure and today's $115.56. `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598, zero open positions, `orders: {}` (only crypto dust <$0.01 total plus $0.1066 ZAUD remain). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rose from $62,965.50 (Jul 09 EOD) to $64,264.30 (+2.06%), so bot underperformed BTC today (−3.58%) entirely due to the ARB stop-out. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-10 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $115.5598 unchanged, all other balances dust. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled`/filled (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $64,322.40 vs $63,174.00 = **+1.82%** (-0.48% off 24h high $64,635.00); ETH +2.97% (-0.66% off high); SOL +0.72% (-1.30% off high); AVAX +1.14% (-1.11% off high); NEAR +0.04% (-2.27% off high); **ARB +6.52%** (0.0931 vs open 0.0874) — the standout mover, but **-2.6% off its 24h high** ($0.0956), meaning the move has already faded rather than accelerating (momentum-peak check fails).
+
+Perplexity ARB-specific query confirms **no fresh catalyst**: "no major new price catalysts or breaking news for Arbitrum specifically released today... consolidation phase driven by broader market sentiment," Fear & Greed 20 (Extreme Fear), RSI 39 (oversold-adjacent, not bullish). Given ARB was stopped out on this exact asset just yesterday (Jul 09) with an already-borderline 1.2:1 R:R, and today's setup has **no catalyst** at all (vs. yesterday's unconfirmed-but-plausible one) plus a faded/receding price, re-entry is a clear skip — doesn't even reach the standard bar, let alone the stricter 1.5:1 Extreme-Fear floor.
+
+1h-surge query again returned the same unreliable pattern flagged every session: claimed leaders Anoma/Aster/ICP (Anoma not on Kraken; ICP not queried live but not corroborated), plus contradictory BTC price claims ("~8% to $74,000" and "above $123,000" in the same response) vs live Kraken price $64,322.40 — cross-checked and discounted.
+
+No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum, no fresh catalyst, ARB's raw daily gain fails the momentum-peak check). Crash gate: BTC +1.82% — not triggered (market green, not red).
+
+### Decision: **HOLD — monitoring only, no action taken.** Fear & Greed remains at Extreme Fear (22-23); no qualifying setup; Perplexity data quality remains unreliable and was cross-checked against live Kraken prices throughout.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
