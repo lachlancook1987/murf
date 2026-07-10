@@ -26689,3 +26689,27 @@ ARB $0.0938 vs open $0.0874 = +7.32%, but 24h high ($0.0956) was set at 11:00 (~
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). No trades → no TRADE-LOG entry, no commit required per STEP 8.
 
 ---
+
+## 2026-07-10 — Session-Open Execution Check (2nd, monitoring only, no trades)
+
+### STEP 1-2 — State Check
+
+Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD unchanged at $115.5598, all other balances dust. Alpaca: `positions: []`, orders history-only, zero exposure. No change since prior checks today.
+
+### STEP 3 — Entry Scan (live Kraken quotes vs today's open $63,174.00 BTC)
+
+BTC $63,870.00 vs open = **+1.10%** (-1.18% off 24h high $64,635.00) — crash gate not triggered.
+
+Re-checked the three closest candidates from prior scans today, all continuing to fade rather than accelerate:
+- **ETH** $1,784.71 vs open $1,743.94 = +2.34%, high $1,809.93 (~-1.39% off high) — has receded further since the last check (was $1,798.58/-0.14% off high); trend continues to slow, no fresh catalyst. **SKIP**
+- **ARB** $0.0920 vs open $0.0874 = +5.28%, high $0.0956 (~-3.77% off high, worse than the -2.6% seen last check) — momentum-peak check fails harder than before, no new catalyst since Jul 9 stop-out. **SKIP**
+- **ZEC** $503.51 vs open $481.09 = +4.66%, high $517.13 (~-2.63% off high) — still fading off a high set hours ago, Ironwood upgrade catalyst remains >2 weeks out (fails scheduled-catalyst rule). **SKIP**
+- **SOL** $77.92 vs open $77.99 = **-0.09%** — flat/negative, no momentum. **SKIP**
+
+No candidate clears the live-verified momentum + catalyst + peak-freshness bar. All three prior "closest" movers (ETH, ARB, ZEC) have faded further off their daily highs since the last check rather than breaking out.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Consistent with every check today. Crash gate not triggered (BTC +1.10%).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
