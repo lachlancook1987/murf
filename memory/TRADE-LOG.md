@@ -7345,3 +7345,15 @@ No open positions on Kraken or Alpaca (Alpaca `a2b44cf9` still `canceled` since 
 ### Decision: **ENTER — ARB/USD, 655 units, 2.5% trailing stop placed immediately.**
 
 WhatsApp notification attempted per Step 7 (action taken) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-10 — EOD Snapshot (Day 51, Friday)
+
+### Jul 10 — EOD Snapshot (Day 51, Friday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** −$1.7753 (−1.51%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −3.58%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** ARB/USD round trip from Jul 09 (655 units bought $0.0888, stopped out via 2.5% trailing stop at $0.0876 ~66min later, realized ≈−$1.78 after fees) closed *after* the Jul 09 EOD snapshot was recorded, so it lands in today's Day P&L instead of yesterday's — explains the delta between the flat $117.34 Jul 09 EOD figure and today's $115.56. `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598, zero open positions, `orders: {}` (only crypto dust <$0.01 total plus $0.1066 ZAUD remain). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rose from $62,965.50 (Jul 09 EOD) to $64,264.30 (+2.06%), so bot underperformed BTC today (−3.58%) entirely due to the ARB stop-out. Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2; needs resubscription at callmebot.com/61477788635.
