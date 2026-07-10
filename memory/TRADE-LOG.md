@@ -7382,3 +7382,31 @@ No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum, 
 ### Decision: **HOLD — monitoring only, no action taken.** Fear & Greed remains at Extreme Fear (22-23); no qualifying setup; Perplexity data quality remains unreliable and was cross-checked against live Kraken prices throughout.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-10 — Midday Scan #2 (Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $115.5598 unchanged, all other balances dust (<$0.01 equivalent). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC +1.27% (-1.01% off 24h high $64,635); ETH +2.84% (-0.91% off high); XRP +1.06%; DOGE +1.87%; AVAX +1.30%; LINK +2.88%; SOL -0.05%; NEAR -1.58%; ICP -3.02%; HYPE +0.48%; **SUI +3.36%** (-1.17% off high); **INJ +3.17%** (-0.34% off high, essentially at 24h high); **ARB +6.86%** (-2.30% off high — already fading, momentum-peak check fails, same asset stopped out yesterday with no confirmed catalyst per yesterday's own research — skip).
+
+Perplexity "altcoin momentum >3% in 4h" query again produced unreliable output cross-checked and rejected against live Kraken data:
+- Claimed OMNI +36.77%, TAC +64.76%, MAT +66%, DOLO +53%, ODOS +59.85% (24h) — live Kraken shows OMNI spread ~76% (~$8 volume, same untradeable dust flagged last session), MAT spread ~30% with only 1 trade/24h (broken/no market), TAC actually **down** -8.0% live (open $0.004723 → close $0.004346, direction opposite Perplexity's claim), DOLO spread ~5.3% (illiquid, 6 trades/24h), ODOS spread ~56% (untradeable). None tradeable or even directionally correct.
+- INJ-specific query claimed price "$4.82, down 1-5%" — live Kraken shows $4.983, **up** 3.17%, contradicting Perplexity by both price and direction (~$1.50 off vs Coinbase figure cited). Cited catalyst (Binance mainnet upgrade, Pineapple treasury) dated July 3-6 — already priced in over the trailing week (+40%), not a fresh <6h trigger.
+- SUI-specific query cited Bitwise ETF rebalance / Grayscale classification as catalyst — no confirmed timestamp, not verifiably <6h old.
+
+Fear & Greed Index: **23 (Extreme Fear)**, consistent with 22-23 all week. Per the strategy rule added earlier today (2026-07-10), any entry without a confirmed <6h catalyst requires R:R ≥1.5:1 at T1 vs 2.5% stop — standard 3%-target trades only clear 1.2:1. Neither SUI nor INJ (the only two assets with genuine live momentum near their highs) has a confirmed fresh catalyst, so both fail the stricter Extreme Fear floor. No candidate clears the entry bar.
+
+Crash gate: BTC +1.27% — not triggered (market green).
+
+### Decision: **HOLD — monitoring only, no action taken.** Extreme Fear (23) plus no confirmed <6h catalyst on any live-momentum candidate (SUI, INJ) means neither clears the stricter 1.5:1 R:R floor added today; ARB re-entry rejected on momentum-peak fade + no fresh catalyst; all other Perplexity-flagged "movers" (OMNI/TAC/MAT/DOLO/ODOS) are illiquid, broken markets, or directionally contradicted by live Kraken data.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
