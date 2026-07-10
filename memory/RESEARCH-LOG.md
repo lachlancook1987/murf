@@ -26713,3 +26713,58 @@ No candidate clears the live-verified momentum + catalyst + peak-freshness bar. 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-10 — Pre-Session Research (20:05 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only (`b7f70b08` filled 2026-05-22), nothing open |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Unchanged since the last scan today.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $63,800–$64,000 consensus, +1.5% to +2.7% (Coinbase $91,151 figure flagged as an outlier/error) | $63,806.60, open $63,174.00 → **+1.00%**, -1.28% off 24h high $64,635.00 | Consistent — mild green day, Coinbase figure correctly dismissed |
+| ETH | $1,740–$1,792 across sources, -1.5% to +3.6% (wide disagreement) | $1,789.30, open $1,743.94 → **+2.60%**, -1.14% off 24h high $1,809.93 | Near the high end of Perplexity's range — roughly consistent |
+| Fear & Greed | 23 (Extreme Fear), up slightly from 22 yesterday | — | Sentiment still poor despite green tape — same divergence flagged every session this week |
+| BTC funding rate | +0.0095% aggregate, Kraken +0.0148% (8h normalized) | — | Normal range, no crowded skew |
+| Catalysts | BTC ETF inflow reversal (BlackRock IBIT), SEC "Regulation Crypto" agenda (registration exemptions), Tether $20M Mercado Bitcoin investment, crypto-IPO stock collapse (GEMI -89%, BTGO -77%); Solana Jito JTX terminal launch + Alpenglow testing; Zcash Ironwood upgrade "late July" | — | No fresh <6h single-asset catalyst identified; Solana/Zcash items are multi-day/scheduled, not immediate triggers; SEC agenda is forward-looking, not a today trigger |
+| Unlocks | RAIN $796M cliff Jul 11 (tomorrow), PUMP $135.5M cliff Jul 12, APT $7M Jul 12, WLD ~$16.1M/day linear | — | RAIN unlock is <24h out but not yet within the ~2h pre-positioning window; PUMP remains the primary dated watch item |
+| Top 10 gainers (24h) | Talus Network +100.72%, Tagger +70.89%, Victoria VR +42.34%, MemeFi +35.84%, SdexToken +35.24%, SAROS +33.35%, Yooldo +32.03%, TAC +31.76% | TAC live: $0.004278 vs open $0.004723 = **-9.42%** (down, not up); SAROS: malformed/zero ticker data on Kraken (effectively untradeable/not properly listed); Talus, Tagger, Victoria VR, MemeFi, SdexToken, Yooldo not Kraken pairs | **Hallucinated / untradeable** — TAC flatly contradicted by live data (down, not up), consistent with the pattern flagged every session this week; the rest are either not on Kraken or have no usable market |
+
+**Crash gate:** BTC +1.00% today — not a decline → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 1h OHLC verification)
+
+| Symbol | Move vs open | Off 24h high | 1h OHLC pattern | Catalyst freshness | Verdict |
+|---|---|---|---|---|---|
+| **ZEC/USD** | +4.87% ($504.51 vs $481.09) | -2.44% | 1h move (19:00→20:00) +1.07%, 4h move (16:00→20:00) +0.80% — well under 3%/1h and 5%/4h thresholds; range-bound 499-506 for the last 5h, not a fresh breakout | Ironwood upgrade still "late July," >2 weeks out — fails scheduled-catalyst caution rule | **SKIP** — daily gain is stale/range-bound, no live momentum, no fresh catalyst |
+| **ENA/USD** | +5.51% ($0.0804 vs $0.0762) | -0.62% — closest to its high of any candidate today | 1h move (19:00→20:00) +0.88%, 4h move (16:00→20:00) +1.77% — both under threshold; grinding higher steadily rather than surging | No specific catalyst identified beyond general strength | **SKIP** — fails 1h/4h momentum despite being closest to its high; a grind, not a day-trade setup |
+| **ARB/USD** | +4.00% ($0.0909 vs $0.0874) | -4.92% | Flat/plateaued 0.0901-0.0917 for 6h, no breakout, volume thin in the current candle (5.1k vs 70-296k in prior hours) | No new catalyst since the Jul 9 stop-out on this exact asset; thesis is now >24h stale | **SKIP** — continues the multi-session fade pattern, still no fresh catalyst, re-chasing a thesis that already stopped out once |
+| **DOGE/USD** | +1.68% | -0.77% | Flat 0.0737-0.0743 range all session | None | **SKIP** — no momentum |
+| **XRP, AVAX, LINK, SOL, ADA, NEAR** | +1.04%, +0.93%, +2.23%, -0.35%, -0.04%, -2.42% vs open | all within -1% to -5% of 24h high | broad market drift, no single-asset breakout | — | **SKIP** — below momentum thresholds |
+
+No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh catalyst + spread + momentum-peak freshness) simultaneously. ENA is the closest to its daily high but is grinding, not surging, on both 1h and 4h windows. ARB continues to fade further off its high with each successive session-check since its Jul 9 stop-out.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate
+- Fear & Greed at 23 (Extreme Fear) despite a broadly green tape (BTC +1.00%, ETH +2.60%) — sentiment/price divergence persists, same pattern flagged all week
+- Perplexity hallucination rate remains severe and consistent with every session this week: TAC claimed +31.76% but is live-confirmed down -9.42%; SAROS has no usable Kraken market despite being cited as a top gainer
+- RAIN's $796M cliff unlock lands tomorrow (Jul 11) — outside today's pre-positioning window but the largest dated event of the week, worth flagging for tomorrow's scan
+- PUMP's Jul 12 cliff unlock (~$135.5M) remains the secondary dated watch item
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- ARB re-entry risk: continues to fade off its post-stop-out high on every check today; would need a genuinely fresh breakout + new catalyst to justify a third look
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +1.00%). No candidate today passed the full live-verified momentum + spread + catalyst + peak-freshness bar. ENA and ZEC were the closest movers on a vs-open basis but both fail the 1h/4h momentum requirement (grinding/range-bound, not surging); ARB continues its multi-session fade. Will continue scanning intraday for a fresh, live-confirmed setup. RAIN's $796M unlock tomorrow (Jul 11) is the primary near-term watch item.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
