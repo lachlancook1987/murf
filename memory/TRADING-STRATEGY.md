@@ -51,6 +51,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - Skip any setup where the projected gain to T1 is less than 2× the 2.5% stop risk (R:R < 1.2:1)
 - **Momentum peak check (added 2026-06-19):** Before entry, confirm the 24h high was set within the last **60 minutes**. If the 24h high is >60 min old and current price is declining from it, the repricing event has already occurred — skip unless (a) there is a fresh 1h candle breakout above the prior 24h high, or (b) a new distinct catalyst event <2h old. Prevents "buy the rumour, sell the news" entries where momentum is fading rather than accelerating.
 - **Scheduled-catalyst pre-positioning caution (added 2026-07-03):** For catalysts with a known, publicly-scheduled activation time (hard forks, mainnet upgrades, token unlocks with a fixed date/time), do not enter more than **~2 hours ahead** of the event on anticipatory momentum alone. Pre-event momentum on dated catalysts is frequently front-run and sold into before the event fires. Prefer entering on confirmed post-event price reaction, or require a fresh breakout above the pre-event high with volume confirmation if entering ahead of the scheduled time. Does not apply to unscheduled/reactive catalysts (news, listings, protocol votes with no fixed announcement time), which remain governed by the momentum peak check above.
+- **Extreme Fear + unconfirmed catalyst R:R floor (added 2026-07-10):** If a catalyst's freshness cannot be confirmed as <6h old AND the Crypto Fear & Greed Index reads "Extreme Fear" (≤25), require R:R **≥ 1.5:1** at T1 instead of the standard 1.2:1 minimum. A bare-minimum-R:R entry with unverified catalyst timing in an Extreme Fear backdrop (ARB, 2026-07-09) reversed within an hour. Does not apply when either condition alone is true — both must be present.
 
 ---
 
@@ -114,7 +115,7 @@ Rationale: three consecutive NEAR entries (Jun 6, 7, 8) and five consecutive KAS
 
 ## Risk Awareness (not rules — just notes)
 
-- Kraken taker fee: ~0.26% per trade (round trip ~0.52%). On a 3% target that's ~17% of profit — factor in
+- Kraken taker fee: assumed ~0.26% per trade historically, but this account's actual measured taker fee (confirmed live at the ARB entry, 2026-07-09) is **~0.4% per trade (round trip ~0.8%)** — use 0.4% for R:R and fee-estimate purposes going forward. On a 3% target, 0.8% round-trip is ~27% of profit — factor in
 - At 2.5% trailing stop: net loss per bad trade ≈ −2.5% − 0.26% fee ≈ −2.76%. Need >1 winner per loser
 - Thin alt liquidity: wide spreads and slippage can eat into the 2.5% stop budget — tight spread check is critical
 - 2.5% trail on fast-moving alts may trigger on normal noise — pick assets with steady momentum, not spike-and-dump
@@ -186,4 +187,4 @@ For each candidate identified in research:
 
 ---
 
-*Last updated: 2026-07-03 (added scheduled-catalyst pre-positioning caution: don't enter >2h ahead of a known-time event like a hard fork or unlock on anticipation alone)*
+*Last updated: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
