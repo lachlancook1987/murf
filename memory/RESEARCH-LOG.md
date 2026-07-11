@@ -26768,3 +26768,64 @@ No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-11 — Pre-Session Research (08:05 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled order only (`b7f70b08`, filled 2026-05-22), nothing open |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Unchanged since the last logged scan (2026-07-10 20:05 UTC).
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $63,800–$64,400 across sources, +0.5% to +2.9% (wide disagreement) | $64,116.20, open $64,126.50 → **-0.02%**, -0.21% off 24h high $64,250.00 | Essentially flat — Perplexity's positive-change claims not corroborated live |
+| ETH | ~$1,795, +1.2% | $1,798.34, open $1,795.63 → **+0.15%**, -0.19% off 24h high $1,801.77 | Roughly flat, consistent direction but overstated magnitude |
+| Fear & Greed | 23 (Extreme Fear), most sources 22-26 | — | Consistent with every session this week — sentiment stuck in Extreme Fear |
+| BTC funding rate | ~+0.01% (8h), Kraken +0.0148% | — | Normal range, no crowded skew |
+| Catalysts | Bearish: ETF outflows (~$7B May-Jun), Citi cut BTC 12mo target to $82k, altcoin mkt cap -22.84% H1 2026. Bullish: "Crypto Week" — Genius Act (stablecoins) and Clarity Act (digital assets) expected to advance in US House next week | — | Both forward-looking/multi-day, no fresh <6h single-asset trigger; net macro tone bearish-to-mixed |
+| Unlocks | **RAIN $812M cliff unlock today (Jul 11)**, 4.51% of supply; PUMP $117M Jul 12; APT $7M Jul 12 | RAIN quote broken — `c` (last trade) and volume both `0.0000000000`, bid/ask spread ~24% ($0.0119/$0.0151) | RAIN unlock is real and dated today, but the pair is effectively untradeable on Kraken right now (no recent trades, blown-out spread) — also, per strategy, unlocks are dilutive/bearish watch items, not entry catalysts |
+| Top 24h gainers | Talus/US +100.72%, Tagger +70.89%, Victoria VR +42.34%, MemeFi +35.84%, SdexToken +35.24%, SAROS +33.35%, Yooldo/ESPORTS +32.03%, TAC +31.76%, Vine +28.73%, REKT +27.54% (list 1); separately TIBBIR +13.12%, VELVET +10.00%, ALLO +5.34%, EGLD +5.34%, DEXE +4.91% (list 2) | TAC live: $0.003434 vs open $0.003923 = **-12.47%** (down sharply, not up); VINE live: $0.00977 vs open $0.01040 = **-6.06%** (down, not up); EGLD live: $2.82 vs open $2.85 = **-1.05%** (down, not up); DEXE not a valid Kraken pair | **Hallucinated / contradicted** — same pattern flagged every session this week; TAC, VINE, EGLD all move opposite the claimed direction on live Kraken data |
+| 1h/4h momentum, volume surge | No genuine 1h/4h data returned (Perplexity repeatedly states it lacks real-time granular data and falls back to stale/2025 data or generic 24h lists) | — | No usable signal from these two queries this session |
+
+**Crash gate:** BTC -0.02% today — flat, nowhere near -20% → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes)
+
+| Symbol | Move vs open | Off 24h high | Spread | Volume | Verdict |
+|---|---|---|---|---|---|
+| **TAC/USD** | **-12.47%** (claimed +31.76% to +64.76%) | — | tight | high | **SKIP** — hallucinated; actually down sharply |
+| **OMNI/USD** | last $0.381 vs open $0.85 = -55% | — | **~76%** (bid $0.384 / ask $0.890) | ~20 units (~$8) 24h | **SKIP** — same broken/untradeable dust market flagged every prior session |
+| **MAT/USD** | last $0.0507, only 1 trade in 24h | — | **~34%** (bid $0.0589 / ask $0.0829) | ~$5 notional | **SKIP** — no real market, effectively 1 print |
+| **VINE/USD** | **-6.06%** (claimed +28.73%) | -7.0% off high | 0.7% | real | **SKIP** — hallucinated direction, also fading off high |
+| **EGLD/USD** | **-1.05%** (claimed +5.34%) | -1.4% off high | 0.35% | modest | **SKIP** — hallucinated direction |
+| **ARB/USD** | -2.05% ($0.0909 vs open $0.0928) | -4.9% off high $0.0956 | 0.11% | real | **SKIP** — down today, continues the multi-session fade pattern from its Jul 9 stop-out, still no fresh catalyst |
+| **ZEC/USD** | +0.03% (flat) | -3.6% off high | tight | real | **SKIP** — no momentum |
+| **ENA/USD** | +0.49% (flat) | -1.6% off high | tight | real | **SKIP** — no momentum |
+| **SOL/USD** | -0.17% (flat) | -2.1% off high | tight | real | **SKIP** — no momentum |
+| **RAIN/USD** | quote broken, no recent trades | — | ~24% | ~0 | **SKIP** — untradeable despite today's $812M unlock; spread and zero volume rule it out regardless |
+| BTC/USD, ETH/USD | -0.02%, +0.15% | both within 0.2% of 24h high but flat, not surging | — | — | **SKIP** — no single-asset momentum, broad market dead flat |
+
+No candidate clears the entry bar (no 1h>3%/4h>5% momentum, no fresh <6h catalyst, no spread-and-volume-confirmed setup). Every "gainer" from Perplexity that had a real, liquid Kraken market (TAC, VINE, EGLD) is live-confirmed moving in the **opposite direction** of the claim; the rest (OMNI, MAT) remain broken/illiquid dust markets already flagged in prior sessions. RAIN's unlock is real but the pair has no tradeable market right now.
+
+### STEP 4 — Risk Factors
+
+- Market is dead flat today (BTC -0.02%, ETH +0.15%) — no volatility to trade, day-trading setups require actual movement
+- Fear & Greed at 23 (Extreme Fear), 6th+ consecutive session at this level — sentiment remains poor
+- Macro backdrop mixed-to-bearish: ETF outflows, Citi's BTC/ETH price target cuts, altcoin market cap down ~23% H1 2026, offset only by forward-looking (not-yet-passed) US crypto legislation next week
+- Perplexity hallucination rate remains severe and consistent with every session this week — three separate "gainers" (TAC, VINE, EGLD) are all live-confirmed **down**, not up as claimed; treat all Perplexity gainer/momentum lists as noise until independently verified against live Kraken OHLC
+- RAIN's $812M cliff unlock (4.51% of supply) lands today — large dilution event, but the pair is untradeable on Kraken right now (no volume, ~24% spread); watch for a tradeable market to develop later in the session, though unlocks are dilutive/bearish signals, not bullish entry catalysts
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.02%, effectively flat). No candidate today passed the live-verified momentum + catalyst + spread bar — the market itself is flat with no volatility to trade, and every liquid "gainer" surfaced by Perplexity is live-confirmed moving in the opposite direction. Will continue scanning intraday for a fresh, live-confirmed setup. RAIN's unlock today is a watch item only, not tradeable currently.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 9+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
