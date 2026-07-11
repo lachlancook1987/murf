@@ -7422,3 +7422,29 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 9+ days); needs resubscription at callmebot.com/61477788635.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-11 — Midday Scan #2 (22:03 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $115.5598 unchanged, all other balances dust. Alpaca `orders` reconfirmed only the historical filled order (`b7f70b08`, 2026-05-22) — zero Alpaca exposure. No change since the 21:01 UTC session-open check.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+
+Live Kraken quotes vs today's open: BTC +0.30% (-0.20% off 24h high) — crash gate not triggered. Broad market flat-to-mildly-up: ETH +1.46%, SOL +0.06%, SUI +0.81%, INJ +0.70%, AVAX -0.36%, LINK +0.97%, DOGE +1.39%, XRP +0.87%, NEAR +0.91% — none clear the 1h>3%/4h>5% momentum bar.
+
+**ZEC/USD** $525.11 vs open $498.38 = +5.36%, but **-1.67% off the 21:00 UTC candle high** ($534.01) — pulled live 1h OHLC: the 21:00 candle broke to a fresh high on strong volume (1684, vs typical 200-600/hr), but the in-progress 22:00 candle has faded to $525 on collapsing volume (28 so far). Trailing 1h flat, trailing 4h ~+1.6% — both well under threshold. Same asset rejected at 21:01 UTC on momentum-threshold grounds; now further faded from its peak. **SKIP**.
+
+**ARB/USD** $0.0984 vs open $0.0928 = +6.03%, **-1.60% off the 21:00 UTC high** ($0.1000). 1h OHLC shows volume collapsing hard (22:00 partial: 15,353 vs 21:00's 430,236) and price flat/rolling over. Trailing 1h flat, trailing 4h ~+1.8% — under threshold. Fourth rejection of this exact asset today (08:05, 15:03, 20:04, now 22:03 UTC) — no new catalyst at any point. **SKIP**.
+
+Fear & Greed reconfirmed at **23 (Extreme Fear)**, unchanged all day. Neither ZEC nor ARB has a confirmed fresh (<6h) catalyst, so even setting aside the momentum-threshold miss, the Extreme-Fear 1.5:1 R:R floor would block both — the standard 3%/2.5% structure only reaches 1.2:1. No other asset shows any momentum. Crash gate: BTC +0.30% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ZEC and ARB both continue fading from highs set ~1h ago on declining volume rather than breaking out further; no fresh catalyst on either; Extreme Fear persists. Consistent with every prior check today.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
