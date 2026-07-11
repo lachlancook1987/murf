@@ -26966,3 +26966,29 @@ No candidate clears the entry bar. The only two assets with any real momentum to
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 9+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-11 — Session-Open Execution Check #3 (21:01 UTC, monitoring only, no trades)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### STEP 1-2 — State Check
+
+Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD $115.5598 unchanged, all other balances dust. Alpaca: `positions: []`, orders history-only (last fill 2026-05-22), zero exposure. No change since the 20:04 UTC pre-session research.
+
+### STEP 3 — Entry Scan (live Kraken quotes vs today's open, ~1h after last check)
+
+BTC $64,350.10 vs open $64,126.50 = **+0.35%** — crash gate not triggered. Broad market flat-to-mildly-up: ETH +1.65%, SOL +0.06%, SUI +1.25%, INJ +0.60%, DOGE +1.48%, XRP +1.02%, LINK +1.36%, AVAX -0.03%, NEAR +0.66% — none clear the 1h>3%/4h>5% momentum bar.
+
+**ZEC/USD** is the standout: $523.65 vs open $498.38 = **+5.07%**, only **-0.12% off a freshly-set 24h high** ($524.26, made in the in-progress 20:00-21:00 UTC hour) — momentum-peak check passes, this is a genuine new high, not a fade. Live 1h OHLC: 18:00 candle vol 1811 (vs typical 78-243/hr) pushed price to $516.95; 20:00 candle vol 1136 broke to a new high $524.26. Real volume-confirmed strength. However, precise trailing-window math: 1h change (20:00 open $514.63 → now $523.65) = **+1.75%**, trailing 4h (17:00 open $504.57 → now) = **+3.78%** — both **below** the strategy's strict 1h>3% / 4h>5% thresholds despite the strong headline daily gain and fresh high.
+
+**Catalyst check (Perplexity, ZEC-specific):** cites the **Ironwood upgrade** and a Cypherpunk-backed **$100M ZEC treasury** announcement as drivers of a claimed 7-10% move — but Perplexity's own price figure (~$505.64) is ~3.5% off live Kraken ($523.65), consistent with the hallucination/staleness pattern flagged every session this week. More importantly, the Ironwood upgrade was already identified in the 20:04 UTC pre-session research as a **scheduled event in late July** (weeks out) — not a fresh <6h trigger. Per the scheduled-catalyst pre-positioning caution rule, anticipatory momentum on a dated catalyst >2h out requires either a confirmed post-event reaction (N/A, event hasn't happened) or a fresh breakout above the pre-event high with volume confirmation (satisfied — new 24h high with 2x+ volume). This clears the momentum-peak/breakout exception but does **not** independently satisfy the primary 1h>3%/4h>5% entry threshold, which is the harder gate here.
+
+**ARB/USD**: $0.0982 vs open $0.0928 = +5.82%, -1.50% off high $0.0997 (a marginally higher high than the 16:00 spike). Hourly OHLC shows the 20:00 candle volume (252k) is a moderate bump but well below the 16:00 spike (784k) and price is chopping sideways ($0.0967-$0.0989) rather than breaking out. Trailing 1h and 4h both under 1%. **SKIP** — same asset rejected three times already today (15:03 UTC, 20:04 UTC) on fade/no-catalyst grounds; nothing has changed.
+
+**Rule check:** Fear & Greed unchanged at 23 (Extreme Fear) per 20:04 UTC research, no reason to expect a shift within the hour. Even setting aside the primary momentum-threshold miss, ZEC's catalyst is a scheduled/stale event and would trigger the Extreme-Fear 1.5:1 R:R floor, which the standard 3%/2.5% structure cannot reach.
+
+### Decision: **HOLD — no new entries.** ZEC shows a genuine volume-confirmed fresh high but fails the strict 1h>3%/4h>5% momentum threshold on precise OHLC math, and its catalyst (Ironwood upgrade) is scheduled weeks out, not fresh. ARB remains rejected on repeat grounds. No other asset shows any momentum. Crash gate not triggered (BTC +0.35%).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
