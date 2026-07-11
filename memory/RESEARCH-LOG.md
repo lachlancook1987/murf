@@ -26855,3 +26855,33 @@ No candidate clears the 1h>3%/4h>5% momentum bar or has a fresh <6h catalyst; sp
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-11 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $115.5598 unchanged, all other balances dust (AAVE, ARB, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. No change since the 08:05 UTC pre-session research or the session-open check.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+
+Live Kraken quotes vs today's open: BTC +0.12% (-0.30% off 24h high); ETH +0.34% (-0.26% off high); SOL +0.15%; ARB +1.51% (-0.11% off high, closest to its 24h high); SUI +0.72%; INJ +0.62%; NEAR +0.63%; AVAX -0.27%; LINK +0.75%; DOGE +1.04%; XRP +0.47%. Broad market flat-to-slightly-up, no single asset surging.
+
+Perplexity flagged AAVE +6.65%/24h as the standout — pulled live 1h OHLC candles directly from Kraken's public API to verify: AAVE rose steadily from $96.45 (09:00 UTC) to $98.79 (14:00 UTC, in-progress candle), **+2.18% over the trailing 4h**, not the >5% threshold required; 1h change only +0.31%. This is a steady grind, not a surge — fails the momentum bar despite looking strong on a stale 24h-change basis. Spread tight (0.05%) but irrelevant without qualifying momentum.
+
+ARB showed a volume spike at 13:00 UTC (513k vs a typical 20–160k/hr) with price moving $0.0916→$0.0940 (+2.6% in that hour, just short of the 3% 1h bar), then faded flat into 14:00. Same asset stopped out Jul 9 with no fresh catalyst confirmed since (per Jul 10 and Jul 11 pre-session research) — skip, doesn't clear the bar and carries a stale/repeat-thesis flag.
+
+Perplexity "altcoin momentum >3% in 4h" query returned no qualifying candidates on Kraken with usable 4h data (Matchain, Beamable, AAVE only had 24h figures, all below or unverifiable against the 4h/1h requirement). Catalyst query repeated the same bearish macro backdrop as pre-session (ETF outflows, Citi price target cuts, altcoin cap contraction) with no fresh <6h single-asset trigger — Clarity Act remains forward-looking/multi-day. Fear & Greed reconfirmed at **23 (Extreme Fear)**, unchanged from pre-session.
+
+No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum, no fresh catalyst). Crash gate: BTC +0.12% — not triggered.
+
+### Decision: **HOLD — monitoring only, no action taken.** Market flat-to-slightly-up across the board; AAVE and ARB were the closest candidates on stale 24h figures but both fail on verified 1h/4h OHLC data; Extreme Fear (23) persists; no qualifying setup.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
