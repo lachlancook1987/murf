@@ -26885,3 +26885,27 @@ No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum, 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-11 — Session-Open Execution Check #2 (15:03 UTC, monitoring only, no trades)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### STEP 1-2 — State Check
+
+Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD $115.5598 unchanged, all other balances dust (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066). Alpaca: `positions: []`, orders history-only (last fill 2026-05-22), zero exposure. No change since the midday scan.
+
+### STEP 3 — Entry Scan (live Kraken quotes vs today's open)
+
+BTC $64,318.10 vs open $64,126.50 = **+0.30%** (-0.19% off 24h high $64,442.50) — crash gate not triggered. Broad market flat-to-up: ETH +0.90%, SOL +0.50%, SUI +0.85%, INJ +0.92%, ZEC +1.25%, DOGE +1.48%, LINK +1.14%, AVAX +0.07%, NEAR +1.16%, XRP +0.91% — none clear the 1h>3%/4h>5% momentum bar.
+
+**ARB/USD** is the one standout: $0.0970 vs open $0.0928 = **+4.53%**, only **-0.92% off its 24h high** ($0.0979, set in the in-progress 15:00 candle) — momentum-peak check passes (high is fresh, not faded). Pulled live 1h OHLC directly from Kraken: 13:00 candle $0.0915→$0.0940 (+2.7%, vol 513k), 14:00 candle $0.0942→$0.0979 high, close $0.0969 (**+3.9% in that hour**, vol 866k vs typical 20-160k/hr — genuine 4-5x volume surge). This clears the 1h>3%-with-volume momentum bar on live-verified data, unlike prior sessions' Perplexity noise.
+
+**Catalyst check (Perplexity, ARB-specific):** explicitly states **"no specific news catalyst reported for Arbitrum in the last few hours"** — attributes the move to technical follow-through/profit-taking after the Jul 9 Robinhood Chain rally, not a fresh trigger. Perplexity also claimed ARB is **down 12.23% to ~$0.075** today, directly contradicting live Kraken (+4.53% to $0.097) — same hallucination pattern flagged every session this week, but the "no fresh catalyst" finding is corroborated by its own admission, not just a directional claim.
+
+**Rule check:** Fear & Greed remains **23 (Extreme Fear, ≤25)**. No confirmed <6h news catalyst exists (Perplexity confirms none, only stale Jul 9-10 developments already priced in). Per the 2026-07-10 Extreme-Fear R:R floor rule, this combination requires **R:R ≥1.5:1 at T1** — the standard 3%-target/2.5%-stop structure only yields 1.2:1, structurally unable to meet 1.5:1. **Entry fails this gate.** This is also the same asset that reversed and stopped out within ~1 hour on Jul 9 under near-identical conditions (momentum-only, no confirmed catalyst, Extreme Fear) — the exact scenario the rule was written to prevent. Same-Thesis Entry Cap does not independently block (only 1 prior stop-out in the 7-day window, not 2), but the Extreme-Fear floor blocks regardless.
+
+### Decision: **HOLD — no new entries.** ARB shows genuine volume-confirmed 1h momentum (+3.9%, 4-5x volume) but has no confirmed fresh catalyst, and Extreme Fear (23) requires 1.5:1 R:R that the standard trade structure cannot reach — skip per the rule added after this exact asset's Jul 9 failure. No other candidate clears the momentum bar. Crash gate not triggered (BTC +0.30%).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
