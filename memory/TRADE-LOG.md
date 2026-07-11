@@ -7409,4 +7409,16 @@ Crash gate: BTC +1.27% — not triggered (market green).
 
 ### Decision: **HOLD — monitoring only, no action taken.** Extreme Fear (23) plus no confirmed <6h catalyst on any live-momentum candidate (SUI, INJ) means neither clears the stricter 1.5:1 R:R floor added today; ARB re-entry rejected on momentum-peak fade + no fresh catalyst; all other Perplexity-flagged "movers" (OMNI/TAC/MAT/DOLO/ODOS) are illiquid, broken markets, or directionally contradicted by live Kraken data.
 
+---
+
+## 2026-07-11 — EOD Snapshot (Day 52, Saturday)
+
+### Jul 11 — EOD Snapshot (Day 52, Saturday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.10%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity since the Jul 10 EOD snapshot — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged, zero open positions, `orders: {}` (only crypto dust <$0.01 total plus $0.1066 ZAUD remain, all unchanged from yesterday). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC essentially flat, $64,264.30 (Jul 10 EOD) → $64,197.80 today (−0.10%), so the bot's flat day marginally outperformed BTC (+0.10% vs BTC). Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 9+ days); needs resubscription at callmebot.com/61477788635.
+
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
