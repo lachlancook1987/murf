@@ -7460,3 +7460,31 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 10+ days); needs resubscription at callmebot.com/61477788635.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-12 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $63,982.40 vs open $63,779.60 = **+0.32%** (crash gate not triggered — nowhere near -20%). Majors all flat-to-mild: ETH +1.03%, SOL +0.47%, XRP +0.19%, DOGE +0.04%, AVAX -1.54%, LINK +1.53%, ARB +1.37%, SUI +1.81%, INJ -1.34%, NEAR +1.12% — none clear the 1h>3%/4h>5% momentum bar, all well off their 24h highs.
+
+Perplexity again produced the same hallucination pattern flagged every session — cross-checked and rejected against live Kraken data:
+- "1h surge" query returned no real 1h data, just repeated the stale Coinbase "Anoma/Aster/ICP" claim with no percentages or date confirmation — discounted as before.
+- "Altcoin momentum >3% in 4h" query claimed RENDER +3.15%, KAS +2.73%, LIT +97.11%, PORTAL +34.67%, VTHO +34.59%, YALA +27.74% (24h, not even 4h as asked). Live Kraken check: RENDER actually +0.52% (o $1.543→c $1.551, not +3.15%); KAS actually **-2.0%** (o $0.02929→c $0.02871, wrong direction vs claimed +2.73%); PORTAL flat at 0.00% (o=c=$0.01172, not +34.67%); LIT genuinely up +4.4% (o $0.1025→c $0.1070, real but far short of claimed +97%) yet spread ~1.1% (over the 1% cap) and 24h volume only ~$4.2k (110 trades) — illiquid, no confirmed catalyst, skip; VTHO spread ~4.2% and YALA spread ~20.5% — both untradeable, consistent with prior sessions' dust-asset findings.
+- Catalyst query surfaced only stale/already-passed items: "CLARITY Act July 4 deadline" (already passed with no resolution per today's date), "NEAR resharding scheduled June 2026" (already passed), DTCC+Stellar integration (dated, priced in over past week) — nothing fresh and <6h old.
+
+Fear & Greed Index: **26 (Fear)**, up slightly from Extreme Fear (23) yesterday — no longer in the stricter 1.5:1 R:R zone, but moot since no candidate has both qualifying momentum and a confirmed fresh catalyst.
+
+No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum on any liquid, spread-compliant asset; LIT is the only real mover but fails spread/liquidity/catalyst checks). Crash gate: BTC +0.32% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Market broadly flat; Perplexity data quality remains unreliable (wrong direction on KAS, ~0% actual move claimed as +34.67% on PORTAL) and was cross-checked against live Kraken prices throughout.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
