@@ -27108,3 +27108,59 @@ No candidate clears the 1h>3%/4h>5% momentum bar with volume confirmation on liv
 WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 10+ days); needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-12 — Pre-Session Research #3 (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22), nothing open |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Consensus $64,100-64,350 (+0.1% to +0.6%); Coinbase's $91,151 figure flagged as a data error again | $64,166.60, open $63,779.60 → **+0.61%**, -0.36% off 24h high $64,396.10 | Consistent, crash gate nowhere close |
+| ETH | ~$1,800-1,820, +0.26% to +1.65% | $1,819.01, open $1,786.67 → **+1.81%**, -0.33% off high $1,827.78 | Directionally right, best reading of the day so far but still under 3% threshold |
+| Fear & Greed | 26 (Fear, Alternative.me/FearGreedMeter consensus); Binance Square 31, CFGI 54 (Neutral), @BitcoinFear 20 (Extreme Fear) — wide source disagreement | — | Treat as 26 (Fear) — Extreme Fear R:R floor (≤25) not clearly triggered, moot since no candidate clears primary bar |
+| BTC funding rate | ~+0.008-0.01% (8h) most venues; Kraken +0.0148%/+0.0177% predicted | — | Normal range, no crowded skew |
+| Catalysts | 4-year US CBDC ban enacted (bullish stablecoins/reduces uncertainty); Circle OCC national trust bank approval; proposed bank-grade KYC for stablecoin issuers; ETF outflows ~$7B May-Jun, Citi cut BTC target to $82K; Solana Jito JTX launch + Alpenglow upgrade testing; Zcash Ironwood upgrade (still weeks out, same dated-catalyst flag as every session this week) | — | No fresh <6h single-asset trigger; regulatory items are market-wide sentiment, not single-asset day-trade catalysts |
+| Unlocks | PUMP $117-135M cliff unlock **today** (8.94% supply, dilutive); RAIN $796-812M already passed Jul 11; HYPE $30.9-630M passed Jul 6; APT $7M today; CC/WLD ongoing daily linear | — | No long setup implied; PUMP dilution risk only |
+| Top 24h gainers | USDBC +75%, SXT +42%, CASHCAT +38%, T +30%, QUAI +28%, ASTEROID +24%, SUNDOG +23%, CLO +22%, OXT +22%, Hajimi +21% — **identical list to every session this week, stale/cached** | — | Discarded — not liquid Kraken-tradeable names |
+| Altcoin momentum >3%/4h | OMNI +174%, MAT +66%, DOLO +53%, LIT +97%, SIDEKICK +79%, PORTAL +35%, VTHO +35%, YALA +28%, KEEP +58%, REX/INIT 30-50% — **same core list flagged broken/illiquid/hallucinated every session this week** (OMNI spread 92.97%, SIDEKICK spread 10.21%, LIT spread ~1.1% w/ ~$4.2k volume, PORTAL flat 0% live, VTHO spread ~4.2%, YALA spread ~20.5%) | — | Discarded, no re-verification needed — established pattern |
+| Volume surge | No live 4h data; fallback 24h list: DeXe +23%, Theta +11.34%, Zcash +7.03%, ETH +3.5% (ETF inflows $729M) | DeXe, Theta: `kraken.sh assets` → **"Unknown asset pair"**, not tradeable on Kraken at all. ETH +1.81% live (see above) | DeXe/Theta discarded as untradeable; ETH's move real but sub-threshold |
+| Intraday setups | Generic weekend-volatility framework (HYPE, SOL, DOGE, BTC/ETH), explicitly noted Sunday lacks confirmed dated setups | — | No actionable signal |
+
+**Crash gate:** BTC +0.61% — green → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
+
+| Symbol | Move vs open | Off 24h high | Detail | Verdict |
+|---|---|---|---|---|
+| **ZEC/USD** | +5.65% ($537.23 vs open $508.51) | -2.08% (high $548.65) | Best headline number of the week, but hourly OHLC shows the entire move happened in the **16:00 UTC candle** (open $531.24→high $548.65, vol 3477 vs typical 300-600/hr) — over 4h ago now. Since then: 17:00 close $544.31, 18:00 $543.13, 19:00 $538.96, 20:00 partial $536.83 — a steady fade on thinning volume (20:00 partial vol only 34). Trailing 1h (vs ~19:00 $543.42) ≈ **-1.14%** (declining). Trailing 4h (vs 16:00 open $531.24) ≈ **+1.13%** — both well under the 1h>3%/4h>5% bar. 24h high is >4h old and price is declining from it → **fails momentum-peak check**; no fresh breakout above the high, no new catalyst (Ironwood still weeks out, dated-catalyst caution applies) | **SKIP** — real but fully faded spike, not a fresh setup |
+| **ARB/USD** | **-1.06%** ($0.0937 vs open $0.0947) | -7.41% (high $0.1012) | Actually red today, not a candidate at all — worst reading yet for this repeat-rejected asset | **SKIP** |
+| **ETH/USD** | +1.81% | -0.33% off high | Real strength (ETF inflow narrative) but under 3% threshold | **SKIP** — no momentum breach |
+| **BTC/USD** | +0.61% | -0.36% off high | Flat/mild green | **SKIP** — no signal, crash gate not triggered |
+| **DeXe, Theta** | — | — | Not listed on Kraken (`Unknown asset pair`) | **SKIP** — untradeable venue |
+| **OMNI, SIDEKICK, LIT, PORTAL, VTHO, YALA, MAT, DOLO, KEEP** | — | — | Confirmed broken/illiquid/hallucinated in prior sessions this week, same list recurring | **SKIP** — untradeable |
+
+No candidate clears the 1h>3%/4h>5% momentum bar with volume confirmation, and no fresh (<6h) single-asset catalyst was identified on any live-moving asset. ZEC is the closest but is a decaying spike (peak >4h old), not an active breakout.
+
+### STEP 4 — Risk Factors
+
+- Fear & Greed at 26 (Fear) — sits just above the Extreme Fear R:R floor line (≤25); source disagreement (20-54 range) means this is a soft signal, not moot but not currently binding since no candidate is in play anyway
+- Macro backdrop unchanged: ETF outflows narrative ongoing (Citi's $82K BTC target cut still standing) despite today's ETH ETF inflow counter-narrative; CBDC ban / Circle trust bank approval are sentiment-positive but not single-asset day-trade triggers
+- PUMP's $117-135M cliff unlock today (8.94% of supply) is a dilution risk for that token specifically, not a long setup
+- Perplexity's altcoin "momentum"/"gainer" lists remain confirmed broken/illiquid/hallucinated for the 5th+ consecutive session this week — continue treating as unreliable without live Kraken cross-check
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.61%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar; ZEC posted the week's best headline gain (+5.65%) but the OHLC shows it's a fully decayed spike from 4+ hours ago (peak-check fails), not an active breakout, and its Ironwood catalyst remains weeks out. ARB, DeXe, Theta and the recurring hallucinated altcoin list are all discarded. Will continue scanning intraday for a fresh, live-confirmed setup.
+
+
+WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 10+ days); needs resubscription at callmebot.com/61477788635.
+
+---
