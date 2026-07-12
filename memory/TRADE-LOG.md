@@ -7488,3 +7488,28 @@ No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum o
 ### Decision: **HOLD — no new entries, no open positions to manage.** Market broadly flat; Perplexity data quality remains unreliable (wrong direction on KAS, ~0% actual move claimed as +34.67% on PORTAL) and was cross-checked against live Kraken prices throughout.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-12 — Midday Scan #2 (22:03 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC -0.13% (-1.06% off 24h high) — crash gate not triggered (nowhere near -20%). Majors mixed but nothing clears the momentum bar: ETH +0.87%, LINK +1.11%, SUI +1.15%, NEAR +1.45% (all under 3%/1h); SOL -0.03%, XRP -0.63%, DOGE -0.52%, AVAX -2.37%, INJ -1.68%, ARB -2.22% (all red).
+
+**ZEC/USD** $537.13 vs open $508.51 = **+5.63%**, the only asset clearing the headline 3% mark. Pulled live hourly OHLC: the spike peaked in the **16:00 UTC candle** (high $548.20) — over 6h ago now. Since then a steady fade: 17:00 close $544.31 → 18:00 $543.13 → 19:00 $538.96 → 20:00 $540.60 → 21:00 $538.55 → 22:00 (partial) $537.13, on thin/declining volume (22:00 partial vol only 0.47 vs 300-1300/hr typical). Trailing 1h ≈ **-0.26%**, trailing 4h ≈ **-1.1%** (vs 18:00 close) — both well under threshold, declining not accelerating. 24h high is >6h old and price is declining from it → **fails momentum-peak check**; no fresh breakout, no new catalyst (Ironwood upgrade still weeks out, same dated-catalyst flag every session this week). Same asset rejected on identical grounds at the last two research checks today. **SKIP**.
+
+Perplexity catalyst query returned only previously-discarded/stale items: US CBDC ban (already priced in, market-wide sentiment not single-asset trigger), Circle OCC trust bank approval (market-wide), ETF outflows/Citi $82K target cut (bearish, ongoing), DTCC+Stellar/XLM "72% surge" (already confirmed live-contradicted in Pre-Session Research #2 — XLM flat/red today), CLARITY Act deadline passed unresolved. Nothing fresh and asset-specific <6h old.
+
+Fear & Greed Index: **26 (Fear)**, unchanged from the last two checks today — not Extreme Fear, but moot since no candidate has qualifying momentum regardless of R:R floor. Crash gate: BTC -0.13% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ZEC continues fading from its 16:00 UTC peak on thinning volume (6th+ consecutive rejection of this exact pattern today/this week); all other assets are either under threshold or red; no fresh catalyst on any live-moving asset.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
