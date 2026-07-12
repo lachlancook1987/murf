@@ -7447,4 +7447,16 @@ Fear & Greed reconfirmed at **23 (Extreme Fear)**, unchanged all day. Neither ZE
 
 ### Decision: **HOLD — no new entries, no open positions to manage.** ZEC and ARB both continue fading from highs set ~1h ago on declining volume rather than breaking out further; no fresh catalyst on either; Extreme Fear persists. Consistent with every prior check today.
 
+---
+
+## 2026-07-12 — EOD Snapshot (Day 53, Sunday)
+
+### Jul 12 — EOD Snapshot (Day 53, Sunday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.36%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — no research or scan sessions ran (RESEARCH-LOG has no 2026-07-12 entries), and `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since the Jul 11 EOD snapshot, zero open positions, `orders: {}` (dust <$0.01 across several assets plus $0.1066 ZAUD unchanged). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC dipped slightly, $64,197.80 (Jul 11 EOD) → $63,964.40 today (−0.36%), so the bot's flat day outperformed BTC (+0.36% vs BTC). Tomorrow: pre-session research resumes catalyst-driven momentum scans with full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 10+ days); needs resubscription at callmebot.com/61477788635.
+
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
