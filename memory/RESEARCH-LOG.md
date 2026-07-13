@@ -27225,3 +27225,63 @@ Broadly red session — every liquid asset checked is flat-to-down except AVAX (
 ### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -1.24%, nowhere near -20%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar — the entire tracked universe is flat-to-red except AVAX/NEAR which are both minor and catalyst-free. Perplexity's headline claims (BTC/ETH green, ZEC surging, SUI at $1.15) were all contradicted by live Kraken data. Will continue scanning intraday for a fresh, live-confirmed setup.
 
 WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 11+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-13 — Pre-Session Research #2 (20:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22); stop `a2b44cf9` still `canceled` | 
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Consensus scattered $61,100–$64,200 depending on source (-1.8% to +0.6%) | $62,205.90, open $63,737.80 → **-2.40%**, -3.36% off 24h high $64,364.60 | Session has deteriorated further intraday; wide source disagreement noted, live Kraken price taken as ground truth |
+| ETH | ~$1,816–$1,820 (-1.0% to +1.5%) | $1,773.11, open $1,805.57 → **-1.80%**, -3.90% off 24h high $1,845.00 | Contradicted — live ETH meaningfully lower and red |
+| Fear & Greed | 26–31 (Fear) consensus (Alternative.me 26, Binance Square 29, CoinStats 31); one outlier CFGI 47-54 (Neutral) | — | Fear, not Extreme Fear — ≤25 R:R floor not triggered |
+| BTC funding rate | ~+0.01% (8h) most venues; Kraken +0.0148%/+0.0177% predicted | — | Normal range, no crowded skew |
+| Catalysts | DTCC tokenization soft-launch on Canton Network (RWA-bullish, not a Kraken-tradeable single-asset lever); July 14 US CPI release (macro, forward-looking); ETF outflows ongoing; CLARITY Act Senate odds 48%; GENIUS Act stablecoin KYC proposal | — | All macro/sentiment-level or non-Kraken-tradeable; no fresh <6h single-asset trigger |
+| Unlocks | ARB ~0.93% (~$8.87M) landed 6:30 AM UTC today; TON ~0.72% at 10 PM UTC tonight; DBR ~7.5% (~$10.4M) at 4 AM UTC today; SEI cliff tomorrow (~$6M) | — | No long setup implied; dilution risk only, already largely priced in by this hour |
+| Top 24h gainers | CZ +193.6%, RED +109.2%, ZA2Z +80.5%, DODO +52.2%, LAT +52.4%, BLAST +33.6%, ANSEM +32.2%, DEXE +28.1%, BILL +26.8%, BBT +24.2% | Verified below | Mostly untradeable/illiquid or contradicted — see Step 3 |
+| 1h surge | No real 1h data available (Perplexity's own admission); fallback 24h list identical to top-gainers above | — | Discarded — no genuine 1h feed |
+| Altcoin momentum >3%/4h | No real 4h feed; fallback 24h: JUP +3.09%, FIL +3.06%, PUMP +5.96%, LIT +97.11%, SIDEKICK +78.96%, PORTAL +34.67%, VTHO +34.59% (LIT/SIDEKICK/PORTAL/VTHO all previously confirmed illiquid/broken/hallucinated across multiple sessions this week) | JUP live-verified below | JUP was the one live-plausible name; rest discarded per established pattern |
+| Volume surge | NEAR +43% (24h), SOL +82% (24h), SHIB heavy sell pressure, large BTC exchange inflow (49k BTC) | NEAR/SOL checked below | Neither clears momentum bar despite volume claims |
+| Intraday setups | Generic session-timing framework, no concrete date-specific catalyst identified; suggested SOL/XRP and BTC/ETH structured ranges only | — | No actionable signal |
+
+**Crash gate:** BTC -2.40% vs today's open → **NOT triggered** (threshold is -20% in 24h).
+
+### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
+
+| Symbol | Move vs open | Off 24h high | Detail | Verdict |
+|---|---|---|---|---|
+| **JUP/USD** | **+4.47%** ($0.2101 vs open $0.20111) | -3.98% (high $0.2188 at 16:00 UTC) | Only asset clearing the headline 3% mark. Hourly OHLC: high set in the 16:00 candle (4h ago); since then faded/flattened — 17:00 close $0.21125, 18:00 $0.20945, 19:00 $0.21053, 20:00 (partial) $0.21010. Trailing 1h ≈ -0.2%, trailing 4h ≈ -2.85% (vs 16:00 open) — both declining, not accelerating. **Fails momentum-peak check** (24h high >60min old, price not breaking new highs, no fresh catalyst). Spread ~0.12% (fine) but timing fails | **SKIP** — decayed spike, not an active breakout |
+| **BILL/USD** | +18.15% ($0.05847 vs open $0.04949) | -5.4% (high $0.06179 at 16:00 UTC) | Headline gain is real but hourly OHLC shows a choppy, already-decayed spike: 16:00 high $0.06179 → 17:00 crashed to close $0.05639 → 18:00 bounced to $0.05879 → 19:00 $0.05792 → 20:00 partial $0.05834. Trailing 1h ≈ +0.7%, trailing 4h ≈ -1.9% (vs 16:00 open) — net flat/choppy, not a fresh accelerating move. No distinct catalyst identified for BILL today. Spread ~0.14% (fine) but timing/momentum fails | **SKIP** — decayed/choppy spike, no fresh breakout, no catalyst |
+| **RED/USD** | **-3.83%** ($0.1106 vs open $0.1150) | — | Directly contradicts Perplexity's claimed +109.2% — actually red today | **SKIP** — hallucinated claim |
+| **NEAR/USD** | +0.81% | -2.98% (high $1.9735) | Volume claim (+43%) doesn't translate to price momentum — well under 3% threshold | **SKIP** — no price signal despite volume |
+| **SOL/USD** | -2.24% | -3.80% (high $78.12) | Red despite claimed 82% volume surge | **SKIP** — no price signal, contradicts direction implied |
+| **FIL/USD** | -2.59% | — | Red, contradicts claimed +3.06% | **SKIP** |
+| **PUMP/USD** | +1.50% | — | Under threshold | **SKIP** |
+| **BTC/USD** | -2.40% | -3.36% | Broadly red, crash gate nowhere close | **SKIP** |
+| **ETH/USD** | -1.80% | -3.90% | Red | **SKIP** |
+| **DODO, DEXE, ZA2Z, LAT, ANSEM, BBT** | — | — | Confirmed `Unknown asset pair` on Kraken (DODO, DEXE) or not listed at all (ZA2Z, LAT, ANSEM, BBT) | **SKIP** — untradeable venue |
+
+No candidate clears the 1h>3%/4h>5% momentum bar with a genuinely fresh (not decayed) move, and no fresh (<6h) single-asset catalyst was identified anywhere in Perplexity's output. JUP and BILL are the closest but both are confirmed decaying spikes from ~4h ago (momentum-peak check fails on both), consistent with the ZEC pattern flagged repeatedly this week.
+
+### STEP 4 — Risk Factors
+
+- Fear & Greed at 26-31 (Fear), one outlier at 47-54 (Neutral) — not Extreme Fear, R:R floor not binding since no candidate is in play
+- Session has worsened intraday: BTC -1.24% at this morning's pre-session check → -2.40% now; ETH similarly deteriorating (-1.17% → -1.80%)
+- Macro backdrop unchanged: ETF outflows ongoing, CLARITY Act stalled (48% odds), July 14 US CPI release tomorrow could add volatility
+- Perplexity data quality remains unreliable this session — RED claimed +109.2% when live shows -3.83%, NEAR/SOL volume-surge claims didn't translate into any price momentum, and several headline gainers (DODO, DEXE, ZA2Z, LAT, ANSEM, BBT) are confirmed untradeable/nonexistent on Kraken — cross-checked and discarded throughout, consistent with the pattern flagged every session this week
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -2.40%, nowhere near -20%). No candidate today passes the live-verified momentum bar with a genuinely fresh (non-decayed) move — JUP (+4.47%) and BILL (+18.15%) are the closest headline numbers but both peaked ~4h ago (16:00 UTC) and have since faded/flattened, failing the momentum-peak check. RED's claimed +109.2% gain is directly contradicted by live data (actually -3.83%). Market broadly red and worsening since this morning's pre-session check. Will continue scanning intraday for a fresh, live-confirmed setup.
+
+WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 11+ days); needs resubscription at callmebot.com/61477788635.
