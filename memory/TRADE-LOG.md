@@ -7525,3 +7525,30 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since the Jul 12 EOD snapshot, zero open positions, `orders: {}` (dust <$0.01 across several assets plus $0.1066 ZAUD unchanged). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $63,964.40 (Jul 12 EOD) to $63,035.30 today (−1.45%), so the bot's flat day outperformed BTC by +1.45%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 11+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-13 — Midday Scan (Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) and stop `a2b44cf9` still `canceled` — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $62,275.40 vs open $63,737.80 = **-2.30%** (-3.24% off 24h high $64,364.60) — crash gate not triggered (nowhere near -20%), but session has deteriorated further since pre-session (-1.24%). ETH -1.96% (-4.05% off high), SOL -1.69% (-3.26% off high) — market broadly red and worsening intraday.
+
+Perplexity "1h surge" query again returned no usable live data (explicitly flagged its own timeframe mismatch — same recurring limitation). "Top 24h gainers" list was the usual obscure/micro-cap set (CZ +193%, CASHCAT +40%, QUAI +46%, T +41%, LAT +52%, DODO +52%, EPT +37%, BLAST +24%, BILL +25%, DEXE +21%) — cross-checked the two with real Kraken pairs:
+- **T/USD**: claimed +40.8%. Live: open $0.00541 → current $0.00481 = **-11.1%**, falling, not surging — directly contradicts the claim. **SKIP**.
+- **BLAST/USD, DEXE/USD**: `Unknown asset pair` — untradeable on Kraken, consistent with prior sessions. **SKIP**.
+
+Catalyst query surfaced only stale/ongoing macro narratives already priced in: ETF outflows (~$7B May-Jun, continuing bleed), macro/rate pressure, CLARITY Act deadline (already passed, 48% 2026 passage odds, no resolution), Ethereum Glamsterdam fork (H2 2026, not immediate). Nothing fresh and asset-specific <6h old.
+
+Fear & Greed reconfirmed **26 (Fear)** — not Extreme Fear, but moot since no candidate has qualifying momentum. No asset in the tracked universe shows any upside momentum today; BTC/ETH/SOL all red and extending losses since pre-session. Crash gate: BTC -2.30% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Broadly red, worsening session (BTC -2.30% vs -1.24% at pre-session open); no candidate clears the momentum bar; T/USD's claimed +40.8% gain is directly contradicted by live data (actually -11.1%); BLAST/DEXE untradeable on Kraken; no fresh catalyst anywhere.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
