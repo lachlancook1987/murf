@@ -27285,3 +27285,24 @@ No candidate clears the 1h>3%/4h>5% momentum bar with a genuinely fresh (not dec
 ### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -2.40%, nowhere near -20%). No candidate today passes the live-verified momentum bar with a genuinely fresh (non-decayed) move — JUP (+4.47%) and BILL (+18.15%) are the closest headline numbers but both peaked ~4h ago (16:00 UTC) and have since faded/flattened, failing the momentum-peak check. RED's claimed +109.2% gain is directly contradicted by live data (actually -3.83%). Market broadly red and worsening since this morning's pre-session check. Will continue scanning intraday for a fresh, live-confirmed setup.
 
 WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 11+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-13 — Session-Open Execution Check (21:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only the historical 2026-05-22 filled buy — zero exposure on both exchanges, nothing to protect.
+
+**Live quotes vs today's open ($63,737.80 BTC):**
+- BTC $62,157.90 → **-2.48%**, -3.43% off 24h high $64,364.60
+- ETH $1,765.00 → **-2.25%**, -4.34% off 24h high $1,845.00
+- SOL $74.71 → **-2.81%**, -4.37% off 24h high $78.12
+
+Session continues to deteriorate intraday (BTC -1.24% at 09:01 UTC → -2.40% at 20:05 UTC → -2.48% now). **Crash gate not triggered** (threshold -20%, nowhere close).
+
+**Re-checked prior candidates (JUP, BILL) for a fresh breakout:** JUP $0.20898 vs open $0.20111 (+3.91%, down from +4.47% at 20:05 check) — still fading below the 16:00 UTC high ($0.2188), no new high made, momentum-peak check still fails. BILL $0.05793 vs open $0.04949 (+17.06%, down from $0.05834 at 20:00) — continuing to decay from its 16:00 UTC high ($0.06179), no breakout. Both remain decayed spikes, not active setups.
+
+No new candidates identified; no fresh (<6h) single-asset catalyst surfaced since the 20:05 UTC scan.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Broadly red, still worsening session; no candidate clears the momentum bar; JUP/BILL both continue fading from stale highs. Will continue scanning intraday for a live-confirmed setup.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
