@@ -7552,3 +7552,32 @@ Fear & Greed reconfirmed **26 (Fear)** — not Extreme Fear, but moot since no c
 ### Decision: **HOLD — no new entries, no open positions to manage.** Broadly red, worsening session (BTC -2.30% vs -1.24% at pre-session open); no candidate clears the momentum bar; T/USD's claimed +40.8% gain is directly contradicted by live data (actually -11.1%); BLAST/DEXE untradeable on Kraken; no fresh catalyst anywhere.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-13 — Midday Scan #2 (22:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) and stop `a2b44cf9` still `canceled` — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $62,146.60 vs open $63,737.80 = **-2.50%** (-3.44% off 24h high $64,364.60) — crash gate not triggered, session has deteriorated further since the last check (-2.30% → -2.50%). ETH -2.31%, SOL -3.04% — market broadly red and still extending losses.
+
+Perplexity "1h surge" query again returned only 24h gainer data, no real 1h timeframe (same recurring limitation, self-flagged by the tool). Cross-checked the tradeable names against live Kraken:
+- **DODO/USD, LAT/USD, CZ/USD**: `Unknown asset pair` — untradeable on Kraken. **SKIP**.
+- **IDEX/USD**: live quote shows +12.5% vs today's open ($0.0012→$0.00135), spread ~0.74% (passes cap). Pulled hourly OHLC: flat/declining 15:00–20:00 UTC, then a genuine breakout candle at 21:00 UTC (o $0.00125 → h $0.00141 → c $0.00135 on 10M vol vs ~1-4M typical, 192 trades). But the following 22:00 candle (current, ~4 min old) is dead — flat at $0.00135 on only 2 trades/82k vol, no continuation above the 21:00 high of $0.00141. Perplexity found **no catalyst** for IDEX today and its own price data (-8.1%/24h) directly contradicts live Kraken, consistent with this week's recurring Perplexity data-quality problems. Spike-then-stall-on-thin-volume with no catalyst is the exact pattern rejected repeatedly this week (ZEC, ARB). **SKIP**.
+- **ENA/USD**: -2.9%, red. **SKIP**.
+- **ZEC/USD**: -7.5% vs today's open (o $532.71 → c $492.73), red and falling — directly contradicts Perplexity's claimed "ZEC rallied 7.68%" (stale/wrong or referencing a prior period). Ironwood upgrade still 2 weeks out (July 28), same dated-catalyst flag as every session this week. **SKIP**.
+
+Catalyst query surfaced only market-wide/dated items: DTCC tokenization soft-launch on Canton Network (RWA-sector, not single-asset actionable), US CBDC ban (already priced in), GENIUS Act KYC proposal (bearish/neutral for stablecoins), CLARITY Act (already passed deadline, unresolved), ZEC Ironwood upgrade (dated, 2 weeks out). Nothing fresh, asset-specific, and <6h old.
+
+Fear & Greed Index reconfirmed: **44-46 (Neutral)** on the primary CFGI reading (up from 26 Fear at the last check), though alternative.me still reads 28 (Fear) — mixed across providers, no longer clearly Extreme Fear either way. Moot here since no candidate clears the momentum/catalyst bar regardless of R:R floor. Crash gate: BTC -2.50% — not triggered.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Session continues to deteriorate (BTC -2.50%, ETH -2.31%, SOL -3.04%, all extending losses vs the last check); IDEX is the only asset with a real live move but it already stalled on collapsing volume with no catalyst; ZEC is red, contradicting Perplexity's stale claim; DODO/LAT/CZ untradeable on Kraken; no fresh catalyst anywhere.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
