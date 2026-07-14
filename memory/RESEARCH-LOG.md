@@ -27418,3 +27418,64 @@ No new Perplexity catalyst query run this pass (no change in conditions since th
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-14 — Pre-Session Research #2 (20:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only (last fill 2026-05-22, stop `a2b44cf9` still `canceled`) |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Balance unchanged since Jul 10 EOD (no trades this week).
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken (20:05 UTC) | Verdict |
+|---|---|---|---|
+| BTC | Wide disagreement, $61,100–$64,700, sources split -3% to +1% | $64,458.60, open $62,253.40 → **+3.54%**, -0.65% off 24h high $64,881.20 | Reality is a strong multi-hour rally continuing from earlier today; Perplexity scattered, none matched the actual size of the move |
+| ETH | ~$1,775, -0.8% to +2.4% depending on source | $1,874.51, open $1,774.48 → **+5.64%**, -0.63% off 24h high $1,886.28 | Materially understated by Perplexity — real move is nearly double the top of its quoted range |
+| Fear & Greed | 28 (Fear) most-cited; range 18-52 across sources (CFGI 48-52 Neutral, Alternative.me/Bitget 22, Binance India 18) | — | Using 28 (Fear) as primary; not ≤25, so Extreme-Fear 1.5:1 R:R floor does not apply |
+| BTC funding rate | ~+0.01%/8h across Binance/Bybit/BitMEX/OKX/Hyperliquid; Kraken +0.0125% (predicted +0.0176%) | — | Normal range, no crowded skew |
+| Catalysts | July 14 US CPI came in below forecast (3.5% vs 3.8% expected) → reduced rate-hike odds, likely driver of today's BTC/ETH rally; offset by hawkish BoJ comments (-6% CoinDesk 20 index reaction) and ongoing ETF outflows; CLARITY Act still stalled (48% odds); Glamsterdam/Ironwood/Chainlink-SWIFT all dated/non-immediate | CPI beat is a genuine market-wide catalyst and lines up with the rally starting mid-session | Real catalyst, but it's macro/market-wide (already reflected in the BTC/ETH move), not a single-asset lever |
+| Unlocks | TRUMP 90M-token cliff (~$1.57B week total, largest single unlock); SOL/WLD/DOGE/TAO linear daily; CONX $145.81M cliff; ZRO ~$25.71M cliff | TRUMP confirmed tradeable on Kraken (`TRUMPUSD` active) | Dilution/supply-increase events are bearish signals, not entry triggers — noted, not actionable |
+| Top 24h gainers | CRVUSD +231.79%, KYVE +173.51%, HEI +104.11%, XCX +74.13%, R2 +68.66%, ALLO +62.86%, LAB +50.70%, WARD +46.46%, ID +42.63%, BASED +32.72% | HEI, XCX: `Unknown asset pair` on Kraken — untradeable | Consistent with the pattern flagged every session this week — most headline gainers aren't Kraken-listed or are illiquid micro-caps |
+| Altcoin momentum >3%/4h | ENA +5.39%, PYTH +5.18%, Scallop +8.97%, DCR +36.65%, VELVET +29.45%, EPT +28.73% (all 24h, no real 4h data available per Perplexity's own admission) | Live-checked below — DCR/VELVET claims directly contradicted | Comprehensively unreliable again |
+| Volume surge | XEC (Upbit, +1663% exchange volume), XRP ($3.04B 24h on Bitget), BILL ($211.51M 24h volume, claimed +23.93% price) | XEC: `Unknown asset pair` on Kraken; BILL live-checked below (actually down big) | Not corroborated on Kraken |
+| Best intraday setups | Generic framework only — no date-specific single-asset catalyst; suggested SOL/XRP/BTC/ETH/LINK/AVAX structured plays | — | No actionable signal |
+
+**Crash gate:** BTC +3.54% today (rally) → **NOT triggered** (nowhere near -20%).
+
+### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC, 20:05 UTC)
+
+| Symbol | vs open | Off 24h high | 1h / 4h OHLC momentum | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| **BTC/USD** | +3.54% | -0.65% (high $64,881.20 set at 15:00 UTC, ~5h ago) | Rangebound $64,250–$64,880 for the last 5 hours since the high, now $64,442–$64,483 — flat, slightly fading from peak, not breaking out | CPI beat (market-wide, already priced into the move) | **SKIP** — rally has stalled/consolidated for 5h, not a fresh breakout |
+| **ETH/USD** | +5.64% | -0.63% (high $1,886.28 also set at 15:00 UTC) | Same pattern as BTC — rangebound $1,860–$1,886 for 5h, now $1,874–$1,875, flat | Same as BTC | **SKIP** — stalled, same 5h consolidation |
+| **ENA/USD** | +7.67% ($0.0842 vs open $0.0782) | -1.17% (high $0.0852, set well before the last 5h window — outside the visible 15:00-20:00 candles) | Hourly candles 15:00→20:00 show tight rangebound chop $0.0832–$0.0844, trailing 1h ≈ +0.36%, trailing 4h ≈ +0.72% — both far under threshold; today's headline +7.67% is stale (earlier-session move), not current momentum. Spread ~0.12% (fine) | Only associated news (BlackRock Aladdin/USDe) previously confirmed >2 weeks stale | **SKIP** — flat/consolidating for 5h+, no fresh breakout, no fresh catalyst |
+| **DCR/USD** | +5.76% ($13.224 vs open $12.504) | -7.4% (high $14.282 set in the 17:00 UTC candle, ~3h ago) | Peaked at 17:00 ($14.140 intra-candle high) then declined every hour since: 17:00 close $13.852 → 18:00 $13.464 → 19:00 $13.343 → now $13.224. Trailing 1h ≈ **-0.89%**, trailing 4h ≈ **-2.43%** — actively fading, opposite of the claimed +36.65% narrative | None found | **SKIP** — declining from a 3h-stale high, directly contradicts Perplexity's "+36.65% gainer" framing |
+| **VELVET/USD** | -8.35% ($0.558 vs open $0.6088) | — | Red, falling | None | **SKIP** — directly contradicts Perplexity's claimed +29.45% gain |
+| **PYTH/USD** | -1.54% | — | Red | None | **SKIP** — contradicts claimed +5.18% |
+| **BILL/USD** | **-30.02%** ($0.04185 vs open $0.0598) | -38.8% off 24h high $0.06839 | Collapsing | None | **SKIP** — catastrophic contradiction of Perplexity's claimed +23.93% gain; real move is a 30% crash |
+| **XEC, HEI, XCX** | — | — | `Unknown asset pair` — not listed on Kraken | — | **SKIP** — untradeable venue |
+| **TRUMP/USD** | tradeable on Kraken, not screened for momentum (unlock is dilution risk, not a bullish trigger) | — | — | 90M-token cliff unlock this week | **SKIP** — unlock is a headwind, not an entry signal |
+
+No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh catalyst + spread ≤1% + momentum-peak freshness). BTC/ETH themselves are the "cleanest" movers today but both stalled 5+ hours ago and are now flat — a market-wide grind on a CPI catalyst, not a qualifying single-asset day-trade setup. ENA and DCR were the closest altcoin candidates on paper but both fail the momentum-peak-freshness check (ENA flat for 5h, DCR actively declining from a 3h-old high).
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's data quality remains severely unreliable — today's worst case was BILL, claimed +23.93% but live-confirmed **-30.02%** (a 30% crash, not a gain); DCR claimed +36.65% but is live-confirmed declining from its high; VELVET claimed +29.45% but is live-confirmed -8.35%; XEC/HEI/XCX aren't valid Kraken pairs. Consistent with the pattern flagged every session this week — every headline claim requires live cross-checking before any action
+- Fear & Greed at 28 (Fear) — not Extreme Fear, so the stricter 1.5:1 R:R floor does not apply today
+- TRUMP's 90M-token cliff unlock lands this week (~$1.57B), the largest single unlock tracked — dilution headwind, not a blocking risk to other positions since none are held
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- BTC/ETH rally (CPI-driven) is the dominant theme today but has been flat for 5+ hours — worth rechecking intraday for a fresh breakout above the 15:00 UTC highs ($64,881 BTC / $1,886.28 ETH) with volume confirmation, which would qualify as a fresh catalyst-driven setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +3.54%, a rally not a crash). No candidate today passes the full live-verified momentum + catalyst + spread + peak-freshness bar. BTC/ETH are up strongly on a genuine CPI catalyst but both stalled at their 15:00 UTC highs and have been flat for 5+ hours — not a fresh single-asset breakout. ENA and DCR were the closest altcoin candidates but ENA is flat/rangebound and DCR is actively declining from a stale high. VELVET and BILL are the most dramatic Perplexity hallucinations this session — both claimed as double-digit gainers but live-confirmed red (BILL down 30%). Will continue scanning intraday for a fresh, live-confirmed breakout, with BTC/ETH's 15:00 UTC highs as the primary levels to watch.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 12+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
