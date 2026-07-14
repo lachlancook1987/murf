@@ -27393,3 +27393,28 @@ Fear & Greed: mixed readings 22-52 across sources, mostly clustered in Fear zone
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-14 — Session-Open Check (15:02 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh account` reconfirms ZUSD $115.5598 unchanged, dust-only balances. `kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `positions` → `[]`, Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Continuation of the market-wide rally flagged in the 14:04 UTC scan. BTC $64,270.70 vs open $62,253.40 = **+3.24%**, now essentially at the 24h high ($64,294.40, off by only -0.04%). Hourly OHLC confirms a genuine breakout candle at 14:00 UTC (o $63,785.7 → h $64,257.2 → c $64,244.0, vol 160.57 vs 13:00's fading 213.6) followed by continuation into the 15:00 candle making a fresh high — but trailing 1h (14:00 open → now) is only **+0.76%** and trailing 4h (11:00 close → now) only **+2.38%**, both well under the 3%/5% thresholds. This remains a broad multi-asset grind, not a qualifying single-asset breakout.
+
+Re-checked the two closest candidates flagged at 14:04 UTC:
+- **INJ/USD** $5.031 vs open $4.671 = +7.71%, but off its 12:00-candle high ($5.11) by -1.55% and now dead flat in the 15:00 candle (o=h=l=c=$5.031, vol 1.06 vs 9148.5 in the prior hour) — stalled, fading, no fresh breakout. **SKIP**.
+- **NEAR/USD** $2.0412 vs open $1.9202 = +6.30%, sitting right at its 14:00-candle high ($2.0430, off by only -0.09%) — the freshest of the two — but trailing 1h momentum is only +0.80% and trailing 4h only +2.82%, both under threshold; consolidating near the high rather than accelerating through it. **SKIP**.
+
+No new Perplexity catalyst query run this pass (no change in conditions since the 14:04 UTC check to warrant a fresh pull); no single-asset catalyst <6h old has surfaced today beyond the already-rejected stale items. Crash gate: BTC +3.24% — not triggered (rally, not crash).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/market-wide rally continues and made a fresh high this hour, but no single asset clears the 1h>3%/4h>5% momentum bar with a fresh catalyst. INJ has stalled and faded from its high; NEAR is the closest (sitting at its own fresh high) but still under both momentum thresholds — worth another look if it breaks out further with volume.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
