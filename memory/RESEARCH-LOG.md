@@ -27479,3 +27479,30 @@ No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 12+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-14 — Midday Scan #2 (22:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open: BTC $64,555.00 vs open $62,253.40 = **+3.70%** (-0.44% off 24h high $64,881.20, set at 15:00 UTC, ~7h ago). ETH +5.57% (-0.68% off high), SOL +2.94%, XRP +3.66%, DOGE +3.18%, AVAX +2.82%, LINK +4.68%, ARB +1.33%, NEAR +4.80%, SUI +4.98%, INJ +7.39%, ENA +7.80%, DCR +8.55%.
+
+Pulled fresh hourly OHLC (BTC, ETH, INJ, NEAR, SUI, LINK, ENA, DCR) to check for breakouts. All majors and the previously-flagged INJ/NEAR/ENA candidates remain tightly rangebound this hour — BTC $64,390–$64,860 for 7h, ETH $1,860–$1,886 for 7h, INJ $4.98–$5.04, NEAR declining slowly since its 15:00 high, SUI/LINK flat, ENA flat $0.0836–$0.0844 all session (5h+ consolidation confirmed again). DCR bounced off its 20:00 low ($13.164) to $13.573 in the 21:00 candle but is still -4.96% off its 17:00 high ($14.282, ~5h stale) and trailing 1h/4h momentum (+0.37%/+0.81%) both well under threshold — a minor bounce, not a fresh breakout.
+
+**TRIA/USD** stood out: $0.0095 vs open $0.00809 = **+17.4%**, with genuine accelerating momentum confirmed directly via Kraken's own OHLC (independent of Perplexity) — trailing 1h (21:00 open→now) ≈ **+4.6%**, trailing 4h (18:00 open→now) ≈ **+5.3%**, both clearing thresholds, with each of the last 3 hourly candles making higher highs (18:00 h.0096 → 21:00 h.00968 → 22:00 h.01028) rather than fading from a stale peak. Spread 0.21% (passes). However: (1) the 22:00 candle alone had an **8.4% intra-hour range** (l.00948→h.01028) — clearly high-ATR, requiring the strategy's 3.5% trailing-stop exception rather than the default 2.5%; at 3.5% stop, R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1, fails the 1.2:1 minimum**. (2) Perplexity's TRIA-specific catalyst query **self-contradicted** — claimed TRIA is "not surging," down 1.3%/24h, price $0.0081 — directly wrong vs. live Kraken $0.0095, and gave a stale/unconfirmed "Binance perpetual futures listing" as the only catalyst, which it also said "has not yet triggered a price increase." No confirmed fresh catalyst survives. **SKIP** — real move, but fails R:R once correctly sized for its volatility, and no catalyst confirms the move is durable rather than a thin-orderbook spike on an obscure micro-cap.
+
+General catalyst query (last 2h) returned mostly stale/hallucinated items: DODO/Derive not valid Kraken pairs, BTC "past $80,000" claim directly contradicted by live $64,555, SOL "+9% overnight" contradicted by live +2.94%. JUP/USD checked (+1.45% vs open) — under threshold. Nothing fresh and asset-specific clears the bar.
+
+Fear & Greed: no material change from the 20:05 UTC check (28, Fear) — not Extreme Fear, moot regardless since no candidate clears momentum+R:R+catalyst together. Crash gate: BTC +3.70% — not triggered (rally continuing, not a crash).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH-led rally remains stalled at its 15:00 UTC highs for 7+ hours; INJ/NEAR/ENA/SUI/LINK all flat or fading; DCR's bounce is a minor move still well under threshold. TRIA is the only asset with genuine fresh momentum today but fails R:R once correctly classified as high-ATR (3.5% stop required), and has no confirmed catalyst — Perplexity's own catalyst query contradicted itself and live price data. No candidate qualifies.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
