@@ -26769,540 +26769,62 @@ Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory alway
 
 ---
 
-## 2026-07-11 — Pre-Session Research (08:05 UTC)
+## 2026-07-14 — Pre-Session Research (08:05 UTC)
 
 ### STEP 1 — Account Snapshot
 
 | Exchange | Balance | Positions | Orders |
 |---|---|---|---|
 | Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `positions: []` — zero exposure | None | historical filled order only (`b7f70b08`, filled 2026-05-22), nothing open |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only, nothing open |
 
-No open positions on either exchange — nothing to protect, no held-position news queries needed. Unchanged since the last logged scan (2026-07-10 20:05 UTC).
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Balance unchanged since Jul 10 EOD (no trades in the interim).
 
 ### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
 
 | Metric | Perplexity claim | Live Kraken | Verdict |
 |---|---|---|---|
-| BTC | $63,800–$64,400 across sources, +0.5% to +2.9% (wide disagreement) | $64,116.20, open $64,126.50 → **-0.02%**, -0.21% off 24h high $64,250.00 | Essentially flat — Perplexity's positive-change claims not corroborated live |
-| ETH | ~$1,795, +1.2% | $1,798.34, open $1,795.63 → **+0.15%**, -0.19% off 24h high $1,801.77 | Roughly flat, consistent direction but overstated magnitude |
-| Fear & Greed | 23 (Extreme Fear), most sources 22-26 | — | Consistent with every session this week — sentiment stuck in Extreme Fear |
-| BTC funding rate | ~+0.01% (8h), Kraken +0.0148% | — | Normal range, no crowded skew |
-| Catalysts | Bearish: ETF outflows (~$7B May-Jun), Citi cut BTC 12mo target to $82k, altcoin mkt cap -22.84% H1 2026. Bullish: "Crypto Week" — Genius Act (stablecoins) and Clarity Act (digital assets) expected to advance in US House next week | — | Both forward-looking/multi-day, no fresh <6h single-asset trigger; net macro tone bearish-to-mixed |
-| Unlocks | **RAIN $812M cliff unlock today (Jul 11)**, 4.51% of supply; PUMP $117M Jul 12; APT $7M Jul 12 | RAIN quote broken — `c` (last trade) and volume both `0.0000000000`, bid/ask spread ~24% ($0.0119/$0.0151) | RAIN unlock is real and dated today, but the pair is effectively untradeable on Kraken right now (no recent trades, blown-out spread) — also, per strategy, unlocks are dilutive/bearish watch items, not entry catalysts |
-| Top 24h gainers | Talus/US +100.72%, Tagger +70.89%, Victoria VR +42.34%, MemeFi +35.84%, SdexToken +35.24%, SAROS +33.35%, Yooldo/ESPORTS +32.03%, TAC +31.76%, Vine +28.73%, REKT +27.54% (list 1); separately TIBBIR +13.12%, VELVET +10.00%, ALLO +5.34%, EGLD +5.34%, DEXE +4.91% (list 2) | TAC live: $0.003434 vs open $0.003923 = **-12.47%** (down sharply, not up); VINE live: $0.00977 vs open $0.01040 = **-6.06%** (down, not up); EGLD live: $2.82 vs open $2.85 = **-1.05%** (down, not up); DEXE not a valid Kraken pair | **Hallucinated / contradicted** — same pattern flagged every session this week; TAC, VINE, EGLD all move opposite the claimed direction on live Kraken data |
-| 1h/4h momentum, volume surge | No genuine 1h/4h data returned (Perplexity repeatedly states it lacks real-time granular data and falls back to stale/2025 data or generic 24h lists) | — | No usable signal from these two queries this session |
+| BTC | Wide disagreement across sources, $61,100–$63,800, −2.8% to +3.1% | $62,476.10, open $62,253.40 → **+0.36%**, -1.17% off 24h high $63,217.10 | Reality is flat/mildly green — Perplexity sources scattered in both directions, none close to the true small move |
+| ETH | $1,757–$1,787, −3.1% to +2.4% (wide disagreement) | $1,779.35, open $1,774.48 → **+0.27%**, -0.72% off 24h high $1,792.18 | Same pattern — actual move is flat, Perplexity range overstates volatility in both directions |
+| Fear & Greed | 28 (Fear), up from 24-26 over the past week | — | Sentiment mildly improving but still Fear zone; not ≤25 so the stricter 1.5:1 Extreme-Fear R:R floor does NOT apply today |
+| BTC funding rate | Aggregate ~+0.004-0.01%, Kraken +0.0125-0.0148% (8h) | — | Normal range, no crowded skew |
+| Catalysts | CLARITY Act still stalled (48% odds); Ethereum Glamsterdam upgrade (H2 2026, not imminent); Zcash Ironwood (late July, scheduled); DTCC tokenization soft launch Jul 13; Chainlink SWIFT integration; **BlackRock Aladdin/ENA "surged 12%"** cited as today's catalyst | Verified separately (see ENA row below) — BlackRock/Aladdin news is dated **June 29, 2026**, over 2 weeks stale, not a today catalyst | Perplexity's catalyst query resurfaced an old story as if current — same stale-catalyst-cited-as-fresh error pattern as prior sessions |
+| Unlocks | StarkNet (STRK) $3.9M unlock Jul 15 (tomorrow, 1.95% of mcap); Chainbase (C) $1.55M Jul 14; PUMP's $116-135M cliff already occurred Jul 12 | — | STRK unlock is <24h out but outside the ~2h pre-positioning window; no actionable dated catalyst today |
+| Top 1h/24h gainers | ZA2Z +80.5%, DODO +46%, BLAST +36.5%, ANSEM +32%, HEI +104%, XCX +74%, R2 +69%, ALLO +63%, LAB +51%, OMNI +174%, MAT +66%, DOLO +53%, PENGU +34%, DCR +36.65% | Live-checked: **DODO, DEXE not valid Kraken pairs**; **OMNI** live is **-56.85% vs open** (catastrophic gap-down, not +174%) with a **48% spread** (untradeable); **PENGU** live **-0.52% vs open**, -3.71% off high (flat/down, not +34%); **LRC** live **-0.33% vs open** (flat, not a gainer); **ICX** live **0.00% vs open** (dead flat); **DCR** live actually **declining** through the session (12.8→12.2 over 5h, down ~4.5%, not +36.65%) | **Comprehensively hallucinated** — every checkable claim from this query was flatly contradicted or untradeable; zero survived live verification, consistent with the pattern flagged every session this week |
+| Volume surge | ICX +1858% volume, LRC +1318% volume, QUQ +26% price on $499M volume, DEXE +18.4% on $205M volume | ICX flat, LRC flat, DEXE not a Kraken pair | Not corroborated; no live evidence of unusual activity on any checkable symbol |
+| Best intraday setups | Generic framework (BTC/ETH core, SOL/XRP/JTO conditional, DOGE/HYPE momentum) — no specific dated catalyst identified for today | — | No actionable signal; JTO checked directly (see below) |
 
-**Crash gate:** BTC -0.02% today — flat, nowhere near -20% → **NOT triggered.**
+**Crash gate:** BTC +0.36% today — nowhere near a decline → **NOT triggered.**
 
-### STEP 3 — Candidate Screening (live Kraken quotes)
+### STEP 3 — Candidate Screening (live Kraken quotes + 1h/4h OHLC verification, 08:05 UTC)
 
-| Symbol | Move vs open | Off 24h high | Spread | Volume | Verdict |
+| Symbol | vs open | Off 24h high | 1h / 4h OHLC momentum | Catalyst | Verdict |
 |---|---|---|---|---|---|
-| **TAC/USD** | **-12.47%** (claimed +31.76% to +64.76%) | — | tight | high | **SKIP** — hallucinated; actually down sharply |
-| **OMNI/USD** | last $0.381 vs open $0.85 = -55% | — | **~76%** (bid $0.384 / ask $0.890) | ~20 units (~$8) 24h | **SKIP** — same broken/untradeable dust market flagged every prior session |
-| **MAT/USD** | last $0.0507, only 1 trade in 24h | — | **~34%** (bid $0.0589 / ask $0.0829) | ~$5 notional | **SKIP** — no real market, effectively 1 print |
-| **VINE/USD** | **-6.06%** (claimed +28.73%) | -7.0% off high | 0.7% | real | **SKIP** — hallucinated direction, also fading off high |
-| **EGLD/USD** | **-1.05%** (claimed +5.34%) | -1.4% off high | 0.35% | modest | **SKIP** — hallucinated direction |
-| **ARB/USD** | -2.05% ($0.0909 vs open $0.0928) | -4.9% off high $0.0956 | 0.11% | real | **SKIP** — down today, continues the multi-session fade pattern from its Jul 9 stop-out, still no fresh catalyst |
-| **ZEC/USD** | +0.03% (flat) | -3.6% off high | tight | real | **SKIP** — no momentum |
-| **ENA/USD** | +0.49% (flat) | -1.6% off high | tight | real | **SKIP** — no momentum |
-| **SOL/USD** | -0.17% (flat) | -2.1% off high | tight | real | **SKIP** — no momentum |
-| **RAIN/USD** | quote broken, no recent trades | — | ~24% | ~0 | **SKIP** — untradeable despite today's $812M unlock; spread and zero volume rule it out regardless |
-| BTC/USD, ETH/USD | -0.02%, +0.15% | both within 0.2% of 24h high but flat, not surging | — | — | **SKIP** — no single-asset momentum, broad market dead flat |
+| **ENA/USD** | +7.03% ($0.0837 vs $0.0782) | **0.00%** — at today's high right now | 1h (07:00→now): +1.6% — under 3% threshold. 4h (04:00→now): +4.89% — just under the 5% threshold, close but not clearing it. Volume surged in the 07:00 candle (215k vs ~50-70k typical) then collapsed in the current partial candle (thin) | Only catalyst found (BlackRock Aladdin/USDe) is dated **June 29, 2026** — confirmed via direct follow-up query, **>2 weeks stale**, not a today trigger. No fresh catalyst identified | **SKIP** — closest candidate today (at 24h high, decent 4h trend, tight 0.12% spread), but fails both the 1h>3% and 4h>5% momentum thresholds cleanly, and has no fresh catalyst to substitute — a grind, not a confirmed breakout |
+| **JTO/USD** | +0.14% ($0.6427 vs $0.6424) | -6.6% (high $0.6876 in 24h window, but that was yesterday — today's range $0.6311-0.6483) | Flat/rangebound all session (0.632-0.648), no directional momentum | "July JTX launch" cited as forward-looking, not confirmed live today | **SKIP** — no momentum |
+| **STRK/USD** | +0.49% ($0.02901 vs $0.02887) | -3.1% off 24h high $0.02995 | Flat/declining slightly since 07:00 high (0.02926→0.02901) | Own token unlock is tomorrow (Jul 15) — a dilution risk, not a bullish catalyst | **SKIP** — no momentum, unlock is a headwind not a trigger |
+| **DCR/USD** | -2.17% ($12.233 vs $12.504) | -7.1% off 24h high $13.164 | Declining through the session (12.8→12.2 over 5h) — opposite of the +36.65% "gainer" claim | None found | **SKIP** — actually down, hallucinated as a gainer |
+| **PENGU/USD** | -0.52% | -3.71% off high | Flat/down | None | **SKIP** — hallucinated as +34% gainer |
+| **LRC/USD** | -0.33% | -4.69% off high | Flat | None | **SKIP** — hallucinated volume/price claims |
+| **ICX/USD** | 0.00% | -1.33% off high | Dead flat | None | **SKIP** — hallucinated volume claim |
+| **OMNI/USD** | **-56.85%** | 0.00% (at a collapsed low, not a high) | Gap-down, 48% spread — untradeable | None | **SKIP** — catastrophically hallucinated (+174% claimed vs -56.85% actual); also fails spread filter by a huge margin |
+| BTC/USD, ETH/USD | +0.36%, +0.27% vs open | both within -1.2% of 24h high | Flat/rangebound 6h+ on both, no single-asset breakout | — | **SKIP** — market-wide drift, not a day-trade setup |
 
-No candidate clears the entry bar (no 1h>3%/4h>5% momentum, no fresh <6h catalyst, no spread-and-volume-confirmed setup). Every "gainer" from Perplexity that had a real, liquid Kraken market (TAC, VINE, EGLD) is live-confirmed moving in the **opposite direction** of the claim; the rest (OMNI, MAT) remain broken/illiquid dust markets already flagged in prior sessions. RAIN's unlock is real but the pair has no tradeable market right now.
+No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh catalyst + spread ≤1% + momentum-peak freshness) simultaneously. ENA is the only genuine near-miss; every other Perplexity-flagged "gainer" was live-disproven or untradeable.
 
 ### STEP 4 — Risk Factors
 
-- Market is dead flat today (BTC -0.02%, ETH +0.15%) — no volatility to trade, day-trading setups require actual movement
-- Fear & Greed at 23 (Extreme Fear), 6th+ consecutive session at this level — sentiment remains poor
-- Macro backdrop mixed-to-bearish: ETF outflows, Citi's BTC/ETH price target cuts, altcoin market cap down ~23% H1 2026, offset only by forward-looking (not-yet-passed) US crypto legislation next week
-- Perplexity hallucination rate remains severe and consistent with every session this week — three separate "gainers" (TAC, VINE, EGLD) are all live-confirmed **down**, not up as claimed; treat all Perplexity gainer/momentum lists as noise until independently verified against live Kraken OHLC
-- RAIN's $812M cliff unlock (4.51% of supply) lands today — large dilution event, but the pair is untradeable on Kraken right now (no volume, ~24% spread); watch for a tradeable market to develop later in the session, though unlocks are dilutive/bearish signals, not bullish entry catalysts
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's data quality remains severely unreliable — today's worst case was OMNI, claimed +174% but live-confirmed **-56.85%** with a 48% spread; DCR claimed +36.65% but is live-confirmed **declining**; DODO and DEXE aren't even valid Kraken pairs. This is now the ~2nd consecutive week of this hallucination pattern — cross-checking every candidate against live Kraken quotes/OHLC before any entry remains mandatory
+- Fear & Greed at 28 (Fear) — mild improvement off the recent 20-24 Extreme Fear readings, but still cautious; the stricter 1.5:1 R:R floor does not apply today since Fear&Greed >25
+- STRK unlock lands tomorrow (Jul 15, $3.9M, 1.95% of mcap) — minor, not a blocking risk, but a mild dilution headwind if STRK were ever considered
 - $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- ENA is the asset to watch intraday — if it breaks its current high with a fresh acceleration (1h>3% or a genuine new catalyst, not the stale BlackRock story), it would clear the bar; currently just short
 
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.02%, effectively flat). No candidate today passed the live-verified momentum + catalyst + spread bar — the market itself is flat with no volatility to trade, and every liquid "gainer" surfaced by Perplexity is live-confirmed moving in the opposite direction. Will continue scanning intraday for a fresh, live-confirmed setup. RAIN's unlock today is a watch item only, not tradeable currently.
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.36%, nowhere near -20%). No candidate today passed the full live-verified momentum + catalyst + spread + peak-freshness bar. ENA is the closest (at its 24h high, tight spread, decent 4h trend) but its momentum falls just short of both thresholds and its only associated catalyst is confirmed stale (>2 weeks old). Every other Perplexity-flagged gainer was live-disproven (OMNI especially, -56.85% vs a claimed +174%) or not tradeable on Kraken. Will continue scanning intraday for a fresh, live-confirmed setup, with ENA as the primary watch item.
 
 ### Step 6 — Notification
 
-Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 9+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 12+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
-
-## 2026-07-11 — Session-Open Execution Check (monitoring only, no trades)
-
-### STEP 1-2 — State Check
-
-Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD $115.5598 (100% cash) unchanged, all other balances dust (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066). Alpaca: `positions: []`, orders history-only (last fill 2026-05-22), zero exposure. No change since the 08:05 UTC pre-session research.
-
-### STEP 3 — Entry Scan (live Kraken quotes vs today's open $64,126.50 BTC)
-
-BTC $64,142.50 vs open = **-0.02%** (-0.17% off 24h high $64,250.00) — dead flat, crash gate not triggered.
-
-Re-checked the closest candidates from pre-session research, all still flat/fading:
-- **ETH** $1,798.73 vs open $1,795.63 = +0.17% (-0.62% off high $1,809.93) — no momentum. **SKIP**
-- **ARB** $0.0922 vs open $0.0928 = **-0.65%** (-2.12% off high $0.0942) — now negative, continues the multi-session fade, still no fresh catalyst. **SKIP**
-- **SOL** $78.01 vs open $78.08 = -0.09% — flat. **SKIP**
-- **ZEC** $504.53 vs open $498.38 = +1.23% (-2.44% off high $517.13) — fading off high, no fresh catalyst. **SKIP**
-- **SUI** $0.7422 vs open $0.7386 = +0.49% (-1.77% off high) — no momentum. **SKIP**
-- **INJ** $5.047 vs open $5.015 = +0.64% (-1.85% off high) — no momentum. **SKIP**
-
-No candidate clears the 1h>3%/4h>5% momentum bar or has a fresh <6h catalyst; spreads all tight (0.00–0.11%) but irrelevant with no qualifying setup. Market remains dead flat across the board.
-
-### Decision: **HOLD — no new entries, no open positions to manage.** Consistent with the 08:05 UTC pre-session research. Crash gate not triggered (BTC -0.02%).
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-11 — Midday Scan (Monitoring Only)
-
-**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
-
-### Steps 1-2 — State Check
-
-`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`, `kraken.sh account` confirms ZUSD $115.5598 unchanged, all other balances dust (AAVE, ARB, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. No change since the 08:05 UTC pre-session research or the session-open check.
-
-### Steps 3-5 — Stop Verification / Tightening / Thesis Check
-
-N/A — no open positions on either exchange, nothing to protect or re-evaluate.
-
-### Step 6 — New Entry Scan
-
-Live Kraken quotes vs today's open: BTC +0.12% (-0.30% off 24h high); ETH +0.34% (-0.26% off high); SOL +0.15%; ARB +1.51% (-0.11% off high, closest to its 24h high); SUI +0.72%; INJ +0.62%; NEAR +0.63%; AVAX -0.27%; LINK +0.75%; DOGE +1.04%; XRP +0.47%. Broad market flat-to-slightly-up, no single asset surging.
-
-Perplexity flagged AAVE +6.65%/24h as the standout — pulled live 1h OHLC candles directly from Kraken's public API to verify: AAVE rose steadily from $96.45 (09:00 UTC) to $98.79 (14:00 UTC, in-progress candle), **+2.18% over the trailing 4h**, not the >5% threshold required; 1h change only +0.31%. This is a steady grind, not a surge — fails the momentum bar despite looking strong on a stale 24h-change basis. Spread tight (0.05%) but irrelevant without qualifying momentum.
-
-ARB showed a volume spike at 13:00 UTC (513k vs a typical 20–160k/hr) with price moving $0.0916→$0.0940 (+2.6% in that hour, just short of the 3% 1h bar), then faded flat into 14:00. Same asset stopped out Jul 9 with no fresh catalyst confirmed since (per Jul 10 and Jul 11 pre-session research) — skip, doesn't clear the bar and carries a stale/repeat-thesis flag.
-
-Perplexity "altcoin momentum >3% in 4h" query returned no qualifying candidates on Kraken with usable 4h data (Matchain, Beamable, AAVE only had 24h figures, all below or unverifiable against the 4h/1h requirement). Catalyst query repeated the same bearish macro backdrop as pre-session (ETF outflows, Citi price target cuts, altcoin cap contraction) with no fresh <6h single-asset trigger — Clarity Act remains forward-looking/multi-day. Fear & Greed reconfirmed at **23 (Extreme Fear)**, unchanged from pre-session.
-
-No candidate clears the entry bar (no confirmed 1h>3% or 4h>5%+volume momentum, no fresh catalyst). Crash gate: BTC +0.12% — not triggered.
-
-### Decision: **HOLD — monitoring only, no action taken.** Market flat-to-slightly-up across the board; AAVE and ARB were the closest candidates on stale 24h figures but both fail on verified 1h/4h OHLC data; Extreme Fear (23) persists; no qualifying setup.
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-11 — Session-Open Execution Check #2 (15:03 UTC, monitoring only, no trades)
-
-**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
-
-### STEP 1-2 — State Check
-
-Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD $115.5598 unchanged, all other balances dust (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066). Alpaca: `positions: []`, orders history-only (last fill 2026-05-22), zero exposure. No change since the midday scan.
-
-### STEP 3 — Entry Scan (live Kraken quotes vs today's open)
-
-BTC $64,318.10 vs open $64,126.50 = **+0.30%** (-0.19% off 24h high $64,442.50) — crash gate not triggered. Broad market flat-to-up: ETH +0.90%, SOL +0.50%, SUI +0.85%, INJ +0.92%, ZEC +1.25%, DOGE +1.48%, LINK +1.14%, AVAX +0.07%, NEAR +1.16%, XRP +0.91% — none clear the 1h>3%/4h>5% momentum bar.
-
-**ARB/USD** is the one standout: $0.0970 vs open $0.0928 = **+4.53%**, only **-0.92% off its 24h high** ($0.0979, set in the in-progress 15:00 candle) — momentum-peak check passes (high is fresh, not faded). Pulled live 1h OHLC directly from Kraken: 13:00 candle $0.0915→$0.0940 (+2.7%, vol 513k), 14:00 candle $0.0942→$0.0979 high, close $0.0969 (**+3.9% in that hour**, vol 866k vs typical 20-160k/hr — genuine 4-5x volume surge). This clears the 1h>3%-with-volume momentum bar on live-verified data, unlike prior sessions' Perplexity noise.
-
-**Catalyst check (Perplexity, ARB-specific):** explicitly states **"no specific news catalyst reported for Arbitrum in the last few hours"** — attributes the move to technical follow-through/profit-taking after the Jul 9 Robinhood Chain rally, not a fresh trigger. Perplexity also claimed ARB is **down 12.23% to ~$0.075** today, directly contradicting live Kraken (+4.53% to $0.097) — same hallucination pattern flagged every session this week, but the "no fresh catalyst" finding is corroborated by its own admission, not just a directional claim.
-
-**Rule check:** Fear & Greed remains **23 (Extreme Fear, ≤25)**. No confirmed <6h news catalyst exists (Perplexity confirms none, only stale Jul 9-10 developments already priced in). Per the 2026-07-10 Extreme-Fear R:R floor rule, this combination requires **R:R ≥1.5:1 at T1** — the standard 3%-target/2.5%-stop structure only yields 1.2:1, structurally unable to meet 1.5:1. **Entry fails this gate.** This is also the same asset that reversed and stopped out within ~1 hour on Jul 9 under near-identical conditions (momentum-only, no confirmed catalyst, Extreme Fear) — the exact scenario the rule was written to prevent. Same-Thesis Entry Cap does not independently block (only 1 prior stop-out in the 7-day window, not 2), but the Extreme-Fear floor blocks regardless.
-
-### Decision: **HOLD — no new entries.** ARB shows genuine volume-confirmed 1h momentum (+3.9%, 4-5x volume) but has no confirmed fresh catalyst, and Extreme Fear (23) requires 1.5:1 R:R that the standard trade structure cannot reach — skip per the rule added after this exact asset's Jul 9 failure. No other candidate clears the momentum bar. Crash gate not triggered (BTC +0.30%).
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-11 — Pre-Session Research #2 (20:04 UTC)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `positions: []` — zero exposure | None | historical filled order only (`b7f70b08`, filled 2026-05-22), nothing open |
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed. Unchanged since every prior scan today.
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | $63,800–$64,400 consensus, +1.5% to +2.9% | $64,254.20, open $64,126.50 → **+0.20%**, -0.29% off 24h high $64,442.50 | Roughly flat; Perplexity overstates magnitude again |
-| ETH | ~$1,787, +2.68% | $1,823.44, open $1,795.63 → **+1.55%**, -0.27% off high $1,828.44 | Mild gain, direction correct, magnitude overstated |
-| Fear & Greed | 23 (Extreme Fear), range 22-31 across sources | — | Consistent — 7th+ consecutive session at Extreme Fear |
-| BTC funding rate | ~0.0076-0.0148% (8h) across exchanges, Kraken 0.0148% | — | Normal range, no crowded skew |
-| Catalysts | Bearish: ETF outflows ~$7B May-Jun (now stabilizing/reversing per one source), Citi cut BTC target $112K→$82K, ETH $3,175→$2,240; altcoin mkt cap -22.84% H1 2026. Forward-looking: Clarity Act. Unrelated: $122M crypto crime bust | — | No fresh <6h single-asset trigger; macro tone bearish-to-mixed, unchanged from this morning |
-| Unlocks | RAIN ~$800M cliff unlock today (4.51% supply, dominant event, 72% of week's unlock volume); PUMP $117-135M Jul 12 | RAIN quote still broken — `c`/`v` both 0.0000000000, spread ~27% (bid $0.0119/ask $0.0151) | RAIN unlock real but pair remains untradeable on Kraken all day — confirmed again |
-| Top 24h gainers | Talus/US +100.72%, Tagger +70.89%, Victoria VR +42.34%, MemeFi +35.84%, SdexToken +35.24%, SAROS +33.35%, ESPORTS +32.03%, **TAC +31.76%**, **VINE +28.73%**, REKT +27.54% (identical list to yesterday's session — looks like stale/cached Perplexity output) | **TAC** live: $0.003614 vs open $0.003923 = **-7.88%** (down, not up); **VINE** live: $0.00988 vs open $0.01040 = **-5.00%** (down, not up) | **Hallucinated / contradicted again** — same exact pattern flagged every session this week; both liquid Kraken-tradeable names from the list move opposite the claimed direction |
-| Altcoin momentum >3%/4h | OMNI +174%, MAT +66% ("+4.29% recent" on Kraken), DOLO +53%, LIT +97%, SIDEKICK +79%, PORTAL +35%, VTHO +35%, YALA +28% | **MAT** live: last $0.0507, `v`=0.00000 (zero 24h volume) — broken/no market, same as every prior session | Skip — untradeable dust market; rest either not on Kraken or unverifiable |
-| 1h surge / volume surge queries | Both queries explicitly stated no real-time 1h/4h data available, fell back to stale 24h or conflicting figures (one source claimed BTC $117,333 +3.3%, another $60-63K bearish) | — | No usable signal, discarded |
-| Intraday setups | Generic 2026-framework suggestions (SOL/HYPE/DOGE breakout, LINK/AVAX/ENA catalyst-driven) with no dated, asset-specific trigger for today | — | No actionable signal — none of these showed live momentum (see Step 3) |
-
-**Crash gate:** BTC +0.20% today — flat/mildly green, nowhere near -20% → **NOT triggered.**
-
-### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
-
-| Symbol | Move vs open | Off 24h high | 1h OHLC detail | Verdict |
-|---|---|---|---|---|
-| **ARB/USD** | **+5.60%** ($0.0980 vs open $0.0928) | -1.31% off high $0.0993 | High set in the 16:00 UTC candle (vol 784k); volume has since collapsed to 54k-174k/hr through 17:00-20:00 while price chopped $0.0967-0.0980, well below the 16:00 high | **SKIP** — momentum-peak check fails: high is ~4h old, not fresh; volume fading hard, not surging. Same asset stopped out Jul 9, rejected again at 15:03 UTC today on identical Extreme-Fear-floor grounds; no new catalyst surfaced since |
-| **ZEC/USD** | +3.21% ($514.39 vs open $498.38) | -1.03% off high $519.77 | Genuine volume spike in the 18:00 candle (vol 1811 vs typical 200-600, price $506→$519.73 high), but faded to $514 by 19:00-20:00 on declining volume (642, 621) | **SKIP** — high set ~1-1.5h ago and already fading; no catalyst identified in any query today |
-| **TAC/USD**, **VINE/USD** | -7.88%, -5.00% | — | — | **SKIP** — hallucinated by Perplexity; actually down |
-| **MAT/USD**, **OMNI/USD** (implied), **RAIN/USD** | — | — | zero/near-zero volume, blown-out spreads | **SKIP** — broken/untradeable markets, flagged every session this week |
-| **BTC, ETH, SOL, SUI, INJ, NEAR, DOGE, LINK, AVAX, XRP** | +0.20%, +1.55%, flat, +1.20%, +0.28%, +0.51%, flat, flat, flat, flat | all within ~1-2% of 24h highs but none surging | — | **SKIP** — no single asset clears 1h>3% or 4h>5% momentum bar |
-
-No candidate clears the entry bar. The only two assets with any real momentum today (ARB, ZEC) both had their volume/price peak 1-4 hours ago and are now fading, not breaking out — the exact pattern the momentum-peak-check rule was written to filter out. Neither has a confirmed fresh (<6h) catalyst, which would in any case trigger the stricter 1.5:1 R:R floor under today's persistent Extreme Fear (23) reading — a bar the standard 3%/2.5% trade structure cannot reach.
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed at 23 (Extreme Fear), 7th+ consecutive session — sentiment remains stuck
-- Macro backdrop mixed-to-bearish: ETF outflows (one source says stabilizing), Citi's BTC/ETH target cuts, altcoin market cap down ~23% H1 2026; Clarity Act remains forward-looking, not yet a live catalyst
-- Perplexity hallucination rate remains severe and consistent — TAC and VINE both live-confirmed **down** while claimed up in the "top gainers" list; the exact same gainer list as yesterday's session suggests stale/cached data, not live data — treat all Perplexity gainer/momentum lists as unreliable until independently verified against live Kraken OHLC
-- RAIN's ~$800M cliff unlock (4.51% of supply) landed today — dilutive event, pair remains untradeable on Kraken (zero volume, ~27% spread) all session
-- ARB and ZEC both showed real intrahour volume spikes today but both have already faded from their peaks by 1-4 hours — chasing either now would be buying the fade, not the breakout
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.20%). No candidate today passes the live-verified momentum + catalyst + spread + peak-freshness bar — ARB and ZEC are the only two assets with genuine volume-confirmed moves, but both are fading from a peak set 1-4h ago rather than breaking out, and neither has a confirmed fresh catalyst. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-### Step 6 — Notification
-
-Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 9+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
-
----
-
-## 2026-07-11 — Session-Open Execution Check #3 (21:01 UTC, monitoring only, no trades)
-
-**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
-
-### STEP 1-2 — State Check
-
-Kraken: `positions: {}`, `orders: {"open": {}}`, ZUSD $115.5598 unchanged, all other balances dust. Alpaca: `positions: []`, orders history-only (last fill 2026-05-22), zero exposure. No change since the 20:04 UTC pre-session research.
-
-### STEP 3 — Entry Scan (live Kraken quotes vs today's open, ~1h after last check)
-
-BTC $64,350.10 vs open $64,126.50 = **+0.35%** — crash gate not triggered. Broad market flat-to-mildly-up: ETH +1.65%, SOL +0.06%, SUI +1.25%, INJ +0.60%, DOGE +1.48%, XRP +1.02%, LINK +1.36%, AVAX -0.03%, NEAR +0.66% — none clear the 1h>3%/4h>5% momentum bar.
-
-**ZEC/USD** is the standout: $523.65 vs open $498.38 = **+5.07%**, only **-0.12% off a freshly-set 24h high** ($524.26, made in the in-progress 20:00-21:00 UTC hour) — momentum-peak check passes, this is a genuine new high, not a fade. Live 1h OHLC: 18:00 candle vol 1811 (vs typical 78-243/hr) pushed price to $516.95; 20:00 candle vol 1136 broke to a new high $524.26. Real volume-confirmed strength. However, precise trailing-window math: 1h change (20:00 open $514.63 → now $523.65) = **+1.75%**, trailing 4h (17:00 open $504.57 → now) = **+3.78%** — both **below** the strategy's strict 1h>3% / 4h>5% thresholds despite the strong headline daily gain and fresh high.
-
-**Catalyst check (Perplexity, ZEC-specific):** cites the **Ironwood upgrade** and a Cypherpunk-backed **$100M ZEC treasury** announcement as drivers of a claimed 7-10% move — but Perplexity's own price figure (~$505.64) is ~3.5% off live Kraken ($523.65), consistent with the hallucination/staleness pattern flagged every session this week. More importantly, the Ironwood upgrade was already identified in the 20:04 UTC pre-session research as a **scheduled event in late July** (weeks out) — not a fresh <6h trigger. Per the scheduled-catalyst pre-positioning caution rule, anticipatory momentum on a dated catalyst >2h out requires either a confirmed post-event reaction (N/A, event hasn't happened) or a fresh breakout above the pre-event high with volume confirmation (satisfied — new 24h high with 2x+ volume). This clears the momentum-peak/breakout exception but does **not** independently satisfy the primary 1h>3%/4h>5% entry threshold, which is the harder gate here.
-
-**ARB/USD**: $0.0982 vs open $0.0928 = +5.82%, -1.50% off high $0.0997 (a marginally higher high than the 16:00 spike). Hourly OHLC shows the 20:00 candle volume (252k) is a moderate bump but well below the 16:00 spike (784k) and price is chopping sideways ($0.0967-$0.0989) rather than breaking out. Trailing 1h and 4h both under 1%. **SKIP** — same asset rejected three times already today (15:03 UTC, 20:04 UTC) on fade/no-catalyst grounds; nothing has changed.
-
-**Rule check:** Fear & Greed unchanged at 23 (Extreme Fear) per 20:04 UTC research, no reason to expect a shift within the hour. Even setting aside the primary momentum-threshold miss, ZEC's catalyst is a scheduled/stale event and would trigger the Extreme-Fear 1.5:1 R:R floor, which the standard 3%/2.5% structure cannot reach.
-
-### Decision: **HOLD — no new entries.** ZEC shows a genuine volume-confirmed fresh high but fails the strict 1h>3%/4h>5% momentum threshold on precise OHLC math, and its catalyst (Ironwood upgrade) is scheduled weeks out, not fresh. ARB remains rejected on repeat grounds. No other asset shows any momentum. Crash gate not triggered (BTC +0.35%).
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-12 — Pre-Session Research (09:01 UTC, Session-Open)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `[]` — zero exposure | None | historical filled order only (`b7f70b08`, filled 2026-05-22), nothing open |
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed.
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | ~$64,100-64,310, consensus +0.1% to +0.5% (Coinbase quote of $91,151 discarded as stale/wrong) | $63,937.90, open $63,779.60 → **+0.25%**, -0.78% off 24h high $64,442.50 | Roughly consistent this time — Perplexity's consensus range is close to live |
-| ETH | ~$1,796-1,804, +1.2% to +2.8% | $1,803.72, open ~$1,786 → **+0.95%** | Directionally correct, magnitude slightly overstated |
-| Fear & Greed | 26 (Fear, Alternative.me) vs Bitget 23 (Extreme Fear) vs Binance Square 31 (Fear) — meaningful source disagreement | — | Treat as borderline Fear/Extreme-Fear; Extreme-Fear R:R floor (≤25) not clearly triggered but close — moot today since no candidate clears primary momentum bar anyway |
-| BTC funding rate | ~+0.01% (8h) across major exchanges, Kraken +0.0148% | — | Normal range, no crowded skew |
-| Catalysts | ETF outflows ~$7B May-Jun (bearish, ongoing); CLARITY Act Senate vote still pending (48% odds, XRP binary); DTCC+Stellar tokenization integration (bullish XLM, but **H1 2027** — far out, not tradeable now); NEAR resharding upgrade (dated "scheduled June 2026" — already in the past, not fresh); Zcash Ironwood upgrade (bullish ZEC, **activates late July** — still weeks out, same dated-catalyst flag as every prior session this week) | — | No fresh <6h single-asset trigger; all cited catalysts are either already priced in, dated weeks/months out, or unresolved binary events |
-| Unlocks | $776.3M this week: PUMP $117M cliff unlock **today** (dilutive/bearish), RAIN $812M (Jul 11, already passed), HYPE $630M (Jul 6, already passed), CC/WLD ongoing daily linear unlocks | — | PUMP unlock today is a dilution risk, not a long setup — no action |
-| Top 24h gainers | USDBC +75%, SXT +42%, CASHCAT +38%, T +30%, QUAI +28%, ASTEROID +24%, SUNDOG +23%, CLO +22%, OXT +22%, Hakimi +21% — none are liquid Kraken-tradeable large/mid caps | — | Same pattern as every session — micro-cap/illiquid names, not actionable |
-| Altcoin momentum >3%/4h | OMNI +174%, MAT +66%, DOLO +53%, LIT +97%, SIDEKICK +79%, PACT +128%, ODOS +36%, BMB +76% | **OMNI** live: spread **92.97%**, price -56.85% vs "open" (broken/no real market); **SIDEKICK** live: spread **10.21%**, -10% vs open — both confirmed broken/illiquid, consistent with every prior session's finding on this exact list | **Hallucinated/untradeable** — discarded, same as every session this week |
-| Volume surge | No 4h data available; fell back to 24h volume leaders (USDT, BTC, USDC, ETH, SOL) — no actionable signal | — | Discarded |
-| Intraday setups | Generic 2026-framework list (SOL, DOGE, WIF, HYPE, BTC) with no dated, asset-specific trigger for today (Sunday, low-news day per Perplexity's own admission) | — | No actionable signal |
-
-**Crash gate:** BTC +0.25% today — flat/mildly green → **NOT triggered.**
-
-### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
-
-| Symbol | Move vs open | Off 24h high | Spread | 1h/4h detail | Verdict |
-|---|---|---|---|---|---|
-| **ZEC/USD** | +3.36% ($525.60 vs open) | -1.57% | 0.05% | Real but modest 08:00 candle move (518.69→525.03, vol 944 vs typical 66-473/hr), 09:00 candle already flattening (vol only 7.6 partial hour). Trailing 1h ≈ **+1.33%**, trailing 4h ≈ **+1.95%** — both under threshold. Catalyst (Ironwood) still weeks out, same dated-catalyst flag as every prior session | **SKIP** — fails primary 1h>3%/4h>5% momentum bar, no fresh catalyst |
-| **NEAR/USD** | +1.00% | -1.94% | 0.06% | No standout hourly move; resharding catalyst already dated as past-scheduled | **SKIP** — no momentum |
-| **ARB/USD** | +1.37% | -5.14% | 0.10% | Weakest reading of the week for this asset — well off high, no fresh catalyst (fifth+ consecutive rejection) | **SKIP** — repeat rejection, no change |
-| **ETH/USD** | +0.95% | -1.35% | 0.00% | Flat, no signal | **SKIP** |
-| **SOL/USD** | -0.10% | -2.70% | 0.01% | Flat/negative | **SKIP** |
-| **XLM/USD** | -0.05% | -3.76% | 0.04% | Flat despite DTCC news; catalyst dated H1 2027, not tradeable now | **SKIP** |
-| **DOGE/USD** | -0.30% | -3.35% | 0.02% | Flat/negative | **SKIP** |
-| **OMNI/USD, SIDEKICK/USD** | — | — | 92.97%, 10.21% | Broken/illiquid markets | **SKIP** — untradeable |
-
-No candidate clears the 1h>3%/4h>5% momentum bar with volume confirmation, and no fresh (<6h) catalyst was identified on any live-moving asset. Sunday remains a structurally low-catalyst day per Perplexity's own admission.
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed sits at a borderline Fear/Extreme-Fear reading (23-31 depending on source, consensus ~26) — slightly improved from the 23 that persisted through Jul 5-11, but not a green light on its own
-- Macro backdrop unchanged: ETF outflows ongoing, CLARITY Act unresolved (48% odds), no fresh single-asset catalyst
-- PUMP's $117M cliff unlock today is a dilution risk for that token specifically — not a long setup
-- Perplexity's BTC/ETH price consensus was closer to live Kraken data than usual this session, but the asset-specific "momentum"/"gainer" lists (OMNI, SIDEKICK, etc.) remain confirmed broken/illiquid on live Kraken data, consistent with the hallucination pattern flagged every session this week — continue treating those lists as unreliable
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.25%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar; ZEC is the closest but its move has already flattened and its catalyst remains weeks out. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
-
----
-
-## 2026-07-12 — Pre-Session Research #2 (Scheduled Routine)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22), nothing open |
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed.
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | Consensus ~$64,070–$64,310, near-flat 24h (one source claimed "21-month low near $58,000 before rebound to ~$61,800") | $63,867.40, open $63,779.60 → **+0.14%**, -0.5% off today's high | Consensus range roughly right; the "$58K low" claim is a fresh hallucination, discarded |
-| ETH | ~$1,795, +1.3% to +2.8% | $1,798.94, open $1,786.67 → **+0.69%** | Directionally correct, magnitude overstated as usual |
-| Fear & Greed | 26 (Fear), up from 23 yesterday | — | Improving slightly but still cautious; not Extreme Fear today (>25), so the 1.5:1 R:R floor doesn't independently trigger |
-| BTC funding rate | ~+0.01% (8h), Kraken +0.0148% | — | Normal, no crowded skew |
-| Catalysts | BTC ETF outflows (bearish, ongoing), CLARITY Act deadline passed with 48% odds (XRP binary, unresolved), stablecoin KYC proposal, **DTCC×Stellar tokenization integration cited as driving a "72% 7-day XLM surge"** | XLM $0.18574 vs open $0.18628 → **-0.29% today**, live price shows no surge whatsoever | DTCC/XLM claim contradicted by live data — flat/red today, discarded |
-| Unlocks | PUMP $117-135M cliff unlock today (dilutive), RAIN unlock already passed Jul 11, APT ~$7M recurring | — | No long setup implied; dilution risk only |
-| Top 24h gainers | USDBC +75%, SXT +42%, CASHCAT +38%, T +30%, QUAI +28%, ASTEROID +24%, SUNDOG +23%, CLO +22%, OXT +22%, Hajimi +21% — **identical list to yesterday's session, stale/cached** | — | Discarded — none liquid/Kraken-tradeable large-mid caps |
-| Altcoin momentum >3%/4h | OMNI +174%, MAT +66%, DOLO +53%, LIT +97%, SIDEKICK +79%, PORTAL +35%, VTHO +35% (only 24h data available, no live 4h feed); KAS +3.39%, RENDER +3.31% flagged as closest real candidates | Live: KAS $0.02883 vs open $0.02929 = **-1.57%** (down, not up); RENDER $1.547 vs open $1.543 = **+0.26%** (flat) — both contradicted | Entire list discarded — same broken/illiquid/hallucinated pattern flagged every session this week |
-| Volume surge | No live 4h data; fallback list (BEAT, VIRTUAL, PEPE, LIT, INJ) based on stale 24h figures | INJ live: $4.89 vs open $4.928 = **-0.77%** (down, not up) | Contradicted, discarded |
-| Intraday setups | Generic 2026-framework list (BTC/ETH/SOL/HYPE/DOGE), no dated asset-specific trigger; explicitly noted today is a low-catalyst Sunday | — | No actionable signal |
-| 1h surge query | Returned only stale 2017/2024/2025 historical data, no current info | — | Discarded entirely |
-
-**Crash gate:** BTC +0.14% — flat → **NOT triggered.**
-
-### STEP 3 — Candidate Screening (live Kraken quotes vs today's open)
-
-| Symbol | Move vs open | Off high | Verdict |
-|---|---|---|---|
-| **ZEC/USD** | +2.41% ($520.75 vs open $508.51) | -1.27% off today's high $527.45, -2.48% off 24h high $534.01 | **SKIP** — under 3% threshold, still short of momentum bar; Ironwood catalyst remains weeks out (flagged every session) |
-| **ARB/USD** | +0.32% ($0.0950 vs open $0.0947) | -6.1% off 24h high $0.1012 | **SKIP** — weakest reading yet for this repeat-rejected asset, no catalyst |
-| **ETH/USD** | +0.69% | -1.35% off high | **SKIP** — no momentum |
-| **BTC/USD** | +0.14% | -0.5% off high | **SKIP** — flat |
-| **SOL/USD** | -0.12% | -2.7% off high | **SKIP** — flat/negative |
-| **INJ/USD** | -0.77% | — | **SKIP** — contradicts Perplexity's volume-surge claim, actually down |
-| **KAS/USD** | -1.57% | — | **SKIP** — contradicts Perplexity's momentum claim, actually down |
-| **RENDER/USD** | +0.26% | — | **SKIP** — flat |
-| **XLM/USD** | -0.29% | — | **SKIP** — no DTCC-driven surge visible live |
-
-No candidate clears the 1h>3%/4h>5% momentum bar with volume confirmation on live-verified data. No fresh (<6h) catalyst identified on any live-moving asset. Sunday remains a structurally low-catalyst day, consistent with Perplexity's own admission.
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed at 26 (Fear) — mild improvement from the 22-23 Extreme Fear that persisted through most of last week, but still cautious sentiment
-- Macro backdrop unchanged: ETF outflows ongoing, CLARITY Act unresolved (48% odds), Citi's bearish BTC/ETH target cuts still standing
-- Perplexity data quality remains unreliable this session — fabricated "$58K BTC low," fabricated "72% XLM surge," and the momentum/gainer lists were all contradicted by live Kraken OHLC — cross-checked and discarded throughout, consistent with the pattern flagged every session this week
-- PUMP's cliff unlock today is a dilution risk for that token specifically, not a long setup
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.14%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar; ZEC remains the closest but still under threshold. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 10+ days); needs resubscription at callmebot.com/61477788635.
-
----
-
-## 2026-07-12 — Pre-Session Research #3 (Scheduled Routine)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22), nothing open |
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed.
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | Consensus $64,100-64,350 (+0.1% to +0.6%); Coinbase's $91,151 figure flagged as a data error again | $64,166.60, open $63,779.60 → **+0.61%**, -0.36% off 24h high $64,396.10 | Consistent, crash gate nowhere close |
-| ETH | ~$1,800-1,820, +0.26% to +1.65% | $1,819.01, open $1,786.67 → **+1.81%**, -0.33% off high $1,827.78 | Directionally right, best reading of the day so far but still under 3% threshold |
-| Fear & Greed | 26 (Fear, Alternative.me/FearGreedMeter consensus); Binance Square 31, CFGI 54 (Neutral), @BitcoinFear 20 (Extreme Fear) — wide source disagreement | — | Treat as 26 (Fear) — Extreme Fear R:R floor (≤25) not clearly triggered, moot since no candidate clears primary bar |
-| BTC funding rate | ~+0.008-0.01% (8h) most venues; Kraken +0.0148%/+0.0177% predicted | — | Normal range, no crowded skew |
-| Catalysts | 4-year US CBDC ban enacted (bullish stablecoins/reduces uncertainty); Circle OCC national trust bank approval; proposed bank-grade KYC for stablecoin issuers; ETF outflows ~$7B May-Jun, Citi cut BTC target to $82K; Solana Jito JTX launch + Alpenglow upgrade testing; Zcash Ironwood upgrade (still weeks out, same dated-catalyst flag as every session this week) | — | No fresh <6h single-asset trigger; regulatory items are market-wide sentiment, not single-asset day-trade catalysts |
-| Unlocks | PUMP $117-135M cliff unlock **today** (8.94% supply, dilutive); RAIN $796-812M already passed Jul 11; HYPE $30.9-630M passed Jul 6; APT $7M today; CC/WLD ongoing daily linear | — | No long setup implied; PUMP dilution risk only |
-| Top 24h gainers | USDBC +75%, SXT +42%, CASHCAT +38%, T +30%, QUAI +28%, ASTEROID +24%, SUNDOG +23%, CLO +22%, OXT +22%, Hajimi +21% — **identical list to every session this week, stale/cached** | — | Discarded — not liquid Kraken-tradeable names |
-| Altcoin momentum >3%/4h | OMNI +174%, MAT +66%, DOLO +53%, LIT +97%, SIDEKICK +79%, PORTAL +35%, VTHO +35%, YALA +28%, KEEP +58%, REX/INIT 30-50% — **same core list flagged broken/illiquid/hallucinated every session this week** (OMNI spread 92.97%, SIDEKICK spread 10.21%, LIT spread ~1.1% w/ ~$4.2k volume, PORTAL flat 0% live, VTHO spread ~4.2%, YALA spread ~20.5%) | — | Discarded, no re-verification needed — established pattern |
-| Volume surge | No live 4h data; fallback 24h list: DeXe +23%, Theta +11.34%, Zcash +7.03%, ETH +3.5% (ETF inflows $729M) | DeXe, Theta: `kraken.sh assets` → **"Unknown asset pair"**, not tradeable on Kraken at all. ETH +1.81% live (see above) | DeXe/Theta discarded as untradeable; ETH's move real but sub-threshold |
-| Intraday setups | Generic weekend-volatility framework (HYPE, SOL, DOGE, BTC/ETH), explicitly noted Sunday lacks confirmed dated setups | — | No actionable signal |
-
-**Crash gate:** BTC +0.61% — green → **NOT triggered.**
-
-### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
-
-| Symbol | Move vs open | Off 24h high | Detail | Verdict |
-|---|---|---|---|---|
-| **ZEC/USD** | +5.65% ($537.23 vs open $508.51) | -2.08% (high $548.65) | Best headline number of the week, but hourly OHLC shows the entire move happened in the **16:00 UTC candle** (open $531.24→high $548.65, vol 3477 vs typical 300-600/hr) — over 4h ago now. Since then: 17:00 close $544.31, 18:00 $543.13, 19:00 $538.96, 20:00 partial $536.83 — a steady fade on thinning volume (20:00 partial vol only 34). Trailing 1h (vs ~19:00 $543.42) ≈ **-1.14%** (declining). Trailing 4h (vs 16:00 open $531.24) ≈ **+1.13%** — both well under the 1h>3%/4h>5% bar. 24h high is >4h old and price is declining from it → **fails momentum-peak check**; no fresh breakout above the high, no new catalyst (Ironwood still weeks out, dated-catalyst caution applies) | **SKIP** — real but fully faded spike, not a fresh setup |
-| **ARB/USD** | **-1.06%** ($0.0937 vs open $0.0947) | -7.41% (high $0.1012) | Actually red today, not a candidate at all — worst reading yet for this repeat-rejected asset | **SKIP** |
-| **ETH/USD** | +1.81% | -0.33% off high | Real strength (ETF inflow narrative) but under 3% threshold | **SKIP** — no momentum breach |
-| **BTC/USD** | +0.61% | -0.36% off high | Flat/mild green | **SKIP** — no signal, crash gate not triggered |
-| **DeXe, Theta** | — | — | Not listed on Kraken (`Unknown asset pair`) | **SKIP** — untradeable venue |
-| **OMNI, SIDEKICK, LIT, PORTAL, VTHO, YALA, MAT, DOLO, KEEP** | — | — | Confirmed broken/illiquid/hallucinated in prior sessions this week, same list recurring | **SKIP** — untradeable |
-
-No candidate clears the 1h>3%/4h>5% momentum bar with volume confirmation, and no fresh (<6h) single-asset catalyst was identified on any live-moving asset. ZEC is the closest but is a decaying spike (peak >4h old), not an active breakout.
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed at 26 (Fear) — sits just above the Extreme Fear R:R floor line (≤25); source disagreement (20-54 range) means this is a soft signal, not moot but not currently binding since no candidate is in play anyway
-- Macro backdrop unchanged: ETF outflows narrative ongoing (Citi's $82K BTC target cut still standing) despite today's ETH ETF inflow counter-narrative; CBDC ban / Circle trust bank approval are sentiment-positive but not single-asset day-trade triggers
-- PUMP's $117-135M cliff unlock today (8.94% of supply) is a dilution risk for that token specifically, not a long setup
-- Perplexity's altcoin "momentum"/"gainer" lists remain confirmed broken/illiquid/hallucinated for the 5th+ consecutive session this week — continue treating as unreliable without live Kraken cross-check
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.61%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar; ZEC posted the week's best headline gain (+5.65%) but the OHLC shows it's a fully decayed spike from 4+ hours ago (peak-check fails), not an active breakout, and its Ironwood catalyst remains weeks out. ARB, DeXe, Theta and the recurring hallucinated altcoin list are all discarded. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-
-WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 10+ days); needs resubscription at callmebot.com/61477788635.
-
----
-
-## 2026-07-13 — Pre-Session Research (Scheduled Routine)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22), nothing open |
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed.
-
-**Note:** last two sessions' memory updates (2026-07-11, 2026-07-12) were found committed on the session branch but never synced to `main` — fixed at the start of this session via the standard mem-sync pattern (turned out `main` had already been fast-forwarded by a concurrent process by the time the sync ran, so no additional commit was needed, but the gap was confirmed closed).
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | Consensus ~$63,800–$64,350 (+0.1% to +0.6%); Coinbase's "$91,151" figure flagged as a recurring data error | $62,950.10, today's open $63,737.80 → **-1.24%**, -2.20% off 24h high $64,364.60 | Perplexity consensus stale/too high — live price is meaningfully lower and red today, not green as claimed |
-| ETH | ~$1,816–$1,820, +0.08% to +1.82% | $1,784.45, open $1,805.57 → **-1.17%**, -3.28% off 24h high $1,845.00 | Contradicted — live ETH is red, not green |
-| Fear & Greed | 26–32 (Fear) consensus across most trackers; one outlier (CFGI) at 44 (Neutral) | — | Fear, not Extreme Fear — the ≤25 R:R floor does not trigger, though borderline given today's broad red tape |
-| BTC funding rate | ~0.0032% (aggregated, 8h), Kraken individually ~0.0125–0.0148% | — | Normal range, no crowded skew |
-| Catalysts | ETF outflows (~$7B May–Jun, ongoing bleed); Citi cut BTC target $112K→$82K, ETH $3,175→$2,240; CLARITY Act stalled in Senate cloture (48% 2026 passage odds per Polymarket); Circle OCC national trust bank approval (bullish, stock-specific not a Kraken day-trade lever) | — | All macro/sentiment-level, no fresh <6h single-asset trigger; same CLARITY/ETF-outflow narrative running for 2+ weeks |
-| Unlocks | $PUMP cliff unlock (~$126M, 8.94% supply) landed Jul 12, still weighing on sentiment; $WLD/$CC ongoing daily linear unlocks; $SEI cliff Jul 14 (~$6M); $ARB cliff Jul 16 (~$8.9M) | — | No long setup implied; dilution risk only, nothing actionable today |
-| Top 24h gainers | The Final Form Bull (CZ) +193%, PlatON +52%, DODO +52%, Balance +37%, Billions +25%, Threshold +24%, BLAST +24%, AGLD +22%, DeXe +21%, EWT +20% | — | Same pattern as every session — obscure/micro-cap names, not liquid Kraken-tradeable large/mid caps; DeXe previously confirmed **untradeable on Kraken** (`Unknown asset pair`) |
-| Altcoin momentum >3%/4h | No real 4h feed; fallback 24h list: OMNI +174%, LIT +97%, PACT +107%, MAT +66%, SIDEKICK +79%, DOLO +53%, ODOS +51% — same core names flagged broken/illiquid/hallucinated every session this week | — | Discarded without re-verification — established pattern (OMNI spread ~93%, SIDEKICK spread ~10%, LIT thin/illiquid) |
-| Volume surge | No live 4h data; 24h fallback: DeXe +24% (untradeable, see above), Audiera +23%, **ZEC +8.17%**, ADI +7%, Worldcoin +6% | ZEC live: $520.84 vs open $532.71 → **-2.23%**, -5.07% off 24h high $548.65 — actually **red** today, opposite of claimed +8.17% | Contradicted — ZEC has fully reversed from its recent multi-day rally, not surging |
-| Intraday setups | Generic high-volatility framework (SOL, DOGE, WIF, HYPE, SUI) with a specific SUI "$1.15 breakout" level cited | SUI live: $0.7326 — nowhere near the cited $1.15 level (off by ~57%), clearly hallucinated/stale reference price | Discarded — fabricated price level |
-
-**Crash gate:** BTC -1.24% vs today's open → **NOT triggered** (threshold is -20% in 24h).
-
-### STEP 3 — Candidate Screening (live Kraken quotes vs today's open)
-
-| Symbol | Move vs open | Off 24h high | Verdict |
-|---|---|---|---|
-| **AVAX/USD** | +1.66% | -0.75% | **SKIP** — best mover today but well under 3%/1h threshold, no catalyst |
-| **NEAR/USD** | +1.20% | -0.75% | **SKIP** — no momentum, no catalyst |
-| **LINK/USD** | +0.07% | -1.77% | **SKIP** — flat |
-| **SUI/USD** | -0.43% | -2.02% | **SKIP** — red, contradicts Perplexity's fabricated "$1.15 breakout" claim |
-| **DOGE/USD** | -0.42% | -2.32% | **SKIP** — red |
-| **ARB/USD** | -0.64% | -5.71% | **SKIP** — red, repeat rejection, no catalyst |
-| **SOL/USD** | -0.66% | -2.25% | **SKIP** — red |
-| **XRP/USD** | -0.51% | -2.10% | **SKIP** — red |
-| **ETH/USD** | -1.17% | -3.28% | **SKIP** — red |
-| **BTC/USD** | -1.24% | -2.20% | **SKIP** — red, crash gate nowhere close |
-| **ZEC/USD** | -2.23% | -5.07% | **SKIP** — red, directly contradicts Perplexity's +8.17% volume-surge claim; multi-day rally has fully reversed |
-| **INJ/USD** | -2.58% | -4.18% | **SKIP** — worst mover today, red |
-
-Broadly red session — every liquid asset checked is flat-to-down except AVAX (+1.66%) and NEAR (+1.20%), both far under the 1h>3%/4h>5% momentum bar. No candidate clears the entry bar, and no fresh (<6h) single-asset catalyst was identified anywhere in Perplexity's output — only recycled 2+ week-old macro narratives (ETF outflows, CLARITY Act, PUMP unlock).
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed at 26–32 (Fear), one outlier at 44 (Neutral) — not Extreme Fear, but today's broad red tape across majors and alts warrants caution regardless
-- Macro backdrop unchanged/worsening: ETF outflows ongoing, Citi's bearish BTC/ETH target cuts still standing, CLARITY Act stalled in Senate cloture
-- Perplexity data quality remains unreliable this session — BTC/ETH both claimed green when live data shows both red, ZEC claimed +8.17% when live shows -2.23%, and a fabricated SUI "$1.15" price level (actual $0.73) — cross-checked and discarded throughout, consistent with the pattern flagged every session this week
-- $PUMP's cliff unlock (Jul 12) dilution risk already priced in, not a new signal
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -1.24%, nowhere near -20%). No candidate today passes the live-verified 1h>3%/4h>5% momentum bar — the entire tracked universe is flat-to-red except AVAX/NEAR which are both minor and catalyst-free. Perplexity's headline claims (BTC/ETH green, ZEC surging, SUI at $1.15) were all contradicted by live Kraken data. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 11+ days); needs resubscription at callmebot.com/61477788635.
-
----
-
-## 2026-07-13 — Pre-Session Research #2 (20:05 UTC, Scheduled Routine)
-
-### STEP 1 — Account Snapshot
-
-| Exchange | Balance | Positions | Orders |
-|---|---|---|---|
-| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
-| Alpaca | `[]` — zero exposure | None | historical filled orders only (last fill 2026-05-22); stop `a2b44cf9` still `canceled` | 
-
-No open positions on either exchange — nothing to protect, no held-position news queries needed.
-
-### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
-
-| Metric | Perplexity claim | Live Kraken | Verdict |
-|---|---|---|---|
-| BTC | Consensus scattered $61,100–$64,200 depending on source (-1.8% to +0.6%) | $62,205.90, open $63,737.80 → **-2.40%**, -3.36% off 24h high $64,364.60 | Session has deteriorated further intraday; wide source disagreement noted, live Kraken price taken as ground truth |
-| ETH | ~$1,816–$1,820 (-1.0% to +1.5%) | $1,773.11, open $1,805.57 → **-1.80%**, -3.90% off 24h high $1,845.00 | Contradicted — live ETH meaningfully lower and red |
-| Fear & Greed | 26–31 (Fear) consensus (Alternative.me 26, Binance Square 29, CoinStats 31); one outlier CFGI 47-54 (Neutral) | — | Fear, not Extreme Fear — ≤25 R:R floor not triggered |
-| BTC funding rate | ~+0.01% (8h) most venues; Kraken +0.0148%/+0.0177% predicted | — | Normal range, no crowded skew |
-| Catalysts | DTCC tokenization soft-launch on Canton Network (RWA-bullish, not a Kraken-tradeable single-asset lever); July 14 US CPI release (macro, forward-looking); ETF outflows ongoing; CLARITY Act Senate odds 48%; GENIUS Act stablecoin KYC proposal | — | All macro/sentiment-level or non-Kraken-tradeable; no fresh <6h single-asset trigger |
-| Unlocks | ARB ~0.93% (~$8.87M) landed 6:30 AM UTC today; TON ~0.72% at 10 PM UTC tonight; DBR ~7.5% (~$10.4M) at 4 AM UTC today; SEI cliff tomorrow (~$6M) | — | No long setup implied; dilution risk only, already largely priced in by this hour |
-| Top 24h gainers | CZ +193.6%, RED +109.2%, ZA2Z +80.5%, DODO +52.2%, LAT +52.4%, BLAST +33.6%, ANSEM +32.2%, DEXE +28.1%, BILL +26.8%, BBT +24.2% | Verified below | Mostly untradeable/illiquid or contradicted — see Step 3 |
-| 1h surge | No real 1h data available (Perplexity's own admission); fallback 24h list identical to top-gainers above | — | Discarded — no genuine 1h feed |
-| Altcoin momentum >3%/4h | No real 4h feed; fallback 24h: JUP +3.09%, FIL +3.06%, PUMP +5.96%, LIT +97.11%, SIDEKICK +78.96%, PORTAL +34.67%, VTHO +34.59% (LIT/SIDEKICK/PORTAL/VTHO all previously confirmed illiquid/broken/hallucinated across multiple sessions this week) | JUP live-verified below | JUP was the one live-plausible name; rest discarded per established pattern |
-| Volume surge | NEAR +43% (24h), SOL +82% (24h), SHIB heavy sell pressure, large BTC exchange inflow (49k BTC) | NEAR/SOL checked below | Neither clears momentum bar despite volume claims |
-| Intraday setups | Generic session-timing framework, no concrete date-specific catalyst identified; suggested SOL/XRP and BTC/ETH structured ranges only | — | No actionable signal |
-
-**Crash gate:** BTC -2.40% vs today's open → **NOT triggered** (threshold is -20% in 24h).
-
-### STEP 3 — Candidate Screening (live Kraken quotes + hourly OHLC)
-
-| Symbol | Move vs open | Off 24h high | Detail | Verdict |
-|---|---|---|---|---|
-| **JUP/USD** | **+4.47%** ($0.2101 vs open $0.20111) | -3.98% (high $0.2188 at 16:00 UTC) | Only asset clearing the headline 3% mark. Hourly OHLC: high set in the 16:00 candle (4h ago); since then faded/flattened — 17:00 close $0.21125, 18:00 $0.20945, 19:00 $0.21053, 20:00 (partial) $0.21010. Trailing 1h ≈ -0.2%, trailing 4h ≈ -2.85% (vs 16:00 open) — both declining, not accelerating. **Fails momentum-peak check** (24h high >60min old, price not breaking new highs, no fresh catalyst). Spread ~0.12% (fine) but timing fails | **SKIP** — decayed spike, not an active breakout |
-| **BILL/USD** | +18.15% ($0.05847 vs open $0.04949) | -5.4% (high $0.06179 at 16:00 UTC) | Headline gain is real but hourly OHLC shows a choppy, already-decayed spike: 16:00 high $0.06179 → 17:00 crashed to close $0.05639 → 18:00 bounced to $0.05879 → 19:00 $0.05792 → 20:00 partial $0.05834. Trailing 1h ≈ +0.7%, trailing 4h ≈ -1.9% (vs 16:00 open) — net flat/choppy, not a fresh accelerating move. No distinct catalyst identified for BILL today. Spread ~0.14% (fine) but timing/momentum fails | **SKIP** — decayed/choppy spike, no fresh breakout, no catalyst |
-| **RED/USD** | **-3.83%** ($0.1106 vs open $0.1150) | — | Directly contradicts Perplexity's claimed +109.2% — actually red today | **SKIP** — hallucinated claim |
-| **NEAR/USD** | +0.81% | -2.98% (high $1.9735) | Volume claim (+43%) doesn't translate to price momentum — well under 3% threshold | **SKIP** — no price signal despite volume |
-| **SOL/USD** | -2.24% | -3.80% (high $78.12) | Red despite claimed 82% volume surge | **SKIP** — no price signal, contradicts direction implied |
-| **FIL/USD** | -2.59% | — | Red, contradicts claimed +3.06% | **SKIP** |
-| **PUMP/USD** | +1.50% | — | Under threshold | **SKIP** |
-| **BTC/USD** | -2.40% | -3.36% | Broadly red, crash gate nowhere close | **SKIP** |
-| **ETH/USD** | -1.80% | -3.90% | Red | **SKIP** |
-| **DODO, DEXE, ZA2Z, LAT, ANSEM, BBT** | — | — | Confirmed `Unknown asset pair` on Kraken (DODO, DEXE) or not listed at all (ZA2Z, LAT, ANSEM, BBT) | **SKIP** — untradeable venue |
-
-No candidate clears the 1h>3%/4h>5% momentum bar with a genuinely fresh (not decayed) move, and no fresh (<6h) single-asset catalyst was identified anywhere in Perplexity's output. JUP and BILL are the closest but both are confirmed decaying spikes from ~4h ago (momentum-peak check fails on both), consistent with the ZEC pattern flagged repeatedly this week.
-
-### STEP 4 — Risk Factors
-
-- Fear & Greed at 26-31 (Fear), one outlier at 47-54 (Neutral) — not Extreme Fear, R:R floor not binding since no candidate is in play
-- Session has worsened intraday: BTC -1.24% at this morning's pre-session check → -2.40% now; ETH similarly deteriorating (-1.17% → -1.80%)
-- Macro backdrop unchanged: ETF outflows ongoing, CLARITY Act stalled (48% odds), July 14 US CPI release tomorrow could add volatility
-- Perplexity data quality remains unreliable this session — RED claimed +109.2% when live shows -3.83%, NEAR/SOL volume-surge claims didn't translate into any price momentum, and several headline gainers (DODO, DEXE, ZA2Z, LAT, ANSEM, BBT) are confirmed untradeable/nonexistent on Kraken — cross-checked and discarded throughout, consistent with the pattern flagged every session this week
-- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
-
-### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -2.40%, nowhere near -20%). No candidate today passes the live-verified momentum bar with a genuinely fresh (non-decayed) move — JUP (+4.47%) and BILL (+18.15%) are the closest headline numbers but both peaked ~4h ago (16:00 UTC) and have since faded/flattened, failing the momentum-peak check. RED's claimed +109.2% gain is directly contradicted by live data (actually -3.83%). Market broadly red and worsening since this morning's pre-session check. Will continue scanning intraday for a fresh, live-confirmed setup.
-
-WhatsApp notification attempted per Step 6 (mandatory always-notify) — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since 2026-07-02 (now 11+ days); needs resubscription at callmebot.com/61477788635.
-
----
-
-## 2026-07-13 — Session-Open Execution Check (21:01 UTC, monitoring only, no trades)
-
-**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only the historical 2026-05-22 filled buy — zero exposure on both exchanges, nothing to protect.
-
-**Live quotes vs today's open ($63,737.80 BTC):**
-- BTC $62,157.90 → **-2.48%**, -3.43% off 24h high $64,364.60
-- ETH $1,765.00 → **-2.25%**, -4.34% off 24h high $1,845.00
-- SOL $74.71 → **-2.81%**, -4.37% off 24h high $78.12
-
-Session continues to deteriorate intraday (BTC -1.24% at 09:01 UTC → -2.40% at 20:05 UTC → -2.48% now). **Crash gate not triggered** (threshold -20%, nowhere close).
-
-**Re-checked prior candidates (JUP, BILL) for a fresh breakout:** JUP $0.20898 vs open $0.20111 (+3.91%, down from +4.47% at 20:05 check) — still fading below the 16:00 UTC high ($0.2188), no new high made, momentum-peak check still fails. BILL $0.05793 vs open $0.04949 (+17.06%, down from $0.05834 at 20:00) — continuing to decay from its 16:00 UTC high ($0.06179), no breakout. Both remain decayed spikes, not active setups.
-
-No new candidates identified; no fresh (<6h) single-asset catalyst surfaced since the 20:05 UTC scan.
-
-### Decision: **HOLD — no new entries, no open positions to manage.** Broadly red, still worsening session; no candidate clears the momentum bar; JUP/BILL both continue fading from stale highs. Will continue scanning intraday for a live-confirmed setup.
-
-No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
