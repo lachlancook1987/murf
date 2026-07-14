@@ -27368,3 +27368,28 @@ No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 12+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-14 — Midday Scan (14:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) and stop `a2b44cf9` still `canceled` — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Live Kraken quotes vs today's open (broad market up since pre-session's flat +0.36% BTC read): BTC $63,697.30 vs open $62,253.40 = **+2.32%** (-0.62% off 24h high $64,095.50), ETH +5.19% (-0.75% off high), SOL +2.54% (-2.19% off high), XRP +2.72%, DOGE +2.45%, AVAX +2.87%, LINK +4.72%, ARB +0.78%, NEAR +5.53% (-0.56% off high), SUI +4.27%, INJ +8.09% (-1.19% off high, largest mover).
+
+Pulled hourly OHLC (BTC, ETH, SOL, INJ, NEAR) to check freshness. Every asset checked shows the **identical pattern**: a sharp move in the **12:00-13:00 UTC candle** (BTC 62774→63880, ETH 1796→1859, SOL 75.33→76.79, INJ 5.005→5.012 intra-candle high 5.11, NEAR 1.987→2.030) on elevated volume, followed by a **flat/declining 14:00 candle** on collapsed volume (e.g. BTC vol 336→18, ETH vol 6128→400, NEAR vol 104k→42k). This is a **market-wide synchronized rally**, not a single-asset catalyst move — every asset peaked in the same hour and is now consolidating/fading, 60+ min past the highs with no fresh breakout in the current candle. Fails the momentum-peak-freshness check across the board despite several assets (ETH, NEAR, INJ) clearing the raw %-vs-open threshold.
+
+Perplexity catalyst query returned **stale/contradicted data** (cited BTC "$62,261, -2.3%" — directly contradicted by live Kraken +2.32% — same data-quality problem flagged repeatedly this week) — no fresh, asset-specific catalyst <6h old identified for any single mover. Regulatory items (CLARITY Act markup, GENIUS Act KYC proposal) are market-wide, not single-asset triggers, and the CLARITY Act item has been recurring all week.
+
+Fear & Greed: mixed readings 22-52 across sources, mostly clustered in Fear zone (28 primary reading) — not clearly Extreme Fear, moot regardless since no candidate clears the momentum-peak-freshness bar. Crash gate: BTC +2.32% — nowhere near triggered (rally, not crash).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Market-wide rally (BTC/ETH/SOL/INJ/NEAR/LINK all up) peaked synchronously in the 12:00-13:00 UTC hour and is now fading on collapsing volume across every asset checked — classic broad-based pump-then-consolidate, not a single-asset breakout. No fresh catalyst identified; Perplexity's catalyst data was stale/contradicted by live prices. INJ (+8.09%, -1.19% off high) and NEAR (+5.53%) are the closest candidates if a fresh 1h breakout above the 13:00 highs materializes later in the session — worth a re-check.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
