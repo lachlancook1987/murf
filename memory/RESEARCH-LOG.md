@@ -26768,3 +26768,63 @@ No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 8+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-14 — Pre-Session Research (08:05 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `positions: []` — zero exposure | None | historical filled/canceled only, nothing open |
+
+No open positions on either exchange — nothing to protect, no held-position news queries needed. Balance unchanged since Jul 10 EOD (no trades in the interim).
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Wide disagreement across sources, $61,100–$63,800, −2.8% to +3.1% | $62,476.10, open $62,253.40 → **+0.36%**, -1.17% off 24h high $63,217.10 | Reality is flat/mildly green — Perplexity sources scattered in both directions, none close to the true small move |
+| ETH | $1,757–$1,787, −3.1% to +2.4% (wide disagreement) | $1,779.35, open $1,774.48 → **+0.27%**, -0.72% off 24h high $1,792.18 | Same pattern — actual move is flat, Perplexity range overstates volatility in both directions |
+| Fear & Greed | 28 (Fear), up from 24-26 over the past week | — | Sentiment mildly improving but still Fear zone; not ≤25 so the stricter 1.5:1 Extreme-Fear R:R floor does NOT apply today |
+| BTC funding rate | Aggregate ~+0.004-0.01%, Kraken +0.0125-0.0148% (8h) | — | Normal range, no crowded skew |
+| Catalysts | CLARITY Act still stalled (48% odds); Ethereum Glamsterdam upgrade (H2 2026, not imminent); Zcash Ironwood (late July, scheduled); DTCC tokenization soft launch Jul 13; Chainlink SWIFT integration; **BlackRock Aladdin/ENA "surged 12%"** cited as today's catalyst | Verified separately (see ENA row below) — BlackRock/Aladdin news is dated **June 29, 2026**, over 2 weeks stale, not a today catalyst | Perplexity's catalyst query resurfaced an old story as if current — same stale-catalyst-cited-as-fresh error pattern as prior sessions |
+| Unlocks | StarkNet (STRK) $3.9M unlock Jul 15 (tomorrow, 1.95% of mcap); Chainbase (C) $1.55M Jul 14; PUMP's $116-135M cliff already occurred Jul 12 | — | STRK unlock is <24h out but outside the ~2h pre-positioning window; no actionable dated catalyst today |
+| Top 1h/24h gainers | ZA2Z +80.5%, DODO +46%, BLAST +36.5%, ANSEM +32%, HEI +104%, XCX +74%, R2 +69%, ALLO +63%, LAB +51%, OMNI +174%, MAT +66%, DOLO +53%, PENGU +34%, DCR +36.65% | Live-checked: **DODO, DEXE not valid Kraken pairs**; **OMNI** live is **-56.85% vs open** (catastrophic gap-down, not +174%) with a **48% spread** (untradeable); **PENGU** live **-0.52% vs open**, -3.71% off high (flat/down, not +34%); **LRC** live **-0.33% vs open** (flat, not a gainer); **ICX** live **0.00% vs open** (dead flat); **DCR** live actually **declining** through the session (12.8→12.2 over 5h, down ~4.5%, not +36.65%) | **Comprehensively hallucinated** — every checkable claim from this query was flatly contradicted or untradeable; zero survived live verification, consistent with the pattern flagged every session this week |
+| Volume surge | ICX +1858% volume, LRC +1318% volume, QUQ +26% price on $499M volume, DEXE +18.4% on $205M volume | ICX flat, LRC flat, DEXE not a Kraken pair | Not corroborated; no live evidence of unusual activity on any checkable symbol |
+| Best intraday setups | Generic framework (BTC/ETH core, SOL/XRP/JTO conditional, DOGE/HYPE momentum) — no specific dated catalyst identified for today | — | No actionable signal; JTO checked directly (see below) |
+
+**Crash gate:** BTC +0.36% today — nowhere near a decline → **NOT triggered.**
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 1h/4h OHLC verification, 08:05 UTC)
+
+| Symbol | vs open | Off 24h high | 1h / 4h OHLC momentum | Catalyst | Verdict |
+|---|---|---|---|---|---|
+| **ENA/USD** | +7.03% ($0.0837 vs $0.0782) | **0.00%** — at today's high right now | 1h (07:00→now): +1.6% — under 3% threshold. 4h (04:00→now): +4.89% — just under the 5% threshold, close but not clearing it. Volume surged in the 07:00 candle (215k vs ~50-70k typical) then collapsed in the current partial candle (thin) | Only catalyst found (BlackRock Aladdin/USDe) is dated **June 29, 2026** — confirmed via direct follow-up query, **>2 weeks stale**, not a today trigger. No fresh catalyst identified | **SKIP** — closest candidate today (at 24h high, decent 4h trend, tight 0.12% spread), but fails both the 1h>3% and 4h>5% momentum thresholds cleanly, and has no fresh catalyst to substitute — a grind, not a confirmed breakout |
+| **JTO/USD** | +0.14% ($0.6427 vs $0.6424) | -6.6% (high $0.6876 in 24h window, but that was yesterday — today's range $0.6311-0.6483) | Flat/rangebound all session (0.632-0.648), no directional momentum | "July JTX launch" cited as forward-looking, not confirmed live today | **SKIP** — no momentum |
+| **STRK/USD** | +0.49% ($0.02901 vs $0.02887) | -3.1% off 24h high $0.02995 | Flat/declining slightly since 07:00 high (0.02926→0.02901) | Own token unlock is tomorrow (Jul 15) — a dilution risk, not a bullish catalyst | **SKIP** — no momentum, unlock is a headwind not a trigger |
+| **DCR/USD** | -2.17% ($12.233 vs $12.504) | -7.1% off 24h high $13.164 | Declining through the session (12.8→12.2 over 5h) — opposite of the +36.65% "gainer" claim | None found | **SKIP** — actually down, hallucinated as a gainer |
+| **PENGU/USD** | -0.52% | -3.71% off high | Flat/down | None | **SKIP** — hallucinated as +34% gainer |
+| **LRC/USD** | -0.33% | -4.69% off high | Flat | None | **SKIP** — hallucinated volume/price claims |
+| **ICX/USD** | 0.00% | -1.33% off high | Dead flat | None | **SKIP** — hallucinated volume claim |
+| **OMNI/USD** | **-56.85%** | 0.00% (at a collapsed low, not a high) | Gap-down, 48% spread — untradeable | None | **SKIP** — catastrophically hallucinated (+174% claimed vs -56.85% actual); also fails spread filter by a huge margin |
+| BTC/USD, ETH/USD | +0.36%, +0.27% vs open | both within -1.2% of 24h high | Flat/rangebound 6h+ on both, no single-asset breakout | — | **SKIP** — market-wide drift, not a day-trade setup |
+
+No candidate clears the full live-verified bar (1h>3% or 4h>5% momentum + fresh catalyst + spread ≤1% + momentum-peak freshness) simultaneously. ENA is the only genuine near-miss; every other Perplexity-flagged "gainer" was live-disproven or untradeable.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's data quality remains severely unreliable — today's worst case was OMNI, claimed +174% but live-confirmed **-56.85%** with a 48% spread; DCR claimed +36.65% but is live-confirmed **declining**; DODO and DEXE aren't even valid Kraken pairs. This is now the ~2nd consecutive week of this hallucination pattern — cross-checking every candidate against live Kraken quotes/OHLC before any entry remains mandatory
+- Fear & Greed at 28 (Fear) — mild improvement off the recent 20-24 Extreme Fear readings, but still cautious; the stricter 1.5:1 R:R floor does not apply today since Fear&Greed >25
+- STRK unlock lands tomorrow (Jul 15, $3.9M, 1.95% of mcap) — minor, not a blocking risk, but a mild dilution headwind if STRK were ever considered
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- ENA is the asset to watch intraday — if it breaks its current high with a fresh acceleration (1h>3% or a genuine new catalyst, not the stale BlackRock story), it would clear the bar; currently just short
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.36%, nowhere near -20%). No candidate today passed the full live-verified momentum + catalyst + spread + peak-freshness bar. ENA is the closest (at its 24h high, tight spread, decent 4h trend) but its momentum falls just short of both thresholds and its only associated catalyst is confirmed stale (>2 weeks old). Every other Perplexity-flagged gainer was live-disproven (OMNI especially, -56.85% vs a claimed +174%) or not tradeable on Kraken. Will continue scanning intraday for a fresh, live-confirmed setup, with ENA as the primary watch item.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 12+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
