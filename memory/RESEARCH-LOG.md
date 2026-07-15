@@ -27598,3 +27598,68 @@ Fear & Greed: 22 (Extreme Fear), unchanged — moot since no candidate has quali
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-15 — Pre-Session Research #2 (20:0x UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled buy (`b7f70b08`, 2026-05-22) only |
+
+Balance unchanged since the 15:01 UTC session-open check. No open positions anywhere — nothing to protect.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | +3.1% to +3.6% (multiple sources) | $64,937.20 vs today's open $64,983.50 = **-0.07%**, -0.87% off 24h high $65,513.80 | Flat, not rallying — Perplexity's cited figures are stale/lagged vs a live pull |
+| ETH | +5% to +7.4% (multiple sources, one Coinbase outlier showing -3.5%) | $1,922.23 vs open $1,890.49 = **+1.68%**, -1.14% off 24h high $1,944.54 | Real but modest gain, well under the claimed 5-7% |
+| Fear & Greed | Split: cfgi.io 56 (Neutral), Binance/CoinStats 34-36 (Fear), alternative.me 22 (Extreme Fear) | — | Wide divergence again; using 22 (conservative) as reference — moot since no candidate qualifies regardless of R:R floor |
+| BTC funding rate | Mixed: Binance/Bybit/OKX small positive (0.005-0.01%/8h, mild bullish lean); Kraken cited as -0.37%/hr (bearish, but figure looks like a data-quality artifact given magnitude) | — | No crowded skew either direction, not actionable |
+| Catalysts | ETF outflows (bearish, ongoing/stale), CLARITY Act (stalled, 48% odds, dated), GENIUS Act stablecoin KYC proposal, Fed policy (Kevin Warsh, macro-only) | — | All market-wide or already-priced, nothing fresh single-asset <6h old |
+| Unlocks this week | PUMP $138.85M cliff (largest), ARB $7.35M DAO treasury, SEI $4.59M ecosystem linear, DBR/ERA/GPS smaller | ARB live: $0.0880 vs open $0.0922 = **-4.56%**, red; SEI live: $0.0485 vs open $0.04849 = flat | Both dilution-headwind tokens trading weak/flat, consistent with unlock pressure — not entry triggers |
+| Top 24h gainers | HEI, ODOS, XCX, CEL, R2, PORTO, ALLO, MIGGLES, Akedo/AKE, PACT, MAT, OMNI, DOLO, QUAI, DRV, KAITO | Spot-checked OMNI (bid/ask $0.38/$0.74, ~95% spread, v=20 total — dead market), DOLO (~8.7% spread) | Illiquid/wide-spread, consistent with the pattern every prior session — hard skip |
+| 1h surge / volume | PEPE +3.17%/1h claimed; BONK/SHIB/XRP/TRUMP volume-surge claims | PEPE $0.000002783 vs open $0.000002812 = **-0.97%** (red); BONK -1.19% (red); SHIB +0.02% (flat); XRP -0.15% (flat); TRUMP +1.86% | All directly contradict or fall well short of Perplexity's claims — comprehensively unreliable again |
+| Day trade setups | No specific real-time catalyst; generic SOL/XRP catalyst-driven, BTC/ETH range/breakout framework only | — | No actionable single-asset signal |
+
+**Crash gate:** BTC -0.07% today (flat) → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes)
+
+| Symbol | vs today's open | Off 24h high | Verdict |
+|---|---|---|---|
+| **BTC/USD** | -0.07% | -0.87% | Flat — **SKIP** |
+| **ETH/USD** | +1.68% | -1.14% | Below 3% threshold — **SKIP** |
+| **PENGU/USD** | +3.32% (crosses momentum threshold) | -2.5% off high $0.006289 (13:00 UTC candle, ~7h ago) | Hourly OHLC shows high set at 13:00, faded to a 16:00 low of $0.00608 on the session's largest volume (9.3M), now flat at $0.006131 on collapsing volume (20.5k in current partial candle) — same spike-then-stall pattern rejected every prior session this week (ETH 7/15, ZEC, ARB, IDEX). No fresh breakout above $0.006289. **SKIP** |
+| **TRUMP/USD** | +1.86% | -0.9% off high | Below threshold; 90M-token unlock this week is a dilution headwind, not a bullish trigger — **SKIP** |
+| **PEPE/USD** | -0.97% | — | Red, contradicts claimed +3.17%/1h — **SKIP** |
+| **BONK/USD** | -1.19% | — | Red, contradicts claimed +20.52% — **SKIP** |
+| **SHIB/USD** | +0.02% | — | Flat, contradicts claimed +9.44% — **SKIP** |
+| **XRP/USD** | -0.15% | — | Flat, contradicts claimed +6.07% — **SKIP** |
+| **DOGE/USD** | -0.76% | — | Red — **SKIP** |
+| **ARB/USD** | -4.56% | — | Red, unlock dilution headwind this week — **SKIP** |
+| **SEI/USD** | +0.02% | — | Flat, unlock dilution headwind this week — **SKIP** |
+| **OMNI/USD** | — | — | ~95% bid/ask spread, v=20 total — dead market, untradeable — **SKIP** |
+| **DOLO/USD** | — | — | ~8.7% spread — hard skip on spread cap — **SKIP** |
+
+No candidate clears the momentum + catalyst + spread + peak-freshness bar. PENGU is the closest real mover but its high is ~7h stale with no fresh breakout, the identical pattern flagged repeatedly across this week's sessions (ETH, ZEC, ARB, IDEX, TRIA).
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's data quality remains unreliable again this session: BTC/ETH headline gains (+3.6%/+7.4%) are live-contradicted (BTC flat, ETH +1.68%); PEPE/BONK claimed as gainers but live-confirmed red; the entire 24h-gainers list (HEI, ODOS, XCX, CEL, R2, PORTO, ALLO, MIGGLES, AKE, PACT, MAT, OMNI, DOLO, QUAI, DRV, KAITO) is either illiquid/wide-spread or unverifiable — every headline claim required live cross-checking, none held up cleanly
+- Fear & Greed split 22 (Extreme Fear, alternative.me) to 56 (Neutral, cfgi.io) — moot today since no candidate has qualifying momentum regardless of which R:R floor applies
+- ARB and SEI both face unlock-driven dilution pressure this week and are trading weak/flat, consistent with the unlock calendar
+- $115.5598 ZUSD fully available — no capital constraint on next qualifying setup
+- Market is broadly flat-to-mildly-positive with no single-asset breakout; PENGU is worth rechecking if it breaks decisively above $0.006289 with fresh volume
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC flat, -0.07%). No candidate today passes the live-verified momentum + catalyst + spread + peak-freshness bar — BTC/ETH are flat-to-modest, PENGU's real move already peaked ~7h ago and has stalled on fading volume, and the broader 24h-gainers list is illiquid or unverifiable. Will continue scanning intraday for a fresh, live-confirmed breakout.
+
+### Step 6 — Notification
+
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 13+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
