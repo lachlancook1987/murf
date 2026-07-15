@@ -7605,3 +7605,30 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 14 EOD, zero open positions, `orders: {}` (dust unchanged across AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/WLD/XETH/XXBT/XXDG/XXLM/XXRP plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rallied from $62,555.50 (Jul 14 EOD) to $64,595.90 today (+3.26%), so the bot's flat day underperformed BTC by −3.26% — sitting out a genuine market move. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 13+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-15 — Midday Scan (14:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) and stop `a2b44cf9` still `canceled` — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Market has turned mildly positive since pre-session (08:04 UTC): BTC $65,170.90 vs today's open $64,983.50 = **+0.29%**. ETH $1,927-1,929 vs open $1,890.49 = **+2.0-2.2%**.
+
+**ETH deep-dive (closest candidate):** Kraken 60m OHLC shows a genuine breakout — the 12:00-13:00 UTC candle ran $1,883.51→$1,925.52 on 3,614 ETH volume (vs ~200-400 typical), and 13:00-14:00 continued to a 24h high of $1,944.54 on 6,334 volume. Perplexity confirms a real, dated catalyst: **spot Ethereum ETF launch today (2026-07-15)**, corroborated by the abnormal volume — not a hallucinated claim this time. However, 5m OHLC shows the high was actually set at **13:20 UTC** (44 min before this scan), and price has since faded: dropped to a low of $1,915.50 by 13:50, bounced only to ~$1,927 now, on volume that collapsed back to 100-200/5min (vs 500-800+ during the 13:10-13:35 spike window). Current price is still **-0.9% off the 24h high**, no fresh 1h candle breakout above $1,944.54. This is the same spike-then-stall-on-thinning-volume pattern that was correctly rejected repeatedly this week (ZEC 7/12-13, IDEX 7/13, ARB 7/9) — the momentum peak check fails (high >~44min old, price declining from it, no fresh breakout above it) and neither exception applies (no continuation breakout; the ETF-launch catalyst is real but its price reaction already happened and is now fading, not a fresh <2h trigger for a new leg up). **SKIP**.
+
+**BTC:** +0.29% off open, unremarkable, no momentum signal. **SKIP**.
+
+Perplexity "1h surge" and "top gainers" queries returned the same micro-cap list as pre-session (HEI, XCX, R2, ALLO, LAB, WARD, ID, ARROW, UP, B3) — consistent with every prior session, these are either untradeable on Kraken (ARROW confirmed `Unknown asset pair` at pre-session) or illiquid; not re-screened individually given zero hit rate historically. Catalyst query surfaced only market-wide/dated narratives (ETF outflows, CLARITY Act stalled, GENIUS Act KYC proposal, Glamsterdam H2 2026) plus the ETH ETF launch already assessed above — nothing else fresh and single-asset-actionable.
+
+Fear & Greed Index: **22 (Extreme Fear)**, unchanged from pre-session — moot since ETH is the only candidate with real momentum and it fails the peak-freshness check regardless of R:R floor. Crash gate: BTC +0.29% — not triggered (market is up, not down).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ETH's ETF-launch-driven spike already peaked at 13:20 UTC and is fading on collapsing volume — matches this week's repeatedly-rejected spike-then-stall pattern; no fresh breakout above the 24h high. BTC flat. No other candidate clears the momentum/catalyst bar; Extreme Fear (22) unchanged.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
