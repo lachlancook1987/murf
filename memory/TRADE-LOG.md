@@ -7632,3 +7632,36 @@ Fear & Greed Index: **22 (Extreme Fear)**, unchanged from pre-session — moot s
 ### Decision: **HOLD — no new entries, no open positions to manage.** ETH's ETF-launch-driven spike already peaked at 13:20 UTC and is fading on collapsing volume — matches this week's repeatedly-rejected spike-then-stall pattern; no fresh breakout above the 24h high. BTC flat. No other candidate clears the momentum/catalyst bar; Extreme Fear (22) unchanged.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-15 — Midday Scan #2 (22:05 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. `kraken.sh account` reconfirms all non-USD balances are dust (<$0.01 each). Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) and stop `a2b44cf9` still `canceled` — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+Market has cooled further since the last check (14:04 UTC): BTC $64,800.00 vs today's open $64,983.50 = **-0.28%** (down from +0.29% earlier), off 24h high $65,513.80 by -1.09%. ETH $1,921.48 vs open $1,890.49 = **+1.64%** (down from +2.0-2.2% earlier), still -1.19% off the 24h high of $1,944.54 set ~44+ min ago at the last check — momentum continues to fade, no fresh breakout. SOL -0.54% off open. Crash gate: not triggered (no asset near -20%).
+
+Perplexity "1h surge" and "altcoin momentum" queries surfaced a fresh list of claimed movers not seen in prior sessions: ODOS (+31%), QUAI (+40.7%), DRV (+35.3%/+26.6%), KAITO (+22.0%), B3 (+32.6%/+27.8%), AKE (+232%). Unusually, **all six are actually tradeable on Kraken** (`kraken.sh assets` confirmed pairs exist) — a break from the usual pattern of untradeable/hallucinated names. Live quotes checked for all six:
+- **ODOS/USD**: c $0.001560 vs o $0.001990 = **-21.6%**, directly contradicts the claimed +31%. Spread ~6.5% (way over 1% cap). **SKIP**.
+- **QUAI/USD**: c $0.01727 vs o $0.01877 = **-8.0%**, contradicts claimed +40.7%. Spread ~1.27% (over cap). **SKIP**.
+- **DRV/USD**: c $0.14741 vs o $0.15518 = **-5.0%**, contradicts claimed +35.3%/+26.6%. **SKIP**.
+- **KAITO/USD**: c $0.7673 vs o $0.7768 = **-1.2%**, contradicts claimed +22.0%. **SKIP**.
+- **B3/USD**: c $0.000610 vs o $0.000655 = **-6.9%**, contradicts claimed +32.6%/+27.8%. **SKIP**.
+- **AKE/USD**: c $0.00066813 vs o $0.00019440 = **+243.7%**, this one is real and roughly matches the claimed +232%. But intraday high was $0.00090515 — current price is **-26.2% off that high**, a major fade from peak on what looks like a one-off pump (today's volume ~2.156B ≈ nearly all of the 24h volume figure, i.e. the entire move happened and largely reversed within the session). No catalyst identified beyond "top gainer." This is the same spike-then-fade pattern rejected repeatedly this week (ZEC, IDEX, ARB, ETH today) — buying 26% below the day's peak with no fresh catalyst and no breakout confirmation has negative expected value. **SKIP**.
+
+Five of six candidates were directly contradicted by live data (red instead of the claimed green) — reinforcing the recurring Perplexity data-quality/staleness problem flagged in every session this week. The one real mover (AKE) already peaked and is fading hard.
+
+Catalyst query unchanged from pre-session/last check: CLARITY Act (stalled, 48% odds), Glamsterdam (H2 2026, not immediate), Zcash Ironwood (late July, dated), DTCC tokenization soft-launch (sector-wide RWA, not single-asset actionable), stablecoin KYC proposal (bearish/neutral). Nothing fresh and single-asset-actionable beyond the already-assessed ETH ETF launch.
+
+Fear & Greed Index query returned conflicting readings across providers again: CFGi.io 56 (Neutral), Binance Square 35 (Fear), Alternative.me 22 (Extreme Fear), CoinStats 34 (Fear) — moot here regardless, since no candidate clears the momentum/catalyst bar on any reading.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/SOL red and ETH still fading off its earlier peak; five of six newly-surfaced "momentum" candidates (ODOS, QUAI, DRV, KAITO, B3) are directly contradicted by live Kraken data (actually red, not the claimed double-digit gains); the one genuine mover (AKE) is already -26% off its intraday high with no catalyst — a spike-and-fade, not a fresh setup. No candidate clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
