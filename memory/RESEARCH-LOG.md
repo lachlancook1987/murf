@@ -27663,3 +27663,73 @@ No candidate clears the momentum + catalyst + spread + peak-freshness bar. PENGU
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 13+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-16 — Pre-Session Research (08:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled buy (`b7f70b08`, 2026-05-22) only |
+
+Balance unchanged since the 2026-07-15 20:0x UTC pre-session check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:05 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | +0.2% to +3.4% across sources | $64,135.90 vs today's open $64,709.40 = **-0.89%**, -2.10% off 24h high $65,513.80 | Mild pullback, not the claimed rally |
+| ETH | +2.4% to +5.4% (Coinbase/TradingView outliers discarded as erroneous) | $1,908.25 vs open $1,916.62 = **-0.44%**, -1.86% off 24h high $1,944.54 | Flat/red, contradicts claimed gains |
+| Fear & Greed | Wide split: cfgi.io 58 (Neutral), Binance 35 (Fear), Fear&Greed Meter 20-22 (Extreme Fear), alternative.me 25 (Extreme Fear), CoinStats 34 (Fear) | — | Using 58 (Neutral, broadest-market source) as primary reference; even on the conservative Extreme Fear reading the 1.5:1 R:R floor is moot today since no candidate clears the base bar (see AKE below) |
+| BTC funding rate | Mostly +0.01%/8h across majors; Kraken shows a conflicting -0.37%/hr (looks like a data artifact given magnitude) vs Kraken CF Benchmark +0.0148% | — | No crowded skew, not actionable |
+| Catalysts | CLARITY Act floor action pending (48% odds, stalled), GENIUS Act stablecoin KYC proposal, BTC ETF inflows resumed (+$197.4M, ending 8-week outflow streak), ETH ETF +$84.3M, Ethereum Glamsterdam (H2 2026, dated), Circle OCC bank charter approval, Fed Chair Warsh testimony (macro) | — | All market-wide or dated >1 week out — nothing fresh single-asset-actionable <6h old |
+| Unlocks today | ARB $8.87M DAO treasury (~0.96% supply), STBL $8.18M (**71.9% of market cap** — severe dilution risk), MAGMA/AGT/VALVE/ROLL smaller vests | ARB live: -1.81% vs open, red | ARB trading weak, consistent with unlock pressure — dilution headwind, not a buy trigger. STBL not checked (bearish-only signal, no entry case) |
+| Top 24h gainers | ODOS +105%, HEI +104%, RED +109%, CEL +73%, XCX +74%, R2 +69%, PORTO +63%, ALLO +63%, MIGGLES +53%, AKE +258%, EPT +42%, QUAI +41%, DRV +35%, B3 +33%, KAITO +22%, ARROW +60%, UP +42%, NOCK +28%, PACT +58% | Live-checked below | Comprehensively cross-checked — most hallucinated/contradicted, three untradeable |
+| Volume surge | ZEC flagged as "most unusual surge," +6.73% price claimed | ZEC live: -0.46% vs open, red | Directly contradicts — not a gainer today |
+| Day trade setups | No real-time catalyst identified; generic session-window/BTC-range framework only | — | No actionable single-asset signal |
+
+**Crash gate:** BTC -0.89% today → **NOT triggered** (nowhere near -20%).
+
+### STEP 3 — Candidate Screening (live Kraken quotes, 08:05 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **BTC/USD** | -0.89% | -2.10% | — | Red — **SKIP** |
+| **ETH/USD** | -0.44% | -1.86% | — | Red/flat — **SKIP** |
+| **ZEC/USD** | -0.46% | -3.5% | — | Red, contradicts claimed +6.73% "unusual volume surge" — **SKIP** |
+| **ODOS/USD** | -1.30% | — | ~4.8% | Red, contradicts +60-105% claims; spread also fails cap — **SKIP** |
+| **QUAI/USD** | -0.46% | — | ~1.1% | Red, contradicts +40.7%; spread marginally over cap — **SKIP** |
+| **DRV/USD** | -4.11% | — | — | Red, contradicts +35.4% — **SKIP** |
+| **B3/USD** | -2.48% | — | — | Red, contradicts +32.6% — **SKIP** |
+| **KAITO/USD** | -2.39% | — | — | Red, contradicts +22.0% — **SKIP** |
+| **NOCK/USD** | +0.26% | -28.9% | — | Flat, contradicts +27.7%; already faded hard off 24h high — **SKIP** |
+| **PACT/USD** | -13.6% | — | — | Red, contradicts +58.0% — **SKIP** |
+| **ARB/USD** | -1.81% | — | — | Red, today's unlock dilution headwind confirmed live — **SKIP** |
+| **ARROW/USD, CEL/USD, HEI/USD, XCX/USD** | — | — | — | `Unknown asset pair` — untradeable on Kraken — **SKIP** |
+| **AKE/USD** | **+25.2%** ($0.00084968 vs open $0.00067847) | -6.9% off high $0.00091277 (set 07:45 UTC, ~20min ago — within the 60min freshness window) | **0.73%** (passes) | Real move, real catalyst — see deep-dive below |
+
+### AKE Deep-Dive (only candidate with real, catalyst-confirmed momentum)
+
+Hourly OHLC (23:00 yesterday → 08:00 today) shows a **sustained, accelerating multi-hour uptrend** — every hour posts a higher high on consistently elevated volume (36M–208M/hr vs the ~9M partial-hour baseline), not a single-candle spike. Trailing 4h momentum (04:00 open $0.00076034 → now) ≈ **+11.7%**, well past the 5% threshold. Perplexity's AKE-specific catalyst query (independent of the general gainers query, and corroborated by live price/volume action for the first time this week) confirms a **real, fresh catalyst**: Bybit perpetual contracts launched today, plus AKE ranking as #2 gainer on Binance Perpetuals — a genuine exchange-listing catalyst, not a hallucination.
+
+However, 15m OHLC shows the 24h high ($0.00091277) was a **wick within the 07:45 candle** that closed back down at $0.00084086 — price rejected off the high within the same candle and is now consolidating $0.00084–0.00085, -6.9% off that peak. More importantly: hourly candle ranges throughout the move are **5–11% intra-candle** (e.g. the 07:45 candle alone ranged $0.082169→$0.091277, a 11.1% swing) — this clears the strategy's high-ATR threshold (>3% intraday ATR), mandating the **3.5% trailing-stop exception**, not the default 2.5%. At a 3.5% stop, R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 minimum**. This is the identical failure mode already logged for TRIA (2026-07-14) and for AKE itself (2026-07-15, then +243% off a different day's open) — a real, catalyst-confirmed move that nonetheless has negative-expectancy R:R once correctly sized for its own volatility. **SKIP.**
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's headline gainer list was ~90% wrong again today: ODOS, QUAI, DRV, B3, KAITO, NOCK, PACT, ZEC all claimed as double-digit gainers but live-confirmed red or flat; ARROW/CEL/HEI/XCX are untradeable on Kraken. AKE was the sole claim that held up under live cross-check, and even then only partially (claimed +258%, live +25.2% vs today's open)
+- STBL's unlock today is a severe dilution event (71.9% of market cap) — bearish signal only, not tradeable on the long side; not on Kraken universe anyway
+- ARB unlock ($8.87M, ~0.96% supply) confirmed as a live drag — asset trading red, consistent with the dilution calendar
+- Fear & Greed badly split across providers (20-58 range) — moot today regardless, since no candidate clears the base R:R bar before the Extreme-Fear floor would even apply
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- AKE is worth rechecking only if it produces a fresh breakout candle closing above $0.00091277 with continued volume — that would still require re-running the ATR/R:R math (3.5% stop likely persists given the asset's volatility profile), so a breakout alone would not automatically qualify it
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.89%, a mild pullback). No candidate passes the full live-verified momentum + catalyst + spread + R:R bar. AKE is the only asset with a real, catalyst-confirmed move today (Bybit perpetuals launch, sustained multi-hour volume) but fails R:R (0.86:1 vs 1.2:1 minimum) once correctly classified as high-ATR and sized with the mandatory 3.5% trailing stop. Every other headline "gainer" from Perplexity is live-contradicted or untradeable. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 14+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
