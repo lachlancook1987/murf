@@ -7665,3 +7665,15 @@ Fear & Greed Index query returned conflicting readings across providers again: C
 ### Decision: **HOLD — no new entries, no open positions to manage.** BTC/SOL red and ETH still fading off its earlier peak; five of six newly-surfaced "momentum" candidates (ODOS, QUAI, DRV, KAITO, B3) are directly contradicted by live Kraken data (actually red, not the claimed double-digit gains); the one genuine mover (AKE) is already -26% off its intraday high with no catalyst — a spike-and-fade, not a fresh setup. No candidate clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-16 — EOD Snapshot (Day 57, Thursday)
+
+### Jul 16 — EOD Snapshot (Day 57, Thursday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.68%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 15 EOD, zero open positions, `orders: {}` (dust unchanged across AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/WLD/XETH/XXBT/XXDG/XXLM/XXRP plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,595.90 (Jul 15 EOD) to $64,156.60 today (−0.68%), so the bot's flat day outperformed BTC by +0.68%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 14+ days); needs resubscription at callmebot.com/61477788635.
