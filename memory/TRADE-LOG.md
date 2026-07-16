@@ -7700,3 +7700,31 @@ Perplexity "1h surge" query again returned only 24h-gain data (no true 1h resolu
 ### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all red/flat since pre-session. TRU and the other newly-surfaced Perplexity "gainers" (CATX, CDXR, DEGO) are either untradeable or live-contradicted. AKE extended its breakout to a new session high but remains R:R-negative (0.86:1 vs 1.2:1 minimum) once correctly sized for its persistent high-ATR profile — unchanged from the pre-session assessment despite the higher price.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-16 — Midday Scan #2 (22:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed only the historical filled buy (`b7f70b08`, 2026-05-22) — zero Alpaca exposure, nothing new. No change since the 21:01 UTC session-open execution check.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+BTC $64,188.30 vs today's open $64,709.40 = **-0.80%** (-1.16% off 24h high $64,939.30). ETH $1,879.61 vs open $1,916.62 = **-1.93%** (-2.49% off 24h high $1,927.52). SOL $75.95 vs open $77.23 = **-1.66%**. All three majors still red, essentially unchanged from the 21:01 UTC check. Crash gate: not triggered.
+
+Perplexity "1h surge" query again returned only 24h-gain data: A2Z +125.6%, PUMP +20.95%, DEXE +17.4%, ONDO +16.1%, XPIN +16.2%. DEXE is `Unknown asset pair` — untradeable, skip. Live-checked the rest:
+- **PUMP/USD**: c $0.001741 vs o $0.001692 = **+2.9%**, far below the claimed +20.95% and below the 3% momentum threshold anyway; -2.4% off 24h high. **SKIP**.
+- **ONDO/USD**: c $0.36728 vs o $0.36699 = **+0.08%**, flat — directly contradicts claimed +16.11%; -6.9% off 24h high. **SKIP**.
+- A2Z/XPIN not checked — no Kraken pair naming precedent found for either ticker in prior sessions and neither showed up in the catalyst query as a real listing/news item; low-probability use of screening time given the pattern of hallucinated micro-cap gainers this week.
+
+**AKE recheck** (recurring high-ATR candidate, flagged in every check today): c $0.00094008 vs o $0.00067847 = **+38.6%**, still **-18.3% off the 24h high** ($0.00115115) — materially unchanged from the -18.9% reading at 21:01 UTC, no fresh breakout. R:R at the mandatory 3.5% high-ATR trailing stop remains 0.86:1, already failing the 1.2:1 minimum in six consecutive checks today. **SKIP**.
+
+Catalyst query surfaced only market-wide/dated themes: BTC ETF outflows (bearish macro), GENIUS Act stablecoin KYC proposal, privacy-coin delisting crackdown (bearish for ZEC, not on Kraken universe as an entry), CLARITY Act stalled at 48% odds, hawkish FOMC minutes. Nothing fresh, single-asset-actionable, and <6h old.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all red and essentially unchanged since the 21:01 UTC check. PUMP and ONDO both fail to match Perplexity's claimed gains once live-checked. AKE remains ~18% off its high with an already-failing R:R (0.86:1), now confirmed for a sixth consecutive check today. No candidate clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
