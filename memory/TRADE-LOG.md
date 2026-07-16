@@ -7677,3 +7677,26 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 15 EOD, zero open positions, `orders: {}` (dust unchanged across AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/WLD/XETH/XXBT/XXDG/XXLM/XXRP plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,595.90 (Jul 15 EOD) to $64,156.60 today (−0.68%), so the bot's flat day outperformed BTC by +0.68%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 14+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-16 — Midday Scan (14:05 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}`. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure, nothing new.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+BTC $64,298.90 vs today's open $64,709.40 = **-0.63%** (off 24h high $65,513.80 by -1.85%). ETH $1,881.59 vs open $1,916.62 = **-1.83%** (off 24h high $1,935.58 by -2.79%). SOL $76.32 vs open $77.23 = **-1.18%**. All three red/flat since pre-session — no momentum signal. Crash gate: not triggered (nowhere near -20%).
+
+Perplexity "1h surge" query again returned only 24h-gain data (no true 1h resolution available): CATX +971%, CDXR +410%, DEGO +257%, AKE +248%, TRU +164%. CATX/CDXR/DEGO are `Unknown asset pair` on Kraken — untradeable, skip. TRU is tradeable but live quote is $0.000640 vs open $0.000660 = **-3.0%**, directly contradicting the claimed +164% — spread also ~3.1%, over the 1% cap. **SKIP**.
+
+**AKE deep-dive (only asset with a real live move, already flagged at pre-session):** Live quote $0.00097665 vs today's open $0.00067847 = **+44.0%**, and only -1.15% off the fresh 24h high of $0.00098805 — a genuine continuation of the pre-session breakout, now at a new session high. However, 15m OHLC (last 3h) still shows the same extreme intra-candle ranges flagged at pre-session (e.g. 0.00093911→0.00098782 in one 15m candle, a 5.2% swing; another candle -5.9%) — confirms the high-ATR classification persists, mandating the 3.5% trailing-stop exception per strategy. At 3.5% stop, R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1, still fails the 1.2:1 minimum** — the same negative-expectancy math from pre-session, unchanged by the higher price level. Additionally the most recent 15m candle shows volume collapsing to ~737K from a 13-32M/candle run — a stall right at the high, consistent with the spike-then-stall pattern rejected repeatedly this week. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all red/flat since pre-session. TRU and the other newly-surfaced Perplexity "gainers" (CATX, CDXR, DEGO) are either untradeable or live-contradicted. AKE extended its breakout to a new session high but remains R:R-negative (0.86:1 vs 1.2:1 minimum) once correctly sized for its persistent high-ATR profile — unchanged from the pre-session assessment despite the higher price.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
