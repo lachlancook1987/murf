@@ -27949,3 +27949,62 @@ Crash gate: not triggered. Both majors still red, extending the losses already l
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-17 — Pre-Session Research (20:06 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since every prior check today. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 20:06 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Split -2.36% to +0.57% across sources | $64,032.10 vs today's open $63,789.60 = **+0.38%**, -0.47% off 24h high $64,334.30 | Roughly flat, near session high — no momentum signal either way |
+| ETH | Split -1.35% to -4.61% | $1,838.44 vs open $1,863.19 = **-1.33%** | Mild red, within claimed range |
+| Fear & Greed | Split 27 (Fear, alternative.me) to 50-62 (Neutral/Greed, other providers) | — | Using 27 (Fear) as conservative reference; not Extreme Fear, 1.5:1 R:R floor doesn't trigger — moot regardless, no candidate clears base bar |
+| BTC funding rate | Majors +0.003% to +0.010%/8h; Kraken +0.0055% (stable) / -0.0126% (coin, likely artifact) | — | No crowded skew, not actionable |
+| Catalysts | Fed hawkishness (bearish), BTC ETF outflows ~$7B May-June (bearish), US-Iran tensions (bearish), CLARITY Act House hearing today (odds down to ~43%, outcome pending), GENIUS Act stablecoin law reportedly signing tomorrow (bullish, dated) | — | All market-wide/macro or dated-forward; nothing fresh, single-asset-actionable, <6h old |
+| Unlocks today | INFRA ~$286K, XWGT ~$192K, SOLV ~$3.8M (27.2% of mkt cap — severe dilution) | — | Dilution headwinds only, none held/flagged as momentum names |
+| Top gainers / momentum | OXT +266%, LRC +60%, STAR +55%, WAR +86%, NTRN +62%, ESPORTS +44%, AKE +41%, Memecore +62%, PENGU +34%, VANRY +52-55%, YFI +38.75%, ZEUS +38.33%, BLUR +30-38% | See candidate table below | Comprehensively cross-checked live |
+
+**Crash gate:** BTC +0.38% today → **NOT triggered** (nowhere near -20%).
+**BTC weekly trend gate:** BTC roughly flat-to-up over trailing week (consistent with prior sessions' assessment) → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 15m OHLC, 20:06 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **BTC/USD** | +0.38% | -0.47% | — | Flat, no momentum signal — **SKIP** |
+| **ETH/USD** | -1.33% | — | — | Mild red — **SKIP** |
+| **VANRY/USD** | +2.83% | -10.4% off high | — | Below 3% threshold; contradicts claimed +52-55%; already faded off high — **SKIP** |
+| **ZEUS/USD** | -1.16% | — | — | Red, contradicts claimed +38.33% — **SKIP** |
+| **NTRN/USD** | -18.4% | — | — | Red, contradicts claimed +62.19% — **SKIP** |
+| **OXT/USD** | +149.2% (huge, but see below) | **-53.2%** off 24h high $0.038 | ~0.78% (passes) | Confirmed blow-off already round-tripped per the 15:xx UTC midday check (-69.3% off high then); now a partial bounce off the bottom but still -53% off the session high with no fresh breakout — the repricing already happened hours ago. Momentum-peak check fails hard — **SKIP** |
+| **AKE/USD** | +40.2% | **-3.35%** off a fresh 24h high $0.00147974 (set in the 19:45-20:00 UTC candle, ~6-20min old — within freshness window) | tight | Freshest, most legitimate-looking setup of the day — but 15m OHLC confirms the same high-ATR profile flagged in every AKE check this week (candle ranges regularly 2.5-4%+), mandating the 3.5% trailing-stop exception. R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 minimum**, the identical structural failure logged in every AKE check since 2026-07-14. No catalyst beyond generic "AI sector leader" gainer-list mention. **SKIP** |
+| **LRC/USD** | +40.2% | **-18.8%** off 24h high $0.020732 (set in the 18:30-18:45 UTC candle, ~1h20min old — outside the 60min freshness window) | ~0.39% (passes) | Real move but high is stale and price has faded hard since with no breakout above it — momentum-peak check fails. No catalyst identified. **SKIP** |
+
+No candidate clears the momentum + catalyst + spread + freshness + R:R bar. AKE remains the closest — genuinely fresh high this time — but its structural high-ATR R:R (0.86:1) has now failed the 1.2:1 minimum in every single check this week regardless of freshness, since the math is independent of how recent the high is.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's headline gainer claims were again partly contradicted or overstated once live-checked: VANRY/ZEUS/NTRN all red or below-threshold vs claimed double-digit gains
+- OXT and LRC both had real, large moves but are already well off their highs with no fresh breakout — repeating the spike-then-fade pattern seen all week (ZEC, IDEX, ARB, ETH, TRU, ODOS, T, WAR)
+- AKE is structurally unable to clear the R:R bar under its persistent high-ATR classification (0.86:1 vs 1.2:1 required) — this has now failed in essentially every check since 2026-07-14, suggesting AKE should likely be deprioritized from active screening going forward unless its ATR profile changes
+- Fed hawkishness, ETF outflows, and US-Iran tensions are bearish macro overhangs; CLARITY Act hearing outcome today is pending and not yet a confirmed catalyst
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.38%). No candidate passes the full live-verified momentum + catalyst + spread + freshness + R:R bar: BTC/ETH flat/mild-red with no signal; VANRY/ZEUS/NTRN live-contradicted; OXT and LRC both real movers but already faded well off their highs with stale/no breakout; AKE has a genuinely fresh high this time but its high-ATR R:R math (0.86:1) still fails the 1.2:1 minimum, as it has in every check this week. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 15+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
