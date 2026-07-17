@@ -27816,3 +27816,73 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 
 ---
 
+## 2026-07-17 — Pre-Session Research (08:10 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled buy (`b7f70b08`, 2026-05-22) only |
+
+Balance unchanged since the 2026-07-16 22:04 UTC midday scan. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:10 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Split -1.8% to +2.3% across sources | $63,453 area per Perplexity's own Kraken citation, roughly -1.75% | Mild pullback, consistent with the negative-leaning consensus |
+| ETH | Split -3.5% to +2.6% | Kraken-cited $1,882.71, +0.13% | Roughly flat |
+| Fear & Greed | **27 (Fear)**, up from 25 (Extreme Fear) yesterday; CoinStats 34, Binance 31 | — | Fear, not Extreme Fear — the 1.5:1 R:R floor rule does not trigger today (threshold is ≤25) |
+| BTC funding rate | Mostly +0.003% to +0.010%/8h across majors; Kraken shows a conflicting -0.0126% (coin-margined, likely data artifact) | — | No crowded skew, not actionable |
+| Catalysts | US sanctions on Iran (bearish, oil +5%, inflation fear), Fed Chair Warsh hawkish testimony (bearish macro), CLARITY Act passed markup (bullish, dated/priced), GENIUS Act stablecoin KYC proposal (mixed), brief ETF inflow reversal (bullish, already reflected in Jul 15 price) | — | All market-wide/macro or already-priced — nothing fresh, single-asset-actionable, <6h old |
+| Unlocks this week | PUMP $138.85M (largest, Jul 14-15 cliff, already passed), ERA $7.42M (today), YZY $6.13M (today), DBR $10.67M (Jul 18), GPS $3.60M (ongoing) | — | Dilution headwinds only; ERA/YZY/DBR/GPS not held and not flagged as tradeable momentum names |
+| Top 24h gainers / 1h surge | MOG CAT +2,866%, EGL1 +112%, ZA2Z +126%, RMRK +508,288%, HEI +104%, MBOX +267%, OXT +88.7%/+95.4%, ATOM +4.10%, SOL +3.99%, XRP +3.22% | See candidate table below | Comprehensively cross-checked live |
+| Kraken altcoin momentum | SOL +3.99%/4h, ATOM +4.10%/4h, XRP +3.22%/4h, OXT +88.69%/24h, ESPORTS +44.23%, WAR +86.33%, NTRN +62.19%, AKE +36.90% | See candidate table below | Live-checked |
+| Volume surge | VANRY +52.20% ($132.57M vol), BLUR +38.03% ($136.47M vol), YFI +38.75%, ZEUS +38.33% ($301M vol), EPIC +54.25% | See candidate table below | Live-checked; EPIC untradeable on Kraken |
+
+**Crash gate:** BTC roughly -1.75% today → **NOT triggered** (nowhere near -20%).
+
+### STEP 3 — Candidate Screening (live Kraken quotes, 08:10-08:11 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **SOL/USD** | -0.92% ($74.56 vs o $75.25) | — | — | Red, contradicts claimed +3.99%/4h — **SKIP** |
+| **ATOM/USD** | -0.75% ($1.5001 vs o $1.5114) | — | — | Red, contradicts claimed +4.10%/4h — **SKIP** |
+| **XRP/USD** | -0.22% ($1.08381 vs o $1.08623) | — | — | Flat/red, contradicts claimed +3.22%/4h — **SKIP** |
+| **BLUR/USD** | -0.88% | — | — | Red, contradicts claimed +38.03% — **SKIP** |
+| **VANRY/USD** | -0.75% | — | — | Red, contradicts claimed +52.20% — **SKIP** |
+| **NTRN/USD** | -4.08% | — | — | Red, contradicts claimed +62.19% — **SKIP** |
+| **AKE/USD** | -1.14% ($0.00100891 vs o $0.00102051) | -12.4% off high $0.00115115 | tight | Recurring high-ATR asset (flagged every session since Jul 14) — today it's actually red vs open, no momentum signal at all — **SKIP** |
+| **ZEUS/USD** | +3.10% (crosses threshold) | -5.3% off high $0.00281 | **~1.51%** (over 1% cap) | Fails spread cap — **SKIP** |
+| **WAR/USD** | +33.85% (real move) | -9.4% off high $0.000960 | **~9.8%** (far over cap) | Illiquid, matches recurring WAR pattern — **SKIP** |
+| **EPIC/USD** | — | — | — | `Unknown asset pair` — untradeable on Kraken — **SKIP** |
+| **OXT/USD** | **+28.5%** ($0.009160 vs o $0.007130) | -11.8% off high $0.010390 | **~0.99%** (passes, barely) | Real move, real volume — see deep-dive below |
+
+### OXT Deep-Dive (only candidate with a live-confirmed, spread-passing momentum move)
+
+15m OHLC (03:15-08:00 UTC) shows a genuine multi-hour rally: price climbed from $0.00706 (05:15 low) to a 24h high of $0.010390 struck within the 07:45-08:00 UTC candle (11-26 min old — within the 60min freshness window), on a real volume ramp (500K-900K/15m baseline → 1.6M-4.7M/15m during the 06:15-07:45 run). However, the 08:00 candle is an explicit **rejection candle**: O $0.00962 → H $0.00969 → L $0.00881 → C $0.00898, closing near the low after tagging just below the high, on continued elevated volume (960K) — classic blow-off-top signature, not continuation. Current live price ($0.009160) is a modest bounce off that close but still -11.8% off the high with no fresh breakout above it.
+
+No catalyst identified for OXT anywhere in the research (general gainer-list entry only, no news item, no listing/upgrade attached) — this is a pure momentum/volume spike.
+
+**ATR classification:** 15m candle ranges during the rally are extreme — e.g. the 07:30 candle alone spanned $0.00889→$0.00978 (10.0% high-low range) and the 07:45 candle spanned $0.00949→$0.01039 (9.5% range). This clears the strategy's high-ATR threshold (>3% intraday ATR), mandating the **3.5% trailing-stop exception**, not the default 2.5%. At a 3.5% stop, R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 minimum**, the identical failure mode already logged repeatedly for AKE, TRIA, and other high-ATR movers this month. Combined with the confirmed rejection candle at the highs and zero catalyst, entering now would mean chasing a fading spike with negative-expectancy sizing. **SKIP.**
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's headline claims were again mostly wrong or wildly overstated once live-checked: SOL/ATOM/XRP all claimed up 3-4%/4h but are actually red; BLUR/VANRY/NTRN claimed up 38-62% but are red; AKE claimed up 36.9% but is actually down 1.1% vs today's open; RMRK/MOG CAT/EGL1/ZA2Z/HEI/MBOX/ESPORTS/YFI/EPIC are either untradeable, absurd data artifacts, or not independently verified given zero historical hit rate on this class of claim
+- OXT is the sole claim that partially held up (real move, but +28.5% live vs the +88.7%/+95.4% claimed) — and it already peaked and is rejecting off the high with no catalyst; high-ATR sizing math makes it R:R-negative regardless
+- Fear & Greed at 27 (Fear) — not Extreme Fear, so the stricter 1.5:1 R:R floor doesn't apply today, though it's moot since no candidate clears the base 1.2:1 bar
+- US-Iran sanctions and hawkish Fed commentary are bearish macro overhangs pressuring the whole market today — consistent with BTC/majors trading soft
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- OXT is worth rechecking only on a fresh 1h candle close above $0.010390 with continued volume — that would still require re-running the high-ATR R:R math, which has failed for every high-ATR mover screened this month
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC ~-1.75%, a mild pullback). No candidate passes the full live-verified momentum + catalyst + spread + R:R bar: SOL/ATOM/XRP/BLUR/VANRY/NTRN are all live-contradicted (red, not the claimed gains); AKE is flat/red today with no fresh momentum; ZEUS and WAR both fail the spread cap; EPIC is untradeable; OXT is the only real, spread-passing mover but already peaked with an explicit rejection candle at the highs, no catalyst, and negative R:R (0.86:1) once correctly classified as high-ATR. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 16+ days of quota exhaustion, unresolved since first flagged 2026-07-02 — needs resubscription at callmebot.com/61477788635.
+
+---
+
+
