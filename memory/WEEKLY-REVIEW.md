@@ -887,3 +887,71 @@ When a catalyst's freshness (<6h) can't be confirmed AND market-wide Fear & Gree
 **A quiet week (3 closed trades, 7 of 10 sessions flat) barely broke even (+0.17%) and lagged BTC's uptrend (−0.71% vs BTC) because the week's only fresh entry (ARB) was also its most marginal one — bare-minimum R:R, unconfirmed catalyst freshness, and an Extreme Fear backdrop all present simultaneously.** The one clean win (ETH) came from risk-management mechanics (the T1 tighten), not sourcing skill. Going forward, marginal setups in a bearish-sentiment environment need a higher R:R bar, not just a smaller position size — sizing discipline limited this week's damage but didn't prevent the loss.
 
 ---
+
+## Week of 2026-07-11 — Review Date: 2026-07-17
+
+### Context
+**Zero-trade week.** Every one of the ~20 research/scan sessions across the week (2 pre-session + 2 midday scans daily, Jul 11–17) returned HOLD. No position was opened or closed. Cash sat unchanged at $115.5598 ZUSD from the Jul 10 EOD snapshot through Friday close. The recurring theme: Perplexity kept surfacing "movers" that live Kraken data directly contradicted (wrong direction, wrong magnitude, non-Kraken tickers), and the handful of real live movers (ZEC repeatedly, ARB, IDEX, ETH on the ETF-launch day, AKE) all failed the momentum-peak-freshness check, R:R floor, or spread/liquidity cap on inspection. Fear & Greed ranged Extreme Fear (22–23) to Fear/Neutral (26–46) through the week, never favorable for marginal setups.
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $115.5598 | $115.5598 ZUSD (+dust) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` canceled since May 22) |
+| **Total** | **$115.5598** | $115.5598 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jul 10 EOD) | $115.5598 |
+| Ending Equity (Fri Jul 17 EOD) | **$115.5598** |
+| **Week Return** | **0.00%** ($0.00) |
+| BTC Week Return | **−1.74%** (Mon Jul 13 open $63,737.80 → Fri $62,630.30) |
+| **Bot vs BTC** | **+1.74%** (outperformed by sitting out a down week) |
+
+### Trade Summary
+No trades this week — 0 entries, 0 exits, 0 open positions.
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 0 |
+| Wins | 0 |
+| Losses | 0 |
+| Win Rate | N/A (no trades) |
+| Gross Wins | $0.00 |
+| Gross Losses | $0.00 |
+| Profit Factor | N/A |
+| Avg Win / Avg Loss | N/A |
+| Largest Win / Largest Loss | N/A |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | $0.00 (no trades placed) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $115.5598 (+dust). No open orders. BTC weekly trend gate: not applicable this review (BTC down 1.74% over 5 days is under the −3% trigger threshold, so no stricter entry criteria were in force).
+
+### Trade Quality Review
+
+**Entry types that worked:** N/A — no entries taken.
+
+**Entry types that failed:** N/A — no entries taken. Every live-mover candidate this week was correctly rejected before entry:
+- **ZEC** (repeated Jul 11–13): spiked 5–6% multiple times but every check found the 24h/1h high already 1–6h old and fading on collapsing volume — momentum-peak check correctly blocked all four+ instances.
+- **ARB** (Jul 11): fourth consecutive rejection same day, same fading-momentum pattern, no fresh catalyst.
+- **IDEX** (Jul 13): genuine 21:00 UTC breakout candle, but the following candle stalled dead with no catalyst — correctly skipped.
+- **ETH** (Jul 15): real ETF-launch catalyst with confirmed abnormal volume, but the price high was already 44+ min old and fading by the time of the scan — momentum-peak check correctly applied even to a *real*, non-hallucinated catalyst.
+- **AKE** (Jul 15–16): a genuine +230–250% mover, but R:R at the mandatory 3.5% high-ATR trailing stop was persistently 0.86:1 — below the 1.2:1 floor — across six consecutive checks; correctly never entered despite repeated re-checks as price extended.
+
+**Stop quality:** N/A — no positions opened, so no stops placed. No orphan-stop issues (positions/orders confirmed empty at every check).
+
+**Profile violations:** None — no trades occurred, so no rule (spread, leverage, R:R, momentum-peak) was ever at risk of violation. Rejections were all correctly reasoned discipline, not missed rule enforcement.
+
+**Recurring operational issues (not strategy rules, but worth flagging):**
+- **Perplexity data-quality problem, now chronic:** Nearly every session this week (and every session since at least early July) saw Perplexity report movers or magnitudes directly contradicted by live Kraken quotes — wrong direction (KAS claimed +2.73%, actually −2.0%), fabricated magnitude (PORTAL claimed +34.67%, actually flat; T/USD claimed +40.8%, actually −11.1%; five of six "movers" in the Jul 15 22:05 scan were red, not green), and non-Kraken tickers (BLAST, DEXE, CATX, CDXR, DODO, LAT, CZ all `Unknown asset pair`). Live Kraken cross-checks caught all of it, so no bad trade resulted, but the research signal is now providing near-zero usable candidates — the bot is essentially trading on raw Kraken OHLC/volume alone, with Perplexity only occasionally confirming a catalyst (e.g. the real ETH ETF launch).
+- **WhatsApp/CallMeBot notifications have now failed for 15+ consecutive days** (since Jul 2, quota exhausted) — every EOD snapshot this week logged a failed notification attempt. Needs resubscription at callmebot.com/61477788635; this is an external quota issue the bot cannot self-resolve, but it has now gone unresolved for over two weeks and should be flagged explicitly to the user.
+
+**Concrete adjustment:** No rule change warranted this week — every rejection was a correct application of existing rules (momentum-peak check, R:R floor, high-ATR trail sizing), not a gap the rules failed to catch. The one process note: given Perplexity's sustained near-zero hit rate over the past two+ weeks, consider deprioritizing it as a discovery source in favor of scanning live Kraken OHLC/volume directly across the full pair universe, using Perplexity only for catalyst confirmation once a live mover is already found. No changes made to TRADING-STRATEGY.md this week.
+
+### Key Lesson
+**Discipline, not opportunity, defined this week — roughly 20 consecutive HOLD decisions across a week where BTC fell 1.74% means sitting in cash was the correct call, not a missed one (Bot +1.74% vs BTC).** Every live mover that surfaced (ZEC, ARB, IDEX, ETH, AKE) was correctly rejected on a specific, rule-based check (momentum-peak freshness, R:R floor, spread/liquidity, stall-after-breakout), including one case (ETH's ETF launch) where the catalyst itself was real, not hallucinated — proof the rules work even when the "obvious" trade tempts. The more pressing issue is external, not strategic: Perplexity's research signal has been unreliable for two-plus weeks straight, and WhatsApp notifications have been silently broken for over two weeks — both need attention outside the bot's own decision loop.
+
+---
