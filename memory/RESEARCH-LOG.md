@@ -27885,4 +27885,26 @@ Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory alway
 
 ---
 
+## 2026-07-17 — Session-Open Execution Check #2 (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, `orders` shows only the historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect. No change since the 09:02 UTC check.
+
+**Live quotes vs today's open:**
+- BTC $63,263.10 → **-0.83%** (o $63,789.60), -2.42% off 24h high $64,830.30
+- SOL $74.72 → **-0.70%** (o $75.25)
+
+Crash gate: not triggered.
+
+**OXT recheck:** $0.013360 vs open $0.007130 = **+87.4%**, extending further from the +65.4% seen at 09:02, still on the Coinbase-inbound-transfers catalyst. Now -16.4% off a fresh 24h high $0.015970. Spread now **~1.43%** — fails the 1% cap outright (previously borderline-passing). High-ATR classification unchanged; R:R at mandatory 3.5% trail remains 0.86:1, still fails 1.2:1 minimum. **SKIP** (spread + R:R both fail).
+
+**AKE recheck:** $0.00117586 vs open $0.00102051 = **+15.2%**, -4.0% off 24h high $0.00122507 (closest to its high of any check today). Spread ~0.24%, passes. Still high-ATR (mandatory 3.5% trail); R:R at T1 = 0.86:1, same structural failure logged all week. **SKIP.**
+
+**New catalyst scan:** Perplexity flagged ENA +12% on a BlackRock Aladdin/USDe integration story. Live-checked: ENA $0.0810 vs open $0.0823 = **-1.58%**, directly contradicting the claimed gain — same live-data-contradicts-headline pattern seen repeatedly today (SOL/ATOM/XRP/BLUR/VANRY/NTRN earlier, now ENA). **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No candidate clears the full bar: OXT now fails on both spread (1.43%) and R:R (0.86:1); AKE fails R:R only (0.86:1), unchanged from every prior check this week; ENA's claimed catalyst is live-contradicted. Crash gate not triggered (BTC -0.83%).
+
+WhatsApp notification attempted per Step 7 (checked, not required since no trade) — reconfirmed still **FAILED**: quota exhausted (0 messages left), unresolved since 2026-07-02.
+
+---
+
 
