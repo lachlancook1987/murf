@@ -7738,3 +7738,23 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 16 EOD, zero open positions, `orders: {}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,156.60 (Jul 16 EOD) to $62,699.30 today (−2.21%), so the bot's flat day outperformed BTC by +2.21%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 15+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-17 — Session-Open Execution Check (09:02 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, `orders` shows only the historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect.
+
+**Live quotes vs today's open:**
+- BTC $62,868.80 → **-1.44%** (o $63,789.60), -3.03% off 24h high $64,830.30
+- ETH $1,829.32 → **-1.82%** (o $1,863.19), -3.34% off 24h high $1,892.49
+
+Crash gate: not triggered. Both majors extending the red day already logged at the 08:10 UTC pre-session pass.
+
+**OXT deep-dive (largest live mover):** $0.011790 vs open $0.007130 = **+65.4%**, a sharp extension from the +28.5% seen at the 08:10 pre-session check. Confirmed a **genuine catalyst** via Perplexity: Coinbase confirmed it will open inbound OXT transfers today (Jul 17), a real listing event — not a stale/hallucinated headline. 15m OHLC (Kraken public API) shows the rally accelerating from ~$0.0075 at 06:15 to a fresh 24h high of $0.01379 in the 08:30 candle (~30min old, within the 60min freshness window), but the very next candle (08:45) reversed hard to close $0.01152 and the latest 09:00 candle volume collapsed to ~138K from a 1.9M–6.4M/candle run — an unambiguous blow-off-top/exhaustion signature. Current price is **-14.5% off that fresh high**. ATR is extreme (single 15m candles ranging 15–28%), mandating the high-ATR 3.5% trailing-stop exception; R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 minimum**, the same structural failure logged repeatedly this month for AKE/TRU/ODOS-type spikes. Genuine catalyst does not override the R:R floor. **SKIP.**
+
+**AKE recheck:** $0.00112255 vs open $0.00102051 = **+10.0%**, -2.5% off 24h high $0.00115115 (closer to its high than at any prior check today). 15m OHLC still shows high-ATR ranges (up to 12.5% in one candle) and the same 09:00 volume collapse (748K vs 5.6M–38M in prior candles) — same stall-at-highs pattern. R:R at the mandatory 3.5% trail remains 0.86:1, unchanged and still failing. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Crash gate not triggered (BTC -1.44%). OXT is a real, catalyst-confirmed mover (Coinbase listing) but is already fading hard off a fresh high with volume evaporating, and its mandatory high-ATR stop sizing makes R:R structurally negative (0.86:1) regardless of catalyst quality. AKE shows the identical R:R failure it has shown all week. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
