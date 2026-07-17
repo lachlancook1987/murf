@@ -27907,4 +27907,27 @@ WhatsApp notification attempted per Step 7 (checked, not required since no trade
 
 ---
 
+## 2026-07-17 — Midday Scan (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** zero exposure, only the historical filled/canceled entries through 2026-05-22. No change since the prior session-open check.
+
+**Live quotes vs today's open:**
+- BTC $63,133.00 → **-1.03%** (o $63,789.60), -1.36% off 24h high $64,830.30
+- ETH $1,823.59 → **-2.13%** (o $1,863.19), -3.63% off 24h high $1,892.49
+- SOL ~$75.08 → roughly flat/red vs o $75.25
+
+Crash gate: not triggered (BTC -1.03%, nowhere near -20%).
+
+**OXT recheck:** $0.011652 vs open $0.007130 = **+63.4%**, but now **-69.3% off a new 24h high of $0.038** — the spike has fully round-tripped and then some; this is a completed blow-off, not a fresh setup. **SKIP.**
+
+**AKE recheck:** $0.00099079 vs open $0.00102051 = **-2.9%**, now actually red vs open and -23.4% off 24h high $0.0012936 — momentum faded further since the last check. **SKIP.**
+
+**New candidate scan:** Perplexity's "biggest 1h surge" query again returned only 24h-gain data with the usual mix of untradeable/illiquid tickers: LVVA, MYRO, CROZKCRO (all `Unknown asset pair` on Kraken), LUMIA (`Unknown asset pair`), T (Threshold) — the only one confirmed tradeable. **T/USD** live: last $0.00407 vs open $0.00395 = +3.0% (barely at threshold) but **-31.2% off its 24h high** ($0.00592) and sitting near today's low ($0.0039) — an already-crashed spike, not a breakout; spread ~0.25% (would pass) but momentum direction is down, not up. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all red since open. OXT and AKE both continue to fade off their highs (OXT fully round-tripped its spike; AKE now red vs open). T is the only new tradeable name from Perplexity's gainer list and it's already -31% off its high, not a fresh setup. No candidate clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
 
