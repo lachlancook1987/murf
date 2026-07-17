@@ -7728,3 +7728,13 @@ Catalyst query surfaced only market-wide/dated themes: BTC ETF outflows (bearish
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-17 — EOD Snapshot (Day 58, Friday)
+
+### Jul 17 — EOD Snapshot (Day 58, Friday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +2.21%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 16 EOD, zero open positions, `orders: {}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,156.60 (Jul 16 EOD) to $62,699.30 today (−2.21%), so the bot's flat day outperformed BTC by +2.21%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 15+ days); needs resubscription at callmebot.com/61477788635.
