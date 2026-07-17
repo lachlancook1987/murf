@@ -28008,3 +28008,27 @@ No candidate clears the momentum + catalyst + spread + freshness + R:R bar. AKE 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 15+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-17 — Midday Scan #2 (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, `orders` shows only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect.
+
+**Live quotes vs today's open:**
+- BTC $64,027.60 → **+0.37%** (o $63,789.60), -0.48% off 24h high $64,334.30
+- ETH $1,839.53 → **-1.27%** (o $1,863.19), -1.57% off 24h high $1,868.87
+- SOL $74.93 → **-0.43%** (o $75.25)
+
+Crash gate: not triggered (BTC +0.37%). Majors roughly flat, no momentum signal.
+
+**Fresh scan:** Perplexity 1h-surge query again returned no genuine 1h-resolution data, only stale 24h "gainers": MOG CAT +2,866.67%, DEGO +377.8%, MRLIGHTSPEED +301.73%, EGL1 +112.1%, OXT +134.05%. Live-checked:
+- **MOG/USD**: $0.0000001014 vs open $0.0000001020 = **-0.6%**, flat/red — directly contradicts claimed +2,866.67%. **SKIP**
+- **DEGO/USD**, **EGL1/USD**: `Unknown asset pair` — untradeable on Kraken. **SKIP**
+- **OXT/USD**: $0.018120 vs open $0.007130 = +154.1% cumulative, but **-52.3% off today's 24h high** ($0.038) — the spike already fully round-tripped per the 15:xx UTC and 20:06 UTC checks; spread now ~1.5%, fails the 1% cap. Same completed blow-off, no fresh breakout. **SKIP**
+
+Catalyst query returned only market-wide macro themes already logged today: hawkish Fed minutes, ~$7B BTC ETF outflows May-June, US-Iran tensions, CLARITY Act House hearing (odds down to 43%, outcome pending). Nothing fresh, single-asset-actionable, <6h old.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all flat/mild-red, no momentum signal. MOG CAT live-contradicted; DEGO/EGL1 untradeable; OXT remains a fully round-tripped blow-off failing both spread and freshness. No candidate clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
