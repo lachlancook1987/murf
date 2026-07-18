@@ -28092,3 +28092,30 @@ No candidate clears the momentum + catalyst + spread + freshness + R:R bar. AKE 
 
 ### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.05%). No candidate passes the full live-verified momentum + catalyst + spread + freshness + R:R bar: BTC/ETH/SOL/XRP all flat with no signal; OXT is a fully round-tripped blow-off failing both spread and freshness; WAR/NTRN fail the spread cap; ESPORTS/STAR/MBOX are live-contradicted or untradeable; AKE remains the closest real mover but its high-ATR R:R math (0.86:1) has now failed the 1.2:1 minimum for a fifth straight trading day. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
 
+
+---
+
+## 2026-07-18 — Midday Scan (14:04 UTC, Monitoring Only)
+
+**Portfolio:** $115.5598 ZUSD (100% cash) + dust only | **Open positions:** none | **Open orders:** none
+
+### Steps 1-2 — State Check
+`kraken.sh positions` → `{}`, `kraken.sh orders` → `{"open": {}}` — unchanged since the 09:01 UTC session-open check. Alpaca `orders` reconfirmed only the historical filled/canceled entries through 2026-05-22 — zero Alpaca exposure.
+
+### Steps 3-5 — Stop Verification / Tightening / Thesis Check
+N/A — no open positions on either exchange, nothing to protect or re-evaluate.
+
+### Step 6 — New Entry Scan
+BTC $64,078.70 vs today's open $63,907.00 = **+0.27%** (-0.39% off 24h high $64,334.30). ETH $1,840.25 vs open $1,840.56 = **-0.02%**. SOL $74.65 vs open $74.98 = **-0.44%**. All three majors still flat/rangebound, essentially unchanged from the 09:01 UTC check. Crash gate: not triggered.
+
+Perplexity "1h surge" query again returned only stale 24h-gainer data, same names flagged since pre-session: MOG CAT +2,867%, DOGO +1,116%, Union (U) +110%, OXT +167%, UP +147%, AKE +81%, HPP +38.5%, XeXe +17.4%. OXT and AKE already ruled out earlier today (OXT: completed blow-off + spread fail; AKE: R:R 0.86:1, sixth consecutive failing day). Live-checked the two new names with a plausible Kraken pair:
+- **UP/USD**: c $0.06025 vs o $0.06096 = **-1.16%**, directly contradicting the claimed +146.9% gain; spread also ~10% (ask 0.06774 / bid 0.06093), far over the 1% cap. **SKIP**.
+- **U/USD** (Union): c $0.000361 vs o $0.000371 = **-2.7%**, contradicts claimed +110.31% and is two orders of magnitude below Perplexity's cited $0.12 price — mismatched/hallucinated data. **SKIP**.
+- **HPP/USD**: `Unknown asset pair` — untradeable. **SKIP**.
+- MOG CAT, DOGO, XeXe: no Kraken pair naming precedent found in prior sessions, consistent with the recurring pattern of unverifiable micro-cap "gainer" claims — not screened further.
+
+Catalyst query surfaced only the same market-wide/macro themes already logged at 08:05 UTC pre-session: US-Iran geopolitical escalation (bearish), Fed Chair Warsh dovish rhetoric (bullish relief rally, already priced in), CLARITY Act odds at 48% (dated/uncertain), GENIUS Act stablecoin KYC proposal (bearish/compliance). Nothing fresh, single-asset-actionable, or <6h old.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all flat and essentially unchanged since the 09:01 UTC check. UP and U both fail to match Perplexity's claimed gains once live-checked, with UP's spread also disqualifying. HPP is untradeable. AKE/OXT remain ruled out from earlier scans today. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
