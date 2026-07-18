@@ -7758,3 +7758,15 @@ Crash gate: not triggered. Both majors extending the red day already logged at t
 ### Decision: **HOLD — no new entries, no open positions to manage.** Crash gate not triggered (BTC -1.44%). OXT is a real, catalyst-confirmed mover (Coinbase listing) but is already fading hard off a fresh high with volume evaporating, and its mandatory high-ATR stop sizing makes R:R structurally negative (0.86:1) regardless of catalyst quality. AKE shows the identical R:R failure it has shown all week. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-18 — EOD Snapshot (Day 59, Saturday)
+
+### Jul 18 — EOD Snapshot (Day 59, Saturday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −2.04%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 17 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rose from $62,699.30 (Jul 17 EOD) to $63,978.60 today (+2.04%), so the bot's flat day underperformed BTC by −2.04%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 16+ days); needs resubscription at callmebot.com/61477788635.
