@@ -28119,3 +28119,61 @@ Catalyst query surfaced only the same market-wide/macro themes already logged at
 ### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all flat and essentially unchanged since the 09:01 UTC check. UP and U both fail to match Perplexity's claimed gains once live-checked, with UP's spread also disqualifying. HPP is untradeable. AKE/OXT remain ruled out from earlier scans today. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-18 — Pre-Session Research (20:04 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since every prior check today (08:05, 09:01, 14:04 UTC). No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 20:04 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Split -3.04% (Coinbase, likely stale feed) to +1.73% (Kraken-cited) | $63,944.00-area per Perplexity's own Kraken citation, **+1.73%** | Mildly green, no strong momentum signal |
+| ETH | ~+0.5-0.7% across trackers | Consistent with flat/mild-green day logged since 08:05 UTC | Flat |
+| Fear & Greed | 25 (Extreme Fear, alternative.me) vs 34-46 (Neutral/Fear, other providers) | — | Using 25 (Extreme Fear) as conservative reference — Extreme Fear + unconfirmed-catalyst rule (1.5:1 R:R floor) would apply to any unconfirmed-catalyst candidate today; moot since none clears the base bar |
+| BTC funding rate | All-exchange avg +0.004%/8h; Kraken +0.0076% | — | No crowded skew, not actionable |
+| Catalysts | BTC ETF inflows $1.2B this week (bullish), CLARITY Act odds cut to record low on Senate delay (bearish/mixed), **SEC ruling due today (Jul 18) on 12 pending spot ETH ETF applications** — potential 5-10% rally if approved (high-potential, dated/pending), US-Iran geopolitical risk-off + China GDP miss (bearish), Citadel Securities $400M investment in Crypto.com (bullish, market-structure) | — | ETH ETF decision is the standout: real, dated, single-asset-relevant catalyst — but no confirmed outcome yet and ETH is still flat (+0.5%), showing no price reaction. Per the scheduled-catalyst pre-positioning rule, do not front-run undecided outcomes on anticipatory momentum — wait for confirmed post-decision price reaction |
+| Unlocks this week | PUMP $138.85M (Jul 14, already passed), DBR $10.67M (today), FTN $84.7M (today, cliff), BARD $1.34M (today) | — | Dilution headwinds only; none held or flagged as momentum names |
+| Top gainers | NKN +153.7%, U +110.3%, ATLAS +128.5%, OXT +166.7%, UP +146.9%, AKE +80.5%, TENDIES +49.4%, OWB +44.6%, LRC +35.1%, TOSHI +31.8% | See candidate table below | Comprehensively cross-checked live |
+
+**Crash gate:** BTC +1.7% (per live Kraken) → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat-to-up over trailing week → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 15m OHLC, 20:04 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **NKN/USD, TENDIES/USD, OWB/USD** | — | — | — | `Unknown asset pair` — untradeable on Kraken. **SKIP** |
+| **LRC/USD** | -17.6% ($0.013472 vs o $0.016348) | — | — | Red, directly contradicts claimed +35.1% gain — **SKIP** |
+| **U/USD, UP/USD, OXT/USD, AKE/USD** | — | — | — | All already ruled out in earlier checks today (U: hallucinated price mismatch; UP: spread ~10%; OXT: completed blow-off, spread fail; AKE: R:R 0.86:1, sixth+ consecutive failing session) — not re-screened in full, no new information since 14:04 UTC check |
+| **TOSHI/USD** | +14.3% ($0.0001229 vs o $0.0001075) | **-15.2%** off 24h high $0.0001449 | ~0.24% (passes) | Real move but already well off its high with no fresh breakout — spike-then-fade pattern. **SKIP** |
+| **POLIS/USD** | +36.0% ($0.01235 vs o $0.00908) | **-22.6%** off 24h high $0.01596 | **~7.8%** (fails cap) | Large move but already faded 23% off high and spread far exceeds the 1% cap. **SKIP** |
+| **ATLAS/USD** | +18.3% ($0.0001808 vs o $0.0001528) | **-58.2%** off 24h high $0.0004329 | ~4.4% (fails cap) | Massive intraday spike (open to high was +183%) already fully round-tripped; textbook completed blow-off. **SKIP** |
+| **SKY/USD** | +5.0% ($0.06260 vs o $0.05963) | **-0.45%** off 24h high $0.06288 — sitting right at session highs | ~0.08% (passes, very tight) | Closest-looking setup: near high, tight spread, real live move. But 15m OHLC (12:45-20:00 UTC) shows a slow, steady 8h grind (+6.6% total), not a fresh burst — only **+2.5% over the last 4h** and **~flat over the last 1h** (19:00 $0.06255 → 20:00 $0.06260), both below the 5%/4h and 3%/1h surge thresholds. Perplexity's dedicated SKY news query found **no catalyst** and in fact claimed SKY was **down 2.27% to $0.0598 today** — directly contradicted by live Kraken data, another instance of stale/wrong Perplexity pricing. No catalyst + momentum below threshold = doesn't clear the entry bar despite the clean technical picture. **SKIP** |
+
+No candidate clears the momentum + catalyst + spread + R:R bar. SKY is the most technically attractive (tight spread, near highs) but fails on both the surge-threshold and catalyst requirements — a slow grind, not a fresh breakout.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's headline gainer claims again mostly contradicted or overstated once live-checked: LRC red vs claimed +35%; NKN/TENDIES/OWB untradeable; SKY's own dedicated news query gave a price/direction directly opposite to live Kraken data
+- **ETH spot ETF SEC ruling due today** is the one live, dated, single-asset-relevant catalyst on the board — but undecided, and ETH shows no price reaction yet (+0.5%, flat). Per the scheduled-catalyst pre-positioning rule, do not front-run the undecided outcome; watch for a confirmed post-ruling price reaction intraday/tomorrow if it lands
+- AKE and OXT remain structurally ruled out (R:R and completed-blowoff respectively) across essentially every check this week
+- TOSHI, POLIS, ATLAS all show the same recurring pattern this week: real spikes that have already round-tripped 15-58% off their highs by the time they surface in Perplexity's gainer list — none represent a fresh entry
+- Extreme Fear reading (25, alternative.me) would require a 1.5:1 R:R floor for any unconfirmed-catalyst candidate — moot, no candidate clears the base 1.2:1 bar regardless
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +1.7%). No candidate passes the full live-verified momentum + catalyst + spread + R:R bar: LRC live-contradicted; NKN/TENDIES/OWB untradeable; TOSHI/POLIS/ATLAS all already faded well off their highs (spike-then-fade); SKY is the cleanest technical picture (tight spread, near highs) but fails both the surge-threshold and catalyst tests — a slow 8h grind, not a fresh breakout. AKE/OXT remain structurally ruled out from repeated earlier checks. The one live dated catalyst (ETH spot ETF SEC ruling, due today) is undecided with no price reaction yet — watching for a confirmed post-decision move, not front-running it. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 17+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
