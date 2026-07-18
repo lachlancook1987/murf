@@ -28032,3 +28032,63 @@ Catalyst query returned only market-wide macro themes already logged today: hawk
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-18 — Pre-Session Research (08:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since every prior check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:05 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Split -2.36% (Kraken cited) to +1.89% across sources | $63,937.10 vs today's open $63,907.00 = **+0.05%**, -0.62% off 24h high $64,334.30 | Flat — no momentum signal |
+| ETH | Split -2.64% to +2.7% | $1,841.28 vs open $1,840.56 = **+0.04%** | Flat |
+| SOL | — | $74.79 vs open $74.98 = **-0.25%** | Flat/mild red |
+| XRP | +4.58% (24h volume note) | $1.08821 vs open $1.08829 = **-0.01%** | Flat, contradicts claimed gain |
+| Fear & Greed | Wide split: CFGI 49 (Neutral), Binance 34 (Fear), FearGreedMeter 25-27 (Fear/Extreme Fear), CoinStats 31 (Fear), alternative.me 25 (Extreme Fear) | — | Using conservative alternative.me 25 (Extreme Fear) as reference — moot regardless since no candidate clears base bar |
+| BTC funding rate | Aggregate ~+0.004%, mean 0%; Kraken +0.0055% (stablecoin) / -0.0126% (coin, likely artifact) | — | No crowded skew, not actionable |
+| Catalysts | Fed Chair Warsh softer inflation rhetoric (bullish relief rally), US-Iran geopolitical escalation (bearish), CLARITY Act odds down to 48% (uncertain/dated), GENIUS Act stablecoin KYC proposal (bearish/compliance), $96M spot ETH ETF inflow (bullish but market-wide, not single-asset actionable) | — | All market-wide/macro or dated; nothing fresh, single-asset-actionable, <6h old |
+| Unlocks this week | BARD (Lombard) $1.34M today (3.10% of mkt cap), UP/C/STRK/ARB/MAGMA/AGT smaller unlocks already passed | — | Dilution headwinds only; none held or flagged as momentum names |
+| Top gainers / momentum | MOG CAT +2,867%, GameStop Coin +567%, CATX +837%, Union (U) +110%, OXT +89-267%, STAR +158%, AKE +36-69%, WAR +86%, NTRN +62%, ESPORTS +44-49%, MBOX +267% | See candidate table below | Comprehensively cross-checked live |
+| Volume surge | XRP $3.04B/+4.58%, SOL $2.78B/+3.56%, VANRY +52.20%, BLUR +38.03% | See candidate table below | Live-checked |
+
+**Crash gate:** BTC +0.05% today → **NOT triggered** (nowhere near -20%).
+**BTC weekly trend gate:** BTC roughly flat over trailing week → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 15m OHLC, 08:05 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **BTC/USD** | +0.05% | -0.62% | — | Flat, no momentum signal — **SKIP** |
+| **ETH/USD** | +0.04% | — | — | Flat — **SKIP** |
+| **SOL/USD** | -0.25% | — | — | Flat/red — **SKIP** |
+| **XRP/USD** | -0.01% | — | — | Flat, contradicts claimed +4.58% — **SKIP** |
+| **OXT/USD** | +5.9% ($0.017770 vs o $0.016780) | **-53.2%** off 24h high $0.038 | ~1.8% (fails cap) | Same completed blow-off flagged in every check since 2026-07-17 — spike already fully round-tripped, no fresh breakout, spread also fails — **SKIP** |
+| **AKE/USD** | +32.0% ($0.00188728 vs o $0.00142991) | -3.7% off 24h high $0.00196008, but high was set in the 07:00 UTC candle (~65min old — just outside the 60min freshness window) | ~0.6% (passes) | 15m OHLC confirms extreme high-ATR profile persists (07:45 candle alone ranged $0.00192228→$0.00166525, a 13.4% intra-candle swing, followed by a partial recovery) — mandates the 3.5% trailing-stop exception. R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 minimum**, the identical structural failure logged in every single AKE check since 2026-07-14. High also just outside freshness window with a violent whipsaw in between (dumped to -13% then recovered) — no clean breakout. **SKIP** |
+| **WAR/USD** | +8.6% | -20.8% off 24h high $0.00096 | **~3.9%** (far over cap) | Fails spread cap — **SKIP** |
+| **NTRN/USD** | +5.1% | -12.8% off 24h high $0.00047 | **~5.0%** (far over cap) | Fails spread cap — **SKIP** |
+| **ESPORTS/USD** | -7.7% ($0.02870 vs o $0.03110) | -24.9% off 24h high $0.0382 | — | Red, directly contradicts claimed +44-49% gain — **SKIP** |
+| **STAR/USD**, **MBOX/USD** | — | — | — | `Unknown asset pair` — untradeable on Kraken — **SKIP** |
+
+No candidate clears the momentum + catalyst + spread + freshness + R:R bar. AKE remains the closest — a real, large move — but its structural high-ATR R:R (0.86:1) has now failed the 1.2:1 minimum in every check since 2026-07-14 (five consecutive trading days), consistent with the standing note that AKE should be deprioritized from active screening unless its ATR profile changes.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Perplexity's headline gainer claims were again mostly contradicted or overstated once live-checked: XRP and ESPORTS both red/flat vs claimed double-digit gains; STAR/MBOX untradeable; MOG CAT/CATX/GameStop Coin/Union are absurd data artifacts or not independently verified given zero historical hit rate on this class of claim
+- OXT continues the completed blow-off pattern flagged in every check since 2026-07-17 — spread now also fails the 1% cap
+- AKE is structurally unable to clear the R:R bar under its persistent high-ATR classification (0.86:1 vs 1.2:1 required) for a fifth consecutive trading day — high-conviction case to stop actively re-screening this asset until its ATR profile changes
+- WAR and NTRN both fail the spread cap outright (~4-5%) regardless of momentum
+- Fed Chair Warsh's softer inflation rhetoric is a mild bullish macro tailwind, offset by US-Iran tensions — net roughly neutral, consistent with BTC/ETH/SOL/XRP all trading flat today
+- Fear & Greed readings diverge sharply (25 Extreme Fear to 49 Neutral depending on source) — moot here since no candidate clears the base 1.2:1 R:R bar regardless of which floor applies
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.05%). No candidate passes the full live-verified momentum + catalyst + spread + freshness + R:R bar: BTC/ETH/SOL/XRP all flat with no signal; OXT is a fully round-tripped blow-off failing both spread and freshness; WAR/NTRN fail the spread cap; ESPORTS/STAR/MBOX are live-contradicted or untradeable; AKE remains the closest real mover but its high-ATR R:R math (0.86:1) has now failed the 1.2:1 minimum for a fifth straight trading day. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
