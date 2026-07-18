@@ -7789,3 +7789,28 @@ All three majors still flat, essentially unchanged from the 08:05 UTC pre-sessio
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 08:05 UTC pre-session research. BTC/ETH/SOL all flat, AKE unchanged and still R:R-negative. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-18 — Midday Scan (22:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}` — unchanged since the 09:01 UTC session-open check. **Alpaca:** orders reconfirmed only the historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:**
+- BTC $64,742.80 → **+1.31%** (o $63,907.00), only -0.09% off 24h high $64,800.00
+- ETH $1,861.10 → **+1.12%** (o $1,840.56), -0.22% off 24h high $1,865.28
+- SOL $75.50 → **+0.69%** (o $74.98), -0.09% off 24h high $75.57
+
+All three majors green and near session highs, but below the 3% momentum threshold. Crash gate: not triggered. Fear & Greed Index: **25 (Extreme Fear)** per most-cited source (alternative.me), though readings vary widely across providers (34-62 elsewhere).
+
+Perplexity "1h surge" query again returned only 24h-gain data: U +110%, OXT +166.7%, UP +146.9%, AKE +80.5%, HPP +38.5%, KYVE +29.1%, DEXE +17.4%, VVV +15.0%. HPP/KYVE/DEXE are `Unknown asset pair` on Kraken — untradeable, skip. Live-checked the rest:
+- **U/USD**: c $0.000351 vs o $0.000371 = **-5.4%**, directly contradicting the claimed +110%. Spread ~4.5% — over the 1% cap regardless. **SKIP**.
+- **UP/USD**: c $0.06091 vs o $0.06096 = **-0.08%**, flat — contradicts claimed +146.9%, -14.8% off 24h high. Spread ~2.7% — over cap. **SKIP**.
+- **OXT recheck**: c $0.01697 vs o $0.01678 = +1.1% today, but still -28.7% off yesterday's blow-off-top high ($0.02379) — the same exhausted spike flagged and rejected at the 2026-07-17 session-open check, no fresh signal. **SKIP**.
+- **AKE recheck**: c $0.00195407 vs o $0.00142991 = **+36.6%**, -6.95% off 24h high $0.00210. Same high-ATR profile, R:R at mandatory 3.5% trail remains 0.86:1 — still failing the 1.2:1 minimum for a seventh consecutive check. **SKIP**.
+
+**VVV deep-dive (only asset with a real live move, genuine catalyst, tight spread):** $11.798 vs open $11.152 = **+5.79%**, only -0.85% off 24h high $11.899, spread ~0.09% — comfortably inside every screening gate on paper. Catalyst confirmed via Perplexity as genuine (not hallucinated): a new "buy-and-burn" tokenomics update reducing circulating supply, plus AI-integration adoption news (~22h old, too stale to count as fresh). However, 15m OHLC (Kraken public API) shows the 24h high of $11.899 was set in the 20:15 UTC candle — **110 minutes ago**, well past the 60-minute momentum-peak-check freshness window — on a volume spike of 3491 units. Every candle since has failed to reclaim that high, and the most recent candle (21:45-22:00 UTC) shows volume collapsing to just **8.49 units**, a >99% decline from the spike candle. This is the identical spike-then-stall/volume-exhaustion signature rejected repeatedly this week for OXT/AKE/TRU — no fresh breakout above $11.899, and the AI-integration catalyst is 22h old (not <2h). Per the momentum peak check rule, **SKIP** — the repricing event has already occurred and is not being followed through.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all green near highs but below the momentum entry threshold. U and UP both contradict their claimed Perplexity gains once live-checked. OXT and AKE repeat their established R:R-negative/exhausted patterns. VVV had a genuine catalyst and tight spread but fails the momentum peak check — its high was set 110 min ago with volume now collapsed >99% off the spike, the same stall-at-highs signature rejected all week. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
