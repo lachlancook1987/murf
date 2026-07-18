@@ -7770,3 +7770,22 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 17 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rose from $62,699.30 (Jul 17 EOD) to $63,978.60 today (+2.04%), so the bot's flat day underperformed BTC by −2.04%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 16+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-18 — Session-Open Execution Check (09:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}` — unchanged since the 08:05 UTC pre-session check. **Alpaca:** `[]` positions, `orders` shows only the historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect.
+
+**Live quotes vs today's open (~1h after pre-session):**
+- BTC $63,956.30 → **+0.08%** (o $63,907.00)
+- ETH $1,845.96 → **+0.29%** (o $1,840.56)
+- SOL $74.91 → **-0.09%** (o $74.98)
+
+All three majors still flat, essentially unchanged from the 08:05 UTC pre-session read. Crash gate: not triggered.
+
+**AKE recheck** (recurring high-ATR near-candidate): $0.00190082 vs open $0.00142991 = **+32.9%**, -3.0% off 24h high $0.00196008 — materially unchanged from the pre-session reading (+32.0%, -3.7% off high). No fresh breakout. R:R at the mandatory 3.5% high-ATR trailing stop remains 0.86:1, still failing the 1.2:1 minimum for a sixth consecutive trading day.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 08:05 UTC pre-session research. BTC/ETH/SOL all flat, AKE unchanged and still R:R-negative. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
