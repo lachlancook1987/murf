@@ -28177,3 +28177,65 @@ No candidate clears the momentum + catalyst + spread + R:R bar. SKY is the most 
 ### Step 6 — Notification
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 17+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-19 — Pre-Session Research (08:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since every prior check this week. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:05 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | Split $64,052–$64,722 across sources, +0.7% to +2.24% | Consistent with the +0.7–1.7% consensus | Mildly green, no strong momentum signal |
+| ETH | $1,843–$1,867, +0.45% to +1.31% | Consistent | Flat/mild green |
+| Fear & Greed | Wide split: CFGI 49 (Neutral, 17 days running), alternative.me 28 (Fear), Binance 35 (Fear), Tools4Crypto 62 (Greed) | — | 28 (Fear) is above the ≤25 Extreme Fear threshold — the 1.5:1 R:R floor rule does NOT apply today; moot regardless since no candidate clears the base 1.2:1 bar |
+| BTC funding rate | All-exchange avg ~+0.004%/8h; Kraken +0.0076% (stablecoin) | — | No crowded skew, not actionable |
+| Catalysts | **CLARITY Act reaches Senate floor July 20** (tomorrow — scheduled, dated catalyst), US airstrikes on Iran continuing (Day 6, bearish/risk-off), Fed Chair Warsh dovish tone (bullish, already priced in per soft CPI), **Uniswap governance proposal** enabling protocol fees across ETH/Base/Arbitrum (bullish for UNI, live-checked below), Robinhood Chain Mainnet (unconfirmed detail, not chased further) | — | CLARITY Act vote is >24h out — per scheduled-catalyst pre-positioning rule, too far ahead to front-run. Uniswap proposal is real but UNI shows no price reaction (see candidate table) |
+| Unlocks this week | deBridge (DBR) $10.4M (12.1% of mkt cap, Jul 18, already passed), ARB $8.87M + STBL $8.18M (Jul 16, passed), Caldera (ERA) $6.3M + YZY $6.13M (Jul 17, passed), SEI $6.01M (Jul 14, passed) | — | All already passed or dilution-only headwinds; none held or flagged as momentum names |
+| Top gainers | MOG CAT +2,867% (outlier/illiquid), NKN +153.7% (untradeable), ATLAS +128.5%/160.6%, AKE +69–77%, OXT +36.7–83.2%, HPP/KYVE/TENDIES (untradeable), REEF/HODL/SPURS (not screened, no recent precedent), POLIS +45%, VVV +15%, DOLO/MAT/PENGU (new names, live-checked below) | See candidate table below | Comprehensively cross-checked live — pattern of stale/hallucinated gainer data continues |
+
+**Crash gate:** BTC +0.7% to +1.7% (live) → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat-to-up over trailing week → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes, 08:05 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **AKE/USD** | **-10.0%** ($0.00180573 vs o $0.00200678) | -15.4% off high $0.00213348 | ~0.5% (passes) | Red — directly contradicts claimed +69-77% gain. First red AKE reading in over a week of checks (previously always a real-but-R:R-failing mover); no signal at all today. **SKIP** |
+| **OXT/USD** | **-6.6%** ($0.014780 vs o $0.015820) | -30.1% off high $0.021150 | ~1.0% (borderline) | Red — contradicts claimed +36.7-83.2% gain; still well off last week's blow-off high with no recovery. **SKIP** |
+| **ATLAS/USD** | **-3.1%** ($0.0001700 vs o $0.0001755) | -60.7% off high $0.0004329 | ~10.7% (fails cap) | Red, contradicts claimed +128-160% gain; the completed blow-off from earlier this week remains fully round-tripped; spread also fails. **SKIP** |
+| **UNI/USD** | -0.98% ($3.53320 vs o $3.56810) | -1.09% off high $3.57230 | ~0.06% (tight, passes) | Real, live governance catalyst (protocol fee proposal) but price shows **no reaction** — flat/mild red, below the 3%/1h and 5%/4h momentum thresholds. Catalyst without price confirmation. **SKIP** |
+| **VVV/USD** | +0.90% ($11.9400 vs o $11.8330) | -0.63% off high $12.0160 | ~0.08% (tight, passes) | Tight spread, near highs, but move is far below the 3%/1h or 5%/4h momentum threshold — no fresh breakout, consistent with last week's stall pattern for this asset. **SKIP** |
+| **DOLO/USD** | -11.7% ($0.019590 vs o $0.022190) | -11.7% off high (= open) | ~6.9% (fails cap) | Red, thin liquidity (single-digit trade count), spread far exceeds cap. **SKIP** |
+| **MAT/USD** | -4.3% ($0.0450000 vs o $0.0470000) | -8.2% off high $0.0490000 | ~18.9% (fails cap badly) | Red, extremely wide spread — untradeable regardless of direction. **SKIP** |
+| **PENGU/USD** | -0.03% ($0.006145 vs o $0.006147) | -1.5% off high $0.006213 | ~0.02% (tight) | Flat — no momentum signal. **SKIP** |
+| **POLIS/USD** | -3.7% ($0.01276 vs o $0.01325) | -20.0% off high $0.01596 | ~4.8% (fails cap) | Red, contradicts claimed +44.96% gain; still well off high from prior sessions; spread fails cap. **SKIP** |
+| **NKN, HPP, KYVE, TENDIES** | — | — | — | `Unknown asset pair` — untradeable on Kraken. **SKIP** |
+
+Every tradeable candidate from today's gainer lists is flat or outright **red** versus today's open — a notably weaker/cleaner signal than prior sessions this week (where at least one asset showed a genuine live move that then failed R:R or freshness checks). Perplexity's headline "top gainer" claims (AKE +69-77%, OXT +36-83%, ATLAS +128-160%, POLIS +45%) are directly and uniformly contradicted by live Kraken data today, continuing the established pattern of stale/inaccurate third-party gainer data this month.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- Every screened gainer-list candidate (AKE, OXT, ATLAS, POLIS, DOLO, MAT) is red vs today's open, directly contradicting Perplexity's claimed double-digit gains — the worst hit-rate on gainer-list accuracy seen this week
+- UNI has a real, live governance catalyst (protocol fee proposal) but zero price reaction so far — worth a follow-up check later in the session if momentum develops
+- CLARITY Act Senate floor vote is scheduled for tomorrow (Jul 20) — per the scheduled-catalyst pre-positioning rule, do not front-run more than ~2h ahead; too far out to act on now
+- US-Iran airstrikes continue (Day 6) — ongoing bearish geopolitical overhang, though BTC/ETH remain mildly green today despite it
+- Fear & Greed at 28 (alternative.me, Fear) — above the ≤25 Extreme Fear threshold, so the stricter 1.5:1 R:R floor does not apply today; moot since nothing clears the base 1.2:1 bar anyway
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.7-1.7%). No candidate passes the momentum + catalyst + spread + R:R bar: every screened altcoin (AKE, OXT, ATLAS, POLIS, DOLO, MAT) is red vs today's open, contradicting claimed gains; PENGU/VVV flat with no fresh momentum; UNI has a real catalyst but no price reaction yet; NKN/HPP/KYVE/TENDIES untradeable. Will continue scanning intraday — UNI is the one name worth rechecking if the governance catalyst gains price traction.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
