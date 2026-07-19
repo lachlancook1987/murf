@@ -7866,3 +7866,25 @@ Perplexity 1h/4h/volume-surge queries again returned only stale 24h gainer data 
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 09:01 UTC session-open check. BTC/ETH/SOL flat, no candidate clears the momentum + spread + R:R bar. TRU had a real 24h move but its 2.4% spread is a hard fail on liquidity grounds alone.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-19 — Session-Open Execution Check #2 (15:02 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}` — unchanged since the 14:04 UTC midday scan. **Alpaca:** `[]` positions, `orders` shows only the historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect.
+
+**Live quotes vs today's open:**
+- BTC $64,575.90 → **-0.34%** (o $64,796.70), -0.54% off 24h high $64,928.00
+- ETH $1,874.28 → **+0.68%** (o $1,861.70)
+- SOL $76.37 → **+1.19%** (o $75.47)
+- UNI $3.52840 → **-1.11%** (o $3.56810), -1.24% off 24h high $3.57230 — governance-fee catalyst still shows zero price reaction, now the fourth consecutive check today with no follow-through. **SKIP**.
+
+All three majors flat/mildly mixed, no momentum signal. Crash gate: not triggered.
+
+Perplexity 1h-surge query again returned only 24h-gain data (BABYNEIRO +56,256% micro-cap noise, MNGO +77.4%, BUILDon +52.1%, SVTS +92.08%, MOG CAT +2,866%). Live-checked the one new tradeable name:
+- **MNGO/USD**: c $0.02790 vs o $0.03956 = **-29.5%**, directly contradicting the claimed +77.4% gain; -41.8% off 24h high $0.04788; spread ≈1.5% — fails the ≤1% cap on top of being red. **SKIP**.
+- BABYNEIRO, BUILDon, SVTS, MOG CAT: known illiquid/meme micro-caps, not tradeable pairs on Kraken (consistent with prior sessions). **SKIP**.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 14:04 UTC midday scan. BTC/ETH/SOL flat, UNI catalyst still unconfirmed by price, MNGO red and spread-failed. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
