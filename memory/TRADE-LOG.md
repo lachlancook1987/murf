@@ -7888,3 +7888,24 @@ Perplexity 1h-surge query again returned only 24h-gain data (BABYNEIRO +56,256% 
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 14:04 UTC midday scan. BTC/ETH/SOL flat, UNI catalyst still unconfirmed by price, MNGO red and spread-failed. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-19 — Midday Scan #2 (22:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** orders reconfirmed only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:**
+- BTC $64,427.10 → **-0.57%** (o $64,796.70), -0.77% off 24h high $64,928.00
+- ETH $1,861.06 → **-0.03%** (o $1,861.70), -0.91% off 24h high $1,878.09
+- SOL $75.80 → **+0.44%** (o $75.47), -1.07% off 24h high $76.62
+
+All three majors flat/mixed, no momentum signal. Crash gate: not triggered.
+
+Perplexity 1h-surge query again returned only micro-cap 24h-gain noise (CATX +1,218%, DOGO +291.7%, SNFT +209.4%, PIRATE +193.0%, A2Z +114.5%). Live-checked the two new names: **CATX/USD** and **A2Z/USD** both return `Unknown asset pair` — untradeable on Kraken, consistent with the pattern all week. DOGO, SNFT, PIRATE not checked further — same illiquid meme-coin profile, no Kraken pairs expected.
+
+Catalyst check: CLARITY Act floor debate still begins tomorrow (Jul 20), still >12h out and outside the pre-positioning window; BTC ETF inflows and Iran airstrikes are already-known background context; Uniswap governance-fee proposal remains unconfirmed by price after a full day of checks.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 15:02 UTC session-open check. BTC/ETH/SOL flat, no candidate has a live Kraken pair or a fresh catalyst. Nothing clears the entry bar.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
