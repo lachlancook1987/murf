@@ -7814,3 +7814,15 @@ Perplexity "1h surge" query again returned only 24h-gain data: U +110%, OXT +166
 ### Decision: **HOLD — no new entries, no open positions to manage.** BTC/ETH/SOL all green near highs but below the momentum entry threshold. U and UP both contradict their claimed Perplexity gains once live-checked. OXT and AKE repeat their established R:R-negative/exhausted patterns. VVV had a genuine catalyst and tight spread but fails the momentum peak check — its high was set 110 min ago with volume now collapsed >99% off the spike, the same stall-at-highs signature rejected all week. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-19 — EOD Snapshot (Day 60, Sunday)
+
+### Jul 19 — EOD Snapshot (Day 60, Sunday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −1.00%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 18 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC rose from $63,978.60 (Jul 18 EOD) to $64,621.20 today (+1.00%), so the bot's flat day underperformed BTC by −1.00%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 17+ days); needs resubscription at callmebot.com/61477788635.
