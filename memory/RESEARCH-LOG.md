@@ -28239,3 +28239,61 @@ Every tradeable candidate from today's gainer lists is flat or outright **red** 
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
+---
+
+## 2026-07-19 — Pre-Session Research (20:04 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since every prior check today. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 20:04 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $64,370–$64,780 consensus, +0.2% to +1.4% (Coinbase/TradingView outliers discarded as stale) | Consistent with the +0.2–1.4% range | Mildly green, no strong momentum signal |
+| ETH | ~$1,867, +1.2% to +1.4% | Consistent | Mild green |
+| Fear & Greed | 28 (FearGreedMeter/alternative.me, Fear), 35 (CoinStats), 34 (Binance), 48 (CFGI composite) | — | 28 is above the ≤25 Extreme Fear threshold — the 1.5:1 R:R floor rule does NOT apply; moot since no candidate clears the base 1.2:1 bar anyway |
+| BTC funding rate | Stablecoin-margined +0.0029% to +0.0100% across exchanges; Kraken +0.0076% (coin-margined -0.0210%, notable negative skew) | — | No crowded long/short skew actionable for a directional bias |
+| Catalysts | CLARITY Act reaches Senate floor **tomorrow (Jul 20)** — still outside the ~2h pre-positioning window; BTC ETF inflows $132.3M (Jul 17, bullish but already known); soft CPI/dovish Fed (already priced in); US-Iran airstrikes Day 6 (bearish, already reflected in price); Uniswap governance protocol-fee proposal (bullish UNI, still unconfirmed by price per repeated checks today) | — | Nothing new/actionable vs. the prior checks logged today — CLARITY Act is a scheduled catalyst >12h out, still too far to front-run |
+| Unlocks this week | DBR $10.4M (Jul 18, passed), ARB $8.87M + STBL $8.18M (Jul 16, passed), Caldera (ERA) $6.3M + YZY $6.13M (Jul 17, passed), SEI $6.01M (Jul 14, passed) | — | All already passed, dilution-only headwinds, none held or momentum-relevant |
+| Top gainers (24h) | MNGO +77–103% (already ruled out today, live-contradicted, red -29.5%), BANK +141% (untradeable on Kraken), A2Z +139% (no Kraken pair), FOXY +55.8% (no Kraken pair), TLM +47–98%, TENDIES +46.3% (untradeable), ES +38.4%, SYN +31.6%, OMG +26.1%, PYTH +16.0%, ALLO +13.0%, VANRY +52.2% | See candidate table below | Live-checked the tradeable subset |
+
+**Crash gate:** BTC +0.2–1.4% → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat-to-up over trailing week → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 15m OHLC, 20:04 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **BANK/USD, A2Z/USD, FOXY/USD, TENDIES/USD** | — | — | — | `Unknown asset pair` — untradeable on Kraken. **SKIP** |
+| **TLM/USD** | **+45.2%** ($0.002564 vs o $0.001766) | -7.6% off high $0.002775 | ~0.47% (passes) | Real live move, tight spread — but 15m OHLC over the last 3h shows pure chop between $0.0025–$0.00272 with no directional breakout; current price sits mid-range, off a local intraday high of $0.002724 set ~24 min ago that already faded to $0.002564. Spike-then-chop, not a clean breakout. **SKIP** |
+| **OMG/USD** | **-27.8%** ($0.048498 vs o $0.067176) | -28.1% off high $0.067413 | ~2.9% (fails cap) | Red, directly contradicts claimed +26.1% gain; spread also fails. **SKIP** |
+| **SYN/USD** | **-6.6%** ($0.20990 vs o $0.22470) | -14.5% off high $0.24510 | ~0.14% (passes) | Red, contradicts claimed +31.6% gain. **SKIP** |
+| **PYTH/USD** | **-0.84%** ($0.04827 vs o $0.04868) | -2.1% off high $0.04932 | ~0.06% (passes) | Flat, contradicts claimed +16.0% gain — no momentum signal. **SKIP** |
+| **ALLO/USD** | +2.9% ($0.46300 vs o $0.44980) | -3.9% off high $0.48180 | ~0.13% (passes) | Real but modest move, below the 3%/1h and 5%/4h thresholds; contradicts the larger claimed +13.0% figure. **SKIP** |
+| **VANRY/USD** | +5.1% ($0.00557 vs o $0.00530) | -7.2% off high $0.00600 | ~0.36% (passes) | Real move but already -7.2% off high with no fresh breakout confirmation — same fade pattern as TLM. **SKIP** |
+
+No candidate clears the full momentum + freshness + R:R bar. TLM was the standout on paper (real +45% move, tight 0.47% spread) but 15m OHLC shows it's been chopping in a range for 3+ hours with no clean breakout — the momentum-peak-check pattern (spike already occurred, not accelerating) applies.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- TLM is the closest real mover today but fails the freshness/breakout test — 3h of chop, not a clean move
+- OMG, SYN, PYTH all directly contradict their claimed Perplexity gains once live-checked — continuing this month's pattern of unreliable third-party gainer data
+- CLARITY Act Senate floor debate begins tomorrow (Jul 20) — per the scheduled-catalyst pre-positioning rule, still >12h out, too far to front-run tonight
+- Uniswap governance catalyst remains unconfirmed by price after a full day of checks — deprioritize unless price reacts
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has now failed for 18+ consecutive days (quota exhausted since 2026-07-02) — flagging again below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.2–1.4%). No candidate passes the full live-verified momentum + freshness + spread + R:R bar: TLM's real +45% move is 3h-old chop with no breakout; OMG/SYN/PYTH all live-contradicted or flat; ALLO/VANRY real but modest moves already faded off highs. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
