@@ -7844,3 +7844,25 @@ Crash gate: not triggered (BTC -0.19%). No candidate shows fresh momentum (>3%/1
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 08:05 UTC pre-session research. BTC/ETH flat, UNI's governance catalyst still shows no price reaction, AKE remains red vs open. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-19 — Midday Scan (14:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only. `positions` → `{}`, `orders` → `{"open": {}}` — unchanged since the 09:01 UTC session-open check. **Alpaca:** orders reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:**
+- BTC $64,455.60 → **-0.53%** (o $64,796.70), -1.24% off 24h high $64,928.00
+- ETH $1,870.23 → **+0.46%** (o $1,861.70)
+- SOL $76.07 → **+0.79%** (o $75.47)
+
+All three majors flat/mildly mixed, no momentum signal. Crash gate: not triggered. No fresh catalyst — CLARITY Act floor debate begins tomorrow (Jul 20), still outside the ~2h pre-positioning window per the scheduled-catalyst rule; Bitcoin ETF inflows and Uniswap fee-governance proposal are already-known, non-actionable background context.
+
+Perplexity 1h/4h/volume-surge queries again returned only stale 24h gainer data (TRU, ATLAS, OXT, AKE, POLIS, OMNI, MAT, M) — same names flagged and rejected repeatedly this week. Live-checked the two not yet screened today:
+- **TRU/USD**: c $0.00127 vs o $0.00056 = a genuine **+126.8%** intraday move, but spread ≈2.4% (ask 0.00127 / bid 0.00124) — fails the mandatory ≤1% cap outright, hard skip regardless of momentum quality. Also -13.6% off 24h high $0.00147, already faded.
+- **OMNI/USD**: spread ≈65% (ask 0.741 / bid 0.38) on ~12 units of volume — effectively no liquid market, untradeable. **SKIP**.
+- **AKE recheck**: c $0.00189673 vs o $0.00200678 = **-5.5%**, still red vs open, -11.1% off 24h high — 8th consecutive failing check this week, no breakout. **SKIP**.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 09:01 UTC session-open check. BTC/ETH/SOL flat, no candidate clears the momentum + spread + R:R bar. TRU had a real 24h move but its 2.4% spread is a hard fail on liquidity grounds alone.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
