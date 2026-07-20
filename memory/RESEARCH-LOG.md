@@ -28359,3 +28359,17 @@ TRU was the closest real setup today (genuine +10% move, spread inside cap, near
 ### Step 6 — Notification
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-20 — Session-Open Execution Check (15:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 14:07 UTC midday scan. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect.
+
+**Live quote:** BTC $64,400.00 → **-0.43%** vs today's open $64,678.10, -0.99% off 24h high $65,045.20. Crash gate: not triggered.
+
+No new discovery sweep run this check — the 14:07 UTC midday scan (54 min prior) already covered a comprehensive 43-candidate Kraken-native sweep and found nothing clearing the full momentum + freshness + spread + R:R bar (LRC: delisting-risk catalyst; ZAMA: ATR-adjusted R:R fails; CHZ: bearish narrative + bare-minimum R:R). BTC essentially unchanged since that scan (-0.43% vs -0.45%).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 14:07 UTC midday scan. Today's research plan has no qualifying candidate to execute.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
