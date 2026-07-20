@@ -28297,3 +28297,65 @@ No candidate clears the full momentum + freshness + R:R bar. TLM was the standou
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
+
+---
+
+## 2026-07-20 — Pre-Session Research (08:07 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since the 2026-07-19 22:04 UTC check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:07 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $64,079–$64,800 consensus, -0.9% to +0.9% (Coinbase outlier ~$91k discarded as stale/erroneous) | Consistent with the -0.9% to +0.3% range | Flat, no momentum signal |
+| ETH | ~$1,866–$1,874, +1.1% to +1.7% (Yahoo/Coinbase outliers discarded) | Live XRP/SOL/BTC checks confirm broadly flat market | Mild green, no strong signal |
+| Fear & Greed | Wide split again: alternative.me 29 (Fear), CoinStats 35 (Fear), Binance 34 (Fear), CFGI 44-50 (Neutral), feargreedindex.org 25 (Extreme Fear, stale Jul 15) | — | 29 (Fear) is above the ≤25 Extreme Fear threshold — the 1.5:1 R:R floor rule does NOT apply; moot regardless since no candidate clears the base 1.2:1 bar |
+| BTC funding rate | Stablecoin avg ~+0.0071%/8h (Binance/Bybit/OKX positive); Kraken -0.0013% (slightly negative) | — | No crowded skew, not actionable |
+| Catalysts | BTC ETF outflows have driven BTC down ~20% **this month** (largest headline risk); CLARITY Act Senate floor math unresolved, Polymarket odds down to 48%; GENIUS Act KYC proposal targeting USDC/USDT issuers (bearish/compliance); Allbridge Core halted after $1.1M flash-loan exploit on Solana (isolated, not a broad risk); Ethereum "Glamsterdam" hard fork slated H2 2026 (too far out) | — | Nothing fresh/single-asset-actionable/<6h old. BTC ETF outflow narrative is a background macro headwind, not a live dated catalyst to trade |
+| Unlocks this week | ARB $8.94M (Jul 16, passed), STRK $3.90M (Jul 15, passed), MAGMA $5.01M (Jul 16, passed), AGT $2.06M (Jul 16, passed), Chainbase (C) $1.55M (Jul 14, passed), BARD $1.34M (Jul 18, passed) | — | All already passed, dilution-only headwinds, none held or momentum-relevant |
+| Top gainers / 1h surge / volume surge | BANK +141% (untradeable), FOXY +55.8% (untradeable), TLM +47.6%, TRU +108.2%, MNGO +103.6%, POLIS +38.8%, ES +38.4%, SYN +31.6%, OMNI +174%, M (Memecore) +62.3%, PENGU +34.4%, WISHBONE/NFP/TAG (no Kraken pairs), BPX/CRED (no Kraken pairs, illiquid micro-caps) | See candidate table below | Comprehensively cross-checked live — pattern of stale/hallucinated gainer data continues |
+
+**Crash gate:** BTC -0.9% to +0.3% → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat over trailing week (~$63.9k Jul 17 → ~$64.6k Jul 20) → **NOT triggered**.
+
+### STEP 3 — Candidate Screening (live Kraken quotes + 15m OHLC, 08:07 UTC)
+
+| Symbol | vs today's open | Off 24h high | Spread | Verdict |
+|---|---|---|---|---|
+| **BANK, FOXY, BPX, CRED, WISHBONE, NFP, TAG** | — | — | — | `Unknown asset pair` — untradeable on Kraken. **SKIP** |
+| **TLM/USD** | **-11.8%** ($0.001965 vs o $0.002228) | -19.2% off high $0.002433 | ~0.36% (passes) | Red, directly contradicts claimed +47.58% gain — completed fade from the intraday chop flagged in the 2026-07-19 20:04 check. **SKIP** |
+| **TRU/USD** | **+10.28%** ($0.001180 vs o $0.001070) | -2.5% off high $0.001210 | ~0.84% (passes) | Real live move, spread passes. But 15m OHLC (03:15-08:00 UTC) shows the coin has been chopping in a $0.00100-$0.00121 range all night with no clean breakout; the 24h high was set at 06:00 UTC (~2h ago), and current price ($0.00118-0.00119) has not reclaimed it — fails the momentum-peak-check freshness requirement (high must be <60min old or a fresh breakout above it). Volume also faded sharply on the most recent 08:00 candle (277k vs 13.5M the candle before). Spike-then-chop, not accelerating. **SKIP** |
+| **MNGO/USD** | +8.2% ($0.02860 vs o $0.02643) | -1.1% off high $0.02891 | **~7.6%** (fails cap) | Real move, near highs, but spread far exceeds the 1% cap — untradeable at size. **SKIP** |
+| **M/USD (Memecore)** | +3.25% ($1.23842 vs o $1.19940) | -0.33% off high $1.24254 | ~0.26% (passes) | Near highs, tight spread on paper, but 15m OHLC shows an extremely thin market — numerous 0-volume candles overnight (03:30, 04:45-06:00, 07:00), total volumes in the hundreds of units per candle. 4h momentum only +2.2% (04:00→08:00), 1h momentum ~+0.7% — both below the 3%/1h and 5%/4h thresholds. No catalyst identified. Thin liquidity + sub-threshold momentum. **SKIP** |
+| **POLIS/USD** | -5.06% ($0.01050 vs o $0.01106) | -9.8% off high $0.01164 | ~0.6% (passes) | Red, contradicts claimed +38.84% gain. **SKIP** |
+| **SYN/USD** | -2.18% ($0.21080 vs o $0.21550) | -3.7% off high $0.21900 | ~0.10% (passes) | Red/flat, contradicts claimed +31.6% gain — no momentum signal. **SKIP** |
+| **ES/USD** | -4.55% ($0.0021 vs o $0.0022) | -22.2% off high $0.0027 | **~4.65%** (fails cap) | Red, contradicts claimed +38.36% gain; spread also fails. **SKIP** |
+| **OMNI/USD** | — | — | **~65%** (fails cap badly) | Ask 0.741 / bid 0.38 on ~12 units volume — effectively no liquid market, same as prior sessions. **SKIP** |
+| **PENGU/USD** | +1.7% ($0.006222 vs o $0.006118) | -0.37% off high $0.006245 | ~0.05% (passes) | Near highs, tight spread, but move well below the 3%/1h threshold — no fresh breakout. **SKIP** |
+| **XRP/USD, SOL/USD** | -0.77%, -0.33% | — | tight | Flat majors, no signal. **SKIP** |
+
+TRU was the closest real setup today (genuine +10% move, spread inside cap, near its high) but fails the momentum-peak-check freshness rule — the high is ~2h old and price is chopping below it, not accelerating through it.
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- TRU is the closest real mover today but fails the freshness/breakout test — chop below a 2h-old high, not a clean push
+- MNGO, ES, OMNI all show real momentum but fail the spread cap outright — thin-liquidity alts remain the recurring trap this month
+- BTC ETF outflow narrative (BTC down ~20% this month per Perplexity) is a real macro headwind but not a live dated single-asset catalyst — watching, not trading on it directly; crash gate (BTC -20% in 24h) remains far from triggered
+- Fear & Greed at 29 (alternative.me, Fear) — above the ≤25 Extreme Fear threshold, so the stricter 1.5:1 R:R floor does not apply today; moot since nothing clears the base 1.2:1 bar anyway
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has now failed for **18+ consecutive days** (quota exhausted since 2026-07-02) — flagging again below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.9% to +0.3%). BTC weekly trend gate not triggered (BTC roughly flat over trailing week). No candidate passes the full live-verified momentum + freshness + spread + R:R bar: TLM/POLIS/SYN/ES all live-contradicted or red vs claimed gains; TRU fails the momentum-peak-check freshness rule (2h-old high, chopping not breaking out); MNGO/ES/OMNI fail the spread cap; M and PENGU are near highs but below the 3%/1h and 5%/4h momentum thresholds. Will continue scanning intraday for a fresh, live-confirmed breakout with a durable R:R profile.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now 18+ days of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
