@@ -7909,3 +7909,15 @@ Catalyst check: CLARITY Act floor debate still begins tomorrow (Jul 20), still >
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 15:02 UTC session-open check. BTC/ETH/SOL flat, no candidate has a live Kraken pair or a fresh catalyst. Nothing clears the entry bar.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-20 — EOD Snapshot (Day 61, Monday)
+
+### Jul 20 — EOD Snapshot (Day 61, Monday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.70%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 19 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,621.20 (Jul 19 EOD) to $64,168.10 today (−0.70%), so the bot's flat day outperformed BTC by +0.70%. Phase P&L unchanged at −$64.2202 (−35.72%) from Kraken starting equity $179.78 (May 21). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 18+ days); needs resubscription at callmebot.com/61477788635.
