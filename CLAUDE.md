@@ -76,36 +76,46 @@ universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new t
 The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session
 research — the old Alpaca conservative rules are fully retired.
 
-### Perplexity Queries (run all)
+### Discovery Method (revised 2026-07-20 — Perplexity demoted, chronic data-quality failures)
 
-- `"Bitcoin price and 24h change right now"`
-- `"Ethereum price and 24h change right now"`
-- `"Crypto assets with the biggest price surge in the last 1 hour right now"`
-- `"Top 10 crypto gainers in the last 24 hours"`
-- `"Crypto Fear and Greed Index today"`
-- `"Bitcoin perpetual futures funding rate today"`
-- `"Top crypto market catalysts and breaking news today $DATE"`
-- `"Crypto token unlocks or major protocol upgrades this week $DATE"`
-- `"Top altcoin momentum plays on Kraken exchange today — assets up more than 3% in 4 hours"`
-- `"Crypto volume surge alerts — which coins have unusual trading volume in the last 4 hours $DATE"`
-- `"Best intraday crypto day trade setups with catalyst today $DATE"`
-- One query per open Kraken position: `"<ASSET> news and price outlook today"`
+**Primary discovery is Kraken-native, not Perplexity.** A month of sessions showed
+Perplexity's "top gainer" / "1h surge" / "volume surge" queries were wrong-direction,
+wrong-magnitude, or non-existent tickers in the large majority of checks. Every miss
+was caught by a live Kraken cross-check before it reached an order, but it meant most
+of each session went to disproving Perplexity instead of finding real setups.
+
+1. Sweep live Kraken ticker/OHLC data across the tradeable pair universe. Rank by:
+   1h surge >3%, 4h momentum >5%, volume >2× trailing 24h average, and proximity to
+   the 24h high (candidates whose high was set within the last ~60 minutes are
+   prioritized — that's what the momentum-peak-check gate below requires anyway).
+2. Spread check via `kraken.sh quote SYM/USD` — ≤1% or hard skip.
+3. Run Perplexity **only** for macro context and catalyst confirmation, not discovery:
+   `"Bitcoin price and 24h change right now"`, `"Ethereum price and 24h change right
+   now"`, `"Crypto Fear and Greed Index today"`, `"Bitcoin perpetual futures funding
+   rate today"`, `"Top crypto market catalysts and breaking news today $DATE"`,
+   `"Crypto token unlocks or major protocol upgrades this week $DATE"`, one query per
+   open Kraken position (`"<ASSET> news and price outlook today"`), and one query per
+   Kraken-sourced candidate from step 1 (same format) to confirm/deny a catalyst.
+4. **Do not run or rely on** Perplexity's "biggest 1h surge," "top gainers,"
+   "momentum plays on Kraken," "volume surge alerts," or "best intraday setups"
+   queries — these are the specific query types that produced bad data nearly every
+   session this month. Kraken's own market data replaces them entirely.
 
 ### Candidate Screening Priority
 
-After Perplexity research, rank candidates by these signals before checking Kraken:
+Same signal ranking as before, now sourced from the Kraken sweep first:
 1. **1h surge >3%** — strongest intraday signal
 2. **4h momentum >5%** — sustained move, not a spike
 3. **Volume surge >2× average** — real buying pressure
-4. **News catalyst <6h old** — listing, upgrade, partnership, regulatory win
+4. **News catalyst <6h old** — listing, upgrade, partnership, regulatory win (Perplexity-confirmed)
 5. Spread ≤1% (hard skip if wider)
 
-### Decision Rules (one gate only)
+### Decision Rules (gates protect capital — read before assuming "TRADE" means force an entry)
 
 | Rule | Kraken |
 |---|---|
 | Crash gate | BTC down >20% in 24h → no new entries, protect positions |
-| Everything else | **TRADE** — find the best intraday setup and enter |
+| Everything else | **Scan for a qualifying setup.** Enter only if it clears every gate (momentum-peak-check freshness, spread ≤1%, R:R ≥1.2:1 [≥1.5:1 in Extreme Fear + unconfirmed catalyst], same-thesis cooling period). **HOLD is the default and correct outcome when nothing clears every gate — it is not a failure of the "trade" stance, and gates are never to be loosened in-session just to manufacture a trade.** |
 | Sector pause rules | **RETIRED** — ignore consecutive loss counts entirely |
 | CAUTION / OFFENSIVE regime | **RETIRED** — BTC vs MA does not affect sizing or entries |
 | DXY filter | **NOT in strategy** — do not apply |
