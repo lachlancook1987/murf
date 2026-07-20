@@ -52,6 +52,7 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - **Momentum peak check (added 2026-06-19):** Before entry, confirm the 24h high was set within the last **60 minutes**. If the 24h high is >60 min old and current price is declining from it, the repricing event has already occurred — skip unless (a) there is a fresh 1h candle breakout above the prior 24h high, or (b) a new distinct catalyst event <2h old. Prevents "buy the rumour, sell the news" entries where momentum is fading rather than accelerating.
 - **Scheduled-catalyst pre-positioning caution (added 2026-07-03):** For catalysts with a known, publicly-scheduled activation time (hard forks, mainnet upgrades, token unlocks with a fixed date/time), do not enter more than **~2 hours ahead** of the event on anticipatory momentum alone. Pre-event momentum on dated catalysts is frequently front-run and sold into before the event fires. Prefer entering on confirmed post-event price reaction, or require a fresh breakout above the pre-event high with volume confirmation if entering ahead of the scheduled time. Does not apply to unscheduled/reactive catalysts (news, listings, protocol votes with no fixed announcement time), which remain governed by the momentum peak check above.
 - **Extreme Fear + unconfirmed catalyst R:R floor (added 2026-07-10):** If a catalyst's freshness cannot be confirmed as <6h old AND the Crypto Fear & Greed Index reads "Extreme Fear" (≤25), require R:R **≥ 1.5:1** at T1 instead of the standard 1.2:1 minimum. A bare-minimum-R:R entry with unverified catalyst timing in an Extreme Fear backdrop (ARB, 2026-07-09) reversed within an hour. Does not apply when either condition alone is true — both must be present.
+- **Gate-protection default (added 2026-07-20):** Every gate in this document (momentum-peak check, spread cap, R:R floor, same-thesis cooling period) exists to protect capital and takes precedence over CLAUDE.md's "TRADE is the default stance" framing. A session that checks every live candidate and finds none clearing every gate should conclude HOLD — that is a correct, expected outcome, not a gap to route around. Gates are never to be loosened or skipped in-session to manufacture a trade, regardless of how long the HOLD streak has run.
 
 ---
 
@@ -137,22 +138,40 @@ Sector pause rules from the Alpaca era are **retired**. All sectors open.
 
 ---
 
-## Pre-Session Research Query Set
+## Discovery & Research Method (revised 2026-07-20 — Perplexity demoted to context-only)
 
-Run all of these via `bash scripts/perplexity.sh "<query>"` at each session open:
+Across roughly a month of sessions (mid-June through mid-July 2026), Perplexity's
+gainer/surge/volume queries were contradicted by live Kraken data in the large
+majority of checks — wrong direction, wrong magnitude, or tickers with no Kraken
+pair at all. Every bad read was caught before it reached an order, but it meant most
+scan time went to disproving Perplexity rather than finding real setups. Perplexity
+is now **context/catalyst-confirmation only**, not a discovery source.
+
+### Primary discovery: Kraken-native
+
+1. Sweep live Kraken ticker/OHLC data across the tradeable pair universe.
+2. Rank by: 1h surge >3%, 4h momentum >5%, volume >2× trailing 24h average, and
+   proximity to the 24h high (candidates whose high was set within the last ~60
+   minutes are prioritized — that's what the momentum-peak-check gate requires).
+3. Spread check via `kraken.sh quote SYM/USD` — ≤1% or hard skip.
+
+### Secondary: Perplexity for context only
+
+Run via `bash scripts/perplexity.sh "<query>"`:
 
 1. `"Bitcoin price and 24h change right now"`
 2. `"Ethereum price and 24h change right now"`
-3. `"Crypto assets with the biggest price surge in the last 1 hour right now"`
-4. `"Top 10 crypto gainers in the last 24 hours"`
-5. `"Crypto Fear and Greed Index today"`
-6. `"Bitcoin perpetual futures funding rate today"`
-7. `"Top crypto market catalysts and breaking news today $DATE"`
-8. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
-9. `"Top altcoin momentum plays on Kraken exchange today — assets up more than 3% in 4 hours"`
-10. `"Crypto volume surge alerts — which coins have unusual trading volume in the last 4 hours $DATE"`
-11. `"Best intraday crypto day trade setups with catalyst today $DATE"`
-12. One query per open position: `"<ASSET> news and price outlook today"`
+3. `"Crypto Fear and Greed Index today"`
+4. `"Bitcoin perpetual futures funding rate today"`
+5. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
+6. `"Top crypto market catalysts and breaking news today $DATE"`
+7. One query per open position: `"<ASSET> news and price outlook today"`
+8. One query per Kraken-sourced candidate from the sweep above: `"<ASSET> news and
+   price outlook today"` — to confirm/deny a catalyst, not to source the candidate
+
+**Do not use** Perplexity's "biggest 1h surge," "top gainers," "momentum plays on
+Kraken," "volume surge alerts," or "best intraday setups" queries — these are the
+specific query types that produced bad data nearly every session this month.
 
 ### Candidate Screening (fast-mover focus)
 
@@ -168,13 +187,14 @@ Priority signals to look for in research output — rank candidates by these:
 
 ### Opportunity Scan Checklist
 
-For each candidate identified in research:
+For each candidate found via the Kraken sweep:
 - [ ] `bash scripts/kraken.sh assets SYM/USD` — confirm pair is online on Kraken
 - [ ] `bash scripts/kraken.sh quote SYM/USD` — confirm spread ≤1% (skip if wider)
-- [ ] Catalyst documented — momentum alone OK if 1h surge >3% with volume
+- [ ] Momentum-peak check: 24h high set within last 60 min, or a fresh 1h breakout above it
+- [ ] Catalyst documented via Perplexity — momentum alone OK if 1h surge >3% with volume
 - [ ] Stop: `trailing_stop`, `trail_percent: 2.5` (default); 7 for binary-catalyst events only
 - [ ] T1 = entry +3%, T2 = entry +5% defined before entry
-- [ ] R:R ≥ 1.2:1 (T1 gain vs 2.5% stop risk)
+- [ ] R:R ≥ 1.2:1 (T1 gain vs 2.5% stop risk); ≥1.5:1 if Extreme Fear + unconfirmed catalyst
 - [ ] Size chosen based on conviction — no arbitrary cap; up to 100% equity
 
 ### What NOT to apply (retired rules)
@@ -184,7 +204,9 @@ For each candidate identified in research:
 - ~~DXY red flag~~ — not part of this strategy
 - ~~Fixed 25% position size in CAUTION mode~~ — size to conviction
 - ~~5% default trailing stop~~ — replaced by 2.5% on all new day trades
+- ~~Perplexity-sourced "top gainer"/"1h surge"/"volume surge" discovery queries~~ —
+  replaced by direct Kraken market-data sweep (added 2026-07-20)
 
 ---
 
-*Last updated: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
+*Last updated: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Previous update: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
