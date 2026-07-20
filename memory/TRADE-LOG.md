@@ -7941,3 +7941,21 @@ Other candidates from the sweep (POND, CAP, CCD, MANTRA, ARX, ZBCN, JTO, NANO) f
 ### Decision: **HOLD — no new entries, no open positions to manage.** Three real momentum names surfaced (LRC, ZAMA, CHZ) but each fails a specific gate (delisting-risk catalyst, ATR-adjusted R:R, or bearish-narrative-plus-bare-minimum-R:R). Per the gate-protection default rule, none were forced. Nothing else in the 43-candidate sweep clears spread + freshness + momentum together.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-20 — Midday Scan #2 (22:06 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 20:06 UTC pre-session research. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` confirmed still `canceled` (since 2026-05-22) — no action needed.
+
+**Live quotes vs today's open:** BTC $65,139.30 → **+0.71%** (o $64,678.10), -0.94% off 24h high. ETH $1,898.08 → **+1.43%**. SOL $77.69 → **+1.78%**. All three majors mildly green, no momentum signal. Crash gate: not triggered.
+
+**Discovery (Kraken-native sweep, full 695 USD pairs, live Ticker + 15m OHLC):** 51 pairs cleared >3% vs open with spread ≤1% and within 3% of 24h high. Computed true 1h/4h momentum + high-freshness via 15m OHLC for the top ~12 by liquidity:
+
+- **PTB/USD**: closest real candidate — 1h +5.66%, 4h +9.20% (clears both thresholds), 24h high set only ~22min ago, live spread 0.31% (tight). **Rejected on liquidity quality**: 15m candles show long stretches of zero volume punctuated by single sparse trades (several consecutive candles with 0.00 range/volume, then one candle spiking +3.6% on a single burst) — the tight quoted spread masks a thin/sparse order book, not real sustained demand. Perplexity also flags **conflicting cross-exchange pricing** (CoinGecko +5%, MEXC -2.78%, Binance -3.85% for the same day) with no confirmed catalyst — same stale/unreliable-data pattern as the KNTQ precedent from the 20:06 UTC session today. **SKIP.**
+- JTO, LDO, MON, EUL, CFG, DEEP, ENSO, USELESS, PI, XPL, BMT: all fail the 1h>3% / 4h>5% momentum thresholds outright (best was LDO/JTO ~1-4%, day-open gains are slow grinds not sharp moves) despite showing 5-16% vs today's open. **SKIP.**
+- KNTQ/USD (13.2% vs open, 0% off high) already rejected this session at 20:06 UTC as a dead order book behind a misleadingly tight spread — not rechecked.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 20:06 UTC pre-session research. PTB is the only candidate clearing momentum + spread + freshness together, but sparse/illiquid order-book activity and conflicting cross-exchange price data disqualify it on liquidity-quality grounds. Nothing else in the 51-candidate shortlist clears the 1h/4h momentum bar. Per gate-protection default, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
