@@ -28373,3 +28373,61 @@ No new discovery sweep run this check — the 14:07 UTC midday scan (54 min prio
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 14:07 UTC midday scan. Today's research plan has no qualifying candidate to execute.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-20 — Pre-Session Research (20:06 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since the 15:01 UTC session-open check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 20:06 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $64,079–$65,402 range across sources, -0.96% to +1.35% (Coinbase's $91,151 outlier discarded as stale/erroneous) | Consistent with the -0.9% to +1.4% range | Flat/mildly mixed, no momentum signal |
+| ETH | $1,864–$1,906 (Yahoo $2,465 outlier discarded), +1.6% to +2.5% consensus | — | Mild green, no strong signal |
+| Fear & Greed | Coinglass 34 (Fear, most recently updated), CFGI 46 (Neutral), alternative.me 29 (Fear) | — | 34 (Fear) above the ≤25 Extreme Fear threshold — 1.5:1 R:R floor does NOT apply; moot regardless since no candidate clears the base 1.2:1 bar |
+| BTC funding rate | Stablecoin avg ~+0.002%/8h (Binance/Bybit/OKX/BitMEX/Hyperliquid positive); Kraken -0.0013%, Huobi -0.0043% (both negative) | — | No crowded skew, not actionable |
+| Catalysts | CLARITY Act Senate cloture math unresolved, Polymarket odds down to 48%; **Solana hit by two security exploits**, price stuck below $80 (bearish, not held); **ENA +12% claimed** on USDe integration into BlackRock's Aladdin platform (live-checked below — contradicted); Ethereum "Glamsterdam" hard fork H2 2026 (too far out); softer CPI repricing rate-hike risk lower (already priced in) | See candidate table | ENA claim directly contradicted once live-checked — see below |
+| Unlocks this week | **ZRO (LayerZero)** unlock today, $21.19M (2.57% of supply, 10.2% of mkt cap) — dilution headwind, not held; INFRA/XWGT unlocks today are dust-sized; PUMP's $125.9M unlock already passed (Jul 12) | — | ZRO unlock is a same-day dilution headwind on a name not on our candidate list — noted, not actionable |
+
+**Crash gate:** BTC -0.96% to +1.35% → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat over trailing week → **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (700 USD pairs, live Ticker + 15m/5m OHLC)
+
+Pulled full `AssetPairs` + batched `Ticker` for all 700 USD pairs, ranked by % vs today's open. Top movers: PONDUSD +49.5% (off-high -23.6%, already-faded), OXTUSD +46.7% (off-high -26.4%), TRUUSD +43.0% (off-high -26.1%) — all three are stale/completed moves, already well off their 24h highs, consistent with the OXT/TRU pattern rejected repeatedly this week. Pulled OHLC for the tightest-spread, closest-to-high candidates:
+
+| Symbol | vs open | 1h% | 4h% | Off high | High age | Spread | Verdict |
+|---|---|---|---|---|---|---|---|
+| **KNTQ/USD** | +13.04% | +0.13% | **+10.41%** | 0.00% | ~15min | 0.06% (passes) | Real 4h move and fresh high on paper, but 5m OHLC shows only **2 trades in the last 80 minutes** (15 units, then 8534 units) — most candles show zero volume, ask depth only 15 units. Quoted tight spread is an illusion of an effectively dead order book. **SKIP — untradeable at any real size.** |
+| **SAPIEN/USD** | +9.39% | +3.34% | +2.41% | -2.74% | ~15min | 0.07% (passes) | Closest real candidate — 1h just clears the 3% threshold, high set ~15min ago, spread tight. But 5m OHLC shows two volume bursts (66.7k, then 76.5k units) pushing to a high of $0.08328, then an immediate reversal to $0.08063 (-3.2% off high) with the very last 5m candle showing **zero volume** — spike-then-stall, not accelerating. Perplexity confirms no fresh (<6h) catalyst: cited news is a Binance HODLer-airdrop/listing pump from **earlier this week**, plus wildly inconsistent price citations ($0.075–$0.49 across sources) vs live Kraken $0.081 — same stale-data pattern as prior sessions. **SKIP — momentum peak check fails (declining off a fresh high, volume collapsed to zero) and catalyst is stale, not fresh.** |
+| **ENA/USD** | flat | -0.12% | -1.08% | -1.4% | ~225min (stale) | — | Perplexity claimed ENA +12% today on a BlackRock Aladdin/USDe integration catalyst — **directly contradicted** by live Kraken data (flat/mildly red, high set 3.75h ago). Same stale/hallucinated-gainer pattern as prior sessions. **SKIP.** |
+| **ZAMA/USD** | +11.47% | +0.28% | -1.26% | -5.21% | ~225min (stale) | 0.15% | High set 3.75h ago with no recent breakout, 4h momentum now negative — different (weaker) profile than yesterday's accelerating breakout; momentum has faded. **SKIP.** |
+| TREE, JTO, NANO, RSR, MET | +9–13% | 0.7–1.9% | 1.5–4.4% | near 0 | 0–60min | tight | All below both the 3%/1h and 5%/4h momentum thresholds; TREE/MET show zero recent volume (illiquid). **SKIP.** |
+| MULTI, XTER | +18.6%, +13.3% | — | — | 0.00% | fresh | **15.1%, 11.1%** | Fail spread cap outright despite fresh highs. **SKIP.** |
+| PONDUSD, OXTUSD, TRUUSD, CAMPUSD, DOVUUSD, WARUSD, CLVUSD | +14–49% | — | — | **-19% to -27%** | stale | mixed | All already-completed moves, well off highs — no fresh breakout, momentum peak check fails outright. **SKIP.** |
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- SAPIEN is the closest real setup today but fails on both freshness-of-follow-through (volume collapsed to zero right after the spike) and catalyst staleness (week-old listing pump, not a <6h event)
+- KNTQ's tight quoted spread is misleading — real order-book depth is effectively zero, a reminder that spread alone isn't sufficient to confirm liquidity
+- ZRO's $21.19M unlock today (10.2% of market cap) is a dilution headwind on a name outside our candidate set — noted, not actionable
+- Solana exploit headlines are bearish for SOL specifically — not held, no action needed
+- Fear & Greed readings split 29–46 depending on source; most-recent (Coinglass 34, Fear) is above the Extreme Fear threshold, so the stricter 1.5:1 R:R floor doesn't apply — moot since nothing clears the base 1.2:1 bar anyway
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has now failed for **18+ consecutive days** (quota exhausted since 2026-07-02) — flagging again below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.96% to +1.35%). BTC weekly trend gate not triggered. Full 700-pair Kraken-native sweep found no candidate clearing momentum + freshness + spread + liquidity + catalyst together: SAPIEN is closest but shows a spike-then-stall pattern with a stale catalyst; KNTQ's tight spread masks a dead order book; ENA's claimed catalyst is live-contradicted; every large "gainer" (POND, OXT, TRU, CAMP, DOVU, WAR, CLV) is already 19-27% off its 24h high with no fresh breakout. Will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **18+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
