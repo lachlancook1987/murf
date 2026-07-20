@@ -7921,3 +7921,23 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 19 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure. BTC fell from $64,621.20 (Jul 19 EOD) to $64,168.10 today (−0.70%), so the bot's flat day outperformed BTC by +0.70%. Phase P&L unchanged at −$64.2202 (−35.72%) from Kraken starting equity $179.78 (May 21). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 18+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-20 — Midday Scan (14:07 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 08:07 UTC pre-session check. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** orders reconfirmed only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A). BTC $64,383.90 vs today's open $64,678.10 = **-0.45%** — crash gate nowhere close.
+
+**Discovery (Kraken-native sweep, per 2026-07-20 revised method):** Pulled live `AssetPairs` (693 USD pairs) + batched `Ticker` for all, ranked by % vs today's open and proximity to 24h high. 43 pairs showed >3% up vs open with spread ≤2%. Pulled 15m OHLC for the top ~15 by liquidity/tightness to compute true 1h/4h momentum and high-freshness (age of 24h high).
+
+Three real candidates emerged; all rejected:
+
+- **LRC/USD**: +12.4% vs open, 1h +10.7%, 4h +16.1%, spread 0.82%, high set ~45-60min ago and being retested with volume — mechanically the strongest setup of the day. **Rejected on catalyst**: Perplexity confirms Loopring shut down its L2/DEX on Jul 17 and is winding down products; Upbit has delisted LRC and Binance placed it under a delisting-risk monitoring tag. Today's push is a dead-project bounce on a shutdown/fund-return event, not a tradeable catalyst — buying into active delisting risk on two exchanges is a clear disqualifier regardless of technicals.
+- **ZAMA/USD**: +16.3% vs open, 1h +3.35%, 4h +9.72%, spread 0.22%, high set <15min ago (still accelerating), volume surging 5-20x baseline — clean technical breakout above a Perplexity-flagged $0.039 resistance level, no negative catalyst (recent mainnet launch, $23M confidential-vault deposits, live on Kraken/Binance/Solana). **Rejected on ATR-adjusted R:R**: last four 15m candles show 2.5-2.8% high-low range each — genuinely high-ATR, would need the 3.5% high-ATR trail per strategy to avoid a noise-stop. At 3.5% stop, R:R at T1 (+3%) = 3/3.5 = 0.86:1, below the 1.2:1 floor. Using the standard 2.5% stop instead to force R:R to 1.2:1 would misprice the actual noise risk on this asset. Gate fails either way — not loosened to manufacture a trade.
+- **CHZ/USD**: +5.6% vs open, 1h +3.14% (barely above threshold), 4h +5.92%, spread 0.19%, high set <15min ago, candle ranges tame (~1%, standard 2.5% stop appropriate, R:R exactly 1.2:1). Mechanically clears every gate. **Held back on conviction**: Perplexity's catalyst read is net bearish — FIFA World Cup 2026 final concluded Jul 19, removing Chiliz's primary fan-token demand driver, price reportedly broke a multi-week downtrend low; only bullish note is an OKX Singapore listing that's trade-only (no deposit/withdraw), limited impact. A barely-above-threshold move with a bare-minimum 1.2:1 R:R and a background narrative that's actively negative mirrors the ARB entry (2026-07-09) flagged in TRADING-STRATEGY.md as a cautionary precedent (reversed within an hour on thin conviction). Passed on discretion, not a hard gate failure.
+
+Other candidates from the sweep (POND, CAP, CCD, MANTRA, ARX, ZBCN, JTO, NANO) failed on spread >1%, stale/aged highs (>60min with no breakout), or single-candle spike-then-chop patterns (CCD: +5.7% in one candle at 13:30, flat/fading since).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Three real momentum names surfaced (LRC, ZAMA, CHZ) but each fails a specific gate (delisting-risk catalyst, ATR-adjusted R:R, or bearish-narrative-plus-bare-minimum-R:R). Per the gate-protection default rule, none were forced. Nothing else in the 43-candidate sweep clears spread + freshness + momentum together.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
