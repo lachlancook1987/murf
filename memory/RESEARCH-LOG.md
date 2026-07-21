@@ -28501,3 +28501,60 @@ No new discovery sweep run this check — the 08:05 UTC pre-session research (�
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 08:05 UTC pre-session research. Today's research plan has no qualifying candidate to execute.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-21 — Pre-Session Research (20:06 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, ARB, AVAX, BABY, ENA, FET, HBAR, HYPE, INJ, JTO, KAS, LINK, NEAR, ONDO, RENDER, SOL, SUI, TAO, UNI, WLD, XETH, XXBT, XXDG, XXLM, XXRP dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only (stop `a2b44cf9` still `canceled`) |
+
+Balance unchanged since the 12:01 UTC session-open check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 20:06 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $65,146–$66,466 range (Coinbase $91,151 outlier discarded as stale/erroneous), +0.8% to +2.95% | Live sweep confirms ~$66.2k, consistent with the +1.4-2% consensus range | Mild-to-moderate green, no crash/momentum signal |
+| ETH | $1,916–$1,939 consensus (Coinbase $3,036 and Yahoo $2,465 outliers discarded), +1.0% to +4.4% | Consistent with live sweep (~$1,920-1,935) | Mild green, no strong signal |
+| Fear & Greed | alternative.me/FearGreedMeter **25 (Extreme Fear)**, Binance Square 40 (Fear), CFGI 50 (Neutral, altcoin-broad) | — | 25 (Extreme Fear) on primary reference (alternative.me, same as this morning) → **1.5:1 R:R floor applies today for any unconfirmed-catalyst entry** |
+| BTC funding rate | Stablecoin avg +0.003% to +0.010%/8h (Binance/Bybit/OKX/Hyperliquid positive); Kraken -0.0007%, BitMEX -0.0072%, KuCoin -0.0077% (negative) | — | No crowded skew, not actionable |
+| Catalysts | **CLARITY Act** cleared a procedural hurdle (ethics-provision agreement) — cited as driving BTC to a one-month high; **Cardano Van Rossum hard fork** activated network v11 (first community-voted upgrade); Iran-US tensions/Strait of Hormuz oil spike to $90/bbl (bearish/volatile); Spot BTC ETF +$227M net inflows Jul 20 (bullish, BlackRock IBIT led); US sanctions on TRON ~$131M (bearish, not held) | ADA live-checked: only +2.35% vs open, -2.09% off high — hard-fork catalyst not producing a tradeable momentum move; TRX barely moved (+0.82%) despite sanctions headline | CLARITY Act is a real macro tailwind (already reflected in BTC's broad green day) but not single-asset-actionable; ADA fork news is a real catalyst but price action doesn't clear momentum thresholds |
+| Unlocks this week | ZRO/KAITO unlocks Jul 20 (already passed), PLUME $2.45M + GWEI $1.34M + AKE $3.90M + TA unlocks today (Jul 21, all small/dust-tier) | — | Nothing large enough or held to be actionable |
+
+**Crash gate:** BTC +1.4% to +2.95% → **NOT triggered**.
+**BTC weekly trend gate:** BTC up over trailing week (~$64.2k Jul 20 EOD → ~$66.2k today) → **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (695 USD pairs, live Ticker + 15m/5m OHLC)
+
+Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker`, ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. 66 pairs cleared that initial screen. Pulled 15m OHLC for the top ~23 by combined move-size/proximity-to-high/liquidity to compute true 1h/4h momentum and high-freshness, then 5m OHLC for the two closest real candidates:
+
+| Symbol | vs open | 1h% | 4h% | High age | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| **EDGE/USD** | +18.73% | **+19.30%** | **+21.02%** | 0min | 1.03% (borderline) | Mechanically the loudest candidate on paper — but 5m OHLC exposes a classic **fully-reverted spike**: one 20:00 candle jumped 0.06706→0.07967 on 56,519 units (66x the 20-candle average), then **zero volume in the following candle**, and critically the *live order book* (ask $0.06721, bid $0.06662) already sits back near the **pre-spike** price of ~$0.0667-0.0672 — the ticker's "last trade" ($0.07967) is stale and the market has already round-tripped the entire move. Not a live breakout; a completed pump that's dumped back to baseline. **SKIP.** |
+| **VELO/USD** | +6.11% | +2.95% (just under 3% threshold) | +6.58% | 15min | 0.90% (passes) | 5m OHLC shows the 19:50-19:55 candles carried the real volume (1.03M + 1.00M units, by far the session's biggest) but price **declined** through them (high $0.003671 → low $0.003590) before stabilizing — a volume-heavy reversal/chop, not a clean breakout, and 1h momentum sits just below the 3% entry threshold. **SKIP — fails 1h threshold and shows rollover characteristics on the highest-volume candles.** |
+| **SCOR/USD** | +17.12% | +3.48% | +6.05% | 0min | 0.62% (passes) | Clears both momentum thresholds on paper, but last 15m candle shows **zero volume** — same dead-order-book profile as the SCOR/PTB/KNTQ precedents (tight spread masking an inactive book). **SKIP.** |
+| **1INCH/USD** | +11.48% | +0.48% | +4.00% | 15min | 0.24% | 4h momentum below 5% threshold; 1h essentially flat — the 4h move already happened and has stalled. **SKIP.** |
+| **PLAY/USD** | +9.00% | +0.05% | +8.26% | 15min | 0.13% | 4h clears but 1h flat — move front-loaded, not accelerating now. **SKIP.** |
+| **TRIA/USD** | +7.37% | +0.73% | +3.88% | 0min | 0.48% | Fresh high but both 1h/4h below thresholds despite a real volume spike (3.7x avg). **SKIP.** |
+| **GENIUS/USD** | +7.10% | +2.11% | +4.75% | 600min (stale) | 0.20% | Both metrics just below threshold and high is 10h old — not fresh. **SKIP.** |
+| **AERO, SNEK, ARKM, USUAL, FLR, PEAQ, LQTY, ZBT, SHX, VINE, TON, AAVE, USELESS, VVV, SAGA** | +4-9% | all <3% | most <5% (FLR +4.56% closest) | mixed, several 200-800min (stale) | tight | All below the 1h>3%/4h>5% combined bar, several with zero-volume 15m candles indicating thin books. **SKIP.** |
+| ADA (catalyst check) | +2.35% | — | — | — | — | Van Rossum hard fork is real news but price action (+2.35% vs open, -2.09% off high) doesn't clear any momentum threshold. **SKIP.** |
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- EDGE was the loudest signal in the raw sweep but is a textbook fully-reverted spike once the order book and 5m candles are checked — a reminder that ticker `last` price can lag the live book by a full round-trip on thin names
+- Fear & Greed still reads 25 (Extreme Fear) on the primary reference — the stricter 1.5:1 R:R floor remains live and binding, moot today since nothing clears even the base 1.2:1 bar
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has failed for **19+ consecutive days** (quota exhausted since 2026-07-02) — flagging again below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +1.4% to +2.95%). BTC weekly trend gate not triggered (BTC up over trailing week). Full 695-pair Kraken-native sweep found no candidate clearing momentum + freshness + spread + liquidity together: EDGE is a fully-reverted spike masquerading as a live breakout in the ticker feed; VELO's biggest volume candles are a reversal, not a breakout, and its 1h momentum sits just under threshold; SCOR clears momentum on paper but has a dead order book; everything else is below the 1h>3%/4h>5% combined bar or sits on a stale high. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session (EDGE rejected as a fully-reverted spike; VELO/SCOR fail on momentum threshold/dead order book respectively; no other candidate clears the bar). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **20+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
