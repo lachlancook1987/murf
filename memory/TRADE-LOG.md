@@ -7990,3 +7990,25 @@ WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still
 ### Decision: **HOLD — no new entries, no open positions to manage.** ESPORTS was the only candidate with real technical strength but fails hard on catalyst (post-rug/flash-crash bounce); 1INCH fails on sub-threshold momentum plus thin liquidity; ONDO unchanged from the 12:01 UTC rejection. Nothing else in the 60-candidate shortlist clears momentum + spread + freshness + liquidity together. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-21 — Midday Scan #2 (22:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22), positions historical-only — no action needed.
+
+**Live quotes vs today's open:** BTC $66,343.80 → **+1.73%** (o $65,215.70), -0.84% off 24h high $66,907.30. ETH $1,922.03 → **+0.98%**. SOL $77.99 → **+0.26%**. All majors green but cooling from the 12:01/earlier-22:00 checks. Crash gate: not triggered. BTC weekly trend gate: not triggered (BTC +4.0% over trailing 5 days vs the 63,789.5 close 5 sessions back — no downtrend).
+
+**Discovery (Kraken-native sweep, full 695 USD pairs, live Ticker + 15m OHLC):** 70 pairs cleared >3% vs open with spread ≤1.5% and within 5% of 24h high. Pulled 15m OHLC for the top ~28 by move-size/freshness/liquidity:
+
+- **ESPORTS/USD**: now +51.26% vs open (up from +33.67% at the last check), off_high -1.95%, spread 0.66%. **Still rejected on catalyst** — this session's earlier check confirmed the move is a post-rug/flash-crash dead-cat bounce (unauthorized MM dump, ~$110-130M sold), not a genuine breakout; no new information changes that. **SKIP.**
+- **BIO/USD**: real technical setup — 1h +6.55%, 4h +8.14% (clears both), 24h high set 0min ago (still printing new highs), volume 43.3k vs 17.5k avg (~2.5x surge), live spread 0.75% (clears ≤1%). Perplexity found **no confirmed fundamental catalyst** — cited only vague/unverified "BioXP upgrade" and "Upbit volume surge" mentions from secondary feeds, with CoinGecko flagging bearish 7-day sentiment despite today's pop. Crypto Fear & Greed reads **Extreme Fear (25, Alternative.me)** today. **Rejected on the Extreme Fear + unconfirmed-catalyst R:R floor**: with catalyst timing unconfirmed and F&G ≤25, required R:R is 1.5:1, but standard 2.5% stop against a +3% T1 only yields 1.2:1 — gate fails, not loosened to force a trade.
+- **AVAAI/USD**: 1h +5.27%, 4h +11.80%, high_age 30min — momentum clears, but live spread 1.07% **hard-fails** the ≤1% spread cap. **SKIP.**
+- **TRIA/USD**: 1h +2.79% (just below 3% threshold), 4h +5.22%. **SKIP** — sub-threshold 1h momentum.
+- **WAL, FIL, AAVE, ICNT, CFG, SAGA, PEAQ, AI, BILL, SPACE, PROS, VELO, GENIUS, ZBT, SNEK, DOVU, VVV, SHX, USUAL, TON, LQTY**: all below the 1h>3%/4h>5% momentum thresholds outright, several with zero-volume trailing 15m candles (thin/dead order books despite nonzero quoted daily move).
+- **1INCH/USD** rechecked: momentum now negative on 1h (-0.48%), high_age 75min — unchanged rejection from the earlier scan.
+- **ONDO/USD** rechecked: still -4.24% off 24h high — momentum-peak-check gate still fails, unchanged from prior rejections today.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BIO was the strongest technical candidate today (clears momentum, spread, and freshness) but fails the Extreme Fear R:R floor on an unconfirmed catalyst. ESPORTS remains disqualified on catalyst grounds despite extending further. Nothing else in the 70-candidate shortlist clears momentum + spread + freshness together. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
