@@ -28487,3 +28487,17 @@ Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker`, ranked by % vs toda
 ### Step 6 — Notification
 
 Planned trades: **HOLD** — no new entries this session (ONDO rejected on momentum-continuation + Extreme Fear R:R floor; no other candidate clears the bar). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **19+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-21 — Session-Open Execution Check (12:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 08:05 UTC pre-session research. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:** BTC $66,257.20 → **+1.60%** (o $65,215.70), -0.19% off 24h high $66,386.30. ETH $1,932.50 → **+1.53%**. SOL $78.30 → **+0.65%**. All three majors mildly green, no momentum signal. Crash gate: not triggered. BTC weekly trend gate: not triggered.
+
+No new discovery sweep run this check — the 08:05 UTC pre-session research (≈4h prior) already covered a comprehensive 695-pair Kraken-native sweep. Rechecked the closest candidate from that scan: **ONDO/USD** now $0.40155 (+12.4% vs open, unchanged direction) but still **-1.75% off its 24h high** ($0.40873) — not a fresh breakout, still below the prior high rather than through it, so the momentum-peak-check gate that failed it this morning still fails. The Extreme Fear (25) unconfirmed-catalyst R:R floor from this morning's research is unaffected by price action and still applies. No basis to revisit the HOLD.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 08:05 UTC pre-session research. Today's research plan has no qualifying candidate to execute.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
