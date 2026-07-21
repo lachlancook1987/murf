@@ -7971,3 +7971,22 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 20 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Pre-session research (08:05 UTC) found one clean technical breakout (ONDO, +9.53% vs open) but it failed both the momentum-continuation check (5m volume collapse right after a fresh high) and today's Extreme Fear (25) R:R floor of 1.5:1; everything else in the 24-candidate shortlist was below threshold or on a thin order book, so HOLD stood all session. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), positions `[]`, equity $2.54 cash-only — zero Alpaca exposure. BTC rose from $64,168.10 (Jul 20 EOD) to $66,152.00 today (+3.09%), so the bot's flat day underperformed BTC by −3.09% (a real setup existed but failed the Extreme Fear R:R gate, which is working as intended rather than a missed opportunity). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 19+ days); needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-21 — Midday Scan (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 12:01 UTC session-open check. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22), positions `[]` — no action needed.
+
+**Live quotes vs today's open:** BTC $66,808.90 → **+2.44%** (o $65,215.70). ETH $1,939.23 → **+1.88%**. SOL $78.51 → **+0.93%**. All three majors green, no crash signal. Crash gate: not triggered. BTC weekly trend gate: not triggered.
+
+**Discovery (Kraken-native sweep, full 700 USD pairs, live Ticker + 15m/5m OHLC):** 60 pairs cleared >3% vs open with spread ≤1.5% and within 5% of 24h high. Pulled 15m OHLC for the top ~20 by move-size/freshness/liquidity:
+
+- **ESPORTS/USD**: mechanically the loudest candidate (+33.67% vs open, 4h +11.86%, high age 0min, spread 0.75%, sustained volume 200-400k/candle). **Rejected on catalyst** — Perplexity confirms this is the aftermath of a 90%+ flash crash from an unauthorized market-maker dump (~$110-130M sold, project disputing responsibility), not a genuine breakout. Buying a distressed post-rug bounce is a clear disqualifier regardless of technicals (same class of rejection as the LRC delisting-risk precedent, 2026-07-20).
+- **1INCH/USD**: 1h +4.04%, 4h +4.86% (just below the 5% threshold), spread 0.25%. 5m OHLC shows several consecutive single-trade or zero-trade candles — thin/sparse order book behind a tight quoted spread, same profile as the PTB/KNTQ precedents. **SKIP** on both sub-threshold momentum and liquidity quality.
+- **ONDO/USD** rechecked: $0.40692, +13.87% vs open, still **-0.44% off its 24h high** ($0.40873) — no fresh breakout since the 12:01 UTC check, momentum-peak-check gate still fails; Extreme Fear (25) unconfirmed-catalyst R:R floor from this morning still applies and unaffected by price action.
+- Remaining candidates (ZBT, PUFFER, SCOR, REZ, CFG, LQTY, AIN, ARKM, STABLE, 0G, WARD, GENIUS, PROVE, AKT, GIGA, COTI, VIRTUAL, AERO): all below the 1h>3%/4h>5% momentum thresholds outright, or showing zero-volume candles (PUFFER, SCOR — dead order books despite a nonzero quoted move).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ESPORTS was the only candidate with real technical strength but fails hard on catalyst (post-rug/flash-crash bounce); 1INCH fails on sub-threshold momentum plus thin liquidity; ONDO unchanged from the 12:01 UTC rejection. Nothing else in the 60-candidate shortlist clears momentum + spread + freshness + liquidity together. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
