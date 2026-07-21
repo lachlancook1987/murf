@@ -28431,3 +28431,59 @@ Pulled full `AssetPairs` + batched `Ticker` for all 700 USD pairs, ranked by % v
 ### Step 6 — Notification
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **18+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-21 — Pre-Session Research (08:05 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only |
+
+Balance unchanged since the 2026-07-20 22:06 UTC check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken, 08:05 UTC)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $65,146–$65,700 consensus (Coinbase $91,151 and Kraken-quoted-by-Perplexity $70,749 both discarded as stale/erroneous), +0.8% to +2.74% | Consistent with the +0.8–1.3% range | Mild green, no strong signal |
+| ETH | ~$1,898 consensus (CMC/CoinGecko), +1.6% to +2.5% (Perplexity's own "Kraken" row of $1,864/-0.07% is itself stale vs our live check) | Live sweep confirms broadly flat-to-mild-green market | Mild green, no strong signal |
+| Fear & Greed | alternative.me **25 (Extreme Fear)**, Binance Square 39 (Fear), CFGI 52 (Neutral), FearGreedMeter 29 (Fear) | — | 25 (Extreme Fear) on the primary reference (alternative.me) → **1.5:1 R:R floor applies today for any unconfirmed-catalyst entry** |
+| BTC funding rate | Stablecoin avg ~+0.003–0.0071%/8h (Binance/Bybit/OKX/BitMEX positive); Kraken -0.0013%, Huobi -0.0043% (negative) | — | No crowded skew, not actionable |
+| Catalysts | Trump/GOP agreement on CLARITY Act ethics provisions (bullish, bill nearer to Senate vote); GENIUS Act bank-grade KYC proposal targeting USDC/USDT issuers (bearish/compliance); South Korea won-stablecoin framework; Vietnam crypto penalties; Russia Duma final review of crypto trading bill; **ENA claimed +12%** on BlackRock Aladdin/USDe integration | See candidate table — ENA live-contradicted again | CLARITY Act progress is a real, dated (today) macro catalyst but not single-asset-actionable; ENA's claimed +12% move is the same recurring hallucinated-gainer pattern from the 2026-07-20 20:06 session |
+| Unlocks this week | AVAIL $19.3M cliff (Jul 21, ~58% of circ. supply — large but not held), VENOM $13.1M (Jul 25), SOL $85M/week linear (already priced in continuously), WLD $45M+/week, TAO $45.4M/week, SAHARA $7.1M (Jul 26), SOON $6.1M (Jul 23); GRVT TGE today (Season 2, 18% of 1B supply) | — | AVAIL's 58%-of-supply cliff today is the standout dilution risk — not held, not a candidate, noted only |
+
+**Crash gate:** BTC +0.8% to +1.3% → **NOT triggered**.
+**BTC weekly trend gate:** BTC roughly flat-to-mildly-up over trailing week (~$64.2k Jul 20 EOD → ~$65.3k today) → **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (695 USD pairs, live Ticker + 15m/5m OHLC)
+
+Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker`, ranked by % vs today's open with spread ≤1% and within 5% of 24h high. 24 candidates cleared that screen. Pulled 15m OHLC for the top ones by combined move-size/proximity-to-high/liquidity, then 5m OHLC for the closest three:
+
+| Symbol | vs open | 1h% | 4h% | Off high | High age | Spread | Verdict |
+|---|---|---|---|---|---|---|---|
+| **ONDO/USD** | +9.53% | +1.40% | **+7.86%** | -0.91% (new high at 08:00) | ~5-10min | 0.06% (passes) | Strongest technical setup of the sweep — clean breakout from ~$0.363 (06:10) to $0.395 (08:00) on a 30x volume surge candle (06:50, 1.16M vs ~40k baseline), 4h momentum well past the 5% threshold. But the last 5m candle (08:05) shows volume collapsing to 1,332 units (from 287,456 the candle before) with price pulling back to $0.391 — a spike-then-stall pattern matching the SAPIEN precedent rejected 2026-07-20. Perplexity's ONDO catalyst read (SEC probe concluded, DTCC tokenized-stock 24/7 minting, 21Shares spot ETF S-1) cites real-sounding themes but gives no intraday timestamp and is bundled with a "60% surge this month" framing plus badly stale price figures ($1.02-$1.169 quoted vs live $0.391 — off by ~3x, same unreliable-data pattern flagged repeatedly). Catalyst freshness **cannot be confirmed as <6h old**. Combined with today's Extreme Fear (25) reading, the R:R floor is 1.5:1 — this setup only prices to the standard 1.2:1 at best. **SKIP — fails both the momentum-continuation check and the Extreme Fear R:R floor.** |
+| **US/USD** | +10.50% | -0.40% | +12.24% | -2.80% | 30min | 0.44% (passes) | Real 4h move (0.0367→0.0439 spike 07:00-07:40) but 5m OHLC shows a clean rollover since the 07:40 high — price down to $0.0423 now, last-candle volume (4,340) far below the breakout candles (100k-450k range). Momentum has already reversed, not accelerating. **SKIP.** |
+| **VVV/USD** | +9.83% | -2.50% | +6.67% | -3.43% | 105min | 0.13% (passes) | 5m OHLC shows a steady grind down from $13.17 (07:00) to $12.71 (08:05) — clearly rolling over, 1h momentum already negative. **SKIP.** |
+| AAVE, PENDLE, FET, IMX | +4-6% | <1.2% | <3% | ~0% (fresh) | 0min | tight | All near fresh highs but 1h/4h momentum both below threshold (1h<3%, 4h<5%); AAVE additionally has near-zero volume (~$5-10k/candle) — no real signal. **SKIP.** |
+| ADA, DOT, ENA, LDO, SUSHI, ENS, SOMI, VIRTUAL, AZTEC | +3-4% | <2% | <3% (ENS/LDO/AZTEC/SOMI negative) | mixed | 60-1095min | tight | Below both momentum thresholds outright, several already declining off stale highs. **SKIP.** |
+| USELESS/USD | +5.15% | +1.07% | +6.05% | -0.69% (high 120min old, but 08:00 candle ticked to new local high) | 120min (per 15m calc) | 0.18% | 5m OHLC shows long stretches of literal zero-volume candles punctuated by single sparse bursts (285-42,384 units, erratic) — sparse/thin order book, not sustained demand, same profile as the PTB/KNTQ precedents (tight spread masking a near-dead book). **SKIP.** |
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- ONDO is the closest real setup today (clean technical breakout, real volume) but fails on momentum-continuation (spike-then-stall in the latest 5m candle) and on the Extreme Fear R:R floor (catalyst timing unconfirmed, so 1.5:1 required, only 1.2:1 available)
+- Fear & Greed at 25 (Extreme Fear, alternative.me) is the lowest reading in recent sessions — the stricter 1.5:1 R:R floor is live and binding today, not moot
+- ENA's claimed +12% catalyst move was again live-contradicted (actual +3.26% vs open) — same recurring Perplexity gainer-hallucination pattern, now observed on ENA specifically in back-to-back sessions (2026-07-20 20:06 and today)
+- AVAIL's cliff unlock today releases ~58% of circulating supply — large dilution risk on a name outside our candidate set, not actionable
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has failed for **19+ consecutive days** (quota exhausted since 2026-07-02) — flagging again below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC +0.8% to +1.3%). BTC weekly trend gate not triggered (BTC flat-to-mildly-up over trailing week). Full 695-pair Kraken-native sweep found one clean technical breakout (ONDO) but it fails both the momentum-continuation check (5m volume collapse right after the fresh high) and today's Extreme Fear R:R floor (unconfirmed catalyst timing → needs 1.5:1, only 1.2:1 available); US and VVV already rolled over from their intraday highs; everything else in the 24-candidate shortlist is below the 1h/4h momentum thresholds or sits on a thin/sparse order book. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session (ONDO rejected on momentum-continuation + Extreme Fear R:R floor; no other candidate clears the bar). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **19+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
