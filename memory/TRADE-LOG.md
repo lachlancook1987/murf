@@ -7959,3 +7959,15 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 20:06 UTC pre-session research. PTB is the only candidate clearing momentum + spread + freshness together, but sparse/illiquid order-book activity and conflicting cross-exchange price data disqualify it on liquidity-quality grounds. Nothing else in the 51-candidate shortlist clears the 1h/4h momentum bar. Per gate-protection default, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-21 — EOD Snapshot (Day 62, Tuesday)
+
+### Jul 21 — EOD Snapshot (Day 62, Tuesday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −3.09%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 20 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Pre-session research (08:05 UTC) found one clean technical breakout (ONDO, +9.53% vs open) but it failed both the momentum-continuation check (5m volume collapse right after a fresh high) and today's Extreme Fear (25) R:R floor of 1.5:1; everything else in the 24-candidate shortlist was below threshold or on a thin order book, so HOLD stood all session. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), positions `[]`, equity $2.54 cash-only — zero Alpaca exposure. BTC rose from $64,168.10 (Jul 20 EOD) to $66,152.00 today (+3.09%), so the bot's flat day underperformed BTC by −3.09% (a real setup existed but failed the Extreme Fear R:R gate, which is working as intended rather than a missed opportunity). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 19+ days); needs resubscription at callmebot.com/61477788635.
