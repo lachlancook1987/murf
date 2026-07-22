@@ -8012,3 +8012,15 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** BIO was the strongest technical candidate today (clears momentum, spread, and freshness) but fails the Extreme Fear R:R floor on an unconfirmed catalyst. ESPORTS remains disqualified on catalyst grounds despite extending further. Nothing else in the 70-candidate shortlist clears momentum + spread + freshness together. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-22 — EOD Snapshot (Day 63, Wednesday)
+
+### Jul 22 — EOD Snapshot (Day 63, Wednesday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.23%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 21 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Pre-session research earlier today (see RESEARCH-LOG.md, 2026-07-22) screened the full Kraken pair universe and surfaced three real momentum names (LRC, ZAMA, CHZ) but each failed a specific gate — LRC on active delisting risk, ZAMA on ATR-adjusted R:R falling short of the 1.2:1 floor, CHZ on discretionary conviction (bearish post-World-Cup catalyst narrative against a bare-minimum R:R). No midday scans logged today beyond the pre-session check; HOLD stood all session per the gate-protection default. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from $66,152.00 (Jul 21 EOD) to $66,002.70 today (−0.23%), so the bot's flat day outperformed BTC by +0.23% — a quiet day with no qualifying setups, gates worked as intended rather than a missed opportunity. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still exhausted (0 messages left), same recurring issue flagged every session since Jul 2 (now 20+ days); needs resubscription at callmebot.com/61477788635.
