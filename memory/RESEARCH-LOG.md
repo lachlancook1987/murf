@@ -28662,3 +28662,73 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-22 — Pre-Session Research (20:06 UTC, Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | 44 historical orders, all `filled`/`canceled` (checked full status set) — stop `a2b44cf9` still `canceled` since 2026-05-22 |
+
+Balance unchanged since the 14:08 UTC midday scan. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $66,119.30, -0.36% (24h) | Live sweep close ~$66,010-66,120 range across pairs, consistent | Flat, no crash/momentum signal |
+| ETH | $1,927.66, +0.4% (24h) | Consistent with live sweep (~$1,920-1,945) | Flat, no strong signal |
+| Fear & Greed | **39 (Fear)** — Binance 39, CoinStats 39 | — | Above Extreme Fear threshold (≤25) → standard 1.2:1 R:R floor applies today, not the stricter 1.5:1 |
+| BTC funding rate | Cross-exchange ~+0.003% to +0.009%/8h (Binance, Bybit, OKX, Deribit, Hyperliquid all positive, mean ~0% per Glassnode) | — | No crowded skew, not actionable |
+| Catalysts | Clarity Act ethics-package agreement reported (Bessent: "1-yard line," possible Senate floor vote next week) — cited driving BTC to a five-week high ($66.8-66.9k); 5 straight days of spot BTC ETF inflows; **PONS** claimed +129% intraday on Robinhood-related attention; Russia passed first crypto retail-purchase-limit law (~$3,800/yr) | **PONS/USD**: `Unknown asset pair` on Kraken — untradeable, consistent with the recurring pattern of Perplexity-sourced "surge" names having no live Kraken pair | Clarity Act / ETF inflows are real macro tailwinds already reflected in BTC's broad range, not single-asset-actionable; PONS unconfirmed and untradeable — discarded |
+| Unlocks this week | INFRA ($50K), XWGT (805K), NYAN (2.62M), ARX ($1.53M), 0G (~$2.86M), HYPER (~$1.81M) today; Avalanche (~0.23% supply), Toncoin (~0.72%) also today; Polymesh v8 mainnet, Neo Gorgon testnet hardfork, Kaia CR Mission 1 this week | ARX appeared in today's sweep (below threshold, see Step 3) | All small/dust-tier or already-priced continuous unlocks; nothing large enough to be a standalone trade driver |
+
+**Crash gate:** BTC -0.36% (24h) → **NOT triggered**.
+**BTC weekly trend gate:** BTC flat (~$66.0-66.1k today vs $66,002.70 EOD yesterday, well within the +3.5%-over-trailing-week uptrend confirmed at this morning's pre-session check) → **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (700 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (700 USD pairs) + batched `Ticker` (all 700 returned), ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. **40 pairs** cleared that initial screen (out of 645 pairs with valid data). Pulled 15m OHLC for the top 20 by move-size/proximity-to-high/liquidity to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|---|
+| RE/USD | +24.87% | +1.08% | +4.78% | 30min | 0.45x | 0.12% | Loudest on the raw vs-open screen but 1h well below 3% threshold and 4h just short of 5% — move has already happened, not currently accelerating. **SKIP.** |
+| NES/USD | +16.70% | +0.96% | +0.70% | 0min | 0.00x (dead) | 0.19% | Both metrics far below threshold; zero-volume last candle. **SKIP.** |
+| UAI/USD | +15.25% | +0.45% | +0.97% | 30min | 1.07x | 0.18% | Both well below threshold. **SKIP.** |
+| ARX/USD | +12.04% | -0.23% | +1.43% | 120min | 0.00x (dead) | 0.24% | 1h negative, dead order book on the latest candle. **SKIP.** |
+| **BLUAI/USD** | +10.34% | +1.84% | **+8.88%** | 0min (fresh) | 1.05x (real, steady) | 0.36% (passes) | Strongest 4h move in the set with genuine sustained volume (~10-115k/candle) and a fresh high — but 1h sits at +1.84%, well under the 3% threshold; the 4h move front-loaded earlier in the window rather than accelerating now. **SKIP — fails 1h threshold.** |
+| GIB/USD | +10.02% | +0.00% | -0.12% | 75min | 0.00x (dead) | 0.63% | Flat/negative, dead book. **SKIP.** |
+| ZAMA/USD | +9.12% | +1.17% | +2.76% | 0min | 0.22x (thin) | 0.05% | Both below threshold, thin volume. **SKIP.** |
+| US/USD | +7.90% | -0.95% | -2.83% | 240min | 0.00x (dead) | 0.50% | Negative momentum, stale high, dead book — already rolled over. **SKIP.** |
+| PROS/USD | +7.54% | +0.00% | -0.08% | 0min | 0.00x (dead) | 0.36% | Flat, dead book despite fresh-looking high. **SKIP.** |
+| STBL/USD | +7.44% | +1.33% | +3.35% | 30min | 0.34x (thin) | 0.19% | Both below threshold. **SKIP.** |
+| AIO/USD | +6.76% | +2.37% | +0.71% | 30min | 0.00x (dead) | 1.02% (borderline) | 1h closest of the batch but still under 3%; 4h weak; dead last candle. **SKIP.** |
+| CHECK/USD | +6.71% | +0.00% | -0.88% | 195min | 0.00x (dead) | 0.25% | Flat/negative, stale, dead book. **SKIP.** |
+| **SAPIEN/USD** | +6.53% | +2.97% | +4.04% | 30min | 2.40x (real surge) | 0.14% (passes) | Second-closest candidate — real volume surge (2.4x), but both 1h (2.97%, just shy of 3%) and 4h (4.04%, short of 5%) fall marginally under threshold. Live requote confirmed spread still tight (0.083670/0.083600 = ~0.08%). **SKIP — misses both thresholds by a narrow margin, not forced.** |
+| SAFE/USD | +6.44% | +0.56% | +0.34% | 90min | 0.00x (dead) | 0.22% | Both far below threshold, dead book. **SKIP.** |
+| ENA/USD | +6.34% | +0.76% | +2.78% | 15min | 0.25x (thin) | 0.11% | Below threshold — this is the same ENA Perplexity flagged for a BlackRock Aladdin/USDe "rally" catalyst; live Kraken data does not support a tradeable momentum move, consistent with the recurring gainer-hallucination pattern on this name. **SKIP.** |
+| PEAQ/USD | +5.94% | +0.10% | +2.42% | 30min | 0.09x (thin) | 0.05% | Both below threshold. **SKIP.** |
+| INX/USD | +5.67% | +0.00% | +0.15% | 0min | 0.00x (dead) | 0.18% | Flat, dead book. **SKIP.** |
+| SLX/USD | +5.50% | +0.21% | -1.15% | 240min | 0.03x (dead) | 0.14% | Negative 4h, stale high, near-dead book. **SKIP.** |
+| EIGEN/USD | +5.48% | +1.40% | -0.71% | 210min | 0.41x (thin) | 0.08% | Negative 4h, stale high. **SKIP.** |
+| KTA/USD | +5.07% | +0.00% | +2.56% | 105min | 0.00x (dead) | 0.32% | Both below threshold, dead last candle. **SKIP.** |
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- BLUAI and SAPIEN were the closest real candidates today (genuine sustained volume, tight spreads) but both miss the combined 1h>3%/4h>5% momentum bar by a narrow margin — not forced per the gate-protection default
+- Several pairs in the top-20 (NES, ARX, GIB, US, PROS, CHECK, SAFE, INX, SLX, KTA) show literal zero-volume last candles — thin/dead order books behind an eye-catching vs-open % that the raw ticker screen alone would have missed
+- PONS (Perplexity's headline "+129% intraday" mover) has no Kraken pair at all — confirms discovery must stay Kraken-native, not Perplexity-sourced, consistent with the 2026-07-20 methodology change
+- Fear & Greed at 39 (Fear, not Extreme Fear) — standard 1.2:1 R:R floor applies today, moot since nothing reaches the entry stage regardless
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has failed for 21+ consecutive days as of the last check (quota exhausted since 2026-07-02) — will reconfirm status in Step 6 below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.36% 24h). BTC weekly trend gate not triggered (BTC flat, consistent with this morning's confirmed uptrend). Full 700-pair Kraken-native sweep found no candidate clearing momentum + freshness + spread + liquidity together: BLUAI has the strongest 4h move (+8.88%) with real volume but 1h sits under 3%; SAPIEN has a genuine volume surge but both 1h (2.97%) and 4h (4.04%) fall just short; the remainder of the top-20 either sits well below threshold or trades on a dead/thin order book behind a misleading vs-open %. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session (BLUAI and SAPIEN both fail the combined 1h/4h momentum bar by a narrow margin; rest of the 40-candidate shortlist is below threshold or on a dead order book; PONS unconfirmed/untradeable). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
