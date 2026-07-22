@@ -28643,3 +28643,22 @@ No new discovery sweep run this check — the pre-session research (695-pair Kra
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-22 — Midday Scan (14:08 UTC, monitoring only, no trades)
+
+**Kraken:** `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — no action needed.
+
+**Live quotes vs today's open:** BTC $65,932.40 → **-0.87%** (o $66,511.70), -1.46% off 24h high $66,907.30. ETH $1,943.32 → **+0.75%** (o $1,928.87). SOL $77.99 → **-0.14%** (o $78.10). All three majors flat/mixed, no momentum signal. Crash gate: not triggered. BTC weekly trend gate: not triggered (per pre-session check, +3.5% over trailing week).
+
+**Discovery (Kraken-native sweep, full 695 USD pairs, live Ticker + 15m OHLC):** 41 pairs cleared >3% vs today's open with spread ≤1.5% and within 5% of 24h high. Pulled 15m OHLC for the top 15 by move-size/freshness/liquidity:
+
+- **SCOR/USD**: 1h +5.89%, 4h +8.69% (clears both), high age ~15min. **Rejected on liquidity quality** — most recent 15m candle shows 0 volume against a ~7,768 average (dead order book behind the move), same profile as the SCOR precedent flagged 2026-07-21. **SKIP.**
+- **BLESS/USD**: 1h +4.06%, 4h +10.63% (clears both), high age 0min (still printing fresh highs), volume 655,717 vs 93,846 avg (~7x surge) — real, sustained volume, mechanically the strongest setup. **Rejected on spread** — live requote at time of check: ask 0.0111370 / bid 0.0110070 = **1.18% spread**, hard-fails the ≤1% cap (initial ticker snapshot had shown 0.68%, but the spread widened by the time of the live requote — live number governs). **SKIP.**
+- **BLUR/USD**: 1h +4.04%, 4h +7.87% (clears both), high age 0min, spread 0.77% (passes), volume pattern shows a genuine breakout candle (223 trades, 1.47M volume) followed by continued real volume — not a dead book. Perplexity catalyst check: **mixed-to-negative** — Binance placed BLUR on its **Monitoring Tag** list (elevated exchange risk/review, CoinMarketCap reports a 12.97% drop followed that news) and a **~50M token unlock** was sent to Coinbase Prime (supply overhang through June 2027); no confirmed fresh bullish catalyst behind today's specific pump (Perplexity's own price snapshot was stale/inconsistent with live data, consistent with the known data-quality pattern). An elevated-exchange-risk flag on a currently-pumping token mirrors the LRC delisting-risk disqualifier (2026-07-20) — **rejected on catalyst quality, not forced.**
+- ARX (1h +3.07%, 4h +1.86%), UAI (1h +2.98%, 4h +5.32%): both miss one of the two momentum thresholds narrowly — not forced. REU, ZAMA, TRIA, PROS, GIB, RIZE, US, TAC, NES, SAFE: below combined threshold and/or thin/zero-volume candles.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BLESS was the strongest technical setup but hard-fails the live spread cap; BLUR clears momentum/spread/liquidity but carries an active Binance Monitoring Tag flag plus token-unlock overhang with no confirmed fresh bullish catalyst; SCOR has a dead order book behind its move. Nothing else in the 41-candidate shortlist clears the momentum bar. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
