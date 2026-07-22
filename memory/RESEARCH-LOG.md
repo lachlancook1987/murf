@@ -28572,3 +28572,60 @@ No new discovery sweep run this check — the 20:06 UTC pre-session research (�
 ### Decision: **HOLD — no new entries, no open positions to manage.** No material change since the 20:06 UTC pre-session research. Today's research plan has no qualifying candidate to execute.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-22 — Pre-Session Research (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | historical filled/canceled entries through 2026-05-22 only (stop `a2b44cf9` still `canceled`) |
+
+Balance unchanged since the 2026-07-21 21:02 UTC check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $66,300–$66,600 consensus (CMC $66,574 +1.55%, CoinGecko $66,303 +1.60%, CoinCodex $66,466 +2.71%) | Live $66,010.10, today's open $66,511.70 (-0.75% vs open, still +~3% vs the 07-16/17 base) | Mild green over 24h, flat-to-slightly-down vs today's own open — no crash/momentum signal |
+| ETH | $1,920–$1,940 consensus, +1% to +4% | Consistent with broadly flat-to-mild-green market | No strong signal |
+| Fear & Greed | **40 (Fear)**, Binance page: 40 today / 40 yesterday / 35 last week | — | 40 is above the Extreme Fear (≤25) threshold → standard 1.2:1 R:R floor applies today, not the stricter 1.5:1 |
+| BTC funding rate | Cross-exchange ~0.003–0.010%/8h, mostly +0.005 to +0.01% (Binance, Bybit, OKX, Deribit, Hyperliquid); Kraken/Huobi slightly negative | — | No crowded skew, not actionable |
+| Catalysts | Spot BTC ETF 5 straight days of net inflows (~$727M as of Jul 21); CLARITY Act ethics-provision agreement (regulatory tailwind); softer US inflation data (macro support); Russia's first crypto retail-purchase-limit law (~$3,800/yr); Robinhood Chain tokenization narrative; ENA cited again for BlackRock Aladdin/USDe integration | — | All macro/index-level, not single-asset-actionable; ENA's "rally" claim is the same recurring gainer-hallucination pattern seen repeatedly this month — not verified against live Kraken data as a discovery source |
+| Unlocks this week | ARX $1.53M (Jul 22), 0G ~$2.86M (Jul 22), HYPER ~$1.52-4.99M (Jul 22), XPL ~0.89% supply (Jul 22), AVAX ~0.23% supply (Jul 22), INFRA/XWGT market-cap-% unlocks (Jul 22); Polymesh v8 mainnet upgrade this week | ARX appeared in today's Kraken sweep (below threshold, see Step 3) | All small/dust-tier or already-priced continuous unlocks; nothing large enough to be a standalone trade driver |
+
+**Crash gate:** BTC -0.75% vs today's open, +1.5–2.7% vs 24h → **NOT triggered**.
+**BTC weekly trend gate:** BTC daily closes 07-16 $63,789.5 → today (live) ~$66,010 = **+3.5%** over the period → **NOT triggered** (uptrend, not down >3%).
+
+### STEP 3 — Kraken-Native Discovery Sweep (695 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker`, ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. **21 pairs** cleared that initial screen (out of 636 pairs with valid data). Pulled 15m OHLC for all 21 to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|---|
+| **AKE/USD** | +9.07% | **+4.51%** | **+9.13%** | ~6min (fresh, matches live 24h high exactly) | 1.02x (steady, not dead) | 0.24% (passes) | **Only candidate clearing both 1h>3% and 4h>5% with real, sustained volume** (1-8M units/candle across the full lookback, not sparse/dead). Live spread 0.24%, ordermin/costmin trivial, pair online. **Rejected on catalyst quality**: Perplexity confirms this is a **whale-led short squeeze** (one whale opened a $3.37M / 4.73B AKE long), CoinMarketCap flags **RSI ~80 (overbought)** and **$4.73M in liquidations** driving the move — not a fundamental catalyst. Cross-source price data is also **contradictory** (24h change reported anywhere from -10% to +15% depending on venue) — the same conflicting-cross-exchange-data pattern that disqualified PTB (2026-07-20) and contributed to the ESPORTS-class rejection (2026-07-21, post-dump bounce). A minor $5M seed-round mention (AKEDO) exists but is explicitly not the driver of today's move per the same source. Squeeze-driven, overbought, catalyst-thin pumps are a known reversal-risk profile (ESPORTS/EDGE precedents) — **SKIP.** |
+| PROS/USD | +6.18% | +5.84% | +7.29% | 51min | 0.00x | 0.54% | Clears both momentum thresholds on paper but 15m OHLC shows **long runs of zero-volume candles** (six of the last ten candles show 0 volume/count) — classic thin/dead order book behind a normal-looking spread, same profile as PTB/KNTQ/SCOR precedents. **SKIP.** |
+| REU/USD | +15.37% | +1.11% | +6.45% | 21min | 2.03x (real surge) | 0.17% | 4h clears but 1h well below the 3% threshold — move already happened, not currently accelerating (candles show a rise then chop). **SKIP.** |
+| ALICE/USD | +6.24% | +2.94% | +6.24% | 6min (fresh) | 1.44x | 0.70% | 1h just under the 3% threshold (2.94%); 4h clears. Marginal miss, not forced. **SKIP.** |
+| NES/USD | +10.36% | +1.88% | +4.20% | 21min | 0.56x | 0.62% | Both metrics below threshold. **SKIP.** |
+| PEAQ/USD | +5.01% | +0.36% | +4.95% | 126min | 3.24x (real surge) | 0.05% | 4h just under 5%, 1h flat — volume surge without current acceleration. **SKIP.** |
+| SXT, ZBT, VANRY, SAFE, BILL, REPV2, TAC | +3-4% | all ≤2.15% | most <2% or negative | several 1000min+ (stale) | mixed | tight | All below the 1h>3%/4h>5% combined bar or sitting on stale highs. **SKIP.** |
+| UAI, ARX, GRASS, TRIA, USUS, ZAMA, PIEVERSE, PACK | +3-9% | all <3% | mixed, several negative/zero | mixed | mostly thin (<0.6x) or zero | tight | Below momentum thresholds and/or thin order books. **SKIP.** |
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- AKE was the only pair in the 21-candidate shortlist clearing both momentum thresholds with real volume, but the move is whale/squeeze-driven with overbought RSI (~80) and contradictory cross-exchange 24h-change data — a known reversal-risk profile, not a fundamental breakout
+- Fear & Greed at 40 (Fear, not Extreme Fear) — standard 1.2:1 R:R floor applies, moot today since nothing reaches the entry stage regardless
+- ENA's Perplexity-claimed rally is again unverified against live Kraken discovery data — consistent with the ongoing gainer-hallucination pattern flagged repeatedly since 2026-07-20
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- CallMeBot WhatsApp notification channel has failed for 20+ consecutive days as of the last check (quota exhausted since 2026-07-02) — will reconfirm status in Step 6 below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -0.75% vs today's open, +1.5-2.7% vs 24h). BTC weekly trend gate not triggered (BTC +3.5% over the trailing week, an uptrend). Full 695-pair Kraken-native sweep found one candidate (AKE) clearing both momentum thresholds with real volume, but it is a whale-driven short squeeze with overbought RSI and contradictory cross-exchange data — rejected on catalyst-quality grounds, not a hard gate miss but a discretionary reversal-risk call consistent with prior ESPORTS/EDGE-class rejections. PROS clears momentum on paper but has a dead order book. Everything else in the 21-candidate shortlist is below the 1h>3%/4h>5% combined bar. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session (AKE rejected on whale-squeeze/overbought-RSI/contradictory-data catalyst quality; PROS has a dead order book; nothing else clears the momentum bar). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **21+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
