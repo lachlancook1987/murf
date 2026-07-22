@@ -28732,3 +28732,23 @@ Pulled full `AssetPairs` (700 USD pairs) + batched `Ticker` (all 700 returned), 
 Planned trades: **HOLD** — no new entries this session (BLUAI and SAPIEN both fail the combined 1h/4h momentum bar by a narrow margin; rest of the 40-candidate shortlist is below threshold or on a dead order book; PONS unconfirmed/untradeable). Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
 ---
+
+## 2026-07-22 — Midday Scan #2 (22:06 UTC, monitoring only, no trades)
+
+**Kraken:** `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22) — no action needed.
+
+**Live quotes vs today's open:** BTC $65,975.50 → **-0.81%** (o $66,511.70), -1.08% off 24h high $66,698.40. ETH $1,935.51 → **+0.34%** (o $1,928.87). SOL $78.03 → **-0.09%** (o $78.10). All three majors flat/mixed, no crash or momentum signal. Crash gate: not triggered. BTC weekly trend gate: not triggered (per pre-session check, +3.5% over trailing week).
+
+**Discovery (Kraken-native sweep, full 695 USD pairs, live Ticker + 15m OHLC):** 43 pairs cleared >3% vs today's open with spread ≤1.5% and within 5% of 24h high — same shortlist composition as the 20:06 UTC pre-session (RE, UAI, NES, STBL, ZAMA, ARX, GIB, US, SAPIEN, CHECK, AIO, KTA, PROS, BLUAI, INX, PEAQ, SLX, SAFE, ZBT, plus a few new names — DYDX, VSN, EIGEN, ALTHEA, OPN, GUN, HBAR, NODE, TX, SAUCE — all below the top-20 cut). Pulled 15m OHLC for the top 20 by move-size to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+- **STBL/USD**: closest candidate — 4h +10.88% (clears), high age 6.5min (fresh), volume 1.59x avg (real). **Fails 1h threshold**: only +2.09%, under the 3% bar — the 4h move front-loaded earlier, not currently accelerating. **SKIP.**
+- **SAPIEN/USD**: pre-session had this at 1h +2.97%/4h +4.04% (narrow miss); now 1h has gone **negative** (-1.32%), 4h +6.20% — momentum reversing, high age 66.5min (>60min, momentum-peak-check fails too). **SKIP — deteriorated since pre-session, not improved.**
+- **CHECK/USD**: 4h +8.94% but 1h -2.46% (negative), vol_ratio 0.00x (dead last candle), high age 7446min (stale) — momentum already rolled over. **SKIP.**
+- **ZAMA/USD**: 4h +5.60% but 1h only +0.84%, vol_ratio 0.01x (effectively dead — 400 vs 26,768 avg). **SKIP.**
+- Remainder (RE, UAI, NES, ARX, GIB, US, AIO, KTA, PROS, BLUAI, INX, PEAQ, SLX, SAFE, DYDX, ZBT): all show 1h and 4h well below threshold, several with zero-volume last candles (PROS, BLUAI, INX, PEAQ, DYDX, ZBT — dead order books) or badly stale highs (hours to days old). **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No candidate has newly accelerated since the 20:06 UTC pre-session sweep — STBL is the only name with real 4h momentum and volume but still misses the 1h threshold; SAPIEN and CHECK have actively reversed (negative 1h) rather than improved. Nothing in the 43-candidate shortlist clears momentum + spread + freshness + liquidity together. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
