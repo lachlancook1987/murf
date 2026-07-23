@@ -28752,3 +28752,76 @@ Planned trades: **HOLD** — no new entries this session (BLUAI and SAPIEN both 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-23 — Pre-Session Research (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since 2026-07-22 EOD. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $65,764.82, +0.20% (24h) | Consistent with live sweep | Flat, no crash/momentum signal |
+| ETH | $1,919-1,949 range across sources (-1.6% to +1.2%) | ~$1,920-1,945 in live sweep | Flat, no strong signal — Perplexity source spread reconfirms it's not usable for precision |
+| Fear & Greed | **38 (Fear)** Binance, 39 CoinStats, 31 alternative.me | — | Above Extreme Fear threshold (≤25) → standard 1.2:1 R:R floor applies today |
+| BTC funding rate | ~+0.003-0.0054%/8h across venues (Binance, Glassnode mean) | — | No crowded skew, not actionable |
+| Catalysts | CLARITY Act ethics-provision progress ("1-yard line" per Bessent), macro headwinds (ETF outflows, rates, US-Iran tension), ENA/BlackRock Aladdin USDe integration, APR unlock largest listed today | — | Macro tailwind already reflected in BTC's flat range; nothing single-asset-actionable from this query |
+| Unlocks this week | GRAM/TON (~$52-57M, Jul 23), WLD (52.51% of supply, Jul 23 17:00 UTC), SPACE ($1.52M), TIA ($69K), RIVER ($489K), H ($17.2M Jul 24), SOSO ($6.64M Jul 24), AVAX ($10.9M Jul 25), XPL ($7.29M Jul 26) | — | WLD unlock is the standout by size (>50% of supply) — worth flagging as a risk factor if WLD ever becomes a candidate, but WLD did not appear in today's Kraken sweep |
+
+**Crash gate:** BTC +0.20% (24h) → **NOT triggered**.
+**BTC weekly trend gate:** BTC $63,907.00 five sessions back vs $65,764.82 today = **+2.9%** over trailing week → uptrend, **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (695 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker` for all, ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. Only **12 pairs** cleared that initial screen — a notably quiet day vs. the 40-70 pair shortlists of the last few sessions. Pulled 15m OHLC for all 12 to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|---|
+| **STABLE/USD** | +10.61% | **+3.4-3.7%** | **+8.0%** | ~15min (fresh) | 0.68x (moderate, declining from breakout peak but still substantive — 235k→113k→35k/candle, 10-119 trades/candle, not dead) | 0.20% (live-requoted, passes) | **Clears every gate.** See full writeup below. |
+| AKE/USD | +10.43% | +0.93% | +4.49% | 1155min (very stale) | 0.05x (dead) | 0.28% | Yesterday's whale-squeeze candidate has fully faded — high is now 19h old, volume dead. Already disqualified on catalyst quality (overbought RSI, whale squeeze) at the 2026-07-22 pre-session check; today confirms momentum has also died. **SKIP.** |
+| WLFI/USD | +10.36% | +1.48% | +11.96% | 15min | 0.00x (dead last candle) | 0.16% | Strong 4h but 1h well below threshold and last candle shows zero volume — move already happened, not currently accelerating. **SKIP.** |
+| ZAMA/USD | +5.85% | +0.84% | +3.57% | 300min (stale) | 0.00x (dead) | 0.18% | Both below threshold, dead book, stale high. **SKIP.** |
+| CAP/USD | +5.80% | +1.13% | +3.35% | 45min | 0.65x | 0.21% | Both below threshold. **SKIP.** |
+| OPN/USD | +4.90% | +0.83% | +2.82% | 0min | 9.20x (real surge) | 0.55% | Volume surging but momentum well below both thresholds — early-stage move, not yet at entry criteria. **SKIP.** |
+| BMT/USD | +4.21% | -0.32% | +2.52% | 1230min (stale) | 3.36x | 0.16% | Negative 1h, stale high — already rolled over. **SKIP.** |
+| MANTRA/USD | +3.94% | -0.15% | +1.33% | 45min | 1.66x | 0.28% | Both below threshold. **SKIP.** |
+| MORPHO/USD | +3.61% | +0.48% | +1.09% | 1320min (stale) | 0.09x (thin) | 0.12% | Both below threshold, thin/stale. **SKIP.** |
+| NODE/USD | +3.40% | 0.00% | 0.00% | 885min | 0.00x (dead) | 1.01% | Flat, dead book, spread borderline. **SKIP.** |
+| MET/USD | +3.32% | +0.67% | +3.26% | 30min | 0.00x (dead) | 0.24% | Both below threshold, dead last candle. **SKIP.** |
+| XAN/USD | +3.00% | +1.43% | +0.27% | 165min | 0.00x (dead) | 0.27% | Both below threshold, dead book. **SKIP.** |
+
+### STABLE/USD — Full Trade Idea
+
+- **Catalyst:** Perplexity confirms an active ecosystem push: SDK v0 launch, StablePay expansion, StableEarn growth, new partnerships (official project account), plus market commentary tying the move to Tether/USAT liquidity-layer narrative and an upcoming network upgrade (free gas, payment integration). CoinMarketCap analysis cites the volume surge as confirming renewed demand, not a single isolated pump. This is a positive ecosystem catalyst — no delisting risk, no whale-squeeze/overbought-RSI flag, no negative overhang, unlike the last several weeks' rejected candidates (LRC, ESPORTS, AKE, BLUR).
+- **Entry:** Market, ~$0.04054 (live-requoted at time of writing)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard — post-breakout 15m candle ranges run ~1-2%, not high-ATR)
+- **T1:** $0.04176 (+3%) | **T2:** $0.04257 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** — meets the standard floor exactly (F&G at 38/Fear, not Extreme Fear ≤25, so the stricter 1.5:1 floor does not apply)
+- **Size:** Given R:R sits exactly at the floor rather than exceeding it, and Perplexity flagged some cross-source price inconsistency ($0.035-$0.0405 range, attributed to "fast intraday movement"), moderate conviction sizing (~40-50% of the $115.56 equity, ~$46-58) is more appropriate than full notional — live Kraken OHLC itself is clean and monotonic (no dump/reversal pattern), so this is a sizing choice, not a gate failure
+- **Kraken pair:** `STABLEUSD` confirmed online, `ordermin: 130` units, `costmin: $0.5` — both trivially satisfied
+- **Spread:** 0.20-0.25% live-requoted, well within the ≤1% cap
+- **Momentum-peak check:** 24h high ($0.04114) set ~15min ago — passes (<60min)
+
+### STEP 4 — Risk Factors
+
+- STABLE is the first candidate in several weeks' worth of sessions to clear momentum + spread + freshness + liquidity + a real (non-disqualifying) catalyst together — flagging as an actionable idea rather than a forced HOLD, per the gate-protection default rule this is what "clearing every gate" actually looks like, not a manufactured trade
+- R:R sits at the exact 1.2:1 floor, not above it — sizing reflects that with a moderate rather than maximal allocation
+- Perplexity's own price citations for STABLE ranged $0.035-$0.0405 (attributed to timing/source lag) — live Kraken OHLC is the authority used here and shows a clean, gradual, non-spiky rise, but this is noted as a residual data-quality caveat
+- WLD's 52%-of-supply unlock today (17:00 UTC) is a major overhang risk if WLD ever surfaces as a candidate — it did not appear in today's sweep, so no action needed, but worth remembering if it re-appears intraday
+- OPN/USD shows a genuine early-stage volume surge (9.2x) with momentum not yet at threshold — worth a midday recheck in case it accelerates
+- $115.5598 ZUSD fully available; no capital constraint
+
+### Decision: **TRADE stance — STABLE/USD clears every gate** (momentum, freshness, spread, liquidity, catalyst, R:R floor). Crash gate not triggered (BTC +0.20% 24h). BTC weekly trend gate not triggered (BTC +2.9% over trailing week). This is a genuine, non-forced setup per the gate-protection default rule — logged here as a fully-specified trade idea; execution (if any) occurs in a live trading session, not this research-only routine.
+
+### Step 6 — Notification
+
+Planned trades: **STABLE/USD** — clears every gate (1h +3.4-3.7%, 4h +8.0%, 24h high set 15min ago, spread 0.20%, real ecosystem catalyst, R:R 1.2:1 at the standard floor). First actionable candidate in several weeks of sessions; sized moderately (~40-50% equity) given R:R sits at the floor rather than above it. Rest of the 12-candidate shortlist (AKE, WLFI, ZAMA, CAP, OPN, BMT, MANTRA, MORPHO, NODE, MET, XAN) skipped on momentum/liquidity/staleness grounds.
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **21+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
