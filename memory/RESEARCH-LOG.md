@@ -28843,3 +28843,21 @@ No fresh discovery sweep run this check — today's pre-session sweep (12-candid
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-23 — Session-Open Execution Check (15:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 09:03 UTC check and the 14:04 UTC midday scan. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:** BTC $64,833.80 → **-1.87%** (o $66,072.40), -2.29% off 24h high $66,351.20. No crash signal — crash gate (BTC down >20% in 24h) not triggered, not close.
+
+**Today's rejected candidates rechecked, both further decayed:**
+- **STABLE/USD**: $0.03964 vs 24h high $0.04178 → **-5.1% off high** (was -2.6% at 09:03 UTC, -6.5% at 14:04 UTC midday). Momentum-peak-check gate still fails, no fresh breakout, no new catalyst. Continues to decay from this morning's pre-session TRADE-stance idea. **SKIP, unchanged rejection.**
+- **BILL/USD**: $0.02678 vs 24h high $0.02825 → **-5.2% off high**, also rolling over since the 14:04 UTC midday reject (catalyst-quality fail: stale listing narrative + pump-volume red flag). **SKIP, unchanged rejection.**
+
+No fresh full-universe sweep run this check — today's pre-session sweep (12-candidate shortlist) and the 14:04 UTC midday sweep (17-candidate shortlist) both already screened the live universe within the last hour; re-running a full sweep is out of scope for a session-open execution check.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Crash gate not triggered. Both of today's only candidates (STABLE, BILL) continue to decay further off their highs with no new catalyst. Nothing to execute this session-open check.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
