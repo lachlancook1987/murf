@@ -28825,3 +28825,21 @@ Pulled full `AssetPairs` (695 USD pairs) + batched `Ticker` for all, ranked by %
 Planned trades: **STABLE/USD** — clears every gate (1h +3.4-3.7%, 4h +8.0%, 24h high set 15min ago, spread 0.20%, real ecosystem catalyst, R:R 1.2:1 at the standard floor). First actionable candidate in several weeks of sessions; sized moderately (~40-50% equity) given R:R sits at the floor rather than above it. Rest of the 12-candidate shortlist (AKE, WLFI, ZAMA, CAP, OPN, BMT, MANTRA, MORPHO, NODE, MET, XAN) skipped on momentum/liquidity/staleness grounds.
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **21+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-23 — Session-Open Execution Check (09:03 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 08:08 UTC pre-session research. `positions` → `{}`, `orders` → `{"open": {}}`. **Alpaca:** `[]` positions, orders show only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges, nothing to protect (Steps 3-5 N/A).
+
+**Live quotes vs today's open:** BTC $65,609.40 → **-0.70%** (o $66,072.40), -1.1% off 24h high $66,351.20. ETH $1,927.12 → **-0.32%**. SOL $77.51 → **-0.55%**. All three majors mildly red, no crash signal. Crash gate: not triggered. BTC weekly trend gate: not triggered (per pre-session check, +2.9% over trailing week).
+
+**STABLE/USD re-verified (today's only pre-session candidate):** Pulled fresh 15m OHLC. The 24h high ($0.04114) printed in the 07:30-07:45 UTC candle — now **78 minutes old**, outside the 60-minute momentum-peak-check freshness window. Price has been declining since: 08:00 close $0.04044, 08:15 close $0.04032, 08:30 close $0.04003, 08:45 close $0.04013, current $0.04007 (live quote) — **-2.6% off the high**, no fresh 1h candle breakout back above $0.04114, no new catalyst reported since the pre-session write-up (<2h old test also unmet as a distinct new development). 1h momentum is now **negative** (~-0.9% vs price ~1h ago), a reversal from the +3.4-3.7% that qualified it this morning. **Momentum-peak-check gate now fails** — per TRADING-STRATEGY.md this is exactly the "buy the rumour, sell the news" pattern the gate exists to block. The pre-session TRADE-stance idea has decayed and is **not executed**.
+
+No fresh discovery sweep run this check — today's pre-session sweep (12-candidate shortlist) already screened the full 695-pair universe; the only actionable name has since rolled over, and re-running a full sweep is out of scope for a session-open execution check (that's the pre-session/midday routine's job).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** STABLE/USD failed re-verification at execution time (stale high, price declining, no fresh breakout, no new catalyst); per the gate-protection default rule this is not loosened or forced. No other candidate from this morning's sweep qualified. Nothing to execute this session-open check.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
