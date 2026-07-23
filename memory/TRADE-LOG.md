@@ -8034,3 +8034,36 @@ WhatsApp notification attempted per Step 5 — **FAILED**: CallMeBot quota still
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~88
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 22 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from $66,002.70 (Jul 22 EOD) to $65,585.60 today (−0.63%), so the bot's flat day outperformed BTC by +0.63%. Pre-session research (see RESEARCH-LOG.md, 2026-07-23) did surface one candidate clearing every gate — **STABLE/USD** (1h +3.4-3.7%, 4h +8.0%, spread 0.20%, real ecosystem catalyst, R:R 1.2:1 at the standard floor) — logged as a TRADE-stance idea, but the research routine does not execute orders itself and no subsequent live trading session acted on it, so it expired unfilled; account state confirms no order was ever placed. No midday scans logged today. WhatsApp/CallMeBot notification quota has now been exhausted for 21+ days (since 2026-07-02) — recurring unresolved issue, needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+---
+
+## 2026-07-23 — Midday Scan (14:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since session-open. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22), positions `[]` — no action needed.
+
+**Live quotes vs today's open:** BTC $64,901.00 → **-1.77%** (o $66,072.40), -2.19% off 24h high. ETH $1,900.14 → **-1.72%**. SOL $76.79 → **-1.48%**. All three majors mildly red, deeper than the 09:03 UTC check but nowhere near crash-gate territory. Crash gate: not triggered. BTC weekly trend gate: not triggered (unchanged from pre-session, BTC +2.9% trailing week).
+
+**STABLE/USD rechecked** (this morning's only pre-session candidate): $0.03905, +6.81% vs open but now **-6.53% off its 24h high** ($0.04178) — momentum-peak-check gate still fails, decayed further since the 09:03 UTC check (-2.6% off high then). No fresh breakout, no new catalyst. **SKIP**, unchanged rejection.
+
+**OPN/USD rechecked** (flagged this morning for a midday recheck on its 9.2x volume surge): now -1.59% vs open, -9.30% off high — the surge never converted into qualifying momentum and has since rolled over. **SKIP.**
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC): 17 pairs cleared >3% vs open with spread ≤1.5% and within 5% of 24h high. Pulled 15m OHLC for the top 10 by move-size to compute true 1h/4h momentum and high-freshness:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| **BILL/USD** | **+8.85%** | **+8.81%** | 0min (fresh) | 1.01x (sustained, not a single-candle spike) | 0.21% | Clears momentum + spread + freshness — see rejection below |
+| AKE/USD | -1.39% | +2.42% | 30min | 0.52x | 0.18% | Both below threshold — yesterday's whale-squeeze/overbought-RSI reject, still faded. SKIP |
+| OOB/USD | +7.07% | +6.67% | 1305min (stale) | 0.00x (dead) | 1.30% | High is 21h stale, dead book, spread also above cap. SKIP |
+| KAITO/USD | +2.00% | +7.97% | 15min | 0.42x | 0.15% | 1h below threshold. SKIP |
+| USDUC/USD | -0.42% | +8.70% | 90min | 0.00x (dead) | 0.83% | 1h negative, dead book. SKIP |
+| ZAMA/USD | -0.21% | +3.88% | 90min | 0.01x (dead) | 0.22% | Both below threshold, dead book — same reject as pre-session. SKIP |
+| ZBT/USD | +2.43% | +5.67% | 0min | 0.11x | 0.11% | 1h below threshold. SKIP |
+| CAP/USD | +0.22% | +0.40% | 150min | 0.10x | 0.45% | Both below threshold — rolled over since pre-session. SKIP |
+| FHE/USD | +1.51% | +6.78% | 30min | 0.03x (thin) | 0.32% | 1h below threshold, thin book. SKIP |
+| BMT/USD | +3.25% | +1.84% | 525min (stale) | 0.29x | 0.16% | 4h below threshold, stale high. SKIP |
+
+**BILL/USD — rejected on catalyst quality.** Only candidate clearing both 1h>3%/4h>5% thresholds with a fresh (0min) high and tight spread. Perplexity (`BILL crypto token news and price catalyst today 2026-07-23`) found **no major project announcement in the last 24-48h** — the move is attributed to Binance Alpha listing/futures activity and short covering on top of a several-days-old TGE, i.e. stale listing momentum, not a fresh <6h catalyst. Multiple independent sources (Binance Square, Yellow) explicitly flag **24h volume exceeding market cap** as a sign of "speculative rotation"/"pump-like trading" — the same red-flag signature that disqualified ESPORTS (post-rug bounce) and AKE (whale squeeze) in prior sessions. No confirmed fundamental catalyst + pump-volume signature = reject regardless of clean technicals, consistent with precedent.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BILL/USD is the only candidate clearing momentum + spread + freshness together but fails on catalyst quality (stale listing narrative + explicit pump-volume red flag from independent sources). STABLE/USD and OPN/USD from this morning's shortlist remain rejected on decayed momentum. Nothing else in the 17-candidate shortlist clears both momentum thresholds. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
