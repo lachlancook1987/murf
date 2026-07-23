@@ -28932,3 +28932,21 @@ Fresh Perplexity query (`BILL crypto token news and price catalyst today 2026-07
 Planned trades: **HOLD** — no new entries this session (ALKIMI hard-fails the 1% spread cap despite the best technicals on the board; BILL clears every mechanical gate but fails catalyst quality again, now with a fresh insider-selling red flag; rest of the 21-candidate shortlist is below threshold, stale, or on a dead order book).
 
 ---
+
+## 2026-07-23 — Session-Open Execution Check (21:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since the 20:06 UTC pre-session check. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `[]` positions, orders show only historical filled/canceled entries through 2026-05-22 — zero exposure on both exchanges.
+
+**Live quote vs today's open:** BTC $65,110.90 → **-1.46%** (o $66,072.40), -1.76% off 24h high $66,275.80. No crash signal — crash gate not triggered.
+
+**Rechecked the pre-session shortlist's two live candidates (last screened 55min ago):**
+- **ALKIMI/USD**: spread has tightened to **~0.57%** (from 1.20% at 20:06 UTC) — now clears the ≤1% cap. But price $0.00178 vs 24h high $0.00195 → **-8.7% off high**, up from the fresh/at-high read an hour ago. The move has rolled over since the last check; momentum-peak-check freshness gate now fails where spread previously did. Net effect: still disqualified, just on a different gate. **SKIP.**
+- **BILL/USD**: unchanged mechanically (momentum/spread still clear) but the catalyst rejection from 20:06 UTC stands — no new information in the last hour to reverse the insider-wallet-distribution red flag. **SKIP, unchanged rejection.**
+
+No fresh full-universe sweep run this check — the 20:06 UTC pre-session sweep (701-pair universe, 21-candidate shortlist) is under an hour old; re-running a full sweep is out of scope for a session-open execution check.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Crash gate not triggered. Both live candidates from this morning's sweep remain disqualified (ALKIMI now on freshness instead of spread; BILL still on catalyst quality). Nothing to execute this session-open check.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
