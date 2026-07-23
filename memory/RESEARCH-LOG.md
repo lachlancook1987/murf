@@ -28861,3 +28861,74 @@ No fresh full-universe sweep run this check — today's pre-session sweep (12-ca
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-23 — Pre-Session Research (Scheduled Routine, 20:06 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, ARB, AVAX, BABY, ENA, FET, HBAR, HYPE, INJ, JTO, KAS, LINK, NEAR, ONDO, RENDER, SOL, SUI, TAO, UNI, WLD, XETH, XXBT, XXDG, XXLM, XXRP dust; ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since the 15:01 UTC session-open check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $64,789.36, +1.5% (24h, non-UTC-day window) | $64,952.40, **-1.70% vs today's UTC open** ($66,072.40), -2.0% off 24h high ($66,275.80) | Kraken (authoritative) shows a mild red day, no crash/momentum signal — reconfirms the ongoing Perplexity/Kraken discrepancy on reference windows |
+| ETH | $1,934.77, +0.70% (24h) | Broadly consistent | Flat, no strong signal |
+| Fear & Greed | 39 (CoinStats), 37 (Binance), 31 (FearGreedMeter), 54 (CFGI) | — | Most recent-timestamped reading (39) is above Extreme Fear (≤25) → standard 1.2:1 R:R floor applies |
+| BTC funding rate | ~0.001-0.005% across major venues (Kraken futures page outlier at 0.20%/hr, likely a stale/mismatched page) | — | No crowded skew, not actionable |
+| Catalysts | 6 straight days of net BTC spot ETF inflows (strongest since April), CLARITY Act ethics-provision progress ahead of August recess, risk-on macro tone (AI/semis, improving inflation), ETH Glamsterdam upgrade (H2 2026) | — | Macro tailwind already reflected in BTC's range; nothing single-asset-actionable today |
+| Unlocks this week | GRAM/TON (~$52M, today), WLD (ongoing, rate -43% tomorrow), H (~$17.2M, Jul 24), AVAX (~$10.9M, Jul 25), XPL (~$7.29M, Jul 26), SOSO (~$6.64M, Jul 24) | — | None of the unlock names appear in today's Kraken sweep shortlist — no action needed |
+
+**Crash gate:** BTC -1.70% vs today's UTC open → **NOT triggered** (threshold is -20% in 24h).
+**BTC weekly trend gate:** live price $64,952.40 vs daily close 5 sessions back $64,796.70 (2026-07-18 UTC close) = **+0.24%** → flat/no downtrend, **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (701 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (701 USD pairs) + batched `Ticker` for all, ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. **21 pairs** cleared the initial screen. Pulled 15m OHLC for the top 14 by move-size to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| **ALKIMI/USD** | +53.27% | **+8.55%** | **+17.86%** | 0min (fresh) | 0.76x | **1.20%** (live-requoted) | Clears every momentum/freshness gate but **hard-fails the ≤1% spread cap**. **SKIP — spread gate is non-negotiable.** |
+| **BILL/USD** | +22.85% | **+3.29%** | **+10.06%** | 30min (fresh) | 0.36x (below 20-candle avg — not currently accelerating) | 0.20% (live-requoted, well within cap) | Clears momentum + spread + freshness — see catalyst rejection below |
+| OOB/USD | +11.15% | -0.34% | +0.46% | 135min (stale) | 0.22x | 0.80% | Both below threshold, stale high, thin volume. **SKIP.** |
+| CAP/USD | +10.79% | +0.88% | +2.16% | 165min | 0.10x (thin) | 0.38% | Both below threshold. **SKIP.** |
+| ZBT/USD | +10.46% | -0.47% | +1.07% | 195min | 0.28x | 0.14% | Both below threshold. **SKIP.** |
+| RE/USD | +9.69% | -2.52% | +0.69% | 195min | 0.00x (dead) | 0.16% | Negative 1h, dead last candle. **SKIP.** |
+| VELO/USD | +7.48% | +1.98% | +3.11% | 30min | 0.00x (dead) | 0.88% | Both below threshold, dead book. **SKIP.** |
+| USDUC/USD | +7.44% | 0.00% | -1.01% | 450min (stale) | 0.00x (dead) | 0.63% | Flat/negative, dead book, stale high. **SKIP.** |
+| OPEN/USD | +5.49% | +1.24% | +4.02% | 0min | 1.64x | 0.12% | Both below threshold. **SKIP.** |
+| FHE/USD | +5.45% | +0.78% | -1.49% | 330min (stale) | 0.90x | 0.23% | Both below threshold, stale high. **SKIP.** |
+| EVAA/USD | +5.31% | -2.10% | +2.13% | 15min | 0.32x | 0.36% | Negative 1h. **SKIP.** |
+| LIT/USD | +4.85% | 0.00% | +3.97% | 120min | 0.00x (dead) | 0.90% | Both below threshold, dead book. **SKIP.** |
+| ME/USD | +4.28% | -3.52% | -0.30% | 45min | 0.02x (dead) | 0.46% | Negative on both windows. **SKIP.** |
+| GMX/USD | +4.26% | -0.15% | +1.63% | 45min | 0.00x (dead) | 0.29% | Both below threshold, dead book. **SKIP.** |
+
+Remaining candidates from the initial 21-pair screen not pulled for OHLC (ST, ADI, SUSHI, ENSO, VSN, AMI, 1INCH) all sat below ALKIMI/BILL on vs-open% and would need to beat GMX/OOB-tier momentum to matter — not pursued given the top two already resolve to SKIP.
+
+### BILL/USD — Catalyst Check (repeat candidate, rejected at the 2026-07-22 22:04 UTC and 2026-07-23 14:04 UTC checks)
+
+Fresh Perplexity query (`BILL crypto token news and price catalyst today 2026-07-23`) reconfirms and *reinforces* the prior rejection: CoinGecko shows BILL actually **down 2.30% over 24h** on its own reference window (vs Kraken's +22.85% intraday pop — large cross-source disagreement, a data-quality flag on its own) and **down 29.70% over 7 days**. No fresh fundamental catalyst — coverage cites only a technical breakout watch (50-day EMA) and a **new red flag: an on-chain investigator reporting continuous team-wallet distributions, interpreted as possible insider sell pressure**. Extreme volatility (~40-44% average daily swings) is described as a structural trait, not a one-off event. This is the same profile that has disqualified ESPORTS (post-rug bounce), AKE (whale squeeze/overbought), and BILL itself twice already this week — **pump/volatility without a genuine, fresh, non-adversarial catalyst**. **Rejected again — catalyst quality gate fails, and the new insider-selling flag makes today's read worse than yesterday's, not better.**
+
+### STEP 4 — Risk Factors
+
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- ALKIMI was the strongest technical setup on the board (1h +8.55%, 4h +17.86%, fresh high) but is hard-disqualified on spread (1.20% > 1% cap) — not a discretionary call, the gate is mechanical
+- BILL cleared momentum + spread + freshness for the third consecutive check this week but continues to fail on catalyst quality, now with an added insider-selling red flag — same disqualification class as ESPORTS/AKE, reinforces rather than weakens the standing rejection
+- Cross-source price disagreement on BILL (Kraken +22.85% vs open vs CoinGecko -2.30%/24h) is a data-quality caveat worth flagging generally, not just for this candidate
+- Fear & Greed at 39 (Fear, not Extreme Fear) — standard 1.2:1 R:R floor applies, moot since nothing reaches entry stage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- WLD's daily unlock rate drops 43% tomorrow (Jul 24) — noted as background context only, WLD did not appear in today's sweep
+- CallMeBot WhatsApp notification channel has been failing (quota exhausted since 2026-07-02, 21+ days) as of the last several sessions — will reconfirm status in Step 6 below
+
+### Decision: **TRADE stance — but HOLD this session; no new entries.** Crash gate not triggered (BTC -1.70% vs today's UTC open, nowhere near -20%). BTC weekly trend gate not triggered (BTC flat, +0.24% over trailing week). Full 701-pair Kraken-native sweep found no candidate clearing momentum + freshness + spread + catalyst together: ALKIMI has the strongest technicals but hard-fails the spread cap; BILL clears every mechanical gate but fails catalyst quality with a new insider-selling flag; the remainder of the 21-candidate shortlist sits below threshold, on stale highs, or on dead order books. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session (ALKIMI hard-fails the 1% spread cap despite the best technicals on the board; BILL clears every mechanical gate but fails catalyst quality again, now with a fresh insider-selling red flag; rest of the 21-candidate shortlist is below threshold, stale, or on a dead order book).
+
+---
