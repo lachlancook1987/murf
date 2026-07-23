@@ -8067,3 +8067,29 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** BILL/USD is the only candidate clearing momentum + spread + freshness together but fails on catalyst quality (stale listing narrative + explicit pump-volume red flag from independent sources). STABLE/USD and OPN/USD from this morning's shortlist remain rejected on decayed momentum. Nothing else in the 17-candidate shortlist clears both momentum thresholds. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-23 — Midday Scan #2 (22:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since session-open. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22), positions `[]` — no action needed.
+
+**Live quotes vs today's open:** BTC $65,114.80 → **-1.45%** (o $66,072.40), 24h range $64,603.40–$66,275.80. ETH $1,880.91 → **-2.71%** (o $1,933.37). SOL $75.99 → **-2.50%** (o $77.94). All three majors deeper red than the 14:04 UTC check, still nowhere near crash-gate territory (BTC -1.45% vs the -20% threshold). Crash gate: not triggered. BTC weekly trend gate: not triggered (unchanged from pre-session).
+
+**Fresh discovery sweep** (Kraken-native, full 645 USD pairs, live Ticker + 15m OHLC): 21 pairs cleared >3% vs open with spread ≤1.5% and within 5% of 24h high. Pulled 15m OHLC on the fresh (non-previously-rejected) names:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| **ALKIMI/USD** | **+4.40%** | **+27.52%** | 90min | 3.00x (real surge) | 0.53% | Clears momentum + spread but fails freshness — see rejection below |
+| LIT/USD | +3.34% | +1.19% | 0min (fresh) | 1.80x | 0.68% | 4h below threshold. SKIP |
+| TREE/USD | +0.77% | +2.07% | 0min (fresh) | 0.04x (thin) | 0.25% | Both below threshold. SKIP |
+| RE/USD | -1.42% | +4.74% | 60min | 0.75x | 0.15% | 1h negative, 4h below threshold. SKIP |
+| VELO/USD | -0.26% | +6.14% | 60min | 0.48x | 1.00% | 1h below threshold. SKIP |
+| VSN, GMX, ADI, ME, OPEN, ST, SUSHI, EVAA, AMI | — | — | 105–675min (stale) | ≤0.94x | — | All below both momentum thresholds outright, several dead/thin books. SKIP |
+| ESPORTS, BILL, CAP, OOB, ZBT, FHE, 1INCH | — | — | — | — | — | Rechecked implicitly via price — unchanged from the 14:04 UTC rejections logged above (post-rug bounce, pump-volume catalyst reject, rolled over, stale/dead book, sub-threshold). SKIP |
+
+**ALKIMI/USD — rejected on momentum-peak-check + catalyst quality.** The loudest mover (+77% vs open on the raw ticker, +27.52% over 4h, 3x volume surge) but 24h high was set 90min ago and price is currently -2.56% off that high with no fresh 1h breakout above it — fails the momentum-peak-check gate outright (needs a fresh breakout or a new catalyst <2h old). Perplexity (`ALKIMI crypto token news and price catalyst today 2026-07-23`) confirms the move is driven by an **ADS→ALKIMI token migration/rebrand on Sui** (1:1 swap, KuCoin/MEXC paused ADS trading during migration, unconfirmed future Kraken listing mentioned) — a multi-day-old corporate-action event, not a fresh <2h catalyst, so it can't satisfy the momentum-peak-check exception either. Additionally, Kraken's live price ($0.0019) is roughly **80% higher than CoinGecko/CoinMarketCap quotes ($0.00093–0.00107)** for the same asset — a large cross-exchange divergence consistent with a thin, not-yet-arbitraged, migration-distorted order book despite the tight quoted spread. Reject on both gate failure and market-quality red flag.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ALKIMI was the only candidate clearing momentum + spread together but fails the momentum-peak-check freshness gate and shows a large cross-exchange price divergence red flag. LIT and TREE had fresh highs but insufficient momentum. Nothing else in the 21-candidate shortlist clears both thresholds. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
