@@ -955,3 +955,77 @@ None — 100% ZUSD $115.5598 (+dust). No open orders. BTC weekly trend gate: not
 **Discipline, not opportunity, defined this week — roughly 20 consecutive HOLD decisions across a week where BTC fell 1.74% means sitting in cash was the correct call, not a missed one (Bot +1.74% vs BTC).** Every live mover that surfaced (ZEC, ARB, IDEX, ETH, AKE) was correctly rejected on a specific, rule-based check (momentum-peak freshness, R:R floor, spread/liquidity, stall-after-breakout), including one case (ETH's ETF launch) where the catalyst itself was real, not hallucinated — proof the rules work even when the "obvious" trade tempts. The more pressing issue is external, not strategic: Perplexity's research signal has been unreliable for two-plus weeks straight, and WhatsApp notifications have been silently broken for over two weeks — both need attention outside the bot's own decision loop.
 
 ---
+
+## Week of 2026-07-18 — Review Date: 2026-07-24
+
+### Context
+**Second consecutive zero-trade week.** Every research session across the week (2 pre-session + occasional midday scans daily, Jul 18–24) returned HOLD. No position was opened or closed. Cash sat unchanged at $115.5598 ZUSD (+dust) from the Jul 17 EOD snapshot through Friday close. One candidate (STABLE/USD, Jul 23) cleared every mechanical gate at pre-session and was logged as a TRADE-stance idea, but decayed (stale high, no fresh breakout, no new catalyst) by the time the same-day session-open execution check re-verified it — correctly re-rejected under the momentum-peak-check rule rather than chased. Fear & Greed ranged Fear/Neutral through most of the week, dipping to Extreme Fear (25) on Jul 22 (BIO rejection).
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $115.5598 | $115.5598 ZUSD (+dust, incl. $0.1066 ZAUD) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$115.5598** | $115.5598 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jul 17 EOD) | $115.5598 |
+| Ending Equity (Fri Jul 24 EOD) | **$115.5598** |
+| **Week Return** | **0.00%** ($0.00) |
+| BTC Week Return | **+1.07%** (Mon Jul 20 open $64,678.10 → Fri $65,371.80) |
+| **Bot vs BTC** | **−1.07%** (underperformed by sitting in cash during a mildly up week) |
+
+### Trade Summary
+No trades this week — 0 entries, 0 exits, 0 open positions.
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 0 |
+| Wins | 0 |
+| Losses | 0 |
+| Win Rate | N/A (no trades) |
+| Gross Wins | $0.00 |
+| Gross Losses | $0.00 |
+| Profit Factor | N/A |
+| Avg Win / Avg Loss | N/A |
+| Largest Win / Largest Loss | N/A |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | $0.00 (no trades placed) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $115.5598 (+dust). No open orders. BTC weekly trend gate: not triggered (BTC up over the week).
+
+### Trade Quality Review
+
+**Entry types that worked:** N/A — no entries taken.
+
+**Entry types that failed:** N/A — no entries taken. Every live-mover candidate this week was correctly rejected on a specific gate:
+- **LRC/USD** (Jul 21): +12.4% vs open, mechanically strong, but Loopring shut down its L2/DEX and got flagged for delisting by Upbit/Binance — a dead-project bounce, not a tradeable catalyst.
+- **ZAMA/USD** (Jul 21): clean breakout, no negative catalyst, but genuinely high-ATR (2.5–2.8% per-candle range) — R:R at the mandatory 3.5% trail is 0.86:1, below the 1.2:1 floor either way.
+- **CHZ/USD** (Jul 21): cleared every mechanical gate at the bare minimum (1h +3.14%, R:R exactly 1.2:1), but held back on discretion — World Cup catalyst driver had just ended, net-bearish narrative background, same profile as the ARB (Jul 9) cautionary precedent.
+- **PTB/USD** (Jul 21): tight quoted spread masked a thin/sparse order book (long zero-volume candle stretches) plus conflicting cross-exchange pricing — rejected on liquidity/data quality.
+- **ESPORTS/USD** (Jul 21): loudest mover of the day (+33.67%) but the move was a post-rug bounce from a $110–130M unauthorized market-maker dump, not a genuine breakout.
+- **BIO/USD** (Jul 22): cleared momentum/volume/spread but no confirmed fundamental catalyst under Extreme Fear (F&G 25) — required R:R 1.5:1 not met at the standard 2.5% stop.
+- **STABLE/USD** (Jul 23): the week's only candidate to clear every gate simultaneously (momentum, freshness, spread, liquidity, catalyst, R:R exactly 1.2:1) at pre-session; correctly re-rejected hours later at session-open execution once the high had gone stale (−5.1% off high, no fresh breakout, no new catalyst) — the full research→execution pipeline worked as designed rather than chasing a decayed setup.
+- **BILL/USD** (Jul 23): clean technicals but no fresh (<24–48h) fundamental catalyst — flagged 24h volume exceeding market cap, a "pump-like trading" red flag also seen on ESPORTS/AKE.
+- **ALKIMI/USD** (Jul 23): loudest mover (+77%) but high was 90min stale with no fresh breakout (momentum-peak-check fail), plus Kraken's price ran ~80% above CoinGecko/CoinMarketCap — a thin, migration-distorted order book.
+- **TNSR/USD** (Jul 24): cleared every mechanical gate (1h +5.30%, 4h +6.96%, 30min-fresh high, spread 0.30%) but rejected on catalyst quality (whale accumulation/short-squeeze mechanics, no fundamental news) plus an order-of-magnitude cross-source pricing divergence.
+
+**Stop quality:** N/A — no positions opened, so no stops placed. No orphan-stop issues (positions/orders confirmed empty at every check).
+
+**Profile violations:** None — no trades occurred, so no rule (spread, leverage, R:R, momentum-peak) was ever at risk of violation. Every rejection was correctly reasoned discipline.
+
+**Recurring operational issues (not strategy rules, but worth flagging):**
+- **Cross-exchange price divergence is now a recurring, ad hoc rejection signal, not yet a formal gate.** ALKIMI (Kraken ~80% above CoinGecko/CMC) and TNSR (order-of-magnitude cross-source divergence) were both correctly rejected this week on this basis, and PTB earlier in the week showed the same pattern (CoinGecko +5% vs MEXC/Binance −3%/−4%). Three occurrences in one week is enough to formalize rather than rely on discretion each time — added to TRADING-STRATEGY.md this review (see below).
+- **WhatsApp/CallMeBot notifications have now failed for 22+ consecutive days** (since Jul 2, quota exhausted) — every EOD snapshot this week logged a failed notification attempt. Needs resubscription at callmebot.com/61477788635; unresolved for over three weeks now.
+
+**Concrete adjustment (added 2026-07-24):**
+Formalized the cross-exchange price-divergence check that's been applied ad hoc for the past several sessions (PTB, ALKIMI, TNSR) into an explicit rule in TRADING-STRATEGY.md: a candidate whose live Kraken price diverges materially (>~15–20%) from CoinGecko/CoinMarketCap/other major-exchange quotes is rejected regardless of how cleanly it clears the momentum/spread/R:R gates — large divergence signals a thin, not-yet-arbitraged, or distorted order book rather than a real tradeable move.
+
+### Key Lesson
+**Two clean, disciplined zero-trade weeks in a row (Jul 11–17, Jul 18–24) is a pattern worth naming rather than shrugging off: the gates are working exactly as designed — every mechanically-loud candidate this week (LRC, ZAMA, ESPORTS, ALKIMI, TNSR) had a real, specific disqualifier (delisting risk, ATR-adjusted R:R, post-rug bounce, price-divergence, catalyst quality) — and the one setup that cleared everything (STABLE) was correctly let go when it decayed before execution rather than chased.** Sitting in cash cost −1.07% vs a mildly-up BTC this week, but that is the accepted cost of discipline, not a process failure. The one real gap surfaced this week isn't a missed trade — it's that a red flag (cross-exchange price divergence) has been catching bad candidates three times without ever being written into the strategy doc; that's now fixed.
+
+---
