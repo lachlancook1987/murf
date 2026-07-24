@@ -29027,3 +29027,69 @@ Planned trades: **HOLD** — no new entries today. TNSR/USD was the only candida
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
+
+---
+
+## 2026-07-24 — Pre-Session Research (Scheduled Routine, 20:06 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since this morning's pre-session check and the 14:05 UTC midday scan. No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$64.4k, +2.9% (24h, CoinGecko-cited) | $64,150.00 vs today's UTC open $65,052.40 = **-1.39%**, -2.46% off 24h high ($65,766.90) | Perplexity's direction disagrees with live Kraken (which shows BTC red on the day, cooling from the $65.4-65.8k range seen earlier today) — Kraken remains the pricing authority for gating |
+| ETH | ~$1,741 (CoinGecko), sources split -0.1% to +0.8% | $1,861.10 vs today's open $1,877.05 = **-0.85%** | Perplexity's absolute price is materially stale vs live Kraken again — same recurring data-quality gap |
+| Fear & Greed | **32 (Fear)** | — | Improved from this morning's 22 (Extreme Fear) — no longer ≤25, so the Extreme-Fear R:R floor (1.5:1) does not apply to a fresh candidate right now, though it's a moot point today (see Step 3) |
+| BTC funding rate | ~0.00206% (Binance, 8h) | — | No crowded skew, not actionable |
+| Catalysts | US-Iran geopolitical escalation (Brent >$100) pressuring risk assets; CLARITY Act Senate standoff, passage odds down to ~38%; BTC ETFs still +$900M net weekly inflows; PancakeSwap/AFX Trade exploits; BitMEX shutting down; Tesla $112M crypto paper loss; Argentina easing rules for mutual-fund crypto exposure | — | Net risk-off macro backdrop (geopolitics + stalled regulation) consistent with today's BTC/ETH pullback from this morning's highs; nothing single-asset-actionable |
+| Unlocks this week | H $17.2M (Jul24), **SOSO $6.6-7.5M (Jul24)**, AVAX $10.9M (Jul25), XPL $7.3M (Jul26); GRAM $52M (Jul23 already past) | — | SOSO's unlock lands today — relevant below since SOSO also appears in the sweep as a near-miss; an unlock is sell-pressure, not a bullish catalyst |
+
+**Crash gate:** BTC -1.39% (24h vs today's UTC open) → **NOT triggered** (threshold -20%).
+**BTC weekly trend gate:** $64,150.00 today vs $64,678.10 close 5 sessions back (2026-07-19) = **-0.82%** → flat, **NOT triggered** (threshold -3%).
+
+### STEP 3 — Kraken-Native Discovery Sweep (701 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (701 USD pairs, all with live tickers) + batched `Ticker`, ranked by % vs today's open with spread ≤1.5% and within 6% of 24h high. **41 pairs** cleared the initial screen — up from this morning's 36. Pulled 15m OHLC for the top 40 by move-size to compute true 1h/4h momentum, high-freshness, and volume-surge ratio (full table below; only the closest calls need discussion):
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| ESPORTS | +17.29% | +2.41% | +2.18% | 210min | 0.22x | 0.43% | Standing catalyst reject (post-rug/flash-crash bounce, disqualified 2026-07-21) — momentum has also faded since. SKIP. |
+| XNY | +17.18% | +1.41% | +1.22% | 195min | 0.05x (dead) | 0.43% | Both below threshold, thin book. SKIP. |
+| **TLM** | +13.76% | **+5.94%** | +2.58% | 0min (fresh) | 2.22x (real) | 0.68% | 1h clears, 4h does not (need >5%) — see near-miss note below. |
+| CAP | +13.19% | +2.42% | -3.13% | 435min (stale) | 0.01x (dead) | 0.38% | 4h negative, stale high, dead book — already rejected pre-session today on volume/momentum grounds, unchanged. SKIP. |
+| BEAM | +12.88% | +1.34% | +0.42% | 285min (stale) | 0.01x (dead) | 0.66% | Flagged this morning for a midday recheck; already decelerated below threshold by 14:05 UTC and has continued to fade — both momentum signals near-dead now. SKIP. |
+| SLX | +12.27% | +0.50% | +3.66% | 195min | 0.18x | 0.13% | Both below threshold. SKIP. |
+| **SOSO** | +12.20% | +2.65% | **+5.55%** | 0min (fresh) | 1.11x | 0.29% | 4h clears, 1h does not (need >3%) — also has a same-day token unlock (sell-pressure event, not a bullish catalyst). See near-miss note below. |
+| ROLL | +11.46% | +0.02% | -0.34% | 510min (stale) | 0.00x (dead) | 0.87% | Both below threshold, dead book. SKIP. |
+| PLAY | +10.10% | +0.51% | +1.08% | 135min | 0.21x | 0.05% | Both below threshold. SKIP. |
+| ZRO, CVX, TNSR, XPL, PTB, EUL, ESP, CLOUD, BASED, BLESS, TAC | +3.5-7.2% | ≤+1.5% | ≤+3.8% | — | mostly thin/dead | — | All below both momentum thresholds outright; TNSR rechecked (unchanged catalyst rejection from this morning, momentum has since faded to flat). SKIP. |
+| M, ALTHEA, KERNEL, DEGEN, BTR, ACU, MYX, G, LAVA, CTR, KULA, IP, VVV, AI, AIN, SXT, BREV, GRIFFAIN, XXMRZ, BANANAS31 | +3.0-5.5% | ≤+1.5% (several negative) | ≤+4.7% (several negative/flat) | — | mostly thin/dead | — | All below both momentum thresholds. SKIP. |
+
+**TLM/USD — near-miss, rejected on 4h momentum.** Fresh (0min) high, real 2.2x volume surge, tight 0.68% spread, and a clean +5.94% 1h move — but 4h momentum (+2.58%) sits well under the 5% sustained-move floor, meaning this reads as a sudden spike rather than the sustained move the 4h threshold is designed to require. Does not clear both mechanical gates together; not pursued further (no catalyst check needed — mechanical gate fails first).
+
+**SOSO/USD — near-miss, rejected on 1h momentum plus an active unlock.** Fresh (0min) high, decent spread (0.29%), and 4h momentum (+5.55%) clears — but 1h momentum (+2.65%) sits just under the 3% floor, and today's Perplexity unlock query confirms a **~$6.6-7.5M SOSO token unlock lands today (2026-07-24)** — unlock events add sell pressure and are a headwind, not a catalyst, for a fresh long. Double disqualifier (mechanical + fundamental); not pursued further.
+
+### STEP 4 — Risk Factors
+
+- No candidate in the 41-pair shortlist clears both the 1h>3% and 4h>5% momentum thresholds together — the two closest (TLM, SOSO) each clear only one side
+- BTC/ETH both pulled back from this morning's highs (BTC -1.39% vs open, was +0.55% at this morning's check) amid a risk-off macro backdrop (Iran/oil, stalled CLARITY Act) — consistent with the broad lack of qualifying momentum setups this scan
+- Fear & Greed improved to 32 (Fear) from this morning's 22 (Extreme Fear) — moot today since no candidate reached the R:R-floor stage
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- Perplexity's BTC/ETH price levels again diverged from live Kraken — reconfirms Kraken as the sole pricing authority for gating decisions
+
+### Decision: **HOLD — no new entries.** Crash gate not triggered (BTC -1.39% 24h). BTC weekly trend gate not triggered (BTC -0.82% over trailing week). Full 701-pair Kraken-native sweep found 41 initial candidates; only TLM (1h clears, 4h fails) and SOSO (4h clears, 1h fails, plus a same-day token unlock) came close, and neither clears both momentum thresholds together. Nothing else in the shortlist clears either threshold cleanly. Per the gate-protection default rule, HOLD stands — this marks a second consecutive clean-gate zero-trade week per the 2026-07-24 weekly review, and that remains correct discipline, not a gap to route around.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries this session. TLM/USD and SOSO/USD were the closest candidates but each clears only one of the two mechanical momentum gates (1h>3%, 4h>5%); SOSO additionally carries a same-day token unlock (sell-pressure headwind). Crash gate and BTC weekly trend gate both not triggered. Fear & Greed improved to 32 (Fear) from this morning's Extreme Fear reading.
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
