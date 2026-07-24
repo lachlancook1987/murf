@@ -8103,3 +8103,30 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~88
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 23 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research (see RESEARCH-LOG.md, 2026-07-24) screened the full 696-pair Kraken universe and surfaced one candidate clearing every mechanical gate — **TNSR/USD** (1h +5.30%, 4h +6.96%, spread 0.30%, fresh 30min high) — but rejected it on catalyst quality: no fresh fundamental announcement, attributed instead to on-chain whale accumulation and short-squeeze mechanics, plus a severe cross-source pricing divergence (CoinGecko/Binance/Coinbase an order of magnitude apart). No midday scans logged today. BTC fell from $65,585.60 (Jul 23 EOD) to $65,371.80 today (−0.33%), so the bot's flat day outperformed BTC by +0.33%. WhatsApp/CallMeBot notification quota has now been exhausted for 22+ days (since 2026-07-02) — recurring unresolved issue, needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+---
+
+## 2026-07-24 — Midday Scan (14:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since session-open. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,963.80 → **-1.67%** (o $65,052.40), -2.74% off 24h high ($65,766.90). Crash gate: not triggered (threshold -20%).
+
+**BEAM/USD rechecked** (flagged pre-session for a midday recheck on its volume surge): now +11.12% vs open (up from +7.12% pre-session), price $0.001639 vs 24h high $0.00165 (-0.67%, high set ~36min ago — still fresh). But true 1h momentum is only +2.89% (still sub-3% threshold) and 4h momentum has *fallen* to +3.67% (was +6.76% pre-session, now below the 5% floor) — the trailing-20-candle volume ratio has also collapsed to 0.11x (the 13:30-13:45 volume spike is over, last 15min candle is quiet). The surge already happened and is now decelerating rather than accelerating. **SKIP — does not clear 1h or 4h thresholds.**
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker): candidates newly appearing vs pre-session's shortlist (spread ≤1.5%, within 6% of 24h high, vs-open >3%): B2, XNY, APR, GWEI, ESPORTS (already rejected — post-rug bounce), SLX, AVAAI (spread 1.02%, still fails ≤1% cap), PLAY, PTB, IP, CLOUD, KERNEL, ACU, ZRO, AIN, LCX, TLM, GMX, CTR, M, AIO, BLESS, ENSO, PHA. Pulled 15m OHLC on the top fresh names:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| B2/USD | +1.87% | **+15.43%** | 51min | 0.19x (below avg) | 4h clears but 1h well below 3%, thin volume. **SKIP.** |
+| APR/USD | +1.46% | +3.41% | 21min | 1.40x | Both below threshold. **SKIP.** |
+| GWEI/USD | -2.01% | +3.61% | 51min | 0.93x | Negative 1h, 4h below threshold. **SKIP.** |
+| PTB/USD | -0.65% | +2.17% | 66min (stale) | 3.64x | Both below threshold, stale high — also carries the standing cross-exchange divergence flag from Jul 21. **SKIP.** |
+| ACU/USD | +0.64% | +4.53% | 51min | 0.30x (thin) | Both below threshold. **SKIP.** |
+| LCX/USD | +0.60% | +3.45% | 21min | 0.00x (dead) | Both below threshold, dead book. **SKIP.** |
+
+No candidate clears both the 1h>3% and 4h>5% momentum thresholds together with volume confirmation. TNSR/USD (pre-session's only mechanically-clean candidate) had a firm catalyst-quality rejection with no new information since — unchanged rejection, not rechecked in detail this scan.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BEAM decelerated below both momentum thresholds since pre-session. B2/USD has strong 4h momentum but fails 1h and lacks volume confirmation. Nothing in the fresh sweep clears both mechanical gates together. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
