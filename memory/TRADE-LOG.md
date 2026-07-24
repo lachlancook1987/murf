@@ -8130,3 +8130,29 @@ No candidate clears both the 1h>3% and 4h>5% momentum thresholds together with v
 ### Decision: **HOLD — no new entries, no open positions to manage.** BEAM decelerated below both momentum thresholds since pre-session. B2/USD has strong 4h momentum but fails 1h and lacks volume confirmation. Nothing in the fresh sweep clears both mechanical gates together. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-24 — Midday Scan #2 (22:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quotes vs today's open:** BTC $64,082.50 → **-1.49%** (o $65,052.40), -2.56% off 24h high ($65,766.90). ETH $1,856.66 → **-1.09%** (o $1,877.05). Crash gate: not triggered (threshold -20%).
+
+**TLM/USD rechecked** (20:06 UTC pre-session near-miss, then +5.94% 1h / +2.58% 4h): now $0.001828 vs 1h-ago $0.001899 = **-3.74%** 1h — has rolled over hard. 24h high ($0.001993) was set ~120min ago and is now stale past the 60min freshness window; price has been falling since the peak. **SKIP — momentum reversed, high stale.**
+
+**SOSO/USD rechecked** (20:06 UTC pre-session near-miss, 4h +5.55%, 1h +2.65%, same-day unlock flagged): now $0.3134 vs 1h-ago $0.3160 = **-0.82%** 1h — also rolled over, choppy/sideways since. Unlock sell-pressure flag from pre-session still stands. **SKIP — momentum reversed.**
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker, batched via direct Kraken public API): 35 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — same shortlist composition as the 20:06 UTC pre-session scan (ESPORTS, CAP, SOSO, PLAY, ROLL, BASED, TNSR, ZRO, CVX, XPL, PTB, EUL, CLOUD, M, ALTHEA, KERNEL, DEGEN, BTR, ACU, MYX, KULA, IP, AIN, SXT, BREV, TAC, CTR — all standing rejections, unchanged). Two names not previously checked this session plus SLX (previously dead-book) pulled for fresh 15m OHLC:
+
+| Symbol | 1h% | ~4h% (partial window) | High age | Vol pattern | Verdict |
+|---|---|---|---|---|---|
+| SAGA/USD | +1.63% | ~+3.6%/2h | fresh | Thin, intermittent zero-vol candles | Both below threshold, thin book. **SKIP.** |
+| XNY/USD | -0.42% | flat/declining | stale | Choppy, no trend | Negative 1h, dead chop — matches earlier "dead book" reject. **SKIP.** |
+| SLX/USD | +1.46% | ~+2.8%/2.25h | fresh (0min, new high just set) | Rising last 2 candles (18.7k, 64.2k vol) | Both below threshold currently, but volume accelerating with a fresh high — **watch for next scan**, not yet a qualifying entry. **SKIP.** |
+
+No candidate clears both the 1h>3% and 4h>5% momentum thresholds this scan. SLX/USD shows early volume acceleration worth a recheck at the next scan if it continues.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** TLM and SOSO (this morning's closest near-misses) have both rolled over and decayed further since the 20:06 UTC pre-session check. Fresh sweep surfaces nothing new clearing both mechanical gates; SLX/USD flagged for a recheck next scan on early volume acceleration. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
