@@ -8093,3 +8093,13 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** ALKIMI was the only candidate clearing momentum + spread together but fails the momentum-peak-check freshness gate and shows a large cross-exchange price divergence red flag. LIT and TREE had fresh highs but insufficient momentum. Nothing else in the 21-candidate shortlist clears both thresholds. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-24 — EOD Snapshot (Day 65, Friday)
+
+### Jul 24 — EOD Snapshot (Day 65, Friday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** +0.33%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 23 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research (see RESEARCH-LOG.md, 2026-07-24) screened the full 696-pair Kraken universe and surfaced one candidate clearing every mechanical gate — **TNSR/USD** (1h +5.30%, 4h +6.96%, spread 0.30%, fresh 30min high) — but rejected it on catalyst quality: no fresh fundamental announcement, attributed instead to on-chain whale accumulation and short-squeeze mechanics, plus a severe cross-source pricing divergence (CoinGecko/Binance/Coinbase an order of magnitude apart). No midday scans logged today. BTC fell from $65,585.60 (Jul 23 EOD) to $65,371.80 today (−0.33%), so the bot's flat day outperformed BTC by +0.33%. WhatsApp/CallMeBot notification quota has now been exhausted for 22+ days (since 2026-07-02) — recurring unresolved issue, needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
