@@ -28950,3 +28950,80 @@ No fresh full-universe sweep run this check — the 20:06 UTC pre-session sweep 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
 ---
+
+## 2026-07-24 — Pre-Session Research (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since 2026-07-23 EOD/last check. No open positions anywhere — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $62.2k-$64.4k range across sources, +0.5% to +2.9% (24h) — sources not aligned | $65,410.00, **+0.55%** vs today's UTC open ($65,052.40), -0.54% off 24h high | Kraken (authoritative) shows a mild green day, no crash/momentum signal. Perplexity's wide source spread reconfirms it's unusable for precision, consistent with the ongoing pattern |
+| ETH | $1,788.46-$1,788.60, +0.83-0.90% (24h) | $1,891.75, **+0.78%** vs today's open, -1.99% off 24h high | Perplexity's absolute price ($1,788) is materially stale/wrong vs live Kraken ($1,891.75) — again reconfirms Kraken as the pricing authority |
+| Fear & Greed | Binance 32, CFGI 38, **Alternative.me 22 (Extreme Fear)** | — | Alternative.me (the source used as authoritative in prior sessions) reads **Extreme Fear (≤25)** — the stricter 1.5:1 R:R floor would apply to any unconfirmed-catalyst candidate today |
+| BTC funding rate | +0.00206% (Binance, 8h), some venues +0.01-0.0148%/8h, Kraken perp page shows 1.06%/hr (likely stale/mismatched) | — | No crowded skew, not actionable |
+| Top gainers (context only, not used for discovery per policy) | NEM, Power, PERP, Cellframe, DuckChain, TAKE, DEGEN, quq, REKT — none of these are Kraken-tradeable USD pairs in the sweep below | — | Confirms the demoted-query problem again; ignored per TRADING-STRATEGY.md |
+| Catalysts | CLARITY Act still stalled (new Senate draft causing friction, not resolution), GENIUS Act stablecoin KYC rules (OCC comment period closes today), ETF flows still a structural driver, Middle East/Iran macro risk, ENA/BlackRock Aladdin USDe integration (+12% cited), ETH Glamsterdam H2 2026 | — | Macro backdrop only; nothing single-asset-actionable beyond what's already reflected in majors' flat/mild-green range |
+| Unlocks this week | GRAM/TON ($52M, Jul23), H ($17.2M, Jul24), SOSO (~$6.64-7.5M, Jul24), AVAX ($10.9M, Jul25), XPL ($7.29M, Jul26), CC/TRUMP/WLD ongoing daily | — | None of the unlock names appear in today's sweep shortlist below — no action needed |
+
+**Crash gate:** BTC +0.55% (24h vs UTC open) → **NOT triggered** (threshold -20%).
+**BTC weekly trend gate:** $65,410.00 today vs $64,678.10 close 5 sessions back (2026-07-19) = **+1.13%** → flat/mild uptrend, **NOT triggered**.
+
+### STEP 3 — Kraken-Native Discovery Sweep (696 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (701 USD pairs, 696 with live tickers) + batched `Ticker`, ranked by % vs today's open with spread ≤1.5% and within 5% of 24h high. **36 pairs** cleared the initial screen. Pulled 15m OHLC for the top 20 by move-size to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| REUSD | +20.46% | +1.36% | +4.10% | 45min | 0.01x (dead) | 0.19% | Both below threshold, dead last candle. SKIP. |
+| XNYUSD | +13.31% | +0.15% | +4.30% | 15min | 0.13x | 0.46% | Both below threshold. SKIP. |
+| USUSD | +11.66% | +1.72% | +10.04% | 45min | 0.00x (dead) | 0.59% | 4h clears but 1h well below, dead book. SKIP. |
+| SLXUSD | +10.49% | +0.37% | +4.21% | 165min (stale) | 0.64x | 0.11% | Both below threshold, stale high. SKIP. |
+| CAPUSD | +9.99% | +1.59% | +8.71% | 75min | 0.00x (dead) | 0.45% | 4h clears but 1h below, dead last candle. SKIP. |
+| **TNSRUSD** | +8.68% | **+5.30%** | **+6.96%** | 30min (fresh) | 0.58x | 0.30% | Clears every mechanical gate — see catalyst rejection below |
+| CTRUSD | +7.28% | +1.14% | +2.58% | 1425min (very stale) | 0.00x (dead) | 0.63% | Both below threshold. SKIP. |
+| BEAMUSD | +7.12% | +1.28% | +6.76% | 15min (fresh) | **10.48x** (real surge) | 0.31% | 4h clears, real volume surge, but 1h below 3% threshold — watch for midday recheck. SKIP for now. |
+| PLAYUSD | +6.92% | -0.80% | +5.96% | 30min | 0.07x (thin) | 0.16% | Negative 1h, thin book. SKIP. |
+| ARXUSD | +6.90% | +0.69% | +0.33% | 225min (stale) | 0.00x (dead) | 0.29% | Both below threshold. SKIP. |
+| BLESSUSD | +6.46% | +0.91% | +4.52% | 75min | 0.02x (dead) | 0.40% | Both below threshold. SKIP. |
+| PROMPTUSD | +5.78% | -0.60% | +3.18% | 105min | 0.00x (dead) | 0.19% | Negative 1h, dead book. SKIP. |
+| ZROUSD | +5.70% | -1.07% | +3.60% | 60min | 0.00x (dead) | 0.12% | Negative 1h, dead book. SKIP. |
+| CLOUDUSD | +5.61% | 0.00% | 0.00% | 1200min (stale) | 0.00x (dead) | 0.96% | Flat, dead book, stale high. SKIP. |
+| IPUSD | +5.04% | -0.29% | +5.56% | 90min | 0.00x (dead) | 0.22% | 1h negative, dead book. SKIP. |
+| PTBUSD | +4.87% | -0.17% | +1.17% | 120min | 0.00x (dead) | 0.33% | Both below threshold. SKIP. |
+| GRIFFAINUSD | +4.80% | -0.79% | +3.80% | 120min | 0.00x (dead) | 0.34% | Negative 1h. SKIP. |
+| AIUSD | +4.40% | +0.08% | -0.96% | 285min (stale) | 0.13x | 0.04% | Both below threshold. SKIP. |
+| INJUSD | +4.35% | -0.31% | +0.93% | 45min | 0.51x | 0.04% | Both below threshold. SKIP. |
+| EVAAUSD | +4.30% | +0.52% | +3.37% | 750min (stale) | 0.04x (thin) | 0.21% | Both below threshold, stale high, thin book. SKIP. |
+
+Remaining candidates from the 36-pair initial screen (STUSD, METUSD, BILLYUSD, XPLUSD, AVAUSD, TRUSTUSD, HFTUSD, KERNELUSD, ROBOUSD, AIXBTUSD, AMIUSD, INITUSD, EULUSD, BLURUSD, HIPPOUSD) all sat below TNSR/BEAM on vs-open% and would need to beat CAP/USUSD-tier 4h momentum with a clean 1h to matter — not pulled for OHLC given the top candidate already resolves to a catalyst rejection.
+
+### TNSR/USD — Catalyst Check (only candidate clearing both momentum thresholds)
+
+Live requote: spread 0.30% (ask $0.0338/bid $0.0337), well within cap. Fresh Perplexity query (`TNSR Tensor crypto token news and price catalyst today 2026-07-24`) found **no fresh fundamental announcement** — coverage explicitly states "no significant recent announcement to explain the spike," attributing the move instead to **on-chain accumulation by a new large wallet**, **short-squeeze mechanics**, and **speculative rotation into small-cap Solana tokens**. A late-2025 tokenomics overhaul (fee redirection, supply burn) is cited as background support but is not a fresh <6h catalyst. Binance also flags **unlock-event selling-pressure risk**. Additionally, cross-source pricing is wildly inconsistent (CoinGecko ~$0.0334, Binance ~$0.0352, Coinbase ~$0.15 — an order of magnitude off, a severe data-quality red flag on its own). This is the same profile that has repeatedly disqualified BILL, ESPORTS, and AKE: **pump/squeeze technicals without a genuine fresh catalyst**. **Rejected on catalyst quality**, consistent with precedent.
+
+### STEP 4 — Risk Factors
+
+- TNSR was the only candidate clearing both 1h>3%/4h>5% momentum thresholds with a fresh (30min) high and tight spread, but fails on catalyst quality (squeeze/accumulation narrative, no confirmed fresh news, severe cross-source price divergence)
+- BEAM shows a genuine 10.5x volume surge and clears 4h momentum but 1h is still sub-threshold — worth a midday recheck in case it accelerates into a clean setup
+- Fear & Greed (Alternative.me) reads **22 — Extreme Fear** today, below the ≤25 threshold — any future unconfirmed-catalyst candidate today would need R:R ≥1.5:1, not the standard 1.2:1 floor
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- Perplexity's absolute price levels for both BTC and ETH were materially off live Kraken values again today — reconfirms Kraken as the sole pricing authority for gating decisions
+
+### Decision: **HOLD — no new entries.** Crash gate not triggered (BTC +0.55% 24h). BTC weekly trend gate not triggered (BTC +1.13% over trailing week). Full 696-pair Kraken-native sweep found one candidate (TNSR) clearing every mechanical gate (momentum, freshness, spread) but it fails catalyst quality with a pump/squeeze-without-news profile and severe cross-source price divergence. BEAM shows a real volume surge but insufficient 1h momentum — flagged for a midday recheck. Nothing else in the 36-candidate shortlist clears both momentum thresholds. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries today. TNSR/USD was the only candidate clearing momentum + freshness + spread together but fails on catalyst quality (squeeze/accumulation pump, no confirmed fresh news, severe cross-source price divergence). BEAM/USD shows a genuine 10.5x volume surge worth a midday recheck but 1h momentum is currently sub-threshold. Crash gate and BTC weekly trend gate both not triggered. Fear & Greed at Extreme Fear (22, Alternative.me) — any future unconfirmed-catalyst candidate today needs R:R ≥1.5:1.
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
