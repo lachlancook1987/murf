@@ -8194,3 +8194,30 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** SYN/USD was the only candidate clearing both momentum thresholds in a 43-candidate shortlist but hard-fails the cross-exchange price-divergence gate with a directional (not just magnitude) mismatch against CoinGecko. Nothing else in the sweep clears both thresholds. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-25 — Midday Scan #2 (22:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quotes vs today's open:** BTC $64,309.80 → **+0.35%** (o $64,088.20), -0.11% off 24h high ($64,379.70). ETH $1,870.86 → **+0.60%** (o $1,859.61). Crash gate: not triggered (threshold -20%).
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC): 53 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — same broad memecoin-led move as the 20:05 UTC pre-session scan (EUL, SHIB, PTB, LQTY, WIF, SOSO, AVAX, CTR, EDGEX, TAKE, ACT, AZTEC, FLOKI, VVV, BLESS, AVA, AMI, KAITO, BONK, FET all standing rejections, unchanged — see pre-session entry). Pulled fresh 15m OHLC on the standing near-misses plus new names (NEIRO, JOE, VELVET, USELESS, TBTC):
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| EULUSD | -1.11% | +6.05% | 125min | 0.11x | 1h below threshold, momentum decayed further since pre-session — standing divergence reject also applies. SKIP |
+| **USELESSUSD** | **+4.97%** | **+6.87%** | 35min (fresh) | 0.61x | Clears both momentum thresholds — see rejection below |
+| KAITOUSD | +2.13% | +3.57% | 20min | 9.51x (huge) | Both below momentum threshold despite massive volume. SKIP |
+| NEIROUSD | +4.66% | +3.84% | 5min | 0.13x | 4h below threshold. SKIP |
+| FETUSD | +2.24% | +2.97% | 5min | 0.03x | Both below threshold. SKIP |
+| CTRUSD | +1.75% | +3.96% | 5min | 0.00x | Both below threshold, dead vol. SKIP |
+| AZTECUSD | +0.93% | +1.22% | 5min | 0.46x | Both below threshold. SKIP |
+| QUSD, SHIB, PTB, LQTY, WIF, SOSO, JOE, EDGEX, AVAX, TAKE, ACT, VELVET, FLOKI, VVV, BLESS, AVA, AMI, TBTC, BONK | — | — | — | — | All below both momentum thresholds this check (0-2% 1h, several negative). SKIP |
+
+**USELESS/USD — rejected on cross-exchange price-divergence gate, hard fail.** Clears both momentum thresholds (1h +4.97%, 4h +6.87%) with a fresh (35min) high and tight 0.21% live spread (ask $0.05621/bid $0.05609) — confirmed live and margin-eligible via `kraken.sh assets`. Catalyst check (`USELESS crypto token news and price catalyst today 2026-07-25`) found a real driver — OKX perpetual futures listing plus continued Solana meme-coin rotation — but flagged current price signals as "inconsistent across sources, $0.08-$0.28." Direct follow-up (`USELESS coin current price today CoinGecko CoinMarketCap USD`) returned **CoinGecko $0.08266 / CoinMarketCap $0.08190** — both converging near $0.082, vs Kraken's live $0.056. That's a **~32% divergence**, well past the ~15-20% cross-exchange price-divergence gate (added 2026-07-24), Kraken pricing the asset *lower* than both reference sources. Same pattern (Kraken order book distorted vs. major-exchange consensus) as EUL/MORPHO/SYN/TNSR/ALKIMI/PTB this week. Rejected regardless of clean technicals and a genuine catalyst.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** USELESS/USD was the only candidate clearing both momentum thresholds but hard-fails the cross-exchange price-divergence gate (~32%, Kraken pricing well below CoinGecko/CMC consensus) despite a real OKX-listing catalyst. EUL continues to decay and still carries its standing divergence rejection. Nothing else in the sweep clears both thresholds. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
