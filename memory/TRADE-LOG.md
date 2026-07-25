@@ -8166,3 +8166,31 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~88
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 24 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from $64,088.20 (today's open) to $63,926.50 (−0.25%), so the bot's flat day outperformed BTC by +0.25%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+---
+
+## 2026-07-25 — Midday Scan (14:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, order `a2b44cf9` reconfirmed still on file as `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**Live quotes vs today's open:** BTC $64,069.40 → **-0.03%** (o $64,088.20), -0.18% off 24h high ($64,187.80). ETH $1,864.13 → **+0.24%** (o $1,859.61). Both flat. Crash gate: not triggered (threshold -20%).
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC): 43 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — broader shortlist than pre-session (19) as the day's moves matured. Pulled 15m OHLC on fresh/unconfirmed names:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| **SYNUSD** | **+3.72%** | **+6.51%** | 690min (stale) | 12.62x | 0.25% | Clears both momentum thresholds with huge volume — see rejection below |
+| QUSD | +2.55% | +3.49% | 30min | 8.20x | — | Both below threshold. SKIP |
+| SPACEUSD | -0.15% | +3.67% | 105min | 0.00x | — | Negative 1h, dead vol. SKIP |
+| AZTECUSD | +2.08% | +3.53% | 0min | 2.04x | — | Both below threshold. SKIP |
+| COQUSD | +2.16% | +4.16% | 0min | 0.00x | — | Both below threshold. SKIP |
+| GMTUSD | 0.00% | +4.73% | 0min | 0.00x | — | 1h flat. SKIP |
+| CSPRUSD | +2.53% | +2.53% | 450min (stale) | 0.00x | — | Both below threshold, stale, dead vol. SKIP |
+| TELUSD, PLUME, TAKE, AVA, HFT, SHIB, HDX, DRIFT, WIF, REZ, ZEREBRO, NIL, STABLE, SAPIEN, ARX, XMLNZ, EDGEX, CLOUD, AMI | — | — | — | — | All below both momentum thresholds outright, several dead/thin/negative books. SKIP |
+| PTB, ESPORTS, AI, LQTY, SUP, SOSO, Q(dup), OMI, VVV, MORPHO, GENIUS, ACT, GRIFFAIN, EUL, AKE, B2 | — | — | — | — | Standing rejections, unchanged from pre-session sweep (stale highs, dead/thin books, negative momentum, or divergence flags). SKIP |
+
+**SYN/USD — rejected on cross-exchange price-divergence gate, hard fail.** Clears both momentum thresholds (1h +3.72%, 4h +6.51%) with a genuine 12.6x volume surge and tight 0.25% spread — the cleanest technical setup of the sweep. Live Kraken price $0.1618 is 0.7% below the stale (690min) 24h high of $0.163, not yet a confirmed breakout. Perplexity (`SYN Synapse Protocol crypto token price today 2026-07-25`) returned CoinGecko at **$0.3575** (+120% vs Kraken) and CoinDesk at **$0.04402** (-73% vs Kraken) — a three-way price mismatch far past the ~15-20% divergence threshold (cross-exchange price-divergence gate, added 2026-07-24). Worse, CoinGecko shows SYN **down -14.10%** over 24h while Kraken shows it **up ~+12%** vs today's open — directionally opposite readings, consistent with a thin/distorted Kraken order book rather than a real market-wide move. Rejected regardless of clean technicals, same pattern as MORPHO (this morning) and TNSR/ALKIMI/PTB in prior sessions.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** SYN/USD was the only candidate clearing both momentum thresholds in a 43-candidate shortlist but hard-fails the cross-exchange price-divergence gate with a directional (not just magnitude) mismatch against CoinGecko. Nothing else in the sweep clears both thresholds. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
