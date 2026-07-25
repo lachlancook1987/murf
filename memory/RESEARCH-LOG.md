@@ -29093,3 +29093,78 @@ Pulled full `AssetPairs` (701 USD pairs, all with live tickers) + batched `Ticke
 Planned trades: **HOLD** — no new entries this session. TLM/USD and SOSO/USD were the closest candidates but each clears only one of the two mechanical momentum gates (1h>3%, 4h>5%); SOSO additionally carries a same-day token unlock (sell-pressure headwind). Crash gate and BTC weekly trend gate both not triggered. Fear & Greed improved to 32 (Fear) from this morning's Extreme Fear reading.
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **22+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+
+---
+
+## 2026-07-25 — Pre-Session Research (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since 2026-07-24 EOD. No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | ~$64.4k, +2.9% (24h) | $63,915.10 vs today's UTC open $64,088.20 = **-0.27%**, -2.35% off 24h high ($65,450.00) | Perplexity direction disagrees again with live Kraken (mild red day vs claimed +2.9%) — Kraken remains the pricing authority for gating |
+| ETH | $1,740.95 (CoinGecko), other sources $1,749-$1,789, -0.10% to +0.90% | $1,853.45 vs today's open $1,859.61 = **-0.33%** | Perplexity's absolute price materially stale/low vs live Kraken again — same recurring data-quality gap, ignored for gating |
+| Fear & Greed | **32 (Fear)** | — | Not Extreme Fear (≤25) — standard 1.2:1 R:R floor applies to any candidate today, not the 1.5:1 floor |
+| BTC funding rate | ~0.00206% (Binance, 8h); Kraken page shows 1.06%/hr (likely stale/mismatched); other venues -0.0027% to +0.0148%/8h | — | No crowded skew signal, not actionable |
+| Catalysts | ETF outflows cited as recent bearish driver; GENIUS Act stablecoin-KYC push; Ethereum Glamsterdam (H2 2026) planning; XRP CLARITY Act still unresolved (48% Polymarket odds); Solana Jito JTX launch, Alpenglow testing; TAO spot-ETF decisions expected by Aug 2026 | — | Macro backdrop only, nothing single-asset-actionable beyond today's sweep results |
+| Unlocks this week | AVAX $10.9M (Jul25), H $15.6-17.2M (Jul25), XPL $7.1-7.3M (Jul26), CC/WLD/TRUMP ongoing daily | — | None of these names appear in today's sweep shortlist below — no action needed |
+
+**Crash gate:** BTC -0.27% (24h vs today's UTC open) → **NOT triggered** (threshold -20%).
+**BTC weekly trend gate:** $63,915.10 today vs $64,678.10 close 5 sessions back (2026-07-19) = **-1.18%** → flat, **NOT triggered** (threshold -3%).
+
+### STEP 3 — Kraken-Native Discovery Sweep (696 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (696 USD pairs with live tickers) + batched `Ticker` via direct Kraken public API, ranked by % vs today's open with spread ≤1.5% and within 6% of 24h high. **19 pairs** cleared the initial screen. Pulled 15m OHLC for all 19 to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| EULUSD | +37.30% | +0.81% | +16.35% | 60min | 0.29x | 0.94% | 1h below threshold. SKIP. |
+| AKEUSD | +16.90% | +0.75% | +19.95% | 855min (very stale) | 0.18x | 0.64% | 1h below threshold, stale high, standing whale-squeeze reject from prior sessions. SKIP. |
+| **GWEIUSD** | +16.33% | **+5.75%** | **+5.27%** | 210min (stale) | 0.31x | 0.10% | Clears both momentum thresholds but high is stale (210min) and price is still -4.6% below it with no fresh breakout — fails momentum-peak-check. SKIP. |
+| B2USD | +12.51% | +1.16% | +9.96% | 135min | 0.43x | 0.44% | 1h below threshold. SKIP. |
+| SUPUSD | +10.31% | -4.45% | +9.99% | 555min (stale) | 0.00x (dead) | 0.41% | Negative 1h, dead book. SKIP. |
+| OMIUSD | +9.89% | +2.61% | +1.07% | 30min | 0.04x (thin) | 0.75% | Both below threshold, thin book. SKIP. |
+| **MORPHOUSD** | +6.03% | **+7.52%** | **+7.51%** | 30min (fresh) | 1.14x | 0.75% (live requoted) | Clears every mechanical gate — see rejection below |
+| SOSOUSD | +5.72% | -0.62% | -0.06% | 240min | 0.06x | 0.09% | Both below threshold. SKIP. |
+| GENIUSUSD | +5.30% | +0.63% | +6.35% | 45min | 0.00x (dead) | 0.47% | 1h below threshold, dead book. SKIP. |
+| ACTUSD | +5.20% | +1.11% | +3.06% | 45min | 0.00x (dead) | 0.55% | Both below threshold, dead book. SKIP. |
+| KAITOUSD | +4.73% | +0.03% | +3.54% | 1305min (very stale) | 0.01x (dead) | 0.20% | Both below threshold, stale/dead. SKIP. |
+| GRIFFAINUSD | +4.58% | +0.79% | +4.82% | 0min | 1.32x | 0.34% | Both below threshold. SKIP. |
+| AIUSD | +4.25% | -2.17% | -1.40% | 135min | 0.12x | 0.04% | Negative on both. SKIP. |
+| BREVUSD | +3.47% | 0.00% | 0.00% | 1185min | 0.00x | 0.28% | Flat, dead, stale. SKIP. |
+| SAHARAUSD | +3.47% | +0.33% | -3.04% | 210min | 0.00x | 0.22% | Both below threshold. SKIP. |
+| LQTYUSD | +3.45% | +0.83% | +2.83% | 30min | 0.00x | 0.47% | Both below threshold. SKIP. |
+| VVVUSD | +3.42% | +1.41% | +3.29% | 15min | 0.50x | 0.06% | Both below threshold. SKIP. |
+| ROLLUSD | +3.30% | +0.16% | +4.64% | 1230min | 0.00x | 0.30% | Both below threshold, very stale. SKIP. |
+| EDGEXUSD | +3.25% | 0.00% | +0.11% | 1320min | 0.00x | 0.73% | Flat, dead, very stale. SKIP. |
+
+**MORPHO/USD — rejected on cross-exchange price divergence + rolling-over spike pattern.** OHLC shows a single 15-min candle 30min ago with an extreme volume spike (77,252 vs a trailing-20-candle average of ~250 — over 300x normal) that wicked up to $2.156 then closed back down at $1.98941 within the same candle — a classic pump-and-dump signature, not sustained accumulation. Price has partially recovered since (to ~$2.05) but requoting live during the check showed it continuing to slide ($2.057 → $2.046 across ~2 minutes). Perplexity (`Morpho MORPHO crypto token news and price catalyst today 2026-07-25`) confirms real fundamental tailwinds exist (Robinhood earn-product integration, $175M funding round led by Paradigm/a16z) but explicitly flags CoinGecko pricing MORPHO **down ~5% today at ~$1.66**, versus Kraken's live ~$2.05 — a **~23.5% cross-exchange divergence**, well past the ~15-20% threshold in the cross-exchange price-divergence gate (added 2026-07-24 after ALKIMI/TNSR precedent). Rejected on the mechanical divergence gate regardless of clean technicals, reinforced by the pump-and-dump candle shape and continuing live price decay during the check.
+
+None of the near-misses (GWEI, EUL, AKE, B2 — all with strong 4h but sub-3% 1h, or GWEI which inverts that) show a fresh breakout above their respective stale 24h highs on the last 3 candles — confirmed no exception applies.
+
+### STEP 4 — Risk Factors
+
+- MORPHO was the only candidate clearing both 1h>3%/4h>5% momentum thresholds with a fresh (30min) high, but fails the cross-exchange price-divergence gate (~23.5%, Kraken vs CoinGecko) and shows a pump-and-dump candle shape with live price still decaying during the check
+- GWEI clears both momentum thresholds numerically but the 24h high is 210min stale with no fresh breakout — fails momentum-peak-check
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- Perplexity's BTC/ETH price levels again diverged from live Kraken (BTC direction wrong, ETH price stale-low) — reconfirms Kraken as the sole pricing authority for gating decisions
+- WhatsApp/CallMeBot notification channel has been failing on quota exhaustion since 2026-07-02 (23+ days) as of the last several sessions — will reconfirm status in Step 6 below
+
+### Decision: **HOLD — no new entries.** Crash gate not triggered (BTC -0.27% 24h). BTC weekly trend gate not triggered (BTC -1.18% over trailing week). Full 696-pair Kraken-native sweep found 19 initial candidates; only MORPHO cleared both momentum thresholds cleanly, but it hard-fails the cross-exchange price-divergence gate (~23.5% Kraken-vs-CoinGecko) with a pump-and-dump candle signature reinforcing the rejection. GWEI clears momentum numerically but fails momentum-peak-check on a stale high with no breakout. Nothing else in the shortlist clears both thresholds. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries today. MORPHO/USD was the only candidate clearing both momentum thresholds but fails the cross-exchange price-divergence gate (Kraken ~$2.05 vs CoinGecko ~$1.66, ~23.5% divergence) plus a pump-and-dump candle pattern. GWEI/USD clears momentum numerically but the 24h high is stale (210min) with no fresh breakout. Crash gate and BTC weekly trend gate both not triggered. Fear & Greed at 32 (Fear, not Extreme Fear) — standard 1.2:1 R:R floor applies to any future candidate today.
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **24+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
