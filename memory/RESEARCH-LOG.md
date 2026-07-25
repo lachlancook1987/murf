@@ -29168,3 +29168,75 @@ None of the near-misses (GWEI, EUL, AKE, B2 — all with strong 4h but sub-3% 1h
 Planned trades: **HOLD** — no new entries today. MORPHO/USD was the only candidate clearing both momentum thresholds but fails the cross-exchange price-divergence gate (Kraken ~$2.05 vs CoinGecko ~$1.66, ~23.5% divergence) plus a pump-and-dump candle pattern. GWEI/USD clears momentum numerically but the 24h high is stale (210min) with no fresh breakout. Crash gate and BTC weekly trend gate both not triggered. Fear & Greed at 32 (Fear, not Extreme Fear) — standard 1.2:1 R:R floor applies to any future candidate today.
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **24+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+
+---
+
+## 2026-07-25 — Pre-Session Research (Scheduled Routine, 20:05 UTC)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only (all `filled`/`canceled` through 2026-05-22) — no live stop, consistent with prior sessions |
+
+Balance unchanged since the 2026-07-25 14:04 UTC midday scan. No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $62,642.04, +0.53% (24h) | $64,301.50 vs today's UTC open $64,088.20 = **+0.33%**, -0.12% off 24h high ($64,379.70) | Perplexity's absolute price is ~2.6% low vs live Kraken — same recurring data-quality gap; Kraken remains the pricing authority for gating |
+| ETH | ~$2,465.83, +0.91% (24h) | $1,871.90 vs today's open $1,859.61 = **+0.66%** | Perplexity's absolute price is materially high vs live Kraken (~32% off) — ignored for gating |
+| Fear & Greed | Mixed: 22 (Alternative.me, Extreme Fear), 32 (Binance, Fear), 33 (FearGreedMeter, Fear), 56 (CFGI.io, Neutral) | — | Using the Alternative.me/Binance consensus (~22-32, Fear-to-Extreme-Fear range) as in prior sessions; moot today since no candidate reached the R:R-floor stage |
+| BTC funding rate | ~0.00206% (Binance 8h); range -0.0027% to +0.006% across sources | — | No crowded skew signal, not actionable |
+| Catalysts | ETF outflows cited as dominant bearish driver; weak labor data/softer rate expectations behind recent bounce; Ethereum Glamsterdam upgrade (H2 2026 forward catalyst); GENIUS Act stablecoin-KYC proposal targeting USDC/USDT; XRP CLARITY Act odds falling as Senate math unresolved; Solana ETF-related headlines with weakening inflows; Zama protocol launch (Jul 23); DEXE -80% crash on team-wallet transfer; Worldcoin fell despite unlock cut | — | Macro backdrop only, nothing single-asset-actionable beyond today's sweep results |
+| Unlocks this week | Humanity (H) ~$15.86M (Jul 25), Plasma (XPL) ~$7.13-7.29M (Jul 25-26), ChainOpera AI (COAI) ~$2.56M (Jul 25), Perle Labs (PRL) ~$1.71M (Jul 25), AVAX ~$10.9M (Jul 25), LayerZero (ZRO) ~$19.78M (Jul 20, still cycling), Kaito (KAITO) ~$16.93-17.1M (Jul 20) | — | AVAX appears in today's sweep shortlist (+6.38% vs open) — today's unlock is a sell-pressure headwind, not a bullish catalyst, factored into its rejection below |
+
+**Crash gate:** BTC +0.33% (24h vs today's UTC open) → **NOT triggered** (threshold -20%).
+**BTC weekly trend gate:** $64,301.50 today vs $64,678.10 close 5 sessions back (2026-07-19) = **-0.58%** → flat, **NOT triggered** (threshold -3%).
+
+### STEP 3 — Kraken-Native Discovery Sweep (696 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (696 USD pairs) + batched `Ticker` via direct Kraken public API, ranked by % vs today's open with spread ≤1.5% and within 6% of 24h high. **53 pairs** cleared the initial screen — broad memecoin-led move (SHIB, WIF, FLOKI, BONK, PENGU, MOODENG all up together alongside AVAX, EUL, SOSO). Pulled 15m OHLC on the top 34 by move-size to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| **EULUSD** | +61.4% (live) | **+8.14%** | **+22.93%** | 525min (stale) | 0.50x | 0.46% | Clears both momentum thresholds — see hard rejection below |
+| SHIBUSD | +22.07% | +2.79% | +3.79% | 0min | 0.70x | 0.08% | Both below threshold. SKIP. |
+| QUSD | +18.26% | +1.14% | +9.88% | 15min | 0.00x (dead) | 0.72% | 1h below threshold, dead vol. SKIP. |
+| PTBUSD | +13.84% | -0.57% | -2.92% | 240min | 0.00x | 0.43% | Negative on both — standing cross-exchange divergence flag (Jul 21) also applies. SKIP. |
+| LQTYUSD | +10.12% | +0.33% | -0.44% | 255min | 0.78x | 0.55% | Both below threshold. SKIP. |
+| SOSOUSD | +9.69% | -1.04% | +0.06% | 135min | 0.00x | 0.06% | Both below threshold — unlock lands today too. SKIP. |
+| VVVUSD | +8.97% | +0.16% | +0.81% | 90min | 0.14x | 0.10% | Both below threshold. SKIP. |
+| WIFUSD | +8.96% | +1.42% | +4.47% | 0min | 6.00x | 0.06% | 1h below threshold, 4h close but under 5%. SKIP. |
+| AIOUSD | +7.36% | +2.56% | +4.45% | 0min | 0.00x | 1.04% | Both below threshold, dead vol, spread also fails ≤1% cap live. SKIP. |
+| JUNOUSD | +6.56% | +2.35% | +1.86% | 210min | 0.00x | 0.94% | Both below threshold, dead vol. SKIP. |
+| AVAXUSD | +6.38% | +0.36% | +1.10% | 195min | 0.01x (dead) | 0.03% | Both below threshold, dead vol — also carries today's $10.9M unlock as a headwind. SKIP. |
+| CTRUSD | +5.96% | +0.25% | +2.17% | 0min | 0.00x | 0.37% | Both below threshold. SKIP. |
+| UFDUSD | +4.44% | 0.00% | +4.93% | 0min | 0.00x | 0.36% | 1h flat, 4h just under 5%. SKIP. |
+| PNUTUSD | +5.46% | +0.24% | +3.41% | 0min | 0.00x | 0.24% | Both below threshold. SKIP. |
+| BONKUSD, FLOKIUSD, XDGUSD, TURBOUSD, GTCUSD, PENGUUSD, MEWUSD, TAKEUSD, ACTUSD, EDGEXUSD, MUBARAKUSD, AVAUSD, COQUSD, BLESSUSD, AMIUSD, AZTECUSD, CLOUDUSD, HDXUSD, BERAUSD | +3.2-7.8% | ≤+2.6% (several negative) | ≤+2.9% (several negative) | — | mostly thin/dead vol | — | All below both momentum thresholds outright. SKIP. |
+
+**EUL/USD — rejected on cross-exchange price-divergence gate (hard fail, directional mismatch), and independently fails momentum-peak-check.** Live Kraken shows EUL at $1.748 (bid $1.736 / ask $1.744, 0.46% spread), up **+61.4%** vs today's open ($1.083), with real 1h/4h momentum clearing both thresholds. But Perplexity (`Euler Finance EUL crypto token news and price catalyst today 2026-07-25`) reports CoinGecko pricing EUL at **$0.9767, down -5.8% for the day**, and CoinMarketCap around **$1.06** — a **65-79% divergence** from Kraken's live price, and directionally opposite (Kraken up ~61%, CoinGecko down -5.8%), far past the ~15-20% cross-exchange price-divergence gate (added 2026-07-24). This is the same directional-mismatch pattern that killed SYN (Jul 25 midday) and MORPHO (Jul 25 pre-session) — rejected regardless of clean technicals. Independently, the official 24h high ($1.797) was set 525min ago and current price ($1.748) has not broken above it, so this would also fail momentum-peak-check on its own. Fundamentals cited by Perplexity (RWA/PT-reUSD growth, Cassa vault incentives, Re7 exploit-compensation pool) are constructive but do not override the divergence hard-fail.
+
+No other candidate in the 34-pair detail table clears both the 1h>3% and 4h>5% momentum thresholds together.
+
+### STEP 4 — Risk Factors
+
+- EUL was the only candidate clearing both momentum thresholds, but hard-fails the cross-exchange price-divergence gate (65-79%, directionally opposite vs CoinGecko/CMC) and independently fails momentum-peak-check (stale 525min high, no breakout)
+- WIF (+4.47% 4h) and UFD (+4.93% 4h) are the closest true near-misses but both fail the 1h leg and neither has volume confirmation strong enough to treat as an exception
+- AVAX (+6.38% vs open) carries today's $10.9M token unlock as an active sell-pressure headwind, on top of failing both momentum thresholds and showing dead volume
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- Perplexity's BTC/ETH price levels again diverged materially from live Kraken (BTC ~2.6% low, ETH ~32% high) — reconfirms Kraken as the sole pricing authority for gating decisions
+- WhatsApp/CallMeBot notification channel has been failing on quota exhaustion since 2026-07-02 (24+ days as of the last session) — reconfirming status in Step 6 below
+
+### Decision: **HOLD — no new entries.** Crash gate not triggered (BTC +0.33% 24h). BTC weekly trend gate not triggered (BTC -0.58% over trailing week). Full 696-pair Kraken-native sweep found 53 initial candidates in a broad memecoin-led move; only EUL cleared both momentum thresholds cleanly, but it hard-fails the cross-exchange price-divergence gate (65-79%, directionally opposite vs CoinGecko/CMC) and independently fails momentum-peak-check on a stale high with no breakout. WIF and UFD came closest among the rest but each clear only the 4h leg, not both. Per the gate-protection default rule, HOLD stands — will continue scanning intraday for a fresh, live-confirmed setup.
+
+### Step 6 — Notification
+
+Planned trades: **HOLD** — no new entries today. EUL/USD was the only candidate clearing both momentum thresholds (1h +8.14%, 4h +22.93%) but fails the cross-exchange price-divergence gate hard (Kraken $1.748 vs CoinGecko $0.9767, ~79% divergence, directionally opposite — CoinGecko shows EUL down -5.8% today vs Kraken's +61%) and independently fails momentum-peak-check (stale 525min high, no breakout). WIF/USD and UFD/USD were the next-closest near-misses, clearing only the 4h leg. Crash gate and BTC weekly trend gate both not triggered.
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **25+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
