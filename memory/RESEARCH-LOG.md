@@ -29407,3 +29407,28 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** SOON/USD was the only candidate clearing both momentum thresholds this scan but fails the active BTC weekly-downtrend gate (1h momentum below the required 5% floor, no fresh dated catalyst). TAKE/USD remains rolled over and flat. Crash gate not triggered (BTC +0.45% 24h). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-26 — Session-Open Execution Re-check (15:01 UTC)
+
+**Account state (live):** Kraken $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca `positions` → `[]`, zero exposure. Crash gate: BTC $64,657.00 vs today's open $64,312.90 = **+0.53%**, not triggered.
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC, direct public API): 46 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top movers by vs-open%:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| KAITOUSD | -0.76% | +8.07% | 75min | 0.05x | 0.12% | 1h negative, dead vol, stale high. SKIP. |
+| CAPUSD | +1.09% | +12.40% | 0min | 0.04x | 0.54% | 4h strong but dead volume (0.04x) and 1h below threshold — not real buying. SKIP. |
+| **MERLUSD** | **+3.43%** | +3.26% | 0min (fresh) | **41.12x** (huge) | 0.65% | 1h clears 3% but 4h below 5% threshold — see rejection below |
+| REPPOUSD | -1.09% | -1.09% | 285min | 20.97x | 1.08% | Negative on both despite huge volume, stale high. SKIP. |
+| SOONUSD | +0.06% | +6.80% | 45min | 0.23x | 0.11% | 1h flat, below threshold. SKIP. |
+| BLESS, VULT, HIPPO, ZBT, KNTQ, HDX, VVV, DUAL, PEPE, UNI, PLUME | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**MERL/USD — rejected, fails 4h threshold and BTC weekly-downtrend gate.** 1h +3.43% clears the base 3% bar with genuine 41x volume surge and a fresh (0min) high, but 4h momentum (+3.26%) misses the 5% confirmation threshold. Under the actively-triggered BTC weekly-downtrend gate (-3.34% over trailing 5 sessions, still active per this morning's check — today's BTC move since then, +0.53% off open, is far too small to flip it), pure-momentum entries require 1h **>5%** — MERL's 3.43% falls short. Catalyst check (`MERL Merlin Chain crypto token news catalyst today`) found rising TVL ($85M→$343M this month) and an ongoing Binance trading-competition promotion — real, but an ongoing/ramping narrative rather than a fresh dated event, so it does not qualify for the catalyst-driven exception (exchange listing / regulatory event / protocol upgrade) that would bypass the momentum gate. One Perplexity source cited a stale/wrong $0.1622 price; CoinGecko's $0.01873 is consistent with Kraken's live $0.0184 (no real cross-exchange divergence). **SKIP** — momentum and gate failure, not a data-quality issue.
+
+**TAKE/USD re-checked again** (today's original pre-session candidate, SKIPped three times already at 09:01, 12:02, 14:06 UTC): now $0.02130, still ~8.9% below the stale $0.02337 high with no fresh breakout. Continues to confirm the earlier SKIP.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** MERL/USD was the closest candidate (real volume, fresh high, clears 1h but not 4h) but fails the stricter momentum floor required by the active BTC weekly-downtrend gate and lacks a dated catalyst for the exception path. TAKE/USD remains rolled over. Crash gate not triggered (BTC +0.53% 24h). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
