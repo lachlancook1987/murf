@@ -29350,3 +29350,15 @@ Planned trades: **TAKE/USD** — clears every gate (1h +4.76%, 4h +6.07%, 24h hi
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **26+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
 
+---
+
+## 2026-07-26 — Session-Open Execution (09:01 UTC)
+
+**Account state (live):** Kraken $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca `positions` → `[]`, zero exposure. Crash gate: BTC $64,419.40 vs today's open $64,312.90 = +0.17%, **not triggered**.
+
+**TAKE/USD re-check before execution — momentum has rolled over since pre-session research.** Pre-session (this morning) clocked TAKE at 1h +4.76%/4h +6.07% with a fresh (45min) 24h high of $0.02337 and recommended a market entry near $0.02202. Live re-check now (15m OHLC): price ran further to a peak of $0.02337 (same high, now **106min old — stale**, past the 60min freshness window) around 07:15 UTC, then rolled over through three consecutive declining 15m candles ($0.02301 → $0.02289 → $0.02265, current ask $0.02277). Current 1h% ≈ +3.55%, 4h% ≈ +10.0% (mechanically still clear the numeric thresholds), but this is exactly the momentum-peak-check failure mode: high is stale, price is declining from it, no fresh breakout above the prior high, and no new catalyst distinct from the one already priced in at research time. Buying now would mean chasing an already-faded pop ~3% above the price the research plan was built around.
+
+### Decision: **SKIP TAKE/USD, HOLD — no trade this session.** The research-log candidate no longer clears the momentum-peak-check gate at live execution time even though it cleared every gate ~2h ago. Per the gate-protection default rule, gates are re-verified at execution time, not just at research time, and are not loosened to force the pre-planned trade. No other candidate was substituted (out of scope for this execution-only pass). No positions to protect, no stops to place. Step 8 commit skipped — no trades fired.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
