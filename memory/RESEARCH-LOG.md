@@ -29362,3 +29362,17 @@ Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory alway
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
+---
+
+## 2026-07-26 — Session-Open Execution Re-check (12:02 UTC)
+
+**Account state (live):** Kraken $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca `positions` → `[]`, zero exposure. Crash gate: BTC $64,459.70 vs today's open $64,312.90 = **+0.23%**, not triggered. ETH $1,885.11 vs open $1,873.40 = +0.63%.
+
+**TAKE/USD — re-checked again, decay has continued.** At the 09:01 UTC check it had already rolled over from its stale 24h high ($0.02337, then 106min old) to $0.02277. Now at 12:02 UTC, live ask is **$0.02136** — down another ~6% from the 09:01 level and ~8.6% off the $0.02337 high, which is now ~4h45m old. No fresh breakout, no new catalyst distinct from the original listing news already priced in this morning. Momentum-peak-check fails harder than at the last check, not less. Confirms the earlier SKIP.
+
+No new candidate has cleared both the sweep and the cross-exchange divergence gate since the day's earlier scans (TAKE — rolled over; SYN/USD and USELESS/USD — both rejected on cross-exchange price-divergence, logged in TRADE-LOG.md). BTC weekly-downtrend gate remains active per this morning's check (pure-momentum entries still banned; catalyst-driven entries remain open).
+
+### Decision: **HOLD — no new entries.** Nothing in today's research pipeline currently clears every gate; TAKE/USD has continued to decay rather than recover. No positions to protect, no stops to manage. Step 8 commit limited to this research-log entry (memory continuity) — no trades fired, no TRADE-LOG update needed.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
