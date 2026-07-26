@@ -29240,3 +29240,113 @@ No other candidate in the 34-pair detail table clears both the 1h>3% and 4h>5% m
 Planned trades: **HOLD** — no new entries today. EUL/USD was the only candidate clearing both momentum thresholds (1h +8.14%, 4h +22.93%) but fails the cross-exchange price-divergence gate hard (Kraken $1.748 vs CoinGecko $0.9767, ~79% divergence, directionally opposite — CoinGecko shows EUL down -5.8% today vs Kraken's +61%) and independently fails momentum-peak-check (stale 525min high, no breakout). WIF/USD and UFD/USD were the next-closest near-misses, clearing only the 4h leg. Crash gate and BTC weekly trend gate both not triggered.
 
 Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **25+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-26 — Pre-Session Research (Scheduled Routine)
+
+### STEP 1 — Account Snapshot
+
+| Exchange | Balance | Positions | Orders |
+|---|---|---|---|
+| Kraken | **$115.5598 ZUSD** (100% cash) + dust only (AAVE, AVAX, BABY, FET, HYPE, INJ, NEAR, SOL, SUI, TAO dust, ZAUD $0.1066) | `{}` — no open positions | `{"open": {}}` — no open orders |
+| Alpaca | `[]` — zero exposure | None | Historical orders only — stop `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22), no live stop |
+
+Balance unchanged since the 2026-07-25 22:05 UTC midday scan. No open positions on either exchange — nothing to protect, no held-position news queries needed.
+
+### STEP 2 — Market Context (Perplexity, cross-checked against live Kraken)
+
+| Metric | Perplexity claim | Live Kraken | Verdict |
+|---|---|---|---|
+| BTC | $62,642.04-$64,382.37 across sources (CoinDesk/Kraken/CoinGecko), +0.53% to +2.90% | $64,292.30 vs today's UTC open $64,312.90 = **-0.03%**, -0.36% off 24h high ($64,525.40) | Perplexity's source spread (+0.5% to +2.9%) again disagrees on direction/magnitude — Kraken remains the pricing authority for gating; live BTC is essentially flat today |
+| ETH | $1,740.95 (one source), -0.10% | $1,878.58 vs today's open $1,873.40 = **+0.28%** | Perplexity's absolute price materially low vs live Kraken again — same recurring data-quality gap, ignored for gating |
+| Fear & Greed | **32 (Fear)** | — | Not Extreme Fear (≤25) — standard 1.2:1 R:R floor applies today, not the 1.5:1 floor |
+| BTC funding rate | Binance BTCUSDT Perpetual ~0.00206%/8h; Coinalyze +0.0100%; Coinperps -0.0027% | — | No crowded skew signal across sources, not actionable |
+| Catalysts | CLARITY Act Senate progress watched as key regulatory driver; July 28-29 FOMC meeting is the dominant macro swing factor; spot ETF inflow/outflow stabilization flagged as quickest bullish catalyst; Tether probe headline risk flagged as the most material downside risk; XRP/Solana cited as coin-specific regulatory/ETF beneficiaries | — | Macro backdrop only (FOMC two days out, regulatory watch-and-wait) — nothing single-asset-actionable beyond today's sweep results |
+| Unlocks this week | GateToken (GT) $44.60M (Jul 26, 03:00 UTC, already past), Sahara AI (SAHARA) $1.46M (Jul 26), Plasma (XPL) $7.29M (Jul 26), Canton (CC) $18.5M ongoing daily, TRUMP $9.86M ongoing daily, WLD $9.37M ongoing daily; ~$166M total unlocking Jul 20-26 | — | None of GT/SAHARA/XPL/CC/TRUMP/WLD appear in today's sweep shortlist below — no action needed |
+
+**Crash gate:** BTC -0.03% (24h vs today's UTC open) → **NOT triggered** (threshold -20%).
+**BTC weekly trend gate:** BTC $64,292.30 today vs $66,511.70 close 5 sessions back (2026-07-21) = **-3.34%** → **TRIGGERED** (threshold -3%). Stricter entry criteria apply: pure-momentum entries are banned; any candidate needs either (a) 1h momentum >5% AND a fresh catalyst <3h old, or (b) a catalyst-driven entry (exchange listing, regulatory event, protocol upgrade) which remains open regardless of this gate.
+
+### STEP 3 — Kraken-Native Discovery Sweep (696 USD pairs, live Ticker + 15m OHLC)
+
+Pulled full `AssetPairs` (696 USD pairs) + batched `Ticker` via direct Kraken public API, ranked by % vs today's open with spread ≤1.5% and within 6% of 24h high. **35 pairs** cleared the initial screen — a broad memecoin-led move (SHIB, PEPE, TOSHI, MOG, FLOKI, DOGS, MEW, NEIRO, MOODENG all up together). Pulled 15m OHLC for all 35 to compute true 1h/4h momentum, high-freshness, and volume-surge ratio:
+
+| Symbol | vs open | 1h% | 4h% | High age | Vol ratio | Spread (live) | Verdict |
+|---|---|---|---|---|---|---|---|
+| PIEVERSEUSD | +49.47% | -1.55% | +35.74% | 15min | 1.18x | 0.47% | 1h below threshold — 4h move already happened, not currently accelerating. SKIP. |
+| SHIBUSD | +13.04% | -2.86% | +4.23% | 75min | 0.40x | 0.11% | Negative 1h, momentum has rolled over. SKIP. |
+| REPPOUSD | +9.88% | 0.00% | +5.26% | 225min | 0.00x (dead) | 1.09% | 1h flat, dead book, stale high. SKIP. |
+| PEPEUSD | +9.03% | -0.57% | +2.93% | 45min | 0.04x (thin) | 0.03% | Both below threshold, thin book. SKIP. |
+| **DBRUSD** | +7.35% | **+6.17%** | **+7.40%** | 0min (fresh) | 0.19x (thin) | 0.13% | Clears both momentum thresholds — see rejection below |
+| VVVUSD | +6.56% | -0.66% | +4.82% | 90min | 0.25x | 0.08% | 1h negative. SKIP. |
+| KNTQUSD | +6.48% | 0.00% | -0.61% | 285min | 0.00x | 0.05% | Flat/negative, dead book. SKIP. |
+| PNUTUSD | +6.44% | -1.33% | +2.29% | 45min | 0.44x | 0.22% | Both below threshold. SKIP. |
+| **TAKEUSD** | +5.76% | **+4.76%** | **+6.07%** | 45min (fresh) | 2.10x (real) | 0.14% (live-requoted) | Clears every mechanical gate — see full writeup below |
+| AMIUSD | +5.68% | 0.00% | 0.00% | 285min | 0.00x | 0.51% | Flat, dead, stale. SKIP. |
+| TOSHIUSD | +5.50% | +0.79% | +2.58% | 45min | 0.00x | 0.26% | Both below threshold. SKIP. |
+| CLOUDUSD | +5.34% | 0.00% | 0.00% | 285min | 0.00x | 0.92% | Flat, dead, stale. SKIP. |
+| BLESSUSD | +5.32% | +1.13% | +0.70% | 135min | 2.44x | 0.27% | Both below threshold despite real volume — early-stage, not yet at criteria. SKIP. |
+| ZORAUSD | +5.27% | +2.47% | +2.23% | 30min | 8.71x (huge) | 0.12% | Both below threshold despite massive volume. SKIP. |
+| NEIROUSD | +5.16% | -2.57% | +1.27% | 210min | 0.17x | 0.63% | Negative 1h, rolled over. SKIP. |
+| **AVAAIUSD** | +5.13% | **+4.11%** | **+7.49%** | 15min (fresh) | 0.00x (dead) | 1.28% (live-requoted) | Clears momentum but hard-fails spread cap — see rejection below |
+| HIPPOUSD | +4.69% | 0.00% | +3.88% | 30min | 0.00x | 1.47% | Both below threshold, spread also fails. SKIP. |
+| MOGUSD | +4.51% | -1.42% | +3.48% | 60min | 0.00x | 0.19% | Negative 1h. SKIP. |
+| XETCZUSD | +4.51% | +1.30% | +1.77% | 15min | 0.00x | 0.06% | Both below threshold. SKIP. |
+| TURBOUSD | +4.49% | -0.71% | -0.71% | 120min | 0.00x | 0.24% | Negative on both. SKIP. |
+| AIXBTUSD | +4.45% | +0.21% | +4.85% | 30min | 0.00x | 1.00% | 1h well below threshold. SKIP. |
+| MEWUSD | +4.21% | 0.00% | +2.77% | 60min | 0.00x | 0.54% | Both below threshold. SKIP. |
+| YGGUSD | +3.93% | +0.54% | +2.78% | 30min | 5.21x (huge) | 0.54% | Both below threshold despite real volume. SKIP. |
+| MOODENGUSD | +3.84% | -1.31% | +0.68% | 75min | 0.21x | 0.08% | Negative 1h. SKIP. |
+| SN62USD | +3.71% | -0.25% | +2.57% | 60min | 0.00x | 0.47% | Both below threshold. SKIP. |
+| SPELLUSD | +3.63% | 0.00% | +3.38% | 75min | 0.00x | 1.31% | Both below threshold, spread also fails. SKIP. |
+| SN75USD | +3.59% | 0.00% | +2.62% | 150min | 0.00x | 0.23% | Both below threshold. SKIP. |
+| FARTCOINUSD | +3.51% | -0.15% | -0.08% | 75min | 0.00x | 0.15% | Flat/negative, dead book. SKIP. |
+| USELESSUSD | +3.42% | -1.62% | -1.42% | 15min | 0.08x | 0.12% | Negative on both — has rolled over hard since Jul 25's near-miss. SKIP. |
+| MEMEUSD | +3.40% | 0.00% | +1.48% | 165min | 0.00x | 0.37% | Both below threshold. SKIP. |
+| FLOKIUSD | +3.37% | -2.15% | +0.13% | 45min | 0.47x | 0.09% | Negative 1h. SKIP. |
+| TAOUSD | +3.26% | -0.22% | +0.85% | 120min | 0.02x | 0.04% | Both below threshold. SKIP. |
+| VINEUSD | +3.18% | +3.18% | +3.18% | 45min | 0.00x | 0.77% | 4h below threshold, dead vol. SKIP. |
+| QUSD | +3.14% | +1.24% | +1.59% | 135min | 0.03x | 1.02% | Both below threshold. SKIP. |
+| DOGSUSD | +3.05% | -1.27% | +1.81% | 60min | 0.00x | 0.18% | Both below threshold, negative 1h. SKIP. |
+
+### TAKE/USD — Full Trade Idea
+
+- **Catalyst:** Perplexity confirms **OVERTAKE (TAKE)** — a P2P marketplace for game assets on Sui — is undergoing a **simultaneous global listing/distribution today** across **Momentum Finance, Binance Alpha, MEXC, and Coinone** (DEX + CEX venues), described by the project as the start of full-scale token distribution. This is a fresh, dated exchange-listing catalyst, which is explicitly the type of event that keeps an entry open under the active BTC weekly-downtrend gate regardless of the 1h-momentum/fresh-catalyst AND-clause. No unlock or negative overhang flagged.
+- **Cross-exchange price check:** CoinGecko $0.02010 (+6.90% 24h, directionally consistent with Kraken's move), Gate $0.02009, Binance $0.0196021 — vs Kraken live $0.02202. Divergence ~9.5-12.3% against these three sources, all comfortably under the ~15-20% cross-exchange price-divergence gate, and all directionally consistent (every source shows TAKE up today). No divergence red flag — passes clean, unlike the recent EUL/MORPHO/SYN/USELESS run of directional-mismatch rejections.
+- **Entry:** Market, ~$0.02202 (live-requoted ask at time of writing)
+- **Stop:** `trailing_stop`, `trail_percent: 2.5` (standard — this is a brand-new listing rather than an established high-ATR momentum coin, so the 3.5% high-ATR exception is not applied; using 3.5% would drop R:R below the 1.2:1 floor)
+- **T1:** $0.022681 (+3%) | **T2:** $0.023121 (+5%)
+- **R:R:** 3% / 2.5% = **1.2:1** — meets the standard floor exactly (F&G at 32/Fear, not Extreme Fear ≤25, so the stricter 1.5:1 floor does not apply)
+- **Size:** R:R sits exactly at the floor rather than above it, and 24h volume in USD terms is thin (~$13.8k) for a fresh listing with a fairly shallow order book (top-of-book ~$15-17 each side) — moderate conviction sizing (~30-40% of the $115.56 equity, ~$35-46) is more appropriate than full notional, mirroring the STABLE/USD (2026-07-24) sizing precedent for a floor-R:R setup
+- **Kraken pair:** `TAKEUSD` confirmed online, `ordermin: 300` units (~$6.61 at current price), `costmin: $0.5` — both trivially satisfied; no margin available (`leverage_buy: []`) — spot only
+- **Spread:** 0.14% live-requoted (bid $0.02199 / ask $0.02202), well within the ≤1% cap
+- **Momentum-peak check:** 24h high ($0.02337) set 45min ago — passes (<60min), no stale-high concern
+
+### DBR/USD — Near-miss, rejected
+
+Clears both mechanical momentum thresholds (1h +6.17%, 4h +7.40%) with a fresh (0min) high and tight 0.13% spread, and price matches almost exactly across exchanges (Kraken $0.01582 vs CoinGecko $0.01584 — no divergence concern). Rejected on two independent grounds: (1) **volume is thin** (0.19x trailing average — below-average volume on a claimed 6-7% move is a weak-confirmation flag, unlike TAKE's real 2.1x surge); (2) under the **active BTC weekly-downtrend gate**, DBR's cited catalyst (an ongoing Reserve Fund buyback program running since June, plus a ~618M-token unlock that already happened in mid-July) is not a fresh dated event and does not qualify for the catalyst-driven exception the way TAKE's exchange listing does — so DBR would need the AND-clause (1h>5% AND fresh catalyst <3h old) to apply on pure momentum, and the catalyst leg fails that freshness test. **SKIP.**
+
+### AVAAI/USD — Rejected, spread cap
+
+Clears both mechanical momentum thresholds (1h +4.11%, 4h +7.49%) with a fresh (15min) high, but live-requoted spread is **1.28%** (bid $0.00851 / ask $0.00862) — hard-fails the ≤1% spread cap. Volume is also dead (0.00x). **SKIP** — mechanical gate failure, not pursued further.
+
+### STEP 4 — Risk Factors
+
+- TAKE is the first candidate to clear every gate since STABLE/USD (2026-07-24) — momentum, freshness, spread, liquidity, catalyst, cross-exchange price consistency, and R:R floor all pass; the BTC weekly-downtrend gate is active but TAKE qualifies via the explicit exchange-listing catalyst exception
+- R:R sits at the exact 1.2:1 floor, not above it — sizing recommendation reflects that with a moderate (~30-40% equity) rather than maximal allocation
+- Thin absolute liquidity (~$13.8k 24h volume, shallow top-of-book) is typical of a same-day listing and adds slippage risk beyond the quoted spread — a market order of the recommended size should still clear cleanly given the ordermin/costmin are trivial relative to book depth, but size should not be pushed materially higher than the recommendation
+- BTC weekly trend gate is freshly triggered (-3.34% over trailing 5 sessions) — any *other* candidate surfacing intraday today needs either 1h>5%+fresh catalyst<3h, or its own catalyst-driven exception; pure-momentum entries are banned until this gate clears
+- DBR/USD is a fallback watch item if TAKE's setup decays intraday — its momentum is real, but weak volume and the weekly-downtrend catalyst-freshness gap keep it a SKIP for now, not a second entry
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- Perplexity's BTC/ETH price levels again diverged from live Kraken (BTC source spread wrong-direction on magnitude, ETH price stale-low) — reconfirms Kraken as the sole pricing authority for gating decisions
+
+### Decision: **TRADE stance — TAKE/USD clears every gate** (momentum, freshness, spread, liquidity, catalyst, cross-exchange price consistency, R:R floor), including the actively-triggered BTC weekly-downtrend gate via the exchange-listing catalyst exception. Crash gate not triggered (BTC -0.03% 24h). This is a genuine, non-forced setup per the gate-protection default rule — logged here as a fully-specified trade idea (moderate ~30-40% equity sizing given R:R sits at the floor rather than above it); execution (if any) occurs in a live trading session, not this research-only routine.
+
+### Step 6 — Notification
+
+Planned trades: **TAKE/USD** — clears every gate (1h +4.76%, 4h +6.07%, 24h high set 45min ago, spread 0.14%, real multi-exchange listing catalyst on Momentum Finance/Binance Alpha/MEXC/Coinone, cross-exchange price consistent within ~10%, R:R 1.2:1 at the standard floor). Also clears the actively-triggered BTC weekly-downtrend gate (-3.34%) via the exchange-listing catalyst exception. Sized moderately (~30-40% equity, ~$35-46) given R:R sits at the floor rather than above it and liquidity is thin for a same-day listing. DBR/USD was a close secondary (both momentum thresholds clear) but rejected on thin volume (0.19x) and a non-fresh catalyst under the active weekly-downtrend gate. AVAAI/USD cleared momentum but hard-fails the spread cap (1.28%). Crash gate not triggered (BTC -0.03% 24h).
+
+Attempted via `bash scripts/clickup.sh` (WhatsApp/CallMeBot) per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now **26+ days** of quota exhaustion, unresolved since first flagged 2026-07-02; needs resubscription at callmebot.com/61477788635.
+
