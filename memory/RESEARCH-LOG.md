@@ -29486,3 +29486,28 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only, unchanged all day. `positions` �
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. TLM/USD cleared momentum (1h +7%, 4h +10.6%, 13.5x volume) but hard-failed the cross-exchange price-divergence gate (~19-28% vs CoinGecko/CMC/MEXC) and lacks a fresh catalyst. Crash gate not triggered (BTC +0.49%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now well past a month of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-26 — Session-Open Execution Re-check (21:01 UTC)
+
+**Account state (live):** Kraken $115.5598 ZUSD (100% cash) + dust only, unchanged all day. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca `positions` → `[]`, order `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22) — zero exposure. Crash gate: BTC $64,605.00 vs today's open $64,312.90 = **+0.45%**, not triggered.
+
+**Fresh discovery sweep** (Kraken-native, direct public API, full 643 online USD pairs, live Ticker): 55 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high.
+
+| Symbol | vs open | Spread | Off high | Verdict |
+|---|---|---|---|---|
+| **ESPUSD** | **+48.34%** | 0.18% | 0.93% (fresh) | New candidate today, accelerating in the last hour — see rejection below |
+| SAFEUSD | +17.41% | 0.31% | 1.92% | Standing rejection (stale high, thin vol) — unchanged. SKIP. |
+| SOONUSD | +17.10% | 0.25% | 1.40% | Standing rejection (no fresh catalyst, BTC weekly-downtrend gate) — momentum has faded since 14:06 UTC (was 1h+4.42%). SKIP. |
+| KAITOUSD | +14.85% | 0.09% | 5.59% | Standing rejection (dead vol, stale high) — unchanged. SKIP. |
+| MERLUSD | +12.99% | 0.36% | 0.00% | Standing rejection (decayed from 15:01 UTC near-miss, no catalyst) — unchanged. SKIP. |
+| BLESS, HDX, REPPO, VULT, KNTQ, LQTY, NIL, HOLO, DUAL, PEPE, MET, and 44 others | — | — | — | All either standing rejections from earlier scans today or below the 1h/4h momentum double-threshold on spot-check. SKIP. |
+
+**ESP/USD — new candidate, rejected on cross-exchange price-divergence gate (hard fail).** 15m OHLC shows a genuine, accelerating intraday move: $0.0899 (16:15 UTC) → $0.0908 (17:00) → $0.0993 (18:45) → $0.1027 (19:00) → $0.1076 (20:45) → **$0.1102** (current, 21:00 candle), i.e. roughly **+14% in the last hour** and **+21% over 4h** — clears both mechanical momentum thresholds decisively, with a fresh (<15min) 24h high and consistent per-candle volume (40-140k units/15min, no dead patches). Spread is tight (0.18%, bid $0.10917/ask $0.10937), well within cap. Catalyst check (`ESP Espresso Systems crypto token news catalyst today`) confirms a real, dated driver: **Upbit/Bithumb (South Korea) exchange listings reported to have driven a 120% surge to a new high**, plus token-launch/proof-of-stake-transition context — a fresh exchange-listing catalyst, the type that would otherwise qualify for the BTC weekly-downtrend gate's catalyst exception. However, Perplexity's same query surfaced **CoinGecko pricing ESP at ~$0.065, "small daily decline"** — vs Kraken's live $0.1093 and **+48% vs-open**. That is a **~68% price divergence** (Kraken far *above* CoinGecko) and a direct **directional contradiction** (Kraken up sharply, CoinGecko down slightly) — the same order-book-distortion signature as EUL/MORPHO/SYN/USELESS/TLM this week, but the largest magnitude yet. Hard-fails the ~15-20% cross-exchange price-divergence gate by a wide margin. **SKIP** — the catalyst is real (Upbit/Bithumb listing) but Kraken's own book for this pair cannot be trusted as a fair, arbitraged price at this size of divergence; a market buy here risks paying a Kraken-specific premium with no assurance of an exit at comparable terms.
+
+**BTC weekly-downtrend gate:** still borderline/transitioning per the 20:04 UTC evening-scan read (-2.83%, vs -3.34% this morning); BTC has moved <0.1% since that scan, so the gate reading is materially unchanged. Moot for this check regardless, since ESP is rejected independently on the divergence gate.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ESP/USD was the only new candidate clearing both momentum thresholds this scan, with a real Upbit/Bithumb listing catalyst, but hard-fails the cross-exchange price-divergence gate at ~68% — the widest divergence flagged this week — so it is rejected regardless of catalyst quality. All other candidates in the 55-pair shortlist are standing rejections from earlier scans today or below threshold. Crash gate not triggered (BTC +0.45% 24h). Per the gate-protection default rule, HOLD stands. Zero open positions on either exchange; $115.5598 ZUSD fully available for the next qualifying setup.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred — CallMeBot quota has also been exhausted since 2026-07-02, unresolved).
