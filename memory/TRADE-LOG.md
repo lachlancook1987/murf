@@ -8231,3 +8231,35 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~88
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 25 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC rose from $63,926.50 (yesterday's EOD) to $64,338.10 (+0.64%), so the bot's flat cash day underperformed BTC by −0.64%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+---
+
+## 2026-07-26 — Midday Scan #2 (22:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quotes vs today's open:** BTC $65,121.00 → **+1.26%** (o $64,312.90), -0.06% off 24h high ($65,163.30). Crash gate: not triggered (threshold -20%). **BTC 5-day trend check:** $65,215.70 (Jul 21 open) → $65,121.00 now = **-0.15%**, well inside the ±3% band — the BTC weekly-downtrend gate (active earlier today at the 14:06 UTC scan) is **no longer in effect**; standard entry rules apply.
+
+**Fear & Greed:** Split reads — Alternative.me (canonical) **22 "Extreme Fear"**, Binance widget 32 "Fear", CoinStats 28 "Fear".
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC): 71 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — a much broader board than either scan earlier today, memecoin/alt-led. Pulled 15m OHLC on the top 16 by vs-open to check 1h/4h momentum and high freshness:
+
+| Symbol | 1h% | 4h% | High age | Spread | Verdict |
+|---|---|---|---|---|---|
+| **SAFEUSD** | **+6.64%** | **+9.32%** | 5min (fresh) | 0.38% | Clears both thresholds — see rejection below |
+| **PUMPUSD** | **+6.58%** | **+9.99%** | 5min (fresh) | 0.05% | Clears both thresholds — see rejection below |
+| **SOONUSD** | **+4.36%** | **+7.24%** | 5min (fresh) | 0.39% | Clears both thresholds — see rejection below |
+| ESPUSD | +0.59% | +16.21% | 50min | 0.10% | 1h below threshold. SKIP |
+| KAITOUSD | +0.85% | +1.26% | 500min (stale) | 0.14% | Both below threshold, stale high. SKIP |
+| MERLUSD | +0.56% | +4.67% | 35min | 0.40% | Both below threshold. SKIP |
+| REPPOUSD, BLESSUSD, HDXUSD, NILUSD, LQTYUSD, VULTUSD, CFGUSD, PEPEUSD, KNTQUSD, AAVEUSD | — | — | — | — | All below both momentum thresholds (0-4h% range), several stale highs. SKIP |
+
+**PUMP/USD — rejected, bearish catalyst + divergence.** Catalyst check found the dominant driver is a **~$127M / ~29% of supply token unlock (Jul 12)** flagged by CoinMarketCap/TradingView/CoinMarketCal as active sell-side overhang, not a bullish trigger — momentum here reads as a dead-cat bounce or unlock-driven volatility, not a real breakout. Cross-exchange check also shows Kraken ($0.002025-0.002032) running **~23-36% above** Perplexity-sourced Coinbase/CoinGecko reads ($0.00149-0.00165) — past the divergence gate threshold on top of the bearish catalyst. **SKIP.**
+
+**SOON/USD — rejected again, same unlock overhang plus new divergence flag.** Re-clears momentum (unlike the 14:06 UTC check) now that the BTC weekly-downtrend gate has lifted, but the **20.24M-token unlock (~4.07% of supply)** flagged this morning is still the live catalyst and still explicitly described as bearish sell-pressure. Cross-exchange check: Kraken $0.2058 vs CoinGecko $0.1610 (+27.8%), Binance $0.1760 (+16.9%), MEXC $0.1671 (+23.2%) — Kraken pricing materially above all three references, same distorted-book pattern as SYN/USELESS/EUL this week. **SKIP.**
+
+**SAFE/USD — rejected on R:R floor, not catalyst quality.** Cleanest technical setup of the sweep: fresh (5min) high, tight 0.38% spread, no cross-exchange divergence flag (Kraken $0.1044-0.1047 vs CoinGecko $0.09963 ≈ +4.8%, well inside tolerance). Catalyst is genuine but **not a fresh dated event** — Perplexity describes an ongoing multi-day narrative (staking rewards, SafeNet beta, Ledger Proxy Detection feature) already reflected in a +16% 7-day move, not something that fired in the last 6h. With catalyst freshness unconfirmed and the canonical Alternative.me Fear & Greed reading **22 (Extreme Fear)**, the Extreme-Fear + unconfirmed-catalyst rule requires **R:R ≥ 1.5:1** — the standard T1(+3%)/2.5%-stop structure is exactly 1.2:1 and does not clear the raised bar. **SKIP** per gate, not widening T1 to force a fit.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Three candidates cleared both momentum thresholds this scan (SAFE, PUMP, SOON) — the widest field of the day — but each fails a distinct gate: PUMP and SOON on bearish unlock catalysts plus cross-exchange divergence, SAFE on the Extreme-Fear-adjusted R:R floor despite otherwise clean technicals. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
