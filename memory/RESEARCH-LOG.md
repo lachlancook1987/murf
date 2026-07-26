@@ -29432,3 +29432,57 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** MERL/USD was the closest candidate (real volume, fresh high, clears 1h but not 4h) but fails the stricter momentum floor required by the active BTC weekly-downtrend gate and lacks a dated catalyst for the exception path. TAKE/USD remains rolled over. Crash gate not triggered (BTC +0.53% 24h). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-26 — Evening Scan (20:04 UTC)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only, unchanged all day. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, order `a2b44cf9` reconfirmed still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC ~$62,643-64,629 depending on source (Kraken live $64,629, today's open $64,312.90 → **+0.49%**); Perplexity's CoinDesk figure again diverges from live Kraken (a recurring data-quality gap, Kraken remains the pricing authority for gating)
+- ETH $1,911.70 live vs today's open $1,873.40 → **+2.04%**
+- Fear & Greed: 32 (Fear) per primary source; other trackers range 22-38 — consistently Fear-to-Extreme-Fear territory, not Extreme Fear by the primary reading (32 > 25 threshold)
+- BTC perp funding: ~+0.002% (Binance), longs paying shorts, unremarkable
+- Market catalysts: CLARITY Act regulatory odds, FOMC meeting July 28-29 approaching, ETF flow watch; **EUL +69% on Upbit KRW listing** is the single clearest named-asset catalyst in the feed (see rejection below — EUL carries a standing cross-exchange divergence flag from prior sessions this week, not re-verified fresh here)
+- Token unlocks this week: XPL ($7.29M, today), GT ($44.6M), SAHARA ($1.46M, today), GRAM/CC/ZRO/H/KAITO/AVAX/TRUMP/WLD/SOSO all carrying active unlock overhangs — no held positions affected (zero exposure)
+- Crash gate: **not triggered** (BTC +0.49% vs open, nowhere near -20%)
+
+### Step 4 — Discovery sweep (Kraken-native, full 643 online USD pairs, live Ticker + 15m OHLC)
+
+51 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — broadest shortlist of the day, led by SOON (+17.2% vs-open), KAITO (+16.0%), SAFE (+15.8%), MERL (+12.2%). Pulled 15m OHLC on the top movers plus standing watch items:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **TLMUSD** | **+7.07%** | **+10.64%** | 0min (fresh) | **13.49x** (huge) | Clears both momentum thresholds cleanly — see rejection below |
+| SAFEUSD | +1.38% | +6.56% | 390min (stale) | 0.23x | 1h below threshold, thin vol, stale high. SKIP. |
+| HOLOUSD | +1.36% | +5.97% | 30min | 0.00x | 1h below threshold, dead vol. SKIP. |
+| LQTYUSD | +2.17% | +3.13% | 15min | 0.00x | Both below threshold, dead vol. SKIP. |
+| KNTQUSD | -0.22% | +1.23% | 105min | 6.76x | Negative 1h despite real volume. SKIP. |
+| MERLUSD | +0.41% | +3.75% | 0min | 0.81x | Both below threshold now — decayed from the 15:01 UTC near-miss (was 1h+3.43%/4h+3.26%). SKIP. |
+| SOONUSD | +0.41% | +3.51% | 30min | 0.00x | Both below threshold, dead vol — the +17.2% vs-open move already happened earlier and has stalled. SKIP. |
+| KAITOUSD | +0.21% | +0.38% | 375min | 0.00x | Both below threshold, dead vol, stale high — the +16.0% vs-open move is old news, fully faded. SKIP. |
+| BLESSUSD, REPPOUSD, HDXUSD, VULTUSD, CFGUSD, PEPEUSD, METUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**TLM/USD — rejected, cross-exchange price-divergence gate (hard fail).** Clears both mechanical momentum thresholds decisively (1h +7.07%, 4h +10.64%) with a fresh (0min) 24h high and a genuine 13.5x volume surge — the cleanest technical setup of the day. Confirmed live and online via `kraken.sh quote`/`assets` (spot only, no margin, spread ~0.65%, well within cap). Cross-exchange check (`TLM Alien Worlds Trilium coin price today CoinGecko CoinMarketCap USD`): CoinGecko $0.002525, CoinMarketCap $0.002305, MEXC $0.0025842 — all **19-28% above** Kraken's live $0.001862. This is past the ~15-20% cross-exchange price-divergence gate (added 2026-07-24), same pattern as EUL/MORPHO/SYN/USELESS this week (Kraken order book distorted vs. major-exchange consensus). Separately, catalyst check (`TLM Alien Worlds Trilium crypto token news catalyst today`) found the cited drivers (Aster perpetuals 5x-leverage listing, Alien Worlds drone racing tournament rewards) are **not new today** — Perplexity explicitly flagged them as "early July 2026" rally drivers still being cited, not a fresh <24h catalyst. Under the BTC weekly-downtrend gate (recomputed here at **-2.83%** over the last 5 daily closes — marginally below the -3% trigger, a shift from this morning's -3.34% reading as BTC has ticked up modestly since; treated as still-transitioning/borderline rather than confirmed clear), a pure-momentum move with no fresh dated catalyst does not qualify for the momentum-gate bypass either way. Double rejection (divergence gate + non-fresh catalyst) — **SKIP** regardless of the strongest technicals seen all day. Also consistent with TLM's own history: this exact pair spiked and fully reversed on 2026-07-24 after an earlier momentum read, reinforcing caution on this asset's spike-and-fade tendency.
+
+**EUL/USD (Perplexity-flagged, +69% on Upbit KRW listing)** — not independently re-pulled via Kraken sweep this scan (did not surface in the top-50 vs-open shortlist at scan time, suggesting the move is Upbit-specific and not yet reflected in Kraken's book); EUL also carries a standing cross-exchange divergence rejection from earlier this week (MORPHO/SYN/USELESS pattern). Not pursued further without a fresh Kraken-side confirmation.
+
+### Step 4 — Risk factors
+
+- TLM was the only candidate clearing both momentum thresholds this scan, and by a wide margin, but the ~19-28% cross-exchange divergence is a clean hard-fail independent of catalyst freshness — two independent rejection grounds, not a marginal call
+- BTC weekly-downtrend gate is transitioning (-2.83%, vs -3.34% this morning) — right at the boundary of the -3% trigger; treated conservatively as still-restrictive pending a clearer read next scan
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- TAKE/USD (today's earlier candidate) not re-checked this scan — already confirmed rolled over/decayed across three prior checks today (09:01, 12:02, 14:06 UTC)
+
+### Decision: **HOLD — no new entries, no open positions to manage.** TLM/USD was the only candidate clearing both momentum thresholds, decisively, but hard-fails the cross-exchange price-divergence gate (~19-28%, Kraken pricing well below CoinGecko/CMC/MEXC consensus) and lacks a fresh dated catalyst. Nothing else in the 51-candidate shortlist clears both thresholds. Crash gate not triggered (BTC +0.49% 24h). Per the gate-protection default rule, HOLD stands.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. TLM/USD cleared momentum (1h +7%, 4h +10.6%, 13.5x volume) but hard-failed the cross-exchange price-divergence gate (~19-28% vs CoinGecko/CMC/MEXC) and lacks a fresh catalyst. Crash gate not triggered (BTC +0.49%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now well past a month of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
