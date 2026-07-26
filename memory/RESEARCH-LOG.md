@@ -29376,3 +29376,34 @@ No new candidate has cleared both the sweep and the cross-exchange divergence ga
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
 
+
+---
+
+## 2026-07-26 — Midday Scan (14:06 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, order `a2b44cf9` reconfirmed still on file as `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**Live quotes vs today's open:** BTC $64,599.90 → **+0.45%** (o $64,312.90). ETH $1,887.75 → **+0.77%** (o $1,873.40). Crash gate: not triggered (threshold -20%). BTC weekly-downtrend gate remains active per this morning's pre-session check (-3.34% over trailing 5 sessions) — BTC's intraday move since then (+0.45%) is far too small to flip that reading, so pure-momentum entries remain banned unless 1h>5% AND catalyst<3h old, or a genuine listing/regulatory/upgrade catalyst applies.
+
+**Fresh discovery sweep** (Kraken-native, full 696 USD pairs, live Ticker + 15m OHLC on top movers): 38 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 10 by vs-open%:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| KAITOUSD | -1.28% | +12.75% | 15min | 2.03x | 0.22% | 4h move already happened; 1h negative — spiked and fading. SKIP. |
+| **SOONUSD** | **+4.42%** | **+5.71%** | 0min (fresh) | 2.77x | 0.33% | Clears both momentum thresholds — see rejection below |
+| BLESSUSD | +2.38% | +4.35% | stale (multi-day) | 0.00x | 0.75% | Both below threshold, dead vol. SKIP. |
+| REPPOUSD | 0.00% | 0.00% | stale | 0.00x | 1.09% | Flat, dead book. SKIP. |
+| VULTUSD | +2.71% | +2.71% | stale | 0.00x | 0.44% | Both below threshold, dead vol. SKIP. |
+| PEPEUSD | -1.27% | +0.10% | 405min | 0.04x | 0.07% | Negative 1h, thin. SKIP. |
+| HIPPOUSD | 0.00% | +2.99% | stale | 0.00x | 1.46% | Both below threshold, spread also fails. SKIP. |
+| KNTQUSD | 0.00% | +0.25% | stale | 0.00x | 0.02% | Flat, dead book. SKIP. |
+| ZBTUSD | -0.58% | +1.16% | 150min | 0.00x | 0.15% | Negative 1h, dead vol. SKIP. |
+| MOGUSD | 0.00% | +1.24% | 45min | 0.00x | 0.28% | Both below threshold. SKIP. |
+
+**SOON/USD — rejected on BTC weekly-downtrend gate.** Clears both mechanical momentum thresholds (1h +4.42%, 4h +5.71%) with a fresh (0min) high, real 2.77x volume, and a clean 0.33% spread. Catalyst check (`SOON crypto token news and price catalyst today 2026-07-26`) found only ongoing/non-dated narrative — a recurring "TON Station Combo" rewards event, a governance proposal to unlock 30M staked tokens for AI-focused projects (still pending, not fired today), and a Firedancer-integration rally described as "earlier" (not today) — plus an active bearish overhang from a 20.24M-token unlock adding sell pressure. Perplexity's price ($0.161-0.163, "roughly flat 24h") vs Kraken's live $0.1796 is ~10-11% divergent (under the 15-20% hard-fail threshold) but directionally inconsistent enough (flat vs Kraken's +6.6% vs-open) to add doubt. With no fresh (<3h) dated catalyst and 1h momentum (4.42%) below the 5% bar the active BTC weekly-downtrend gate requires for pure-momentum entries, SOON does not qualify for either exception path. **SKIP.**
+
+**TAKE/USD re-checked again** (candidate from this morning's pre-session research, already SKIPped twice today at 09:01 and 12:02 UTC on momentum-peak-check failure): now $0.02142, essentially flat vs the 12:02 UTC level ($0.02136), still ~8.3% below the stale $0.02337 high with no fresh breakout. Continues to confirm the earlier SKIP — no change.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** SOON/USD was the only candidate clearing both momentum thresholds this scan but fails the active BTC weekly-downtrend gate (1h momentum below the required 5% floor, no fresh dated catalyst). TAKE/USD remains rolled over and flat. Crash gate not triggered (BTC +0.45% 24h). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
