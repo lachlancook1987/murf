@@ -29511,3 +29511,59 @@ Attempted per mandatory always-notify rule — **FAILED again**: `0 messages lef
 ### Decision: **HOLD — no new entries, no open positions to manage.** ESP/USD was the only new candidate clearing both momentum thresholds this scan, with a real Upbit/Bithumb listing catalyst, but hard-fails the cross-exchange price-divergence gate at ~68% — the widest divergence flagged this week — so it is rejected regardless of catalyst quality. All other candidates in the 55-pair shortlist are standing rejections from earlier scans today or below threshold. Crash gate not triggered (BTC +0.45% 24h). Per the gate-protection default rule, HOLD stands. Zero open positions on either exchange; $115.5598 ZUSD fully available for the next qualifying setup.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred — CallMeBot quota has also been exhausted since 2026-07-02, unresolved).
+
+---
+
+## 2026-07-27 — Pre-Session Research (Day 68, Monday)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, all historical stop orders on file are `canceled`/`filled` (most recently `a2b44cf9`, canceled 2026-05-22) — zero exposure, no action needed. Nothing to protect on either exchange.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity range $62,643-$64,382 depending on source (CoinGecko/CoinDesk); live Kraken $65,123.50 vs today's open $65,336.60 → **-0.33%**. Kraken remains sole pricing authority per standing note — Perplexity price feeds are consistently stale/divergent for BTC.
+- ETH: Perplexity range $1,738-$1,789; live Kraken $1,963.26 vs today's open $1,953.50 → **+0.50%**.
+- Fear & Greed: split reads — Binance 32 "Fear", Alternative.me (canonical) **22 "Extreme Fear"**, CFGI.io 38 "Fear". Canonical reading is Extreme Fear (≤25) — the stricter 1.5:1 R:R floor applies to any catalyst-unconfirmed entry today.
+- BTC perp funding: mixed by venue — Binance +0.00206% (next funding ~14min), CoinAlyze +0.0100% (8h normalized), Kraken futures 1.06%/hr, Glassnode 0.006%. Broadly unremarkable/neutral, no funding-driven signal.
+- Market catalysts: FOMC meeting July 28-29 is the dominant macro catalyst this week; Thursday Q2 GDP and Friday core PCE follow. CLARITY Act regulatory progress still contested. Miner economics (16% difficulty relief vs AI data-center demand) and a reported $7B Chainlink migration are secondary infra narratives. BitMart shutdown/BMX collapse is negative sentiment for exchange tokens (not held). BlackRock/Coinbase Bitcoin Security Alliance ($15M/3yr) is a supportive institutional-custody narrative. No single fresh, tradeable <6h catalyst named for any specific Kraken-listed asset.
+- Token unlocks this week: GT ($44.6M, Jul 26), SAHARA (Jul 26), XPL (Jul 26 or 28, source-dependent) — none held, no exposure impact.
+- **BTC 5-day weekly-trend check:** Jul 22 open $66,511.70 → Jul 27 close $65,130.20 = **-2.08%**, inside the ±3% band. The BTC weekly-downtrend gate from 2026-07-26 (-3.34%, later -2.83%) has **cleared** — standard entry rules apply, no AND-clause restriction today.
+- Crash gate: **not triggered** (BTC -0.33% vs open, nowhere near -20%).
+
+### Step 4 — Discovery sweep (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC)
+
+20 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 20 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **NILUSD** | **+8.29%** | **+11.28%** | 15min (fresh) | **14.85x** (huge) | Clears both momentum thresholds decisively — see rejection below |
+| **COOKIEUSD** | **+4.61%** | **+5.68%** | 45min | 2.68x | Clears both momentum thresholds — see rejection below |
+| ZKPUSD | +4.21% | +3.30% | 45min | 2.55x | 1h clears, 4h below 5% threshold. SKIP. |
+| HFTUSD | +0.20% | +4.98% | 60min | 8.77x | 1h fails badly, 4h just misses 5%. SKIP. |
+| GTCUSD | +2.91% | +1.73% | 30min | 0.00x | Both below threshold, dead vol. SKIP. |
+| INXUSD | +2.90% | +2.44% | 15min | 1.93x | Both below threshold (1h just short). SKIP. |
+| APEUSD, LDOUSD, JTOUSD, ZROUSD, EVAAUSD, ZEREBROUSD, TRUSTUSD, FFUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+| GAIBUSD, HOLOUSD, TUSD, XNYUSD, PLUMEUSD, REZUSD | — | — | — | — | Flat/negative 1h or dead volume. SKIP. |
+
+**NIL/USD — rejected, cross-exchange price-divergence gate (hard fail, directional mismatch).** Clears both mechanical momentum thresholds by a wide margin (1h +8.29%, 4h +11.28%) with a fresh (15min) 24h high and a genuine 14.85x volume surge — the cleanest technical setup of the sweep. Confirmed live and online via `kraken.sh assets`/`quote` (spot only, no margin, tight 0.68% spread, ordermin/costmin trivially satisfied). Catalyst check (`NIL Nillion crypto token news catalyst price today`) found a real driver — Nillion's Ethereum migration/Nillion 2.0 rollout (Cosmos→ERC-20) — but the same query returned **CoinGecko pricing NIL at $0.03583, down -0.40% in 24h**, and **CoinMarketCap ~$0.03448** — both **materially below** Kraken's live ask of $0.0445. Divergence is **~24-29%**, past the ~15-20% cross-exchange price-divergence gate (added 2026-07-24), and directionally contradictory: CoinGecko shows NIL essentially flat-to-down today while Kraken shows +16.8% vs-open. Same order-book-distortion signature as EUL/MORPHO/SYN/USELESS/TLM/ESP this week. **SKIP** regardless of the genuine migration catalyst and clean technicals.
+
+**COOKIE/USD — rejected, spread cap hard fail plus contradictory catalyst.** Clears both momentum thresholds (1h +4.61%, 4h +5.68%) with a 45min-old high and 2.68x volume, but live-requoted spread (ask $0.0093 / bid $0.00916) computes to **~1.5%** — hard-fails the ≤1% spread cap outright, independent of any other gate. Catalyst check also returned a **negative-to-mixed** read: the identified driver is X/Twitter's Snaps-incentive-policy shutdown pressuring the token, with Bitget showing COOKIE **down -5.97% in 24h** — directly contradicting Kraken's own +5.8% vs-open reading. Double rejection (spread + contradictory sentiment/price read). **SKIP.**
+
+### Step 5 — Risk factors
+
+- NIL was the standout technical setup of the sweep (widest momentum margin, fresh high, huge volume) but the ~24-29% cross-exchange divergence combined with directionally opposite readings (CoinGecko flat/down vs Kraken sharply up) is a clean hard-fail, not a marginal call — same pattern that has rejected six other candidates this week (EUL, MORPHO, SYN, USELESS, TLM, ESP)
+- COOKIE fails on spread alone (1.5% > 1% cap) before even reaching the catalyst question, and the catalyst itself reads negative on at least one source
+- BTC weekly-downtrend gate has cleared (-2.08%, inside ±3% band) — no longer a restricting factor, but no candidate needed the catalyst-exception path anyway since none cleared the base momentum+divergence+spread gates
+- Fear & Greed canonical read is 22 (Extreme Fear) — any future catalyst-unconfirmed entry today needs R:R ≥1.5:1, not the standard 1.2:1 floor; moot this scan since nothing reached the R:R check
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- FOMC meeting (Jul 28-29) is imminent — elevated macro volatility risk into Tuesday/Wednesday, worth flagging for future scans even though it isn't gate-relevant today
+
+### Decision: **HOLD — no new entries, no open positions to manage.** NIL/USD and COOKIE/USD were the only two candidates clearing both momentum thresholds out of 20 shortlisted pairs; NIL hard-fails the cross-exchange price-divergence gate (~24-29%, directionally contradictory), COOKIE hard-fails the spread cap (1.5%) with a contradictory/negative catalyst besides. Nothing else in the sweep clears both thresholds. Crash gate not triggered (BTC -0.33% 24h). BTC weekly-downtrend gate has cleared but was not the binding constraint this scan. Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. NIL/USD cleared momentum (1h +8.3%, 4h +11.3%, 14.85x volume) but hard-failed the cross-exchange price-divergence gate (~24-29% vs CoinGecko/CMC, directionally contradictory). COOKIE/USD cleared momentum but hard-failed the spread cap (1.5%) with a negative catalyst. Crash gate not triggered (BTC -0.33%). BTC weekly-downtrend gate cleared (-2.08%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~25 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
