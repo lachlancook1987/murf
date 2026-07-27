@@ -8273,3 +8273,29 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** Three candidates cleared both momentum thresholds this scan (SAFE, PUMP, SOON) — the widest field of the day — but each fails a distinct gate: PUMP and SOON on bearish unlock catalysts plus cross-exchange divergence, SAFE on the Extreme-Fear-adjusted R:R floor despite otherwise clean technicals. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-27 — Midday Scan (14:10 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $65,254.40 → **-0.13%** (o $65,336.60), -0.65% off 24h high ($65,682.60). Crash gate: not triggered (threshold -20%).
+
+**Fresh discovery sweep** (Kraken-native, full 643 online USD pairs, live Ticker + 15m OHLC): 25 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — broader than this morning's pre-session shortlist (20). Pulled 15m OHLC on all 25 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| ZROUSD | +2.03% | +5.16% | 30min | 0.47x | 4h clears, 1h below 3% threshold. SKIP. |
+| REKTUSD | -0.35% | +5.53% | 75min | 0.00x | 4h clears, 1h negative and dead vol. SKIP. |
+| AEROUSD | +1.60% | +5.00% | 15min | 2.80x | 4h just clears, 1h below threshold. SKIP. |
+| PYTHUSD | +1.82% | +0.89% | fresh (0min) | 30.67x (huge) | Both below momentum threshold despite massive volume. SKIP. |
+| APEUSD | -0.25% | +4.21% | 30min | 1.13x | Both below threshold, 1h negative. SKIP. |
+| COTIUSD, HFTUSD, GTCUSD, REUSD, BLENDUSD, CLANKERUSD, PUMPUSD, NPCUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+| WEMIXUSD, GAIBUSD, EVAAUSD, XANUSD, VSNUSD, PLUMEUSD, NOSUSD, JTOUSD, ZEREBROUSD, TAKEUSD, COOKIEUSD, LDOUSD | — | — | — | — | Flat/negative 1h or stale high, several dead volume. SKIP. |
+
+No candidate clears both the 1h>3% and 4h>5% momentum thresholds together this scan — ZROUSD, REKTUSD, and AEROUSD each clear 4h but miss 1h. Nothing approaches the divergence/R:R/spread gates since the base momentum gate isn't cleared.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Widest sweep of the day (25 candidates) but none clear both mechanical momentum thresholds simultaneously. Crash gate not triggered (BTC -0.13%). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
