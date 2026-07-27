@@ -8234,6 +8234,16 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 
 ---
 
+## 2026-07-27 — EOD Snapshot (Day 68, Monday)
+
+### Jul 27 — EOD Snapshot (Day 68, Monday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −1.28%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 26 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC rose from $64,338.10 (yesterday's EOD) to $65,163.30 (+1.28%), so the bot's flat cash day underperformed BTC by −1.28%. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
+
+---
+
 ## 2026-07-26 — Midday Scan #2 (22:05 UTC, monitoring only, no trades)
 
 **Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
