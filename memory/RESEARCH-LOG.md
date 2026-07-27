@@ -29567,3 +29567,58 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. NIL/USD cleared momentum (1h +8.3%, 4h +11.3%, 14.85x volume) but hard-failed the cross-exchange price-divergence gate (~24-29% vs CoinGecko/CMC, directionally contradictory). COOKIE/USD cleared momentum but hard-failed the spread cap (1.5%) with a negative catalyst. Crash gate not triggered (BTC -0.33%). BTC weekly-downtrend gate cleared (-2.08%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~25 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-27 — Evening Scan (20:08 UTC)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, `orders` all historical, most recent stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure. Nothing to protect on either exchange.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity range $62,642-$64,382 depending on source; live Kraken $64,890.80 vs today's open $65,336.60 → **-0.68%**. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity ~$1,740.95; live Kraken $1,944.58 vs today's open $1,953.50 → **-0.46%**.
+- Fear & Greed: **32 "Fear"** (Alternative.me/primary source) — not Extreme Fear this scan (>25), so the standard 1.2:1 R:R floor applies, not the stricter 1.5:1.
+- BTC perp funding: Binance +0.00206% (8h), Coinalyze ~+0.01% normalized, Kraken futures 1.06%/hr — unremarkable, no funding-driven signal.
+- Market catalysts: FOMC meeting (Jul 28-29) is the dominant near-term macro catalyst; CLARITY Act regulatory progress still contested; BTC reclaimed $65K intraday, ETH hit a two-month high near $1,968-1,970; GEOD surged on Upbit/Bithumb listings (not Kraken-checked this scan); miner economics (16% difficulty cut vs AI datacenter revenue) is a secondary infra narrative; WEMIX hack and BitMart shutdown are negative idiosyncratic events (no exposure).
+- Token unlocks this week: SUI (Aug 1, 13.72M), EIGEN (Aug 1, 36.82M, ~$7.63M), KMNO (Jul 30, 229.17M), GRASS/SIGN/FF (Jul 27), XPL (Jul 28) — none held, no exposure impact. No confirmed protocol-upgrade calendar found (unlocks dominate the results).
+- Crash gate: **not triggered** (BTC -0.68% vs open, nowhere near -20%).
+- **BTC 5-day weekly-trend check:** ~$66,511.70 (Jul 22 open, per this morning's log) → $64,890.80 now = **-2.44%**, inside the ±3% band — weekly-downtrend gate remains clear, consistent with this morning's read. Standard entry rules apply.
+
+### Step 4 — Discovery sweep (Kraken-native, full 643 online USD pairs, live Ticker + 15m OHLC)
+
+24 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 24 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **COTIUSD** | **+23.75%** | **+27.41%** | 15min (fresh) | **12.31x** (huge) | Clears both momentum thresholds decisively — see rejection below |
+| **REKTUSD** | **+8.36%** | **+7.88%** | 15min (fresh) | **17.11x** (huge) | Clears both thresholds but hard-fails live spread — see below |
+| **PROUSD** | **+5.37%** | **+6.57%** | 30min | 5.68x | Clears both thresholds but hard-fails live spread — see below |
+| ARCUSD | +2.66% | +2.66% | 15min | 10.45x | Both below threshold despite huge volume. SKIP. |
+| SAPIENUSD | +2.18% | +4.19% | 30min | 1.08x | Both below threshold. SKIP. |
+| SOONUSD | +1.91% | +12.43% | 30min | 0.00x | 4h clears, 1h well below, dead vol. SKIP. |
+| CAPUSD, CSPRUSD, EVAAUSD, PUMPUSD, PROSUSD, PYTHUSD, AEROUSD, GTCUSD, GAIBUSD, VELODROMEUSD, ALCXUSD, APEUSD, SCORUSD, ENSOUSD, ZEREBROUSD, ZROUSD, KAITOUSD, BLENDUSD | — | — | — | — | All below both momentum thresholds this check (several negative 1h). SKIP. |
+
+**REKT/USD and PRO/USD — rejected on live spread cap, before reaching catalyst/divergence checks.** Both clear vs-open/1h/4h momentum decisively, but the initial sweep's ticker-based spread (≤1.5% filter) was stale by the time of live re-quote: REKT live ask $0.0000001218 / bid $0.0000001205 = **~1.07%** spread, PRO live ask $0.3865 / bid $0.3811 = **~1.40%** spread — both exceed the strategy's ≤1% hard cap. **SKIP**, spread alone is decisive.
+
+**COTI/USD — rejected on cross-exchange price-divergence gate, borderline but consistent with this week's pattern.** Cleanest technical setup of the sweep: fresh (15min) 24h high, huge 12.3x volume, live spread a tight 0.20% (ask $0.00980/bid $0.00978) — comfortably clears the spread cap. Catalyst check (`COTI crypto coin news catalyst price surge today`) found only background/non-dated drivers — Privacy Portal, wETH support, AI-agent trading integration on Carbon DeFi MCP — and explicitly stated **no single confirmed catalyst for today's specific spike**, attributing the move to a mix of older product news and thin-liquidity amplification. Cross-exchange check (`COTI coin current price today CoinGecko CoinMarketCap USD`): CoinMarketCap $0.008122, CoinGecko $0.008096 — both **~18% below** Kraken's live last ($0.0099)/ask ($0.0098). That falls inside the "~15-20%" reject band of the cross-exchange price-divergence gate (added 2026-07-24), same order-book-distortion signature as EUL/MORPHO/SYN/USELESS/TLM/ESP/NIL this week, and doubly rejected on unconfirmed catalyst freshness besides. **SKIP** despite the strongest technicals of the scan.
+
+### Step 5 — Risk factors
+
+- COTI was the standout technical setup (widest momentum margin, fresh high, huge volume, tight spread) but the ~18% cross-exchange divergence plus unconfirmed catalyst freshness is a double rejection, consistent with the gate's application to seven other candidates this week
+- REKT and PRO both cleared momentum decisively but failed on live spread alone — a reminder that the initial ≤1.5% sweep filter is a screen, not a pass; live re-quote at ≤1% is mandatory before any entry
+- BTC weekly-downtrend gate remains clear (-2.44%, inside ±3% band) — not a binding constraint this scan
+- Fear & Greed is 32 (Fear), not Extreme Fear — standard 1.2:1 R:R floor would have applied had any candidate reached that check
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- FOMC meeting (Jul 28-29) is imminent — elevated macro volatility risk into tomorrow, worth flagging for the next scan
+
+### Decision: **HOLD — no new entries, no open positions to manage.** COTI, REKT, and PRO were the only three candidates clearing both momentum thresholds out of 24 shortlisted pairs. COTI hard-fails the cross-exchange price-divergence gate (~18%, in the reject band) with unconfirmed catalyst freshness besides; REKT and PRO both hard-fail the live ≤1% spread cap. Nothing else in the sweep clears both thresholds. Crash gate not triggered (BTC -0.68% 24h). BTC weekly-downtrend gate remains clear. Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. COTI/USD cleared momentum decisively (1h +23.8%, 4h +27.4%, 12.3x volume) but hard-failed the cross-exchange price-divergence gate (~18% vs CoinGecko/CMC) with unconfirmed catalyst freshness. REKT/USD and PRO/USD cleared momentum but hard-failed the live spread cap (~1.07%/~1.40%). Crash gate not triggered (BTC -0.68%). BTC weekly-downtrend gate clear (-2.44%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~25 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
