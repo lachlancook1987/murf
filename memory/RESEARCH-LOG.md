@@ -29622,3 +29622,27 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. COTI/USD cleared momentum decisively (1h +23.8%, 4h +27.4%, 12.3x volume) but hard-failed the cross-exchange price-divergence gate (~18% vs CoinGecko/CMC) with unconfirmed catalyst freshness. REKT/USD and PRO/USD cleared momentum but hard-failed the live spread cap (~1.07%/~1.40%). Crash gate not triggered (BTC -0.68%). BTC weekly-downtrend gate clear (-2.44%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~25 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-27 — Midday Scan #2 (22:10 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quotes vs today's open:** BTC $64,660.00 → **-1.04%** (o $65,336.60), -1.56% off 24h high ($65,682.60). ETH $1,936.00 → **-0.90%** (o $1,953.50). Crash gate: not triggered (threshold -20%).
+
+**Fresh discovery sweep** (Kraken-native, full 643 online USD pairs, live Ticker + 15m OHLC): 21 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 21 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| KAITOUSD | +2.54% | +8.24% | 15min | 0.23x | 4h clears, 1h below 3% threshold. SKIP. |
+| SOONUSD | +1.32% | +7.65% | 75min | 0.05x | 4h clears, 1h below threshold, dead vol. SKIP. |
+| REKTUSD | +0.08% | +7.36% | 120min | 0.00x | 4h clears, 1h flat, dead vol. SKIP. |
+| SAPIENUSD | +1.75% | +5.25% | 75min | 0.84x | 4h just clears, 1h below threshold. SKIP. |
+| GAIBUSD, PUMPUSD, BLENDUSD, APEUSD, CAPUSD, ENSOUSD, GTCUSD, AEROUSD, ZEREBROUSD, ZROUSD, PROSUSD, CSPRUSD, ALCXUSD, SCORUSD, PYTHUSD, QUSD, PROUSD | — | — | — | — | All below both momentum thresholds this check (several flat/negative 1h). SKIP. |
+
+No candidate clears both the 1h>3% and 4h>5% momentum thresholds together this scan — KAITO, SOON, and REKT each clear 4h but miss 1h by a wide margin. Nothing approaches the catalyst/divergence/spread gates since the base momentum gate isn't cleared. (REKT, PUMP, SOON also carry standing bearish-catalyst/divergence rejections from earlier scans today — moot here since they don't clear momentum anyway.)
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 21 candidates in the sweep but none clear both mechanical momentum thresholds simultaneously. Crash gate not triggered (BTC -1.04%). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
