@@ -29646,3 +29646,54 @@ No candidate clears both the 1h>3% and 4h>5% momentum thresholds together this s
 ### Decision: **HOLD — no new entries, no open positions to manage.** 21 candidates in the sweep but none clear both mechanical momentum thresholds simultaneously. Crash gate not triggered (BTC -1.04%). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-28 — Pre-Session Research (Day 69, Tuesday)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, all historical stop orders on file remain `filled`/`canceled` (most recently `a2b44cf9`, canceled 2026-05-22) — zero exposure. Nothing to protect on either exchange.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity range $62,642-$64,382 depending on source (CoinDesk/CoinGecko/Blockchain.com), the usual multi-source spread; live Kraken $63,452.60 vs today's open $63,697.10 → **-0.38%**. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity $2,465.83, **+0.91%** 24h.
+- Fear & Greed: **32 "Fear"** (primary), 28-38 range across trackers — not Extreme Fear (>25), standard 1.2:1 R:R floor applies (not the stricter 1.5:1).
+- BTC perp funding: Binance +0.00206% (next funding ~14min), Coinalyze +0.0100% (8h normalized) — unremarkable, no funding-driven signal.
+- Market catalysts: **FOMC meeting July 28-29** is the dominant macro event this week, markets expecting a hold; **BTC options expiry July 31** (Deribit, ~$66K area) could amplify volatility; Rare Evo 2026 summit (institutional on-chain finance) running Jul 28-31; BTC repeatedly failed above $65K and is consolidating $63K-$63.5K; Solana down ~3% nearing $76.67 support; Lido migrating 8M+ staked ETH post-Pectra. No single fresh <6h catalyst named for any specific Kraken-listed asset.
+- Token unlocks this week: Falcon Finance (FF) $7.41M (~5.26% of mkt cap, Jul 28), Midnight (NIGHT) $2.54M (~8.59%, Jul 28), Plasma (XPL) 12-month lockup ends Jul 28, Worldcoin (WLD) ongoing linear unlocks — ~$1.9B in unlocks across the market this month. None held, no exposure impact. NIGHT appears in today's sweep shortlist below — noted as carrying a same-day unlock overhang.
+- Crash gate: **not triggered** (BTC -0.38% vs today's open, nowhere near -20%).
+- **BTC 5-day weekly-trend check:** Jul 22 daily open $66,511.70 → live $63,452.60 now = **-4.60%**, outside the ±3% band. The **BTC weekly-downtrend gate is TRIGGERED** today (first time since it cleared on Jul 27 morning) — pure-momentum entries (no fresh catalyst) are banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h.
+
+### Step 4 — Discovery sweep (Kraken-native, full 697 online USD pairs, live Ticker + 15m OHLC)
+
+20 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 20 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **TRACUSD** | **+3.47%** | **+6.39%** | 165min (stale) | 3.16x | Clears both base momentum thresholds — see rejection below |
+| CSPRUSD | +2.48% | +5.59% | 15min | 0.55x | 1h below 3% threshold. SKIP. |
+| GOATUSD | +1.84% | +5.06% | 15min | 1.99x | 1h below threshold. SKIP. |
+| MONUSD | 0.00% | +2.96% | 45min | 3.73x | Both below threshold, huge vol but flat 1h. SKIP. |
+| ZAMAUSD | -1.23% | +5.91% | 915min (stale) | 0.00x | 1h negative, dead vol, stale high. SKIP. |
+| PROSUSD | +1.54% | +4.85% | 60min | 1.24x | Both below threshold. SKIP. |
+| CAPUSD, VELVETUSD, ACTUSD, SEIUSD, BLUAIUSD, SWELLUSD, METUSD, WINUSD, EDGEXUSD, TLMUSD, GTCUSD, ENSOUSD, NIGHTUSD, APEUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**TRAC/USD — rejected, momentum-peak-check gate (stale high, declining) AND weekly-downtrend gate (1h below the raised 5% bar).** The only candidate clearing the base 1h>3%/4h>5% thresholds (1h +3.47%, 4h +6.39%), with a tight 0.11% live spread (ask $0.2847/bid $0.2844) and confirmed online via `kraken.sh assets`. Catalyst check (`TRAC OriginTrail crypto token news catalyst price today`) confirms a real AI-narrative rally — TRAC reportedly jumped ~32% to a monthly high near $0.38-0.39 — but the 24h high (per live ticker, $0.3038) was set **165 minutes ago**, and current price ($0.2863) is **~6% below that high**, i.e. declining from the peak, not breaking above it. Per the momentum-peak-check gate (high >60min old + price declining from it), this qualifies for rejection unless a fresh breakout above the prior high or a new catalyst <2h old is present — neither applies; Perplexity explicitly frames this as a post-spike pullback with support levels ($0.30-0.32, then $0.26-0.25) now the discussion, the exact "buy the rumour, sell the news" pattern the gate exists to catch. Independently, today's BTC weekly-downtrend gate (-4.60%, triggered) requires 1h momentum **>5%** for a pure-momentum entry — TRAC's 1h (+3.47%) falls well short of that raised bar too. Double rejection. Cross-exchange check found no material divergence (CoinMarketCap $0.2757 vs Kraken $0.2847, ~3.3%, well inside tolerance) — this one washes out on timing/momentum gates, not price integrity. **SKIP.**
+
+### Step 5 — Risk factors
+
+- BTC weekly-downtrend gate triggered today (-4.60%, first trigger since clearing Jul 27 morning) — raises the bar for any pure-momentum entry to 1h>5% + fresh catalyst <3h; worth carrying into subsequent scans today
+- TRAC was the only candidate clearing the base momentum thresholds but fails on timing (stale, declining high) independent of the weekly-downtrend gate — a clean double rejection, not a marginal call
+- FOMC meeting (Jul 28-29) is live this week — elevated macro volatility risk, could produce fresh momentum on the announcement itself
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+
+### Decision: **HOLD — no new entries, no open positions to manage.** TRAC/USD was the only candidate clearing the base 1h/4h momentum thresholds out of a 20-pair shortlist, but fails the momentum-peak-check gate (24h high 165min old, price declining from it, no fresh breakout or new catalyst) and independently falls short of today's triggered BTC weekly-downtrend gate's raised 1h>5% bar. Nothing else in the sweep clears both base thresholds. Crash gate not triggered (BTC -0.38% 24h). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. TRAC/USD cleared base momentum (1h +3.5%, 4h +6.4%) but hard-failed the momentum-peak-check gate (24h high 165min old, price declining ~6% from it, no fresh breakout/catalyst) and fell short of today's triggered BTC weekly-downtrend gate (-4.60%, requires 1h>5%). Crash gate not triggered (BTC -0.38%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~26 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
