@@ -29697,3 +29697,59 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. TRAC/USD cleared base momentum (1h +3.5%, 4h +6.4%) but hard-failed the momentum-peak-check gate (24h high 165min old, price declining ~6% from it, no fresh breakout/catalyst) and fell short of today's triggered BTC weekly-downtrend gate (-4.60%, requires 1h>5%). Crash gate not triggered (BTC -0.38%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~26 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-28 — Pre-Session Research #2 (Day 69, Tuesday, later scan)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, all historical orders remain `filled`/`canceled` (most recent stop `a2b44cf9`, canceled 2026-05-22) — zero exposure. Nothing to protect on either exchange.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity range $62,169.74-$64,382.37 (source-dependent); live Kraken $63,870.60 vs today's open $63,697.10 → **+0.27%**. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity reported **$3,036.82 (-3.54%)** — flatly wrong; live Kraken $1,919.53 vs today's open $1,890.79 → **+1.52%**. Another confirmed Perplexity bad-data instance (price off by ~58%), consistent with the demoted-to-context-only status; Kraken used exclusively for gating.
+- Fear & Greed: **Alternative.me 22 "Extreme Fear"**, Binance 32 "Fear", CoinStats 28 "Fear" — canonical read (22) is Extreme Fear, so any catalyst-unconfirmed entry today would need R:R ≥1.5:1, not the standard 1.2:1. Moot this scan (no candidate reached the R:R check).
+- BTC perp funding: Binance +0.00206% (8h), Coinalyze ~+0.01% (Kraken +0.0148%/+0.0125% on margin types) — unremarkable, no funding-driven signal.
+- Market catalysts: **FOMC meeting (Jul 28-29)** is the dominant macro event, hold expected; **Deribit BTC options expiry (Jul 31)** flagged as a volatility trigger near $66K; **Rare Evo 2026 summit (Jul 28-31)** — institutional on-chain finance/tokenization news possible; easing **U.S.-Iran tensions** supporting a BTC rebound narrative; general risk-off tone into the Fed decision.
+- Token unlocks this week: **XPL** (Jul 28, public-sale vesting), **SIGN** (~10.75%), **BIRB** (~9.5%), WLD/CC/TRUMP ongoing linear unlocks, PUMP ~$126-134M (mid-July, already priced in). None held, no exposure impact.
+- Perplexity "top 10 gainers" (CoinRanking): NEM, Power, PERP, 哈基米, Cellframe, DuckChain, Dego, XANA, Vana, Vanry — cross-checked PERP/USD and VANRY/USD directly on Kraken per the demoted-discovery rule: PERP/USD live vs_open **+3.63%** but **-6.1% off its 24h high** (already faded, correctly excluded from the sweep); VANRY/USD vs_open **+16.1%** but **-9.68% off its 24h high** (deep pullback from peak, classic already-faded pump) — both confirm why Perplexity gainer lists are not used for discovery; Kraken sweep below is authoritative.
+- Crash gate: **not triggered** (BTC +0.27% vs today's open).
+- **BTC 5-day weekly-trend check:** Jul 22 daily open $66,511.70 → live $63,870.60 = **-3.97%**, outside the ±3% band. **BTC weekly-downtrend gate remains TRIGGERED** (third consecutive check today, following -4.60% at pre-session and -5.03% at midday) — pure-momentum entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h. Moot this scan regardless (see below).
+
+### Step 4 — Discovery sweep (Kraken-native, full 643 online USD pairs, live Ticker + 15m OHLC)
+
+51 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — the widest initial shortlist of the week. Pulled 15m OHLC on **all 51** to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| PUFFERUSD | +4.02% | +4.02% | 900min (stale) | 0.00x (dead) | 1h clears, 4h just misses 5% threshold, stale high, dead vol. SKIP. |
+| ALEOUSD | +2.60% | +6.62% | 195min (stale) | 0.00x (dead) | 4h clears, 1h below 3%, stale high, dead vol. SKIP. |
+| CSPRUSD | +2.00% | +3.95% | 0min (fresh) | 0.04x | Both below threshold despite fresh high. SKIP. |
+| GMXUSD | 0.00% | +5.15% | 0min (fresh) | 0.00x | 4h just clears, 1h flat, dead vol. SKIP. |
+| VINEUSD | 0.00% | +4.73% | 165min | 0.00x | 4h just misses, 1h flat, dead vol. SKIP. |
+| CAPUSD | +1.46% | +4.42% | 0min | 3.32x | Both below threshold despite good volume. SKIP. |
+| STXUSD, TAOUSD, OMIUSD, AINUSD | — | — | 0-15min | 1.7-8.4x | Fresh highs, real volume, but all below both momentum thresholds. SKIP. |
+| SENTUSD, TELUSD, FLOWUSD, DCRUSD, PLUMEUSD, OPENUSD, ZEREBROUSD, PROSUSD, CFGUSD, XNYUSD, BONKUSD, TLMUSD, JUPUSD, MOGUSD, MONUSD, PTBUSD, BTRUSD, TAKEUSD, UNIUSD, AAVEUSD, SPXUSD, METUSD, SUPUSD, FFUSD, FIGHTUSD, HOLOUSD, LOFIUSD, SN62USD, WINUSD, BILLUSD, KMNOUSD, CRVUSD, CHZUSD, HFTUSD, BLUAIUSD, MIRAUSD, MORPHOUSD, XPLUSD, REKTUSD, PROMPTUSD | — | — | — | — | All below both momentum thresholds this check (several negative). SKIP. |
+
+**No candidate clears both the 1h>3% and 4h>5% thresholds simultaneously.** Closest misses: PUFFER clears 1h (+4.02%) but its 4h is identical at +4.02%, just under the 5% bar, on a stale (900min) high with dead volume — a decayed move, not fresh momentum. ALEO clears 4h (+6.62%) but 1h (+2.60%) falls short, also on a stale (195min) high. Neither would survive the momentum-peak-check gate even if the numeric thresholds were met.
+
+### Step 5 — Risk factors
+
+- Widest initial shortlist of the week (51 pairs) but the broadest field yet with **zero** dual-threshold clears — momentum this scan is diffuse (many small movers) rather than concentrated in any fresh breakout
+- BTC weekly-downtrend gate remains triggered (-3.97%) for the third check today — raises the bar for any pure-momentum entry, though moot since no candidate reaches even the base thresholds
+- Perplexity ETH price was off by ~58% this scan (reported $3,036.82 vs Kraken's actual $1,919.53) — another concrete instance supporting the context-only demotion; Kraken used exclusively for all gating decisions
+- Perplexity's CoinRanking gainer list (NEM, Power, PERP, etc.) cross-checked against Kraken directly: PERP and VANRY both showed real vs-open gains but were well off their 24h highs (already-faded pumps), confirming the sweep's off-high filter is doing its job
+- Fear & Greed canonical read is 22 (Extreme Fear) — any future catalyst-unconfirmed entry today needs R:R ≥1.5:1, not the standard 1.2:1 floor; moot this scan since nothing reached the R:R check
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup
+- FOMC meeting (Jul 28-29) remains the dominant macro overhang — could produce fresh momentum on the announcement itself in subsequent scans
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 51 candidates cleared the initial vs-open/spread/off-high filter — the widest shortlist this week — but none cleared both the 1h>3% and 4h>5% momentum thresholds simultaneously; the two closest (PUFFER, ALEO) each clear only one side and sit on stale, dead-volume highs. Crash gate not triggered (BTC +0.27%). BTC weekly-downtrend gate remains triggered (-3.97%) but moot given no base-threshold clears. Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. Widest sweep this week (51/643 pairs cleared initial filter) but zero candidates cleared both momentum thresholds (1h>3%, 4h>5%) simultaneously — closest were PUFFER (1h +4.0%, stale 4h) and ALEO (4h +6.6%, stale 1h), both on dead volume. Crash gate not triggered (BTC +0.27%). BTC weekly-downtrend gate remains triggered (-3.97%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~26+ days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
