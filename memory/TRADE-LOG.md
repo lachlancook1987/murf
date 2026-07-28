@@ -8311,3 +8311,28 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 27 EOD, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from $65,163.30 (yesterday's EOD) to $63,373.10 (-2.75%), so the bot's flat cash day outperformed BTC by +2.75% purely by sitting out a down day. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`, unresolved since first flagged 2026-07-02, now ~26+ days), needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-28 — Midday Scan (14:15 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since Jul 24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,163.40 → **-0.84%** (o $63,697.10). Crash gate: not triggered (threshold -20%). **BTC 5-day trend check:** $66,511.70 (Jul 22 daily open) → $63,163.40 now = **-5.03%**, outside the ±3% band — the BTC weekly-downtrend gate remains **TRIGGERED** (first flagged at pre-session, -4.60%, now slightly deeper at -5.03%): pure-momentum entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h.
+
+**Fresh discovery sweep** (Kraken-native, full 643 online USD pairs, live Ticker): 35 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 35 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **KOBANUSD** | **+10.32%** | **+39.73%** | 1050min (very stale) | 0.16x (dead) | Clears both thresholds numerically but fails momentum-peak-check (high >17h old) and dead volume — thin/illiquid microcap noise, not real momentum. SKIP. |
+| **PEPUSD** | **+9.38%** | **+12.39%** | 0min (fresh) | 4.65x | Clears both thresholds and the raised weekly-downtrend 1h>5% bar — see rejection below |
+| BOSUSD | +9.52% | -2.13% | 210min | 12.45x | 1h clears but 4h negative. SKIP. |
+| SAMOUSD | +0.00% | +17.06% | 165min | 0.00x | 4h clears, 1h flat, dead vol. SKIP. |
+| OBOLUSD | +0.00% | +19.92% | 0min | 0.00x | 4h clears, 1h flat, dead vol. SKIP. |
+| ZEREBROUSD, UNIUSD, KMNOUSD, TLMUSD, CSPRUSD, TOKENUSD, and 24 others | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**PEP/USD — rejected on spread gate, hard fail.** The only candidate with real volume clearing both base momentum thresholds and the raised weekly-downtrend 1h>5% bar (1h +9.38%, 4h +12.39%, fresh 0min high). Live quote: ask $0.0000719 / bid $0.0000676 → **spread ≈ 6.16%**, far past the ≤1% hard-skip threshold (and past even the looser 1.5% sweep-filter tolerance used elsewhere). Thin book on a sub-cent memecoin — rejected on spread alone, before catalyst or R:R were even checked. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** PEP/USD was the only candidate with real volume clearing both momentum thresholds (and the raised weekly-downtrend gate bar) but hard-fails the spread gate (~6.16% vs ≤1% cap). KOBAN clears numerically but fails on stale high + dead volume. Nothing else in the 35-pair shortlist clears both base thresholds. Crash gate not triggered (BTC -0.84%). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
