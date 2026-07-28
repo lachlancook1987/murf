@@ -8336,3 +8336,30 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** PEP/USD was the only candidate with real volume clearing both momentum thresholds (and the raised weekly-downtrend gate bar) but hard-fails the spread gate (~6.16% vs ≤1% cap). KOBAN clears numerically but fails on stale high + dead volume. Nothing else in the 35-pair shortlist clears both base thresholds. Crash gate not triggered (BTC -0.84%). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-28 — Midday Scan #2 (22:07 UTC, monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since Jul 24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,922.80 → **+0.35%** (o $63,697.10). Crash gate: not triggered. **BTC 5-day trend check:** $66,511.70 (Jul 22 daily open) → $63,922.80 now = **-3.89%**, outside the ±3% band — the BTC weekly-downtrend gate remains **TRIGGERED**: pure-momentum entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h.
+
+**Fresh discovery sweep** (Kraken-native, full 699 online USD pairs, live Ticker): 56 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — widest field of the day. Pulled 15m OHLC on the top 15 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | 24h-high age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **PRIMEUSD** | **+12.39%** | **+10.92%** | 15min (fresh) | 4.60x | Clears both thresholds and the raised weekly-downtrend 1h>5% bar — see rejection below |
+| **ANKRUSD** | **+6.23%** | **+5.92%** | 0min (fresh) | 0.60x | Clears both thresholds and the raised bar, but volume ratio 0.60x (no real surge) — see rejection below |
+| OPENUSD | +2.59% | +5.24% | 15min | 0.25x | 4h clears, 1h below threshold, weak vol. SKIP. |
+| AINUSD | +2.00% | +5.54% | 0min | 28.03x (huge) | 4h clears, 1h below threshold despite massive volume. SKIP. |
+| CAPUSD | -0.71% | +6.16% | 45min | 0.09x | 4h clears, 1h negative, dead vol. SKIP. |
+| SOONUSD, CSPRUSD, FLOWUSD, PUFFERUSD, PLUMEUSD, CFGUSD, SUPUSD, XPLUSD, KMNOUSD, BTRUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**PRIME/USD — rejected on spread gate, hard fail.** Strongest candidate of the scan: 1h +12.39%, 4h +10.92%, fresh (15min) 24h high, real volume (4.60x). Live quote at check time: ask $0.2500 / bid $0.2460 → **spread ≈ 1.60%**, past the ≤1% hard-skip threshold — thin book widened materially since the ticker snapshot (0.79%) was pulled. **SKIP.**
+
+**ANKR/USD — rejected on spread gate, hard fail; also weak volume.** Clears both momentum thresholds and the raised weekly-downtrend bar, high is fresh (0min) — but live quote: ask $0.00361 / bid $0.00356 → **spread ≈ 1.39%**, also past the ≤1% cap. Volume ratio 0.60x is below the 2x-average bar anyway, so this would have failed the volume-confirmation criterion even with a tighter book. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** PRIME and ANKR both cleared momentum thresholds (including the raised weekly-downtrend-gate bar) but both hard-fail the ≤1% spread gate at time of check — thin books on fast-moving small-caps. Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC +0.35% vs day open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
