@@ -29948,3 +29948,32 @@ Attempted — **FAILED**: `0 messages left`, CallMeBot quota still exhausted. No
 ### Decision: **HOLD — no new entries, no open positions to manage.** Full 644-pair sweep found zero candidates clearing both momentum thresholds; the two closest (REU, TAKE) are continuations of setups already rejected in the evening scan and have since faded further rather than strengthened. Crash gate not triggered (BTC -0.66%). BTC weekly-downtrend gate not triggered (-2.51%, inside ±3% band but the closest to the edge today — worth watching). Per the gate-protection default rule, HOLD stands. No trades placed; skipping Steps 4-8 order/stop/trade-log actions (no commit needed per Step 8 rule).
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
+
+---
+
+## 2026-07-29 — Midday Scan #2 (~22:05 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since VELVET closed earlier today. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,851.60 → **+0.01%** (o $63,844.50), essentially flat. Crash gate: not triggered. **BTC 5-day trend check:** Jul 24 open $65,052.40 → live $63,851.60 = **-1.85%**, inside the ±3% band — weekly-downtrend gate not triggered, standard entry rules apply.
+
+### Step 6 — Discovery sweep (Kraken-native, full 644 online USD pairs, live Ticker + 15m OHLC)
+
+22 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 22 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| VELVETUSD | +1.35% | -1.88% | 300min | 0.00x | Our earlier-closed position, now +13.55% vs open — continued running post-stop but has faded on both windows since; not a re-entry candidate. SKIP. |
+| REUSD | +1.40% | +0.01% | 150min | 0.19x | Both below threshold — fully faded from earlier scans' +7-17% 4h reads. SKIP. |
+| CXTUSD | +0.00% | +3.02% | 0min | 0.00x | 4h below 5% bar, 1h flat, dead vol despite fresh high. SKIP. |
+| SAFEUSD | -0.11% | -1.64% | 210min | 3.83x | Real volume but both momentum windows negative/flat. SKIP. |
+| PIUSD | +1.88% | +1.14% | 30min | 0.00x | Both below threshold, dead vol. SKIP. |
+| GAIBUSD, NANOUSD, KAITOUSD, TAKEUSD, BTRUSD, USUSD, BLENDUSD, B2USD, OPENUSD, SCORUSD, ARCUSD, DBRUSD, ZBCNUSD, SENTUSD, INXUSD, XXMRZUSD, TRIAUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**No candidate clears both the 1h>3% and 4h>5% thresholds simultaneously.** CXT/USD is the closest (4h +3.02%, fresh 0min high) but well short of the 5% bar and 1h is flat with dead volume. VELVET (our earlier exit) kept running to +13.55% vs open post-stop but has since faded on both 1h and 4h — confirms the trailing stop did its job; not a re-entry signal without fresh momentum.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Full 644-pair sweep found zero candidates clearing both momentum thresholds. Crash gate not triggered (BTC +0.01%, flat). BTC weekly-downtrend gate not triggered (-1.85%, inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around. No trades placed; Steps 3-5 N/A (zero exposure), skipping order/stop/trade-log actions.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
