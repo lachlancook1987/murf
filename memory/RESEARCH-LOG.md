@@ -29834,3 +29834,27 @@ No new candidates found beyond re-checking these two; no full fresh 600+ pair sw
 ### Decision: **HOLD — no new entries, no open positions to manage.** ACH looked like it had cleared the earlier momentum-peak-check rejection, but a closer look shows the honest ATR-adjusted stop breaks R:R, and live cross-exchange divergence (~17%) plus no catalyst confirms this is likely a thin/isolated Kraken book move, not real broad-market momentum. Per the gate-protection default rule, HOLD stands. No trades placed; skipping Steps 4-8 (no order/stop/trade-log/commit needed).
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
+
+---
+
+## 2026-07-29 — Midday Scan (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $64,403.90 → **+0.88%** (o $63,844.50). Crash gate: not triggered. **BTC 5-day trend check:** $65,052.40 (Jul 24 open) → $64,403.90 now = **-1.00%**, inside the ±3% band — weekly-downtrend gate **not triggered**, standard entry rules apply.
+
+**Fresh discovery sweep** (Kraken-native, full 694 online USD pairs, live Ticker): 23 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 23 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **OGNUSD** | **+6.07%** | **+6.28%** | 24min (fresh) | 23.76x (huge) | Clears both base thresholds cleanly — see rejection below |
+| UAIUSD | +0.64% | +9.81% | 24min | 0.70x | 4h clears, 1h below threshold. SKIP. |
+| FLOWUSD | +2.90% | +5.19% | 24min | 1.56x | 4h clears, 1h just below threshold. SKIP. |
+| GAIBUSD | +0.00% | +9.16% | 84min | 0.00x | 4h clears, 1h flat, dead vol. SKIP. |
+| VELVETUSD, NANOUSD, USUSD, KAITOUSD, CXTUSD, NEXUSD, XXMRZUSD, AZTECUSD, BLENDUSD, NOBODYUSD, IDEXUSD, AVAAIUSD, DBRUSD, UNIUSD, OPENUSD, INXUSD, FFUSD, SAFEUSD, ARCUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**OGN/USD — rejected on spread-instability gate, hard fail.** Only candidate clearing both base thresholds (1h +6.07%, 4h +6.28%, fresh 24min high, huge volume 23.76x). Live spread checked three times ~2s apart via `kraken.sh quote`: **0.85%, 0.98%, 1.22%** — flickering across the ≤1% hard-skip line rather than holding cleanly under it, indicating a thin book that can't be relied on to fill at the sampled spread. Catalyst check (Perplexity): no confirmed project-specific news — "momentum-driven buying with rising volume," not a dated catalyst. Cross-exchange check: CoinGecko $0.01821 / CoinMarketCap $0.01705 vs Kraken ~$0.0164 → ~4-10% divergence, within tolerance (not the blocker). Net: same thin-book pattern as PRIME/ANKR (2026-07-28) — rejected on the unstable spread alone. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** OGN was the only candidate clearing both momentum thresholds but hard-fails the spread gate on an unstable, flickering book (~0.85-1.22% across three checks). Nothing else in the 23-pair shortlist clears both base thresholds. Crash gate not triggered (BTC +0.88%). BTC weekly-downtrend gate not triggered (-1.00%, inside band). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
