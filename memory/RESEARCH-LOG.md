@@ -29753,3 +29753,62 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. Widest sweep this week (51/643 pairs cleared initial filter) but zero candidates cleared both momentum thresholds (1h>3%, 4h>5%) simultaneously — closest were PUFFER (1h +4.0%, stale 4h) and ALEO (4h +6.6%, stale 1h), both on dead volume. Crash gate not triggered (BTC +0.27%). BTC weekly-downtrend gate remains triggered (-3.97%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~26+ days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-29 — Pre-Session Research (Day 70, Wednesday)
+
+### Step 1-2 — Account state (live)
+
+Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, all historical orders remain `filled`/`canceled` (most recent stop `a2b44cf9`, canceled 2026-05-22) — zero exposure. Nothing to protect on either exchange.
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity $62,642.04 (+0.53%), Kraken widget cited $64,241.00 (+0.81%), CoinGecko $64,382.37 (+2.90%) — the usual multi-source spread; live Kraken ticker at check time: close $64,440.90 vs today's open $63,844.50 → **+0.93%**. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity $1,755.74 (+1.6%); live Kraken $1,918.53 vs today's open $1,919.78 → essentially flat (-0.07%).
+- Fear & Greed: **32 "Fear"** (Binance Square primary), yesterday also 31 "Fear" — not Extreme Fear (>25), so standard 1.2:1 R:R floor applies (not the stricter 1.5:1).
+- BTC perp funding: Binance +0.00206% (8h), Kraken 1.06%/hr, Coinalyze +0.0100% (8h normalized) — unremarkable, no funding-driven signal.
+- Market catalysts: **FOMC decision (Jul 28-29)** is the dominant macro driver, markets watching hold-vs-25bps-hike at 3.50-3.75%; CLARITY Act regulatory progress ongoing; GENIUS Act stablecoin KYC proposals; **Zcash Ironwood upgrade live**, **Polygon Ithaca hard fork today**; Bittensor/Render/Chainlink/Ethena highlighted on AI-infra rotation; Deribit BTC options expiry Jul 31; **US-Iran geopolitical re-escalation** (missile launches toward US bases) flagged as a risk-off macro shock.
+- Token unlocks: July 29 flagged as the **largest unlock day of the month (~$916.8M aggregate)** — B2 ($1.45M, ~4.92% mkt cap), HYPE (estimates vary $29M-$690M depending on methodology), PUMP (~$116.7M, already priced in from mid-July), ZRO, EIGEN also named. None held, no exposure impact. No specific dated protocol-upgrade calendar beyond Zcash/Polygon above.
+- Perplexity "top 10 gainers" (Coinranking/CoinMarketCap/CoinGecko, context only per demoted-discovery rule): NEM, Power, PERP, 哈基米, Cellframe, DuckChain, AURORA, Astar, WIF, VANRY — **zero overlap** with the Kraken-native sweep shortlist below, consistent with the pattern all month; not used for discovery.
+- Crash gate: **not triggered** (BTC +0.93% vs today's open).
+- **BTC 5-day weekly-trend check:** Jul 24 daily open $65,052.40 → live $64,440.90 = **-0.94%**, inside the ±3% band. The BTC weekly-downtrend gate is **NOT triggered** today (was triggered most of Jul 28) — standard entry rules apply, no raised 1h>5% bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 697 online USD pairs, live Ticker + 15m OHLC)
+
+17 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 17 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ACHUSD** | **+6.54%** | **+6.29%** | 660min (stale) | 2.57x | Clears both base thresholds — see rejection below |
+| **USELESSUSD** | **+3.69%** | **+6.24%** | 1335min (very stale) | 1.06x | Clears both base thresholds — see rejection below |
+| USUSD | +3.30% | +3.32% | 1215min (stale) | 0.05x (dead) | 4h just misses, 1h just clears. SKIP. |
+| BLENDUSD | +2.87% | +2.44% | 405min | 1.41x | Both below threshold. SKIP. |
+| AZTECUSD | +2.35% | +5.86% | 15min (fresh) | 4.39x | 4h clears, 1h below threshold despite fresh high. SKIP. |
+| PTBUSD | +1.88% | +5.18% | 45min | 1.52x | 4h clears, 1h below threshold. SKIP (also carries standing divergence flag from earlier in the week). |
+| VELVETUSD | +1.67% | +5.84% | 15min | 0.25x | 4h clears, 1h below threshold, weak vol. SKIP. |
+| CHIPUSD | +1.61% | +8.09% | 30min | 3.43x | 4h clears well, 1h below threshold. SKIP. |
+| SAFEUSD | +1.51% | +9.66% | 135min | 2.28x | 4h clears well, 1h below threshold. SKIP. |
+| CSPRUSD, INXUSD, UAIUSD, LOFIUSD, CLOUDUSD, XYOUSD, NEXUSD, FLOWUSD | — | — | — | — | 1h below threshold in all cases (INX/UAI have huge 4h moves but negligible 1h — already-faded pumps). SKIP. |
+
+**ACH/USD — rejected, momentum-peak-check gate (no confirmed breakout).** Only candidate with real volume clearing both base thresholds (1h +6.54%, 4h +6.29%), tight live spread (0.22%, ask $0.004540/bid $0.004530), online and confirmed via `kraken.sh assets`. Cross-exchange check: Kraken $0.00454 vs CoinMarketCap $0.004263 / CoinGecko $0.004268 → **+6.4% divergence**, comfortably inside tolerance. Catalyst check found an Illinois money-transmitter license (dated Jun 25 — over a month old, not fresh) and an ongoing World Cup 0%-fee promo campaign (not a dated trigger for today specifically) — no catalyst confirmed <6h old. Candle detail: the 24h high ($0.00457) was set ~11h ago; price is **not** declining from it — it's been recovering steadily over the last 2h (from $0.0042 up to $0.00454) — but has **not yet broken above** that prior high. Per the momentum-peak-check gate, entry on a stale (>60min) high requires either a confirmed breakout above the prior high or a catalyst <2h old; neither condition is met here — price is approaching resistance, not through it. **SKIP**, consistent with the gate's conservative default (a live breakout attempt is watchable on a subsequent scan, not an entry signal on its own).
+
+**USELESS/USD — rejected, momentum-peak-check gate (stale, declining high) plus standing divergence history.** 24h high was set ~22h ago and current price is off that high by 3.64% and declining — the textbook "buy the rumour, sell the news" pattern the gate exists to catch. This pair also carries a standing cross-exchange price-divergence rejection from 2026-07-25 (~32% divergence vs CoinGecko/CMC); did not re-run the cross-exchange check since the momentum-peak-check gate alone is decisive. **SKIP.**
+
+### Step 5 — Risk factors
+
+- ACH was the cleanest technical setup of the sweep (tight spread, real volume, no cross-exchange divergence) but fails the momentum-peak-check gate on a technicality — price approaching but not yet through an 11h-old high, with no fresh catalyst to justify an early entry. Worth re-checking on the next scan for a confirmed breakout above $0.00457.
+- BTC weekly-downtrend gate cleared today (-0.94%, inside ±3% band) after being triggered most of yesterday — no longer a binding constraint.
+- Fear & Greed is 32 (Fear), not Extreme Fear — standard 1.2:1 R:R floor would apply had any candidate reached that check.
+- July 29 flagged by Perplexity as the month's largest token-unlock day (~$916.8M aggregate) — elevated sell-pressure backdrop across several large-cap alts (HYPE, PUMP, ZRO, EIGEN); none held, no direct exposure impact but worth noting as a headwind for any late-day momentum entries in those names.
+- FOMC decision lands this week (Jul 28-29) — could produce a fresh, dated macro catalyst on the announcement itself; worth a follow-up scan post-decision.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.5598 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ACH/USD and USELESS/USD were the only two candidates (of 17 shortlisted) clearing both the 1h>3% and 4h>5% momentum thresholds. ACH fails the momentum-peak-check gate — approaching but not yet breaking its 11h-old high, no catalyst <2h old. USELESS fails the same gate more decisively (22h-old high, declining) plus carries a standing cross-exchange divergence rejection. Crash gate not triggered (BTC +0.93%). BTC weekly-downtrend gate cleared today. Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. ACH/USD cleared both momentum thresholds (1h +6.5%, 4h +6.3%, clean spread/no divergence) but hard-failed the momentum-peak-check gate — approaching but not yet breaking an 11h-old high, no catalyst <2h old. USELESS/USD cleared momentum but failed the same gate more decisively (22h-old high, declining) plus a standing divergence rejection. Crash gate not triggered (BTC +0.93%). BTC weekly-downtrend gate cleared today (-0.94%). Zero open positions, $115.56 cash available."
+
+Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~27 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
