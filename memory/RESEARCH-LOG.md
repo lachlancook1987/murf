@@ -29812,3 +29812,25 @@ Kraken: $115.5598 ZUSD (100% cash) + dust only (usual basket + $0.1066 ZAUD), un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no qualifying setups. ACH/USD cleared both momentum thresholds (1h +6.5%, 4h +6.3%, clean spread/no divergence) but hard-failed the momentum-peak-check gate — approaching but not yet breaking an 11h-old high, no catalyst <2h old. USELESS/USD cleared momentum but failed the same gate more decisively (22h-old high, declining) plus a standing divergence rejection. Crash gate not triggered (BTC +0.93%). BTC weekly-downtrend gate cleared today (-0.94%). Zero open positions, $115.56 cash available."
 
 Attempted per mandatory always-notify rule — **FAILED again**: `0 messages left`, quota exhausted. Now ~27 days of quota exhaustion, unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-29 — Session-Open Execution Check (monitoring only, no trades)
+
+**Kraken:** $115.5598 ZUSD (100% cash) + dust only, unchanged since 2026-07-24 EOD. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, orders all historical filled/canceled, zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $64,397.50 → +0.87% (o $63,844.50). Crash gate: not triggered.
+
+**Re-checked pre-session's two rejected candidates, since real-time conditions can shift fast:**
+
+- **ACH/USD — moved sharply since pre-session.** Price ran from ~$0.00454 (pre-session) to $0.00505 (now), +14.9% vs today's open, with a genuinely fresh 24h high ($0.0052, set ~45min ago at the 11:15 candle) — this would satisfy the momentum-peak-check gate that blocked it earlier (stale/no-breakout). 1h momentum +5.0%, 4h +13.5%, both clear thresholds. However two things kill it on closer look:
+  1. **Realized ATR this session is extreme** — 15m candle ranges averaging ~4%, several 6-7% (e.g. 11:15 candle: $0.00487→$0.00520, a 6.8% range in 15 minutes). This meets the strategy's high-ATR exception (`ATR >3% intraday` → 3.5% trail, not the 2.5% default) by its own realized behavior, regardless of ticker whitelist. At a 3.5% stop, R:R at T1 (+3%) = 3/3.5 ≈ **0.86:1 — fails the 1.2:1 floor**. Using the 2.5% default instead just to pass R:R would mean accepting near-certain noise-stop risk on a coin swinging 4-7% per 15min candle, and picking the stop size that makes the number work is exactly the kind of gate-loosening the strategy prohibits.
+  2. **Cross-exchange divergence, rechecked live via Perplexity:** other sources cluster ACH around $0.0043 vs Kraken's $0.00505–0.00508 → **≈17% divergence**, inside the >15-20% reject band (and no catalyst confirmed — Perplexity found no market-moving ACH news in the last few hours, same "no catalyst" read as pre-session). This is the same pattern (PTB, ALKIMI, TNSR) of a thin/illiquid book pumping in isolation from the broader market, not a broad-market move.
+  Net: **SKIP**, decisively — R:R fails at the honestly-applicable stop, and the move looks Kraken-isolated with no catalyst.
+- **USELESS/USD** — now only +2.4% vs today's open (below even the 3% first-stage filter), no longer a candidate.
+
+No new candidates found beyond re-checking these two; no full fresh 600+ pair sweep run given pre-session's sweep was recent and BTC context essentially unchanged.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ACH looked like it had cleared the earlier momentum-peak-check rejection, but a closer look shows the honest ATR-adjusted stop breaks R:R, and live cross-exchange divergence (~17%) plus no catalyst confirms this is likely a thin/isolated Kraken book move, not real broad-market momentum. Per the gate-protection default rule, HOLD stands. No trades placed; skipping Steps 4-8 (no order/stop/trade-log/commit needed).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
