@@ -29858,3 +29858,62 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** OGN was the only candidate clearing both momentum thresholds but hard-fails the spread gate on an unstable, flickering book (~0.85-1.22% across three checks). Nothing else in the 23-pair shortlist clears both base thresholds. Crash gate not triggered (BTC +0.88%). BTC weekly-downtrend gate not triggered (-1.00%, inside band). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
+
+---
+
+## 2026-07-29 — Evening Scan (~20:06 UTC, monitoring only, no new trades)
+
+### Step 1-2 — Account state (live)
+
+**VELVET/USD position closed since last log entry.** `kraken.sh account` shows VELVET balance 0.00000, ZUSD $115.0274 — the trailing stop (`OJCMQI-32UCH-Q6MF7I`) filled at 15:41:57 UTC, ~37min after the 15:04:56 entry. Pulled `ClosedOrders` directly to confirm: buy fill $0.4479 (cost $39.90198, fee $0.31922), sell fill $0.4490 (cost $40.00888, fee $0.32007) — raw price move was actually +0.25% (stop trailed up on an initial pop before reversing), but round-trip fees ($0.639) turned it into a net loss of **−$0.5324 (−1.32%)**. Logged as a closure entry in TRADE-LOG.md (was previously unlogged). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. Alpaca: `positions` → `[]`, orders all historical filled/canceled (stop `a2b44cf9` canceled since 2026-05-22) — zero exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity)
+
+- BTC: Perplexity range $62,642–$64,382 (source-dependent, same spread as pre-session); live Kraken $63,422.60 vs today's open $63,844.50 → **-0.66%**. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity $3,036.82 (-3.54%) — another confirmed bad Perplexity read (consistent with month-long pattern); live Kraken $1,882.86 vs today's open $1,919.78 → **-1.92%**.
+- Fear & Greed: **32 "Fear"** (Binance Square primary, consistent with earlier today) — not Extreme Fear, standard 1.2:1 R:R floor would apply.
+- BTC perp funding: Binance +0.00206% (8h), other venues ~0.01% (8h normalized) — unremarkable.
+- Market catalysts: **FOMC decision** (Jul 28-29, results likely imminent/just landed) remains the dominant macro driver; **Morgan Stanley launched spot ETH/SOL ETPs** (0.14% fee, staking rewards) — Perplexity claims this lifted ETH ~2% intraday, though live Kraken ETH is actually down -1.92% vs today's open, another instance of Perplexity's price/direction claims not matching live Kraken data; Russia issued an international arrest warrant for Telegram's Pavel Durov (headline risk, not directly crypto-price-moving); GENIUS Act stablecoin KYC proposal (USDC/USDT relevant, not held); XRP catalyst (OSL Digital Securities SFC-licensed retail XRP trading) — not currently a Kraken sweep candidate; Deribit BTC options expiry Jul 31 flagged as upcoming volatility trigger.
+- Token unlocks: July 29 remains flagged as the month's largest unlock day (~$916.8M aggregate) — BEAT, SUI, HYPE, PUMP named; none held, no exposure impact.
+- Crash gate: **not triggered** (BTC -0.66% vs today's open).
+- **BTC 5-day weekly-trend check:** Jul 24 daily open $65,052.40 → live $63,422.60 = **-2.51%**, inside the ±3% band but the closest to the edge today (was -0.94% to -1.00% earlier). BTC weekly-downtrend gate **not triggered** — standard entry rules apply, though worth watching if BTC keeps drifting down.
+
+### Step 4 — Discovery sweep (Kraken-native, full 699 online USD pairs, live Ticker + 15m OHLC)
+
+26 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 26 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| VELVETUSD | +1.81% | +1.23% | 186min | 0.71x | Our just-closed position, now +16.3% vs open — ran further after our stop fired, but neither 1h nor 4h clears now; stale high. Not a re-entry candidate this scan. SKIP. |
+| REUUSD | -0.05% | **+17.37%** | 36min | 0.32x | 4h clears huge but 1h flat — already faded from the spike, weak volume. SKIP. |
+| ROBOUSD | +0.52% | **+11.36%** | 21min | 2.30x | 4h clears well with real volume and fresh high, but 1h below 3% threshold. SKIP. |
+| TAKEUSD | -0.63% | **+5.86%** | 96min | 1.74x | 4h clears, 1h negative. SKIP. |
+| SENTUSD | -0.57% | +4.97% | 21min | 1.83x | 4h just misses 5% bar, 1h negative. SKIP. |
+| BLZUSD | **+3.38%** | +3.90% | 36min | 0.00x | 1h clears, 4h just misses 5% bar, dead volume. SKIP. |
+| USUSD | -0.30% | +4.41% | 51min | 0.00x | Both below/at threshold, dead vol. SKIP. |
+| BTRUSD | 0.00% | +4.08% | 141min | 0.00x | Both below threshold. SKIP. |
+| KAITOUSD, GAIBUSD, CXTUSD, SAFEUSD, FLOWUSD, SCORUSD, B2USD, BLENDUSD, ARCUSD, NIGHTUSD, CLOUDUSD, DBRUSD, CCDUSD, METUSD, OPENUSD, IDEXUSD, AZTECUSD, XXMRZUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**No candidate clears both the 1h>3% and 4h>5% thresholds simultaneously.** Closest misses: ROBO clears 4h (+11.36%, fresh 21min high, real 2.30x volume) but 1h (+0.52%) falls well short. BLZ clears 1h (+3.38%) but 4h (+3.90%) just misses the 5% bar on dead volume. REU has the largest 4h move (+17.37%) but has already faded on the 1h (flat) — textbook already-priced-in pump.
+
+### Step 5 — Risk factors
+
+- VELVET (our just-closed position) continued running after the stop fired (+16.3% vs open now) — a reminder that trailing stops will sometimes leave gains on the table, but the stop did its job protecting capital when the initial pop reversed; not a signal to chase back in without a fresh qualifying setup.
+- BTC weekly-downtrend gate is close to triggering (-2.51%, band is ±3%) — worth tightening scrutiny on pure-momentum entries if it crosses -3% on the next scan.
+- Perplexity's ETH read (-3.54%, reported price $3,036.82) is off by ~58% from Kraken's actual $1,882.86 — another concrete instance of the context-only demotion being correct; also claimed ETH +2% intraday from the Morgan Stanley ETP news, contradicted by live Kraken (-1.92%) — Perplexity used for catalyst awareness only, never for price/direction.
+- Fear & Greed 32 "Fear" — standard 1.2:1 R:R floor would apply if any candidate reached that check (none did).
+- FOMC decision (Jul 28-29) still the dominant macro overhang — could produce a fresh dated catalyst on the announcement itself; worth a follow-up scan.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available (down $0.53 from the VELVET stop-out) — no capital constraint on the next qualifying setup.
+
+### Decision: **HOLD — no new entries.** 26 candidates cleared the initial vs-open/spread/off-high filter but none cleared both the 1h>3% and 4h>5% momentum thresholds simultaneously — closest were ROBO (4h only) and BLZ (1h only, 4h just short). Crash gate not triggered (BTC -0.66%). BTC weekly-downtrend gate not triggered but drifting closer to the -3% band (-2.51%). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+VELVET stop-out (net -$0.53, -1.32%) since the last update warrants a notification per the mandatory always-notify rule.
+
+bash scripts/clickup.sh "[CRYPTO SCAN] VELVET/USD trailing stop filled at $0.4490 (~37min hold, net -$0.53/-1.32% after fees) - position now flat, $115.03 cash. Fresh sweep of 26 candidates found none clearing both momentum thresholds (1h>3%, 4h>5%) simultaneously - closest were ROBO (4h +11.4%, 1h weak) and BLZ (1h +3.4%, 4h just short). Crash gate not triggered (BTC -0.66%). Decision: HOLD."
+
+Attempted — **FAILED**: `0 messages left`, CallMeBot quota still exhausted. Now ~27 days unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
