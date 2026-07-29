@@ -29917,3 +29917,34 @@ VELVET stop-out (net -$0.53, -1.32%) since the last update warrants a notificati
 bash scripts/clickup.sh "[CRYPTO SCAN] VELVET/USD trailing stop filled at $0.4490 (~37min hold, net -$0.53/-1.32% after fees) - position now flat, $115.03 cash. Fresh sweep of 26 candidates found none clearing both momentum thresholds (1h>3%, 4h>5%) simultaneously - closest were ROBO (4h +11.4%, 1h weak) and BLZ (1h +3.4%, 4h just short). Crash gate not triggered (BTC -0.66%). Decision: HOLD."
 
 Attempted — **FAILED**: `0 messages left`, CallMeBot quota still exhausted. Now ~27 days unresolved since first flagged 2026-07-02; still needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-29 — Late Scan (~21:01 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since VELVET closed earlier today. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, orders all historical filled/canceled (stop `a2b44cf9` canceled since 2026-05-22) — zero exposure.
+
+**Live quote vs today's open:** BTC $63,421.50 → **-0.66%** (o $63,844.50). Crash gate: not triggered. **BTC 5-day trend check:** Jul 24 open $65,052.40 → live $63,421.50 = **-2.51%**, inside the ±3% band — weekly-downtrend gate not triggered, standard entry rules apply.
+
+### Step 4 — Discovery sweep (Kraken-native, full 644 online USD pairs, live Ticker + 15m OHLC)
+
+24 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 24 to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| REUUSD | -3.79% | +7.29% | 90min | 0.01x | 4h clears, 1h negative — faded since evening scan (was flat, now down). SKIP. |
+| TAKEUSD | +1.75% | +6.69% | 150min | 0.08x | 4h clears, 1h below threshold, dead vol. SKIP. |
+| USUSD | +1.33% | +4.35% | 105min | 0.00x | Both below threshold, dead vol. SKIP. |
+| ZBCNUSD | +1.08% | +4.19% | 15min (fresh) | 0.09x | Both below threshold despite fresh high, weak vol. SKIP. |
+| BLZUSD | +0.33% | +4.24% | 0min (fresh) | 0.00x | Both below threshold, dead vol. SKIP. |
+| B2USD | +0.99% | +3.59% | 45min | 0.00x | Both below threshold. SKIP. |
+| INXUSD | +2.08% | -0.15% | 510min | 0.00x | 1h below threshold, 4h negative. SKIP. |
+| KAITOUSD, NANOUSD, SAFEUSD, GAIBUSD, CXTUSD, FLOWUSD, SENTUSD, SCORUSD, BLENDUSD, ARCUSD, BTRUSD, CLOUDUSD, OPENUSD, DBRUSD, IDEXUSD, AZTECUSD, CCDUSD | — | — | — | — | All below both momentum thresholds this check (several negative on one or both windows). SKIP. |
+
+**No candidate clears both the 1h>3% and 4h>5% thresholds simultaneously.** REU/USD had the largest 4h move (+7.29%) but has faded hard on the 1h (-3.79%) since the evening scan flagged it as flat — confirms the "already-priced-in pump" read from an hour ago. TAKE/USD similarly clears 4h (+6.69%) but 1h (+1.75%) falls short, also consistent with the evening scan's read. Nothing new entered the shortlist with fresh momentum on both windows.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Full 644-pair sweep found zero candidates clearing both momentum thresholds; the two closest (REU, TAKE) are continuations of setups already rejected in the evening scan and have since faded further rather than strengthened. Crash gate not triggered (BTC -0.66%). BTC weekly-downtrend gate not triggered (-2.51%, inside ±3% band but the closest to the edge today — worth watching). Per the gate-protection default rule, HOLD stands. No trades placed; skipping Steps 4-8 order/stop/trade-log actions (no commit needed per Step 8 rule).
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
