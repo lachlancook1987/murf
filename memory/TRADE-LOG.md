@@ -8363,3 +8363,11 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** PRIME and ANKR both cleared momentum thresholds (including the raised weekly-downtrend-gate bar) but both hard-fail the ≤1% spread gate at time of check — thin books on fast-moving small-caps. Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC +0.35% vs day open). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+### Jul 29 — EOD Snapshot (Day 70, Wednesday)
+**Portfolio:** $115.5598 | **Cash:** $115.5598 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.2202 (−35.72%) | **vs BTC:** −1.40%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~88
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.5598 unchanged since Jul 27, zero open positions, `orders: {"open": {}}` (dust unchanged across the usual basket plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC rose from $63,373.10 (yesterday's EOD) to $64,262.00 (+1.40%), so the bot's flat cash day underperformed BTC by -1.40% by sitting out an up day. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`, unresolved since first flagged 2026-07-02, now ~27+ days), needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.56 available for a fresh entry.
