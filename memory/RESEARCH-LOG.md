@@ -30109,3 +30109,25 @@ bash scripts/clickup.sh "[CRYPTO SCAN] HOLD - $115.03 cash, no positions. Widest
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~28 days running; needs resubscription at callmebot.com/61477788635.
 
+## 2026-07-30 — Midday Scan #3 (22:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket unchanged, plus $0.1066 ZAUD), unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`; `orders` reconfirmed stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Live quote vs today's open:** BTC $64,791.70 → **+1.39%** (o $63,901.00), -0.44% off 24h high ($65,078.50). Crash gate: not triggered.
+
+**Fresh discovery sweep** (Kraken-native, full 646 online USD pairs, live Ticker): 57 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 18 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| ROBOUSD | +0.22% | +3.48% | 120min | 0.00x | Prior rally has fully faded — both windows now below threshold, dead vol. SKIP. |
+| HDXUSD | +2.36% | +19.14% | 0min | 0.00x | 4h clears huge, 1h just below 3% threshold, dead vol. SKIP. |
+| RLCUSD | +2.75% | -0.17% | 270min | 0.32x | 1h just below threshold, 4h negative (already faded), stale high. SKIP. |
+| DCRUSD | +3.59% | +8.64% | 210min | 1.51x | Only candidate clearing both mechanical thresholds — but 24h high is 210min old (>60min), fails momentum-peak-check freshness with no fresh 1h breakout above the prior high. SKIP. |
+| UNIUSD, PUMPUSD, XNYUSD, PENGUUSD, ZBTUSD, TRUSTUSD, INJUSD, DOVUUSD, OMIUSD, FILUSD, DRIFTUSD, NOSUSD, ACUUSD, ADAUSD | — | — | — | — | All below both momentum thresholds this check. SKIP. |
+
+**DCRUSD — rejected on momentum-peak-check freshness, not evaluated further.** The only candidate numerically clearing 1h>3% and 4h>5% together (1h +3.59%, 4h +8.64%), but its 24h high was set 210 minutes ago and price is off that high, not breaking above it — the momentum-peak-check gate requires the high to be <60min old or a fresh breakout above it, neither of which holds here. Per the gate, this is a stale/already-priced-in move, not evaluated further on catalyst/spread/R:R.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 57 pairs cleared the initial filter; only DCR/USD cleared both momentum thresholds and it fails the momentum-peak-check freshness gate outright. Nothing else in the top-18 shortlist clears both base thresholds. Crash gate not triggered (BTC +1.39% intraday). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
