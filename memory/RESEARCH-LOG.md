@@ -29977,3 +29977,54 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Decision: **HOLD — no new entries, no open positions to manage.** Full 644-pair sweep found zero candidates clearing both momentum thresholds. Crash gate not triggered (BTC +0.01%, flat). BTC weekly-downtrend gate not triggered (-1.85%, inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around. No trades placed; Steps 3-5 N/A (zero exposure), skipping order/stop/trade-log actions.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred). CallMeBot quota issue remains unresolved (unchanged from prior sessions) — not re-flagged here since already logged repeatedly.
+
+---
+
+## 2026-07-30 — Pre-Session Research (Day 71, Thursday)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/VELVET/WLD/XETH/XXBT/XXDG/XXLM/XXRP/ZAUD dust, all sub-$1), unchanged since VELVET closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; `orders` reconfirmed stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity $64,382.37 (+2.9% 24h) — live Kraken last $63,955.90 vs today's open $63,901.00 → **+0.09%** intraday (Kraken's 24h change consistent with the broader up-move; Kraken remains sole pricing/gating authority per the ongoing Perplexity-price divergence pattern).
+- ETH: Perplexity $2,465.83 (+0.91%) — plausible range this time, not cross-checked against Kraken live (no ETH position, no ETH candidate this scan).
+- Fear & Greed: **32 "Fear"** — not Extreme Fear, standard 1.2:1 R:R floor applies if any candidate reaches that check.
+- BTC perp funding: Binance +0.00206% (8h), Coinalyze ~+0.01% (8h norm), Glassnode +0.006% — unremarkable, no funding-driven signal.
+- Market catalysts: **FOMC rate decision** (today) is the dominant macro driver; US-Iran geopolitical escalation adds risk-off pressure; Deribit monthly BTC options expiry Jul 31 flagged as a near-term volatility trigger (~$66k positioning); ENA/Ethena up to +12% on USDe integration into BlackRock's Aladdin platform (not a Kraken sweep candidate, not held).
+- Token unlocks: Kamino (KMNO) ~$4.14M unlock today (Jul 30, 2.97% of released supply); SUI and EIGEN unlocks Aug 1 (~$9.9M and ~$7.6M) — none held, no exposure impact. No confirmed major protocol upgrade with fixed date this week (Ethereum Glamsterdam remains H2-2026, no fixed mainnet date).
+- Crash gate: **not triggered** (BTC +0.09% intraday vs today's open; +2.9% 24h per Perplexity).
+- **BTC 5-day weekly-trend check** (via Kraken daily OHLC): Jul 25 open $64,088.20 → live $63,955.90 = **-0.21%**, comfortably inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry rules apply (not the raised 1h>5% bar).
+
+### Step 4 — Discovery sweep (Kraken-native, full 644 online USD pairs, live Ticker + 15m OHLC)
+
+49 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — widest sweep in recent sessions (BTC's +2.9% day lifted the whole board). Pulled 15m OHLC on the top 22 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **EDGEUSD** | **+8.85%** | **+8.65%** | 0min (fresh) | 24.47x (huge) | Clears both thresholds cleanly with strong volume — see rejection below |
+| WEMIXUSD | +3.13% | +5.41% | 0min | 0.34x | Numerically clears both thresholds but volume ratio 0.34x is *below* trailing average — no real buying pressure behind the move, textbook dead-volume drift. SKIP. |
+| RLCUSD | -0.68% | +7.47% | 30min | 1.08x | 4h clears, 1h negative — already faded. SKIP. |
+| BANDUSD | +1.04% | +6.87% | 15min | 0.00x | 4h clears, 1h below threshold, dead vol. SKIP. |
+| HNTUSD | +1.16% | +5.79% | 45min | 3.99x | 4h clears with real volume, but 1h well below 3% threshold. SKIP. |
+| CTSIUSD | -1.94% | +2.16% | 90min | 8.67x | Huge volume but both momentum windows fail. SKIP. |
+| XNYUSD, SWARMSUSD, AEROUSD, ACUUSD, PROMPTUSD, DYMUSD, AIOUSD, STBLUSD, CVCUSD, FLUXUSD, ICXUSD, FOLKSUSD, QIUSD, CHECKUSD, WINGSUSD, FUNUSD | — | — | — | — | All below both momentum thresholds this check (several 0.00x dead volume despite nominal price moves). SKIP. |
+
+**EDGE/USD — rejected on cross-exchange price-divergence gate, hard fail; also unconfirmed catalyst.** Strongest numeric candidate of the scan by a wide margin: 1h +8.85%, 4h +8.65%, fresh (0min) 24h high, huge volume (24.47x trailing average) — would otherwise be a clean entry. Live spread confirmed tight (ask $0.07001/bid $0.06931 → 1.0%, at the edge but within the ≤1% sweep tolerance used at ticker time). However: (1) an initial Perplexity catalyst query returned data for "Edgeware (EDG)" priced at $0.0000125–0.0000329 — a completely different, unrelated token (ticker collision), with no catalyst and one source showing $0 24h volume; (2) a follow-up query specifically identifying Kraken's listing ("Definitive/EDGE") found CoinGecko pricing it at $0.05512 vs Kraken's live ~$0.0693 — a **~25.7% divergence**, past the >15-20% cross-exchange divergence-reject band from the 2026-07-24 gate; (3) no confirmed project-specific news/catalyst was found for the correct Kraken-listed EDGE token itself. Combination of ticker-identity ambiguity, no catalyst, and material cross-exchange divergence is the same red-flag pattern that killed PTB/ALKIMI/TNSR — thin, not-yet-arbitraged, or listing-distorted book, not a real broad-market move. **SKIP.**
+
+### Step 5 — Risk factors
+
+- FOMC rate decision lands today — could produce sharp BTC/majors volatility in either direction after this research snapshot; worth a fresh scan post-announcement.
+- Deribit BTC options expiry Jul 31 (tomorrow) flagged as a near-term volatility trigger around the $66k area.
+- EDGE's 25.7% cross-exchange divergence plus a ticker collision with an unrelated "Edgeware" token is a reminder to always disambiguate the asset before trusting a catalyst read, not just before trusting the price.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Widest sweep of recent sessions (49 candidates past the initial filter) surfaced one candidate (EDGE/USD) that cleared both momentum thresholds cleanly with real volume, but it hard-fails the cross-exchange price-divergence gate (~25.7% vs CoinGecko) compounded by an unresolved ticker-identity/catalyst ambiguity. WEMIX clears both thresholds numerically but on dead volume (0.34x), no real buying pressure. Nothing else in the top-22 shortlist clears both base thresholds. Crash gate not triggered (BTC +0.09% intraday, +2.9% 24h). BTC weekly-downtrend gate not triggered (-0.21%, well inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around. FOMC decision today and options expiry tomorrow are worth a follow-up scan.
+
+### Step 6 — Notification
+
+WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs regardless of trade action) — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~28 days running; needs resubscription at callmebot.com/61477788635.
