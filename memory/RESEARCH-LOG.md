@@ -30056,3 +30056,56 @@ WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs re
 ### Decision: **HOLD — no new entries, no open positions to manage.** STORJ and EVAA both cleared momentum thresholds cleanly but STORJ carries an active bearish bankruptcy catalyst and EVAA fails the cross-exchange divergence gate by a wide margin (likely ticker ambiguity). Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC +1.28%). BTC weekly-downtrend gate not triggered (+0.98%, inside ±3% band). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-30 — Midday Scan #2 (~15:35 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket unchanged, plus $0.1066 ZAUD), unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; `orders` reconfirmed stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity range $62,642–$64,382 (source-dependent, consistent spread with earlier today); live Kraken $64,847.90 vs today's open $63,901.00 → **+1.48%** intraday. Kraken remains sole pricing/gating authority.
+- ETH: Perplexity $3,036.82 (**-3.54%**) — plausible on its face but not cross-checked against Kraken live (no ETH position, no ETH candidate this scan); prior sessions have repeatedly found Perplexity ETH reads badly off Kraken, so treated as context only.
+- Fear & Greed: **32 "Fear"** (unchanged from earlier today) — not Extreme Fear, standard 1.2:1 R:R floor applies if any candidate reaches that check.
+- BTC perp funding: Binance +0.00206% (8h), Glassnode 0.006% — unremarkable.
+- Market catalysts: **Fed held rates at 3.50%-3.75% with three hawkish dissents** (FOMC decision now landed) — read as macro risk-appetite driver, not crypto-native; spot BTC ETF flows reportedly flipped from a 10-day outflow streak to ~$221-223.5M net inflows (bullish); whale accumulation (~29,075 BTC) cited; Chainlink SWIFT integration and Ethena USDe/BlackRock Aladdin integration flagged as altcoin catalysts (neither a Kraken sweep candidate this scan); core PCE inflation report and month-end rebalancing flagged as next macro catalysts.
+- Token unlocks: Kamino (KMNO) ~$4.14M unlock today (Jul 30); GUNZ (GUN) ~$1.17M unlock today; SUI (~$9.91M) and EIGEN (~$7.63M) unlocks Aug 1 — none held, no exposure impact, none are sweep candidates this scan.
+- Crash gate: **not triggered** (BTC +1.48% intraday vs today's open).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 25 open $64,088.20 → live $64,847.90 = **+1.19%**, comfortably inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry rules apply (not the raised 1h>5% bar).
+
+### Step 4 — Discovery sweep (Kraken-native, full 651 online USD pairs, live Ticker + 15m OHLC)
+
+65 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — one of the widest fields this week. Pulled 15m OHLC on the top 30 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ROBOUSD** | **+3.67%** | **+15.25%** | 5min (fresh) | 0.17x (dead) | Clears both thresholds numerically — see rejection below |
+| CAPUSD | -0.65% | +12.12% | 20min | 1.66x | 4h clears big, 1h negative — already faded (same pattern as this morning's CAP read). SKIP. |
+| EVAAUSD | +2.49% | +11.20% | 5min | 1.66x | 4h clears, 1h below 3% threshold; same ticker flagged for extreme cross-exchange divergence in the 14:10 UTC scan today — not re-tested since it doesn't clear momentum anyway. SKIP. |
+| DCRUSD | +0.95% | +6.08% | 95min | 0.00x | 4h clears, 1h below threshold, dead vol. SKIP. |
+| PUMPUSD | +3.50% | +3.45% | 5min | 1.08x | 1h clears, 4h below 5% threshold. SKIP. |
+| OMIUSD | +1.08% | +4.49% | 35min | 0.00x | Both below threshold, dead vol. SKIP. |
+| WEMIXUSD | +0.43% | +3.37% | 695min (stale) | 1.15x | Both below threshold, stale high. SKIP. |
+| FETUSD, PENGUUSD, AUCTIONUSD, LDOUSD, ENAUSD, NEARUSD, AKTUSD, FILUSD, UNIUSD, CFGUSD, AEROUSD, FHEUSD, CAKEUSD, ZBTUSD, NOSUSD, ADAUSD, TRUSTUSD, VETUSD, ACUUSD, CTSIUSD, RLCUSD, MYXUSD, XNYUSD | — | — | — | — | All below both momentum thresholds this check (several negative on one or both windows). SKIP. |
+
+**ROBO/USD — rejected, dead volume plus contradictory catalyst read.** The only candidate clearing both mechanical momentum thresholds (1h +3.67%, 4h +15.25%, fresh 5min high, spread confirmed 0.57% live via `kraken.sh quote`, pair `status: online`). But the most recent 15m candle's volume is only **0.17x the trailing 24h average** — materially thinner than WEMIX's 0.34x, which was rejected earlier today for "no real buying pressure behind the move." A price move of this size on dying volume reads as a thin order book being walked up, not real demand. Compounding this, the Perplexity catalyst check returned a **flatly contradictory picture**: CoinMarketCap describes ROBO as down **-5.01% to $0.0134** with a **new all-time low**, "reinforcing selling pressure" and warning of "downtrend continuation" — the opposite narrative to Kraken's live +25.82%-vs-open rally near its 24h high. The only catalyst cited is a vague, undated "AI/robotics narrative," not a fresh dated event. Cross-exchange price gap itself (Kraken $0.01413 vs CMC $0.0134, ~5.4%) is inside the divergence-gate tolerance, but the outright opposite trend narrative plus dead recent volume is a stronger red flag than a pure price-divergence check would catch — same thin/thinly-traded-book pattern as prior EDGE/EVAA/STORJ rejections. **SKIP.**
+
+### Step 5 — Risk factors
+
+- ROBO's dead-volume rally with a contradictory external catalyst read is a reminder that a clean mechanical momentum clear is not sufficient on its own — volume confirmation and catalyst sanity-check both have to hold up.
+- Fed decision has now landed (hold, hawkish dissents) — near-term BTC/majors volatility risk from digesting the outcome remains through the rest of the session.
+- Deribit BTC options expiry Jul 31 (tomorrow) still flagged as a near-term volatility trigger.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Widest field of the week (65 candidates past the initial filter) produced one candidate (ROBO/USD) that cleared both momentum thresholds numerically, but it fails on dead recent volume (0.17x trailing average) plus a directly contradictory external catalyst read (CMC: down 5%, new ATL vs Kraken: +25.82% vs-open near 24h high). CAP and EVAA both clear 4h big but miss 1h (already faded / previously divergence-flagged). PUMP clears 1h but misses 4h. Nothing else in the top-30 shortlist clears both base thresholds. Crash gate not triggered (BTC +1.48%). BTC weekly-downtrend gate not triggered (+1.19%, well inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO SCAN] HOLD - $115.03 cash, no positions. Widest sweep this week (65 candidates) found ROBO/USD clearing both momentum thresholds (1h +3.7%, 4h +15.3%) but rejected on dead volume (0.17x avg) plus contradictory catalyst (CMC shows -5%/ATL vs Kraken's rally). BTC +1.48% intraday, crash gate not triggered."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~28 days running; needs resubscription at callmebot.com/61477788635.
+
