@@ -8393,3 +8393,11 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 **Net P&L:** −$0.5324 (−1.32% of $40.22 notional)
 **Duration:** ~37 minutes (entry 15:04:56 UTC, stop fill 15:41:57 UTC)
 **Notes:** Confirmed via `ClosedOrders` — no closure had yet been logged when this session started. Price action was mildly favorable in raw terms (sell fill $0.4490 > buy fill $0.4479, +0.25%) — the trailing stop trailed up on an initial pop, then reversed and triggered near breakeven. Round-trip fees ($0.639 total) turned a small gross gain into a net loss. Kraken balance confirms flat: VELVET 0.00000, ZUSD back to $115.0274 (vs $115.5598 pre-trade, consistent with the $0.53 net loss plus dust). No further action — position fully closed, stop already consumed.
+
+---
+
+### Jul 30 — EOD Snapshot (Day 71, Thursday)
+**Portfolio:** $115.0274 | **Cash:** $115.0274 (100%) | **Day P&L:** −$0.5324 (−0.46%) | **Phase P&L:** −$64.7526 (−36.02%) | **vs BTC:** −0.39%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~90
+**Notes:** No new trading activity today — pre-session research (widest recent sweep, 49 candidates) found EDGE/USD clearing both momentum thresholds but hard-failed the cross-exchange divergence gate (~25.7% vs CoinGecko) plus an unresolved ticker-identity ambiguity; nothing else cleared. `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the VELVET stop-out closed yesterday (2026-07-29, 15:41 UTC, net −$0.53), zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Day P&L (−$0.53, −0.46%) reflects the VELVET stop-out against the most recent EOD reference ($115.5598, logged Jul 29 before that trade closed) rather than any activity today. BTC essentially flat (−0.07%, $64,262.00 → $64,217.10), so the bot's flat day roughly tracked BTC (−0.39% relative). Phase P&L −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry; FOMC decision (today) and Deribit BTC options expiry (Jul 31) flagged as near-term volatility triggers worth a fresh scan.
