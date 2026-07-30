@@ -30028,3 +30028,31 @@ No WhatsApp notification per Step 7 rule (only notify on action taken; none occu
 ### Step 6 — Notification
 
 WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs regardless of trade action) — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~28 days running; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-07-30 — Midday Scan (14:10 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $64,717.20 → **+1.28%** (o $63,901.00), -0.55% off 24h high ($65,078.50). Crash gate: not triggered. **BTC 5-day trend check:** $64,088.20 (Jul 25 daily open) → $64,717.20 now = **+0.98%**, well inside ±3% band — BTC weekly-downtrend gate **NOT triggered**; standard entry thresholds apply (1h>3%, not the raised 1h>5% bar).
+
+**Fresh discovery sweep** (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC): 58 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — one of the widest fields recently. Pulled 15m OHLC on the top 15 by vs-open to check 1h/4h momentum, high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **STORJUSD** | **+6.75%** | **+8.45%** | 15min (fresh) | 0.76x | Clears both thresholds — see rejection below |
+| **EVAAUSD** | **+7.09%** | **+6.42%** | 0min (fresh) | 3.80x | Clears both thresholds — see rejection below |
+| ROBOUSD | +3.75% | +3.16% | 30min | 2.07x | 1h clears, 4h below 5% threshold. SKIP. |
+| CAPUSD | -0.69% | +8.74% | 30min | 0.28x | 4h clears, 1h negative, weak vol. SKIP. |
+| UNIUSD | +1.90% | +7.24% | 0min | 0.89x | 4h clears, 1h below threshold. SKIP. |
+| CTSIUSD, FHEUSD | +0.04%/+0.85% | +4.41%/+7.06% | 30min/60min | 0.58x/0.00x | Both below combined threshold or dead vol. SKIP. |
+| KTAUSD, RLCUSD, SOONUSD, BANDUSD, TACUSD, KATUSD, CFGUSD, VETUSD | — | — | — | — | All below both momentum thresholds or negligible/zero volume this check. SKIP. |
+
+**STORJ/USD — rejected, bearish bankruptcy catalyst + cross-exchange divergence.** Live Kraken spread confirmed tight (0.81%, ask $0.05216/bid $0.05174), momentum and high-freshness both clean. But Perplexity catalyst check surfaced the actual driver: **Storj Labs filed for Chapter 11 bankruptcy today**, citing "legacy obligations" — reports describe STORJ falling ~17-20% on the news with pricing quoted around $0.0608-$0.0745 across sources, materially above Kraken's live $0.0533 (divergence ~12-28% depending on source, straddling the 15-20% reject band). A bankruptcy filing is an unambiguous bearish catalyst regardless of the technical setup — this reads as restructuring-related volatility/a dead-cat bounce, not a real breakout to buy. **SKIP** — thesis is actively bearish, not just unconfirmed.
+
+**EVAA/USD — rejected, extreme cross-exchange divergence / ticker ambiguity.** Cleanest technical setup of the scan (1h +7.09%, 4h +6.42%, fresh 0min high, strong 3.80x volume) and spread near-zero (0.16%). But cross-exchange check shows wildly inconsistent pricing across sources: CoinGecko $2.57-2.65, CoinMarketCap $1.08, Binance $0.886, vs Kraken's live $0.7646 — divergence ranges from ~14% (Binance) to over 70% (CoinGecko), with sources even disagreeing on direction (day change reported as -11%, +0.5%, +19.89%, and -6.83% across four sources). This is the same ticker-collision/fragmented-pricing pattern that killed EDGE/Edgeware on 2026-07-30 pre-session — almost certainly not the same underlying asset being quoted, or an extremely thin/illiquid book. **SKIP** per the cross-exchange divergence gate.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** STORJ and EVAA both cleared momentum thresholds cleanly but STORJ carries an active bearish bankruptcy catalyst and EVAA fails the cross-exchange divergence gate by a wide margin (likely ticker ambiguity). Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC +1.28%). BTC weekly-downtrend gate not triggered (+0.98%, inside ±3% band). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp notification per Step 7 rule (only notify on action taken; none occurred).
