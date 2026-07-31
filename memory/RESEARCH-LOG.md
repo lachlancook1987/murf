@@ -30222,3 +30222,59 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no new entries, no open positions to manage.** 39 pairs cleared the initial filter — widest sweep of the day — but only XNY and EVAA cleared both momentum thresholds, and both fail on dead volume (0.00x and 0.06x respectively, well below the 2x confirmation bar); EVAA additionally carries a known cross-exchange divergence red flag from 2026-07-30. Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC -3.39% intraday, a red day but nowhere near -20%). BTC weekly-downtrend gate not triggered (-2.43%, inside ±3% band but tightening toward the raised-bar threshold). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+## 2026-07-31 — Pre-Session Research (Evening run, 20:05 UTC)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the VELVET stop-out closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; order history re-confirms stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity $64,382.37 (**+2.9%** 24h) — **contradicted by live Kraken**, which shows last $62,919.90 vs today's open $64,723.00 = **-2.79%** intraday (24h range $62,344.00–$65,369.80). Consistent with the ongoing Perplexity BTC-price divergence pattern flagged all week — Kraken remains sole pricing/gating authority.
+- ETH: Perplexity $1,740.95 (-0.1%) — not cross-checked against Kraken (no ETH position, no ETH candidate this scan), treated as context only.
+- Fear & Greed: **31-32 "Fear"** (Binance 32, cryptofeargreedindex.org 31; Alternative.me's historical page showed a stale 22 "Extreme Fear" read, not a live value) — reading treated as Fear, not Extreme Fear; standard 1.2:1 R:R floor would apply if any candidate reached that check.
+- BTC perp funding: ~+0.01%/8h on major exchanges, Kraken slightly higher (+0.0148% stablecoin-margined, +0.0125% coin-margined) — unremarkable, no funding-driven signal.
+- Market catalysts: CLARITY Act stalled in the Senate (JPMorgan flags lower passage odds as a crypto headwind, Kalshi pricing ~30% enactment odds by year-end) — the clearest bearish crypto-specific headline; BoJ rate decision and US macro data (GDP, PCE, Employment Cost Index) still digesting post-FOMC; Deribit BTC options expiry today flagged with pressure cited around $66k (BTC is well below that, at ~$62.9k); month-end rebalancing/profit-taking adding volatility; Rare Evo 2026 conference (runs through today) flagged as a possible source of altcoin protocol-upgrade announcements, nothing specific surfaced.
+- Token unlocks: OP (~$22.8M, Jul 31), SUI (~$9.78M) and EIGEN (~$7.63M, Aug 1), ENA (~$3.66M, Aug 2); Audiera (BEAT, ~$73.9M/6.82% mkt value) and Kite (KITE, ~$11.4M/6.07%) also flagged for today — none held, none are sweep candidates this scan. Polygon Ithaca hard fork (automatic payment failover, security tooling) went live Jul 30 — no MATIC/POL position or candidate.
+- Crash gate: **not triggered** (BTC -2.79% intraday vs today's open; ordinary volatility, nowhere near -20%).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 26 open $64,312.90 → live $62,919.90 = **-2.17%**, inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%), not the raised 1h>5% bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+38 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 18 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| USUSD | +1.20% | +8.01% | 35min | 0.15x | 4h clears, 1h below 3% threshold, weak vol. SKIP. |
+| XNYUSD | +0.28% | +7.16% | 20min | 0.53x | 4h clears, 1h flat. SKIP. |
+| XIONUSD | +1.74% | +11.25% | 35min | 0.00x | 4h clears big, 1h below threshold, dead vol. SKIP. |
+| **OMIUSD** | **+2.55%** | **+14.10%** | 35min | 1.51x | Closest candidate — 4h clears strongly with real volume, but 1h at +2.55% is just short of the 3% mechanical threshold. Not evaluated further; the 3% line is a hard mechanical gate, not a judgment call. SKIP. |
+| PTBUSD | -0.42% | +5.31% | 65min | 0.14x | 4h clears, 1h negative, high already stale (>60min), weak vol. SKIP. |
+| TLMUSD | +1.80% | +5.20% | 140min | 0.74x | 4h clears, 1h below threshold, stale high. SKIP. |
+| ACHUSD | -1.22% | +4.54% | 95min | 0.79x | Both below thresholds. SKIP. |
+| DRIFTUSD | +0.81% | +5.04% | 80min | 0.01x | 4h clears, 1h below threshold, dead vol. SKIP. |
+| DRVUSD, WINGSUSD, FUNUSD, SXTUSD, PUMPUSD, TAKEUSD, BTRUSD, TUSD, SENTUSD, RARIUSD | — | — | — | — | All below both momentum thresholds this check (several negative on one or both windows, several dead/near-dead volume). SKIP. |
+
+**No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) simultaneously.** OMI/USD came closest — strong 4h (+14.10%) with real volume confirmation (1.51x) — but its 1h reading (+2.55%) sits just under the 3% bar, so it wasn't evaluated further on catalyst/spread/R:R. This is a cleaner rejection than most of today's earlier scans, where a candidate cleared both thresholds but failed downstream on spread, volume, ATR, or divergence gates — here nothing even clears the entry screen.
+
+### Step 5 — Risk factors
+
+- Narrowest/weakest momentum field of the day's several scans — nothing clears both mechanical thresholds outright (contrast with midday's COTI and session-open's XNY/EVAA, which cleared both but failed downstream gates).
+- BTC red across the whole session (-2.79% intraday, -3.39% at the 15:01 UTC check) — broad market weakness suppressing genuine breakouts.
+- CLARITY Act Senate stall is a fresh bearish regulatory headline that could pressure sentiment further into the close.
+- Deribit BTC options expiry today — flagged pressure zone ($66k) is well above current price ($62.9k), reducing near-term relevance of that specific trigger.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 38 pairs cleared the initial filter; none cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) — OMI/USD came closest (4h +14.10%, real volume) but its 1h reading (+2.55%) fell just short of the 3% bar. Crash gate not triggered (BTC -2.79% intraday). BTC weekly-downtrend gate not triggered (-2.17%, inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -2.79% intraday, crash gate not triggered. 38 candidates screened, none cleared both momentum thresholds (OMI/USD closest, 1h +2.55% vs 3% bar, 4h +14.10%). CLARITY Act Senate stall flagged as bearish regulatory headline."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~29 days running; needs resubscription at callmebot.com/61477788635.
