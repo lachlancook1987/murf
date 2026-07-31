@@ -30181,3 +30181,24 @@ Only **18 pairs** cleared vs-open >3% with spread ≤1.5% and within 6% of 24h h
 ### Step 6 — Notification
 
 WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs regardless of trade action) — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~29 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-07-31 — Midday Scan (14:08 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $62,806.70 → **-2.96%** (o $64,723.00), sitting right at the 24h low ($62,806.70). Crash gate: not triggered (threshold -20%). **BTC 5-day trend check:** $64,312.90 (Jul 26 daily open) → $62,806.70 now = **-2.34%**, still inside the ±3% band (tighter than the pre-session -0.34% read as BTC has slid further intraday) — weekly-downtrend gate **not triggered**, standard entry rules apply.
+
+**Fresh discovery sweep** (Kraken-native, full 646 online USD pairs, live Ticker): 34 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 15 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **COTIUSD** | **+10.46%** | **+17.31%** | 15min (fresh) | 2.51x | Clears both momentum thresholds, fresh high, real volume — see rejection below |
+| MUSD | +7.74% | +30.49% | 15min (fresh) | 0.49x | 1h clears, but volume ratio 0.49x is below the 2x confirmation bar — no real surge behind the move. SKIP. |
+| XNYUSD | +5.10% | +5.89% | 195min | 0.03x | Clears both numerically, but high is stale (>60min) and volume dead. SKIP. |
+| NOCKUSD, WINUSD, SENTUSD, RARIUSD, WINGSUSD, BTRUSD, SXTUSD, USUSD, UNITASUSD, DRVUSD, MUBARAKUSD, CAPUSD | — | — | — | — | All below both momentum thresholds this check (several negative on 1h). SKIP. |
+
+**COTI/USD — rejected on ATR/R:R gate, same pattern as 2026-07-29.** Live spread checked at 0.055% (ask $0.018080/bid $0.018070) — comfortably clears the ≤1% cap. But realized 15m candle ranges over the last ~5h are running 2–14% (multiple candles >5%, one 14%), well above the >3% high-ATR threshold that mandates the 3.5% trailing-stop exception per TRADING-STRATEGY.md. At 3.5% stop, R:R = 3% T1 / 3.5% stop ≈ 0.86:1 — below the 1.2:1 floor. A standard 2.5% stop would almost certainly noise-stop given this ATR (candles alone have moved 5-14% peak-to-trough). No valid stop configuration clears the R:R gate. Matches the exact rejection reasoning logged for COTI on 2026-07-29 (killed the ACH entry same day). SKIP.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 34 pairs cleared the initial filter; COTI/USD was the only candidate clearing both momentum thresholds with fresh high and real volume, but it fails the ATR/R:R gate (0.86:1 at the mandatory 3.5% high-ATR trail vs 1.2:1 floor) — same failure mode as its 2026-07-29 rejection. MUSD clears 1h but lacks volume confirmation (0.49x). Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC -2.96% intraday). BTC weekly-downtrend gate not triggered (-2.34%, inside ±3% band but tightening). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
