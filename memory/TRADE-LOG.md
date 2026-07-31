@@ -8409,3 +8409,15 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~90
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the VELVET stop-out closed 2026-07-29, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged: AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/WLD/XETH dust plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure — full order history spot-checked, no new fills. BTC fell from $64,217.10 (yesterday's EOD) to $63,871.30 (−0.54%), so the bot's flat cash day outperformed BTC by +0.54% by sitting out a down day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). No qualifying pre-session or intraday setup was logged today under this session — flat cash day. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~29 days — needs resubscription at callmebot.com/61477788635. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry.
+
+## 2026-07-31 — Midday Scan (14:08 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure.
+
+**Live quote vs today's open:** BTC $62,806.70 → **-2.96%** (o $64,723.00), at 24h low. Crash gate not triggered. BTC 5-day trend -2.34%, inside ±3% band — weekly-downtrend gate not triggered.
+
+**Discovery sweep:** 34/646 online USD pairs cleared initial filter. Only COTI/USD cleared both momentum thresholds (1h +10.46%, 4h +17.31%, fresh 15min high, 2.51x volume) but fails the ATR/R:R gate — realized candle ranges 2-14% require the 3.5% high-ATR trail exception, dropping R:R to ~0.86:1 vs the 1.2:1 floor (same rejection as 2026-07-29). MUSD clears 1h but volume ratio only 0.49x (no confirmation). Nothing else clears both base thresholds.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
