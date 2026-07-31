@@ -8421,3 +8421,23 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-31 — Midday Scan #2 (22:08 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $62,920.60 → **-2.78%** (o $64,723.00). Crash gate not triggered (threshold -20%).
+
+**Discovery sweep** (Kraken-native, full 647 online USD pairs, live Ticker): 69 pairs cleared vs-open >3% and within 6% of 24h high — widest field logged today. Pulled 15m OHLC on the top 25 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **XIONUSD** | **+5.84%** | **+19.04%** | 15min (fresh) | 0.27x | Clears both momentum thresholds and momentum-peak-check, but volume ratio 0.27x is well below the 2x confirmation bar — price rising on below-average volume, thin/low-conviction move. Spread checked anyway (0.93%, would pass) but rejected on volume alone. SKIP. |
+| ATLASUSD | +12.46% | +11.92% | 405min (stale) | 0.00x | Clears both numerically but fails momentum-peak-check (high >60min old, no fresh breakout) and dead volume. SKIP. |
+| TLMUSD | +3.36% | +7.99% | 15min (fresh) | 1.59x | Clears both thresholds, fresh high, but volume ratio 1.59x still under the 2x bar. Spread checked (0.33%, would pass) but rejected on volume. SKIP. |
+| PTBUSD | +0.55% | +6.15% | 75min | 1.75x | 4h clears, 1h below threshold, high already stale. SKIP. |
+| USUSD, XNYUSD, CLVUSD, SIDEKICKUSD, DRVUSD, CAPUSD, KEEPUSD, OMIUSD, TAKEUSD, BODENUSD, TREMPUSD, COOKIEUSD, FLOWUSD, CLANKERUSD, WINUSD, DUCKUSD, TURBOUSD, FUNUSD, ELXUSD, RAILSUSD, and 45 others | — | — | — | — | All below both momentum thresholds, or negative/flat/stale/dead-volume this check. SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** XIONUSD and TLMUSD were the only candidates clearing both mechanical momentum thresholds with a fresh 24h high, but both fail the volume-confirmation gate (0.27x and 1.59x respectively, under the 2x bar) — momentum without real buying pressure, thin/low-conviction moves. ATLASUSD clears numerically but the 24h high is stale (405min) and volume is dead. Crash gate not triggered (BTC -2.78% vs today's open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
