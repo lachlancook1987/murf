@@ -30131,3 +30131,53 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
 
+
+---
+
+## 2026-07-31 — Pre-Session Research
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/VELVET/WLD/XETH/XXBT/XXDG/XXLM/XXRP, plus $0.1066 ZAUD), unchanged since the VELVET stop-out closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; `orders` reconfirmed stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity range $62,169–$64,382 (source-dependent: CoinDesk +0.53%, Kraken snapshot +0.81%, CMC +2.11%, CoinGecko +2.90%) — live Kraken authoritative: last $63,870.00 vs today's open $64,723.00 → **-1.32%** intraday, 24h range $63,820.80–$65,369.80. Kraken remains sole pricing/gating authority per the ongoing Perplexity-price divergence pattern.
+- ETH: Perplexity badly scattered ($1,788.60 / $1,755.74 / $2,465.83 across sources) — not cross-checked against Kraken (no ETH position, no ETH candidate this scan), treated as context noise only, consistent with prior sessions' findings that Perplexity ETH reads are unreliable.
+- Fear & Greed: **32 "Fear"** (unchanged from Jul 30) — not Extreme Fear, standard 1.2:1 R:R floor would apply if any candidate reached that check.
+- BTC perp funding: Binance +0.00206% (8h), Glassnode aggregate 0.006% — unremarkable, no funding-driven signal.
+- Market catalysts: Bank of Japan rate decision and US Employment Cost Index flagged as macro volatility triggers; Deribit BTC monthly options expiry today (Jul 31) expected to create short-term volatility near $66k; month-end rebalancing/profit-taking cited as added positioning risk; spot ETF flows reportedly supportive (net inflows >$600M cited over recent days, unconfirmed against Kraken price action given BTC is down on the day).
+- Token unlocks: Audiera (BEAT) ~$73.9M (6.82% of mkt value) and Kite (KITE) ~$11.4M (6.07%) unlock today 03:00 UTC; EigenCloud (EIGEN) ~$7.7M unlock 11:00 UTC — none held, none are sweep candidates this scan, no exposure impact. No clearly sourced major protocol upgrade this week.
+- Crash gate: **not triggered** (BTC -1.32% intraday vs today's open; normal daily volatility, nowhere near -20%).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 25 open $64,088.20 → live $63,870.00 = **-0.34%**, comfortably inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry rules apply (not the raised 1h>5% bar).
+
+### Step 4 — Discovery sweep (Kraken-native, full 645 online USD pairs, live Ticker + 15m OHLC)
+
+Only **18 pairs** cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high — narrowest field in recent sessions (BTC red on the day, quieter board overall). Pulled 15m OHLC on all 18 to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ARXUSD** | **+3.20%** | **+5.17%** | 1282min (very stale) | 0.00x (dead) | Clears both thresholds numerically but fails momentum-peak-check (high >21h old, no fresh breakout) and dead volume — same stale-high/dead-volume pattern as prior KOBAN/DCR rejects. SKIP. |
+| SN62USD | +3.70% | +3.98% | 7min | 1.27x | 1h clears, 4h just below 5% threshold. SKIP. |
+| GOATUSD | +2.78% | +3.18% | 22min | 0.00x | Both below threshold, dead vol. SKIP. |
+| CFXUSD | +2.39% | +11.59% | 172min | 3.77x | 4h clears big with real volume, but 1h below 3% threshold and high already 172min stale. SKIP. |
+| USUSD | -0.12% | +8.74% | 1342min | 0.21x | 4h clears, 1h negative, very stale high, dead vol. SKIP. |
+| XNYUSD, SCORUSD, RARIUSD, TACUSD, WINUSD, BLENDUSD, DRVUSD, PROMPTUSD, CTCUSD, SANDUSD, VELVETUSD, LAYERUSD, BONZOUSD | — | — | — | — | All below both momentum thresholds this check (several negative on one or both windows, several dead volume). SKIP. |
+
+**ARX/USD — rejected on momentum-peak-check freshness plus dead volume, not evaluated further.** The only candidate numerically clearing 1h>3% and 4h>5% together, but its 24h high was set ~21.4 hours ago with zero recent breakout above it, and last-candle volume is 0.00x the trailing average — a stale, already-priced-in move on a dead book, not fresh momentum. Per the gate, not evaluated further on catalyst/spread/R:R.
+
+### Step 5 — Risk factors
+
+- Quietest discovery sweep of recent sessions (18 candidates vs 49-65 on prior days) — BTC red on the day (-1.32%) is pulling the board down broadly, fewer genuine breakouts.
+- Deribit BTC monthly options expiry lands today — flagged as a near-term volatility trigger around the $66k area; worth a fresh scan post-expiry if BTC moves sharply.
+- Bank of Japan decision and US Employment Cost Index both due today — macro catalysts that could move BTC/majors sharply in either direction.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** Narrowest sweep of recent sessions (18 candidates past the initial filter) produced exactly one candidate (ARX/USD) clearing both momentum thresholds, but it fails the momentum-peak-check freshness gate outright (24h high ~21h stale) compounded by dead volume (0.00x). Nothing else in the 18-pair shortlist clears both base thresholds. Crash gate not triggered (BTC -1.32% intraday). BTC weekly-downtrend gate not triggered (-0.34%, well inside ±3% band). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around. Deribit options expiry and BoJ decision today are worth a follow-up scan.
+
+### Step 6 — Notification
+
+WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs regardless of trade action) — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~29 days running; needs resubscription at callmebot.com/61477788635.
