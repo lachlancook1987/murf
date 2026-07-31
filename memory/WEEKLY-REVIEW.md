@@ -1029,3 +1029,78 @@ Formalized the cross-exchange price-divergence check that's been applied ad hoc 
 **Two clean, disciplined zero-trade weeks in a row (Jul 11–17, Jul 18–24) is a pattern worth naming rather than shrugging off: the gates are working exactly as designed — every mechanically-loud candidate this week (LRC, ZAMA, ESPORTS, ALKIMI, TNSR) had a real, specific disqualifier (delisting risk, ATR-adjusted R:R, post-rug bounce, price-divergence, catalyst quality) — and the one setup that cleared everything (STABLE) was correctly let go when it decayed before execution rather than chased.** Sitting in cash cost −1.07% vs a mildly-up BTC this week, but that is the accepted cost of discipline, not a process failure. The one real gap surfaced this week isn't a missed trade — it's that a red flag (cross-exchange price divergence) has been catching bad candidates three times without ever being written into the strategy doc; that's now fixed.
 
 ---
+
+## Week of 2026-07-25 — Review Date: 2026-07-31
+
+### Context
+**One trade all week — VELVET/USD, a marginal-R:R momentum-only entry that lost to fees.** Six of seven days (Jul 25–28, 30–31) were flat zero-trade HOLD days despite wide daily sweeps (up to 71 candidates in one scan) — SYN, USELESS, EUL, PUMP, SOON, SAFE, PEP, PRIME, ANKR, KOBAN, EDGE all surfaced and were correctly rejected on divergence, bearish-unlock catalysts, spread, stale highs, or R:R floor. The one trade that did clear every gate (VELVET/USD, Jul 29, entered exactly at the 1.2:1 R:R floor with no confirmed catalyst) stopped out ~37 minutes later for a small net loss — raw price action was mildly favorable (sell fill above buy fill) but round-trip fees turned it negative. Fear & Greed ranged Fear to Extreme Fear (22) during the week; the BTC weekly-downtrend gate triggered briefly Jul 28 (lifted by Jul 29).
+
+### Account Snapshot (Friday close)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $115.0274 | $115.0274 ZUSD (+dust, incl. $0.1066 ZAUD) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$115.0274** | $115.0274 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jul 24 EOD) | $115.5598 |
+| Ending Equity (Fri Jul 31 EOD) | **$115.0274** |
+| **Week Return** | **−0.46%** (−$0.5324) |
+| BTC Week Return | **−2.25%** (Mon Jul 27 open $65,336.60 → Fri $63,869.00) |
+| **Bot vs BTC** | **+1.78%** (outperformed — the week's only trade lost slightly, but sitting flat through BTC's post-Monday decline avoided a larger drawdown) |
+
+### Trade Summary
+One round trip — VELVET/USD, entered Jul 29, stopped out same day.
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 1 |
+| Wins | 0 |
+| Losses | 1 |
+| Win Rate | 0% (0/1) |
+| Gross Wins | $0.00 |
+| Gross Losses | $0.5324 |
+| Profit Factor | 0.00 (no wins) |
+| Avg Win / Avg Loss | N/A / −$0.5324 |
+| Largest Win / Largest Loss | N/A / −$0.5324 |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | $0.6393 (actual, from fill data: buy fee $0.31922 + sell fee $0.32007) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $115.0274 (+dust). No open orders. BTC weekly trend gate: not triggered at week-end (gate had briefly triggered Jul 28, −5.03% over 5 days, lifted by Jul 29 as the window rolled off the Jul 22 high).
+
+### Trade Quality Review
+
+**Entry types that worked:** N/A — the week's only trade was a pure momentum+volume entry (no catalyst) and it lost. Sample size of 1 is too small to draw a "what works" conclusion, but it's a data point against thin-margin catalyst-free entries.
+
+**Entry types that failed:** Momentum-only entry (VELVET/USD, Jul 29) — cleared the mechanical gates (1h +4.41%, 4h +7.24%, fresh 3min high, volume 2.88x, spread 0.58%) but sat at exactly the 1.2:1 R:R floor with no confirmed catalyst. Raw price action was actually mildly favorable (sell $0.4490 > buy $0.4479, +0.25%) — the trailing stop trailed up on an initial pop then reversed to trigger near breakeven. The loss (−$0.53, −1.32% of notional) came entirely from round-trip fees, not bad price action.
+
+**Assets:** VELVET/USD — only asset traded, generated the week's only (small) loss.
+
+**Candidates correctly rejected this week (gates functioning as designed):**
+- **SYN/USD** (Jul 25): clean momentum + huge volume surge, but a three-way cross-exchange price mismatch (CoinGecko +120%, CoinDesk −73% vs Kraken) with directionally opposite 24h readings — thin/distorted book, hard reject.
+- **USELESS/USD** (Jul 25): real OKX-listing catalyst plus clean momentum, but ~32% divergence vs CoinGecko/CMC consensus.
+- **EUL/USD** (Jul 25, standing): momentum decayed below threshold, still carried a standing divergence flag.
+- **SAFE/PUMP/SOON/USD** (Jul 26): widest field of the day (3 candidates clearing both momentum thresholds) — PUMP and SOON killed by bearish token-unlock catalysts plus divergence, SAFE killed on the Extreme-Fear-adjusted 1.5:1 R:R floor (stale, non-fresh catalyst) despite otherwise clean technicals.
+- **PEP/USD** (Jul 28): only real-volume candidate clearing the raised weekly-downtrend-gate bar, but spread blew out to ~6.16% at execution time — hard spread-gate reject.
+- **PRIME/ANKR/USD** (Jul 28): both cleared momentum incl. the raised weekly-downtrend bar, both hard-failed the ≤1% spread gate (1.60% and 1.39% respectively) at check time.
+- **EDGE/USD** (Jul 30, pre-session): cleared momentum but hard-failed the cross-exchange divergence gate (~25.7% vs CoinGecko) plus an unresolved ticker-identity ambiguity.
+
+**Stop quality:** The one stop placed (VELVET, 2.5% trail, GTC, immediate post-fill) was placed correctly and functioned as designed — it wasn't too tight relative to the realized price action (candle ranges stayed under 3.5% except one 3.23% candle) and wasn't the cause of the loss. Fees were.
+
+**Profile violations:** None. VELVET's spread (0.58%), R:R (exactly 1.2:1, correctly gated since F&G read 32 "Fear" not Extreme Fear), sizing (~35% equity, no leverage), and stop placement all conformed to the Kraken profile. Every HOLD rejection cited a specific, correctly-applied gate.
+
+**Recurring operational issues (not strategy rules, but worth flagging):**
+- **Measured taker fee is double the documented assumption.** TRADING-STRATEGY.md (updated 2026-07-10, after the ARB trade) states actual measured taker fee is "~0.4% per trade (round trip ~0.8%)." The VELVET fill data shows **0.80% per leg** on both the buy ($0.31922 / $39.90198 = 0.800%) and the sell ($0.32007 / $40.00888 = 0.800%) — a round trip of **~1.6%**, exactly double the documented figure. This is the direct cause of this week's loss: a trade with favorable raw price action (+0.25%) still lost money because round-trip fees at the true rate ate more than the gross gain. If 0.8%/leg holds going forward, the current 1.2:1 R:R floor at a 2.5% stop is materially thinner than assumed — a trade barely clearing the floor is a near-coin-flip after real fees, not a positive-expectancy setup.
+- **WhatsApp/CallMeBot notifications have now failed for 29+ consecutive days** (since Jul 2, quota exhausted) — every EOD snapshot logged a failed send attempt again this week, including today's. Needs resubscription at callmebot.com/61477788635; unresolved for over four weeks now, escalating from a minor annoyance to a standing operational gap (no push notification path currently works for this bot).
+
+**Concrete adjustment (added 2026-07-31):**
+Corrected the taker-fee assumption in TRADING-STRATEGY.md from 0.4%/leg (0.8% round trip) to the actually-measured **0.8%/leg (~1.6% round trip)**, confirmed twice in the VELVET fill (buy and sell both exactly 0.800%). Recomputed the net-loss-per-stopout figure in the Risk Awareness section accordingly. This doesn't change the R:R floor rule itself this review — that requires more fee-confirmed trades to set a new floor with confidence — but it's flagged prominently so entries sitting at exactly 1.2:1 are recognized as fee-thin, not comfortably profitable, until the rule is formally revisited.
+
+### Key Lesson
+**A trade can clear every mechanical gate, have favorable raw price action, and still lose — because the fee assumption baked into the R:R math was wrong by 2x.** VELVET/USD sold higher than it bought (+0.25% gross) and still net-lost −1.32%, because actual round-trip fees (~1.6%, confirmed from live fill data) are double what TRADING-STRATEGY.md assumed (0.8%). The other six days were correct, disciplined HOLD streaks — SYN, USELESS, SAFE/PUMP/SOON, PEP, PRIME/ANKR, and EDGE were all real candidates killed by specific, correctly-applied gates (divergence, bearish unlocks, spread, R:R). The gates are sound; the fee input feeding the R:R gate was stale. That's now corrected in the strategy doc — the practical implication going forward is that entries sitting at the bare 1.2:1 floor with no catalyst carry less real edge than the number suggests.
+
+---

@@ -117,8 +117,8 @@ Rationale: three consecutive NEAR entries (Jun 6, 7, 8) and five consecutive KAS
 
 ## Risk Awareness (not rules — just notes)
 
-- Kraken taker fee: assumed ~0.26% per trade historically, but this account's actual measured taker fee (confirmed live at the ARB entry, 2026-07-09) is **~0.4% per trade (round trip ~0.8%)** — use 0.4% for R:R and fee-estimate purposes going forward. On a 3% target, 0.8% round-trip is ~27% of profit — factor in
-- At 2.5% trailing stop: net loss per bad trade ≈ −2.5% − 0.26% fee ≈ −2.76%. Need >1 winner per loser
+- Kraken taker fee: previously assumed ~0.4% per trade (round trip ~0.8%) based on the ARB entry (2026-07-09), but the VELVET round trip (2026-07-29) measured **0.80% per leg on both legs** (buy $0.31922/$39.90198 = 0.800%, sell $0.32007/$40.00888 = 0.800%) — a round trip of **~1.6%**, double the prior assumption. Use **0.8%/leg (1.6% round trip)** for R:R and fee-estimate purposes going forward. On a 3% target, 1.6% round-trip is over half of gross profit — factor in heavily. An entry sitting at exactly the 1.2:1 R:R floor is fee-thin, not comfortably profitable, at this rate.
+- At 2.5% trailing stop: net loss per bad trade ≈ −2.5% − 0.8% fee ≈ −3.3%. Need meaningfully more than 1 winner per loser
 - Thin alt liquidity: wide spreads and slippage can eat into the 2.5% stop budget — tight spread check is critical
 - 2.5% trail on fast-moving alts may trigger on normal noise — pick assets with steady momentum, not spike-and-dump
 - 2x leverage on volatile alts can gap through stops — size accordingly; day trades are usually unleveraged spot
@@ -210,4 +210,4 @@ For each candidate found via the Kraken sweep:
 
 ---
 
-*Last updated: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Previous update: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
+*Last updated: 2026-07-31 (weekly review — corrected taker fee assumption from 0.4%/leg to the actually-measured 0.8%/leg, ~1.6% round trip, after the VELVET trade showed the prior figure was 2x too low). Previous update: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Prior: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
