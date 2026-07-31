@@ -30202,3 +30202,23 @@ WhatsApp send attempted (Step 6 mandates always notifying on pre-session runs re
 ### Decision: **HOLD — no new entries, no open positions to manage.** 34 pairs cleared the initial filter; COTI/USD was the only candidate clearing both momentum thresholds with fresh high and real volume, but it fails the ATR/R:R gate (0.86:1 at the mandatory 3.5% high-ATR trail vs 1.2:1 floor) — same failure mode as its 2026-07-29 rejection. MUSD clears 1h but lacks volume confirmation (0.49x). Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC -2.96% intraday). BTC weekly-downtrend gate not triggered (-2.34%, inside ±3% band but tightening). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-07-31 — Session-Open Execution (15:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-6 N/A). **Alpaca:** `positions` → `[]`, zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $62,529.40 → **-3.39%** (o $64,723.00), sliding further from the midday read (-2.96%). Crash gate: not triggered (threshold -20%). **BTC 5-day trend check:** $64,088.20 (Jul 25 daily open) → $62,529.40 now = **-2.43%**, still inside the ±3% band but tightening further — weekly-downtrend gate **not triggered**, standard entry thresholds apply.
+
+**Fresh discovery sweep** (Kraken-native, full 646 online USD pairs, live Ticker): 39 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 15 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **XNYUSD** | **+6.03%** | **+5.22%** | 30min | 0.00x (dead) | Clears both thresholds numerically but dead volume — no real buying pressure. SKIP. |
+| **EVAAUSD** | **+5.28%** | **+7.15%** | 0min (fresh) | 0.06x (dead) | Clears both thresholds but dead volume; also the same ticker flagged for extreme cross-exchange divergence (~14-70%) on 2026-07-30. SKIP. |
+| CAPUSD | +3.37% | +3.90% | 105min | 0.01x | 1h clears, 4h below 5% threshold, dead vol. SKIP. |
+| ACHUSD | +1.28% | +4.16% | 0min | 0.75x | 4h below threshold, 1h below threshold. SKIP. |
+| DRVUSD, USUSD, MUBARAKUSD, NOCKUSD, BTRUSD, PTBUSD, SXTUSD, UNITASUSD, WMTXUSD, SENTUSD | — | — | — | — | All below both momentum thresholds this check (several negative on one or both windows, all dead/near-dead volume). SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 39 pairs cleared the initial filter — widest sweep of the day — but only XNY and EVAA cleared both momentum thresholds, and both fail on dead volume (0.00x and 0.06x respectively, well below the 2x confirmation bar); EVAA additionally carries a known cross-exchange divergence red flag from 2026-07-30. Nothing else in the top-15 shortlist clears both base thresholds. Crash gate not triggered (BTC -3.39% intraday, a red day but nowhere near -20%). BTC weekly-downtrend gate not triggered (-2.43%, inside ±3% band but tightening toward the raised-bar threshold). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
