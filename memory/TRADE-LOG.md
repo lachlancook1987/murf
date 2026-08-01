@@ -8441,3 +8441,11 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no new entries, no open positions to manage.** XIONUSD and TLMUSD were the only candidates clearing both mechanical momentum thresholds with a fresh 24h high, but both fail the volume-confirmation gate (0.27x and 1.59x respectively, under the 2x bar) — momentum without real buying pressure, thin/low-conviction moves. ATLASUSD clears numerically but the 24h high is stale (405min) and volume is dead. Crash gate not triggered (BTC -2.78% vs today's open). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+### Aug 01 — EOD Snapshot (Day 73, Saturday)
+**Portfolio:** $115.0274 | **Cash:** $115.0274 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.7526 (−36.02%) | **vs BTC:** +1.29%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~90
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the VELVET stop-out closed 2026-07-29, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research today found the BTC weekly-downtrend gate newly triggered (-3.54%/5d) and F&G deepened to 22 "Extreme Fear," but 37 candidates screened cleared no genuine setup (FIGHT/USD a thin-listing artifact, AVA/USD 4h-only with faded 1h) — HOLD stood. BTC fell further intraday, from $63,871.30 (yesterday's EOD) to $63,048.20 (-1.29%), so the bot's flat cash day outperformed BTC by +1.29% by sitting out another down day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry; BTC weekly-downtrend gate remains in effect (raises pure-momentum bar to 1h>5%+catalyst<3h) until BTC recovers back inside the ±3%/5d band. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~30 days — needs resubscription at callmebot.com/61477788635.
