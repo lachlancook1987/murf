@@ -8449,3 +8449,27 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~90
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the VELVET stop-out closed 2026-07-29, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research today found the BTC weekly-downtrend gate newly triggered (-3.54%/5d) and F&G deepened to 22 "Extreme Fear," but 37 candidates screened cleared no genuine setup (FIGHT/USD a thin-listing artifact, AVA/USD 4h-only with faded 1h) — HOLD stood. BTC fell further intraday, from $63,871.30 (yesterday's EOD) to $63,048.20 (-1.29%), so the bot's flat cash day outperformed BTC by +1.29% by sitting out another down day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry; BTC weekly-downtrend gate remains in effect (raises pure-momentum bar to 1h>5%+catalyst<3h) until BTC recovers back inside the ±3%/5d band. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~30 days — needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-01 — Midday Scan (14:05 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,037.60 → **+0.34%** (o $62,821.80). Crash gate not triggered. BTC weekly-downtrend gate remains **triggered** from pre-session (-3.54%/5d) — pure-momentum entries require 1h>5% AND a fresh catalyst <3h old.
+
+**Discovery sweep** (Kraken-native, full 652 online USD pairs, live Ticker + 15m OHLC): 25 pairs pulled by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **EULUSD** | **+14.13%** | **+22.06%** | 15min (fresh) | 3.69x | Only candidate to clear both mechanical thresholds *and* the raised weekly-downtrend 1h>5% bar with real volume — see rejection below |
+| KOBANUSD | +29.41% | +21.51% | 0min | 0.00x | Clears numerically but dead volume ratio despite the large move — thin-book artifact, not confirmed. SKIP. |
+| FIGHTUSD | +4.34% | +15.21% | 30min | 0.64x | 4h clears, 1h below the raised 5% bar, weak vol. SKIP. |
+| MYXUSD | +3.90% | +5.26% | 0min | 1.23x | Both near thresholds but 1h below raised 5% bar, vol under 2x. SKIP. |
+| AKTUSD | +1.14% | +5.89% | 120min | 2.49x | 4h clears with real volume, 1h far below raised bar, high stale. SKIP. |
+| UAIUSD | -0.75% | +20.18% | 0min | 0.20x | 4h clears big, 1h negative (faded), dead vol. SKIP. |
+| STUSD, SIDEKICKUSD, ZRCUSD, KEEPUSD, MIRUSD, MNGOUSD, AI3USD, PTBUSD, ICNTUSD, RAILSUSD, ARXUSD, ESUSD, QUSD, BMBUSD, BLESSUSD, SCRTUSD, FOLKSUSD, SN62USD | — | — | — | — | All below both momentum thresholds, or flat/negative/stale/dead-volume this check. SKIP. |
+
+**EUL/USD — rejected on cross-exchange divergence gate, hard fail; catalyst also stale.** Strongest candidate by far: 1h +14.13%, 4h +22.06%, fresh 15min high, real volume (3.69x) — clears every mechanical gate including the raised weekly-downtrend 1h>5% bar. Spread confirmed 0.57% (ask $1.582/bid $1.573), well under the 1% cap. But live Kraken price $1.599 vs CoinGecko $0.9767 and CoinMarketCap $0.9957 → **divergence ≈62-64%**, far past the 15-20% reject band — signals a thin/distorted Kraken order book, not a real tradeable move (same pattern as PRIME/ANKR/ALKIMI/TNSR precedent). Perplexity catalyst check also found nothing fresher than a **July 25** momentum/VanEck-integration writeup (~1 week old) plus an unrelated March exploit-pool headline — no confirmed catalyst <3h old, which the triggered weekly-downtrend gate requires independently of the divergence fail. **SKIP — double rejection.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** EUL/USD was the only candidate clearing all momentum/spread/volume gates but hard-fails the cross-exchange price-divergence gate (~62-64% vs CoinGecko/CMC) and lacks a fresh catalyst under the active weekly-downtrend gate. KOBAN/USD's large move carries zero volume confirmation (thin-book artifact). Nothing else clears both base mechanical thresholds. Crash gate not triggered (BTC +0.34% vs today's open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
