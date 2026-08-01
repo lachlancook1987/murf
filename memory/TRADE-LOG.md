@@ -8473,3 +8473,25 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** EUL/USD was the only candidate clearing all momentum/spread/volume gates but hard-fails the cross-exchange price-divergence gate (~62-64% vs CoinGecko/CMC) and lacks a fresh catalyst under the active weekly-downtrend gate. KOBAN/USD's large move carries zero volume confirmation (thin-book artifact). Nothing else clears both base mechanical thresholds. Crash gate not triggered (BTC +0.34% vs today's open). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-01 — Midday Scan #2 (22:04 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $62,742.40 → **-0.13%** (o $62,821.80). Crash gate not triggered. BTC weekly-downtrend gate remains **triggered** from pre-session (-3.54%/5d) — pure-momentum entries require 1h>5% AND a fresh catalyst <3h old.
+
+**Discovery sweep** (Kraken-native, full 647 online USD pairs, live Ticker): 38 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 10 by vs-open% for 1h/4h momentum and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | Vol ratio (last candle) | Verdict |
+|---|---|---|---|---|
+| ACAUSD | +18.52% | +18.52% | 3.77x | Only candidate clearing the raised 1h>5% bar with real volume, but spread is **15.6%** (ask $0.00032/bid $0.00027) — hard fail vs the 1% cap, and only 22 trades in 24h (thin/illiquid micro-cap). SKIP. |
+| KP3RUSD | 0% | +34.29% | 0.00x | 4h move already priced in, 1h flat, dead volume — stale, fails momentum-peak-check. SKIP. |
+| BLESSUSD | +0.51% | +10.35% | 0.08x | 1h far below raised bar, dead volume. SKIP. |
+| APRUSD | +1.29% | +5.56% | 0.01x | 1h below raised bar, dead volume. SKIP. |
+| KOBANUSD | 0% | -0.24% | 2.27x | 24h change was a stale prior move; no current momentum. SKIP. |
+| MIRUSD, QUSD, KAITOUSD, AKTUSD | flat/negative | mixed | low/zero | Below raised 1h bar or negative. SKIP. |
+| EPTUSD, MIRUSD (OHLC) | — | — | — | Zero-division on thin/no-trade candles — too illiquid to compute, consistent with thin-listing status. SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ACA/USD was the only candidate clearing the raised weekly-downtrend momentum bar with real volume, but its 15.6% spread hard-fails the 1% spread cap and 24h trade count (22) confirms an illiquid micro-cap. Nothing else clears the raised 1h>5% bar with real volume. Crash gate not triggered (BTC -0.13% vs today's open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
