@@ -30278,3 +30278,55 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -2.79% intraday, crash gate not triggered. 38 candidates screened, none cleared both momentum thresholds (OMI/USD closest, 1h +2.55% vs 3% bar, 4h +14.10%). CLARITY Act Senate stall flagged as bearish regulatory headline."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~29 days running; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-08-01 — Pre-Session Research
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the VELVET stop-out closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; order history re-confirms stop `a2b44cf9` (BTC/USD stop_limit sell) still `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity ~$63.1k (+1.7% 24h) — roughly consistent with live Kraken this time: last $63,023.70 vs today's open $62,821.80 = **+0.32%** intraday (24h range $62,344.00–$63,940.30).
+- ETH: Perplexity $1,764.47 (+1.64%) — not cross-checked against Kraken (no ETH position, no ETH candidate this scan), treated as context only.
+- Fear & Greed: **22 "Extreme Fear"** (down from 31-32 "Fear" on Jul 31) — deepened overnight. Per the Extreme Fear + unconfirmed-catalyst rule, any pure-momentum candidate without a confirmed <6h catalyst would need R:R **≥1.5:1** instead of the standard 1.2:1 floor. Moot this scan — no candidate reached that check.
+- BTC perp funding: ~+0.01%/8h across major exchanges (Binance 0.0079%, Coinalyze aggregate +0.01%) — unremarkable, no funding-driven signal.
+- Market catalysts: US non-farm payrolls/labor data and ongoing digestion of the July 29 Fed hold (3.50–3.75%, three hawkish dissents) are the dominant macro catalysts; **~$156M+ in token unlocks this week** — BEAT (~$74.9M, today) rallying ~+24.65% on unlock speculation, SUI (~$50M/64M tokens), dYdX (~$11M), ZetaChain (~$35M/18.92% of supply), EIGEN (~$7.63M) all unlock today (Aug 1); none held, none Kraken sweep candidates this scan. Altcoin narrative watchpoints flagged: Chainlink gov-data integrations, Hyperliquid strength, Sui institutional milestone, Aave Avalanche expansion.
+- Crash gate: **not triggered** (BTC +0.32% intraday vs today's open).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 27 open $65,336.60 → live $63,023.70 = **-3.54%**, outside the ±3% band. **BTC weekly-downtrend gate TRIGGERED** — pure-momentum entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h. Catalyst-driven entries remain open regardless.
+
+### Step 4 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+37 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on the top 20 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| ICNTUSD | +4.49% | +1.69% | 105min | 0.22x | 1h clears, 4h below threshold, weak vol. SKIP. |
+| **FIGHTUSD** | **+5.44%** | **+5.44%** | 15min | 0.00x | Clears both numerically, but 1h==4h==vs_open is a data artifact of a pair with <4h trading history (thin/new listing) — not real sustained momentum. Dead volume (0.00x) and spread 1.16% (past the ≤1% hard cap) confirm a thin book. SKIP. |
+| **AVAUSD** | -0.35% | **+5.71%** | 15min | 5.80x (strong) | 4h clears with real volume, but 1h negative — momentum already faded/reversing. SKIP. |
+| SCRTUSD | +2.56% | +4.90% | 0min | 0.05x | Both just under threshold, dead vol. SKIP. |
+| BANDUSD | +1.20% | +4.63% | 90min | 0.00x | Both under threshold, dead vol. SKIP. |
+| EVAAUSD | -3.05% | +2.85% | 60min | 4.79x | 1h negative (already faded), 4h under threshold. SKIP. |
+| MEGAUSD, QUSD, MYXUSD, BLESSUSD, ICXUSD, ZAMAUSD, PUMPUSD, INXUSD, CLANKERUSD, PIEVERSEUSD, SWELLUSD, ALLOUSD | — | — | — | — | All below both momentum thresholds, or dead/near-dead volume. SKIP. |
+
+**No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation.** FIGHT/USD was the only nominal double-clear, but it's a data artifact from a thinly-traded new listing (dead volume, spread already past the hard cap) — not a genuine setup. AVA/USD had the strongest 4h move with real volume (5.80x) but 1h is already negative, indicating the move has faded rather than being fresh momentum. With the BTC weekly-downtrend gate now triggered, the bar for pure-momentum entries is raised to 1h>5% anyway, which nothing here would have cleared regardless.
+
+### Step 5 — Risk factors
+
+- BTC weekly-downtrend gate is now triggered (-3.54% over 5 days, first breach of the ±3% band in recent sessions) — raises the pure-momentum entry bar to 1h>5%+catalyst<3h for the rest of the session.
+- Fear & Greed deepened to 22 "Extreme Fear" overnight (from 31-32 "Fear") — any future momentum-only candidate needs R:R ≥1.5:1, not the standard 1.2:1.
+- Large token-unlock cluster today (BEAT, SUI, dYdX, ZetaChain, EIGEN) — worth rechecking if any of these show up in a later Kraken sweep with a live price reaction, since none currently clear the momentum screen.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 37 pairs cleared the initial filter; none cleared both mechanical momentum thresholds with real volume confirmation. FIGHT/USD's numeric double-clear is a thin-listing data artifact (dead volume, spread past hard cap); AVA/USD had real 4h volume but 1h has already turned negative. Crash gate not triggered (BTC +0.32% intraday). BTC weekly-downtrend gate newly **triggered** (-3.54%, first breach in recent sessions) — raises momentum bar going forward. Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.32% intraday, crash gate not triggered. BTC weekly-downtrend gate newly TRIGGERED (-3.54%/5d) - raises momentum bar. F&G deepened to 22 Extreme Fear. 37 candidates screened, none cleared both momentum thresholds with real volume (FIGHT/USD thin-listing artifact, AVA/USD 4h-only with faded 1h)."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~30 days running; needs resubscription at callmebot.com/61477788635.
