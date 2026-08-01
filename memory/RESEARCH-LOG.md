@@ -30330,3 +30330,54 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.32% intraday, crash gate not triggered. BTC weekly-downtrend gate newly TRIGGERED (-3.54%/5d) - raises momentum bar. F&G deepened to 22 Extreme Fear. 37 candidates screened, none cleared both momentum thresholds with real volume (FIGHT/USD thin-listing artifact, AVA/USD 4h-only with faded 1h)."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~30 days running; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-08-01 — Pre-Session Research (second run, 20:07 UTC)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/VELVET/WLD/XETH/XXBT/XXDG/XXLM/XXRP, plus $0.1066 ZAUD), unchanged since the VELVET stop-out closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; full order history spot-checked (44 orders: 29 filled, 15 canceled, 0 open) — stop `a2b44cf9` remains `canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: live Kraken authoritative — last $62,491.80 vs today's open $62,821.80 → **-0.53%** intraday (24h range $62,200.50–$63,091.00).
+- Fear & Greed: **32 "Fear"** (Binance) — not Extreme Fear this reading; standard 1.2:1 R:R floor would apply if any candidate reached that check.
+- BTC perp funding: Binance +0.0079%/8h, Coinalyze aggregate ~+0.01%/8h (Kraken +0.0148% stablecoin-margined) — unremarkable, no funding-driven signal.
+- Market catalysts: Heaviest unlock day of the week — BEAT, EIGEN, KITE unlocking today alongside SUI (~$50M/2.56% supply), dYdX (~$11M/3.65%), ZetaChain (~$35M/18.92% supply); Fed held rates 3.50-3.75% on Jul 29, shaping August risk appetite; US non-farm payrolls due today, a potential BTC/ETH volatility trigger; a crypto bill reportedly moving before Senate recess; altcoin-specific drivers cited (Chainlink gov-data integrations, Hyperliquid strength, Sui institutional adoption, Aave Avalanche expansion) — none held, none Kraken sweep candidates this scan.
+- Crash gate: **not triggered** (BTC -0.53% intraday vs today's open).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 27 open $65,336.60 → live $62,491.80 = **-4.36%**, outside the ±3% band. **BTC weekly-downtrend gate remains TRIGGERED** — pure-momentum entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**, not just the standard >3%/1h. Catalyst-driven entries remain open regardless.
+
+### Step 4 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+34 pairs cleared vs-open >3% with spread ≤1.5% and within 6% of 24h high. Pulled 15m OHLC on all 34 to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **LITUSD** | **+18.71%** | **+21.32%** | 0min (fresh) | 6.53x | Only candidate to clear both mechanical thresholds *and* the raised weekly-downtrend 1h>5% bar with real volume — see rejection below |
+| AIXBTUSD | +5.60% | +3.59% | 0min (fresh) | 72.92x (huge) | 1h clears the raised 5% bar with massive volume, but 4h at +3.59% falls short of the 5% threshold. SKIP. |
+| UAIUSD | -1.29% | +18.87% | 15min | 2.17x | 4h clears big with real volume, but 1h negative — momentum already faded, same pattern as AVA (Jul 31) and EVAA (Jul 30) precedent. SKIP. |
+| BLESSUSD | -0.99% | +11.89% | 60min | 1.33x | 4h clears, 1h negative (faded), high already 60min stale. SKIP. |
+| KAITOUSD | -0.38% | +6.13% | 150min | 0.00x | 4h clears, 1h negative, stale high, dead vol. SKIP. |
+| APRUSD | -0.14% | +4.63% | 15min | 0.00x | Both below thresholds, dead vol. SKIP. |
+| GTCUSD | +0.26% | +4.02% | 75min | 0.00x | Both below thresholds, dead vol. SKIP. |
+| CSPRUSD, IAGUSD, AVAUSD, QUSD, 0GUSD, PIEVERSEUSD, AUGURUSD, AKTUSD, SN62USD, CHECKUSD, QUAIUSD, BANDUSD, ARXUSD, SN75USD, ESPORTSUSD, PROSUSD, KSMUSD, ZKPUSD, SWEATUSD, SBRUSD, GUSD, RNBWUSD, OPENUSD, XANUSD, PIUSD, STBLUSD, GOATUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**LIT/USD — rejected on cross-exchange divergence gate, hard fail with a direction mismatch.** Strongest candidate by far: 1h +18.71%, 4h +21.32%, fresh 0min high, real volume (6.53x) — clears every mechanical gate including the raised weekly-downtrend 1h>5% bar. Live spread confirmed 0.61% (ask $0.0990/bid $0.0984), well under the 1% cap. Kraken pair confirmed online (`LITUSD`, Litentry). But direct CoinGecko API check shows Litentry at **$0.1388, down -26.19% in the last 24h** — the opposite direction of Kraken's reading, and a **~29% price divergence** (($0.1388-$0.099)/$0.1388), well past the 15-20% reject band. A candidate showing +18.71%/1h on Kraken while the reference price is falling -26% over 24h elsewhere indicates a thin/distorted Kraken order book (isolated local price action, not a real market-wide move), not a genuine tradeable setup — same failure mode as the EUL/PRIME/ANKR/ALKIMI/TNSR precedent, but with an unusually stark direction mismatch this time. **SKIP — hard reject.**
+
+### Step 5 — Risk factors
+
+- LIT/USD was the strongest mechanical setup seen in several sessions (double-clears every momentum/spread/volume gate) but is a clean cross-exchange divergence rejection with a direction mismatch — a reminder that Kraken-native discovery still requires the divergence check even on the cleanest-looking candidates.
+- AIXBT/USD came closest of the rest — huge volume (72.92x) and a 1h move clearing the raised bar — but 4h momentum (+3.59%) hasn't caught up to the 5% sustained-move threshold; worth a re-check on a later scan if 4h continues to build.
+- BTC weekly-downtrend gate remains triggered (-4.36%/5d, deepened slightly from the -3.54% pre-session read) — keeps the pure-momentum bar raised to 1h>5%+catalyst<3h for the rest of the session.
+- Heaviest token-unlock day of the week (BEAT, EIGEN, KITE, SUI, dYdX, ZetaChain) — none held, none current candidates, but worth rechecking if any shows a live price reaction on a later sweep.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 34 pairs cleared the initial filter; LIT/USD was the only candidate clearing every mechanical momentum/spread/volume gate (including the raised weekly-downtrend bar) but hard-fails the cross-exchange price-divergence gate with a stark direction mismatch (~29% vs CoinGecko, Kraken +18.71%/1h vs CoinGecko -26.19%/24h) — a thin/distorted order book, not a real move. AIXBT/USD clears 1h but not 4h. Nothing else clears both base thresholds. Crash gate not triggered (BTC -0.53% intraday). BTC weekly-downtrend gate remains triggered (-4.36%/5d). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -0.53% intraday, crash gate not triggered. BTC weekly-downtrend gate still TRIGGERED (-4.36%/5d). F&G 32 Fear. 34 candidates screened - LIT/USD cleared every momentum/spread/volume gate but hard-failed cross-exchange divergence (~29% vs CoinGecko, direction-mismatched: Kraken +18.71%/1h vs CoinGecko -26.19%/24h). Nothing else cleared both thresholds."
