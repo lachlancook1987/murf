@@ -8503,3 +8503,29 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~90
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the Jul 29 VELVET stop-out, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research (widest field recently, 51 candidates screened) found broad market-wide strength but no candidate clearing both mechanical momentum thresholds with real volume and a fresh high — AIO/USD closest but failed on stale high, dead volume, and spread simultaneously; ENA/USD's unlock-driven 4h volume had already faded on 1h. BTC weekly-downtrend gate recovered (-0.39%/5d), no longer triggered. HOLD stood. BTC rose from $63,048.20 (yesterday's EOD) to $63,320.10 (+0.43%), so the bot's flat cash day underperformed BTC by −0.43% by sitting out a modest up-day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~31 days — needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-02 — Midday Scan #3 (23:11 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,613.80 → **+1.36%** (o $62,760.00). Crash gate not triggered (threshold -20%).
+
+**Discovery sweep** (Kraken-native, full 655 online USD pairs, live Ticker): 86 pairs cleared vs-open >3% and within 6% of 24h high — widest field of the day yet (vs. 51 pre-session, 52 at 14:06 UTC, 60 at session-open, 77 at 20:05 UTC pre-session re-run). Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **BICOUSD** | **+5.33%** | **+11.95%** | 0min (fresh) | **2.14x** (real) | Only candidate clearing both mechanical thresholds with real volume confirmation and a fresh high — see rejection below |
+| BKSUSD | +12.83% | +10.62% | 0min (fresh) | 0.00x | Clears both thresholds with a fresh high, but dead volume — thin micro-cap artifact (last price $0.000677). SKIP. |
+| PERPUSD | +12.50% | +10.77% | 0min (fresh) | 0.00x | Same pattern: fresh high, dead volume. SKIP. |
+| NPCUSD | +2.16% | +9.81% | 45min | 2.74x (real) | 4h clears with genuine volume, but 1h below the 3% bar. SKIP. |
+| FHEUSD | +1.09% | +6.70% | 15min | 1.33x | 4h clears, 1h below threshold, volume under 2x bar. SKIP. |
+| TAKEUSD | +1.81% | +0.94% | 15min | 0.35x | Neither window clears, weak volume. SKIP. |
+| KEYUSD | 0.00% | +0.26% | 645min (stale) | 0.00x | Flat, stale, dead volume. SKIP. |
+| RNBWUSD | +0.96% | +0.96% | 0min | 13.95x (real) | Strong volume but neither momentum window clears. SKIP. |
+| ADAUSD, AVAXUSD, SNEKUSD, LUNAUSD, ALGOUSD, PEPEUSD, ENAUSD, NTRNUSD, PIEVERSEUSD, CHILLHOUSEUSD, NIGHTUSD, B2USD, XZECZUSD, GWEIUSD, APXUSDUSD, HPOS10IUSD, ACUUSD, CELRUSD, SUNDOGUSD, PACTUSD, KGENUSD, USELESSUSD, SN44USD, LOCKINUSD, BNCUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**BICO/USD — rejected on spread gate, hard fail.** Strongest candidate of the scan: 1h +5.33%, 4h +11.95%, fresh (0min) 24h high, real volume (2.14x, clears the 2x bar). Live quote at check time: ask $0.01525 / bid $0.01443 → **spread ≈ 5.38%**, far past the ≤1% hard-skip threshold — thin book despite the real-looking volume ratio (last trade price $0.01443 sits at the bid, well below the current ask). **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BICO/USD was the only candidate to clear both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but hard-fails the ≤1% spread gate at 5.38%. BKS/USD and PERP/USD clear both thresholds numerically with fresh highs but on dead volume (thin-book artifacts). NPC/USD has real volume and a strong 4h move but 1h falls short. Nothing else clears both base thresholds. Crash gate not triggered (BTC +1.36% vs today's open). Per the gate-protection default rule, HOLD stands — consistent with every other scan today (pre-session, 14:06 UTC midday, 15:01 UTC session-open, 20:05 UTC pre-session re-run).
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
