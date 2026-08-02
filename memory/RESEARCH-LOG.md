@@ -30453,3 +30453,25 @@ bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions.
 ### Decision: **HOLD — no new entries, no open positions to manage.** CAMP/USD and TREMP/USD were the strongest numeric double-clears (fresh highs, big 1h/4h moves) but both hard-fail on dead volume (0.00x) and wide spreads (2.87% and 11.1% respectively) — classic thin-book artifacts, same pattern as ATLAS/EPT/KP3R precedent. MANTRA/USD was the closest legitimate candidate but its spread (6.3%) hard-fails the 1% cap regardless of the sub-2x volume ratio. ENA/USD's unlock-driven momentum from pre-session has fully faded. Crash gate not triggered (BTC +0.37% vs today's open). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-02 — Session-Open Scan (15:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,013.70 → **+0.40%** (o $62,760.00). Crash gate not triggered (threshold -20%).
+
+**Discovery sweep** (Kraken-native, full 655 online USD pairs, live Ticker): 60 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 25 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| BLESSUSD | +5.22% | +14.60% | 15min (fresh) | 0.03x | Both thresholds clear numerically with a fresh high, but volume is dead (0.03x) — thin-book artifact, same recurring pattern as prior sessions. SKIP. |
+| MNGOUSD | +16.13% | +16.13% | 30min | 0.00x | Identical 1h/4h reading is a thin-book artifact (same pattern as ATLAS/FIGHT precedent); dead volume. SKIP. |
+| FXSUSD | +16.60% | +16.60% | 1290min (stale) | 0.00x | Same identical-reading artifact, stale high (21.5h), dead volume — triple rejection. SKIP. |
+| ALGOUSD | +1.71% | +3.77% | 30min | 3.66x | Only pair with real volume confirmation (3.66x), but both windows fall short of the 3%/5% thresholds. SKIP. |
+| SNEKUSD | -0.90% | +3.13% | 90min | 1.42x | 1h negative (faded), 4h below 5% bar. SKIP. |
+| CAMPUSD | 0.00% | +23.89% | 45min | 0.00x | 4h clears big, 1h flat, dead volume — recurring thin micro-cap artifact (also flagged 14:06 UTC scan). SKIP. |
+| TREMPUSD, MANTRAUSD, ICNTUSD, ENAUSD, PEPECOINUSD, ADAUSD, MUSD, SAGAUSD, REZUSD, PIEVERSEUSD, FHEUSD, AVAXUSD, OOBUSD, EPTUSD, KP3RUSD, TAKEUSD, XANUSD, PTBUSD, ATLASUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation. BLESSUSD was the closest numeric double-clear but dead volume (0.03x) marks it a thin-book artifact. MNGOUSD/FXSUSD show the identical-1h/4h-reading artifact pattern with dead volume. ALGOUSD was the only pair with genuine volume confirmation (3.66x) but both windows fall short of threshold. Crash gate not triggered (BTC +0.40% vs today's open). Per the gate-protection default rule, HOLD stands — consistent with the pre-session and two midday scans earlier today.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
