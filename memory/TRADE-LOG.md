@@ -8495,3 +8495,11 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no new entries, no open positions to manage.** ACA/USD was the only candidate clearing the raised weekly-downtrend momentum bar with real volume, but its 15.6% spread hard-fails the 1% spread cap and 24h trade count (22) confirms an illiquid micro-cap. Nothing else clears the raised 1h>5% bar with real volume. Crash gate not triggered (BTC -0.13% vs today's open). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+### Aug 02 — EOD Snapshot (Day 74, Sunday)
+**Portfolio:** $115.0274 | **Cash:** $115.0274 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.7526 (−36.02%) | **vs BTC:** −0.43%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~90
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the Jul 29 VELVET stop-out, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. Pre-session research (widest field recently, 51 candidates screened) found broad market-wide strength but no candidate clearing both mechanical momentum thresholds with real volume and a fresh high — AIO/USD closest but failed on stale high, dead volume, and spread simultaneously; ENA/USD's unlock-driven 4h volume had already faded on 1h. BTC weekly-downtrend gate recovered (-0.39%/5d), no longer triggered. HOLD stood. BTC rose from $63,048.20 (yesterday's EOD) to $63,320.10 (+0.43%), so the bot's flat cash day underperformed BTC by −0.43% by sitting out a modest up-day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~31 days — needs resubscription at callmebot.com/61477788635.
