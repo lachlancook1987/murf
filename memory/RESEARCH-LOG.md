@@ -30475,3 +30475,57 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no new entries, no open positions to manage.** No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation. BLESSUSD was the closest numeric double-clear but dead volume (0.03x) marks it a thin-book artifact. MNGOUSD/FXSUSD show the identical-1h/4h-reading artifact pattern with dead volume. ALGOUSD was the only pair with genuine volume confirmation (3.66x) but both windows fall short of threshold. Crash gate not triggered (BTC +0.40% vs today's open). Per the gate-protection default rule, HOLD stands — consistent with the pre-session and two midday scans earlier today.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-02 — Pre-Session Research (second run, 20:05 UTC)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; full order history spot-checked (44 orders: 29 filled, 15 canceled, 0 open) — stop `a2b44cf9` (BTC/USD stop_limit sell) remains `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity $62,642.04 (+0.53% 24h) — roughly consistent with live Kraken this time: last $63,354.00 vs today's open $62,760.00 = **+0.95%** intraday (24h range within normal bounds).
+- ETH: Perplexity $3,036.82 (-3.54% 24h) — not cross-checked against Kraken (no ETH position, no ETH candidate this scan), treated as context only. Note: Perplexity's ETH price ($3,036) is far above the ~$1,750-1,920 range cited in earlier sessions today — inconsistent read, another data point for the ongoing Perplexity-unreliability pattern; not acted on since ETH isn't a candidate.
+- Fear & Greed: split readings — Binance 32 "Fear" (unchanged from earlier today), CoinStats 28 "Fear", Alternative.me 22 "Extreme Fear" (likely stale, flagged as such by the source itself). Treated as "Fear," not Extreme Fear — standard 1.2:1 R:R floor would apply if any candidate reached that check.
+- BTC perp funding: Binance +0.0079%/8h, Coinalyze aggregate ~+0.01%/8h — unremarkable, no funding-driven signal.
+- Market catalysts: Spot BTC ETF flow reversal (short covering after **$265.4M outflows** in the latest session) and Fed-dovish expectations cited as the main BTC/ETH drivers; **Coldcard hardware-wallet vulnerability** reportedly affecting 4,585 addresses (~1,367 BTC / ~$89M) is the day's biggest negative security headline — no held asset affected. Microcap speculation flagged around ASTEROID (BNB Chain, +1,557% 24h, insider-wallet allegations) — not a Kraken candidate. Minnesota crypto-kiosk ban took effect Aug 1 — minor regulatory noise, no market-wide impact.
+- Token unlocks next week: Succinct (PROVE) ~31.25% of max supply on Aug 5, Berachain (BERA) and MYX Finance (MYX) on Aug 6, Story Protocol (IP) Aug 13, YZY (~$35.5M) Aug 16 — none held, none current candidates, worth rechecking closer to date.
+- Crash gate: **not triggered** (BTC +0.95% intraday vs today's open, live Kraken).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): 5 days ago open $63,697.10 → live $63,354.00 = **-0.54%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%), not the raised 1h>5% bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+77 pairs cleared vs-open >3% and within 6% of 24h high — the widest field of the day yet (vs. 51 at pre-session, 52 and 60 at the two midday/session-open scans), continuing the broad market-wide rally noted throughout today. Pulled 15m OHLC on the top 30 by vs-open to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| LCXUSD | +3.17% | +1.63% | 255min (stale) | 0.01x | 1h clears, 4h below the 5% bar, stale high, dead volume. SKIP. |
+| BICOUSD | +1.38% | **+9.08%** | 15min (fresh) | 0.40x | 4h clears with a fresh high, but 1h below the 3% bar and volume ratio 0.40x well under the 2x confirmation bar. SKIP. |
+| BTRUSD | +1.01% | **+9.46%** | 0min (fresh) | 0.18x | 4h clears with a fresh high, but 1h below threshold and dead volume (0.18x). SKIP. |
+| FHEUSD | +0.72% | **+9.04%** | 105min | 0.03x | 4h clears, 1h below threshold, stale-ish high, dead volume. SKIP. |
+| UUSD | 0.00% | **+33.54%** | 105min | 0.00x | Huge 4h move but 1h flat, stale high, dead volume, and live spread **18.86%** — far past the 1% cap, essentially untradeable thin book. SKIP. |
+| HPOS10IUSD | 0.00% | +7.11% | 0min | 0.00x | 4h clears, 1h flat, dead volume despite fresh high; spread 5.35% also fails. SKIP. |
+| PORTALUSD | -2.57% | +7.78% | 90min | 0.00x | 4h clears but 1h already negative (faded), dead volume. SKIP. |
+| ALGOUSD | -0.80% | +0.22% | 135min | **9.44x** (real) | Only candidate with genuine strong volume confirmation, but both momentum windows are below threshold (1h negative, 4h flat) — volume without a real move. SKIP. |
+| CHILLHOUSEUSD, ZEREBROUSD, LOCKINUSD, SYNUSD, ACUUSD, PIEVERSEUSD, SANDUSD, SNEKUSD, MUSD, EPTUSD, ATLASUSD, MNGOUSD, SN44USD, APXUSDUSD, CELRUSD, ADAUSD, AVAXUSD, NIGHTUSD, XANUSD, ENAUSD, GWEIUSD, BLESSUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation.** BICO/USD, BTR/USD, and FHE/USD all show strong 4h moves (+9%) with fresh-to-recent 24h highs, but every one of them has dead-to-weak volume (0.18x-0.40x, well under the 2x bar) and none clears the 1h>3% threshold — consistent with the recurring pattern this week of numerically-large 4h moves that aren't backed by real buying pressure. ALGO/USD is the inverse case: strong genuine volume (9.44x) but no accompanying price momentum in either window.
+
+### Step 5 — Risk factors
+
+- Widest sweep field of the day (77 candidates) continues the broad market-wide rally theme noted at pre-session and both midday scans — still no single asset breaking out with a fresh, volume-confirmed move distinct from the general uptick.
+- Recurring pattern today: strong 4h% moves (BICO, BTR, FHE, UUSD, HPOS10I, PORTAL) consistently lack volume confirmation (all <0.5x except ALGO) — suggests today's "movers" are drifting on thin books rather than being bought with conviction.
+- Coldcard hardware-wallet exploit (~$89M reported) is a live security headline — no held asset affected, but a reminder to keep wallet/key hygiene in mind if it develops further.
+- BTC weekly-downtrend gate remains not triggered (-0.54%/5d, inside band) — standard entry thresholds apply, not the raised bar.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 77 pairs cleared the initial filter — the widest field of the day — but none cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation. BICO/BTR/FHE all show strong 4h moves with fresh highs but dead-to-weak volume; ALGO has real volume but no accompanying momentum. Crash gate not triggered (BTC +0.95% intraday). BTC weekly-downtrend gate not triggered (-0.54%/5d). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.95% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.54%/5d). 77 candidates screened (widest field of the day) - none cleared both momentum thresholds with real volume. BICO/BTR/FHE all strong 4h% but dead-to-weak volume; ALGO real volume (9.44x) but no momentum."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~31 days running; needs resubscription at callmebot.com/61477788635.
