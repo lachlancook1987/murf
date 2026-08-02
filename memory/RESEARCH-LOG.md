@@ -30381,3 +30381,52 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Step 6 — Notification
 
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -0.53% intraday, crash gate not triggered. BTC weekly-downtrend gate still TRIGGERED (-4.36%/5d). F&G 32 Fear. 34 candidates screened - LIT/USD cleared every momentum/spread/volume gate but hard-failed cross-exchange divergence (~29% vs CoinGecko, direction-mismatched: Kraken +18.71%/1h vs CoinGecko -26.19%/24h). Nothing else cleared both thresholds."
+
+## 2026-08-02 — Pre-Session Research
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the VELVET stop-out closed 2026-07-29. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; stop `a2b44cf9` (BTC/USD stop_limit sell) remains `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity $64,382.37 (+2.90% 24h) — **contradicted by live Kraken**, which shows last $63,450.60 vs today's open $62,760.00 = **+1.10%** intraday (24h range $62,740.20–$63,554.40). Consistent with the ongoing Perplexity BTC-price divergence pattern flagged repeatedly this week — Kraken remains sole pricing/gating authority.
+- ETH: Perplexity ~$1,749–$1,789 (-0.10% to +1.64% depending on source) — not cross-checked against Kraken (no ETH position, no ETH candidate this scan), treated as context only.
+- Fear & Greed: split readings — Binance 32 "Fear", CFGI 38 "Fear", CoinStats 28 "Fear", Alternative.me 22 "Extreme Fear" (likely stale). Treated as "Fear," not Extreme Fear — standard 1.2:1 R:R floor would apply if any candidate reached that check.
+- BTC perp funding: Binance +0.0079-0.0100%/8h, Glassnode cross-exchange aggregate +0.006% — slightly positive, unremarkable, no funding-driven signal.
+- Market catalysts: Macro/Fed reaction-function watch continues into August; spot BTC ETF inflows (3 straight weeks) cited as a structural bull driver; Clarity Act progress flagged as a potential upside catalyst if it advances (contrasts with Jul 31's "stalled in Senate" read — mixed/uncertain legislative status); Uniswap v4 Permissioned Pools cited as a DeFi product development; ENA ~40.63M token unlock today (Aug 2), following SUI/EIGEN unlocks earlier in the week — ENA not held, appeared in this scan's sweep with 4h +4.13% and real volume (6.88x) but 1h negative (-0.23%), momentum already faded from the unlock reaction.
+- Token unlocks this week: BERA and MYX unlock Aug 6 (~$2.0M and ~$1.0M respectively); CRO (~$64.0M) and MANTA (~$0.8M) unlock later in the month (Aug 17/18) — none held, none current candidates.
+- Crash gate: **not triggered** (BTC +1.10% intraday vs today's open).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 28 open $63,697.10 → live $63,450.60 = **-0.39%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — recovered from the -4.36% trigger logged Aug 1; standard entry thresholds apply (1h>3%, 4h>5%), not the raised 1h>5% bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+51 pairs cleared vs-open >3% and within 6% of 24h high — the widest initial field in recent sessions, consistent with a broad market-wide rally (large-caps ADA +6.91%, AVAX +6.79%, WLD +6.97%, LINK +3.93% all cleared the initial filter alongside BTC's own +1.10%). Pulled 15m OHLC on all 51 to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **AIOUSD** | **+5.62%** | **+8.08%** | 1395min (stale) | 0.00x | Clears both mechanical thresholds numerically, but 24h high is ~23h old (fails momentum-peak-check) and volume is dead (0.00x) — the move already happened, not fresh. Spread also checked: 1.33%, past the 1% cap. Triple rejection. SKIP. |
+| ATLASUSD | +4.75% | +4.75% | 0min | 0.00x | 1h clears, 4h just under the 5% bar (identical 1h/4h reading is a thin-book artifact, same pattern as FIGHT/USD Aug 1). Dead volume, spread ~10.1% (far past cap). SKIP. |
+| ENAUSD | -0.23% | +4.13% | 45min | 6.88x (real) | 4h clears with strong real volume — the ENA unlock reaction — but 1h has already turned negative, momentum faded. Same faded-momentum pattern as AVA (Jul 31), EVAA (Jul 30), UAI (Aug 1). SKIP. |
+| BLESSUSD | +1.72% | +6.87% | 45min | 0.17x | 4h clears, 1h below threshold, weak volume. SKIP. |
+| HPOS10IUSD | 0.00% | +6.18% | 1320min (stale) | 0.00x | 4h clears numerically but stale high (22h) and dead volume. SKIP. |
+| WLDUSD, ADAUSD, AVAXUSD, ZEUSUSD, REZUSD, EIGENUSD, ZAMAUSD, XNYUSD, USELESSUSD, PEPEUSD, XANUSD, NIGHTUSD, HIPPOUSD, GRASSUSD, NEIROUSD, FWOGUSD, YFIUSD, RSRUSD, ESPUSD, BONKUSD, FARTCOINUSD, UNITASUSD, POPCATUSD, IAGUSD, LINKUSD, PIEVERSEUSD, MEWUSD, RNBWUSD, SHIBUSD, ETHFIUSD, GENIUSUSD, GUSD, CFGUSD, ARBUSD, UNIUSD, CHILLHOUSEUSD, SNEKUSD, CRVUSD, TIAUSD, TACUSD, MERLUSD, MEGAUSD, PENGUUSD, ZBTUSD, KP3RUSD, EPTUSD | — | — | — | — | All below both momentum thresholds this check, or near-zero/dead volume where one threshold clears. SKIP. |
+
+**No candidate cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation and a fresh high.** AIO/USD was the only numeric double-clear but fails on three independent grounds (stale high, dead volume, spread past cap). ENA/USD had the strongest real-volume 4h move (unlock-driven) but 1h already faded negative. The widest field of the week (51 candidates, broad large-cap participation) still produced nothing genuinely fresh — consistent with a market-wide grind-up rather than any single asset breaking out.
+
+### Step 5 — Risk factors
+
+- Broadest initial-filter field in recent sessions (51 vs. the usual 30s-40s) reflects market-wide strength (BTC +1.10%, large-caps participating) rather than isolated setups — no asset shows a fresh, volume-confirmed breakout distinct from the general uptick.
+- ENA's unlock-day reaction (4h +4.13% on 6.88x volume) is the most "real" volume signal of the sweep but has already faded on the 1h window — worth rechecking on a later scan if it reclaims 1h momentum.
+- BTC weekly-downtrend gate has recovered (-0.39%, back inside band) after triggering Aug 1 — no longer raises the entry bar.
+- Fear & Greed readings diverge sharply across trackers (22-38) — treated as "Fear" (not Extreme Fear) per the Binance/CFGI/CoinStats majority; the Extreme Fear R:R floor does not apply this scan regardless, since nothing reached that check.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 51 pairs cleared the initial filter — the widest field in recent sessions, reflecting broad market strength rather than a genuine breakout. None cleared both mechanical momentum thresholds (1h>3% AND 4h>5%) with real volume confirmation and a fresh 24h high. AIO/USD was the only numeric double-clear but fails on stale high, dead volume, and spread simultaneously. ENA/USD's unlock-driven 4h volume signal faded on 1h. Crash gate not triggered (BTC +1.10% intraday). BTC weekly-downtrend gate recovered, not triggered (-0.39%/5d). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +1.10% intraday, crash gate not triggered. BTC weekly-downtrend gate recovered (-0.39%/5d). 51 candidates screened (widest field recently, broad market rally) - none cleared both momentum thresholds with real volume + fresh high. AIO/USD closest but stale high + dead volume + 1.33% spread. ENA/USD unlock-driven 4h volume faded on 1h."
