@@ -30430,3 +30430,26 @@ bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions.
 ### Step 6 — Notification
 
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +1.10% intraday, crash gate not triggered. BTC weekly-downtrend gate recovered (-0.39%/5d). 51 candidates screened (widest field recently, broad market rally) - none cleared both momentum thresholds with real volume + fresh high. AIO/USD closest but stale high + dead volume + 1.33% spread. ENA/USD unlock-driven 4h volume faded on 1h."
+
+## 2026-08-02 — Midday Scan (14:06 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $62,993.00 → **+0.37%** (o $62,760.00). Crash gate not triggered (threshold -20%).
+
+**Discovery sweep** (Kraken-native, full 647 online USD pairs, live Ticker): 52 pairs cleared vs-open >3% and within 6% of 24h high — widest field yet, extending the broad market rally noted at pre-session. Pulled 15m OHLC on the top 25 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| CAMPUSD | +25.48% | +23.89% | 15min (fresh) | 0.00x | Clears both thresholds numerically with a fresh high, but dead volume (0.00x) and live spread **2.87%** (ask $0.000314/bid $0.000305) hard-fail both the volume-confirmation and spread gates — only 123/585 trades in 24h, thin micro-cap artifact. SKIP. |
+| TREMPUSD | +12.90% | +14.38% | 15min (fresh) | 0.00x | Same pattern: fresh high, dead volume, and spread **11.1%** (ask $0.0035/bid $0.00311) — only 6/18 trades in 24h, essentially untradeable. SKIP. |
+| KEYUSD | 0.00% | +15.56% | 180min (stale) | 0.00x | 4h clears, 1h flat, stale high, dead volume. SKIP. |
+| ICNTUSD | -0.42% | +9.31% | 30min | 1.52x | 4h clears with modest volume, 1h negative (faded). SKIP. |
+| MANTRAUSD | +4.04% | +5.71% | 60min (borderline stale) | 1.68x | Closest legitimate candidate — clears both mechanical thresholds, but volume ratio 1.68x is under the 2x bar and live spread **6.3%** (ask $0.006494/bid $0.006453) hard-fails the 1% cap. SKIP. |
+| ATLASUSD | 0.00% | +7.46% | 15min | 0.00x | 4h clears, 1h flat, dead volume. SKIP. |
+| ENAUSD | -0.34% | -0.45% | 270min | 0.00x | Unlock-day momentum from pre-session has now fully faded on both windows. SKIP. |
+| BLESSUSD, TAKEUSD, EPTUSD, KP3RUSD, XANUSD, SNEKUSD, PRIMEUSD, FHEUSD, ADAUSD, MUSD, OOBUSD, AVAXUSD, REZUSD, PIEVERSEUSD, SAGAUSD, CHILLHOUSEUSD, YFIUSD, ACUUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** CAMP/USD and TREMP/USD were the strongest numeric double-clears (fresh highs, big 1h/4h moves) but both hard-fail on dead volume (0.00x) and wide spreads (2.87% and 11.1% respectively) — classic thin-book artifacts, same pattern as ATLAS/EPT/KP3R precedent. MANTRA/USD was the closest legitimate candidate but its spread (6.3%) hard-fails the 1% cap regardless of the sub-2x volume ratio. ENA/USD's unlock-driven momentum from pre-session has fully faded. Crash gate not triggered (BTC +0.37% vs today's open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
