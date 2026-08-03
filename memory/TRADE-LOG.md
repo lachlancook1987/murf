@@ -8529,3 +8529,11 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no new entries, no open positions to manage.** BICO/USD was the only candidate to clear both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but hard-fails the ≤1% spread gate at 5.38%. BKS/USD and PERP/USD clear both thresholds numerically with fresh highs but on dead volume (thin-book artifacts). NPC/USD has real volume and a strong 4h move but 1h falls short. Nothing else clears both base thresholds. Crash gate not triggered (BTC +1.36% vs today's open). Per the gate-protection default rule, HOLD stands — consistent with every other scan today (pre-session, 14:06 UTC midday, 15:01 UTC session-open, 20:05 UTC pre-session re-run).
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+---
+
+### Aug 03 — EOD Snapshot (Day 75, Monday)
+**Portfolio:** $115.0274 | **Cash:** $115.0274 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$64.7526 (−36.02%) | **vs BTC:** +1.98%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** none | **Total since migration:** ~90
+**Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the Jul 29 VELVET stop-out, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from today's open $63,500.00 to $62,242.00 (-1.98%), so the bot's flat cash day outperformed BTC by +1.98% by sitting out a down day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry; crash gate threshold ~$50,800 (BTC -20% from ~$62,242 current). EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~32 days — needs resubscription at callmebot.com/61477788635.
