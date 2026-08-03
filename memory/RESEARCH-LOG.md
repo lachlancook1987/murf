@@ -30583,3 +30583,27 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -1.49% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-2.02%/5d). F&G 32 Fear. 24 candidates screened (narrowest field recently) - ZEREBRO/USD cleared every momentum/spread/volume/divergence gate but hard-failed ATR/R:R (two 7-10% range candles require 3.5% trail, dropping R:R to 0.86:1 vs 1.2:1 floor), same failure mode as COTI/BOB. Nothing else cleared both thresholds."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~32 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-03 — Midday Scan (14:20 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,357.90 → **-0.22%** (o $63,500.00). Crash gate not triggered. BTC weekly-downtrend gate not triggered (per pre-session, -2.02%/5d, unchanged this scan).
+
+**Discovery sweep** (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC): 38 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 25 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **LSKUSD** | **+6.07%** | **+7.77%** | 15min (fresh) | **7.27x** (real) | Only candidate clearing both mechanical thresholds with real volume and a fresh high — see rejection below |
+| HFTUSD | +16.38% | +29.85% | 0min (fresh) | 0.00-1.07x | Largest move of the scan but volume ratio under the 2x bar despite huge absolute volume (last 4 candles: 1.25M/198K/607K/937K/177K) — recent-candle-skewed average makes the ratio unreliable, but candle ranges (11.2%, 4.2%, 7.4%, 7.3%, 6.7%) mark the same high-ATR spike pattern as LSK. Would fail the ATR/R:R gate even if volume cleared. SKIP. |
+| MNGOUSD | +11.34% | +9.81% | 1425min (stale) | 0.00x | Clears both numerically but 24h-stale high and dead volume — momentum-peak-check fail. SKIP. |
+| PTBUSD | +0.87% | +10.64% | 105min | 0.01x | 4h clears, 1h below 3% bar, dead volume. SKIP. |
+| BICOUSD | +0.05% | +17.54% | 30min | 0.59x | 4h clears big, 1h flat (faded), volume under bar. SKIP. |
+| PROMPTUSD | +0.67% | +6.95% | 30min | 2.91x (real) | 4h clears with real volume, 1h far below 3% bar. SKIP. |
+| GENIUSUSD, PERPUSD, BILLYUSD, KP3RUSD, STUSD, LITUSD, WINUSD, CATUSD, RADUSD, OBOLUSD, EULUSD, ESPUSD, ENAUSD, AKTUSD, ZAMAUSD, SNXUSD, TUSD, GUSD, EPTUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**LSK/USD — rejected on ATR/R:R gate, same failure mode as ZEREBRO (Aug 3 pre-session), COTI, and BOB.** Cleanest mechanical setup of the scan: 1h +6.07%, 4h +7.77%, fresh 15min high, real volume (7.27x, clears the 2x bar). Spread confirmed 0.50% (ask $0.076388/bid $0.076005), well under the 1% cap. Kraken pair online, no margin available (spot only, acceptable for a day trade). But the last 4 15m candles show ranges of 5.33%, 6.05%, 2.96%, 6.71% — three of four candles over 5%, a sharper spike profile than ZEREBRO's rejection earlier today. Worse: the 24h high ($0.080454) printed in the second-to-last candle, and the most recent candle already closed **-5.1% off that high** ($0.080454 → $0.076366) — the reversal has already started, not a steady climb still building toward the high. Applying the required high-ATR 3.5% trail drops R:R to 3%/3.5% = **0.86:1**, below the 1.2:1 floor — hard reject. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** LSK/USD was the only candidate clearing both mechanical momentum thresholds with real volume and a fresh high, but hard-fails the ATR/R:R gate (three of the last four 15m candles >5% range, plus an already-started -5.1% reversal off the 24h high) — the same failure mode that rejected ZEREBRO earlier today, and COTI/BOB previously. HFT/USD's huge move shows the identical spike pattern and lacks confirmed volume. MNGO/USD clears numerically but on a stale high with dead volume. Nothing else clears both base thresholds. Crash gate not triggered (BTC -0.22% vs today's open). BTC weekly-downtrend gate not triggered. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
