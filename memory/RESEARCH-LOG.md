@@ -30529,3 +30529,57 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.95% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.54%/5d). 77 candidates screened (widest field of the day) - none cleared both momentum thresholds with real volume. BICO/BTR/FHE all strong 4h% but dead-to-weak volume; ALGO real volume (9.44x) but no momentum."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~31 days running; needs resubscription at callmebot.com/61477788635.
+
+---
+
+## 2026-08-03 — Pre-Session Research
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; stop `a2b44cf9` (BTC/USD stop_limit sell) remains `status: canceled` since 2026-05-22 — zero Alpaca exposure.
+
+**Cash available: $115.0274 ZUSD** (100%, +dust).
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity ~$62.2k-64.4k depending on source (+0.53% to +2.9%) — live Kraken authoritative: last $62,556.00 vs today's open $63,500.00 = **-1.49%** intraday (5-day: $63,844.50 → $62,556.00 = **-2.02%**, inside the ±3% band).
+- ETH: Perplexity $3,036.82 (-3.54% 24h) — not cross-checked (no ETH position/candidate), context only.
+- Fear & Greed: Binance **32 "Fear"** (primary source used), CFGI 38 "Fear", Alternative.me 22 "Extreme Fear" (flagged in prior sessions as likely stale/inconsistent). Treated as "Fear" — standard 1.2:1 R:R floor applies.
+- BTC perp funding: Binance +0.0079%/8h, Coinalyze aggregate ~+0.0100%/8h, Kraken +0.0148% — unremarkable, no funding-driven signal.
+- Market catalysts: Iran/geopolitical risk and US macro data (ISM Manufacturing PMI today, ADP/ISM Services/JOLTs and Friday's NFP ahead) are the main drivers; spot BTC ETF flows returned positive in July; CLARITY Act still pending Senate action; Coldcard hardware-wallet exploit (~1,359 addresses) flagged as a live security headline, no held asset affected.
+- Token unlocks this week: Wormhole (W) 600M tokens (~$180M, ~1/3 circulating supply) unlocked today (Aug 3) — largest of the week; Lagrange (LA) Aug 4; Succinct (PROVE) 31.25% max supply Aug 5; Berachain (BERA) and MYX Finance (MYX) Aug 6; Story Protocol (IP) Aug 13; YZY (~$35.5M) Aug 16. Polygon Ithaca hard fork went live Jul 30. None held, none Kraken sweep candidates this scan.
+- Crash gate: **not triggered** (BTC -1.49% intraday vs today's open, live Kraken).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): 5 days ago open $63,844.50 → live $62,556.00 = **-2.02%**, inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%), not the raised bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 650 online USD pairs, live Ticker + 15m OHLC)
+
+24 pairs cleared vs-open >3% and within 6% of 24h high — the narrowest initial field in recent sessions (vs. 34-77 over the past week). Pulled 15m OHLC on all 24 to check 1h/4h momentum, 24h-high freshness, and volume ratio:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ZEREBROUSD** | **+14.67%** | **+12.28%** | 15min (fresh) | **3.36x** (real) | Only candidate to clear both mechanical thresholds with real volume and a fresh high — see rejection below |
+| RBCUSD | +6.96% | +2.13% | 0min (fresh) | 0.00x | 1h clears, 4h below the 5% bar, fresh high but dead volume. SKIP. |
+| GWEIUSD | +3.41% | +5.22% | 360min (stale) | 0.50x | Both clear numerically but stale high (6h) and weak volume. SKIP. |
+| SCRTUSD | +1.48% | +8.23% | 120min | 0.00x | 4h clears, 1h below threshold, stale-ish high, dead volume. SKIP. |
+| ZAMAUSD | +0.36% | +6.66% | 1425min (stale) | 0.25x | 4h clears numerically but high ~24h stale, dead volume. SKIP. |
+| PTBUSD | -0.54% | +5.13% | 60min (borderline stale) | 0.11x | 4h clears, 1h negative (faded), weak volume. SKIP. |
+| GHIBLIUSD, STUSD, DUCKUSD, HOLOUSD, OBOLUSD, KGENUSD, TXUSD, MIRAUSD, LQTYUSD, ALLOUSD, TUSD, CCDUSD, PIEVERSEUSD, GENIUSUSD, HMSTRUSD, CLVUSD, LITUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**ZEREBRO/USD — rejected on ATR/R:R gate, same failure mode as COTI (Jul 29/31) and BOB (Jul 29).** Strongest candidate by a wide margin: 1h +14.67%, 4h +12.28%, fresh 15min high, real volume (3.36x, clears the 2x bar). Spread confirmed 0.62% (ask $0.03886/bid $0.03862), well under the 1% cap. Kraken pair online, `ordermin` 120 units / `costmin` $0.5 — no sizing obstacle. Cross-exchange check: Kraken $0.03869 vs CoinGecko $0.03888 (+13.1% 24h, direction-matched) — divergence only ~0.49%, comfortably inside the acceptable band, no divergence rejection. No confirmed project-specific catalyst (Perplexity found only generic market commentary) — momentum+volume alone would otherwise satisfy the entry rule. **However**, the last four 15m candles show ranges of 1.72%, 7.65%, 10.02%, 2.44% — two consecutive candles with 7-10% ranges, not a steady multi-candle climb (contrast VELVET's 0-3.2% realized ranges on its successful Jul 29 entry). This sustained double-digit-range pattern is the same profile that triggered the high-ATR 3.5% trailing-stop exception for COTI (twice) and the outright spike-and-dump rejection for BOB. Applying the required 3.5% high-ATR trail drops R:R to 3%/3.5% = **0.86:1**, below the 1.2:1 floor — hard reject, not a "trade with wider stop" situation. **SKIP.**
+
+### Step 5 — Risk factors
+
+- ZEREBRO was the cleanest mechanical setup in several sessions (real volume, fresh high, tight spread, clean cross-exchange match) but the two back-to-back double-digit-range candles mark it as a sharp spike rather than a steady climb — worth a re-check only if it re-tests a breakout with calmer, sub-3.5% candle ranges on a later scan.
+- Narrowest initial-filter field in recent sessions (24 vs. the usual 30s-70s) — no broad market-wide rally today, isolated moves only.
+- Wormhole's $180M unlock (~1/3 circulating supply) is today's largest scheduled event — not a Kraken sweep candidate this scan, but worth a fresh price-reaction check on a later scan given the size.
+- BTC weekly-downtrend gate not triggered (-2.02%/5d, inside band) — standard entry thresholds apply.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29, net -$0.53).
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 24 pairs cleared the initial filter — the narrowest field in recent sessions. ZEREBRO/USD was the only candidate clearing both mechanical momentum thresholds with real volume, a fresh high, tight spread, and a clean cross-exchange match, but its two consecutive double-digit-range 15m candles require the high-ATR 3.5% trail exception, which drops R:R to 0.86:1 — below the 1.2:1 floor, the same failure mode that rejected COTI and BOB. Nothing else clears both base thresholds. Crash gate not triggered (BTC -1.49% intraday). BTC weekly-downtrend gate not triggered (-2.02%/5d). Per the gate-protection default rule, HOLD stands — this is a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC -1.49% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-2.02%/5d). F&G 32 Fear. 24 candidates screened (narrowest field recently) - ZEREBRO/USD cleared every momentum/spread/volume/divergence gate but hard-failed ATR/R:R (two 7-10% range candles require 3.5% trail, dropping R:R to 0.86:1 vs 1.2:1 floor), same failure mode as COTI/BOB. Nothing else cleared both thresholds."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~32 days running; needs resubscription at callmebot.com/61477788635.
