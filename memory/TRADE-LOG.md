@@ -8537,3 +8537,26 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~90
 **Notes:** No trading activity today — `kraken.sh account`/`positions`/`orders` confirm ZUSD $115.0274 unchanged since the Jul 29 VELVET stop-out, zero open positions, `orders: {"open": {}}` (usual dust basket unchanged, plus $0.1066 ZAUD). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero Alpaca exposure. BTC fell from today's open $63,500.00 to $62,242.00 (-1.98%), so the bot's flat cash day outperformed BTC by +1.98% by sitting out a down day. Phase P&L unchanged at −$64.7526 (−36.02%) from the $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $115.03 available for a fresh entry; crash gate threshold ~$50,800 (BTC -20% from ~$62,242 current). EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~32 days — needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-03 — Midday Scan (22:07 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,353.90 → **-0.23%** (o $63,500.00). Crash gate not triggered (threshold ~-20%).
+
+**Discovery sweep** (Kraken-native, full 647 online USD pairs, live Ticker): 72 pairs cleared vs-open >3% and within 6% of 24h high — widest field yet this week. Pulled 15m OHLC on the top 40 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ACAUSD** | **+25.00%** | **+34.62%** | 0min (fresh) | **7.74x** (real) | Only candidate clearing both mechanical thresholds with genuine volume confirmation — see rejection below |
+| BDXNUSD | +7.89% | +7.89% | 0min | 0.00x | Clears both thresholds with a fresh high but dead volume — thin micro-cap artifact. SKIP. |
+| MIRUSD | +7.55% | +21.54% | 0min | 0.00x | Same pattern: fresh high, dead volume. SKIP. |
+| TBTCUSD | +4.70% | +4.70% | 0min | 0.00x | 1h clears, dead volume, thinly-wrapped BTC product. SKIP. |
+| DRIFTUSD | +2.24% | -2.84% | 225min | 0.99x | 1h below bar, 4h negative (faded), high stale. SKIP. |
+| SAGAUSD, ZROUSD, VELOUSD, JUNOUSD, RLCUSD, PHAUSD, GENIUSUSD, WFBUSD, TUSD, WENUSD, C98USD, FXSUSD, ALGOUSD, UNITASUSD, MYXUSD, RADUSD, OBOLUSD, VVVUSD, ARUSD, EPTUSD, BADGERUSD, UXLINKUSD, WINUSD, ORDERUSD, APXUSDUSD, AMIUSD, CATUSD, OPNUSD, ATOMUSD, VELVETUSD, AKTUSD, EWTUSD, KNTQUSD, LITUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**ACA/USD — rejected on spread gate, hard fail (repeat offender).** Strongest candidate by far: 1h +25.00%, 4h +34.62%, fresh (0min) 24h high, real volume (7.74x, clears the 2x bar). Live quote at check time: ask $0.00036 / bid $0.00034 → **spread ≈ 5.56%**, far past the ≤1% hard-skip threshold, with only 54 trades in 24h confirming an illiquid micro-cap order book (same asset, same failure mode as the Aug 1 22:04 UTC rejection at 15.6% spread — spread has narrowed but is still 5.5× the cap). **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** ACA/USD was the only candidate clearing both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but hard-fails the ≤1% spread gate at 5.56% on thin 24h trade count (54). BDXN/USD and MIR/USD clear both thresholds numerically with fresh highs but on dead volume (thin-book artifacts). Nothing else clears both base thresholds. Crash gate not triggered (BTC -0.23% vs today's open). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
