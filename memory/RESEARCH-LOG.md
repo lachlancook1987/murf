@@ -30787,3 +30787,43 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +1.06% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.91%/5d). F&G 32 Fear. 57 candidates screened (widest field this week) - VOOI/USD and PUMP/USD were the only ones clearing both momentum thresholds with real volume and a fresh high, but VOOI failed spread (2.17% >1% cap) and PUMP failed cross-exchange divergence (~62-66% vs CoinGecko/CMC). Nothing else cleared both thresholds."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~33-34 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-04 — Midday Scan #3 (22:07 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out — day 6 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+### Step 3 — Market context
+
+- BTC: live Kraken $64,174.10, today's open $63,461.80 → **+1.12%** intraday. Crash gate not triggered (threshold ~-20%).
+- BTC 5-day trend (daily OHLC): 5d-ago close $64,723.00 → live $64,166.70 = **-0.86%**, inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard thresholds apply (1h>3%, 4h>5%).
+- Fear & Greed: **32 "Fear"** (Binance) — standard 1.2:1 R:R floor applies.
+
+### Step 4 — Discovery sweep (Kraken-native, full 653 online USD pairs, live Ticker + 15m OHLC)
+
+56 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 25 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **LITUSD** | **+3.37%** | **+8.46%** | 30min (fresh) | **2.16x** (real) | Only candidate clearing both mechanical thresholds with genuine volume and a fresh high — see rejection below |
+| BICOUSD | +6.63% | +9.83% | 45min | 1.31x | 1h/4h both clear but volume under the 2x bar. SKIP. |
+| YALAUSD | +7.69% | +25.64% | 30min | 0.00x | Clears both numerically but dead volume — thin micro-cap artifact. SKIP. |
+| BMBUSD | +7.49% | +13.28% | 45min | 0.00x | Same pattern: fresh high, dead volume. SKIP. |
+| NPCUSD | +0.52% | +1.98% | 285min | 5.32x (real) | Strong volume but neither momentum window clears. SKIP. |
+| CVXUSD | +1.50% | +3.58% | 75min | 1.41x | Neither window clears, volume under 2x bar. SKIP. |
+| TAKEUSD, PUMPUSD, BADGERUSD, VOOIUSD, ZEREBROUSD, GWEIUSD, SN75USD, BILLYUSD, XANUSD, XNYUSD, NOSUSD, CLOUDUSD, TURBOUSD, HDXUSD, QUAIUSD, ZROUSD, NOCKUSD, PIEVERSEUSD, LSETHUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**LIT/USD — rejected on catalyst-validity grounds, not a mechanical gate (novel risk pattern).** Strongest candidate by far: 1h +3.37%, 4h +8.46%, fresh (30min) 24h high, real volume (2.16x). Spread confirmed 0.79% (ask $0.1268/bid $0.1258, well under the 1% cap), liquidity looks genuine (1,080 trades/24h, not a thin book). Cross-exchange check: Kraken $0.1257 vs CoinGecko $0.1280 (-1.8%) vs CoinMarketCap $0.1209 (+4.0%) — both well inside the divergence band, no red flag there. However, Perplexity catalyst research surfaced a **ticker collision**: Kraken's LIT is **Litentry** (per Kraken's own listing page), which CoinGecko says has since **rebranded to Heima (HEI)** on a new contract. The buyback-and-burn / Robinhood Wallet partnership news actually driving today's "LIT" narrative belongs to a **different, unrelated project — Lighter DEX** — not Litentry. There is no genuine fresh catalyst for the asset actually trading on Kraken as LITUSD; the move looks like retail momentum piggybacking on ticker confusion with an unrelated project's news, a pattern with material reversal risk once the mix-up is arbitraged away. Momentum-alone entries are otherwise permitted per strategy, but a *known, identified* name-confusion pump is a materially different risk than plain unconfirmed-catalyst momentum, and the underlying token's own rebrand status adds a second layer of doubt about what's actually being bought. **SKIP.**
+
+### Step 5 — Risk factors
+
+- LIT/USD passed every mechanical gate (spread, volume, freshness, cross-exchange divergence) — the first time a candidate has cleared the divergence gate cleanly in several sessions — but the catalyst research uncovered a name-collision pump not previously seen this month; documenting as a new pattern to watch for (a ticker shared by an active/renamed project and an unrelated trending project).
+- BICO/USD and YALA/USD both showed strong momentum but failed the volume-confirmation bar (thin book vs. dead volume, respectively) — consistent with the week's dominant failure mode.
+- BTC weekly-downtrend gate not triggered (-0.86%/5d). Crash gate not triggered (BTC +1.12% intraday).
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available, idle since the VELVET stop-out (2026-07-29), day 6 of the all-cash streak.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 56 pairs cleared the initial filter. LIT/USD was the only candidate clearing every mechanical gate (momentum, volume, freshness, spread, cross-exchange divergence), but the catalyst behind today's move belongs to an unrelated project (Lighter DEX) sharing the same ticker as Kraken's actual (and reportedly rebranded) Litentry token — no genuine catalyst for the asset actually being bought, and a real risk of a confusion-driven reversal. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
