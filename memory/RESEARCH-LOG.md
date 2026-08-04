@@ -30734,3 +30734,56 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Decision: **HOLD — no new entries, no open positions to manage.** 35 pairs cleared the initial filter. KP3R/USD was the only candidate clearing both mechanical momentum thresholds with a real-looking volume ratio and a fresh high, but hard-fails the ≤1% spread gate at ≈28.8% on a thin 24h trade count (30-32). TREMP/USD and LSETH/USD clear thresholds numerically but on dead volume (thin-book artifacts). Nothing else clears both base thresholds. Crash gate not triggered (BTC +0.40% vs today's open). BTC weekly-downtrend gate not triggered. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-04 — Midday Scan #2 (20:08 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account state (live)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the Jul 29 VELVET stop-out — day 6 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure, no action needed.
+
+### Step 3 — Market context (Perplexity, context/catalyst-confirmation only)
+
+- BTC: Perplexity/Kraken live **$64,241.00, +0.81%/24h** (Kraken daily-OHLC cross-check: today's open $63,461.80 → live $64,133.60 = **+1.06%** intraday). Crash gate not triggered (threshold -20%).
+- ETH: Perplexity **$3,036.82, -3.54%/24h** — context only, no ETH position/candidate.
+- Fear & Greed: **32 "Fear"** (Binance, primary tracker used) — standard 1.2:1 R:R floor applies, not the Extreme Fear 1.5:1 floor.
+- BTC perp funding: near-neutral, mixed by venue (Binance +0.0079%/8h, Glassnode aggregate ~flat) — no funding-driven signal.
+- Market catalysts: Coldcard hardware-wallet exploit (~1,367 BTC / ~$114M, day 5) still dominating sentiment; CLARITY Act stalled ahead of Senate recess; US-Iran de-escalation supporting risk-on tone; September Fed rate-hike odds >60% after three dissents at July meeting (headwind); Mastercard closed BVNK acquisition; Robinhood got FCA UK crypto approval; MMT unlock (~6.14% supply, ~$4.2M) live today.
+- Token unlocks this week: PROVE (Aug 5, ~$35-39M, large vs market cap), ENA (Aug 5, ~172M tokens), HYPE (Aug 6, ~$22.7M) — none held, context only.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): 5d ago close $64,723.00 → live $64,133.60 = **-0.91%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard thresholds apply (1h>3%, 4h>5%).
+
+### Step 4 — Discovery sweep (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC)
+
+57 pairs cleared vs-open >3% and within 6% of 24h high — widest field this week (vs. 32-35 earlier today). Pulled 15m OHLC on the top 57 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **VOOIUSD** | **+16.82%** | **+20.39%** | 7min (fresh) | **28.71x** (real) | Clears both mechanical thresholds with strong volume confirmation and a fresh high — rejected on spread, see below |
+| **PUMPUSD** | **+4.83%** | **+8.82%** | 7min (fresh) | **4.08x** (real) | Clears both mechanical thresholds with real volume and a fresh high, spread passes (0.12%) — rejected on cross-exchange divergence, see below |
+| RBCUSD | +12.55% | +12.55% | 52min | 0.00x | Clears both thresholds numerically but dead volume — thin micro-cap artifact. SKIP. |
+| BMBUSD | +5.58% | +5.39% | 548min (stale) | 0.00x | Clears both thresholds numerically but high is 548min stale and volume dead. SKIP. |
+| BICOUSD | +3.05% | +14.91% | 202min (stale) | 0.33x | 4h clears strongly, 1h barely clears, but high is 202min stale (price declining from it, not a fresh breakout) and volume under 2x bar — fails momentum-peak-check. SKIP. |
+| ZIGUSD | +4.75% | +3.22% | 1373min (stale) | 0.55x | 1h clears, 4h and freshness both fail. SKIP. |
+| TAOUSD | +1.46% | +3.73% | 22min | 1.79x | Neither window clears, volume just under 2x bar. SKIP. |
+| NOSUSD, METUSD, XZECZUSD, GUSD | -0.63% to +1.51% | mixed | 37-427min | 0.03-2.35x | Below both momentum thresholds this check, or negative/faded. SKIP. |
+| TAKEUSD, WFBUSD, SYNUSD, AIOUSD, PUMPUSD-dupe, BADGERUSD, ZROUSD, CLOUDUSD, KINUSD, HDXUSD, NILUSD, TURBOUSD, XNYUSD, GWEIUSD, DRVUSD, XANUSD, ELXUSD, ALPHAUSD, NOCKUSD, LSETHUSD, NPCUSD, HIPPOUSD, PIEVERSEUSD, SN44USD, BIOUSD, SN62USD, CXTUSD, APUUSD, ARCUSD, VELVETUSD, CHIPUSD, MUBARAKUSD, TRUSTUSD, AEROUSD, CVXUSD, CHECKUSD, ESPORTSUSD, ADXUSD, VELODROMEUSD, PRIMEUSD, HYPEUSD, GRIFFAINUSD, PORTALUSD, GSTUSD, STUSD, LMWRUSD, ZORAUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**VOOI/USD — rejected on spread gate, hard fail.** 1h +16.82%, 4h +20.39%, fresh (7min) 24h high, strong real volume (28.71x). Live quote: ask $0.00876 / bid $0.00857 → **spread ≈ 2.17%**, above the ≤1% cap. SKIP.
+
+**PUMP/USD — rejected on cross-exchange divergence gate, hard fail; catalyst also mixed/negative.** Strongest candidate on merit: 1h +4.83%, 4h +8.82%, fresh (7min) 24h high, real volume (4.08x, clears the 2x bar). Spread passes cleanly at 0.12% (ask $0.002479/bid $0.002476). But Kraken last price **$0.002475** vs CoinGecko **$0.001489** and CoinMarketCap **$0.001523** → **divergence ≈ 62-66%**, far past the 15-20% reject band — same failure pattern as EUL (Aug 1), COTI (Aug 4 pre-session), ALKIMI, TNSR, PRIME. Perplexity catalyst check also found no fresh bullish catalyst: mixed/negative news (July 15 insider-vesting unlock of 57.28B PUMP ~$86.5M, reports of team cash-outs raising governance concerns), partially offset by an ongoing buyback-and-burn program — net "choppy, not clearly bullish" per Perplexity. **SKIP — double rejection.**
+
+### Step 5 — Risk factors
+
+- PUMP/USD is another instance of the cross-exchange divergence gate doing its job: real volume and a fresh high look tradeable on Kraken's own numbers, but a 62-66% premium over CoinGecko/CMC means the Kraken book is not pricing the same market as everyone else — filling here would mean paying for supply no other venue would honor.
+- Widest field of the day (57 pairs) but the two standout momentum/volume candidates both failed on independent gates (spread, cross-exchange divergence) rather than the softer volume/freshness filters — a reminder that a wide initial field doesn't correlate with tradeable quality.
+- BTC weekly-downtrend gate not triggered (-0.91%/5d) — standard thresholds apply, not the raised 1h>5% bar.
+- Fear & Greed reads Fear (32); no candidate combined an unconfirmed catalyst with Extreme Fear, so the 1.5:1 R:R floor rule was not in play.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29), day 6 of an all-cash streak.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 57 pairs cleared the initial filter, the widest field this week. VOOI/USD and PUMP/USD were the only candidates clearing both mechanical momentum thresholds with genuine volume confirmation and a fresh high — VOOI hard-fails the ≤1% spread gate at 2.17%, and PUMP hard-fails the cross-exchange price-divergence gate at ~62-66% vs CoinGecko/CMC (plus no fresh bullish catalyst). Nothing else clears both base thresholds. Crash gate not triggered (BTC +1.06% intraday). BTC weekly-downtrend gate not triggered (-0.91%/5d). Per the gate-protection default rule, HOLD stands.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +1.06% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.91%/5d). F&G 32 Fear. 57 candidates screened (widest field this week) - VOOI/USD and PUMP/USD were the only ones clearing both momentum thresholds with real volume and a fresh high, but VOOI failed spread (2.17% >1% cap) and PUMP failed cross-exchange divergence (~62-66% vs CoinGecko/CMC). Nothing else cleared both thresholds."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~33-34 days running; needs resubscription at callmebot.com/61477788635.
