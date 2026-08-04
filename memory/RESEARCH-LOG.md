@@ -30711,3 +30711,26 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.24% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.36%/5d). F&G 32 Fear. 32 candidates screened (narrowest field in a week) - COTI/USD was the only one clearing both momentum thresholds with real volume and a fresh high, but double-rejected: spread 1.34% (>1% cap) and ~75% cross-exchange price divergence vs CoinGecko/CMC (thin/distorted Kraken book). Nothing else cleared both thresholds."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~33 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-04 — Midday Scan (14:09 UTC, monitoring only, no trades)
+
+**Kraken:** `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $63,717.00 → **+0.40%** (o $63,461.80). Crash gate not triggered (threshold ~-20%). BTC weekly-downtrend gate not triggered per pre-session check (-0.36%/5d) — standard thresholds apply.
+
+**Discovery sweep** (Kraken-native, full 648 online USD pairs, live Ticker): 35 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **KP3RUSD** | **+44.53%** | **+50.46%** | 0min (fresh) | **12.27x** (real) | Only candidate clearing both mechanical thresholds with genuine volume confirmation and a fresh high — see rejection below |
+| TREMPUSD | +8.44% | +8.44% | 15min | 0.00x | Clears both thresholds with a fresh-ish high but dead volume — thin micro-cap artifact. SKIP. |
+| LSETHUSD | 0.00% | +5.42% | 90min | 0.00x | 4h clears, 1h flat, dead volume, high stale. SKIP. |
+| NOSUSD | -5.19% | +4.88% | 45min | 0.02x | 4h just short, 1h sharply negative (faded), dead volume. SKIP. |
+| ANONUSD, PIEVERSEUSD, SN75USD, LITUSD, NOCKUSD | +2.7% to +3.9% | mixed | 15-45min | ≤0.35x | 1h near/at the 3% bar but volume dead or thin; none clear the 2x volume bar. SKIP. |
+| ZEREBROUSD, RBCUSD, CLOUDUSD, SYNDUSD, ORDERUSD, CHECKUSD, APUUSD, NILUSD, XANUSD, ARCUSD, PUMPUSD, ZROUSD, MYXUSD, VELVETUSD, GRIFFAINUSD, ROLLUSD, CXTUSD, STUSD, ACHUSD, EGLDUSD, KASUSD, SOONUSD, WEMIXUSD, ALPHAUSD, GUSD, SENTUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**KP3R/USD — rejected on spread gate, hard fail (thin micro-cap, repeat-pattern).** Strongest candidate by far: 1h +44.53%, 4h +50.46%, fresh (0min) 24h high, real-looking volume (12.27x, clears the 2x bar). Live quote at check time: ask $0.989 / bid $0.704 → **spread ≈ 28.8%**, far past the ≤1% hard-skip threshold, with only 30-32 trades in the 24h ticker window confirming an illiquid, thinly-traded book — the large nominal move and "real" volume ratio are consistent with a handful of large trades on a near-empty order book rather than genuine liquidity (same failure mode as ACA/USD, BICO/USD, EPT/USD, BDXN/USD in prior sessions). **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 35 pairs cleared the initial filter. KP3R/USD was the only candidate clearing both mechanical momentum thresholds with a real-looking volume ratio and a fresh high, but hard-fails the ≤1% spread gate at ≈28.8% on a thin 24h trade count (30-32). TREMP/USD and LSETH/USD clear thresholds numerically but on dead volume (thin-book artifacts). Nothing else clears both base thresholds. Crash gate not triggered (BTC +0.40% vs today's open). BTC weekly-downtrend gate not triggered. Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
