@@ -30659,3 +30659,55 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.47% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-1.43%/5d). F&G ~30 Fear. 60 candidates screened (widest field today) - OPN/USD closest (real volume, fresh high, tight spread, 4h +7.6%) but 1h momentum only +2.5-2.7%, short of the 3% bar. WFB/MIR posted bigger moves but both hard-fail spread (29.6%/10.6%) on dead post-spike volume. Nothing else cleared both thresholds."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~32 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-04 — Pre-Session Research
+
+### Step 1 — Account snapshot
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (AAVE/ARB/AVAX/BABY/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/NEAR/ONDO/RENDER/SOL/SUI/TAO/UNI/VELVET/WLD/XETH/XXBT/XXDG/XXLM/XXRP all sub-$0.01 dust, plus $0.1066 ZAUD), unchanged since the Jul 29 VELVET stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero Alpaca exposure, no action needed. Day 6 of the all-cash streak since the VELVET stop-out.
+
+### Step 2 — Market context
+
+- BTC (Kraken live): $63,617.70, today's open $63,461.80 → **+0.24%** intraday. Perplexity cross-check: $62,642.04 (+0.53%/24h) — broadly consistent.
+- ETH (Kraken live): $1,861.32 vs Perplexity-reported $2,465.83 — a large discrepancy between sources; using Kraken-native as primary per strategy, no ETH candidate involved so not gate-relevant this session.
+- Fear & Greed Index: **32 (Fear)** per the dominant tracker (Binance's page also shows a prior-day 31); some trackers diverge as high as 56 (Neutral) — treating as Fear-leaning per the dominant reading.
+- BTC perpetual funding: ~+0.01%/8h across major venues (Binance, BitMEX, Bybit, Hyperliquid, OKX) — neutral, no crowding signal.
+- Catalysts: BTC range-bound ~$63k; Fed holding rates steady; spot BTC ETF flows reportedly reversing positive after a prior outflow streak; Senate/Clarity Act still a live legislative catalyst; new SEC altcoin-ETF listing framework floated (SOL/XRP/ADA/DOGE); Coldcard hardware-wallet exploit weighing on sentiment; contested Bitcoin soft-fork proposal this month. None of these are asset-specific triggers for today's sweep candidates.
+- Token unlocks this week: Succinct (PROVE) Aug 5 (~208-312M tokens, largest of the week), Ethena (ENA) Aug 5 (~172M), Hyperliquid (HYPE) Aug 6 (~433K), Lagrange (LA) Aug 4, Berachain/MYX Aug 6 — none held, none among today's candidates.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 29 open $63,844.50 → live $63,617.70 = **-0.36%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%), not the raised 1h>5% bar.
+
+### Step 3 — Discovery sweep (Kraken-native, full 647 online USD pairs, live Ticker + 15m OHLC)
+
+32 pairs cleared vs-open >3% and within 6% of 24h high — a narrower field than recent sessions (24-77 range this past week). Pulled 15m OHLC on the top 31 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **COTIUSD** | **+18.91%** | **+18.81%** | 15min (fresh) | **4.60x** (real) | Only candidate clearing both mechanical thresholds with genuine volume confirmation — see double-rejection below |
+| EPTUSD | 0.00% | 0.00% | 0min | 0.00x | 24h vs-open +51% but flat/dead 15m candles; spread 62.75% — thin-book artifact. SKIP. |
+| BDXNUSD | 0.00% | 0.00% | 0min | 0.00x | Flat 15m OHLC, spread 19.61%. SKIP. |
+| APUUSD | +7.49% | +11.88% | 285min (stale) | 0.01x | Both windows clear numerically but high is 285min stale and volume is dead (0.01x). SKIP. |
+| AIOUSD | +5.28% | +3.31% | 1335min (stale) | 0.33x | 1h clears, 4h and freshness both fail — a recurring near-miss this asset has shown in prior sessions. SKIP. |
+| BODENUSD | +1.57% | +4.88% | 0min (fresh) | 11.61x (real) | Strong real volume and fresh high, but neither momentum window clears its threshold (4h just short of 5%). SKIP. |
+| SOONUSD | +2.79% | +7.35% | 0min (fresh) | 0.63x | 4h clears, 1h short of 3% bar, volume under 2x. SKIP. |
+| XANUSD | -0.15% | +4.98% | 75min | 1.26x | 4h just short of 5% bar, 1h negative, high not fresh. SKIP. |
+| ORDERUSD | -2.13% | -2.13% | 60min | 21.00x | Huge volume but momentum has faded negative on both windows. SKIP. |
+| MNGOUSD, APXUSDUSD, KNTQUSD, LSETHUSD, EGLDUSD, RADUSD, PUMPUSD, OBOLUSD, WEMIXUSD, FHEUSD, ALTHEAUSD, KEEPUSD, AVAXUSD, PACTUSD, YBUSD, OPNUSD, CXTUSD, TRACUSD, KATUSD, COQUSD, CLOUDUSD, ZEREBROUSD | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**COTI/USD — double rejection: cross-exchange divergence gate (hard fail) + spread gate (hard fail).** Strongest candidate by far: 1h +18.91%, 4h +18.81%, fresh (15min) 24h high, real volume (4.60x, clears the 2x bar). Kraken live quote: ask $0.01420 / bid $0.01401 → **spread ≈ 1.34%**, above the ≤1% cap on its own. But the decisive rejection is cross-exchange: Kraken last price **$0.0142** vs CoinGecko **$0.008096** and CoinMarketCap **$0.008122** → **divergence ≈74-75%**, far past the 15-20% reject band — same failure pattern as EUL (Aug 1, ~62-64% divergence), ALKIMI, TNSR, and PRIME. Kraken's COTI order book is pricing the asset roughly 75% above every other major venue, indicating a thin/distorted/stale local book rather than a real market move. Perplexity catalyst check found only a minor "COTI Earn Season 4" mention and a Bitget technical level ($0.0085 breakout, $0.0105 target) — no fresh (<6h) catalyst that would explain a Kraken-specific 75% premium. **SKIP — double rejection, do not chase.**
+
+### Step 4 — Risk factors
+
+- COTI/USD is the clear illustration this session of why the cross-exchange divergence gate exists: a candidate that clears both momentum thresholds with real volume and a fresh high is still unqualified to trade if the local order book is 75% detached from the rest of the market — filling at Kraken's price would mean paying a price no other venue would honor, with no realistic path to exit at the same premium.
+- Narrowest initial field in over a week (32 vs. 24-77 range) — quieter board today, consistent with BTC's flat/tight-range intraday action (+0.24%).
+- BTC weekly-downtrend gate not triggered (-0.36%/5d) — standard thresholds apply, not the raised bar.
+- Fear & Greed reads Fear (32) on the dominant tracker; no candidate today combined an unconfirmed catalyst with Extreme Fear, so the 1.5:1 R:R floor rule was not in play.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29), now day 6 of an all-cash streak.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 32 pairs cleared the initial filter, the narrowest field in over a week. COTI/USD was the only candidate clearing both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but it is double-rejected: spread (1.34%, above the 1% cap) and, decisively, a ~75% cross-exchange price divergence versus CoinGecko/CoinMarketCap — a thin/distorted Kraken order book, not a real tradeable move. BODEN/USD and SOON/USD show real volume and fresh highs but neither clears both momentum thresholds. Nothing else clears both base thresholds. Crash gate not triggered (BTC +0.24% intraday). BTC weekly-downtrend gate not triggered (-0.36%/5d). Per the gate-protection default rule, HOLD stands — a correct, expected outcome, not a gap to route around.
+
+### Step 5 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.24% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (-0.36%/5d). F&G 32 Fear. 32 candidates screened (narrowest field in a week) - COTI/USD was the only one clearing both momentum thresholds with real volume and a fresh high, but double-rejected: spread 1.34% (>1% cap) and ~75% cross-exchange price divergence vs CoinGecko/CMC (thin/distorted Kraken book). Nothing else cleared both thresholds."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~33 days running; needs resubscription at callmebot.com/61477788635.
