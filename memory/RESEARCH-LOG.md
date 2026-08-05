@@ -30920,3 +30920,69 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no new entries, no open positions to manage.** BOB/USD was the only candidate clearing both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but its volume is concentrated in a single spike-and-fade candle after hours of dead trading, and its price cannot be cross-verified against another exchange (Perplexity's "BOB Token" match is priced ~4 orders of magnitude off) — rejected on pump-pattern and cross-exchange divergence grounds. CLANKER/USD clears momentum by a wide margin but fails both volume confirmation (0.95x) and spread (16.6%) simultaneously. Nothing else in the 66-candidate field clears both base thresholds. Crash gate not triggered (BTC +0.57% intraday). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-05 — Pre-Session Research Re-run (20:10 UTC)
+
+### Step 1-2 — Account Snapshot
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out — day 8 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+- **BTC:** $64,382.37, **+2.9%** 24h. **ETH:** $1,740.95, -0.10% 24h.
+- **Fear & Greed:** 40 (Fear) per Binance's tracker; CFGI shows 38 (Fear) — not Extreme Fear, so the 1.5:1 R:R floor rule does not apply.
+- **BTC funding:** positive across major venues (~+0.0079-0.0148%/8h) — neutral, no crowding signal.
+- **Catalysts:** Easing US-Iran tensions / possible Strait of Hormuz reopening pushing BTC back above $64k; Circle and AMD earnings today; ENA unlock (1.97% of supply, ~$15.36M) later this week; Coldcard hardware-wallet exploit (~$70-130M, sources differ) weighing on sentiment; CLARITY Act still stalled.
+- **Token unlocks this week:** PROVE (Succinct) ~208-312M tokens (source-dependent) and ENA ~172M both Aug 5; HYPE ~433K Aug 6. Neither is a sweep candidate this scan.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 31 open $64,723.00 → live $64,759.20 = **+0.06%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%), not the raised 1h>5% bar.
+
+### Step 4 — Discovery sweep (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC)
+
+77 pairs cleared vs-open >3% and within 6% of 24h high — widest field of the day. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **SYNUSD** | **+3.13%** | **+13.82%** | 15min (fresh) | **2.27x** (real) | Clears every mechanical gate — see full writeup below |
+| HMSTRUSD | +7.85% | +6.21% | 15min (fresh) | 0.00x | Clears both thresholds with a fresh high but dead volume — thin-book artifact. SKIP. |
+| ZBTUSD | +15.53% | +16.95% | 4905min (stale) | 11.65x | Huge move with real volume, but 24h high is 3.4 days old — fails momentum-peak-check, no fresh breakout above it. SKIP. |
+| BASEDUSD | +3.15% | +1.33% | 9240min (stale) | 0.64x | 1h barely clears, 4h falls short, high very stale, weak volume. SKIP. |
+| HDXUSD | +3.04% | +5.14% | 8475min (stale) | 0.00x | Both windows numerically clear but high is 5.9 days old (lagging move) and volume is dead. SKIP. |
+| MUSD | +2.94% | +4.01% | 7560min (stale) | 0.22x | Both windows fall just short, stale high, weak volume. SKIP. |
+| INXUSD, PTBUSD, SOSOUSD, BADGERUSD, USDUCUSD, BNKRUSD, AVAAIUSD, AVAUSD, SN75USD, KNTQUSD, B2USD, NOBODYUSD, GHIBLIUSD, MIRAUSD, PORTALUSD, GRASSUSD, UNIUSD, LDOUSD, BIOUSD, PENDLEUSD, OPENUSD, SOMIUSD, ARXUSD, AXSUSD, PIUSD, TREEUSD, WEMIXUSD, WENUSD, VINEUSD, SAHARAUSD, USUSD, and 42 more (CLVUSD, HPOS10IUSD, ORDERUSD, ZBTUSD-dupe range) | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+### SYN/USD — full gate check (only candidate clearing every gate)
+
+- **Momentum:** 1h +3.13%, 4h +13.82% — clears both thresholds (standard bar applies; BTC weekly-downtrend gate not triggered).
+- **Momentum-peak check:** 24h high ($0.1385) set 15 minutes ago — fresh, PASS.
+- **Volume:** 2.27x the trailing 24h average on the live 15m candle — clears the 2x confirmation bar.
+- **Spread:** ask $0.1347 / bid $0.1344 → **0.22%**, well under the 1% cap. Confirmed via `kraken.sh quote SYN/USD`.
+- **Pair status:** `kraken.sh assets SYN/USD` confirms online, ordermin 60 SYN (~$8 notional), no margin/leverage available on this pair.
+- **Cross-exchange divergence check — the critical gate given SYN's history:** SYN has been a repeat offender on this gate in the trade log (Jul 25 entry: CoinGecko $0.3575 / CoinDesk $0.04402 vs Kraken $0.1618, a three-way mismatch). Perplexity's live search *again* returned stale/wrong data this session — "$0.3575 CoinGecko / $0.3728 CoinMarketCap," identical to the Jul 25 figures, clearly a cached/stale page. A **direct CoinGecko API pull** (not search-mediated) instead shows: current price **$0.134505**, 24h change **+32.25%**, 24h volume **$74.4M**, and per-exchange tickers all clustered tight — Binance $0.1346, BTCC $0.1353, LBank $0.13446, Gate $0.13456, KuCoin $0.1343, Kraken $0.1348, MEXC $0.1357. Kraken's price sits squarely inside this cluster (~0.4% off the CoinGecko aggregate) — **no divergence, PASS.** This is the first time SYN has cleared this gate in the trade log's history; treat the earlier Perplexity search result as a demonstrated data-quality failure, not a real signal, consistent with the strategy doc's known Perplexity discovery-query problems now shown to also affect ad hoc catalyst/price searches — direct exchange APIs are the trustworthy source when the two disagree.
+- **Catalyst:** No fresh (<6h) news catalyst confirmed. The only widely-reported SYN catalyst (Arthur Hayes ~$2.2M buy via FlowDesk) is **37 days stale** (2026-06-29), not today's driver — a second Perplexity data-quality miss this session (conflated old news with today's move). Qualifies instead under the momentum-alone provision (1h>3% with 2x+ volume confirmation), valid because the BTC weekly-downtrend gate is not triggered.
+- **R:R:** T1 = entry +3% ($0.1388) vs 2.5% stop = **1.2:1, exactly at the floor.** Not in Extreme Fear (F&G 40), so 1.2:1 is the correct bar, not 1.5:1. Per the strategy's fee-awareness note (~1.6% round-trip), this is fee-thin, not comfortably profitable — flagged as a risk factor below.
+- **Same-thesis cooling period:** N/A — trade log shows many prior SYN SKIPs but no filled/stopped-out SYN trades, so no 48h cooling restriction applies.
+
+**Trade idea — SYN/USD:**
+- Catalyst: Pure momentum + real cross-exchange-confirmed volume (no single fresh news driver)
+- Entry: Market, ~$0.1348
+- Stop: `trailing_stop`, `trail_percent: 2.5`, GTC, placed immediately after fill
+- T1: $0.1388 (+3%) — tighten stop to 0.5% on touch
+- T2: $0.1415 (+5%)
+- R:R: 1.2:1 at T1 (floor — fee-thin)
+- Size: to conviction; given the fee-thin R:R and reliance on a momentum-alone (not catalyst) thesis, a partial rather than full-equity size is reasonable, left to the execution session's judgment
+- Kraken pair: SYN/USD confirmed online
+- Spread: confirmed 0.22%
+
+### Step 5 — Risk Factors
+
+- SYN/USD is the **first candidate in the trade log's history to clear the cross-exchange price-divergence gate** — every prior SYN scan (Jul 25 and earlier) failed it outright. Confirmed via direct CoinGecko API + 7-exchange ticker cluster, not Perplexity (which returned stale Jul-25-identical figures both times it was asked about SYN this session — a repeat, not incidental, data-quality failure).
+- R:R sits exactly at the 1.2:1 floor with no catalyst premium — thin margin once the ~1.6% round-trip fee is applied.
+- No fresh news catalyst; this is a momentum-only entry, valid only because the BTC weekly-downtrend gate is not triggered (+0.06%/5d).
+- This pre-session research workflow's scope is research/logging/notification only — no order was placed in this session; SYN/USD is logged as a validated actionable idea for the trading/execution session to act on.
+- $115.0274 ZUSD fully available — day 8 of an all-cash streak, no capital constraint.
+
+### Decision: **TRADE — SYN/USD is the first setup in over a week to clear every gate**, including the historically problematic cross-exchange divergence check (verified via direct CoinGecko API against a 7-exchange price cluster, overriding two separate stale/wrong Perplexity reads this session). Momentum-peak check, spread, volume, and R:R floor all pass; no crash gate or BTC weekly-downtrend gate in effect. R:R is at the bare 1.2:1 floor (fee-thin) and the entry relies on momentum alone rather than a fresh catalyst — noted as risk factors, not disqualifiers.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE - SYN/USD clears every gate (1h +3.13%, 4h +13.82%, fresh 15min high, 2.27x volume, 0.22% spread, cross-exchange divergence PASS via direct CoinGecko check). R:R 1.2:1 at floor, no fresh catalyst (momentum-only entry). Entry ~$0.1348, trailing_stop 2.5%, T1 $0.1388/T2 $0.1415. First candidate to clear the divergence gate in the trade log's history. $115.03 cash available, no open positions."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~34 days running; needs resubscription at callmebot.com/61477788635.
