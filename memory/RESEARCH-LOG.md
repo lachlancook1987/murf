@@ -30986,3 +30986,27 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE - SYN/USD clears every gate (1h +3.13%, 4h +13.82%, fresh 15min high, 2.27x volume, 0.22% spread, cross-exchange divergence PASS via direct CoinGecko check). R:R 1.2:1 at floor, no fresh catalyst (momentum-only entry). Entry ~$0.1348, trailing_stop 2.5%, T1 $0.1388/T2 $0.1415. First candidate to clear the divergence gate in the trade log's history. $115.03 cash available, no open positions."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~34 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-05 — Midday Scan #2 (22:07 UTC, monitoring only, no new trades)
+
+**Kraken:** SYN/USD position from the 21:02 UTC session-open execution was already closed by the time this scan started — `positions` → `{}`, `orders` → `{"open": {}}`, SYN balance `0.000000`. Reconciled via `ClosedOrders`: the 2.5% trailing stop (ON25HF-TTRJY-AZPMZR) trailed up with the price and triggered on a pullback, closing at $0.1438 (above the $0.1423 entry) after a ~25min hold — a real price gain that the ~1.6% round-trip fee still turned into a small net loss (−$0.3392, −0.56%). No thesis break, mechanical stop-out as designed; logged in TRADE-LOG.md. Current ZUSD: **$114.6882** (+dust, usual basket unchanged plus $0.1066 ZAUD) — 100% cash again, zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $64,620.00 → **+0.88%** (o $64,053.70). Crash gate not triggered (threshold ~-20%).
+
+**Discovery sweep** (Kraken-native, full 652 online USD pairs, live Ticker + 15m OHLC): 81 pairs cleared vs-open >3% and within 6% of 24h high — widest field of the day. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| ZBTUSD | +0.89% | +20.80% | 51.7min | 0.47x | 4h clears well past the 5% bar, but 1h falls well short of 3% and volume is under 1x — stale relative to the 4h move. SKIP. |
+| GHIBLIUSD | +0.00% | +21.85% | 1431.7min (stale) | 0.00x | 4h clears numerically but high is nearly a day old (lagging move) and volume is dead; 1h flat. SKIP. |
+| MYXUSD | -1.12% | +14.29% | 81.7min | 0.05x | 4h clears, but 1h is negative (faded) and volume is near-dead. SKIP. |
+| NOBODYUSD | +0.00% | +13.41% | 231.7min | 0.00x | 4h clears, 1h flat, high stale, dead volume. SKIP. |
+| HMSTRUSD | +1.74% | +9.90% | 81.7min | 0.00x | 4h clears, 1h below the 3% bar, dead volume. SKIP. |
+| SAHARAUSD | -0.24% | +0.59% | 426.7min | 7.59x (real) | Strong volume but neither momentum window clears. SKIP. |
+| All remaining 29 candidates (HPOS10I, CLV, INX, ORDER, SOSO, BADGER, USDUC, BNKR, AVA, KNTQ, PORTAL, AVAAI, LOCKIN, SN75, B2, MIRA, GRASS, PI, OPEN, VINE, BASED, SOMI, UNI, SYND, HDX, HOLO, AXS, CTR, CELR) | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+### Decision: **HOLD — no new entries, no open positions to manage.** No candidate in the 81-pair field clears both mechanical momentum thresholds (1h>3% AND 4h>5%) simultaneously — ZBT, GHIBLI, MYX, NOBODY, and HMSTR all clear the 4h bar alone but fail 1h, freshness, or volume confirmation individually. Crash gate not triggered (BTC +0.88% intraday). BTC weekly-downtrend gate not triggered (per pre-session/re-run checks earlier today). Per the gate-protection default rule, HOLD stands.
+
+### Step 7 — Notification
+
+Action taken this scan (SYN stop-out reconciliation is a logging event, not a new order/stop placement/thesis cut) — no ClickUp notification sent per the Step 7 rule (only notify on stop tightened, position cut, or new entry placed; none occurred this scan).
