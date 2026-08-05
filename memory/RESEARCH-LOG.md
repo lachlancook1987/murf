@@ -30827,3 +30827,52 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Decision: **HOLD — no new entries, no open positions to manage.** 56 pairs cleared the initial filter. LIT/USD was the only candidate clearing every mechanical gate (momentum, volume, freshness, spread, cross-exchange divergence), but the catalyst behind today's move belongs to an unrelated project (Lighter DEX) sharing the same ticker as Kraken's actual (and reportedly rebranded) Litentry token — no genuine catalyst for the asset actually being bought, and a real risk of a confusion-driven reversal. Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-05 — Pre-Session Research
+
+### Step 1 — Account snapshot
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only (usual basket: AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH, plus $0.1066 ZAUD), unchanged since the Jul 29 VELVET stop-out — day 7 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero Alpaca exposure, no action needed.
+
+### Step 2 — Market context
+
+- BTC (Kraken live): $64,093.70, today's open $64,053.70 → **+0.06%** intraday. Perplexity cross-check: $64,241.00 (+0.81%/24h) — broadly consistent.
+- ETH (Perplexity): $1,740.95, **-0.10%/24h** — context only, no ETH position/candidate.
+- Fear & Greed Index: **32 "Fear"** (Binance, primary tracker) — standard 1.2:1 R:R floor applies, not the Extreme Fear 1.5:1 floor.
+- BTC perpetual funding: mixed by venue, broadly flat-to-mild-positive — Binance BTCUSDT 0.0079%/8h, Coinalyze aggregate ~+0.01%/8h normalized; no crowding signal.
+- Catalysts: CLARITY Act 2026-passage odds fallen to ~37% (from ~82% in Feb) — next vote/delay is the biggest near-term altcoin driver; BTC recovering from the Coldcard exploit/Strategy-selling overhang back to ~$64k; spot BTC ETF flows choppy/source-dependent (weekly -$61.5M net outflow per one report, +$170M single-day inflow Aug 4 per another); Cardano cited as best-performing top-100 asset past week; XRP sensitive to CLARITY outcome. None are asset-specific triggers for today's sweep candidates.
+- Token unlocks this week: **PROVE (Aug 5, ~208-312M tokens, ~$34.7M)** and **ENA (Aug 5, ~172M tokens, ~$15.3-15.4M)** both unlock today; **HYPE (Aug 6, ~433K tokens, ~$22.7M)** tomorrow — none held, none among today's candidates.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Jul 31 close $62,822.00 → live $64,093.70 = **+2.02%**, well inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%).
+- Crash gate not triggered (BTC +0.06% intraday, nowhere near -20%/24h).
+
+### Step 3 — Discovery sweep (Kraken-native, full 638 online USD pairs, live Ticker + 15m OHLC)
+
+50 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 50 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **APRUSD** | **+5.98%** | **+13.60%** | 45min (fresh) | 0.00x | Clears both momentum thresholds and freshness, but volume is dead — only 1-2 sporadic trades per 15m candle (29 trades in 24h per ticker), a thin micro-cap artifact, not real buying pressure. SKIP. |
+| **BLESSUSD** | **+4.24%** | **+21.78%** | 0min (fresh, at current high) | 0.32x | Clears both thresholds with the freshest possible high, and has genuine 24h trade count (786), but the move is already decelerating — last 15m candle volume is well under (not above) its own trailing average, failing the 2x surge-confirmation bar. SKIP. |
+| **FIDAUSD** | **+4.20%** | **+15.12%** | 105min (stale) | 0.66x | Clears both thresholds with real volume (937 trades/24h), but the 24h high was set 105min ago and price has since declined from it (no fresh breakout) — fails the momentum-peak-check. SKIP. |
+| BNKRUSD | +3.33% | +2.89% | 0min | 6.87x (real) | 1h clears, 4h falls short, fresh high with strong volume. SKIP. |
+| BABYUSD | +2.78% | +3.98% | 0min | 17.74x (real) | Neither window clears the threshold despite strong volume. SKIP. |
+| EULUSD, SXTUSD, AVNTUSD, TREEUSD, PUMPUSD, FOLKSUSD, LSKUSD, AVAUSD, CELRUSD, and 33 others | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**Spread check on the three momentum-clearing candidates (for completeness — all already rejected on other gates):** APR/USD 0.96% (ask $0.21032/bid $0.2083, would pass), BLESS/USD 0.43% (ask $0.017213/bid $0.017139, would pass), FIDA/USD 0.44% (ask $0.02023/bid $0.02014, would pass) — none would have been spread-limited; the rejections are purely on volume-confirmation (APR, BLESS) and momentum-peak freshness (FIDA).
+
+### Step 4 — Risk factors
+
+- Today's board is thinner-quality than most recent sessions: three candidates cleared the mechanical momentum bar, all with tight spreads, but none carried genuine accelerating volume behind a fresh high — APR is an outright thin book, BLESS is fading (decelerating volume despite the freshest high), FIDA already peaked and is declining. No candidate reached the spread or cross-exchange divergence gates that have caught several near-misses in recent sessions.
+- BTC weekly-downtrend gate not triggered (+2.02%/5d, comfortably inside band) — standard thresholds apply, not the raised bar.
+- Fear & Greed reads Fear (32); no candidate combined an unconfirmed catalyst with Extreme Fear, so the 1.5:1 R:R floor rule was not in play.
+- PROVE and ENA both unlock today (~$34.7M and ~$15.3M respectively) — neither is a Kraken sweep candidate this scan; worth a later re-check for post-unlock price reaction if either shows up on a fresh sweep.
+- No open positions on either exchange — nothing to protect, no thesis to invalidate, no stops to manage.
+- $115.0274 ZUSD fully available — no capital constraint on the next qualifying setup; capital idle since the VELVET stop-out (2026-07-29), now day 7 of an all-cash streak.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** 50 pairs cleared the initial filter. APR/USD, BLESS/USD, and FIDA/USD were the only candidates clearing both mechanical momentum thresholds (1h>3%, 4h>5%) — APR fails on dead volume (thin micro-cap), BLESS fails on decelerating (sub-2x) volume despite its fresh high, and FIDA fails the momentum-peak-check on a 105min-stale high with no fresh breakout. Nothing else clears both base thresholds. Crash gate not triggered (BTC +0.06% intraday). BTC weekly-downtrend gate not triggered (+2.02%/5d). Per the gate-protection default rule, HOLD stands — a correct, expected outcome, not a gap to route around.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.06% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (+2.02%/5d). F&G 32 Fear. 50 candidates screened - APR/BLESS/FIDA were the only ones clearing both momentum thresholds, but APR has dead volume (thin micro-cap), BLESS is decelerating (sub-2x volume despite fresh high), and FIDA's high is 105min stale with no fresh breakout. Nothing else cleared both thresholds. PROVE and ENA unlock today (~$34.7M/$15.3M), neither a candidate."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~34 days running; needs resubscription at callmebot.com/61477788635.
