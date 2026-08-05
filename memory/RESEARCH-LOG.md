@@ -30897,3 +30897,26 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Decision: **HOLD — no new entries, no open positions to manage.** GFI/USD was the only candidate clearing both momentum thresholds with a fresh high, but fails both the volume-confirmation gate (0.55x, 1 trade/candle) and the spread gate (2.24%) simultaneously. VELVET/USD clears momentum numerically but on dead volume. Nothing else in the 65-candidate field clears both base thresholds. Crash gate not triggered (BTC +0.61% intraday). Per the gate-protection default rule, HOLD stands.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-05 — Session-Open Execution (15:01 UTC, monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out — day 8 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `positions` → `[]`, historical orders only (last activity 2026-05-22, stop `a2b44cf9` canceled) — zero exposure, no action needed.
+
+**Live quote vs today's open:** BTC $64,422.30 → **+0.57%** (o $64,053.70). Crash gate not triggered (threshold ~-20%).
+
+**Discovery sweep** (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC): 66 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 66 for 1h/4h momentum (24h-windowed), 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **BOBUSD** | **+7.27%** | **+7.83%** | 0min (fresh) | **46.89x** (huge) | Clears both mechanical thresholds with a fresh high and massive volume — see rejection below |
+| CLANKERUSD | +19.17% | +18.97% | 0min (fresh) | 0.95x | Strongest momentum of the scan by far, but volume ratio under the 2x confirmation bar; spread check confirms separately: ask $14.63/bid $12.20 → **16.6% spread**, only 8 trades in 24h — extreme thin micro-cap. SKIP (double fail). |
+| PTBUSD | +15.73% | +1.47% | 240min | 0.79x | 1h clears, 4h falls well short of the 5% bar. SKIP. |
+| TOKENUSD | +4.55% | +4.31% | 45min | 0.0x | 1h clears, 4h falls short, dead volume. SKIP. |
+| VELVETUSD | -3.15% | +2.3% | 30min | 0.65x | Neither window clears; same asset as the Jul 29 stop-out (moot — fails momentum anyway). SKIP. |
+| All remaining 61 candidates | — | — | — | — | Below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**BOB/USD — rejected on pump-pattern and cross-exchange divergence, double fail.** Numerically the strongest real-volume candidate: 1h +7.27%, 4h +7.83%, fresh (0min) high, 46.89x volume ratio. But the 15m candle history shows hours of near-zero-trade candles (0 volume, 0 trades) immediately followed by a single still-forming candle that spiked from $0.00391 to a high of $0.00431 (209 trades, 3.9M volume) then pulled back ~3.5% to ~$0.0042 within the same 3-minute window — a single-candle spike-and-immediate-fade signature, not sustained accelerating buying. Live re-polling over ~16s showed price stalled just below the spike high rather than continuing to press it. Separately, Perplexity flags a **naming/ticker mismatch**: the only "BOB Token" it can identify quotes ~$0.0000010, roughly 4 orders of magnitude below Kraken's live $0.0042 — either a distinct mismatched asset or a thin, unverifiable listing. This is exactly the pattern the cross-exchange price-divergence gate exists to catch (far beyond the ~15–20% threshold). Spread itself was fine (~0.24–0.72% across checks) and 24h trade count (831) isn't thin by past-rejection standards, but the pump signature plus unverifiable cross-exchange price make this a hard SKIP regardless.
+
+### Decision: **HOLD — no new entries, no open positions to manage.** BOB/USD was the only candidate clearing both mechanical momentum thresholds with genuine volume confirmation and a fresh high, but its volume is concentrated in a single spike-and-fade candle after hours of dead trading, and its price cannot be cross-verified against another exchange (Perplexity's "BOB Token" match is priced ~4 orders of magnitude off) — rejected on pump-pattern and cross-exchange divergence grounds. CLANKER/USD clears momentum by a wide margin but fails both volume confirmation (0.95x) and spread (16.6%) simultaneously. Nothing else in the 66-candidate field clears both base thresholds. Crash gate not triggered (BTC +0.57% intraday). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
