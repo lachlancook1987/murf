@@ -30876,3 +30876,24 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - $115.03 cash, no positions. BTC +0.06% intraday, crash gate not triggered. BTC weekly-downtrend gate not triggered (+2.02%/5d). F&G 32 Fear. 50 candidates screened - APR/BLESS/FIDA were the only ones clearing both momentum thresholds, but APR has dead volume (thin micro-cap), BLESS is decelerating (sub-2x volume despite fresh high), and FIDA's high is 105min stale with no fresh breakout. Nothing else cleared both thresholds. PROVE and ENA unlock today (~$34.7M/$15.3M), neither a candidate."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~34 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-05 — Midday Scan (monitoring only, no trades)
+
+**Kraken:** $115.0274 ZUSD (100% cash) + dust only, unchanged since the Jul 29 VELVET stop-out — day 8 of the all-cash streak. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect (Steps 3-5 N/A). **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure — no action needed.
+
+**Live quote vs today's open:** BTC $64,442.60 → **+0.61%** (o $64,053.70). Crash gate not triggered (threshold ~-20%).
+
+**Discovery sweep** (Kraken-native, full 648 online USD pairs, live Ticker): 65 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 65 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **GFIUSD** | **+10.31%** | **+16.50%** | 15min (fresh) | 0.55x | Only candidate clearing both mechanical thresholds with a fresh high — see rejection below |
+| VELVETUSD | +7.65% | +8.55% | 30min | 0.13x | 1h clears, 4h clears, but dead volume (0.13x) and this is the same asset as the Jul 29 stop-out — double-fails on volume alone regardless of same-thesis question. SKIP. |
+| PUFFERUSD | +3.09% | +3.09% | 0min | 0.00x | 1h barely clears, dead volume (0 trades in last candle). SKIP. |
+| All remaining 62 candidates | — | — | — | — | Below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+**GFI/USD — rejected on volume AND spread gates, double fail.** Strongest candidate by far: 1h +10.31%, 4h +16.50%, fresh (15min) 24h high — clears both mechanical momentum thresholds cleanly. But volume ratio is 0.55x (well under the 2x confirmation bar) with only **1 trade** in the last 15m candle — a thin/illiquid micro-cap move, not real buying pressure. Spread check confirms: ask $0.0357 / bid $0.0349 → **spread ≈ 2.24%**, also past the ≤1% hard-skip cap. Double rejection. **SKIP.**
+
+### Decision: **HOLD — no new entries, no open positions to manage.** GFI/USD was the only candidate clearing both momentum thresholds with a fresh high, but fails both the volume-confirmation gate (0.55x, 1 trade/candle) and the spread gate (2.24%) simultaneously. VELVET/USD clears momentum numerically but on dead volume. Nothing else in the 65-candidate field clears both base thresholds. Crash gate not triggered (BTC +0.61% intraday). Per the gate-protection default rule, HOLD stands.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
