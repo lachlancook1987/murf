@@ -31081,3 +31081,55 @@ No open positions on either exchange — per-position catalyst queries N/A (Step
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE - SUSHI/USD clears every gate (1h +3.46%, 4h +10.66%, fresh 15min high, 3.45x volume, 0.18% spread, cross-exchange divergence PASS via direct CoinGecko check). R:R 1.2:1 at floor, modest catalyst (Stellar cross-chain integration) plus strong sustained momentum. Entry ~$0.1705, trailing_stop 2.5%, T1 $0.1756/T2 $0.1790. TAKE/USD was the only other momentum-clearing candidate but fails spread (1.19%). $114.69 cash available, no open positions."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-06 — Pre-Session Research (20:07 UTC)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** $111.7835 ZUSD (100% cash) + dust (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals), unchanged since the ADA/USD HOLD at the 15:01 UTC session-open check. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, zero exposure — no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** live $64,467.30 vs today's open $64,599.30 → **-0.20%** (Kraken direct; Perplexity's CoinGecko read of $64,382.37/+2.9% is stale/inconsistent with Kraken and its own $64,241/+0.81% Kraken citation — used direct Kraken OHLC as source of truth per the established override precedent). Crash gate not triggered (threshold -20%).
+- **ETH:** ~$1,646.50, -0.49% 24h (Perplexity).
+- **Fear & Greed:** 38 (Fear) — not Extreme Fear (≤25), so the 1.5:1 R:R floor rule does not apply.
+- **BTC funding:** mixed, mostly slightly positive (~+0.006-0.01%/8h across major venues, a couple of exchanges slightly negative) — neutral, no crowding signal.
+- **Catalysts:** Spot BTC ETF inflows (>$170M last session, IBIT $111M); CLARITY Act Senate procedural vote possible as soon as Aug 7; US-Qatar-Iran de-escalation talks re: Strait of Hormuz easing macro risk; Fed policy/labor data still a headwind overhang.
+- **Token unlocks/upgrades today:** HYPE (~433K, ~$22.7M), BERA (~13.28M, ~$2.0M), MYX (~15.62M, ~$1.0M), EGLD mainnet upgrade — none are today's sweep candidates.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 1 open $62,821.80 → live $64,467.30 = **+2.62%**, inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%).
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery sweep (Kraken-native, full 652 online USD pairs, live Ticker + 15m OHLC via direct public API)
+
+65 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 45 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| HFTUSD | +3.85% | +14.18% | 195min (stale) | 0.49x | Clears both momentum thresholds but high is 3.25h stale and volume is under 1x. SKIP. |
+| **OOBUSD** | **+3.16%** | **+71.97%** | **15min (fresh)** | 0.84x | Clears momentum + freshness (3 of 4 gates) but volume fails the 2x confirmation bar by a wide margin. Closest miss of the sweep. SKIP (volume gate). |
+| **STGUSD** | +2.83% | **+9.08%** | **0min (fresh)** | **2.87x** (real) | Clears freshness, 4h momentum, and volume (3 of 4 gates) but 1h momentum falls just short of the 3% bar (2.83%). SKIP (1h gate). |
+| ZBTUSD | +1.83% | +7.16% | 30min | 0.26x | 4h clears, 1h and volume fail. SKIP. |
+| RIVERUSD | +1.6% | +5.17% | 15min | 0.32x | 4h barely clears, 1h and volume fail. SKIP. |
+| REUSD | +2.38% | +8.41% | 0min | 0.47x | 4h clears, fresh high, 1h and volume fail. SKIP. |
+| GWEIUSD | +0.8% | +6.63% | 30min | 0.6x | 4h clears, 1h and volume fail. SKIP. |
+| ADAUSD | -1.25% | -1.53% | 210min | 0.31x | Faded entirely — confirms the 15:01 UTC HOLD was correct; no longer a candidate. |
+| SUSHIUSD | -0.72% | +0.37% | 735min (stale) | 0.0x | Fully dead — this morning's TRADE-plan asset remains faded, consistent with all three prior HOLDs today. |
+| Remaining candidates (KP3RUSD, ZRCUSD, ROBOUSD, KEEPUSD, PLUMEUSD, BADGERUSD, TOKENUSD, ENSOUSD, RBCUSD, DUALUSD, STUSD, FHEUSD, USUSD, BTRUSD, XTERUSD, GRIFFAINUSD, ZAMAUSD, BLUAIUSD, TREMPUSD, AIOUSD, C98USD, BASEDUSD, ALLOUSD, SWARMSUSD, EDGEXUSD, ARCUSD, CATUSD, FLOWUSD, ESPUSD, QUSD, CFXUSD, ZROUSD, OMIUSD, ALPHAUSD, CRVUSD, USUALUSD) | — | — | — | — | All clear at most 1 of the 4 mechanical gates simultaneously (momentum, freshness, volume). SKIP. |
+
+**No candidate in the 45-pair OHLC pull clears all four mechanical gates (1h>3%, 4h>5%, high age ≤60min, volume ≥2x) simultaneously.** OOBUSD (3/4, fails volume 0.84x vs 2x) and STGUSD (3/4, fails 1h momentum 2.83% vs 3%) were the closest misses — both real, not spread/liquidity artifacts, but each fails one mechanical gate outright. Per the strategy doc's discovery method, no spread checks or catalyst queries were run on these since neither clears the momentum+volume+freshness bar required before that stage.
+
+### Step 5 — Risk Factors
+
+- No setup this scan clears every mechanical gate — OOBUSD and STGUSD are the closest misses (3 of 4 gates each) and worth a recheck later in the session if momentum/volume continues to build.
+- SUSHI/USD (this morning's TRADE idea) and ADA/USD (15:01 UTC candidate) have both now fully faded — no residual thesis on either.
+- BTC crash gate and weekly-downtrend gate both clear (BTC -0.20% intraday, +2.62%/5d) — no macro restriction in effect, the HOLD here is purely a lack-of-qualifying-candidate outcome, not a gated one.
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Decision: **HOLD — no candidate clears every gate.** Widest-momentum pairs (HFT, OOB, ZBT) all fail on stale highs or weak volume; the two 3-of-4 near-misses (OOB on volume, STG on 1h momentum) do not meet the bar. Per the gate-protection default rule, HOLD is the correct outcome, not a gap to route around. $111.7835 cash remains fully available for the next qualifying setup, either later in this session or the next pre-session/midday scan.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears every gate in a 65-pair sweep. Closest misses: OOB/USD (fresh 15min high, +71.97% 4h, but volume only 0.84x vs 2x bar) and STG/USD (fresh 0min high, +9.08% 4h, 2.87x volume, but 1h momentum 2.83% just under the 3% bar). SUSHI (this AM's idea) and ADA (15:01 UTC candidate) both fully faded. BTC -0.20% intraday, crash/weekly-downtrend gates clear. $111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
