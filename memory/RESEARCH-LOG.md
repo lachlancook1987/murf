@@ -31133,3 +31133,43 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears every gate in a 65-pair sweep. Closest misses: OOB/USD (fresh 15min high, +71.97% 4h, but volume only 0.84x vs 2x bar) and STG/USD (fresh 0min high, +9.08% 4h, 2.87x volume, but 1h momentum 2.83% just under the 3% bar). SUSHI (this AM's idea) and ADA (15:01 UTC candidate) both fully faded. BTC -0.20% intraday, crash/weekly-downtrend gates clear. $111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-06 — Midday Scan (22:05 UTC)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** $111.7835 ZUSD (100% cash) + dust, unchanged since the ADA/USD HOLD at 15:01 UTC (post-BICO stop-out). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. **Alpaca:** `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**BTC:** live $64,373.50 vs today's open $64,599.30 → **-0.35%**. Crash gate not triggered (threshold -20%). Weekly trend: Aug 1 open $62,821.80 → live $64,373.50 = **+2.47%**, inside ±3% band — weekly-downtrend gate not triggered, standard entry thresholds apply.
+
+### Step 6 — Discovery sweep (Kraken-native, full 648 online USD pairs, direct Ticker + OHLC API)
+
+72 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 25 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| CLVUSD | +9.05% | +9.05% | 1267min (stale) | 0.00x | Clears momentum, high 21h+ stale, dead volume. SKIP. |
+| **GWEIUSD** | **+6.91%** | **+15.14%** | **7min (fresh)** | 0.26x | Clears momentum + freshness (3 of 4 gates), but volume fails the 2x bar by a wide margin (0.26x). Closest miss of the sweep. SKIP (volume gate). |
+| FXSUSD | +6.25% | +6.92% | 517min (stale) | 0.04x | Clears momentum, high 8.6h stale, dead volume. SKIP. |
+| BTRUSD | +4.62% | +3.96% | 7min (fresh) | 0.13x | 4h fails 5% bar, dead volume. SKIP. |
+| ALLOUSD | +4.45% | +9.48% | 7min (fresh) | 0.07x | Clears momentum + freshness, dead volume (0.07x). SKIP. |
+| UAIUSD | +4.11% | +7.04% | 7min (fresh) | 0.03x | Clears momentum + freshness, dead volume. SKIP. |
+| KEYUSD | +1.68% | +76.70% | 7min | 0.00x | 4h huge, 1h fails, dead volume, sub-cent dust asset. SKIP. |
+| ADAUSD | +0.79% | -0.26% | 337min (stale) | 0.44x | Fully faded — confirms the 15:01 UTC HOLD was correct. |
+| SUSHIUSD | +0.36% | +0.24% | 862min (stale) | 0.00x | Still dead, consistent with all prior HOLDs today. |
+| Remaining candidates (C98, ACT, USUSD, GRIFFAIN, PLUME, TOKEN, ENSO, BLUAI, ROBO, KP3R, KEEP, WFB, BADGER, RBC, ST, FHE) | ≤0.8% or negative 1h, or dead volume | — | — | — | All fail at least two mechanical gates simultaneously. SKIP. |
+
+**No candidate clears all four mechanical gates (1h>3%, 4h>5%, high age ≤60min, volume ≥2x) simultaneously.** Unlike the 20:07 UTC scan's near-misses (OOB/STG at 3-of-4 gates), this sweep's closest candidates (GWEI, ALLO, UAI) clear momentum + freshness but miss the volume gate decisively (0.03x–0.26x vs the 2x bar) — thin/dead order books, not real buying pressure. No spread or catalyst checks run per methodology (neither stage reached).
+
+### Step 5 — Risk Factors
+
+- No setup this scan clears every mechanical gate — volume confirmation is the universal failure point (best candidate at 0.26x vs the 2x bar), a more decisive miss than the 20:07 UTC near-misses.
+- SUSHI/USD (this morning's original TRADE idea) and ADA/USD (15:01 UTC candidate) remain fully faded — no residual thesis on either.
+- BTC crash gate and weekly-downtrend gate both clear (BTC -0.35% intraday, +2.47%/5d) — no macro restriction in effect, the HOLD here is purely a lack-of-qualifying-candidate outcome.
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Decision: **HOLD — no candidate clears every gate.** GWEI/USD, ALLO/USD, and UAI/USD all clear momentum + freshness but fail the volume-confirmation gate decisively (0.03x–0.26x vs the 2x bar required). Per the gate-protection default rule, HOLD is the correct outcome, not a gap to route around. $111.7835 cash remains fully available for the next qualifying setup.
+
+### Step 7 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
