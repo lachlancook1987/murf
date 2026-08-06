@@ -8671,3 +8671,46 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE - BICO/USD bought 1570 @ $0.03658 (~$57.89, 50.5% equity), trailing_stop 3.5% placed (stopprice $0.03524). Momentum-alone entry: 1h +15.58%, 4h +26.24%, fresh 13min high, 3.16x accelerating volume, 0.28% spread (down from 15.6%/5.38% on two prior BICO rejections), cross-exchange divergence 1.3% via direct CoinGecko (Perplexity data unreliable again). T1 $0.03768/T2 $0.03841. High-ATR 3.5% trail used given 26% 4h move. $56.80 ZUSD cash remaining."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-06 — Session-Open Execution Check (15:01 UTC)
+
+### 2026-08-06T14:30:07Z | BICO/USD | SELL (trailing stop triggered) | 1570 BICO | Exit: $0.03530 | Closed
+
+**Order ID (stop):** O2BZI6-JMC77-SODSKH (trailing_stop, trail_percent 3.5%, GTC — triggered at stopprice $0.03543, filled $0.03530)
+**Hold time:** ~16.4 minutes (bought 14:13:41Z, closed 14:30:07Z)
+**P&L:** Buy cost $57.43060 + $0.45944 fee = $57.89004 total spent. Sell proceeds $55.42877 − $0.44343 fee = $54.98534 net received. **Net: −$2.9047 (−5.02%)**
+**Notes:** Discovered via this session's account/positions/orders pull — BICO balance 0.0000000000, `positions: {}`, `orders: {"open": {}}`, ZUSD $111.7835 (up from the $56.80 post-buy figure, confirming the stop closed the position). Confirmed via `ClosedOrders` API pull (kraken.sh has no closed-orders subcommand, so queried `/0/private/ClosedOrders` directly with the same HMAC auth pattern) that the 3.5% trailing stop fired on a fast reversal shortly after entry — the 5-candle accelerating-volume pattern at entry did not sustain; price gapped down through the trail rather than continuing. No manual intervention; mechanical stop-out as designed. Wider ATR-exception stop (3.5% vs standard 2.5%) meant a larger loss than a standard-stop trade would have taken, consistent with the known tradeoff (fewer noise-stops on legitimate momentum, larger loss when the momentum reverses instead of continuing).
+
+**Post-close state:** Kraken $111.7835 ZUSD (100% cash) + dust, zero open positions, zero open orders. Alpaca `positions` → `[]`, zero exposure. BTC $64,707.00 vs today's open $64,599.30 → +0.17%, crash gate not triggered.
+
+**Today's research plan (08:08 UTC pre-session):** SUSHI/USD — already invalidated twice (09:01 and 12:01 UTC checks, momentum-peak check failed both times, high grew progressively staler). Not re-checked this session; no new information since the 12:01 UTC HOLD.
+
+**Fresh discovery sweep (Kraken-native, full 648 online USD pairs, direct Ticker API):** 69 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top candidates by liquidity/momentum for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| BICOUSD | +3.82% | +34.95% | 0min (fresh) | 1.09x | Same asset that stopped us out 30min ago; volume confirmation now much weaker than at original entry (1.09x vs 3.16x). SKIP — fails volume gate. |
+| **ADAUSD** | **+3.75%** | **+6.16%** | 30min (fresh) | **2.16x** (real) | Clears every mechanical gate — see full writeup below. Ultimately SKIPPED on R:R floor. |
+| GWEIUSD | -0.59% | +2.37% | 45min | 0.65x | 1h negative. SKIP. |
+| PLUMEUSD | +4.00% | +8.81% | 0min (fresh) | 1.20x | Below 2x volume bar. SKIP. |
+| FHEUSD | -2.01% | +5.03% | 60min | 0.26x | 1h negative, dead volume. SKIP. |
+| SUSHIUSD | +0.00% | -1.26% | 210min (stale) | 0.35x | Still dead — consistent with prior HOLDs today. |
+| AKEUSD | +3.06% | +2.19% | 0min | 0.45x | 4h fails 5% bar, dead volume. SKIP. |
+| ZBTUSD | +4.57% | +27.34% | 15min (fresh) | 1.54x | Below 2x volume bar (closest miss). Unfamiliar ticker, not investigated further given volume gate already fails. SKIP. |
+
+### ADA/USD — full gate check
+
+- **Momentum:** 1h +3.75%, 4h +6.16% — clears both thresholds.
+- **Momentum-peak check:** 24h high ($0.203198) set ~30min prior — inside the 60min freshness window, PASS.
+- **Volume:** ~2.16x recent 15m volume vs trailing average — clears the 2x confirmation bar.
+- **Spread:** ask $0.201236 / bid $0.201127 → **0.054%**, comfortably under the 1% cap.
+- **Tradeable:** confirmed via `kraken.sh assets ADA/USD` (margin-eligible up to 10x, we'd cap at 2x if used).
+- **Cross-exchange divergence check:** CoinGecko direct API (id: cardano) shows $0.201562, +5.30% 24h — tightly clustered with Kraken's live $0.201241 (~0.16% divergence) and matching 24h-change order of magnitude. PASS.
+- **BTC weekly trend gate:** BTC +3.11% over the past 5 days (not down >3%) — weekly downtrend gate not triggered, momentum-alone entries remain open.
+- **Catalyst:** Perplexity query returned only generic/mixed background (Clearstream custody addition, Hoskinson stablecoin comments, falling DeFi fees) with a stale reference price ($0.17–0.19 vs Kraken's live $0.2012) — no dated, confirmed <6h catalyst. Treated as **momentum-alone, unconfirmed catalyst**.
+- **Fear & Greed Index:** live check (alternative.me, dated today 2026-08-06) reads **25 — Extreme Fear**.
+- **R:R gate — FAILS:** Per the Extreme Fear + unconfirmed catalyst rule, both conditions are present (F&G ≤25 AND catalyst unconfirmed), requiring R:R ≥1.5:1 at T1. ADA's R:R is the standard momentum-alone 1.2:1 (T1 +3% vs 2.5% reference stop) — structurally capped at 1.2:1 under the strategy's fixed T1/stop definitions, so it cannot clear 1.5:1 without a confirmed catalyst. **SKIP — R:R floor gate fails.**
+
+### Decision: **HOLD — no entry this check.** ADA/USD was the strongest technical candidate (clears momentum, freshness, volume, spread, tradeability, and cross-exchange divergence) but fails the Extreme-Fear-and-unconfirmed-catalyst R:R floor (needs ≥1.5:1, structurally capped at 1.2:1 for momentum-alone entries). BICO/PLUME/ZBT all fail the 2x volume-confirmation gate. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is the correct outcome when no candidate clears every gate simultaneously. $111.7835 cash remains fully available for the next qualifying setup, either at a later intraday recheck (F&G level and catalyst landscape can both shift) or tomorrow's pre-session research.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
