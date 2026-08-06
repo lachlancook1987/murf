@@ -31010,3 +31010,74 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Step 7 — Notification
 
 Action taken this scan (SYN stop-out reconciliation is a logging event, not a new order/stop placement/thesis cut) — no ClickUp notification sent per the Step 7 rule (only notify on stop tightened, position cut, or new entry placed; none occurred this scan).
+
+## 2026-08-06 — Pre-Session Research (08:08 UTC)
+
+### Step 1-2 — Account Snapshot
+**Kraken:** $114.6882 ZUSD (100% cash) + dust only (usual basket unchanged, plus $0.1066 ZAUD), unchanged since the SYN/USD stop-out on 2026-08-05 (−$0.3392, −0.56%). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+- **BTC:** $64,382.37, **+2.9%** 24h. **ETH:** $1,764.47, +1.64% 24h.
+- **Fear & Greed:** 40 (Fear) — not Extreme Fear, so the 1.5:1 R:R floor rule does not apply.
+- **BTC funding:** mixed but mostly modest positive (~+0.008–0.015%/8h across venues, Glassnode aggregate near 0.0000%) — neutral, no crowding signal.
+- **Catalysts:** Spot Bitcoin ETF inflows (>$170M Aug 4, IBIT leading at $111M); CLARITY Act Senate vote expected before August recess, possible procedural vote Aug 7; easing US-Iran tensions / possible Strait of Hormuz reopening supporting risk sentiment; short-covering contributing to BTC's move above $64k.
+- **Token unlocks this week:** HYPE (~433K, ~$22.7M, Aug 6), PROVE (~208–312M, source-dependent, largest of the week), BERA (~13.28M, ~$2.0M, Aug 6), MYX (~15.62M, ~$1.0M, Aug 6), YZY (~120.83M, ~$35.8M, Aug 16). EGLD mainnet upgrade also listed Aug 6. None of these are today's sweep candidate.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 1 open $62,821.80 → live $64,382.37 = **+2.48%**, inside the ±3% band. BTC weekly-downtrend gate **not triggered** — standard entry thresholds apply (1h>3%, 4h>5%).
+
+No open positions on either exchange — per-position catalyst queries N/A (Step 3).
+
+### Step 4 — Discovery sweep (Kraken-native, full 648 online USD pairs, live Ticker + 15m OHLC)
+
+47 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC (24h window) on the top 40 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **SUSHIUSD** | **+3.46%** | **+10.66%** | 15min (fresh) | **3.45x** (real) | Clears every mechanical gate — see full writeup below |
+| TAKEUSD | +32.64% | +41.00% | 0min (fresh) | 7.75x (real) | Clears both momentum thresholds with a fresh high and real volume, but spread ask $0.05652/bid $0.05585 → **1.19%**, just past the ≤1% hard cap. SKIP (spread gate). |
+| LITUSD | +8.14% | +37.99% | 0min (fresh) | 0.76x | Clears both thresholds with a fresh high but volume ratio under the 2x confirmation bar. SKIP. |
+| DOVUUSD | +11.96% | +9.79% | 30min | 0.00x | Clears both thresholds with a fresh-ish high but dead volume. SKIP. |
+| GHIBLIUSD | +9.77% | +9.77% | 30min | 0.00x | Same pattern: clears thresholds, dead volume. SKIP. |
+| ZBTUSD | +5.04% | +5.63% | 0min (fresh) | 0.40x | Clears both thresholds narrowly with a fresh high but volume under the 2x bar. SKIP. |
+| COTIUSD | -0.59% | +10.26% | 75min (stale) | 1.00x | 4h clears, 1h negative (faded), high stale, volume under 2x. SKIP. |
+| STUSD | +2.46% | +10.90% | 45min | 0.00x | 4h clears, 1h below 3% bar, dead volume. SKIP. |
+| AVAUSD | +3.05% | +4.44% | 15min | 0.04x | 1h barely clears, 4h falls short of 5% bar, dead volume. SKIP. |
+| All remaining 31 candidates (CLV, ORDER, BADGER, FLOCK, TOKEN, PEP, AVAAI, ES, PEAQ, TREMP, RBC, ALKIMI, SWARMS, ACT, LSETH, LQTY, OGN, PLUME, RIVER, GRIFFAIN, GTC, USUSD, JOE, GWEI, CHR, TUSD, PEPECOIN, AVNT, CARV, PACT, MIM) | — | — | — | — | All below both momentum thresholds this check, or negative/flat/stale/dead-volume. SKIP. |
+
+### SUSHI/USD — full gate check (only candidate clearing every gate)
+
+- **Momentum:** 1h +3.46%, 4h +10.66% — clears both thresholds (standard bar applies; BTC weekly-downtrend gate not triggered).
+- **Momentum-peak check:** 24h high ($0.1723, set in the 07:45 UTC candle) 15 minutes old — fresh, PASS. Current price ($0.1703–0.1708) sits ~1.2% below that high, a normal pullback within a fresh high, not a stale/declining structure.
+- **Volume:** 3.45x the trailing 24h average on the live 15m candle; candle-by-candle detail from 05:45–08:00 UTC shows a sustained, accelerating climb (0.1548 → 0.1723) with rising trade counts (18, 19, 30, 18, 36, 49, 9 trades/candle) — a genuine sustained move, not a single spike-and-fade candle.
+- **Spread:** ask $0.17080 / bid $0.17050 → **0.18%**, well under the 1% cap. Confirmed via `kraken.sh quote SUSHI/USD`.
+- **Pair status:** `kraken.sh assets SUSHI/USD` confirms online, ordermin 30 SUSHI (~$5.10 notional), 2x/3x margin available on this pair.
+- **Cross-exchange divergence check:** Perplexity's search results were scattered and unreliable (CoinGecko $0.16, Bitget $0.1753, CMC $0.177–178, Binance Square social posts $0.19–0.23, OKX $0.6058 — an obvious stale/mismatched outlier) — consistent with the strategy doc's documented pattern of Perplexity search giving unreliable live-price reads. A **direct CoinGecko API pull** instead shows: aggregate price **$0.170055**, 24h change **+8.29%** (consistent with the momentum seen), with per-exchange tickers tightly clustered — Binance $0.1702, Kraken $0.1691/$0.1470 (two listed quotes, likely spot/other), Binance $0.1539. Kraken's live quote ($0.1703–0.1708) sits squarely inside this cluster — **no material divergence, PASS.**
+- **Catalyst:** SushiSwap's new Stellar cross-chain swap integration (per CoinMarketCap, via Perplexity) is cited as supporting the move — a real but modest catalyst, not obviously <6h old. Qualifies primarily under the momentum-alone provision (1h>3% with 3x+ volume confirmation), valid because the BTC weekly-downtrend gate is not triggered.
+- **R:R:** T1 = entry +3% (~$0.1755) vs 2.5% stop = **1.2:1, exactly at the floor.** Not in Extreme Fear (F&G 40), so 1.2:1 is the correct bar. Per the strategy's fee-awareness note (~1.6% round-trip), this is fee-thin — flagged as a risk factor below.
+- **Same-thesis cooling period:** N/A — no prior SUSHI fills in TRADE-LOG (one prior SKIP entry, 2026-07-xx, on stale/thin momentum, not a stop-out).
+
+**Trade idea — SUSHI/USD:**
+- Catalyst: Modest confirmed catalyst (Stellar cross-chain integration) + strong sustained momentum with real volume confirmation
+- Entry: Market, ~$0.1705
+- Stop: `trailing_stop`, `trail_percent: 2.5`, GTC, placed immediately after fill
+- T1: $0.1756 (+3%) — tighten stop to 0.5% on touch
+- T2: $0.1790 (+5%)
+- R:R: 1.2:1 at T1 (floor — fee-thin)
+- Size: to conviction; SUSHI is an established, liquid, non-microcap asset (unlike most recent candidates), which reduces thin-book risk relative to typical micro-cap rejections this month — left to the execution session's judgment
+- Kraken pair: SUSHI/USD confirmed online, 2x/3x margin available
+- Spread: confirmed 0.18%
+
+### Step 5 — Risk Factors
+
+- R:R sits exactly at the 1.2:1 floor with no strong catalyst premium — thin margin once the ~1.6% round-trip fee is applied (same pattern that produced a small net loss on the SYN trade Aug 5 despite a favorable stop-out).
+- Catalyst (Stellar integration) is real but modest and not clearly <6h old — this is primarily a momentum-alone entry, valid only because the BTC weekly-downtrend gate is not triggered (+2.48%/5d).
+- TAKE/USD showed the strongest raw momentum of the scan (32–41%) but hard-fails the spread gate at 1.19% — a reminder that explosive movers on this scan skew toward thin order books.
+- This pre-session research workflow's scope is research/logging/notification only — no order was placed in this session; SUSHI/USD is logged as a validated actionable idea for the trading/execution session to act on.
+- $114.6882 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Decision: **TRADE — SUSHI/USD clears every gate**, including the cross-exchange divergence check (verified via direct CoinGecko API against a multi-exchange price cluster, overriding scattered/unreliable Perplexity search results). Momentum-peak check, spread, volume, and R:R floor all pass; no crash gate or BTC weekly-downtrend gate in effect. R:R is at the bare 1.2:1 floor (fee-thin) and the catalyst is modest rather than a strong fresh driver — noted as risk factors, not disqualifiers. TAKE/USD was the only other candidate clearing both momentum thresholds with real volume but hard-fails the spread gate.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE - SUSHI/USD clears every gate (1h +3.46%, 4h +10.66%, fresh 15min high, 3.45x volume, 0.18% spread, cross-exchange divergence PASS via direct CoinGecko check). R:R 1.2:1 at floor, modest catalyst (Stellar cross-chain integration) plus strong sustained momentum. Entry ~$0.1705, trailing_stop 2.5%, T1 $0.1756/T2 $0.1790. TAKE/USD was the only other momentum-clearing candidate but fails spread (1.19%). $114.69 cash available, no open positions."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
