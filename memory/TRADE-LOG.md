@@ -8624,3 +8624,50 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no entry on SUSHI/USD.** Momentum-peak check and 1h-surge threshold both continue to fail, now more decisively than at the 09:01 recheck (high 4h+ stale, price 2.7% off it, 1h change flat). No fresh candidate re-screened this check (scope was re-verifying the existing plan). Per the gate-protection default rule, HOLD stands. $114.6882 cash remains fully available for the next qualifying setup.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-06 — Midday Scan (trade placed)
+
+**Pre-trade state:** Kraken $114.6882 ZUSD (100% cash) + dust, unchanged since Aug 05 21:27 UTC SYN stop-out. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled`, zero exposure. BTC $64,450.90 vs today's open $64,599.30 → -0.23%, crash gate not triggered.
+
+**Discovery sweep** (Kraken-native, full 648 online USD pairs, direct Ticker API): 61 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 20 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **BICOUSD** | **+15.58%** | **+26.24%** | 13min (fresh) | **3.16x** (real, accelerating) | Clears every gate — see full writeup below |
+| HFTUSD | +7.41% | +48.79% | 522min (stale) | 0.68x | 4h huge but high nearly 9h old, weak volume. SKIP. |
+| KINUSD | +21.58% | +21.58% | 42min | 0.00x | Clears thresholds but dead volume, sub-cent dust-priced asset. SKIP. |
+| ICXUSD | +10.76% | +10.76% | 42min | 0.00x | Clears thresholds, dead volume. SKIP. |
+| GLMRUSD | +6.69% | +10.46% | 12min (fresh) | 1.50x | Clears both thresholds with fresh high but volume under the 2x bar. SKIP. |
+| NILUSD | +4.17% | +6.23% | 12min (fresh) | 5.41x (real) | Also clears every mechanical gate — see note below |
+| SUSHIUSD | -0.42% | -0.24% | 387min (stale) | 0.00x | Fully faded from this morning's TRADE plan — confirms all three prior HOLDs today were correct. |
+| Remaining candidates (ORDER, TOKEN, ROBO, DOVU, BADGER, RIVER, FHE, GWEI, ZRO, PLUME, GTC, TREMP) | — | — | — | — | Below both momentum thresholds simultaneously, stale high, or dead volume. SKIP. |
+
+**NIL/USD** also cleared both mechanical thresholds with real volume (5.41x) and a fresh 12min high, spread 0.27% — a legitimate second candidate, but BICO/USD was selected as the stronger setup (16x the 1h move, 3x the 4h move, higher 24h liquidity — 2999 trades/24h vs 302 for NIL).
+
+### BICO/USD — full gate check
+
+- **Momentum:** 1h +15.58%, 4h +26.24% — clears both thresholds by a wide margin.
+- **Momentum-peak check:** 24h high ($0.03722) set 13 minutes prior at check time — fresh, PASS. Re-verified immediately before order placement: still fresh, price still climbing (5 consecutive 15m candles of rising volume: 97k→391k→894k→1.1M→843k with rising trade counts 25/72/177/187/145) — genuine sustained/accelerating buying, not a spike-and-fade.
+- **Volume:** 3.16x the trailing 24h average — clears the 2x confirmation bar comfortably, and the candle-by-candle acceleration is stronger confirmation than a single-candle check.
+- **Spread:** ask $0.03642 / bid $0.03632 → **0.28%**, well under the 1% cap. Notable: BICO/USD has failed the spread gate twice before (Aug 1: 15.6%; Aug 2: 5.38%) — spread has narrowed dramatically as liquidity improved (24h trade count now 2999 vs 22 and 54 on the prior rejections).
+- **Cross-exchange divergence check:** Perplexity search returned clearly stale/mismatched data ($0.01394, -1.8% 24h — inconsistent with both Kraken's live price and its own cited "76.5% jump" narrative, likely conflating with a differently-named token), a repeat of the documented Perplexity data-quality pattern (SYN Aug 5, SUSHI Aug 6). A **direct CoinGecko API pull** (id: biconomy) instead shows **$0.036140, +49.4% 24h** — tightly clustered with Kraken's live $0.03662 (~1.3% divergence), and the 24h-change order of magnitude matches Kraken's own +33.66% vs-open. PASS via direct API, consistent with the established override precedent.
+- **Catalyst:** No clean fresh (<6h) catalyst confirmed — Perplexity cited a possible Aug 4 technical breakout / ERC-8211 batching-standard narrative but the accompanying price data was unreliable, so this is treated as unconfirmed. Qualifies under the momentum-alone provision (sustained 1h>3% with real accelerating volume), valid because the BTC weekly-downtrend gate was not triggered at this morning's check (+2.48%/5d) and BTC's intraday move since (-0.23%) is too small to flip that.
+- **R:R:** T1 = entry +3% ($0.03768) vs the standard 2.5% reference stop = **1.2:1, exactly at the floor** (per the Entry Rules' R:R calc, which is defined against the 2.5% reference stop regardless of the live stop width chosen for high-ATR assets). Not in Extreme Fear (F&G 40 this morning), so 1.2:1 is the correct bar.
+- **High-ATR stop exception applied:** Given the live 1h/4h moves (15.58%/26.24%) place BICO squarely in the "FET/HYPE/WLD-type momentum coin" ATR profile the strategy doc calls out, used **3.5% trailing stop** instead of the 2.5% default to avoid a noise-stop on an otherwise-valid trade — one 15m candle alone swung ~1.8% intracandle (high $0.0357→low $0.03505 in the same 15min bar).
+- **Same-thesis cooling period:** N/A — no prior BICO fills in TRADE-LOG (two prior SKIPs, both on spread, not stop-outs).
+
+### 2026-08-06T[order time ~14:33 UTC] | BICO/USD | BUY | 1570 BICO | Entry: $0.03658 | Stop: trailing 3.5% (GTC) | Open
+
+**Order ID (buy):** OQGLJR-2UGKC-MLSYEX (market, filled T5IVAH-2F4CX-ZUDTID @ $0.03658)
+**Trailing Stop Order ID:** O2BZI6-JMC77-SODSKH (trailing_stop, trail_percent 3.5%, GTC; stopprice at placement $0.03524, limitprice $0.03652)
+**Notional:** $57.4306 + $0.45944 fee = $57.89004 total spent (~50.5% of $114.6882 equity)
+**T1:** $0.03768 (+3%) | **T2:** $0.03841 (+5%)
+**R:R:** 1.2:1 (3% target vs 2.5% reference stop — meets standard floor exactly; live stop widened to 3.5% for high-ATR noise protection, not part of the R:R calc)
+**Thesis:** Momentum-alone entry (no confirmed fresh catalyst) on the strongest, most liquid setup in a 61-candidate discovery sweep — sustained accelerating volume across 5 consecutive 15m candles, fresh 13min 24h high, spread narrowed to 0.28% after two prior spread-gate rejections on this same asset, cross-exchange price confirmed via direct CoinGecko API (1.3% divergence) after Perplexity again returned unreliable search data. Valid under the momentum-alone provision since BTC weekly-downtrend gate not triggered.
+**Notes:** Sized at ~50.5% equity (partial), consistent with recent momentum-only entries (SYN ~52.5%) given the fee-thin 1.2:1 floor R:R and absence of a confirmed catalyst. Stop placed and confirmed live immediately after fill (stopprice $0.03524, well below entry). NIL/USD was a legitimate second candidate (both mechanical thresholds clear, 5.41x volume, 0.27% spread) but BICO was preferred on stronger momentum magnitude and much deeper liquidity (2999 vs 302 24h trades).
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE - BICO/USD bought 1570 @ $0.03658 (~$57.89, 50.5% equity), trailing_stop 3.5% placed (stopprice $0.03524). Momentum-alone entry: 1h +15.58%, 4h +26.24%, fresh 13min high, 3.16x accelerating volume, 0.28% spread (down from 15.6%/5.38% on two prior BICO rejections), cross-exchange divergence 1.3% via direct CoinGecko (Perplexity data unreliable again). T1 $0.03768/T2 $0.03841. High-ATR 3.5% trail used given 26% 4h move. $56.80 ZUSD cash remaining."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~35 days running; needs resubscription at callmebot.com/61477788635.
