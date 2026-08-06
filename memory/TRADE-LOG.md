@@ -8610,3 +8610,17 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry on SUSHI/USD.** Momentum-peak-check fails (high now 76min stale, price fading further away from it rather than holding a fresh breakout) and the live 1h change has gone negative, both required gates that passed at 08:08 UTC research no longer hold ~53 minutes later. Per the gate-protection default rule, gates are not loosened to force the research plan through — HOLD stands even though pre-session research called TRADE. No other live candidates re-screened this check (scope was re-verifying the existing plan, not a fresh sweep). $114.6882 cash remains fully available for the next qualifying setup, either at a later intraday recheck or tomorrow's pre-session research.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
+
+## 2026-08-06 — Session-Open Execution Check (12:01 UTC, monitoring only, no trades)
+
+**Kraken:** $114.6882 ZUSD (100% cash) + dust only, unchanged since the Aug 05 21:27 UTC SYN trailing-stop close. `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 — zero exposure, no action needed.
+
+**BTC:** $64,490.40 vs today's open $64,599.30 → -0.17%. Crash gate not triggered.
+
+**Today's research plan (08:08 UTC pre-session):** TRADE — SUSHI/USD, already re-checked and HELD once at 09:01 UTC (momentum-peak check failed, 1h change gone negative).
+
+**Live re-check at execution (12:01 UTC, ~3h53min after research, ~3h after the 09:01 recheck):** Quote ask $0.16720/bid $0.16690 → spread 0.18%, still inside the cap, but momentum continues to deteriorate rather than recover. 15m OHLC for the last ~2.5h (09:45–12:00) shows price chopping in a $0.1653–$0.1694 range with no candle approaching the $0.1723 high — that high is now **well over 4h old**, far past the ~60min freshness window, and price sits **~2.7% below it** (vs 1.2% at research, 1.57% at the 09:01 check) — the gap has widened at each successive check, not narrowed. 1h change (11:00 close $0.1673 → now $0.1677) is **+0.24%**, still nowhere near the >3% surge threshold. This is a stalled/rangebound consolidation, not a fresh breakout.
+
+### Decision: **HOLD — no entry on SUSHI/USD.** Momentum-peak check and 1h-surge threshold both continue to fail, now more decisively than at the 09:01 recheck (high 4h+ stale, price 2.7% off it, 1h change flat). No fresh candidate re-screened this check (scope was re-verifying the existing plan). Per the gate-protection default rule, HOLD stands. $114.6882 cash remains fully available for the next qualifying setup.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred).
