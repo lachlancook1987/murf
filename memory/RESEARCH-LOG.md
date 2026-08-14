@@ -31173,3 +31173,63 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Step 7 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-14 — Pre-Session Research (09:03 UTC)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** $111.7835 ZUSD (100% cash) + dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals), unchanged since the Aug 06 15:01 UTC ADA/USD HOLD (confirmed by the Aug 14 EOD snapshot logging an 8-day continuity gap Aug 07–13 with zero trades). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` canceled) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity readings scattered ($63,337–$63,738 across CoinDesk/CoinGecko/Binance, roughly flat 24h). **Kraken direct quote used as source of truth per established override precedent: $62,859.20**, today's open $63,423.30 → **-0.89%** intraday. Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,870–$1,885 (Perplexity, mixed sources), roughly -1% to -1.4% 24h on most feeds.
+- **Fear & Greed:** scattered across sources — CFGI.io 43 (Neutral), Binance 36 (Fear), Bitget 29 (Fear), CoinStats 38 (Fear). Treating as **Fear-range, not Extreme Fear** (no source ≤25) — the 1.5:1 Extreme Fear R:R floor does not apply on that basis alone (moot this session regardless, see gate below).
+- **BTC funding:** ~0.01%/8h cluster across major venues (Binance 0.0079%, Kraken ~0.0125–0.0148%/8h-normalized) — neutral, no crowding signal.
+- **Catalysts:** US August retail sales + prelim Michigan consumer sentiment due today (macro risk); weekly BTC/ETH options/futures expiry on Deribit/CME; spot BTC ETF **-$61.1M** net outflows vs spot ETH ETF **+$7.4M** net inflows (diverging institutional demand); **Harmony (ONE) abnormal mint** of >3 trillion tokens (exploit, rollback in progress — avoid ONE entirely); **CRO** treasury-deal collapse ($6.42B Crypto.com/Trump Media/Yorkville deal terminated), CRO fell below $0.05, lowest since Oct 2023 — negative catalyst, not a dip-buy setup; SEC scheduled to vote today on a crypto-startup registration-exemption framework (mildly constructive, not asset-specific).
+- **Token unlocks this week:** PUMP ($19.57M, Aug 14 — today), Chainbase/C ($1.66M, Aug 14), ARB ($7.19M, Aug 16), CONX ($11.55M, Aug 15), YZY ($35.22M, Aug 16), CRO ($63.97M, Aug 17 — compounds the treasury-deal negative catalyst), MANTA ($809.64K, Aug 18). None are today's sweep candidates.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC, direct API): Aug 9 open $64,901.20 → live $62,859.20 = **-3.15%**, outside the ±3% band. **BTC weekly-downtrend gate TRIGGERED** — per TRADING-STRATEGY.md, pure momentum entries (no specific catalyst) are **banned**; any entry requires **1h momentum >5% AND a fresh catalyst <3h old** instead of the standard 1h>3%/4h>5% bar. Catalyst-driven entries (regulatory event, listing, protocol upgrade) remain open regardless.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery sweep (Kraken-native, full 627 online USD pairs, direct Ticker API)
+
+29 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC (~7.5h window) on all 29 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| ZEXUSD | 0.00% | +16.54% | 198min (stale) | 0.00x | 4h clears vs-open screen but 1h flat, high 3.3h stale, dead volume. SKIP. |
+| UXLINKUSD | 0.00% | +13.43% | 123min (stale) | 0.00x | Same pattern — 1h flat, stale high, dead volume. SKIP. |
+| USDUCUSD | +0.62% | +10.00% | 228min (stale) | 0.00x | 1h fails outright, dead volume. SKIP. |
+| **INXUSD** | **+3.01%** | +7.80% | **18min (fresh)** | 0.00x | Best 1h in the field — clears the *standard* 3% bar but falls well short of the **5% bar required under the active weekly-downtrend gate**; volume also dead (0.00x). SKIP (downtrend-gate momentum + volume). |
+| CAPUSD | +1.02% | +5.36% | 93min | 0.01x | 1h fails, dead volume. SKIP. |
+| SOMIUSD | +1.99% | -0.32% | 243min (stale) | 0.00x | 1h fails, 4h negative, dead volume. SKIP. |
+| B2USD | +1.75% | +3.09% | 18min | 0.00x | Both windows fail, dead volume. SKIP. |
+| RIZEUSD | +1.23% | +4.04% | 3min (fresh) | 0.36x | Freshest high in the field but both momentum windows fail the downtrend-gate bar; volume weak. SKIP. |
+| AIOUSD | +1.27% | +2.09% | 393min (stale) | 0.00x | Fails both windows, dead volume, stale high. SKIP. |
+| SAMOUSD | +0.80% | +3.28% | 33min | 0.00x | Fails both windows, dead volume. SKIP. |
+| REZUSD | +0.65% | +1.71% | 33min | 0.24x | Fails both windows, weak volume. SKIP. |
+| CROUSD | +0.16% | +0.58% | 348min (stale) | 0.00x | Essentially flat despite the vs-open screen hit — confirms Perplexity's negative CRO catalyst (terminated $6.42B treasury deal) is real; no bounce/opportunity here, this is a broken chart, not a dip-buy. SKIP. |
+| SYNUSD | -0.18% | +0.36% | 378min (stale) | 0.05x | Prior TRADE-LOG asset (Aug 5), now flat/dead. SKIP. |
+| PIEVERSEUSD | -1.91% | +2.01% | 123min | 0.67x | 1h negative. SKIP. |
+| GRIFFAINUSD | -1.33% | +0.51% | 138min | 0.12x | 1h negative. SKIP. |
+| COOKIEUSD | -1.12% | +2.15% | 183min | 0.00x | 1h negative, dead volume. SKIP. |
+| Remaining candidates (LAVA, NOBODY, SRM, KEEP, XTER, BANANAS31, KULA, BILLY, ATLAS, BNC, RBC, WINGS, OBOL) | 0.00% or flat | 0.00%–4.17% | 183–438min (all stale) | 0.00x | All flat/dead — zero 1h movement and zero volume confirmation on every one. SKIP. |
+
+**No candidate clears even the standard 1h>3% bar with real volume, let alone the stricter 1h>5%+fresh-catalyst bar required under today's active BTC weekly-downtrend gate.** INX/USD (+3.01% 1h, 18min-fresh high) is the single closest miss on momentum alone, but (a) it's under the 5% downtrend-gate bar by a wide margin, (b) it has zero catalyst backing (not mentioned in any of today's news queries), and (c) volume is completely dead (0.00x) — it would fail the standard volume-confirmation gate even absent the downtrend gate. No spread checks were run since no candidate reached the momentum+volume+freshness bar required before that stage.
+
+### Step 5 — Risk Factors
+
+- **BTC weekly-downtrend gate is active** (-3.15%/5d) — this is the primary reason for today's HOLD, not merely a lack of candidates; the bar is structurally higher today (1h>5%+catalyst<3h) than a normal session (1h>3%, momentum-alone permitted).
+- Overall market breadth is thin this scan — only 29 of 627 online USD pairs even cleared the initial vs-open>3% screen (vs. 45–81 pairs in early-August scans), and none of those 29 show real volume confirmation. Consistent with a risk-off, low-conviction tape matching the weekly BTC downtrend and mixed/negative ETF flow data.
+- Two negative-catalyst events flagged for awareness, not action: Harmony (ONE) abnormal token mint (exploit in progress, avoid entirely) and CRO treasury-deal collapse (broken chart, not a dip-buy despite appearing in the vs-open screen).
+- Crash gate not triggered (BTC -0.89% intraday, nowhere near -20%).
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup; cash has now sat idle since Aug 06 (8+ day gap plus today), underperforming a BTC hold by the BTC move over that window, but this is a side effect of no clean setup appearing, not a decision cost.
+
+### Decision: **HOLD — BTC weekly-downtrend gate active, no candidate clears the resulting stricter bar.** BTC is down 3.15% over the trailing 5 days, triggering TRADING-STRATEGY.md's requirement that new entries need 1h momentum >5% AND a catalyst <3h old (pure momentum entries banned while this gate is live). The strongest candidate in a 29-pair field, INX/USD, clears only 3.01% on 1h (the *standard*, not downtrend, bar) with zero volume confirmation and no catalyst — it fails on three independent grounds. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected here, not a gap to route around. $111.7835 cash remains fully available for the next qualifying setup, either later today (weekly-trend % and catalyst landscape can both shift) or the next scheduled scan.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - BTC weekly-downtrend gate TRIGGERED (-3.15% over 5 days, Aug 9 $64,901 -> live $62,859), requiring 1h momentum >5% + catalyst <3h old for any entry (pure momentum banned). No candidate in a 29-pair sweep clears it - best momentum was INX/USD at only +3.01% 1h with zero volume confirmation and no catalyst. Negative catalysts flagged for awareness: Harmony (ONE) abnormal 3T-token mint exploit, CRO treasury-deal collapse (<\$0.05, avoid). BTC -0.89% intraday, crash gate not triggered. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~43 days running; needs resubscription at callmebot.com/61477788635.
