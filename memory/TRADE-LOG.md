@@ -8758,3 +8758,29 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry this scan.** ALICE/USD was the strongest technical candidate by a wide margin (momentum, freshness, volume, spread, and cross-exchange divergence all pass) but the active BTC weekly-downtrend gate requires a confirmed catalyst <3h old in addition to the 5% momentum bar, and no catalyst could be confirmed — Perplexity's own search called ALICE's news flow "thin" with no headline-based catalyst. TAKE/USD had far larger momentum but failed hard on a 9.6% spread. No other candidate in a 35-pair field cleared the downtrend-gate momentum bar with real volume. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup, either later today (catalyst landscape and BTC weekly trend can both shift) or the next scheduled scan.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-14 — Midday Scan (22:11 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed. State is byte-for-byte unchanged from the 20:05 UTC evening scan two hours prior — no trades occurred between checks.
+
+**BTC:** live $62,830.50 vs today's open $63,423.30 → **-0.93%** intraday. Crash gate not triggered (threshold ~-20%, 24h range $62,490–$63,567). **Weekly trend (Kraken daily OHLC):** Aug 9 open $64,901.20 → live $62,830.50 = **-3.19%**, slightly worse than the 20:05 UTC check (-3.05%). **BTC weekly-downtrend gate remains TRIGGERED** — entries require 1h momentum >5% AND a fresh catalyst <3h old; pure momentum entries banned.
+
+**Discovery sweep** (Kraken-native, direct Ticker API, 629 online USD pairs): 44 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 40 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **PEPECOINUSD** | **+6.71%** | +6.71% | 30min (fresh) | **0.00x** | Only candidate clearing the downtrend-gate 5% 1h bar — but completely dead volume (0.00x), no real buying behind the move. SKIP. |
+| AIOUSD | +4.06% | +7.85% | 180min (stale) | 1.81x | 1h fails the 5% bar; high 3h stale. SKIP. |
+| PACTUSD | +4.03% | +13.86% | 165min (stale) | 0.00x | 1h fails bar, dead volume, stale high. SKIP. |
+| BALUSD | +3.58% | +0.73% | 405min (stale) | 0.00x | 1h fails bar outright, dead volume. SKIP. |
+| ROBOUSD | +2.54% | +6.04% | 15min (fresh) | 1.39x | 1h fails the 5% bar despite fresh high. SKIP. |
+| YGGUSD | +2.56% | +1.52% | 45min | 0.00x | 1h fails bar, dead volume. SKIP. |
+| GRIFFAINUSD | +2.46% | +0.40% | 240min (stale) | 0.57x | 1h fails bar. SKIP. |
+| GUNUSD | -2.05% | +7.74% | 120min | 0.14x | 1h negative despite 4h strength — momentum reversed, dead volume. SKIP. |
+| INXUSD | -2.13% | -0.85% | 105min | 0.47x | 1h negative. SKIP. |
+| NILUSD | -1.34% | +5.24% | 75min | 1.45x | 1h negative. SKIP. |
+| Remaining candidates (ACUUSD, B2USD, LAVAUSD, UXLINKUSD, GTCUSD, MUBARAKUSD, NOBODYUSD, KEEPUSD, SRMUSD, USELESSUSD, PIEVERSEUSD, CHILLHOUSEUSD, CELRUSD, EULUSD, CCDUSD, BILLYUSD, KULAUSD, ACTUSD, FORESTUSD, GUSD, RLCUSD, ADXUSD, MOCAUSD, ARCUSD, ZBTUSD, BNCUSD, RBCUSD, USUALUSD, QTUMUSD, OKBUSD) | ≤3.6% | — | — | — | All fail the 5% 1h bar outright, several flat/negative, most with dead (<1x) or zero volume. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** BTC weekly-downtrend gate remains active (-3.19%, worse than the 20:05 UTC check), requiring 1h momentum >5% AND a catalyst <3h old. Across the full 44-pair candidate field, only PEPECOINUSD cleared the 5% 1h bar (+6.71%, fresh 30min high) — but with 0.00x volume ratio it fails the volume-confirmation gate outright, meaning the move has no real buying behind it and would not have proceeded to a catalyst check even if one existed. No other candidate cleared the momentum bar at all. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup at the next scheduled scan.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
