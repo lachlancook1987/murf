@@ -1104,3 +1104,72 @@ Corrected the taker-fee assumption in TRADING-STRATEGY.md from 0.4%/leg (0.8% ro
 **A trade can clear every mechanical gate, have favorable raw price action, and still lose — because the fee assumption baked into the R:R math was wrong by 2x.** VELVET/USD sold higher than it bought (+0.25% gross) and still net-lost −1.32%, because actual round-trip fees (~1.6%, confirmed from live fill data) are double what TRADING-STRATEGY.md assumed (0.8%). The other six days were correct, disciplined HOLD streaks — SYN, USELESS, SAFE/PUMP/SOON, PEP, PRIME/ANKR, and EDGE were all real candidates killed by specific, correctly-applied gates (divergence, bearish unlocks, spread, R:R). The gates are sound; the fee input feeding the R:R gate was stale. That's now corrected in the strategy doc — the practical implication going forward is that entries sitting at the bare 1.2:1 floor with no catalyst carry less real edge than the number suggests.
 
 ---
+
+## Week of 2026-08-01 to 2026-08-14 — Review Date: 2026-08-14
+
+### Context
+**No weekly review was run last Friday (2026-08-07) — this review covers a two-week span since the last one (2026-07-31).** Two trades total, both losses (SYN Aug 5, BICO Aug 6), continuing the momentum-only-floor-R:R losing streak flagged last week. **Far more significant: the bot has been completely dark since 2026-08-06 15:01 UTC — a full 8 days with zero sessions, zero research, zero scans, zero snapshots.** Live account state confirmed via `kraken.sh account/positions/orders` at review time exactly matches the closing state logged after the Aug 6 BICO stop-out ($111.7835 ZUSD, same dust basket, zero positions, zero orders) — nothing has moved. `CronList` shows no scheduled jobs from this session; whatever session/trigger mechanism runs the daily pre-session/midday/EOD cadence appears to have stopped firing entirely after Aug 6. This is a real operational gap, not a strategy issue — the bot sat in cash through 8 days of live market moves (BTC −3.0% Aug 6→14) purely because no session executed, not because of a deliberate HOLD decision.
+
+### Account Snapshot (Friday close, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $111.7835 | $111.7835 ZUSD (+dust, incl. $0.1066 ZAUD) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$111.7835** | $111.7835 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Jul 31 EOD) | $115.0274 |
+| Ending Equity (Fri Aug 14, live) | **$111.7835** |
+| **Period Return** | **−2.82%** (−$3.2439, over 2 weeks — 2 trading days of activity, 8 days dark) |
+| BTC Period Return | **−1.73%** (Fri Jul 31 close $63,869.00 → Fri Aug 14 live $62,763.60) |
+| **Bot vs BTC** | **−1.09%** (underperformed — both realized losses plus zero benefit from any moves during the 8-day outage) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Aug 5 | SYN/USD | $0.143455 | $0.1438 (trail stop) | **−$0.3392** (−0.56%) | LOSS |
+| 2 | Aug 6 | BICO/USD | $0.03658 | $0.03530 (trail stop) | **−$2.9047** (−5.02%) | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 2 |
+| Wins | 0 |
+| Losses | 2 |
+| Win Rate | 0% (0/2) |
+| Gross Wins | $0.00 |
+| Gross Losses | $3.2439 |
+| Profit Factor | 0.00 (no wins) |
+| Avg Win / Avg Loss | N/A / −$1.6220 |
+| Largest Win / Largest Loss | N/A / −$2.9047 (BICO) |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | $1.8667 (actual, from fill data: SYN $0.9638 + BICO $0.90287) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $111.7835 (+dust). No open Kraken orders. Alpaca fully closed. BTC weekly-downtrend gate: not evaluated this session (no live session ran to check it during the dark period).
+
+### Trade Quality Review
+
+**Entry types:** Both trades this period were momentum-only entries (no confirmed <6h catalyst), both sized ~50% equity, both sitting exactly at the structural 1.2:1 R:R floor (T1 +3% vs 2.5% reference stop). Both lost. Combined with VELVET (Jul 29, also momentum-only, also at the 1.2:1 floor, also a loss), that's **three consecutive momentum-only floor-R:R entries, three losses, 0% win rate**, spanning three separate weeks since the fee assumption was corrected to 0.8%/leg (~1.6% round trip). This is no longer a single fee-surprise data point (as VELVET was framed last week) — it's a repeating pattern.
+
+**Assets:** SYN/USD and BICO/USD both generated losses this period. Neither had a confirmed catalyst; both were pure technical/volume setups.
+
+**Stop quality:**
+- SYN (standard 2.5% trail): worked exactly as designed — price rose, the trail moved up with it, and the stop closed the position *above* entry (+1.05% raw price gain). The loss was 100% fee erosion (~1.6% round trip > 1.05% gross gain), not a stop-placement problem.
+- BICO (3.5% ATR-exception trail, used because 1h/4h moves were 15.58%/26.24%): the position reversed and stopped out in **~16 minutes**, losing 5.02% — the wider ATR trail meant a larger loss when momentum failed to sustain, exactly the tradeoff the exception accepts. One data point isn't enough to say 3.5% was wrong here, but a stop that wide getting hit inside 16 minutes on a coin still showing +26% on the 4h chart is a fast, decisive reversal, not typical noise — worth flagging that the "high-ATR = wider stop" heuristic doesn't protect against a genuine sharp reversal, only against normal chop.
+
+**Profile violations:** None. Both trades respected spread caps, leverage limits (unleveraged spot), and stop-placement-immediately-after-fill discipline.
+
+**Recurring operational issues:**
+- **The bot did not run at all for 8 consecutive days (Aug 7–14).** No pre-session research, no midday scans, no EOD snapshots, no trade activity, and — because nothing ran — no weekly review last Friday either. This is the single most important finding of this review: whatever mechanism triggers the recurring session cadence stopped working after the Aug 6 22:05 UTC midday scan, and nothing in this session's tooling (`CronList` returns empty) explains why. This needs the user's direct attention outside of what a trading-strategy session can fix — check the scheduling/trigger configuration for this bot's recurring sessions.
+- **WhatsApp/CallMeBot notifications remain broken** — re-tested this session, still `0 messages left`. Failing since 2026-07-02, now **43+ consecutive days**. No working push-notification path exists for this bot via the configured channel.
+
+**Concrete adjustment (added 2026-08-14):**
+Three consecutive momentum-only, no-catalyst entries sitting exactly at the 1.2:1 R:R floor (VELVET Jul 29, SYN Aug 5, BICO Aug 6) have now lost 3-for-3 since the fee assumption was corrected to the real 0.8%/leg rate. At a genuine ~1.6% round-trip cost, a bare 1.2:1 floor on a fixed +3%/−2.5% structure leaves too little edge to survive fees on a sample this consistent. **Extending the existing Extreme-Fear-and-unconfirmed-catalyst R:R floor (1.5:1) to apply to *all* momentum-only (no confirmed <6h catalyst) entries, regardless of Fear & Greed level** — not just during Extreme Fear. Catalyst-confirmed entries keep the standard 1.2:1 floor; this only tightens the no-catalyst case, which is exactly where all three recent losses came from. Updated in TRADING-STRATEGY.md.
+
+### Key Lesson
+**The most consequential thing this review found wasn't a trade — it was 8 days of silence.** The bot sat in 100% cash for over a week not because gates correctly rejected every candidate, but because no session ran to check any candidates at all. That's a distinct failure mode from anything this log has tracked before (bad data, wrong fee assumption, fee-thin R:R) — it's not a strategy problem, it's an execution/scheduling problem, and it needs to be fixed outside this session before next week's numbers mean anything. On the trading side, the pattern is narrower but real: momentum-only entries at the bare 1.2:1 R:R floor are now 0-for-3 since the fee correction, and the floor for that specific case has been raised to 1.5:1 accordingly.
+
+---
