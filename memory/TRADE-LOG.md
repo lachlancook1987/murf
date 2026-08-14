@@ -8720,3 +8720,41 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~92
 **Notes:** **Continuity gap flagged:** the last logged session/EOD activity in this file is 2026-08-06 (~22:05 UTC midday scan, HOLD). No pre-session, midday, or EOD entries exist for Aug 07–13 — `git log` confirms zero commits touching memory/ on either the session branch or `main` in that window, so this is a real 8-day gap in scheduled runs, not a missing-sync issue. `kraken.sh account`/`positions`/`orders` today show ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — byte-for-byte the same state as the Aug 06 15:01 UTC post-BICO-stop-out snapshot, confirming **no trades occurred at any point during the gap** (mechanically impossible to miss a fill against an unchanged balance). Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22); Alpaca `positions` → `[]`, `account` shows cash/equity $2.54 — zero exposure on either exchange throughout. Because there is no logged snapshot for the 7 missing days, Day P&L and the BTC comparison above are computed against the last available reference (Aug 06 EOD: portfolio $111.7835 post-trade actual, BTC $64,828.80) rather than a true single trading day — they represent the full 8-day gap, not "today." BTC fell from that Aug 06 reference to today's $62,761.50 (−3.19%), so the bot's flat cash position outperformed a hypothetical hold by +3.19% over the gap, purely as a side effect of already being 100% cash before the gap began, not from any decision made during it. Phase P&L now −$67.9965 (−37.82%) from the $179.78 Kraken starting equity (May 22), unchanged from Aug 06 since no trades occurred. Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $111.78 available for a fresh entry; crash gate threshold ~$50,209 (BTC -20% from ~$62,762 current). **Action needed:** confirm whether the scheduled pre-session/midday/EOD triggers are still active — this session ran only because the EOD schedule fired today; if the same gap recurs, notify separately. EOD WhatsApp send **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~43 days running; needs resubscription at callmebot.com/61477788635. Given both the WhatsApp outage and the 8-day scheduling gap, this notification is being escalated via the session's alert channel as well.
+
+## 2026-08-14 — Midday Scan (15:06 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken $111.7835 ZUSD (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** $62,569.40 vs today's open $63,423.30 → -1.35% intraday. Crash gate not triggered (threshold ~-20%). **Weekly trend (Kraken daily OHLC):** Aug 9 open $64,901.20 → live $62,569.40 = **-3.59%**, more negative than this morning's -3.15% check. **BTC weekly-downtrend gate remains TRIGGERED** — entries require 1h momentum >5% AND a fresh catalyst <3h old; pure momentum entries banned.
+
+**Discovery sweep** (Kraken-native, direct Ticker API, 627 online USD pairs): 35 pairs cleared vs-open >3% and within 6% of 24h high (vs. 29 this morning). Pulled 15m OHLC on the top 15 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| TAKEUSD | +31.00% | +28.78% | 5.9min (fresh) | 0.43x | Massive move, clears downtrend-gate momentum bar, but spread 9.6% (ask $0.05699/bid $0.05152) — hard fail on the 1% spread cap, thin/illiquid. SKIP. |
+| **ALICEUSD** | **+9.92%** | **+10.82%** | 5.9min (fresh) | **5.69x** (real) | Clears momentum, freshness, volume, and spread (0.82%) gates — see full writeup below. Ultimately SKIPPED on missing catalyst. |
+| B2USD | +2.52% | +5.03% | 5.9min | 11.03x | 4h clears but 1h fails the downtrend-gate 5% bar despite huge volume. SKIP. |
+| LAVAUSD | +5.59% | -4.62% | 80.9min (stale) | 0.00x | 1h barely clears but 4h negative and high 80min stale — fading, not fresh momentum; dead volume. SKIP. |
+| MUBARAKUSD | +3.11% | +6.96% | 20.9min | 0.00x | 1h fails downtrend-gate bar, dead volume. SKIP. |
+| APRUSD | +4.74% | +2.24% | 170.9min (stale) | 0.41x | 1h fails bar by a hair, stale high. SKIP. |
+| COOKIEUSD | +0.86% | +6.37% | 35.9min | 0.33x | 1h fails outright. SKIP. |
+| USDUCUSD | 0.00% | -0.40% | 470.9min (stale) | 0.00x | Flat, dead volume, stale high. SKIP. |
+| INXUSD | +3.23% | +5.49% | 5.9min (fresh) | 4.58x | Improved since this morning's HOLD (was +3.01%/0.00x) but 1h still fails the downtrend-gate 5% bar. SKIP. |
+| SRMUSD | 0.00% | -0.25% | 125.9min (stale) | 0.00x | Flat, dead. SKIP. |
+| KEEPUSD | 0.00% | 0.00% | 5.9min | 0.00x | Flat despite fresh high, dead volume. SKIP. |
+| ZBTUSD | +0.05% | +0.96% | 200.9min (stale) | 0.00x | Flat, dead. SKIP. |
+| Remaining candidates (CHILLHOUSE, ATLAS, EUL) | 0.00%–1.62% | 1.44%–3.29% | 5.9–35.9min | 0.00–0.01x | All fail the 5% 1h bar, dead volume. SKIP. |
+
+### ALICE/USD — full gate check
+
+- **Momentum:** 1h +9.92%, 4h +10.82% — clears the active downtrend-gate 5% bar comfortably (nearly 2x the threshold).
+- **Momentum-peak check:** 24h high ($0.1369) set ~6min prior — fresh, PASS.
+- **Volume:** 5.69x trailing average — clears the 2x confirmation bar with real accelerating buying.
+- **Spread:** ask $0.13440 / bid $0.13330 → **0.82%**, under the 1% cap but not by much — noted for awareness.
+- **Tradeable:** confirmed via `kraken.sh assets ALICE/USD` (spot only, no margin).
+- **Cross-exchange divergence check:** Perplexity returned stale/flat data ($0.115–$0.122, roughly flat to mildly ±2% 24h, "no clear directional breakout") — another instance of the documented Perplexity data-quality pattern. **Direct CoinGecko API** (id: my-neighbor-alice) shows **$0.135641, +16.60% 24h** — tightly clustered with Kraken's live $0.1352 close (~0.33% divergence) and consistent order-of-magnitude with Kraken's own +15% vs-open. Confirms the move is real and cross-exchange, not a Kraken-only artifact. PASS on divergence.
+- **Catalyst — FAILS:** Perplexity found no dated, confirmed <3h (or even <6h) catalyst — news flow described as "thin," only a vague, undated mention of "prior event spillover" from an in-game airdrop. The BTC weekly-downtrend gate requires momentum >5% **AND** a fresh catalyst <3h old, not momentum alone. ALICE clears the momentum leg decisively but has no confirmed catalyst. **SKIP — downtrend-gate catalyst requirement not met.**
+
+### Decision: **HOLD — no entry this scan.** ALICE/USD was the strongest technical candidate by a wide margin (momentum, freshness, volume, spread, and cross-exchange divergence all pass) but the active BTC weekly-downtrend gate requires a confirmed catalyst <3h old in addition to the 5% momentum bar, and no catalyst could be confirmed — Perplexity's own search called ALICE's news flow "thin" with no headline-based catalyst. TAKE/USD had far larger momentum but failed hard on a 9.6% spread. No other candidate in a 35-pair field cleared the downtrend-gate momentum bar with real volume. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup, either later today (catalyst landscape and BTC weekly trend can both shift) or the next scheduled scan.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
