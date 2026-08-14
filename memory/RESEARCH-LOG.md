@@ -31233,3 +31233,49 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - BTC weekly-downtrend gate TRIGGERED (-3.15% over 5 days, Aug 9 $64,901 -> live $62,859), requiring 1h momentum >5% + catalyst <3h old for any entry (pure momentum banned). No candidate in a 29-pair sweep clears it - best momentum was INX/USD at only +3.01% 1h with zero volume confirmation and no catalyst. Negative catalysts flagged for awareness: Harmony (ONE) abnormal 3T-token mint exploit, CRO treasury-deal collapse (<\$0.05, avoid). BTC -0.89% intraday, crash gate not triggered. \$111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~43 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-14 — Evening Scan (20:05 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE/AVAX/BABY/FET/HYPE/INJ/KAS/NEAR/SOL/SUI/TAO/XETH/ZAUD, all sub-$0.01 remnants), `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect, Steps 3-5 N/A for existing positions. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` reconfirmed `canceled`) — zero exposure, no action needed. State is byte-for-byte unchanged from the 15:06 UTC midday scan — no trades occurred between checks.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** ~$63.3K per Perplexity sources (live Kraken quote at check time: $62,925.40), 24h change roughly -0.2% to -0.5% across sources.
+- **ETH:** ~$1,873–1,875, 24h change roughly -0.6% to -1.1%.
+- **Fear & Greed:** mixed readings across sources — CFGI.io 44-46 (Neutral), other trackers 29-37 (Fear). Treated as Fear-leaning, not Extreme Fear (>25).
+- **BTC perp funding:** ~+0.008-0.02%/8h across venues — mildly positive, not stressed.
+- **Catalysts:** SEC canceled its planned Aug 14 vote on crypto capital-raising exemptions; SEC may still detail a tokenized-stock "innovation exemption"; Binance halting HTX+10 platforms from Aug 23 (compliance); Kalshi ordered to halt WA operations; BTC ETFs -$61.1M net outflow, ETH ETFs +$7.4M net inflow yesterday; Clarity Act still pending as a broader tailwind. No single dated, asset-specific catalyst <3h old identified.
+- **Unlocks this week:** Chainbase (C) $1.66M and Pump.fun (PUMP) $19.57M both unlocked today (Aug 14); YZY ($35.47M), ARB ($7.19M), CONX ($11.55M) scheduled Aug 15-16 — none of these are in today's candidate list.
+
+### Step 4 — BTC Weekly Trend Gate Check
+
+Kraken daily OHLC: Aug 9 open $64,901.20 → live $62,925.40 = **-3.05%** over the trailing 5 days. **BTC weekly-downtrend gate remains TRIGGERED** (threshold -3%) — per TRADING-STRATEGY.md, new entries require 1h momentum **>5%** AND a fresh catalyst **<3h old**; pure momentum entries are banned while this gate is live. Crash gate not triggered (BTC -0.79% intraday vs today's open $63,423.30, nowhere near -20%).
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker API, 629 online USD pairs)
+
+45 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 20 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **PACTUSD** | **+15.58%** | +10.63% | 37min (fresh) | 3.17x (real) | Clears the downtrend-gate 5% bar with real volume — see full writeup below. SKIPPED on catalyst. |
+| **GUNUSD** | +5.94% | +13.76% | 7min (fresh) | 20.90x (very real) | Clears the downtrend-gate 5% bar — see full writeup below. SKIPPED on catalyst. |
+| BILLYUSD | +8.78% | +7.85% | 7min (fresh) | 0.00x | Clears momentum bar but dead volume — no real buying behind the fresh high. SKIP. |
+| B2USD | +4.51% | +5.44% | 292min (stale) | 5.33x | 1h fails the downtrend-gate 5% bar despite real volume; high nearly 5h old. SKIP. |
+| MUBARAKUSD | +2.57% | -1.06% | 247min (stale) | 0.00x | 1h fails bar, stale high, dead volume. SKIP. |
+| GTCUSD | +0.82% | +7.73% | 7min (fresh) | 16.72x | 4h clears but 1h fails the downtrend-gate bar outright. SKIP. |
+| Remaining candidates (CCD, INX, ROBO, RLC, ACT, LAVA, KEEP, SRM, NOBODY, XTER, CHILLHOUSE, ATLAS, GRIFFAIN, PIEVERSE) | ≤2.1% | — | — | — | All fail the 5% 1h bar outright (several flat/negative). SKIP. |
+
+### PACT/USD and GUN/USD — gate checks
+
+- **PACT/USD:** Spread ask $0.0001220/bid $0.0001219 → 0.08%, well under cap. Tradeable, confirmed via `assets`. Perplexity catalyst check found no fresh (<3h, or even <24h) news — the only identifiable drivers were a **February 2026** Kraken/MEXC/Gate exchange-support announcement and a **July 2026** Tether-led $7M Series A in Pact Labs, both stale by weeks/months. **Catalyst check FAILS the <3h requirement.**
+- **GUN/USD:** Spread ask $0.00340/bid $0.00338 → 0.59%, under cap. Tradeable, confirmed via `assets`. Perplexity catalyst check explicitly found **no formal announcement or on-chain event** — Bitget's own writeup attributed the move to "speculation," not a project catalyst. **Catalyst check FAILS the <3h requirement** (in fact fails to identify any catalyst at all).
+
+### Decision: **HOLD — BTC weekly-downtrend gate active, no candidate clears the resulting stricter bar.** PACT/USD and GUN/USD both clear the downtrend-gate 5% 1h-momentum bar with real, confirmed volume (3.17x and 20.90x respectively) and tight spreads, but neither has a catalyst inside the required <3h window — PACT's best available catalyst is a month-old funding round, and GUN's own coverage explicitly attributes the move to speculation with no formal announcement. BILLY/GTC clear momentum but fail on dead volume or a failing 1h leg. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup, either later today (weekly-trend % and catalyst landscape can both shift) or the next scheduled scan.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO EVENING] HOLD - BTC weekly-downtrend gate still TRIGGERED (-3.05% over 5 days, Aug 9 \$64,901 -> live \$62,925), requiring 1h momentum >5% + catalyst <3h old. PACT/USD (+15.58% 1h, 3.17x vol) and GUN/USD (+5.94% 1h, 20.9x vol) both clear momentum+volume but have no catalyst inside 3h - PACT's best driver is a month-old funding round, GUN's move is explicitly speculation-only per Bitget. BTC -0.79% intraday, crash gate not triggered. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~43 days running; needs resubscription at callmebot.com/61477788635.
