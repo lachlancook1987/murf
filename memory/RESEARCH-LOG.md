@@ -31336,3 +31336,66 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, high-age freshness, volume>=2x) in a 36-pair sweep. Closest misses: IDOS/USD (+14.73% 1h, +24.7% 4h, 2.35x volume, but 5.35% spread - hard fail - and stale 21h-old 24h-high with no catalyst) and NOCK/USD (+7.45% 1h, +11.31% 4h, fresh high, but 0.00x volume - thin/new ticker). BTC weekly-downtrend gate CLEARED today (-2.91%, first time in over a week), crash gate clear, BTC roughly flat intraday. \$111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~44 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-15 — Pre-Session Research (20:06 UTC scheduled run)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect, Steps 3-5 N/A. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed. State unchanged from the 14:08 UTC midday scan and this morning's 09:xx UTC pre-session check — no trades have occurred all day.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity ~$62,830, -0.70% 24h. **Kraken live quote used as source of truth: $63,048.00**, today's open $62,979.40 → **+0.11%** intraday, essentially flat. Crash gate not triggered (threshold ~-20%, 24h range $62,724–$63,111).
+- **ETH:** ~$1,878–$1,882, roughly flat to +0.7% 24h (Perplexity).
+- **Fear & Greed:** 44/100 — Neutral (124 coins Fear, 144 Neutral, 29 Greed, 1 Extreme Greed across 298 tracked). Not Extreme Fear (≤25).
+- **BTC funding:** mixed by venue — Binance BTCUSDT perp +0.0079%/8h (neutral), Kraken's own perp page showing -0.28%/hr (venue-specific quirk). No crowding signal.
+- **Catalysts:** Persistent spot BTC ETF outflows (~$192M net over two sessions per CoinStats) cited as the main pressure on BTC; miners selling (~28K BTC YTD, Bitdeer sold its full 263.4 BTC mined this week) adding supply; CLARITY Act passage odds cut to 10% (Galaxy); Fed policy/rate expectations still a macro headwind; UAE sovereign funds disclosed $763.7M IBIT stake plus new Morgan Stanley/BMO/JPMorgan ETF positions as a partial institutional counterweight; Chainlink flagged as a structural winner (BitGo migrated $7.7B WBTC treasury onto Chainlink this month).
+- **Unlocks this week:** CONX (Aug 15, ~$11.55M), STRK (Aug 15, ~$3.19M), CYBER (Aug 15, ~$1.29M), YZY (Aug 16, ~$35.6M, ~12.1% of supply), ARB (Aug 16, ~92.63M tokens, ~$7.37M), KAITO/ZRO (Aug 20, ~$29.4M/~$21M). None are today's sweep candidates. No confirmed major protocol upgrade this week beyond MultiversX's Aug 6 mainnet upgrade (already past) and an *expected* (unconfirmed date) Solana Alpenglow upgrade.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 9 open $64,901.20 → live $63,048.00 = **-2.86%**, inside the ±3% band by a narrow margin. **BTC weekly-downtrend gate NOT triggered** (consistent with this morning's -2.91% read) — standard entry thresholds apply (1h>3%, 4h>5%), no stricter 5%+catalyst<3h requirement.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 634 online USD pairs)
+
+62 pairs cleared vs-open >3% and within 6% of 24h high — widest field of the day so far (vs. 36 this morning). Pulled 15m OHLC on the top candidates by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **FUNUSD** | **+13.64%** | **+20.37%** | 4.8min (fresh) | **3.22x** (real) | Clears all four mechanical gates and spread (0.58%) — see full writeup below. Ultimately REJECTED on cross-exchange price divergence. |
+| ZEREBROUSD | +3.98% | +4.28% | 19.8min (fresh) | 4.59x | 1h clears, 4h fails the 5% bar by a hair. SKIP. |
+| CHIPUSD | +3.50% | +6.41% | 4.8min (fresh) | 0.42x | Momentum and freshness both clear but volume well under the 2x bar. SKIP. |
+| USUSD | +4.36% | +3.70% | 274.8min (stale) | 1.24x | 1h clears, 4h fails, high stale, volume short of 2x. SKIP. |
+| C98USD | +1.84% | +6.63% | 4.8min (fresh) | 16.2x | 4h and volume both strong but 1h fails the 3% bar. SKIP. |
+| REDUSD | +1.53% | +3.23% | 4.8min | 16.66x | Huge volume but both momentum windows fail. SKIP. |
+| MULTIUSD | +4.82% | +4.82% | 439.8min (stale) | 0.00x | 1h clears, 4h fails narrowly, high stale, dead volume. SKIP. |
+| XNYUSD | +2.11% | +5.58% | 34.8min | 0.55x | 1h fails, thin volume. SKIP. |
+| AIOUSD | -0.05% | +8.29% | 49.8min | 0.23x | 1h negative despite 4h strength — fading, not building. SKIP. |
+| NILUSD | +2.40% | +6.43% | 739.8min (very stale) | 0.61x | 1h fails, high 12h+ stale, thin volume. SKIP. |
+| Remaining candidates (WFBUSD, LAVAUSD, HPOS10IUSD, BASEDUSD, MIMUSD, KNTQUSD, LINKUSD, SHAPEUSD, QUSD, SYRUPUSD, GRASSUSD, CHEXUSD, XTERUSD, REPPOUSD, ETHFIUSD, NOTUSD, STBLUSD, OPNUSD, FIGHTUSD, YBUSD, AIUSD, SOLVUSD, WARDUSD, PROVEUSD, ZEUSUSD, DEGENUSD, GLMRUSD, BNCUSD, SWARMSUSD, MERLUSD, ACHUSD, ANIMEUSD, JOEUSD, FLUXUSD, ANONUSD, BATUSD, ADXUSD, CHECKUSD, BERAUSD, RLCUSD, PHAUSD, PUFFERUSD, BNTUSD, XXMRZUSD, AEVOUSD) | ≤3.3% 1h or negative | — | — | mostly 0.00x–0.77x | All fail the 1h and/or 4h momentum bar outright, and nearly all show dead/near-zero volume. SKIP. |
+
+### FUN/USD — full gate check (rejected on cross-exchange divergence, not a near-miss)
+
+- **Momentum:** 1h +13.64%, 4h +20.37% — clears both thresholds decisively.
+- **Momentum-peak check:** 24h high ($0.026000) set ~5min prior — fresh, PASS.
+- **Volume:** 3.22x trailing 15m average — clears the 2x confirmation bar with real accelerating buying.
+- **Spread:** ask $0.025690 / bid $0.025540 → **0.58%**, under the 1% cap.
+- **Tradeable:** confirmed via `kraken.sh assets FUN/USD` — spot only (no margin/leverage listed), acceptable for an unleveraged day trade.
+- **Cross-exchange divergence check — HARD FAIL:** Kraken live price **$0.02574**. Perplexity independently reported FUNToken trading around **$0.0043–$0.0044** (-4% to -5% 24h), and a direct CoinGecko API pull (id: `funfair`, FUNToken's actual listing) confirms **$0.004248, -6.51% 24h** — tightly matching Perplexity and **diverging from Kraken by roughly 500%+**, far past the 15–20% reject band. This is a materially larger divergence than any prior rejection this cycle (PUMP ~62-66%, ALKIMI ~80%, TNSR order-of-magnitude) and strongly suggests Kraken's `FUNUSD` pair is either a distinct/mislabeled listing or reflects a thin, not-yet-arbitraged order book rather than the same FUNToken CoinGecko/Perplexity are pricing. Per the cross-exchange price-divergence gate, reject regardless of how cleanly the mechanical gates clear. **SKIP — divergence gate, hard fail.**
+
+### Decision: **HOLD — no entry this session.** FUN/USD was the only candidate in a 62-pair field to clear all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high, volume≥2x) plus the spread cap, but failed decisively on cross-exchange price divergence (~500%+ vs. CoinGecko/Perplexity) — the largest divergence rejection logged to date, treated as a data-integrity red flag rather than a real tradeable move. No other candidate cleared all four momentum/volume/freshness gates simultaneously (closest misses: ZEREBRO on the 4h bar, CHIP and USU on volume). BTC weekly-downtrend gate remains just inside the ±3% band (-2.86%, not triggered) so standard thresholds applied throughout. Crash gate clear, BTC essentially flat intraday. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- FUN/USD's ~500%+ cross-exchange divergence is unusually large — worth a passing check next session on whether Kraken's `FUNUSD` pair is a different underlying token than FUNToken/funfair, since a routine screen would otherwise treat this as the cleanest mechanical setup of the day.
+- BTC weekly-downtrend gate sits right at the edge of the ±3% band (-2.86%) — a small further BTC pullback would flip it back to triggered, as it has been in most sessions over the past two weeks.
+- Persistent spot BTC ETF outflows and ongoing miner selling are a soft headwind on BTC; CLARITY Act odds cut to 10% removes a near-term regulatory tailwind.
+- ARB (Aug 16, ~$7.37M) and YZY (Aug 16, ~$35.6M, ~12.1% supply) unlocks are dilution-pressure catalysts for tomorrow — not today's candidates, noted for awareness.
+- Market breadth continues wide (62 of 634 pairs cleared the initial screen, widest of the day) but volume confirmation and cross-exchange integrity remain the dominant failure points — consistent with the pattern across recent sessions.
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - only FUN/USD cleared all 4 mechanical gates (1h +13.64%, 4h +20.37%, fresh high, 3.22x volume, 0.58% spread) but REJECTED on ~500%+ cross-exchange price divergence vs CoinGecko/Perplexity - largest divergence rejection to date, treated as a data-integrity flag not a real move. No other candidate in a 62-pair sweep cleared all momentum/volume gates. BTC weekly-downtrend gate NOT triggered (-2.86%, just inside band), crash gate clear, BTC flat intraday. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~44 days running; needs resubscription at callmebot.com/61477788635.
+
