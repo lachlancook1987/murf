@@ -8814,3 +8814,32 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry this scan.** No candidate in a 57-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high, volume≥2x) simultaneously. RAILS/USD and ENSO/USD were the two closest — both clear momentum and freshness but fail the volume-confirmation gate (0.00x and 0.78x respectively, both well under 2x), meaning neither move has real buying behind it. BERA/USD was the only pair to clear the volume bar but with no momentum behind it. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. BTC flat intraday, crash gate clear. $111.7835 cash remains fully available for the next qualifying setup at the next scheduled scan.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-15 — Midday Scan (22:05 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $63,090.00 vs today's open $62,979.40 → **+0.18%** intraday, essentially flat. Crash gate not triggered (threshold ~-20%, 24h range $62,723.80–$63,111.00). Consistent with the 20:06 UTC pre-session check (+0.11%) ~2h prior.
+
+**Discovery sweep** (Kraken-native, direct Ticker + 15m OHLC API, 629 online USD pairs): 62 pairs cleared vs-open >3% and within 6% of 24h high — same field size as the 20:06 UTC pre-session scan. Pulled 15m OHLC on the top 20 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **FUNUSD** | +18.63% | +54.18% | 0min (fresh) | 1.86x | Clears momentum/freshness but volume now just under the 2x bar (was 3.22x at 20:06 UTC) — moot given divergence gate below. Ultimately REJECTED on cross-exchange price divergence (re-verified). |
+| SODAUSD | +7.99% | +5.64% | 0min (fresh) | 0.02x | Clears both momentum bars but volume essentially dead. SKIP (volume gate). |
+| HPOS10IUSD | +3.55% | +6.97% | 0min (fresh) | 0.00x | Clears both momentum bars but dead volume. SKIP. |
+| MIMUSD | +3.83% | -0.04% | 0min | 0.72x | 1h clears, 4h negative. SKIP. |
+| AIOUSD | +1.23% | +12.18% | 45min | 0.00x | 1h fails bar, dead volume. SKIP. |
+| CHIPUSD | +2.38% | +8.91% | 0min (fresh) | 0.01x | 1h fails bar, dead volume. SKIP. |
+| PROVEUSD | +2.5% | +4.49% | 30min | 0.93x | Both bars fail narrowly, volume short of 2x. SKIP. |
+| NOTUSD | +0.73% | +7.24% | 0min | 5.71x | 4h clears, volume strong, but 1h fails outright. SKIP. |
+| Remaining candidates (PIPEUSD, WFBUSD, XNYUSD, SBRUSD, SHAPEUSD, BASEDUSD, FHEUSD, LAVAUSD, REPPOUSD, KNTQUSD, TACUSD, LINKUSD) | ≤0.1% or negative 1h | — | — | 0.00x–0.44x | All fail the 1h momentum bar outright (several flat/negative), dead/thin volume. SKIP. |
+
+### FUN/USD — re-verification (same asset rejected at 20:06 UTC pre-session)
+
+- **Spread — now HARD FAIL on its own:** ask $0.034890 / bid $0.033590 → **3.87%**, up from 0.58% two hours ago and nearly 4x the 1% cap.
+- **Cross-exchange divergence — still HARD FAIL:** Kraken live $0.03486. Direct CoinGecko API (id: funfair) shows **$0.00421966, -7.03% 24h** — divergence still **~727%**, consistent with the 20:06 UTC rejection (~500%+ then). Confirms this is a persistent data-integrity issue with Kraken's `FUNUSD` listing, not a transient mispricing that resolved. **SKIP — divergence gate, hard fail (now compounded by spread gate too).**
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 62-pair field cleared all four mechanical gates plus spread and divergence checks. FUN/USD remains the only pair clearing momentum/freshness but is rejected twice now (20:06 UTC and this check) on cross-exchange divergence, and has additionally widened past the spread cap since the last check. SODA/USD and HPOS10I/USD both cleared momentum bars with fresh highs but zero real volume behind them. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. BTC flat intraday, crash gate clear. $111.7835 cash remains fully available for the next qualifying setup at the next scheduled scan.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
