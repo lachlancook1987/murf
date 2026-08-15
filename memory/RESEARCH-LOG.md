@@ -31279,3 +31279,60 @@ Kraken daily OHLC: Aug 9 open $64,901.20 → live $62,925.40 = **-3.05%** over t
 bash scripts/clickup.sh "[CRYPTO EVENING] HOLD - BTC weekly-downtrend gate still TRIGGERED (-3.05% over 5 days, Aug 9 \$64,901 -> live \$62,925), requiring 1h momentum >5% + catalyst <3h old. PACT/USD (+15.58% 1h, 3.17x vol) and GUN/USD (+5.94% 1h, 20.9x vol) both clear momentum+volume but have no catalyst inside 3h - PACT's best driver is a month-old funding round, GUN's move is explicitly speculation-only per Bitget. BTC -0.79% intraday, crash gate not triggered. \$111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~43 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-15 — Pre-Session Research (09:xx UTC scheduled run)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect, Steps 3-5 N/A. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity ~$62.8K, -0.7% to -0.8% 24h. **Kraken live quote used as source of truth: $63,009.70**, today's open $62,979.40 → roughly flat intraday (+0.05%). Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,877, +0.4% 24h (Perplexity).
+- **Fear & Greed:** mixed — CFGI.io 48 / a broader tracker 44 (both Neutral), some sources 29-37 (Fear). No source read ≤25 — **not Extreme Fear**.
+- **BTC funding:** ~0.0079%/8h on Binance perp — neutral, no crowding signal.
+- **Catalysts:** SEC canceled its planned vote on crypto-startup capital-raising rules (regulatory uncertainty, not asset-specific); BTC spot ETF flows still soft; **ARB unlock today** (~92.65M tokens, ~$7.37M) with reported whale de-risking ahead of it; **CONX unlock today** (~1.32M tokens, ~$11.55M); TRX's GreatVoyage v4.8.2 upgrade and SOL's Agave 4.2 rollout (next week) flagged as narrative tailwinds, not immediate triggers. Perplexity's "top gainers" list (ACE, AKE, CROSS, VELVET, APR, M, CYS, BTW, AGENTFUN, DOSP) treated as context-only per methodology — cross-checked against the Kraken-native sweep below, not used for discovery.
+- **Unlocks this week:** CONX (Aug 15, today), ARB (Aug 16), YZY (Aug 16, $35.22M), STRK (Aug 15). None are today's sweep candidates.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 9 open $64,901.20 → live $63,009.70 = **-2.91%**, inside the ±3% band. **BTC weekly-downtrend gate NOT triggered today** (first session in over a week where this gate has cleared) — standard entry thresholds apply, no special 5%+catalyst<3h requirement.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker API, 629 online USD pairs)
+
+36 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 36 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| NOCKUSD | +7.45% | +11.31% | 0min (fresh) | 0.00x | Clears momentum + freshness decisively but completely dead volume — thin/newly-listed ticker, no real buying behind the pump. SKIP (volume gate). |
+| **IDOSUSD** | **+14.73%** | **+24.7%** | 1275min (stale) | **2.35x** (real) | Best 3-of-4 near-miss — see full writeup below. SKIPPED on spread. |
+| PTBUSD | +3.06% | +3.80% | 0min (fresh) | 3.91x | 1h barely clears, 4h fails the 5% bar; spread fine (0.23%) but momentum gate fails. SKIP. |
+| NILUSD | +1.74% | +17.67% | 15min (fresh) | 0.98x | 4h huge but 1h fails 3% bar; volume just under the 2x bar. SKIP. |
+| SRMUSD | +4.96% | +2.00% | 345min (stale) | 0.00x | 1h clears but 4h fails, high 5.75h stale (no breakout, last<high24), dead volume. SKIP. |
+| VELVETUSD | -2.22% | +12.80% | 135min (stale) | 0.17x | 1h negative — same asset that stopped us out previously; fading, not building. SKIP. |
+| UNITASUSD | 0.00% | +16.35% | 0min | 0.00x | 1h flat, dead volume despite fresh high. SKIP. |
+| BANANAS31USD | +0.41% | +1.71% | 0min | 2.74x | Volume clears but both momentum windows fail outright. SKIP. |
+| Remaining candidates (QUSD, LAVAUSD, FOLKSUSD, SBRUSD, SUPUSD, KEEPUSD, GRIFFAINUSD, CHIPUSD, MIMUSD, ENSOUSD, MOVRUSD, CHEXUSD, PLUMEUSD, ARXUSD, PIEVERSEUSD, MOCAUSD, BILLYUSD, SHAPEUSD, STBLUSD, BNCUSD, OPENUSD, MULTIUSD, LINKUSD, CFGUSD, GRASSUSD, MEGAUSD, SKRUSD, GSTUSD) | ≤2.1% or negative 1h | — | — | 0.00x–0.64x (mostly dead) | All fail the 1h momentum bar outright (several negative), and nearly all show dead/near-zero volume. SKIP. |
+
+### IDOS/USD — full gate check (closest near-miss)
+
+- **Momentum:** 1h +14.73%, 4h +24.7% — clears both thresholds by a wide margin.
+- **Volume:** 2.35x trailing 15m average — clears the 2x confirmation bar with real activity.
+- **Momentum-peak check — FAILS:** 24h high ($0.00671) was set ~21.25h ago; current price ($0.00631/$0.00622 live) remains below it — no fresh breakout above the prior high, and the high is far outside the 60min freshness window. Per the momentum-peak-check rule this requires a new distinct catalyst <2h old to still qualify; no such catalyst was identified for IDOS in today's research.
+- **Spread — HARD FAIL:** ask $0.00654 / bid $0.00619 → **5.35%**, more than 5x the 1% cap. This alone disqualifies the pair regardless of the freshness question. SKIP — spread gate.
+
+### Decision: **HOLD — no entry this session.** BTC weekly-downtrend gate cleared for the first time in over a week (-2.91%, inside the ±3% band), so only standard gates applied — but no candidate in a 36-pair sweep cleared all four mechanical gates (1h>3%, 4h>5%, high-age freshness/breakout, volume≥2x) simultaneously. NOCK/USD had the cleanest momentum+freshness read but zero real volume behind it (thin/newly-listed). IDOS/USD was the strongest 3-of-4 near-miss (momentum and volume both clear) but fails the momentum-peak-check on a stale (21h) 24h-high with no breakout or fresh catalyst, and separately fails the spread cap outright (5.35% vs 1% max) — a hard disqualifier on its own. PTB/USD clears 1h and volume but falls short on the 4h bar. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup, either at a later intraday recheck or the next scheduled scan.
+
+### Step 5 — Risk Factors
+
+- BTC weekly-downtrend gate cleared today (-2.91%, just inside the ±3% band) — worth monitoring, as it has been triggered in nearly every session over the past week and could flip back with a small further BTC pullback.
+- ARB unlock today (~$7.37M, whales reportedly de-risking ahead of it) and CONX unlock today (~$11.55M) — dilution-pressure catalysts, not candidates in today's sweep, noted for awareness only.
+- Market breadth moderate (36 of 629 pairs cleared the initial vs-open>3% screen) but volume confirmation was the dominant failure point across nearly every candidate — consistent with recent sessions' pattern of thin/spike-and-fade moves rather than sustained buying.
+- Crash gate and BTC weekly-downtrend gate both clear — no macro restriction in effect; today's HOLD is purely a lack-of-qualifying-candidate outcome.
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, high-age freshness, volume>=2x) in a 36-pair sweep. Closest misses: IDOS/USD (+14.73% 1h, +24.7% 4h, 2.35x volume, but 5.35% spread - hard fail - and stale 21h-old 24h-high with no catalyst) and NOCK/USD (+7.45% 1h, +11.31% 4h, fresh high, but 0.00x volume - thin/new ticker). BTC weekly-downtrend gate CLEARED today (-2.91%, first time in over a week), crash gate clear, BTC roughly flat intraday. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~44 days running; needs resubscription at callmebot.com/61477788635.
