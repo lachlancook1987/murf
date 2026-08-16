@@ -31532,3 +31532,28 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 54-pair sweep (widest in several days). Closest misses: US/USD (+5.37% 1h, +5.49% 4h, 8.13x volume, 0.32% spread - all pass - but 24h high 17h stale, no breakout) and CSPR/USD (+8.54% 1h, +12.48% 4h, 1.94x volume near-miss, but 18.5h-stale high). BTC weekly-downtrend gate NOT triggered (-1.33%), crash gate clear, BTC flat intraday. Token unlocks (YZY ~\$35.2M, ARB ~\$7.2M, STBL ~\$9M) today, none sweep candidates. \$111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~45 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-16 — Midday Scan (22:27 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $62,804.40 vs today's open $63,024.30 → **-0.35%** intraday. Crash gate not triggered (threshold ~-20%). Consistent with the 2nd pre-session check (~-1.33% weekly, gate not triggered) ~5h prior — no material shift.
+
+**Discovery sweep** (Kraken-native, direct Ticker + 15m OHLC API, 655 online USD pairs): 47 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 30 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **PORTALUSD** | **+16.89%** | **+11.49%** | 15min (fresh) | 1.04x | Clears both momentum bars and freshness, spread clean (0.46%, ask $0.01961/bid $0.01952) — but volume ratio falls well short of the 2x confirmation bar. Best all-around read of the day. SKIP (volume gate). |
+| **STUSD** | +14.38% | +5.34% | 30min (fresh) | **6.69x** | Rare full clear on momentum + freshness + volume (6.69x) — but spread is a catastrophic **21.5%** (ask $0.015884 / bid $0.012471), an illiquid thin-book artifact, not a tradeable market. HARD FAIL (spread gate), independent of the mechanical gates all otherwise passing. |
+| AIOUSD | +9.25% | +4.27% | 345min (stale) | 1.04x | 1h clears decisively but 4h narrowly fails the 5% bar; high stale, volume short. SKIP. |
+| NOBODYUSD | +0.00% | +18.18% | 105min (stale) | 0.00x | 4h clears but 1h flat, stale high, dead volume. SKIP. |
+| VOOIUSD | +1.14% | +7.61% | 45min | 7.68x | 4h clears, volume strong, but 1h fails the 3% bar. SKIP. |
+| TAKEUSD | -0.72% | +5.54% | 15min (fresh) | 0.25x | 4h clears, 1h negative, thin volume. SKIP. |
+| ALKIMIUSD | +0.00% | +7.32% | 150min (stale) | 1.93x | 4h clears, 1h flat, stale high. Also the pair with a documented ~80% cross-exchange divergence history (Jul 23) — would fail the divergence gate too. SKIP. |
+| ANONUSD | -1.93% | -3.42% | 285min | 5.03x | Strong volume but both momentum windows negative — fading. SKIP. |
+| CVXUSD | -0.37% | -0.73% | 540min | 2.84x | Volume clears but no momentum. SKIP. |
+| Remaining candidates (SIDEKICKUSD, WENUSD, AI3USD, LOCKINUSD, MNGOUSD, BADGERUSD, LAVAUSD, TREMPUSD, BTRUSD, DRIFTUSD, OOBUSD, SKYUSD, ALICEUSD, CAPUSD, MUBARAKUSD, PTBUSD, USUSD, PEPECOINUSD, STBLUSD, ETHFIUSD, BIGTIMEUSD) | ≤0.2% or stale-artifact 0.00%/0.00% | mostly ≤2.6% or negative | mostly stale/1440min artifacts | 0.00x-1.3x | All fail the 1h>3% bar outright (many are stale 24h-window artifacts, flat on live windows), dead-to-thin volume. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 47-pair field cleared all mechanical gates including spread. PORTAL/USD was the strongest all-around read — clean spread (0.46%), fresh 15min high, and both momentum bars cleared decisively (+16.89% 1h, +11.49% 4h) — but its 1.04x volume ratio falls well short of the 2x confirmation bar. ST/USD was the rarer case: it actually cleared momentum, freshness, AND volume (6.69x) simultaneously, but a 21.5% spread on a near-empty order book makes it untradeable regardless — a clean illustration of why the spread gate exists independent of the momentum/volume gates. BTC essentially flat intraday (-0.35%), crash gate clear, weekly-downtrend gate not triggered. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).

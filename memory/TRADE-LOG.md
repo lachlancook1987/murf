@@ -8849,3 +8849,15 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~92
 **Notes:** Kraken `account`/`positions`/`orders` unchanged from Aug 15 EOD: ZUSD $111.7835 (100%), unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — no trades occurred today, consistent with the extended HOLD streak. BTC $62,998.00 vs Aug 15 EOD reference $62,980.80 → +0.03%; flat cash trailed BTC by −0.03% today (bot vs BTC). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Phase P&L unchanged at −$67.9965 (−37.82%) from $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $111.78 available; crash gate threshold ~$50,398 (BTC −20% from $62,998.00). EOD WhatsApp send **FAILED** again — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~45 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-16 — Midday Scan (22:27 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $62,804.40 vs today's open $63,024.30 → **-0.35%** intraday. Crash gate not triggered. Weekly-downtrend gate not triggered (consistent with pre-session -1.33% read).
+
+**Discovery sweep** (655 USD pairs, 47 cleared vs-open>3% + within 6% of 24h high): No candidate cleared all mechanical gates. **PORTAL/USD** closest — +16.89% 1h, +11.49% 4h, fresh 15min high, clean 0.46% spread, but only 1.04x volume (needs 2x). **ST/USD** cleared momentum+freshness+volume (6.69x) but had a 21.5% spread (illiquid thin book) — hard fail. Full detail logged in RESEARCH-LOG.md.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $111.7835 cash remains fully available.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
