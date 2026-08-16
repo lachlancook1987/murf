@@ -31454,3 +31454,30 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 33-pair sweep. Closest misses: BICO/USD (+6.10% 1h, +10.95% 4h, fresh 15min high, 0.92% spread - all pass - but only 1.59x volume vs 2x bar) and ZIG/USD (+6.77% 1h, +6.89% 4h, fresh high, 0.80% spread, but 1.18x volume). BTC weekly-downtrend gate NOT triggered (-1.45%, well inside band), crash gate clear, BTC flat intraday. Token unlocks (YZY ~\$35.2M, ARB ~\$7.2M) today, neither a sweep candidate. \$111.78 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~45 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-16 — Midday Scan (14:06 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $111.7835 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $62,998.80 vs pre-session read $62,996.70 (07:xx UTC) → essentially flat, no material move. Crash gate not triggered. BTC weekly-downtrend gate remains NOT triggered per pre-session check (-1.45%, well inside ±3% band) — standard entry thresholds apply.
+
+**Discovery sweep** (Kraken-native, direct Ticker + 15m OHLC API, 655 online USD pairs): 53 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 24 by vs-open%, plus a second batch of 29 near-high-dist-to-high candidates, for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| SIDEKICKUSD/WENUSD/AI3USD/LOCKINUSD/MNGOUSD/LAVAUSD/TREMPUSD | +0.00% | +0.00% | 1425min (stale) | 0.00x | Huge vs-open% readings (up to +659%) are stale 24h-window artifacts, not live moves — flat on all recent windows, dead volume. SKIP. |
+| WLFIUSD | +2.11% | +7.34% | 0min (fresh) | 5.80x | Clears 4h, freshness, and volume decisively — but 1h fails the 3% bar. SKIP (1h gate). |
+| DRIFTUSD | +2.50% | +6.96% | 15min (fresh) | 8.20x | Same pattern as WLFI — strong 4h/volume/freshness, 1h narrowly fails. SKIP (1h gate). |
+| ROBOUSD | +2.31% | +7.95% | 0min (fresh) | 2.58x | Same pattern — 1h fails the 3% bar by a narrow margin. SKIP (1h gate). |
+| BICOUSD | +1.53% | +10.49% | 135min (stale) | 2.55x | Strong 4h and volume but 1h fails and high is stale (>60min, no fresh breakout). Same asset that stopped us out 2026-08-06. SKIP. |
+| AIOUSD | +5.26% | -2.21% | 225min (stale) | 1.27x | 1h clears but 4h negative — momentum not sustained; stale high. SKIP. |
+| DOLOUSD | +8.24% | +1.98% | 390min (stale) | 0.97x | 1h clears, 4h fails, stale high, volume short of 2x. SKIP. |
+| ESUSD | +12.50% | +12.50% | 1425min (stale) | 0.47x | Both momentum bars clear but high is a full-day-stale artifact and volume is dead (0.47x). SKIP. |
+| DUCKUSD | +4.55% | +21.05% | 1320min (stale) | 2.13x | Momentum and volume both clear but 24h high set 22h ago with no fresh breakout — fails freshness gate outright. SKIP. |
+| HPOS10IUSD | +6.86% | +0.00% | 450min (stale) | 0.98x | 1h clears, 4h flat, stale high, volume short. SKIP. |
+| BIGTIMEUSD/CVXUSD/MELANIAUSD/LSKUSD/COOKIEUSD | ≤2.15% 1h | mixed | fresh-to-stale | strong (2.6x-7.8x) | Good volume but all fail the 1h and/or 4h momentum bars outright. SKIP. |
+| Remaining candidates (PACTUSD, CAPUSD, ZEREBROUSD, TAKEUSD, LITUSD, UNITASUSD, BTRUSD, MUBARAKUSD, PIEVERSEUSD, USELESSUSD, ANONUSD, WINGSUSD, PARTIUSD, UAIUSD, BMTUSD, BASEDUSD, USDUCUSD, PTBUSD, GUNUSD, ORDERUSD, XANUSD, ACTUSD, QIUSD, MERLUSD, CHECKUSD, BATUSD, MULTIUSD, ADXUSD, CRVUSD, GRIFFAINUSD, ETHFIUSD, STBLUSD) | ≤1.6% 1h or negative | mostly ≤4.7% | stale-to-mixed | 0.00x-1.4x | All fail the 1h>3% bar outright, most also fail 4h>5% and/or freshness and/or volume. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 53-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. WLFI/USD, DRIFT/USD, and ROBO/USD were the closest misses — all three clear 4h momentum, a fresh 24h high, and strong volume confirmation (2.6x-8.2x), but each falls narrowly short of the 3% 1h bar (2.1-2.5%). BICO/USD (same asset that stopped us out 2026-08-06) showed strong 4h momentum and adequate volume but a stale (135min) high and a 1h miss. BTC essentially flat since pre-session, both gates (crash, weekly-downtrend) clear/not-triggered. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
