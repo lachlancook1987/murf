@@ -31399,3 +31399,58 @@ bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - only FUN/USD cleared all 4 
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~44 days running; needs resubscription at callmebot.com/61477788635.
 
+
+## 2026-08-16 — Pre-Session Research (scheduled run)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect, Steps 3-5 N/A. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity sources disagree materially (~$63,000–$63,074, one stale outlier at $91,151), roughly flat to +0.5% 24h. **Kraken live quote used as source of truth: $62,996.70**, today's open $63,024.30 → essentially flat intraday (-0.04%). Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,878–$1,882, roughly flat (0% to +0.3%) 24h across sources.
+- **Fear & Greed:** 44/100 (CFGI.io, Neutral) vs. 34-37 (Alternative/CoinStats/Binance Square, Fear) — mixed by source, treated as Fear-leaning Neutral, not Extreme Fear (>25 on every reading).
+- **BTC funding:** exchange-specific and mixed — Kraken -0.18%/hr (venue quirk), Binance +0.0079%/8h (neutral). No crowding signal.
+- **Catalysts:** Token-unlock supply pressure is the dominant near-term driver — YZY (~120.83M tokens, ~$35.2M) and ARB (~92.65M tokens, ~$7.19–7.4M) both unlock today; broader >$605.5M unlock wave this week (LINEA, APT, STRK, SEI, etc.). Macro backdrop: no August FOMC, Fed/inflation data still shaping expectations; BTC soft on spot ETF outflows and repeated failure near $65K; TRON's mandatory GreatVoyage v4.8.2 upgrade due by Aug 16 flagged as an altcoin-specific catalyst (not a discovery candidate today). Clarity Act still cited as a longer-run regulatory tailwind.
+- **Unlocks this week:** YZY (Aug 16, ~$35.2M), ARB (Aug 16, ~$7.2-7.4M), STBL (Aug 16, ~$9.05M), plus AGT/GPS/MAGMA/VALVE/ROLL (Aug 16, smaller). No major protocol upgrade this week beyond the already-past MultiversX Aug 6 mainnet upgrade.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): 5 sessions ago open $63,922.10 → live $62,996.70 = **-1.45%**, well inside the ±3% band. **BTC weekly-downtrend gate NOT triggered** — standard entry thresholds apply (1h>3%, 4h>5%, momentum-alone entries permitted), no stricter 5%+catalyst<3h requirement.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 629 online USD pairs)
+
+33 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 33 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **BICOUSD** | **+6.10%** | **+10.95%** | 15min (fresh) | **1.59x** | Best all-around read — clears both momentum bars and freshness but falls short of the 2x volume-confirmation bar. Same asset that stopped us out 2026-08-06 (single stop-out, cooling period N/A — only triggers after 2 stop-outs in 7 days). SKIP (volume gate). |
+| QUSD | +5.41% | +10.73% | 0min (fresh) | 0.00x | Clears momentum + freshness decisively but completely dead volume. SKIP (volume gate). |
+| ZIGUSD | +6.77% | +6.89% | 15min (fresh) | 1.18x | Clears both momentum bars and freshness but short of the 2x volume bar. SKIP (volume gate). |
+| PACTUSD | +2.49% | +6.23% | 15min | 0.06x | 1h fails the 3% bar, dead volume. SKIP. |
+| AIOUSD | -3.39% | +10.00% | 30min | 0.02x | 1h negative despite 4h strength — fading, dead volume. SKIP. |
+| DUALUSD | +5.35% | +4.53% | 855min (stale) | 0.00x | 1h clears, 4h fails, high 14h+ stale, dead volume. SKIP. |
+| INITUSD | +3.91% | +2.12% | 0min (fresh) | 0.18x | 1h clears, 4h fails, thin volume. SKIP. |
+| UAIUSD | +2.38% | +2.56% | 15min | 0.59x | Both windows fail, thin volume. SKIP. |
+| Remaining candidates (CAPUSD, BASEDUSD, LAVAUSD, PIEVERSEUSD, BTRUSD, TAKEUSD, PERPUSD, AMIUSD, AVAAIUSD, CTRUSD, SBRUSD, ORDERUSD, CCDUSD, HPOS10IUSD, USDUCUSD, GUNUSD, MULTIUSD, REKTUSD, ADXUSD, ZKUSD, CFGUSD, GALAUSD, SWARMSUSD, WINGSUSD) | ≤1.05% or negative 1h | — | — | 0.00x–0.67x | All fail the 1h momentum bar outright (several flat/negative), and nearly all show dead/near-zero volume. SKIP. |
+
+### BICO/USD and ZIG/USD — closest misses, spread checked for completeness
+
+- **BICO/USD:** ask $0.02409 / bid $0.02387 → **0.92%** spread, under the 1% cap — would have passed the spread gate, but the 1.59x volume ratio (vs. the 2x bar) is a hard fail on its own. Catalyst check skipped per methodology (candidate did not reach the catalyst-check stage after failing the mechanical volume gate).
+- **ZIG/USD:** ask $0.03894 / bid $0.03863 → **0.80%** spread, under the 1% cap — same pattern, 1.18x volume ratio fails the 2x bar. Catalyst check skipped for the same reason.
+
+### Decision: **HOLD — no entry this session.** BTC weekly-downtrend gate not triggered (-1.45%, well inside band), so only standard gates applied — but no candidate in a 33-pair sweep cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high, volume≥2x) simultaneously. BICO/USD was the strongest all-around read (momentum, freshness, and an acceptable 0.92% spread all clear) but its 1.59x volume ratio falls short of the 2x confirmation bar. QUSD had the freshest high and strongest momentum but zero real volume behind it. ZIG/USD was a secondary near-miss on the same volume shortfall. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- Token unlock supply pressure (YZY ~$35.2M, ARB ~$7.2-7.4M, both today) is the dominant near-term catalyst in the broader market but neither asset appeared in today's discovery sweep as a candidate.
+- BTC weekly-downtrend gate is well clear of its -3% trigger (-1.45%) — no near-term risk of flipping on a small pullback, unlike several recent sessions that sat right at the band edge.
+- Market breadth thin (33 of 629 pairs cleared the initial vs-open>3% screen, narrower than the 36-62 pair fields seen over the past two days) — consistent with a low-conviction tape; volume confirmation remains the dominant failure point across nearly every candidate.
+- Crash gate clear (BTC essentially flat intraday, nowhere near -20%).
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup; cash has sat idle since the Aug 06 BICO stop-out (10+ days), underperforming a BTC hold over that window by the extent BTC has moved, but this remains a side effect of no clean setup appearing rather than a decision cost.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 33-pair sweep. Closest misses: BICO/USD (+6.10% 1h, +10.95% 4h, fresh 15min high, 0.92% spread - all pass - but only 1.59x volume vs 2x bar) and ZIG/USD (+6.77% 1h, +6.89% 4h, fresh high, 0.80% spread, but 1.18x volume). BTC weekly-downtrend gate NOT triggered (-1.45%, well inside band), crash gate clear, BTC flat intraday. Token unlocks (YZY ~\$35.2M, ARB ~\$7.2M) today, neither a sweep candidate. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~45 days running; needs resubscription at callmebot.com/61477788635.
