@@ -31481,3 +31481,54 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Decision: **HOLD — no entry this scan.** No candidate in a 53-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. WLFI/USD, DRIFT/USD, and ROBO/USD were the closest misses — all three clear 4h momentum, a fresh 24h high, and strong volume confirmation (2.6x-8.2x), but each falls narrowly short of the 3% 1h bar (2.1-2.5%). BICO/USD (same asset that stopped us out 2026-08-06) showed strong 4h momentum and adequate volume but a stale (135min) high and a 1h miss. BTC essentially flat since pre-session, both gates (crash, weekly-downtrend) clear/not-triggered. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+
+## 2026-08-16 — Pre-Session Research (scheduled run, 2nd of day)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect, Steps 3-5 N/A. **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed. State unchanged from the 07:xx UTC pre-session run and the 14:06 UTC midday scan earlier today.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity sources cluster $63,000–$63,100, roughly flat (0% to +0.4%) 24h. **Kraken live quote used as source of truth: $63,069.20**, today's open $63,024.30 → essentially flat intraday (+0.07%). Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,878–$1,885, roughly flat (-0.2% to +0.2%) 24h across sources.
+- **Fear & Greed:** 42/100 (CFGI live) vs. 44/100 (CFGI broader 298-coin tracker) — both Neutral, consistent with this morning's read. Not Extreme Fear.
+- **BTC funding:** mixed but neutral — Binance +0.0079%/8h, aggregated venue average +0.0210%/8h, Kraken +0.0148%. No crowding signal.
+- **Catalysts:** Same token-unlock supply overhang as this morning — **YZY (~120.83M tokens, ~$35.22M)** and **ARB (~92.65M tokens, ~$7.19-7.4M)** both unlock today, neither a sweep candidate. Macro: Fed-pause repricing after a weak July jobs report (mildly risk-supportive); spot BTC ETF outflows continue (~$57.63M net on Aug 15), keeping BTC range-bound; TRON's mandatory GreatVoyage v4.8.2 upgrade deadline today (altcoin-specific, not a discovery candidate); Clarity Act cited as a longer-run tailwind with uncertain timing. No new catalyst since this morning's pre-session read.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 11 open $63,922.10 → live $63,069.20 = **-1.33%**, well inside the ±3% band. **BTC weekly-downtrend gate NOT triggered** — standard entry thresholds apply (1h>3%, 4h>5%, momentum-alone entries permitted).
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 629 online USD pairs)
+
+54 pairs cleared vs-open >3% and within 6% of 24h high — widest field in several days. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| PEPUSD | +3.62% | +5.06% | 30min (fresh) | 1.38x | Clears both momentum bars and freshness but short of the 2x volume bar. Spread also fails hard (3.72%, ask $0.0000833/bid $0.0000802) — disqualified twice over. SKIP. |
+| CSPRUSD | +8.54% | +12.48% | 1110min (stale, 18.5h) | 1.94x | Clears both momentum bars decisively and volume is just under 2x (closest volume near-miss of the day), but 24h high is 18.5h stale with no fresh breakout — fails momentum-peak-check. Spread 0.14% would have passed. SKIP (freshness gate). |
+| USUSD | +5.37% | +5.49% | 1020min (stale, 17h) | 8.13x | Clears both momentum bars and volume decisively (8.13x), spread 0.32% clean — but 24h high is 17h stale with price still 2.84% below it, no fresh breakout — fails momentum-peak-check. Best "3-of-4" miss of the day. SKIP (freshness gate). |
+| ALKIMIUSD | +6.10% | +2.35% | 0min (fresh) | 0.00x | 1h clears, 4h fails the 5% bar; dead volume. Also the same pair with a documented ~80% cross-exchange divergence history (Jul 23) — would fail the divergence gate even if mechanical gates cleared. SKIP. |
+| ANONUSD | -2.66% | +5.79% | 15min (fresh) | 1.26x | 4h clears, 1h negative — fading not building. SKIP. |
+| STBLUSD | +1.10% | +7.69% | 0min (fresh) | 0.44x | 4h clears, 1h fails, thin volume. Also a today's-unlock token (STBL, ~$9M) — supply overhang risk if it had otherwise qualified. SKIP. |
+| ALICEUSD | -1.84% | +1.54% | 585min (stale) | 0.03x | Both windows fail on this read (yesterday's ALICE spike has faded), dead volume. SKIP. |
+| BADGERUSD/LAVAUSD/REKTUSD/TOKENUSD/SXTUSD/ADXUSD/RSCUSD/SONICUSD/NESUSD | 0.00% | 0.00% | 0min | 0.00x | Large vs-open% readings are stale 24h-window artifacts (thin/illiquid tickers) — flat on all live windows, dead volume. SKIP. |
+| Remaining candidates (BTRUSD, PIEVERSEUSD, ETHFIUSD, CAPUSD, BIGTIMEUSD, ROBOUSD, PTBUSD, CVXUSD, DRIFTUSD, LSKUSD, RIVERUSD, USELESSUSD, MUBARAKUSD, CRVUSD, TACUSD, WLFIUSD, SKYUSD, RAREUSD, WLDUSD, TRUUSD, BODENUSD, EVAAUSD) | ≤0.96% or negative 1h | mostly ≤4.35% or negative | mixed | 0.00x–2.36x | All fail the 1h>3% bar outright, and nearly all also fail the 4h bar. SKIP. |
+
+### Decision: **HOLD — no entry this session.** BTC weekly-downtrend gate not triggered (-1.33%, well inside band), so only standard gates applied — but no candidate in a 54-pair sweep (widest field in several days) cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high, volume≥2x) simultaneously. US/USD was the strongest "3-of-4" read (both momentum bars, volume, and spread all clear) but its 24h high is 17h stale with no fresh breakout — a clean momentum-peak-check fail. CSPR/USD was the closest volume near-miss (1.94x vs 2x bar) but also carries an 18.5h-stale high. PEP/USD cleared momentum and freshness but failed both the volume bar and the spread cap outright. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- Token unlock supply pressure (YZY ~$35.2M, ARB ~$7.2-7.4M, STBL ~$9M, all today) remains the dominant near-term catalyst theme but none of the unlock tokens appeared as sweep candidates.
+- BTC weekly-downtrend gate is comfortably clear of its -3% trigger (-1.33%) — no near-term risk of flipping on a small pullback.
+- Two candidates today (US/USD, CSPR/USD) cleared momentum and volume/spread but failed specifically on stale 24h highs (17-18.5h old) with price still below the high and no fresh breakout — a reminder that yesterday's or earlier-today's spike fading into a stale high is exactly the "buy the rumour, sell the news" pattern the momentum-peak-check gate is designed to reject, even when the raw momentum numbers look strong.
+- Market breadth wide (54 of 629 pairs cleared the initial vs-open>3% screen, widest in several days) but volume confirmation and 24h-high freshness remain the dominant failure points, consistent with the pattern across recent sessions.
+- Crash gate clear (BTC essentially flat intraday, nowhere near -20%).
+- $111.7835 ZUSD fully available — no capital constraint on the next qualifying setup; cash has sat idle since the Aug 06 BICO stop-out (10+ days).
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 54-pair sweep (widest in several days). Closest misses: US/USD (+5.37% 1h, +5.49% 4h, 8.13x volume, 0.32% spread - all pass - but 24h high 17h stale, no breakout) and CSPR/USD (+8.54% 1h, +12.48% 4h, 1.94x volume near-miss, but 18.5h-stale high). BTC weekly-downtrend gate NOT triggered (-1.33%), crash gate clear, BTC flat intraday. Token unlocks (YZY ~\$35.2M, ARB ~\$7.2M, STBL ~\$9M) today, none sweep candidates. \$111.78 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~45 days running; needs resubscription at callmebot.com/61477788635.
