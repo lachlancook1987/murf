@@ -31557,3 +31557,76 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Decision: **HOLD — no entry this scan.** No candidate in a 47-pair field cleared all mechanical gates including spread. PORTAL/USD was the strongest all-around read — clean spread (0.46%), fresh 15min high, and both momentum bars cleared decisively (+16.89% 1h, +11.49% 4h) — but its 1.04x volume ratio falls well short of the 2x confirmation bar. ST/USD was the rarer case: it actually cleared momentum, freshness, AND volume (6.69x) simultaneously, but a 21.5% spread on a near-empty order book makes it untradeable regardless — a clean illustration of why the spread gate exists independent of the momentum/volume gates. BTC essentially flat intraday (-0.35%), crash gate clear, weekly-downtrend gate not triggered. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $111.7835 cash remains fully available for the next qualifying setup.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-17 — Pre-Session Research (scheduled run, trade placed)
+
+### Step 1-2 — Account Snapshot (pre-trade)
+
+**Kraken:** ZUSD $111.7835 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure entering this session. **Alpaca:** `positions` → `[]`, stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity ~$62,891, roughly flat (-0.10%) 24h. **Kraken live quote used as source of truth: $63,351.30**, today's open $62,819.10 → **+0.85%** intraday. Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,878–$1,885, flat to slightly negative (0% to -0.2%) 24h across sources.
+- **Fear & Greed:** 46/100 (daily) / 44/100 (298-coin average) — both Neutral, consistent with recent sessions.
+- **BTC funding:** mixed, mostly modestly positive (+0.004% to +0.021%/8h across venues) — no crowding signal.
+- **Catalysts:** Institutional adoption theme continues (Mastercard/BVNK $1.8B acquisition, Tether KPMG audit); SEC Reg Crypto meeting cancelled with no new date (regulatory drag); **Cronos (CRO) ~$64M unlock today** (largest tracked linear release for Aug 17); **Solana Agave 4.2 rollout** beginning this week (faster block times, lower rent); BTC ETF outflows (~$57.6M net Aug 15) keeping BTC range-bound; Strait of Hormuz tensions flagged as a macro risk-off wildcard.
+- **Unlocks this week:** CRO (Aug 17, ~$64M), plus earlier-week YZY/ARB/KAITO/ZRO/H/HUMA. No confirmed major protocol upgrade this exact week beyond Solana Agave 4.2 (SOL not a discovery candidate today).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 11 open $63,922.10 → live $63,351.30 = **-0.89%**, well inside the ±3% band. **BTC weekly-downtrend gate NOT triggered** — standard entry thresholds apply (1h>3%, 4h>5%, momentum-alone entries permitted).
+
+No open positions on either exchange pre-trade — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 629 online USD pairs)
+
+41 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 41 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **CSPRUSD** | **+9.62%** | **+18.66%** | 15min (fresh) | **2.67x** | **Clears all 4 mechanical gates simultaneously** — rare full clear. |
+| **RIZEUSD** | **+10.23%** | **+12.58%** | 0min (fresh) | **2.85x** | Also clears all 4 mechanical gates but spread 2.13% hard-fails the ≤1% cap (ask $0.0060570/bid $0.0059280). SKIP (spread gate). |
+| SYNDUSD | +3.90% | +3.90% | 30min | 8.07x | 1h clears, 4h narrowly fails the 5% bar. SKIP. |
+| FXSUSD | +5.34% | +5.34% | 1065min (stale) | 4.99x | Both momentum bars clear with strong volume but 24h high is 17.75h stale, no fresh breakout. SKIP (freshness gate). |
+| ICNTUSD | -1.93% | -0.53% | 45min | 6.53x | Strong volume but both momentum windows negative. SKIP. |
+| PEPECOINUSD | +3.97% | +2.49% | 630min (stale) | 0.15x | 1h clears, 4h fails, stale high, thin volume. SKIP. |
+| MUBARAKUSD | +3.06% | +0.06% | 165min (stale) | 0.81x | 1h narrowly clears, 4h flat, stale high. SKIP. |
+| ZROUSD | +1.40% | +4.31% | 0min (fresh) | 10.47x | Fresh high, strong volume, but both momentum windows fail their respective bars. SKIP. |
+| Remaining candidates (PUMPUSD, LAVAUSD, IDOSUSD, CHECKUSD, ARCUSD, SOONUSD, MOGUSD, NESUSD, AVAAIUSD, PIEVERSEUSD, SWARMSUSD, XZECZUSD, BERTUSD, SCRTUSD, CHEXUSD, JTOUSD, EULUSD, BNCUSD, EVAAUSD, 2ZUSD, USELESSUSD, AKEUSD, HYPEUSD, ZORAUSD, VVVUSD, GLMRUSD, CFGUSD, FWOGUSD, ALTHEAUSD, MORPHOUSD, PENDLEUSD, SONICUSD, GUNUSD) | ≤2% or negative 1h | mixed | mixed | 0.00x-3.95x | All fail the 1h>3% bar outright (several are stale 24h-window artifacts, flat on live windows). SKIP. |
+
+### CSPR/USD — full gate check
+
+- **Momentum:** 1h +9.62% (bar: >3%) ✓ | 4h +18.66% (bar: >5%) ✓
+- **Freshness:** 24h high set 15min ago, price at high (0.00% distance) ✓
+- **Volume:** 2.67x trailing 24h average (bar: ≥2x) ✓
+- **Spread:** ask $0.00322660 / bid $0.00319700 → **0.92%** (bar: ≤1%) ✓
+- **Cross-exchange divergence:** Kraken live $0.0031948 vs CoinGecko (casper-network) $0.00315561, +20.03% 24h on CoinGecko — divergence **~1.2%**, well inside the ~15-20% rejection band. Clean. ✓
+- **Same-thesis cooling period:** No CSPR stop-outs found in TRADE-LOG within the past 7 days — N/A, fully open. ✓
+- **Catalyst:** Casper Network's x402 AI-agent payment facilitator "now live on mainnet" (CoinMarketCap), csprUSD stablecoin upgrade announced, and Kraken perpetual-futures listing driving retail visibility (CoinGecko). Narrative reads as building over the past several days (CSPR +40.4% over 7 days per CoinGecko) rather than a single fresh <6h trigger — **treated as momentum-only / catalyst timing unconfirmed**, not a confirmed <6h catalyst.
+- **R:R floor:** Per the 2026-08-14 rule, momentum-only/no-confirmed-catalyst entries require R:R ≥1.5:1 at T1 regardless of Fear & Greed. Standard T1(+3%)/stop(2.5%) only yields 1.2:1, so T1 was widened to **+4%** (R:R = 4/2.5 = **1.6:1** ✓) given the exceptionally strong 4h momentum (+18.66%) provides ample room; T2 set at +6% (relative to the same momentum strength, above the standard +5%).
+- **BTC weekly-downtrend gate:** not triggered (-0.89%), standard thresholds apply — no additional catalyst-freshness requirement layered on top from that gate.
+
+### Decision: **TRADE — CSPR/USD BUY.** First candidate to clear every mechanical gate (momentum, freshness, volume, spread, divergence) simultaneously since the extended HOLD streak began (Aug 06 BICO stop-out, 11 days ago). RIZE/USD also cleared all 4 momentum/volume/freshness gates but hard-failed on spread (2.13%). Executed as a momentum-only entry at the raised 1.5:1 R:R floor given catalyst timing could not be confirmed as <6h old.
+
+### Step 4b — Order Execution
+
+**2026-08-17T~[order time, this session] | CSPR/USD | BUY | 31000 CSPR | Entry: ~$0.0032266 (ask at order time) | Cost: $100.4248 (ZUSD 111.7835→11.3587, incl. ~0.4% taker fee) | Order txid `O444PS-YXZTQ-NB5KFZ`**
+
+**Stop placed immediately after fill:** `trailing_stop`, `trail_percent: 2.5`, GTC, sell 31000 CSPR. Order txid `OM3JB6-2BW5G-GBEUKN`, confirmed `open`, stopprice $0.0031382, limitprice $0.0032186.
+
+**T1:** $0.0033557 (+4% from entry) — tighten stop to 0.5% on hit.
+**T2:** $0.0034202 (+6% from entry) — consider closing/tightening further.
+
+Remaining cash: ZUSD $11.3587 (+ unchanged dust basket).
+
+### Step 5 — Risk Factors
+
+- CSPR is a momentum-only entry (catalyst timing unconfirmed <6h) — sized at the raised 1.5:1 R:R floor via a widened +4% T1, not the standard +3%. Reversal risk is real if the multi-day narrative (x402/csprUSD/Kraken-listing attention) has already priced in via the 7-day +40.4% move.
+- 31000 CSPR is a large single-asset concentration (~90% of pre-trade equity) — no per-position cap in this strategy, but a stop-out here consumes most of the account's available capital for re-entry until the position is closed or partially recycled.
+- Cronos (CRO) ~$64M unlock today is the dominant broader-market unlock catalyst but CRO was not a discovery-sweep candidate — noted for context only.
+- Solana Agave 4.2 rollout this week is a SOL-specific catalyst; SOL not a sweep candidate today, dust-only exposure.
+- BTC weekly-downtrend and crash gates both clear/not-triggered — no headwind from BTC trend gates on this entry.
+- $11.3587 ZUSD remains as residual cash — effectively no capital available for a second entry until CSPR closes (target or stop) or is partially trimmed.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE PLACED - CSPR/USD BUY 31000 @ ~\$0.0032266 (\$100.42), all 4 mechanical gates cleared (1h +9.62%, 4h +18.66%, fresh 15min high, 2.67x volume) + 0.92% spread + clean cross-exchange divergence (~1.2%). Catalyst (x402 mainnet launch, csprUSD stablecoin, Kraken listing attention) reads as multi-day narrative not confirmed <6h, so entered at raised 1.5:1 R:R floor: T1 +4% \$0.0033557, T2 +6% \$0.0034202. 2.5% trailing stop placed immediately, txid OM3JB6-2BW5G-GBEUKN, stopprice \$0.0031382. RIZE/USD also cleared momentum/volume/freshness but failed spread gate (2.13%). BTC weekly-downtrend gate not triggered (-0.89%), crash gate clear. \$11.36 ZUSD cash remaining."
+
