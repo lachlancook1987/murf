@@ -31630,3 +31630,28 @@ Remaining cash: ZUSD $11.3587 (+ unchanged dust basket).
 
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE PLACED - CSPR/USD BUY 31000 @ ~\$0.0032266 (\$100.42), all 4 mechanical gates cleared (1h +9.62%, 4h +18.66%, fresh 15min high, 2.67x volume) + 0.92% spread + clean cross-exchange divergence (~1.2%). Catalyst (x402 mainnet launch, csprUSD stablecoin, Kraken listing attention) reads as multi-day narrative not confirmed <6h, so entered at raised 1.5:1 R:R floor: T1 +4% \$0.0033557, T2 +6% \$0.0034202. 2.5% trailing stop placed immediately, txid OM3JB6-2BW5G-GBEUKN, stopprice \$0.0031382. RIZE/USD also cleared momentum/volume/freshness but failed spread gate (2.13%). BTC weekly-downtrend gate not triggered (-0.89%), crash gate clear. \$11.36 ZUSD cash remaining."
 
+
+## 2026-08-17 — Midday Scan (14:08 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $106.9982 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure (CSPR entry from this morning's pre-session was already stopped out at -4.77% before this check; see TRADE-LOG). Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**BTC:** live $63,548.70 vs today's open $62,819.10 → **+1.16%** intraday. Crash gate not triggered (threshold ~-20%). **Weekly trend:** Aug 11 daily-open $63,922.10 → live $63,548.70 = **-0.58%**, well inside the ±3% band. BTC weekly-downtrend gate NOT triggered — standard entry thresholds apply.
+
+**Discovery sweep** (Kraken-native, direct Ticker + 15m OHLC API, 629 online USD pairs): 42 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **EULUSD** | **+4.28%** | **+7.44%** | 0min (fresh) | 1.39x | Clears both momentum bars and freshness, spread clean (0.16%) — but volume ratio falls short of the 2x confirmation bar. SKIP (volume gate). |
+| **ACUUSD** | **+12.64%** | **+9.24%** | 1320min (22h, stale) | 2.81x | Clears both momentum bars and volume (2.81x) — but 24h high is 22h stale, well past the 60min freshness window; no fresh breakout above it. SKIP (freshness gate). |
+| BADGERUSD | +1.16% | +8.12% | 0min (fresh) | 26.39x | 4h clears with massive volume and fresh high, but 1h fails the 3% bar outright. SKIP. |
+| CHECKUSD | +0.05% | -3.62% | 90min | 21.19x | Strong volume but both momentum windows fail (1h flat, 4h negative). SKIP. |
+| ZKUSD | +0.63% | +5.10% | 0min (fresh) | 6.00x | 4h clears with fresh high and strong volume, but 1h fails the 3% bar. SKIP. |
+| MORPHOUSD | +1.25% | +0.78% | 0min (fresh) | 4.05x | Both momentum windows fail despite fresh high and volume. SKIP. |
+| SOLVUSD | +0.42% | +3.95% | 0min (fresh) | 3.43x | 1h fails the 3% bar. SKIP. |
+| SYNDUSD | +0.00% | +3.16% | 375min (stale) | 0.05x | Both bars fail, stale high, dead volume. SKIP. |
+| LAVAUSD | +0.00% | +0.00% | 0min | 0.00x | Flat despite fresh high, dead volume. SKIP. |
+| Remaining candidates (PUMPUSD, ATLASUSD, NOCKUSD, SCRTUSD, NESUSD, SOONUSD, EVAAUSD, ZIGUSD, XZECZUSD, ALLOUSD, AVAAIUSD, SWARMSUSD, 2ZUSD, VIRTUALUSD, ARCUSD, ORCAUSD, POLUSD, CFGUSD, GUSD, OMGUSD, PONDUSD, PENDLEUSD, PEPECOINUSD, HYPEUSD, ZROUSD, MOGUSD) | ≤5.5% or negative 1h | mixed | mixed | 0.00x–4.26x | All fail the 1h>3% bar outright (several negative on 1h despite positive vs-open), no pair pairs surviving momentum with fresh high AND volume simultaneously. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 42-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. EUL/USD was the closest full-momentum read — clears 1h, 4h, and freshness with a clean 0.16% spread — but its 1.39x volume ratio falls short of the 2x confirmation bar. ACU/USD cleared momentum and volume (2.81x) but its 24h high is 22h stale, well outside the freshness window, meaning the "surge" already happened and priced in rather than being an active breakout. BTC crash gate clear (+1.16% intraday), weekly-downtrend gate not triggered (-0.58%). Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.9982 cash remains fully available for the next qualifying setup.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
