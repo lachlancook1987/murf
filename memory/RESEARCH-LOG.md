@@ -31748,3 +31748,74 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Step 6 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-17 — Midday Scan #2 (~21:35 UTC, scheduled run, trade placed)
+
+### Step 1-2 — Account Snapshot (pre-trade)
+
+**Kraken:** ZUSD $106.9982 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, consistent with the 21:01 UTC Session-Open scan. **Alpaca:** `positions` → `[]`, stop `a2b44cf9` still `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+- **BTC:** live $64,331–$64,548 range, up ~+1.2% (Perplexity) to +2.4% (Kraken live vs today's open $62,819.10) intraday, consistent with the 21:01 UTC check. Crash gate not triggered.
+- **Fear & Greed:** 50–55 Neutral (CFGI/AltIndex); one CoinMarketCap-style source read 36 Fear — treated as Neutral, not Extreme Fear.
+- **BTC weekly trend:** consistent with 21:01 UTC check (+1.24%, inside ±3% band) — gate not triggered, standard thresholds apply.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 655 online USD pairs)
+
+63 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 63 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **PEAQUSD** | **+3.78%** | **+9.34%** | 15min (fresh) | **2.66x** | **Clears all 4 mechanical gates simultaneously.** Third consecutive scan today where PEAQ was the standout (20:07 UTC: 4h +11.46% but 1h failed at +2.19%; 21:01 UTC: 4h +7.69% but 1h failed at +1.51%; now 1h has crossed the 3% bar). |
+| **XANUSD** | **+5.76%** | **+5.86%** | 0min (fresh) | **2.42x** | Also clears all 4 mechanical gates — freshest high (0min) and strongest 1h, but 4h margin over the 5% bar is thin (+0.86pp) vs PEAQ's +4.34pp. New candidate, not seen in prior scans today. |
+| BMTUSD | +4.32% | -1.68% | 240min (stale) | 0.42x | 1h clears, 4h negative, stale high, thin volume. SKIP. |
+| PEPECOINUSD | +4.23% | +3.43% | 1395min (stale) | 0.55x | 1h clears, 4h fails, very stale high. SKIP. |
+| UUSD | +3.74% | +4.10% | 750min (stale) | 1.19x | 1h clears, 4h narrowly fails, stale high, volume under 2x. SKIP. |
+| PIEVERSEUSD | +3.72% | +11.04% | 0min (fresh) | 0.04x | Clears both momentum bars and freshness but dead volume. SKIP. |
+| OPNUSD | +3.68% | +3.68% | 0min (fresh) | 11.48x | 1h clears, 4h fails 5% bar despite strong volume. SKIP. |
+| WARDUSD | +3.09% | +2.45% | 0min (fresh) | 4.01x | 1h clears, 4h fails. SKIP. |
+| Remaining candidates (SYNDUSD, VVVUSD, SCRTUSD, MONUSD, USELESSUSD, SAGAUSD, ACUUSD, ORCAUSD, CHILLHOUSEUSD, RADUSD, EVAAUSD, ARCUSD, CFGUSD, SOLVUSD, MORPHOUSD, ZROUSD, AAVEUSD, FARTCOINUSD, APTUSD, BABYUSD, HYPEUSD, RSRUSD, VIRTUALUSD, SIDEKICKUSD, WENUSD, AI3USD, LOCKINUSD, MNGOUSD, COMPUSD, LAVAUSD, TREMPUSD, DUALUSD, BMBUSD, ALTHEAUSD, UNFIUSD, EGLDUSD, BADGERUSD, OCEANUSD, HMSTRUSD, APUUSD, SOONUSD, MEGAUSD, EATUSD, PACKUSD, POLUSD, STORJUSD, KIIUSD, PENDLEUSD, XZECZUSD, BERAUSD, ANONUSD, CSPRUSD, REPPOUSD, ALLOUSD, PUPSUSD) | ≤2.7% or negative 1h | mixed | mixed | 0.00x–11.48x | All fail the 1h>3% bar outright. CSPR/USD (this morning's stop-out) still negative on both windows (-1.28%/-0.15%) — confirmed not a re-entry. SKIP. |
+
+### PEAQ/USD — full gate check
+
+- **Momentum:** 1h +3.78% (bar: >3%) ✓ | 4h +9.34% (bar: >5%) ✓
+- **Freshness:** 24h high set 15min ago (bar: <60min) ✓
+- **Volume:** 2.66x trailing 24h average (bar: ≥2x) ✓
+- **Spread:** ask $0.018960 / bid $0.018880 → **0.42%** (bar: ≤1%) ✓
+- **Cross-exchange divergence:** Kraken live $0.01896 vs CoinGecko $0.01781 (Perplexity) — divergence **~6.1%**, well inside the ~15-20% rejection band. Clean. ✓
+- **Same-thesis cooling period:** No PEAQ stop-outs found in TRADE-LOG within the past 7 days — N/A, fully open. ✓
+- **Catalyst:** Perplexity found no PEAQ-specific news catalyst — commentary points to "weak buying interest and thin volume" as the explanation for recent softness rather than a driving event. Treated as **momentum-only, no confirmed catalyst**.
+- **R:R floor:** Per the 2026-08-14 rule, momentum-only/no-confirmed-catalyst entries require R:R ≥1.5:1 at T1 regardless of Fear & Greed. Standard T1(+3%)/stop(2.5%) only yields 1.2:1, so T1 widened to **+4%** (R:R = 4/2.5 = **1.6:1** ✓), consistent with the strong 4h momentum (+9.34%); T2 set at +6%.
+- **BTC weekly-downtrend gate:** not triggered (+1.24% per 21:01 UTC check), standard thresholds apply.
+
+### XAN/USD — comparison (also cleared all 4 gates, not traded)
+
+- 1h +5.76%, 4h +5.86% (only +0.86pp over the 5% bar — thinner momentum margin than PEAQ's +4.34pp), fresh 0min high, 2.42x volume, spread 0.27% (ask $0.01097/bid $0.01094). Cross-exchange: Kraken $0.01084 vs CoinGecko $0.01022 (Perplexity, "Anoma") — divergence ~6.1%, clean. No confirmed catalyst (Perplexity: "low liquidity and broader market sentiment/altcoin rotation," not asset-specific). New candidate this scan, no multi-scan build history to corroborate. Passed over in favor of PEAQ given PEAQ's decisively wider 4h momentum margin and its three-scan build (this asset had been the closest miss at 20:07 UTC and 21:01 UTC before finally clearing all gates this check) — capital was sized to one full-conviction entry rather than split across two thinner-margin momentum-only setups.
+
+### Decision: **TRADE — PEAQ/USD BUY.** First candidate to clear every mechanical gate (momentum, freshness, volume, spread, divergence) simultaneously since this morning's CSPR entry. XAN/USD also cleared all four gates but was passed over for a decisively thinner 4h margin and no corroborating multi-scan build.
+
+### Step 4b — Order Execution
+
+**2026-08-17T~21:35 UTC | PEAQ/USD | BUY | 5060 PEAQ | Entry: $0.018980 (market fill) | Cost: $96.80711 (incl. $0.76831 fee) | Order txid `OV5ICW-XO4L7-WR2CL7`**
+
+**Stop placed immediately after fill:** `trailing_stop`, `trail_percent: 2.5`, GTC, sell 5060 PEAQ. Order txid `OPQE45-5IK74-X2L5YQ`, confirmed `open`, stopprice $0.018510, limitprice $0.018980.
+
+**T1:** $0.0197392 (+4% from entry) — tighten stop to 0.5% on hit.
+**T2:** $0.0201188 (+6% from entry) — consider closing/tightening further.
+
+Remaining cash: ZUSD $10.1911 (+ unchanged dust basket).
+
+### Step 5 — Risk Factors
+
+- PEAQ is a momentum-only entry (no confirmed catalyst) — sized at the raised 1.5:1 R:R floor via a widened +4% T1, not the standard +3%. Perplexity's own read ("weak buying interest and thin volume" narrative) is a mild headwind against the momentum thesis holding.
+- 5060 PEAQ (~$96.81) is ~90% of pre-trade equity — no per-position cap in this strategy, but a stop-out consumes most of the account's available capital until the position closes or is recycled, same concentration profile as this morning's CSPR trade.
+- This is the second trade of the day on a single account — the CSPR stop-out this morning (-4.77%) means today's P&L is now dependent on this PEAQ position performing better than the mechanical stop.
+- $10.1911 ZUSD remains as residual cash — effectively no capital available for a second entry until PEAQ closes (target or stop) or is partially trimmed.
+- BTC weekly-downtrend and crash gates both clear/not-triggered — no headwind from BTC trend gates on this entry.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE PLACED - PEAQ/USD BUY 5060 @ \$0.018980 (\$96.81), all 4 mechanical gates cleared (1h +3.78%, 4h +9.34%, fresh 15min high, 2.66x volume) + 0.42% spread + clean cross-exchange divergence (~6.1%). No confirmed catalyst (momentum-only), so entered at raised 1.5:1 R:R floor: T1 +4% \$0.0197392, T2 +6% \$0.0201188. 2.5% trailing stop placed immediately, txid OPQE45-5IK74-X2L5YQ, stopprice \$0.018510. XAN/USD also cleared all 4 gates but with thinner 4h margin, passed over. BTC weekly-downtrend gate not triggered, crash gate clear. \$10.19 ZUSD cash remaining."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~46 days running; needs resubscription at callmebot.com/61477788635.
