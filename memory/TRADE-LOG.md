@@ -8861,3 +8861,11 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $111.7835 cash remains fully available.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-17 — Pre-Session Execution (trade placed)
+
+### 2026-08-17T~[order time] | CSPR/USD | BUY | 31000 CSPR | Entry: ~$0.0032266 | Cost: $100.4248 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `O444PS-YXZTQ-NB5KFZ` (buy), stop txid `OM3JB6-2BW5G-GBEUKN` (trailing stop, confirmed open, stopprice $0.0031382, limitprice $0.0032186). Full gate check (momentum, freshness, volume, spread, cross-exchange divergence) and rationale logged in RESEARCH-LOG.md 2026-08-17 pre-session entry. T1 $0.0033557 (+4%), T2 $0.0034202 (+6%) — widened from standard +3%/+5% to clear the 1.5:1 momentum-only R:R floor (catalyst timing unconfirmed <6h). ZUSD post-trade: $11.3587. First trade since the Aug 06 BICO stop-out (11-day HOLD streak ended).
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~46 days running; needs resubscription at callmebot.com/61477788635).
