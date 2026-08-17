@@ -31705,3 +31705,46 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 46-pair sweep. Closest misses: PEAQ/USD (4h +11.46%, fresh high, 2.43x volume, clean 0.16% spread - but 1h only +2.19%, fails 3% bar) and UU/USD (1h +3.41% clears, but 4h +4.48% narrowly fails, high 10.5h stale, volume 1.99x just under 2x). CSPR/USD (this morning's stop-out) now fading, not a re-entry. BTC +2.25% intraday, weekly-downtrend gate NOT triggered (+0.49%), crash gate clear. \$106.9982 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-17 — Session-Open Scan (21:01 UTC, scheduled run, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.9982 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, consistent with the 20:07 UTC evening scan and the Aug 17 EOD snapshot already logged in TRADE-LOG.md. **Alpaca:** `positions` → `[]`, orders show only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+**BTC:** live $64,331.40 vs today's open $62,819.10 → **+2.41%** intraday. Crash gate not triggered (threshold ~-20%). **Weekly trend:** Aug 12 daily open $63,541.10 → live $64,331.40 = **+1.24%**, inside the ±3% band. BTC weekly-downtrend gate NOT triggered — standard entry thresholds apply.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 655 online USD pairs)
+
+57 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 57 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ZEUSUSD** | **+7.86%** | **+7.86%** | 0min (fresh) | **22.13x** | Clears all four mechanical gates decisively (momentum, freshness, volume) — but spread is $0.00251 ask / $0.00247 bid = **~1.6%**, above the 1% hard cap. **SKIP — spread gate, hard fail.** Cross-exchange check (CoinGecko zeus-network $0.00238151 vs Kraken $0.00247) shows only ~3.7% divergence, not itself disqualifying, but moot given the spread fail. |
+| BMBUSD | +5.46% | +5.46% | 0min (fresh) | 0.00x | Clears both momentum bars and freshness but completely dead volume. SKIP (volume gate). |
+| REPPOUSD | +8.30% | +3.82% | 30min | 0.00x | 1h clears strongly, 4h fails the 5% bar; dead volume regardless. SKIP. |
+| EVUSD | +7.38% | +7.38% | 30min (fresh) | 0.93x | Clears both momentum bars and freshness but volume under the 2x bar. SKIP (volume gate). |
+| PIEVERSEUSD | +4.46% | +7.11% | 15min (fresh) | 0.00x | Clears both momentum bars and freshness but dead volume. SKIP. |
+| EATUSD | +4.77% | +3.36% | 15min | 0.00x | 1h clears, 4h fails 5% bar, dead volume. SKIP. |
+| PEAQUSD | +1.51% | +7.69% | 15min | 0.14x | 4h clears, 1h fails, thin volume. SKIP. |
+| ALLOUSD | +2.30% | +7.98% | 15min | 0.14x | 4h clears, 1h fails, thin volume. SKIP. |
+| COMPUSD | -0.94% | +4.02% | 60min | 0.39x | Both bars fail, thin volume. SKIP. |
+| VVVUSD | +2.33% | +0.47% | 30min | 3.28x | Volume clears but both momentum bars fail. SKIP. |
+| MEGAUSD | +2.96% | +2.80% | 0min | 0.98x | Both bars narrowly fail. SKIP. |
+| CSPRUSD | -0.63% | +1.30% | 135min (stale) | 0.03x | Still fading from this morning's stop-out — not a re-entry candidate. SKIP. |
+| SIDEKICKUSD, WENUSD, AI3USD, LOCKINUSD, PUPSUSD, MNGOUSD, LAVAUSD, TREMPUSD, BADGERUSD, CHILLHOUSEUSD, ORCAUSD, RSRUSD, SOONUSD, APUUSD, EVAAUSD, BABYUSD | flat/no OHLC signal despite large vs-open% | — | — | 0.00x | Extreme vs-open readings on these are single-tick/thin-liquidity artifacts (0% below 24h high, zero recent 15m momentum or volume) — not real breakouts. SKIP. |
+| Remaining candidates (WARDUSD, XZECZUSD, ALTHEAUSD, NILUSD, PENDLEUSD, MORPHOUSD, UNFIUSD, KIIUSD, SCRTUSD, USELESSUSD, SOLVUSD, EGLDUSD, ARCUSD, VIRTUALUSD, BERAUSD, OCEANUSD, STORJUSD, PACKUSD, ANONUSD, HMSTRUSD, VELOUSD, THQUSD, INITUSD, HNTUSD, CFGUSD, HDXUSD) | ≤2% or negative 1h | mixed | mixed | 0.00x–1.55x | All fail the 1h>3% bar outright. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** ZEUS/USD was the only pair in a 57-candidate field to clear all four mechanical gates (1h +7.86%, 4h +7.86%, fresh 0min high, 22.13x volume) — but its live spread (~1.6%) fails the 1% hard cap, an independent gate that is never waived regardless of momentum strength. No other candidate cleared both momentum bars with real volume behind it. BTC +2.41% intraday, crash gate clear, weekly-downtrend gate not triggered (+1.24%). Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.9982 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- ZEUS/USD is the one live near-miss worth re-checking at the next scan — if its spread tightens under 1% while momentum/volume hold, it would clear every gate.
+- CSPR (this morning's stop-out) continues to fade (-0.63% 1h, stale 135min high, near-dead volume) — confirms no near-term re-entry case.
+- No new catalyst research run this scan (Perplexity queries already exhausted for the day across the pre-session/midday/evening scans logged above) — this was a mechanical-gate-only re-scan given the short interval since the 20:07 UTC evening scan.
+- Crash gate clear, nowhere near -20%. Weekly-downtrend gate clear (+1.24%, inside ±3% band).
+- $106.9982 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
