@@ -31655,3 +31655,53 @@ bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE PLACED - CSPR/USD BUY 31000 
 ### Decision: **HOLD — no entry this scan.** No candidate in a 42-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. EUL/USD was the closest full-momentum read — clears 1h, 4h, and freshness with a clean 0.16% spread — but its 1.39x volume ratio falls short of the 2x confirmation bar. ACU/USD cleared momentum and volume (2.81x) but its 24h high is 22h stale, well outside the freshness window, meaning the "surge" already happened and priced in rather than being an active breakout. BTC crash gate clear (+1.16% intraday), weekly-downtrend gate not triggered (-0.58%). Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.9982 cash remains fully available for the next qualifying setup.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-17 — Evening Scan (20:07 UTC, scheduled pre-session run)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.9982 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, consistent with the CSPR stop-out reconciled at the 14:08 UTC midday scan. Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity $62,891, roughly flat (-0.10%) 24h — stale vs live. **Kraken live quote used as source of truth: $64,234.60**, today's open $62,819.10 → **+2.25%** intraday, a real move up since the 14:08 UTC check (+1.16%). Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,897–$1,907 across sources, roughly +1.0% to +1.2% 24h.
+- **Fear & Greed:** mixed across sources — CFGI.io daily 47/100, CFGI 298-coin average 44/100 (both Neutral), CoinStats 38/100 (Fear), Bitget 31/100 (Fear). Treating as Neutral-to-mild-Fear, consistent with recent sessions; not Extreme Fear.
+- **BTC funding:** mixed, mostly modest positive (Binance +0.0079%/8h, TradingView +0.0066%, Kraken perp 0.086%/hr, CF Market-Wide index +3.6995% annualized) — no crowding signal.
+- **Catalysts:** SEC crypto open meeting still canceled with no new date (regulatory drag); BASECAT the day's standout mover (+1,701% on ~$40.9M volume after LBank/MEXC Meme+/Gate Alpha listings — not a Kraken pair, not a discovery candidate); **CRO (~$64M) and PENGU (~$4.19M) unlocks today**, plus a smaller ZK (~$1.31M) unlock; Solana Agave 4.2 rollout continues this week (SOL-specific, dust-only exposure); Iran-Hormuz tension flagged as a macro risk-off wildcard; no confirmed major protocol upgrade this week beyond Agave 4.2.
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 11 open $63,922.10 → live $64,234.60 = **+0.49%**, inside the ±3% band and now positive (was -0.58% at midday). **BTC weekly-downtrend gate NOT triggered** — standard entry thresholds apply.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 630 online USD pairs)
+
+46 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 35 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **CSPRUSD** | -1.80% | +3.71% | 75min (stale) | 0.25x | Same asset stopped out this morning (-4.77%) — now fading, not building; fails 1h bar, stale high, dead volume. Not a re-entry candidate. SKIP. |
+| **PEAQUSD** | +2.19% | **+11.46%** | 0min (fresh) | **2.43x** | Clears 4h, freshness, and volume decisively — but 1h narrowly fails the 3% bar. Spread clean (0.16%, ask $0.01821/bid $0.01818). Closest full-strength miss. SKIP (1h gate). |
+| **UUSD** | +3.41% | +4.48% | 630min (10.5h, stale) | 1.99x | 1h clears, 4h narrowly fails the 5% bar, high 10.5h stale (no fresh breakout), volume 1.99x just under the 2x bar. Multiple near-misses stacked, none individually decisive. SKIP. |
+| KIIUSD | +3.43% | +0.89% | 0min (fresh) | 0.84x | 1h clears, 4h fails outright despite fresh high; volume weak. Spread clean (0.01%). SKIP. |
+| HDXUSD | +2.16% | +2.55% | 0min (fresh) | 20.85x | Massive volume and fresh high but both momentum bars fail — spike without follow-through. SKIP. |
+| ALLOUSD | +2.14% | +9.60% | 15min (fresh) | 0.22x | 4h clears, 1h fails, thin volume. SKIP. |
+| BMTUSD | +2.14% | +1.25% | 120min (stale) | 0.49x | Both bars fail, stale high, thin volume. SKIP. |
+| SOLVUSD | -2.87% | +0.00% | 45min | 2.65x | Strong volume but both momentum windows negative/flat. SKIP. |
+| ORCAUSD | +1.32% | +1.23% | 15min | 1.09x | Both bars fail. SKIP. |
+| Remaining candidates (ACUUSD, COMPUSD, LAVAUSD, VVVUSD, WARDUSD, POLUSD, ALTHEAUSD, XZECZUSD, NOBODYUSD, PUMPUSD, MORPHOUSD, UNFIUSD, PENDLEUSD, CHILLHOUSEUSD, NILUSD, CFGUSD, PACKUSD, BADGERUSD, EGLDUSD, VIRTUALUSD, SCRTUSD, PIEVERSEUSD, RSRUSD, SOONUSD, STORJUSD, ZEUSUSD, APUUSD, SYRUPUSD, OCEANUSD, THQUSD, BERAUSD, ARCUSD, BABYUSD, EVAAUSD, STABLEUSD, REZUSD, HNTUSD) | ≤3.5% vs-open or negative 1h | mostly ≤3.6% or negative | mixed | 0.00x–0.68x | All fail the 1h>3% bar outright (several are stale vs-open artifacts, flat/negative on live windows), dead-to-thin volume where checked. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 46-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. PEAQ/USD was the strongest full-strength read — clears 4h momentum decisively (+11.46%), a fresh 0min high, 2.43x volume confirmation, and a clean 0.16% spread — but its 1h reading (+2.19%) falls short of the 3% bar. UU/USD stacked three near-misses (1h clears, 4h narrowly fails, volume just under 2x, high stale 10.5h) with no single decisive pass. CSPR/USD — the asset stopped out this morning — is now fading (-1.80% 1h, stale high, dead volume), confirming it is not a same-session re-entry setup. BTC up +2.25% intraday, crash gate clear, weekly-downtrend gate not triggered (now +0.49%, inside band). Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.9982 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- CRO (~$64M) and PENGU (~$4.19M) unlocks land today — neither was a sweep candidate, noted for context only.
+- CSPR (this morning's stop-out) is fading rather than continuing — the same-thesis cooling rule doesn't yet apply (only 1 stop-out in the 7-day window, rule triggers at 2), but the round-trip loss plus current fade argues against chasing it back in regardless.
+- BTC's intraday move to +2.25% is constructive but the weekly-trend gate flipping from -0.58% to +0.49% in ~6h shows how close to the ±3% band edge conditions can swing — worth re-checking at the next scan.
+- Crash gate clear, nowhere near -20%.
+- $106.9982 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 46-pair sweep. Closest misses: PEAQ/USD (4h +11.46%, fresh high, 2.43x volume, clean 0.16% spread - but 1h only +2.19%, fails 3% bar) and UU/USD (1h +3.41% clears, but 4h +4.48% narrowly fails, high 10.5h stale, volume 1.99x just under 2x). CSPR/USD (this morning's stop-out) now fading, not a re-entry. BTC +2.25% intraday, weekly-downtrend gate NOT triggered (+0.49%), crash gate clear. \$106.9982 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635.
