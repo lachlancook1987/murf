@@ -8869,3 +8869,15 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 Order txid `O444PS-YXZTQ-NB5KFZ` (buy), stop txid `OM3JB6-2BW5G-GBEUKN` (trailing stop, confirmed open, stopprice $0.0031382, limitprice $0.0032186). Full gate check (momentum, freshness, volume, spread, cross-exchange divergence) and rationale logged in RESEARCH-LOG.md 2026-08-17 pre-session entry. T1 $0.0033557 (+4%), T2 $0.0034202 (+6%) — widened from standard +3%/+5% to clear the 1.5:1 momentum-only R:R floor (catalyst timing unconfirmed <6h). ZUSD post-trade: $11.3587. First trade since the Aug 06 BICO stop-out (11-day HOLD streak ended).
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~46 days running; needs resubscription at callmebot.com/61477788635).
+
+### 2026-08-17 | CSPR/USD | SELL (trailing stop triggered) | 31000 CSPR | Exit: $0.0031100 | Closed
+
+**Order ID (stop):** OM3JB6-2BW5G-GBEUKN (trailing_stop, trail_percent 2.5%, GTC — triggered on pullback from entry; stopprice $0.0031382, filled $0.0031100)
+**P&L:** Buy cost $99.6278 + $0.79702 fee = $100.4248 total spent. Sell proceeds $96.41085 − $0.77129 fee = $95.63956 net received. **Net: −$4.78524 (−4.77%)**
+**Notes:** Discovered via EOD `ClosedOrders` reconciliation — position was already flat (CSPR balance 0.000, `positions: {}`, `orders: {"open": {}}`) at EOD check; stop fired between pre-session entry and EOD. ZUSD confirmed $106.9982 post-close (down from $111.7835 pre-trade, matching the $4.7853 total round-trip loss). No thesis break, no manual intervention — mechanical stop-out as designed.
+
+### Aug 17 — EOD Snapshot (Day 89, Monday)
+**Portfolio:** $106.9982 | **Cash:** $106.9982 (100%) | **Day P&L:** −$4.7853 (−4.28%) | **Phase P&L:** −$72.7818 (−40.48%) | **vs BTC:** −4.84%
+No open positions — 100% cash (+dust), no open Kraken orders.
+**Trades today:** CSPR/USD BUY 31000 @ $0.0032138 (pre-session) → SELL (trailing stop) 31000 @ $0.0031100, net −$4.7853 (−4.77%) | **Total since migration:** ~94
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $106.9982 (100%), unchanged dust basket, `positions: {}`, `orders: {"open": {}}`. Today's only trade was the pre-session CSPR/USD entry (momentum-only, R:R widened to 1.5:1 per Extreme-Fear/unconfirmed-catalyst rule) — the 2.5% trailing stop triggered within the session, closing for a −$4.7853 (−4.77%) net loss including fees. BTC $63,351.40 vs Aug 16 EOD reference $62,998.00 → +0.56%; the CSPR loss plus sitting out the BTC up-move left the bot −4.84% vs BTC today (bot vs BTC). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Phase P&L now −$72.7818 (−40.48%) from $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes catalyst-driven momentum scans with the full $106.9982 available; crash gate threshold ~$50,681 (BTC −20% from $63,351.40). EOD WhatsApp send **FAILED** again — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~47 days running; needs resubscription at callmebot.com/61477788635.
