@@ -31932,3 +31932,55 @@ No new full sweep run this check (already covered at pre-session and midday); in
 ### Step 6 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-18 — Pre-Session Research (20:06 UTC)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH — all sub-$0.01 fragments; ZAUD $0.1066 residual). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure.
+**Alpaca (residual BTC):** `positions` → `[]`. Full order history re-checked (44 orders): 29 filled (historical), 15 canceled — no `open`/`new`/`accepted` orders present. Stop `a2b44cf9` remains canceled (since 2026-05-22). Zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** ~$64,286 (Perplexity), +2.00% 24h per Perplexity. Kraken live ticker: $64,545 (see sweep below). Weekly trend (Kraken daily OHLC, 5d): open $63,412.50 (Aug 13) → close $64,545.00 → **+1.79%**. BTC weekly-downtrend gate **NOT triggered**. Crash gate not triggered (threshold ~-20%).
+- **ETH:** ~$1,898–1,902, roughly flat (-0.11% to -0.30% 24h depending on venue).
+- **Fear & Greed Index:** split reading — 56 "Neutral" (CFGI.io) vs. 41 "Fear" (Binance/CoinStats-style trackers). Treating as Neutral-to-mild-Fear; not Extreme Fear (≤25), so the Extreme Fear R:R floor does not independently apply (momentum-only 1.5:1 floor applies regardless per the 2026-08-14 rule anyway).
+- **Funding rate:** small/mixed across venues (Binance +0.0079%/8h, Kraken -0.56%/hr display, Coinalyze +0.0148%/+0.0100% predicted, Glassnode aggregate 0.005%) — no strong long/short skew signal.
+- **Catalysts:** Fed July minutes + US/Eurozone PMI data are the dominant macro drivers today; UBS reportedly increased BlackRock spot BTC ETF call exposure (bullish institutional signal); ETF outflows ~$385-390M last week and miner selling flagged as headwinds. Altcoin-specific: TRON GreatVoyage v4.8.2 upgrade, HYPE AQAv2 revenue-share launch — neither is a Kraken-tradeable fresh-momentum name from today's sweep.
+- **Token unlocks this week (Aug 18-23):** Manta (~$809.6K, today), Solv/Oasis/MANTRA (today), Kaito (~$11.06M, Aug 20), Lombard (~$36.91M, Aug 20), LayerZero/ZRO (~$19.66M, Aug 20), Soon (~$3.85M, Aug 23). None of these are current momentum leaders in the Kraken sweep below — noted for awareness, not acted on.
+- Top-gainers query (context only, not discovery per strategy) returned meme/micro-cap tickers with no Kraken listings (MEOW, TradingRazor, FLT, DOS, etc.) — consistent with the demoted-Perplexity-discovery finding; ignored per policy.
+- No open positions on either exchange, so no held-asset news queries were needed.
+
+### Step 4 — Discovery Sweep (Kraken-native)
+
+635 online USD pairs swept via direct Ticker API. **51 pairs** cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 40 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **ZEXUSD** | **+66.67%** | **+88.68%** | 0min (fresh) | **397.64x** | Clears momentum and volume decisively — but spread is **28.5%** (ask $0.00200 / bid $0.00143), ~28x the 1% cap. Thin, illiquid book. **SKIP — hard spread-gate fail.** |
+| DUCKUSD | +76.47% | +76.47% | 15min (fresh) | 0.00x | Clears momentum bars but completely dead volume — no real buying behind the move. SKIP (volume gate). |
+| **ADXUSD** | **+5.45%** | **+5.45%** | 0min (fresh) | **223.58x** | Clears momentum and volume decisively — but spread is **3.28%** (ask $0.06344 / bid $0.06136), over 3x the 1% cap. SKIP — hard spread-gate fail. |
+| DUALUSD | +3.50% | -2.30% | 240min (stale) | 0.00x | 1h clears, 4h negative, stale high, dead volume. SKIP. |
+| ALTHEAUSD | +3.26% | +2.98% | 840min (stale) | 0.54x | Both bars fail 4h/volume thresholds; very stale high. SKIP. |
+| TRIAUSD | +1.33% | +6.39% | 15min (fresh) | 1.72x | 4h clears, 1h fails, volume under 2x. SKIP. |
+| Remaining candidates (VELVETUSD, OBOLUSD, MFUSD, USDUCUSD, LAVAUSD, BERTUSD, OPNUSD, AEVOUSD, MIMUSD, NOSUSD, ESPORTSUSD, WALUSD, CHEXUSD, FUNUSD, VELOUSD, METUSD, QUSD, VVVUSD, RLSUSD, EWTUSD, JAILSTOOLUSD, B2USD, VINEUSD, INXUSD, ETHPYUSD, MULTIUSD, ENSOUSD, BADGERUSD, AMIUSD, CCDUSD, STGUSD, PUMPUSD, EULUSD, CHILLHOUSEUSD, FWOGUSD, PROVEUSD, ALEOUSD, SKYUSD, CAKEUSD, PROSUSD, TELUSD, DYDXUSD, ODOSUSD, JUNOUSD, RADUSD) | ≤3.6% or negative 1h | mixed, mostly <5% or negative | mixed | 0.00x–1.72x | All fail the 1h>3% bar outright or have dead/thin volume where checked. SKIP. |
+
+### Step 5 — Trade Ideas
+
+No trade ideas meet full gate criteria this scan. The two strongest momentum reads (ZEX, ADX) both fail on spread alone by a wide margin — not marginal misses, so no alternate sizing or limit-order workaround changes the verdict (a 28.5%/3.28% spread eats any realistic 3-5% target before fees even enter the calculation).
+
+### Decision: **HOLD — no entry this scan.**
+
+Hard stop (crash gate) not triggered — BTC +1.79% weekly, +2% 24h. Per the gate-protection default rule, gates are never loosened to manufacture a trade: ZEX/USD and ADX/USD are the closest candidates on momentum+volume but both hard-fail the spread cap by a wide margin (28.5% and 3.28% vs. 1% cap), and DUCK/USD clears momentum with zero real volume behind it. No candidate in a 51-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh high, volume≥2x, spread≤1%) simultaneously. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Risk Factors
+
+- Two of today's top movers (ZEX, ADX) show extreme momentum paired with extremely wide spreads — a pattern consistent with thin order books getting temporarily repriced by a handful of large trades rather than durable buying pressure. Worth flagging: this is the kind of setup the spread + divergence gates exist specifically to reject.
+- Macro calendar (Fed minutes, PMI prints) could move BTC sharply intraday — no position currently exposed to that risk.
+- Cluster of token unlocks this week (Kaito, Lombard, ZRO, Soon — Aug 20 and Aug 23) is a known pre-event volatility risk; none currently held or targeted.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no entry, crash gate clear (BTC +1.79% wk), no candidate cleared all gates (ZEX/ADX momentum+volume strong but spread 28.5%/3.28% hard-fail vs 1% cap). $106.04 cash available."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635.
