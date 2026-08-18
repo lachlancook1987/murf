@@ -31819,3 +31819,52 @@ Remaining cash: ZUSD $10.1911 (+ unchanged dust basket).
 bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE PLACED - PEAQ/USD BUY 5060 @ \$0.018980 (\$96.81), all 4 mechanical gates cleared (1h +3.78%, 4h +9.34%, fresh 15min high, 2.66x volume) + 0.42% spread + clean cross-exchange divergence (~6.1%). No confirmed catalyst (momentum-only), so entered at raised 1.5:1 R:R floor: T1 +4% \$0.0197392, T2 +6% \$0.0201188. 2.5% trailing stop placed immediately, txid OPQE45-5IK74-X2L5YQ, stopprice \$0.018510. XAN/USD also cleared all 4 gates but with thinner 4h margin, passed over. BTC weekly-downtrend gate not triggered, crash gate clear. \$10.19 ZUSD cash remaining."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~46 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-18 — Pre-Session Scan (scheduled run, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, $0.1066 ZAUD — all sub-$0.01-notional residuals). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, consistent with the PEAQ overnight stop-out reconciled at the last EOD/triage check (net −$0.96016, −0.99%). Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, `orders` shows only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** Perplexity ~$64,286–$64,330 (Kraken/CoinGecko), +2.00% to +2.10% 24h. **Kraken live quote used as source of truth: $64,072.80**, today's open $64,471.70 → **-0.62%** intraday (mild pullback from the +2.25% high logged yesterday evening). Crash gate not triggered (threshold ~-20%, 24h range $63,985.70–$64,562.30).
+- **ETH:** $1,897.92, +1.10% 24h.
+- **Fear & Greed:** mixed, 31–48 across sources (CFGI.io 48 Neutral, CoinStats 38 Fear, Bitget 41 Fear, Alternative.me 31 Fear) — treating as Neutral-to-mild-Fear, not Extreme Fear.
+- **BTC funding:** modest positive (Binance +0.0079%/8h, market gauges +0.005–0.008%) — no crowding signal.
+- **Catalysts:** Macro-heavy day — Fed July minutes and Friday PMI prints are the dominant driver; UBS reportedly increased IBIT call-option exposure 24x in Q2 (bullish institutional signal) but weekly BTC ETF outflows ~$385-390M remain a drag. Altcoin unlock cluster Aug 18-20: **Manta (Aug 18, $809.64K), LayerZero/ZRO (Aug 20, ~$19.7-20M), KAITO (Aug 20, ~$11.06M), BARD (Aug 20)** — none of these are Kraken discovery-sweep candidates today, noted for context only. Hyperliquid AQAv2 stablecoin revenue-share launches Aug 26 (not Kraken-relevant). No confirmed near-term protocol upgrade beyond already-past EGLD (Aug 6).
+- **BTC 5-day weekly-trend check** (Kraken daily OHLC): Aug 12 open $63,541.10 → live $64,072.80 = **+0.84%**, inside the ±3% band. **BTC weekly-downtrend gate NOT triggered** — standard entry thresholds apply.
+
+No open positions on either exchange — per-position catalyst queries N/A.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 635 online USD pairs)
+
+21 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 21 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **RAILSUSD** | **+9.19%** | **+9.98%** | 825min (13.75h, stale) | **33.32x** | Clears both momentum bars and volume decisively — but 24h high is 13.75h stale (price is currently 5.99% below it, not a fresh breakout), failing the freshness gate. Additionally, spread checked directly: ask $0.04585/bid $0.04421 = **3.58%**, hard fail on its own. **SKIP — double gate failure (freshness + spread).** |
+| BLESSUSD | +3.05% | +5.61% | 1275min (21.25h, stale) | 1.48x | Narrowly clears both momentum bars but high is very stale (21h) and volume falls short of 2x. SKIP. |
+| ACAUSD | 0.00% | +11.90% | 0min (fresh) | 0.00x | 4h clears with fresh high but 1h flat and completely dead volume — thin/illiquid tick artifact. SKIP. |
+| NOSUSD | -0.95% | +6.97% | 195min (stale) | 0.07x | 4h clears but 1h negative, stale high, dead volume. SKIP. |
+| FISUSD | 0.00% | +5.42% | 1080min (18h, stale) | 0.00x | 4h clears but 1h flat, very stale high, dead volume. SKIP. |
+| EWTUSD | 0.00% | +5.84% | 195min (stale) | 0.00x | 4h clears but 1h flat, stale high, dead volume. SKIP. |
+| VVVUSD | +1.16% | +4.01% | 90min (stale) | 0.48x | Both bars fail, thin volume. SKIP. |
+| GUSD | +0.18% | +0.44% | 45min (fresh) | 5.64x | Strong volume and fresh high but both momentum bars fail outright — spike without follow-through. SKIP. |
+| Remaining candidates (LAVAUSD, ALTHEAUSD, ANONUSD, OPNUSD, BILLYUSD, ENSOUSD, HOLOUSD, MEUSD, KGENUSD, JUNOUSD, LITUSD, ZAMAUSD) | ≤2.7% or flat 1h | ≤4.5% or flat | mixed | 0.00x–0.79x | All fail the 1h>3% bar outright (several flat single-tick artifacts on thin books), dead-to-thin volume where checked. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 21-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. RAILS/USD was by far the strongest momentum/volume read (+9.19%/+9.98%/33.32x) but its 24h high was set 13.75h ago with price still 5.99% below it — not a fresh breakout — and it additionally fails the spread gate outright (3.58%, over 3x the 1% cap), a double disqualification. BLESS/USD narrowly cleared both momentum bars but on a 21h-stale high with sub-2x volume. No pair combined fresh momentum, a fresh high, and real volume simultaneously. BTC mildly pullback intraday (-0.62%), crash gate clear, weekly-downtrend gate not triggered (+0.84%, inside band). Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- RAILS/USD is the one asset worth re-checking later today — if a fresh breakout candle clears the prior 13.75h-old high with volume still elevated, freshness would resolve, though the 3.58% spread would still need to tighten under 1% independently.
+- Manta (Aug 18), ZRO/KAITO/BARD (Aug 20) unlock cluster — none were sweep candidates, noted for context only; ZRO has a history of unlock-related volatility if it later screens.
+- Fed July minutes and Friday PMI prints are the dominant macro catalyst set today — could move BTC and correlated alts sharply in either direction outside the mechanical scan.
+- Crash gate clear, nowhere near -20%. Weekly-downtrend gate clear (+0.84%, inside ±3% band).
+- $106.0382 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 21-pair sweep. Closest miss: RAILS/USD (1h +9.19%, 4h +9.98%, 33.32x volume - but 24h high 13.75h stale, price still 5.99% below it, plus 3.58% spread fails the 1% cap outright). BLESS/USD narrowly cleared momentum bars but 21h-stale high + sub-2x volume. BTC -0.62% intraday, weekly-downtrend gate NOT triggered (+0.84%), crash gate clear. \$106.04 cash, zero exposure, no action taken."
+
+Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635.
