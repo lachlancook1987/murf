@@ -31984,3 +31984,28 @@ Hard stop (crash gate) not triggered — BTC +1.79% weekly, +2% 24h. Per the gat
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no entry, crash gate clear (BTC +1.79% wk), no candidate cleared all gates (ZEX/ADX momentum+volume strong but spread 28.5%/3.28% hard-fail vs 1% cap). $106.04 cash available."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-18 — Session-Open Execution Check #2 (monitoring only, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, byte-for-byte unchanged from the 20:06 UTC pre-session research check. Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, orders list only historical filled/canceled entries through 2026-05-22 — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+**BTC:** live $64,550.00 vs today's open $64,471.70 → **+0.12%** intraday (24h range $63,985.70–$64,995.20). Crash gate not triggered. No material shift from the 20:06 UTC pre-session read (+1.79% weekly, weekly-downtrend gate not triggered).
+
+### Step 4 — Execution Check
+
+No new full sweep run this check — the 20:06 UTC pre-session research (51-pair sweep) already concluded HOLD with no trade ideas meeting all gates (ZEX/ADX hard-failed spread by a wide margin; no other candidate cleared all four mechanical gates). Nothing has changed materially since then (BTC flat, account state identical) to warrant a fresh sweep or override that conclusion.
+
+### Decision: **HOLD — no entry this check.** Per the gate-protection default rule, no trade manufactured. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- Same as 20:06 UTC pre-session check: ZEX/ADX spread-gate pattern, macro calendar (Fed minutes/PMI), Aug 20/23 unlock cluster — none currently actionable.
+- Crash gate clear, weekly-downtrend gate clear.
+
+### Step 6 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
