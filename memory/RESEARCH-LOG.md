@@ -31904,3 +31904,31 @@ Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Un
 ### Step 6 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-18 — Session-Open Execution Check (~16:47 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, byte-for-byte unchanged from the pre-session and midday checks. Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, orders list only historical filled/canceled entries through 2026-05-22 (stop `a2b44cf9` still `canceled`) — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+**BTC:** live $64,691.50 vs today's open $64,471.70 → **+0.34%** intraday. Crash gate not triggered (24h range $63,985.70–$64,995.20). No material shift from the -0.29% midday read; weekly-downtrend gate remains not triggered.
+
+### Step 4 — Re-check of prior closest misses
+
+No new full sweep run this check (already covered at pre-session and midday); instead re-verified the two candidates flagged for later re-checking:
+
+- **USDUC/USD:** ask $0.003095 / bid $0.003071 → spread 0.78% (passes). Price has drifted essentially sideways since the midday check (then ~$0.00307, now $0.00307), sitting just under the intraday high $0.003095 rather than breaking above it. Without a fresh breakout candle or a re-run OHLC volume-ratio pull, the previously-unmet volume gate cannot be confirmed cleared — no fresh signal to act on.
+- **RAILS/USD:** ask $0.04397 / bid $0.04363 → spread now 0.77% (tightened from the 3.58% pre-session fail), but price has pulled back from today's high ($0.04585) and is well below the 24h high ($0.04877, set prior to today) — momentum has faded rather than broken out fresh. Today's move from open is only +2.03%, well off the +9.19%/1h read from the pre-session scan. Freshness/momentum gate still unmet.
+
+### Decision: **HOLD — no entry this check.** Neither re-checked candidate clears its previously-failing gate; no new candidate scanned. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- Crash gate clear. Weekly-downtrend gate clear (+0.84% pre-session read, no material BTC move since).
+- $106.0382 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
