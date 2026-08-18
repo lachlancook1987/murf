@@ -32009,3 +32009,37 @@ No new full sweep run this check — the 20:06 UTC pre-session research (51-pair
 ### Step 6 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+---
+
+## 2026-08-18 — Midday Scan #2 (22:06 UTC)
+
+### Step 1 — Account State
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, orders list only historical filled/canceled entries through 2026-05-22, stop `a2b44cf9` reconfirmed `canceled` — zero exposure, no action needed.
+
+### Step 2 — Market Context
+
+**BTC:** live $64,553.00 vs today's open $64,471.70 → **+0.13%** intraday (24h range $63,985.70–$64,995.20). Crash gate not triggered. **Weekly trend:** Aug 13 daily open $63,412.50 → live $64,553.00 = **+1.80%** over 5 trading days — weekly-downtrend gate NOT triggered (needs >3% down), consistent with the 14:07 UTC check. Standard entry gates apply (no >5%/1h + <3h catalyst override needed).
+
+### Step 3 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 630 online USD pairs)
+
+48 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 48 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **TRIA/USD** | +3.35% | +11.16% | 15min (fresh) | 5.45x | Clears all four mechanical gates (momentum, freshness, volume) — but spread ask $0.009910/bid $0.009890 = **2.02%**, over the 1% cap. SKIP (spread gate). |
+| **JUNO/USD** | +6.24% | +7.34% | 15min (fresh) | 8.24x | Clears all four mechanical gates — but spread ask $0.02163/bid $0.02110 = **2.45%**. SKIP (spread gate). |
+| **KEEP/USD** | +12.77% | +12.77% | 15min (fresh) | 4.31x | Clears all four mechanical gates — but spread ask $0.016920/bid $0.015050 = **11.05%**, thin book (only 6 trades/24h). SKIP (spread gate, hard fail). |
+| PRCL/USD | +11.50% | +31.87% | 15min (fresh) | 1.42x | vs-open +129.15% (data-quality flag — likely illiquid/thin listing). Volume 1.42x under the 2x bar regardless. SKIP (volume gate). |
+| UU/USD | +3.74% | +4.81% | 1425min (stale, ~23.75h) | 1.80x | 1h clears but 4h narrowly fails 5% bar; high stale; volume under 2x. Triple fail. SKIP. |
+| JUNO/USD (dup), PUMP/USD | +2.18% | +4.42% | 0min | 3.36x | 1h fails 3% bar, 4h fails 5% bar despite fresh high and strong volume. SKIP. |
+| IAG/USD | +1.93% | +0.83% | 30min | 3.02x | Both momentum bars fail. SKIP. |
+| DYDX/USD | +0.44% | -0.05% | 690min | 3.20x | Momentum fails outright despite volume. SKIP. |
+| Remaining candidates (VELVET, MF, BERT, USDUC, MIM, AEVO, FUN, ADX, NOS, ESPORTS, Q, MET, VELO, EWT, JAILSTOOL, CHEX, MULTI, TEL, TX, ENSO, ALTHEA, CCD, WAL, VINE, PROVE, B2, RLS, INX, SWEAT, CHILLHOUSE, HPOS10I, FWOG, STG, CQT, SKY, PROS, ODOS, OKB, EUL, CAKE) | ≤1.7% or negative 1h | — | — | mostly 0.00x–1.65x | All fail the 1h momentum bar outright (several flat/negative), and none pair surviving momentum with real volume or clean spread. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** Three candidates (TRIA, JUNO, KEEP) cleared momentum + freshness + volume simultaneously — the strongest field in several scans — but all three hard-failed the spread gate (2.02%, 2.45%, and 11.05% respectively, all well over the 1% cap), consistent with the thin-alt-liquidity risk noted in TRADING-STRATEGY.md. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. BTC flat intraday, crash gate and weekly-downtrend gate both clear. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Step 4 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).

@@ -8913,3 +8913,15 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $106.0382 cash remains fully available.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-18 — Midday Scan #2 (22:06 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $106.0382 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $64,553.00 vs today's open $64,471.70 → **+0.13%** intraday. Crash gate not triggered. Weekly-downtrend gate not triggered (+1.80% over 5 trading days).
+
+**Discovery sweep** (630 USD pairs, 48 cleared vs-open>3% + within 6% of 24h high): No candidate cleared all mechanical gates plus spread. **TRIA/USD, JUNO/USD, KEEP/USD** all cleared momentum+freshness+volume simultaneously (strongest field in several scans) but all three hard-failed the spread gate (2.02%, 2.45%, 11.05% respectively vs the 1% cap). Full detail logged in RESEARCH-LOG.md.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $106.0382 cash remains fully available.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
