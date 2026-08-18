@@ -31868,3 +31868,39 @@ No open positions on either exchange — per-position catalyst queries N/A.
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD - no candidate clears all 4 mechanical gates (1h>3%, 4h>5%, fresh high, volume>=2x) in a 21-pair sweep. Closest miss: RAILS/USD (1h +9.19%, 4h +9.98%, 33.32x volume - but 24h high 13.75h stale, price still 5.99% below it, plus 3.58% spread fails the 1% cap outright). BLESS/USD narrowly cleared momentum bars but 21h-stale high + sub-2x volume. BTC -0.62% intraday, weekly-downtrend gate NOT triggered (+0.84%), crash gate clear. \$106.04 cash, zero exposure, no action taken."
 
 Attempted — **FAILED**: CallMeBot `0 messages left`, quota still exhausted. Unresolved since first flagged 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-18 — Midday Scan (14:07 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account Snapshot
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, byte-for-byte unchanged from the pre-session check. Steps 3-5 N/A (nothing to protect, tighten, or thesis-check). **Alpaca:** `positions` → `[]`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+**BTC:** live $64,285.60 vs today's open $64,471.70 → **-0.29%** intraday (mild pullback, consistent with the -0.62% pre-session read ~5h earlier — no meaningful directional shift). Crash gate not triggered (threshold ~-20%, 24h range $63,516.20–$64,562.30). Weekly-downtrend gate not triggered (pre-session +0.84%, no material BTC move since to flip it).
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 630 online USD pairs)
+
+35 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on the top 22 by vs-open% for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **USDUCUSD** | **+7.06%** | **+8.14%** | 6.9min (fresh) | **1.52x** | Clears both momentum bars and freshness decisively — closest miss of the scan, but volume ratio falls short of the 2x confirmation bar. Spread checked directly: ask $0.003095/bid $0.003071 = 0.78%, passes. **SKIP — volume gate.** |
+| ANONUSD | +4.24% | +4.24% | 726.9min (12.1h, stale) | 1.79x | 1h clears but 4h fails the 5% bar; high very stale. SKIP. |
+| APRUSD | +3.02% | +15.24% | 21.9min (fresh) | 0.29x | Both momentum bars clear (1h barely) with a fresh high, but volume is dead. SKIP (volume gate). |
+| VELOUSD | +2.55% | +5.07% | 6.9min (fresh) | 2.13x | Clears 4h, freshness, and volume — but 1h fails the 3% bar. SKIP. |
+| LITUSD | +2.74% | +4.59% | 21.9min (fresh) | 0.62x | Both momentum bars fail narrowly; volume thin. SKIP. |
+| MOVRUSD | +2.17% | +5.74% | 6.9min (fresh) | 0.55x | 4h clears, fresh high, but 1h fails and volume thin. SKIP. |
+| Remaining candidates (AKEUSD, WALUSD, ALICEUSD, MULTIUSD, VVVUSD, NOSUSD, ZAMAUSD, MFUSD, LAVAUSD, AMIUSD, MIMUSD, ENSOUSD, AEVOUSD, HOLOUSD, OPNUSD, DUALUSD) | ≤1.5% or negative 1h | mixed | mixed | 0.00x–0.43x | All fail the 1h>3% bar outright (several flat or negative), dead-to-thin volume where checked. SKIP. |
+
+### Decision: **HOLD — no entry this scan.** No candidate in a 35-pair field cleared all four mechanical gates (1h>3%, 4h>5%, fresh 24h-high <60min, volume≥2x) simultaneously. USDUC/USD was the closest miss — clean 1h (+7.06%), 4h (+8.14%), a 6.9min-fresh high, and a passing 0.78% spread — but its 1.52x volume ratio falls short of the 2x confirmation bar. VELO/USD cleared 4h/freshness/volume but failed 1h; APR/USD cleared both momentum bars but with dead volume. Per the gate-protection default rule, gates are not loosened to manufacture a trade — HOLD is correct and expected. BTC -0.29% intraday, crash gate clear, weekly-downtrend gate not triggered. $106.0382 cash remains fully available for the next qualifying setup.
+
+### Step 5 — Risk Factors
+
+- USDUC/USD is the one asset worth re-checking later today if volume picks up — momentum, freshness, and spread are all already clean; only the volume-confirmation gate is unmet.
+- Crash gate clear, nowhere near -20%. Weekly-downtrend gate clear.
+- $106.0382 ZUSD fully available — no capital constraint on the next qualifying setup.
+
+### Step 6 — Notification
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
