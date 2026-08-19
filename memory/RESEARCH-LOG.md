@@ -32102,3 +32102,46 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — MUBARAK/USD BUY 5261 @ ~$0.0181, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, no confirmed <6h catalyst). REQ/USD rejected on stale-price data-quality grounds despite +15% headline move. $10.82 ZUSD remaining."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
+
+## 2026-08-19 — Midday Scan (14:14 UTC, trade placed)
+
+**Pre-scan state:** Kraken 100% cash $109.3566 (flat since MUBARAK stop-out this morning), `positions: {}`, `orders: {"open": {}}`. Alpaca stop `a2b44cf9` reconfirmed `canceled`, zero exposure.
+
+**BTC:** $65,358.50 vs today's open $64,677.20 → +1.05%. Crash gate (BTC −20%/24h) not triggered.
+
+**Discovery sweep (Kraken-native, per revised 2026-07-20 method):**
+1. Pulled `AssetPairs` (655 USD pairs) and `Ticker` for all in 60-pair batches.
+2. First-pass filter: vs-open > 3% AND within 6% of 24h high → 60 pairs cleared.
+3. Excluded 6 pairs (SIDEKICK, WEN, AI3, LOCKIN, ESUSD, TREMP-adjacent) where reported today-volume implausibly exceeded trailing-24h volume — a mechanical impossibility under Kraken's own accounting, treated as a data-quality red flag → 54 "sane" candidates remained.
+4. Top 20 by vs-open pulled via 1h `OHLC` (25 bars) to compute: 4h momentum (close now vs close 4 bars back), 1h volume vs trailing-average-hourly-volume ratio, and hours-since-24h-high (freshness).
+
+**Gate results (need all three: 4h mom >5%, vol ratio >2x, high set within ~1h):**
+| Pair | vs-open | 4h mom | vol ratio | hrs since high | Verdict |
+|---|---|---|---|---|---|
+| OCEAN/USD | +15.98% | +17.14% | 0.1x | 1h | Fail — volume far below average despite huge move |
+| TREE/USD | +13.11% | +6.63% | 3.49x | 0h | **Clears all 3 mechanical gates** — see data-quality rejection below |
+| OBOL/USD | +12.95% | +7.87% | n/a | 5h | Fail — stale high |
+| SPACE/USD | +10.74% | +6.88% | 0.41x | 2h | Fail — volume, staleness |
+| ZRO/USD | +10.14% | +2.71% | 2.23x | 0h | Fail — momentum below 5% bar |
+| BIO/USD | +8.35% | +5.44% | 4.87x | 0h | **Clears all 3 mechanical gates** — taken |
+| RSR/USD | +7.75% | +3.88% | 0.93x | 0h | Fail — momentum, volume |
+| RE/USD | +7.72% | +5.38% | 0.5x | 0h | Fail — volume |
+| UXLINK/USD | +7.46% | +1.41% | 12.97x | 0h | Fail — momentum |
+| AMI/USD | +7.33% | +17.69% | 1.1x | 20h | Fail — stale high, weak volume ratio |
+| (remaining 10: CHEX, BERT, PUPS, US, NIGHT, RUNE — none cleared all 3) |
+
+**TREE/USD — data-quality rejection:** Cleared all three mechanical gates (4h +6.63%, vol 3.49x, 0h stale) and passed Kraken spread check (0.27%, ask $0.03730/bid $0.03720, `TREEUSD` status `online`). Perplexity catalyst check ("TREE crypto token news and price catalyst today") returned CoinMarketCap $0.1475 (+333.77% 24h, self-flagged as conflicting with other sources), CoinGecko $0.1477 with only $1,335.81 in 24h volume, Forbes $0.1467–$0.1498 — all ~290% above Kraken's live $0.0376 print. Kraken's own reported volume (567K+ units, $ millions notional) is wildly inconsistent with CoinGecko's ~$1,336 24h volume figure. This is the same cross-exchange-divergence pattern that killed REQ/USD in this morning's pre-session scan (stale/wrong "last" print with no real liquidity behind it). **Rejected — not traded.**
+
+**BIO/USD — taken:** Cleared all three mechanical gates (4h +5.44%, vol 4.87x, high set within the last hour). Kraken quote: ask $0.02622/bid $0.02617-0.02614 → spread 0.19-0.27%, well inside the 1% cap. `BIOUSD` status `online`, ordermin 230. Cross-exchange check: Perplexity reported BIO trading $0.0245-$0.0251 (Bithumb, other venues) vs Kraken $0.02622-0.02635 — a normal ~5-7% divergence, consistent with prior accepted trades (MUBARAK was 4.7-6.4%). Catalyst: Bithumb added a BIO/KRW spot pair, live since 08:00 UTC per Perplexity; scan ran at 14:14 UTC, so the catalyst is ~6.2h old — just past the strict <6h freshness bar, so it does not qualify as a fully "fresh" catalyst even though it's real and confirmed (not rumor). Treated as momentum-only for R:R sizing: T1 widened to +4% ($0.027269), T2 to +6% ($0.027793), giving R:R 1.6:1 at T1 vs the 2.5% stop (above both the 1.2:1 standard floor and the 1.5:1 momentum-only convention used in recent trades). Fear & Greed Neutral (41-54 across sources) — not Extreme Fear, so the stricter 1.5:1 floor wasn't strictly required, but applied anyway per recent-session convention.
+
+**Macro context (Perplexity):** BTC/ETH price queries and the general catalyst-news query were rate-limited (429, request rate limit exceeded) and not retried given time cost — Kraken's own BTC/USD quote (+1.05% vs open) substituted for the crash-gate check, which is the only macro input that gates trading. Fear & Greed Index: Neutral, 41-54 depending on source (CFGI 54, Bitget 46, CoinStats 41, Alternative.me 41). Token-unlock query returned no items materially affecting BIO or TREE.
+
+### Step 6 — Trade executed
+
+Order txid `O5RWWH-Q47DG-QD4ZSX` (buy, market, 3810 BIO filled @ $0.02622, cost $99.89820 + $0.79919 fee = $100.69739 total). Stop txid `OIWAUM-R7R4I-2Z7OXX` (trailing stop 2.5%, GTC, confirmed open: stopprice $0.02557, limitprice $0.02622). ZUSD post-trade: $8.6592.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — BIO/USD BUY 3810 @ $0.02622, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (Bithumb BIO/KRW listing catalyst, ~6.2h old). TREE/USD rejected on cross-exchange price-divergence (Kraken $0.0376 vs external ~$0.147). $8.66 ZUSD remaining."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
