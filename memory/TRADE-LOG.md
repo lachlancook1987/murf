@@ -8925,3 +8925,13 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $106.0382 cash remains fully available.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-19 — Pre-Session Execution (trade placed)
+
+### 2026-08-19 | MUBARAK/USD | BUY | 5261 MUBARAK | Entry: ~$0.018096 | Cost: $95.2147 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `O3DMF3-GGVLK-USEJLY` (buy), stop txid `OPTJQM-ZYK3Q-Z7CAAS` (trailing stop, confirmed open, stopprice $0.017540, limitprice $0.017980). Full gate check (momentum 1h +3.04%/4h +6.20%, freshness 6.7min, volume 3.15x, spread 0.66%, cross-exchange divergence 4.7-6.4% vs CoinGecko/CMC) and rationale logged in RESEARCH-LOG.md 2026-08-19 pre-session entry. T1 $0.018820 (+4%), T2 $0.019182 (+6%) — widened from standard +3%/+5% to clear the 1.5:1 momentum-only R:R floor (Aster DEX listing catalyst deemed historical/monthly, not fresh <6h). REQ/USD showed a stronger headline momentum read (+15.37%) but was rejected on data-quality grounds — its "last" print sat ~13% above the live executable bid/ask after 180+ hours of zero volume. ZUSD post-trade: $10.8235. First trade since the Aug 17 PEAQ stop-out (2-day HOLD streak ended).
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — MUBARAK/USD BUY 5261 @ ~$0.0181, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, no confirmed <6h catalyst). REQ/USD rejected on stale-price data-quality grounds despite +15% headline move. $10.82 ZUSD remaining."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
