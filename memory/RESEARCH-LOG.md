@@ -32043,3 +32043,62 @@ No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; n
 ### Step 4 — Notification
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-19 — Pre-Session Research (trade placed)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $106.0382 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, SOL, SUI, TAO, XETH — all sub-$0.01 fragments; ZAUD $0.1066 residual). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, byte-for-byte unchanged from Aug 18 EOD/midday checks.
+**Alpaca (residual BTC):** `positions` → `[]` — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** $64,550.00, +0.30% 24h. Crash gate not triggered (threshold ~-20%). No prior-day close reference change materially — weekly-downtrend gate not independently re-derived this check but no signal of a sharp BTC decline.
+- **ETH:** ~$1,897.90, roughly flat (0.0% to -0.30% depending on source).
+- **Fear & Greed Index:** 54/100 Neutral (CFGI.io daily), 44/100 Neutral (298-coin average), BTC-specific 57/100 Neutral. Not Extreme Fear.
+- **Funding rate:** mixed/small across venues (Binance +0.0079%/8h, Coinlayze ~+0.01% majors, Kraken +0.0148%, CryptoDataAPI -0.0108%/8h) — no strong skew signal.
+- **Catalysts:** Fed July FOMC minutes due today (main macro repricing event), 30Y UST yield at 5.321% (highest since 2007), Japan tightening risk pressuring carry trades. Altcoin-specific: Qubic 2nd halving (~Aug 19, burn rate 55%→77.5%), Syscoin Liberty 5.1.0, IOTA Pyth Pro transition, Flow protocol upgrade, Mina Mesa deployment, Ontology hard fork — none of these are Kraken-tradeable fresh-momentum names from today's sweep.
+- **Token unlocks this week:** ZKsync (ZK) today (~$1.30M), LayerZero (ZRO) and KAITO Aug 20 (~$25.45M / ~$12.17M), SOON Aug 23 (~20.24M tokens). None are current sweep leaders — noted for awareness only.
+- Top-10-gainers query (context only, not discovery) returned PRCL, FLT, DOS, APR, M, CYS, BTW, VELVET, ELF, BOS — cross-checked against the Kraken-native sweep below; PRCL/DOS appeared in the Kraken sweep too but neither cleared all gates (see Step 4).
+- No open positions on either exchange — no held-asset news queries needed.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 630 online USD pairs)
+
+26 pairs cleared vs-open >3% and within 6% of 24h high. Pulled 15m OHLC on all 26 for 1h/4h momentum, 24h-high freshness, and volume-ratio checks:
+
+| Symbol | 1h% | 4h% | High age | Vol ratio | Verdict |
+|---|---|---|---|---|---|
+| **REQ/USD** | +15.37% | +15.37% | 6.7min (fresh) | 20.57x | Clears momentum/freshness/volume decisively on the ticker's "last" print (0.05861) — but live order book (ask $0.0510/bid $0.0508) sits ~13% **below** that last-trade price, and OHLC shows the pair was completely dead (0 volume) for ~180+ hours before a single ~$3.8k-notional candle spiked the print. Classic stale/thin-print artifact, not a real tradeable move — the current executable price is flat vs. today's open. **SKIP — data-quality reject (last-price/order-book divergence).** |
+| **MUBARAK/USD** | **+3.04%** | **+6.20%** | **6.7min (fresh)** | **3.15x** | **Clears all four mechanical gates simultaneously.** Spread (quote): ask $0.018060/bid $0.017940 = **0.66%** (passes ≤1% cap). Cross-exchange check: Kraken $0.01807 vs CoinGecko $0.0169 (+6.4%) and CoinMarketCap $0.01725 (+4.7%) — both within the ~15-20% divergence-reject threshold (KuCoin's $0.01273 read treated as a stale/lagged outlier, not used). Catalyst: CMC/CoinGecko cite an **Aster DEX perpetual listing** and a BNB-chain memecoin/technical-breakout narrative behind the broader rally, but this reads as the driver of an **earlier/monthly** move, not a fresh <6h catalyst confirmed for today — treated as **momentum-only**, triggering the 1.5:1 R:R floor. **TRADED — see below.** |
+| SOONUSD | +0.29% | +7.49% | 6.7min | 3.46x | 4h/freshness/volume clear but 1h fails 3% bar. SKIP. |
+| ESPUSD | +2.28% | +4.73% | 6.7min | 2.50x | Both momentum bars narrowly fail (1h just under 3%, 4h just under 5%). SKIP. |
+| UUSD | +4.08% | +1.66% | 96.7min | 0.97x | 1h clears but 4h/freshness/volume all fail. SKIP. |
+| MASKUSD | +1.09% | +2.48% | 21.6min | 6.06x | Volume clears but both momentum bars fail. SKIP. |
+| INJUSD | +0.69% | +2.61% | 81.7min | 4.06x | Volume clears but momentum/freshness fail. SKIP. |
+| ALCXUSD | +0.99% | +3.54% | 6.7min | 0.02x | Fresh high but dead volume, momentum fails. SKIP. |
+| Remaining candidates (ESUSD, UXLINKUSD, ARCUSD, RAILSUSD, ZROUSD, AVAAIUSD, BNCUSD, ALCXUSD, QUIDUSD, RUJIUSD, CHEXUSD, TAKEUSD, NOSUSD, ODOSUSD, DAGUSD, FISUSD, DOSUSD, USUSD, EULUSD) | ≤1.5% or negative 1h | mixed | mostly stale (50min-24h) | 0.00x-0.89x | All fail the 1h momentum bar outright and/or have stale highs and dead/thin volume. SKIP. |
+
+### Step 5 — Trade Placed
+
+**MUBARAK/USD | BUY | 5261 MUBARAK | Entry: ~$0.018096 (market) | Cost: $95.2147 (incl. fee) | Stop: trailing 2.5% GTC (placed)**
+
+- Order txid `O3DMF3-GGVLK-USEJLY` (buy, market, filled in full). Stop txid `OPTJQM-ZYK3Q-Z7CAAS` (trailing_stop, confirmed open, stopprice $0.017540, limitprice $0.017980).
+- Gate check: momentum (1h +3.04%, 4h +6.20%), freshness (24h high set 6.7min prior), volume (3.15x trailing average), spread (0.66%), cross-exchange divergence (4.7-6.4% vs CoinGecko/CMC, well under the 15-20% reject threshold).
+- Momentum-only entry (no catalyst confirmed <6h) → R:R widened to the 1.5:1 floor per the 2026-08-14 rule: T1 $0.018820 (+4%, tighten stop to 0.5% on hit), T2 $0.019182 (+6%). R:R at T1 = 4%/2.5% = 1.6:1, clears the 1.5:1 floor.
+- BTC crash gate clear (+0.30% 24h), Fear & Greed 54 Neutral (not Extreme Fear — the stricter 1.5:1 floor applies regardless per the 2026-08-14 rule anyway).
+- ZUSD post-trade: $10.8235.
+
+### Decision: **TRADE — MUBARAK/USD entered.** REQ/USD showed the strongest raw momentum numbers in the sweep but was rejected on a data-quality basis (stale last-trade print ~13% above the live tradeable book, dead volume for 180+ hours prior) — exactly the kind of signal the discovery method's "wrong-magnitude" caution exists to catch. MUBARAK/USD cleared all mechanical gates cleanly and is the session's trade.
+
+### Step 6 — Risk Factors
+
+- MUBARAK is thin-liquidity (trade counts of 0-13 per 15min candle in recent history) — the 2.5% trail can be noise-prone; will monitor for a fast stop-out.
+- Fed July FOMC minutes due today — described as the week's main repricing-potential event; could move BTC/majors sharply and drag alts with it regardless of MUBARAK-specific thesis.
+- Token unlock cluster (ZK today, ZRO/KAITO Aug 20, SOON Aug 23) — none currently held or targeted, noted for awareness.
+- Crash gate clear, nowhere near -20%.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — MUBARAK/USD BUY 5261 @ ~$0.0181, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, no confirmed <6h catalyst). REQ/USD rejected on stale-price data-quality grounds despite +15% headline move. $10.82 ZUSD remaining."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
