@@ -32145,3 +32145,65 @@ Order txid `O5RWWH-Q47DG-QD4ZSX` (buy, market, 3810 BIO filled @ $0.02622, cost 
 bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — BIO/USD BUY 3810 @ $0.02622, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (Bithumb BIO/KRW listing catalyst, ~6.2h old). TREE/USD rejected on cross-exchange price-divergence (Kraken $0.0376 vs external ~$0.147). $8.66 ZUSD remaining."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
+
+## 2026-08-19 — Pre-Session Research #2 (trade placed)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $117.2185 (100% cash) + unchanged dust basket. `positions` → `{}`, `orders` → `{"open": {}}` at session start. Reconciliation: the BIO/USD position from the prior midday scan (entry $0.02622) was already closed — trailing stop `OIWAUM-R7R4I-2Z7OXX` fired at $0.02872, **net +$7.86197 (+7.81%)**, running past both T1 ($0.027269) and T2 ($0.027793) before trailing back. Logged in TRADE-LOG.md.
+**Alpaca (residual BTC):** `positions` → `[]` — zero exposure, no action needed.
+
+### Step 3 — Market Context (Perplexity)
+
+- **BTC:** $64,550.00, +0.30% 24h. Crash gate not triggered. Weekly trend: roughly flat (-0.6% to +1.4% depending on source/reference point) — weekly-downtrend gate not triggered.
+- **ETH:** $1,914.72, +0.70% 24h.
+- **Fear & Greed Index:** inconsistent across sources, 41-55 range (CoinStats/Alternative.me 41 Fear, Bitget 46 Fear, AltIndex 50 Neutral, CFGI 55 Neutral). Not Extreme Fear.
+- **Funding rate:** small/mixed, Binance +0.0079%/8h, Kraken +0.0148%, others clustering +0.01%/8h — no strong skew signal.
+- **Catalysts:** Fed July FOMC minutes + White House crypto policy meeting are today's dominant macro drivers; SEC "Regulation Crypto Assets" framework proposal flagged as bullish; Citi Bitcoin custody launch, Kraken expanding into US stocks for EU customers. No fresh (<6h) altcoin-specific catalyst surfaced independent of the sweep below.
+- **Token unlocks this week:** ZKsync (today, ~$1.30M), LayerZero/ZRO and KAITO (Aug 20, ~$25.45M/~$12.17M), SOON (Aug 23, ~$3.85M) — none are current sweep leaders, noted for awareness only.
+- No open positions at query time (BIO already closed) — no held-asset news queries needed.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 15m OHLC API, 636 online USD pairs)
+
+282 pairs cleared vs-open >3% and within 6% of 24h high — unusually broad field, consistent with a market-wide rally rather than isolated moves. Pulled 15m OHLC on the top 25 by vs-open% for 4h momentum, volume-ratio (last 1h vs trailing hourly average), and 24h-high freshness:
+
+| Symbol | vs-open | 4h% | Vol ratio | High age | Verdict |
+|---|---|---|---|---|---|
+| REUSD | +33.19% | +12.45% | 4.04x | 45min | Clears all 3 mechanical gates + spread (0.16%) — **rejected on cross-exchange divergence**: Perplexity shows CoinGecko ~$0.995 (flat) vs Kraken $0.534, ~46% divergence, plus explicit note this may not be the same tradeable asset ("not available for trading on Kraken" per one source). Same pattern as the Aug 19 REQ/TREE rejections. |
+| KNTQUSD | +19.26% | +21.27% | 4.22x | 45min | Clears all 3 mechanical gates + spread (0.65%) — **rejected on cross-exchange divergence**: external trackers cluster $0.1167-$0.1219 vs Kraken $0.14666, ~22-23% divergence, over the 15-20% threshold. |
+| **HYPEUSD** | **+18.72%** | **+12.67%** | **36.95x** | **45min** | **Clears all 3 mechanical gates decisively**, spread 0.014% (ask $69.29/bid $69.28). Cross-exchange: CoinGecko $69.34 (+17.90%) closely matches Kraken (~0.2% diff, same magnitude of move) — treated as the reliable reference; CoinMarketCap ($58.92, flat) and Coinbase ($41.10) diverge sharply from both Kraken and CoinGecko and read as stale/mismatched data (consistent with recurring Perplexity data-quality issues documented all month), not evidence of a Kraken-side pricing error. **TRADED — see below.** |
+| ACUUSD | +18.16% | +8.45% | 1.43x | 60min | 4h clears, volume under 2x bar. SKIP. |
+| PUPSUSD, CHEXUSD, MIMUSD, ESUSD, POLISUSD, BODENUSD | +9.8-17.7% | ≤1.0% or 0.00-0.08% | mixed | 0min | 4h momentum fails outright despite fresh highs. SKIP. |
+| ELXUSD, HPOS10IUSD, SPACEUSD, USUSD, GRIFFAINUSD, ESPUSD, USELESSUSD | +9.8-16.4% | mixed, mostly <5% | 0.00x-0.90x | 90-1095min (stale) | Fail momentum/volume/freshness combinations. SKIP. |
+| LIGHTERUSD | +14.75% | +8.67% | 9.82x | 0min | Clears all 3 mechanical gates — **spread 2.77%, hard fail** (ask $2.812/bid $2.734). SKIP. |
+| APUUSD | +14.47% | +8.52% | 3.13x | 15min | Clears all 3 mechanical gates — **spread 3.48%, hard fail**. SKIP. |
+| WLDUSD | +13.32% | +7.85% | 1.61x | 0min | 4h clears, volume under 2x bar. SKIP. |
+| INJUSD | +11.00% | +3.94% | 7.04x | 15min | 4h fails 5% bar despite strong volume. SKIP. |
+| ARBUSD | +10.37% | +2.73% | 19.59x | 0min | 4h fails 5% bar despite strong volume. SKIP. |
+| XETHZUSD | +9.89% | +0.83% | 4.61x | 285min | 4h fails, stale high. SKIP. |
+| ZBCNUSD | +9.87% | +2.99% | 1.43x | 0min | 4h and volume both fail. SKIP. |
+
+### Step 5 — Trade Placed
+
+**HYPE/USD | BUY | 1.5150013 HYPE | Entry: $69.27 (market) | Cost: $105.78360 (incl. $0.83955 fee) | Stop: trailing 2.5% GTC (placed)**
+
+- Order txid `OBQQNE-UDTDA-SOQ3DG` (buy, market, filled in full). Stop txid `OTBC6O-NY6OD-TTG6TI` (trailing_stop, confirmed open, stopprice $67.46, limitprice $69.18).
+- Gate check: momentum (4h +12.67%), freshness (24h high set 45min prior), volume (36.95x trailing average), spread (0.014%), cross-exchange divergence via CoinGecko (~0.2% vs Kraken, clean).
+- Catalyst check: Perplexity surfaced "Hyperliquid Strategies added to Russell 3000/2000 and S&P Global BMI" as the only concrete catalyst, but confirmed announcement/effective dates are June 22-29, 2026 — **~7-8 weeks old, not fresh**. Treated as momentum-only for R:R purposes.
+- R:R widened to the 1.5:1 momentum-only floor per the 2026-08-14 rule: T1 $72.04 (+4%, tighten stop to 0.5% on hit), T2 $73.43 (+6%). R:R at T1 = 4%/2.5% = 1.6:1, clears the floor.
+- BTC crash gate clear (+0.30% 24h), weekly-downtrend gate clear (roughly flat over 5 days). Fear & Greed 41-55 mixed Neutral/Fear, not Extreme Fear.
+- ZUSD post-trade: $11.4348.
+
+### Decision: **TRADE — HYPE/USD entered.** REUSD and KNTQUSD both showed stronger raw momentum numbers and cleared every mechanical gate, but both were rejected on cross-exchange price divergence (~46% and ~22-23% respectively vs external trackers) — the same data-quality pattern that has correctly killed REQ/TREE candidates this week. HYPE/USD is a well-known, liquid, real asset where the divergence check (via CoinGecko) came back clean, and it cleared momentum/freshness/volume/spread decisively.
+
+### Step 6 — Risk Factors
+
+- HYPE's headline catalyst (Russell/S&P index inclusion) is stale (~7-8 weeks old) — today's move is being treated as momentum-only with no confirmed fresh driver; if the rally has no real underlying reason, a fast reversal/stop-out is possible.
+- CoinMarketCap and Coinbase price reads for HYPE diverged sharply from Kraken/CoinGecko (15-41% below) — assessed as stale/mismatched data rather than a genuine Kraken mispricing, given CoinGecko's independent confirmation, but this is a judgment call worth flagging.
+- Fed FOMC minutes + White House crypto policy meeting today — macro event risk that could move BTC/majors sharply and drag HYPE with it regardless of its own thesis.
+- 282-pair field clearing the initial vs-open filter is unusually broad (vs. typical 25-60) — consistent with a genuine market-wide rally today, but also raises the chance of more low-quality/thin-liquidity candidates surfacing (as seen with REUSD/KNTQUSD/LIGHTERUSD/APUUSD all failing spread or divergence gates despite clearing momentum).
+- Crash gate clear, nowhere near -20%. Weekly-downtrend gate clear.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — HYPE/USD BUY 1.515 @ $69.27, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, Russell/S&P catalyst stale ~7wk). REUSD/KNTQUSD rejected on cross-exchange divergence despite stronger momentum. BIO/USD closed +7.81% since last scan. $11.43 ZUSD remaining."

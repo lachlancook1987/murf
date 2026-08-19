@@ -8967,3 +8967,17 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 Order txid `O5RWWH-Q47DG-QD4ZSX` (buy, market, filled in full), stop txid `OIWAUM-R7R4I-2Z7OXX` (trailing stop, confirmed open, stopprice $0.02557, limitprice $0.02622). T1 $0.027269 (+4%), T2 $0.027793 (+6%) — widened from standard +3%/+5% to the 1.5:1+ momentum-only R:R convention (catalyst is real — Bithumb listing — but past the strict <6h freshness window). R:R 1.6:1 at T1 vs 2.5% stop. ZUSD post-trade: $8.6592. First trade since the Aug 19 pre-session MUBARAK round-trip (+3.49%).
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
+
+### 2026-08-19 | BIO/USD | SELL (trailing stop triggered) | 3810 BIO | Exit: $0.02872 | Closed
+
+**Order ID (stop):** OIWAUM-R7R4I-2Z7OXX (trailing_stop, trail_percent 2.5%, GTC — trailed up as price ran past T1 $0.027269 and T2 $0.027793, then reversed and triggered; filled $0.02872)
+**P&L:** Buy cost $99.89820 + $0.79919 fee = $100.69739 total spent. Sell proceeds $109.43484 − $0.87548 fee = $108.55936 net received. **Net: +$7.86197 (+7.81%)**
+**Notes:** Discovered via this session's pre-trade reconciliation — position was already flat (BIO balance 0, `positions: {}`, `orders: {"open": {}}`) at session start; stop fired and closed between the prior midday-scan log entry and this session, beating both T1 and T2 before trailing back. No thesis break, no manual intervention — mechanical stop-out as designed, and it worked as intended. ZUSD confirmed $117.2185 pre-trade this session.
+
+## 2026-08-19 — Pre-Session Research #2 (trade placed)
+
+### 2026-08-19 | HYPE/USD | BUY | 1.5150013 HYPE | Entry: $69.27 | Cost: $105.78360 (incl. $0.83955 fee) | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `OBQQNE-UDTDA-SOQ3DG` (buy, market, filled in full), stop txid `OTBC6O-NY6OD-TTG6TI` (trailing stop, confirmed open, stopprice $67.46, limitprice $69.18). Full gate check (momentum, freshness, volume, spread, cross-exchange divergence) and rationale logged in RESEARCH-LOG.md 2026-08-19 pre-session #2 entry. Catalyst (Hyperliquid Strategies Russell/S&P index inclusion) confirmed ~7 weeks old — not fresh, so treated as momentum-only, R:R widened to the 1.5:1 floor: T1 $72.04 (+4%, tighten stop to 0.5% on hit), T2 $73.43 (+6%). R:R at T1 = 1.6:1 vs 2.5% stop. ZUSD post-trade: $11.4348. First trade since the BIO/USD round-trip (+7.81%).
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635).
