@@ -8935,3 +8935,11 @@ Order txid `O3DMF3-GGVLK-USEJLY` (buy), stop txid `OPTJQM-ZYK3Q-Z7CAAS` (trailin
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — MUBARAK/USD BUY 5261 @ ~$0.0181, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, no confirmed <6h catalyst). REQ/USD rejected on stale-price data-quality grounds despite +15% headline move. $10.82 ZUSD remaining."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635).
+
+### Aug 19 — EOD Snapshot (Day 91, Wednesday)
+**Portfolio:** $104.5745 | **Cash:** $10.8235 (10.35%) | **Day P&L:** −$1.4637 (−1.38%) | **Phase P&L:** −$75.2055 (−41.84%) | **vs BTC:** −1.57%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| MUBARAK/USD | 5261 | $0.018096 | $0.017820 | −1.53% | −$1.45 | 2.5% (stop $0.017540 / limit $0.017980), open, untouched |
+**Trades today:** MUBARAK/USD BUY 5261 @ ~$0.018096 (pre-session, still open) | **Total since migration:** ~97
+**Notes:** Kraken account: ZUSD $10.8235 (10.35% cash) + MUBARAK 5261 units (89.65%) valued at last trade $0.017820, down −1.53% from the $0.018096 pre-session entry, unrealized −$1.45; trailing stop `OPTJQM-ZYK3Q-Z7CAAS` still open (stopprice $0.017540, limitprice $0.017980, 2.5% trail), untouched all session — no other open orders. Today's only trade was the pre-session MUBARAK/USD momentum-only entry (R:R 1.6:1, T1 $0.018820/T2 $0.019182 both still ahead, unrealized). BTC $64,297.70 vs Aug 18 EOD reference $64,176.10 → +0.19%; the MUBARAK drawdown left the bot −1.57% vs BTC today. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Phase P&L now −$75.2055 (−41.84%) from $179.78 Kraken starting equity (May 22). Tomorrow: pre-session research resumes with the MUBARAK position still open under its 2.5% trailing stop; crash gate threshold ~$51,438 (BTC −20% from $64,297.70). EOD WhatsApp send **FAILED** again — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~48 days running; needs resubscription at callmebot.com/61477788635.
