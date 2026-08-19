@@ -32207,3 +32207,74 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 ### Step 7 — Notification
 
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE — HYPE/USD BUY 1.515 @ $69.27, trailing stop 2.5% placed. T1 +4% / T2 +6%, R:R 1.6:1 (momentum-only, Russell/S&P catalyst stale ~7wk). REUSD/KNTQUSD rejected on cross-exchange divergence despite stronger momentum. BIO/USD closed +7.81% since last scan. $11.43 ZUSD remaining."
+
+## 2026-08-19 — Midday Scan #2 (~22:48 UTC, trade placed)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $117.7035 (100% cash) + unchanged dust basket at scan start. `positions` → `{}`, `orders` → `{"open": {}}`. Reconciliation: the HYPE/USD position from the prior pre-session #2 scan (entry $69.27) was already closed — trailing stop `OTBC6O-NY6OD-TTG6TI` fired at $70.70, **net +$0.48513 (+0.46%)**, having run through T1/T2 territory before reversing. Logged in TRADE-LOG.md.
+**Alpaca (residual BTC):** stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure.
+
+### Step 3 — Market Context
+
+Unusually broad, unusually large move: direct Kraken ticker showed BTC/USD +7.37% vs today's open ($64,677.20 → $69,441.10) and ETH/USD +18.15% vs open ($1,916.38 → $2,264.28). This is far outside the day's typical range, so it was independently sanity-checked via a direct (non-Perplexity) CoinGecko API call before trusting it: CoinGecko showed BTC $69,575 (+7.78%) and ETH $2,273.50 (+18.91%) — closely matching Kraken, confirming the move is real, not a Kraken-side data artifact. Perplexity's own price query for the same assets returned BTC $64,550 (+0.30%) and ETH $1,935.48 (+2.0%) — badly stale/wrong, consistent with the chronic Perplexity data-quality issues this strategy document already flags; the direct-API cross-check was used instead. Perplexity catalyst query attributed the rally to a proposed SEC "Regulation Crypto Assets" framework, a White House crypto summit, Fed July FOMC minutes, improving spot ETF inflows, and short-covering — all broad macro drivers, none asset-specific. Fear & Greed Neutral (41-60 range across sources, not Extreme Fear).
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 1h OHLC API, 631 online USD pairs)
+
+376 pairs cleared vs-open >3% and within 6% of 24h high — the broadest field seen this month, consistent with a genuine market-wide rally rather than isolated moves. Pulled 1h OHLC on the top 25 by vs-open for 4h momentum (close now vs close 4 bars/4h back), volume ratio (last 1h bar vs trailing average of the prior bars), and freshness (hours since the bar high last touched the 24h high):
+
+| Symbol | vs-open | 4h mom | vol ratio | hrs since high | Verdict |
+|---|---|---|---|---|---|
+| REUSD | +31.99% | +3.58% | 0.08x | 1h | Fail — momentum, volume both far below bars |
+| OCEANUSD | +31.57% | +14.31% | 0.47x | 0h | Fail — volume far below average despite fresh high |
+| CHEXUSD | +24.42% | +8.08% | 0.00x | 1h | Fail — dead volume |
+| PEPECOINUSD | +22.12% | -0.01% | 0.00x | 7h | Fail — momentum, volume, stale high |
+| **HYPEUSD** | +21.01% | +14.23% | 3.15x | 1h | **Clears all 3 mechanical gates** — passed over in favor of TRUMP (see below) |
+| **TRUMPUSD** | +20.54% | +18.48% | 3.93x | 1h | **Clears all 3 mechanical gates decisively — taken** |
+| HPOS10IUSD | +20.35% | +5.41% | 0.00x | 0h | Fail — dead volume |
+| WELLUSD | +19.44% | +10.61% | 0.00x | 1h | Fail — dead volume |
+| METHUSD | +19.14% | +9.44% | 0.00x | 1h | Fail — dead volume |
+| XETHZUSD | +18.14% | +8.79% | 0.72x | 1h | Fail — volume below bar |
+| **ARBUSD** | +17.69% | +10.06% | 2.16x | 0h | **Clears all 3 mechanical gates** (thin volume margin) — passed over, weaker than TRUMP |
+| ACUUSD | +17.67% | +3.83% | 0.46x | 1h | Fail — momentum, volume |
+| USELESSUSD | +17.20% | +6.14% | 0.62x | 0h | Fail — volume |
+| ZBCNUSD | +15.16% | +5.82% | 0.15x | 1h | Fail — volume |
+| OOBUSD | +15.02% | +1.85% | 0.00x | 1h | Fail — momentum, volume |
+| APUUSD | +14.58% | +8.51% | 0.00x | 1h | Fail — volume |
+| WLDUSD | +14.36% | +4.07% | 0.37x | 1h | Fail — momentum, volume |
+| BODENUSD | +14.31% | +4.38% | 0.00x | 0h | Fail — momentum, volume |
+| ESUSD | +14.29% | +14.29% | 0.05x | 0h | Fail — volume |
+| AZTECUSD | +13.76% | +6.10% | 0.03x | 1h | Fail — volume |
+| ENAUSD | +13.66% | +7.15% | 0.04x | 1h | Fail — volume |
+| BIOUSD | +13.57% | -2.11% | 2.37x | 7h | Fail — momentum negative, stale high (already round-tripped earlier today, correctly not re-entered) |
+| TELUSD | +13.42% | +4.21% | 0.04x | 1h | Fail — momentum, volume |
+| COQUSD | +13.25% | +8.16% | 0.00x | 7h | Fail — volume, stale high |
+| INJUSD | +13.01% | +4.21% | 0.79x | 1h | Fail — momentum, volume |
+
+**TRUMP/USD — taken:** Cleared all three mechanical gates decisively (4h momentum +18.48%, volume 3.93x trailing average, 24h high set within the last hour). Kraken quote: ask $1.7110/bid $1.7090 → spread 0.12%, well inside the 1% cap. `TRUMPUSD` status `online`, ordermin 3.5. Cross-exchange check: direct CoinGecko API showed official-trump $1.69 (+20.59% 24h) vs Kraken $1.711 mid — ~1.2% divergence, clean. (Perplexity's own catalyst-query summary for TRUMP was internally self-contradictory — $1.41 CoinGecko, $1.51 CoinMarketCap, $6.96 "clearly stale" Coinbase all cited in the same answer — so its numbers were discarded in favor of the live direct-API cross-check for the divergence gate, per the demoted-Perplexity-for-discovery pattern.) Catalyst check: no TRUMP-specific fresh (<6h) catalyst found — a Sens. Warren/Blumenthal letter urging SEC investigation was the only TRUMP-specific headline, and it's a negative-risk item, not a positive driver; the move reads as macro spillover from the broader BTC/ETH rally. Treated as momentum-only for R:R sizing.
+
+**15m candle check (high-ATR assessment):** the last 12 15-minute candles for TRUMP showed real per-candle ranges of 0.3%-6.96% through the runup (not flat/noise), consistent with the strategy's high-ATR trail exception (FET/HYPE/WLD-type coins, expected intraday ATR >3%). Used **3.5% trail** instead of the 2.5% default. To compensate for the wider stop, T1/T2 were widened beyond the standard momentum-only convention: T1 = entry +6% ($1.8137), T2 = entry +9% ($1.8650) — R:R at T1 = 6%/3.5% ≈ 1.71:1, clearing the 1.5:1 momentum-only floor.
+
+**HYPE/USD and ARB/USD** both cleared all three mechanical gates too (HYPE: 4h +14.23%/vol 3.15x/1h-stale-high; ARB: 4h +10.06%/vol 2.16x/fresh-high) but were passed over — HYPE to avoid re-concentrating in the asset just closed profitably this session, ARB for its thinner volume margin relative to TRUMP's decisive numbers.
+
+### Step 5 — Trade Placed
+
+**TRUMP/USD | BUY | 61 TRUMP | Entry: $1.711 (market) | Cost: $105.20597 (incl. $0.83497 fee) | Stop: trailing 3.5% GTC (placed)**
+
+- Order txid `OM2VZA-TAB67-2ZSGTN` (buy, market, filled in full). Stop txid `OFG7DI-NI34B-SZV73G` (trailing_stop, confirmed open, stopprice $1.6520, limitprice $1.7110).
+- BTC crash gate clear (BTC up, not down — +7.4% intraday). Fear & Greed Neutral, not Extreme Fear.
+- ZUSD post-trade: $12.4975.
+
+### Decision: **TRADE — TRUMP/USD entered.** REUSD, OCEANUSD, and several other pairs showed larger headline vs-open moves but all failed the volume-ratio and/or 4h-momentum bars outright (mostly near-zero volume ratios despite large price prints — a market-wide-rally version of the same thin/stale-print pattern seen with individual small-caps like REQ/TREE). TRUMP/USD was the only candidate combining decisive momentum, strong volume confirmation, a fresh high, tight spread, and clean cross-exchange divergence.
+
+### Step 6 — Risk Factors
+
+- TRUMP is a highly volatile political memecoin (recent commentary notes it trading far below its all-time peak) — today's move reads as macro spillover from the BTC/ETH rally rather than an asset-specific catalyst; if the broader rally stalls, TRUMP could give back gains quickly.
+- Regulatory headline risk: a Warren/Blumenthal letter urging SEC investigation of the token is a live negative catalyst that could resurface as a market mover.
+- 376-pair field clearing the initial vs-open filter is the broadest seen this month — raises the chance of thin/stale-print candidates surfacing (as seen with REUSD, CHEXUSD, WELLUSD, METHUSD, APUUSD, OOBUSD all showing 0.00x volume ratios despite large headline moves).
+- Broad macro event risk remains live today (Fed minutes, White House crypto summit) — could move BTC/majors sharply in either direction and drag TRUMP with it regardless of its own thesis.
+- Crash gate clear, nowhere near -20%.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — TRUMP/USD BUY 61 @ $1.711, trailing stop 3.5% placed (high-ATR exception). T1 +6% / T2 +9%, R:R 1.71:1 (momentum-only, macro spillover from BTC +7.4%/ETH +18% rally, no TRUMP-specific catalyst). HYPE/USD closed +0.46% since last scan. $12.50 ZUSD remaining."

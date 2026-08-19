@@ -8981,3 +8981,28 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 Order txid `OBQQNE-UDTDA-SOQ3DG` (buy, market, filled in full), stop txid `OTBC6O-NY6OD-TTG6TI` (trailing stop, confirmed open, stopprice $67.46, limitprice $69.18). Full gate check (momentum, freshness, volume, spread, cross-exchange divergence) and rationale logged in RESEARCH-LOG.md 2026-08-19 pre-session #2 entry. Catalyst (Hyperliquid Strategies Russell/S&P index inclusion) confirmed ~7 weeks old — not fresh, so treated as momentum-only, R:R widened to the 1.5:1 floor: T1 $72.04 (+4%, tighten stop to 0.5% on hit), T2 $73.43 (+6%). R:R at T1 = 1.6:1 vs 2.5% stop. ZUSD post-trade: $11.4348. First trade since the BIO/USD round-trip (+7.81%).
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635).
+
+### 2026-08-19 | HYPE/USD | SELL (trailing stop triggered) | 1.5150013 HYPE | Exit: $70.70 | Closed
+
+**Order ID (stop):** OTBC6O-NY6OD-TTG6TI (trailing_stop, trail_percent 2.5%, GTC — trailed up as price ran toward T1/T2, then reversed and triggered; filled $70.70)
+**P&L:** Buy cost $104.94405 + $0.83955 fee = $105.78360 total spent. Sell proceeds $107.12574 − $0.85701 fee = $106.26873 net received. **Net: +$0.48513 (+0.46%)**
+**Notes:** Discovered via this session's pre-trade reconciliation (`positions: {}`, `orders: {"open": {}}`, HYPE balance 0) — stop fired between the prior pre-session #2 log entry and this midday scan. Ran up through both T1 ($72.04) and T2 ($73.43) territory before reversing and trailing back to a modest gain. No thesis break, no manual intervention — mechanical stop-out as designed. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []`, zero exposure.
+
+## 2026-08-19 — Midday Scan #2 (~22:48 UTC, trade placed)
+
+### 2026-08-19 | TRUMP/USD | BUY | 61 TRUMP | Entry: $1.711 | Cost: $105.20597 (incl. $0.83497 fee) | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OM2VZA-TAB67-2ZSGTN` (buy, market, filled in full). Stop txid `OFG7DI-NI34B-SZV73G` (trailing_stop, trail_percent 3.5%, confirmed open, stopprice $1.6520, limitprice $1.7110).
+
+**Context:** Unusually broad market-wide rally — BTC +7.4% (open $64,677.20 → live $69,441.10), ETH +18.1% (open $1,916.38 → live $2,264.28), both independently confirmed via direct CoinGecko API (BTC +7.78%, ETH +18.91%) after Perplexity's stale query (BTC +0.30%, ETH +2.0%) sharply disagreed — same chronic Perplexity data-quality issue documented all month; Kraken's own data plus a live direct-API cross-check were trusted over Perplexity's text summary. Perplexity catalyst query attributed the move to SEC "Regulation Crypto Assets" framework proposal, White House crypto summit, Fed July FOMC minutes, improving spot ETF inflows, and short-covering — all broad macro, none TRUMP-specific. Fear & Greed Neutral (41-60 range across sources).
+
+**Discovery sweep** (631 online USD pairs via direct public API, 376 cleared vs-open>3% + within 6% of 24h high — unusually broad field consistent with the market-wide move). Pulled 1h OHLC on top 25 by vs-open for 4h momentum, volume ratio, and freshness:
+- **TRUMP/USD** cleared all three mechanical gates decisively: 4h momentum +18.48%, volume 3.93x trailing average, 24h high set within the last hour. Spread 0.12% (ask $1.7110/bid $1.7090). Cross-exchange divergence clean: direct CoinGecko API showed official-trump $1.69 +20.59% vs Kraken $1.711, ~1.2% divergence (Perplexity's own summary for TRUMP was self-contradictory across sources — $1.41 CoinGecko, $1.51 CoinMarketCap, $6.96 "clearly stale" Coinbase — so the live direct-API cross-check was used instead of Perplexity's text for the divergence gate, consistent with the demoted-Perplexity-for-discovery/data-quality pattern).
+- **HYPE/USD** also cleared all three gates (4h +14.23%, vol 3.15x, fresh high) but was passed over in favor of TRUMP given TRUMP's stronger momentum/volume margin and to avoid re-concentrating in the asset just closed this session.
+- **ARB/USD** cleared all three gates narrowly (4h +10.06%, vol 2.16x — just above the 2x bar) but was thinner on volume margin than TRUMP.
+- **BIO/USD** (already round-tripped once today) failed 4h momentum this scan (-2.11%) and had a stale high (7h) — correctly not re-entered.
+- Remaining ~20 candidates (REUSD, OCEANUSD, CHEXUSD, PEPECOINUSD, HPOS10IUSD, WELLUSD, METHUSD, ACUUSD, USELESSUSD, ZBCNUSD, OOBUSD, APUUSD, WLDUSD, BODENUSD, ESUSD, AZTECUSD, ENAUSD, TELUSD, COQUSD, INJUSD) failed the volume-ratio and/or 4h-momentum bars despite large vs-open reads.
+
+**High-ATR trail exception applied:** 15m candle history for TRUMP showed real per-candle ranges of 2-7% through the runup (not noise-flat), consistent with the strategy's high-ATR exception (FET/HYPE/WLD-type momentum coins, expected intraday ATR >3%) — used **3.5% trail** instead of the 2.5% default to avoid a fast noise-stop on an already-volatile memecoin. To compensate, T1/T2 widened further than the standard momentum-only convention: **T1 = entry +6% ($1.8137), T2 = entry +9% ($1.8650)** — R:R at T1 = 6%/3.5% ≈ **1.71:1**, clearing the 1.5:1 momentum-only floor (no TRUMP-specific <6h catalyst confirmed; regulatory letter from Sens. Warren/Blumenthal noted as a negative-risk headline, not a positive driver — move reads as macro spillover from the broader BTC/ETH rally). Crash gate clear (BTC up, not down). ZUSD post-trade: $12.4975.
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635).
