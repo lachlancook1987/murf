@@ -32333,3 +32333,19 @@ No other candidate in the top 25 cleared all three mechanical gates (4h momentum
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no candidate cleared every gate. USDUC/USD cleared momentum/volume/spread but failed cross-exchange divergence (~20-33% vs external venues); EDGEX/USD cleared momentum/volume but failed spread (2.50%). TRUMP/USD closed +1.40% since last scan. $119.18 ZUSD, 100% cash, fully flat."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
+
+## 2026-08-20 — Midday Scan (monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $119.1802 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $71,774.20 vs today's open $69,285.00 → **+3.59%** intraday, extending the pre-session +0.80% read — rally continuing to build, not reversing. Crash gate not triggered, nowhere close. Weekly-downtrend gate not applicable (BTC firmly up).
+
+**Discovery sweep** (direct Kraken public API, 631 online USD pairs; 124 cleared vs-open>3% + within 6% of 24h high — a much broader field than the pre-session's 44, consistent with BTC's intraday extension). Pulled 1h OHLC on the top 60 by vs-open for 4h momentum, volume ratio (last bar vs trailing 24-bar average), and freshness (hours since 24h high):
+
+- **SN44USD** was the only candidate to clear both momentum (4h +18.56%) and volume (2.67x) simultaneously, but its 24h high was set **10h ago** (near_high 1.40%, price already pulled back from a stale peak) — hard fail on the momentum-peak-check freshness gate (needs high set within last 60min, or a fresh 1h breakout above it, neither present). Correctly not traded, same pattern as prior sessions' stale-high rejections.
+- **ESPUSD** cleared volume (2.00x) but 4h momentum was negative (-3.91%) — fails momentum.
+- No other candidate in the top 60 cleared even two of the three mechanical gates simultaneously; most showed strong vs-open reads (AVAAI +22.87%, NEIRO +22.25%, PUMP +19.95%, ORDER +17.43%, PNUT +16.08%, ROBO +14.34%, MON +14.34%, BICO +13.00%) but with 4h momentum stalling, negative, or thin trailing volume relative to the vs-open spike — consistent with the broad-based BTC-led rally lifting spot prices without idiosyncratic per-asset volume confirmation yet.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20); every top candidate checked, none cleared all three mechanical gates plus spread. No trade manufactured. $119.1802 ZUSD remains fully available (100% cash, fully flat across Kraken and Alpaca).
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
