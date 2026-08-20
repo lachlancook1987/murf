@@ -32409,3 +32409,47 @@ This is also the correct call immediately after a stop-out: today's earlier ROBO
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no candidate cleared every gate across 201-pair field (101 liquid). ENA/USD closest: momentum +5.14% and spread 0.18% clean but volume 1.89x (<2x bar) and 24h high 66min old; also carries a $14M-to-FalconX supply overhang. XDC/USD cleared volume 3.04x but 4h momentum +4.35% (<5% bar). ROBO/USD stopped out −2.43% since last scan. BTC +4.94% intraday, F&G 62 Greed. $116.61 ZUSD, 100% cash, fully flat."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
+
+## 2026-08-20 — Session-Open Execution #2 (~21:01 UTC, monitoring only, no trades)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $116.6120 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect/tighten. Matches the prior pre-session #2 reconciliation exactly (ROBO stop-out already logged, no new fills since). **Alpaca:** `positions` → `[]` — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+- **BTC:** live $72,620.50 vs today's open $69,285.00 → **+4.82%** intraday, roughly flat vs the pre-session #2 read (+4.94%) — rally has plateaued rather than extended further this hour. Crash gate not triggered, nowhere close.
+- **ETH:** live $2,316.55 vs open $2,251.50 → **+2.89%** intraday.
+- **Fear & Greed:** Greed range across sources — Alternative.me 62, Binance 63, CoinStats 59, CFGI 74 (CFGI BTC-only 83, Extreme Greed). Not Extreme Fear — standard R:R floors apply (1.2:1 catalyst-confirmed, 1.5:1 momentum-only).
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + OHLC API, 632 online USD pairs)
+
+237 pairs cleared vs-open >3% + within 6% of 24h high — the broadest field yet today, consistent with BTC holding its intraday gain. Pulled 1h OHLC on the top 60 by vs-open for 4h momentum, volume ratio (last complete bar vs trailing 24-bar average), and freshness (hours since 24h high).
+
+**Two candidates cleared the three mechanical bars on the hourly pass:**
+
+| Symbol | vs-open | 4h mom | vol ratio | hrs since high | Spread |
+|---|---|---|---|---|---|
+| **NEO/USD** | +9.11% | +5.52% | 2.55x | ~1.0h (18 min on 15m granularity) | 0.36% |
+| **EWT/USD** | +7.72% | +5.40% | 3.23x | ~1.0h (63 min on 15m granularity) | 0.34% |
+
+Both went to 15m-granularity diligence, same as prior sessions' borderline calls:
+
+- **NEO/USD — rejected on structure.** 24h high genuinely fresh (18 min old), but the 15m volume tape is spike-and-dump, not steady: `[0.00, 2.88, 270.17, 0.00, 381.54, 10.08]` — two isolated vertical-volume bars separated by dead (zero-volume) bars, then volume collapsing back to near-zero on the latest bar. This is the same pattern that correctly killed GOAT/USD in this morning's session-open scan (strategy note: "pick assets with steady momentum, not spike-and-dump"; the 1h vol-ratio of 2.55x is itself an artifact of a near-zero trailing-bar denominator). **Cross-exchange check** (Perplexity): CoinGecko $1.81 (+7.30%), CoinMarketCap $1.80 (+6.72%), CoinDesk $1.7357 (+4.03%) vs Kraken live $1.989 — **~10-15% divergence**, below the hard 15-20% gate but a real multi-source cluster, not a single stale read, adding to the reject case. Catalyst found (Neo X MainNet v0.6.2 upgrade, Upbit deposit/withdrawal suspension for wallet compatibility) is ambiguous-to-negative (an exchange suspending deposits/withdrawals reduces liquidity, it isn't a buy catalyst) and not clearly <6h fresh. **Not traded.**
+- **EWT/USD — rejected on freshness.** Volume tape is genuinely steady (`[420, 310, 4434, 996, 200, 277]`, real volume every bar, no gaps) — the better-structured of the two. But the 24h high (0.294) was set **63 minutes ago**, 3 minutes past the momentum-peak-check's 60-minute freshness window, and current price (0.293) has not broken back above that high — no fresh-breakout exception applies. Same category of near-miss as ENA's 66-minute-stale high in this morning's pre-session #2 scan, correctly held to the same bar. **Not traded.**
+
+No other candidate in the top 60 cleared even two of the three mechanical gates simultaneously (ENA/USD +8.24% 4h mom but 0.91x volume; GAS/USD +9.23% 4h mom but 1.57x volume; CRV/USD 4.50% 4h mom, just under the 5% bar, despite 4.12x volume).
+
+### Decision: **HOLD — no entry this scan.**
+
+Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): the top of a 237-pair field was checked, the two closest candidates each failed on a different, specific gate (NEO on spike-and-dump structure + cross-exchange divergence, EWT on a 3-minute freshness miss) rather than a general absence of momentum. Neither miss is a reason to loosen a bar in-session. No trade manufactured. $116.6120 ZUSD remains fully available (100% cash, fully flat across Kraken and Alpaca).
+
+### Step 6 — Risk Factors
+
+- Still a broad beta-driven tape (237 pairs clearing vs-open>3%, third consecutive scan today showing this pattern) rather than idiosyncratic per-asset moves — consistent with today's two prior stop-outs (ROBO −2.43%, and TRUMP/HYPE/BIO round-trips reconciled earlier) both being momentum-only entries into the same kind of tape.
+- CFGI BTC-only reading at 83 (Extreme Greed) is a mild caution flag on chasing further upside momentum, even though it doesn't gate entries directly under this strategy.
+- Crash gate clear (BTC +4.82%, up not down, nowhere near -20%).
+
+### Step 7 — Notification
+
+No trade placed this scan — per Step 7, notification only fires on executed trades. Skipped.
