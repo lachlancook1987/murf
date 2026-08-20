@@ -32453,3 +32453,30 @@ Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): the top of a 
 ### Step 7 — Notification
 
 No trade placed this scan — per Step 7, notification only fires on executed trades. Skipped.
+
+## 2026-08-20 — Midday Scan #2 (~22:04 UTC, monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $116.6120 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A, nothing to protect/tighten. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $72,589.00 vs today's open $69,285.00 → **+4.77%** intraday, essentially flat vs the last two reads (+4.94% pre-session #2, +4.82% session-open #2) — rally still plateaued, not extending or reversing. Crash gate not triggered, nowhere close.
+
+**Discovery sweep** (direct Kraken public Ticker + 1h OHLC API, 632 online USD pairs): **245 pairs** cleared vs-open >3% + within 6% of 24h high — the broadest field of the day (vs. 44/124/201/237 in the four prior scans), consistent with BTC holding its gain. Pulled 1h OHLC on the top 60 by vs-open for 4h momentum, volume ratio (last complete bar vs trailing 24-bar average), and freshness (hours since 24h high).
+
+**One candidate cleared all three mechanical gates: STABLE/USD** (4h momentum +13.43%, volume 3.15x, 24h high set ~5 min ago, spread 0.627%) — but **rejected on liquidity**: 24h volume is only **$25,595** (last $0.03166 × 805,570 tokens), well under the **$50k liquidity floor** established in this session's pre-session #2 scan to drop thin/dead-liquidity names. A $100 order in a $25.6k/day market is a meaningful fraction of daily turnover — real slippage/exit risk despite the clean headline spread. Not traded.
+
+**ENA/USD** — highly liquid ($2.44M 24h volume, spread 0.175%), 4h momentum +6.27% clears, 24h high fresh (~5 min), but **volume ratio 1.57x fails the >2x bar** (same gate it failed on in pre-session #2 at 1.89x — still marginal, still failing, and still carrying the FalconX $14M supply-overhang risk noted then). Not traded.
+
+Other near-misses checked for liquidity: NPC ($227k vol, 4h mom only +2.13%, fails), SN51 ($16.8k vol, thin, hrs-since-high 1.08h stale), DAG ($69.8k vol, 4h mom +5.63%/vol 7.43x clear but 24h high 18h stale), JUNO ($1.8k vol, 4.48% spread — hard fail both). No other top-60 candidate cleared two of three gates with adequate liquidity.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): the broadest candidate field of the day was checked, the one mechanical clean-sweep (STABLE) failed on liquidity and the one liquid near-miss (ENA) failed on volume ratio, same gate as last scan. No trade manufactured. $116.6120 ZUSD remains fully available (100% cash, fully flat across Kraken and Alpaca).
+
+### Step 6 — Risk Factors
+
+- Beta-rally tape persists — 245 pairs clearing vs-open>3% (up from 237 last scan), still consistent with index-wide BTC-led lift rather than fresh idiosyncratic setups.
+- STABLE/USD is a reminder that headline-clean mechanical gates can still hide a thin/illiquid market — the $50k liquidity floor caught it correctly.
+- ENA's volume-ratio miss and FalconX overhang are unchanged from the last scan; still correctly avoided.
+- Crash gate clear (BTC +4.77%, up not down, nowhere near -20%).
+
+### Step 7 — Notification
+
+No trade placed this scan — per Step 7, notification only fires on executed trades. Skipped.
