@@ -9018,3 +9018,15 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~104
 **Notes:** Kraken `account`/`positions`/`orders`: ZUSD $119.1802 (100%), unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure, no trades placed during today's session itself. The large Day P&L swing (+$14.6057, +13.97%) is not from a trade today — it's the Aug 19 EOD snapshot ($104.5745) catching up to four Aug-19 round-trips (MUBARAK +3.49%, BIO +7.81%, HYPE +0.46%, TRUMP +1.40%) that closed via trailing stop after that stale snapshot was written but were only reconciled across this session and the prior one. BTC $71,368.80 vs Aug 19 EOD reference $64,297.70 → +11.00%; even with that catch-up the bot trailed the raw comparison only slightly, landing +2.97% vs BTC today once the reconciled gains are counted. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []`, zero exposure. Phase P&L now −$60.5998 (−33.71%) from $179.78 Kraken starting equity (May 22). Total trades since migration ~104 (97 recorded as of the Aug 19 EOD snapshot + 7 discrete orders reconciled since: MUBARAK sell, BIO buy+sell, HYPE buy+sell, TRUMP buy+sell). Tomorrow: pre-session research resumes with the full $119.1802 available; crash gate threshold ~$57,095 (BTC −20% from $71,368.80). EOD WhatsApp send **FAILED** again — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~49 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-20 — Midday Scan (monitoring only, no trades)
+
+**Pre-trade state:** Kraken ZUSD $119.1802 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, Steps 3-5 N/A. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $71,774.20 vs today's open $69,285.00 → **+3.59%** intraday (extending the pre-session +0.80% read). Crash gate not triggered.
+
+**Discovery sweep** (631 online USD pairs, 124 cleared vs-open>3% + within 6% of 24h high; top 60 deep-dived on 1h OHLC): No candidate cleared all mechanical gates. **SN44/USD** closest — 4h momentum +18.56% and volume 2.67x both clear, but 24h high set 10h ago (stale), hard fail on the momentum-peak-check freshness gate. **ESP/USD** cleared volume (2.00x) but 4h momentum negative (-3.91%). Full detail logged in RESEARCH-LOG.md.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $119.1802 cash remains fully available.
+
+No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
