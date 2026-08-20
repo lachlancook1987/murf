@@ -32278,3 +32278,58 @@ Unusually broad, unusually large move: direct Kraken ticker showed BTC/USD +7.37
 ### Step 7 — Notification
 
 bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — TRUMP/USD BUY 61 @ $1.711, trailing stop 3.5% placed (high-ATR exception). T1 +6% / T2 +9%, R:R 1.71:1 (momentum-only, macro spillover from BTC +7.4%/ETH +18% rally, no TRUMP-specific catalyst). HYPE/USD closed +0.46% since last scan. $12.50 ZUSD remaining."
+
+## 2026-08-20 — Pre-Session Research (HOLD)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD $119.1802 (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066). `positions` → `{}`, `orders` → `{"open": {}}` at session start — zero exposure. **Reconciliation:** the TRUMP/USD position from the prior midday scan #2 (entry $1.711) was already closed — trailing stop `OFG7DI-NI34B-SZV73G` fired at $1.763 (confirmed via Kraken `ClosedOrders`), short of both T1 ($1.8137) and T2 ($1.8650), **net +$1.47669 (+1.40%)**. Logged in TRADE-LOG.md.
+**Alpaca (residual BTC):** `positions` → `[]` — zero exposure, no action needed.
+
+### Step 3 — Market Context
+
+- **BTC:** live $69,837.60 vs today's open $69,285.00 → **+0.80%** intraday. Perplexity's BTC query independently read $69,397.00 (+7.90% 24h) — consistent in direction/magnitude with Kraken, confirming yesterday's +7-8% rally has held and consolidated rather than reversed. Crash gate not triggered, nowhere close. Weekly-downtrend gate not applicable (BTC firmly up).
+- **ETH:** live $2,251.87 vs today's open $2,251.50 → **+0.02%** intraday (flat today after yesterday's +18% move already priced in). Perplexity's ETH query returned a stale $1,914.72 read (pre-rally figure, same chronic staleness pattern documented all month) — direct Kraken/CoinGecko-class data trusted over it.
+- **Fear & Greed Index:** mixed but skewing Greed — CFGI 67 (Greed), CFGI BTC-specific 75 (Greed), Binance 56 (Neutral), CoinStats 41 (Fear). Not Extreme Fear — standard R:R floors apply (1.2:1 catalyst-confirmed, 1.5:1 momentum-only).
+- **Funding rate:** ~0.01%/8h across major venues (Binance 0.0079%, Glassnode avg ~0.003%, TradingView 0.0066%) — no strong crowding signal either direction.
+- **Catalysts:** Yesterday's rally attributed to a White House/CLARITY Act push (Trump urged Senate to pass a "fair version") plus a ~$1.14B short-covering squeeze — ETH led at +17.48%, SOL +10.83%, XRP +10.29%. This is now a **>24h-old, already-priced-in catalyst**, not a fresh driver for new entries today. **Token unlocks today (Aug 20):** KAITO (~32.6M tokens, ~$11-29M) and LayerZero/ZRO (~25.71M tokens, ~$19.7-21.0M) — both scheduled/dated, neither held nor a sweep leader; noted as pressure risk, not traded.
+- No open Kraken positions at query time (TRUMP already closed) — no held-asset news queries needed.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 1h OHLC API, 636 online USD pairs)
+
+44 pairs cleared vs-open >3% and within 6% of 24h high — a normal-sized field (yesterday's market-wide rally has mostly consolidated, today's moves look more idiosyncratic). Pulled 1h OHLC on the top 25 by vs-open for 4h momentum, volume ratio (last bar vs trailing average), and freshness (hours since 24h high):
+
+| Symbol | vs-open | 4h mom | vol ratio | hrs since high | Verdict |
+|---|---|---|---|---|---|
+| **USDUCUSD** | +21.44% | +29.10% | 9.92x | 0h | **Clears all 3 mechanical gates + spread (0.52%)** — rejected on cross-exchange divergence, see below |
+| ORDERUSD | +15.87% | 0.00% | 0.00x | 0h | Fail — dead volume, flat 4h |
+| **EDGEXUSD** | +15.51% | +18.78% | 2.41x | 0h | Clears momentum/volume/freshness — **spread 2.50%, hard fail** (ask $0.37256/bid $0.36325) |
+| ESUSD | +14.29% | 0.00% | 0.00x | 0h | Fail — dead volume, flat 4h |
+| LIGHTERUSD | +13.03% | +4.85% | 0.08x | 1h | Fail — momentum, volume |
+| MIMUSD | +12.99% | +5.85% | 0.00x | 4h | Fail — dead volume, stale high |
+| BIOUSD | +11.67% | +7.99% | 0.56x | 0h | Fail — volume (already round-tripped twice yesterday; correctly not re-entered) |
+| MONUSD | +11.28% | +4.84% | 1.48x | 0h | Fail — momentum, volume just under bars |
+| RUJIUSD | +9.94% | +5.50% | 0.00x | 3h | Fail — dead volume, stale high |
+| BODENUSD | +9.92% | +6.27% | 0.00x | 0h | Fail — dead volume |
+| PNUTUSD, PUMPUSD, ETHFIUSD, GRASSUSD, MONAUSD, AVAAIUSD, ELXUSD, ALPHAUSD, SRMUSD, VELODROMEUSD, ESPUSD, UXLINKUSD, ALTHEAUSD, REPPOUSD, AEROUSD | +4.98-7.93% | mixed, mostly <10% | 0.00-0.64x (GRASSUSD 5.67x but 17h-stale high) | none clear all 3 gates simultaneously |
+
+**USDUCUSD — cross-exchange divergence rejection:** Cleared all three mechanical gates decisively (4h momentum +29.10%, volume 9.92x trailing average, 24h high set this bar) and passed spread (0.52%, well under the 1% cap; `USDUCUSD` status `online`, ordermin 1500). Perplexity catalyst check ("USDUC crypto token news and price catalyst today") shows a **Binance US listing-driven speculative spike with sharp inconsistency across venues**: CoinMarketCap $0.002869 (+10% 24h), CoinGecko $0.003083 (+1.5% 24h, ~$944k 24h volume, ~$3.08M market cap), Binance $0.0031953 (+20.26% 24h) — vs. Kraken's live $0.003824. Divergence vs. each external source: **+33.3% vs CMC, +24.0% vs CoinGecko, +19.7% vs Binance** — all at or above the 15-20% cross-exchange price-divergence gate threshold. Combined with a ~$3M market cap and explicit note in the Perplexity results that "the data is inconsistent across venues... different pairs, feeds, or outdated snapshots," this is the same thin/not-yet-arbitraged/listing-distorted order book pattern that has correctly killed REQ, TREE, REUSD, and KNTQUSD in prior sessions. USDUC was also flagged in the 2026-08-18 midday scan #1 (then failing on volume at 1.52x) — now clears volume but fails on divergence instead, still correctly not traded. **Rejected — not traded.**
+
+**EDGEXUSD** — cleared momentum (+18.78% 4h), volume (2.41x), and freshness (0h) cleanly, but spread of 2.50% is more than double the 1% hard cap — mechanical hard skip, no further diligence needed.
+
+No other candidate in the top 25 cleared all three mechanical gates (4h momentum >5%, volume >2x, high set within ~1h).
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): every live candidate was checked, none cleared every gate — USDUCUSD failed cross-exchange divergence, EDGEXUSD failed spread, all others failed momentum/volume/freshness. No trade manufactured. $119.1802 ZUSD remains fully available (100% cash, fully flat across Kraken and Alpaca).
+
+### Step 6 — Risk Factors
+
+- Yesterday's BTC/ETH rally (+7-8%/+18%) has consolidated rather than extended or reversed — today's field of candidates is much thinner (44 vs. 282-376 in yesterday's two scans), consistent with a market that has already repriced the CLARITY Act/short-squeeze catalyst.
+- KAITO and ZRO token unlocks today (~$30-50M combined at various valuations) could add selling pressure to those specific names and adjacent L0/AI-agent-sector alts — neither held nor targeted.
+- USDUC's Binance US listing spike is a live reminder that thin-cap meme/listing plays can show huge mechanical-gate numbers while carrying real cross-exchange pricing risk — divergence gate held firm.
+- Crash gate clear, nowhere near -20%. Fear & Greed skews Greed (CFGI 67), not Extreme Fear.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no candidate cleared every gate. USDUC/USD cleared momentum/volume/spread but failed cross-exchange divergence (~20-33% vs external venues); EDGEX/USD cleared momentum/volume but failed spread (2.50%). TRUMP/USD closed +1.40% since last scan. $119.18 ZUSD, 100% cash, fully flat."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
