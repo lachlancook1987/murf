@@ -9030,3 +9030,35 @@ No open positions — 100% cash (+dust), no open Kraken orders.
 ### Decision: **HOLD — no entry this scan.** Gate-protection default applied; no trade manufactured. $119.1802 cash remains fully available.
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-20 — Session-Open Execution (~15:06 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $119.1802 (100% cash) + unchanged dust basket, `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure, nothing to protect/tighten. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions` → `[]` — zero exposure, no action needed.
+
+**BTC:** live $71,903.00 vs today's open $69,285.00 → **+3.78%** intraday (extending the pre-session +0.80% and midday +3.59% reads — rally still building). Crash gate not triggered, nowhere close. BTC weekly-downtrend gate not applicable (BTC firmly up vs the Aug 19 EOD $64,297.70 reference).
+
+**Discovery sweep** (631 online USD pairs via direct public Ticker API; 137 cleared vs-open >3% + within 6% of 24h high — a much broader field than this morning's 44, consistent with the intraday rally extending). Top 60 by vs-open deep-dived on 1h OHLC for 4h momentum, volume ratio, and freshness. **Volume-ratio methodology note:** the first pass measured the *current, partial* 1h bar against the trailing average and returned near-zero ratios across the entire field (scan ran at 15:03 UTC, three minutes into the bar) — an artifact, not a real signal. Recomputed against the **last complete** 1h bar (bars[-2] vs the prior 24), which is the correct comparison and surfaced four passers that the naive pass had hidden.
+
+Four candidates cleared all three mechanical gates: **ROBOUSD** (4h +12.70%, vol 6.66x, high 0h), **GOATUSD** (4h +6.70%, vol 18.33x, high 0h), **OXTUSD** (4h +6.93%, vol 6.29x, high 0h), **KAITOUSD** (4h +5.30%, vol 2.18x, high 0h).
+- **OXT/USD — rejected on spread:** 1.364% (ask $0.00880/bid $0.00868), above the 1% hard cap. Mechanical hard skip.
+- **KAITO/USD — rejected:** cleared every gate on paper (spread 0.162%, divergence 0.05% vs live CoinGecko $0.369597) but sits at the bare minimum on both momentum (+5.30% vs the >5% bar) and volume (2.18x vs the >2x bar), and **today is KAITO's ~32.6M-token unlock (~$11-29M)**, flagged in this morning's pre-session research as pressure risk. A dated, bearish, already-scheduled supply event against a marginal momentum read is the wrong side of the scheduled-catalyst caution rule. Not traded.
+- **GOAT/USD — rejected on structure:** divergence clean (0.7% vs live CoinGecko $0.01498) and volume nominally the strongest in the field at 18.33x, but the 15m tape is **spike-and-dump, not steady momentum**: zero-volume bars at 12:45 and 14:00 interleaved with two isolated vertical spikes (14:15 +6.92% range on 765k vol, 14:45 +4.87% range), and the 15:00 bar was already reversing (opened $0.01541, low $0.01498, closed $0.01509 — giving back most of the last spike). The strategy's own note — "pick assets with steady momentum, not spike-and-dump" — reads directly against this tape. The 18.33x volume ratio is itself inflated by the near-zero-volume trailing bars in the denominator. Not traded.
+- **ROBO/USD — selected.** Steady, continuous accumulation across eight consecutive 15m bars ($0.01443 → $0.01517) with real volume in *every* bar (217k-534k) rather than gaps and spikes; 24h high $0.01541 set in the 14:45 bar, ~20 min before entry.
+
+**Cross-exchange divergence — Perplexity staleness caught again.** Perplexity's ROBO query returned $0.01305 (CoinGecko), $0.01319 (Bitget), $0.01295 (Bybit) — which would imply **+15-17% divergence vs Kraken's $0.01517 and a hard rejection under the divergence gate**. But those figures are almost exactly Kraken's own daily *open* ($0.01304), the signature of a pre-move snapshot rather than a live read — the same chronic staleness documented all month (and the same reason the TRUMP entry on Aug 19 was resolved by direct API). **Direct live CoinGecko API check: ROBO (Fabric Protocol, `robo-token-2`) $0.01523087, +15.33% 24h, $15.89M 24h volume, $33.98M market cap** — a **0.4% divergence** vs Kraken, with CoinGecko's own +15.33% independently corroborating Kraken's +16.33% vs-open. Divergence gate **passes cleanly**; the $15.9M real volume also rules out the thin/unarbitraged order-book pattern that killed USDUC this morning and REQ/TREE/KNTQ in prior sessions. Rejecting ROBO on Perplexity's stale text would have been a false negative.
+
+**Catalyst:** none token-specific confirmed — Perplexity explicitly reports "no strong token-specific catalyst," move reads as broad-market/sector spillover from the ongoing BTC rally. Treated as **momentum-only**, so the **1.5:1 R:R floor** (2026-08-14 rule) applies, not the 1.2:1 catalyst-confirmed floor.
+
+**High-ATR trail exception applied:** ROBO's 15m candle ranges through the runup were 1.43%, 2.02%, 2.20%, 2.62%, 2.21%, 2.13%, **4.20%**, 2.24% — genuine per-candle volatility well above the >3% intraday-ATR threshold at the extremes, not noise-flat. Used **3.5% trail** instead of the 2.5% default to avoid a fast noise-stop, same call as the Aug 19 TRUMP entry. T1/T2 widened correspondingly to keep R:R above the momentum-only floor.
+
+### 2026-08-20 | ROBO/USD | BUY | 6889.0000 ROBO | Entry: $0.01524 | Cost: $105.82827 (incl. $0.83987 fee) | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `O3JKQJ-4UV2E-KLXW5U` (buy, market, filled in full — `orders` returned `{"open": {}}` immediately after, ROBO balance 6889.0000). Stop txid `OBSHTJ-ICZO4-CIKPZG` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.014710, limitprice $0.015240 — the limitprice independently confirms the $0.01524 fill).
+
+**T1 = $0.016154 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2. **T2 = $0.016612 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +3.78%, up not down) | spread 0.197% (ask $0.01524/bid $0.01521) ≤1% | `ROBOUSD` status `online`, ordermin 400, costmin $0.5 | no leverage (spot) | 4h momentum +12.70% >5% | volume 6.66x >2x | 24h high set ~20 min pre-entry, well inside the 60-min freshness window | cross-exchange divergence 0.4% vs live CoinGecko | R:R 1.71:1 ≥1.5:1 momentum-only floor | same-thesis cooling period N/A (ROBO never previously traded) | BTC weekly-downtrend gate N/A.
+
+ZUSD post-trade: $13.3519. First trade since the Aug 19 TRUMP/USD round-trip (+1.40%); both of today's earlier scans (pre-session, midday) correctly concluded HOLD under the gate-protection default.
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
