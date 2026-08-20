@@ -9062,3 +9062,9 @@ Order txid `O3JKQJ-4UV2E-KLXW5U` (buy, market, filled in full — `orders` retur
 ZUSD post-trade: $13.3519. First trade since the Aug 19 TRUMP/USD round-trip (+1.40%); both of today's earlier scans (pre-session, midday) correctly concluded HOLD under the gate-protection default.
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
+
+### 2026-08-20 | ROBO/USD | SELL (trailing stop triggered) | 6889 ROBO | Exit: $0.01511 | Closed
+
+**Order ID (stop):** OBSHTJ-ICZO4-CIKPZG (trailing_stop, trail_percent 3.5%, GTC — triggered at $0.01516, filled $0.01511)
+**P&L:** Buy cost $104.98836 + $0.83991 fee = $105.82827 total spent (entry $0.01524). Sell proceeds $104.09279 − $0.83274 fee = $103.26005 net received. **Net: −$2.56822 (−2.43%)**
+**Notes:** Discovered via this session's (2026-08-20 pre-session #2) reconciliation — Kraken `ClosedOrders` confirms the fill; position never reached T1 ($0.016154, +6%), reversed shortly after entry and the 3.5% trail closed it ~65 minutes after the buy. No thesis break, no manual intervention — mechanical stop-out as designed. Momentum-only entry (no token-specific catalyst confirmed) that did not follow through. Kraken account confirmed flat: ROBO balance 0.0000, `positions: {}`, `orders: {"open": {}}`, ZUSD $116.6120 (100% cash + unchanged dust basket). Alpaca: `positions` → `[]`, zero exposure.
