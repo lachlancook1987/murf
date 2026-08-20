@@ -32349,3 +32349,63 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 ### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20); every top candidate checked, none cleared all three mechanical gates plus spread. No trade manufactured. $119.1802 ZUSD remains fully available (100% cash, fully flat across Kraken and Alpaca).
 
 No WhatsApp/ClickUp notification per Step 7 rule (only notify on action taken; none occurred this check).
+
+## 2026-08-20 — Pre-Session Research #2 (HOLD)
+
+### Step 1-2 — Account State
+
+**Kraken:** ZUSD **$116.6120** (100% cash) + unchanged dust basket (AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SOL, SUI, TAO, XETH dust, ZAUD $0.1066). `positions` → `{}`, `orders` → `{"open": {}}` — zero exposure. **Reconciliation:** the ROBO/USD position from the prior session-open execution (entry $0.01524) was already closed — trailing stop `OBSHTJ-ICZO4-CIKPZG` triggered at $0.01516 and filled at **$0.01511** (confirmed via Kraken `ClosedOrders`), never reaching T1 ($0.016154). **Net −$2.56822 (−2.43%)**, ~65 minutes from buy fill to stop fill. Logged in TRADE-LOG.md.
+**Alpaca (residual BTC):** `positions` → `[]` — zero exposure, no action needed. Stop `a2b44cf9` remains `canceled` (since 2026-05-22).
+
+### Step 3 — Market Context
+
+- **BTC:** live **$72,705.90** vs today's open $69,285.00 → **+4.94%** intraday, extending the earlier +0.80% (pre-session), +3.59% (midday) and +3.78% (session-open) reads — the rally is still building through the day. Crash gate not triggered, nowhere close (would need BTC below ~$55,428). Weekly-downtrend gate not applicable.
+- **ETH:** live **$2,324.90** vs open $2,251.50 → **+3.26%** intraday.
+- **Perplexity staleness again:** its BTC query returned $69,397.00 (+7.90% 24h) and its ETH query ~$2,287 (+18.2%) — both are yesterday's figures, roughly 4.8% below Kraken's live BTC. Same chronic pattern documented all month; live Kraken data trusted.
+- **Fear & Greed:** **62/100 (Greed)** headline; CFGI 74 (Greed), CoinStats 59 (Greed), Binance 62 (Greed). Not Extreme Fear — standard R:R floors apply (1.2:1 catalyst-confirmed, 1.5:1 momentum-only).
+- **Funding rate:** mixed/slightly positive — Glassnode all-exchange avg ~+0.003%, TradingView +0.0066%, Binance +0.0079%, Coinalyze cluster ~+0.0100%/8h. No crowding signal either direction.
+- **Catalysts:** CLARITY Act push (Trump urging Congress), expanded U.S. Treasury long-dated bond buybacks pushing yields lower, renewed spot-BTC ETF inflows, and short-covering liquidations — all **broad macro, all >24h old and already priced in**, not fresh drivers for a new entry. Sector-specific: Trump reportedly hinted at potential regulation of decentralized exchanges (HYPE in focus); **negative** — a private-key hack at Humanity, >$32M losses, token down sharply.
+- **Token unlocks today (Aug 20):** KAITO (~32.6M, $9-11M), LayerZero/ZRO (~25.71M, $18.9-21.0M), Lombard/BARD (~$36.9M) — none held, none a sweep leader. No confirmed major protocol upgrade pinned to today.
+- No open Kraken positions at query time (ROBO already closed) — no held-asset news queries needed.
+
+### Step 4 — Discovery Sweep (Kraken-native, direct Ticker + 1h OHLC API, 632 online USD pairs)
+
+**201 pairs** cleared vs-open >3% + within 6% of 24h high — a broad field, consistent with BTC extending +4.94% intraday. Filtered to the **101 with ≥$50k 24h USD volume** (dropping dead-liquidity names like FORESTUSD $1,059, ORDERUSD $207, LSSOLUSD $111, SIGMAUSD $1,553, MULTIUSD $1,862, PERPUSD $2,350 — headline vs-open moves on prints that cannot absorb a $100 order). Pulled 1h OHLC on **all 101** for 4h momentum, volume ratio (last **complete** bar vs trailing 24-bar average — the bars[-2] methodology established in the prior session), and freshness (hours since the 24h high).
+
+**Result: zero candidates cleared all three mechanical gates.** Closest misses:
+
+| Symbol | vs-open | 4h mom | vol ratio | hrs since high | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| **ENAUSD** | +16.18% | **+5.14%** ✓ | 1.89x ✗ | 1.1h ✗ | 0.184% ✓ | **Rejected — volume 1.89x below the >2x bar; 24h high 66 min old, just outside the 60-min freshness window** |
+| **XDCUSD** | +4.31% | +4.35% ✗ | **3.04x** ✓ | 1.1h ✗ | 0.103% ✓ | **Rejected — 4h momentum +4.35% below the >5% bar** |
+| TURBOUSD | +12.76% | +2.63% ✗ | 22.23x ✓ | 1.1h | — | Fail — momentum less than half the bar despite an enormous volume ratio (inflated by near-zero trailing bars) |
+| REPPOUSD | +7.98% | +2.78% ✗ | 6.40x ✓ | 1.1h | — | Fail — momentum |
+| LITUSD | +16.84% | +5.24% ✓ | 0.50x ✗ | 0.1h ✓ | — | Fail — volume at a quarter of the bar |
+| LUNAUSD | +4.37% | −0.17% ✗ | 2.02x ✓ | 1.1h | — | Fail — momentum negative |
+| NEIROUSD | +26.60% | +2.10% ✗ | 0.58x ✗ | 8.1h ✗ | — | Fail — all three (largest headline move in the field) |
+| PUMPUSD | +22.98% | +1.88% ✗ | 1.02x ✗ | 5.1h ✗ | — | Fail — all three |
+| MONUSD | +13.98% | −1.15% ✗ | 0.13x ✗ | 8.1h ✗ | — | Fail — all three |
+| PENGUUSD, WIFUSD, PEPEUSD, FARTCOINUSD, CRVUSD, FILUSD, POPCATUSD, FLOKIUSD, XPLUSD, COMPUSD, 2ZUSD, MORPHOUSD + ~85 others | +3-12% | mostly flat to negative 4h | mixed | mixed | — | None cleared even two gates plus freshness simultaneously |
+
+**Pattern read:** this is a BTC-led index rally, not idiosyncratic per-asset momentum. Large vs-open prints across ~200 pairs with 4h momentum that is flat-to-negative and thin trailing volume — spot prices being lifted by beta, with the actual repricing having happened hours ago (most highs 3-11h stale). The two names with genuinely fresh highs and real volume (ENA, XDC) each miss one bar by a small margin, and ENA additionally carries a documented near-term supply overhang: a foundation-linked wallet moved **$14M ENA to FalconX**, read by trackers as possible OTC-sale preparation. Its positives (FalconX $1B secured lending facility, Janus Henderson partnership) are real but not confirmable as <6h old — so ENA would be a momentum-only entry needing the **1.5:1 floor**, on 1.89x volume, a 66-minute-stale high, and a live sell-pressure headline. Not a trade.
+
+### Decision: **HOLD — no entry this scan.**
+
+Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): the entire liquid field was checked, none cleared every gate. Neither ENA's marginal volume miss nor XDC's marginal momentum miss is a reason to loosen a bar in-session. No trade manufactured. **$116.6120 ZUSD remains fully available** (100% cash, fully flat across Kraken and Alpaca).
+
+This is also the correct call immediately after a stop-out: today's earlier ROBO entry was a momentum-only trade in exactly this kind of beta-driven tape and it did not follow through (−2.43%). Re-entering the same market structure on a candidate that clears fewer gates than ROBO did would be manufacturing a trade.
+
+### Step 6 — Risk Factors
+
+- **Beta-rally tape, not idiosyncratic momentum.** 201 pairs clearing the vs-open filter with flat/negative 4h momentum and stale highs is the signature of index-wide lift, not tradeable per-asset moves. Entries into this structure have a poor recent record (ROBO −2.43% today).
+- **Macro catalyst is >24h old and priced in.** CLARITY Act / Treasury buybacks / ETF inflows drove yesterday's and today's move; nothing fresh is queued to extend it. A stall or mean-reversion in BTC would drag the whole candidate field at once.
+- **ENA supply overhang** ($14M to FalconX, possible OTC prep) is a concrete near-term sell-pressure risk on the field's best-looking name — correctly avoided.
+- **KAITO / ZRO / BARD unlocks today** (~$65-70M combined at listed valuations) add pressure to those names and adjacent L0/AI-agent alts. None held or targeted.
+- **Humanity private-key hack (>$32M)** is a live negative headline — a reminder that thin small-caps carry idiosyncratic blowup risk that the mechanical gates do not screen for.
+- Crash gate clear (BTC +4.94%, up not down). Fear & Greed 62 (Greed), not Extreme Fear. Funding neutral.
+
+### Step 7 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] HOLD — no candidate cleared every gate across 201-pair field (101 liquid). ENA/USD closest: momentum +5.14% and spread 0.18% clean but volume 1.89x (<2x bar) and 24h high 66min old; also carries a $14M-to-FalconX supply overhang. XDC/USD cleared volume 3.04x but 4h momentum +4.35% (<5% bar). ROBO/USD stopped out −2.43% since last scan. BTC +4.94% intraday, F&G 62 Greed. $116.61 ZUSD, 100% cash, fully flat."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
