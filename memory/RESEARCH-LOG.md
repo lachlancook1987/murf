@@ -32652,3 +32652,35 @@ Order attempt (`{"symbol":"ZEC/USD","qty":"0.1400","side":"buy","type":"market",
 ### Step 6 — Notification
 
 No trade placed this session — per Step 7 of the execution workflow, notification only fires on executed trades. Skipped (per-workflow rule); the ZEC jurisdiction-restriction finding is notable enough to flag via the session's own push-notification mechanism as an operational item, separately from the no-trade routine skip.
+
+## 2026-08-21 — Midday Scan (~21:48 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $114.5099 (100% cash), `positions: {}`, `orders: {"open": {}}` — fully flat, matches Session-Open Execution #3's end state exactly (no fills since). Steps 3-5 N/A (nothing to protect/tighten/thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []` — zero exposure.
+
+**BTC:** live $78,649.80 vs today's open $73,001.20 → **+7.74%** intraday — still accelerating (was +6.11% at Session-Open #3, +5.48% at Pre-Session #2). Crash gate not triggered (up, not down).
+
+**Discovery sweep** (Kraken-native, direct public Ticker+AssetPairs API, 632 online USD pairs): **186 pairs** cleared vs-open>3% + within 6% of 24h high + >$50k 24h volume — broader than every prior scan today (174/237/245/311/307/176), confirming the market-wide rally is still widening, not fading. Deep-dived the ~38 most liquid on 1h OHLC (last **complete** bar vs trailing 24-bar average) for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| **DASH/USD** | **+10.90%** | **7.08x** | 0min (fresh) | Clears decisively — **jurisdiction-blocked (AU), see below** |
+| **XDG/USD** | **+8.75%** | **5.28x** | 0min (fresh) | Clears decisively — selected |
+| STX/USD | +7.12% | 2.21x | 0min | Clears mechanically; passed over for XDG's stronger liquidity/volume |
+| SHIB/USD | +6.22% | 3.41x | 0min | Clears mechanically; passed over for XDG |
+| DOG/USD | +6.17% | 2.89x | 0min | Clears mechanically but spread 0.742% — thin, passed over |
+| FLOKI/USD | +5.24% | 3.54x | 0min | Clears mechanically; passed over for XDG's stronger liquidity |
+| AAVE, ENS, CRV, USUS, WIF, LINK, KTA, SUI, LIGHTER, XCN, USUAL, USELESS, and ~25 more | mixed | mostly <2x or momentum <5% | — | Fail momentum and/or volume bar |
+
+**DASH/USD BUY order rejected — jurisdiction restriction (second instance, same pattern as ZEC 2026-08-21 Session-Open #3):**
+```
+{"error": ["EAccount:Invalid permissions:DASH trading restricted for AU."]}
+```
+Confirms the ZEC finding was not isolated — **Kraken restricts privacy-adjacent/AU-blocked coins generally, not just ZEC.** Flagging for future sessions: skip DASH/USD as untradeable on this account regardless of gate clearance; treat as a second confirmed entry on the untradeable-asset list alongside ZEC. Moved to next-best candidate (XDG) without loosening any gate.
+
+**XDG/USD gate check:** Spread 0.008% (ask $0.0927633/bid $0.0926889) ≤1%. `XDGUSD` status online, ordermin 50, costmin $0.5, no leverage used (spot). Cross-exchange divergence: CoinGecko $0.092189 (+15.52% 24h) vs Kraken $0.092716 → 0.57%, clean pass. Catalyst (Perplexity): broad crypto rebound + pro-crypto policy signals (White House crypto summit commentary) + memecoin-sector volume rotation (3.5x) — no DOGE-specific fresh catalyst <6h confirmed, and Perplexity's own price read ($0.081-0.084) is stale vs Kraken's live $0.0927 (same chronic lag pattern flagged all month). Treated as **momentum-only** → 1.5:1 R:R floor applies. 15m ATR check: ranges mostly 0.5-1.6%, one 3.67% outlier bar amid a genuine volume ramp (not sustained high-ATR) → standard 2.5% trail. No prior XDG stop-outs in the last 7 days (last XDG position, per TRADE-LOG history, closed positive months ago) — no same-thesis cooling restriction. BTC weekly-downtrend gate N/A (BTC firmly up). R:R at T1 (+4%) vs 2.5% stop = 1.6:1, clearing the 1.5:1 momentum-only floor.
+
+### Decision: **TRADE.** Crash gate not triggered (BTC +7.74%, up not down, an even larger move than every prior read today). XDG/USD cleared every mechanical gate (spread, momentum-peak freshness, 4h momentum, volume ratio, cross-exchange divergence, R:R floor) via the Kraken-native discovery sweep across a 186-pair qualifying field. DASH/USD was mechanically the stronger candidate but is jurisdiction-blocked for this account — confirmed as a second instance of the AU-restriction pattern first found on ZEC, not a gate failure requiring substitution logic beyond moving to the next-best qualifying candidate.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). DASH jurisdiction-block flagged in the same push as an operational item.

@@ -9152,3 +9152,21 @@ ZUSD post-trade: $10.0808. Second trade of the session-open pass; first (ZORA, f
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-21 — Midday Scan (~21:48 UTC, trade placed)
+
+### 2026-08-21 | XDG/USD | BUY | 1078.00 XDG | Entry: ~$0.093595 (blended incl. fee) | Cost: $100.8959 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `O6Y6LT-ZZPRY-FJKFFH` (buy, market, filled in full — post-trade XXDG balance 1078.00000000, ZUSD $13.6140). Stop txid `ODBULZ-TPE7H-GPB7X2` (trailing_stop, trail_percent 2.5%, confirmed `status: open`, stopprice $0.0905797, limitprice $0.0929022 — consistent with the ~$0.0929 fill).
+
+**T1 = $0.097339 (+4%)** — on hit, cancel the 2.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational — per TRADING-STRATEGY.md, this scan-cadence limitation may prevent live tightening). **T2 = $0.099211 (+6%)**. **R:R at T1 = 4%/2.5% = 1.6:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +7.74%, up not down) | spread 0.008% ≤1% | `XDGUSD` status online, ordermin 50, costmin $0.5 | no leverage (spot) | 4h momentum +8.75% >5% | volume 5.28x >2x | 24h high set in current complete 1h bar (fresh) | cross-exchange divergence 0.57% vs live CoinGecko | R:R 1.6:1 ≥1.5:1 momentum-only floor | same-thesis cooling N/A (no XDG stop-outs in trailing 7 days) | BTC weekly-downtrend gate N/A (BTC firmly up).
+
+**DASH/USD rejected — jurisdiction restriction.** Was the mechanically stronger candidate (+10.90%/4h, 7.08x volume) but the buy order returned `EAccount:Invalid permissions:DASH trading restricted for AU.` Second confirmed instance of this restriction pattern (first: ZEC, Session-Open Execution #3 earlier today) — flagging DASH alongside ZEC as untradeable on this account regardless of gate clearance.
+
+ZUSD post-trade: $13.6140. First trade since the Pre-Session Research #2 reconciliation (BCH +3.50% win, logged there); the Pre-Session #2 candidates (COTI, LIGHTER) and Session-Open #3's ZEC (jurisdiction-blocked) did not result in fills.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). DASH jurisdiction-block flagged as an operational item in the same notification.
