@@ -9074,3 +9074,41 @@ WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota 
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~106
 **Notes:** Kraken `account`/`positions`/`orders`: ZUSD $116.6120 (100%), unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure. Today's pre-session research (logged in RESEARCH-LOG.md) reached a **TRADE** decision with five momentum-only candidates (BCH, VVV, POL, ASTER, MUBARAK) that cleared every mechanical gate, but no execution session followed — account equity is unchanged from the pre-session snapshot ($116.6120), and no new orders appear in Kraken's closed-order history for today. BTC ripped hard intraday: $71,368.80 (Aug 20 EOD reference) → $77,456.80 live, **+8.53%**, a much larger move than this morning's pre-session read (+5.30% vs Aug 20's open) — the rally continued accelerating through the day while the bot sat flat, producing today's −8.53% vs-BTC gap entirely from opportunity cost, not a losing trade. Phase P&L −$63.1680 (−35.14%) from $179.78 Kraken starting equity (May 22), unchanged from yesterday. Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []`, zero exposure. Total trades since migration ~106 (104 as of the Aug 20 EOD snapshot + 2 discrete orders since: ROBO buy + ROBO sell). Tomorrow: pre-session research resumes with the full $116.6120 available; crash gate threshold ~$61,965 (BTC −20% from $77,456.80). If tomorrow's pre-session again reaches TRADE with qualifying candidates, ensure the execution step actually runs and fills, not just the research step. EOD WhatsApp send **FAILED** again — CallMeBot quota still exhausted (`0 messages left`), unresolved since first flagged 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635.
+
+## 2026-08-21 — Midday Scan (~14:30 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $116.6120 (100% cash) + unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure. Steps 3-5 N/A (nothing to protect/tighten/thesis-check). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []` — zero exposure, no action needed.
+
+**BTC:** live $77,085.90 vs today's open $73,001.20 → **+5.60%** intraday (roughly flat vs. this morning's pre-session +5.30% and session-open +5.05% reads — the broad rally has plateaued, not reversed). Crash gate not triggered.
+
+**Discovery sweep** (661 online USD pairs via direct public Ticker API; 354 cleared vs-open>3% + within 6% of 24h high — still an unusually broad field). Deep-dived 26 of the more liquid/recognizable candidates on 1h OHLC (last complete bar vs trailing 24-bar average) for 4h momentum, volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| **ZORA/USD** | **+26.48%** | **7.49x** | ~45-60min (borderline fresh) | Clears all three gates decisively — selected |
+| ROBO/USD | +12.92% | 1.10x | fresh | Fails volume bar; also stopped out here Aug 20 (-2.43%), no fresh edge |
+| USUAL/USD | +12.65% | 0.41x | 60min | Fails volume bar |
+| APR/USD | +11.46% | 2.26x | ~60min | Clears mechanically but thin/illiquid name (ordermin 25, low profile), passed over for ZORA's stronger liquidity/volume |
+| GALA/USD | +9.78% | 1.58x | fresh | Fails volume bar |
+| ZRO/USD | +9.31% | 0.74x | fresh | Fails volume bar |
+| BERA/USD, IAG/USD, TRUMP/USD, others | mixed | mixed | 120-180min | Stale highs or fail momentum/volume |
+
+**ZORA/USD gate check:** Spread 0.14% (ask $0.0071540/bid $0.0071440) ≤1%. Cross-exchange divergence: live CoinGecko $0.007118 vs Kraken $0.0071590 → **0.58%**, clean pass. Catalyst (Perplexity): mixed/ambiguous — flagged a **Coinbase International Exchange plan to suspend ZORA-PERP derivatives trading on 2026-08-26** (a scheduled, minor structural event 5 days out, not a spot delisting or exploit) alongside older Robinhood-listing and Base-ecosystem drivers; Perplexity's own read: "some coverage says there is no clear ZORA-specific catalyst and the move may be tracking broader crypto sentiment" — consistent with today's exceptionally broad 354-pair sweep. Distinguished from the BONK rejection earlier today (Upbit delisting + $20M exploit, a genuine bearish break) — the ZORA Coinbase-PERP note is materially less severe (derivatives-only, scheduled days out) and not clearly the driver of today's move. Treated as **momentum-only**, no confirmed <6h catalyst → 1.5:1 R:R floor applies.
+
+**High-ATR trail exception applied:** ZORA's 15m candles through the move showed extreme per-candle ranges — 21.73%, 7.91%, 6.22%, 5.87% — a genuine high-ATR spike-and-consolidate pattern, not noise-flat, and well above the >3% threshold. Used **3.5% trail** instead of the 2.5% default. T1/T2 widened to +6%/+9% to keep R:R above the momentum-only floor (6%/3.5% ≈ 1.71:1).
+
+### 2026-08-21 | ZORA/USD | BUY | 14666.851 ZORA | Entry: ~$0.0071954 (blended incl. fee) | Cost: $105.5346 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OVSQOX-FAAGM-LOWSZY` (buy, market, filled in full). Stop txid `O2GPIS-WT6VO-A5APQB` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.006890, limitprice $0.0071390).
+
+**T1 = $0.0076272 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2. **T2 = $0.0078430 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +5.60%, up not down) | spread 0.14% ≤1% | `ZORAUSD` status `online`, ordermin 900, costmin $0.5 | no leverage (spot) | 4h momentum +26.48% >5% | volume 7.49x >2x | 24h high set ~45-60min pre-entry, inside the 60-min freshness window | cross-exchange divergence 0.58% vs live CoinGecko | R:R 1.71:1 ≥1.5:1 momentum-only floor | same-thesis cooling period N/A (ZORA never previously traded) | BTC weekly-downtrend gate N/A (BTC firmly up vs recent reference).
+
+ZUSD post-trade: $11.0774. First trade since the Aug 20 ROBO/USD stop-out (-2.43%); the Aug 21 pre-session TRADE candidates (BCH/VVV/POL/ASTER/MUBARAK) all failed live re-verification at session-open and were correctly not chased.
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — ZORA/USD BUY 14666.851 @ ~$0.007195, 3.5% trailing stop placed (high-ATR). T1 +6% / T2 +9%, R:R 1.71:1 (momentum-only, no confirmed <6h catalyst; Coinbase ZORA-PERP suspension news noted as minor/ambiguous risk, not treated as thesis-breaking). $11.08 ZUSD remaining."
+
+No WhatsApp/ClickUp notification per CLAUDE.md retirement decision (2026-08-21) — CallMeBot channel retired by user decision, not pursued.
