@@ -32525,3 +32525,44 @@ No trade placed this scan — per Step 7, notification only fires on executed tr
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE ideas ready — BCH/USD, VVV/USD, POL/USD, ASTER/USD, MUBARAK/USD (momentum-only, broad BTC+5.3%/ETH+9.6% rally on CLARITY Act + Treasury buyback catalysts, R:R 1.6:1 each, 2.5% trail). BONK rejected (Upbit delisting news). SSV rejected (2% spread). Full detail in RESEARCH-LOG.md."
 
 WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
+
+## 2026-08-21 — Session-Open Execution (~12:01 UTC, no trades)
+
+### Step 1-2 — Account State
+
+Kraken: ZUSD $116.6120 (100% cash) + unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure, nothing to protect/tighten. Alpaca: `positions: []`, stop `a2b44cf9` remains `canceled` — zero exposure. Matches the pre-session snapshot exactly; no fills occurred between pre-session and this execution session.
+
+### Step 3 — Re-verification of pre-session's 5 TRADE candidates (BCH, VVV, POL, ASTER, MUBARAK)
+
+Pre-session research ran earlier in the day; by execution time several hours had passed, so all five were re-checked live via Kraken public Ticker + 15m/1h/5m OHLC (not just re-quoted) before any order — per the momentum-peak-check gate, stale research is not a standing order ticket. **All five now fail live re-verification:**
+
+| Symbol | Live check | Result |
+|---|---|---|
+| BCH/USD | 24h high (268.92) untouched for hours in the 15m tape shown (last high seen in-window 264.36); price declining from it, no fresh breakout | **FAIL** — stale high |
+| VVV/USD | 24h high (16.373) not approached in recent bars; price 6% below and declining | **FAIL** — stale high |
+| POL/USD | Clear downtrend for the last ~2h (0.09248→0.09090), well off the 24h high | **FAIL** — stale high, declining |
+| ASTER/USD | 24h high (0.74361) was set ~4h ago (bar 1787299200); current price 0.73844 has not broken above it (no fresh-breakout exception); 4h momentum only **+0.8%** (current vs. ~4h-ago close 0.73260), far under the 5% bar | **FAIL** — stale high AND momentum faded |
+| MUBARAK/USD | 24h high (0.02263) stale, price 6.4% below after a dip/partial bounce | **FAIL** — stale high |
+
+None of the five clears the momentum-peak-check; the broad BTC/ETH-led rally that produced these candidates this morning has plateaued/rolled over intraday (BTC live $76,689.90 vs. today's open $73,001.20 = +5.05%, roughly flat vs. the pre-session's +5.30% read — no longer accelerating).
+
+### Step 4 — Fresh discovery sweep (Kraken-native, direct Ticker API, live)
+
+Full-universe Ticker pull (1,461 pairs) filtered to USD pairs with vs-open >3% and within 6% of 24h high: **311 candidates** — an even broader beta-rally tape than any of yesterday's four scans (237/245 pairs), confirming this is still index-wide lift, not idiosyncratic setups. Narrowed to pairs *currently at or within 0.5% of their 24h high* with >$20k 24h USD volume: 38 candidates. Checked the top 6 by liquidity with 1h OHLC for true 4h momentum:
+
+| Symbol | 24h vol | vs-open | 4h momentum (live) | Note |
+|---|---|---|---|---|
+| CRV/USD | $7.0M | +13.44% | **+2.63%** | Best liquidity/spread (0.16%) and genuinely broke to a *new* 24h high in the current 15m bar (0.32533 > prior high 0.32481) — clears the fresh-breakout exception — but 4h momentum fails the 5% bar by a wide margin |
+| ETHFI/USD | $353k | +5.64% | +1.78% | Fails |
+| JTO/USD | $300k | +7.11% | +1.49% | Fails |
+| APT/USD | $223k | +9.96% | +2.49% | Fails |
+| AI/USD | $176k | +7.31% | +2.95% | Fails |
+| CHZ/USD | $137k | +6.44% | +0.43% (last bar volume = 0, dead) | Fails |
+
+No candidate — from the stale pre-session list or the fresh live sweep — clears the 4h momentum >5% bar right now. The day's vs-open gains are almost entirely a since-UTC-midnight artifact; the trailing 4h window across the board is flat-to-mildly-up, consistent with a rally that fired earlier and has since consolidated.
+
+### Decision: **HOLD — no entry this execution session.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): both the stale pre-session candidates and a fresh 311-pair live sweep were checked; every candidate failed a specific, named gate (stale 24h high / no fresh breakout, or 4h momentum <5%) rather than a general absence of activity. No trade manufactured to avoid an empty session. $116.6120 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 6 — Notification
+
+No trade placed this session — per Step 7 of the execution workflow, notification only fires on executed trades. Skipped.
