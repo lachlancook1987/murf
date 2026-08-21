@@ -1173,3 +1173,74 @@ Three consecutive momentum-only, no-catalyst entries sitting exactly at the 1.2:
 **The most consequential thing this review found wasn't a trade — it was 8 days of silence.** The bot sat in 100% cash for over a week not because gates correctly rejected every candidate, but because no session ran to check any candidates at all. That's a distinct failure mode from anything this log has tracked before (bad data, wrong fee assumption, fee-thin R:R) — it's not a strategy problem, it's an execution/scheduling problem, and it needs to be fixed outside this session before next week's numbers mean anything. On the trading side, the pattern is narrower but real: momentum-only entries at the bare 1.2:1 R:R floor are now 0-for-3 since the fee correction, and the floor for that specific case has been raised to 1.5:1 accordingly.
 
 ---
+
+## Week of 2026-08-14 to 2026-08-21 — Review Date: 2026-08-21
+
+### Context
+**Recovery week, session cadence restored.** The prior review flagged 8 days of dead scheduling (Aug 6–14); sessions resumed normally this period with regular pre-session/midday/EOD cadence and 7 closed round trips across 6 assets (CSPR, PEAQ, MUBARAK, BIO, HYPE, TRUMP, ROBO). BTC staged a sharp, sustained rally through the period (+23.46%, $62,761.50 → $77,484.20 live), driven by CLARITY Act / White House crypto roundtable momentum and a Treasury long-dated-bond-buyback liquidity narrative. All 7 trades were momentum-only entries (no confirmed <6h catalyst) under the widened 1.5:1 R:R floor added in the 2026-08-14 review. No Alpaca exposure (stop `a2b44cf9` still `canceled` since 2026-05-22).
+
+### Account Snapshot (Friday close, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $116.6120 | $116.6120 ZUSD (+dust basket) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$116.6120** | $116.6120 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Aug 14 EOD) | $111.7835 |
+| Ending Equity (Fri Aug 21, live) | **$116.6120** |
+| **Week Return** | **+4.32%** (+$4.8285) |
+| BTC Week Return | **+23.46%** ($62,761.50 → $77,484.20 live) |
+| **Bot vs BTC** | **−19.14%** (underperformed — sustained BTC trend outran the day-trading structure) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Aug 17 | CSPR/USD | $0.0032138 | $0.0031100 (trail stop 2.5%) | **−$4.7852** (−4.77%) | LOSS |
+| 2 | Aug 17 | PEAQ/USD | $0.018980 | $0.01909 (trail stop 2.5%) | **−$0.9602** (−0.99%) | LOSS |
+| 3 | Aug 19 | MUBARAK/USD | $0.01795 | $0.01888 (trail stop 2.5%) | **+$3.3184** (+3.49%) | WIN |
+| 4 | Aug 19 | BIO/USD | $0.02622 | $0.02872 (trail stop 2.5%) | **+$7.8620** (+7.81%) | WIN |
+| 5 | Aug 19 | HYPE/USD | $69.27 | $70.70 (trail stop 2.5%) | **+$0.4851** (+0.46%) | WIN |
+| 6 | Aug 19 | TRUMP/USD | $1.711 | $1.763 (trail stop 3.5%, ATR exception) | **+$1.4767** (+1.40%) | WIN |
+| 7 | Aug 20 | ROBO/USD | $0.01524 | $0.01511 (trail stop 3.5%, ATR exception) | **−$2.5682** (−2.43%) | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 7 |
+| Wins | 4 |
+| Losses | 3 |
+| Win Rate | **57.1%** |
+| Gross Wins | $13.1422 |
+| Gross Losses | $8.3136 |
+| Profit Factor | **1.58** |
+| Avg Win | $3.29 |
+| Avg Loss | $2.77 |
+| Largest Win | BIO/USD **+$7.8620 (+7.81%)** |
+| Largest Loss | CSPR/USD **−$4.7852 (−4.77%)** |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **$11.40** (actual, summed from fill data across all 7 round trips — buy+sell fees ranged 0.79–0.88% per leg, consistent with the documented ~0.8%/leg rate) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $116.6120 (+dust). No open Kraken orders. Alpaca fully closed. A fresh pre-session scan (5 momentum-only ideas: BCH, VVV, POL, ASTER, MUBARAK) was logged Aug 21 but not yet executed as of this review.
+
+### Trade Quality Review
+
+**Entry types:** All 7 trades this period were momentum-only entries (no confirmed <6h catalyst), governed by the 1.5:1+ R:R floor added in the 2026-08-14 review after three straight momentum-only losses at the old 1.2:1 floor (VELVET, SYN, BICO). This period's momentum-only cohort went **4-3 (57.1% win rate, 1.58 profit factor)** — a clear reversal of the prior 0-for-3 pattern, and the first full sample of trades run entirely under the new floor. The rule change is validated so far; no further R:R adjustment is warranted this week.
+
+**Assets:** Winners — MUBARAK (+3.49%), BIO (+7.81%, largest win of the week), HYPE (+0.46%), TRUMP (+1.40%). Losers — CSPR (−4.77%, largest loss), PEAQ (−0.99%), ROBO (−2.43%). No asset was traded to a loss more than once; no same-thesis cooling-period triggers this week.
+
+**Stop quality:**
+- Standard 2.5% trail (CSPR, PEAQ, MUBARAK, BIO, HYPE): all fired mechanically and correctly, no orphaned positions, no manual intervention needed. BIO and MUBARAK both ran through T1 and T2 before reversing and trailing back for gains well above target — the trail let winners run rather than capping them at T1, working exactly as designed.
+- High-ATR 3.5% exception (TRUMP, ROBO): both assets had genuine per-candle ATR >3% at entry (TRUMP 2-7% candle ranges during its runup; ROBO 15m ranges up to 4.20%), so the exception was correctly applied in both cases, not misused. TRUMP's exception paid off — caught a large move (BTC/ETH +18%+ day) before reversing for a modest gain. ROBO's did not — it reversed and stopped within ~65 minutes, never reaching T1. This reads as an entry-selection outcome (momentum that didn't sustain), not a stop-sizing error; the wider trail didn't cause a larger loss than a 2.5% trail would have on the same reversal magnitude.
+
+**Profile violations:** None. Every entry confirmed spread ≤1% at execution, no leverage used, catalyst freshness correctly assessed (all 7 treated as momentum-only where a <6h catalyst couldn't be confirmed, several — HYPE, TRUMP, ROBO, BIO — had real but stale/timing-unconfirmed catalysts, correctly not given the tighter 1.2:1 floor), and the 1.5:1+ R:R floor was met on every trade.
+
+**Concrete adjustment:** No rule change this week — the R:R floor change is working. The one pattern worth flagging for future review, not action: BTC staged a genuine multi-day trend this period (+23.46%), and the bot's day-trading structure (quick T1/T2 exits, capital recycled at ~$100 notional per trade, long stretches of cash between HOLD-gated scans) captured only a fraction of that move (+4.32%) despite a winning week on a trade-by-trade basis. This is the second such week (following the Aug 19–20 BTC/ETH spike) where a strong sustained BTC move has outrun the bot by double digits. This is not a rule violation — the strategy is deliberately built around frequent small wins and capital preservation, not trend-riding — but if strong multi-day BTC uptrends keep recurring, it may be worth exploring (in a future review, with more data) whether trailing stops should be allowed to run wider/longer once a position has already cleared T2 in a confirmed broad-market rally, rather than treating every trade as an independent quick-flip. No change made to TRADING-STRATEGY.md this week pending more data.
+
+### Key Lesson
+**The widened 1.5:1 R:R floor for momentum-only entries is validated: 4-3, 57% win rate, 1.58 profit factor over the first full week running under it — a clean reversal of the 0-for-3 pattern that triggered the change.** Stops, spread checks, and catalyst-freshness calls were all correctly applied with zero profile violations. The week's real story is structural rather than rule-related: BTC's +23.46% trend dwarfed the bot's +4.32% net gain, because the day-trading design banks small wins and sits in cash between qualifying setups rather than holding through a sustained directional move. That tradeoff is by design (it's exactly what protects capital in down weeks like Jun 1 or Jun 8), but it's now shown up twice in two weeks as a real cost during up weeks — worth watching, not yet worth changing.
+
+---
