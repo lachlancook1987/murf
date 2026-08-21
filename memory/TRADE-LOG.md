@@ -9112,3 +9112,43 @@ ZUSD post-trade: $11.0774. First trade since the Aug 20 ROBO/USD stop-out (-2.43
 bash scripts/clickup.sh "[CRYPTO MIDDAY] TRADE — ZORA/USD BUY 14666.851 @ ~$0.007195, 3.5% trailing stop placed (high-ATR). T1 +6% / T2 +9%, R:R 1.71:1 (momentum-only, no confirmed <6h catalyst; Coinbase ZORA-PERP suspension news noted as minor/ambiguous risk, not treated as thesis-breaking). $11.08 ZUSD remaining."
 
 No WhatsApp/ClickUp notification per CLAUDE.md retirement decision (2026-08-21) — CallMeBot channel retired by user decision, not pursued.
+
+### 2026-08-21 | ZORA/USD | SELL (trailing stop triggered) | 14666.8505 ZORA | Exit: $0.006865 | Closed
+
+**Order ID (stop):** O2GPIS-WT6VO-A5APQB (trailing_stop, trail_percent 3.5%, GTC — triggered at $0.006921, filled $0.006865; Kraken reports order status `canceled`/reason `Insufficient funds` on the parent ticket despite `vol_exec` 14666.85050 matching the full held position — a Kraken quirk on trailing-stop trigger/fill reporting, not an unfilled stop; confirmed by post-fill ZUSD balance reconciling exactly)
+**P&L:** Buy cost $104.69702 + $0.83757 fee = $105.53459 total spent (entry $0.007138). Sell proceeds $100.70259 − $0.80562 fee = $99.89697 net received. **Net: −$5.63762 (−5.34%)**
+**Notes:** Discovered via this session's (2026-08-21 session-open execution, ~15:02 UTC) reconciliation — Kraken balance/positions/orders confirm ZORA 0.000, `positions: {}`, `orders: {"open": {}}`, ZUSD $110.9744 (matches pre-trade $116.6120 minus fees/slippage/loss). Position never reached T1 ($0.0076272, +6%), reversed shortly after entry and the 3.5% trail closed it ~26 minutes after the buy (buy closetm 1787321395, stop closetm 1787322973). No thesis break, no manual intervention — mechanical stop-out as designed; exit fill (0.006865) came in below the stop-trigger price (0.006921) — normal slippage on a fast, thin-liquidity move. Momentum-only entry (no confirmed <6h catalyst — Coinbase ZORA-PERP suspension news was noted as ambiguous/minor at entry) that did not follow through. Alpaca reconfirmed flat: `positions: []`, stop `a2b44cf9` still `canceled`, zero exposure.
+
+## 2026-08-21 — Session-Open Execution #2 (~15:05 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $110.9744 (100% cash after ZORA stop-out reconciliation above), `positions: {}`, `orders: {"open": {}}` — fully flat. Alpaca reconfirmed flat: `positions: []`, stop `a2b44cf9` still `canceled`, zero exposure.
+
+**BTC:** live $77,385.30 vs today's open $73,001.20 → **+6.01%** intraday (Perplexity cross-check: +5.9% to +7.9% across sources). Crash gate not triggered.
+
+**Fresh discovery sweep** (661 online USD pairs via direct public Ticker API; 372 cleared vs-open>3% + within 6% of 24h high — still a very broad beta-rally tape, consistent with today's prior three scans). Filtered to liquidity ≥$100k 24h USD volume + within 2% of 24h high (108 candidates), deep-dived top 16 by vs-open on 1h OHLC for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| ROBO/USD | +12.14% | 2.17x | 15min | Clears mechanically; passed over — 3rd trade in this token this week (1 prior stop-out loss Aug 20), lower liquidity ($231k) than BCH |
+| **BCH/USD** | **+6.13%** | **3.51x** | **0min (fresh breakout)** | Clears all gates, best liquidity ($5.2M) and tightest spread of qualifying set — selected |
+| GALA/USD | +5.21% | 2.69x | 0min | Mechanically clears but **rejected on catalyst**: Perplexity flagged GalaChain bridge suspended after $2.9M security incident + a wallet dumping $3M GALA in the same window — bearish fundamental news, momentum reads as noise against it (same logic as today's earlier BONK rejection) |
+| PENGU/USD | +5.76% | 3.16x | 0min | Clears mechanically (momentum-only, LBank $500k reward-program-driven, unconfirmed Pokémon-partnership rumor); passed over in favor of BCH's stronger liquidity/spread |
+| ENA/USD | +7.82% | 1.81x | 0min | Fails volume bar (same rejection as prior scans) |
+| TRUMP/USD | +8.49% | 2.21x | 120min | Fails freshness (stale high) |
+| APR, REPPO, ZRO, BERA, PEPE, IMX, XZEC, USELESS, MELANIA, ZBCN | mixed | mostly <2x or negative momentum | — | Fail volume and/or momentum bars |
+
+**BCH/USD gate check:** Spread 0.075% (ask $278.23/bid $278.02) ≤1%. `BCHUSD` status `online`, ordermin 0.01, costmin $0.5. No leverage (spot). 4h momentum +6.13% >5%. Volume 3.51x >2x. 24h high set in the current 15m bar (0min stale) — genuine fresh breakout, confirmed via 15m OHLC (this is the same pair the pre-session/session-open scans flagged as stale earlier today at ~12:01 UTC; it has since made a fresh new high, re-qualifying it independently of the stale morning read). Catalyst (Perplexity): no fresh <6h fundamental catalyst — technical breakout above multi-month resistance is the driver, a 1-2 day-old Singapore court/custody story unrelated to price direction. Treated as **momentum-only** → 2026-08-14 rule applies: 1.5:1 R:R floor, T1/T2 widened to +4%/+6% against 2.5% stop (4%/2.5% = 1.6:1). ATR check: last 12× 15m candle ranges 0.89%-1.98%, well under the >3% high-ATR trail-widening threshold — standard 2.5% trail applies (no exception needed, unlike today's ZORA 3.5% trail).
+
+### 2026-08-21 | BCH/USD | BUY | 0.3594 BCH | Entry: $278.50 | Cost: $100.8936 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `O64PNY-FOJLH-B7ZWM4` (buy, market, filled in full — cost $100.0929 + fee $0.800743). Stop txid `ORIMGX-27AOZ-DNV3NO` (trailing_stop, trail_percent 2.5%, confirmed `status: open`, stopprice $272.01, limitprice $278.98).
+
+**T1 = $289.64 (+4%)** — on hit, cancel the 2.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2. **T2 = $295.21 (+6%)**. **R:R at T1 = 4%/2.5% = 1.6:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +6.01%, up not down) | spread 0.075% ≤1% | `BCHUSD` status `online`, ordermin 0.01, costmin $0.5 | no leverage (spot) | 4h momentum +6.13% >5% | volume 3.51x >2x | 24h high set in current 15m bar (fresh) | R:R 1.6:1 ≥1.5:1 momentum-only floor | same-thesis cooling N/A (BCH never previously filled — this morning's pre-session idea failed live re-verification and was never entered) | BTC crash gate N/A (BTC firmly up).
+
+ZUSD post-trade: $10.0808. Second trade of the session-open pass; first (ZORA, from the earlier midday scan) stopped out -5.34% and is reconciled above. Day P&L so far: $116.6120 → $110.9744 (pre-this-trade) from the ZORA loss; this trade re-deploys $100.89 of the remaining $110.97.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
