@@ -32480,3 +32480,48 @@ Other near-misses checked for liquidity: NPC ($227k vol, 4h mom only +2.13%, fai
 ### Step 7 — Notification
 
 No trade placed this scan — per Step 7, notification only fires on executed trades. Skipped.
+
+## 2026-08-21 — Pre-Session Research
+
+**Account snapshot:** Kraken ZUSD $116.6120 (100% cash + dust basket: AAVE/AVAX/BABY/FET/INJ/KAS/NEAR/SOL/SUI/TAO/XETH/ZAUD dust), `positions: {}`, `orders: {"open": {}}` — fully flat, no open Kraken position to protect/tighten/thesis-check. Alpaca: `positions: []`, BTC stop `a2b44cf9` remains `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**Market context:** BTC live $72,634.00, **+5.30%** 24h (Perplexity) — independently consistent with Kraken's own ticker read. ETH ~$2,326, **+9.6%** 24h (source spread +4.2% to +18.2%, normal cross-venue noise on a fast-moving day). Fear & Greed: **72 Greed** (range 62-75 across sources — Greed regime, not Extreme Fear, so the 2026-07-10 stricter R:R rule doesn't apply; the 2026-08-14 momentum-only 1.5:1 floor still applies to every no-catalyst entry regardless). BTC funding mixed/low across venues (+0.003% to +0.01%/8h on most aggregators) — no crowded-long red flag. Crash gate: **not triggered**, nowhere close (BTC up, not down). Top-gainer lists from Perplexity (Ontology Gas, DebtReliefBot, Optiview, etc.) are non-Kraken micro-caps per the demoted-Perplexity-for-discovery rule — ignored, not used for candidate sourcing.
+
+**Catalysts (macro):** CLARITY Act / White House crypto roundtable momentum + Treasury doubling long-dated bond buybacks (liquidity-positive) cited as the main drivers of a broad, market-wide rally (short squeeze/liquidations also amplifying). This is macro spillover, not asset-specific — consistent with nearly every Kraken sweep candidate below showing 4h momentum without a distinct token-level catalyst.
+
+**Discovery sweep** (632 online USD pairs via direct public Ticker API; 174 cleared vs-open>3% + within 6% of 24h high — a very broad field, consistent with the market-wide rally). Top ~25 by vs-open deep-dived on 1h OHLC (last **complete** bar vs trailing 24-bar average) for 4h momentum, volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Spread | Notes |
+|---|---|---|---|---|---|
+| SSV/USD | +17.38% | 15.29x | ~1h | **2.00%** | Strongest momentum/volume in the field but **hard-fails spread cap** (1% max) — not tradeable |
+| BCH/USD | +15.12% | 6.31x | ~1h | 0.06% | Clears all gates — selected |
+| BONK/USD | +11.14% | 6.30x | ~1h | 0.03% | Clears mechanical gates but **bearish fundamental catalyst** (Upbit BCH... BONK delisting effective Sep 7, 2026 + $20M BonkDAO governance exploit) — momentum reads as a dead-cat bounce against negative news, not a real setup. Rejected on catalyst grounds. |
+| VVV/USD | +9.87% | 6.54x | ~1h | 0.18% | Clears all gates — selected |
+| POL/USD | +6.49% | 6.14x | ~1h | 0.02% | Clears all gates — selected |
+| ASTER/USD | +7.48% | 5.00x | ~1h | 0.13% | Clears all gates — selected |
+| MUBARAK/USD | +12.68% | 3.12x | ~1h | 0.54% | Clears all gates — selected (no same-thesis cooling restriction; prior two round-trips both closed positive, no stop-out losses) |
+| TBTC/USD | +3.72% | 16.23x | ~1h | — | Fails momentum bar (<5%); thin/low-interest wrapped-BTC pair, not pursued |
+| USELESS/WBT/MOODENG/GALA/STX | mixed | <2x | — | — | Fail volume-ratio bar |
+| DUAL/AUGUR/CRV | — | — | 5-17h | — | Stale 24h high, momentum-peak-check fail |
+
+**Cross-exchange divergence — Perplexity staleness caught again (chronic pattern, per RESEARCH-LOG methodology note).** Perplexity's per-asset price reads for BCH ($203-226 vs Kraken $263.59) and VVV ($14.3-14.8 vs Kraken $16.16) implied 14-23% divergence — enough to trip the rejection gate on its face. Direct CoinGecko public API cross-check resolved this cleanly: **BCH $263.38 (+23.17% 24h)**, **VVV $16.18 (+14.83% 24h)**, **BONK $2.89e-6 (+15.82% 24h)**, **POL $0.087989 (+8.14% 24h)**, **ASTER $0.719507 (+8.63% 24h)** — all within **0.03-0.14% of Kraken's live prices**, independently corroborating Kraken's own vs-open reads. Perplexity's per-asset snapshots were stale (pre-rally), not the live venue disagreements they appeared to be. Divergence gate **passes cleanly** on all five selected/considered candidates; only BONK is rejected, and that's on catalyst grounds, not price data.
+
+**Catalyst read per candidate:** none of BCH (technical breakout + an unrelated Singapore court/custody story, not a positive driver), VVV (tokenomics/API-credit update, timing unconfirmed <6h), POL (network upgrade/hard-fork chatter, timing unconfirmed), ASTER (ended fixed unlock schedule + RWA-perp launch — directionally positive but timing not confirmed <6h fresh), or MUBARAK (no new catalyst, prior Aster-DEX-listing thesis already stale/historical) clears the <6h fresh-catalyst bar with confidence. **All five treated as momentum-only** → 2026-08-14 rule applies: **R:R ≥1.5:1 required at T1**, T1/T2 widened to +4%/+6% (instead of standard +3%/+5%) against the 2.5% stop to clear the floor (4%/2.5% = 1.6:1).
+
+### Trade ideas (3-5, momentum-only, R:R 1.6:1 each)
+
+1. **BCH/USD** — Catalyst: broad-market momentum + technical breakout above multi-month resistance (no fresh token-specific driver). Entry: market ~$263.59. Stop: `trailing_stop`, `trail_percent: 2.5`, GTC, placed immediately on fill. T1: $274.13 (+4%, tighten stop to 0.5% on hit). T2: $279.41 (+6%). R:R: 1.6:1. Spread: 0.06%. Kraken pair: `BCHUSD`, online, ordermin 0.01, costmin $0.5.
+2. **VVV/USD** — Catalyst: CoinGecko-reported new tokenomics/API-credit utility (timing unconfirmed <6h, momentum-only). Entry: market ~$16.159. Stop: 2.5% trail GTC. T1: $16.81 (+4%). T2: $17.13 (+6%). R:R: 1.6:1. Spread: 0.18%. Kraken pair: `VVVUSD`, online, ordermin 0.4, costmin $0.5.
+3. **POL/USD** — Catalyst: network upgrade/hard-fork chatter causing some exchange deposit/withdrawal pauses (timing unconfirmed, momentum-only). Entry: market ~$0.08803. Stop: 2.5% trail GTC. T1: $0.09155 (+4%). T2: $0.09331 (+6%). R:R: 1.6:1. Spread: 0.02%. Kraken pair: `POLUSD`, online, ordermin 70, costmin $0.5.
+4. **ASTER/USD** — Catalyst: ended fixed monthly unlock schedule (97% emissions cut) + new RWA-perps product launch — directionally positive but not confirmed <6h fresh, treated as momentum-only. Entry: market ~$0.72048. Stop: 2.5% trail GTC. T1: $0.7493 (+4%). T2: $0.7637 (+6%). R:R: 1.6:1. Spread: 0.13%. Kraken pair: `ASTERUSD`, online, ordermin 8, costmin $0.5.
+5. **MUBARAK/USD** — Catalyst: none new confirmed; broad-market spillover only (prior Aster-DEX-listing thesis stale). Entry: market ~$0.02256. Stop: 2.5% trail GTC. T1: $0.02346 (+4%). T2: $0.02391 (+6%). R:R: 1.6:1. Spread: 0.54%. Kraken pair: `MUBARAKUSD`, online, ordermin 400, costmin $0.5. Note: same asset traded twice before (Aug 19, both closed positive, no stop-out losses) — same-thesis 48h cooling period does not apply (that rule triggers only after 2 *stop-out losses* within 7 days).
+
+**Risk factors:** (1) All five ideas are momentum-only in a broad, macro-driven rally — if the CLARITY Act/Treasury-buyback narrative stalls or reverses, all five likely reverse together (correlated, not independent bets); size accordingly if multiple are entered same-session. (2) BONK's bearish delisting/exploit news is a reminder that high volume+momentum alone isn't sufficient — always run the per-candidate catalyst check before entry, even under time pressure in a fast-moving broad rally. (3) SSV/USD had the single strongest momentum/volume read in the whole sweep but is spread-gated out — a reminder the spread cap is non-negotiable even for the best-looking setup. (4) Fear & Greed 72 (Greed) — elevated-greed regimes can see sharp mean-reversion; the 2.5% trail and T1-tighten-to-0.5% rule are the primary defense.
+
+### Decision: **TRADE.** Crash gate not triggered (BTC +5.30%, up not down). Five momentum-only candidates cleared every mechanical gate (spread, momentum-peak freshness, volume, cross-exchange divergence, R:R floor) via the Kraken-native discovery sweep; BCH, VVV, POL, ASTER, and MUBARAK are the day's actionable ideas for the execution session. BONK and SSV were mechanically strong but correctly rejected (catalyst and spread respectively).
+
+### Step 6 — Notification
+
+bash scripts/clickup.sh "[CRYPTO PRE-SESSION] TRADE ideas ready — BCH/USD, VVV/USD, POL/USD, ASTER/USD, MUBARAK/USD (momentum-only, broad BTC+5.3%/ETH+9.6% rally on CLARITY Act + Treasury buyback catalysts, R:R 1.6:1 each, 2.5% trail). BONK rejected (Upbit delisting news). SSV rejected (2% spread). Full detail in RESEARCH-LOG.md."
+
+WhatsApp/ClickUp notification **FAILED** — CallMeBot `0 messages left`, quota still exhausted (unresolved since 2026-07-02, now ~50 days running; needs resubscription at callmebot.com/61477788635).
