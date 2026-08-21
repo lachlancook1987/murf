@@ -32607,3 +32607,48 @@ All other liquid candidates checked (COTI/LIGHTER aside) failed the 4h-momentum-
 bash scripts/clickup.sh "[CRYPTO PRE-SESSION #2] TRADE ideas ready — COTI/USD (+24.4%/4h, 16.3x vol, 3.5% trail, R:R 1.71:1, caution: extended/whale-concentration flag) and LIGHTER/USD (+7.45%/4h, 6.66x vol, 2.5% trail, R:R 1.6:1, buyback/burn news). Both momentum-only, crash gate clear (BTC +5.48%). Full detail in RESEARCH-LOG.md."
 
 No WhatsApp/ClickUp notification per CLAUDE.md retirement decision (2026-08-21) — CallMeBot channel retired by user decision, not pursued.
+
+## 2026-08-21 — Session-Open Execution #3 (~21:05 UTC, no trades)
+
+### Step 1-2 — Account State
+
+Kraken: ZUSD $114.5099 (100% cash) + unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure, nothing to protect/tighten. Alpaca: `positions: []` — zero exposure. Matches the Pre-Session Research #2 snapshot exactly (no fills since that scan).
+
+### Step 3 — Re-verification of Pre-Session #2's candidates (COTI, LIGHTER)
+
+Both re-checked live via fresh 15m OHLC before any order — per the momentum-peak-check gate, ~1h-old research is not a standing order ticket. **Both now fail:**
+
+| Symbol | Live check | Result |
+|---|---|---|
+| COTI/USD | 24h high $0.01459 set ~45min before the research note; price has since reversed hard through 3 consecutive declining 15m closes (0.01427→0.01316→0.01263→0.01224, now ~0.0126-0.0129) — a completed spike-and-reversal, not an active breakout | **FAIL** — momentum reversed |
+| LIGHTER/USD | 24h high $3.177 set ~2.5h ago; price has chopped sideways 3.02-3.15 since with no fresh breakout, currently ~3.045-3.056 (~4% below high) | **FAIL** — stale high, no breakout |
+
+BTC live $77,460 vs today's open $73,001.20 → **+6.11%** (still climbing vs. earlier reads today, +5.05% to +6.01%). Crash gate not triggered.
+
+### Step 4 — Fresh discovery sweep (Kraken-native, direct Ticker+AssetPairs API)
+
+Full-universe pull (656 online USD pairs). 176 candidates cleared vs-open>3% + within 6% of 24h high + >$50k 24h volume — still an exceptionally broad beta-rally tape (6th scan today showing this pattern). Filtered to within 1.5% of 24h high + >$100k volume + spread ≤1%: 61 candidates. Deep-dived ~70 of the most liquid/highest-ranked on 1h OHLC for true 4h momentum and volume ratio (last complete bar vs trailing 24-bar average).
+
+**One candidate cleared both bars decisively:**
+
+| Pair | 4h momentum | Volume ratio | High freshness | Spread | Liquidity |
+|---|---|---|---|---|---|
+| **ZEC/USD (XZECZUSD)** | **+5.43%** | **2.56x** | 0min (fresh, current hour) | 0.043% | $48.9M 24h vol |
+
+All other candidates checked (GALA +8.91%mom/0.98x vol, USUAL +4.11%/2.18x, WIF +3.38%/2.74x, XDG +3.19%/2.32x, VET +2.01%/2.92x, DASH +1.35%/3.43x, AAVE +4.32%/1.53x, LCX +6.83%mom/0.30x vol, and ~55 more) failed to clear both the momentum AND volume bars simultaneously.
+
+**ZEC gate check:** Spread 0.043% (ask $714.28/bid $713.97) ≤1%. Cross-exchange divergence: CoinGecko $708.00 (+22.76% 24h) vs Kraken $714.28 → 0.89%, clean pass. Catalyst (Perplexity): genuine and substantive — Grayscale filed another ZEC-trust-to-spot-ETF conversion amendment, a DCG-related unit reportedly considering a ~200,000 ZEC purchase, plus the Ironwood (NU6.3) network upgrade — but exact timing not confirmed <6h fresh from the query, and Perplexity's own price reads ($638-654) are stale vs. Kraken's live $714 (same chronic lag pattern flagged all month). Treated conservatively as **momentum-only** → 1.5:1 R:R floor. 15m ATR check: ranges mostly 0.9-2.0%, one 4.1% breakout-candle outlier, not sustained high-ATR → standard 2.5% trail. No prior ZEC trades (checked TRADE-LOG/RESEARCH-LOG — always HOLD historically, decayed-spike pattern each time until today), no cooling-period restriction. R:R at T1 (+4%) vs 2.5% stop = 1.6:1, clearing the floor.
+
+### ZEC/USD BUY order rejected — jurisdiction restriction (new finding)
+
+Order attempt (`{"symbol":"ZEC/USD","qty":"0.1400","side":"buy","type":"market","time_in_force":"gtc"}`) returned:
+```
+{"error": ["EAccount:Invalid permissions:ZEC trading restricted for AU."]}
+```
+**Kraken restricts ZEC (and likely other privacy-coin) trading for AU-domiciled accounts** — a jurisdiction/compliance restriction, not a mechanical gate failure. This is a new finding (ZEC has appeared in the log many times before but always failed the momentum-peak-check first, so this restriction was never hit until today). **Flagging for future sessions: skip ZEC/USD as untradeable on this account regardless of how cleanly it clears momentum/volume/catalyst gates** — re-verify with `kraken.sh assets ZEC/USD` before spending sweep time on it in future scans; treat other privacy coins (if any appear as candidates) with the same caution pending confirmation.
+
+### Decision: **HOLD — no entry this execution session.** Gate-protection default applied. An exhaustive sweep (176-candidate qualifying field, ~70 deep-dived on 1h OHLC) found exactly one candidate clearing every mechanical gate (ZEC), and it is blocked by account-level jurisdiction restriction rather than a strategy gate — not a loosening opportunity, a hard stop. No fallback substitution was made; manufacturing a trade from a candidate that failed momentum or volume would violate the gate-protection default. $114.5099 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 6 — Notification
+
+No trade placed this session — per Step 7 of the execution workflow, notification only fires on executed trades. Skipped (per-workflow rule); the ZEC jurisdiction-restriction finding is notable enough to flag via the session's own push-notification mechanism as an operational item, separately from the no-trade routine skip.
