@@ -69,6 +69,19 @@ target, move on. Volume of profitable trades beats size of any single trade.
 - **Profit targets: T1 = +3%, T2 = +5%** from entry
   - At T1 (+3%): tighten trailing stop to 0.5% to lock in gains, let it run toward T2
   - At T2 (+5%): consider closing or tightening further — day trading wins are banked, not held
+  - **Aspirational only — not reliably executed (flagged 2026-08-21):** tightening at T1 requires
+    a live session to catch the price crossing T1 in real time and actively cancel/replace the
+    trailing-stop order. Sessions run on a scan cadence (pre-session/midday/EOD), not
+    continuously, so by the time a session checks in, price has frequently already run past
+    T1/T2 *and* reversed on the original, wider trail before any tightening could happen. June
+    sessions did catch this live a few times (logged "STOP TIGHTENED (T1 hit)" events), but the
+    Aug 19-20 trades (MUBARAK, BIO) show the more typical outcome: both ran through T1 and T2
+    and were closed by the original 2.5%/3.5% trail, not a tightened 0.5% one — BIO netted
+    +7.81%, well past its +6% T2, precisely because tightening never fired. Do not assume T1
+    tightening happened just because T1/T2 are defined in a trade log entry; check for an
+    explicit "STOP TIGHTENED" action before crediting it in a review. This is not treated as a
+    bug to fix — untightened trades have been letting winners run further, not worse — but
+    future reviews should stop assuming the tightening step executes as written.
 - **Binary catalyst assets (regulatory votes, ETF filings):** use `trail_percent: 7` for the initial stop — headline volatility can blow through 2.5%; widen only on binary events, not routine trades
 - No fixed hold time — exit when thesis is invalidated, target is hit, or stop fires
 - Cancel orders any time: `bash scripts/kraken.sh cancel <order_id>`
@@ -211,4 +224,4 @@ For each candidate found via the Kraken sweep:
 
 ---
 
-*Last updated: 2026-08-14 (weekly review — raised the R:R floor for momentum-only/no-catalyst entries to 1.5:1 at all Fear/Greed levels, after three such entries at the bare 1.2:1 floor lost 3-for-3 since the fee correction (VELVET, SYN, BICO)). Previous update: 2026-07-31 (weekly review — corrected taker fee assumption from 0.4%/leg to the actually-measured 0.8%/leg, ~1.6% round trip, after the VELVET trade showed the prior figure was 2x too low). Previous update: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Prior: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
+*Last updated: 2026-08-21 (flagged the T1 stop-tightening-to-0.5% rule as aspirational-only, not reliably executed given the scan cadence — sessions run periodically, not continuously, so they usually miss the moment price crosses T1; recent trades (MUBARAK, BIO) closed on the original untightened trail well past T1/T2 instead). Previous update: 2026-08-14 (weekly review — raised the R:R floor for momentum-only/no-catalyst entries to 1.5:1 at all Fear/Greed levels, after three such entries at the bare 1.2:1 floor lost 3-for-3 since the fee correction (VELVET, SYN, BICO)). Previous update: 2026-07-31 (weekly review — corrected taker fee assumption from 0.4%/leg to the actually-measured 0.8%/leg, ~1.6% round trip, after the VELVET trade showed the prior figure was 2x too low). Previous update: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Prior: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
