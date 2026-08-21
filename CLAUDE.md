@@ -27,13 +27,21 @@ git branch -D _mem-sync
 > lost. Always run `git add memory/ && git commit` on the session branch before switching
 > to `_mem-sync`.
 
-## Notifications (WhatsApp via CallMeBot)
+## Notifications (WhatsApp/CallMeBot — RETIRED 2026-08-21)
 
-`scripts/clickup.sh` now delegates to `scripts/whatsapp.sh` — all existing routine
-calls to `scripts/clickup.sh` continue to work unchanged.
+WhatsApp notifications via CallMeBot are **retired by user decision**, not just broken.
+CallMeBot's quota was exhausted 2026-07-02 and never recovered (~50 days of failed
+sends, logged repeatedly in trade/research logs before this decision). The user now
+prefers Claude Code's own push notifications and no longer wants CallMeBot pursued.
 
-Required env vars: `WHATSAPP_PHONE` (international format, no `+`, e.g. `447911123456`)
-and `WHATSAPP_APIKEY` (received from CallMeBot on first activation).
+- **Do not call `scripts/clickup.sh` or `scripts/whatsapp.sh`** for routine
+  pre-session/midday/EOD/weekly notifications, even if a scheduled task prompt's
+  STEP instructs it — skip that step silently.
+- **Do not log a "WhatsApp/ClickUp notification FAILED" line anymore.** The channel
+  is intentionally retired, not an outstanding problem to keep flagging.
+- If something genuinely needs to reach the user (a trade executed, a notable loss,
+  an operational failure), surface it via the session's own push-notification
+  mechanism instead, the way the 2026-08-21 weekly review did.
 
 ## Kraken Script Commands (primary broker)
 
