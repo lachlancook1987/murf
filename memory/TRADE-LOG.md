@@ -9207,3 +9207,41 @@ ZUSD post-trade: $10.4406. Fill price came in above the research-time reference 
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). ZAMA skip (failed re-verification) flagged in the same push.
+
+## 2026-08-22 — Session-Open Execution #4 (~21:03 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat, unchanged since the Evening Scan (~20:04 UTC). Alpaca reconfirmed flat: `positions: []`.
+
+BTC live $77,233.90 vs today's session open $78,327.70 → **−1.40%** intraday. Crash gate not triggered. BTC weekly trend gate checked via daily OHLC: 5 days ago close $64,471.70 → today ~$77,118 = **+19.6%**, firmly uptrending — gate not triggered, standard entry criteria apply.
+
+**Fresh discovery sweep** (632 online USD pairs, direct public AssetPairs+Ticker API). 35 candidates cleared vs-open>3% + within 6% of 24h high. Filtered to liquidity ≥$100k 24h USD volume: **17 candidates**. Deep-dived on 1h OHLC for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| **ZRO/USD** | **+11.11%** | **2.01x** | 0 bars (fresh, current forming bar just made new 24h high) | Only pair clearing both bars — selected |
+| STX/USD | +8.74% | 1.93x | fresh | Fails volume bar (needs >2x) |
+| LIGHTER/USD | +5.28% | 0.04x | 1 bar ago | Fails volume bar badly |
+| ENA/USD | +4.84% | 0.49x | stale (16 bars) | Fails momentum and volume bars |
+| PUMP/USD | +4.14% | 1.37x | fresh | Fails volume bar |
+| XZEC/USD (ZEC) | not deep-dived | — | — | Excluded — confirmed jurisdiction-restricted for AU (DASH/ZEC pattern, prior rejections) |
+| UNI, KNTQ, AAVE, CC, PENDLE, HYPE, CVX, PYTH, CAP, BABY, VVV | mixed, mostly <2% momentum or negative | — | — | Fail momentum and/or volume bars |
+
+**ZRO/USD gate check:** Spread 0.088-0.18% (a$1.1330/b$1.1310 at execution) ≤1%. `ZROUSD` status `online`, ordermin 6, costmin $0.5, leverage available 2-3x (spot used). 4h momentum +11.11% >5% (also confirmed via 1h closes: $1.032→~$1.136 over 4h ≈ +10%). Volume 2.01x >2x. 24h high ($1.148) set in the current in-progress 15m/1h bar — genuine fresh breakout continuing a multi-hour uptrend (1h closes climbing steadily: $1.015→$1.016→$1.026→$1.032→$1.100→$1.081→$1.140→now ~$1.136, with strong volume in the breakout bars: 43,907 / 22,168 / 50,453 units), not a thin spike-and-dump. **Cross-exchange divergence check:** CoinGecko live $1.15 (+16.78%/24h) vs Kraken $1.136 → ~1.2% divergence, well within the ≤15-20% gate — confirms real, arbitraged move. Catalyst (Perplexity): no single fresh <6h catalyst — broader altcoin rotation is the immediate driver; LayerZero's "Zero L1" institutional blockchain announcement (Citadel Securities, DTCC, ARK, Google Cloud, ICE backers) is real but "earlier in the week" (stale), and a 25.7M ZRO unlock (Aug 20, ~2 days old) is a supply-side factor, not a fresh trigger. Perplexity's own price read ($1.00-1.01) lagged Kraken's live tape by roughly a day — the usual chronic-lag pattern, cross-checked and overridden by CoinGecko's live read above. Treated as **momentum-only** → 2026-08-14 rule applies: 1.5:1 R:R floor.
+
+**ATR/stop sizing:** Last 8 hourly candle ranges show a fast, extended move (one 15m bar ranged 3.8%; the asset moved +14.4%/24h and +11.1%/4h in a few hours) — treated as high-ATR per the same logic as the 2026-08-21 ZAMA trade (comparable extended-move profile). Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9% (matching the ZAMA precedent) to keep R:R ≥1.5:1 momentum-only floor: 6%/3.5% ≈ **1.71:1**.
+
+No prior ZRO fills in TRADE-LOG (only historical research skips on stricter volume/momentum reads) — no same-thesis cooling-period restriction.
+
+### 2026-08-22 | ZRO/USD | BUY | 88.0000 ZRO | Entry: ~$1.13778 (blended incl. fee) | Cost: $100.1252 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OD2WMS-QPN6B-6DWWHW` (buy, market, filled in full — post-trade ZRO balance 88.000000, ZUSD $9.9310). Stop txid `OAFB2B-2PU53-UHHXX3` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $1.0920, limitprice $1.1310).
+
+**T1 = $1.2061 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — see TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $1.2402 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC −1.40% intraday, nowhere near −20%) | BTC weekly trend gate clear (+19.6% over 5 days, firmly up) | spread 0.088-0.18% ≤1% | `ZROUSD` status online, ordermin 6, costmin $0.5 | no leverage used (spot) | 4h momentum +11.11% >5% | volume 2.01x >2x | 24h high set in current bar, fresh | cross-exchange divergence ~1.2% vs live CoinGecko | R:R 1.71:1 ≥1.5:1 momentum-only floor | no prior ZRO fills — no cooling-period restriction | catalyst: momentum-only (altcoin rotation + stale Zero-L1/unlock factors, no confirmed fresh news).
+
+ZUSD post-trade: $9.9310. Fifth research/execution pass today (Pre-Session traded POL which whipsawed; Session-Open #1, #2, #3 and Midday/Evening Scans all HOLD) — this is the second fill of the day.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
