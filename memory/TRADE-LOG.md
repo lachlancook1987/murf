@@ -9176,3 +9176,34 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 No open positions — 100% cash (+dust), no open Kraken orders.
 **Trades today:** none | **Total since migration:** ~112
 **Notes:** Kraken `account`/`positions`/`orders`: ZUSD $112.3570 (100%), unchanged dust basket, `positions: {}`, `orders: {"open": {}}` — zero exposure, no trades placed today. **Log data-quality note:** the "Aug 21 — EOD Snapshot" entry above (Portfolio $116.6120) was written mid-day, *before* that day's three further trades (ZORA, BCH, XDG) executed and closed — it is not Aug 21's true closing equity. Reconstructed from Kraken `ClosedOrders` (all 6 orders closed Fri Aug 21, between 14:09 and 23:32 UTC — none today): ZORA stop-out −$5.6376 (−5.34%), BCH stop-out +$3.5355 (+3.50%), XDG stop-out −$2.1529 (−2.14%), net −$4.2550 for the day, landing at $112.3570 — which is also today's balance since nothing traded since. Today's Day P&L is therefore correctly $0.00 (0.00%) against that true Aug 21 close, not the stale −$4.2550 that would result from diffing against the mislabeled snapshot; that loss belongs to Aug 21, already reflected in the balance carried forward. BTC: today's session open $78,327.70 vs live $77,076.90 → **−1.60%**; bot flat at 0.00% beat that by **+1.60 points**. Phase P&L −$67.4230 (−37.50%) from $179.78 Kraken starting equity (May 22). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), `positions: []`, zero exposure. Total trades since migration ~112 (~106 as of the Aug 21 mid-day snapshot + 6 discrete orders that day: ZORA buy+sell, BCH buy+sell, XDG buy+sell). Tomorrow: pre-session research resumes with the full $112.3570 available; crash gate threshold ~$61,661 (BTC −20% from $77,076.90).
+
+## 2026-08-22 — Pre-Session Research Execution (~08:49 UTC, trade placed)
+
+**Note:** The EOD Snapshot immediately above (written ~08:35 UTC, before this execution) already reconciled the XDG/USD stop-out (−$2.1529/−2.14%, `ODBULZ-TPE7H-GPB7X2`) from Kraken `ClosedOrders` — not repeated here, figures match exactly.
+
+**Pre-trade state:** Kraken ZUSD $112.3570 (100% cash, matching the EOD snapshot above), `positions: {}`, `orders: {"open": {}}` — fully flat. Alpaca reconfirmed flat: `positions: []`.
+
+**Live re-verification of this morning's Pre-Session Research candidates (ZAMA, POL)** — per the momentum-peak-check gate, research is not a standing order ticket; both re-checked live via fresh Ticker + 15m/1h OHLC before any order:
+
+| Symbol | Live check | Result |
+|---|---|---|
+| ZAMA/USD | Reversed hard since the research snapshot — price fell from ~$0.064 to ~$0.0546 (3 consecutive declining 15m closes: 0.06466→0.05859→0.05508), now ~19% off the stale 24h high ($0.06718) | **FAIL** — momentum reversed, not chased |
+| POL/USD | Continued climbing — $0.1122 at research → $0.1173 live, fresh 24h high just set ($0.11786), last 15m candle broke out on 1.06M volume (well above trailing average) | **PASS** — re-confirmed |
+
+BTC live ~$78,323, +8.10%/24h — crash gate not triggered.
+
+### 2026-08-22 | POL/USD | BUY | 850.00 POL | Entry: ~$0.119902 (blended incl. fee) | Cost: $101.9164 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `OJLBD6-UOL7E-H2AM34` (buy, market, filled in full — post-trade POL balance 850.0000000000, ZUSD $10.4406). Stop txid `OMAUXR-CZH5E-IE6UZW` (trailing_stop, trail_percent 2.5%, confirmed `status: open`, stopprice $0.115700, limitprice $0.118660 — consistent with continued upward drift between fill and stop placement).
+
+**T1 = $0.124698 (+4%)** — on hit, cancel the 2.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation). **T2 = $0.127096 (+6%)**. **R:R at T1 = 4%/2.5% = 1.6:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +8.10%, up not down) | spread ~0.20% ≤1% | `POLUSD` status online, ordermin 70, costmin $0.5 | no leverage used (spot) | 4h momentum +7.69% >5% (re-confirmed live) | volume 2.32x >2x (re-confirmed) | 24h high set in current bar, fresh (re-confirmed, high moved from $0.11505→$0.11786 between research and execution — genuine continuation) | cross-exchange divergence ~0.2% vs live CoinGecko at research time | R:R 1.6:1 ≥1.5:1 momentum-only floor | no prior POL fills in TRADE-LOG — no cooling-period restriction | catalyst: momentum-only (technical breakout + broad rally, no confirmed fresh project news).
+
+**ZAMA/USD skipped** — the second pre-session idea failed live re-verification (reversed hard, see table above) and was correctly not chased per the gate-protection default; no substitute was forced in its place.
+
+ZUSD post-trade: $10.4406. Fill price came in above the research-time reference ($0.1122→$0.1199 effective) because POL kept climbing between research and execution — accepted as the cost of a live, continuing breakout rather than re-quoting to chase a better price.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). ZAMA skip (failed re-verification) flagged in the same push.
