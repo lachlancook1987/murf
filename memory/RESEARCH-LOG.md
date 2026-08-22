@@ -32684,3 +32684,61 @@ Confirms the ZEC finding was not isolated — **Kraken restricts privacy-adjacen
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). DASH jurisdiction-block flagged in the same push as an operational item.
+
+## 2026-08-22 — Pre-Session Research (~00:00 UTC)
+
+### Step 1-2 — Account snapshot
+
+Kraken: **ZUSD $112.3570** (100% cash) + unchanged dust basket (AAVE/ARB/AVAX/BABY/BICO/BIO/CSPR/ENA/FET/HBAR/HYPE/INJ/JTO/KAS/LINK/MUBARAK/NEAR/ONDO/PEAQ/RENDER/ROBO/SOL/SUI/SYN/TAO/TRUMP/UNI/VELVET/WLD/XETH/ZAUD dust, all effectively zero), `positions: {}`, `orders: {"open": {}}` — fully flat, no open Kraken position to protect/tighten/thesis-check. The XDG/USD position logged "Open" at the end of yesterday's last entry (2026-08-21 ~21:48 UTC, entry ~$0.093595) has since closed — XXDG balance now 0.00000000, ZUSD moved from $13.6140 post-trade to $112.3570 now; full P&L reconciliation belongs in TRADE-LOG.md at the next execution/EOD session, not repeated here. Alpaca: `positions: []` (confirmed empty), stop `a2b44cf9` history unchanged (canceled since 2026-05-22) — zero exposure, no action needed.
+
+### Step 3 — Market context (Perplexity)
+
+- **BTC:** $78,323.00, **+8.10%/24h** (Perplexity) — Kraken's own live tape is the discovery ground truth per the 2026-07-20 demotion rule; still an unusually strong continuation of yesterday's rally (which ran from +5.05% to +7.74% intraday).
+- **ETH:** $2,388.85, +4.90%/24h.
+- **Top gainers list:** Perplexity returned ZEC/TRUMP/DASH/STX/GALA/WIF/PEPE/ZEN/ENS/BCH — **not used for discovery** per the 2026-07-20 rule (this exact query type is the demoted one); Kraken-native sweep below is the actual discovery source. Notably ZEC and DASH both appear here again — both are confirmed jurisdiction-restricted (AU) on this account per 2026-08-21 findings, so neither would be actionable regardless.
+- **Fear & Greed:** **Greed, 72-77** (CFGI 77 daily/72 4h, CoinStats 74, Alternative.me 72) — standard R:R floors apply (1.2:1 catalyst-confirmed / 1.5:1 momentum-only), not Extreme Fear.
+- **BTC funding:** positive, +0.004% to +0.021%/8h across venues (Binance 0.0079%, Kraken 0.0026-0.0148%) — low/normal, no crowded-long red flag.
+- **Catalysts:** Treasury bond-buyback program increase, Clarity Act political momentum, continued spot BTC ETF inflows, short-covering amplifying the move — all macro/index-wide, same drivers as yesterday, not asset-specific.
+- **Token unlocks this week:** KAITO ($11.5M, Aug 20, already past), ZRO ($19.7M, Aug 20, already past), MBG ($2.85M, Aug 22), SOON ($3.85M, Aug 23), River ($2.53M, Aug 22), 0G ($1.38M, Aug 22) — none are today's screened candidates, no relevance.
+- Crash gate: **not triggered** — BTC firmly up, nowhere close to -20%/24h.
+
+### Step 4 — Kraken-native discovery sweep
+
+Full-universe pull (direct public Ticker+AssetPairs API, 632 online USD pairs). Filtered to vs-open>3% + within 6% of 24h high: **59 candidates** — markedly narrower than every scan in yesterday's log (174-311 pairs), indicating today's BTC-led rally is less broad across alts than yesterday's index-wide lift, despite BTC's larger headline move. Filtered further to liquidity ≥$100k 24h USD volume: 17 candidates. Pulled 1h OHLC on all 17 for true 4h momentum (close now vs. close 4 bars ago) and volume ratio (last complete bar vs trailing 24-bar average):
+
+| Pair | 4h momentum | Volume ratio | 24h-high freshness | Note |
+|---|---|---|---|---|
+| **ZAMA/USD** | **+16.03%** | **3.51x** | 0min (fresh) | Clears both bars decisively — selected |
+| **POL/USD** | **+7.69%** | **2.32x** | 0min (fresh) | Clears both bars — selected |
+| PUMP/USD | +9.65% | 0.75x | 0min | Fails volume bar |
+| MINA/USD | +5.25% | 1.62x | 0min | Fails volume bar |
+| CC/USD | +1.59% | 0.85x | ~60min | Fails momentum bar |
+| SUSHI/USD | -0.74% | 2.80x | ~60min | Fails momentum bar |
+| DCR/USD | -3.34% | 1.07x | ~240min | Fails both, stale high |
+| XZEC/USD (ZEC) | -3.03% | 0.46x | ~240min | Fails both; also jurisdiction-restricted (AU) regardless |
+| HYPE/USD | -4.01% | 0.32x | ~240min | Fails both, stale high |
+| XXMR/USD (Monero) | -2.42% | 0.16x | ~180min | Fails both, dead volume |
+| KSM, BAT, CHZ, VET, BABY, NIL, MET | -2.9% to +1.3% | 0.11x-1.50x | mixed, mostly stale | Fail momentum and/or volume bar |
+
+No candidate below the $100k liquidity cut was pursued (SN62, WFB, ZAMA-tier vs_open outliers like MIR/ORDER/GFI/SRM/BIGTIME etc. all had sub-$20k 24h volume — dead/illiquid books, correctly skipped per convention).
+
+### ZAMA/USD gate check
+
+Spread 0.62% (ask $0.06423/bid $0.06383) ≤1%. `ZAMAUSD` status online, ordermin 100, costmin $0.5, no leverage available for this pair (spot only). Cross-exchange divergence: live CoinGecko $0.0646 (+38.48% 24h) vs Kraken live $0.06409-0.06423 → **0.6-0.8%**, clean pass. Catalyst (Perplexity): genuine and specific — **Revolut listing across the EEA** (70M+ users, 15M+ crypto users) plus **Confidential RFQ protocol private-beta launch on Ethereum mainnet** (100% of swap fees routed to buy-and-burn ZAMA, public release expected September) — a real, named catalyst, but exact intraday timing not confirmed <6h fresh from the query, and Perplexity's own price read ($0.055-0.0565) is stale vs. Kraken's live $0.064 (same chronic lag pattern flagged throughout this log). Treated conservatively as **momentum-only** → 1.5:1 R:R floor applies. **High-ATR trail exception:** 15m tape shows extreme per-candle ranges (30.78%, 14.12%, 9.99%, 5.73% across the last 12 bars) on a real, sustained volume ramp, not an isolated spike — clear high-ATR asset, **3.5% trail** applies (same exception class as COTI/ZORA). T1/T2 widened to +6%/+9% to keep R:R above the momentum-only floor. No prior ZAMA fills in TRADE-LOG (many historical SKIPs on thin/dead volume, but never filled) — no cooling-period restriction; today's 3.51x volume ratio is a materially stronger profile than every past rejection.
+
+### POL/USD gate check
+
+Spread 0.20% (ask $0.11247/bid $0.11224) ≤1%. `POLUSD` status online, ordermin 70, costmin $0.5, leverage available up to 5x (not used — spot entry per strategy default, no need to lever a clean momentum setup). Cross-exchange divergence: live CoinGecko $0.112454 (+27.92% 24h) vs Kraken live $0.11220-0.11247 → **~0.2%**, clean pass. Catalyst (Perplexity): no confirmed fresh project-specific news — technical breakout above resistance + broader crypto rally is the stated driver; one source explicitly noted no verifiable POL-specific headline in the last 24-48h. Ongoing Polygon 2.0/Open Money Stack narrative exists but isn't dated to today. Treated as **momentum-only** → 1.5:1 R:R floor applies. ATR check: 15m ranges mostly 1.56%-3.87% over the last ~2h (one older 11.51% outlier candle 3h back, outside the recent-volatility window) — not sustained high-ATR, **standard 2.5% trail** applies. No prior POL fills in TRADE-LOG — no cooling-period restriction.
+
+### Trade ideas (2 — fewer than the usual 3-5; gate-protection default preferred over forcing weaker picks)
+
+1. **ZAMA/USD** — Momentum-only (Revolut EEA listing + Confidential RFQ fee-burn launch noted as a real but unconfirmed-<6h catalyst). Entry: market ~$0.0641. Stop: `trailing_stop`, `trail_percent: 3.5` (high-ATR exception), GTC, placed immediately on fill. T1: $0.06795 (+6%, tighten to 0.5% trail on hit — aspirational per known scan-cadence limitation). T2: $0.06987 (+9%). **R:R at T1 = 6%/3.5% ≈ 1.71:1** ≥1.5:1 momentum-only floor. Spread 0.62%. Kraken pair `ZAMAUSD`, ordermin 100, costmin $0.5.
+2. **POL/USD** — Momentum-only (technical breakout + broad rally, no confirmed fresh project catalyst). Entry: market ~$0.1122. Stop: `trailing_stop`, `trail_percent: 2.5` (standard), GTC. T1: $0.11669 (+4%, tighten to 0.5% trail on hit). T2: $0.11893 (+6%). **R:R at T1 = 4%/2.5% = 1.6:1** ≥1.5:1 floor. Spread 0.20%. Kraken pair `POLUSD`, ordermin 70, costmin $0.5, best liquidity of today's field ($4.1M+ 24h volume).
+
+**Risk factors:** (1) Today's qualifying field (59 pairs, 17 liquid) is far narrower than every scan in yesterday's log despite BTC's larger +8.10% move — suggests alts are lagging BTC today rather than co-rallying, so both ideas carry more idiosyncratic (less BTC-beta-protected) risk than yesterday's broad-rally trades. (2) ZAMA is already up +38%/24h and +16%/4h — a mature, extended move; the 3.5% trail and conservative momentum-only R:R floor are the primary defenses against a blow-off-top reversal, same caution as the 2026-08-21 COTI trade. (3) Fear & Greed 72-77 (Greed) — elevated-greed regimes see sharp mean-reversion; T1-tightening to 0.5% remains aspirational-only (per the 2026-08-21 TRADING-STRATEGY.md flag), so both positions may run the original wider trail rather than lock in early. (4) Account is thin ($112.36 ZUSD) after yesterday's mixed trading day (BCH win, ZORA loss, XDG outcome pending reconciliation) — size accordingly, no over-leveraging into two positions.
+
+### Decision: **TRADE.** Crash gate not triggered (BTC +8.10%, up not down — the largest single read yet). Two candidates (ZAMA, POL) cleared every mechanical gate (spread, momentum-peak freshness, true 4h momentum, volume ratio, cross-exchange divergence, R:R floor) out of a 17-candidate liquid field drawn from a 59-pair qualifying sweep. Fewer ideas than the usual 3-5 reflects today's narrower alt participation relative to BTC's move, not a relaxed screen — every other liquid candidate failed a specific named gate (momentum or volume bar).
+
+### Step 6 — Notification
+
+Push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21) with today's two planned trade ideas (ZAMA/USD, POL/USD).
