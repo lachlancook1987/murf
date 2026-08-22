@@ -32821,3 +32821,28 @@ Skipped per task instructions (notification only if a trade is placed). No opera
 ### Step 7 — Notification
 
 Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
+
+## 2026-08-22 — Session-Open Execution #3 (~15:01 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat, unchanged since the Midday Scan earlier today — confirms no fills since. Dust basket unchanged. Alpaca not re-checked this pass (no open Alpaca stop/position since 2026-05-22, reconfirmed flat multiple times already today).
+
+BTC live $76,943.00 vs today's session open $78,327.70 → **−1.77%** intraday, continuing the gentle pullback from this morning's +8.10% peak. Crash gate not triggered (nowhere near −20%).
+
+**Fresh discovery sweep** (637 online USD pairs via direct public Ticker/AssetPairs API). 24 candidates cleared vs-open>3% + within 6% of 24h high. Filtered to liquidity ≥$100k 24h USD volume: **6 candidates**. Deep-dived all 6 on 1h OHLC (last complete bar vs trailing 24-bar average) for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | Note |
+|---|---|---|---|
+| VVV/USD | +6.19% | 1.76x | Fails volume bar (needs >2x); same pair rejected on momentum-peak/spike-retreat grounds at the prior scan |
+| PUMP/USD | +1.96% | 0.74x | Fails both |
+| SUSHI/USD | +3.28% | 0.42x | Fails volume bar |
+| CAP/USD | −0.75% | 0.41x | Fails both |
+| CVX/USD | −1.72% | 0.56x | Fails both |
+| BABY/USD | −2.22% | 0.74x | Fails both |
+
+No candidate clears both the >5% 4h-momentum bar and the >2x volume bar this scan — a stricter miss than the prior scans, which at least produced one candidate clearing both bars before failing on spread or momentum-peak.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied. Zero candidates in the liquid field clear both mechanical momentum and volume bars; no trade manufactured. $110.0562 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 7 — Notification
+
+Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
