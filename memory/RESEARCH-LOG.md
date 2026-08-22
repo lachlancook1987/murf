@@ -32742,3 +32742,30 @@ Spread 0.20% (ask $0.11247/bid $0.11224) ≤1%. `POLUSD` status online, ordermin
 ### Step 6 — Notification
 
 Push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21) with today's two planned trade ideas (ZAMA/USD, POL/USD).
+
+## 2026-08-22 — Session-Open Execution (~09:03 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat (this reconciles the Pre-Session Execution POL trade above: bought 08:50:59 UTC, stopped out 08:53:19 UTC at $0.11814, only ~2m20s later — net ≈ −$2.30/−2.26%, well inside the 2.5% trail; entry landed inside a volatile spike bar (08:45 15m candle ranged $0.11565–$0.12125) and the immediate pullback within that same bar/the next one triggered the trail). Alpaca reconfirmed flat: `positions: []`.
+
+BTC live $77,142.30 vs today's session open $78,327.70 → **−1.51%** intraday — a real pullback from this morning's +8.10% read; crash gate not triggered (nowhere near −20%).
+
+**Fresh discovery sweep** (632 online USD pairs via direct public Ticker API). 34 candidates cleared vs-open>3% + within 6% of 24h high — narrower than this morning's pre-session sweep (59), confirming the "alts lagging BTC" risk flagged there. Filtered to liquidity ≥$100k 24h USD volume: **8 candidates**. Deep-dived all 8 on 1h OHLC for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | Note |
+|---|---|---|---|
+| **POL/USD** | **+10.12%** | **2.72x** | Only pair clearing both bars — same asset as this morning's stop-out |
+| NIL/USD | +7.69% | 1.54x | Fails volume bar |
+| MET/USD | +3.50% | 0.53x | Fails volume bar |
+| CVX/USD | +4.56% | 0.15x | Fails volume bar |
+| BLUR/USD | +4.27% | 0.15x | Fails volume bar |
+| CAP/USD | +0.41% | 0.40x | Fails both |
+| CC/USD | −1.44% | 0.61x | Fails both |
+| SUSHI/USD | −0.29% | 1.42x | Fails both |
+
+**POL/USD re-entry rejected on momentum-peak check, not a mechanical gate.** POL mechanically clears 4h momentum and volume, but 15m OHLC shows the 24h high ($0.12125) was set in the 08:45 bar — the exact same spike bar this morning's entry bought into — and price has been declining/chopping below it since (09:00 bar high $0.11915, current ~$0.1186, ~2.2% off the high; volume also fading intrabar: 08:45 bar 1.94M vs 09:00 bar's partial 117k). This is a spike-and-retest pattern, not a fresh breakout or accelerating move — the exact "spike-and-dump" case TRADING-STRATEGY.md's Risk Awareness section warns against trailing stops on. No new distinct catalyst has appeared since the 08:49 execution's momentum-only read (technical breakout + broad rally, no confirmed fresh project news). Re-entering the identical asset ~10 minutes after a fast 2m20s whipsaw stop-out, at a price still below the prior peak with fading volume, would be chasing the same noise that just produced a loss — not the "steady momentum" profile the strategy calls for.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20): the only candidate clearing the mechanical momentum/volume bars (POL) is the same asset that whipsawed 10 minutes prior in the same spike bar, with no fresh breakout above the prior high and no new catalyst — re-entry would be chasing noise, not a qualifying setup. No trade manufactured. $110.0562 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 7 — Notification
+
+Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
