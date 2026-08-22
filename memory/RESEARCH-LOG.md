@@ -32797,3 +32797,27 @@ BTC live $77,115.30 vs today's session open $78,327.70 → **−1.55%** intraday
 ### Step 7 — Notification
 
 Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
+
+## 2026-08-22 — Midday Scan (~19:38 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat, unchanged since Session-Open #2 (~12:01 UTC) — confirms no fills since. Dust basket unchanged. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero exposure, no action needed. Steps 3-5 N/A (nothing open to protect/tighten/thesis-check).
+
+**Fresh discovery sweep** (632 online USD pairs via direct public Ticker API). 23 candidates cleared vs-open>3% + within 6% of 24h high. Filtered to liquidity ≥$100k 24h USD volume: **7 candidates**. Deep-dived all 7 on 1h OHLC (last complete bar vs trailing 24-bar average) for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | Note |
+|---|---|---|---|
+| **VVV/USD** | **+8.71%** | **3.44x** | Only pair clearing both bars — deep-dived below, **rejected on momentum-peak check** |
+| PUMP/USD | +10.55% | 0.97x | Fails volume bar |
+| CVX/USD | +3.30% | 1.53x | Fails momentum bar |
+| CAP/USD | +1.22% | 1.29x | Fails both |
+| UNI/USD | +3.09% | 0.93x | Fails momentum bar |
+| BABY/USD | +3.00% | 0.70x | Fails both |
+| SUSHI/USD | +2.26% | 0.10x | Fails both |
+
+**VVV/USD rejected — spike-and-retreat pattern, same class as this morning's POL rejection.** Spread 0.31-0.35% ≤1%, `VVVUSD` status online, ordermin 0.4, leverage available 2-3x (spot preferred). 1h OHLC shows the 24h high ($17.64) was set in the last *complete* hourly bar (16:00-17:00 UTC window, vol 20,368 — the bar driving the 3.44x ratio), but the current in-progress hour opened at $17.291 and immediately declined to a low of $17.058 on much thinner volume (1,109 vs the prior bar's 20,368) before a partial recover to ~$17.14 on re-check — price down ~2.9-3.4% off the 24h high within the same fresh (<30min) window, not making a new high or holding near it. Catalyst (Perplexity): real but not fresh — Venice AI's **$100M annualized revenue run-rate milestone (Aug 17, ~5 days old)** and a **Sept 1/Oct 1 emissions-reduction announcement** (future-dated, not today's trigger) are the cited drivers, plus a note that **open interest (~$76M) and futures volume (~$117M) are amplifying the move via leverage** — a reversal-risk flag, not a reason to chase. Perplexity's own price read ($15.85-16.2) lagged Kraken's live tape by ~1 day's worth of the move, the usual chronic-lag pattern. Treated as momentum-only (no <6h catalyst) → 1.5:1 R:R floor would apply, but the entry never reaches the R:R stage: same logic as Session-Open #1's POL rejection (spike bar high, immediate pullback on fading volume, no fresh breakout) applies here — chasing into a reversal that has already started, not accelerating momentum.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied. The single candidate clearing the mechanical momentum/volume bars (VVV) is pulling back from a spike-bar high on fading volume, with a stale (5-day-old) catalyst and a leverage/OI amplification flag — a spike-and-retreat profile, not sustained momentum. No trade manufactured. $110.0562 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 7 — Notification
+
+Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
