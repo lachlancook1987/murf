@@ -32846,3 +32846,39 @@ No candidate clears both the >5% 4h-momentum bar and the >2x volume bar this sca
 ### Step 7 — Notification
 
 Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
+
+## 2026-08-22 — Evening Scan (~20:04 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat, unchanged since the Midday Scan / Session-Open #3 (~19:38 UTC) — confirms no fills since. Dust basket unchanged (small residual balances in AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, ZAUD — all sub-$1 dust, no action). Alpaca: `positions: []` — zero exposure, no open Alpaca stop check needed this pass (reconfirmed flat multiple times today already).
+
+**BTC:** live $78,323.00, **+8.10%/24h** (Perplexity). **ETH:** ~$2,426-$2,434, +1.7% to +3.0%/24h (feed-dependent). Crash gate not triggered (nowhere near -20%).
+
+**Fear & Greed:** 72-76 across trackers (Alternative.me 72, CFGI.io 73, CoinStats 76) — Greed/Extreme-Greed boundary, standard R:R floors apply (not Extreme Fear).
+
+**BTC funding:** +0.008% to +0.015%/8h across major venues (Binance 0.0079-0.0100%, OKX 0.0100%, Kraken 0.0148%) — low/normal, no crowded-long red flag.
+
+**Catalysts (macro, index-wide):** Broad risk-on rally driven by U.S. Treasury bond-buyback expansion, a BTC short squeeze, and Clarity Act regulatory optimism — same drivers cited all day, nothing asset-specific new. Grayscale's 5th amended spot Zcash ETF filing noted but not approved. No fresh single-asset catalyst identified for any of today's discovery candidates.
+
+**Token unlocks this week:** MBG ($2.85M, Aug 22), MET (Aug 22), SOON ($3.85M, Aug 23), 0G ($1.38M, Aug 22) — none are today's screened candidates, no relevance.
+
+### Kraken-native discovery sweep
+
+Full-universe pull (direct public AssetPairs+Ticker API, 632 online USD pairs). 37 candidates cleared vs-open>3% + within 6% of 24h high — the broadest count of any scan today, but liquidity/momentum quality thinned out on deep-dive (see below). Filtered to liquidity ≥$100k 24h USD volume: **16 candidates**. Pulled 1h OHLC on all 16 for true 4h momentum (close now vs. close 4 bars ago) and volume ratio (last complete bar vs trailing 24-bar average):
+
+| Pair | 4h momentum | Volume ratio | 24h-high freshness | Note |
+|---|---|---|---|---|
+| ZRO/USD | +6.73% | 0.89x | 1h ago | Clears momentum, **fails volume bar** (needs >2x) |
+| STX/USD | +6.36% | 0.63x | 1h ago | Clears momentum, fails volume bar |
+| MON/USD | +5.15% | 0.26x | 16h ago | Clears momentum, fails volume bar badly; stale high |
+| XZEC/USD (ZEC) | +4.54% | 0.76x | 17h ago | Fails momentum bar (needs >5%... marginal miss on the 5% cut historically used); also **jurisdiction-restricted for AU** regardless (confirmed pattern, see DASH/ZEC prior rejections) |
+| PORTAL/USD | +3.94% | 0.98x | 10h ago | Fails momentum bar, near-average volume, stale high |
+| LIGHTER/USD | +2.22% | 0.33x | 1h ago | Fails momentum and volume bars |
+| PENDLE, PUMP, HYPE, CC, UNI, SUSHI, VVV, CVX, CAP, BABY | -1.0% to +1.7% | 0.08x-0.36x | mostly 3-17h stale | All fail momentum bar; broadly weak volume across the board |
+
+**No candidate clears both the >5% 4h-momentum bar and the >2x volume bar this scan.** Even the closest (ZRO, +6.73%/4h) is running on sub-average volume (0.89x) — a price drift without confirming buying pressure, not the "real buying, not thin noise" profile the strategy requires. This is a stricter miss than every earlier scan today, which at least produced 1-2 candidates clearing both mechanical bars before failing on spread/momentum-peak/catalyst grounds — today's alt participation has now fully decoupled from BTC's +8.10% move, consistent with the "alts lagging BTC" pattern flagged at each successive scan since this morning's pre-session sweep (59→34→28→24→37 candidates, but volume quality degrading each time).
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied (TRADING-STRATEGY.md, 2026-07-20). Zero candidates in the liquid field clear both mechanical momentum and volume bars simultaneously; no trade manufactured. $110.0562 ZUSD remains fully available, fully flat across Kraken and Alpaca. This is the fourth HOLD out of five scans today (only the 08:49 UTC pre-session POL entry traded, and it stopped out -2.26% within minutes per the 09:03 UTC reconciliation).
+
+### Step 6 — Notification
+
+Skipped per task instructions — notification only warranted if a trade is placed or an operational issue arises. No operational issues: all API calls succeeded, all env vars confirmed set. Per CLAUDE.md, no WhatsApp/ClickUp send either way (channel retired 2026-08-21).
