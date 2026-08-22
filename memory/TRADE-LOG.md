@@ -9170,3 +9170,40 @@ ZUSD post-trade: $13.6140. First trade since the Pre-Session Research #2 reconci
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). DASH jurisdiction-block flagged as an operational item in the same notification.
+
+## 2026-08-22 — Session-Open Execution (~08:49 UTC, trade placed)
+
+### 2026-08-21 | XDG/USD | SELL (trailing stop triggered) | 1078.00 XDG | Exit: $0.092337 | Closed
+
+**Order ID (stop):** ODBULZ-TPE7H-GPB7X2 (trailing_stop, trail_percent 2.5%, GTC — triggered and filled in full, `status: closed`). Closed ~84 minutes after the buy (buy closetm 1787350101, stop closetm 1787355126).
+**P&L:** Buy cost $100.0951 + $0.8008 fee = $100.8959 total spent (entry $0.0928526). Sell proceeds $99.5393 − $0.7963 fee = $98.7430 net received. **Net: −$2.1529 (−2.13%)**
+**Notes:** Discovered via this session's account reconciliation (Kraken `ClosedOrders`) — position never reached T1 ($0.097339, +4%), reversed shortly after entry and the 2.5% trail closed it mechanically. No thesis break, no manual intervention. DASH remains flagged jurisdiction-blocked (unrelated, no action needed).
+
+## 2026-08-22 — Pre-Session Research Execution (~08:49 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $112.3570 (100% cash after the XDG stop-out reconciliation above), `positions: {}`, `orders: {"open": {}}` — fully flat. Alpaca reconfirmed flat: `positions: []`.
+
+**Live re-verification of this morning's Pre-Session Research candidates (ZAMA, POL)** — per the momentum-peak-check gate, research is not a standing order ticket; both re-checked live via fresh Ticker + 15m/1h OHLC before any order:
+
+| Symbol | Live check | Result |
+|---|---|---|
+| ZAMA/USD | Reversed hard since the research snapshot — price fell from ~$0.064 to ~$0.0546 (3 consecutive declining 15m closes: 0.06466→0.05859→0.05508), now ~19% off the stale 24h high ($0.06718) | **FAIL** — momentum reversed, not chased |
+| POL/USD | Continued climbing — $0.1122 at research → $0.1173 live, fresh 24h high just set ($0.11786), last 15m candle broke out on 1.06M volume (well above trailing average) | **PASS** — re-confirmed |
+
+BTC live ~$78,323, +8.10%/24h — crash gate not triggered.
+
+### 2026-08-22 | POL/USD | BUY | 850.00 POL | Entry: ~$0.119902 (blended incl. fee) | Cost: $101.9164 | Stop: trailing 2.5% (GTC) | Open
+
+Order txid `OJLBD6-UOL7E-H2AM34` (buy, market, filled in full — post-trade POL balance 850.0000000000, ZUSD $10.4406). Stop txid `OMAUXR-CZH5E-IE6UZW` (trailing_stop, trail_percent 2.5%, confirmed `status: open`, stopprice $0.115700, limitprice $0.118660 — consistent with continued upward drift between fill and stop placement).
+
+**T1 = $0.124698 (+4%)** — on hit, cancel the 2.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation). **T2 = $0.127096 (+6%)**. **R:R at T1 = 4%/2.5% = 1.6:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +8.10%, up not down) | spread ~0.20% ≤1% | `POLUSD` status online, ordermin 70, costmin $0.5 | no leverage used (spot) | 4h momentum +7.69% >5% (re-confirmed live) | volume 2.32x >2x (re-confirmed) | 24h high set in current bar, fresh (re-confirmed, high moved from $0.11505→$0.11786 between research and execution — genuine continuation) | cross-exchange divergence ~0.2% vs live CoinGecko at research time | R:R 1.6:1 ≥1.5:1 momentum-only floor | no prior POL fills in TRADE-LOG — no cooling-period restriction | catalyst: momentum-only (technical breakout + broad rally, no confirmed fresh project news).
+
+**ZAMA/USD skipped** — the second pre-session idea failed live re-verification (reversed hard, see table above) and was correctly not chased per the gate-protection default; no substitute was forced in its place.
+
+ZUSD post-trade: $10.4406. Fill price came in above the research-time reference ($0.1122→$0.1199 effective) because POL kept climbing between research and execution — accepted as the cost of a live, continuing breakout rather than re-quoting to chase a better price.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). ZAMA skip (failed re-verification) and XDG stop-out reconciliation (-2.13%) flagged in the same push.
