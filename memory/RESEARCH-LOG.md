@@ -32769,3 +32769,31 @@ BTC live $77,142.30 vs today's session open $78,327.70 → **−1.51%** intraday
 ### Step 7 — Notification
 
 Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
+
+## 2026-08-22 — Session-Open Execution #2 (~12:01 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $110.0562, `positions: {}`, `orders: {"open": {}}` — fully flat, unchanged since Session-Open Execution #1 (~09:03 UTC) — confirms no fills since. Alpaca reconfirmed flat: `positions: []`.
+
+BTC live $77,115.30 vs today's session open $78,327.70 → **−1.55%** intraday, roughly flat vs the −1.51% read at Session-Open #1. Crash gate not triggered (nowhere near −20%).
+
+**Fresh discovery sweep** (632 online USD pairs via direct public Ticker API). Only **28 candidates** cleared vs-open>3% + within 6% of 24h high — narrower again than every prior scan today (59 pre-session, 34 at Session-Open #1), confirming the "alts lagging BTC" pattern is deepening as BTC drifts down from its morning peak. Filtered to liquidity ≥$100k 24h USD volume: **9 candidates**. Deep-dived all 9 on 1h OHLC for true 4h momentum and volume ratio:
+
+| Pair | 4h momentum | Volume ratio | Note |
+|---|---|---|---|
+| **BABYSHARK/USD** | **+46.79%** | **2.83x** | Only pair clearing both bars — **rejected on spread, see below** |
+| SYN/USD | +5.51% | 0.52x | Fails volume bar |
+| PUMP/USD | +4.77% | 0.87x | Fails momentum bar |
+| BABY/USD | +4.45% | 3.85x | Fails momentum bar (needs >5%) |
+| HYPE/USD | +1.15% | 0.52x | Fails both |
+| CVX/USD | +1.94% | 0.21x | Fails both |
+| CAP/USD | +0.02% | 0.16x | Fails both |
+| BLUR/USD | −0.82% | 0.59x | Fails both |
+| NIL/USD | −1.00% | 0.58x | Fails both |
+
+**BABYSHARK/USD rejected on spread — hard skip, not a discretionary call.** `kraken.sh quote BABYSHARK/USD`: ask $0.008398 / bid $0.007914 → spread **5.76%**, nearly 6× the mandatory ≤1% cap. 15m OHLC confirms this is a spike-and-thin pattern, not steady momentum: single 15m candle jumped from $0.006763→$0.008403 (+24% in one bar) on 352k volume, followed immediately by the most recent complete bar collapsing to 48k volume (~7% of the spike bar) — classic pump-and-thin-out shape on a low-cap meme pair (ordermin 1000 units, $945k 24h volume). Exactly the "spike-and-dump, not sustained momentum" profile TRADING-STRATEGY.md's Risk Awareness section warns against. No substitute forced — every other liquid candidate failed the momentum or volume bar outright.
+
+### Decision: **HOLD — no entry this scan.** Gate-protection default applied. The single candidate clearing the mechanical momentum/volume bars (BABYSHARK) fails the mandatory spread cap by a wide margin (5.76% vs ≤1%) and shows a spike-and-thin volume shape rather than sustained momentum — a hard skip, not a borderline call. No trade manufactured. $110.0562 ZUSD remains fully available, fully flat across Kraken and Alpaca.
+
+### Step 7 — Notification
+
+Skipped per task instructions (notification only if a trade is placed). No operational issues — all API calls succeeded, all env vars confirmed set.
