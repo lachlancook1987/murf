@@ -33177,3 +33177,15 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 **Decision: HOLD, no new order — capital exhausted.** Today's Pre-Session Research (~20:06 UTC, above) already ran the full discovery sweep and executed the sole qualifying candidate (PENGU/USD); that trade is this session's plan. With ZUSD at $1.1651 (effectively no cash), no new position can be sized regardless of any candidate's setup quality — this is a hard capital constraint, not a gate failure. No fresh discovery sweep re-run; this pass is a state-confirmation checkpoint per the session-open workflow, not a second research cycle. Standing PENGU stop confirmed correctly placed and trailing favorably.
 
 No trade → no TRADE-LOG entry, no ClickUp/WhatsApp notification (retired), no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
+
+## 2026-08-23 — Midday Scan (~22:08 UTC, no trade)
+
+**Reconciliation:** PENGU/USD (9500.0000, entry $0.0099705) hit its 3.5% trailing stop between the 21:01 UTC check and this pass — not caught live. Stop `OY4GZK-CRI72-MYNT2F` closed at $0.009967 (21:50:23 UTC), having trailed favorably to $0.009915/$0.010274 per the prior check before reversing. **P&L: −$0.60105 (−0.63%)**, near-breakeven (small price gain, fee drag). Full reconciliation logged in TRADE-LOG.md. Fully flat: `positions: {}`, `orders: {"open": {}}`, PENGU 0.0000, ZUSD $95.2835.
+
+**BTC:** live $77,700.90 vs session open $77,082.70 → +0.80%. Crash gate clear. BTC weekly trend gate clear (+19.4%/5d).
+
+**Fresh discovery sweep** (658 pairs, 205 candidates vs-open>3%+near-high, 67 after $100k liquidity filter). Deep-dived top 25 on 15m OHLC. **ARX/USD** was the only candidate clearing both 4h momentum (+6.15%) and volume-ratio (19.96x) bars with the freshest possible high (0 min) — but rejected on the cross-exchange directional-mismatch gate: CoinGecko/CoinMarketCap showed ARX flat-to-down (−3.65%) on broad market weakness while Kraken showed +10.0% vs open, the same red-flag pattern that killed MORPHO and EIGEN earlier today. No other candidate cleared both mechanical bars together. Full candidate table and ARX rejection rationale in TRADE-LOG.md.
+
+**Decision: HOLD.** Genuine gate failure (cross-exchange mismatch), not a capital constraint — $95.2835 fully available. Correct, expected outcome per the gate-protection default.
+
+No action taken → no notification per STEP 7 gate (channel retired regardless). PENGU stop-out was a small near-breakeven loss, not notable enough for a proactive push.
