@@ -33119,3 +33119,51 @@ ZUSD post-trade: $1.3301.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). AAVE stop-out (−4.52%, missed live, caught on reconciliation) flagged in the same push.
+
+## 2026-08-23 — Pre-Session Research (~20:06 UTC, trade placed)
+
+**Reconciliation:** The UAI/USD position from Session-Open Execution #3 (340.0000 UAI, entry $0.29047) hit its 3.5% trailing stop between the prior pass and this one — not caught live. Reconciled via Kraken `ClosedOrders`: stop order `OPBV74-4NHEC-SCSMVC` closed at price $0.27978 (16:14:06 UTC). Sell proceeds $95.12520 − fee $0.57075 = **$94.55445** net. Buy total cost was $99.35265. **P&L: −$4.79820 (−4.83%)**, a routine stop-out on the 3.5% trail. Fully flat before this pass began: `positions: {}`, `orders: {"open": {}}`, UAI balance 0.00000, ZUSD $95.8845.
+
+**Pre-trade state:** Kraken ZUSD $95.8845 (100% cash), flat. Alpaca reconfirmed flat: `positions: []` (open orders list shows only the long-canceled historical BTC stop `a2b44cf9`, no live exposure).
+
+**Market context (Perplexity):** BTC ~$77.3k, roughly flat/slightly negative 24h depending on source. ETH ~$2,428, ~flat 24h. Fear & Greed 72 (Greed); BTC-specific CFGI 82 (Extreme Greed). BTC perp funding ~+0.01%/8h (Binance 0.0079%) — neutral, no crowded-long skew. Catalysts: SEC's new "Regulation Crypto Assets" proposal (Atkins), Treasury doubling long-end bond buybacks from Sept 9, White House pushing the Clarity Act, and 5 straight days of positive spot BTC ETF inflows (~$1.62B Aug 18–21) — a broadly bullish macro/regulatory backdrop, BTC-led (dominance ~76.2%) rather than alt-led. Unlocks this week: SOON, BARD, ZRO, KAITO, ZK, PENGU — none held.
+
+**BTC:** live $77,203.10 vs today's session open $77,082.70 → +0.16%. Crash gate clear (nowhere near −20%). BTC weekly trend gate: daily close 5 days ago (Aug 18) $64,677.20 → today (Aug 23) $77,203.10 = **+19.4%**, firmly uptrending — gate not triggered, standard entry criteria apply.
+
+**Fresh discovery sweep** (632 online USD pairs, direct public AssetPairs+Ticker API). 162 candidates cleared vs-open>3% + within 6% of 24h high. Filtered to liquidity ≥$100k 24h USD volume: 51 candidates. Deep-dived the top 25 by vs-open% on 15m OHLC (24h window, trailing-hour volume baseline excluding the most recent hour) for true 4h momentum, 1h-vs-trailing-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| KNTQ/USD | +21.07% | 0.30x | 21 min | Fails volume bar badly despite huge momentum |
+| SPK/USD | +11.80% | 1.81x | 96 min | Fails volume bar (just under 2x) and freshness |
+| **PENGU/USD** | **+10.05%** | **4.51x** | **51 min** | Clears both bars decisively, within the 60-min momentum-peak-check window — selected |
+| NPC/USD | +8.87% | 0.81x | 201 min | Fails volume bar and stale |
+| GRASS/USD | +7.48% | 1.24x | 6 min | Fails volume bar |
+| LDO/USD | +4.86% | 4.26x | 6 min | Strong volume but momentum just under the 5% bar |
+| MINA/USD | +3.79% | 7.00x | 6 min | Strong volume but momentum well under 5% bar |
+| ZORA, DRV, CHIP, ZAMA, TAO, GRT, XCN, MORPHO, POPCAT, INJ, SKY, RE | −3 to +5% | mixed | mixed | Fail momentum and/or volume bars |
+| AAVE, MET, PENDLE, EIGEN, MEGA, UAI | negative | mixed | stale | Cooling off / already traded and stopped today |
+
+**PENGU/USD gate check:** Spread 0.111% (bid $0.009927/ask $0.009938) ≤1%. `PENGUUSD` status online, ordermin 700, costmin $0.5, leverage available up to 3x (spot used, no leverage). 4h momentum +10.05% >5%. Volume 4.51x >2x. 24h high ($0.010033) set 51 min ago — inside the 60-min momentum-peak-check window, passes. 24h range $0.007676–$0.010033 (~23.5% of price) — high-ATR mover, same treatment as recent XPL/ZRO/AAVE/UAI entries. **Cross-exchange divergence check (Perplexity):** external sources quote PENGU ~$0.0099, up ~15% in 24h, 24h volume ~$260M — same direction and comparable magnitude to Kraken's live tape ($0.009929, +10.05% 4h/+18.2% vs-open), no directional mismatch or outsized divergence. Catalyst (Perplexity): a $500k LBank reward campaign cited as driving trading activity, plus a reported technical breakout from a descending triangle triggering short liquidations — a real but ongoing/non-discrete catalyst, not confirmed <6h old → treated as **momentum-only**, 1.5:1 R:R floor applies (2026-08-14 rule).
+
+**Same-thesis check:** No prior PENGU fills anywhere in TRADE-LOG (one prior session logged it only as a passed-over candidate on 2026-07-xx, no fill) — no cooling-period restriction.
+
+**ATR/stop sizing:** 24h range ~23.5% plus 4.51x volume ratio — high-ATR mover. Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9%: R:R = 6%/3.5% ≈ **1.71:1**, clears the momentum-only floor.
+
+### 2026-08-23 | PENGU/USD | BUY | 9500.0000 PENGU | Entry: $0.0099705 (blended incl. fee) | Cost: $94.7194 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OW7PFW-VI3LP-4IPQS6` (buy, market, filled in full — vol_exec 9500.00000 @ $0.009911, cost $94.15450, fee $0.56493, total $94.71943; post-trade PENGU balance 9500.0000, ZUSD $1.1651). Stop txid `OY4GZK-CRI72-MYNT2F` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.009565, limitprice $0.009911).
+
+**T1 = $0.0105687 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.0108678 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +0.16% intraday) | BTC weekly trend gate clear (+19.4% over 5 days, firmly up) | spread 0.111% ≤1% | `PENGUUSD` online, ordermin 700, costmin $0.5, no leverage used | 4h momentum +10.05% >5% | volume 4.51x >2x | 24h high fresh (51 min, inside 60-min window) | cross-exchange divergence: same direction/magnitude as Kraken, no mismatch | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction (no prior PENGU fills) | catalyst: momentum-only (LBank reward campaign + technical breakout, not confirmed <6h discrete event).
+
+ZUSD post-trade: $1.1651.
+
+### Decision: **TRADE — PENGU/USD.** Broad bullish macro backdrop (SEC proposal, Treasury buybacks, Clarity Act push, 5-day BTC ETF inflow streak) but few candidates cleared both momentum and volume bars cleanly this pass — KNTQ and SPK had stronger raw momentum but failed the volume-confirmation bar badly; LDO and MINA had strong volume but sub-5% momentum. PENGU was the only candidate clearing both bars decisively within the freshness window.
+
+**Risk factors:** High-ATR asset (23.5% 24h range) — 3.5% trail may still be noise-prone on a volatile meme-adjacent token; catalyst is momentum/reward-program-driven rather than a hard news event, so the 1.5:1 R:R floor was required and applied; broad market Extreme-Greed reading (BTC CFGI 82) raises reversal risk on any single position even with a fresh breakout.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).

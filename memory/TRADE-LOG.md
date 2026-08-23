@@ -9395,3 +9395,44 @@ ZUSD post-trade: $1.3301.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). AAVE stop-out (−4.52%, missed live, caught on reconciliation) flagged in the same push.
+
+## 2026-08-23 — Pre-Session Research (~20:06 UTC, trade placed)
+
+**Reconciliation:** The UAI/USD position from Session-Open Execution #3 (340.0000 UAI, entry $0.29047) hit its 3.5% trailing stop between the prior pass and this one — not caught live. Reconciled via Kraken `ClosedOrders`: stop order `OPBV74-4NHEC-SCSMVC` closed at price $0.27978 (16:14:06 UTC). Sell proceeds $95.12520 − fee $0.57075 = **$94.55445** net. Buy total cost was $99.35265. **P&L: −$4.79820 (−4.83%)**, a routine stop-out on the 3.5% trail. Fully flat before this pass began: `positions: {}`, `orders: {"open": {}}`, UAI balance 0.00000, ZUSD $95.8845.
+
+**Pre-trade state:** Kraken ZUSD $95.8845 (100% cash), flat. Alpaca reconfirmed flat: `positions: []` (open orders list shows only the long-canceled historical BTC stop `a2b44cf9`, no live exposure).
+
+**BTC:** live $77,203.10 vs today's session open $77,082.70 → +0.16%. Crash gate clear. BTC weekly trend gate: +19.4% over 5 days, firmly uptrending — standard entry criteria apply. Fear & Greed 72 (Greed).
+
+**Fresh discovery sweep** (632 online USD pairs). 162 candidates cleared vs-open>3% + within 6% of 24h high; 51 with liquidity ≥$100k. Deep-dived top 25 on 15m OHLC:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| KNTQ/USD | +21.07% | 0.30x | 21 min | Fails volume bar badly |
+| SPK/USD | +11.80% | 1.81x | 96 min | Fails volume bar and freshness |
+| **PENGU/USD** | **+10.05%** | **4.51x** | **51 min** | Clears both bars decisively — selected |
+| LDO/USD | +4.86% | 4.26x | 6 min | Strong volume, momentum just under 5% bar |
+| MINA/USD | +3.79% | 7.00x | 6 min | Strong volume, momentum well under 5% bar |
+| AAVE, MET, PENDLE, EIGEN, MEGA, UAI | negative | mixed | stale | Already traded and stopped today |
+
+**PENGU/USD gate check:** Spread 0.111% ≤1%. `PENGUUSD` online, ordermin 700, no leverage used. 4h momentum +10.05% >5%. Volume 4.51x >2x. 24h high set 51 min ago — passes momentum-peak-check. 24h range ~23.5% of price — high-ATR. Cross-exchange (Perplexity): ~$0.0099, up ~15%/24h — same direction/magnitude as Kraken, no mismatch. Catalyst: $500k LBank reward campaign + technical breakout — ongoing, not confirmed <6h → **momentum-only**, 1.5:1 R:R floor applies.
+
+**Same-thesis check:** No prior PENGU fills anywhere in TRADE-LOG — no cooling-period restriction.
+
+**ATR/stop sizing:** High-ATR mover — **3.5% trailing stop**, T1/T2 widened to +6%/+9%: R:R ≈ **1.71:1**.
+
+### 2026-08-23 | PENGU/USD | BUY | 9500.0000 PENGU | Entry: $0.0099705 (blended incl. fee) | Cost: $94.7194 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OW7PFW-VI3LP-4IPQS6` (buy, market, filled in full — vol_exec 9500.00000 @ $0.009911, cost $94.15450, fee $0.56493, total $94.71943; post-trade PENGU balance 9500.0000, ZUSD $1.1651). Stop txid `OY4GZK-CRI72-MYNT2F` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.009565, limitprice $0.009911).
+
+**T1 = $0.0105687 (+6%)**, **T2 = $0.0108678 (+9%)**. R:R at T1 ≈ 1.71:1.
+
+**Gate checklist:** crash gate clear | BTC weekly trend gate clear (+19.4%/5d) | spread 0.111% ≤1% | `PENGUUSD` online, ordermin 700, no leverage | 4h momentum +10.05% >5% | volume 4.51x >2x | 24h high fresh (51 min) | cross-exchange divergence: no mismatch | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction | catalyst: momentum-only.
+
+ZUSD post-trade: $1.1651.
+
+### Decision: **TRADE — PENGU/USD.** Few candidates cleared both momentum and volume bars this pass — KNTQ/SPK had stronger momentum but failed volume confirmation; LDO/MINA had strong volume but sub-5% momentum. PENGU was the only candidate clearing both bars decisively within the freshness window.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). UAI stop-out (−4.83%, missed live, caught on reconciliation) flagged in the same push.
