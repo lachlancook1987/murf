@@ -9436,3 +9436,39 @@ ZUSD post-trade: $1.1651.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). UAI stop-out (−4.83%, missed live, caught on reconciliation) flagged in the same push.
+
+## 2026-08-23 — Midday Scan (~22:08 UTC, no trade)
+
+### 2026-08-23 | PENGU/USD | SELL (trailing stop triggered) | 9500.0000 PENGU | Exit: $0.009967 | Closed
+
+**Order ID (stop):** OY4GZK-CRI72-MYNT2F (trailing_stop, trail_percent 3.5%, GTC — trailed up from stopprice $0.009565/limitprice $0.009911 at fill toward $0.009915/$0.010274 as price ran to today's high per the 21:01 UTC check, then reversed and triggered; final stopprice $0.009967, limitprice $0.010344, opened 20:06:51 UTC, closed 21:50:23 UTC)
+**P&L:** Buy cost $94.15450 + $0.56493 fee = $94.71943 total spent. Sell proceeds $94.68650 − $0.56812 fee = $94.11838 net received. **Net: −$0.60105 (−0.63%)**
+**Notes:** Discovered via this session's pre-trade reconciliation (`positions: {}`, `orders: {"open": {}}`, PENGU balance 0.0000) — stop fired between the prior session-open check (21:01 UTC, position was risk-free with stop above entry) and this midday scan. Price ran up toward the 24h high before reversing and trailing back through the still-favorable stop level to a near-breakeven small loss (fee drag exceeded the small net price gain). No thesis break, no manual intervention — mechanical stop-out as designed. Kraken account confirmed flat: `positions: {}`, `orders: {"open": {}}`, ZUSD $95.2835 (100% cash + unchanged dust basket). Alpaca reconfirmed flat: `positions: []`, no open orders beyond the long-canceled historical BTC stop `a2b44cf9`.
+
+**Pre-trade state:** Kraken ZUSD $95.2835 (100% cash), flat. Alpaca reconfirmed flat.
+
+**BTC:** live $77,700.90 vs today's session open $77,082.70 → +0.80%. Crash gate clear. BTC weekly trend gate clear (+19.4%/5d, established earlier today — firmly uptrending, standard entry criteria apply). 
+
+**Fresh discovery sweep** (658 online USD pairs). 205 candidates cleared vs-open>3% + within 6% of 24h high — still a broad market-wide melt-up, unchanged character from earlier passes today. Filtered to liquidity ≥$100k 24h USD volume: 67 candidates. Deep-dived the top 25 by vs-open% on 15m OHLC for true 4h momentum, 1h-vs-trailing-24h volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| **ARX/USD** | **+6.15%** | **19.96x** | **0 min (current bar)** | Clears both bars decisively, freshest possible high — **rejected on cross-exchange divergence, directional mismatch** (see below) |
+| NPC/USD | +11.10% | 0.94x | 0 min | Fails volume bar despite huge momentum |
+| DOG/USD | +7.95% | 2.67x | 195 min | Fails momentum-peak-check (stale >60min) |
+| GRASS/USD | +9.65% | 1.05x | 15 min | Fails volume bar |
+| SUPER/USD | +6.26% | 1.31x | 15 min | Fails volume bar |
+| TURBO/USD | +5.29% | 1.65x | 0 min | Fails volume bar (just under 2x) |
+| TOSHI/USD | +5.61% | 0.95x | 15 min | Fails volume bar |
+| KII/USD | +5.08% (mechanical read) | 0.83x | 0 min | Fails volume bar; vs-open +384.5% is a listing/relisting-scale anomaly, treated as a data-quality outlier regardless |
+| SPK, DRV, ZAMA, GRT, TAO, USELESS, INJ, POPCAT, LDO, CFG, UNI, RE, SKY, MINA, MET, ZEC, PENDLE | mixed | mixed | mixed | Fail momentum and/or volume bars; PENDLE/EIGEN/MORPHO/UAI/AAVE/PENGU already traded or rejected earlier today |
+
+**ARX/USD — rejected, cross-exchange price-divergence gate, directional mismatch.** Clears both mechanical bars by the widest margin of the sweep (19.96x volume, freshest possible high). Spread check: bid $0.13526/ask $0.13584 (~0.43%) ≤1%; `ARXUSD` online, ordermin 35, no leverage. But Perplexity (`ARX Arcium crypto token news and price catalyst today`) returned CoinGecko ~$0.1276 and CoinMarketCap ~$0.124 with ARX reported **down −3.65%/24h**, attributed to broad market weakness with "no clear secondary driver" — vs Kraken live $0.13522 (**+10.0% vs open**). This is a direct directional mismatch (Kraken sharply up, CoinGecko/CMC flat-to-down) on top of a ~6% price-level divergence — the identical red-flag pattern that killed MORPHO and EIGEN earlier today (both also directionally opposite to Kraken) and MORPHO/EUL/SYN/TLM/ESP/USELESS on 2026-07-25. Rejected per standing precedent regardless of the otherwise-clean technical setup; ARX's $119k 24h liquidity (borderline-thin) is consistent with a not-yet-arbitraged or distorted order book.
+
+**No other candidate cleared all gates.** With ARX rejected, nothing else in the sweep cleared both the 4h momentum >5% and volume >2x bars together with a fresh high — this is a genuine gate failure, not a capital constraint (ZUSD $95.2835 fully available).
+
+### Decision: **HOLD.** ARX/USD was the only candidate this sweep to mechanically clear both momentum and volume thresholds with the freshest possible high, but failed the cross-exchange directional-mismatch gate on the same pattern that rejected MORPHO and EIGEN earlier today. No other candidate cleared both bars. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected HOLD outcome, not a gap to route around.
+
+### Step 7 — Notification
+
+No action taken this pass (reconciliation of an already-fired stop, no new entry) → no ClickUp/WhatsApp notification per STEP 7 gate (and channel retired regardless per CLAUDE.md). PENGU stop-out was a small near-breakeven loss (−0.63%), not flagged as a notable loss warranting a proactive push.
