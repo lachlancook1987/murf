@@ -9254,4 +9254,50 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 
 **Trades today:** ZRO/USD BUY 81.0000 @ ~$1.2352 (Pre-Session Research, ~08:07 UTC) — re-entry after yesterday's ZRO position (88.0000, Session-Open Execution #4) hit its 3.5% trailing stop at 22:39 UTC Aug 22 for +$2.0240 (+2.03%); full write-up and reconciliation already in `RESEARCH-LOG.md` ("2026-08-23 — Pre-Session Research"), not duplicated here. | **Total since migration:** ~117
 
+### 2026-08-23 | ZRO/USD | SELL (trailing stop triggered) | 81.0000 ZRO | Exit: $1.215 | Closed
+
+Order txid `OEA5QH-GIJ3T-Z6EOEB` closed via `ClosedOrders` reconciliation (not caught live — closed at 09:27:17 UTC, after the "Session-Open Execution (~09:01 UTC, no trade)" pass had already logged the position as open/protected). Buy cost $99.4680 (entry $1.228) → sell proceeds $98.4150 (exit $1.215) → **−$1.0530 (−1.06%)**, small loss on the 3.5% trail (stop triggered before the full 3.5% because the trail had ratcheted up from the post-fill high before reversing). Flat again: ZUSD $108.6334, `positions: {}`, `orders: {"open": {}}` confirmed at this pass's (~12:01 UTC) pre-trade check.
+
+## 2026-08-23 — Session-Open Execution #2 / Midday Scan (~12:01 UTC, trade placed)
+
+**Pre-trade state:** Kraken ZUSD $108.6334 (100% cash), flat — no open positions or orders (ZRO stop-out from ~09:27 UTC reconciled above). Alpaca reconfirmed flat: `positions: []`.
+
+**BTC:** live $77,248 vs today's session open $77,082.70 → +0.21%. Crash gate clear. BTC weekly trend gate: still firmly uptrending (no change from this morning's +17.6%/5d read) — standard entry criteria apply. Fear & Greed 71 (Greed, Perplexity).
+
+**Fresh discovery sweep** (632 online USD pairs, direct public AssetPairs+Ticker API). 40 candidates cleared vs-open>3% + within 6% of 24h high; filtered to liquidity ≥$100k 24h USD volume: 22 candidates. Deep-dived the top 14 by vs-open% on 15m OHLC for true 4h momentum, 1h-vs-trailing-bar volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| **XPL/USD** | **+13.33%** | **12.33x** | 0 min (current bar making new high) | Clears both bars decisively — selected |
+| SPX/USD | +6.07% | 5.08x | 15 min | Also clears both bars — weaker on both momentum and volume vs. XPL, not selected |
+| ENA/USD | +13.59% | 1.83x | 45 min | Fails volume bar |
+| ETHFI/USD | +10.61% | 1.32x | 45 min | Fails volume bar |
+| UAI/USD | +9.30% | 0.69x | 15 min | Fails volume bar |
+| EIGEN/USD | +7.90% | 0.61x | 60 min | Fails volume bar |
+| PUMP/USD | +4.60% | 2.67x | 285 min | Fails momentum bar; same spike-and-retreat profile flagged before |
+| MON/USD | +5.18% | 0.48x | 930 min (stale) | Fails freshness and volume |
+| GRASS, MORPHO, STX, TRUMP, RE | +1-5% | mixed | mixed | Fail momentum and/or volume bars |
+
+**XPL/USD gate check:** Spread 0.096% (ask $0.1039/bid $0.1038 at execution) ≤1%. `XPLUSD` status online, ordermin 60, costmin $0.5, leverage available 2-3x (spot used). 4h momentum +13.33% >5% (24h vs-open +12.37% at sweep time). Volume 12.33x >2x — exceptionally large spike, comparable to the 2026-08-22/23 ZRO entries' volume profile. 24h high ($0.1054) set in the current forming bar — passes momentum-peak-check decisively. **Cross-exchange divergence check:** Perplexity's CMC/CoinGecko reads ($0.0938-0.0954) lag Kraken's live tape ($0.1039-0.1047) by ~9-10% — within the ≤15-20% gate and consistent with the known chronic Perplexity-lag pattern (not a thin/illiquid-book signal; XPL trades >$5M/24h on Kraken). Catalyst (Perplexity): Plasma One card-rewards launch and mainnet-beta news cited as drivers, but timing not confirmed <6h old — treated as **momentum-only** → 2026-08-14 rule applies: 1.5:1 R:R floor.
+
+**Same-thesis check:** No prior XPL fills in TRADE-LOG (only research mentions, all prior passes SKIP/HOLD) — no cooling-period restriction.
+
+**ATR/stop sizing:** 24h range $0.0890-$0.1054 (~15.6% of price) plus 12.33x volume ratio mark this as a fast, extended high-ATR mover — same treatment as prior ZRO/XDG high-ATR entries. Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9% to keep R:R ≥1.5:1 momentum-only floor: 6%/3.5% ≈ **1.71:1**.
+
+### 2026-08-23 | XPL/USD | BUY | 960.0000 XPL | Entry: ~$0.104624 (blended incl. fee) | Cost: $100.4390 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OHKSVJ-555E2-6FHDEM` (buy, market, filled in full — post-trade XPL balance 960.00000, ZUSD $8.1944). Stop txid `OALTOR-LKXK2-LUJAWT` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.1004, limitprice $0.1040).
+
+**T1 = $0.110901 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.114040 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +0.21% intraday) | BTC weekly trend gate clear (+17.6% over 5 days, firmly up) | spread 0.096% ≤1% | `XPLUSD` status online, ordermin 60, costmin $0.5 | no leverage used (spot) | 4h momentum +13.33% >5% | volume 12.33x >2x | 24h high set in current bar, fresh | cross-exchange divergence ~9-10% vs Perplexity-sourced CMC/CoinGecko, within ≤15-20% gate and attributed to known Perplexity lag | R:R 1.71:1 ≥1.5:1 momentum-only floor | no prior XPL fills — no cooling-period restriction | catalyst: momentum-only (Plasma One/mainnet news cited but timing unconfirmed <6h).
+
+ZUSD post-trade: $8.1944.
+
+### Decision: **TRADE — XPL/USD.** One candidate (XPL) cleared every gate decisively; SPX was a distant second on both momentum and volume and not needed as a second entry given account size ($108.63 total equity, already ~93% deployed after this fill).
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). ZRO stop-out (-1.06%, missed live, caught on reconciliation) flagged in the same push.
+
 **Notes:** Kraken `account`: ZUSD $10.8089, ZRO 81.000000 (dust basket unchanged — AAVE/AVAX/BABY/FET/INJ/KAS/NEAR/SOL/SUI/TAO/XETH/ZAUD, all sub-$0.20 total, immaterial, no action). `positions: {}` (spot, not margin), one open order: trailing-stop `OEA5QH-GIJ3T-Z6EOEB` on ZRO/USD (3.5%, stopprice $1.2060, limitprice $1.2490) — position is protected. **Log data-quality note (second instance of this pattern):** the "Aug 22 — EOD Snapshot" entry above (Portfolio $112.3570, 100% cash) was, like the Aug 21 entry before it, written mid-morning (~08:35 UTC) *before* that day's two further trades (POL, ZRO) executed — it is not Aug 22's true closing equity either. Reconstructed Aug 22's true close from Kraken `ClosedOrders`: post-ZRO-buy cash was $9.9310, the 3.5% trail then stopped out the full 88 ZRO at 22:39 UTC for proceeds $101.5520 (+$2.0240), landing at **$111.4830** (100% cash, flat) by midnight UTC — nothing else traded before day's end. Today's Day P&L ($111.7349 vs $111.4830) is computed against that reconstructed true close, not the stale $112.3570 label. **Recommendation for future sessions:** only label a snapshot "EOD" if it is written after that day's trading has concluded (e.g. at the *next* day's pre-session pass, reconciling the prior day first) — a mid-morning pre-session snapshot should not carry an "EOD" heading for the day it's written on. BTC: Kraken ticker `o` (today's session-open) $77,082.70 vs live $76,286.40 → **−1.03%**; bot +0.23% beat that by **+1.26 points**. Phase P&L −$68.0451 (−37.85%) from $179.78 Kraken starting equity (May 22). Alpaca stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Total trades since migration ~117 (~116 as of Aug 22 close + 1 discrete order today: ZRO buy; its stop is still open, not yet triggered). Tomorrow: pre-session research resumes with $10.8089 cash + the open ZRO position; crash gate threshold ~$61,029 (BTC −20% from $76,286.40).
