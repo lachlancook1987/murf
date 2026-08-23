@@ -33025,3 +33025,50 @@ ZUSD post-trade: $8.1944.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). ZRO stop-out (−1.06%, missed live, caught on reconciliation) flagged in the same push.
+
+## 2026-08-23 — Midday Scan (~14:04 UTC, trade placed)
+
+**Reconciliation:** The XPL/USD position from Session-Open Execution #2 (960.0000 XPL, entry $0.104624) hit its 3.5% trailing stop between the prior pass and this one — not caught live. Reconciled via Kraken `ClosedOrders`: stop order `OALTOR-LKXK2-LUJAWT` opened 12:04:07 UTC, closed 12:48:43 UTC (stopprice ratcheted to $0.1017, filled at $0.1017). Buy cost $99.84000 + fee $0.59904 = **$100.4390** total cost. Sell proceeds $97.63200 − fee $0.58579 = **$97.0462** net. **P&L: −$3.3928 (−3.38%)**, a routine stop-out on the 3.5% trail. Fully flat before this pass began: `positions: {}`, `orders: {"open": {}}`, XPL balance 0.00000, ZUSD $105.2406.
+
+**Pre-trade state:** Kraken ZUSD $105.2406 (100% cash), flat. Alpaca reconfirmed flat via `orders` (all historical, no open BTC position/orders — stop `a2b44cf9` long since canceled).
+
+**BTC:** live $77,550.70 vs today's session open $77,082.70 → +0.61%. Crash gate clear (nowhere near −20%). BTC weekly trend gate: 5 days ago close (Aug 18) $64,677.20 → today $77,550.70 = **+19.9%**, firmly uptrending — gate not triggered, standard entry criteria apply. Fear & Greed 71 (Greed, unchanged from this morning/midday).
+
+**Fresh discovery sweep** (632 online USD pairs, direct public AssetPairs+Ticker API). 130 candidates cleared vs-open>3% + within 6% of 24h high — a broad market-wide melt-up, nearly every pair green. Filtered to liquidity ≥$100k 24h USD volume: 55 candidates. Deep-dived the top 15 by vs-open% on 15m OHLC for true 4h momentum, 1h-vs-trailing volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| PENDLE/USD | +15.58% | 6.07x | 0 min | Clears both bars — liquidity only $345k/24h |
+| EIGEN/USD | +11.51% | 6.44x | 0 min | Clears both bars — liquidity only $190k/24h |
+| **AAVE/USD** | **+11.26%** | **6.00x** | **0 min** | Clears both bars decisively, best liquidity ($5.7M/24h) among the strong movers — selected |
+| TRUMP/USD | +10.91% | 2.08x | 0 min | Clears bars but volume ratio thin (barely >2x) |
+| XPL/USD | +10.25% | 3.73x | 30 min | Just stopped out this pass — not re-entered on the same thesis one pass later |
+| UNI/USD | +9.74% | 9.66x | 15 min | Clears both bars, strong second choice |
+| UAI/USD | +9.72% | 2.57x | 15 min | Clears bars, weaker liquidity ($235k/24h) |
+| GRASS/USD | +9.14% | 2.64x | 30 min | Clears bars, weaker liquidity |
+| STX/USD | +9.11% | 4.05x | 45 min | Clears bars |
+| LDO/USD | +8.13% | 26.89x | 0 min | Extreme volume spike, clears bars |
+| MORPHO/USD | +8.05% | 3.82x | 0 min | Clears bars |
+| MON, ZRO, USELESS, ETHFI | +5-10% | mixed | mixed | Weaker on one metric or stale |
+
+**AAVE/USD gate check:** Spread 0.100% (bid $139.77/ask $139.86 pre-order) ≤1%. `AAVEUSD` status online, ordermin 0.05, no leverage used (spot). 4h momentum +11.26% >5%. Volume 6.00x >2x. 24h high ($141.97) set in the current forming bar — passes momentum-peak-check decisively. 24h range $120.88–$141.97 (~17.4% of price) plus the 6x volume spike mark this as high-ATR, same treatment as recent XPL/ZRO/POL entries. **Cross-exchange divergence check (Perplexity):** sources quote AAVE $123–$127 vs Kraken live $140.24 at fill → ~12–14% divergence, within the ≤15–20% gate and consistent with the known chronic Perplexity-lag pattern (AAVE trades >$5.7M/24h on Kraken, not a thin book). Catalyst (Perplexity): broad DeFi short-squeeze/risk-on rally, Aave V4 deposits hit a $600M record, and a $192.8M USDC whale in-and-out flow — real protocol growth and market-wide momentum, but no single fresh <6h discrete catalyst → treated as **momentum-only**, 1.5:1 R:R floor applies (2026-08-14 rule).
+
+**Same-thesis check:** No prior AAVE fills anywhere in TRADE-LOG — no cooling-period restriction.
+
+**ATR/stop sizing:** 24h range ~17.4% plus 6.00x volume ratio — high-ATR mover, same treatment as prior high-ATR entries (XPL, ZRO, POL). Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9%: R:R = 6%/3.5% ≈ **1.71:1**, clears the momentum-only floor.
+
+### 2026-08-23 | AAVE/USD | BUY | 0.7150 AAVE | Entry: ~$141.0814 (blended incl. fee) | Cost: $100.8732 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OYA62L-XQOKP-ZEYIHE` (buy, market, filled in full — vol_exec 0.71500000 @ $140.24, cost $100.2716, fee $0.60163, total $100.8732; post-trade AAVE balance 0.71504 incl. pre-existing 0.00004 dust, ZUSD $4.3674). Stop txid `O547NW-BYEYR-RULXCW` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $135.10, limitprice $140.00).
+
+**T1 = $149.546 (+6%)**, **T2 = $153.779 (+9%)**. R:R at T1 ≈ 1.71:1.
+
+**Gate checklist:** crash gate clear | BTC weekly trend gate clear (+19.9%/5d) | spread 0.100% ≤1% | `AAVEUSD` online, ordermin 0.05, no leverage | 4h momentum +11.26% >5% | volume 6.00x >2x | 24h high fresh (current bar) | cross-exchange divergence ~12-14%, within gate, attributed to Perplexity lag on a highly liquid pair | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction | catalyst: momentum-only (DeFi rally + V4 growth, no confirmed single <6h event).
+
+ZUSD post-trade: $4.3674.
+
+### Decision: **TRADE — AAVE/USD.** Broad market-wide rally produced many qualifying candidates (PENDLE, EIGEN, TRUMP, UNI among them); AAVE selected as the strongest combination of momentum, volume confirmation, and liquidity (best 24h volume of the qualifying set at $5.7M, minimizing slippage/spread risk relative to the smaller-cap alternatives).
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). XPL stop-out (−3.38%, missed live, caught on reconciliation) flagged in the same push.
