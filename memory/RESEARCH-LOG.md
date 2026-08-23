@@ -33072,3 +33072,50 @@ ZUSD post-trade: $4.3674.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). XPL stop-out (−3.38%, missed live, caught on reconciliation) flagged in the same push.
+
+## 2026-08-23 — Session-Open Execution #3 (~15:06 UTC, trade placed)
+
+**Reconciliation:** The AAVE/USD position from Midday Scan (0.7150 AAVE, entry $141.0814) hit its 3.5% trailing stop between the prior pass and this one — not caught live. Reconciled via Kraken `ClosedOrders`: stop order `O547NW-BYEYR-RULXCW` closed at price $135.52 (stopprice had ratcheted to $135.56). Sell proceeds $96.89680 − fee $0.58138 = **$96.31542** net. Buy total cost was $100.8732. **P&L: −$4.5578 (−4.52%)**, a routine stop-out on the 3.5% trail. Fully flat before this pass began: `positions: {}`, `orders: {"open": {}}`, AAVE balance back to pre-existing dust (0.00004), ZUSD $100.6828.
+
+**Pre-trade state:** Kraken ZUSD $100.6828 (100% cash), flat. Alpaca reconfirmed flat via `positions`/`orders` (no open BTC position/orders).
+
+**BTC:** live $77,122.30 vs today's session open $77,082.70 → roughly flat (+0.05%). Crash gate clear. BTC weekly trend gate: daily close 5 days ago (Aug 18) $64,677.20 → today (Aug 23) $77,204.50 = **+19.4%**, firmly uptrending — gate not triggered, standard entry criteria apply. Fear & Greed 71 (Greed, per CFGI; Alternative.me also 71, CoinStats 76 Extreme Greed).
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API). 100 candidates cleared vs-open>3% + within 6% of 24h high — still a broad market-wide melt-up. Filtered to liquidity ≥$100k 24h USD volume: 43 candidates. Deep-dived the top ~20 by vs-open% on 15m OHLC for true 4h momentum, 1h-vs-trailing volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| PENDLE/USD | +15.10% | 2.36x | 63 min | Fails momentum-peak-check (stale >60min) |
+| SPK/USD | +12.05% | 8.91x | 63 min | Fails momentum-peak-check (stale >60min) |
+| **MORPHO/USD** | **+10.24%** | **7.69x** | **3 min** | Clears both bars + fresh high — **rejected on cross-exchange divergence, directional mismatch** (see below) |
+| EIGEN/USD | +7.50% | 6.78x | 48 min | Clears both bars — **rejected, borderline divergence + directional mismatch** (see below) |
+| MELANIA/USD | +6.76% | 2.80x | 33 min | Clears both bars, not needed |
+| UNI/USD | +6.52% | 5.78x | 78 min | Fails momentum-peak-check (stale) |
+| **UAI/USD** | **+6.05%** | **2.44x** | **18 min** | Clears both bars, fresh high, clean cross-exchange check — **selected** |
+| TRIA, ZEC, MON, SKY, TAO, DRV, ONDO, GRASS, ZAMA, MINA, USELESS, TON, ETHFI | +0.5-7% | mixed | mixed | Fail momentum and/or volume bars |
+
+**MORPHO/USD — rejected, cross-exchange price-divergence gate, directional mismatch.** Clears both mechanical bars decisively with the freshest high of the sweep (3 min). But Perplexity (`Morpho MORPHO crypto token news and price catalyst today`) returned CoinGecko **$2.24, down −7.10%/24h**, and CoinMarketCap **~$2.28–2.31**, vs Kraken live $2.6436–2.6518 (**+8-15% vs open**) — a **~15-18% magnitude divergence and a direct directional mismatch** (Kraken up double digits, CoinGecko down). This is the identical pattern that killed MORPHO itself on 2026-07-25 (~23.5% divergence, pump-and-dump candle) and the EUL/SYN/TLM/ESP/USELESS run that week — rejected regardless of clean technicals, per standing precedent on this exact asset.
+
+**EIGEN/USD — rejected, same pattern, weaker case for inclusion anyway.** CoinGecko $0.2089, **down −2.6%/24h**, vs Kraken live $0.2394 (**+13.73% vs open**) — ~14.6% magnitude divergence, also directionally opposite (Kraken up sharply, CoinGecko down). Below the strict ≥15% band on magnitude alone but the directional mismatch is the same red flag as MORPHO; not pursued given a clean alternative (UAI) was available.
+
+**UAI/USD gate check:** Spread ~0.55% (bid $0.28912/ask $0.29071) ≤1%. `UAIUSD` status online, ordermin 23, costmin $0.5, no margin available for this pair (spot used, immaterial). 4h momentum +6.05% >5%. Volume 2.44x >2x. 24h high set 18 min ago — passes momentum-peak-check. **Cross-exchange divergence check (Perplexity):** CoinGecko $0.2501 (~15.8% divergence), CoinMarketCap $0.2710 (~6.9% divergence) — both **same direction** as Kraken (up), no directional mismatch; treated as within the chronic-Perplexity-lag pattern seen on XPL/AAVE earlier today, not a distorted-book signal. Catalyst (Perplexity): Jupiter integration for AI agents (Solana liquidity/swaps inside UnifAI Console) — a real product update but not confirmed <6h old, part of an ongoing AI-sector-rotation narrative → treated as **momentum-only**, 1.5:1 R:R floor applies.
+
+**Same-thesis check:** No prior UAI fills anywhere in TRADE-LOG (prior sessions only ever SKIPped it on momentum/volume grounds) — no cooling-period restriction.
+
+**ATR/stop sizing:** 24h range $0.21792–$0.29477 (~29.5% of price) plus a genuine volume spike — high-ATR mover, same treatment as prior high-ATR entries (ZRO, XPL, AAVE today). Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9%: R:R = 6%/3.5% ≈ **1.71:1**, clears the momentum-only floor.
+
+### 2026-08-23 | UAI/USD | BUY | 340.0000 UAI | Entry: $0.29047 (blended incl. fee) | Cost: $99.3527 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OIS7WG-QRFDQ-KMM5XY` (buy, market, filled in full — vol_exec 340.00000 @ $0.29047, cost $98.76009, fee $0.59256, total $99.35265; post-trade UAI balance 340.00000, ZUSD $1.3301). Stop txid `OPBV74-4NHEC-SCSMVC` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.28033, limitprice $0.29049).
+
+**T1 = $0.307898 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.316612 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC ~flat intraday) | BTC weekly trend gate clear (+19.4% over 5 days, firmly up) | spread 0.55% ≤1% | `UAIUSD` online, ordermin 23, costmin $0.5, no leverage available | 4h momentum +6.05% >5% | volume 2.44x >2x | 24h high fresh (18 min) | cross-exchange divergence ~6.9-15.8%, same direction as Kraken (no mismatch), attributed to Perplexity lag | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction (no prior UAI fills) | catalyst: momentum-only (Jupiter AI-agent integration, ongoing AI-sector narrative, not confirmed <6h).
+
+ZUSD post-trade: $1.3301.
+
+### Decision: **TRADE — UAI/USD.** MORPHO was the strongest technical setup of the sweep (freshest high, highest volume ratio) but hard-rejected on the cross-exchange directional-mismatch gate — the same pattern that killed this exact asset on 2026-07-25. EIGEN showed the identical mismatch signature and was skipped too. UAI was the next-best candidate and cleared every gate cleanly, including a same-direction (non-mismatched) cross-exchange check.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21). AAVE stop-out (−4.52%, missed live, caught on reconciliation) flagged in the same push.
