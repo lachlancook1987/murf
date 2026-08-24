@@ -33189,3 +33189,26 @@ No trade → no TRADE-LOG entry, no ClickUp/WhatsApp notification (retired), no 
 **Decision: HOLD.** Genuine gate failure (cross-exchange mismatch), not a capital constraint — $95.2835 fully available. Correct, expected outcome per the gate-protection default.
 
 No action taken → no notification per STEP 7 gate (channel retired regardless). PENGU stop-out was a small near-breakeven loss, not notable enough for a proactive push.
+
+## 2026-08-24 — Pre-Session Research
+
+**Account snapshot:** Kraken pre-trade ZUSD $95.2835 (100% cash, flat: `positions: {}`, `orders: {"open": {}}`). Alpaca residual BTC position: flat, `positions: []`, no open orders beyond the long-canceled historical BTC stop. Post-trade Kraken: 188.0000 AERO (entry $0.501152 blended), ZUSD $1.0669, trailing stop live.
+
+**Market context:** BTC $77,366.50, ~+0.1% 24h (CoinGecko $77,403.14 +0.10%, CoinStats $77,333.54 +0.04%). ETH ~$2,428, roughly flat 24h (sources ranging $2,406–$2,448). Fear & Greed 66 (Greed). BTC perp funding ~+0.01%/8h (Binance 0.0079%) — neutral, no crowded-long skew. Crash gate clear. BTC weekly trend gate clear: +11.7% over 5 days (Aug 19 close $69,285.00 → today $77,366.50), firmly uptrending, standard entry criteria apply. Catalysts: renewed spot BTC ETF inflows and derivatives short-covering cited as the main driver of the broader rebound, no fresh Fed/regulatory catalyst identified Aug 22–24; macro watch remains CPI/NFP/PCE/Jackson Hole/FOMC. Token unlocks today: INFRA (1.00% mcap), XWGT (5.55% mcap); imminent this week: H ($21.3M, Aug 25), HUMA ($9.3M, Aug 26). No major dated protocol upgrade this week beyond a LayerZero chain wind-down (~Aug 24, cleanup event, not a catalyst). No currently-held Kraken positions to check news on (fully flat pre-trade).
+
+**Discovery sweep:** 633 online USD pairs, direct public AssetPairs+Ticker API. 33 candidates cleared vs-open>3% + within 6% of 24h high; 10 with liquidity ≥$100k. Deep-dived all 10 on 15m OHLC (true 4h momentum, 1h-vs-trailing-hourly volume ratio, 24h-high freshness). Only two cleared both the 4h momentum >5% and volume >2x bars: UAI/USD (+21.48%/3.44x/15min) and AERO/USD (+5.54%/6.31x/30min). Full candidate table and gate-by-gate reasoning in TRADE-LOG.md.
+
+**Trade ideas evaluated:**
+1. **UAI/USD** — Catalyst: Jupiter integration for AI agents on Console + AI-sector rotation (momentum-only, not confirmed <6h). Entry would be ~$0.345 market. Stop: trailing 3.5%. T1 +6% / T2 +9%, R:R ≈1.71:1. **REJECTED — cross-exchange price-divergence gate.** Kraken $0.34529 vs CoinGecko $0.2500/CMC $0.2710/Binance $0.2426/KuCoin $0.26464 — ~30–38% divergence, well past the 15–20% threshold, despite same-direction moves everywhere. Echoes this exact asset's stop-out on 2026-08-23.
+2. **AERO/USD — TRADE, executed.** Catalyst: Aerodrome Public Goods Fund 325K AERO buyback + bullish Base-ecosystem narrative + Predictive Allocation upgrade anticipation (momentum-only, timing not confirmed <6h). Entry: market, filled $0.4981 (blended $0.501152 incl. fee). Stop: trailing 3.5% (3.5% used over default 2.5% given 12.5% 24h range / 6.31x volume — high-ATR treatment). T1 = $0.531221 (+6%), T2 = $0.546256 (+9%). R:R ≈1.71:1, clears the 1.5:1 momentum-only floor. Spread 0.10% ≤1%. Cross-exchange check clean (Perplexity quotes ~$0.48, no material divergence). No same-thesis restriction (no prior AERO fills). Order txid `OW6ABB-X2XXV-VWWL53` (buy), stop txid `OFCGQR-GWJBU-XPIMQ6` (trailing 3.5%, confirmed open).
+3. **REUSD** — +8.82% 4h momentum but volume ratio only 0.98x, fails the >2x confirmation bar. Skipped.
+4. **DRVUSD** — +8.55% 4h momentum but volume ratio only 1.32x, fails the >2x confirmation bar. Skipped.
+5. **XDCUSD** — +3.98% 4h momentum, just under the 5% bar; volume 2.56x would have cleared. Skipped on momentum shortfall.
+
+**Risk factors:** AERO is a high-ATR mover (12.5% 24h range, 6.31x volume spike) — the 3.5% trail may still see noise given the volatility, though this matches prior high-ATR position sizing/stop treatment. Catalyst is buyback/momentum-driven rather than a hard <6h news event, so the 1.5:1 R:R floor was correctly required and cleared. Broad market backdrop is Greed (66) but not Extreme Greed, moderate reversal risk. Post-trade capital is fully deployed (ZUSD $1.0669) — no dry powder for a second entry this pass even if another candidate had cleared gates.
+
+**Decision: TRADE — AERO/USD.** Crash gate clear, BTC weekly trend gate clear. UAI was the strongest technical setup but rejected on cross-exchange divergence; AERO was the only remaining candidate clearing both momentum and volume confirmation, and it passed every gate cleanly.
+
+### Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
