@@ -33232,3 +33232,24 @@ No trade → no TRADE-LOG entry, no ClickUp/WhatsApp notification (retired), no 
 **Decision: HOLD, no new order.** Cash unchanged at $1.0669 (1.1% of equity), too thin to size any new position regardless of candidate quality. No fresh discovery sweep run — this pass is a state-confirmation checkpoint per the session-open workflow. AERO position healthy and running toward T1, no manual intervention needed.
 
 No trade → no TRADE-LOG entry, no ClickUp/WhatsApp notification (retired), no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
+
+## 2026-08-24 — Session-Open Execution (~15:01 UTC, TRADE)
+
+**Account snapshot:** Kraken pre-trade ZUSD $95.8749 (100% cash, flat — AERO's trailing stop fired mechanically at 13:33 UTC, +0.63% win, discovered by the 14:20 UTC midday scan). Alpaca reconfirmed flat: `positions: []`, no open orders beyond the long-canceled historical BTC stop. Post-trade Kraken: 114.2000 VIRTUAL (entry $0.833233 blended), ZUSD $0.7200, trailing stop live.
+
+**Market context:** BTC $79,380.40, +2.11% vs today's session open ($77,737.30). Crash gate clear, BTC weekly trend gate clear (firmly up per pre-session research). No new macro catalyst check re-run this pass (pre-session research covered Fear & Greed 66/Greed, funding neutral, unlocks — unchanged at this cadence).
+
+**Discovery sweep:** 634 online USD pairs, direct public AssetPairs+Ticker API, run 41 minutes after the midday scan's sweep to re-check given cash was fully available again. 59 candidates cleared vs-open>3% + within 6% of 24h high. Deep-dived the top movers not already exhaustively ruled out by the midday scan on 15m OHLC (true 4h momentum, 1h-vs-trailing-hourly volume ratio, 24h-high freshness). Full candidate table and gate-by-gate reasoning in TRADE-LOG.md.
+
+**Trade ideas evaluated:**
+1. **VIRTUAL/USD — TRADE, executed.** Catalyst: Virtuals Protocol mobile app launch (Aug 23) + AI-agent narrative + onchain equities-trading integration (momentum-only, launch date not confirmed <6h). Entry: market, filled $0.8282 (blended $0.833233 incl. fee). Stop: trailing 3.5% (high-ATR treatment — 24h range ~15.6%, volume ratio 5.01x). T1 = $0.883227 (+6%), T2 = $0.908224 (+9%). R:R ≈1.71:1, clears the 1.5:1 momentum-only floor. Spread 0.46% ≤1%. Cross-exchange check: Kraken $0.8228 vs CoinGecko $0.7544 (~9.1% divergence, closest reference) — clean, well under the 15–20% gate. No same-thesis restriction (no prior VIRTUAL fills). Order txid `OHI5RD-DVVAI-IR7DTN` (buy), stop txid `OKYDC4-NJWAW-2VDXYJ` (trailing 3.5%, confirmed open).
+2. **AERO/USD** — Re-check on the same asset stopped out profitably this morning. Cleared both bars narrowly (4h momentum +5.20%, volume 2.11x, high 30 min old) but VIRTUAL was the stronger, fresher setup (8.26%/5.01x/0 min) and available cash ($95.87) was fully committed to VIRTUAL rather than splitting. Not pursued this pass.
+3. **DRV/USD** — Headline 24h change +17.97% looked strong at the surface-level sweep, but true 4h momentum re-check on 15m OHLC showed only +2.57% (well under 5%) and volume ratio 0.12x (badly under 2x) — the 24h move was a stale spike from ~2.5h earlier, not fresh momentum. Skipped.
+
+**Risk factors:** VIRTUAL is a high-ATR mover (~15.6% 24h range, 5.01x volume spike) — the 3.5% trail may still see noise given the volatility, consistent with prior high-ATR position sizing/stop treatment. Catalyst is a dated app launch rather than a hard <6h news event, so the 1.5:1 R:R floor was correctly required and cleared. Post-trade capital is fully deployed (ZUSD $0.7200) — no dry powder for a second entry this pass.
+
+**Decision: TRADE — VIRTUAL/USD.** Crash gate clear, BTC weekly trend gate clear. Fresh sweep found VIRTUAL as the standout candidate — freshest possible 24h-high, strongest volume confirmation of the movers checked, clean cross-exchange divergence — and it passed every gate cleanly.
+
+### Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
