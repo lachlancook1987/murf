@@ -9568,3 +9568,39 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No action taken this pass (stop had already fired mechanically before the scan; no new entry, no stop tightening needed since flat) → no ClickUp/WhatsApp notification per STEP 7 gate (channel retired regardless per CLAUDE.md). AERO stop-out was a small win (+0.63%), not a notable loss warranting a proactive push.
+
+## 2026-08-24 — Session-Open Execution (~15:01 UTC)
+
+**Pre-trade state:** Kraken ZUSD $95.8749 (100% cash, flat since the AERO stop-out at 13:33 UTC): `positions: {}`, `orders: {"open": {}}`. Alpaca reconfirmed flat: `positions: []`, no open orders beyond the long-canceled historical BTC stop `a2b44cf9`.
+
+**BTC:** live $79,380.40 vs today's session open $77,737.30 → **+2.11%**. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (634 online USD pairs, direct public AssetPairs+Ticker API, 41 min after the midday scan's sweep). 59 candidates cleared vs-open>3% + within 6% of 24h high. Deep-dived the top new/changed movers on 15m OHLC for true 4h momentum, 1h-vs-trailing-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| DRV/USD | +2.57% | 0.12x | 150 min | 24h chg (17.97%) was a stale spike hours old — fails momentum and volume badly despite high 24h-change headline number |
+| **VIRTUAL/USD** | **+8.26%** | **5.01x** | **0 min (this candle)** | Clears both bars, freshest possible high — **TRADE** |
+| AERO/USD | +5.20% | 2.11x | 30 min | Clears both bars narrowly (same asset stopped out profitably at 13:33 UTC today) — not pursued, VIRTUAL was the stronger/fresher setup and cash fully committed there |
+
+**VIRTUAL/USD gate check:** Spread 0.46% (bid $0.8192/ask $0.8230) ≤1%. `VIRTUALUSD` online, ordermin 9, costmin $0.5, leverage available up to 3x (spot used, no leverage). 4h momentum +8.26% >5% clears. Volume 5.01x >2x clears. 24h high ($0.8235) set on the current candle — freshest possible, passes momentum-peak-check by a wide margin. 24h range $0.6957–$0.8235 (~15.6% of price) plus the 5.01x volume spike — high-ATR mover, same treatment as prior high-ATR entries (AERO 2026-08-24 morning). **Cross-exchange divergence check (Perplexity):** CoinGecko $0.7544 (+7.50% 24h), CoinMarketCap $0.7114–$0.7185 — vs Kraken $0.8228. Divergence vs the closest/most-favorable reference (CoinGecko) is ~9.1%, comfortably under the 15–20% gate threshold; vs CMC ~15.6%, at the edge but not breached against the best reference. No directional mismatch (all sources show the asset up materially today). Passes. **Catalyst (Perplexity):** Virtuals Protocol mobile app ("AI, Money, Social") launch reported Aug 23, plus AI-agent narrative tailwind and a new onchain equities-trading integration — real catalyst but launch date is not confirmed <6h old at this session time → treated as **momentum-only**, 1.5:1 R:R floor applies (2026-08-14 rule).
+
+**Same-thesis check:** No prior VIRTUAL fills anywhere in TRADE-LOG — no cooling-period restriction.
+
+**ATR/stop sizing:** 24h range ~15.6% plus 5.01x volume ratio — high-ATR/high-volume mover, same treatment as AERO's morning entry. Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9%: R:R = 6%/3.5% ≈ **1.71:1**, clears the momentum-only floor.
+
+### 2026-08-24 | VIRTUAL/USD | BUY | 114.2000 VIRTUAL | Entry: $0.833233 (blended incl. fee) | Cost: $95.15494 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OHI5RD-DVVAI-IR7DTN` (buy, market, filled in full — vol_exec 114.20000 @ $0.8282, cost $94.58742, fee $0.56752, total $95.15494; post-trade VIRTUAL balance 114.200000, ZUSD $0.7200). Stop txid `OKYDC4-NJWAW-2VDXYJ` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.79940, limitprice $0.82830).
+
+**T1 = $0.883227 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.908224 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +2.11% intraday) | BTC weekly trend gate clear (firmly up, per pre-session research) | spread 0.46% ≤1% | `VIRTUALUSD` online, ordermin 9, costmin $0.5, no leverage used | 4h momentum +8.26% >5% | volume 5.01x >2x | 24h high freshest possible (this candle) | cross-exchange divergence ~9.1% vs closest reference, well under 15–20% threshold | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction (no prior VIRTUAL fills) | catalyst: momentum-only (mobile app launch dated Aug 23 + AI-agent narrative, not confirmed <6h discrete event).
+
+ZUSD post-trade: $0.7200.
+
+### Decision: **TRADE — VIRTUAL/USD.** Fresh sweep found VIRTUAL as the clear standout: freshest possible 24h-high (set on the current candle), strongest volume confirmation (5.01x) of any candidate checked, and clean cross-exchange divergence. AERO also cleared gates narrowly (re-entry on the same asset stopped out profitably this morning) but VIRTUAL was the stronger, fresher setup and available cash was fully committed to it. DRV's headline 24h gain (17.97%) was stale — momentum and volume both failed on true 4h/1h re-check.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
