@@ -9604,3 +9604,41 @@ ZUSD post-trade: $0.7200.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+### 2026-08-24 | VIRTUAL/USD | SELL (trailing stop triggered) | 114.2000 VIRTUAL | Exit: $0.8155 | Closed
+
+**Order ID (stop):** OKYDC4-NJWAW-2VDXYJ (trailing_stop, trail_percent 3.5%, GTC — opened 15:04:14 UTC at fill, stopprice $0.79940/limitprice $0.82830 at open, fired 15:13:22 UTC — just 9 minutes after entry, filled 114.20000 @ $0.8155)
+**P&L:** Buy cost $94.58742 + $0.56752 fee = $95.15494 total spent (2026-08-24 Session-Open Execution). Sell proceeds $93.13010 − $0.55878 fee = $92.57132 net received. **Net: −$2.58362 (−2.71%)**
+**Notes:** Sharp reversal immediately after entry — price never confirmed above entry before the 3.5% trail caught the drop. Mechanical stop-out, no thesis break. **Backfilled** — this fill was not caught live by any scheduled checkpoint between 15:13 UTC and the ~20:10 UTC pass that discovered it via Kraken `ClosedOrders` (a scan-cadence gap, not a process failure — no checkpoint fell inside that window).
+
+**Post-stop state (before DRV entry):** Kraken ZUSD $95.7200 (VIRTUAL proceeds credited), flat.
+
+### 2026-08-24 | DRV/USD | BUY | 555.0000 DRV | Entry: $0.166754 (blended incl. fee) | Cost: $92.5488 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OXTUKO-AXT76-T2S3TR` (buy, market, filled in full — vol_exec 555.00000 @ $0.16576, cost $91.99680, fee $0.55198, total $92.54878; post-trade DRV balance 555.00000, ZUSD $0.7425). Stop txid `OC47S6-4TGWT-D3OLQU` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.15996, limitprice $0.16576).
+
+**T1 = $0.176759 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.181762 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +1.35% intraday) | BTC weekly trend gate clear (per this morning's +11.7%/5-day read) | spread 0.404% ≤1% | `DRVUSD` online, ordermin 50, costmin $0.5, no leverage available | 4h momentum +7.70% >5% | volume 3.35x >2x | 24h high fresh (27 min, inside 60-min window) | cross-exchange divergence ~10.5% vs closest reference, well under 15–20% threshold, no directional mismatch | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction (no prior DRV fills) | catalyst: momentum-only (Upbit + Bithumb dual listing, real but not confirmed <6h discrete timestamp).
+
+ZUSD post-trade: $0.7425.
+
+### Decision: **TRADE — DRV/USD.** VIRTUAL's 3.5% trail stopped out for a small loss (−2.71%) on a sharp reversal just 9 minutes after entry — mechanical, no thesis break. Fresh sweep found DRV/USD as the sole candidate clearing both the 4h momentum >5% and volume >2x bars with a fresh (27 min) high; passed every remaining gate (spread, divergence, R:R, same-thesis) cleanly.
+
+**Backfill note:** This trade and the VIRTUAL stop-out above were executed live at 15:13 UTC and 20:13 UTC by a prior process pass (rationale already written up in RESEARCH-LOG.md under "2026-08-24 — Pre-Session Research (~20:10 UTC)") but the pass ended before appending these entries to TRADE-LOG.md or committing/pushing — live trades existed with zero git record. Backfilled here during the ~21:01 UTC session-open check below, reconstructed from Kraken `ClosedOrders`/`OpenOrders` (order IDs, fills, fees all confirmed against the exchange, not estimated).
+
+## 2026-08-24 — Session-Open Execution (~21:01 UTC, no new trade — reconciliation)
+
+**Pre-check discovery:** Live Kraken state (DRV 555.00000 held, ZUSD $0.7425, one open order — DRV trailing stop `OC47S6-4TGWT-D3OLQU`) did not match TRADE-LOG.md's then-last entry (VIRTUAL/USD BUY, ~15:04 UTC). Reconstructed the gap via Kraken `ClosedOrders`: VIRTUAL's 3.5% trail stopped out at 15:13:22 UTC (−2.71%), then DRV/USD was bought at 20:13:00 UTC with a 3.5% trailing stop placed 6 seconds later. Both trades were already documented narratively in RESEARCH-LOG.md by a prior pass but never appended to TRADE-LOG.md nor committed/pushed to git — backfilled above.
+
+**Live state confirmed:** DRV 555.00000 (open, stop-protected), ZUSD $0.7425, dust basket unchanged. Alpaca reconfirmed flat: `positions: []`, only historical filled/canceled orders from May. BTC live $78,972.70 vs today's session open $77,737.30 → +1.59%. Crash gate clear.
+
+**DRV position status:** Entry $0.166754 (blended), current mark ~$0.1645–0.1649 (bid $0.16411/ask $0.16493, last $0.16452) → ~−1.1% unrealized. Stop has already trailed up since fill (stopprice $0.15996→$0.16320, limitprice $0.16576→$0.16911) as price ran to a high of $0.16911 before pulling back — stop remains live and well clear of the current bid, position still protected. T1 ($0.176759, +6%) not hit — no stop-tightening action required.
+
+**No new entry this pass:** ZUSD $0.7425 — no capital available for a fresh position; the open DRV position already absorbs today's risk budget. No fresh discovery sweep run (capital constraint, not a gate failure — nothing to size a new position with even if a setup cleared every gate).
+
+### Decision: **HOLD (reconciliation only).** No cash available for new entries. Backfilled two live-but-unlogged trades into TRADE-LOG.md for record continuity. DRV position remains open and stop-protected; no action needed.
+
+### Step 7 — Notification
+
+No trade placed this pass, but flagging via push notification per CLAUDE.md's "surface operational failures via the session's own push mechanism" guidance: a prior pass executed two live trades (one a loss) and placed a live stop but never logged or committed them, meaning trade history briefly had zero git record while real capital was at risk. Reconciled and backfilled this pass; also open DRV position with live stop is worth the user's awareness.
