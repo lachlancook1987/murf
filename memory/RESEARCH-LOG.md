@@ -33253,3 +33253,55 @@ No trade → no TRADE-LOG entry, no ClickUp/WhatsApp notification (retired), no 
 ### Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-24 — Pre-Session Research (~20:10 UTC)
+
+### 2026-08-24 | VIRTUAL/USD | SELL (trailing stop triggered) | 114.2000 VIRTUAL | Exit: $0.8155 | Closed
+
+**Order ID (stop):** OKYDC4-NJWAW-2VDXYJ (trailing_stop, trail_percent 3.5%, GTC — opened 15:04:02 UTC at fill, fired 15:13:22 UTC just 9 minutes later at stopprice $0.8178, filled 114.20000 @ $0.8155).
+**P&L:** Buy cost $94.58742 + $0.56752 fee = $95.15494 total spent (2026-08-24 Session-Open Execution). Sell proceeds $93.13010 − $0.55878 fee = $92.57132 net received. **Net: −$2.58362 (−2.71%)**
+**Notes:** Discovered via this scan's reconciliation — Kraken `positions: {}`, `orders: {"open": {}}`, VIRTUAL balance 0.000000, ZUSD $93.2913. Confirmed via `ClosedOrders`. Fast, mechanical stop-out on a sharp reversal shortly after entry — thesis was momentum-only (app-launch narrative, not a hard <6h catalyst) and the high-ATR 3.5% trail did its job when the move reversed instead of continuing. No manual intervention possible or needed; scan cadence means this was caught after the fact, consistent with known limitation (TRADING-STRATEGY.md 2026-08-21).
+
+**Post-stop state:** Kraken ZUSD $93.2913 (100% cash + unchanged dust basket + $0.1066 ZAUD), flat: `positions: {}`, `orders: {"open": {}}`. Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`.
+
+**BTC:** live $77,709.00 (Perplexity), Kraken live quote $78,788.20 vs today's session open $77,737.30 → **+1.35%**. Crash gate (−20%/24h) not remotely close. Fear & Greed: Perplexity gave a mixed read — Alternative.me-style tracker 73 (Greed), CFGI 64 (Greed), CoinStats 79 (Extreme Greed) — using 73 (Greed) as the primary reference, consistent with sustained risk-on. BTC perp funding mostly +0.01%/8h across major venues (Binance, OKX, Bybit, Hyperliquid) — neutral, no crowded-long skew despite the Greed reading. BTC weekly trend gate: still firmly up per this morning's +11.7%/5-day read, no reversal — standard entry criteria apply.
+
+**Macro catalysts (Perplexity):** Bitcoin ETF inflows (~$1.92B last week, Bloomberg) cited as the dominant bullish driver; SEC's proposed "Regulation Crypto Assets" framework easing fundraising for crypto startups; forced short covering amplifying the BTC/ETH move; Zcash (ZEC) catalyst ahead of Grayscale's planned ZEC ETF launch Aug 25; Hyperliquid (HYPE) rallying on reported CFTC pathway comments. Token unlocks: Humanity (H) 266.47M tokens (~$21.3M, 2.66% of supply) unlocking Aug 25; HUMA and XPL unlocks later in the week; no confirmed major protocol upgrade this exact week beyond a LayerZero chain wind-down (cleanup, not an upgrade).
+
+**Fresh discovery sweep** (634 online USD pairs, direct public AssetPairs+Ticker API). 60 candidates cleared vs-open>3% + within 6% of 24h high. Filtered to liquidity ≥$100k 24h USD volume: 11 candidates. Deep-dived all 11 on 15m OHLC for true 4h momentum, 1h-vs-trailing-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| DGAI/USD | +100.55% (mechanical read) | 0.39x | 12 min | Fails volume bar; vs-open +1400% is a listing/relisting-scale anomaly, treated as a data-quality outlier regardless |
+| **DRV/USD** | **+7.70%** | **3.35x** | **27 min** | Clears both bars — **TRADE** |
+| AERO/USD | −1.41% | 0.43x | 237 min | Stale — this morning's high, momentum has reversed negative |
+| CSPR/USD | +2.58% | 0.61x | 147 min | Fails momentum and volume bars |
+| ZAMA/USD | +1.23% | 2.69x | 267 min | Fails momentum bar and stale high |
+| INJ/USD | −1.11% | 1.32x | 207 min | Fails momentum and volume bars |
+| POL/USD | −2.11% | 0.48x | 312 min | Fails momentum and volume bars |
+| CVX/USD | +1.87% | 0.65x | 312 min | Fails momentum and volume bars |
+| XXMRZ/USD (Monero) | +2.99% | 2.00x | 87 min | Fails momentum bar (just under threshold) |
+| AKE/USD | +2.94% | 1.53x | 12 min | Fails momentum and volume bars despite fresh high |
+| MON/USD | +4.82% | 0.83x | 57 min | Fails volume bar (momentum just under 5%) |
+
+**DRV/USD gate check.** Spread 0.404% (bid $0.16509/ask $0.16576) ≤1%; `DRVUSD` online, ordermin 50, costmin $0.5, no leverage available (leverage_buy/sell both empty). 4h momentum +7.70% >5% clears. Volume 3.35x >2x clears. 24h high ($0.16753) set 27 min ago — passes momentum-peak-check (<60min window). 24h range $0.12787–$0.16753 (~23.9% of price) — high-ATR mover, same treatment as prior high-ATR entries (AERO, VIRTUAL). **Cross-exchange divergence check (Perplexity):** `DRV Derive crypto token news and price catalyst today` returned cross-venue prices $0.13–$0.15 with one report citing a peak near $0.18 — vs Kraken live $0.16576. Divergence vs the closest (most favorable) reference (~$0.15) is ~10.5%, comfortably under the 15–20% gate threshold; no directional mismatch (every source agrees DRV is up sharply today). Passes. **Catalyst (Perplexity):** dual Upbit + Bithumb listing reported as the primary driver of today's move (South Korea retail market access), with Coinbase-roadmap inclusion cited as an earlier supporting catalyst — real, discrete listing news, but exact time-of-day not confirmed <6h old from the available reporting → treated conservatively as **momentum-only**, 1.5:1 R:R floor applies (2026-08-14 rule), consistent with how AERO/VIRTUAL catalysts were classified today.
+
+**Same-thesis check:** DRV has been rejected as a candidate in multiple prior sweeps (stale/thin volume) but has **no prior fills** anywhere in TRADE-LOG — no cooling-period restriction. This is the first sweep where it has cleared both the momentum and volume bars together with a fresh high.
+
+**ATR/stop sizing:** 24h range ~23.9% plus 3.35x volume ratio — high-ATR/high-volume mover, same treatment as AERO/VIRTUAL. Used **3.5% trailing stop** instead of the 2.5% standard, with T1/T2 widened to +6%/+9%: R:R = 6%/3.5% ≈ **1.71:1**, clears the momentum-only floor.
+
+### 2026-08-24 | DRV/USD | BUY | 555.0000 DRV | Entry: $0.166754 (blended incl. fee) | Cost: $92.5488 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OXTUKO-AXT76-T2S3TR` (buy, market, filled in full — vol_exec 555.00000 @ $0.16576, cost $91.99680, fee $0.55198, total $92.54878; post-trade DRV balance 555.00000, ZUSD $0.7425). Stop txid `OC47S6-4TGWT-D3OLQU` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.15996, limitprice $0.16576).
+
+**T1 = $0.176759 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.181762 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+**Gate checklist:** crash gate clear (BTC +1.35% intraday) | BTC weekly trend gate clear (per this morning's +11.7%/5-day read) | spread 0.404% ≤1% | `DRVUSD` online, ordermin 50, costmin $0.5, no leverage available | 4h momentum +7.70% >5% | volume 3.35x >2x | 24h high fresh (27 min, inside 60-min window) | cross-exchange divergence ~10.5% vs closest reference, well under 15–20% threshold, no directional mismatch | R:R 1.71:1 ≥1.5:1 momentum-only floor | no same-thesis restriction (no prior DRV fills) | catalyst: momentum-only (Upbit + Bithumb dual listing, real but not confirmed <6h discrete timestamp).
+
+ZUSD post-trade: $0.7425.
+
+### Decision: **TRADE — DRV/USD.** VIRTUAL's 3.5% trail stopped out for a small loss (−2.71%) on a sharp reversal just 9 minutes after entry — mechanical, no thesis break, consistent with the known scan-cadence limitation on tightening at T1. Fresh sweep found DRV/USD as the sole candidate clearing both the 4h momentum >5% and volume >2x bars with a fresh (27 min) high; DGAI's headline +100%+ move was a listing/relisting-scale anomaly that failed the volume bar outright. DRV passed every remaining gate (spread, divergence, R:R, same-thesis) cleanly.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
