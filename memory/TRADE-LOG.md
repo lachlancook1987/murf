@@ -9517,3 +9517,15 @@ ZUSD post-trade: $1.0669.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-24 — EOD Summary
+
+### Aug 24 — EOD Snapshot (Day 96, Monday)
+**Portfolio:** $93.5253 | **Cash:** $1.0669 (1.1%) | **Day P&L:** −$1.7582 (−1.85%) | **Phase P&L:** −$86.2547 (−47.98%) | **vs BTC:** −0.97%
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| AERO/USD | 188.0000 | $0.501152 | $0.4918 | opened today | −$1.7582 (−1.87%) | 3.5% (`OFCGQR-GWJBU-XPIMQ6`, stop $0.4816, limit $0.4990) |
+
+**Trades today:** AERO/USD BUY 188.0000 @ $0.501152 (Pre-Session Research, already logged above) | **Total since migration:** ~127
+
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $1.0669, AERO 188.00000 (unchanged since this morning's fill — trail has ratcheted up from stopprice $0.4808/limit $0.4982 at fill toward $0.4816/$0.4990 as price touched today's high of $0.5049 before pulling back), `positions: {}` (spot, not margin), one open order (the AERO trailing stop, position protected). Dust basket (AAVE/AVAX/BABY/FET/INJ/KAS/NEAR/SOL/SUI/TAO/XETH/ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. Current AERO mark $0.4918 (last trade) vs entry $0.501152 → unrealized −$1.7582 (−1.87%); no other activity today, so Day P&L equals the unrealized move exactly. Yesterday's true close (reconstructed from the 2026-08-23 22:08 UTC midday-scan reconciliation, after the PENGU stop-out settled): ZUSD $95.2835, 100% cash, flat — used as the Day P&L baseline, not the mislabeled "Aug 23 EOD Snapshot" line (written mid-morning before that day's other four round-trips). BTC: yesterday's live reference $77,700.90 (same 22:08 UTC pass) vs today's live $77,020.30 → **−0.88%**; bot day return −1.85% trails BTC by **−0.97 points** today — an unprotected-but-open drawdown on a still-live position, not a stop-out. Phase P&L −$86.2547 (−47.98%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat — `positions: []`, historical BTC stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22, zero exposure), account cash $2.54, no action needed. Total trades since migration ~127 (~116 as of Aug 22 close + 10 discrete orders on Aug 23, all closed same day: ZRO buy/sell, XPL buy/sell, AAVE buy/sell, UAI buy/sell, PENGU buy/sell + 1 today: AERO buy, still open). Tomorrow: pre-session research resumes with the AERO position live (trailing stop active, no action needed unless it triggers or T1 $0.531221 is hit) plus $1.0669 cash; crash gate threshold ~$61,616 (BTC −20% from $77,020.30).
