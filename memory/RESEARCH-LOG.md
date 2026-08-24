@@ -33305,3 +33305,28 @@ ZUSD post-trade: $0.7425.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-24 — Midday Scan (~22:04 UTC, no trade)
+
+**Reconciliation:** Live Kraken state was flat (positions/orders empty, DRV balance 0, ZUSD $90.6703) vs TRADE-LOG.md's last entry showing DRV open. Kraken `ClosedOrders` confirmed DRV's 3.5% trailing stop fired at 21:46:49 UTC (sell 555.00000 @ $0.16301, cost $90.47055, fee $0.54282) — a mechanical stop-out for −2.83% (T1 at +6% was never reached; high of $0.16911 preceded the reversal). Backfilled to TRADE-LOG.md. BTC $78,935.20 vs session open $77,737.30 → +1.54%, crash gate clear.
+
+**Discovery sweep** (634 online USD pairs). 64 candidates vs-open>3% within 6% of 24h high; 14 with liquidity ≥$100k. Deep-dived top 8 by 24h-change on 15m OHLC:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| DRV/USD | +6.40% | 0.41x | 105 min | Fails volume bar; stale/declining, same asset just stopped out this session |
+| AERO/USD | +3.43% | 0.35x | 345 min | Fails momentum and volume bars; stale |
+| GIGA/USD | −1.90% | 2.04x | 270 min | Clears volume, momentum negative — stale spike |
+| CSPR/USD | +3.44% | 19.23x | 255 min | Huge volume but momentum under 5%; stale high |
+| INJ/USD | −1.47% | 0.05x | 315 min | Fails both bars |
+| ZAMA/USD | −2.43% | 0.12x | 375 min | Fails both bars |
+| JASMY/USD | +4.23% | 0.67x | 45 min | Fresh high but momentum/volume both short |
+| CVX/USD | +3.50% | 1.49x | 420 min | Fails both bars; stale high |
+
+**No candidate cleared all gates** — every headline 24h mover checked was a stale spike (high set hours ago) or lacked volume confirmation. Not a capital constraint (ZUSD $90.6703 fully available).
+
+### Decision: **HOLD.** DRV stopped out mechanically pre-scan for a small loss; fresh sweep found nothing clearing both momentum and volume bars with a fresh high. Correct gate-protection outcome per TRADING-STRATEGY.md.
+
+### Step 7 — Notification
+
+No action beyond reconciliation/backfill → no ClickUp notification per CLAUDE.md (channel retired). Push notification sent noting the DRV stop-out for user awareness (small loss, not urgent).

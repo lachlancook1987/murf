@@ -9642,3 +9642,38 @@ ZUSD post-trade: $0.7425.
 ### Step 7 — Notification
 
 No trade placed this pass, but flagging via push notification per CLAUDE.md's "surface operational failures via the session's own push mechanism" guidance: a prior pass executed two live trades (one a loss) and placed a live stop but never logged or committed them, meaning trade history briefly had zero git record while real capital was at risk. Reconciled and backfilled this pass; also open DRV position with live stop is worth the user's awareness.
+
+### 2026-08-24 | DRV/USD | SELL (trailing stop triggered) | 555.0000 DRV | Exit: $0.16301 | Closed
+
+**Order ID (stop):** OC47S6-4TGWT-D3OLQU (trailing_stop, trail_percent 3.5%, GTC — opened 20:13:06 UTC at fill, fired 21:46:49 UTC, filled 555.00000 @ $0.16301)
+**P&L:** Buy cost $91.99680 + $0.55198 fee = $92.54878 total spent (2026-08-24 Session-Open Execution). Sell proceeds $90.47055 − $0.54282 fee = $89.92773 net received. **Net: −$2.62105 (−2.83%)**
+**Notes:** Mechanical stop-out, no thesis break — price ran up to a high of $0.16911 (T1 not reached) before reversing through the 3.5% trail. Discovered this pass via Kraken `ClosedOrders`; not caught live by an intervening checkpoint.
+
+**Post-stop state:** Kraken ZUSD $90.6703, flat.
+
+## 2026-08-24 — Midday Scan (~22:04 UTC, no trade)
+
+**Pre-check:** Live Kraken state was flat (`positions: {}`, `orders: {"open": {}}`, DRV balance 0) — did not match TRADE-LOG.md's last entry (DRV/USD BUY, open). Reconstructed via Kraken `ClosedOrders`: DRV's 3.5% trail fired at 21:46:49 UTC for a small loss — backfilled above. Alpaca reconfirmed no action needed (stop `a2b44cf9` untouched). BTC live $78,935.20 vs session open $77,737.30 → +1.54%. Crash gate clear.
+
+**No open positions to verify/tighten/thesis-check** (flat since 21:46:49 UTC).
+
+**Fresh discovery sweep** (634 online USD pairs, direct public AssetPairs+Ticker API). 64 candidates cleared vs-open>3% + within 6% of 24h high; filtered to liquidity ≥$100k 24h USD volume: 14 candidates. Deep-dived the top 8 by 24h-change on 15m OHLC for true 4h momentum, 1h-vs-trailing-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| DRV/USD | +6.40% | 0.41x | 105 min | Fails volume bar; stale/declining from high (same asset just stopped out this session) |
+| AERO/USD | +3.43% | 0.35x | 345 min | Fails momentum and volume bars; stale high |
+| GIGA/USD | −1.90% | 2.04x | 270 min | Clears volume bar but momentum negative — stale spike, not accelerating |
+| CSPR/USD | +3.44% | 19.23x | 255 min | Huge volume spike but momentum under 5% bar; stale high |
+| INJ/USD | −1.47% | 0.05x | 315 min | Fails momentum and volume bars |
+| ZAMA/USD | −2.43% | 0.12x | 375 min | Fails momentum and volume bars |
+| JASMY/USD | +4.23% | 0.67x | 45 min | Fresh high but fails momentum (just under 5%) and volume bars |
+| CVX/USD | +3.50% | 1.49x | 420 min | Fails momentum and volume bars; stale high |
+
+**No candidate cleared all gates.** Every headline 24h-change leader checked was either a stale spike (high set hours ago, true 4h momentum decayed well below the 24h number) or missing volume confirmation — a genuine gate failure, not a capital constraint (ZUSD $90.6703 fully available).
+
+### Decision: **HOLD.** DRV's trailing stop fired mechanically before this scan for a small loss (−2.83%), no thesis break. Fresh sweep found nothing clearing both the 4h momentum >5% and volume >2x bars with a fresh high — per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected HOLD outcome.
+
+### Step 7 — Notification
+
+No action taken this pass beyond backfilling the DRV stop-out discovered via reconciliation → no ClickUp/WhatsApp notification per STEP 7 gate (channel retired regardless per CLAUDE.md). DRV stop-out was a small loss (−2.83%), not large enough to warrant a proactive push on its own — flagged here for the record.
