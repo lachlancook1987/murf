@@ -9741,3 +9741,36 @@ ZUSD post-trade: $0.4836.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+### 2026-08-25 | BMT/USD | SELL (trailing stop triggered) | 3740.0000 BMT | Exit: $0.02299 | Closed
+
+**Order ID (stop):** OZX6KK-S2I4L-D432D6 (trailing_stop, trail_percent 3.5%, GTC — opened 20:08:02 UTC at fill, fired/closed 20:10:44 UTC, filled 3740.00000 @ $0.02299)
+**P&L:** Buy cost $87.81660 + $0.52690 fee = $88.34350 total spent (2026-08-25 Pre-Session Research entry). Sell proceeds $85.98260 − $0.51590 fee = $85.46670 net received. **Net: −$2.87680 (−3.26%)**
+**Notes:** Sharp reversal just 2m42s after entry — price ran up briefly (trail moved to stopprice $0.02317) then reversed hard before confirming any follow-through. Mechanical stop-out, no thesis break, T1 (+6%) never reached. Discovered this pass (session-open execution, ~21:01 UTC) via Kraken `ClosedOrders`; not caught live by an intervening checkpoint — no session ran between the ~20:05 UTC entry and this pass.
+
+**Post-stop state:** Kraken ZUSD $85.9503, flat.
+
+## 2026-08-25 — Session-Open Execution (~21:01 UTC, no new trade — reconciliation)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, BMT balance 0, ZUSD $85.9503) did not match TRADE-LOG's last entry (BMT/USD BUY, open). Reconciled via `ClosedOrders`: BMT's 3.5% trail fired at 20:10:44 UTC, just 2m42s after the ~20:08 UTC fill — backfilled above. Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`.
+
+**BTC:** live $78,151.90 vs today's session open $78,966.10 → **−1.03%**. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API). 31 candidates cleared vs-open>3% + within 6% of 24h high; 6 with liquidity ≥$100k 24h USD volume. Deep-dived all 6 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BMT/USD | +38.13% | +0.17% | 1.87x | 62.7 min | Same asset just stopped out; 1h momentum flat (decelerating), volume ratio fails 2x bar, high just outside 60-min window — repricing-already-occurred pattern, not a fresh breakout. Skipped. |
+| KII/USD | +4.95% | +0.02% | 0.00x | 1322.7 min | Fails momentum (just under 5%) and volume bars; very stale high |
+| ACU/USD | −0.34% | −2.16% | 0.78x | 137.7 min | Fails both bars |
+| ZEREBRO/USD | −0.73% | −1.23% | 0.69x | 737.7 min | Fails both bars; stale |
+| POL/USD | −3.36% | −1.35% | 1.60x | 257.7 min | Fails both bars |
+| PWT/USD | +1.54% | +1.95% | 2.65x | 1217.7 min | Clears volume only; true 4h momentum weak, high is basically the stale 24h high (~20h old), not a fresh move |
+
+**No candidate cleared all gates.** BMT (the asset just stopped out) was the closest mechanical near-miss but showed the same fading/decelerating pattern the momentum-peak-check exists to catch, compounded by a stale (>60min) high and a failed volume bar — not a re-entry candidate. Genuine gate failure, not a capital constraint (ZUSD $85.9503 fully available).
+
+### Decision: **HOLD.** BMT's 3.5% trail had already stopped out mechanically (−3.26%) before this pass — fast reversal, no thesis break, backfilled above. Fresh sweep found nothing clearing both the 4h momentum >5% and volume >2x bars with a fresh, still-accelerating high. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected HOLD outcome.
+
+### Step 7 — Notification
+
+No proactive push sent — the BMT stop-out was a small mechanical loss (−3.26%, consistent with the trail's own design) with no thesis break and no process failure (this pass caught and logged it promptly), and the sweep found nothing actionable. Nothing here needs the user's attention.
