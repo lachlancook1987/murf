@@ -9677,3 +9677,15 @@ No trade placed this pass, but flagging via push notification per CLAUDE.md's "s
 ### Step 7 — Notification
 
 No action taken this pass beyond backfilling the DRV stop-out discovered via reconciliation → no ClickUp/WhatsApp notification per STEP 7 gate (channel retired regardless per CLAUDE.md). DRV stop-out was a small loss (−2.83%), not large enough to warrant a proactive push on its own — flagged here for the record.
+
+### Aug 25 — EOD Snapshot (Day 97, Tuesday)
+
+**Portfolio:** $90.6703 | **Cash:** $90.6703 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$89.1097 (−49.57%) | **vs BTC:** −1.52%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | flat, no position | — |
+
+**Trades today:** none | **Total since migration:** ~132
+
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $90.6703, `positions: {}`, `orders: {"open": {}}` — flat all day, unchanged from yesterday's true close (2026-08-24 ~22:04 UTC midday-scan reconciliation, after DRV's 3.5% trail stopped out). This morning's pre-session research pass (committed as "crypto pre-session research 2026-08-25") ran a fresh discovery sweep but found no candidate clearing both the 4h momentum >5% and volume >2x bars together — a genuine gate failure, not a capital constraint (ZUSD $90.6703 fully available) — correctly resulted in HOLD, no trade. Live Kraken state at this EOD check matches that pass exactly, confirming no further trading occurred today. Dust basket (AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. BTC: yesterday's live reference $78,935.20 (Aug 24 ~22:04 UTC pass) vs today's live $80,131.10 → **+1.52%**; bot flat (0.00%) trails BTC by **−1.52 points** today — expected on a genuine no-setup HOLD day while sitting in cash. Phase P&L −$89.1097 (−49.57%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat — historical BTC stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22, zero exposure), no action needed. Total trades since migration ~132 (~127 as of Aug 24's AERO buy + 5 discrete orders completing that day: AERO sell, VIRTUAL buy/sell, DRV buy/sell; 0 today). Tomorrow: pre-session research resumes with $90.6703 cash, fully flat; crash gate threshold ~$64,104.88 (BTC −20% from $80,131.10).
