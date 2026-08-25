@@ -33365,3 +33365,39 @@ No action beyond reconciliation/backfill → no ClickUp notification per CLAUDE.
 ### Step 6 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
+
+## 2026-08-25 — Session-Open Execution (~13:11 UTC, no trade)
+
+**Pre-trade state:** Kraken ZUSD $90.6703 (100% cash, fully flat), `positions: {}`, `orders: {"open": {}}` — unchanged from this morning's Pre-Session Research and matches TRADE-LOG.md's last entry exactly, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, no open orders beyond the long-canceled historical BTC stop.
+
+**BTC:** live $79,849.90 vs today's session open $78,966.10 → **+1.12%**. Crash gate (−20%/24h) not remotely close. BTC weekly trend gate clear (per this morning's +9.32%/5-day read).
+
+**Fresh discovery sweep re-run** (634 online USD pairs, direct public AssetPairs+Ticker API — not just relying on this morning's now-hours-old pass). 62 candidates cleared vs-open>3% + within ~6% of 24h high; 13 with liquidity ≥$100k 24h USD volume. Deep-dived all 13 on 15m OHLC for true 4h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness (restricted to a proper trailing-24h window):
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| ACU/USD | +6.02% | 3.60x | 1230 min (~20.5h) | Clears both momentum and volume bars but 24h high is stale — price still ~4.6% below it, no fresh 1h breakout |
+| REUSD | +4.78% | 1.23x | 45 min | Fresh high but fails both momentum and volume bars |
+| POL/USD | +3.85% | 1.36x | 45 min | Fresh high but fails both bars |
+| ZBCN/USD | +3.16% | 1.18x | 30 min | Fresh high but fails both bars |
+| INJ/USD | −0.84% | 1.84x | 60 min | Fails momentum bar |
+| GRT/USD | −1.74% | 0.50x | 120 min | Fails both bars |
+| JASMY/USD | −1.22% | 0.15x | 165 min | Fails both bars |
+| JUP/USD | −2.63% | 0.38x | 210 min | Fails both bars |
+| SPX/USD | −2.73% | 0.60x | 195 min | Fails both bars |
+| POPCAT/USD | 0.00% | 1.06x | 300 min | Fails both bars |
+| RAY/USD | −2.29% | 0.07x | 465 min | Fails both bars |
+| NIGHT/USD | −1.96% | 0.04x | 225 min | Fails both bars |
+| PUMP/USD | −0.57% | 0.40x | 1305 min | Fails both bars; very stale |
+
+**ACU/USD deep-check:** the only candidate clearing both the 4h momentum >5% and volume >2x bars. Spread 0.086% (ask $0.1163/bid $0.1162, well under 1%), tradeable, no leverage available. But momentum-peak-check fails: 24h high ($0.1219) was set ~20.5h ago, current price ($0.1163, 95.4% of high) is still below it with no fresh 1h candle breakout above $0.1219. Checked Perplexity for a fresh catalyst that could override the freshness gate per the strategy's exception clause: found a "Cargo update enabling Linux workloads" catalyst (undated/ambiguous timing, not confirmed <2h old) and a larger "Hermes AI" rally catalyst dated **Aug 13 — 12 days old**, not fresh. No qualifying <2h catalyst to override the stale-high skip. **Skipped per momentum-peak-check gate.**
+
+**No other candidate cleared both bars.** REUSD, POL/USD, and ZBCN/USD all have fresh (≤45 min) 24h highs but momentum stayed in the 3–5% range without crossing 5%, and volume ratios (1.18–1.36x) stayed well under the 2x confirmation bar.
+
+### Decision: **HOLD.** Independently re-run discovery sweep (not just reusing this morning's pass) confirms the same outcome as Pre-Session Research: no candidate clears every gate. ACU/USD had the strongest raw momentum+volume signal of the session but fails the momentum-peak-check on a stale (20.5h-old) 24h high with no fresh breakout and no qualifying fresh catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($90.6703) is fully available, this is a genuine gate failure, not a capital constraint.
+
+### Step 7 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
+
+No trade → no TRADE-LOG entry, no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
