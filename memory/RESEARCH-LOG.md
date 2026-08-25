@@ -33434,3 +33434,36 @@ No trade → no TRADE-LOG entry, no commit required by the session-open workflow
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, third clean HOLD of the day on a genuine gate failure (one candidate reached the mechanical thresholds but showed an active price reversal on inspection), nothing requiring the user's attention.
 
 No trade → no TRADE-LOG entry, no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
+
+## 2026-08-25 — Midday Scan (~14:07 UTC, TRADE — PEAQ/USD)
+
+**Pre-check:** Kraken confirmed flat (ZUSD $90.6703, `positions: {}`, `orders: {"open": {}}`), matching the last TRADE-LOG entry — no reconciliation gap. Alpaca reconfirmed flat.
+
+**Fresh discovery sweep** (636 online USD pairs, direct public AssetPairs+Ticker API). 38 candidates cleared vs-open>3% + within 6% of 24h high; 10 with liquidity ≥$100k 24h USD volume. Deep-dived all 10 on 15m OHLC for true 4h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| PEAQ/USD | +11.00% | +3.65% | 2.68x | 0 min | Fresh breakout to a **new** high on strong volume ($406k/$172k 15m bars vs ~20–100k baseline) — see deep-check below. **Taken.** |
+| ZRO/USD | +13.48% | +5.94% | 9.47x | 30 min | Mechanically clears both bars but 5m OHLC shows the high was followed by a sharp −8.9% dump in 15min and only a fading-volume partial bounce since — "repricing already occurred," skipped |
+| VVV/USD | +4.10% | +2.80% | 2.06x | 0 min | Fails momentum bar (under 5%) |
+| AKE/USD | +3.34% | +0.73% | 1.26x | 30 min | Fails momentum and volume bars |
+| JASMY/USD | −2.19% | 0.00% | 0.43x | 450 min | Fails both bars; stale |
+| POL/USD | +0.73% | −2.42% | 1.37x | 105 min | Fails both bars |
+| PTB/USD | −0.26% | 0.00% | 0.34x | 405 min | Fails both bars; stale |
+| ACU/USD | −1.04% | −0.87% | 0.43x | 1425 min | Fails both bars; very stale |
+| ZBCN/USD | −1.91% | −1.32% | 0.80x | 255 min | Fails both bars |
+| PYTH/USD | +2.11% | +1.95% | 0.32x | 525 min | Fails volume bar; stale |
+
+**PEAQ/USD deep-check:** Same asset had a mechanical-but-fading pass at the ~12:03 UTC pass this morning (skipped — active fade off a 45-min decline pattern, logged then). This pass re-checked PEAQ on fresh 5m OHLC and found it had since printed a genuine **new** 24h high (14:00–14:05 UTC candles) on volume well above the session baseline ($406k then $172k 15m bars vs the ~20–100k typical), i.e. the "fresh 1h breakout above the prior 24h high with volume confirmation" exception the momentum-peak-check explicitly allows — re-classified from fade to breakout and taken. Spread 0.13% (ask $0.02295/bid $0.02292). Cross-exchange check: Kraken live $0.02301 vs CoinGecko direct-API $0.022868 → 0.63% divergence, clean, confirms the move is real and broad (CoinGecko's own 24h change read +18.6%, consistent with a genuine market-wide pump, not a Kraken-specific artifact).
+
+**Perplexity data-quality note:** While checking ZRO's cross-exchange price, Perplexity returned two contradictory numbers for the same asset in the same query session — "$2.06 on Coinbase" and "$1.06 on CoinGecko" — disagreeing with each other by ~2x and both far from Kraken's live $1.223. Switched to CoinGecko's direct public API (`api.coingecko.com/api/v3/simple/price`) for both ZRO and PEAQ cross-exchange checks instead, consistent with the known chronic Perplexity price-query unreliability (TRADING-STRATEGY.md 2026-07-20) — Perplexity was used only for catalyst-narrative queries this pass, not price data.
+
+**Catalyst (PEAQ):** No single confirmed <6h event. Perplexity cited a mix: Tokenomics 2.0 launch scheduled Aug 27 (2 days out — checked against the scheduled-catalyst pre-positioning caution; not judged to block entry since the move isn't solely anticipatory positioning tied to that date, multiple other factors cited), World ID integration live since Aug 21 (stale), general risk-on sentiment/ETF inflows, and a Bithumb transaction-suspension headwind (negative, noted). Classified momentum-only → 1.5:1 R:R floor applied (3.5% trail, T1 +6%/T2 +9%, R:R 1.71:1, high-ATR exception given today's ~18% intraday range).
+
+**Same-thesis check:** One prior PEAQ stop-out (Aug 17, 8 days ago) — outside the 7-day/2-stop-out same-thesis cap trigger.
+
+### Decision: **TRADE — PEAQ/USD.** Full trade detail (fill, stop, T1/T2, gate checklist) logged in TRADE-LOG.md under this timestamp. Fourth scan attempt of the day; first three (pre-session, ~12:03 UTC, ~13:11 UTC) correctly held on genuine gate failures.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
