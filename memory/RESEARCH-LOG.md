@@ -33467,3 +33467,19 @@ No trade → no TRADE-LOG entry, no commit required by the session-open workflow
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-25 — Session-Open Execution (~15:01 UTC, no trade — position check only)
+
+**Pre-trade state:** Kraken confirmed one open position: 3835.00000 PEAQ (entry $0.023111 blended, from the ~14:07 UTC midday-scan trade). `positions: {}` (spot, expected — margin-only endpoint). Trailing stop `OT6ASJ-2KRDA-HFCY5D` confirmed `status: open`, trail 3.5%, current stopprice $0.02254/limitprice $0.02335 — correctly trailing, no orphan. ZUSD $2.0397 — essentially fully deployed, no dry powder for a new entry. Alpaca reconfirmed flat: `positions: []`, no open orders beyond the long-canceled historical BTC stop.
+
+**BTC:** live $79,221.40 vs today's session open $78,966.10 → +0.32%. Crash gate (−20%/24h) not remotely close.
+
+**PEAQ position check:** live bid $0.02323 vs entry $0.023111 → **+0.51%**, well short of T1 (+6% = $0.024498). No tightening action due (T1 not hit). Today's high $0.02335 is only marginally above entry — stop is doing its job, no thesis break, no reason to intervene.
+
+**No discovery sweep run this pass** — with ZUSD at $2.0397, there is no capital to deploy into a new candidate even if one cleared every gate; a full sweep would be spent effort with no possible action. This is a capital constraint, not a gate failure — will resume full sweeps once PEAQ closes (target, stop, or thesis exit) and frees capital.
+
+### Decision: **HOLD (no capital to trade).** Existing PEAQ position monitored, stop verified correctly in place and trailing, no T1 action due. Nothing else to do this pass.
+
+### Step 7 — Notification
+
+No trade, no stop event, no thesis break — nothing requiring the user's attention. No push notification sent.
