@@ -9774,3 +9774,35 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No proactive push sent — the BMT stop-out was a small mechanical loss (−3.26%, consistent with the trail's own design) with no thesis break and no process failure (this pass caught and logged it promptly), and the sweep found nothing actionable. Nothing here needs the user's attention.
+
+## 2026-08-25 — Midday Scan (~22:09 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — `positions: {}`, `orders: {"open": {}}`, ZUSD $85.9503 — matches TRADE-LOG's last entry exactly, no reconciliation gap. Alpaca reconfirmed flat, historical BTC stop `a2b44cf9` still `canceled`, no action needed.
+
+**BTC:** live $78,797.40 vs today's session open $78,966.10 → −0.21%. Crash gate (−20%/24h) not remotely close. BTC weekly trend gate clear (per today's +9.32%/5-day read, still firmly uptrending).
+
+**No open positions to verify/tighten/thesis-check** (flat since BMT's stop fired 20:10:44 UTC).
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API). 33 candidates cleared vs-open>3% + within 6% of 24h high; 11 with liquidity ≥$100k 24h USD volume. Deep-dived all 11 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BMT/USD | +25.74% | +7.50% | 1.75x | 0 min | Same asset stopped out twice today (pre-session, then skipped again at 21:01 UTC). Candle-by-candle check shows it's oscillating $0.0220–0.0240, a range already visited at 20:00/20:15 (its own entry candles), with this candle's volume (369k) below the 19:15–20:00 spike volumes (629k–1.15M) — a weak bounce, not fresh accelerating conviction. Fails the 2x volume bar. Skipped. |
+| SPX/USD | −4.41% | +2.29% | 0.23x | 225 min | Fails momentum and volume bars; stale high |
+| CSPR/USD | +3.55% | +2.19% | 3.76x | 705 min | Clears volume but momentum under 5% bar; very stale high |
+| ACU/USD | −1.83% | −0.67% | 1.02x | 195 min | Fails both bars |
+| ZEREBRO/USD | −0.40% | +2.33% | 0.36x | 795 min | Fails both bars; stale |
+| BICO/USD | +3.37% | +2.77% | 1.16x | 720 min | Fails momentum (under 5%) and volume bars; stale high |
+| POL/USD | +2.35% | +1.57% | 0.22x | 315 min | Fails both bars |
+| VVV/USD | −2.06% | +1.76% | 0.32x | 390 min | Fails both bars |
+| EUL/USD | +0.07% | +1.80% | 0.62x | 990 min | Fails both bars |
+| FARTCOIN/USD | −1.43% | +2.31% | 0.35x | 990 min | Fails both bars |
+| PWT/USD | +1.97% | −0.01% | 3.02x | 855 min | Clears volume but momentum weak; high is essentially the stale 24h high |
+
+**No candidate cleared all gates.** BMT was the closest — strong 4h/1h momentum and a live 24h high — but its own volume is declining relative to the spike that already stopped it out twice today, and the price action is a range revisit, not a fresh breakout. Genuine gate failure, not a capital constraint (ZUSD $85.9503 fully available).
+
+### Decision: **HOLD.** No open positions to manage. Fresh sweep found nothing clearing both the 4h momentum >5% and volume >2x bars with a fresh, still-accelerating high. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected HOLD outcome — not the third consecutive attempt to force a BMT re-entry into a range that has already rejected it twice today.
+
+### Step 7 — Notification
+
+No action taken — no proactive push warranted.
