@@ -33401,3 +33401,36 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
 
 No trade → no TRADE-LOG entry, no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
+
+## 2026-08-25 — Session-Open Execution (~12:03 UTC, no trade)
+
+**Pre-trade state:** Live Kraken reconfirmed flat — ZUSD $90.6703, `positions: {}`, `orders: {"open": {}}` — matches TRADE-LOG.md's last entry and both earlier passes today exactly. Alpaca reconfirmed flat: `positions: []`, no open orders (only historical filled/canceled records from May). BTC live $79,151.50 vs session open $78,966.10 → +0.23%. Crash gate not remotely close. BTC weekly trend gate clear (per this morning's +9.32%/5-day read, still firmly uptrending).
+
+**Fresh discovery sweep** (635 online USD pairs via public AssetPairs+Ticker). 46 candidates cleared vs-open>3% + within ~6% of 24h high; 12 with liquidity ≥$100k 24h USD volume (PEAQ, POPCAT, REUSD, POL, JASMY, ZBCN, ZEREBRO, GRT, SKR, INJ, JUP, NIGHT). Deep-dived all 12 on 15m OHLC for true 4h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| PEAQ/USD | +5.25% | 2.28x | ~40 min | Mechanically clears both bars — see deep-check below |
+| ZEREBRO/USD | +4.25% | 1.33x | 210 min | Fails both bars; stale |
+| SKR/USD | +2.38% | 8.09x | 45 min | Huge volume but momentum well under 5% bar |
+| POPCAT/USD | +2.74% | 0.26x | 180 min | Fails both bars |
+| JUP/USD | −1.48% | 0.17x | 390 min | Fails both bars; stale |
+| GRT/USD | −1.18% | 0.44x | 300 min | Fails both bars |
+| NIGHT/USD | −0.85% | 0.40x | 405 min | Fails both bars; very stale |
+| INJ/USD | −0.46% | 0.13x | 240 min | Fails both bars |
+| JASMY/USD | +0.61% | 0.27x | 345 min | Fails both bars |
+| POL/USD | +0.33% | 3.09x | 225 min | Clears volume only; momentum decayed to near-flat, stale high |
+| ZBCN/USD | +1.80% | 0.37x | 150 min | Fails both bars |
+| REUSD | −0.00% | 0.82x | 60 min | Fails both bars |
+
+**PEAQ/USD deep-check:** the only candidate mechanically clearing both the 4h momentum >5% and volume >2x bars, with a 24h high (`$0.02265`) set in the 11:15–11:30 UTC 15m candle — inside the 60-min freshness window (~33–48 min old at check time). Spread tight (bid $0.02144/ask $0.02146, well under 1%), `PEAQUSD` online, ordermin 300, costmin $0.5, no leverage available. **But the last three consecutive 15m candles since the high show a clean, uninterrupted decline** — closes $0.02211 (11:15) → $0.02204 (11:30) → $0.02162 (11:45) → $0.02146 (12:00), a **−5.3% fade off the peak in ~45 minutes**, with volume dropping in lockstep (313k → 157k → 56k → 19k per 15m candle) — the reported 2.28x volume ratio is almost entirely the pump-phase volume from 10:30–11:15, not current buying pressure. True last-1h price change is actually **−4.15%** (11:00 close $0.02239 → now $0.02146), the opposite sign of the 4h figure. This is a textbook "repricing has already occurred, momentum decelerating not accelerating" pattern — the exact failure mode the momentum-peak-check gate and the VELVET/SYN/BICO loss pattern (TRADING-STRATEGY.md 2026-08-14) exist to catch, even though the raw high-age number is mechanically inside 60 minutes. Checked Perplexity for a fresh catalyst that could justify buying the dip anyway: found only ongoing narrative items (World ID integration, peaqOS Monetize/Stream) with no dated <2h-old event — momentum-only, which would also raise the R:R floor to 1.5:1 on a position that is currently moving against the trade before entry. **Skipped** — active fade, no qualifying fresh catalyst.
+
+**No other candidate cleared both bars.** SKR had a huge 8.09x volume ratio but momentum stayed well under the 5% bar. POL cleared volume (3.09x) but momentum had decayed to near-flat on a stale (225 min) high.
+
+### Decision: **HOLD.** Third consecutive gate-failure HOLD today (after Pre-Session Research and the ~13:11 UTC Session-Open pass — note this pass ran earlier in wall-clock time at ~12:03 UTC but after those log entries; sequencing reflects append order, not execution order). PEAQ was the only mechanical pass but the underlying price action is an active reversal, not a breakout — treated as a gate failure under the strategy's momentum-peak-check intent, not a technicality to route around. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($90.6703) fully available, genuine gate failure, not a capital constraint.
+
+### Step 7 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, third clean HOLD of the day on a genuine gate failure (one candidate reached the mechanical thresholds but showed an active price reversal on inspection), nothing requiring the user's attention.
+
+No trade → no TRADE-LOG entry, no commit required by the session-open workflow's own step 8 gate; logged here per standing research-log practice and synced to `main` per CLAUDE.md.
