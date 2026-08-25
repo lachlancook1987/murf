@@ -9711,3 +9711,33 @@ ZUSD post-trade: $2.0397.
 ### Step 7 — Notification
 
 Trade placed — flagging via push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21; this is a Step 7 action-taken case, so a push is warranted).
+
+### 2026-08-25 | PEAQ/USD | SELL (trailing stop triggered) | 3835.0000 PEAQ | Exit: $0.02276 | Closed
+
+**Order ID (stop):** OT6ASJ-2KRDA-HFCY5D (trailing_stop, trail_percent 3.5%, GTC — opened 14:10:37 UTC at fill, fired/closed 15:10:18 UTC, filled 3835.00000 @ $0.02276)
+**P&L:** Buy cost $88.10209 + $0.52862 fee = $88.63071 total spent (~14:07 UTC midday-scan entry). Sell proceeds $87.31119 − $0.52387 fee = $86.78732 net received. **Net: −$1.84339 (−2.08%)**
+**Notes:** Mechanical stop-out, no thesis break — T1 (+6% = $0.024498) was never reached; the trail (stopprice $0.02254→trailed to $0.02284 confirmed at ~15:01 UTC session-open check) caught a reversal. Discovered this pass (pre-session research, ~20:05 UTC) via Kraken `ClosedOrders`; not caught live by an intervening checkpoint — no session ran between the ~15:01 UTC check and this pass.
+
+**Post-stop state (before BMT entry):** Kraken ZUSD $88.8271, flat.
+
+## 2026-08-25 — Pre-Session Research (~20:05 UTC)
+
+**Pre-check:** Live Kraken state was flat (`positions: {}`, `orders: {"open": {}}`, PEAQ balance 0, ZUSD $88.8271) — did not match TRADE-LOG.md's then-last entry (PEAQ/USD BUY, open). Reconstructed via Kraken `ClosedOrders`: PEAQ's 3.5% trail fired at 15:10:18 UTC for a small loss — backfilled above. Alpaca reconfirmed flat (`positions: []`, only historical filled/canceled orders from May, stop `a2b44cf9` still canceled). BTC live $78,857.00 vs Perplexity's read, +1.48% 24h — crash gate clear.
+
+### 2026-08-25 | BMT/USD | BUY | 3740.0000 BMT | Entry: $0.023621 (blended incl. fee) | Cost: $88.34350 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `O3ZM3M-BTAO5-3O5DWF` (buy, market, filled in full — vol_exec 3740.00000 @ $0.02348, cost $87.81660, fee $0.52690, total $88.34350; post-trade BMT balance 3740.00000, ZUSD $0.4836). Stop txid `OZX6KK-S2I4L-D432D6` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.02257, limitprice $0.02338).
+
+**T1 = $0.025039 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.025751 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor. 3.5% trail (not the 2.5% default) used per the high-ATR exception — BMT moved +41% in 4h and +54.85% over 24h (CoinGecko), extreme volatility.
+
+**Gate checklist:** crash gate clear (BTC +1.48% 24h) | BTC weekly trend gate clear (firmly up per yesterday's/this morning's reads) | spread 0.128% (ask $0.02348/bid $0.02345) ≤1% | `BMTUSD` online, ordermin 400, costmin $0.5, no leverage available | 4h momentum +41.20% >>5% | 1h momentum +17.41%, still accelerating (not fading) | volume ratio 5.09x (last 1h vol 3,040,072 vs trailing-24h hourly average 597,818) >2x | 24h high freshness 6.3 min — well within the 60-min momentum-peak-check window, confirmed still accelerating via 1h momentum, not a stale/declining high | cross-exchange divergence: initial Perplexity quote ($0.01514 CoinGecko / $0.01502 CMC) diverged ~53–54% from Kraken's live price — flagged as the known chronic Perplexity price-staleness issue rather than a real gate failure, and confirmed via CoinGecko's **direct public API** instead: live $0.022968, 24h change +54.85%, matching Kraken's live price ($0.02339 last) to within 0.62% — clean, real move, not a Kraken-specific artifact | R:R 1.71:1 ≥1.5:1 momentum-only floor (no confirmed <6h catalyst — Perplexity's cited Upbit listing catalyst dated Aug 21, 4 days old, not fresh; move classified momentum-only) | same-thesis cap clear — no prior BMT fills in TRADE-LOG (only earlier candidate skips on gate failures, no stop-outs) | scheduled-catalyst pre-positioning caution N/A (no dated future event, purely a live in-progress move).
+
+**Candidate comparison:** Fresh sweep (660 online USD pairs) found 47 candidates clearing vs-open>3% + within 6% of 24h high; 10 with liquidity ≥$100k 24h USD volume. Deep-dived all 10 on 15m OHLC: SPXUSD (+13.55% vs-open) had huge volume (13.89x) but 4h momentum negative (−0.94%, stale 111-min high, already reversing) — skipped. KTA, ACU, POL, ZEREBRO, VVV, EUL, MINA, FARTCOIN all failed both the 4h momentum and volume bars outright, or had stale (>80 min) highs with decaying momentum. BMT was the only candidate clearing every bar cleanly, and the only one with a still-fresh (<10 min) high and accelerating 1h momentum.
+
+ZUSD post-trade: $0.4836.
+
+### Decision: **TRADE — BMT/USD.** First scan pass of this session. PEAQ's 3.5% trail had already stopped out for a small loss (−2.08%) sometime between the last session-open check (~15:01 UTC) and this pass — mechanical, no thesis break, backfilled above. Fresh sweep found BMT/USD as a clean standout: massive (+41% 4h) and still-accelerating momentum, decisively confirmed volume (5.09x), a fresh (6.3 min) high, tight spread, and — after catching and discarding a stale/wrong Perplexity price quote — clean cross-exchange confirmation via CoinGecko's direct API that the move is real, not a Kraken-specific or data-quality artifact.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).

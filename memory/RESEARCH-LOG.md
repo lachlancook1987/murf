@@ -33483,3 +33483,36 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No trade, no stop event, no thesis break — nothing requiring the user's attention. No push notification sent.
+
+## 2026-08-25 — Pre-Session Research (~20:05 UTC, TRADE — BMT/USD)
+
+**Account snapshot:** Kraken flat at pre-check — `positions: {}`, `orders: {"open": {}}`, PEAQ balance 0, ZUSD $88.8271. Did not match TRADE-LOG's last entry (PEAQ/USD BUY, open) — reconciled via `ClosedOrders`: PEAQ's 3.5% trailing stop fired at 15:10:18 UTC (opened 14:10:37 UTC at fill) for a small mechanical loss, −2.08% (buy $88.63071 total, sell $86.78732 net) — T1 never reached, no thesis break, no session ran between the ~15:01 UTC check and this pass to catch it live. Backfilled to TRADE-LOG.md. Alpaca residual reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`, no action needed.
+
+**Market context:** BTC $78,857.00, +1.48% 24h (Perplexity). ETH $2,480.03, +1.05% 24h. Fear & Greed 73 "Greed" (Alternative.me); other trackers showed 74–81, still Greed-to-Extreme-Greed range, consistent with recent days. BTC perp funding ~0.0079–0.01%/8h on major venues, neutral (Kraken's own futures page again showed an outlier −0.59%/hr, treated as venue-specific noise per established practice). Crash gate clear. BTC weekly trend gate clear (firmly uptrending per yesterday's +9.32%/5-day read, extended today).
+
+**Catalysts:** Spot ETF inflows (~$2.61B combined BTC/ETH weekly) and macro liquidity (Treasury bond-buyback program, debasement trade) cited as primary drivers of the broader rally. Regulatory tailwinds: White House crypto summit, SEC crypto-asset offering framework proposal. Structural: Coinbase tokenized stocks on Base, USDC supply +$2B. Token unlocks today (Aug 25): Humanity (H, ~$18.7–19.2M), Plasma (XPL, ~$8.67–10.07M), plus smaller INFRA/IRYS/PARTI unlocks — none of the unlocked names appeared in the candidate list. No open positions to check individual news on (fully flat at scan time).
+
+**Discovery sweep:** 660 online USD pairs, direct public AssetPairs+Ticker API. 47 candidates cleared vs-open>3% + within 6% of 24h high; 10 with liquidity ≥$100k 24h USD volume. Deep-dived all 10 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BMT/USD | +41.20% | +17.41% | 5.09x | 6.3 min | Clears every bar decisively, still accelerating. **Taken.** |
+| SPX/USD | −0.94% | −2.54% | 13.89x | 111 min | Huge volume but momentum negative, already reversing off a stale high |
+| KTA/USD | −0.78% | +0.13% | 0.11x | 51 min | Fails both momentum and volume bars |
+| ACU/USD | +2.12% | −0.66% | 0.61x | 81 min | Fails both bars |
+| POL/USD | −0.48% | +1.84% | 0.99x | 201 min | Fails both bars; stale |
+| ZEREBRO/USD | −0.18% | −0.70% | 0.00x | 681 min | Fails both bars; very stale |
+| VVV/USD | −3.25% | −3.24% | 0.05x | 276 min | Fails both bars; stale |
+| EUL/USD | −0.07% | +0.49% | 0.14x | 876 min | Fails both bars; very stale |
+| MINA/USD | −0.23% | −0.23% | 0.05x | 261 min | Fails both bars |
+| FARTCOIN/USD | +2.67% | −2.63% | 1.26x | 876 min | Fails both bars; very stale |
+
+**BMT/USD deep-check:** Only candidate clearing every gate. Spread 0.128% (ask $0.02348/bid $0.02345). `BMTUSD` online, ordermin 400, costmin $0.5, no leverage available. Cross-exchange check caught a bad read: Perplexity's cited CoinGecko/CoinMarketCap prices ($0.01514/$0.01502) diverged ~53–54% from Kraken's live price — before rejecting the candidate on the strategy's cross-exchange divergence gate, queried CoinGecko's **direct public API** instead (known chronic Perplexity price-staleness issue, per TRADING-STRATEGY.md 2026-07-20): live $0.022968, 24h change +54.85%, matching Kraken's $0.02339 to within 0.62% — clean, confirms a real, broad market move, not a Kraken-specific artifact or stale-data false positive. Catalyst check: Perplexity's only cited driver was an Upbit listing dated Aug 21 (4 days old, not fresh <6h) — classified momentum-only, applying the 1.5:1 R:R floor (cleared at 1.71:1 using the high-ATR 3.5% trail / +6%,+9% T1,T2 structure). No prior BMT fills in TRADE-LOG (only earlier candidate skips on gate failures, no stop-outs), so no same-thesis restriction.
+
+**Risk factors:** BMT's 24h move (+54.85%) is extreme even by day-trading standards — thin-ish 24h liquidity (~$309k on Kraken pre-move, since risen sharply with volume) means slippage/gap risk through the 3.5% stop is elevated versus a large-cap alt. Broad backdrop remains Greed-to-Extreme-Greed with BTC near recent highs — some market-wide mean-revert risk. Token unlock pressure (H, XPL) is a minor headwind for those specific names only, unrelated to BMT.
+
+### Decision: **TRADE — BMT/USD.** Full trade detail (fill, stop, T1/T2, gate checklist) logged in TRADE-LOG.md under this timestamp. PEAQ's 3.5% trail had already stopped out mechanically before this pass (small loss, no thesis break, backfilled). Fresh sweep found BMT/USD as a clean standout — decisive momentum and volume confirmation, a fresh accelerating high, tight spread, and cross-exchange confirmation of a real move after catching and correcting a stale/wrong Perplexity price quote.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
