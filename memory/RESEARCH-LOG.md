@@ -33330,3 +33330,38 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No action beyond reconciliation/backfill → no ClickUp notification per CLAUDE.md (channel retired). Push notification sent noting the DRV stop-out for user awareness (small loss, not urgent).
+
+## 2026-08-25 — Pre-Session Research
+
+**Account snapshot:** Kraken ZUSD $90.6703 (100% cash, fully flat: `positions: {}`, `orders: {"open": {}}`). Alpaca residual: flat, `positions: []`, no open orders beyond the long-canceled historical BTC stop. No open positions on either venue.
+
+**Market context:** BTC $78,857.00 (Perplexity) / live Kraken quote $79,803.50, +1.48% 24h. ETH $2,437.07, +1.34% 24h. Fear & Greed 74 (Greed) — Bitcoin sub-index also 74, broader market average 59 (Neutral). BTC perp funding ~+0.01%/8h on Binance/Bybit/OKX/Hyperliquid — neutral, no crowded-long skew (Kraken's own futures page showed an outlier -0.59%/hr on one contract, treated as venue-specific noise, not representative). Crash gate clear (nowhere near -20%/24h). **BTC weekly trend gate clear:** +9.32% over 5 days (5d-ago close $73,001.10 → today $79,803.50) — firmly uptrending, standard entry criteria apply, no downtrend restrictions.
+
+**Catalysts:** BTC briefly touched $80,000 (fresh high since mid-May) on continued spot ETF inflows (~$2.61B combined BTC/ETH weekly). USDC supply +$2B (liquidity supportive). Coinbase launched tokenized stocks on Base. $439M in liquidations reported — volatility-driven squeeze conditions. Token unlocks today: Humanity (H, ~$19.2M) and Huma Finance (HUMA, ~$10.07M, 16.70% of unlocked supply) both Aug 25; Plasma (XPL, 88.89M) also Aug 25. No currently-held positions to check news on (fully flat).
+
+**Discovery sweep:** 634 online USD pairs, direct public AssetPairs+Ticker API. 52 candidates cleared vs-open>3% + within 6% of 24h high; 12 with liquidity ≥$100k 24h USD volume. Deep-dived all 12 on 15m OHLC for true 4h momentum, 1h-vs-trailing-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|
+| REUSD | +4.27% | 2.25x | 30 min | Clears volume, fresh high, but momentum just under the 5% bar |
+| JASMY/USD | +5.44% | 0.21x | 90 min | Clears momentum but badly fails volume bar |
+| SPX/USD | −0.51% | 0.75x | 120 min | Fails both bars |
+| GRT/USD | +0.11% | 1.16x | 45 min | Fails both bars |
+| POL/USD | +3.67% | 3.02x | 30 min | Clears volume, fresh high, but momentum under the 5% bar |
+| RAY/USD | −2.30% | 1.21x | 390 min | Fails both bars; stale |
+| NIGHT/USD | −0.15% | 0.69x | 150 min | Fails both bars |
+| POPCAT/USD | −2.55% | 0.27x | 225 min | Fails both bars |
+| INJ/USD | −0.60% | 0.55x | 915 min | Fails both bars; very stale |
+| JUP/USD | −2.04% | 0.89x | 135 min | Fails both bars |
+| CHIP/USD | +1.49% | 7.59x | 120 min | Huge volume spike but momentum well under 5% bar |
+| KAS/USD | +1.79% | 0.71x | 1140 min | Fails both bars; very stale |
+
+**No candidate cleared both the 4h momentum >5% and volume >2x bars together.** Closest misses: REUSD (4.27%/2.25x, fresh) and POL/USD (3.67%/3.02x, fresh) both had confirming volume but momentum fell short of the 5% threshold; JASMY and CHIP had the inverse problem (momentum or volume alone, not both). This is a genuine gate failure, not a capital constraint (ZUSD $90.6703 fully available for a fresh entry).
+
+**Risk factors:** Broad backdrop is Greed (74) with BTC briefly touching $80K — some reversal/mean-revert risk after headline highs. $439M in liquidations today signals elevated volatility, which raises noise-stop risk on any thin-momentum entry — reinforces not forcing a trade on sub-threshold candidates. Token unlock pressure (H, HUMA, XPL) today is a minor headwind for those specific names, none of which appeared in the candidate list.
+
+**Decision: HOLD.** Crash gate clear, BTC weekly trend gate clear (firmly up) — no restriction-driven HOLD, this is a pure candidate-screening gate failure. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome: no candidate cleared both the momentum and volume confirmation bars together, so no entry is taken this pass.
+
+### Step 6 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
