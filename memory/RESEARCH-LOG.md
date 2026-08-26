@@ -33635,3 +33635,28 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 ### Step 7 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures (one clear divergence-gate catch on TAC), nothing requiring the user's attention.
+
+## 2026-08-26 — Scan Pass (~15:02 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and today's ~14:06 UTC pass, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, no open orders.
+
+**BTC:** live $77,714.20 vs today's session open $78,509.50 → −1.01%. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (640 online USD pairs, direct public AssetPairs+Ticker API). 45 candidates cleared vs-open>3% + within 6% of 24h high; 10 with liquidity ≥$100k 24h USD volume. Deep-dived on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BICO/USD | +20.57% | +6.19% | 4.07x | 0 min | Mechanically clears every bar, strongest and freshest signal seen today — see deep-check below |
+| PEAQ/USD | +8.73% | −0.65% | 2.67x | 30 min | 1h momentum already negative — fade underway, consistent with prior stop-out on this asset (2026-08-25) |
+| S/USD | +5.05% | −1.69% | 2.56x | 45 min | 1h momentum reversed negative — same asset skipped ~14:06 UTC on no-catalyst R:R gate; conditions unchanged/worse |
+| NIL, BLESS, XAN, ACU, STG, PUMP, COTI (USD) | −3.7% to +3.2% | mixed | 0.01x–3.21x | mostly stale | All fail the 4h momentum >5% bar or volume bar; none warrant deeper inspection |
+
+**BICO/USD deep-check:** Spread 0.65% (bid $0.02596/ask $0.02613), online, no issue. 15m candles show a genuine multi-candle breakout (14:00→15:00 climbing $0.02405→$0.02575 on rising volume, not the single-candle spike-and-fade pattern seen in this morning's/midday's BICO checks) — currently trading at/through the 24h high in real time. **But 1-min candles show choppy, spike-and-pullback action** (14:55–15:04: $0.0248→$0.0253→$0.0251→$0.0259→$0.0257→$0.0261), not smooth acceleration. **Catalyst check via Perplexity:** the only concrete driver is the same **Upbit listing (Aug 21, 5 days old)** already rejected as stale in this morning's ~08:09 UTC BICO skip — no new listing/partnership/regulatory event <6h old. Perplexity's own read: "price action may be speculative... driven by volume, short squeeze dynamics, and thin liquidity, with no single fundamental catalyst fully explaining the move." **R:R floor fail:** as a momentum-only, no-confirmed-catalyst entry, requires R:R ≥1.5:1 per TRADING-STRATEGY.md (2026-08-14 rule); standard 3% T1 vs 2.5% stop only yields 1.2:1. Skipped on the R:R gate — this is the strongest BICO signal of the day (three prior skips at 08:09/12:01/14:06 UTC were on fade/staleness grounds; this one fails purely on catalyst/R:R, having cleared the momentum and freshness bars this time).
+
+**No candidate cleared all gates.** BICO was the standout mechanical setup but has no fresh catalyst and fails the no-catalyst R:R floor; PEAQ and S/USD were already-fading repeats of earlier passes.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.01% vs session open, nowhere near −20%). Fifth gate-failure HOLD of the day (pre-session ~08:09, session-open ~09:01, midday ~12:01, midday #2 ~14:06, this pass) — no restriction-driven HOLD, genuine R:R/catalyst gate failure. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($85.9503) fully available, not a capital constraint.
+
+### Step 7 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on a genuine R:R/catalyst gate failure (BICO's strongest move of the day, still correctly rejected on stale catalyst), nothing requiring the user's attention.
