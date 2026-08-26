@@ -33541,3 +33541,38 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No proactive push sent this pass — the BMT stop-out was a small mechanical loss (−3.26%, within the trail's own design tolerance), promptly caught and logged by this pass (no process/logging failure), and the sweep found no actionable candidate. Nothing here rises to the level of needing the user's attention right now.
+
+## 2026-08-26 — Pre-Session Research (~08:09 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — matches TRADE-LOG.md's last entry (BMT/USD stop-out, 2026-08-25 20:10:44 UTC) exactly, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`, no action needed.
+
+**Market context:** BTC $78,893.00, +0.04% 24h (Perplexity); live Kraken quote $79,081.40, today's open $78,509.50 → intraday +0.73%. ETH $2,473.82, −1.2% 24h. Fear & Greed 62–70 depending on source (CFGI 62, another Bitcoin-specific tracker 70), both "Greed," consistent with the recent multi-day Greed backdrop. BTC perp funding ~+0.007–0.010%/8h on major venues (Binance +0.0079%, Glassnode all-exchange avg 0.005%), neutral; Kraken's own futures page again showed an outlier (−0.22%/hr), treated as venue-specific noise per established practice. **Crash gate clear** (nowhere near −20%/24h). **BTC weekly trend gate clear** — 5-day change +0.96% (Kraken daily OHLC, $78,327.20 Aug 21 close → $79,081.40 now), not in a weekly downtrend.
+
+**Catalysts:** Macro is the dominant near-term driver — today's US GDP second estimate + Personal Income/Outlays/Core PCE release, with Jackson Hole (Aug 27–29) as the next major event. Treasury liquidity (bond buybacks) and CLARITY Act regulatory progress cited as ongoing bullish/uncertain backdrop respectively. BitMart discontinued all trading services today (01:00 UTC) — exchange-specific, not a broad market catalyst. Token unlocks: HUMA (Aug 26, ~$2.7–9.3M depending on tracker, inconsistent), none of the unlocked names appeared in the candidate list. No open positions to check individual news on (fully flat).
+
+**Discovery sweep:** 642 online USD pairs, direct public AssetPairs+Ticker API. 45 candidates cleared vs-open>3% + within 6% of 24h high; 12 with liquidity ≥$100k 24h USD volume. Deep-dived all 12 on 15m OHLC (with a proper trailing-24h window) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BICO/USD | +5.41% | +1.15% | 3.91x | 24.6 min | Mechanically clears both bars — see deep-check below |
+| AKE/USD | +5.76% | +3.40% | 1.30x | 1029.6 min | Clears momentum but fails volume bar; very stale high |
+| PYTH/USD | +5.05% | +0.26% | 0.48x | 84.6 min | Clears momentum but fails volume bar badly; 1h momentum near-flat |
+| PUMP/USD | +2.25% | −1.94% | 0.20x | 1419.6 min | Fails both bars; very stale, 1h reversing |
+| USELESS/USD | +1.26% | −1.14% | 0.17x | 144.6 min | Fails both bars |
+| MELANIA/USD | +1.42% | +0.47% | 0.08x | 1434.6 min | Fails both bars; very stale |
+| US/USD | +1.61% | +3.13% | 0.64x | 9.6 min | Fresh high but fails both 4h momentum and volume bars |
+| PLUME/USD | +0.44% | −0.72% | 0.58x | 129.6 min | Fails both bars |
+| FARTCOIN/USD | +0.39% | +1.99% | 0.83x | 204.6 min | Fails both bars |
+| ACU/USD | +0.93% | +1.79% | 0.26x | 279.6 min | Fails both bars |
+| SPX/USD | −0.37% | +0.47% | 0.11x | 339.6 min | Fails both bars |
+| STX/USD | −2.01% | −0.44% | 0.30x | 339.6 min | Fails both bars |
+
+**BICO/USD deep-check:** The only candidate mechanically clearing both the 4h momentum >5% and volume >2x bars, with a 24h high ($0.02167) set in the 07:45–08:00 UTC 15m candle — 24.6 min old, inside the 60-min freshness window. Spread tight (bid $0.02081/ask $0.02087, ~0.29%, well under 1%), `BICOUSD` online, ordermin 300, costmin $0.5, no leverage available. **But finer candle-by-candle inspection shows clear post-high deceleration, not acceleration:** volume fell sharply candle-over-candle right after the high — 07:30 candle 525k (peak), 07:45 candle 245k, 08:00 (last complete) candle only 84k — and price has already faded −2.86% off the $0.02167 high to $0.02105 in that same window. The reported 3.91x volume ratio is almost entirely pump-phase volume from 07:00–07:45, not current buying pressure; true last-1h momentum is only +1.15%, far short of the 4h headline figure and consistent with a fade already underway. This is the same "repricing has already occurred, momentum decelerating not accelerating" pattern the momentum-peak-check gate exists to catch, even though the raw high-age number is mechanically inside 60 minutes (same failure mode as PEAQ 2026-08-25 ~12:03 UTC, which was correctly skipped on identical reasoning). Checked Perplexity for a fresh catalyst that could override: only catalyst found is an **Upbit listing dated Aug 21 — 5 days old**, not fresh, plus explicit commentary that the move is "trading on speculative momentum... no clear coin-specific catalyst." No qualifying <2h catalyst. **BICO is also specifically named in TRADING-STRATEGY.md's momentum-only R:R floor rule (2026-08-14) as one of three prior no-catalyst bare-floor losses (BICO 2026-08-06)** — an added reason for caution on this exact asset/pattern combination. **Skipped** — active fade, no qualifying fresh catalyst, prior loss history on this asset under near-identical conditions.
+
+**No other candidate cleared both bars.** AKE and PYTH each cleared the momentum bar alone on stale highs (1029 min and 84.6 min respectively) with volume well under 2x. US/USD had a genuinely fresh (9.6 min) high but momentum stayed well under the 5% bar.
+
+### Decision: **HOLD.** Crash gate clear, BTC weekly trend gate clear (+0.96%/5-day) — no restriction-driven HOLD, this is a pure candidate-screening gate failure. BICO/USD was the only candidate mechanically clearing the headline momentum+volume bars, but deep inspection shows an active fade off a very recent high on decaying volume, no fresh catalyst, and a specific prior loss on this same asset/pattern cited in the strategy doc. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($85.9503) fully available, genuine gate failure, not a capital constraint.
+
+### Step 6 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip STEP 6 silently). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
