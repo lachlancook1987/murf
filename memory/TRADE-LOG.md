@@ -9820,3 +9820,26 @@ No action taken — no proactive push warranted.
 **Trades today:** none | **Total since migration:** ~136
 
 **Notes:** Kraken `account`/`positions`/`orders`: ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to the Aug 25 22:09 UTC midday-scan close, confirming zero trading activity anywhere today; no other session ran between that pass and this one. Dust basket (AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. BTC: yesterday's live reference $78,797.40 (Aug 25 22:09 UTC pass) vs today's live $78,989.90 → **+0.24%**; bot flat (0.00%) trails BTC by **−0.24 points** — expected on a no-trading day sitting fully in cash. Phase P&L −$93.8297 (−52.19%) from $179.78 Kraken starting equity (May 22). Alpaca: `positions` and `orders` confirmed fully flat, historical BTC stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Total trades since migration ~136 (~132 as of Aug 24's close + 4 discrete orders on Aug 25: PEAQ buy/sell, BMT buy/sell; 0 today). Tomorrow: pre-session research resumes with $85.9503 cash, fully flat; crash gate threshold ~$63,191.92 (BTC −20% from $78,989.90).
+
+## 2026-08-26 — Session-Open Execution (~09:01 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and to today's Pre-Session Research pass (~08:09 UTC), no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, all historical orders `filled`/`canceled` (44 total), no open orders.
+
+**BTC:** live $78,822.80 vs today's session open $78,509.50 → +0.40%. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API, ~52 min after pre-session's sweep). 64 candidates cleared vs-open>3% + within 6% of 24h high; 16 with liquidity ≥$100k 24h USD volume. Deep-dived the top movers on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BTR/USD | — | — | — | 45 min | **Cross-exchange divergence gate fail.** Kraken showed +174% vs open (last $0.0921–0.0934) vs CoinGecko $0.03333 / CoinMarketCap $0.03318 — ~178–181% divergence, far past the 15–20% threshold. Perplexity confirms no coin-specific catalyst, "leveraged futures speculation" per CoinMarketCap. Same failure mode as PTB/ALKIMI/TNSR precedent. Skipped outright. |
+| PYTH/USD | +8.04% | +3.42% | 4.70x | 0 min (forming candle) | Only candidate mechanically clearing momentum + volume bars with a fresh high. Spread 0.21% (bid $0.05640/ask $0.05652), online, no issue there. **Catalyst check:** best available driver is Nasdaq TotalView-on-Pyth integration — but Perplexity confirms that announcement dates to **June 30, 2026**, ~2 months old, not a fresh <6h catalyst; a separate read calls the move "technical breakout / volume-driven" with no fresh headline. **R:R floor fail:** momentum-only (no confirmed <6h catalyst) entries require R:R ≥1.5:1 per TRADING-STRATEGY.md (2026-08-14 rule); standard 3% T1 vs 2.5% stop only yields 1.2:1. Skipped on R:R gate. |
+| FARTCOIN, PUMP, SPX, STX, PEAQ, USELESS, ACU (USD) | headline vs-open 6.5–130% | — | 0.02x–0.48x | — | All fail the volume-ratio bar badly (real last-1h volume vs trailing-24h hourly average is well under 2x despite large headline vs-open moves) — thin/bursty trading, not sustained buying pressure. Skipped. |
+| GRASS, WIF, ETHFI, VIRTUAL, WLD, MINA, US (USD) | 0.56–4.53% | −0.35–3.77% | 0.14x–3.14x | mostly stale (>1000 min) except MINA/US (~35 min) | All fail the 4h momentum >5% bar; MINA and US had fresh highs and decent volume but momentum stayed under the bar. Skipped. |
+
+**No candidate cleared all gates.** PYTH was the closest — genuine momentum and volume acceleration with a fresh high and tight spread — but the only plausible catalyst is stale (June 30) and the resulting R:R with no confirmed fresh catalyst falls short of the 1.5:1 floor. BTR was a clear cross-exchange divergence rejection, not a real tradeable move.
+
+### Decision: **HOLD.** Confirms and extends today's Pre-Session Research HOLD (~08:09 UTC) — genuine gate failures across the board (divergence, R:R floor, volume, momentum), not a capital constraint (ZUSD $85.9503 fully available). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome.
+
+### Step 7 — Notification
+
+No push sent — flat account, no reconciliation issue, clean HOLD on genuine gate failures (including one clear divergence-gate catch on BTR). Nothing here needs the user's attention right now.
