@@ -33604,3 +33604,34 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 ### Step 7 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures (including a divergence-gate catch on BTR that's worsened since this morning), nothing requiring the user's attention.
+
+## 2026-08-26 — Midday Scan #2 (~14:06 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and to today's ~12:01 UTC midday-scan pass, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`, no action needed.
+
+**BTC:** live $78,600.40 vs today's session open $78,509.50 → +0.12%. Crash gate (−20%/24h) not remotely close.
+
+**No open positions to verify/tighten/thesis-check** (flat all day).
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API, ~2h after the ~12:01 UTC sweep). 59 candidates cleared vs-open>3% + within 6% of 24h high; 18 with liquidity ≥$100k 24h USD volume. Deep-dived the top movers on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| TAC/USD | +26.62% | +17.54% | 17.28x | 22.4 min | Mechanically clears every bar — see deep-check below |
+| TMX/USD | +32.24% | −0.01% | 0.61x | 52.4 min | Fails volume bar; 1h flat (stalled after initial spike) |
+| BICO/USD | +18.54% | +6.53% | 2.34x | 142.4 min | Fails freshness bar (high 142min old, outside 60min window) — same asset already skipped twice today (~08:09, ~12:01 UTC) on active-fade/prior-loss grounds; not re-examined further |
+| PEAQ/USD | +11.34% | +1.04% | 2.50x | 22.4 min | Mechanically clears headline bars but candle-by-candle shows a fade already underway: high set at 37.7min-ago candle ($0.02450), price declined through the next two candles to $0.02425, volume also declining (280k→234k→54k). Same asset stopped out 2026-08-25. Skipped — decelerating, not accelerating. |
+| S/USD | +7.30% | +4.63% | 3.68x | 7.4 min | Mechanically clears every bar, fresh accelerating high — see deep-check below |
+| ACU, PUMP, LIT, WIF, XAN, STX, JUP, COTI, SPX, MELANIA, PLUME, CHIP (USD) | 0.3–2.8% | — | 0.2x–2.7x | mostly stale | All fail the 4h momentum >5% bar (PUMP/CHIP also fail volume); none warrant deeper inspection |
+
+**TAC/USD deep-check:** Spread 0.79% (bid $0.004648/ask $0.004685) — under the 1% cap but tighter margin than usual. Massive volume surge starting ~37.7min ago (19.3M and 21.6M-unit candles vs a ~15-125k baseline) with price still pressing near the high in the most recent candle — genuinely accelerating, not fading. **Catalyst confirmed:** HTX listed TAC perpetual futures with 20x leverage today, cited as the direct driver ("TAC Surges 64% as HTX Lists Perpetual Contracts with 20x Leverage"). **Cross-exchange divergence gate fail:** CoinGecko quotes TAC at $0.002594 (24h vol $4.99M) while CoinMarketCap quotes $0.004197 — the two reference sources disagree with **each other** by ~62%, and Kraken's own live price ($0.0046-0.0047) diverges ~79% above CoinGecko and ~11% above CoinMarketCap. Unstable, mutually-inconsistent reference prices in the middle of a fresh 20x-leverage perpetual listing is the exact thin/distorted-orderbook signature the divergence gate exists to catch (same failure family as BTR earlier today, PTB/ALKIMI/TNSR precedent) — leverage-listing-driven volatility, not a broadly-confirmed spot move. Skipped on the divergence gate.
+
+**S/USD (Sonic) deep-check:** Spread 0.34% (bid $0.02920/ask $0.02930), clean. Candle-by-candle shows a genuine fresh acceleration — flat/thin volume for the prior ~90min (1.6k–48k/candle) then two consecutive candles with real volume (187k, 330k) and price rising $0.0282→$0.0288→$0.0294 into a fresh 7.4min-old high. Cross-exchange price level checks out fine (CoinGecko $0.02804, CoinMarketCap $0.02713, both within ~5–8% of Kraken's $0.0294 — well inside the divergence threshold). **But no catalyst:** Perplexity finds no Sonic-specific news — CoinGecko and CoinMarketCap both show Sonic **down** 0.4–5.95% over 24h on a "broader market downturn," directly contradicting the sharp intraday rally showing on Kraken's own order book. No confirmed <6h catalyst exists to explain the divergence between Kraken's move and the flat/negative read on other venues. **R:R floor fail:** as a momentum-only, no-confirmed-catalyst entry, this requires R:R ≥1.5:1 per TRADING-STRATEGY.md (2026-08-14 rule); standard 3% T1 vs 2.5% stop only yields 1.2:1. Skipped on the R:R gate.
+
+**No candidate cleared all gates.** TAC was the strongest mechanical setup today but failed cleanly on cross-exchange divergence amid leverage-listing chaos; S/USD was clean on spread and price-level divergence but had no catalyst to clear the elevated no-catalyst R:R bar. PEAQ and BICO were both recognizable fade/stale-high patterns already seen earlier today.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.12% vs session open). Fourth gate-failure HOLD of the day (pre-session ~08:09 UTC, session-open ~09:01 UTC, midday ~12:01 UTC, this pass) — no restriction-driven HOLD, genuine gate failures each time (divergence, R:R floor, fade patterns). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($85.9503) fully available, not a capital constraint.
+
+### Step 7 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures (one clear divergence-gate catch on TAC), nothing requiring the user's attention.
