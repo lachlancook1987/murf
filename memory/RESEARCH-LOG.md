@@ -33691,3 +33691,29 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 ### Step 6 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures, nothing requiring the user's attention.
+
+## 2026-08-26 — Session-Open Execution #2 (~21:02 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and today's ~20:05 UTC pass, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, no open orders.
+
+**BTC:** live $78,457.30 vs today's session open $78,509.50 → −0.07%. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API, ~1h after the ~20:05 UTC sweep). 60 candidates cleared vs-open>3% + within 6% of 24h high; 15 with liquidity ≥$100k 24h USD volume. Deep-dived on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| LIT/USD | +15.64% | +3.00% | 0.95x | 90 min | Strongest headline move but fails volume bar and high is stale (>60min) |
+| SPX/USD | +7.94% | +2.19% | 1.45x | 15 min | Fresh high, clears 4h momentum, but fails the 2x volume bar |
+| S/USD | +7.27% | −0.32% | 0.95x | 105 min | Fails volume bar; 1h flat/negative, stale high |
+| GWEI/USD | +7.05% | −1.03% | 0.97x | 45 min | Fails volume bar; 1h negative — same asset skipped ~20:05 UTC on fade/R:R grounds, still fading |
+| KII/USD | +3.61% | +3.30% | 0.00x | 210 min | Zero-volume candles in window, unreliable/illiquid; fails volume bar |
+| UAI/USD | +3.03% | −1.53% | 1.07x | 45 min | Fails momentum and volume bars; same asset skipped ~20:05 UTC on divergence/chop grounds |
+| PEAQ, ACU, GRASS, BLESS, KTA, NIL, CHIP, PUMP, ENS (USD) | −1.6% to +3.6% | mixed | 0.16x–1.69x | mostly stale | All fail the 4h momentum >5% bar or volume bar; none warrant deeper inspection |
+
+**No candidate cleared all gates.** LIT and SPX were the closest mechanical near-misses (strong momentum, but both fail the 2x volume bar); everything else was weak or a repeat of assets already skipped earlier today (GWEI, S, UAI, PEAQ).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.07% vs session open). Seventh gate-failure HOLD of the day (pre-session ~08:09, session-open ~09:01, midday ~12:01, midday #2 ~14:06, scan ~15:02, scan ~20:05, this pass) — no restriction-driven HOLD, genuine volume-bar gate failures each time. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($85.9503) fully available, not a capital constraint.
+
+### Step 6 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine volume-bar gate failures, nothing requiring the user's attention.
