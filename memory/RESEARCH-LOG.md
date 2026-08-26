@@ -33576,3 +33576,31 @@ No proactive push sent this pass — the BMT stop-out was a small mechanical los
 ### Step 6 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip STEP 6 silently). No push notification sent — flat account, clean HOLD on a genuine gate failure, nothing requiring the user's attention.
+
+## 2026-08-26 — Midday Scan (~12:01 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and to today's ~09:01 UTC session-open pass, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`, no action needed.
+
+**BTC:** live $78,538.60 vs today's session open $78,509.50 → +0.04%. Crash gate (−20%/24h) not remotely close.
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API). 60 candidates cleared vs-open>3% + within 6% of 24h high; 20 with liquidity ≥$100k 24h USD volume. Deep-dived the top 20 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BTR/USD | +46.01% | +9.50% | 2.08x | 47.8 min | Mechanically clears both bars, but this is the same asset flagged at ~09:01 UTC today for a ~178–181% cross-exchange divergence (Kraken vs CoinGecko/CoinMarketCap) with no coin-specific catalyst ("leveraged futures speculation" per CMC) — price has since moved even further from the reference (Kraken now $0.119 vs this morning's ~$0.092), divergence gate still fails decisively. Skipped outright, not re-checked exhaustively given same-day precedent. |
+| BICO/USD | +13.48% | +9.70% | 10.26x | 17.8 min | Mechanically clears both bars, headline numbers stronger than this morning's skip. Candle-by-candle: 17.9-min-ago candle spiked to a fresh high $0.02481 on $33,966 volume, but the most recent (3-min) candle already reversed to $0.02341 close (−5.6% off that high) on volume collapsed to $4,707 — active fade immediately after the spike, not acceleration. Same "repricing already occurred" pattern that caused this morning's ~08:09 UTC BICO skip on a smaller move, now recurring on a larger one. BICO is also specifically named in TRADING-STRATEGY.md's momentum-only R:R floor rule (2026-08-14) as a prior no-catalyst bare-floor loss (2026-08-06). Skipped — active fade, no catalyst re-checked given the immediate reversal, prior loss history on this exact asset/pattern. |
+| CHIP/USD | +5.31% | +0.87% | 0.90x | 17.8 min | Clears momentum only; fails volume bar |
+| BLESS/USD | +7.67% | +2.99% | 0.80x | 152.8 min | Clears momentum only; fails volume bar, stale-ish high |
+| FARTCOIN/USD | +1.39% | +1.05% | 5.79x | 17.8 min | Clears volume only; momentum well under 5% bar |
+| WLD/USD | −0.15% | −1.00% | 4.30x | 77.8 min | Clears volume only; momentum negative |
+| PEAQ/USD | +3.07% | +3.21% | 1.29x | 1262.8 min | Fails both bars; same asset stopped out 2026-08-25, very stale high |
+| NIL/USD | +2.50% | +2.27% | 0.83x | 2.8 min | Fresh high but fails both momentum and volume bars |
+| JUP, GRASS, MORPHO, ETHFI, PLUME, SPX, MELANIA, TRUMP, USELESS, STX, PUMP, ACU (USD) | −2.38% to +2.37% | — | 0.08x–1.29x | mostly stale (>350 min) | All fail the 4h momentum >5% bar; none warrant deeper inspection |
+
+**No candidate cleared all gates.** BTR and BICO were the only two mechanically clearing both headline bars — BTR on an already-established same-day cross-exchange divergence gate fail (worsened, not resolved), BICO on an active fade immediately following its spike high plus documented prior loss history on this exact asset/pattern. Genuine gate failure, not a capital constraint (ZUSD $85.9503 fully available).
+
+### Decision: **HOLD.** Crash gate clear, BTC weekly trend intraday move flat (+0.04% vs session open). Third gate-failure HOLD of the day (pre-session ~08:09 UTC, session-open ~09:01 UTC, this pass) — no restriction-driven HOLD, pure candidate-screening gate failures each time. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome.
+
+### Step 7 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures (including a divergence-gate catch on BTR that's worsened since this morning), nothing requiring the user's attention.
