@@ -9806,3 +9806,17 @@ No proactive push sent — the BMT stop-out was a small mechanical loss (−3.26
 ### Step 7 — Notification
 
 No action taken — no proactive push warranted.
+
+## 2026-08-26 — EOD Summary
+
+### Aug 26 — EOD Snapshot (Day 98, Wednesday)
+
+**Portfolio:** $85.9503 | **Cash:** $85.9503 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$93.8297 (−52.19%) | **vs BTC:** −0.24%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | flat, no position | — |
+
+**Trades today:** none | **Total since migration:** ~136
+
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to the Aug 25 22:09 UTC midday-scan close, confirming zero trading activity anywhere today; no other session ran between that pass and this one. Dust basket (AAVE, AVAX, BABY, FET, INJ, KAS, NEAR, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. BTC: yesterday's live reference $78,797.40 (Aug 25 22:09 UTC pass) vs today's live $78,989.90 → **+0.24%**; bot flat (0.00%) trails BTC by **−0.24 points** — expected on a no-trading day sitting fully in cash. Phase P&L −$93.8297 (−52.19%) from $179.78 Kraken starting equity (May 22). Alpaca: `positions` and `orders` confirmed fully flat, historical BTC stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Total trades since migration ~136 (~132 as of Aug 24's close + 4 discrete orders on Aug 25: PEAQ buy/sell, BMT buy/sell; 0 today). Tomorrow: pre-session research resumes with $85.9503 cash, fully flat; crash gate threshold ~$63,191.92 (BTC −20% from $78,989.90).
