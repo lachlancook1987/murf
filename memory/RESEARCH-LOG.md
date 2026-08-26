@@ -33660,3 +33660,34 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 ### Step 7 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on a genuine R:R/catalyst gate failure (BICO's strongest move of the day, still correctly rejected on stale catalyst), nothing requiring the user's attention.
+
+## 2026-08-26 — Scan Pass (~20:05 UTC, no trade)
+
+**Pre-check:** Kraken confirmed flat — ZUSD $85.9503, `positions: {}`, `orders: {"open": {}}` — exact match to TRADE-LOG's last entry and today's ~15:02 UTC pass, no reconciliation gap. Alpaca reconfirmed flat: `positions: []`, no open orders.
+
+**Market context:** BTC live $78,520.40 vs today's session open $78,509.50 → +0.01%. Crash gate (−20%/24h) not remotely close; BTC weekly trend gate remains clear per this morning's read. ETH $2,452.53, −0.90% 24h. Fear & Greed 65–72 "Greed" (source-dependent, CoinStats outlier at 80 "Extreme Greed"). BTC perp funding +0.008–0.01%/8h on major venues, neutral (Kraken's own futures page again an outlier at −0.22%/hr, treated as venue noise per established practice). Macro backdrop dominated by today's core PCE print, Q2 GDP revision, and Nvidia earnings, with Jackson Hole ongoing; spot BTC ETF inflows (~$338M) supportive. HUMA token unlock (Aug 26, ~$2.7–9.3M depending on source) noted, not in candidate list. No open positions to check individual news on (fully flat).
+
+**Fresh discovery sweep** (637 online USD pairs, direct public AssetPairs+Ticker API, ~5h after the ~15:02 UTC sweep). 59 candidates cleared vs-open>3% + within 6% of 24h high; 12 with liquidity ≥$100k 24h USD volume. Deep-dived all 12 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| GWEI/USD | +11.01% | +2.97% | 2.54x | 22.4 min | Mechanically clears both bars — see deep-check below |
+| UAI/USD | +8.65% | +1.24% | 4.11x | 37.4 min | Mechanically clears both bars — see deep-check below |
+| S/USD | +8.68% | −1.88% | 1.71x | 52.4 min | 1h momentum already negative — fade underway |
+| GRASS/USD | +7.01% | −2.64% | 2.14x | 67.4 min | 1h momentum negative and high just outside freshness window — fading |
+| ACU/USD | +5.37% | +0.37% | 0.77x | 112.4 min | Fails volume bar; stale-ish high |
+| SPX/USD | +5.27% | −0.09% | 0.68x | 82.4 min | Fails volume bar; 1h flat |
+| PEAQ/USD | +3.74% | +1.04% | 0.75x | 337.4 min | Fails momentum and volume bars — same asset stopped out 2026-08-25, skipped repeatedly earlier today, momentum has now decayed well under the 5% bar |
+| KTA, ENS, CHIP, PUMP, NIL (USD) | −2.6% to +3.3% | mixed | 0.23x–1.9x | mostly stale | All fail the 4h momentum >5% bar or volume bar; none warrant deeper inspection |
+
+**GWEI/USD deep-check:** Spread 0.35% (bid $0.025762/ask $0.025853), online, ordermin 300. 1-minute candles show a clean spike at ~10.6min ago (34k-unit candle driving the fresh 24h high $0.026016) followed by immediate chop and decay — price faded to $0.025660 three minutes later, then a partial bounce to the current $0.025742, still −1.05% off the high, on thinning volume (several zero-volume 1m candles interspersed). This is the same spike-then-fade pattern (not smooth acceleration) flagged on BICO/PEAQ earlier this week. **Catalyst check:** best available driver is Upbit/Crypto.com exchange listings dated **Aug 21 — 5 days old**, not a fresh <6h catalyst; Perplexity separately flags the move as possibly a "short squeeze" that could fade with cooling volume. **R:R floor fail:** momentum-only (no confirmed <6h catalyst) entries require R:R ≥1.5:1 per TRADING-STRATEGY.md (2026-08-14 rule); standard 3% T1 vs 2.5% stop only yields 1.2:1. Skipped on both the fade pattern and the R:R gate.
+
+**UAI/USD deep-check:** Spread 0.11% (bid $0.30672/ask $0.30707), online, tight. 1-minute candles over the last ~50min show the true 24h high ($0.30892) was set ~30.8min ago, followed by a decline to $0.30532, then two distinct volume spikes (25.5k-unit candle at −25.8min, 22.7k-unit candle at −7.8min) each of which failed to reclaim the high and faded back down — a choppy, range-bound pattern with two failed breakout attempts, not smooth acceleration. Current price $0.30741 sits −0.49% off the true high. **Cross-exchange check:** CoinGecko quotes UAI at $0.2823, down **−12.70%** over 24h — directly contradicting Kraken's own +8%+ read — while CoinMarketCap/Bitget cluster near $0.284–0.289, all materially below Kraken's $0.307 (~8–9% divergence, under the 15–20% hard-fail threshold but a clear directional contradiction, same failure family as the S/USD case on 2026-08-26 ~14:06 UTC). **Catalyst check:** only driver cited is a "Jupiter integration on Solana," undated and reading as older narrative, not a fresh <6h event; CoinGecko separately describes today's community sentiment as "bearish." **R:R floor fail:** no confirmed fresh catalyst → requires R:R ≥1.5:1; standard setup only yields 1.2:1. Skipped on cross-venue contradiction, choppy price action, and the R:R gate.
+
+**No candidate cleared all gates.** GWEI and UAI were the only two mechanically clearing the headline momentum+volume bars, both failing on stale/absent catalysts (R:R floor) plus their own chop/fade price action; S/USD and GRASS were already fading by the time of this pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.01% vs session open). Sixth gate-failure HOLD of the day (pre-session ~08:09, session-open ~09:01, midday ~12:01, midday #2 ~14:06, scan ~15:02, this pass) — no restriction-driven HOLD, genuine R:R/catalyst and price-action gate failures each time. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — cash ($85.9503) fully available, not a capital constraint.
+
+### Step 6 — Notification
+
+No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on genuine gate failures, nothing requiring the user's attention.
