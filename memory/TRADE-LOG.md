@@ -9861,3 +9861,17 @@ ZUSD post-trade: $0.2934.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-27 — EOD Summary
+
+### Aug 27 — EOD Snapshot (Day 99, Thursday)
+
+**Portfolio:** $85.4394 | **Cash:** $0.2934 (0.3%) | **Day P&L:** −$0.5109 (−0.59%) | **Phase P&L:** −$94.3406 (−52.48%) | **vs BTC:** −1.65%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| RUNE/USD | 138.0000 | $0.620701 | $0.617 | −0.60% | −$0.5109 (−0.60%) | 3.5% trailing, stop $0.60500 (active, trailed up from $0.596 entry-stop as price ran to today's $0.626 high) |
+
+**Trades today:** RUNE/USD buy (138.0000 @ $0.620701 blended, this session, logged above) | **Total since migration:** ~137
+
+**Notes:** Kraken `account`: ZUSD $0.2934, RUNE 138.0000000000, all other balances unchanged dust. `positions: {}` (Kraken spot API doesn't report spot holdings as "positions"; RUNE balance confirmed via account balances instead). `orders: open` shows the trailing-stop sell OW675Y-T4STV-UGMSJX still live, trail_percent 3.5%, stopprice now $0.60500/limitprice $0.62600 — trailed up from the $0.59600/$0.61700 levels at fill time, confirming the stop is tracking RUNE's intraday high ($0.626) correctly and protecting more of the gain than at entry. RUNE last $0.617 (bid $0.617/ask $0.618), essentially flat vs the $0.620701 blended entry (−0.60%), position currently a small unrealized loss of −$0.51 — well inside the 3.5% stop, no action needed. BTC: yesterday's reference $78,989.90 (Aug 26 EOD) vs today's live $79,823.00 → +1.05%; bot day return −0.59% trails BTC by −1.65 points, entirely attributable to RUNE cooling off from its intraday high rather than any new loss. Phase P&L −$94.3406 (−52.48%) from $179.78 Kraken starting equity (May 22). Alpaca: `positions` and `orders` reconfirmed fully flat, historical BTC stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure, no action needed. Total trades since migration ~137 (~136 as of Aug 26's close + today's RUNE buy; the trailing-stop sell will add one more if/when it triggers). Tomorrow: monitor the open RUNE position and its trailing stop; if T1 ($0.657943, +6%) is hit, tighten the trail to 0.5% per the plan logged at entry. Fresh discovery sweep resumes at pre-session as usual with $0.2934 cash + the RUNE position; crash gate threshold ~$63,858.40 (BTC −20% from $79,823.00).
