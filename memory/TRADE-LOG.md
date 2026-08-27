@@ -9893,3 +9893,48 @@ Order txid `OQOI53-67SKJ-KR5W4A` (buy, market, filled in full — vol_exec 0.317
 ### Step 6 — Notification
 
 Trade placed, and RUNE's missed stop-out logged/corrected in the same pass — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-27 — Session-Open Execution (~21:02 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $79.7851, TAO dust only) matched the 2nd pre-session research pass's reconciled state exactly (TAO's 3.5% trail fired 17:01:57 UTC, already logged/reconciled there, decision HOLD at that time) — no new reconciliation gap. Alpaca reconfirmed flat: `positions: []`.
+
+**BTC:** live $80,045.40 vs today's open $79,020.70 → +1.30%. Crash gate (−20%/24h) not remotely close. BTC 5-day trend still positive (no weekly downtrend gate trigger, consistent with earlier passes today).
+
+**Fresh discovery sweep** (638 online USD pairs, direct public AssetPairs+Ticker API). 85 candidates cleared vs-open>3% + within 6% of 24h high; 24 with liquidity ≥$100k 24h USD volume. Deep-dived all 24 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| SKR/USD | +6.91% | +3.43% | 2.72x | 18 min | Clears every bar cleanly. **Taken.** |
+| BMT/USD | +15.42% | +10.95% | 1.65x | 3 min | Strongest headline move but fails the 2x volume bar (1.65x) — same chronic thin-volume pattern that has stopped this asset out repeatedly this week. Skipped. |
+| PONKE/USD | +5.38% | +3.19% | 7.39x | 33 min | Clears momentum/volume/freshness but no distinct catalyst found beyond general meme-coin momentum; SKR was the stronger, catalyst-confirmed pick this pass so PONKE was not pursued in addition. |
+| LIGHTER/USD | +2.28% | +0.51% | 8.97x | 33 min | Huge volume ratio but 4h momentum well under the 5% bar. Skipped. |
+| UAI/USD | +5.19% | −0.98% | 0.54x | 123 min | Fails volume bar; 1h momentum already fading negative. Skipped. |
+| SN8/USD, CSPR/USD, US/USD, ENA/USD, SOL/USD, TAO/USD, STBL/USD, UNI/USD, XMR/USD, KNTQ/USD, RAY/USD, DRV/USD, STRK/USD, HYPE/USD, VVV/USD, MOODENG/USD, SUPER/USD, JUP/USD | mostly <5% 4h or negative | mixed | 0.00x–0.98x | mostly stale | All fail 4h momentum and/or volume bars outright. TAO (today's earlier stopped-out asset) has gone negative (−1.69% 4h) — no re-entry case. STBL remains flagged from earlier passes today for data-integrity/fraud concerns, independent of gate clearance (mechanically also failed momentum/volume here). |
+
+**SKR/USD deep-check:**
+- Spread: 0.26% (ask $0.009729 / bid $0.009704) ≤1% ✓
+- `SKRUSD` online, ordermin 700, costmin $0.5, no margin/leverage available (spot only, unused anyway) ✓
+- 4h momentum +6.91% >5% ✓, 1h momentum +3.43% >3%, not fading ✓
+- Volume ratio 2.72x >2x ✓
+- 24h high freshness: 18 min — fresh, live breakout, not stale ✓
+- Cross-exchange divergence: CoinGecko direct API $0.00974352 (+20.57% 24h) vs Kraken last $0.0097160 → 0.28% divergence, clean, confirms a real broad-market move ✓
+- **Catalyst (confirmed <6h old):** Solana Mobile "Seeker Summer Round 4" token-claim event — 30M SKR allocated, claims opened via Seed Vault Wallet at **16:00 UTC today**, ~5h02m before this entry (21:02 UTC) — within the <6h window. CoinMarketCap's own analysis attributes the move directly to this claim event. Classified **catalyst-confirmed** (1.2:1 R:R floor applies, not the 1.5:1 momentum-only floor), though actual R:R used is well above either floor (see below).
+- Scheduled-catalyst pre-positioning caution: does not apply — the claim window already opened 5h ago; this is a confirmed post-event price reaction, not anticipatory pre-positioning ahead of the event.
+- Same-thesis cap: no prior SKR fills anywhere in TRADE-LOG — clear
+- Crash gate clear (BTC +1.30% 24h) | BTC weekly trend gate clear (no downtrend)
+
+**High-ATR sizing:** SKR's volatility (+6.91%/4h, +~17-20%/24h) is in the same range as today's RUNE/TAO high-ATR trades, so the high-ATR exception was applied: **3.5% trailing stop** instead of the 2.5% default, with **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing both the 1.2:1 catalyst-confirmed floor and the 1.5:1 momentum-only floor with room to spare.
+
+### 2026-08-27 | SKR/USD | BUY | 8100.0000 SKR | Entry: $0.00975216 (blended incl. fee) | Cost: $78.9925 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OHYJCW-NN5HQ-5AGXA3` (buy, market, filled in full — SKR balance 8100.000000 post-trade; ZUSD $79.7851 → $0.7926, implying total spend incl. fee $78.9925). Stop txid `O7FB6I-ZVHGU-4IS3K7` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.0093550, limitprice $0.0096940).
+
+**T1 = $0.01033729 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.01062985 (+9%)**.
+
+ZUSD post-trade: $0.7926.
+
+### Decision: **TRADE — SKR/USD.** Third scan pass of the day (after RUNE and TAO both stopped out earlier per today's log, consistent with no consecutive-loss block in this strategy). Fresh sweep of the full Kraken USD universe found SKR as the only candidate clearing every gate cleanly (momentum, volume, freshness, spread, cross-exchange confirmation), backed by a specific, confirmed <6h-old catalyst (Solana Mobile Seeker Summer Round 4 token claims) — the strongest catalyst confirmation of today's three trades.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
