@@ -33793,3 +33793,32 @@ ZUSD post-trade: $0.2934.
 ### Step 6 — Notification
 
 Trade placed — flagging via push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-27 — Pre-Session Research (2nd pass, ~17:xx UTC)
+
+**Pre-check:** Live Kraken state did not match TRADE-LOG's last entry (TAO/USD BUY, open). Reconciled via `ClosedOrders`: TAO's 3.5% trail fired at **17:01:57 UTC**, ~7h57m after the 09:04:42 UTC entry — sell 0.31700 TAO @ trailing-stop-triggered price $250.7941 (fill $250.7618), cost $79.49152230, fee $0.47694913, net proceeds $79.01457317. Against entry cost $81.88542 (incl. fee), **net P&L ≈ −$2.87085 (−3.50%)** — consistent with the 3.5% trail's own design, no thesis break. Post-stop account confirmed flat: `positions: {}`, `orders: {"open": {}}`, ZUSD $79.7851 (matches $0.7705 pre-stop cash + $79.01457 net proceeds). Alpaca not re-checked this pass (no change expected; reconfirmed flat in this morning's pass).
+
+**Market context:** BTC $78,882.00, +0.08% 24h — crash gate (−20%/24h) not remotely close. BTC 5-day trend: $78,327.70 → $80,032.00 = **+2.18%**, not a >3% down move, so the BTC weekly trend gate's stricter criteria do not apply. ETH ~$2,497–2,508, roughly +0.05–1.8% 24h (source-dependent). Fear & Greed Index: 65 (Alternative.me, "Greed"), with CFGI at 72/Bitcoin-specific 69, CoinStats outlier at 80 "Extreme Greed" — broad Greed regime, consistent with this morning's read. BTC perp funding ~0.008–0.01%/8h on major venues (Binance, aggregators), normal bullish-leaning, no stress signal (Kraken's own futures page again an outlier at 0.52%/hr, treated as venue noise per established practice). Macro: Jackson Hole/Fed (Chair Warsh remarks, symposium running through Aug 29), Core PCE + revised Q2 GDP on deck, Aug 28 BTC options expiry, Treasury buyback liquidity narrative, continued spot BTC/ETH ETF inflows, SEC custody-rule reform chatter, Hyperliquid AQA v2 revenue accrual live today. Token unlocks: HOPR (10.00M, ~1.50% mkt cap) and XWGT (805K, ~5.55% mkt cap) both today — neither on the candidate list below. No open positions to check individual news on (fully flat since TAO's stop fired).
+
+**Discovery sweep:** 638 online Kraken USD pairs (direct public AssetPairs+Ticker API). 83 candidates cleared vs-open>3% + within 6% of 24h high; 23 with liquidity ≥$100k 24h USD volume. Deep-dived the top 20 by momentum/liquidity on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| LIGHTER/USD | +4.62% | +2.63% | 2.25x | 15 min | Closest mechanical setup — clears volume and freshness, but 4h momentum sits just under the 5% bar (4.62%). Genuine miss, not loosened. |
+| UAI/USD | +6.22% | −1.49% | 1.65x | 60 min | Clears 4h momentum but 1h momentum already negative (fading) and fails the volume bar; high right at the 60min freshness boundary. Same asset with a prior cross-exchange divergence flag (2026-08-26). |
+| SKR/USD | +5.04% | +3.18% | 1.11x | 0 min | Clears momentum bars with a fresh high, but fails the 2x volume bar |
+| KNTQ/USD | +4.42% | +0.21% | 0.25x | 45 min | Fails 4h momentum and volume bars; 1h nearly flat |
+| ENA/USD | +2.08% | −1.01% | 0.63x | 165 min | Large 24h USD volume ($8.75M) but fails momentum bars and is fading (1h negative), volume ratio declining, stale-ish high |
+| JUP/USD | +3.46% | −0.25% | 1.05x | 105 min | Fails momentum and volume bars |
+| SOL/USD | +1.79% | +0.71% | 0.92x | 15 min | Fresh high but fails 4h momentum bar badly; too large-cap for this kind of move anyway |
+| TAO/USD | −1.99% | −0.63% | 0.44x | 690 min | Same asset just stopped out this morning — momentum has fully reversed negative, stale high, no re-entry case |
+| HYPE/USD | +0.55% | −1.29% | 0.99x | 45 min | Fails momentum bars, fading |
+| US, SN8, XXMRZ, UNI, RAY, STRK, MOODENG, SUPER, VVV, CSPR, FLR (USD) | −2.2% to +0.6% | mixed | 0.01x–1.11x | mostly stale | All fail the 4h momentum >5% bar and/or volume bar outright |
+
+**No candidate cleared all gates.** LIGHTER was the standout near-miss — genuinely fresh and accelerating (1h momentum stronger than 4h pace, volume clearing 2x, 15min-old high) — but its 4h momentum (4.62%) sits just under the 5% screening threshold, a mechanical miss rather than a judgment call, so it was not pursued further (spread checked anyway for completeness: 0.27%, well inside the 1% cap). UAI and SKR both had fresh/strong headline moves but failed on fade (UAI) or volume (SKR). Genuine gate failure across the board, not a capital constraint (ZUSD $79.7851 fully available).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.08% vs 24h). Fresh sweep of the full Kraken USD universe found no candidate clearing every gate (momentum, volume, freshness) simultaneously — LIGHTER came closest but missed the 4h momentum bar by a small margin. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome; TAO's stop-out (−3.50%, backfilled above) was a small mechanical loss consistent with its own trail design, no thesis break.
+
+### Step 6 — Notification
+
+No push sent — TAO's stop-out was a small, expected mechanical loss (−3.50%, in line with the 3.5% trail's own design) with no thesis break and no process failure (caught and logged promptly this pass), and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
