@@ -9938,3 +9938,49 @@ ZUSD post-trade: $0.7926.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-27 — Midday Scan (~22:06 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $80.4934, SKR 0) did not match TRADE-LOG's last entry (SKR/USD BUY, open). Reconciled via `ClosedOrders`: SKR's 3.5% trail fired at **21:10:06 UTC**, just 6m7s after the 21:03:59 UTC entry — sell 8100.00000 SKR @ trailing-stop-triggered price $0.009899 (stopprice $0.0098990), vol_exec 8100.00000, cost $80.18190, fee $0.48109, net proceeds $79.70081. Against entry cost $78.99253 (incl. fee), **net P&L ≈ +$0.70828 (+0.90%)** — price ran up before reversing, trail caught it for a small win, not a loss. No thesis break, mechanical exit. Post-stop account confirmed: ZUSD $80.4934 (= $0.7926 pre-stop cash + $79.70081 net proceeds, exact match). Alpaca stop `a2b44cf9` reconfirmed `canceled`, zero exposure, no action needed.
+
+**Stop verification (STEP 3):** No open Kraken positions to protect — flat since SKR's stop fired. **Tighten winners (STEP 4):** N/A, no open positions. **Thesis check (STEP 5):** N/A, no open positions.
+
+**BTC:** live $80,277.70 vs today's open $79,020.70 → +1.59%. Crash gate (−20%/24h) not remotely close. BTC 5-day trend: $78,327.70 → $80,277.80 = +2.49%, not a >3% down move, weekly trend gate's stricter criteria do not apply.
+
+**Fresh discovery sweep** (638 online USD pairs, direct public AssetPairs+Ticker API). 93 candidates cleared vs-open>3% + within 6% of 24h high; 27 with liquidity ≥$100k 24h USD volume. Deep-dived on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BMT/USD | +33.00% | +16.63% | 3.55x | 22 min | Clears every bar cleanly, decisively. **Taken.** |
+| SKR/USD | +12.25% | +4.15% | 2.60x | 22 min | Clears every bar too (this session's own SKR trade, just stopped out for a small win) — BMT was the stronger pick this pass so SKR was not re-entered in addition. |
+| BLESS/USD | +8.41% | +2.71% | 1.26x | 22 min | Fails the 2x volume bar. Skipped. |
+| CSPR/USD | +10.44% | +5.79% | 0.18x | 7 min | Fails the volume bar badly despite fresh high. Skipped. |
+| JUP/USD | +4.05% | +2.93% | 3.16x | 7 min | Clears volume/freshness but 4h momentum just under the 5% bar. Skipped. |
+| BTR/USD, ENA/USD, US/USD, LIGHTER/USD, UAI/USD, SOL/USD, TAO/USD, SN8/USD, UNI/USD, STBL/USD, XMR/USD, KAS/USD, RAY/USD, STRK/USD, XPL/USD, PLUME/USD, HYPE/USD, CRV/USD, KNTQ/USD, ARX/USD, MOODENG/USD, FLR/USD | mostly <5% 4h or negative | mixed | 0.03x–2.45x | mostly stale (>90 min) | All fail 4h momentum and/or volume bars, or have stale highs. TAO (stopped out twice today already) is flat-to-negative (−0.26% 4h) — no re-entry case. STBL remains flagged from earlier passes today for data-integrity/fraud concerns. BTR remains flagged for its chronic cross-exchange divergence gate failure (not re-checked this pass, mechanically failed momentum/volume anyway). |
+
+**BMT/USD deep-check:**
+- Spread: 0.035% (ask $0.02881/bid $0.02880) ≤1% ✓
+- `BMTUSD` online, ordermin 400, costmin $0.5, no leverage available (spot only) ✓
+- 4h momentum +33.00% >>5% ✓, 1h momentum +16.63%, still accelerating (not fading) ✓
+- Volume ratio 3.55x >2x ✓
+- 24h high freshness 22 min — fresh, within the 60-min momentum-peak-check window ✓
+- Cross-exchange divergence: CoinGecko direct API (Bubblemaps, id `bubblemaps`) $0.02873972, +34.47% 24h vs Kraken last $0.02881, +34.8% vs-open → 0.25% divergence, clean, confirms a real move, not a Kraken-specific artifact ✓
+- **Catalyst:** Perplexity found no BMT/Bubblemaps-specific news or catalyst today — generic "thin news flow" read, only broader BTC-driven macro context. Classified **momentum-only** (1.5:1 R:R floor applies, not the 1.2:1 catalyst-confirmed floor).
+- **Same-thesis cap check:** BMT had **one** stop-out in the last 7 days (2026-08-25, −3.26%, trail fired ~2m42s after fill). The 48h-cooling-period rule requires **two** stop-outs within a 7-day window to trigger; only one has occurred, so the cap does not apply — re-entry is open. Distinct from today's earlier BMT near-misses (21:02 UTC pass: vs-open +15.42%, volratio 1.65x, failed) — that was a different, weaker move that has since resolved into this much stronger, cleanly-confirmed breakout (vs-open now +34.8%, volratio 3.55x), not a repeat of the same failed setup.
+- Crash gate clear (BTC +1.59% 24h) | BTC weekly trend gate clear (+2.49%/5d, no downtrend)
+
+**High-ATR sizing:** BMT's volatility (+33%/4h) is extreme, well past the high-ATR threshold, so the high-ATR exception was applied: **3.5% trailing stop** instead of the 2.5% default, with **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### 2026-08-27 | BMT/USD | BUY | 2780.0000 BMT | Entry: $0.028943 (blended incl. fee) | Cost: $80.46048 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OYPUZI-J34AT-ZRW5A7` (buy, market, filled in full — vol_exec 2780.00000 @ $0.02877, cost $79.98060, fee $0.47988, total $80.46048; post-trade BMT balance 2780.0000, ZUSD $0.0329). Stop txid `ORETDB-XMNLY-XYOXEQ` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.02777, limitprice $0.02877).
+
+**T1 = $0.030680 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.031548 (+9%)**.
+
+ZUSD post-trade: $0.0329.
+
+### Decision: **TRADE — BMT/USD.** Midday scan pass. SKR's 3.5% trail had already stopped out for a small +0.90% win 6 minutes after entry (backfilled above) — mechanical, no thesis break. Fresh sweep found BMT as a clean standout: massive and still-accelerating momentum (33%/4h, 16.6%/1h), decisively confirmed volume (3.55x, well above the chronic sub-2x readings that skipped this asset in three prior passes this week), a fresh 22-min high, tight spread, and clean cross-exchange confirmation. Same-thesis cap does not apply (only 1 of the required 2 stop-outs in the 7-day window).
+
+### Step 7 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
