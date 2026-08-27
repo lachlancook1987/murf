@@ -9843,3 +9843,21 @@ No action taken — no proactive push warranted.
 ### Step 7 — Notification
 
 No push sent — flat account, no reconciliation issue, clean HOLD on genuine gate failures (including one clear divergence-gate catch on BTR). Nothing here needs the user's attention right now.
+
+### 2026-08-27 | RUNE/USD | BUY | 138.0000 RUNE | Entry: $0.620701 (blended incl. fee) | Cost: $85.65688 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OOSUHQ-4ISMY-6RJXHG` (buy, market, filled in full — vol_exec 138.00000000 @ $0.617, cost $85.14600, fee $0.51088, total $85.65688; post-trade RUNE balance 138.00000000, ZUSD $0.2934). Stop txid `OW675Y-T4STV-UGMSJX` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.59600, limitprice $0.61700).
+
+**T1 = $0.657943 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.676564 (+9%)**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor. 3.5% trail (not the 2.5% default) used per the high-ATR exception — RUNE moved +8.53% in 4h / +26.24% vs-open today.
+
+**Gate checklist:** crash gate clear (BTC +0.08% 24h) | BTC weekly trend gate clear (BTC +2.93% over 5 days, no downtrend) | spread 0.49% (ask $0.614/bid $0.611) ≤1% | `RUNEUSD` online, ordermin 11, costmin $0.5, leverage up to 3x available (unused, spot only) | 4h momentum +8.53% >5% | 1h momentum +2.69%, still positive | volume ratio 2.89x >2x | 24h high freshness 0 min — sitting at the high, live breakout | cross-exchange divergence 0.71% (Kraken $0.611 vs CoinGecko direct-API $0.615355, 24h chg +26.75% matching Kraken's own +26.24%) — clean, confirms real move | R:R 1.71:1 ≥1.5:1 momentum-only floor (catalyst — THORChain v3.20 network upgrade/trading resumption post-exploit + synthetic assets going live — is real but timing not confirmed <6h, so classified momentum-only) | same-thesis cap clear — no prior RUNE fills in TRADE-LOG.
+
+**Candidate comparison:** Fresh sweep (637 online USD pairs) found 55 candidates clearing vs-open>3%+within 6% of 24h high, 16 with liquidity ≥$100k. Deep-dive on 15m OHLC: TAC (+44.52% 4h) and STBL (+5.73% 4h) both had large headline moves but STBL was hard-skipped on explicit fraud/data-integrity red flags (Perplexity reported conflicting cross-source prices — possible ticker collision — plus insider-selling accusations and an 80% drawdown from peak reported elsewhere), independent of its mechanical gate clearance. TAC failed the volume bar (0.53x). TAO (2.06x volume, fresh high) narrowly missed the 4h momentum bar (4.16% <5%). UAI, ZRO, CRV, ENA, ACU, DGAI, SPX, CHIP, GRASS, MORPHO, RLS all failed momentum and/or volume bars outright or had stale highs.
+
+ZUSD post-trade: $0.2934.
+
+### Decision: **TRADE — RUNE/USD.** First scan pass of this session, and the first trade since the 2026-08-25 BMT stop-out — the account had been flat and correctly holding through multiple gate-failure scans since. Fresh sweep found RUNE as the only candidate clearing every gate cleanly (momentum, volume, freshness, spread, cross-exchange confirmation), backed by a real network-upgrade/relaunch catalyst even though its exact timing couldn't be pinned to <6h.
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
