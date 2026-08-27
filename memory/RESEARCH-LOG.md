@@ -33745,3 +33745,51 @@ No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retir
 ### Step 7 — Notification
 
 No trade taken → no ClickUp/WhatsApp notification per CLAUDE.md (channel retired regardless, skip step silently). No push notification sent — flat account, clean HOLD on a genuine R:R/catalyst gate failure (VET, the strongest mechanical setup seen today), nothing requiring the user's attention.
+
+## 2026-08-27 — Pre-Session Research
+
+**Pre-check:** Live Kraken state confirmed flat before this pass — `positions: {}`, `orders: {"open": {}}`, ZUSD $85.9503 — exact match to TRADE-LOG's last entry (2026-08-25 midday-scan HOLD, no activity since). Alpaca reconfirmed flat: `positions: []`, historical BTC stop `a2b44cf9` still `canceled`, no residual exposure.
+
+**Market context:** BTC $78,882.00, +0.08% 24h — crash gate (−20%/24h) not remotely close. BTC 5-day trend: $77,082.60 → $79,342.50 = **+2.93%**, not a >3% down move, so the BTC weekly trend gate's stricter criteria do not apply. ETH ~$2,490–2,495, roughly +1–2% 24h. Fear & Greed Index: readings split 65/71/80 across trackers, all "Greed"/"Extreme Greed" — using 65 (median-ish, most-cited) as the working read. BTC perp funding positive across venues (Binance ~+0.008–0.01%/8h, Kraken ~+0.52%/hr, Glassnode avg +0.005%) — normal bullish-leaning funding, no stress signal. Macro: Jackson Hole/Fed commentary, US GDP/PCE data, Aug 28 BTC options expiry, ~$705M in token unlocks this week (largest: HOPR Aug 27, 10M tokens/1.5% mkt cap) — no single dominant catalyst, broadly risk-on macro backdrop consistent with Greed reading.
+
+**Discovery sweep:** 637 online Kraken USD pairs (direct public AssetPairs+Ticker API). 55 candidates cleared vs-open>3% + within 6% of 24h high; 16 with liquidity ≥$100k 24h USD volume. Deep-dived the top movers on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| RUNE/USD | +8.53% | +2.69% | 2.89x | 0 min | Clears every bar decisively, still at the high. **Taken.** |
+| TAC/USD | +44.52% | +26.77% | 0.53x | 15 min | Huge headline move but fails the 2x volume bar (thin/bursty) — skipped |
+| TAO/USD | +4.16% | +2.00% | 2.06x | 0 min | Clears volume/freshness but 4h momentum under the 5% bar — skipped |
+| STBL/USD | +5.73% | +1.38% | 2.60x | 15 min | Mechanically clears all bars, BUT Perplexity flagged serious data integrity issues: conflicting prices across sources (Yahoo ~$0.47 vs CoinGecko/CMC ~$0.025, suggesting possible ticker collision with a different STBL asset) plus explicit accusations of insider token sell-offs and an 80% drawdown from peak reported elsewhere. Hard-skipped on trust/data-integrity grounds regardless of technical clearance — same caution class as the known chronic cross-source price-quote unreliability, compounded here by real fraud allegations. |
+| UAI/USD | +6.66% | +1.92% | 0.95x | 15 min | Fails the 2x volume bar |
+| ZRO/USD | +5.09% | +2.44% | 0.88x | 1380 min | Fails volume bar; very stale high |
+| CRV/USD, ENA/USD | +5.70%, +4.12% | — | 0.41x, 0.62x | 75 min | Fail volume bar |
+| ACU/USD | +7.14% | +1.01% | 1.54x | 825 min | Fails volume bar; stale high |
+| DGAI/USD | +4.91% | +5.08% | 0.74x | 0 min | 4h momentum narrowly under 5%; fails volume bar |
+| SPX/USD, CHIP/USD, GRASS/USD, MORPHO/USD, RLS/USD | negative or <3.5% momentum | — | 0.12x–0.96x | mostly stale | Fail momentum and/or volume bars outright |
+
+**RUNE/USD deep-check — only candidate clearing every gate:**
+- Spread: 0.49% (ask $0.614 / bid $0.611) ≤1% ✓
+- `RUNEUSD` online, ordermin 11, costmin $0.5, leverage up to 3x available (capped at 2x per strategy, unused here — spot only) ✓
+- 4h momentum +8.53% >5% ✓, 1h momentum +2.69% (still positive, not fading) ✓
+- Volume ratio 2.89x (last-1h vol vs trailing-24h hourly avg) >2x ✓
+- 24h high freshness: 0 min — price sitting at its 24h high, live breakout, not stale ✓
+- Cross-exchange divergence: CoinGecko direct API $0.615355 (+26.75% 24h, matching Kraken's own +26.24% vs-open) vs Kraken last $0.611 → 0.71% divergence, clean, confirms a real broad-market move ✓
+- Catalyst: THORChain v3.20 network upgrade / trading resumption after a post-exploit pause, plus synthetic-assets-trading going live — a real, substantive catalyst, but Perplexity could not confirm exact timing as <6h old, so classified **momentum-only** for R:R purposes (1.5:1 floor applies per the 2026-08-14 rule) rather than catalyst-confirmed (1.2:1 floor)
+- Same-thesis cap: no prior RUNE fills anywhere in TRADE-LOG — clear
+- Crash gate clear (BTC +0.08%) | BTC weekly trend gate clear (BTC +2.93%/5d, not a downtrend)
+
+**High-ATR sizing:** RUNE's 4h/24h volatility (+8.53%/+26.24%) qualifies for the high-ATR exception — used **3.5% trailing stop** instead of the 2.5% default, with **T1 = +6%, T2 = +9%** (matching the PEAQ/BMT precedent structure). **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### 2026-08-27 | RUNE/USD | BUY | 138.0000 RUNE | Entry: $0.620701 (blended incl. fee) | Cost: $85.65688 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OOSUHQ-4ISMY-6RJXHG` (buy, market, filled in full — vol_exec 138.00000000 @ $0.617, cost $85.14600, fee $0.51088, total $85.65688; post-trade RUNE balance 138.00000000, ZUSD $0.2934). Stop txid `OW675Y-T4STV-UGMSJX` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.59600, limitprice $0.61700).
+
+**T1 = $0.657943 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.676564 (+9%)**.
+
+ZUSD post-trade: $0.2934.
+
+### Decision: **TRADE — RUNE/USD.** Fresh sweep of 637 pairs found RUNE as the only candidate clearing every gate cleanly (momentum, volume, freshness, spread, cross-exchange confirmation), with a real network-upgrade/relaunch catalyst behind the move even though its exact timing couldn't be pinned to <6h — sized and stopped per the momentum-only R:R floor and high-ATR exception. STBL was a close mechanical second but hard-skipped on explicit fraud/data-integrity red flags in the news coverage, independent of gate clearance.
+
+### Step 6 — Notification
+
+Trade placed — flagging via push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
