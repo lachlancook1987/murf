@@ -33924,3 +33924,27 @@ Per CLAUDE.md (WhatsApp/ClickUp retired 2026-08-21), notifying via this session'
 ### Step 6 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
+
+## 2026-08-28 — Session-Open Scan (~12:03 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances dust) matches the 09:03 UTC scan exactly — no fills since, fully flat, no open positions to protect or tighten. **Crash gate:** BTC live $79,600.00 vs today's open $80,265.90 → **−0.83%**, nowhere near −20%. Clear.
+
+**Discovery sweep:** 638 online Kraken USD pairs (direct public AssetPairs+Ticker API). 11 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 10 with liquidity ≥$100k (CHIP, CAP, STX, XXMRZ, BABYSHARK, PLAY, US, MELANIA, KNTQ, PTB) on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| CHIP/USD | +6.49% | −0.70% | 0.91x | 1215 min | Clears 4h momentum but 1h has reversed negative (fading) and volume badly fails (0.91x <2x). Stale high. Skipped. |
+| BABYSHARK/USD | +9.45% | +3.87% | 0.23x | 930 min | Strong headline 4h/1h but volume ratio catastrophically fails (0.23x), stale high (15.5h). Classic thin-liquidity spike, not real buying pressure. Skipped. |
+| CAP/USD | +7.10% | +1.43% | 0.33x | 0 min (forming) | Fails volume bar hard (0.33x); the "fresh" high is on the still-forming candle, not a confirmed closed one — fails confirmed-candle rule too. Double miss. |
+| STX/USD | +2.25% | +1.04% | 0.49x | 30 min | Fails 4h momentum bar and volume bar. |
+| XXMRZ/USD | +1.36% | +0.85% | 0.68x | 0 min (forming) | Fails 4h momentum and volume; same asset flagged stale/failing in the 09:03 pass. |
+| PTB/USD | +1.61% | −1.45% | 1.65x | 45 min | Fails 4h momentum, 1h fading negative, volume under 2x. Also chronically flagged for cross-exchange divergence in prior sessions — not re-checked, mechanically failed anyway. |
+| US/USD, MELANIA/USD, KNTQ/USD, PLAY/USD | mostly <2% 4h or negative | mixed, mostly weak | 0.21x–0.76x | mostly stale (>3h) | All fail 4h momentum and/or volume bars badly. MELANIA and PLAY are repeats of assets that already failed the 09:03 UTC pass. |
+
+**No candidate cleared all gates.** Volume ratio was the universal failure this pass — nothing reached the 2x threshold; the two candidates with the strongest headline momentum (CHIP, BABYSHARK) both had volume ratios far below 1x, indicating thin, low-conviction moves rather than real breakouts. No catalyst-confirmation queries were run since no candidate reached the point of needing one. Genuine gate failure, not a capital constraint (ZUSD $73.6760 fully available, unchanged since the last pass).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.83% vs 24h open). Second consecutive fresh sweep today (09:03 and 12:03 UTC) found no candidate clearing every gate — this pass failed universally on the volume-surge bar rather than momentum or freshness. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. No open positions to manage.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
