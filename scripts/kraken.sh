@@ -68,6 +68,10 @@ case "$CMD" in
     kraken_private "/0/private/OpenOrders"
     ;;
 
+  closedorders)
+    kraken_private "/0/private/ClosedOrders"
+    ;;
+
   quote)
     SYM="${2:?Usage: $0 quote SYM/USD}"
     PAIR=$(map_pair "$SYM")
@@ -167,7 +171,7 @@ PYEOF
     ;;
 
   *)
-    echo "Usage: $0 {account|positions|orders|quote SYM/USD|assets [SYM/USD]|order '{json}'|cancel <txid|all>}" >&2
+    echo "Usage: $0 {account|positions|orders|closedorders|quote SYM/USD|assets [SYM/USD]|order '{json}'|cancel <txid|all>}" >&2
     exit 1
     ;;
 esac
