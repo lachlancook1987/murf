@@ -33822,3 +33822,78 @@ Trade placed — flagging via push notification per CLAUDE.md (CallMeBot/ClickUp
 ### Step 6 — Notification
 
 No push sent — TAO's stop-out was a small, expected mechanical loss (−3.50%, in line with the 3.5% trail's own design) with no thesis break and no process failure (caught and logged promptly this pass), and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
+
+## 2026-08-28 — Pre-Session Research (~05:xx UTC)
+
+### Account Snapshot
+
+**Kraken (pre-trade):** ZUSD $76.6472, all other balances dust (0). `positions: {}`, `orders: {"open": {}}` — fully flat, matches the 03:02 UTC overnight-triage close (BMT stopped out −4.78%, no open positions since). **Alpaca:** `positions: []`, historical BTC stop `a2b44cf9` reconfirmed `canceled`, zero exposure — residual account remains fully inert.
+
+### Market Context (Perplexity)
+
+- **BTC:** ~$79.7k–$80.6k across sources (Coindesk $79,695/+1.02%, Kraken $80,239/+1.90%, CoinGecko $80,006/+2.10%, CMC $80,554/+3.29%). Kraken public API (used for gates): last $79,764.70, **5-day trend +3.48%** ($77,082.70 → $79,764.70) — no weekly downtrend gate.
+- **ETH:** ~$2,495–$2,504, 24h change roughly +0.2% to +1.8%.
+- **Fear & Greed:** clustered **Greed-to-Extreme-Greed** — CFGI 72, Alternative.me 71, CoinStats 80 (Extreme Greed), Perplexity's catalyst query separately cited 82.
+- **BTC funding rate:** mixed by venue — Binance BTCUSDT ~+0.0079%, Glassnode all-exchange avg ~+0.005%, Kraken listing −1.01%/hr (outlier), Coinalyze cluster +0.01–0.0148%/8h. No extreme funding skew.
+- **Catalysts:** Fed Chair Kevin Warsh's Jackson Hole speech (macro risk event today), 8th straight day of BTC/ETH spot ETF net inflows ($232.2M BTC / $192.4M ETH), month-end BTC/ETH options expiry, SOL strength linked to reported Schwab platform addition (SOL/AVAX/LINK), CLARITY Act regulatory sentiment. No unlock/upgrade calendar items material to held or candidate assets this week.
+- **Crash gate:** BTC +1–3% 24h — nowhere near −20%. **Clear.**
+
+### Discovery — Kraken-Native Sweep
+
+Per CLAUDE.md's revised discovery method, primary discovery is a direct Kraken public-API sweep (Perplexity used only for macro/catalyst context above, not discovery). Swept all 638 online USD pairs via `AssetPairs`+`Ticker`:
+
+- 15 candidates cleared vs-open >3% with 24h USD liquidity >$50k.
+- Deep-dived the 10 with liquidity ≥$100k on 15m OHLC (true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, 24h-high freshness):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | 24h-high freshness | Note |
+|---|---|---|---|---|---|
+| GWEI/USD | +7.61% | +5.49% | 2.47x | 15 min | Clears every bar cleanly, 1h still accelerating. **Taken.** |
+| AKE/USD | +9.90% | −2.83% | 2.71x | 915 min | Fails momentum-peak-check — high set 15h ago, 1h now fading negative. Skipped. |
+| HFT/USD | +13.48% | −16.49% | 1.92x | 465 min | Fails volume bar and 1h has reversed hard negative — classic spike-and-dump. Skipped. |
+| TRUMP/USD | +4.30% | +0.39% | 0.41x | 405 min | Fails volume bar, stale high. Skipped. |
+| FOLD/USD, PEAQ/USD, PLAY/USD, MELANIA/USD, NIL/USD, RIZE/USD | mostly <5% 4h or negative | mixed | 0.05x–0.68x | mostly stale | All fail 4h momentum and/or volume bars. Skipped. |
+
+### GWEI/USD Deep-Check
+
+- **Identity:** GWEI = ETHGas (CoinGecko id `ethgas-2`), gas-market-tracking token.
+- Spread: 0.56–0.58% (ask $0.028808/bid $0.028647 at order time) ≤1% ✓
+- `GWEIUSD` online, ordermin 300, costmin $0.5, no leverage available (spot only) ✓
+- 4h momentum +7.61% >5% ✓, 1h momentum +5.49%, still accelerating (not fading) ✓
+- Volume ratio 2.47x >2x ✓
+- 24h high freshness 15 min — fresh, within the 60-min momentum-peak-check window ✓
+- Cross-exchange divergence: CoinGecko direct API $0.02898546 (+18.62% 24h) vs Kraken last $0.0289670 → ~0.06% divergence, clean, confirms a real broad move, not a Kraken-specific artifact ✓
+- **Catalyst:** Upbit (South Korea) listing on 2026-08-21, cited by CoinMarketCap as driving an ~11% move at the time, plus renewed Ethereum gas-demand narrative and an active airdrop/claim cycle. Listing itself is 7 days old (not <6h), so classified **momentum-only** (1.5:1 R:R floor applies, not the 1.2:1 catalyst-confirmed floor).
+- Same-thesis cap: no prior GWEI *fills* in TRADE-LOG (only prior skips, e.g. 2026-08 sessions logged GWEI failing momentum on three separate earlier passes) — clear, no cap.
+- Crash gate clear (BTC +1–3% 24h) | BTC weekly trend gate clear (+3.48%/5d, no downtrend)
+
+**High-ATR sizing:** GWEI's volatility (24h range $0.023146–$0.029494, ~21.9% range; 4h momentum +7.61% comparable to prior RUNE/TAO high-ATR entries) warrants the high-ATR exception: **3.5% trailing stop** instead of the 2.5% default, with **T1 = +6%, T2 = +9%**. R:R at T1 = 6%/3.5% ≈ **1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### Trade Idea (executed — see below)
+
+- **Catalyst:** Upbit listing (7d old) + gas-demand narrative + active airdrop cycle — momentum-only classification
+- **Entry:** Market, filled $0.029063 blended (incl. fee)
+- **Stop:** `trailing_stop`, `trail_percent: 3.5` (high-ATR exception), placed immediately post-fill
+- **T1:** $0.030807 (+6%) | **T2:** $0.031679 (+9%)
+- **R:R:** 1.71:1 (≥1.5:1 momentum-only floor)
+- **Size:** 2600 GWEI, cost $75.5639 (~99% of available $76.6472 equity)
+- **Kraken pair:** `GWEIUSD` confirmed online via `assets`
+- **Spread:** 0.56–0.58% confirmed via `quote`
+
+### 2026-08-28 | GWEI/USD | BUY | 2600.0000 GWEI | Entry: $0.029063 (blended incl. fee) | Cost: $75.5639 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OONDWK-W2QT4-3A2URB` (buy, market, filled in full; post-trade GWEI balance 2600.000, ZUSD $76.6472 → $1.0833, implying cost incl. fee $75.5639). Stop txid `OYF67F-SZIJG-QAD5AR` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.0278880, limitprice $0.0288990).
+
+ZUSD post-trade: $1.0833.
+
+### Risk Factors
+
+- Jackson Hole speech today (Fed Chair Warsh) is a live macro volatility event that could move BTC/ETH sharply either direction intraday — GWEI as an alt will likely amplify any broad risk-off move.
+- Extreme Greed readings (72–82 across sources) raise the odds of a broad-market pullback/mean-reversion; GWEI's momentum-only classification (no fresh <6h catalyst) means it has less thesis support if sentiment reverses.
+- GWEI catalyst (Upbit listing) is 7 days old — today's move is better described as continuation/gas-narrative momentum than a fresh news-driven spike; more prone to fading than a same-day catalyst trade.
+- Full-equity sizing (~99% of cash) into a single momentum-only position means no dry powder if a stronger catalyst-confirmed setup appears intraday — will need the stop to fire or T1 to hit before recycling capital.
+
+### Decision: **TRADE — GWEI/USD.** No crash gate trigger (BTC +1–3% 24h, clearly not down 20%), weekly trend gate clear. Fresh Kraken-native sweep of the full USD pair universe found GWEI as the only candidate clearing every gate cleanly (momentum, volume, freshness, spread, cross-exchange confirmation) among 10 deep-dived candidates — AKE and HFT posted larger headline 4h moves but both failed the momentum-peak-check on 1h fade/staleness. Sized and stopped per the momentum-only R:R floor and high-ATR exception.
+
+### Step 6 — Notification
+
+Per CLAUDE.md (WhatsApp/ClickUp retired 2026-08-21), notifying via this session's own push-notification mechanism instead of `scripts/clickup.sh`.
