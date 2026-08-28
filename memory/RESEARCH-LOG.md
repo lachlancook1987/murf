@@ -34048,3 +34048,48 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ### Step 7 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and no trade plan to execute this pass. Nothing here needs the user's attention right now.
+
+## 2026-08-28 — Midday Scan (~22:04 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances unchanged dust) matches the 21:01 UTC Session-Open Execution pass exactly — no fills since, fully flat, no open positions to protect or tighten. Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled`, zero exposure — no action needed. STEP 3/4/5 (stop verification, tighten winners, thesis check): all N/A, no open positions at pre-check.
+
+**Crash gate:** BTC live $77,363.60 vs today's open $80,265.90 → **−3.62%**, nowhere near −20%. Clear. Weekly trend gate: this morning's read was +3.48%/5d (no downtrend); today's intraday pullback doesn't come close to flipping that over a 5-day window. Clear.
+
+**Discovery sweep:** 661 online Kraken USD pairs (direct public AssetPairs+Ticker API). 10 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 6 with liquidity ≥$100k (AKE, ZIG, TURBO, NIL, CAP, PLAY) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| ZIG/USD | +11.21% | +3.31% | 3.42x | 15 min (confirmed closed candle) | Clears every bar cleanly, 1h still accelerating. **Taken.** |
+| AKE/USD | +11.84% | +4.09% | 1.55x | 30 min | Fails the 2x volume bar (chronic — flagged failing on volume in the 20:05 UTC pass too, at 1.9986x). Skipped. |
+| TURBO/USD | +2.96% | +1.74% | 1.44x | 150 min | Fails 4h momentum bar (2.96% <5%) and volume bar. Skipped. |
+| NIL/USD | −0.85% | +2.18% | 0.40x | 240 min | Fails 4h momentum (negative) and volume badly. Skipped. |
+| CAP/USD | −0.10% | −0.33% | 0.83x | 585 min | Flat/negative momentum, fails volume, stale high. Skipped. |
+| PLAY/USD | +1.11% | +0.88% | 0.28x | 885 min | Fails 4h momentum and volume badly, very stale high. Skipped. |
+
+**ZIG/USD deep-check:**
+- **Identity:** ZIG = ZIGChain (CoinGecko id `zignaly`), onchain private-credit / DeFi infra token.
+- Spread: 0.69% (ask $0.04934/bid $0.04900) ≤1% ✓
+- `ZIGUSD` online, ordermin 120, costmin $0.5, no leverage available (spot only) ✓
+- 4h momentum +11.21% >5% ✓, 1h momentum +3.31%, still accelerating (not fading) ✓
+- Volume ratio 3.42x >2x ✓
+- 24h high freshness 15 min, confirmed on a fully closed 15m candle (not the still-forming one) ✓
+- Cross-exchange divergence: CoinGecko direct API $0.04873371 (+16.22% 24h) vs Kraken last $0.048880 → ~0.30% divergence, clean, confirms a real move, not a Kraken-specific artifact ✓
+- **Catalyst:** Perplexity found Laser Digital/Nomura institutional backing for ZIGChain's onchain private-credit push, plus a tokenomics 2.0 buyback/token-retirement narrative — but neither is dated to today (no <6h-old news item), and Perplexity's own price reference ($0.042) was stale versus live Kraken ($0.0489). Classified **momentum-only** (1.5:1 R:R floor applies, not the 1.2:1 catalyst-confirmed floor).
+- **Same-thesis cap check:** No prior ZIG fills anywhere in TRADE-LOG — clear, no cap.
+- Crash gate clear (BTC −3.62% 24h, nowhere near −20%) | BTC weekly trend gate clear (+3.48%/5d this morning, no downtrend)
+
+**High-ATR sizing:** ZIG's 24h range ($0.04122–$0.05145, ~24.9% range) and 4h momentum (+11.21%) are comparable to prior high-ATR entries (SKR, RUNE, TAO), so the high-ATR exception was applied: **3.5% trailing stop** instead of the 2.5% default, with **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### 2026-08-28 | ZIG/USD | BUY | 1460.0000 ZIG | Entry: $0.049636 (blended incl. fee) | Cost: $72.4686 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OF45RM-K3LMQ-CNIZCS` (buy, market, filled in full — post-trade ZIG balance 1460.00000, ZUSD $73.6760 → $1.2074, implying cost incl. fee $72.4686). Stop txid `O7AW5C-RFLGP-3SGQPC` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.0476200, limitprice $0.0493400).
+
+**T1 = $0.052614 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.054103 (+9%)**.
+
+ZUSD post-trade: $1.2074.
+
+### Decision: **TRADE — ZIG/USD.** Midday scan pass. Book was fully flat at pre-check (no positions since the 21:01 UTC reconciliation pass). Fresh sweep of the full Kraken USD universe found ZIG as the only candidate clearing every gate cleanly (momentum, volume, confirmed-closed-candle freshness, spread, cross-exchange confirmation) among 6 deep-dived candidates — AKE had comparable momentum but chronically fails the volume bar (1.55x, same pattern as its 1.9986x miss two hours ago).
+
+### Step 6 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
