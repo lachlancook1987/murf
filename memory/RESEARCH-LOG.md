@@ -33897,3 +33897,30 @@ ZUSD post-trade: $1.0833.
 ### Step 6 — Notification
 
 Per CLAUDE.md (WhatsApp/ClickUp retired 2026-08-21), notifying via this session's own push-notification mechanism instead of `scripts/clickup.sh`.
+
+## 2026-08-28 — Session-Open Scan (~09:03 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances dust) matches the Aug 28 EOD Snapshot already logged in TRADE-LOG.md (GWEI stopped out −3.93%, fully flat since). Alpaca reconfirmed flat/historical-only. No open positions to protect or tighten. **Crash gate:** BTC live $79,355.90 vs today's open $80,265.90 → **−1.13%**, nowhere near −20%. Clear.
+
+**Discovery sweep:** 643 online Kraken USD pairs (direct public AssetPairs+Ticker API). 8 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all 8 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| PONKE/USD | +11.39% | +13.61% | 1.94x | 4.5 min | Closest setup — strong and accelerating momentum, but fails the 2x volume bar (1.94x) and the high was set on the still-forming 15m candle, not a fully closed one (confirmed-candle rule). Genuine double miss, not loosened. |
+| GWEI/USD | +8.37% | −1.34% | 0.99x | 64.5 min | Same asset already traded and stopped out this morning (backfilled above) — 1h momentum has reversed negative (fading), volume back below average, high now stale (>60min). No re-entry case. |
+| TRUMP/USD | +2.31% | −1.41% | 0.84x | 454.5 min | Fails 4h momentum bar, fading, stale high, fails volume. |
+| US/USD | +2.82% | +0.85% | 0.23x | 19.5 min | Fresh high but fails 4h momentum and badly fails volume bar. |
+| XXMRZ/USD | +2.65% | +0.86% | 1.26x | 844.5 min | Fails 4h momentum, volume, and freshness — very stale high. |
+| PEAQ/USD | −0.24% | −1.48% | 2.03x | 469.5 min | Clears volume but 4h/1h both negative (fading), stale high. |
+| PLAY/USD | −0.85% | −2.12% | 1.93x | 124.5 min | Fails momentum bars (negative), fails volume, stale high. |
+| LIT/USD | +1.66% | −0.06% | 0.66x | 34.5 min | Fails 4h momentum and volume bars. |
+
+**No candidate cleared all gates.** PONKE was the standout near-miss — momentum easily clears both bars and is accelerating — but the volume ratio sits just under the 2x threshold and its high is on an unconfirmed, still-forming candle, a mechanical double-miss rather than a judgment call. GWEI (this morning's own trade) has fully reversed and is not a re-entry candidate. Genuine gate failure across the board, not a capital constraint (ZUSD $73.6760 fully available).
+
+**Market context (Perplexity, brief):** BTC ~$80,000–$80,554 across sources (CoinGecko +2.10%, CMC +3.29%, Kraken +1.90%), consistent with the live Kraken read used for gates. Fear & Greed clustered Greed-to-Extreme-Greed (Bitget 73, Alternative.me 71, CoinStats 80, CFGI 59 outlier-neutral) — same regime as this morning's pre-session read, no new signal.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.13% vs 24h open). Fresh sweep of the full Kraken USD universe found no candidate clearing every gate simultaneously — PONKE came closest but missed the volume bar and the confirmed-candle freshness requirement. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. No open positions to manage.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
