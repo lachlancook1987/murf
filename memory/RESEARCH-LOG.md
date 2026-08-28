@@ -34002,3 +34002,35 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ### Step 7 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
+
+
+## 2026-08-28 — Pre-Session Research (~20:05 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances dust/unchanged) matches the 15:02 UTC scan exactly — no fills since, fully flat, no open positions to protect or tighten. Alpaca `positions: []`, `orders`: historical BTC stop `a2b44cf9` reconfirmed `canceled` (2026-05-22), zero exposure, no action needed.
+
+**Crash gate:** BTC live $77,549.70 (Kraken `XXBTZUSD`) vs today's open $80,265.90 → **−3.38%**, nowhere near the −20%/24h crash gate. Clear. **BTC weekly trend gate:** live $77,549.70 vs 5-day-ago daily close $77,737.50 (2026-08-23) → **−0.24%/5d**, nowhere near the >3% downtrend threshold. Clear — pure-momentum entries remain open, no catalyst-only restriction applies.
+
+Note: Perplexity's BTC query returned a stale/conflicting range ($79,650–$80,270, "+1% to +2%") that does not match the live Kraken feed (−3.38% today). Per the demoted-Perplexity methodology, live Kraken data is authoritative for the crash/trend gates; Perplexity used for context only below.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online Kraken USD pairs. 8 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all 8 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness (confirmed-closed-candle check):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| AKE/USD | +16.30% | +4.18% | 1.9986x | 21.5 min | Closest near-miss on record — clean, accelerating, multi-candle uptrend (six consecutive higher closes 17:30→19:45), fresh confirmed-closed-candle high, 1h momentum not fading. But volume ratio lands at 1.9986x, a hair under the 2x bar. A precise mechanical miss, not loosened — the gate is >2x, not ≈2x. |
+| TURBO/USD | +5.46% | +0.93% | 7.26x | 51.5 min (nominal) | Clears every numeric bar at first read, but candle-by-candle inspection shows a spike-and-fade: 24h high hit in a single candle at 19:15 (H=$0.001149), then three consecutive declining closes since (19:30 $0.001097 → 19:45 $0.001098 → now $0.001082, −5.8% off the high). This is a stale spike bounce, not a fresh breakout — same pattern that failed AVL/TRUMP earlier today. Fails momentum-peak-check in substance despite nominally clearing the 60-min freshness clock. Skipped. |
+| NIL/USD | +1.31% | +2.88% | 4.25x | 141.5 min | Clears volume decisively but fails the 4h momentum bar badly (1.31% vs 5%) — a single 19:30 spike candle (+3.7%) surrounded by flat/choppy action, not sustained momentum. Stale high. |
+| CAP/USD | +0.61% | +1.33% | 0.49x | 486.5 min | Fails 4h momentum, volume, and freshness — same asset flagged failing repeatedly in prior passes today. |
+| US/USD | +4.15% | +2.57% | 2.02x | 323.2 min | Volume clears, but 4h momentum sits under the 5% bar (4.15%) and the high is stale (5.4h) — this is a grind, not a fresh breakout. Same asset flagged chronically failing this bar across multiple passes today. |
+| DOS/USD | +0.48% | +0.36% | 0.37x | 653.2 min | Fails every bar — flat, thin volume, very stale high. |
+| SOMI/USD | +1.39% | −0.26% | 1.26x | 188.2 min | 1h momentum negative (fading), fails 4h momentum and volume bars. |
+| OOB/USD | +0.32% | −0.52% | 0.20x | 173.2 min | Fails every bar — flat-to-negative, thin volume, stale high. |
+
+**No candidate cleared all gates.** AKE was the single closest miss recorded to date (99.93% of the volume threshold) but is a genuine mechanical failure, not a judgment call. TURBO looked like a clean pass on the summary numbers alone but the underlying candle sequence is a textbook stale-spike fade, caught only by inspecting the shape of the move rather than the headline stats — worth noting as a case where the freshness-minutes number alone would have been misleading. No candidate reached the point of needing catalyst confirmation, so no per-candidate Perplexity queries were run (consistent with prior passes' practice).
+
+**Market context (Perplexity, brief):** ETH ~$2,500, roughly flat (sources split −1% to +2%). Fear & Greed split across sources (Alternative.me 71 Greed, CoinStats 81 Extreme Greed, CFGI 53 Neutral) — Greed-leaning, consistent with the day's prior reads. Funding rate mixed/roughly neutral to slightly positive across major venues (Binance +0.0079%/8h, Glassnode aggregate ~0.004–0.005%); one Kraken futures page outlier (−1.01%/hr) not corroborated elsewhere, likely a display/product quirk, not treated as signal. Catalysts: Fed/Jackson Hole (Kevin Warsh remarks) cited as today's dominant macro driver, continued spot BTC/ETH ETF inflows (+$232.2M BTC, +$192.4M ETH), ~$6.44B BTC options expiry at 08:00 UTC, Schwab reportedly adding SOL/AVAX/LINK, Strive raising $50M for a 429 BTC treasury buy. Token unlocks today (INFRA, XWGT, INS) and this week (H, XPL, HUMA) — none tied to AKE, TURBO, NIL, or CAP.
+
+### Decision: **HOLD.** Crash gate clear (BTC −3.38% vs 24h open), weekly trend gate clear (−0.24%/5d). Fresh full-universe sweep found no candidate clearing every gate — AKE missed only on volume (1.9986x vs 2x, closest miss to date), TURBO's headline numbers cleared but its candle shape is a stale-spike fade rather than a fresh breakout. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. No open positions to manage. ZUSD $73.6760 fully available, unchanged since the 15:02 UTC pass.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss was a hairline volume-ratio failure, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
