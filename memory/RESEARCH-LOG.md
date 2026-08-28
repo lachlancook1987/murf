@@ -33948,3 +33948,28 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ### Step 6 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
+
+## 2026-08-28 — Midday Scan (~14:23 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances dust) matches the 12:03 UTC scan exactly — no fills since, fully flat, no open positions to protect or tighten. Alpaca `orders` reconfirmed: historical BTC stop `a2b44cf9` still `canceled_at: 2026-05-22T05:22:01Z`, zero exposure, no action needed. **STEP 3 (stop verification), STEP 4 (tighten winners), STEP 5 (thesis check):** all N/A, no open positions.
+
+**Crash gate:** BTC live $79,034.00 vs today's open $80,265.90 → **−1.53%**, nowhere near −20%. Clear. BTC weekly trend gate: this morning's pre-session read had 5-day trend at +3.48% (no downtrend); today's intraday move (−1.53% vs open) doesn't come close to flipping that to a >3% 5-day decline. Clear.
+
+**Discovery sweep:** 638 online Kraken USD pairs (direct public AssetPairs+Ticker API). Only 6 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — thinnest initial screen of today's four passes. Deep-dived all 6 on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness (including the confirmed-closed-candle check):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| CHIP/USD | +10.16% | +1.41% | 1.67x | 53.4 min | Clears 4h momentum and freshness, 1h positive (not fading), confirmed closed candle — but volume ratio fails the 2x bar (1.67x). Genuine miss, not loosened. Same asset flagged failing on volume at 12:03 UTC (0.91x then), now much closer but still short. |
+| NIL/USD | +4.90% | +1.58% | 2.49x | 38.4 min | Clears volume, freshness, confirmed candle, 1h not fading — but 4h momentum sits 0.10pp under the 5% bar. Closest near-miss of the day. |
+| CAP/USD | +3.35% | −0.75% | 0.86x | 143.4 min | Fails 4h momentum, fading (1h negative), fails volume bar, stale high. |
+| STX/USD | −1.33% | −1.74% | 1.09x | 143.4 min | Both momentum windows negative, fails volume, stale high. |
+| US/USD | −0.23% | −0.28% | 0.50x | 338.4 min | Flat-to-negative, fails volume badly, stale high. |
+| XXMRZ/USD | −0.46% | −1.32% | 1.31x | 98.4 min | Both momentum windows negative, fails volume, stale-ish high. |
+
+**No candidate cleared all gates.** CHIP and NIL were the two genuine near-misses — CHIP on volume (1.67x vs 2x), NIL on 4h momentum by a hair (4.90% vs 5%) — both mechanical misses, not judgment calls. No catalyst-confirmation queries run since no candidate reached that point. Genuine gate failure across the board, not a capital constraint (ZUSD $73.6760 fully available, unchanged since the last pass).
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.53% vs 24h open), weekly trend gate clear. Third consecutive fresh sweep today (09:03, 12:03, 14:23 UTC) found no candidate clearing every gate simultaneously. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. No open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
