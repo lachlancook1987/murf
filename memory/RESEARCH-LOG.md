@@ -33973,3 +33973,32 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ### Step 7 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
+
+## 2026-08-28 — Session-Open Scan (~15:02 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $73.6760, all other balances dust) matches the 14:23 UTC scan exactly — no fills since, fully flat, no open positions to protect or tighten. Alpaca `positions: []`, historical BTC stop `a2b44cf9` reconfirmed `canceled`, zero exposure. STEP 3/4/5 (stop verification, tighten winners, thesis check): all N/A, no open positions.
+
+**Crash gate:** BTC live $79,651.00 vs today's open $80,265.90 → **−0.77%**, nowhere near −20%. Clear. BTC weekly trend gate: this morning's read was +3.48%/5d (no downtrend); today's intraday move doesn't come close to flipping that. Clear.
+
+**Discovery sweep:** 638 online Kraken USD pairs (direct public AssetPairs+Ticker API). 12 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 10 with liquidity ≥$100k (CHIP, NIL, TRUMP, AVL, PEAQ, CAP, XXMRZ, STX, KNTQ, BAT) on 15m OHLC for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and 24h-high freshness (confirmed-closed-candle check):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| CHIP/USD | +9.03% | +4.93% | 1.03x | forming (unconfirmed) | Clears both momentum bars, not fading — but volume ratio fails the 2x bar (1.03x) and the 24h high is on the still-forming 15m candle, not a confirmed closed one. Double miss. Same asset flagged failing on volume in every prior pass today (0.91x→1.67x→now 1.03x), never yet cleared. |
+| NIL/USD | +9.20% | +5.56% | 1.43x | forming (unconfirmed) | Clears both momentum bars — but volume ratio fails (1.43x <2x) and high is on the unconfirmed forming candle too. Double miss. |
+| TRUMP/USD | +3.19% | +6.07% | 2.94x | 812 min | Clears volume decisively, but 4h momentum fails the 5% bar (3.19%) and the high is stale (13.5h old, not forming) — the 1h pop is a bounce off a stale high, not a fresh breakout. Fails momentum-peak-check. |
+| AVL/USD | +7.90% | +6.48% | 0.40x | 797 min | Clears both momentum bars but volume ratio catastrophically fails (0.40x) and the high is stale (13.3h) — price already 4.6% below that high per the initial screen, classic fade from an old spike, not fresh buying. |
+| PEAQ/USD | +1.64% | +2.14% | 1.63x | 827 min | Fails 4h momentum bar, stale high, volume under 2x. |
+| CAP/USD | +0.14% | +0.37% | 0.57x | 182 min | Fails 4h/1h momentum (flat) and volume bar, stale high. |
+| XXMRZ/USD | +0.46% | +0.90% | 0.78x | 122 min | Fails 4h/1h momentum and volume bar. |
+| STX/USD | −1.41% | −0.15% | 0.70x | 182 min | Negative momentum, fails volume, stale high. |
+| KNTQ/USD | +1.05% | +1.26% | 0.33x | 1112 min | Fails 4h momentum badly, fails volume badly, very stale high. |
+| BAT/USD | +1.12% | +2.07% | 1.51x | 92 min | Fails 4h momentum bar and volume bar. |
+
+**No candidate cleared all gates.** CHIP and NIL were the closest — both clear momentum decisively but fail on the same double-miss as CAP/XXMRZ earlier today: sub-2x volume plus an unconfirmed, still-forming 24h high. TRUMP and AVL clear momentum but fail on stale, already-faded highs (momentum-peak-check). No catalyst-confirmation queries run since no candidate reached that point. Genuine gate failure across the board, not a capital constraint (ZUSD $73.6760 fully available, unchanged all day).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.77% vs 24h open), weekly trend gate clear. Fourth consecutive fresh sweep today (09:03, 12:03, 14:23, 15:02 UTC) found no candidate clearing every gate simultaneously. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. No open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Nothing here needs the user's attention right now.
