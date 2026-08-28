@@ -1244,3 +1244,98 @@ None — 100% ZUSD $116.6120 (+dust). No open Kraken orders. Alpaca fully closed
 **The widened 1.5:1 R:R floor for momentum-only entries is validated: 4-3, 57% win rate, 1.58 profit factor over the first full week running under it — a clean reversal of the 0-for-3 pattern that triggered the change.** Stops, spread checks, and catalyst-freshness calls were all correctly applied with zero profile violations. The week's real story is structural rather than rule-related: BTC's +23.46% trend dwarfed the bot's +4.32% net gain, because the day-trading design banks small wins and sits in cash between qualifying setups rather than holding through a sustained directional move. That tradeoff is by design (it's exactly what protects capital in down weeks like Jun 1 or Jun 8), but it's now shown up twice in two weeks as a real cost during up weeks — worth watching, not yet worth changing.
 
 ---
+
+## Week of 2026-08-21 to 2026-08-28 — Review Date: 2026-08-28
+
+### Context
+**Worst week on record.** BTC's August uptrend continued through Aug 25 (briefly topping $80k), then chopped sideways/flat $77-79k through Aug 26-27 before a modest reaccelerate into Friday close (~$79.8k live). Fear & Greed stayed Greed-to-Extreme-Greed all week (62-82), so the Extreme-Fear R:R floor never triggered; crash gate and BTC weekly-downtrend gate never triggered either. 20 closed round trips across 17 fills (ZORA, BCH, XDG, POL, ZRO ×2, XPL, AAVE, UAI, PENGU, AERO, VIRTUAL, DRV, PEAQ, BMT ×2, RUNE, TAO, SKR, GWEI) — all momentum-only except SKR (one confirmed catalyst). The week opened fine (BCH +3.50%, ZRO#1 +2.03% on Aug 21-22) then went into a sustained losing streak as the market shifted from trending to choppy/range-bound: 16 of the last 18 trades closed as losses, several reversing within minutes of entry. No Alpaca exposure (stop `a2b44cf9` still `canceled` since 2026-05-22).
+
+### Account Snapshot (Friday close, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $73.6760 | $73.6760 ZUSD (+dust basket) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$73.6760** | $73.6760 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Aug 21 EOD) | $116.6120 |
+| Ending Equity (Fri Aug 28, live) | **$73.6760** |
+| **Week Return** | **−36.82%** (−$42.9360) |
+| BTC Week Return | **+2.97%** ($77,484.20 → $79,781.10 live) |
+| **Bot vs BTC** | **−39.79%** (severely underperformed) |
+
+### Trade Summary
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Aug 21 | ZORA/USD | $0.0071954 | $0.006865 | **−$5.6376** (−5.34%) | LOSS |
+| 2 | Aug 21 | BCH/USD | $278.50 | (reconciled, price n/a) | **+$3.5355** (+3.50%) | WIN |
+| 3 | Aug 21 | XDG/USD | $0.093595 | (reconciled, price n/a) | **−$2.1529** (−2.14%) | LOSS |
+| 4 | Aug 22 | POL/USD | $0.119902 | (inferred) | **≈−$2.30** (≈−2.26%) | LOSS |
+| 5 | Aug 22 | ZRO/USD #1 | $1.13778 | (reconciled, price n/a) | **+$2.0240** (+2.03%) | WIN |
+| 6 | Aug 23 | ZRO/USD #2 | $1.2352 | $1.215 | **−$1.0530** (−1.06%) | LOSS |
+| 7 | Aug 23 | XPL/USD | $0.104624 | $0.1017 | **−$3.3928** (−3.38%) | LOSS |
+| 8 | Aug 23 | AAVE/USD | $141.0814 | $135.52 | **−$4.5578** (−4.52%) | LOSS |
+| 9 | Aug 23 | UAI/USD | $0.29047 | $0.27978 | **−$4.7982** (−4.83%) | LOSS |
+| 10 | Aug 23 | PENGU/USD | $0.0099705 | $0.009967 | **−$0.6011** (−0.63%) | LOSS |
+| 11 | Aug 24 | AERO/USD | $0.501152 | $0.5073 | **+$0.5915** (+0.63%) | WIN |
+| 12 | Aug 24 | VIRTUAL/USD | $0.833233 | $0.8155 | **−$2.5836** (−2.71%) | LOSS |
+| 13 | Aug 24 | DRV/USD #1 | $0.166754 | $0.16301 | **−$2.6211** (−2.83%) | LOSS |
+| 14 | Aug 25 | PEAQ/USD | $0.023111 | $0.02276 | **−$1.8434** (−2.08%) | LOSS |
+| 15 | Aug 25 | BMT/USD #1 | $0.023621 | $0.02299 | **−$2.8768** (−3.26%) | LOSS |
+| 16 | Aug 27 | RUNE/USD | $0.620701 | $0.600 | **−$3.2945** (−3.85%) | LOSS |
+| 17 | Aug 27 | TAO/USD | $258.325 | (inferred) | **≈−$2.87** (≈−3.51%) | LOSS |
+| 18 | Aug 27 | SKR/USD | $0.00975216 | $0.009899 | **+$0.7083** (+0.90%) | WIN (catalyst) |
+| 19 | Aug 27 | BMT/USD #2 | $0.028943 | (inferred) | **≈−$3.846** (≈−4.78%) | LOSS |
+| 20 | Aug 28 | GWEI/USD | $0.029063 | (inferred) | **≈−$2.9712** (≈−3.93%) | LOSS |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 20 |
+| Wins | 4 |
+| Losses | 16 |
+| Win Rate | **20.0%** |
+| Gross Wins | ~$6.86 |
+| Gross Losses | ~$47.40 |
+| Profit Factor | **0.14** |
+| Avg Win | $1.71 |
+| Avg Loss | $2.96 |
+| Largest Win | BCH/USD **+$3.5355 (+3.50%)** |
+| Largest Loss | ZORA/USD **−$5.6376 (−5.34%)** |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | **~$32** (estimated at the measured ~1.6%/round-trip rate on ~20 trades × ~$100 avg notional; several exits lack exact fill data, see below) |
+
+**Data-quality caveat:** 4 of 20 exits (POL, TAO, BMT#2, GWEI) lack exact fill price/fee data due to a tooling gap discovered this week (see Operational Issues) — their P&L is inferred from cash-balance deltas and may be off by small amounts. Gross win/loss above nets to −$40.54 vs. the confirmed actual equity change of −$42.9360; the ~$2.4 gap is attributable to that imprecision, not a reconciliation error.
+
+### Open Positions (End of Week)
+None — 100% cash. No open Kraken orders. Alpaca fully closed.
+
+### Trade Quality Review
+
+**Entry types:** 19 of 20 trades were momentum-only; only SKR (Aug 27, Solana Mobile "Seeker Summer Round 4" claim event, ~5h old) was catalyst-confirmed, and it won (+0.90%). The momentum-only cohort went **3-16 (15.8% win rate)** — a sharp reversal from last week's 4-3 (57.1%) validation of the 1.5:1 R:R floor. This isn't evidence the R:R floor itself is broken — R:R was ≥1.5:1 on every trade, correctly calculated — the entries simply failed to follow through at a much higher rate than the prior week.
+
+**Pattern:** The dominant failure mode was fast reversals shortly after entry: BMT#1 stopped just 2m42s after fill, RUNE 28 minutes, XPL 44 minutes, VIRTUAL 9 minutes — consistent with buying into the tail end of a spike rather than a genuine continuation. The research log shows "spike-and-retreat fade" was the single most common reason for HOLD this week (correctly rejecting many candidates — e.g. BICO rejected on this exact pattern 4 times on Aug 26 alone), but several trades that *did* clear the momentum-peak-check (24h high set within the last 60 min) still turned out to be exactly this kind of fade. The freshness gate is necessary but not sufficient once the market shifts from a strong trending phase (Aug 21-24) into a choppier, range-bound stretch (Aug 25-27) — the same breakout signal that reliably continued in a trending tape produced repeated fakeouts once the trend stalled.
+
+**Stop quality:** 18 of 20 trades used the high-ATR 3.5% trail exception; only the first two (BCH, XDG) used the 2.5% standard — a marked shift from prior weeks where the exception was applied more selectively, worth naming since the "exception" effectively became the default this week. No 7% binary-catalyst trail was used. No "STOP TIGHTENED (T1 hit)" events fired — no trade reached T1 before reversing.
+
+**Profile violations:** None. Spread ≤1% on every executed trade, no leverage used on any trade, catalyst freshness correctly assessed throughout. Two DASH/ZEC rejections on Kraken's `EAccount:Invalid permissions ... restricted for AU` — not a violation, but a new operational finding (standing skip-list added below).
+
+**Operational issues found this week:**
+1. **EOD-snapshot mislabeling recurred at least 3 more times** (Aug 22, 23, 24 snapshots all written mid-session, before that day's later trades closed) despite being flagged as a recommendation in the 2026-08-21 review. The Aug 27 instance was caught and explicitly corrected same-day; the others were silently superseded by later reconciliation notes. Escalated from a review note to a formal TRADING-STRATEGY.md rule this week since flagging it in review text hasn't stopped the recurrence.
+2. **Aug 24 logging gap:** VIRTUAL and DRV#1 were executed live (buy + stop confirmed on-exchange) but the pass that placed them ended without committing them to TRADE-LOG.md — real capital was briefly at risk with zero git record of the position. Backfilled same day; formalized a same-pass logging rule below to close this risk.
+3. **`kraken.sh` had no `closedorders` command** — reconciliation for several late-week trades (POL, TAO, BMT#2, GWEI) had to fall back to balance-delta inference instead of exact fill data. Added a `closedorders` case to the script this session (calls Kraken's `/0/private/ClosedOrders`) to close this gap going forward.
+
+### Concrete Adjustments (added 2026-08-28)
+
+1. **Momentum-peak-check tightened — require one confirmed closed candle, not a still-forming one.** The 60-min freshness check was necessary but not sufficient this week: several entries bought a high made on the *currently forming* bar, which then immediately reversed. Now requires the breakout high to be confirmed by at least one fully closed 15m candle holding above the prior level before entry. Updated in TRADING-STRATEGY.md.
+2. **AU jurisdiction-restricted asset list added.** ZEC and DASH both return an account-level trading restriction on order placement despite clearing every technical gate — added a standing skip-list.
+3. **EOD/Summary labeling rule formalized.** Only the last pass of a calendar day, written after that day's positions are confirmed closed/reconciled, may use an "EOD Snapshot"/"EOD Summary" heading.
+4. **Same-pass logging rule formalized.** Every trade must be appended to TRADE-LOG.md and committed before the pass that executes it ends.
+5. **`kraken.sh closedorders` command added** to restore exact-fill reconciliation capability.
+
+### Key Lesson
+**This was the bot's worst week on record — a 36.82% drawdown against a rising BTC (+2.97%), driven almost entirely by a collapse in momentum-only win rate (3-16, 15.8%, down from last week's validated 4-3) as the market shifted from a strong trend into a choppy, range-bound stretch.** Every mechanically-checkable gate (spread, R:R floor, crash gate, catalyst freshness) was applied correctly on every trade — this wasn't a discipline failure, it was the momentum-breakout method itself producing repeated fakeouts once the tape stopped trending. The fastest reversals (BMT#1 in under 3 minutes) point to a specific, fixable gap: the freshness check accepted a still-forming candle's new high as confirmation, which is exactly the kind of signal that fails first when a rally stalls. Tightened the momentum-peak-check to require one closed confirming candle, and formalized two recurring operational issues (EOD mislabeling, deferred trade logging) into standing rules rather than leaving them as review-note reminders that keep recurring.
+
+---
