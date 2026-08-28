@@ -9984,3 +9984,15 @@ ZUSD post-trade: $0.0329.
 ### Step 7 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-28 — Overnight Triage (~03:02 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, BMT balance 0.0000, ZUSD $76.6472) does not match TRADE-LOG's last entry (BMT/USD BUY, open). Reconciled via balance delta (no `closedorders` command available in `kraken.sh` — inferred from account balance, same method as the 2026-08-27 midday SKR reconciliation): post-entry ZUSD was $0.0329; current ZUSD $76.6472 → net proceeds from BMT exit ≈ $76.6143. Against entry cost $80.46048 (incl. fee), **net P&L ≈ −$3.846 (−4.78%)**. Consistent with the 3.5% trailing stop firing after a pullback from a post-entry peak (some run-up above entry before reversing, plus fees, explains the gap beyond a flat −3.5%). No thesis break, mechanical exit — nothing to log-only-now correct.
+
+**Stop verification (STEP 2):** No open Kraken positions — flat since BMT's stop fired. Alpaca `orders`: stop `a2b44cf9` reconfirmed `canceled` (order dated 2026-05-22); Alpaca `positions: []`, `position_market_value: $0` — zero exposure, canceled stop is correctly inert, no action needed.
+
+**Emergency exits (STEP 3):** N/A, no open positions. **Tighten winners (STEP 4):** N/A, no open positions.
+
+**Crash gate (STEP 5):** BTC live $79,907.10 vs today's open $80,265.90 → **−0.45%**. Nowhere near the −20%/24h crash gate. No action, no alert (not a >20% move in either direction).
+
+**Outcome:** Fully flat book (Kraken and Alpaca), no unprotected positions, no crash event. No orders placed this pass — triage-only routine, no new entries per scope.
