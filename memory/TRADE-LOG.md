@@ -9996,3 +9996,21 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 **Crash gate (STEP 5):** BTC live $79,907.10 vs today's open $80,265.90 → **−0.45%**. Nowhere near the −20%/24h crash gate. No action, no alert (not a >20% move in either direction).
 
 **Outcome:** Fully flat book (Kraken and Alpaca), no unprotected positions, no crash event. No orders placed this pass — triage-only routine, no new entries per scope.
+
+## 2026-08-28 — EOD Summary
+
+**Pre-check reconciliation:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, GWEI balance 0.0000, ZUSD $73.6760) does not match RESEARCH-LOG's last entry (GWEI/USD BUY, 2600.0000 @ $0.029063, cost $75.5639, ZUSD post-trade $1.0833, entered ~08:08 UTC pre-session research). No `closedorders` command available in `kraken.sh` — reconciled via balance delta, same method as prior sessions: proceeds from GWEI exit ≈ $73.6760 − $1.0833 = $72.5927. Against entry cost $75.5639, **net P&L ≈ −$2.9712 (−3.93%)**, consistent with the 3.5% trailing stop firing after some pullback plus fees — no thesis break, mechanical exit. Account now fully flat on both Kraken and Alpaca.
+
+**Alpaca:** `orders` reconfirmed — historical BTC stop `a2b44cf9` still `status: canceled` (since 2026-05-22), `positions: []`, zero exposure, no action needed.
+
+### Aug 28 — EOD Snapshot (Day 100, Friday)
+
+**Portfolio:** $73.6760 | **Cash:** $73.6760 (100%) | **Day P&L:** −$2.9712 (−3.88%) | **Phase P&L:** −$106.1040 (−59.02%) | **vs BTC:** −3.72%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | flat, no position | — |
+
+**Trades today:** GWEI/USD buy 2600.0000 @ $0.029063 (Pre-Session Research, ~08:08 UTC) → 3.5% trailing stop fired later in the day for net P&L ≈ −$2.9712 (−3.93%), reconciled above | **Total since migration:** ~146
+
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $73.6760, `positions: {}`, `orders: {"open": {}}` — fully flat, dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. Today's only trade was GWEI/USD, bought pre-session on a clean momentum sweep (7.61%/4h, +5.49%/1h, 2.47x volume, 15-min-fresh high) with a 3.5% high-ATR trailing stop; the stop fired later in the day (exact time not visible — `kraken.sh` has no `closedorders` command — inferred from the ZUSD balance delta) for a small mechanical loss, no thesis break. Yesterday's true baseline used for Day P&L: $76.6472 (Aug 28 03:02 UTC Overnight Triage close, after BMT's overnight stop settled and before today's GWEI entry — the actual flat starting cash for today's session, not the stale "Aug 27 EOD Snapshot" label which was written before that day's RUNE correction and the TAO/SKR/BMT trades that followed it). BTC: yesterday's live reference $79,907.10 (same Aug 28 03:02 UTC pass) vs today's live $79,779.40 → **−0.16%**; bot day return −3.88% trails BTC by **−3.72 points** today, entirely attributable to GWEI's stop-out rather than a market-wide move (BTC essentially flat). Phase P&L −$106.1040 (−59.02%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled`, zero exposure, no action needed. Total trades since migration ~146 (~137 as of the pre-correction Aug 27 EOD label + 9 discrete orders since: RUNE sell, TAO buy/sell, SKR buy/sell, BMT buy/sell, GWEI buy/sell). Tomorrow: pre-session research resumes with $73.6760 cash, fully flat; crash gate threshold ~$63,823.52 (BTC −20% from $79,779.40).
