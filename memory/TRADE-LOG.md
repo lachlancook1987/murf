@@ -10180,3 +10180,40 @@ ZUSD post-trade: $1.4917.
 ### Step 7 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-29 | NIL/USD | SELL (trailing stop) | 1100.00000 NIL | Exit: $0.0620 | Proceeds: $67.7908 | P&L: +$1.2841 (+1.93%) | Closed
+
+Stop txid `OXAH3X-4ACBV-4IWFLT` fired (trailing stop, trail_percent 3.5%, stopprice $0.0621, filled at $0.0620). Sell cost $68.20000, fee $0.40920, net proceeds $67.79080. Against entry cost basis $66.50666 (fee-inclusive) → net P&L **+$1.2841 (+1.93%)**. Implied peak price before the 3.5% pullback ≈ $0.0620/(1-0.035) ≈ $0.06425 — within ~0.3% of T1 ($0.064089), consistent with the known T1-tightening gap (TRADING-STRATEGY.md 2026-08-21 flag): price approached T1 but reversed on the original untightened 3.5% trail before any tightening could fire. Entry 2026-08-29 14:05:45 UTC, exit 14:21:37 UTC (per `kraken.sh closedorders`) — a ~16-minute hold, faster than the log's own "~15:06 UTC" pass-time label suggests; treated as a minor timestamp-labeling discrepancy in the prior pass, not a data error (fill txids and amounts reconcile exactly against live balances).
+
+## 2026-08-29 — Session-Open Execution (~15:02 UTC)
+
+**Pre-check:** Live Kraken state — `positions: {}`, `orders: {"open": {}}`, NIL balance 0.00000, ZUSD $69.2824. NIL's 3.5% trailing stop fired since the last pass (reconciled above, +1.93%, mechanical exit near T1, no thesis break). Book fully flat. Alpaca `positions: []`, no open/pending orders (44 historical orders, all `filled`/`canceled`) — zero exposure, no action needed.
+
+**Crash gate:** BTC live $77,959.20 vs today's open $77,841.80 → **+0.15%**. Clear, nowhere near −20%. **Weekly trend gate:** live $77,959.20 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−1.27%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Fresh discovery sweep:** direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 18 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+8.82%) and ZEC/USD (+4.75%) are AU jurisdiction-restricted per TRADING-STRATEGY.md — skipped pre-emptively, not deep-dived. Deep-dived the 12 remaining with liquidity ≥$100k on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| VELVET/USD | +6.99% | −1.48% | 1.01x | 77.6 min | Only pair to clear the 4h momentum bar, but 1h has already turned negative (fading), volume fails (1.01x <2x), and the high is stale (77.6 min). Triple failure. |
+| CC/USD | +2.96% | +0.77% | 2.99x | 17.6 min | Volume and freshness both clear, but 4h momentum falls short of the 5% bar. |
+| RIVER/USD | +3.14% | +0.65% | 2.15x | 92.6 min | Volume clears but 4h under bar and high stale (92.6 min). |
+| ICP/USD | +0.96% | +2.15% | 1.70x | 17.6 min | Fresh but fails momentum and volume. |
+| PUMP/USD | +3.84% | +3.51% | 1.54x | 1427.6 min | Momentum closest of the rest but still under bar; fails volume; extremely stale high. |
+| PEAQ/USD | +4.40% | +2.24% | 1.03x | 1442.6 min | Momentum close but under bar; fails volume; very stale high. |
+| BMT/USD | −2.04% | −2.45% | 0.37x | 1337.6 min | Fails every bar, negative momentum. |
+| MINA/USD | +0.79% | +0.23% | 0.11x | 887.6 min | Fails every bar. |
+| SWELL/USD | −2.77% | +0.68% | 0.39x | 572.6 min | Fails every bar, negative 4h. |
+| NANO/USD | −0.42% | +0.59% | 0.10x | 1262.6 min | Fails every bar, negative 4h. |
+| KNTQ/USD | +0.88% | +0.34% | 0.16x | 1427.6 min | Fails every bar. |
+| PTB/USD | −0.38% | −0.63% | 0.52x | 1442.6 min | Fails every bar, negative momentum. |
+
+**No candidate cleared all gates.** VELVET/USD was the only pair to clear the 4h momentum bar (+6.99%), but its 1h leg has already flipped negative (fading, not accelerating), volume fails cleanly (1.01x vs 2x), and the 24h high is stale (77.6 min, past the 60-min freshness window with no fresh breakout candle above it) — a triple failure, not a hairline call. CC/USD was the best of the rest (volume + freshness both clear) but momentum itself falls well short. No candidate reached the point of needing catalyst confirmation, so no per-candidate Perplexity queries were run.
+
+**Same-thesis check:** NIL has one stop-out today (this pass, a gain not a loss) — same-thesis cooling period only applies after 2 *stop-outs* (losses) in 7 days; not triggered here regardless.
+
+### Decision: **HOLD.** NIL's stop-out is reconciled above — mechanical exit near T1, small gain locked (+1.93%), no thesis break. Crash gate clear (BTC +0.15%), weekly trend gate clear (−1.27%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — VELVET had the only qualifying 4h momentum reading but failed on fading 1h momentum, volume, and freshness simultaneously. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. ZUSD $69.2824 fully available, no open positions.
+
+### Step 8 — Notification
+
+No push sent — NIL's stop-out was a small, routine mechanical exit with a modest gain (+1.93%, near T1) already fully reconciled here, book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
