@@ -10101,3 +10101,38 @@ ZUSD post-trade: $1.9606.
 ### Step 7 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-29 — Session-Open Execution (~12:01 UTC)
+
+**Stop-out reconciliation:** HNT/USD's 3.5% trailing stop (order `OWXSCK-J43I4-D6UPAB`) fired sometime between the 09:01 UTC entry and this pass's pre-check. Live Kraken state: HNT balance 0.000000, `positions: {}`, `orders: {"open": {}}` — position fully closed, no fills since. Reconciled via balance delta: ZUSD $1.9606 (post-entry) → $67.9984 (current) implies stop proceeds ≈ $66.0378. Against entry cost $68.0025, **net P&L ≈ −$1.9647 (−2.89%)** — a modest pullback triggering the 3.5% trail well short of the T1/T2 targets, no thesis break, mechanical exit. Alpaca reconfirmed flat (`positions: []`, stop `a2b44cf9` still `canceled`), zero exposure.
+
+**Crash gate:** BTC live $77,589.00 vs today's open $77,841.80 → **−0.32%**. Clear. **Weekly trend gate:** live $77,589.00 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−1.74%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Fresh discovery sweep:** direct Kraken public API (AssetPairs + Ticker), 666 online USD pairs. 14 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 12 with liquidity ≥$100k on 15m OHLC (closed candles only):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| BTR/USD | +14.39% | +10.81% | 0.65x | 2.2 min | Huge move (+18.5% vs open) and very fresh, but fails the 2x volume bar badly (0.65x) — a thin-volume spike, not confirmed buying pressure. |
+| BMT/USD | +6.78% | −1.61% | 2.02x | 1142.2 min | Only pair to clear both 4h and volume bars, but 1h momentum is negative (fading) and the 24h high is extremely stale (19h) — double failure. |
+| VELVET/USD | +5.76% | +5.76% | 0.80x | 17.2 min | Fresh but fails volume (0.80x). |
+| USELESS/USD | +4.05% | +2.13% | 8.02x | 1232.2 min | Volume clears strongly but 4h momentum under the 5% bar and high is 20.5h stale. |
+| RIVER/USD | +4.47% | +0.24% | 0.89x | 62.2 min | 4h under bar, 1h weak, volume fails, freshness just past 60min. |
+| NIL/USD | +3.32% | +6.01% | 1.28x | 2.2 min | Fresh but 4h under bar and volume fails. |
+| PTB/USD | +3.24% | +0.63% | 0.49x | 1277.2 min | Fails 4h, volume, very stale high. |
+| US/USD | +2.73% | +0.35% | 0.32x | 77.2 min | Fails every bar. |
+| KNTQ/USD | +1.28% | +0.47% | 2.93x | 1262.2 min | Volume clears but momentum and freshness both fail badly. |
+| ICP/USD | +1.55% | −0.36% | 0.65x | 62.2 min | Fails momentum and volume. |
+| MINA/USD | +1.17% | +0.82% | 1.34x | 692.2 min | Fails every bar. |
+| NANO/USD | −0.40% | −0.77% | 0.17x | 1067.2 min | Fails every bar, negative momentum. |
+
+**No candidate cleared all gates.** BTR was the standout on raw price action (+18.5% vs open) but the volume bar fails cleanly (0.65x vs 2x), not a hairline call — a large move without confirming volume is exactly the "spike, not real buying pressure" pattern the volume gate exists to filter. BMT was the only pair to clear both momentum and volume individually but failed on fading 1h momentum and a 19h-stale high. No candidate reached the point of needing catalyst confirmation.
+
+**Market context (Perplexity, brief):** Fear & Greed split across sources (CFGI 49 Neutral market-wide / 55 Neutral for BTC / 64 Greed for ETH, CoinStats 81 Extreme Greed, Bitget 68 Greed) — no consensus, roughly neutral-to-greed. No verified fresh (<6h) breaking catalyst found; most relevant recent driver cited was the earlier BTC/ETH rally (BTC +8.8%, ETH +18.5%) that flipped sentiment from fear to greed, not same-day news.
+
+**Same-thesis check:** HNT has one stop-out today (this pass) — below the 2-stop-out/7-day cooling-period threshold, no cap applies to future HNT re-entries.
+
+### Decision: **HOLD.** HNT's stop-out from the 09:01 UTC entry is reconciled above — mechanical exit, no thesis break. Crash gate clear (BTC −0.32%), weekly trend gate clear (−1.74%/5d). Fresh full-universe sweep (666 pairs) found no candidate clearing every gate — BTR had by far the largest move but failed the volume bar cleanly, and BMT was the only pair to clear both momentum and volume individually but failed on fading 1h momentum and a stale high. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. ZUSD $67.9984 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — HNT's stop-out was a small, routine mechanical exit (−2.89%, well inside expected stop-loss variance) already fully reconciled here, book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).

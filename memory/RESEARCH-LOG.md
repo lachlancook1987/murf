@@ -34121,3 +34121,7 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 6 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss, HNT, failed cleanly on two bars, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-29 — Session-Open Execution (~12:01 UTC)
+
+Full detail (stop-out reconciliation, discovery sweep table, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: HNT/USD's 09:01 UTC entry stopped out mechanically (3.5% trail, −2.89%, no thesis break) sometime before this pass's pre-check. Crash gate clear (BTC −0.32%), weekly trend gate clear (−1.74%/5d). Fresh 666-pair sweep found no candidate clearing every gate — BTR (+18.5% vs open) failed the volume bar badly (0.65x vs 2x), BMT was the only pair to clear both momentum and volume individually but failed on fading 1h momentum and a 19h-stale high. Decision: **HOLD**. ZUSD $67.9984 fully available, no open positions.
