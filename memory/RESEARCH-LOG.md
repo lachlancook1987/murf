@@ -34093,3 +34093,31 @@ ZUSD post-trade: $1.2074.
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-29 — Pre-Session Research (~00:05 UTC)
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $69.9631, all other balances dust/unchanged) matches the 03:02 UTC Overnight Triage exactly — no fills since, fully flat since ZIG's stop fired. Alpaca `positions: []`, `orders`: historical BTC stop `a2b44cf9` reconfirmed `canceled` (2026-05-22), zero exposure — no action needed. STEP 3/4/5 (stop verification, tighten winners, thesis check): all N/A, no open positions.
+
+**Crash gate:** BTC live $77,491.20 vs today's open $77,841.80 → **−0.45%**, nowhere near the −20%/24h crash gate. Clear. **BTC weekly trend gate:** live $77,491.30 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−1.87%/5d**, not a >3% downtrend — gate clear, pure-momentum entries remain open, no catalyst-only restriction.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online Kraken USD pairs. 7 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all 7 on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| HNT/USD | +21.85% | +3.13% | 1.40x | 94.9 min | Strongest momentum of the batch and 1h still positive, but fails the 2x volume bar (1.40x) and the 24h high is stale (94.9 min, past the 60-min freshness window with no fresh breakout candle above it). Double miss — closest candidate but a genuine gate failure, not a judgment call. |
+| BLESS/USD | +0.24% | −1.90% | 1.72x | 80.0 min | 1h momentum negative (fading), fails 4h momentum badly, fails volume, stale high. |
+| BTR/USD | −2.44% | +2.74% | 0.06x | 245.0 min | 4h momentum negative, volume catastrophically thin, very stale high. |
+| MINA/USD | +0.71% | −0.13% | 0.09x | 455.0 min | Fails every bar — flat, thin volume, very stale high. |
+| MASK/USD | +2.26% | +0.00% | 6.24x | 35.0 min | Volume and freshness both clear, but momentum is absent (4h under bar, 1h completely flat) — a volume spike with no directional move to trade. |
+| NIL/USD | +0.00% | +3.43% | 0.87x | 50.0 min | 1h momentum clears but 4h is completely flat and volume fails — a single-hour blip, not sustained momentum. |
+| NANO/USD | +4.15% | +1.08% | 0.97x | 830.0 min | 4h momentum just under the 5% bar, volume fails, very stale high. |
+
+**No candidate cleared all gates.** HNT/USD was the closest — decisive 4h momentum (+21.85%) with 1h still positive — but the volume ratio (1.40x) and high freshness (94.9 min, stale) both miss cleanly, not a hairline call. No candidate reached the point of needing catalyst confirmation, so no per-candidate Perplexity queries were run.
+
+**Market context (Perplexity):** BTC $77.4k–$79.7k depending on source/refresh time, −3.6% to −1.0% 24h (live Kraken read of −0.45% is authoritative for the gates). ETH ~$2,499.82, roughly flat (+0.10%). Fear & Greed in the low-to-mid 70s across trackers (Alternative.me 73, Binance 76) — Greed. BTC perpetual funding mixed but net positive (~+0.008%/8h on major venues, Kraken's own perp page an uncorroborated outlier at 0.49%/hr, treated as a display quirk not signal). Catalysts: CLARITY Act regulatory push (Trump met SEC/CFTC leadership), Treasury long-bond buybacks supporting risk assets, Jackson Hole/Fed macro backdrop, continued BTC/ETH ETF inflows, Solana higher on a governance vote + Schwab listing news, XRP RLUSD/institutional-product flow. Token unlocks (H, XPL, HUMA, SOSO — all Aug 24–26, already priced) — none tied to HNT, BLESS, BTR, MINA, MASK, NIL, or NANO. No open Kraken positions, so no per-position catalyst queries needed.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.45% vs 24h open), weekly trend gate clear (−1.87%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — HNT was the standout on momentum alone but fails cleanly on volume (1.40x vs 2x) and freshness (94.9 min vs 60 min, no fresh breakout candle above the stale high). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. No open positions to manage. ZUSD $69.9631 fully available, unchanged since the 03:02 UTC Overnight Triage.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss, HNT, failed cleanly on two bars, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
