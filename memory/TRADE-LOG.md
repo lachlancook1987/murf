@@ -10026,3 +10026,19 @@ Order txid `OF45RM-K3LMQ-CNIZCS` (buy, market, filled in full — post-trade ZIG
 ZUSD post-trade: $1.2074.
 
 **Decision: TRADE — ZIG/USD.** Book was fully flat at pre-check. Fresh 661-pair Kraken sweep found ZIG as the only candidate clearing every gate (4h momentum +11.21%, 1h +3.31% accelerating, volume 3.42x, confirmed-closed-candle 15-min-fresh high, spread 0.69%, cross-exchange divergence 0.30%). No prior ZIG fills — same-thesis cap clear. Crash gate and weekly trend gate both clear.
+
+## 2026-08-29 — Overnight Triage (~03:02 UTC)
+
+**Pre-check reconciliation:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZIG balance 0.00000, ZUSD $69.9631) does not match TRADE-LOG's last entry (ZIG/USD BUY, 1460.0000, open, ZUSD post-trade $1.2074). No `closedorders` command in `kraken.sh` — reconciled via balance delta: proceeds from ZIG exit ≈ $69.9631 − $1.2074 = $68.7557. Against entry cost $72.4686, **net P&L ≈ −$3.7129 (−5.12%)**, consistent with the 3.5% trailing stop firing after a pullback from a post-entry peak plus fees — no thesis break, mechanical exit.
+
+**Stop verification (STEP 2):** No open Kraken positions or orders — flat since ZIG's stop fired. Alpaca `orders`: stop `a2b44cf9` reconfirmed `canceled` (dated 2026-05-22); Alpaca `positions: []`, portfolio value $2.54, zero crypto exposure — canceled stop correctly inert, no action needed.
+
+**Emergency exits (STEP 3):** N/A, no open positions. **Tighten winners (STEP 4):** N/A, no open positions.
+
+**Crash gate (STEP 5):** BTC live $77,721.10 vs today's open $77,841.80 → **−0.15%**. Nowhere near the −20%/24h crash gate. No action, no alert.
+
+**Outcome:** Fully flat book (Kraken and Alpaca), no unprotected positions, no crash event. No orders placed this pass — triage-only routine, no new entries per scope.
+
+### Step 7 — Notification
+
+No push sent — book is flat with no unprotected exposure, ZIG's stop-out was a routine mechanical exit already fully reconciled here, and crash gate is clear. Nothing here needs the user's attention right now.
