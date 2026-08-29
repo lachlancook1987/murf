@@ -10217,3 +10217,36 @@ Stop txid `OXAH3X-4ACBV-4IWFLT` fired (trailing stop, trail_percent 3.5%, stoppr
 ### Step 8 — Notification
 
 No push sent — NIL's stop-out was a small, routine mechanical exit with a modest gain (+1.93%, near T1) already fully reconciled here, book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-29 — Session-Open Execution (~21:01 UTC)
+
+**Pre-check:** Live Kraken state — `positions: {}`, `orders: {"open": {}}`, all balances dust/unchanged, ZUSD $69.2824 — matches the 20:05 UTC Pre-Session Research pass exactly, no fills since. Book fully flat, no open positions to protect or tighten. Alpaca `positions: []`, no open orders (44 historical orders, all `filled`/`canceled`, including the long-canceled BTC stop `a2b44cf9`) — zero exposure, no action needed.
+
+**Crash gate:** BTC live $78,126.60 vs today's open $77,841.80 → **+0.37%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,126.60 vs 5-day-ago daily close $78,966.10 (2026-08-24, confirmed via fresh daily OHLC pull) → **−1.06%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 19 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+7.79%) and ZEC/USD (XZECZUSD, +4.53%) are AU jurisdiction-restricted per TRADING-STRATEGY.md — skipped pre-emptively, not deep-dived. Deep-dived the 10 remaining with liquidity ≥$100k (SKR, DOS, CC, RIVER, MINA, UNI, PUMP, ICP, USELESS, VVV) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| SKR/USD | +4.76% | −2.00% | 0.44x | 902.3 min | Best raw 4h momentum of the batch, but 1h has already reversed negative (fading, not accelerating), volume fails badly (0.44x), and the high is very stale (902 min). Triple failure. |
+| CC/USD | +1.45% | −0.03% | 0.90x | 107.3 min | Fails 4h bar, 1h flat, volume under 2x, high stale. |
+| UNI/USD | +0.60% | +0.39% | 0.96x | 137.3 min | Fails 4h/1h momentum, volume under 2x. |
+| PUMP/USD | +0.77% | −0.21% | 0.61x | 137.3 min | Fails 4h/1h momentum, volume fails. |
+| MINA/USD | −0.69% | +0.17% | 1.34x | 1247.3 min | Negative 4h momentum, volume under 2x, very stale high. |
+| RIVER/USD | +0.60% | +1.26% | 0.19x | 452.3 min | Fails 4h bar, volume catastrophically thin, stale high. |
+| ICP/USD | −0.16% | −0.56% | 0.86x | 362.3 min | Negative momentum, volume fails, stale high. |
+| DOS/USD | −0.66% | −1.62% | 0.58x | 1127.3 min | Negative momentum both legs, volume fails, very stale high. |
+| VVV/USD | −0.13% | +0.56% | 0.54x | 287.3 min | Fails 4h bar, volume fails, stale high. |
+| USELESS/USD | −0.85% | −0.22% | 0.09x | 302.3 min | Negative momentum, volume near-zero, stale high. |
+
+**No candidate cleared all gates.** SKR/USD had the best raw 4h momentum reading (+4.76%) of the batch, but its 1h leg has already flipped negative (−2.00%, fading not accelerating), volume fails cleanly (0.44x vs 2x), and the 24h high is deeply stale (902 min, ~15h, past the 60-min freshness window with no fresh breakout candle above it) — a triple failure, not a hairline call. No other candidate cleared even one bar decisively. Sub-$100k-liquidity candidates from the initial screen (TRAC +9.63%/fresh high but $64k liquidity, PEAQ +5.37%/$56.7k, ACU +5.53%/$82.1k, KII +10.52%/$94k, PTB +5.64%/$89.8k, NANO +3.98%/$73.6k, BLUAI +3.47%/$58.4k) were not deep-dived, consistent with the established ≥$100k liquidity threshold for deep dives. No candidate reached the point of needing catalyst confirmation, so no per-candidate Perplexity queries were run.
+
+**Market context (Perplexity, brief):** Crypto Fear & Greed Index 73 (Greed) market-wide, BTC-specific F&G 59 (Neutral); Perplexity's BTC read (−2.69%/24h, $77,660.01) conflicts with live Kraken (+0.37%) — per the demoted-Perplexity methodology, live Kraken data is authoritative for the gates.
+
+**Same-thesis check:** No open or recently-stopped positions requiring a cooling-period check this pass — book has been flat since NIL's stop-out at 14:21 UTC (a gain, not a loss; same-thesis cap only triggers on 2 stop-out *losses* in 7 days).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.37%), weekly trend gate clear (−1.06%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — SKR had the strongest raw momentum reading but failed on fading 1h momentum, volume, and a deeply stale high simultaneously. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. Book fully flat, ZUSD $69.2824 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss, SKR, failed cleanly on three bars, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
