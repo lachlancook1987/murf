@@ -10042,3 +10042,19 @@ ZUSD post-trade: $1.2074.
 ### Step 7 — Notification
 
 No push sent — book is flat with no unprotected exposure, ZIG's stop-out was a routine mechanical exit already fully reconciled here, and crash gate is clear. Nothing here needs the user's attention right now.
+
+## 2026-08-29 — EOD Summary
+
+### Aug 29 — EOD Snapshot (Day 101, Saturday)
+
+**Portfolio:** $69.9631 | **Cash:** $69.9631 (100%) | **Day P&L:** −$3.7129 (−5.04%) | **Phase P&L:** −$109.8169 (−61.09%) | **vs BTC:** −2.22%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | flat, no position | — |
+
+**Trades today:** none — ZIG's 3.5% trailing stop from yesterday's midday trade fired overnight (before today's session), reconciled in the 03:02 UTC Overnight Triage; no new orders placed today (00:05 UTC Pre-Session Research fresh 638-pair sweep found no candidate clearing every gate → HOLD) | **Total since migration:** 148
+
+**Notes:** Kraken `account`/`positions`/`orders`: ZUSD $69.9631, `positions: {}`, `orders: {"open": {}}` — fully flat, dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. No trades placed today: pre-session research (00:05 UTC) ran a fresh full-universe sweep (638 pairs) and found no candidate clearing every gate — HNT/USD was the closest (4h momentum +21.85%) but failed cleanly on volume (1.40x vs 2x bar) and freshness (94.9 min vs 60 min), a genuine gate failure per the gate-protection default, not a gap to route around. Day P&L (−$3.7129, −5.04%) is entirely the mechanical tail of yesterday's ZIG/USD trade: its 3.5% trailing stop fired sometime overnight between the ZIG entry (Aug 28 midday) and the 03:02 UTC Overnight Triage, netting ≈−$3.7129 (−5.12% vs ZIG's own entry cost) — no thesis break, stop worked as designed. Yesterday's baseline used for Day P&L: $73.6760 (Aug 28 EOD Snapshot, the flat cash balance immediately before the ZIG entry). BTC: yesterday's live reference $79,779.40 (Aug 28 EOD) vs today's live $77,527.80 → **−2.82%**; bot day return −5.04% trails BTC by **−2.22 points** today. Phase P&L −$109.8169 (−61.09%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled`, zero exposure, no action needed. Total trades since migration 148 (146 as of the Aug 28 EOD label + ZIG buy + ZIG stop-out sell). Tomorrow: pre-session research resumes with $69.9631 cash, fully flat; crash gate threshold ≈$62,022.24 (BTC −20% from $77,527.80).
+
+No push sent — book is flat with no unprotected exposure, ZIG's stop-out was a routine mechanical exit already fully reconciled here, and crash gate is clear. Nothing here needs the user's attention right now.
