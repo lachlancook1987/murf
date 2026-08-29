@@ -10058,3 +10058,46 @@ No push sent — book is flat with no unprotected exposure, ZIG's stop-out was a
 **Notes:** Kraken `account`/`positions`/`orders`: ZUSD $69.9631, `positions: {}`, `orders: {"open": {}}` — fully flat, dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. No trades placed today: pre-session research (00:05 UTC) ran a fresh full-universe sweep (638 pairs) and found no candidate clearing every gate — HNT/USD was the closest (4h momentum +21.85%) but failed cleanly on volume (1.40x vs 2x bar) and freshness (94.9 min vs 60 min), a genuine gate failure per the gate-protection default, not a gap to route around. Day P&L (−$3.7129, −5.04%) is entirely the mechanical tail of yesterday's ZIG/USD trade: its 3.5% trailing stop fired sometime overnight between the ZIG entry (Aug 28 midday) and the 03:02 UTC Overnight Triage, netting ≈−$3.7129 (−5.12% vs ZIG's own entry cost) — no thesis break, stop worked as designed. Yesterday's baseline used for Day P&L: $73.6760 (Aug 28 EOD Snapshot, the flat cash balance immediately before the ZIG entry). BTC: yesterday's live reference $79,779.40 (Aug 28 EOD) vs today's live $77,527.80 → **−2.82%**; bot day return −5.04% trails BTC by **−2.22 points** today. Phase P&L −$109.8169 (−61.09%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled`, zero exposure, no action needed. Total trades since migration 148 (146 as of the Aug 28 EOD label + ZIG buy + ZIG stop-out sell). Tomorrow: pre-session research resumes with $69.9631 cash, fully flat; crash gate threshold ≈$62,022.24 (BTC −20% from $77,527.80).
 
 No push sent — book is flat with no unprotected exposure, ZIG's stop-out was a routine mechanical exit already fully reconciled here, and crash gate is clear. Nothing here needs the user's attention right now.
+
+## 2026-08-29 — Session-Open Execution (~09:01 UTC)
+
+**Note on prior "EOD Snapshot" heading above:** that entry was written right after the 03:02 UTC Overnight Triage, not at the end of the day (it's only 09:01 UTC now, mid-Saturday) — a mislabeling per the Process Integrity rule (TRADING-STRATEGY.md, added 2026-08-28). Not correcting the historical heading here, but flagging it so a future review doesn't treat it as a true EOD close. This pass is a normal session-open execution, not an EOD pass.
+
+**Pre-check:** Live Kraken state (`positions: {}`, `orders: {"open": {}}`, ZUSD $69.9631) matched the prior pass exactly — fully flat, no fills since ZIG's overnight stop. Alpaca `positions: []`, historical stop `a2b44cf9` reconfirmed `canceled` — zero exposure.
+
+**Crash gate:** BTC live $77,644.60 vs today's open $77,841.80 → **−0.25%**. Clear. **Weekly trend gate:** ~−1.87%/5d as of this morning's pre-session pass, not a >3% downtrend — clear, pure-momentum entries remain open.
+
+**Fresh discovery sweep** (00:05 UTC pre-session plan was 9h stale): direct Kraken public API (AssetPairs + Ticker, batched), 661 online USD pairs. 8 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 6 with liquidity ≥$100k (HNT, BTR, MINA, NIL, NANO, COTI) on 15m OHLC (closed candles only):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| HNT/USD | +25.21% | +3.00% | 2.68x | 18.4 min (confirmed closed candle) | Clears every bar cleanly. **Taken.** Note: same asset failed this morning's 00:05 UTC pass (1.40x volume, 94.9 min stale high) — momentum has since re-accelerated and volume/freshness now both clear; not the same setup. |
+| BTR/USD | −0.01% | −1.02% | 0.07x | 318.4 min | Ticker's vs-open (+5.37%) is stale/misleading — real OHLC momentum has fully reversed and faded. Fails every bar. |
+| MINA/USD | +0.76% | +0.55% | 0.51x | 528.4 min | Fails 4h momentum, volume, stale high. |
+| NIL/USD | +0.59% | −0.20% | 0.57x | 243.4 min | Fails 4h momentum, volume, stale high. |
+| NANO/USD | +2.63% | −0.92% | 0.89x | 903.4 min | Fails 4h momentum bar, volume, very stale high. |
+| COTI/USD | +1.68% | +3.17% | 3.69x | 1293.4 min | 1h momentum and volume clear, but 4h momentum fails (1.68% <5%) and high is very stale. |
+
+**HNT/USD deep-check:**
+- Spread: 0.19% (ask $0.3161/bid $0.3155) ≤1% ✓
+- `HNTUSD` online, spot only (no leverage), ordermin 30, costmin $0.5 ✓
+- Cross-exchange: CoinGecko direct API $0.318369 (+44.3% 24h) vs Kraken last $0.3188 → ~0.14% divergence, confirms a real move ✓
+- **Catalyst:** Perplexity found no verifiable HNT-specific catalyst in the last 6h (sources contradictory on price/direction, one explicitly noted "no verifiable coin-specific catalyst"). Classified **momentum-only** (1.5:1 R:R floor applies).
+- **Same-thesis cap check:** No prior HNT fills anywhere in TRADE-LOG (only appeared as a skipped candidate in research notes) — clear, no cap.
+- Fear & Greed: 49/100, Neutral (CFGI.io).
+
+**High-ATR sizing:** HNT's 24h range ($0.2080–$0.3275, ~57.5% range) is well above prior high-ATR entries (SKR, RUNE, TAO, ZIG ~25%), so the high-ATR exception applies: **3.5% trailing stop**, **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### 2026-08-29 | HNT/USD | BUY | 215.1100 HNT | Entry: $0.316128 (blended incl. fee) | Cost: $68.0025 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `O3GIQY-DCCVL-ZGQS7N` (buy, market, filled in full — post-trade HNT balance 215.110000, ZUSD $69.9631 → $1.9606, implying cost incl. fee $68.0025). Stop txid `OWXSCK-J43I4-D6UPAB` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.303600, limitprice $0.314600).
+
+**T1 = $0.335096 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.344580 (+9%)**.
+
+ZUSD post-trade: $1.9606.
+
+### Decision: **TRADE — HNT/USD.** Session-Open Execution pass. Book was fully flat at pre-check. Fresh sweep of the full Kraken USD universe (9h after the stale 00:05 UTC plan) found HNT as the only candidate clearing every gate cleanly — the same asset that failed this morning's pass on volume/freshness has since re-accelerated with real, confirmed-closed-candle momentum, decisive volume, and a fresh high. No prior HNT fills — same-thesis cap does not apply. Crash gate and weekly trend gate both clear.
+
+### Step 7 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
