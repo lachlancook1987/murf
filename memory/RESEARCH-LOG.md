@@ -34170,3 +34170,43 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ## 2026-08-29 — Session-Open Execution (~21:01 UTC)
 
 Full detail (pre-check, discovery sweep table, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat since NIL's 14:21 UTC stop-out (small gain, +1.93%), no fills since. Crash gate clear (BTC +0.37%), weekly trend gate clear (−1.06%/5d). Fresh 638-pair sweep found no candidate clearing every gate — SKR/USD had the best raw 4h momentum (+4.76%) but failed on fading 1h momentum, thin volume (0.44x), and a deeply stale high (902 min). DASH and ZEC skipped pre-emptively as AU-restricted. Decision: **HOLD**. ZUSD $69.2824 fully available, no open positions.
+
+## 2026-08-29 — Midday Scan (~22:03 UTC)
+
+**Pre-check:** Live Kraken state — `positions: {}`, `orders: {"open": {}}`, ZUSD $69.2824, all other balances dust/unchanged — matches the 21:01 UTC pass exactly, no fills since. Book fully flat, no open positions to protect or tighten. Alpaca `positions: []`, 44 historical orders all `filled`/`canceled` — zero exposure, no action needed.
+
+**Crash gate:** BTC live $78,158.00 vs today's open $77,841.80 → **+0.41%**. Clear. **Weekly trend gate:** live $78,158.00 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−1.02%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 23 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+6.70%) and ZEC/USD (XZECZUSD, +4.87%) are AU jurisdiction-restricted per TRADING-STRATEGY.md — skipped pre-emptively. Deep-dived the 13 remaining with liquidity ≥$100k (SKR, DOS, PUMP, CC, RIVER, UNI, USELESS, ICP, MINA, XPL, DGAI, VVV, STBL) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| PUMP/USD | +4.46% | +3.08% | 11.29x | 19.6 min | Clears 1h-surge, volume, and freshness bars cleanly; 4h just under the 5% bar. See deep-check below — rejected on R:R. |
+| SKR/USD | +3.42% | +0.69% | 0.39x | 964.6 min | Fails 4h bar, volume, very stale high. |
+| DGAI/USD | +1.03% | +0.31% | 0.56x | 169.6 min | Fails every bar. |
+| CC/USD | +1.76% | +0.05% | 0.91x | 169.6 min | Fails every bar. |
+| XPL/USD | +1.28% | +0.81% | 0.37x | 364.6 min | Fails every bar, stale high. |
+| USELESS/USD | +1.00% | +0.14% | 0.23x | 364.6 min | Fails every bar, stale high. |
+| RIVER/USD | +0.90% | −0.45% | 0.47x | 514.6 min | Fails every bar, negative 1h. |
+| VVV/USD | +0.82% | −0.05% | 0.14x | 349.6 min | Fails every bar, negative 1h. |
+| UNI/USD | +0.66% | −0.29% | 0.27x | 199.6 min | Fails every bar, negative 1h. |
+| STBL/USD | +0.23% | +0.41% | 0.08x | 229.6 min | Fails every bar. |
+| ICP/USD | −0.16% | +0.08% | 0.95x | 424.6 min | Fails every bar. |
+| MINA/USD | −0.74% | −0.63% | 1.21x | 1309.6 min | Fails every bar, negative, very stale. |
+| DOS/USD | −2.61% | −0.28% | 0.20x | 1189.6 min | Fails every bar, negative momentum. |
+
+**PUMP/USD deep-check (closest candidate, ultimately rejected):**
+- Spread: 0.06% (ask $0.005023/bid $0.005020) ≤1% ✓
+- Cross-exchange: CoinGecko direct API (pump-fun) $0.005017 (+11.46% 24h) vs Kraken last $0.005018 → ~0.02% divergence — clears the 15-20% gate cleanly. Notable because PUMP has previously hard-failed this exact gate at 62-66% divergence (earlier this cycle) — not a repeat of that failure mode this time.
+- Candle-by-candle check (last 10 closed 15m candles): steady rising closes (0.004838→0.004898→0.004899→0.004943→0.004987) with a 336M-volume breakout candle (vs ~1-8M on prior candles, a ~40-100x spike) setting the 24h high $0.005124. This is accelerating momentum on a confirmed closed candle, not the "spike-and-retreat" pattern PUMP has been rejected for repeatedly in past sessions (e.g. 45-min-old high with declining closes).
+- **Catalyst (Perplexity):** Revenue-funded buyback-and-burn program (~$961k/310M PUMP bought back in 24h, $12M+ this week) plus a bullish technical golden-cross breakout and HyperEVM ecosystem expansion. Real and active, but it's an ongoing structural mechanism cited in 24h/weekly terms, not a single freshly-dated event — **classified momentum-only** (no confirmed <6h discrete catalyst), consistent with how VIRTUAL's ongoing-narrative catalyst was treated (2026-08-24/25 precedent). Momentum-only R:R floor = 1.5:1.
+- **ATR/stop bucket:** 24h range 13.8% ($0.004502–$0.005124) and max single 15m candle range 3.7% — both below every precedent threshold used for the high-ATR exception (VIRTUAL 15.6% range was the lowest qualifying precedent; COTI's 10.5% candle range was the benchmark for a high-ATR rejection on the other side). PUMP stays in the **standard 2.5% trail / T1 +3% / T2 +5%** bucket.
+- **R:R:** Standard bucket gives T1(3%)/stop(2.5%) = **1.2:1**, which fails the 1.5:1 momentum-only floor. High-ATR bucket (6%/3.5% = 1.71:1) would clear it, but PUMP doesn't qualify for that bucket on this pass's numbers. **Rejected on R:R gate.**
+
+**Same-thesis check:** No open or recently-stopped positions requiring a cooling-period check (last stop-out, NIL, was a gain — cap only triggers on 2 loss stop-outs in 7 days).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.41%), weekly trend gate clear (−1.02%/5d). Fresh full-universe sweep (638 pairs) found one candidate (PUMP/USD) clearing momentum, volume, freshness, spread, and cross-exchange divergence cleanly — the best mechanical setup seen in several passes — but it fails the R:R gate: its catalyst is an ongoing buyback narrative rather than a discrete <6h event (momentum-only classification, 1.5:1 floor), and its volatility profile doesn't clear the high-ATR bucket threshold that would otherwise satisfy that floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around — no ad hoc T1 widening was applied to manufacture a pass. Book fully flat, ZUSD $69.2824 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the closest candidate (PUMP) was rejected on a real, principled gate (R:R), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
