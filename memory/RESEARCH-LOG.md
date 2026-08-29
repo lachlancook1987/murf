@@ -34129,3 +34129,40 @@ Full detail (stop-out reconciliation, discovery sweep table, decision) logged in
 ## 2026-08-29 — Session-Open Execution (~15:02 UTC)
 
 Full detail (NIL stop-out reconciliation, discovery sweep table, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: NIL/USD's 14:05 UTC entry stopped out mechanically near T1 (3.5% trail, **+1.93% gain**, no thesis break) — price ran within ~0.3% of T1 ($0.064089) before reversing on the original untightened trail, the known T1-tightening gap (TRADING-STRATEGY.md 2026-08-21). Crash gate clear (BTC +0.15%), weekly trend gate clear (−1.27%/5d). Fresh 638-pair sweep found no candidate clearing every gate — VELVET was the only pair to clear 4h momentum (+6.99%) but its 1h leg had already turned negative and it failed both volume and freshness; DASH and ZEC skipped pre-emptively as AU-restricted. Decision: **HOLD**. ZUSD $69.2824 fully available, no open positions.
+
+## 2026-08-29 — Pre-Session Research (~20:05 UTC)
+
+**Pre-check:** Live Kraken state — `positions: {}`, `orders: {"open": {}}`, ZUSD $69.2824, all other balances dust/unchanged — matches the 15:02 UTC Session-Open Execution pass exactly, no fills since. Fully flat, no open positions to protect or tighten. Alpaca `positions: []`, no open orders (historical BTC stop `a2b44cf9` long-canceled) — zero exposure, no action needed.
+
+**Crash gate:** BTC live $78,246.60 vs today's open $77,841.80 → **+0.52%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,246.60 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−0.91%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open. Note: Perplexity's BTC read (−3.2% to −3.6%, CoinGecko-sourced) conflicts with live Kraken (+0.52%) — per the demoted-Perplexity methodology, live Kraken data is authoritative for the gates; Perplexity used for context only.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 23 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+7.37%) and ZEC/USD (XZECZUSD, +4.28%) are AU jurisdiction-restricted per TRADING-STRATEGY.md — skipped pre-emptively, not deep-dived. Deep-dived the 14 remaining with liquidity ≥$100k (SKR, DOS, CC, PEPECOIN, PUMP, ICP, UNI, USELESS, MINA, DOG, XAN, DGAI, MANTRA, STBL) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| DOG/USD | +12.29% | +3.90% | 0.85x | 94.2 min | Strongest momentum of the batch, 1h still positive — but volume fails (0.85x <2x) and the high is stale (94.2 min, past the 60-min freshness window). Verified on raw candles: 24h high $0.001290 set at 18:30 UTC; current price $0.001252 remains below it — no fresh breakout candle. Double miss, not a hairline call. |
+| SKR/USD | +6.93% | +3.30% | 0.71x | 844.2 min | Clears both momentum bars but volume fails badly and the high is very stale (14h). |
+| PEPECOIN/USD | +6.24% | +0.30% | 0.15x | 634.2 min | 4h clears but 1h nearly flat (fading), volume catastrophically thin, very stale high. |
+| UNI/USD | +3.56% | −0.45% | 1.26x | 79.2 min | Fails 4h bar, 1h already negative (fading), volume under 2x. |
+| XAN/USD | +4.32% | −0.85% | 0.61x | 94.2 min | Fails 4h bar, 1h negative, volume fails. |
+| DOS/USD | +4.89% | +0.14% | 0.16x | 1069.2 min | Just under the 4h bar, 1h flat, volume catastrophically thin, very stale high. |
+| CC/USD | +2.12% | +0.62% | 1.40x | 49.2 min | Fresh high but fails 4h momentum and volume. |
+| PUMP/USD | +1.17% | −0.12% | 1.70x | 79.2 min | Fails 4h/1h momentum, volume under 2x. |
+| DGAI/USD | +2.04% | −0.04% | 0.76x | 49.2 min | Fails 4h/1h momentum and volume. |
+| STBL/USD | +1.57% | −1.01% | 0.45x | 109.2 min | Fails every bar, 1h negative. |
+| USELESS/USD | +0.75% | +0.48% | 0.09x | 244.2 min | Fails every bar, volume near-zero. |
+| ICP/USD | −0.83% | −0.28% | 0.49x | 304.2 min | Negative momentum, fails volume, stale high. |
+| MINA/USD | −1.24% | −0.16% | 0.81x | 1189.2 min | Negative momentum, fails volume, very stale high. |
+| MANTRA/USD | −2.61% | −0.11% | 0.42x | 274.2 min | Negative momentum, fails volume, stale high. |
+
+**No candidate cleared all gates.** DOG/USD was the standout on raw momentum (+12.29%/4h, 1h still accelerating) but the volume ratio failed cleanly (0.85x vs 2x) and the 24h high was confirmed stale by direct candle inspection — price ($0.001252) remains below the $0.001290 high set 94 minutes earlier, no fresh breakout. SKR and PEPECOIN cleared 4h momentum individually but both failed volume badly. No candidate reached the point of needing catalyst confirmation, so no per-candidate Perplexity queries were run. No open positions, so no per-position queries needed.
+
+**Market context (Perplexity):** ETH ~$2,434, roughly −2.6% to −3.1% 24h across sources (live Kraken read not separately pulled this pass; BTC gate uses live Kraken as shown above). Fear & Greed split (68 Greed one source, 50 Neutral another) — mixed, leaning Greed. BTC perpetual funding mixed but net positive (~+0.007–0.010%/8h on major venues; Kraken's own perp page again showed an uncorroborated outlier, 0.49%/hr, treated as a display quirk, not signal, consistent with prior passes). Catalysts: risk-off pullback following Fed Chair Kevin Warsh's hawkish Jackson Hole remarks, a snapped BTC ETF inflow streak, ~$6.4B BTC options expiry, HYPE's ~14.18M-token unlock (29 Aug), Solana's "Double Disinflation" issuance-cut proposal passing, ongoing CLARITY Act attention. Token unlocks today (INFRA, XWGT, TREE, GRVT) — none tied to any of today's 14 deep-dived candidates.
+
+**Same-thesis check:** No open or recently-stopped positions requiring a cooling-period check this pass (last stop-out, NIL, was a gain — same-thesis cap only triggers on 2 *losses* in 7 days).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.52%), weekly trend gate clear (−0.91%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — DOG had the strongest momentum reading of the day but failed volume and freshness cleanly (verified against raw candles, not a hairline call). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. Book fully flat, ZUSD $69.2824 fully available, no open positions to manage.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss, DOG, failed cleanly on two bars, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
