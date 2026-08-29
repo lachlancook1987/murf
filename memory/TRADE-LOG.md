@@ -10136,3 +10136,47 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 ### Step 7 — Notification
 
 No push sent — HNT's stop-out was a small, routine mechanical exit (−2.89%, well inside expected stop-loss variance) already fully reconciled here, book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-29 — Midday Scan (~15:06 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $67.9984 — fully flat, matched the 12:01 UTC pass exactly (no fills since HNT's stop-out). Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure.
+
+**Crash gate:** BTC live $77,716.70 vs today's open $77,841.80 → **−0.16%**. Clear. **Weekly trend gate:** live $77,716.70 vs 5-day-ago daily close $78,966.10 (2026-08-24) → **−1.58%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Fresh discovery sweep:** direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 13 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+5.88%, liquidity $831.6k) was AU jurisdiction-restricted per TRADING-STRATEGY.md — skipped pre-emptively, not deep-dived. Deep-dived the 9 remaining with liquidity ≥$100k on 15m OHLC (closed candles only):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| NIL/USD | +18.79% | +12.21% | 9.17x | 4.7 min (confirmed closed candle) | Clears every bar cleanly. **Taken.** |
+| VELVET/USD | +11.33% | +3.32% | 1.10x | 19.7 min | Fresh but volume fails (1.10x <2x). |
+| RIVER/USD | +2.47% | −0.70% | 2.09x | 19.7 min | Volume clears but 4h under bar and 1h negative. |
+| KNTQ/USD | +1.51% | +0.17% | 2.50x | 1384.7 min | Volume clears but momentum fails badly, very stale high. |
+| USELESS/USD | +4.07% | −0.13% | 0.07x | 1354.7 min | Fails volume, very stale high. |
+| BMT/USD | +2.38% | +2.29% | 0.60x | 1264.7 min | Fails 4h, volume, stale high. |
+| PTB/USD | +2.45% | +0.25% | 0.13x | 1399.7 min | Fails every bar. |
+| MINA/USD | +0.85% | −0.23% | 0.02x | 814.7 min | Fails every bar. |
+| NANO/USD | −1.69% | +0.08% | 0.14x | 1189.7 min | Fails every bar, negative 4h. |
+
+**NIL/USD deep-check:**
+- Spread: 0.17% (ask $0.0600/bid $0.0599) ≤1% ✓
+- `NILUSD` online, spot only (no leverage), ordermin 150, costmin $0.5 ✓
+- Cross-exchange: CoinGecko direct API (Nillion) $0.059735 (+32.4% 24h) vs Kraken last $0.0599 → ~0.28% divergence, confirms a real move ✓
+- **Catalyst:** Perplexity confirmed a live catalyst — Chainlink CCIP integration enabling NIL transfers between Ethereum and HyperEVM plus Hyperliquid access, cited as driving a ~22% jump "today," with a Upbit (South Korea) listing and a token buyback program cited as additional support. Magnitude and timing line up closely with the observed 4h/1h move. Classified **catalyst-confirmed** (standard 1.2:1 R:R floor applies).
+- **Same-thesis cap check:** No prior NIL fills anywhere in TRADE-LOG (only appeared as a skipped/runner-up candidate in research notes, e.g. Aug 28 BICO pass) — clear, no cap.
+- Fear & Greed: mixed across sources (73 Greed Alternative.me-style, 76 Extreme Greed CoinStats, 68 Greed Bitget) — Greed regime, no Extreme Fear condition.
+
+**High-ATR sizing:** NIL's 24h range ($0.04430–$0.06010, ~35.7% range) is above the standard threshold (prior high-ATR entries ~25%+), so the high-ATR exception applies: **3.5% trailing stop**, **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.2:1 catalyst-confirmed floor comfortably.
+
+### 2026-08-29 | NIL/USD | BUY | 1100.00000 NIL | Entry: $0.060461 (blended incl. fee) | Cost: $66.5067 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `O5GVVG-OBYM5-XTK67D` (buy, market, filled in full — post-trade NIL balance 1100.00000, ZUSD $67.9984 → $1.4917, implying cost incl. fee $66.5067). Stop txid `OXAH3X-4ACBV-4IWFLT` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.058100, limitprice $0.060200).
+
+**T1 = $0.064089 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.065902 (+9%)**.
+
+ZUSD post-trade: $1.4917.
+
+### Decision: **TRADE — NIL/USD.** Midday Scan pass. Book was fully flat at pre-check. Fresh sweep of the full Kraken USD universe found NIL as the only candidate clearing every gate cleanly — strong 4h/1h momentum, decisive volume, a fresh confirmed-closed-candle high, tight spread, cross-exchange confirmation, and a live Chainlink CCIP/Upbit-listing catalyst. No prior NIL fills — same-thesis cap does not apply. Crash gate and weekly trend gate both clear. DASH excluded pre-emptively as AU-restricted despite clearing the initial screen.
+
+### Step 7 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
