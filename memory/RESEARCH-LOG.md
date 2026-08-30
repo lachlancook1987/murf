@@ -34229,3 +34229,11 @@ No push sent — book is flat with no unprotected exposure, crash gate clear, an
 ### Step 6 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-30 — Midday Scan (~14:05 UTC)
+
+Full detail (stop-out reconciliation, discovery sweep table, XMR deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: UAI/USD's 3.5% trail stopped out mechanically for a small gain (+2.16%) sometime before this pass's pre-check — price had run through both T1 and T2 on the high-water mark before reversing on the original untightened trail (known aspirational-tightening gap). Crash gate clear (BTC +0.89%), weekly trend gate clear (+0.53%/5d). Fresh 638-pair sweep found one candidate (XMR/USD) clearing every technical bar (4h/1h momentum, volume, freshness, spread) but it was rejected on R:R — momentum-only catalyst (no confirmed <6h event) requires 1.5:1, and XMR's 10.21% 24h range doesn't qualify for the high-ATR bucket that would clear it. Decision: **HOLD**. ZUSD $70.7704 fully available, no open positions.
+
+### Step 6 — Notification
+
+Trade closed (UAI stop-out, small gain) — surfaced via session push mechanism per CLAUDE.md; no new entry taken this pass (XMR rejected on R:R gate, not a manufactured excuse to force a trade).

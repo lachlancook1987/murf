@@ -10346,3 +10346,50 @@ No push sent — today's trade (UAI buy) was already notified at entry time via 
 ### Step 7 — Notification
 
 No push sent — live state matches records exactly (aside from the stop trailing up favorably), no unprotected exposure, no new development since the last pass. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-30 — Midday Scan (~14:05 UTC)
+
+**Pre-check:** Live Kraken state vs the ~12:02 UTC pass — `account`: UAI balance now 0.00000 (was 200.50000), ZUSD $70.7704 (was $0.4170). `orders: {"open": {}}` — the O7QP4M trailing stop is no longer open. Pulled `closedorders` to reconcile: the trailing stop fired and filled between passes.
+
+### 2026-08-30 | UAI/USD | SELL (stop-out) | 200.50000 UAI | Entry: $0.343468 | Exit: $0.35300 (trailing stop, filled) | P&L: +$1.48784 (+2.16%) | Closed
+
+Stop order txid `O7QP4M-GBRRD-FPFS4Y` (trailing_stop, trail_percent 3.5%) triggered and filled: `stopprice: $0.362330`, `limitprice: $0.376160`, fill `price: $0.35300`, `cost: $70.77795`, `fee: $0.42467`, net proceeds $70.35328. Buy leg (for reference): fill `price: $0.34142`, `cost: $68.45471`, `fee: $0.41073`, total cost $68.86544. Net P&L = $70.35328 − $68.86544 = **+$1.48784 (+2.16%)**.
+
+24h high at time of this check was $0.376160 — above both T1 ($0.364076, +6%) and T2 ($0.37438, +9%) — confirming price ran through both targets before reversing on the original untightened 3.5% trail (the known aspirational-tightening gap, TRADING-STRATEGY.md 2026-08-21). A small win, not the full T1/T2 capture the trail's high-water mark implies was available. No thesis break — mechanical trail exit on a reversal from a fresh high, consistent with prior UAI/momentum-only trade behavior.
+
+Post-exit ZUSD: $70.7704. Book fully flat. Alpaca `positions: []`, zero exposure, no action needed.
+
+**Discovery sweep (STEP 6):** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 32 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — notably HNT/USD +70.31% (extreme move) and UAI/USD itself still +27.86% off today's open (the asset just exited, now fading — see below). Deep-dived the 23 with liquidity ≥$100k (HNT, UAI, AUCTION, AIO, DOS, UNI, ESPORTS, XXMR, VELO, SPX, SUSHI, PLUME, PENDLE, STRK, MINA, PLAY, TRUST, INJ, SKY, FET, KAS, MON, MANA) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| HNT/USD | +17.03% | +4.94% | 0.96x | 19.9 min | Fresh high, momentum clears both bars, but volume fails (0.96x <2x) — same failure mode as this asset's prior sessions. |
+| VELO/USD | +9.85% | +6.07% | 1.16x | 469.9 min | Momentum clears, but volume fails and high is very stale (7.8h). |
+| UNI/USD | +8.60% | −0.17% | 4.17x | 64.9 min | 1h already negative (fading), high just past the 60-min freshness window. |
+| UAI/USD | +7.68% | −2.07% | 1.18x | 79.9 min | The asset just exited — now clearly fading (1h negative), volume fails, stale high. Confirms exit was correctly timed, no re-entry case. |
+| DOS/USD | +7.25% | +0.65% | 1.89x | 34.9 min | Fresh high but 1h momentum weak (not >3%) and volume just under 2x. |
+| **XMR/USD** | **+5.24%** | **+4.39%** | **5.22x** | **19.9 min** | **Clears every technical bar cleanly.** See deep-check below — rejected on R:R. |
+| PENDLE/USD | +4.96% | +1.25% | 14.90x | 64.9 min | Huge volume but just under the 5% 4h bar and 1h weak, high stale. |
+| SPX/USD | +4.58% | −0.28% | 0.95x | 79.9 min | 1h negative, volume fails, stale high. |
+| (16 others) | — | — | — | — | All fail multiple bars — momentum, volume, or freshness. Full list: ESPORTS, MON, PLUME, KAS, SUSHI, INJ, PLAY, SKY, AIO, MANA, MINA, STRK, AUCTION, FET, TRUST — none cleared more than one or two bars. |
+
+**XMR/USD deep-check (only candidate clearing all technical bars):**
+- Spread: 0.002% (ask $507.71/bid $507.70) ≤1% ✓
+- `XXMRZUSD` online, spot + margin (leverage 2-5x available), ordermin 0.015, costmin $0.5 ✓
+- 4h momentum +5.24% (just over bar) ✓, 1h +4.39% >3%, accelerating not fading ✓
+- Volume ratio 5.22x >2x ✓
+- 24h high freshness 19.9 min, confirmed fresh ✓
+- **Cross-exchange check (Perplexity):** Kraken last $507.71 vs Bybit ~$477.42 (+6.35% premium), CoinGecko ~$466.65 (+8.80% premium), Investing.com ~$474.07 (+7.10% premium). Kraken trading at a consistent 6-9% premium to every reference — elevated but under the 15-20% hard-reject divergence gate, so not disqualifying, but flagged as a real premium (not the near-zero divergence UAI/PUMP showed on their clean passes) — thin order book risk noted.
+- **Catalyst (Perplexity):** Privacy-coin narrative rotation, THORChain native XMR swap support, and technical breakout momentum — explicitly **not** a fresh Monero-specific protocol/listing/regulatory event per multiple sources. Classified **momentum-only** (1.5:1 R:R floor applies, not 1.2:1).
+- **ATR/stop bucket:** 24h range 10.21% ($461.54–$508.68) — below the high-ATR bucket's lowest qualifying precedent (VIRTUAL 15.6%). Does not qualify for the 3.5% trail bucket. Stays in the **standard 2.5% trail / T1 +3% / T2 +5%** bucket.
+- **R:R:** Standard bucket gives T1(3%)/stop(2.5%) = **1.2:1**, fails the 1.5:1 momentum-only floor. High-ATR bucket would clear it (6%/3.5%=1.71:1) but XMR's volatility profile doesn't qualify for that bucket. **Rejected on R:R gate** — same failure pattern as PUMP (2026-08-29 22:03 UTC pass).
+
+**BTC:** live $78,923.10 vs today's open $78,227.80 → **+0.89%**. Crash gate clear. **Weekly trend gate:** live $78,923.10 vs 5-day-ago close $78,509.40 (2026-08-25) → **+0.53%/5d**, not a downtrend. Clear, pure-momentum entries remain open.
+
+**Same-thesis check:** UAI's exit was a gain (+2.16%), not a loss — the same-thesis cooling-period cap (2 loss stop-outs in 7 days) does not apply. No re-entry case built anyway since UAI is now failing on fresh momentum (1h −2.07%).
+
+### Decision: **HOLD.** UAI/USD stopped out mechanically for a small gain (+2.16%), no thesis break. Crash gate clear (BTC +0.89%), weekly trend gate clear (+0.53%/5d). Fresh full-universe sweep (638 pairs) found one candidate (XMR/USD) clearing every technical gate cleanly, but it fails R:R: momentum-only catalyst classification (no confirmed <6h event) requires 1.5:1, and XMR's volatility profile (10.21% 24h range) doesn't qualify for the high-ATR bucket that would otherwise clear that floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around — no ad hoc R:R loosening applied. Book fully flat, ZUSD $70.7704 fully available, no open positions.
+
+### Step 7 — Notification
+
+Trade closed (UAI stop-out, small gain) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21), since a position closing is a real state change worth flagging even though it was a routine mechanical exit, not a loss or operational failure.
