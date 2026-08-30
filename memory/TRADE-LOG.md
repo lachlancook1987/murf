@@ -10330,3 +10330,19 @@ Trade placed — push notification sent via session mechanism per CLAUDE.md (Cal
 No push sent — live state matches records exactly, existing stop is intact and untouched, no unprotected exposure, and the capital constraint is expected (book fully deployed by design after this morning's UAI entry). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
 
 No push sent — today's trade (UAI buy) was already notified at entry time via the session's push mechanism per CLAUDE.md; this EOD close is a routine recap with the position still open, protected by its trailing stop, and only a small, expected retrace from entry (−1.08%), not a new development requiring the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-30 — Session-Open Execution (~12:02 UTC, no trade)
+
+**Pre-check:** Live Kraken state confirmed against the ~09:01 UTC pass above — `account`: ZUSD $0.4170 (unchanged), UAI 200.50000 (unchanged); `positions: {}` (spot, expected); `orders: {"open": {"O7QP4M-GBRRD-FPFS4Y": trailing-stop sell 200.50000 UAIUSD, trail 3.5%, stopprice $0.335760, limitprice $0.347930, status open}}` — stop has trailed up from $0.332130 to $0.335760 as UAI ticked toward a new local high ($0.347930), working exactly as designed. No drift, no untracked fills. Alpaca `positions: []`, `orders`: all 44 historical orders are `filled`/`canceled`, none open — confirmed fully flat, no action needed.
+
+**BTC:** live $78,221.80 vs today's session open $78,227.80 → **−0.01%**, essentially flat. Crash gate (>−20%/24h) not remotely close.
+
+**UAI/USD position check:** live last $0.343710 vs entry $0.343468 → +0.07%, inside the 3.5% trailing stop (stop $0.335760, ~2.3% below live). Not at T1 (+6% = $0.364076), so the tighten-to-0.5%-at-T1 rule does not apply yet.
+
+**Capital check:** ZUSD $0.4170 available — unchanged from the prior pass, still below every Kraken order costmin on the tradeable universe. No new entry is possible on capital grounds; no discovery sweep run for the same reason as the ~09:01 UTC pass.
+
+### Decision: **HOLD (capital-constrained).** No change from the ~09:01 UTC pass three hours prior — crash gate clear, UAI position intact and correctly protected by its trailing stop (now trailed up, not down), and available cash remains below the minimum order cost across the universe. Book fully deployed as designed.
+
+### Step 7 — Notification
+
+No push sent — live state matches records exactly (aside from the stop trailing up favorably), no unprotected exposure, no new development since the last pass. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
