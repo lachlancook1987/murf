@@ -10425,3 +10425,49 @@ Trade closed (UAI stop-out, small gain) — surfaced via the session's own push 
 **Same-thesis check:** No open or recently-stopped-at-a-loss positions — UAI's 14:05 UTC exit was a gain (+2.16%), so the 2-loss-in-7-days cooling cap does not apply, and UAI is failing on fresh momentum/volume anyway (no re-entry case built).
 
 ### Decision: **HOLD.** Crash gate clear (BTC +0.65%), weekly trend gate clear (+0.29%/5d). Fresh full-universe sweep (661 pairs) found one candidate (HNT/USD) clearing momentum, volume, and freshness cleanly — the strongest technical setup of the day — but it fails the spread gate outright (1.447% vs ≤1% cap) on a genuinely extreme (~+92%–118%) single-day move. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. Book fully flat, ZUSD $70.7704 fully available, no open positions.
+
+## 2026-08-30 — Session-Open Execution (~21:04 UTC)
+
+**Pre-check:** Live Kraken state vs the 20:03 UTC Pre-Session Research pass — `account`: ZUSD $70.7704 (unchanged), all other balances dust/zero; `positions: {}`; `orders: {"open": {}}`. Exact match, no drift, no untracked fills. Alpaca `positions: []`, zero exposure, no action needed.
+
+**BTC:** live $78,324.70 vs today's session open $78,227.80 → **+0.12%**. Crash gate (>−20%/24h) not remotely close.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 15 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 10 with liquidity ≥$100k (UAI, ZORA, UNI, MNT, CAKE, LIGHTER, BLESS, PLUME, PENDLE, MON) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| **ZORA/USD** | **+15.44%** | **+10.93%** | **7.06x** | **2.9 min** | **Clears every technical bar decisively.** See deep-check below — traded. |
+| UAI/USD | −1.10% | +2.71% | 0.20x | 302.9 min | Volume fails badly and high very stale — no re-entry case (this asset's most recent exit, 14:05 UTC, was a gain so cooling cap doesn't apply anyway, but momentum doesn't support re-entry regardless). |
+| MNT/USD | +3.95% | −0.98% | 1.52x | 152.9 min | 4h just clears but 1h negative (fading), volume under 2x, stale high. |
+| LIGHTER/USD | +2.46% | −2.25% | 1.40x | 62.9 min | 1h negative (fading since the 20:03 UTC near-miss pass), volume fails. |
+| BLESS/USD | +0.46% | −1.08% | 2.09x | 152.9 min | Volume clears but momentum fails both bars, 1h negative, stale high. |
+| UNI/USD | −1.80% | −1.03% | 0.70x | 182.9 min | Fails every bar. |
+| CAKE/USD | −2.80% | −1.07% | 0.97x | 242.9 min | Fails every bar. |
+| PLUME/USD | −0.93% | +1.50% | 0.80x | 347.9 min | Fails every bar. |
+| PENDLE/USD | −0.56% | −0.45% | 1.00x | 137.9 min | Fails every bar. |
+| MON/USD | +0.25% | −0.78% | 0.38x | 107.9 min | Fails every bar. |
+
+**ZORA/USD deep-check (only candidate clearing every technical bar):**
+- Momentum: 4h +15.44% (>5% bar, decisively), 1h +10.93% (>3% bar), accelerating not fading ✓
+- Volume: 7.06x trailing-24h hourly average (>2x bar) ✓
+- Freshness: 24h high ($0.0081310, later ticking to $0.00819 on the live quote) confirmed set by a **fully closed** 15m candle (2.9 min old), not a still-forming one ✓. Raw candle inspection (19:15–21:00 UTC) shows a steady, accelerating grind from $0.006949 to a $0.008131 breakout high on a volume spike (2.33M vs ~700-800k in prior candles) — the forming candle held above the breakout level ($0.008000 close vs prior $0.007655 high), confirming continuation, not a spike-and-fade.
+- Spread: ask $0.0081170 / bid $0.0081040 → **0.16%**, well under the ≤1% cap ✓
+- `ZORAUSD` online, spot only (no margin/leverage on this pair), ordermin 900, costmin $0.5 ✓
+- **Cross-exchange divergence:** Perplexity gave inconsistent/unreliable readings for this ticker (a "$0.006888 CoinGecko aggregate" figure and a separate, clearly wrong "$0.106 Binance/Bybit" figure — off by >10x, evidently confused with a different pair or stale cache, consistent with CLAUDE.md's note on Perplexity's chronic data-quality issues for exact price lookups). Cross-checked directly against **CoinGecko's public API** instead: `zora` = $0.00801144 vs Kraken live $0.008117 → **~1.3% divergence**, clean and well inside the 15-20% hard-reject gate. Direct-API check treated as authoritative over the noisy Perplexity readings.
+- **Catalyst (Perplexity):** No confirmed ZORA-specific news catalyst — CoinMarketCap attributes the move to a 205% 24h volume jump (spot accumulation), with the 2026-08-26 Coinbase ZORA-PERP delisting flagged as a possible secondary liquidity factor, not a direct trigger. Classified **momentum-only** (1.5:1 R:R floor applies, not 1.2:1).
+- **ATR/stop bucket:** 24h range 35.16% ($0.0060160–$0.0081900) — far above every prior high-ATR qualifying precedent (VIRTUAL 15.6%, UAI 20.1%). Qualifies decisively for the **high-ATR bucket: 3.5% trail, T1 = +6%, T2 = +9%**. R:R at T1 = 6%/3.5% ≈ **1.71:1**, clears the 1.5:1 momentum-only floor.
+- **Same-thesis check:** No prior ZORA/USD stop-outs on record — cap does not apply.
+
+### 2026-08-30 | ZORA/USD | BUY | 8500.00000 ZORA | Entry: $0.00829500 (blended incl. fee) | Cost: $70.5075 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OCLRYL-CHD36-LGSGZM` (buy, market, filled in full — post-trade ZORA balance 8500.00000, ZUSD $70.7704 → $0.2629, implying cost incl. fee $70.5075). Stop txid `OWTL5Y-JV4MX-ICZDDZ` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.0078820, limitprice $0.0081670).
+
+**T1 = $0.00879270 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.00904155 (+9%)**.
+
+ZUSD post-trade: $0.2629.
+
+### Decision: **TRADE — ZORA/USD.** Session-Open Execution pass. Book was fully flat at pre-check, exact match to the 20:03 UTC research pass. Fresh sweep of the full Kraken USD universe found ZORA as the only candidate clearing every gate cleanly — decisive 4h/1h momentum, strong volume confirmation (7.06x), a fresh confirmed-closed-candle high verified against raw candle shape (steady accelerating grind, not a spike), tight spread, and a clean cross-exchange divergence check (1.3%) via CoinGecko's direct API after Perplexity's own readings proved unreliable for this ticker. No catalyst <6h old, so classified momentum-only and sized to the high-ATR bucket (3.5% trail, T1+6%/T2+9%) to clear the 1.5:1 R:R floor. Crash gate and weekly trend gate both clear. No prior ZORA stop-outs — same-thesis cap does not apply. Sized to full available capital ($70.5075 of $70.7704, ~99.6%) per the no-cap sizing rule, consistent with prior trade precedent.
+
+### Step 7 — Notification
+
+Trade placed (ZORA/USD buy, $70.51, 3.5% trailing stop confirmed) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21), since a new trade with capital deployed is a real state change worth flagging.
