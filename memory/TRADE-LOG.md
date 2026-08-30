@@ -10393,3 +10393,35 @@ Post-exit ZUSD: $70.7704. Book fully flat. Alpaca `positions: []`, zero exposure
 ### Step 7 — Notification
 
 Trade closed (UAI stop-out, small gain) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21), since a position closing is a real state change worth flagging even though it was a routine mechanical exit, not a loss or operational failure.
+
+## 2026-08-30 — Session-Open Execution (~15:03 UTC, no trade)
+
+**Pre-check:** Live Kraken state — `account`: ZUSD $70.7704, all other balances dust/zero (UAI 0.00000, confirming the 14:05 UTC stop-out settled cleanly); `positions: {}`; `orders: {"open": {}}`. Exact match to the 14:05 UTC Midday Scan post-exit state — no drift, no untracked fills. Alpaca `positions: []`, historical orders all `filled`/`canceled` — zero exposure, no action needed.
+
+**BTC:** live $78,734.20 vs today's session open $78,227.80 → **+0.65%**. Crash gate (>−20%/24h) not remotely close. **Weekly trend gate:** live $78,734.20 vs 5-day-ago daily close $78,509.40 (2026-08-25, verified via Kraken daily OHLC) → **+0.29%/5d**, not a >3% downtrend. Both gates clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 661 online USD pairs. 32 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 22 with liquidity ≥$100k (HNT, SKR, UAI, AUCTION, ZK, AIO, XXMR, DOS, UNI, ESPORTS, PLUME, DGAI, STRK, SUSHI, CRO, MON, PENDLE, SPX, TRUST, FET, SKY, PLAY) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| **HNT/USD** | **+27.88%** | **+3.58%** | **3.41x** | **2.7 min** | **Clears every technical bar cleanly** — see deep-check below, rejected on spread. |
+| XXMR/USD | +9.78% | +1.82% | 5.53x | 2.7 min | 4h clears (>5%) and volume/freshness clear, but 1h momentum (+1.82%) fails the >3% bar — same asset rejected on R:R at 14:05 UTC, this pass fails on momentum instead. |
+| CRO/USD | +4.92% | +0.45% | 6.20x | 47.7 min | Volume and freshness clear but 4h just under 5% bar, 1h negligible. |
+| PLUME/USD | +3.17% | +1.42% | 5.91x | 2.7 min | Strong volume and fresh high but both momentum bars fail. |
+| MON/USD | +4.32% | −0.50% | 1.93x | 47.7 min | 4h just under bar, 1h negative (fading), volume just under 2x. |
+| AUCTION/USD | +2.79% | +0.92% | 2.66x | 197.7 min | Volume clears but both momentum bars fail and high is stale. |
+| SKY/USD | +1.55% | −0.13% | 2.30x | 17.7 min | Fresh high and volume clear but momentum fails both bars. |
+| UAI/USD | +7.55% | +0.57% | 0.70x | 122.7 min | The asset that just exited at 14:05 UTC — now fading further, volume fails, stale high. Confirms no re-entry case. |
+| (14 others: SKR, ZK, AIO, DOS, UNI, ESPORTS, DGAI, STRK, SUSHI, PENDLE, SPX, TRUST, FET, PLAY) | — | — | — | — | All fail multiple bars — momentum, volume, or freshness. None cleared more than one or two bars. |
+
+**HNT/USD deep-check (only candidate clearing every technical bar):**
+- Momentum: 4h +27.88% (>5% bar, decisively), 1h +3.58% (>3% bar), both accelerating not fading ✓
+- Volume: 3.41x trailing-24h hourly average (>2x bar) ✓
+- Freshness: 24h high set on the most recently closed 15m candle (2.7 min) ✓
+- **Spread: FAILS.** Live quote ask $0.80160 / bid $0.79000 → spread = (0.80160−0.79000)/0.80160 = **1.447%**, above the ≤1% hard-skip threshold. Confirmed via direct `kraken.sh quote HNT/USD`, not a stale read.
+- Context: HNT is up ~+92% vs today's session open ($0.4213→$0.8081) — CoinGecko independently shows +117.7%/24h. This is an extreme single-day move; the wide spread here is a real signal of a thin, fast-repricing order book on a huge move, not a data artifact — consistent with the rationale behind the spread gate existing in the first place.
+- **Rejected on spread gate** — a clean, unambiguous miss (1.447% vs 1% cap), not a hairline call. No catalyst confirmation or R:R calc needed since the hard-skip gate fails first.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions — UAI's 14:05 UTC exit was a gain (+2.16%), so the 2-loss-in-7-days cooling cap does not apply, and UAI is failing on fresh momentum/volume anyway (no re-entry case built).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.65%), weekly trend gate clear (+0.29%/5d). Fresh full-universe sweep (661 pairs) found one candidate (HNT/USD) clearing momentum, volume, and freshness cleanly — the strongest technical setup of the day — but it fails the spread gate outright (1.447% vs ≤1% cap) on a genuinely extreme (~+92%–118%) single-day move. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around. Book fully flat, ZUSD $70.7704 fully available, no open positions.
