@@ -10298,3 +10298,17 @@ ZUSD post-trade: $0.4170.
 ### Step 7 — Notification
 
 Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+### Aug 30 — EOD Snapshot (Day 102, Sunday)
+
+**Portfolio:** $68.5369 | **Cash:** $0.4170 (0.6%) | **Day P&L:** −$1.4262 (−2.04%) | **Phase P&L:** −$111.2431 (−61.88%) | **vs BTC:** −2.82%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| UAI/USD | 200.50000 | $0.343468 | $0.339750 | +19.34% | -$0.7455 (-1.08%) | O7QP4M 3.5%, stop $0.332130, HWM $0.345020 |
+
+**Trades today:** UAI/USD buy (200.50000 @ $0.343468, cost $68.8654) — Pre-Session Research pass | **Total since migration:** 149
+
+**Notes:** Kraken `account`: ZUSD $0.4170, UAI 200.50000 (from today's Pre-Session Research entry); `positions: {}` (Kraken's endpoint doesn't report spot holdings, so the UAI balance is priced from live quote directly); `orders: {"open": {...O7QP4M-GBRRD-FPFS4Y...}}` — the 3.5% trailing stop from entry is still live and untouched (stopprice $0.332130, limitprice $0.344170), no fill since. Dust basket (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD) unchanged, all sub-$0.20 total, immaterial, excluded from portfolio total per convention. UAI live quote: last $0.339750 (bid $0.339440/ask $0.340000), spread tight; today's day-open $0.284700 → UAI itself is still up +19.34% on the day even though it's pulled back ~1.08% from this session's $0.343468 entry (entered mid-surge, not at the exact top) — the pullback is a normal retrace within an intact uptrend, well inside the 3.5% trail, no thesis break. Yesterday's baseline used for Day P&L: $69.9631 (Aug 29 EOD Snapshot, flat cash before today's entry). BTC: yesterday's live reference $77,527.80 (Aug 29 EOD) vs today's live $78,135.00 → **+0.78%**; bot day return −2.04% trails BTC by **−2.82 points** today, attributable to UAI's small pullback from entry rather than a market-wide move (BTC up modestly). Phase P&L −$111.2431 (−61.88%) from $179.78 Kraken starting equity (May 22). Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled`, zero exposure, no action needed. Total trades since migration 149 (148 as of the Aug 29 EOD label + today's UAI buy; the trailing stop hasn't fired yet so no matching sell to count). Tomorrow: pre-session research resumes with $0.4170 cash + open UAI/USD position under its 3.5% trailing stop; crash gate threshold ≈$62,508.00 (BTC −20% from $78,135.00).
+
+No push sent — today's trade (UAI buy) was already notified at entry time via the session's push mechanism per CLAUDE.md; this EOD close is a routine recap with the position still open, protected by its trailing stop, and only a small, expected retrace from entry (−1.08%), not a new development requiring the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
