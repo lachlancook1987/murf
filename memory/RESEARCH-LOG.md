@@ -34277,3 +34277,11 @@ Full detail (pre-check, discovery sweep table, HNT deep-check, decision) logged 
 ### Step 6 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the closest candidate (LIGHTER) missed on a real gate by a hairline, not a manufactured excuse to force a trade. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-30 — Midday Scan (~22:05 UTC)
+
+Full detail (stop-out reconciliation, discovery sweep table, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: the 21:04 UTC ZORA/USD entry was already stopped out (3.5% trail) by its own trailing stop at 21:09:33 UTC, 5m12s after fill — a fast whipsaw, small loss (-1.94%), no thesis break, first stop-out on this asset so the same-thesis cooling cap doesn't apply. Crash gate clear (BTC +0.57%), weekly trend gate clear (+0.21%/5d). Fresh 638-pair sweep found no candidate clearing both momentum bars — ZORA itself was the closest (4h +13.85%) but its 1h momentum has turned negative, confirming the same reversal that triggered its stop, so no re-entry case. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 6 — Notification
+
+Trade closed (ZORA stop-out, small loss, 5-minute whipsaw) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).

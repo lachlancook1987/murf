@@ -10471,3 +10471,33 @@ ZUSD post-trade: $0.2629.
 ### Step 7 — Notification
 
 Trade placed (ZORA/USD buy, $70.51, 3.5% trailing stop confirmed) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21), since a new trade with capital deployed is a real state change worth flagging.
+
+## 2026-08-30 — Midday Scan (~22:05 UTC)
+
+**Pre-check:** `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, ZORA balance 0.000 — book flat. The 21:04 UTC ZORA/USD entry was already closed by its own trailing stop before this pass started.
+
+### 2026-08-30 | ZORA/USD | SELL (stop-out) | 8500.00000 ZORA | Entry: $0.00829500 (blended incl. fee, $70.50752 total) | Exit: $0.008183 (trailing stop, filled; net proceeds incl. fee $69.13817) | P&L: -$1.36935 (-1.942%) | Closed
+
+Stop txid `OWTL5Y-JV4MX-ICZDDZ` fired at 21:09:33 UTC, 5m12s after the 21:04:21 UTC fill — a fast whipsaw. Trail (3.5%) triggered off a peak between entry and the stop's `stopprice` 0.0082030; net loss (1.94%) came in under the full 3.5% trail because price ran up briefly before reversing. No thesis break — momentum-only entry, mechanical stop-out. This is ZORA's first stop-out on record; same-thesis 48h cooling cap does not apply (requires 2 within 7 days).
+
+**BTC:** live $78,677.40 vs today's session open $78,227.80 → **+0.57%**. Crash gate clear. **Weekly trend gate:** live vs 5-day-ago close $78,509.40 (2026-08-25) → **+0.21%/5d**, not a downtrend. Both gates clear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. Top movers by 24h change: SKR +119.57% (proxHigh 30.6min stale), HNT +88.63% (proxHigh stale, previously rejected on spread this session), UAI +36.69%, ZORA +35.12%, ZK +15.89%, UNI +12.99%, MNT +8.99%, DOS +8.11%, XXMR +6.37%, PENDLE +5.41%, BLESS +4.86%, LIGHTER +4.63%. Deep-dived the 13 candidates with liquidity ≥$100k and 24h-high proximity <10% (i.e. not stale) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing volume ratio, and high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| ZORA/USD | +13.85% | **-0.39%** | 5.70x | 51.4 min | 4h clears (>5%) but 1h momentum negative — fading post-whipsaw, exactly the reversal that just stopped us out. No re-entry case. |
+| ZK/USD | +1.18% | +2.27% | 1.40x | 171.4 min | Both momentum bars fail, high stale. |
+| DOS/USD | -1.19% | -1.41% | 7.18x | 171.4 min | Volume clears but momentum negative both timeframes, stale high. |
+| LIGHTER/USD | +1.30% | -1.35% | 2.51x | 141.4 min | Volume clears but momentum fails/negative, stale high. |
+| VVV/USD | +2.66% | +0.25% | 1.41x | 111.4 min | Both momentum bars fail. |
+| MNT/USD | +2.33% | +0.12% | 0.16x | 231.4 min | Fails every bar. |
+| (7 others: UAI, UNI, XXMR, PENDLE, BLESS, PLUME, CAKE) | — | — | — | — | All fail multiple bars — momentum, volume, or stale high. |
+
+**Same-thesis check:** ZORA's exit was a loss (-1.94%) but only the 1st stop-out on this asset — the 2-in-7-days cooling cap does not apply. No other recent stop-outs on record for candidates screened.
+
+### Decision: **HOLD.** Book flat post ZORA stop-out (logged above). Crash gate clear (BTC +0.57%), weekly trend gate clear (+0.21%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing both momentum bars — ZORA itself is the closest technical match (4h +13.85%) but its 1h momentum has turned negative, confirming the reversal that just triggered its own stop, so no re-entry case. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+Trade closed (ZORA stop-out, small loss, fast 5-minute whipsaw) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
