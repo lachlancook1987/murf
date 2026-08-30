@@ -10250,3 +10250,51 @@ No push sent — NIL's stop-out was a small, routine mechanical exit with a mode
 ### Step 8 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate clear, and the fresh sweep found nothing actionable (closest miss, SKR, failed cleanly on three bars, not a manufactured excuse to force a trade). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-30 — Pre-Session Research (~20:0X UTC placeholder)
+
+**Pre-check:** Live Kraken state — `positions: {}`, `orders: {"open": {}}`, ZUSD $69.2824, all other balances dust/unchanged — matches the 08-29 22:03 UTC pass exactly, no fills since. Book fully flat, no open positions to protect or tighten. Alpaca `positions: []` — zero exposure, no action needed.
+
+**Crash gate:** BTC live $78,137.50 vs today's open $78,227.80 → **−0.12%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,137.50 vs 5-day-ago daily close $78,509.40 (2026-08-25) → **−0.47%/5d**, not a >3% downtrend. Clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 11 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 7 with liquidity ≥$100k (UAI, ESPORTS, DOS, UNI, XAN, FOLD, MANA) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| UAI/USD | +20.51% | +3.00% | 5.15x | 15 min | Clears every bar decisively; 1h still positive, not fading. **Taken.** |
+| DOS/USD | +4.28% | +2.80% | 3.03x | 285 min | Under the 5% 4h bar, stale high. |
+| UNI/USD | −0.24% | −0.80% | 2.64x | 60 min | Negative momentum both legs despite clearing volume; high right at the freshness boundary. |
+| FOLD/USD | +0.08% | −3.16% | 3.12x | 120 min | Volume clears but momentum negative on 1h, flat on 4h, stale high. |
+| ESPORTS/USD | +1.23% | +0.00% | 0.44x | 240 min | Fails every bar. |
+| MANA/USD | +0.07% | −0.68% | 0.43x | 270 min | Fails every bar. |
+| XAN/USD | +0.80% | +0.58% | 0.45x | 795 min | Fails every bar, very stale high. |
+
+Sub-$100k-liquidity candidates from the initial screen (SGB +13.91%/$56.9k, TRUST +4.89%/$87.9k, SUSHI +3.65%/$81.7k, ACU +3.56%/$73.6k) were not deep-dived, consistent with the established ≥$100k liquidity threshold.
+
+**UAI/USD deep-check:**
+- **Identity:** UAI = UnifAI Network (CoinGecko id `unifai-network`), AI-agent/Solana ecosystem token.
+- Spread at order time: 0.14% (ask $0.34032/bid $0.33984) ≤1% ✓
+- `UAIUSD` online, ordermin 23, costmin $0.5, no leverage available (spot only) ✓
+- 4h momentum +20.51% >5% ✓, 1h momentum +3.00%, still positive/not fading ✓
+- Volume ratio 5.15x >2x ✓
+- 24h high freshness 15 min, confirmed on a fully closed 15m candle ✓. Raw candle inspection (04:30–07:45 UTC) shows a steady grind up from $0.29913 to $0.34228 across 14 consecutive candles with only minor pullbacks and the most recent candles closing near their highs — a sustained uptrend, not a single spike-and-fade.
+- **Cross-exchange divergence:** CoinGecko direct API (`unifai-network`) $0.341187 (+27.56% 24h) vs Kraken live $0.341050 → **~0.04% divergence**, clean. Notable because this exact asset has a chronic history of large Kraken-vs-market divergence (30-38% on 2026-08-28, leading to two prior rejections) — Perplexity's own aggregated quotes today were similarly stale/scattered ($0.2653–$0.3508 across sources), but the direct CoinGecko API pull matches Kraken almost exactly, confirming today's move is real and not a Kraken-specific artifact.
+- **Same-thesis cap check:** One prior UAI stop-out, 2026-08-23 (−4.83%, mechanical 3.5% trail), exactly 7 days ago. Cap requires **2** stop-outs within a 7-day window to trigger the 48h cooling period — only 1 on record, cap does not apply.
+- **Catalyst:** Perplexity found no fresh <6h news item — Bitget/CoinMarketCap both describe today's move as volume/futures-open-interest-driven (technical breakout), with the most recent fundamental driver being a Jupiter/Solana AI-agent integration dated 2026-08-14 (16 days old). Classified **momentum-only** (1.5:1 R:R floor applies, not the 1.2:1 catalyst-confirmed floor).
+- Fear & Greed: split across sources (CFGI 49 Neutral, Alternative.me 68 Greed, Binance 77 Greed, CoinStats 76 Extreme Greed) — Greed-leaning, no Extreme Fear condition, so the momentum-only 1.5:1 floor applies uniformly regardless.
+
+**High-ATR sizing:** UAI's 24h range ($0.27582–$0.34502, ~20.1% range) exceeds prior high-ATR qualifying precedents (VIRTUAL 15.6% was the lowest), and matches this same asset's own prior high-ATR classification on 2026-08-23. Applied: **3.5% trailing stop**, **T1 = +6%, T2 = +9%**. **R:R at T1 = 6%/3.5% ≈ 1.71:1**, clearing the 1.5:1 momentum-only floor.
+
+### 2026-08-30 | UAI/USD | BUY | 200.50000 UAI | Entry: $0.343468 (blended incl. fee) | Cost: $68.8654 | Stop: trailing 3.5% (GTC) | Open
+
+Order txid `OVLI7A-H5KCI-JZTTQL` (buy, market, filled in full — post-trade UAI balance 200.50000, ZUSD $69.2824 → $0.4170, implying cost incl. fee $68.8654). Stop txid `O7QP4M-GBRRD-FPFS4Y` (trailing_stop, trail_percent 3.5%, confirmed `status: open`, stopprice $0.330760, limitprice $0.342750).
+
+**T1 = $0.364076 (+6%)** — on hit, cancel the 3.5% trail and replace with a 0.5% trailing stop to lock gains and trail toward T2 (aspirational per known scan-cadence limitation — TRADING-STRATEGY.md 2026-08-21 flag). **T2 = $0.37438 (+9%)**.
+
+ZUSD post-trade: $0.4170.
+
+### Decision: **TRADE — UAI/USD.** Pre-Session Research pass. Book was fully flat at pre-check. Fresh sweep of the full Kraken USD universe found UAI as the only candidate clearing every gate cleanly — decisive 4h/1h momentum, strong volume confirmation, a fresh confirmed-closed-candle high verified against raw candle shape (steady grind, not a spike), tight spread, and — critically — a clean cross-exchange divergence check (0.04%) despite this exact asset's chronic history of large divergence rejections. No catalyst <6h old, so classified momentum-only and sized to the high-ATR bucket (3.5% trail) to clear the 1.5:1 R:R floor. Crash gate and weekly trend gate both clear. Only 1 prior UAI stop-out in the trailing 7 days — same-thesis cap (requires 2) does not apply.
+
+### Step 7 — Notification
+
+Trade placed — push notification sent via session mechanism per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
