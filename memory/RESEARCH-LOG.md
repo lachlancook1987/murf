@@ -34237,3 +34237,7 @@ Full detail (stop-out reconciliation, discovery sweep table, XMR deep-check, dec
 ### Step 6 — Notification
 
 Trade closed (UAI stop-out, small gain) — surfaced via session push mechanism per CLAUDE.md; no new entry taken this pass (XMR rejected on R:R gate, not a manufactured excuse to force a trade).
+
+## 2026-08-30 — Session-Open Execution (~15:03 UTC)
+
+Full detail (pre-check, discovery sweep table, HNT deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat since UAI's 14:05 UTC stop-out (small gain, +2.16%), no fills since. Crash gate clear (BTC +0.65%), weekly trend gate clear (+0.29%/5d). Fresh 661-pair sweep found HNT/USD clearing momentum (+27.88%/4h, +3.58%/1h), volume (3.41x), and freshness (2.7 min) cleanly on a ~+92%–118% single-day pump, but it fails the spread gate cleanly (1.447% vs ≤1% cap) — a genuine hard-skip, not a judgment call. No other candidate cleared more than one or two bars. Decision: **HOLD**. ZUSD $70.7704 fully available, no open positions.
