@@ -10710,3 +10710,46 @@ No push sent — book flat with no unprotected exposure, both gates clear, and n
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared every raw bar (KTA, ARB) were rejected on specific, documented gates (spread/live-fade; cross-exchange divergence), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+
+## 2026-08-31 — Midday Scan (~22:08 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the ~21:01 UTC pass, no fills or drift since. Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $78,923.30 vs today's session open $77,681.60 → **+1.60%**. Clear. **Weekly trend gate:** live $78,923.30 vs 5-day-ago daily close $79,008.60 (2026-08-26) → **−0.11%/5d**, well inside the ±3% band. Both gates clear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 59 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — the widest raw screen of the day. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 42 with liquidity ≥$100k (KTA, USELESS, ARB, NOT, CRV, JUP, JASMY, DOG, XXMR, BICO, ETHFI, STX, DGAI, SYRUP, MORPHO, BONK, CC, HYPE, PEPE, TON, PYTH, MINA, ENS, WIF, NPC, VIRTUAL, NEAR, TRUMP, PLAY, VSN, DCR, RE, FET, OP, TIA, FIL, KAS, CVX, ADA, RUNE, ICP, MNT) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| KTA/USD | **+36.74%** | **+19.25%** | **4.50x** | 21.9 min | Clears every raw bar — see deep-check below, rejected on cross-exchange divergence grounds. |
+| ARB/USD | **+13.50%** | **+6.48%** | **5.04x** | 21.9 min | Clears every raw bar — see deep-check below, rejected on divergence + no-catalyst R:R grounds. |
+| CRV/USD | +8.36% | +1.43% | 3.32x | 51.9 min | 4h and volume clear, 1h well under the 3% bar (not a hairline miss). |
+| NPC/USD | +5.36% | +1.77% | 5.27x | 966.9 min | 4h and volume clear, but 1h under bar and high very stale (16h+). |
+| USELESS/USD | +6.38% | −0.27% | 0.98x | 156.9 min | 4h clears but 1h negative, volume fails. |
+| ETHFI/USD | +4.94% | 0.00% | 3.75x | 81.9 min | Volume clears, momentum fails both bars. |
+| DOG/USD | +6.99% | +0.79% | 0.64x | 186.9 min | 4h clears but 1h and volume fail, high stale. |
+| (35 others: JUP, JASMY, XXMR, BICO, STX, DGAI, SYRUP, MORPHO, BONK, CC, HYPE, PEPE, TON, PYTH, MINA, ENS, WIF, VIRTUAL, NEAR, TRUMP, PLAY, VSN, DCR, RE, FET, OP, TIA, FIL, KAS, CVX, ADA, RUNE, ICP, MNT, NOT) | — | — | — | — | All fail multiple bars — momentum negative/flat/weak, volume thin, or high stale (several >600 min). |
+
+**KTA/USD deep-check (clears raw momentum/volume/freshness screen — rejected):**
+- Closed 15m candles (20:00–21:45 UTC) show a sustained multi-candle grind up, not a single spike-and-fade: seven consecutive closed candles higher-close-over-higher-close with only one brief dip (20:45) that was quickly recovered and exceeded. 1-minute candles confirm the same shape into the current forming candle — repeated shallow pullbacks bought, continuous new highs ($0.0896→$0.0910→$0.0938→$0.0947→$0.0960 through 22:07). This is structurally different from today's earlier single-candle spike-and-reverse rejections (GHST, DOG, NOT) and would pass the confirmed-candle-shape check on its own.
+- Spread clean: ask $0.0961 / bid $0.0960 ≈ 0.10%, well under the 1% cap (unlike the 1.39% that rejected this same asset at the ~21:01 UTC pass).
+- **Cross-exchange divergence gate (decisive reject):** Perplexity cross-check — CoinGecko $0.06714, CoinMarketCap ~$0.0710/$0.0674 (main page vs AI-update page disagree), Coinbase/Binance figures flagged by Perplexity itself as inconsistent/unreliable. Against Kraken live mid ~$0.0961: divergence vs CoinGecko ≈ **30.1%**, vs CoinMarketCap main page ≈ **26.1%** — both well outside the >15–20% rejection band (TRADING-STRATEGY.md). The only catalyst found (HopNow partnership, per CoinMarketCap) is described as driving a modest 3.52%/24h move on external venues, nowhere near the magnitude of Kraken's own +36.74%/4h — the catalyst doesn't explain Kraken's move, reinforcing a thin/not-yet-arbitraged Kraken order book rather than a real market-wide repricing.
+- **Rejected:** cross-exchange price divergence (~26–30%), despite otherwise being the cleanest technical setup (spread, candle shape, freshness) of the day.
+
+**ARB/USD deep-check (clears raw momentum/volume/freshness screen — rejected):**
+- Closed 15m candles (20:00–21:45 UTC) show a strong accelerating grind with each candle closing near its high, 21:30–21:45 candles up +3.8%/+1.8% on 900k–1.1M volume; 1-minute candles into the forming 22:00 period hold a tight $0.1055–$0.1086 range, closing near highs — not fading.
+- Spread clean: ask $0.1083 / bid $0.1082 ≈ 0.09%.
+- **Cross-exchange divergence gate (mixed, leans reject):** Perplexity cross-check — CoinGecko $0.08613 (−1.6%/24h, stale-looking direction), CoinMarketCap $0.09907 (+10.52%/24h, direction matches Kraken). Divergence vs CoinGecko ≈ **20.5%** (at/over the top of the rejection band); vs CoinMarketCap ≈ **8.5%** (clean) — the two references disagree on both level and direction, unlike KTA where all references agreed downward. Not a clean pass.
+- **Catalyst check (decisive reject):** No dated, <6h-old ARB-specific catalyst found — best available is "Mastercard-owned BVNK added USDC support on Arbitrum," an ecosystem-adoption item with no confirmed timestamp, not a fresh dollar-moving headline. Classified momentum-only, so the no-catalyst R:R floor of 1.5:1 applies; the standard T1(+3%)/2.5%-stop structure only reaches 1.2:1 — structurally short of the floor regardless of the divergence ambiguity.
+- **Rejected:** no confirmed <6h catalyst fails the 1.5:1 momentum-only R:R floor; cross-exchange divergence is ambiguous but leans toward the same distorted-book conclusion as KTA.
+
+**No candidate cleared every gate.** KTA and ARB were again the only pairs clearing all three raw momentum/volume bars (as at the ~21:01 UTC pass); KTA now passes spread and candle-shape but fails decisively on cross-exchange divergence (~26–30%), and ARB fails on a structural R:R-floor miss (no confirmed catalyst) with an ambiguous-but-unfavorable divergence read. CRV was the next-closest (4h + volume) but missed the 1h bar by more than half. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates. ARB's last stop-out on record (2026-07-09) is well outside the 7-day window; KTA has no prior stop-out history.
+
+### Decision: **HOLD.** Crash gate clear (BTC +1.60%), weekly trend gate clear (−0.11%/5d). Fresh full-universe sweep (638 pairs) found the same two candidates as the ~21:01 UTC pass (KTA, ARB) again clearing every raw momentum/volume/freshness bar — KTA now clears spread and candle-shape (unlike that pass) but is rejected on a large cross-exchange price divergence (~26–30%) that the confirmed catalyst doesn't explain; ARB is rejected on a structural R:R-floor miss (no confirmed <6h catalyst) with a divergence read that leans unfavorable. No other candidate came within one gate of clearing. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade despite two candidates clearing every numeric bar for the second consecutive pass. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared every raw bar (KTA, ARB) were rejected on specific, documented gates (cross-exchange divergence; no-catalyst R:R floor), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
