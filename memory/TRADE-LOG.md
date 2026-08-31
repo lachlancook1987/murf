@@ -10519,3 +10519,39 @@ Trade closed (ZORA stop-out, small loss, fast 5-minute whipsaw) — surfaced via
 ### Step 7 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-31 — Session-Open Execution (~09:15 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 08:08 UTC Pre-Session Research pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $78,450.10 vs today's session open $77,681.60 → **+0.99%**. Clear. **Weekly trend gate:** live $78,450.10 vs 5-day-ago daily close $78,509.40 (2026-08-25, confirmed via Kraken daily OHLC) → **−0.08%/5d**, well inside the ±3% band. Both gates clear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 34 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 19 with liquidity ≥$100k (BLESS, NOT, JASMY, XMR, LIGHTER, STX, UAI, CHIP, ETHFI, CRV, GALA, MORPHO, DGAI, MNT, VET, ENS, CC, WLFI, CAKE) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| JASMY/USD | +8.93% | +4.95% | 4.52x | 0.0 min | Both momentum bars and volume clear cleanly on paper — see deep-check below, rejected on live price action. |
+| BLESS/USD | +7.31% | +2.41% | 1.06x | 45.0 min | 4h clears but 1h under the 3% bar, volume fails. |
+| UAI/USD | +7.01% | −0.02% | 0.27x | 135.0 min | 4h clears but 1h flat/negative, volume fails, high stale. |
+| LIGHTER/USD | +6.11% | +1.87% | 0.08x | 780.0 min | 4h clears but 1h under bar, volume fails badly, high very stale. |
+| DGAI/USD | +5.08% | +1.38% | 0.32x | 960.0 min | 4h just clears but 1h/volume fail, high very stale. |
+| CHIP/USD | +4.94% | +1.42% | 0.86x | 1110.0 min | 4h just under bar, 1h/volume fail, high very stale. |
+| ENS/USD | +3.75% | +0.69% | 1.44x | 810.0 min | Fails 4h, 1h, and freshness. |
+| CRV/USD | +3.22% | +0.55% | 3.38x | 915.0 min | Volume clears but momentum fails both bars, high very stale. |
+| MORPHO/USD | +3.05% | +1.05% | 1.55x | 0.0 min | Fails 4h and 1h bars despite a fresh high. |
+| (9 others: ETHFI, XMR, CAKE, STX, VET, CC, WLFI, GALA, MNT) | — | — | — | — | All fail multiple bars — momentum, volume, or stale/flat. |
+
+**JASMY/USD deep-check (only candidate clearing all three technical bars on the 15m-closed-candle scan):**
+- Momentum: 4h +8.93%, 1h +4.95%, both clear decisively; volume 4.52x trailing-24h hourly average, clears decisively.
+- **Freshness / candle-shape check (fails):** the 24h high ($0.00489) was set by the most recent *closed* 15m candle (08:45–09:00 UTC), which broke out from ~$0.00469 and closed strong at $0.00488 on a 4.7M-unit volume spike — on its face this looks like exactly the confirmed-closed-candle breakout the rule wants. But the immediately following (currently forming) candle shows open $0.00488 → low $0.00471 → last $0.00472, a sharp ~3.5% intra-candle reversal already underway. Live quote confirms: ask $0.004750 / bid $0.004740 / last $0.00472, vs the $0.00489 24h high — price has already round-tripped roughly 3.3% off the high within minutes of the breakout candle closing. This is the real-time version of the pattern the momentum-peak-check exists to catch: the breakout printed on the tape, but there is no confirming candle that *held* above the prior level — the very next price action reversed it. Rejected on live-data grounds, not the raw closed-candle stats alone.
+- Spread ($0.004750/$0.004740 ≈ 0.21%) and liquidity would otherwise have passed.
+
+**No candidate cleared every gate.** JASMY was the only candidate to clear the raw momentum/volume screen, but real-time price action (forming-candle detail + live quote) shows the breakout already failing to hold — a live rejection under the momentum-peak-check's intent, not a manufactured exception. BLESS and UAI were the next-closest on 4h momentum but both fail 1h and volume outright.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st, not among today's candidates, and JASMY has no prior stop-out history to check.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.99%), weekly trend gate clear (−0.08%/5d). Fresh full-universe sweep (638 pairs) found one candidate (JASMY/USD) clearing the raw momentum/volume screen, but the confirmed-closed-candle breakout it printed was already reversing in the forming candle and on the live quote by the time of this check — rejected per the momentum-peak-check's intent (a breakout must hold, not just print). No other candidate came within one gate of clearing. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared the paper screen (JASMY) was rejected on live reversal data, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
