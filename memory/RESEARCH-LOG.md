@@ -34335,3 +34335,11 @@ Full detail (pre-check, discovery sweep table, JASMY deep-check, decision) logge
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and JASMY's paper-screen pass was invalidated by real-time reversal data rather than being a manufactured excuse to force a trade. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-31 — Session-Open Execution (~12:02 UTC)
+
+Full detail (pre-check, discovery sweep table, NOT/USD deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 09:15 UTC pass, no fills since. Crash gate clear (BTC +0.92%), weekly trend gate clear (−0.14%/5d). Fresh 638-pair sweep found NOT/USD as the only candidate clearing the 4h-momentum and volume bars with a fresh (33 min) 24h high, but its most recently closed 15m candle already reversed off that high — the same spike-then-fade pattern that rejected this asset at 08:08 UTC this morning. No other candidate cleared more than one bar. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and NOT/USD's paper-screen pass was invalidated by a real closed-candle reversal rather than being a manufactured excuse to force a trade. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).

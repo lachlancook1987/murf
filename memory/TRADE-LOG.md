@@ -10555,3 +10555,38 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared the paper screen (JASMY) was rejected on live reversal data, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-31 — Session-Open Execution (~12:02 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 09:15 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $78,397.00 vs today's session open $77,681.60 → **+0.92%**. Clear. **Weekly trend gate:** live $78,397.00 vs 5-day-ago daily close $78,509.40 (2026-08-25) → **−0.14%/5d**, well inside the ±3% band. Both gates clear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 36 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. AU-restricted DASH/USD appeared in the raw screen (+6.16%) — skipped pre-emptively per the standing restriction, not deep-dived. Deep-dived the 17 with liquidity ≥$100k (NOT, XXMR, MORPHO, BONK, UAI, STX, LIGHTER, CRV, WIF, MNT, ENS, ETHFI, ZRO, CAKE, CC, WLFI, JUP) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| NOT/USD | **+5.42%** | +2.64% | **2.38x** | 33.1 min | Closest candidate — see deep-check below, rejected on candle-shape grounds. |
+| BONK/USD | +5.64% | +1.12% | 1.55x | 1443.1 min | 4h clears but 1h under bar, volume under 2x, high very stale (24h+). |
+| XMR/USD | +3.06% | +0.18% | 0.59x | 48.1 min | Fresh high but both momentum bars fail, volume fails. |
+| MORPHO/USD | +2.30% | −0.67% | 2.77x | 63.1 min | Volume clears but momentum fails both bars, 1h negative. |
+| WIF/USD | +2.70% | +0.81% | 0.23x | 1143.1 min | Fails every bar, high very stale. |
+| ZRO/USD | +3.00% | −0.75% | 0.36x | 1053.1 min | Fails every bar, 1h negative, high very stale. |
+| JUP/USD | +1.70% | +0.33% | 0.25x | 1188.1 min | Fails every bar. |
+| (9 others: UAI, STX, LIGHTER, CRV, MNT, ENS, ETHFI, CAKE, CC, WLFI) | — | — | — | — | All fail multiple bars — momentum negative/flat, volume thin, or high very stale (all >1000 min). |
+
+**NOT/USD deep-check (only candidate with a fresh high clearing the 4h + volume bars):**
+- Momentum: 4h +5.42% clears the >5% bar; 1h +2.64% falls just short of the >3% bar; volume 2.38x trailing-24h hourly average clears.
+- **Candle-shape check (fails):** 15m closed candles show a clean run-up from 11:00 (close $0.000454) through 11:30 (close $0.000473, intraday high $0.000474 — this session's 24h high), but the next fully-closed candle (11:45 UTC) reversed, closing at $0.000467 — down from the 11:30 close and off the high, not holding above the breakout level. The currently-forming 12:00 candle is flat/near-zero volume so far. This is the confirmed-closed-candle requirement's exact failure mode: the breakout printed, but the next closed candle did not hold above it — a fade, not confirmation.
+- Spread: ask $0.000465 / bid $0.000464 ≈ 0.22%, would otherwise have passed.
+- Same pattern as this asset's own 08:08 UTC rejection this morning (spike-then-fade) — second instance today.
+
+**No candidate cleared every gate.** NOT/USD was the only candidate to clear more than one bar cleanly (4h momentum + volume), but its own most recent closed candle already reversed off the high it set 33 minutes ago — a live momentum-peak-check rejection, not a manufactured exception. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates; NOT/USD has no prior stop-out history on record.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.92%), weekly trend gate clear (−0.14%/5d). Fresh full-universe sweep (638 pairs) found one candidate (NOT/USD) clearing the 4h-momentum and volume bars with a fresh high, but its most recent closed 15m candle already reversed off that high — rejected per the confirmed-closed-candle requirement, the same fade pattern that rejected this asset earlier today. No other candidate came close. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared multiple bars (NOT/USD) was rejected on a live candle-reversal, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
