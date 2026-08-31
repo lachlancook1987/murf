@@ -10634,3 +10634,35 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared the technical screen were rejected on specific, documented risk grounds (parabolic reversal; insider-dump history), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-31 — Session-Open Execution (~15:02 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD, all sub-$0.20) — exact match to the ~16:20 UTC Midday Scan pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $78,459.00 vs today's session open $77,681.60 → **+1.00%**. Clear. **Weekly trend gate:** live $78,459.00 vs 5-day-ago daily close $79,008.60 (2026-08-26, Kraken daily OHLC) → **−0.70%/5d**, well inside the ±3% band. Both gates clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 32 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. DASH/USD (+6.07%) appeared in the raw screen — skipped pre-emptively as AU-restricted per TRADING-STRATEGY.md. Deep-dived the 20 with liquidity ≥$100k (NOT, JASMY, MORPHO, ESPORTS, BONK, STX, PEPE, BICO, DGAI, CRV, GALA, UAI, MNT, NEAR, ETHFI, ARB, ENS, WLFI, JUP, RAY) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| ESPORTS/USD | +8.55% | −0.60% | 3.39x | 33.1 min | 4h, volume, and freshness all clear, but 1h has turned negative — the fresh high is already being faded, not extended. Same asset flagged for a documented insider-dump/rug history at the ~16:20 UTC Midday Scan; moot here since it fails the momentum bar outright. |
+| BICO/USD | +4.26% | +2.40% | 2.58x | 3.1 min | Very fresh high and volume clears, but both momentum bars fall just short (4h <5%, 1h <3%). |
+| BONK/USD | +3.43% | +3.89% | 1.51x | 3.1 min | 1h clears cleanly and high is fresh, but 4h fails and volume falls short of 2x. |
+| JASMY/USD | +3.41% | +3.41% | 2.98x | 363.1 min | Momentum and volume clear, but high is stale (>60 min) — same asset rejected on a live reversal at 09:15 UTC this morning. |
+| MORPHO/USD | +2.27% | +3.36% | 2.93x | 3.1 min | 1h, volume, and freshness all clear, but 4h momentum (+2.27%) is well short of the 5% bar. |
+| STX/USD | +1.59% | +1.09% | 0.26x | 348.1 min | Fails every bar. |
+| NEAR/USD | +1.06% | +2.70% | 0.42x | 1203.1 min | Fails every bar, high very stale. |
+| JUP/USD | +0.92% | +2.34% | 0.19x | 1353.1 min | Fails every bar. |
+| NOT/USD | +0.66% | −0.43% | 0.60x | 213.1 min | Fails every bar — momentum has faded well off this morning's readings. |
+| RAY/USD | +0.63% | +2.31% | 1.66x | 1338.1 min | Fails every bar, high very stale. |
+| (9 others: ARB, PEPE, CRV, ETHFI, WLFI, MNT, DGAI, UAI, ENS, GALA) | — | — | — | — | All fail multiple bars — momentum negative/flat, volume thin, or high very stale (>1000 min). |
+
+**No candidate cleared every gate.** ESPORTS/USD had the strongest raw stats (4h, volume, freshness) but its 1h momentum has already turned negative — the classic momentum-peak-check rejection (fresh high, price now declining from it) — and it carries the documented insider-dump/rug risk flagged earlier today regardless. MORPHO/USD was the closest on 1h/volume/freshness but missed the 4h bar by a wide margin (2.27% vs >5%), not a hairline. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates.
+
+### Decision: **HOLD.** Crash gate clear (BTC +1.00%), weekly trend gate clear (−0.70%/5d). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — ESPORTS/USD had the strongest technical shape but is already fading on 1h momentum (and carries a known asset-risk flag), and MORPHO/USD missed the 4h bar by a wide margin despite clearing the others. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and no candidate came close enough to a real gate to be worth flagging (ESPORTS is fading on momentum, not a hairline miss). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.

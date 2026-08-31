@@ -34343,3 +34343,19 @@ Full detail (pre-check, discovery sweep table, NOT/USD deep-check, decision) log
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and NOT/USD's paper-screen pass was invalidated by a real closed-candle reversal rather than being a manufactured excuse to force a trade. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-08-31 — Midday Scan (~16:20 UTC)
+
+Full detail (pre-check, discovery sweep table, GHST/ESPORTS deep-checks, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, no fills since the 12:02 UTC pass. Crash gate clear (BTC +0.40%), weekly trend gate clear (−1.28%/5d). Fresh 661-pair sweep found two candidates clearing the raw momentum/volume/freshness screen — GHST/USD (parabolic spike, no confirming closed candle, violent reversal already visible in the forming candle) and ESPORTS/USD (clean technical structure but a documented insider-dump/rug history on a sub-$3M market cap). Both rejected on risk grounds. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, both candidates rejected on specific documented risk grounds, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-31 — Session-Open Execution (~15:02 UTC)
+
+Full detail (pre-check, discovery sweep table, ESPORTS/MORPHO analysis, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the ~16:20 UTC Midday Scan pass, no fills since. Crash gate clear (BTC +1.00%), weekly trend gate clear (−0.70%/5d). Fresh 638-pair sweep found no candidate clearing every gate — ESPORTS/USD had the strongest raw stats (4h, volume, freshness) but its 1h momentum has already turned negative (fading, plus a known insider-dump risk flag), and MORPHO/USD missed the 4h bar by a wide margin despite clearing the others. No other candidate came close. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and no candidate came close enough to a real gate to be worth flagging. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
