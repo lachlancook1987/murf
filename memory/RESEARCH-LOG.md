@@ -34399,3 +34399,12 @@ No push sent — book flat with no unprotected exposure, both gates clear, and n
 ### Step 6 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared every numeric bar (DOG/USD) was rejected on a live candle-fade, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+
+## 2026-08-31 — Session-Open Execution (~21:01 UTC)
+
+Full detail (pre-check, discovery sweep table, KTA/ARB deep-checks, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the ~20:07 UTC Evening Scan pass, no fills since. Crash gate clear (BTC +1.51%), weekly trend gate clear (−0.20%/5d). Fresh 638-pair sweep found two candidates (KTA/USD, ARB/USD) clearing every raw momentum/volume/freshness bar — the widest technical screen of the day — but KTA failed on spread (1.39%, over the 1% cap) plus a live fade already 4.5% off its 24h high, and ARB failed on a ~16.5% cross-exchange price divergence vs external sources (TRADING-STRATEGY.md divergence gate) with no confirmed catalyst to clear the no-catalyst R:R floor. No other candidate cleared more than one bar cleanly. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared every raw bar (KTA, ARB) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).

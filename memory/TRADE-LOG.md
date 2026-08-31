@@ -10666,3 +10666,47 @@ No push sent — book flat with no unprotected exposure, both gates clear, and b
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and no candidate came close enough to a real gate to be worth flagging (ESPORTS is fading on momentum, not a hairline miss). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+
+## 2026-08-31 — Session-Open Execution (~21:01 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD, all sub-$0.20) — exact match to the ~20:07 UTC Evening Scan pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $78,850.50 vs today's session open $77,681.60 → **+1.51%**. Clear. **Weekly trend gate:** live $78,850.50 vs 5-day-ago daily close $79,008.60 (2026-08-26, Kraken daily OHLC) → **−0.20%/5d**, well inside the ±3% band. Both gates clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 51 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — a wide screen, likely reflecting the broad BTC-led bounce. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 37 with liquidity ≥$100k (USELESS, ARB, NOT, CRV, KTA, JASMY, MORPHO, ETHFI, BICO, DOG, XMR, DGAI, STX, CC, JUP, SYRUP, BONK, HYPE, PEPE, RUNE, PYTH, ENS, TRUMP, PLAY, WIF, CSPR, VIRTUAL, WLFI, DCR, FET, TON, NEAR, ADA, MNT, NPC, TIA, FIL) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| KTA/USD | **+14.33%** | **+10.41%** | **6.06x** | 17.7 min | Clears every raw bar — see deep-check below, rejected on spread + live-fade grounds. |
+| ARB/USD | **+14.11%** | **+4.05%** | **2.94x** | 17.7 min | Clears every raw bar — see deep-check below, rejected on cross-exchange divergence grounds. |
+| CRV/USD | +7.21% | +4.22% | 5.10x | 32.7 min | Momentum and volume clear, but the fully-closed candle after the high-setting one failed to hold above it — fade pattern, same as NOT/JASMY earlier this week. |
+| DOG/USD | +6.59% | −1.25% | 0.77x | 122.7 min | 4h clears but 1h negative and volume thin, high stale. |
+| USELESS/USD | +5.34% | −2.23% | 1.14x | 92.7 min | 4h clears but 1h negative, volume thin. |
+| CC/USD | +5.25% | 0.00% | 1.23x | 47.7 min | 4h clears but 1h flat, volume thin. |
+| ETHFI/USD | +4.90% | +2.33% | 1.54x | 17.7 min | Fresh high held, but all three momentum/volume bars fall just short. |
+| (30 others: PYTH, SYRUP, NOT, JUP, FET, TIA, RUNE, TRUMP, XMR, VIRTUAL, ADA, DGAI, NEAR, HYPE, FIL, NPC, JASMY, PEPE, CSPR, WLFI, DCR, STX, ENS, WIF, MORPHO, BONK, TON, MNT, BICO, PLAY) | — | — | — | — | All fail multiple bars — momentum negative/flat, volume thin, or high stale (several >1000 min). |
+
+**KTA/USD deep-check (clears raw momentum/volume/freshness screen — rejected):**
+- Closed 15m candles: the high-setting candle itself (20:45 UTC, O $0.0783 → H $0.0825 → C $0.0774) reversed **within its own range**, closing 6.2% below the high it printed on the period's largest volume (292k) — an intra-candle spike-and-dump, not a clean breakout close (unlike a healthy breakout candle that closes near its high).
+- Live quote confirms the fade is continuing: ask $0.0794 / bid $0.0783 / last $0.0788, already **4.5% below** the $0.0825 high set 17 minutes ago.
+- **Spread fails outright:** (0.0794−0.0783)/0.0794 ≈ **1.39%**, over the 1% hard-skip threshold — disqualifying on its own regardless of the technical picture.
+- **Rejected:** spread >1% hard skip, plus live price already fading hard off a high that reversed within its own candle.
+
+**ARB/USD deep-check (clears raw momentum/volume/freshness screen — rejected):**
+- Closed 15m candles show a steadier grind (unlike KTA's violent spike) — 19:00–20:45 climbing from ~$0.0940 to $0.1003 without a single-candle blow-off/reversal; the 20:45 candle (high-setting) closed at $0.1003, just 0.2% below its own $0.1005 high — a strong close, not a fade.
+- 1-minute candles since the high (20:45–21:04) show tight chop in a $0.0996–$0.1005 band — holding, not extending, but also not breaking down. No fully-closed 15m candle exists yet after the high-setting one to formally satisfy the confirmed-closed-candle requirement.
+- Spread: ask $0.1003 / bid $0.1002 ≈ 0.10%, clean.
+- **Catalyst check (Perplexity):** no ARB-specific catalyst confirmed in the last 6h — description is bearish/neutral (descending channel, pending token unlock); prior Robinhood Chain/fee-sharing headlines are older than 6h. Momentum-only, no fresh catalyst, meaning the 1.5:1 no-catalyst R:R floor would apply — structurally unreachable at a fixed T1 = +3% / 2.5% stop (max 1.2:1).
+- **Cross-exchange divergence gate (decisive reject):** Perplexity-reported ARB price ~$0.086 (down ~1.6%/24h per external sources) vs Kraken live $0.1002 (up ~19%/24h) → **~16.5% divergence**, squarely inside the TRADING-STRATEGY.md rejection band (>15–20%) for a thin/not-yet-arbitraged or distorted order book. Same pattern that correctly rejected PTB, ALKIMI, and TNSR previously.
+- **Rejected:** cross-exchange price divergence gate (~16.5%) plus no confirmed catalyst structurally failing the R:R floor — the cleanest-looking chart of the sweep, but disqualified on two independent gates.
+
+**No candidate cleared every gate.** KTA and ARB were the only pairs clearing all three raw momentum/volume bars; KTA fails on spread and a live intra-candle reversal, ARB fails on cross-exchange divergence and lack of a confirmed catalyst. CRV was the next-closest (momentum + volume) but its post-high closed candle failed to hold. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates.
+
+### Decision: **HOLD.** Crash gate clear (BTC +1.51%), weekly trend gate clear (−0.20%/5d). Fresh full-universe sweep (638 pairs) found two candidates (KTA, ARB) clearing every raw momentum/volume/freshness bar — the widest technical screen of the day — but KTA fails on spread (1.39%, over the 1% hard cap) and a live fade already 4.5% off its high, while ARB fails on a ~16.5% cross-exchange price divergence (TRADING-STRATEGY.md gate) and has no confirmed catalyst to clear the no-catalyst R:R floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade despite the strongest raw numbers seen today. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared every raw bar (KTA, ARB) were rejected on specific, documented gates (spread/live-fade; cross-exchange divergence), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
