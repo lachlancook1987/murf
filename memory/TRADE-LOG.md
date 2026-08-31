@@ -10590,3 +10590,47 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared multiple bars (NOT/USD) was rejected on a live candle-reversal, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-31 — Midday Scan (~16:20 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 12:02 UTC pass, no fills or drift since. Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $77,995.50 vs today's session open $77,681.60 → **+0.40%**. Clear. **Weekly trend gate:** live $77,995.50 vs 5-day-ago daily close $79,008.60 (2026-08-26) → **−1.28%/5d**, inside the ±3% band. Both gates clear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker), 661 online USD pairs. 23 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. AU-restricted DASH/USD appeared (+3.53%) — skipped pre-emptively, not deep-dived. Deep-dived the 14 with liquidity ≥$100k (GHST, SKR, SOMI, NOT, ESPORTS, JASMY, MORPHO, UAI, STX, BONK, BICO, MNT, GALA, CHIP, WIF) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| GHST/USD | **+40.12%** | **+39.51%** | **8.24x** | 5.8 min | Clears every raw bar decisively — see deep-check below, rejected on candle-shape/risk grounds. |
+| SKR/USD | +56.27% | +30.19% | 1.04x | 695.9 min | 4h/1h huge but volume fails (<2x) and high very stale — already flagged stale this session before. |
+| ESPORTS/USD | +9.93% | +10.67% | 5.76x | 35.9 min | Clears every raw bar — see deep-check below, rejected on asset-risk grounds. |
+| SOMI/USD | +6.76% | −2.22% | 4.25x | 50.9 min | 4h clears but 1h negative — fading, no re-entry case. |
+| JASMY/USD | +2.16% | +1.29% | 6.74x | 320.9 min | Volume clears but momentum fails both bars, high stale — same asset rejected 09:15 UTC this morning on live reversal. |
+| MORPHO/USD | +1.08% | −0.59% | 4.35x | 65.8 min | Volume clears but momentum fails both bars. |
+| BICO/USD | +2.88% | +2.19% | 1.75x | 1400.8 min | Both momentum bars fail 4h/1h thresholds, high very stale. |
+| (7 others: NOT, UAI, STX, BONK, MNT, GALA, CHIP, WIF) | — | — | — | — | All fail multiple bars — momentum negative/flat, volume thin, or high very stale (NOT itself down to +2.46%/4h, no longer close). |
+
+**GHST/USD deep-check (clears raw momentum/volume/freshness screen — rejected on risk grounds):**
+- Raw closed 15m candles (13:30–14:00 UTC) show a **vertical parabolic spike**, not a steady grind: 13:30 $0.0700→$0.0721 (+3%), 13:45 $0.0721→$0.0837 (+16%) on 197.6k volume, 14:00 $0.0830→$0.0971 (+17%) on 530.2k volume — three consecutive candles each bigger than the last, classic blow-off shape.
+- **Confirmed-closed-candle check fails:** the closed-candle high ($0.0971, set by the 14:00 candle) has **no subsequent closed candle** confirming a hold above it — the only candle since is still forming (14:15 UTC).
+- **Forming-candle reversal already visible:** the 14:15 candle shows open $0.0971 → high $0.0982 → **low $0.0935** (a ~4.8% intra-candle round-trip off the high) → last $0.0970. Price already failed to hold the fresh high within the same 15-minute window — the live version of the pattern the momentum-peak-check exists to catch.
+- Perplexity: no confirmed catalyst — CoinMarketCap attributes the prior leg to "profit-taking after an explosive multi-week rally" on a **$3.6–5M market cap**, thin/cooling liquidity amplifying moves. Classified momentum-only, no catalyst.
+- Cross-exchange: CoinGecko $0.096472 vs Kraken last $0.096900 → 0.44% divergence, clean (well inside gate).
+- Spread 0.41% (ask $0.0970/bid $0.0966), would otherwise pass.
+- **Rejected:** parabolic vertical spike with no confirming closed candle and an already-visible violent reversal inside the current forming candle — this is a textbook blow-off top, not an accelerating breakout.
+
+**ESPORTS/USD deep-check (clears raw momentum/volume/freshness screen — rejected on asset-risk grounds):**
+- Closed candles show a healthier structure than GHST: initial pop 13:15–13:30 ($0.0150→$0.0167 on 2.02M volume), then **two subsequent closed candles held the range** (13:45 close $0.0166, 14:00 close $0.0166, both within $0.0163–$0.0167) rather than fading — the confirmed-closed-candle requirement is arguably satisfied here (unlike GHST/JASMY/NOT). Forming candle (14:15) prints a marginal new high ($0.0168) without reversing.
+- Perplexity flags a serious asset-specific red flag not covered by the standard technical gates: this token (Yooldo Games, symbol ESPORTS) has a **documented history of a suspected insider dump / on-chain sell-off that crushed its price by ~90%+** in the recent past. Current move is described as "speculative rebound buying... thin-liquidity trading," with a pre-existing (not fresh) buyback narrative as the only quasi-catalyst — not a new event today, so still momentum-only for R:R purposes.
+- Market cap only **$2.53M** (CoinGecko, `yooldo-games`) — thinner than GHST, and on a token with a recent insider-dump precedent a 3.5% trailing stop provides materially less protection against a repeat flash-dump than it would on a normal high-ATR mover; a gap-through-stop is a real, elevated tail risk here specifically, not generic altcoin volatility.
+- Cross-exchange: CoinGecko $0.01668453 vs Kraken last $0.01670 → 0.09% divergence, clean.
+- Spread 0.60% (ask $0.01680/bid $0.01670), would otherwise pass.
+- **Rejected:** technical gates alone would pass this one, but the documented insider-dump/rug history on a sub-$3M-cap token is exactly the kind of tail risk the gate-protection default exists to screen for beyond the written checklist — capital protection takes precedence over a technically-clean setup.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.40%), weekly trend gate clear (−1.28%/5d). Fresh full-universe sweep (661 pairs) found two candidates clearing the raw momentum/volume/freshness screen — GHST/USD (rejected: parabolic spike with no confirming closed candle and a violent reversal already visible in the forming candle) and ESPORTS/USD (rejected: clean technical structure but a documented insider-dump/rug history on a sub-$3M market cap makes the tail risk unacceptable even at a tightened trail). No other candidate came close. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened and no risk factor waved through to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared the technical screen were rejected on specific, documented risk grounds (parabolic reversal; insider-dump history), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
