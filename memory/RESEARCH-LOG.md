@@ -34327,3 +34327,11 @@ Trade closed (ZORA stop-out, small loss, 5-minute whipsaw) — surfaced via the 
 ### Step 6 — Notification
 
 No push sent — book is flat with no unprotected exposure, crash gate and weekly trend gate both clear, and no candidate came close enough to a real gate to be worth flagging (UAI and NOT both show active fades, not hairline misses). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-08-31 — Session-Open Execution (~09:15 UTC)
+
+Full detail (pre-check, discovery sweep table, JASMY deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 08:08 UTC Pre-Session Research pass, no fills since. Crash gate clear (BTC +0.99%), weekly trend gate clear (−0.08%/5d). Fresh 638-pair sweep found JASMY/USD clearing the raw momentum/volume screen (4h +8.93%, 1h +4.95%, volume 4.52x) with a nominally fresh (0 min) 24h high, but the breakout candle's gains were already reversing hard in the following forming candle and on the live quote (~3.3% pullback off the high within minutes) — rejected on live-data grounds as a fade, not a hold. No other candidate cleared more than one bar. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and JASMY's paper-screen pass was invalidated by real-time reversal data rather than being a manufactured excuse to force a trade. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
