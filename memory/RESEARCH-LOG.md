@@ -34285,3 +34285,45 @@ Full detail (stop-out reconciliation, discovery sweep table, decision) logged in
 ### Step 6 — Notification
 
 Trade closed (ZORA stop-out, small loss, 5-minute whipsaw) — surfaced via the session's own push notification per CLAUDE.md (CallMeBot/ClickUp retired 2026-08-21).
+
+## 2026-08-31 — Pre-Session Research (~08:08 UTC)
+
+**Account snapshot (pre-trade):** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (confirms the 2026-08-30 22:05 UTC ZORA stop-out settled cleanly, no drift since). Book fully flat, no open positions to protect or tighten. Alpaca `positions: []`, all historical orders `filled`/`canceled` — zero exposure, no residual BTC position remaining, no action needed.
+
+**Crash gate:** BTC live $78,056.40 vs today's session open $77,681.60 → **+0.48%**, nowhere near the −20%/24h crash gate. Clear. **Weekly trend gate:** live $78,056.40 vs 5-day-ago daily close $78,509.40 (2026-08-25, Kraken daily OHLC) → **−0.58%/5d**, not a >3% downtrend. Both gates clear, pure-momentum entries remain open.
+
+**Market context (Perplexity):** BTC ~$77,990 (−0.37%/24h), consistent with live Kraken read. ETH ~$2,455 (+0.9%/24h). Fear & Greed split across trackers: CoinStats 77 (Extreme Greed), Alternative.me-style 69 (Greed), CFGI 72 (Greed), Yahoo-cited 62 (Greed) — Greed-leaning across the board, no Extreme Fear condition, so the Extreme-Fear R:R floor does not trigger (the general 1.5:1 momentum-only floor still applies regardless). BTC perpetual funding mixed but modest: Binance +0.0079%/8h, Kraken −0.040%/hr, aggregate ~0.005–0.008% — no funding-driven skew. Catalysts: macro-dominated — post-Jackson Hole Fed repricing toward a hawkish stance (57% probability priced for a September 25bp hike, >90% odds of a hike before December, per market pricing cited by Perplexity), next week's August nonfarm payrolls as the last read before the Sept 16 FOMC, G20 FinMin/CB Governors meeting and Fed Beige Book as potential swing factors, recent ~$488M in crypto liquidations tied to the ETF-flow reversal and hawkish Jackson Hole commentary. Solana has a dense upgrade roadmap in focus (Transaction V1 Sept 9, Alpenglow in October) but nothing firing today. Token unlocks today (Aug 31): OP (~7.9–31M OP unlock), SUI, PRIME, EIGEN, CELO, ACX, P, INFRA, XWGT — none tied to today's sweep candidates below; no confirmed major protocol-upgrade event landing today.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 36 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared in this pass. Deep-dived the 19 with liquidity ≥$100k (BLESS, NOT, XMR, UAI, STX, ETHFI, XPL, LIGHTER, GALA, CHIP, CRV, MNT, MORPHO, SUSHI, ICP, VET, MELANIA, BICO, WLFI) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| UAI/USD | +6.17% | −0.30% | 0.11x | 97.5 min | 4h clears decisively but 1h is flat/negative (fading), volume fails badly, high already stale — the setup already peaked. |
+| LIGHTER/USD | +4.96% | −0.03% | 0.70x | 742.5 min | 4h just under bar, 1h flat, volume fails, high very stale (12.4h). |
+| XMR/USD | +4.82% | +0.78% | 1.63x | 1042.5 min | 4h just under bar, 1h weak, volume under 2x, high stale (17.4h) — same asset flagged R:R-rejected on 2026-08-30, now also failing the technical bars outright. |
+| CHIP/USD | +4.14% | −0.32% | 2.72x | 1072.5 min | Volume clears but both momentum bars fail, 1h negative, high very stale. |
+| BLESS/USD | +3.44% | +1.37% | 1.17x | 832.5 min | Both momentum bars fail the thresholds, volume thin, high stale. |
+| SUSHI/USD | +2.47% | +0.88% | 0.20x | 877.5 min | Fails every bar. |
+| CRV/USD | +2.33% | +0.82% | 1.05x | 877.5 min | Fails every bar. |
+| ICP/USD | +2.11% | +1.04% | 1.98x | 922.5 min | Volume just under 2x, momentum fails both bars. |
+| ETHFI/USD | +2.01% | +0.80% | 0.39x | 922.5 min | Fails every bar. |
+| MORPHO/USD | +1.55% | −0.56% | 0.45x | 937.5 min | Fails every bar, 1h negative. |
+| MELANIA/USD | +1.14% | +0.28% | 0.16x | 1432.5 min | Fails every bar. |
+| VET/USD | +1.13% | +0.10% | 0.32x | 1072.5 min | Fails every bar. |
+| STX/USD | +1.10% | −0.44% | 1.10x | 1177.5 min | Fails every bar, 1h negative. |
+| XPL/USD | +0.91% | −0.56% | 2.45x | 817.5 min | Volume clears but momentum fails both bars, 1h negative. |
+| GALA/USD | +0.58% | −0.58% | 0.23x | 1207.5 min | Fails every bar, 1h negative. |
+| WLFI/USD | +0.00% | +0.17% | 0.07x | 1192.5 min | Fails every bar, essentially flat. |
+| BICO/USD | −0.47% | +1.38% | 0.21x | 1372.5 min | Fails every bar, 4h negative. |
+| MNT/USD | −1.10% | +0.16% | 0.91x | 832.5 min | Fails every bar, 4h negative. |
+| NOT/USD | −1.99% | −4.94% | 3.96x | 67.5 min | Passed the initial vs-open screen (+9.31%) but 15m-candle momentum shows a hard reversal — both windows now sharply negative despite a relatively fresh high (67.5 min) — a textbook momentum-peak-check rejection: the repricing already happened and is fading, not accelerating. |
+
+**No candidate cleared all gates, and none were hairline misses.** UAI is the closest on raw 4h momentum (+6.17%, clears the >5% bar) but fails 1h momentum, volume, and freshness all together — the move has already run and stalled. NOT/USD had the day's biggest headline gainer stat (+9.31% vs open) but its 15m-candle detail shows an active reversal, exactly the pattern the momentum-peak-check exists to catch. No individual catalyst-confirmation queries were run since nothing cleared the technical screen to warrant one.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate — the most recent close (ZORA, 2026-08-30 22:05 UTC) was a small loss but only the 1st stop-out on that asset, and it is not among today's candidates anyway.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.48%), weekly trend gate clear (−0.58%/5d, well inside the ±3% band). Fresh full-universe sweep (638 pairs) found no candidate clearing every gate — the closest raw mover (UAI, +6.17%/4h) has already faded on 1h momentum and volume, and the day's biggest headline gainer (NOT) is in an active reversal. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome, not a gap to route around — no ad hoc threshold loosening applied to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage. No trade plan to execute this pass.
+
+### Step 6 — Notification
+
+No push sent — book is flat with no unprotected exposure, crash gate and weekly trend gate both clear, and no candidate came close enough to a real gate to be worth flagging (UAI and NOT both show active fades, not hairline misses). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
