@@ -34359,3 +34359,43 @@ Full detail (pre-check, discovery sweep table, ESPORTS/MORPHO analysis, decision
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and no candidate came close enough to a real gate to be worth flagging. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+
+## 2026-08-31 — Evening Scan (~20:07 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the ~15:02 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $78,926.40 vs today's session open $77,681.60 → **+1.60%**. Clear. **Weekly trend gate:** live $78,926.40 vs 5-day-ago daily close $78,509.40 (2026-08-25, Kraken daily OHLC) → **+0.53%/5d**, well inside the ±3% band (positive). Both gates clear, pure-momentum entries remain open.
+
+**Macro context (Perplexity, context-only per revised discovery method):** BTC ~$78–78.3k, roughly flat/-0.4% to +0.3% across venues. ETH ~$2,446–$2,482, mixed -1.65% to +1.10% across venues. Fear & Greed **75 (Greed)** per primary source (a secondary composite read 49/Neutral). BTC perp funding modest, +0.006–0.008%/8h on major venues, no funding-driven skew signal. Catalysts: hawkish Jackson Hole Fed commentary pressured BTC off $81k; Saylor/Strategy signaled a possible resumption of BTC buying; US spot BTC ETFs saw a $201.8m net outflow breaking a 9-day inflow streak; SEC submitted custody-rule proposals to OIRA; Cronos halted after a $75m Tectonic exploit; Bitwise Solana ETF hit $1b AUM. Token unlocks today: OP (~31.34M), PRIME (750k), SUI, EIGEN, CELO — none of these appeared in the Kraken sweep as live momentum candidates.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 47 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — the widest raw screen of the day, likely reflecting the BTC bounce off the Jackson Hole dip. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 31 with liquidity ≥$100k (HYPE, XMR, DGAI, ADA, NEAR, PEPE, TRUMP, USELESS, CRV, CC, FIL, FET, DCR, ARB, JUP, BONK, MINA, STX, MORPHO, JASMY, BICO, DOGS, DOG, VIRTUAL, ETHFI, NOT, PYTH, WIF, WLFI, MNT, ENS) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| DOG/USD | **+6.42%** | **+4.59%** | **4.32x** | 50.4 min | Only candidate clearing every numeric bar — see deep-check below, rejected on candle-shape grounds. |
+| ARB/USD | +10.42% | +1.90% | 6.54x | 5.4 min | 4h and volume clear decisively, but 1h under the 3% bar; the fresh "high" is on the still-forming candle, not a confirmed close. |
+| USELESS/USD | +23.87% | +4.58% | 0.55x | 20.4 min | Both momentum bars clear hard but volume ratio fails (<2x) — move isn't backed by above-normal volume for this token. |
+| CC/USD | +5.77% | +1.08% | 10.33x | 20.4 min | 4h and volume clear, 1h well under bar. |
+| DOGS/USD | +8.73% | −2.14% | 0.96x | 200.4 min | 4h clears but 1h negative (fading), volume fails, high stale. |
+| PYTH/USD | +4.35% | +0.68% | 0.41x | 50.4 min | Fails 4h, 1h, and volume. |
+| MINA/USD | +3.26% | −0.47% | 0.33x | 35.4 min | Fails every bar. |
+| (24 others: HYPE, XMR, DGAI, ADA, NEAR, PEPE, TRUMP, CRV, FIL, FET, DCR, JUP, BONK, STX, MORPHO, JASMY, BICO, VIRTUAL, ETHFI, NOT, WIF, WLFI, MNT, ENS) | — | — | — | — | All fail multiple bars — momentum negative/flat, volume thin, or high very stale (several >1000 min: ADA, PEPE, TRUMP, JUP, VIRTUAL, ENS all >1400 min). |
+
+**DOG/USD deep-check (only candidate clearing all four numeric bars — 4h, 1h, volume, freshness):**
+- Momentum: 4h +6.42%, 1h +4.59%, both clear decisively; volume 4.32x trailing-24h 15m-bucket average, clears decisively; 24h high ($0.001320) set 50.4 min ago — inside the 60-min freshness window.
+- **Confirmed-closed-candle check fails:** raw 15m candles show the spike happened in the 19:00 UTC candle (huge 39.3M-unit volume, O 0.001221 → intracandle H 0.001320 → close 0.001281), then 19:15 held near $0.0013, 19:30 re-tagged the same $0.001320 high closing at 0.001292 — but the very next fully-closed candle (19:45 UTC) faded, closing at **0.001277, below the 19:30 close** and off the high. The currently-forming 20:00 candle is chopping $0.001262–$0.001290, last $0.001275, still well under the $0.001320 high with no new breakout attempt.
+- This is exactly the confirmed-closed-candle requirement's failure mode (TRADING-STRATEGY.md, added 2026-08-28): the breakout printed and the freshness window is technically satisfied, but the next fully-closed candle after the high did not hold above the prior level — a fade, not confirmation.
+- Spread: ask $0.001278 / bid $0.001274 ≈ 0.31%, would otherwise pass.
+- Catalyst (Perplexity): CoinMarketCap flags a fresh airdrop campaign (30 Aug 2026, ~1 day old) and prior "DOG Mode Bitcoin client" chatter as retail-attention drivers — momentum-only/social-driven, not a hard <6h catalyst, so this entry would in any case sit under the 1.5:1 R:R floor for no-fresh-catalyst momentum entries, not the standard 1.2:1. Moot given the candle-shape rejection above.
+- Cross-exchange: Perplexity-reported DOG price range ($0.00115–$0.00120 "today") vs Kraken live ($0.001275) is within normal cross-venue noise, no material divergence flag.
+
+**No candidate cleared every gate.** DOG/USD was the only candidate to clear all four numeric bars, but its own most recent closed 15m candle already faded off the high — a live momentum-peak-check rejection, the same pattern that has rejected NOT and JASMY earlier this week. ARB/USD and CC/USD were the next-closest (4h + volume) but both fail the 1h bar outright, not a hairline miss. USELESS/USD cleared both momentum bars emphatically but failed volume confirmation.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. ZORA's last stop-out (2026-08-30 22:05 UTC) is its 1st and not among today's candidates; DOG/USD has no prior stop-out history on record.
+
+### Decision: **HOLD.** Crash gate clear (BTC +1.60%), weekly trend gate clear (+0.53%/5d, positive). Fresh full-universe sweep (638 pairs) found one candidate (DOG/USD) clearing every numeric momentum/volume/freshness bar, but its own most recent closed candle already faded off the 24h high it set 50 minutes ago — rejected per the confirmed-closed-candle requirement's exact intent (a breakout must hold, not just print and fade). No other candidate came within one gate of clearing. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 6 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate that cleared every numeric bar (DOG/USD) was rejected on a live candle-fade, not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
