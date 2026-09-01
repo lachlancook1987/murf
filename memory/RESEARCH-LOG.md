@@ -34416,3 +34416,42 @@ Full detail (pre-check, discovery sweep table, KTA/ARB deep-checks, decision) lo
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and both candidates clearing every raw bar (KTA, ARB) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Pre-Session Research (~08:07 UTC)
+
+**Account snapshot:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD all sub-$0.20) — exact match to the prior session's closing state, no fills or drift overnight. Alpaca `positions: []`, all historical orders `filled`/`canceled` — zero exposure, no residual BTC position remaining, no action needed.
+
+**Market context (Perplexity):** BTC ~$78.3k–$79.1k depending on source (Kraken/CoinGecko cluster ~$78.3k–$78.9k, +0.2% to +1.3%/24h), consistent with live Kraken read. ETH ~$2,462–$2,475 (+0.9% to +1.9%/24h). Fear & Greed split across trackers: 62 (one source), 75 (CoinStats), 72 (CFGI) — Greed-leaning across the board, no Extreme Fear condition, so the Extreme-Fear R:R floor does not trigger (the general 1.5:1 no-catalyst floor still applies regardless). BTC perpetual funding modestly positive (~0.008–0.010%/8h across Binance/Glassnode/TradingView) — no funding-driven skew. Catalysts: macro-dominated — this Friday's August jobs report and the Sept 16 FOMC remain the dominant driver, Treasury long-duration bond buybacks cited as a bullish risk-asset tailwind, Crypto Clarity Act Senate procedural vote expected ~Sept 15, ~$3.2B in weekly institutional ETF inflows, ~$1.5B in token unlocks due first week of September led by HYPE/ENA/SUI, Robinhood Chain TVL >$700M post-mainnet, ZEC rallying on a Grayscale spot-ETF trust-conversion filing, HYPE at a fresh ATH on Trump remarks. Unlocks this week: SUI (Sep 1, 13.53M), STRK (Sep 1, 128M), EIGEN (Sep 1, 7.35M), TRUMP (daily, ~909k/day through Sept), ENA (Sep 2, 40.63M), HYPE (Sep 6, 9.92M) — none of these are among today's sweep candidates below, no confirmed major protocol-upgrade event landing today.
+
+**Crash gate:** BTC live $78,588.20 vs today's session open $78,563.00 (Kraken ticker `o`) → **+0.03%**. Clear, nowhere near the −20%/24h threshold. **Weekly trend gate:** live $78,588.20 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−2.09%/5d**, inside the ±3% band. Both gates clear, pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 21 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) among the deep-dive tier — DASH did clear the initial screen (+4.11% vs open) but was excluded pre-emptively per the standing AU-restriction flag rather than spending scan time on it. Deep-dived the 20 pairs with liquidity ≥$100k (UNI, AKE, UAI, 0G, VELO, BONK, CVX, SPX, SUSHI, AERO, ENS, ZK, ALGO, CRV, OP, DOT, JASMY, RAY, LIGHTER, AR) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| AR/USD | **+7.62%** | **+5.76%** | **3.23x** | 21.8 min | Clears every raw bar — see deep-check below, rejected on no-catalyst R:R floor. |
+| UAI/USD | +8.90% | +8.82% | 0.73x | 21.8 min | Strongest raw momentum of the sweep on both windows, but volume fails decisively (0.73x, <2x bar). |
+| VELO/USD | +9.80% | −1.48% | 1.24x | 81.8 min | 4h clears strongly but 1h negative — fading, not accelerating. |
+| BONK/USD | +5.92% | −0.61% | 11.46x | 66.8 min | 4h clears, volume huge, but 1h negative — momentum already turned. |
+| SPX/USD | +4.84% | −0.12% | 0.52x | 141.8 min | 4h just under bar, 1h flat, volume thin. |
+| SUSHI/USD | +3.73% | +0.25% | 18.82x | 21.8 min | Volume huge but both momentum bars fail. |
+| 0G/USD | +2.10% | 0.00% | 3.06x | 351.8 min | Volume clears but momentum flat, high stale. |
+| (12 others: AKE, CVX, AERO, ENS, ZK, ALGO, CRV, OP, DOT, JASMY, RAY, LIGHTER) | — | — | — | — | All fail multiple bars — momentum negative/flat/weak or volume thin. |
+
+**AR/USD deep-check (clears raw momentum/volume/freshness screen — rejected):**
+- Closed 15m candles (06:45–07:45 UTC) show a clean multi-candle grind up with no single-candle spike-and-reverse: 06:45 ($2.101→$2.137, closed near high), 07:00 ($2.126→$2.202→closed $2.196), 07:15 (closed $2.204), 07:30 (closed $2.222), 07:45 (O $2.220 → H $2.260 → C $2.260 — **closed exactly at its own high**, the cleanest possible confirmed-close signal, no intra-candle fade).
+- Live quote: ask $2.273 / bid $2.259 / last $2.261 — holding just above the 07:45 close, consolidating rather than reversing.
+- Spread: (2.273−2.259)/2.273 ≈ **0.62%**, clean, well under the 1% cap.
+- **Cross-exchange divergence gate:** Perplexity cross-check — CoinMarketCap $2.08 (+0.12%/24h), CoinGecko top-CEX quotes ~$2.08, CoinLore $2.10. Against Kraken live mid ~$2.266: divergence ≈ **7.8%**, inside the acceptable band (well under the >15–20% rejection threshold) — passes.
+- **Catalyst check (decisive reject):** Perplexity found only an AR.IO USDC-payment-support announcement dated **Aug 28** (4 days old, not <6h) and node-software upgrades of similar age; explicitly notes "AR's move is mostly beta-driven and tied to broader market strength rather than a unique new catalyst." No confirmed <6h-old catalyst. Classified momentum-only, so the no-catalyst R:R floor of 1.5:1 applies — the standard T1(+3%)/2.5%-stop structure only reaches 1.2:1, structurally short of the floor (same pattern that rejected ARB twice on 2026-08-31).
+- **Rejected:** no confirmed <6h catalyst fails the 1.5:1 momentum-only R:R floor, despite being the cleanest technical setup of the sweep (candle shape, spread, divergence all pass).
+
+**No candidate cleared every gate.** AR/USD was the only pair clearing all three raw momentum/volume/freshness bars, and it was the technically cleanest setup seen in several sessions (strong-close candle, tight spread, acceptable divergence) — but it has no confirmed catalyst inside 6 hours, so the no-catalyst R:R floor (1.5:1) applies and is structurally unreachable at the standard 3%/2.5% stop structure. UAI had the strongest raw momentum of the day on both windows but failed volume decisively. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history found for AR or UAI within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.03%), weekly trend gate clear (−2.09%/5d). Fresh full-universe sweep (638 pairs) found one candidate (AR/USD) clearing every raw momentum/volume/freshness bar with the cleanest technical shape seen recently — but it lacks a confirmed <6h catalyst, so the no-catalyst R:R floor (1.5:1) applies and is structurally unreachable at the standard T1/stop structure. UAI/USD had the strongest raw momentum but failed volume decisively. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 6 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing every raw bar (AR/USD) was rejected on a specific, documented gate (no-catalyst R:R floor), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
