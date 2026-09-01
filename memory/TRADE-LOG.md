@@ -10854,3 +10854,57 @@ No push sent — book flat with no unprotected exposure, crash gate clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, weekly trend gate back inside band, and both candidates clearing the raw screen (USELESS, ENA) were rejected on specific, documented gates (thin-liquidity wick; unconfirmed forming-candle high; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Midday Scan (~14:22 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AERO, ARB, AVAX, BABY, BICO, BIO, BMT, CSPR, DRV, ENA, FET, GWEI, HBAR, HNT, HYPE, INJ, JTO, KAS, LINK, MUBARAK, NEAR, NIL, ONDO, PEAQ, PENGU, POL, RENDER, ROBO, RUNE, SKR, SOL, SUI, SYN, TAO, TRUMP, UAI, UNI, VELVET, VIRTUAL, WLD, XETH, XPL, XXBT, XXDG, XXLM, XXRP, ZAUD, ZIG, ZORA, ZRO — all sub-$0.20) — exact match to the 12:05 UTC pass, no fills or drift since. Alpaca `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $78,193.80 vs today's session open $78,563.00 → **−0.47%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $78,193.80 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−2.58%/5d**, inside the ±3% band (self-corrected further from −2.83%/5d at the 12:05 UTC pass). Standard regime applies — pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 33 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — the widest raw screen of the day, consistent with a continuing broad alt rally. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 25 with liquidity ≥$100k (UAI, USELESS, CHIP, ADI, AR, UNI, CRV, CVX, ENA, OP, AKE, SKY, MINA, BONK, NEAR, TIA, LIGHTER, DRV, APT, SPX, ALGO, DGAI, ZK, DOT, FIL) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| CHIP/USD | **+11.39%** | **+5.79%** | **5.10x** | 20.6 min | Clears every raw bar — see deep-check below, rejected on unconfirmed-candle grounds. |
+| MINA/USD | **+6.42%** | **+5.15%** | **3.65x** | 20.6 min | Clears every raw bar — see deep-check below, rejected on scheduled-catalyst + live-fade grounds. |
+| TIA/USD | **+5.73%** | **+3.26%** | **4.34x** | 20.6 min | Clears every raw bar — see deep-check below, rejected on no-catalyst R:R floor. |
+| DGAI/USD | **+9.29%** | **+5.88%** | **2.52x** | 20.6 min | Clears every raw bar — see deep-check below, rejected on no-catalyst R:R floor. |
+| USELESS/USD | +13.34% | +2.65% | 1.36x | 35.6 min | 4h clears strongly but 1h and volume both fail. |
+| NEAR/USD | +5.77% | +2.61% | 2.76x | 20.6 min | 4h and volume clear, 1h just under the 3% bar. |
+| APT/USD | +5.20% | +2.20% | 4.01x | 20.6 min | 4h and volume clear, 1h just under the 3% bar. |
+| UAI/USD | +4.79% | +6.10% | 1.64x | 20.6 min | 1h clears strongly but 4h just under bar and volume fails. |
+| (17 others: ADI, AR, UNI, CRV, CVX, OP, AKE, BONK, LIGHTER, DRV, SPX, ALGO, ZK, DOT, FIL, ENA) | — | — | — | — | All fail multiple bars — momentum negative/flat/weak, volume thin, or high stale. |
+
+**Spread check (all four all-bar clearers):** CHIP 0.570%, MINA 0.313%, TIA 0.028%, DGAI 0.289% — all clean, well under the 1% cap.
+
+**CHIP/USD deep-check (clears all raw bars — rejected):**
+- Closed 15m candles (12:00–14:00 UTC) show a clean, uninterrupted grind up — every candle closes higher than the last, several closing at or within a tick of their own high (14:00: O $0.04188 → H $0.04354 → C $0.04332).
+- **Confirmed-closed-candle check fails:** live 24h high ($0.04397) sits on the **currently-forming** 14:15 candle (O $0.04333 → H $0.04397 → last $0.04392), not on any closed candle — the last closed candle's high was $0.04354. No fully-closed candle has yet held above the breakout level, the same still-forming-candle fakeout pattern that rejected ENA at the 12:05 UTC pass today.
+- **Rejected:** unconfirmed forming-candle high (structural gate) — despite otherwise being the cleanest candle shape of the four.
+
+**MINA/USD deep-check (clears all raw bars — rejected):**
+- Closed-candle high ($0.07210, set in the 14:00 candle) matches the live 24h high exactly — confirmed on a closed candle, unlike CHIP.
+- **Live fade (red flag):** the forming 14:15 candle has already pulled back sharply from that high — L $0.06986 (−3.1% off high) before a partial bounce to last $0.07025 (still −2.6% off high) — a live reversal immediately following a fresh high, similar in character to the flash-crash pattern that rejected USELESS on 2026-08-31.
+- **Catalyst check (Perplexity, decisive reject):** confirmed catalyst is Mina's **Mesa mainnet upgrade scheduled Sept 3, 2026** (~2 days out) — the same scheduled-catalyst pre-positioning conflict that passed over MINA in an earlier session (2026-08-28 log). Entering >2h ahead of a dated, publicly-scheduled event on anticipatory momentum is barred by TRADING-STRATEGY.md (added 2026-07-03); Perplexity's own read flags explicit sell-the-news risk once the de-risked upgrade lands.
+- **Rejected:** scheduled-catalyst pre-positioning caution, independently reinforced by the live post-high fade.
+
+**TIA/USD deep-check (clears all raw bars — rejected):**
+- Closed 15m candles (13:45–14:00) close near their own highs (14:00: O $0.3572 → H $0.3595 → C $0.3579); confirmed-closed-candle high ($0.3595) matches the live 24h high — passes the structural freshness check.
+- Forming 14:15 candle shows a mild pullback (L $0.3546, last $0.3547, −1.34% off the confirmed high) — consolidating, not a sharp reversal.
+- **Catalyst check (Perplexity, decisive reject):** no fresh <6h catalyst — the only cited driver is Celestia's **July 31 V9 mainnet upgrade** (a month old) plus generic "testing support near $0.35" technical chatter. Classified momentum-only → 1.5:1 R:R floor applies (TRADING-STRATEGY.md, added 2026-08-14); the standard T1(+3%)/2.5%-stop structure only reaches 1.2:1, structurally short of the floor.
+- **Rejected:** no confirmed <6h catalyst fails the momentum-only R:R floor, despite clean candle shape and confirmed-high freshness.
+
+**DGAI/USD deep-check (clears all raw bars — rejected):**
+- Closed 15m candles (12:45–14:00) show the strongest multi-candle grind of the four — six consecutive higher closes ($0.6879→$0.6981→$0.7064→$0.7232→$0.7358); confirmed-closed-candle high ($0.73967, 14:00 candle) matches the live 24h high.
+- Forming 14:15 candle shows a modest pullback (L $0.73147, last $0.7316, −1.09% off the confirmed high) — mild, not a flash-crash pattern.
+- Cross-exchange check: Perplexity/CoinGecko $0.6633, CoinMarketCap $0.7071, Bitget $0.7091 vs Kraken live ~$0.732 → divergence 3.5%–9.4% depending on reference, within the acceptable band, not a rejection on its own.
+- **Catalyst check (Perplexity, decisive reject):** the cited drivers (multi-exchange listing rollout, Gate Launchpool running through Sept 9, "decentralized AI" narrative) are all ongoing/pre-existing, not a fresh <6h headline. Classified momentum-only → 1.5:1 R:R floor applies, structurally unreachable at the standard 3%/2.5% structure (max 1.2:1), same pattern as TIA.
+- **Rejected:** no confirmed <6h catalyst fails the momentum-only R:R floor — best technical shape of the four but same structural disqualifier as TIA.
+
+**No candidate cleared every gate.** CHIP, MINA, TIA, and DGAI all cleared every raw momentum/volume/freshness bar — the widest multi-candidate clear of the week — but each failed on an independent, documented gate: CHIP on an unconfirmed still-forming-candle high, MINA on the scheduled-catalyst pre-positioning caution (reinforced by a live post-high fade), and TIA/DGAI on the no-catalyst momentum-only R:R floor. USELESS, NEAR, APT, and UAI were the next-closest, each missing exactly one bar. Same-thesis check: no prior stop-outs on record for CHIP, MINA, TIA, or DGAI within the 7-day window — cap does not apply.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.47%), weekly trend gate clear (−2.58%/5d, standard regime). Fresh full-universe sweep (638 pairs) found four candidates (CHIP, MINA, TIA, DGAI) clearing every raw momentum/volume/freshness bar — the widest multi-candidate clear of the week — but each was rejected on a specific, documented gate (unconfirmed forming-candle high; scheduled-catalyst pre-positioning caution; no-catalyst R:R floor ×2). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade despite the widest technical screen seen this week. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and all four candidates clearing the raw screen (CHIP, MINA, TIA, DGAI) were rejected on specific, documented gates (unconfirmed candle; scheduled-catalyst caution; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
