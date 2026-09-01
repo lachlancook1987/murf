@@ -10771,3 +10771,41 @@ No push sent — book flat with no unprotected exposure, both gates clear, and b
 ### Step 7 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +0.35 points. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Session-Open Execution (~09:05 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 08:07 UTC Pre-Session Research pass, no fills or drift since. Alpaca `positions: []`, all orders historical `filled`/`canceled` (last activity 2026-05-22), zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $77,822.60 vs today's session open $78,563.00 → **−0.94%**. Clear, nowhere near the −20%/24h threshold. **Weekly trend gate:** live $77,822.60 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−3.04%/5d**, now just outside the ±3% band (was −2.09%/5d an hour ago at the 08:07 UTC pass — BTC has drifted down since). Per TRADING-STRATEGY.md, this activates the stricter weekly-downtrend regime: pure-momentum entries are banned, catalyst-driven entries require 1h momentum >5% AND a catalyst <3h old. Does not change today's outcome (see below) but is a live regime shift worth flagging for the next pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 14 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the 9 with liquidity ≥$100k (SC, UAI, UNI, AKE, ADI, SPX, CVX, ALGO, CRV) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| SC/USD | **+10.37%** | **+18.99%** | **4.72x** | 15.0 min | Clears every raw bar — see deep-check below, rejected on cross-exchange divergence grounds. |
+| UAI/USD | +10.32% | +2.95% | 1.73x | 60.0 min | 4h clears strongly but 1h falls just short of the 3% bar and volume fails (<2x). |
+| UNI/USD | +6.02% | −2.04% | 2.47x | 150.0 min | 4h clears but 1h negative — momentum already turned, high stale. |
+| ADI/USD | +1.25% | +1.40% | 14.63x | 15.0 min | Volume huge but both momentum bars fail. |
+| SPX/USD | −0.24% | −1.60% | 3.64x | 195.0 min | Volume clears but momentum negative both windows. |
+| CVX/USD | −2.63% | −2.31% | 3.40x | 225.0 min | Momentum negative both windows, high stale. |
+| AKE/USD | −0.71% | −5.03% | 2.94x | 60.0 min | Momentum negative both windows despite volume clearing. |
+| ALGO/USD | −1.48% | −0.13% | 0.85x | 195.0 min | Fails every bar. |
+| CRV/USD | −2.06% | −0.32% | 0.38x | 225.0 min | Fails every bar. |
+
+**SC/USD deep-check (only candidate clearing all three raw technical bars):**
+- Closed 15m candles (06:00–08:45 UTC) show a clean multi-candle breakout from a flat $0.000745–$0.000795 base: 08:15 candle (O $0.000790 → H $0.000873 → C $0.000856, 25M volume — the breakout candle), 08:30 (O $0.000867 → H $0.000903 → C $0.000870, held above the prior close), 08:45 (O $0.000875 → H $0.000921 → C $0.000915, closed near its own high) — each candle closing higher than the last, no single-candle spike-and-reverse.
+- 1-minute candles into the current forming period show price setting a fresh intraday high of $0.000926 at 09:00–09:01 UTC, then chopping down to $0.000900–$0.000901 by 09:04 — a ~2.8% pullback off the high within ~3 minutes, holding/consolidating rather than accelerating into a clean breakdown (milder than the KTA/JASMY single-candle fades rejected on prior passes).
+- Spread: ask $0.000907 / bid $0.000900 ≈ **0.77%**, clean, under the 1% cap.
+- **Catalyst check (Perplexity):** no confirmed SC-specific catalyst in the last 6h — only stale items (a 15 Aug BIP-110/PoW mention, a 17 Jul exchange-support note, an "11 days ago" Bithumb network-upgrade halt). Perplexity's own read attributes the move to "sector rotation / macro beta," not a coin-specific event. No fresh catalyst confirmed.
+- **Cross-exchange divergence gate (decisive reject):** Perplexity/CoinGecko reports SC trading at **$0.0005979**, +0.20%/24h — essentially flat, matching Kraken's own session-open print ($0.000598) almost exactly. Against Kraken's live mid ~$0.0009035: divergence ≈ **33.8%**, far outside the >15–20% rejection band (TRADING-STRATEGY.md) — the same distorted/thin-order-book pattern that correctly rejected KTA (twice) and ARB (twice) on 2026-08-31. No external source shows anything resembling Kraken's +50%/day print; this is a Kraken-specific order-book dislocation, not a real market move.
+- **Rejected:** cross-exchange price divergence (~33.8%) plus no confirmed catalyst — decisively disqualified on two independent gates despite the cleanest raw momentum/volume screen seen in several sessions.
+
+**No candidate cleared every gate.** SC/USD was the only pair clearing all three raw momentum/volume/freshness bars (and the strongest raw 1h momentum print in recent memory), but is rejected on a ~33.8% cross-exchange divergence — no external source corroborates anything close to Kraken's move — plus no confirmed <6h catalyst. UAI/USD had the next-strongest 4h print but failed 1h and volume outright. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for SC or UAI within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.94%). Weekly trend gate now breached (−3.04%/5d, crossed from −2.09%/5d an hour ago) — activates the stricter weekly-downtrend regime per TRADING-STRATEGY.md (pure-momentum entries banned, catalyst-driven entries need 1h >5% + catalyst <3h old), though this did not change today's outcome since the one candidate clearing the raw screen (SC/USD) was independently rejected on cross-exchange divergence (~33.8%) and lacked any confirmed catalyst. No other candidate came close. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing the raw screen (SC/USD) was rejected on a large, well-documented cross-exchange divergence rather than a manufactured excuse. The new weekly-trend-gate breach is noted for the next pass but didn't change today's outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
