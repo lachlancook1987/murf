@@ -34471,3 +34471,11 @@ Full detail (pre-check, discovery sweep table, USELESS/ENA deep-checks, decision
 ### Step 6 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and both candidates clearing every raw bar (USELESS, ENA) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Midday Scan (~14:22 UTC)
+
+Full detail (pre-check, discovery sweep table, four deep-checks, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 12:05 UTC pass, no fills since. Crash gate clear (BTC −0.47%). Weekly trend gate clear and further inside band (−2.58%/5d, was −2.83%/5d). Fresh 638-pair sweep found four candidates (CHIP, MINA, TIA, DGAI) clearing every raw momentum/volume/freshness bar — the widest multi-candidate clear of the week — but CHIP's high sits on an unconfirmed still-forming candle, MINA hits the scheduled-catalyst pre-positioning caution (Mesa mainnet upgrade Sept 3) reinforced by a live −2.6% to −3.1% post-high fade, and TIA/DGAI both lack a confirmed <6h catalyst and fail the momentum-only 1.5:1 R:R floor. USELESS, NEAR, APT, UAI each missed exactly one bar. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and all four candidates clearing every raw bar (CHIP, MINA, TIA, DGAI) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
