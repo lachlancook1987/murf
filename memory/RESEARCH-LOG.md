@@ -34455,3 +34455,11 @@ No push sent — book flat with no unprotected exposure, both gates clear, and b
 ### Step 6 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing every raw bar (AR/USD) was rejected on a specific, documented gate (no-catalyst R:R floor), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Session-Open Execution (~09:05 UTC)
+
+Full detail (pre-check, discovery sweep table, SC/USD deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 08:07 UTC Pre-Session Research pass, no fills since. Crash gate clear (BTC −0.94%). Weekly trend gate newly breached (−3.04%/5d, up from −2.09%/5d an hour earlier) — activates the stricter weekly-downtrend regime (pure-momentum entries banned, catalyst entries need 1h >5% + catalyst <3h old) per TRADING-STRATEGY.md, flagged for the next pass. Fresh 638-pair sweep found one candidate (SC/USD) clearing every raw momentum/volume/freshness bar — strongest raw 1h print in recent memory (+18.99%) — but rejected on a ~33.8% cross-exchange divergence (Kraken shows +50%/day, every external source shows SC flat) plus no confirmed catalyst, the same distorted-order-book pattern that rejected KTA and ARB twice on 2026-08-31. No other candidate cleared more than one bar cleanly. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and SC/USD's paper-screen pass was invalidated by a large, well-documented cross-exchange divergence rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
