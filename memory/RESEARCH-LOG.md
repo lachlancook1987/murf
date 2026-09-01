@@ -34561,3 +34561,32 @@ No push sent — book flat with no unprotected exposure, crash gate clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate with real momentum (UAI) was rejected on a hard spread-cap breach plus additional independent gates rather than a manufactured excuse. The weekly trend gate breach persists but is unchanged in substance from the prior pass. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Midday Scan (~22:05 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 21:06 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $77,246.60 vs today's session open $78,563.00 → **−1.68%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,246.60 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−3.76%/5d** — still **breaches** the ±3% band (was −3.60%/5d at the 21:06 UTC pass, drifting slightly further into breach). Stricter weekly-downtrend regime remains active: pure-momentum entries banned; only entries with 1h momentum **>5%** AND a fresh catalyst **<3h old** are eligible.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 24 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all 24 on 15m OHLC (closed candles only) for true 4h/1h momentum vs. 1h-ago and 4h-ago closes, 1h-vs-trailing-24h volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| CHIP/USD | +6.16% | −2.30% | 0.18x | 95.3 min | Strongest raw chg (+14.56%) but already faded — 1h negative, high going stale. |
+| SPX/USD | +1.72% | −0.44% | 1.00x | 605.3 min | Fails 1h and stale high. |
+| CVX/USD | +2.67% | −1.10% | 0.23x | 710.3 min | Fails 1h and volume, stale high. |
+| REDUSD | +1.61% | +0.09% | 0.00x | 170.3 min | 1h essentially flat, volume dead. |
+| TIA/USD | +1.55% | +0.94% | 0.67x | 485.3 min | Nowhere near the 5% bar. |
+| ROBOUSD | +1.31% | −0.08% | 0.52x | 110.3 min | 1h flat/negative. |
+| SEI/USD | +0.70% | +1.46% | 3.17x | 245.3 min | Best 1h print of the sweep — still <5%. |
+| (17 others: FIL, ADI, UNI, AR, AKE, SKY, W, PWT, ENA, QNT, MINA, PYTH, GALA, DOT, XLTCZ, WAL) | — | — | — | — | All 1h momentum <1.5%, several negative — none within striking distance of the stricter 5% bar. |
+
+**No candidate cleared the stricter momentum bars.** Best 1h momentum in the entire 24-candidate deep-dive was SEI/USD at +1.46% — over 3.5 points short of the required >5%. CHIP/USD carried the strongest raw 4h print (+14.56% vs-open) but has already faded hard on the hourly timeframe (1h −2.30%) with its high now 95 minutes stale and volume ratio well under 1x, consistent with the same fade pattern flagged on CHIP/MINA earlier today. With no candidate remotely close to the momentum bar, no catalyst checks were warranted — the weekly-downtrend regime's 1h>5% prong is decisive on its own for all 24 candidates.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.68%). Weekly trend gate still breached (−3.76%/5d, drifting slightly further from −3.60%/5d at the 21:06 UTC pass) — stricter weekly-downtrend regime remains active (pure-momentum entries banned; require 1h momentum >5% AND catalyst <3h old). Full-universe sweep (638 pairs, 24 raw candidates, all deep-dived) found no candidate within 3.5 points of the required 1h>5% bar — a clean, decisive HOLD with no borderline cases needing catalyst confirmation. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and no candidate came within reach of the weekly-downtrend regime's stricter 1h>5% momentum bar (best was SEI at +1.46%). The weekly trend gate breach persists (−3.76%/5d, marginally worse than the 21:06 UTC pass) but doesn't change the outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.

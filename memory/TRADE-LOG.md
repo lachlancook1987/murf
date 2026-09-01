@@ -10956,3 +10956,17 @@ No push sent — book flat with no unprotected exposure, crash gate clear, weekl
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate with real momentum (UAI) was rejected on a hard spread-cap breach plus additional independent gates rather than a manufactured excuse. The weekly trend gate breach persists but is unchanged in substance from the prior pass. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Midday Scan (~22:05 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 21:06 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Steps 3–5 no-op).
+
+**Crash gate:** BTC live $77,246.60 vs today's session open $78,563.00 → **−1.68%**. Clear. **Weekly trend gate:** live $77,246.60 vs 5-day-ago daily close $80,265.90 (2026-08-27) → **−3.76%/5d**, still **breached** (was −3.60%/5d at the 21:06 UTC pass). Stricter weekly-downtrend regime remains active: pure-momentum entries banned; only 1h momentum >5% AND catalyst <3h old qualify.
+
+**Discovery sweep:** 638 online USD pairs, 24 candidates cleared the raw vs-open>3%/high-proximity/liquidity screen, all 24 deep-dived on 15m OHLC (closed candles). Best 1h momentum across the full set was SEI/USD at +1.46% — over 3.5 points short of the required >5%. CHIP/USD had the strongest raw 4h print (+14.56%) but has already faded (1h −2.30%, high 95 min stale, volume 0.18x). Full table in RESEARCH-LOG.md. No candidate warranted a catalyst check.
+
+### Decision: **HOLD.** No candidate cleared the stricter weekly-downtrend momentum bar. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat, crash gate clear, no candidate within reach of the stricter 1h>5% bar. Weekly trend gate breach persists (−3.76%/5d) but is unchanged in substance. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
