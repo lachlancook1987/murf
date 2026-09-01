@@ -34524,3 +34524,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing the raw screen (FIL) was rejected on specific, documented gates (weekly-downtrend regime; no-catalyst R:R floor) rather than a manufactured excuse. The weekly trend gate breach (now active, stricter regime) is noted for the next pass but did not change today's outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Session-Open Execution (~21:06 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 20:04 UTC Pre-Session Scan, no fills or drift since. Alpaca `positions: []`, `orders` all historical (filled/canceled), zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $77,380.40 vs today's session open $78,563.00 → **−1.51%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,380.40 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−3.60%/5d** — still **breaches** the ±3% band (was −3.77%/5d at the 20:04 UTC pass, a slight improvement but still in breach). Stricter weekly-downtrend regime remains active: pure-momentum entries banned; only entries with 1h momentum **>5%** AND a fresh catalyst **<3h old** are eligible.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 25 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the highest-liquidity clearers on 15m OHLC (closed candles only) for true 4h/1h momentum vs. 1h-ago and 4h-ago closes, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Note |
+|---|---|---|---|
+| UAI/USD | **+27.6%** | **+18.9%** | Clears the stricter 5% bar easily — see deep-check below, rejected on spread + unconfirmed candle + no fresh catalyst. |
+| CHIP/USD | +8.27% | +1.58% | 1h fails the stricter 5% bar. |
+| FIL/USD | +5.86% | −0.89% | 1h negative — fading over the last hour. |
+| ADI/USD | −0.55% | −0.55% | Volume dead (0.0 last candle), momentum negative. |
+| AR/USD | flat | +0.39% | Volume dead (3 candles pinned flat, 0.0 vol). |
+| CVX/USD | +3.6%ish | −0.45% | Fading, fails 1h bar. |
+| CRV/USD | +2.4%ish | −0.30% | Fading, fails 1h bar. |
+| UNI/USD | +2.9%ish | +0.83% | Fails 1h bar. |
+| AKE/USD | +2.0%ish | −0.95% | Fails 1h bar. |
+
+**UAI/USD deep-check (only candidate clearing the stricter momentum bars — rejected on three independent gates):**
+- 15m candles show a genuine sustained multi-hour climb, not a single-candle spike: from ~$0.4506 at 16:15 UTC to a live last of $0.5891 now, accelerating hard in the last two candles (20:45 candle O $0.51434→H $0.57624→C $0.55735; 21:00 forming candle O $0.55464→H **$0.60000**→last $0.5886).
+- **Spread (decisive, hard skip):** ask $0.59248 / bid $0.58134 ≈ **1.88–1.92%** — well over TRADING-STRATEGY.md's mandatory ≤1% cap. This alone disqualifies the trade regardless of momentum strength.
+- **Confirmed-closed-candle check fails:** the live 24h high ($0.60000) sits on the **currently-forming** 21:00 candle. The last fully-closed candle (20:45) topped at $0.57624 — no closed candle has yet held above the new high, the same still-forming-candle fakeout pattern that has rejected CHIP/ENA on earlier passes today.
+- **Catalyst check (Perplexity):** the only cited driver is a Jupiter AI-agent integration on Solana — the same catalyst already noted as dated **Aug 14, 2026** (2+ weeks old) on the 15:02 UTC pass, not a fresh <3h trigger required under the now-active weekly-downtrend regime. Perplexity itself characterizes the move as "momentum trading"/"AI-token rotation" flow rather than a fresh fundamental event, and separately reports UAI trading in the "low-$0.40s" on major trackers — implying a cross-exchange divergence of roughly **25–30%** against Kraken's live $0.589 print, consistent with the thin/dislocated-order-book pattern that has independently rejected UAI and SC on prior passes this week.
+- **Rejected:** spread >1% (hard cap breach) plus unconfirmed forming-candle high plus no fresh <3h catalyst and a large cross-exchange divergence — four independent disqualifiers on what is otherwise the single strongest momentum print seen today.
+
+**No candidate cleared every gate.** UAI/USD was the only pair to clear the stricter weekly-downtrend-regime momentum bars (1h >5%, 4h >5%) by a wide margin, but is disqualified on spread alone before any other gate is even needed — a live illustration of why the parabolic, fast-widening-spread phase of a pump is exactly what the spread cap exists to keep out of. Every other candidate faded over the last hour and failed the stricter 1h>5% bar outright.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for UAI within the 7-day window (UAI has been screened and rejected multiple times today — 14:22, 15:02, 20:04, now 21:06 UTC — but never entered, so the same-thesis cooling period does not apply).
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.51%). Weekly trend gate still breached (−3.60%/5d, marginally improved from −3.77%/5d at the 20:04 UTC pass) — stricter regime remains active. Fresh full-universe sweep (638 pairs) found one candidate (UAI/USD) blowing through the stricter momentum bars, but its spread (~1.9%) breaches the mandatory ≤1% cap outright — a hard, non-negotiable skip — on top of an unconfirmed forming-candle high and no fresh catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade despite the strongest raw momentum print of the day. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate with real momentum (UAI) was rejected on a hard spread-cap breach plus additional independent gates rather than a manufactured excuse. The weekly trend gate breach persists but is unchanged in substance from the prior pass. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
