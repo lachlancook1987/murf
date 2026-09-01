@@ -34479,3 +34479,11 @@ Full detail (pre-check, discovery sweep table, four deep-checks, decision) logge
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and all four candidates clearing every raw bar (CHIP, MINA, TIA, DGAI) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Session-Open Execution (~15:02 UTC)
+
+Full detail (pre-check, discovery sweep table, UAI deep-check, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 14:22 UTC midday scan, no fills since. Crash gate clear (BTC −0.82%). Weekly trend gate clear but drifting toward the boundary (−2.92%/5d, was −2.58%/5d). Fresh 638-pair sweep found one candidate (UAI/USD) clearing every raw momentum/volume/freshness bar with a genuinely confirmed breakout candle, but it lacks a confirmed <6h catalyst (only driver cited is 2+ weeks old) and shows a borderline-high cross-exchange divergence vs Bitget (~18.6%) — two independent rejection grounds. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing every raw bar (UAI) was rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).

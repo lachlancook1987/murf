@@ -10908,3 +10908,35 @@ No push sent — book flat with no unprotected exposure, crash gate clear, weekl
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and all four candidates clearing the raw screen (CHIP, MINA, TIA, DGAI) were rejected on specific, documented gates (unconfirmed candle; scheduled-catalyst caution; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Session-Open Execution (~15:02 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 14:22 UTC midday scan, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $77,922.40 vs today's session open $78,563.00 → **−0.82%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,922.40 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−2.92%/5d**, still inside the ±3% band (was −2.58%/5d at the 14:22 UTC pass, drifting back toward the boundary but not breached). Standard regime applies — pure-momentum entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 31 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the highest-liquidity candidates not already rejected earlier today (AR, LIGHTER, SKY, DRV, STX, STRK, QNT, AKE, CRV, UAI) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| UAI/USD | **+6.87%** | **+3.29%** | **3.69x** | 18.2 min (confirmed closed) | Clears every raw bar — see deep-check below, rejected. |
+| SKY/USD | +5.90% | +1.88% | 3.60x | 33.2 min (confirmed closed) | 4h and volume clear, 1h just under the 3% bar. |
+| STX/USD | +4.34% | +2.26% | 2.95x | stale (closed high doesn't match live) | 4h and volume clear, 1h fails, high not confirmed fresh. |
+| AR/USD | +3.94% | +2.53% | 0.24x | stale | Volume fails decisively. |
+| QNT/USD | +2.84% | +1.18% | 3.09x | stale | Momentum fails both windows. |
+| DRV/USD, STRK/USD, LIGHTER/USD, AKE/USD, CRV/USD | — | — | — | — | All fail multiple bars — momentum weak/negative, volume thin, or high stale. |
+
+**UAI/USD deep-check (clears all four raw bars — rejected):**
+- Closed 15m candles show a clean breakout: 13:45 candle O 0.41842→H 0.43645→C 0.43567, confirmed held by the 14:00 candle closing at its own high (0.44081). The 14:45 candle (fully closed by the time of this check, 15:00 close) printed a fresh high of 0.45320 — matching the live 24h high exactly — and closed at 0.45001, only a mild pullback. Confirmed-closed-candle requirement satisfied (unlike CHIP/ENA earlier today).
+- Spread: ask $0.45059 / bid $0.44966 ≈ 0.21%, very clean.
+- Catalyst (Perplexity): only cited driver is the Jupiter AI-agent integration dated **Aug 14, 2026** — over 2 weeks old, not a fresh <6h trigger. Classified momentum-only → 1.5:1 R:R floor applies (TRADING-STRATEGY.md, added 2026-08-14); standard T1(+3%)/2.5%-stop structure only reaches 1.2:1.
+- Cross-exchange: CoinGecko $0.4216, CoinMarketCap $0.4232, Bitget $0.3794 vs Kraken live $0.44977 → divergence 6.3–6.7% vs CoinGecko/CMC, but **~18.6% vs Bitget** — within the ~15–20% rejection band (TRADING-STRATEGY.md cross-exchange divergence gate) and a second independent red flag alongside the wide spread between reference sources themselves.
+- **Rejected:** no confirmed <6h catalyst fails the momentum-only R:R floor; Bitget cross-exchange divergence (~18.6%) is a second, independent disqualifier.
+
+**No candidate cleared every gate.** UAI/USD was the only candidate to clear all four raw momentum/volume/freshness bars this pass, but failed on the no-catalyst R:R floor and borderline cross-exchange divergence. Fear & Greed index: 69 (Greed), up from 62 yesterday. Same-thesis check: no prior stop-out history on record for UAI within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.82%). Weekly trend gate clear but drifting toward the boundary (−2.92%/5d, was −2.58%/5d at the 14:22 UTC pass) — still standard regime, worth watching next pass. Fresh full-universe sweep (638 pairs) found one candidate (UAI/USD) clearing every raw bar with a genuinely confirmed breakout candle, but it lacks a confirmed <6h catalyst (only cited driver is 2+ weeks old) and shows a borderline-high cross-exchange divergence vs Bitget (~18.6%) — two independent rejection grounds. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, weekly trend gate still inside band (though drifting toward the boundary), and the one candidate clearing the raw screen (UAI) was rejected on specific, documented gates (no-catalyst R:R floor; cross-exchange divergence) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
