@@ -34487,3 +34487,40 @@ Full detail (pre-check, discovery sweep table, UAI deep-check, decision) logged 
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing every raw bar (UAI) was rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Pre-Session Scan (~20:04 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 15:02 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $77,243.90 vs today's session open $78,563.00 → **−1.68%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,243.90 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−3.77%/5d**, **breaches** the ±3% band (was −2.92%/5d at the 15:02 UTC pass, continued drift into breach). **Stricter weekly-downtrend regime now active** per TRADING-STRATEGY.md: pure-momentum entries banned; only entries with 1h momentum **>5%** AND a fresh catalyst **<3h old** are eligible.
+
+**Market context (Perplexity):** BTC $78.3k–$79.1k depending on source (+0.2% to +1.3%/24h), consistent with live Kraken read once cross-checked. ETH ~$2,449.55 (+0.23%/24h). Fear & Greed split: 72 Greed (primary source), with alt trackers at 74 and 62 — Greed-leaning, no Extreme Fear condition. BTC perpetual funding modest/flat (~+0.007–0.010%/8h across venues). Catalysts: macro-dominated — Sept 15–16 FOMC as the month's biggest event, Sept 5 nonfarm payrolls and Sept 11 CPI as pre-meeting data, CLARITY Act Senate procedural vote as the key regulatory milestone. Token unlocks: ~$1.5B first week of September, largest being HYPE, ENA, SUI; XRP has a scheduled 1B-token escrow release today (no open XRP position). No held Kraken positions, so no per-position catalyst queries needed.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 28 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the highest-liquidity clearers not already rejected earlier today (UAI, FIL, ADI, CRV, CVX, AR, UNI, SKY) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| FIL/USD | **+11.44%** | +3.41% | **6.20x** | 36.0 min (confirmed closed) | Clears every raw bar — see deep-check below, rejected. |
+| UAI/USD | **+9.58%** | +2.78% | 1.77x | 21.1 min (confirmed closed) | 4h clears, 1h and volume fall just short of the raw bars. |
+| CVX/USD | +3.46% | +3.03% | 3.25x | stale (591 min) | 4h fails, high stale. |
+| ADI/USD | +0.61% | +0.44% | 1.43x | stale (36 min but flat momentum) | Momentum fails both windows despite fresh high timestamp. |
+| CRV/USD | +3.11% | +1.30% | 1.01x | stale (531 min) | 4h and volume both fail. |
+| AR/USD, UNI/USD, SKY/USD | — | — | — | — | Momentum flat/negative or volume <1x — fail multiple bars. |
+
+**FIL/USD deep-check (clears all raw momentum/volume/freshness bars — rejected):**
+- Closed 15m candles show a clean grind from the $0.684 session open toward the $0.798 24h high, confirmed-closed-candle high timestamped 36 min ago — passes the freshness/confirmed-candle structural checks.
+- Spread: ask $0.79300 / bid $0.79200 ≈ **0.13%**, very clean.
+- **Catalyst check (Perplexity):** only cited driver is Filecoin's "ProPGF Batch 3" ecosystem-funding program (~$1.4M in grants) plus an ongoing AI/DePIN narrative — an ongoing program, not a fresh <6h headline event. No confirmed <6h catalyst → classified momentum-only, 1.5:1 R:R floor applies (TRADING-STRATEGY.md, added 2026-08-14); standard T1(+3%)/2.5%-stop structure only reaches 1.2:1.
+- **Weekly-downtrend regime check (decisive, independent of the above):** with the weekly trend gate now breached (−3.77%/5d), pure-momentum entries are banned outright and require 1h momentum >5% AND a catalyst <3h old. FIL's 1h momentum is +3.41%, short of the 5% bar, and no catalyst <3h old is confirmed — fails the stricter regime on both prongs.
+- **Cross-exchange check:** CoinGecko $0.6932 (+2.50%/24h), CoinMarketCap $0.7034 (+4.12%/24h), Yahoo ~$0.714 vs Kraken live $0.789 → divergence ≈9.5–12.1% depending on reference — elevated versus FIL's typical tracking but still inside the >15–20% rejection band, not independently disqualifying.
+- **Rejected:** two independent gates — no-catalyst R:R floor, and (now decisive on its own) failure of the weekly-downtrend-regime's stricter momentum+catalyst requirement.
+
+**No candidate cleared every gate.** FIL/USD was the only pair to clear all four raw momentum/volume/freshness bars this pass, but the newly-breached weekly trend gate independently disqualifies it (1h momentum 3.41% vs the now-required >5%, no catalyst <3h old) on top of the pre-existing no-catalyst R:R floor rejection. UAI/USD was the next-closest, missing the 1h and volume bars outright. No other candidate came within one gate of clearing.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for FIL or UAI within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.68%). **Weekly trend gate breached** (−3.77%/5d, up from −2.92%/5d at the 15:02 UTC pass) — stricter weekly-downtrend regime now active (pure-momentum entries banned; require 1h momentum >5% AND catalyst <3h old). Fresh full-universe sweep (638 pairs) found one candidate (FIL/USD) clearing every raw momentum/volume/freshness bar, but it is independently disqualified by the newly-breached weekly-downtrend regime (1h momentum 3.41%, short of the now-required >5% bar, no catalyst <3h old) as well as the pre-existing no-catalyst R:R floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing the raw screen (FIL) was rejected on specific, documented gates (weekly-downtrend regime; no-catalyst R:R floor) rather than a manufactured excuse. The weekly trend gate breach (now active, stricter regime) is noted for the next pass but did not change today's outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
