@@ -34463,3 +34463,11 @@ Full detail (pre-check, discovery sweep table, SC/USD deep-check, decision) logg
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and SC/USD's paper-screen pass was invalidated by a large, well-documented cross-exchange divergence rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-01 — Session-Open Execution (~12:05 UTC)
+
+Full detail (pre-check, discovery sweep table, USELESS/ENA deep-checks, decision) logged in TRADE-LOG.md under the same timestamp per the Process Integrity same-pass logging rule. Summary: book fully flat, exact match to the 09:05 UTC pass, no fills since. Crash gate clear (BTC −0.74%). Weekly trend gate self-corrected back inside the ±3% band (−2.83%/5d, was −3.04%/5d an hour earlier) — standard regime applies, stricter weekly-downtrend rules do not activate. Fresh 638-pair sweep found two candidates (USELESS/USD, ENA/USD) clearing every raw momentum/volume/freshness bar — the widest technical screen in several sessions — but USELESS shows a live ~16.8% intracandle flash-crash wick immediately after its high (thin-liquidity red flag) and ENA's 24h high sits on an unconfirmed still-forming candle; neither has a confirmed <6h catalyst, so both are also capped below the momentum-only 1.5:1 R:R floor. No other candidate cleared more than two bars. Decision: **HOLD**. ZUSD $69.4011 fully available, no open positions.
+
+### Step 6 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and both candidates clearing every raw bar (USELESS, ENA) were rejected on specific, documented gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).

@@ -10809,3 +10809,48 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, and the one candidate clearing the raw screen (SC/USD) was rejected on a large, well-documented cross-exchange divergence rather than a manufactured excuse. The new weekly-trend-gate breach is noted for the next pass but didn't change today's outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — Session-Open Execution (~12:05 UTC)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 09:05 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect.
+
+**Crash gate:** BTC live $77,997.60 vs today's session open $78,563.00 → **−0.72%** (ticker `c` moved slightly during checks, computed −0.74% at ticker fetch). Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,997.60 vs 5-day-ago daily close $80,265.90 (2026-08-27, Kraken daily OHLC) → **−2.83%/5d**, back inside the ±3% band (was −3.04%/5d at the 09:05 UTC pass, a brief breach that self-corrected). Standard regime applies — pure-momentum entries remain open, stricter weekly-downtrend rules do not activate.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 23 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — widest raw screen in several sessions, consistent with a broad alt rally. Deep-dived the 16 with liquidity ≥$100k (USELESS, UNI, UAI, ENA, VELO, CRV, CVX, ADI, SPX, AKE, ALGO, LIGHTER, AR, OP, BONK, LDO) on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h volume ratio, and confirmed-closed-candle 24h-high freshness:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| USELESS/USD | **+11.94%** | **+3.41%** | **2.30x** | 35.8 min | Clears every raw bar — see deep-check below, rejected on volatility/no-catalyst grounds. |
+| ENA/USD | **+8.32%** | **+5.82%** | **3.18x** | 20.8 min | Clears every raw bar — see deep-check below, rejected on unconfirmed-candle + no-catalyst grounds. |
+| CRV/USD | +4.85% | +3.59% | 3.90x | 50.8 min | 1h and volume clear, 4h just under the 5% bar (4.85%). |
+| ADI/USD | +8.25% | +0.94% | 0.13x | 20.8 min | 4h clears but 1h and volume fail decisively. |
+| SPX/USD | +2.03% | +2.32% | 2.72x | 35.8 min | Volume clears, both momentum bars fail. |
+| AKE/USD | −3.53% | −2.92% | 2.13x | 245.8 min | Momentum negative both windows despite volume. |
+| (10 others: UNI, UAI, VELO, CVX, ALGO, LIGHTER, AR, OP, BONK, LDO) | — | — | — | — | All fail multiple bars — momentum weak/negative, volume thin, or high stale. |
+
+**USELESS/USD deep-check (clears all four raw bars — rejected):**
+- Closed 15m candles show a clean grind 10:00→11:30 (each close higher than the last, 11:15 O 0.10097→H 0.10178→C 0.09880 was the one soft spot), but the **11:30 candle itself faded intracandle**: O 0.09885 → H **0.10540** (the 24h high) → C 0.10179, a ~3.4% pullback from high to close within the same candle.
+- The very next closed candle (11:45) is the decisive red flag: O 0.10255 → **L 0.08147** → C 0.10302 — an intracandle wick down of **~16.8% from the 11:45 open low point**, then a full recovery to close above open. This is a violent flash-crash-and-recover pattern within a single 15-min bar, indicating a thin/fragile order book, not a clean breakout.
+- Forming 12:00 candle (O 0.10296, H 0.10315, L 0.10151, C 0.10214) is chopping in a tight range well below the 0.10540 high — consolidating, not re-attempting the breakout.
+- Spread: ask $0.10250 / bid $0.10216 ≈ 0.33%, clean.
+- Catalyst (Perplexity): no verified <6h catalyst — social/influencer momentum, derivatives activity, and airdrop speculation cited, all pre-existing narrative, not a fresh trigger. Classified momentum-only → 1.5:1 R:R floor applies, structurally unreachable at the standard 3%/2.5% structure (max 1.2:1).
+- Cross-exchange: Perplexity/CoinGecko ~$0.093–0.096 vs Kraken live ~$0.1021 → divergence ≈7.4%, within acceptable band, not a rejection on its own.
+- **Rejected:** the 16.8% intracandle flash-crash wick in the candle immediately following the 24h-high print is a live thin-liquidity red flag — a 2.5% trailing stop sits well inside that kind of book fragility. No confirmed catalyst independently caps R:R below the momentum-only floor regardless.
+
+**ENA/USD deep-check (clears all four raw bars — rejected):**
+- Closed 15m candles 10:00–11:45 show a textbook clean uptrend — every candle closes higher than the prior close, most closing at or within a tick of their own high (11:45: O 0.1612 → H 0.1655 → C 0.1654, closed essentially at the high).
+- **Confirmed-closed-candle check fails:** the actual 24h high (0.16690, per live ticker) was set in the **currently-forming 12:00 candle** (O 0.1655 → H 0.1669 → current 0.1654), not on a closed candle. Price has since pulled back from 0.1669 to ~0.1654, back near the prior candle's close — no fully-closed candle has yet held above the 0.1655 breakout level. This is exactly the still-forming-candle fakeout pattern the 2026-08-28 confirmed-closed-candle rule exists to filter (same pattern that rejected DOG on 2026-08-31).
+- Spread: ask $0.16520 / bid $0.16500 ≈ 0.12%, very clean.
+- Catalyst (Perplexity): no verified <6h catalyst — buyback/tokenomics narrative and investor-unlock-buyout news are days old, not fresh. Classified momentum-only → 1.5:1 R:R floor applies, structurally unreachable (max 1.2:1 at standard structure).
+- Cross-exchange: Perplexity/CoinGecko ~$0.158 vs Kraken live ~$0.1654 → divergence ≈4.5%, within acceptable band.
+- **Rejected:** unconfirmed forming-candle high (structural gate) plus no confirmed catalyst (R:R floor gate) — two independent disqualifiers.
+
+**No candidate cleared every gate.** USELESS/USD and ENA/USD both cleared all four raw momentum/volume/freshness bars — the first double-clear in several sessions — but USELESS shows a live thin-liquidity flash-crash wick immediately after its high, and ENA's high sits on an unconfirmed still-forming candle; neither has a confirmed <6h catalyst, so both are also capped below the momentum-only 1.5:1 R:R floor independent of their primary rejection reason. CRV/USD was the next-closest, missing the 4h bar by 0.15 points.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for USELESS or ENA within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.74%). Weekly trend gate back inside band (−2.83%/5d, self-corrected from the −3.04%/5d breach at the 09:05 UTC pass) — standard regime applies. Fresh full-universe sweep (638 pairs) found two candidates (USELESS/USD, ENA/USD) clearing every raw momentum/volume/freshness bar — the widest technical screen in several sessions — but USELESS carries a live thin-liquidity flash-crash wick and ENA's high is unconfirmed on a still-forming candle; both also lack a confirmed <6h catalyst, failing the momentum-only R:R floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 7 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, weekly trend gate back inside band, and both candidates clearing the raw screen (USELESS, ENA) were rejected on specific, documented gates (thin-liquidity wick; unconfirmed forming-candle high; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
