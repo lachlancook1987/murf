@@ -10753,3 +10753,21 @@ No push sent — book flat with no unprotected exposure, both gates clear, and b
 ### Step 7 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and both candidates that cleared every raw bar (KTA, ARB) were rejected on specific, documented gates (cross-exchange divergence; no-catalyst R:R floor), not a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-01 — EOD Snapshot
+
+### Sep 1 — EOD Snapshot (Day 104, Tuesday)
+
+**Portfolio:** $69.4011 | **Cash:** $69.4011 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$110.3789 (−61.40%) | **vs BTC:** +0.35%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD — all sub-$0.20 total, immaterial, excluded from portfolio total per convention). `positions: {}`, `orders: {"open": {}}` — book fully flat, no TRADE-LOG entries dated today, no drift since the Aug 31 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $69.4011 baseline. Phase P&L −$110.3789 (−61.40%) from $179.78 Kraken starting equity (May 22). BTC: yesterday's EOD reference $78,110.00 vs today's live $77,840.30 → **−0.35%**; bot day return 0.00% beats BTC by **+0.35 points** today (book was flat and untouched through BTC's modest pullback). Total trades since migration unchanged at 152 (no activity today). Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: pre-session research resumes with $69.4011 cash, fully available, no open positions, no gates currently blocking new entries.
+
+### Step 7 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +0.35 points. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
