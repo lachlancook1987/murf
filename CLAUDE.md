@@ -126,6 +126,33 @@ this replaced.
 this table wherever the scheduled tasks are configured (outside this repo). This section is the
 target to align them to, not a mechanism that enforces it.
 
+### Every pass must be execution-capable (added 2026-09-02, second review same day)
+
+The `TRADE decision requires a confirmed fill` rule in TRADING-STRATEGY.md's Process Integrity
+Rules assumes a pass *could* execute if it reached TRADE. That's not true for every external
+trigger prompt: the "pre-session research" trigger's own STEP list (STEP 4 "scan for trade
+opportunities," STEP 5 "write ideas to RESEARCH-LOG.md," STEP 6 "notify") has no order-placement
+step at all — it is a report-only template by construction, regardless of what it finds. On
+2026-09-01 this produced 5 passes and 8+ candidates clearing every raw momentum/volume bar, 0
+trades, distinct from (and prior to) the 2026-08-20 silent-execution-miss case the Process
+Integrity rule above was written for.
+
+This overrides any scheduled trigger's own STEP list, whatever it says: every pass that reaches
+a TRADE/HOLD decision must be capable of executing in that same pass if a candidate clears every
+gate — place the order and stop right after discovery, don't hand an idea to a future pass. A
+trigger literally named "research" or "scan" is still a full research → decide → execute → log
+pass under the 7-slot schedule above; there is no separate report-only pass type.
+
+**Cadence tension, flagged rather than resolved:** the target schedule above spaces passes 4
+hours apart. TRADING-STRATEGY.md's momentum-peak-check freshness window is 30 minutes (tightened
+2026-09-02) with a same-day dynamic refinement (`min(30min, time since last pass)`, see that
+file) — but even with that refinement, a 4-hour cadence means most genuine <30-min breakouts will
+simply never be caught by any pass, execution-capable or not. Tightening cadence further is a
+real lever nobody has pulled: it wasn't adopted here because it trades directly against cost
+(more sessions/day) and against the Aug 21–29 evidence that faster/more momentum-only entries
+without fixing the underlying edge just loses faster. Revisit this trade-off explicitly with the
+user rather than defaulting to "more frequent."
+
 ## Pre-Session Research — Kraken Framework
 
 The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session
