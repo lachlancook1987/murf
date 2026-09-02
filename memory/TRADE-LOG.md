@@ -10970,3 +10970,23 @@ No push sent — book flat with no unprotected exposure, crash gate clear, and t
 ### Step 7 — Notification
 
 No push sent — book flat, crash gate clear, no candidate within reach of the stricter 1h>5% bar. Weekly trend gate breach persists (−3.76%/5d) but is unchanged in substance. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — EOD Snapshot
+
+### Sep 2 — EOD Snapshot (Day 105, Wednesday)
+
+**Portfolio:** $69.4011 | **Cash:** $69.4011 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$110.3789 (−61.40%) | **vs BTC:** +0.93%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $69.4011, all other balances dust/zero. `positions: {}`, `orders: {"open": {}}` — book fully flat all day, no TRADE-LOG entries dated today, no drift since the Sep 1 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $69.4011 baseline. Phase P&L unchanged at −$110.3789 (−61.40%) from $179.78 Kraken starting equity (May 22). BTC: yesterday's EOD reference $77,840.30 vs today's live $77,114.60 → **−0.93%**; bot day return 0.00% beats BTC by **+0.93 points** today (book was flat and untouched through BTC's modest pullback). Total trades since migration unchanged at 152 (no activity today). Every hourly pass today (06:00 through 23:00 UTC, 15+ passes) reached HOLD — several candidates cleared raw momentum/volume screens through the day (AKE repeatedly, then EGLD/ARB/APT/NIGHT/OP this pass) but each failed a specific structural gate (confirmed-candle, two-candle acceleration, live-fade, freshness ceiling, or no-catalyst R:R floor) rather than a threshold being loosened. Alpaca: confirmed fully flat, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $69.4011 cash, fully available, no open positions, no gates currently blocking new entries.
+
+**Schedule note:** every pass today fired 30-35 minutes past the top of the hour (e.g. 10:34, 14:35, 20:34, 23:35 UTC) rather than on the hour — consistent, not a one-off. Per CLAUDE.md's schedule-drift handling, this is logged under the nearest hour each time; the underlying trigger cadence is outside what any session can fix and has already been noted in prior passes' logs.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift beyond the already-logged firing-time offset, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +0.93 points. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
