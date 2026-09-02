@@ -35240,3 +35240,38 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing nearly every gate (AKE) was rejected on a specific, documented gate (live intracandle fade, 1.6–2.4% past the 1.5% limit) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 22:00 UTC
+
+**Merge note:** This session forked before the 19:00 and 20:00 UTC passes landed on `main` (both fired and pushed while this session was already running its own 22:00 UTC pass against a stale base). `git fetch` at push time surfaced them as unexpected new commits — per the mem-sync concurrency-check procedure in CLAUDE.md, this entry is appended onto the current tip of `main` (which already includes those two passes) rather than pushed via a wholesale `memory/` file replace, so nothing is lost. Both concurrent passes reached HOLD with no position/order changes, consistent with this pass's own pre-check.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD — all sub-$0.15) — exact match to the 21:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,048.60 vs today's session open $77,398.10 → **−0.45%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,048.60 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−1.02%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 15 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, ~62min since last logged pass at 21:33 UTC) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | High freshness | Note |
+|---|---|---|---|---|---|
+| EGLD/USD | **+9.85%** | +2.81% | **3.49x** | 30 min (borderline) | 4h and volume clear strongly, 1h just under the 3% bar (2.81%) — a reversal from the 21:00 UTC pass where 1h cleared (6.62%) but 4h missed (4.39%); has now flipped to the opposite miss. |
+| NIGHT/USD | +4.27% | +1.88% | 2.42x | 0 min (fresh, two-candle accel confirmed) | Volume clears, both momentum bars fail; 4h just under 5%, 1h well under 3%. |
+| PIEVERSE/USD | +2.80% | +1.54% | 0.00x | 45 min (stale) | Volume fails decisively (thin), momentum both fail. |
+| APT/USD | +3.05% | +0.05% | 0.92x | 90 min (stale) | 4h close but under; 1h flat; volume under 2x. |
+| ADI/USD | +1.41% | 0.00% | 0.08x | 150 min (stale) | All fail. |
+| ALGO/USD | +0.61% | +0.67% | 1.95x | 270 min (stale) | Momentum fails both windows despite decent volume. |
+| SAND/USD | +1.30% | −0.26% | 0.51x | 90 min (stale) | Momentum fails; volume thin. |
+| (8 others: ARB, PYTH, MIRA, ASTER, CELO, MNT, SEI, JST) | — | — | — | — | All fail multiple bars — already faded, flat, or negative since the raw vs-open screen was taken (e.g. ARB −1.21%/4h despite +10.96% vs-open; PYTH −0.94%/4h despite +9.63% vs-open). |
+
+**AKE/USD check (not a raw candidate this pass):** live price $0.016647 vs 24h high $0.041876 — down **60.2%** from its own high set earlier in the day, no longer within the 6%-of-high proximity screen. Confirms the pattern flagged across its four rejections today (16:00–21:00 UTC): the huge momentum prints were thin-book speculative mania on fading volume, not a stable breakout — it has now round-tripped most of the move.
+
+**EGLD/USD (closest miss):** spread `kraken.sh quote` — ask $5.11 / bid $5.10 ≈ 0.20%, clean. Live fade only 2.11% off the 24h high ($5.21), high freshness right at the 30-min ceiling. Structurally the cleanest of the set, but the 1h momentum bar (2.81%) falls marginally short of the required >3% — no catalyst check warranted given the raw bar miss (consistent with prior-pass practice of not spending a catalyst query on a candidate that hasn't cleared the raw screen).
+
+**No candidate cleared every raw bar.** EGLD/USD came closest (4h and volume both clear strongly) but missed the 1h bar by ~0.2 points — the inverse of its 21:00 UTC miss (then it cleared 1h but missed 4h). NIGHT/USD has the freshest high and confirmed two-candle acceleration but both momentum bars fail outright. Fear & Greed / macro context not separately queried this pass — no candidate reached the catalyst-confirmation stage.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A — no momentum-only entries in the trailing window (book flat since before 2026-08-31).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.45%), weekly trend gate clear (−1.02%/5d, standard regime). Full-universe sweep (639 pairs) found 15 raw candidates; EGLD/USD was closest, clearing 4h momentum and volume cleanly but missing the 1h bar marginally (2.81% vs required >3%) — the mirror image of its miss at the 21:00 UTC pass. AKE/USD, the day's repeat momentum leader, has now round-tripped ~60% off its own 24h high and dropped out of the candidate screen entirely. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, cadence on schedule (~62 min since the last logged pass, within normal hourly variance), and the closest candidate (EGLD) was rejected on a specific, documented gate (1h momentum bar miss) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
