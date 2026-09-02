@@ -34626,3 +34626,43 @@ No push sent — book flat with no unprotected exposure, crash gate clear, and n
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate came within one bar of clearing the full technical screen. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 07:00 UTC
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 06:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,538.10 vs today's session open $77,398.10 → **+0.18%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,538.10 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.39%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 16 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived all 16 on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~60min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Confirmed? | Note |
+|---|---|---|---|---|---|---|
+| SYRUP/USD | **+7.65%** | **+4.28%** | **2.86x** | 4.7 min | Marginal — see deep-check below | Clears every raw bar — only all-bar clearer this pass. |
+| ETHFI/USD | +6.20% | +4.33% | 1.08x | 4.7 min | Yes | 4h, 1h, freshness clear; volume fails (<2x). |
+| SUSHI/USD | +5.58% | −0.14% | 1.63x | 109.7 min | Yes | 4h clears; 1h negative, volume and freshness fail. |
+| MINA/USD | +4.60% | −0.19% | 0.47x | 49.7 min | Yes | 4h close but under 5%; 1h negative, volume fails. |
+| UNI/USD | +4.48% | +1.18% | 1.35x | 124.7 min | Yes | 4h just under bar; 1h and volume fail. |
+| UAI/USD | −1.71% | **+5.37%** | 1.04x | 619.7 min | Yes | 1h clears strongly; 4h negative, volume and freshness fail. |
+| APR/USD | +3.12% | +0.90% | 0.89x | 4.7 min | Yes | Fails 4h, 1h, volume. |
+| ARB/USD, AAVE/USD, AXS/USD, AUCTION/USD, ZRX/USD, QNT/USD, XMR/USD, EGLD/USD, PYTH/USD | — | — | — | — | — | All fail multiple bars — momentum weak, volume thin, or high stale. |
+
+**SYRUP/USD deep-check (clears all four raw bars — rejected):**
+- Closed 15m candles (06:30–07:15) show clean acceleration: 06:45 C=0.20303 > prior close 06:30 C=0.20183; 07:00 C=0.20332 > 06:45 C=0.20303; 07:15 C=0.20649 > 07:00 C=0.20332 — two-candle acceleration requirement satisfied.
+- **Confirmed-closed-candle check — marginal fail:** last closed candle (07:15) high = 0.20652, closed at 0.20649 (essentially at its own high). Live 24h high is 0.20659, set on the still-forming 07:30 candle (only ~0.03% above the last closed high) — the true high has not yet been confirmed by a closed candle, even though the margin is far smaller than prior rejections (CHIP, ENA, MINA). Applying the rule at its letter per the gate-protection default (no loosening for marginal cases).
+- **Live intracandle fade check:** current price $0.20642 vs 24h high $0.20659 → −0.08% off high, no fade, passes cleanly on its own.
+- Spread: ask $0.20636 / bid $0.20614 ≈ 0.11%, very clean.
+- **Catalyst check (Perplexity, decisive independent of the above):** only cited driver is Maple Finance's ongoing MIP-021 buyback program (25% of November revenue → 2M SYRUP repurchased) — an ongoing framework, not a fresh <6h headline. No confirmed <6h catalyst → classified momentum-only, requiring R:R ≥1.8:1 at T1 (TRADING-STRATEGY.md, raised 2026-09-02); standard T1(+3%)/2.5%-stop structure only reaches 1.2:1, structurally far short of the floor.
+- Cross-exchange: Perplexity/trackers ~$0.184–0.196 vs Kraken live $0.2064 → divergence ≈5.5–8.6%, within acceptable band, not independently disqualifying.
+- **Rejected:** two independent gates — marginal unconfirmed-candle high, and (decisive on its own) no confirmed <6h catalyst failing the momentum-only 1.8:1 R:R floor.
+
+**No candidate cleared every gate.** SYRUP/USD was the sole pair clearing all four raw momentum/volume/freshness bars this pass, but its true 24h high sits (marginally) on a still-forming candle and it lacks a confirmed <6h catalyst — the no-catalyst R:R floor is decisive on its own. ETHFI was next-closest, missing only the volume bar.
+
+**Market context (Perplexity):** Fear & Greed Index: Greed-leaning across sources (Alternative.me 69, Bitget 63, CoinStats 74, CFGI 72) — no Extreme Fear condition. Not decisive this pass since the only all-bar clearer failed on the catalyst-independent R:R floor.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.18%), weekly trend gate clear (−0.39%/5d, standard regime). Full-universe sweep (638 pairs) found one candidate (SYRUP/USD) clearing every raw momentum/volume/freshness bar, but it was rejected on a marginal unconfirmed-candle high plus (decisively) the no-catalyst momentum-only R:R floor. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the sole candidate clearing the raw screen (SYRUP) was rejected on specific, documented gates (marginal unconfirmed candle; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
