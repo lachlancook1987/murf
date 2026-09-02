@@ -79,6 +79,53 @@ Key parameters: target 3–5% per trade, recycle capital multiple times per day,
 universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new trades**
 (placed immediately after fill), crash gate = BTC down >20% in 24h.
 
+## Routine Cadence & Naming Convention (added 2026-09-02)
+
+The scheduled tasks that fire these sessions are configured outside this repo (not visible or
+editable from within a session — `CronList`/`CronCreate` only manage session-local jobs, not
+the actual recurring triggers). This section documents the **intended** cadence and naming so
+routines stay consistent regardless of what the external scheduler is actually set to, and so
+drift between "intended" and "actual" is visible rather than silently absorbed into inconsistent
+log labels.
+
+This replaces an ad hoc pattern (reconstructed from a week of logs on 2026-09-02) that had
+~8+ passes/day clustered unevenly — e.g. a Midday Scan and a Session-Open Execution only 40
+minutes apart, another pair less than an hour apart — while leaving a ~10-hour overnight window
+(~22:00–08:00 UTC) with only sporadic coverage.
+
+### Target schedule (7 passes/day, UTC)
+
+| Time | Name | Scope |
+|---|---|---|
+| 00:00 | Scan — 00:00 UTC | Full discovery sweep + open-position check (stop verify, T1 partial-fill cleanup, thesis check) |
+| 04:00 | Scan — 04:00 UTC | Same as above |
+| 08:00 | Scan — 08:00 UTC | Same as above |
+| 12:00 | Scan — 12:00 UTC | Same as above |
+| 16:00 | Scan — 16:00 UTC | Same as above |
+| 20:00 | Scan — 20:00 UTC | Same as above |
+| 23:50 | EOD Reconciliation | Closed-book summary only — confirm all positions closed/reconciled via `kraken.sh closedorders` or balance delta, log Day P&L, Phase P&L, vs-BTC |
+
+Every scan slot runs the identical routine — crypto has no single "session open" or "midday," so
+there's no reason for six near-identical passes to carry six different names. **Retired names:**
+"Pre-Session Research," "Pre-Session Scan," "Session-Open Execution," "Midday Scan," "Evening
+Scan," "Overnight Triage" — do not use these going forward; log every non-EOD pass as
+`Scan — HH:00 UTC` using the nearest canonical slot time, not the exact fire time.
+
+### Handling schedule drift
+
+If a scheduled task fires at a time that doesn't land within ~15 minutes of one of the 7 slots
+above, log it under the nearest canonical slot name anyway (don't invent a new label), and note
+the actual vs. intended time in that pass's entry — e.g. "Scan — 12:00 UTC (fired 12:47 UTC)."
+This keeps the log queryable by intended slot even while the external trigger times still need
+manual alignment. If drift is frequent or large, flag it explicitly rather than treating it as
+routine, since consistent 4-hour spacing (not clustering + gaps) is the entire point of this
+schedule — see the 2026-09-02 routine-cadence review for the original clustering/gap pattern
+this replaced.
+
+**Not fixed by this document alone:** the actual trigger times still need to be set to match
+this table wherever the scheduled tasks are configured (outside this repo). This section is the
+target to align them to, not a mechanism that enforces it.
+
 ## Pre-Session Research — Kraken Framework
 
 The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session
