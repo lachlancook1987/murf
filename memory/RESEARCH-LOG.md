@@ -34759,3 +34759,34 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (FF) was rejected on a decisive, documented volume/liquidity gate rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 10:00 UTC (fired 10:34 UTC)
+
+**Drift note:** Fired ~34 minutes after the top of the hour — logged under the nominal 10:00 UTC hour per CLAUDE.md's drift-handling guidance.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 09:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $76,450.10 vs today's session open $77,398.10 → **−1.22%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $76,450.10 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−1.79%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. Only 7 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — the thinnest raw screen of the morning. TUSD/USD showed a spurious +41% vs-open read but has no valid Kraken pair via `kraken.sh` (`EQuery:Unknown asset pair`) — discarded as a bad/illiquid data point, not a real candidate. Deep-dived the remaining 6 on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~94min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Confirmed? | Note |
+|---|---|---|---|---|---|---|
+| PIEVERSE/USD | +4.11% | +0.35% | 3.91x | 49.8 min | Yes | 4h close but under 5%, volume clears strongly; 1h fails decisively, high stale beyond ceiling. |
+| SAFE/USD | +2.81% | +0.92% | 1.94x | 19.8 min | Yes | 4h and volume both just under bar; 1h fails. |
+| SYRUP/USD | +2.83% | +0.08% | 1.41x | 169.8 min | Yes | Momentum has faded further from the 09:00 UTC pass; two-candle acceleration technically passes but 1h is essentially flat. |
+| ZKP/USD | +2.16% | +0.75% | 0.26x | 34.8 min | Yes | Volume fails decisively; momentum weak both windows. |
+| EGLD/USD | +0.95% | +1.19% | 0.79x | 319.8 min | Yes | Fails every bar; high stale. |
+| PYTH/USD | −2.72% | −0.99% | 1.61x | 274.8 min | Yes | Negative momentum both windows. |
+
+**No candidate cleared every gate.** This was the weakest raw sweep of the morning (7 candidates vs. 12-16 on recent passes) and none came close to clearing the 4h>5%/1h>3% momentum bars simultaneously — PIEVERSE was closest on 4h (4.11%) but failed 1h decisively (0.35%). No candidate warranted a Perplexity catalyst-confirmation query given none cleared the technical screen.
+
+**Market context (Perplexity):** Fear & Greed Index: Greed-leaning (Alternative.me 69, CoinStats 74) with CFGI's live page reading Neutral (52) — mixed but no Extreme Fear condition anywhere. Not decisive this pass since no candidate reached the catalyst-check stage.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.22%), weekly trend gate clear (−1.79%/5d, standard regime). Full-universe sweep (638 pairs) found only 7 raw candidates, the thinnest screen of the morning; none cleared the 4h/1h momentum bars together. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate came within reach of the momentum bars on the thinnest raw screen of the morning. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
