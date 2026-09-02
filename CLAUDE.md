@@ -79,117 +79,77 @@ Key parameters: target 3–5% per trade, recycle capital multiple times per day,
 universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new trades**
 (placed immediately after fill), crash gate = BTC down >20% in 24h.
 
-## Routine Cadence & Naming Convention (added 2026-09-02)
+## Routine Cadence & Naming Convention (added 2026-09-02, consolidated same day — "single hourly routine")
 
-The scheduled tasks that fire these sessions are configured outside this repo (not visible or
-editable from within a session — `CronList`/`CronCreate` only manage session-local jobs, not
-the actual recurring triggers). This section documents the **intended** cadence and naming so
-routines stay consistent regardless of what the external scheduler is actually set to, and so
-drift between "intended" and "actual" is visible rather than silently absorbed into inconsistent
-log labels.
+**Current model: one consolidated routine, firing hourly, replaces six separate triggers.**
+Pre-Session Research, Session-Open Execution, Midday Scan, Overnight Triage, Daily Summary, and
+Weekly Review were previously six independently-scheduled prompts, each with its own copy of
+overlapping logic (position checks, stop management) and — in Pre-Session Research's case — no
+ability to execute at all. The platform enforces a minimum 1-hour repeat interval per routine,
+which made a sub-hourly "Watch Pass" (see below, retained for reference) impractical to run as
+its own trigger; consolidating into one routine that fires every hour turned that constraint into
+the simpler fix: one routine, one clock, always capable of both position maintenance and new
+entries, with EOD/weekly behavior as time-gated modes rather than separate triggers.
 
-This replaces an ad hoc pattern (reconstructed from a week of logs on 2026-09-02) that had
-~8+ passes/day clustered unevenly — e.g. a Midday Scan and a Session-Open Execution only 40
-minutes apart, another pair less than an hour apart — while leaving a ~10-hour overnight window
-(~22:00–08:00 UTC) with only sporadic coverage.
+**Retired as separate triggers:** "Pre-Session Research," "Pre-Session Scan," "Session-Open
+Execution," "Midday Scan," "Evening Scan," "Overnight Triage," "Daily Summary," "Weekly Review"
+— do not recreate these as distinct scheduled tasks. One routine now covers all of it. Log every
+pass as `Scan — HH:00 UTC` using the UTC hour of firing, regardless of what time of day it is.
 
-### Target schedule (7 passes/day, UTC)
+### What the consolidated routine does every hour
 
-| Time | Name | Scope |
-|---|---|---|
-| 00:00 | Scan — 00:00 UTC | Full discovery sweep + open-position check (stop verify, T1 partial-fill cleanup, thesis check) |
-| 04:00 | Scan — 04:00 UTC | Same as above |
-| 08:00 | Scan — 08:00 UTC | Same as above |
-| 12:00 | Scan — 12:00 UTC | Same as above |
-| 16:00 | Scan — 16:00 UTC | Same as above |
-| 20:00 | Scan — 20:00 UTC | Same as above |
-| 23:50 | EOD Reconciliation | Closed-book summary only — confirm all positions closed/reconciled via `kraken.sh closedorders` or balance delta, log Day P&L, Phase P&L, vs-BTC |
-
-Every scan slot runs the identical routine — crypto has no single "session open" or "midday," so
-there's no reason for six near-identical passes to carry six different names. **Retired names:**
-"Pre-Session Research," "Pre-Session Scan," "Session-Open Execution," "Midday Scan," "Evening
-Scan," "Overnight Triage" — do not use these going forward; log every non-EOD pass as
-`Scan — HH:00 UTC` using the nearest canonical slot time, not the exact fire time.
+1. **Position maintenance, always, before any new-entry research** — orphan-stop/orphan-T1-limit
+   check, T1 partial-profit-take resize, progressive stop-tightening on runners, thesis-break
+   exits, crash-gate check. This is the same job the old Midday/Overnight routines did, just now
+   running hourly instead of at uneven, sometimes 5+ hour gaps.
+2. **Research and execute** — full Kraken-native discovery sweep, Perplexity for context only,
+   every entry gate in TRADING-STRATEGY.md, execute in the same pass if a candidate clears every
+   gate. See "Every pass must be execution-capable" below — this is no longer a special override,
+   it's just what the one routine does every time.
+3. **EOD mode** (only on the 23:00 UTC pass) — also computes and appends an EOD Snapshot (Day
+   P&L, Phase P&L, vs-BTC) to TRADE-LOG.md. This heading may only be used on this specific pass.
+4. **Weekly Review mode** (only on the Friday 07:00 UTC pass, ≈5pm AEST) — also runs the full
+   weekly stats/trade-quality review and appends to WEEKLY-REVIEW.md, updating TRADING-STRATEGY.md
+   if the review warrants a rule change.
 
 ### Handling schedule drift
 
-If a scheduled task fires at a time that doesn't land within ~15 minutes of one of the 7 slots
-above, log it under the nearest canonical slot name anyway (don't invent a new label), and note
-the actual vs. intended time in that pass's entry — e.g. "Scan — 12:00 UTC (fired 12:47 UTC)."
-This keeps the log queryable by intended slot even while the external trigger times still need
-manual alignment. If drift is frequent or large, flag it explicitly rather than treating it as
-routine, since consistent 4-hour spacing (not clustering + gaps) is the entire point of this
-schedule — see the 2026-09-02 routine-cadence review for the original clustering/gap pattern
-this replaced.
+If the hourly trigger fires more than ~10 minutes off the hour, log it under the nearest hour
+anyway (e.g. "Scan — 12:00 UTC (fired 12:14 UTC)") rather than inventing a new label. If drift
+is frequent or large, flag it explicitly — hourly, not clustered/gapped, is the entire point.
 
-**Not fixed by this document alone:** the actual trigger times still need to be set to match
-this table wherever the scheduled tasks are configured (outside this repo). This section is the
-target to align them to, not a mechanism that enforces it.
+**Not fixed by this document alone:** the actual trigger cadence still needs to be set to hourly
+wherever the scheduled task is configured (outside this repo, outside what any tool in a session
+can reach) — this section describes what the routine does once it fires, not how often it fires.
 
-### Watch Pass (added 2026-09-02, third review same day — "Option D")
+### Watch Pass — superseded by hourly consolidation, kept for reference (added 2026-09-02)
 
-A **Watch Pass** is a separate, cheaper pass type, distinct from the 7 Scan slots above — it
-closes the gap between 4-hourly full scans without paying for a full scan's cost every 15-20
-minutes. It is not a smaller Scan; it has a narrower job and a much higher bar for acting.
+Before consolidation, a separate 15-20 minute "Watch Pass" trigger was designed to close the gap
+between infrequent full scans (see prior versions of this file for the full spec: position
+maintenance + a strict extreme-move tripwire). With the routine now firing hourly instead of
+every 4+ hours, most of that gap is already closed, and the platform's 1-hour-per-routine minimum
+makes a genuinely sub-hourly cadence impossible without multiple staggered triggers anyway. Not
+pursued for now — revisit only if hourly coverage turns out to still be too sparse in practice
+(e.g. a fast breakout consistently missed between hourly passes) and the added cost/complexity of
+staggered triggers is worth it at that point. This is a live option, not a closed one.
 
-**What it does:**
-1. **Position maintenance (the primary job):** `kraken.sh account`/`positions`/`orders`,
-   reconcile against the last position logged in TRADE-LOG.md, run the Orphan-stop check
-   (TRADING-STRATEGY.md), and — if a T1 limit order has filled since the last pass — resize the
-   trailing stop per the T1 partial-profit-take rule. This is exactly the "next scan pass"
-   cleanup that rule already requires, just on a loop short enough to matter.
-2. **Extreme-move tripwire (secondary, deliberately high bar):** a ticker-only sweep (Kraken
-   `Ticker` endpoint only — no 15m OHLC deep-dive, no Perplexity) for **1h move >7%** (vs. the
-   normal 3% Scan bar) with the 24h high set in the **last 10 minutes**. Set stricter than a
-   normal Scan on purpose, since this pass runs 15-20x more often.
-   - Nothing clears it → **exit, write no log entry.** A pass firing every 15-20 min that logs
-     "nothing happened" every time would add ~90+ no-op entries/day to the logs; only log when
-     something was actually done (stop resize, orphan cleanup) or the tripwire fired.
-   - Something clears it → escalate **within the same pass** into a full research → decide →
-     execute pass, same gates, same rules, logged the normal Scan way. The tripwire only changes
-     *when* a full pass runs, never *what* it takes to actually place a trade — no shortcuts.
+### Every pass must be execution-capable
 
-**What it explicitly does not do:** no Perplexity calls and no OHLC deep-dive unless the
-tripwire escalates it; no new trade entries off the ticker-only tripwire alone.
+Every hourly pass that reaches a TRADE/HOLD decision must be capable of executing in that same
+pass if a candidate clears every gate — place the order and stop right after discovery, don't
+hand an idea to a future pass. This used to require an explicit override (Pre-Session Research's
+old STEP list had no order-placement step at all — on 2026-09-01 this produced 5 passes and 8+
+candidates clearing every raw momentum/volume bar, 0 trades). Consolidation removes the
+report-only trigger entirely, so this is no longer a special case to guard against — it's just
+what the one routine does.
 
-**Logging:** non-trivial activity only, labeled `Watch — HH:MM UTC` (never one of the 7
-canonical `Scan — HH:00 UTC` slots) — TRADE-LOG.md for a stop resize/orphan cleanup,
-RESEARCH-LOG.md in the normal Scan format if the tripwire escalates to a full pass.
+**Cadence/freshness note:** TRADING-STRATEGY.md's momentum-peak-check freshness window is 30
+minutes, with a dynamic refinement (`min(30min, time since last pass)`, see that file). At an
+hourly cadence, that ceiling is now satisfied by construction on most passes — a real
+improvement over the old 4+ hour gaps, though still not sub-30-minute coverage. Tightening
+further (sub-hourly) was considered and not adopted, per the Watch Pass note above.
 
-**Setup note:** this needs its own external scheduled trigger, firing every 15-20 minutes,
-separate from the 7 Scan slots and EOD. `CronCreate` cannot provide this — it is session-local
-and expires after 7 days, not a durable production schedule; the trigger must be created in
-whatever external scheduler fires these sessions (outside this repo, and outside what any tool
-available in a session can reach).
-
-### Every pass must be execution-capable (added 2026-09-02, second review same day)
-
-The `TRADE decision requires a confirmed fill` rule in TRADING-STRATEGY.md's Process Integrity
-Rules assumes a pass *could* execute if it reached TRADE. That's not true for every external
-trigger prompt: the "pre-session research" trigger's own STEP list (STEP 4 "scan for trade
-opportunities," STEP 5 "write ideas to RESEARCH-LOG.md," STEP 6 "notify") has no order-placement
-step at all — it is a report-only template by construction, regardless of what it finds. On
-2026-09-01 this produced 5 passes and 8+ candidates clearing every raw momentum/volume bar, 0
-trades, distinct from (and prior to) the 2026-08-20 silent-execution-miss case the Process
-Integrity rule above was written for.
-
-This overrides any scheduled trigger's own STEP list, whatever it says: every pass that reaches
-a TRADE/HOLD decision must be capable of executing in that same pass if a candidate clears every
-gate — place the order and stop right after discovery, don't hand an idea to a future pass. A
-trigger literally named "research" or "scan" is still a full research → decide → execute → log
-pass under the 7-slot schedule above; there is no separate report-only pass type.
-
-**Cadence tension, flagged rather than resolved:** the target schedule above spaces passes 4
-hours apart. TRADING-STRATEGY.md's momentum-peak-check freshness window is 30 minutes (tightened
-2026-09-02) with a same-day dynamic refinement (`min(30min, time since last pass)`, see that
-file) — but even with that refinement, a 4-hour cadence means most genuine <30-min breakouts will
-simply never be caught by any pass, execution-capable or not. Tightening cadence further is a
-real lever nobody has pulled: it wasn't adopted here because it trades directly against cost
-(more sessions/day) and against the Aug 21–29 evidence that faster/more momentum-only entries
-without fixing the underlying edge just loses faster. Revisit this trade-off explicitly with the
-user rather than defaulting to "more frequent."
-
-## Pre-Session Research — Kraken Framework
+## Trading Framework — Kraken Research & Decision Rules
 
 The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session
 research — the old Alpaca conservative rules are fully retired.
