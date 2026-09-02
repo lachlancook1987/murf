@@ -34867,3 +34867,48 @@ No push sent — this was a live, user-initiated test run (not an unattended sch
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (OOB) was rejected on a hard spread-cap breach plus two additional independent gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 14:00 UTC (fired 14:35 UTC)
+
+**Drift note:** Fired ~35 minutes after the top of the hour — logged under the nominal 14:00 UTC hour per CLAUDE.md's drift-handling guidance.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 11:33 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` all historical, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,077.90 vs today's session open $77,398.10 → **−0.41%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,077.90 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.98%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 662 online USD pairs. 12 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — the widest raw screen since the morning. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived all 12 on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~182min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | 2-candle accel | Note |
+|---|---|---|---|---|---|---|
+| SYRUP/USD | **+9.07%** | **+3.40%** | **2.55x** | 34.1 min | Yes | Clears all three raw bars — see deep-check below, rejected on freshness/live-fade grounds. |
+| SOMI/USD | **+13.50%** | +2.93% | 1.46x | 1894.1 min | Yes | 4h clears strongly but 1h just under bar, volume fails, high very stale. |
+| ROBO/USD | +6.95% | +0.07% | 1.56x | 5824.1 min | No | 4h clears but 1h flat, volume fails, high stale. |
+| PYTH/USD | +4.31% | +3.81% | 1.41x | 10399.1 min | Yes | 1h clears but 4h just under bar, volume fails, high extremely stale. |
+| OP/USD | +4.14% | +3.04% | 0.33x | 10804.1 min | Yes | Both momentum bars close but volume fails decisively, high extremely stale. |
+| ASTER/USD | +3.68% | +2.61% | 6.48x | 9499.1 min | Yes | Volume clears strongly but both momentum bars fail, high extremely stale. |
+| EGLD/USD | +3.53% | +1.62% | 5.27x | 4789.1 min | No | Volume clears, momentum fails both windows, high stale. |
+| MIRA/USD | +4.47% | −1.06% | 1.10x | 3409.1 min | No | 4h close but under bar, 1h negative. |
+| CELO/USD | +1.04% | +0.91% | 1.26x | 424.1 min | No | Fails every bar. |
+| US/USD | +1.39% | +2.07% | 0.07x | 6004.1 min | No | Volume fails decisively. |
+| FF/USD | +2.39% | −0.11% | 0.29x | 109.1 min | No | Same marginal-liquidity name flagged repeatedly this morning — fails again. |
+| PIEVERSE/USD | −0.21% | +0.32% | 0.28x | 5464.1 min | No | Fails every bar. |
+
+**SYRUP/USD deep-check (clears 4h, 1h, and volume raw bars — rejected):**
+- 4h (+9.07%) and 1h (+3.40%) both clear, with genuine two-candle acceleration and a closed-candle volume ratio of 2.55x — the first candidate in several passes to clear all three raw bars simultaneously.
+- Live ticker confirms the 24h high (0.22315) matches the closed-candle high found in the OHLC sweep — a genuine confirmed-closed-candle high, not a still-forming-candle fakeout.
+- **Freshness ceiling fails narrowly:** high age 34.1 min, just over the 30-min cadence-relative ceiling (ceiling = min(30min, ~182min since last logged pass) = 30 min flat).
+- **Live intracandle fade check fails decisively:** current price (last $0.21786) has already retraced **2.37%** off the 24h high ($0.22315) — well past the 1.5% fade-rejection threshold. Spread is clean (ask $0.21784/bid $0.21763 ≈ 0.10%) but irrelevant given the fade rejection.
+- Given two independent, decisive structural gate failures (freshness ceiling breach + live fade past 1.5%), no Perplexity catalyst-confirmation query was warranted — the rejection doesn't turn on catalyst timing.
+- **Rejected:** freshness ceiling (34.1 min > 30 min) and live intracandle fade (2.37% > 1.5%), both independently decisive.
+
+**No candidate cleared every gate.** SYRUP/USD was the only pair to clear all three raw momentum/volume bars this pass — the cleanest technical screen result in several hours — but it had already faded off its confirmed high by the time this check ran, failing both the freshness ceiling and the live intracandle fade check. SOMI/USD had the strongest raw 4h print (+13.50%) but its high is nearly a day and a half stale and its 1h/volume both fail.
+
+**Market context:** Not queried this pass — no candidate reached the catalyst-confirmation stage (SYRUP's rejection was already decisive on two independent structural gates).
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for SYRUP within the 7-day window (repeatedly screened and rejected this morning on momentum fade, never entered — cooling-period rule does not apply). **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.41%), weekly trend gate clear (−0.98%/5d, standard regime). Full-universe sweep (662 pairs) found 12 raw candidates, the widest screen since this morning; SYRUP/USD cleared all three raw momentum/volume bars but had already faded off its confirmed high by check time, failing both the freshness ceiling and the live intracandle fade check. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing all three raw bars (SYRUP) was rejected on two independent, documented structural gates (freshness ceiling; live intracandle fade) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
