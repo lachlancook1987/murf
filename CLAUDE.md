@@ -27,6 +27,36 @@ git branch -D _mem-sync
 > lost. Always run `git add memory/ && git commit` on the session branch before switching
 > to `_mem-sync`.
 
+## Position Watch Dashboard (added 2026-09-02)
+
+A read-only status page for the user's own monitoring (originally set up for an always-on iMac
+near their workstation): **https://claude.ai/code/artifact/576a1343-17bf-4818-85aa-b998a1007622**
+
+It shows current phase P&L, cash, the open position (if any) with live-updating unrealized P&L/
+stop/T1/T2, the last scan's decision, and the 8 most recent closed trades. It has no write access
+to Kraken — display only, cannot place/modify/cancel orders.
+
+**Every hourly pass must update its `state/bot` document** (via the Artifact tool's `write_db`
+action against the URL above, `db_op: "set"`) whenever position state changes — a new fill, a
+stop/T1 resize, a position close, or a new scan decision. At minimum, update `last_scan` and
+`updated_at` every pass so the dashboard's "last updated" indicator stays honest; update
+`position`, `cash_usd`, `phase_pnl_usd`/`phase_pnl_pct`, and append to `recent_closed` whenever
+Step 3 or Step 4 changes them. Schema (single document at `state/bot`):
+
+```json
+{
+  "updated_at": "ISO 8601 UTC timestamp of this write",
+  "cash_usd": 0,
+  "phase_pnl_usd": 0,
+  "phase_pnl_pct": 0,
+  "position": null,
+  "last_scan": { "time_utc": "YYYY-MM-DD HH:00 UTC", "decision": "HOLD|TRADE", "summary": "..." },
+  "recent_closed": [ { "pair": "SYM/USD", "entry": 0, "exit": 0, "pnl_pct": 0, "outcome": "win|loss", "opened": "YYYY-MM-DD", "closed": "YYYY-MM-DD", "reason": "trailing stop|T1 partial + trail|thesis break|..." } ]
+}
+```
+
+`position` (null when flat) shape when open: `{ "pair", "entry_price", "current_price", "qty", "unrealized_pct", "unrealized_usd", "stop_percent", "t1_price", "t2_price", "catalyst" }`. Keep `recent_closed` to the 8 most recent (prepend new, drop oldest) rather than letting it grow unbounded. This is best-effort visibility for the user, not part of the trading logic — a missed dashboard update is not a trading error and doesn't need a push notification, just fix it next pass.
+
 ## Notifications (WhatsApp/CallMeBot — RETIRED 2026-08-21)
 
 WhatsApp notifications via CallMeBot are **retired by user decision**, not just broken.
