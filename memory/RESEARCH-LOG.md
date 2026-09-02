@@ -35275,3 +35275,30 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, cadence on schedule (~62 min since the last logged pass, within normal hourly variance), and the closest candidate (EGLD) was rejected on a specific, documented gate (1h momentum bar miss) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 23:00 UTC (fired 23:35 UTC, EOD pass)
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 22:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,114.60 vs today's session open $77,398.10 → **−0.37%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,114.60 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.93%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 18 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k, led by EGLD (+32.67% vs open) and ARB (+12.68%). Deep-dived the top candidates by proximity-to-high and vs-open on 15m OHLC (closed candles only):
+
+| Pair | Note |
+|---|---|
+| EGLD/USD | High ($5.49) set in the 22:45 candle, now ~45-50 min stale (exceeds 30-min ceiling); last two closed candles (23:00→23:15) closed *lower* each time — fails two-candle acceleration outright; live price $5.32 is 3.1% off the high — also fails the 1.5% live-fade check. Triple rejection. |
+| ARB/USD | 24h high ($0.1278) sits on the currently-forming 23:30 candle, not confirmed by any closed candle; live price ($0.1244) already 2.7% off that high. Fails confirmed-candle requirement and live-fade check. |
+| APT/USD | High ($0.5882) confirmed on the closed 23:00 candle (~19 min fresh, inside ceiling) — best freshness of the set — but the following closed candle (23:15, close $0.5833) closed *lower* than the 23:00 close ($0.5847), a spike-then-stall pattern that fails the two-candle acceleration requirement. |
+| NIGHT/USD, OP/USD | Same spike-then-stall pattern: a higher-closing candle immediately followed by a lower-closing one. Fail two-candle acceleration. |
+| LIGHTER/USD | 24h high stale (>30 min, set well outside this window); thin/inconsistent volume. |
+| PYTH/USD, SAND/USD, ALGO/USD, MIRA/USD, CELO/USD, ADI/USD | Flat/choppy 15m candles, several printing zero-volume bars — no real momentum, already faded from the raw vs-open screen taken earlier in the sweep window. |
+
+**No candidate cleared every raw/structural gate.** Every candidate with a real spike (EGLD, ARB, APT, NIGHT, OP) faded or stalled on the very next closed candle — the exact pattern the two-candle acceleration and live-fade checks exist to catch. None reached the catalyst-confirmation stage. Fear & Greed Index: 63–69 depending on source (Greed), consistent with recent passes.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A — no momentum-only entries in the trailing window (book flat since before 2026-08-31).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.37%), weekly trend gate clear (−0.93%/5d, standard regime). Full-universe sweep (639 pairs) found 18 raw candidates; the five with genuine spikes (EGLD, ARB, APT, NIGHT, OP) each stalled or reversed on the very next 15m candle close, failing the two-candle acceleration and/or live-fade and/or confirmed-candle gates. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage. **EOD Snapshot appended to TRADE-LOG.md this pass** (23:00 UTC pass, per CLAUDE.md Step 6).
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, zero trades today (Day P&L flat, bot ahead of BTC on the day), and every real-momentum candidate this pass was rejected on a specific, documented structural gate rather than a manufactured excuse. The ~30-35 min post-hour firing pattern seen across every pass today (10:34, 11:33, 13:34, 14:35, 16:34, 17:33, 18:34, 20:34, 21:33, now 23:35) is a consistent, already-flagged scheduling characteristic, not new information — not pushed separately per the standing guidance that this is infrastructure outside any single session's reach. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
