@@ -126,6 +126,42 @@ this replaced.
 this table wherever the scheduled tasks are configured (outside this repo). This section is the
 target to align them to, not a mechanism that enforces it.
 
+### Watch Pass (added 2026-09-02, third review same day — "Option D")
+
+A **Watch Pass** is a separate, cheaper pass type, distinct from the 7 Scan slots above — it
+closes the gap between 4-hourly full scans without paying for a full scan's cost every 15-20
+minutes. It is not a smaller Scan; it has a narrower job and a much higher bar for acting.
+
+**What it does:**
+1. **Position maintenance (the primary job):** `kraken.sh account`/`positions`/`orders`,
+   reconcile against the last position logged in TRADE-LOG.md, run the Orphan-stop check
+   (TRADING-STRATEGY.md), and — if a T1 limit order has filled since the last pass — resize the
+   trailing stop per the T1 partial-profit-take rule. This is exactly the "next scan pass"
+   cleanup that rule already requires, just on a loop short enough to matter.
+2. **Extreme-move tripwire (secondary, deliberately high bar):** a ticker-only sweep (Kraken
+   `Ticker` endpoint only — no 15m OHLC deep-dive, no Perplexity) for **1h move >7%** (vs. the
+   normal 3% Scan bar) with the 24h high set in the **last 10 minutes**. Set stricter than a
+   normal Scan on purpose, since this pass runs 15-20x more often.
+   - Nothing clears it → **exit, write no log entry.** A pass firing every 15-20 min that logs
+     "nothing happened" every time would add ~90+ no-op entries/day to the logs; only log when
+     something was actually done (stop resize, orphan cleanup) or the tripwire fired.
+   - Something clears it → escalate **within the same pass** into a full research → decide →
+     execute pass, same gates, same rules, logged the normal Scan way. The tripwire only changes
+     *when* a full pass runs, never *what* it takes to actually place a trade — no shortcuts.
+
+**What it explicitly does not do:** no Perplexity calls and no OHLC deep-dive unless the
+tripwire escalates it; no new trade entries off the ticker-only tripwire alone.
+
+**Logging:** non-trivial activity only, labeled `Watch — HH:MM UTC` (never one of the 7
+canonical `Scan — HH:00 UTC` slots) — TRADE-LOG.md for a stop resize/orphan cleanup,
+RESEARCH-LOG.md in the normal Scan format if the tripwire escalates to a full pass.
+
+**Setup note:** this needs its own external scheduled trigger, firing every 15-20 minutes,
+separate from the 7 Scan slots and EOD. `CronCreate` cannot provide this — it is session-local
+and expires after 7 days, not a durable production schedule; the trigger must be created in
+whatever external scheduler fires these sessions (outside this repo, and outside what any tool
+available in a session can reach).
+
 ### Every pass must be execution-capable (added 2026-09-02, second review same day)
 
 The `TRADE decision requires a confirmed fill` rule in TRADING-STRATEGY.md's Process Integrity
