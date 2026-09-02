@@ -34666,3 +34666,35 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the sole candidate clearing the raw screen (SYRUP) was rejected on specific, documented gates (marginal unconfirmed candle; no-catalyst R:R floor) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 07:00 UTC (second pass, fired ~07:50 UTC)
+
+**Drift note:** This pass fired ~50 minutes after the prior 07:00 UTC pass (committed at the top of this hour), not a full hour later — flagging per CLAUDE.md's drift-handling guidance rather than silently reusing an identical label. Labeled under the nominal hour ($HOUR=07 at fire time) with the actual fire time noted.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD — all sub-$0.15) — exact match to the 07:00 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,541.10 vs today's session open $77,398.10 → **+0.18%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,541.10 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.39%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 662 online USD pairs. 14 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived all 14 on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~50min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Confirmed? | Note |
+|---|---|---|---|---|---|---|
+| FF/USD | **+9.30%** | **+6.07%** | 0.41x | 21.3 min | **No** | 4h/1h/freshness clear; volume fails decisively, high sits on forming candle. Liquidity only $50.7k (barely above floor). |
+| CHIP/USD | **+5.32%** | **+3.59%** | 0.65x | 51.3 min | Yes | 4h/1h clear; volume fails decisively (<2x), freshness also just outside 30min ceiling. |
+| SYRUP/USD | **+6.82%** | +2.13% | 1.13x | 21.3 min | **No** | 4h clears; 1h fails (<3%), volume fails, high on forming candle — same marginal-candle pattern flagged at 07:00 UTC. |
+| USELESS/USD | **+6.41%** | +2.45% | 0.29x | 771.3 min | Yes | 4h clears; 1h fails, volume fails decisively, high stale. |
+| ETHFI/USD | **+6.14%** | +0.72% | 0.72x | 36.3 min | Yes | 4h clears; 1h and volume fail. |
+| UNI/USD | +4.44% | −0.06% | 1.52x | 156.3 min | Yes | 4h just under bar; 1h flat/negative, volume under 2x. |
+| (8 others: PYTH, EGLD, SUSHI, ARB, APR, AAVE, XMR, ZRX) | — | — | — | — | — | All fail multiple bars — momentum weak/negative or volume thin. |
+
+**No candidate cleared every gate.** FF/USD and CHIP/USD were the closest — both clearing the 4h and 1h momentum bars — but both fail the volume bar decisively (0.41x and 0.65x respectively, well under the required 2x), and FF's high additionally sits on an unconfirmed still-forming candle. No candidate warranted a Perplexity catalyst-confirmation query given none cleared the technical screen (volume was the binding constraint across the board, not a marginal miss).
+
+**Market context (Perplexity):** Fear & Greed Index: 69 (Greed). No Extreme Fear condition, not decisive this pass since no candidate reached the catalyst-check stage.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.18%), weekly trend gate clear (−0.39%/5d, standard regime). Full-universe sweep (662 pairs) found 14 raw candidates on the vs-open/high-proximity/liquidity screen; none cleared every downstream momentum/volume/freshness bar — volume was the binding constraint for the two closest (FF, CHIP), both failing decisively rather than marginally. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate came within reach of the volume bar (closest clearers failed it by a wide margin). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
