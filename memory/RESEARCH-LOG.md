@@ -35199,3 +35199,44 @@ Push sent — not for the trading decision (book flat, both gates clear, AKE/EGL
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both true momentum bars (RIZE) was rejected on a decisive, documented live-fade gate rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 19:00 UTC
+
+**Merge note:** This session forked before the 17:00, 18:00, 20:00, and 21:00 UTC passes landed on `main` (this pass's own research below was performed against a flat book with no knowledge of those concurrent passes, though all reached the same HOLD outcome and none changed position state). `git fetch` at push time surfaced them as unexpected commits — per the mem-sync concurrency-check procedure in CLAUDE.md, this entry is appended onto the current tip of `main` rather than pushed via a wholesale `memory/` file replace, so nothing is lost. Also noted from the 21:00 UTC entry above: the Position Watch Dashboard was retired mid-session by explicit user request — this explains why this pass's own attempt to write `state/bot` (performed before this merge, unaware of the retirement) was denied; no further dashboard-write attempts will be made.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD — all sub-$0.15) — exact match to every pass today, no fills or drift since. Alpaca `positions: []`, `orders` all historical (filled/canceled), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $77,143.60 vs today's session open $77,398.10 → **−0.33%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,143.60 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.90%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 19 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived the highest-liquidity/highest-signal candidates on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~145min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | 2-candle accel | Note |
+|---|---|---|---|---|---|---|
+| AKE/USD | **+85.31%** | **+8.28%** | **2.75x** | ~4 min | Yes | Both momentum bars clear massively — see deep-check below, rejected on live intracandle fade. |
+| SEI/USD | +4.80% | +2.04% | 2.65x | ~19 min | Yes | Neither raw bar clears on a true 4h/1h basis (raw vs-open screen overstated it) despite clean volume/acceleration. |
+| ARB/USD | +6.87% | +0.56% | 1.34x | ~64 min (stale) | No | 4h clears, 1h and volume both fail. |
+| XMR/USD | +2.99% | +1.26% | 2.24x | stale (real 24h high 548.34 set Aug 31, not in last 24h) | No | Raw vs-open screen (5.89%) was misleading — true 4h/1h both fail; high not actually fresh. |
+| EGLD/USD | — | — | — | — | No | Reversing — 3 consecutive closed-candle declines after an early spike; discarded before full deep-check. |
+| PYTH/USD, APT/USD, ALGO/USD | — | — | — | — | No | Choppy/reversing on closed candles, momentum not sustained; discarded before full deep-check. |
+| (9 others: MIRA, SHAPE, CELO, ASTER, RIZE, SAND, MNT, OP, US, PIEVERSE) | — | — | — | — | — | All fail multiple bars on raw screen or thin/zero closed-candle volume (MIRA, SHAPE effectively untraded most of the last hour). |
+
+**AKE/USD deep-check (clears 4h, 1h, volume, freshness, and 2-candle acceleration — rejected):**
+- Six consecutive closed 15m candles (18:00→19:15 UTC) each close higher than the last: 0.01579→0.01691→0.01709→0.01788→0.01837→0.01849 — a genuinely clean, sustained build, not the chaotic single-candle wick pattern that got AKE rejected at 16:00 UTC today.
+- True 4h momentum (vs the 15:30 candle close $0.00999) = **+85.3%**; true 1h momentum (vs the 18:30 candle close $0.01709) = **+8.28%** — both clear decisively. Closed-candle volume ratio (last 1h vs trailing-24h hourly average) = **2.75x**, clears the 2x bar.
+- **Confirmed-closed-candle check passes:** the live 24h high ($0.018884) exactly matches the 19:15 closed candle's high — a genuine confirmed fresh high, ~4 min old at check time, well inside the 30-min freshness ceiling.
+- **Two-candle acceleration passes:** last two closed candles (19:00 C $0.018368 → 19:15 C $0.018494) both close higher than the prior.
+- **Spread clean:** `kraken.sh quote AKE/USD` — ask $0.01858063 / bid $0.01844247 ≈ **0.74%**, under the 1% cap (unlike the 1.76% spread that independently killed AKE at 16:00 UTC — this is a materially different, cleaner order-book state).
+- **Live intracandle fade check fails, decisively rejecting:** live price has already retraced off the confirmed $0.018884 high — last trade $0.018425 (−2.43%), bid $0.018442 (−2.34%), even the best-case ask $0.018581 (−1.60%) — every price reference exceeds the 1.5% fade-rejection threshold. The breakout genuinely happened and is genuinely fresh and clean, but by the time this check ran the live price had already pulled back past the line the gate draws.
+- **Rejected:** live intracandle fade (best case 1.60%, worst case 2.43%, both > 1.5% limit) — the only failing gate; every other check (momentum, volume, freshness, confirmed-candle, acceleration, spread) passed cleanly. No catalyst check warranted since the fade rejection is already decisive.
+
+**No candidate cleared every gate.** AKE/USD was the strongest technical setup seen today — clean sustained momentum, confirmed fresh high, clearing volume/spread/acceleration — but is rejected purely on the live intracandle fade check, having already pulled back 1.6–2.4% off its confirmed high in the few minutes between candle close and this check. SEI, ARB, and XMR all looked promising on the raw vs-session-open screen but failed on true 4h/1h momentum once measured against trailing candles rather than the session open (XMR's raw "24h high proximity" was also a false positive — its actual 24h high was set Aug 31, well outside any freshness window).
+
+**Market context:** Not queried this pass — no candidate reached the catalyst-confirmation stage (AKE's rejection was already decisive on the live fade check).
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for AKE within the 7-day window (AKE was screened and rejected at 16:00 UTC today on different grounds — spread breach, unconfirmed candle — never entered, so the cooling-period rule does not apply). **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.33%), weekly trend gate clear (−0.90%/5d, standard regime). Full-universe sweep (639 pairs, 19 raw candidates) found AKE/USD clearing every momentum/volume/freshness/acceleration/spread bar — the cleanest technical setup of the day — but rejected on the live intracandle fade check (best case 1.60%, worst case 2.43%, both past the 1.5% limit). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade despite the strongest setup seen today. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing nearly every gate (AKE) was rejected on a specific, documented gate (live intracandle fade, 1.6–2.4% past the 1.5% limit) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
