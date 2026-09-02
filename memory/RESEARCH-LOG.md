@@ -34790,3 +34790,43 @@ No push sent — book flat with no unprotected exposure, both gates clear, and t
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate came within reach of the momentum bars on the thinnest raw screen of the morning. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 10:00 UTC (test re-run, fired 10:53 UTC)
+
+**Context:** User-requested re-run of the consolidated hourly routine from the start, to verify the `Artifact` tool no longer stalls waiting for a permission prompt after the `.claude/settings.json` allowlist fix (see CLAUDE.md's new "Autonomous Operation" section). This is a second pass within the 10:00 UTC hour, not a scheduler firing.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the earlier 10:00 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op).
+
+**Crash gate:** BTC live $76,336.90 vs today's session open $77,398.10 → **−1.37%**. Clear. **Weekly trend gate:** live $76,336.90 vs 5-day-ago daily close $77,841.80 (2026-08-28) → **−1.93%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs. 8 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived the 7 with a valid Kraken pair (LRC, CELO, SAFE, PIEVERSE, SYRUP, EGLD, ZKP — XMR's raw vs-open of 3.01% was too weak to warrant a repeat check) on 15m OHLC (closed candles only):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Confirmed? | Note |
+|---|---|---|---|---|---|---|
+| LRC/USD | **+5.33%** | **+5.37%** | 0.89x | 23.0 min | **No** | Both momentum bars clear — see deep-check below, rejected on three independent gates. |
+| SAFE/USD | +3.10% | +1.73% | 2.22x | 23.0 min | Yes | 4h just over bar, 1h fails; volume clears. |
+| CELO/USD | +4.20% | −0.39% | 1.42x | 203.0 min | Yes | 4h close but under 5%, 1h negative, volume and freshness fail. |
+| PIEVERSE/USD | +3.03% | −1.99% | 5.02x | 68.0 min | Yes | Volume clears strongly; both momentum bars fail/negative. |
+| ZKP/USD | +3.05% | +2.07% | 0.24x | 23.0 min | Yes | Volume fails decisively; momentum weak both windows. |
+| SYRUP/USD | +0.71% | +0.98% | 1.20x | 188.0 min | Yes | Momentum has faded further; fails every bar now. |
+| EGLD/USD | +0.71% | +1.67% | 0.67x | 338.0 min | Yes | Fails every bar; high stale. |
+
+**LRC/USD deep-check (both momentum bars clear — rejected):**
+- Raw 15m candles show LRC was essentially dead (0–5 trades/candle, ~$1-27k volume) through 09:00–10:15 UTC, then the 10:15 candle (last closed) suddenly printed $207k volume with price jumping from ~$0.00791 to $0.00834, and the still-forming 10:30 candle has already run to $0.009126 (24h high) on $667k volume — a sharp, sudden spike from a near-flat book, not a building trend.
+- **Confirmed-closed-candle check fails:** the 24h high (0.009126) sits on the still-forming candle; the last closed candle's high (0.008344) is nearly 3% below it.
+- **Two-candle acceleration check fails:** the candles immediately preceding the spike were flat/declining, not building — this is a single sudden jump, not sustained acceleration.
+- **Volume ratio (closed-candle basis) fails:** 0.89x — the huge volume is concentrated in the still-forming candle, which isn't counted; the closed-candle window still shows below-average volume because of the preceding dead stretch.
+- Liquidity only $50,743 — barely above the $50k floor, the thinnest candidate of the pass, consistent with a sudden, thin-liquidity spike (a large order or a handful of trades moving a barely-liquid book) rather than a confirmed breakout.
+- **Rejected:** three independent structural gates (unconfirmed candle, no two-candle acceleration, volume ratio fail) — no catalyst check warranted given the technical rejection is already decisive and the liquidity profile itself is a red flag.
+
+**No candidate cleared every gate.** LRC/USD was the only pair to clear both raw momentum bars this pass, but it's a textbook thin-liquidity spike-from-nothing pattern that fails the confirmed-candle, two-candle-acceleration, and closed-candle volume checks simultaneously.
+
+**Market context (Perplexity):** Fear & Greed Index: 69 (Greed). No Extreme Fear condition, not decisive this pass.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A — no momentum-only entries in the trailing window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.37%), weekly trend gate clear (−1.93%/5d, standard regime). LRC/USD cleared both raw momentum bars but is a thin-liquidity spike-from-nothing pattern, decisively rejected on three independent structural gates. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — this was a live, user-initiated test run (not an unattended scheduled pass), the routine executed end-to-end without any permission stall (confirming the `Artifact` allowlist fix), and no trade/loss/operational failure occurred. Reported directly in-session instead.
