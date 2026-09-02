@@ -34830,3 +34830,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — this was a live, user-initiated test run (not an unattended scheduled pass), the routine executed end-to-end without any permission stall (confirming the `Artifact` allowlist fix), and no trade/loss/operational failure occurred. Reported directly in-session instead.
+
+## 2026-09-02 — Scan — 11:00 UTC (fired 11:33 UTC)
+
+**Drift note:** Fired ~33 minutes after the top of the hour — logged under the nominal 11:00 UTC hour per CLAUDE.md's drift-handling guidance.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 10:53 UTC pass, no fills or drift since. Alpaca `positions: []`, zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $76,530.20 vs today's session open $77,398.10 → **−1.12%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $76,530.20 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−1.69%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 9 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. TUSD/USD again showed a spurious vs-open read (+58.92%) but has no valid Kraken pair via `kraken.sh` (`EQuery:Unknown asset pair`) — discarded as before. Deep-dived the remaining 8 (FF, SAFE, SYRUP, OOB, CELO, EGLD, PIEVERSE, PYTH) on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~40min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | 2-candle accel | Note |
+|---|---|---|---|---|---|---|
+| OOB/USD | **+7.00%** | **+5.69%** | 1.76x | 963.9 min | Yes | Both momentum bars clear strongly — see deep-check below, rejected on three independent gates. |
+| FF/USD | +1.11% | +0.73% | 0.00x | 33.9 min | No | Both momentum bars fail; volume essentially zero; same marginal-liquidity name flagged repeatedly this morning. |
+| SAFE/USD | +2.79% | +0.91% | 1.46x | 48.9 min | No | 4h close but under bar, 1h fails, volume under 2x. |
+| SYRUP/USD | −0.26% | +1.12% | 0.77x | 228.9 min | Yes | Momentum has faded to flat/negative; same pair rejected repeatedly all morning. |
+| CELO/USD, EGLD/USD, PIEVERSE/USD, PYTH/USD | — | — | — | — | — | All fail multiple bars — momentum weak/negative or volume thin. |
+
+**OOB/USD deep-check (both momentum bars clear strongly — rejected):**
+- 4h (+7.00%) and 1h (+5.69%) both clear decisively, with genuine two-candle acceleration (closes 0.00991 → 0.01000 → 0.01040).
+- **Confirmed-closed-candle check fails decisively:** the actual 24h high (0.01093) was set on a closed candle **963.9 minutes** (~16 hours) ago — nowhere near the 30-min cadence-relative ceiling. Current price (0.0104) is still ~4.9% below that stale high, meaning this is a recovery/grind move, not a fresh breakout.
+- **Volume ratio fails:** 1.76x, under the required 2x bar.
+- **Spread fails outright:** `kraken.sh quote OOB/USD` — ask $0.01028 / bid $0.01012 ≈ **1.58%**, breaching the mandatory ≤1% cap on its own, decisive independent of the other two.
+- **Rejected:** three independent gates (stale high, sub-2x volume, spread cap breach) — no catalyst check warranted given the technical/liquidity rejection is already decisive on multiple counts.
+
+**No candidate cleared every gate.** OOB/USD was the only pair to clear both raw momentum bars this pass — the strongest momentum print of the last several hours — but it's rejected on three independent structural/liquidity gates (stale high, thin volume, wide spread), not a marginal miss.
+
+**Market context:** Not queried this pass — no candidate reached the catalyst-confirmation stage (technical/liquidity rejection was already decisive for the one candidate clearing momentum).
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for OOB within the 7-day window. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.12%), weekly trend gate clear (−1.69%/5d, standard regime). Full-universe sweep (639 pairs) found 9 raw candidates (8 valid); OOB/USD cleared both momentum bars decisively but failed three independent gates (stale 24h high, sub-2x volume, 1.58% spread breaching the ≤1% cap outright). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (OOB) was rejected on a hard spread-cap breach plus two additional independent gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
