@@ -78,35 +78,15 @@ the user via push notification rather than silently completing. A clean-looking 
 session branch does not guarantee the push is safe; the risk is specifically that `origin/main`
 advanced past your base while you worked.
 
-## Position Watch Dashboard (added 2026-09-02)
+## Position Watch Dashboard — RETIRED 2026-09-02
 
-A read-only status page for the user's own monitoring (originally set up for an always-on iMac
-near their workstation): **https://claude.ai/code/artifact/576a1343-17bf-4818-85aa-b998a1007622**
-
-It shows current phase P&L, cash, the open position (if any) with live-updating unrealized P&L/
-stop/T1/T2, the last scan's decision, and the 8 most recent closed trades. It has no write access
-to Kraken — display only, cannot place/modify/cancel orders.
-
-**Every hourly pass must update its `state/bot` document** (via the Artifact tool's `write_db`
-action against the URL above, `db_op: "set"`) whenever position state changes — a new fill, a
-stop/T1 resize, a position close, or a new scan decision. At minimum, update `last_scan` and
-`updated_at` every pass so the dashboard's "last updated" indicator stays honest; update
-`position`, `cash_usd`, `phase_pnl_usd`/`phase_pnl_pct`, and append to `recent_closed` whenever
-Step 3 or Step 4 changes them. Schema (single document at `state/bot`):
-
-```json
-{
-  "updated_at": "ISO 8601 UTC timestamp of this write",
-  "cash_usd": 0,
-  "phase_pnl_usd": 0,
-  "phase_pnl_pct": 0,
-  "position": null,
-  "last_scan": { "time_utc": "YYYY-MM-DD HH:00 UTC", "decision": "HOLD|TRADE", "summary": "..." },
-  "recent_closed": [ { "pair": "SYM/USD", "entry": 0, "exit": 0, "pnl_pct": 0, "outcome": "win|loss", "opened": "YYYY-MM-DD", "closed": "YYYY-MM-DD", "reason": "trailing stop|T1 partial + trail|thesis break|..." } ]
-}
-```
-
-`position` (null when flat) shape when open: `{ "pair", "entry_price", "current_price", "qty", "unrealized_pct", "unrealized_usd", "stop_percent", "t1_price", "t2_price", "catalyst" }`. Keep `recent_closed` to the 8 most recent (prepend new, drop oldest) rather than letting it grow unbounded. This is best-effort visibility for the user, not part of the trading logic — a missed dashboard update is not a trading error and doesn't need a push notification, just fix it next pass.
+The Artifact-based read-only status page (`state/bot` doc, `write_db` every pass) is **retired by
+user decision** — it lagged the hourly routine and caused recurring Artifact-tool friction
+(permission/edit prompts) inconsistent with unattended operation. **Do not call the `Artifact`
+tool for routine hourly passes anymore** — no dashboard write step exists in this routine now.
+If a future session wants to rebuild visibility tooling, design it so it cannot stall or slow an
+unattended hourly pass (e.g. fire-and-forget, or push-notification-based) and get explicit user
+sign-off first, per the same reasoning that retired WhatsApp/CallMeBot below.
 
 ## Notifications (WhatsApp/CallMeBot — RETIRED 2026-08-21)
 
