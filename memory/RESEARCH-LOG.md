@@ -34867,3 +34867,40 @@ No push sent — this was a live, user-initiated test run (not an unattended sch
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (OOB) was rejected on a hard spread-cap breach plus two additional independent gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 13:00 UTC (fired 13:34 UTC)
+
+**Drift note:** Fired ~34 minutes after the nominal top of the hour, and no 12:00 UTC pass was logged at all (last logged pass was 11:00 UTC, fired 11:33 UTC) — a ~2h gap between logged passes, wider than the intended hourly cadence. Flagging per CLAUDE.md's drift-handling guidance since this is a full missed hour, not just minor drift. No action taken on it beyond flagging — book was flat throughout per this pass's reconciliation, so no maintenance was missed as a result.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero (AAVE, AVAX, BABY, FET, HYPE, INJ, KAS, NEAR, POL, SOL, SUI, TAO, XETH, ZAUD — all sub-$0.15) — exact match to the 11:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $76,753.60 vs today's session open $77,398.10 → **−0.83%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $76,753.60 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−1.40%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 11 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived all 11 on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~121min) = 30 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Note |
+|---|---|---|---|---|---|
+| SYRUP/USD | **+5.49%** | **+3.83%** | 1.56x | 19.3 min | 4h/1h/freshness all clear cleanly — see deep-check below, rejected on volume floor. |
+| SOMI/USD | **+11.06%** | +1.99% | **2.62x** | 1834.3 min (stale) | 4h and volume clear strongly; 1h fails, high badly stale. |
+| ZKP/USD | **+7.44%** | +4.05% | 1.61x | 4519.3 min (stale) | 4h/1h clear but volume fails and high very stale (real high ~3 days old). |
+| ROBO/USD | +6.33% | −0.07% | 2.49x | 5764.3 min (stale) | 4h and volume clear; 1h flat/negative, high very stale. |
+| EGLD/USD | +3.81% | 0.00% | 4.87x | 4729.3 min (stale) | Volume clears strongly; both momentum bars fail on true 4h/1h basis, high very stale. |
+| FF/USD | −1.18% | −3.66% | 0.29x | 49.3 min | Already faded — negative momentum both windows. |
+| PIEVERSE, CELO, PYTH, US, MNT | — | — | — | — | All fail multiple bars — momentum weak/negative or volume thin. |
+
+**SYRUP/USD deep-check (4h/1h/freshness all clear — rejected):**
+- True 4h momentum +5.49% and 1h momentum +3.83% both clear the standard bars; closed-high ($0.21484, 19.3 min old) is within the 30-min cadence-relative ceiling and matches the live price almost exactly ($0.21473) — no live intracandle fade of note.
+- **Volume ratio fails decisively:** 1.56x on a closed-candle basis, well under the required 2x — the move is happening without confirmed above-average buying pressure, the same volume-floor failure that has rejected SYRUP at least twice before today (08:00 and 09:00 UTC passes) before it later faded on both those occasions.
+- **Rejected:** volume floor (1.56x vs required 2x) — no catalyst check warranted since the raw technical rejection is already decisive, and SYRUP's own history today (momentum builds then fades without volume confirmation) argues against overriding the gate here.
+
+**No candidate cleared every gate.** SYRUP/USD was the only pair to clear both true momentum bars on a confirmed, fresh closed-candle high, but it fails the volume floor decisively — the same pattern that has now rejected SYRUP three times today (08:00, 09:00, 13:00 UTC), each time followed by a fade rather than a breakout, which is a useful data point in the gate's favor per the Gate-Rejection Outcome Tracking note in TRADING-STRATEGY.md. SOMI showed the strongest raw 4h print (+11.06%) with volume confirmation but its 1h momentum and high freshness both fail badly (high is over 30 hours stale — a grind-up recovery, not a fresh breakout).
+
+**Market context:** Not queried this pass — no candidate reached the catalyst-confirmation stage (all rejections were decisive on raw technical/volume gates).
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.83%), weekly trend gate clear (−1.40%/5d, standard regime). Full-universe sweep (639 pairs) found 11 raw candidates; SYRUP/USD cleared both true momentum bars on a fresh confirmed high but failed the volume floor decisively (1.56x, same rejection pattern as its two earlier passes today). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (SYRUP) was rejected on a decisive, documented volume-floor gate rather than a manufactured excuse. The ~2h gap since the last logged pass (11:33 UTC) is flagged above but caused no missed maintenance — book was flat throughout. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
