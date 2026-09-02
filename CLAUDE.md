@@ -48,6 +48,36 @@ git branch -D _mem-sync
 > lost. Always run `git add memory/ && git commit` on the session branch before switching
 > to `_mem-sync`.
 
+### Known bug: concurrent sessions can silently clobber each other's log entries (found 2026-09-02)
+
+The mem-sync recipe above does `git checkout <session-branch> -- memory/` against a **fresh**
+`origin/main` — this **replaces the memory files wholesale** with the session's own copy rather
+than merging. If two or more instances of the hourly routine run concurrently, whichever
+session's branch forked *before* another's push will overwrite it — the later session has no
+record of the entry it's erasing, so this fails completely silently. This actually happened on
+2026-09-02: at least three separate sessions, apparently all firing for the same real-time window
+(labeled "12:00 UTC", "14:00 UTC", and "16:00 UTC") landed their mem-sync pushes on `main` within
+minutes of each other, each wholesale-overwriting the last. Two rounds of the resulting data loss
+were caught and manually recovered from git history (see the RESEARCH-LOG.md entries around this
+date and the `b7c1550`/`0c76275` commits) — but only because sessions happened to notice `git
+fetch` returning unexpected new commits before pushing. `memory/TRADE-LOG.md` was not affected
+this time (all three concurrent passes were pure HOLD/no-execution), but the same race applies to
+it, and a silently-dropped trade/position/order-ID entry there would be a real safety issue, not
+just a lost research note.
+
+**This is a scheduling/infrastructure problem** — three sessions firing for overlapping hours
+within minutes of each other means the routine's trigger is not actually running as the single
+hourly cadence CLAUDE.md's Routine Cadence section describes; something outside any session's
+reach (the scheduler config, or duplicate/overlapping triggers) needs the user's attention. It is
+not something a single session's code can fully fix, but every session can avoid making it worse:
+**before pushing** in the mem-sync recipe, if `git fetch` on `origin/main` returns a commit you
+did not expect (i.e. `origin/main` moved between your read and your push), **stop and diff**
+before overwriting — check whether your `git checkout <branch> -- memory/` would delete content
+that isn't in your own branch's history, recover it (as done here) if so, and flag the pattern to
+the user via push notification rather than silently completing. A clean-looking diff on your own
+session branch does not guarantee the push is safe; the risk is specifically that `origin/main`
+advanced past your base while you worked.
+
 ## Position Watch Dashboard (added 2026-09-02)
 
 A read-only status page for the user's own monitoring (originally set up for an always-on iMac
