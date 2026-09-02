@@ -43,43 +43,6 @@ prefers Claude Code's own push notifications and no longer wants CallMeBot pursu
   an operational failure), surface it via the session's own push-notification
   mechanism instead, the way the 2026-08-21 weekly review did.
 
-## Scheduled Pass Execution Model (added 2026-09-01 — overhaul)
-
-**Root cause identified 2026-09-01:** some scheduled triggers (a "pre-session research"
-template) only documented trade ideas and notified — they never called `kraken.sh order`.
-A separate, later-firing trigger (session-open/midday) was the only one that could act,
-often 1–5h later. By then the strategy's own momentum-peak-check (24h high <60 min old)
-had usually gone stale, so the idea was dead on arrival. Evidence: 2026-09-01 alone had
-5 passes, 8+ candidates (SC, USELESS, ENA×2, CHIP, MINA, TIA, DGAI, UAI, FIL) clearing
-every raw momentum/volume bar, 0 converted to a trade — largely due to this handoff gap,
-not a rejection of the setups on their merits.
-
-**Fix — this overrides any scheduled trigger's own STEP list, whatever it says:** every
-scheduled pass that reaches a screening decision (TRADE vs HOLD) must be capable of
-executing in the same pass if a candidate clears every gate. A pass must never merely
-log an idea for some future pass to act on — if the strategy's gates are satisfied,
-place the order and the stop in this same pass, right after discovery/research.
-"Pre-session research," "midday scan," "EOD," etc. are labels for *when* a pass runs,
-not a signal that a pass is report-only — treat all of them as full
-research → decide → execute → log passes.
-
-**Also fix the trigger schedule itself** (external, in the claude.ai scheduled-tasks
-config — not in this repo, so this can't be done from inside a session): collapse the
-separate "pre-session research" / "session-open execution" / "midday scan" triggers
-into one recurring execution-capable trigger firing every 45–60 min during active
-hours. The current uneven ~40min–5h gaps between passes are why the momentum-peak-check
-freshness gate (see TRADING-STRATEGY.md) was so often already-stale by the time any
-pass looked.
-
-**Caution before loosening anything further to "catch more" of these:** clearing raw
-momentum/volume bars is not the same as being a good trade being missed. Momentum-only,
-marginal-or-no-catalyst entries — exactly the type flagged above — produced the worst
-week on record (−36.82%, win rate 15.8%, week of 2026-08-21 to 2026-08-28). Fee drag
-alone (1.6% round trip) eats over half of a 3% target. Fixing the pipeline so a pass can
-act on what it finds is a structural fix with no real downside; loosening entry gates to
-manufacture more trades is a different move entirely and should not be inferred from
-this section.
-
 ## Kraken Script Commands (primary broker)
 
 `scripts/kraken.sh` supports: `account`, `positions`, `orders`, `quote SYM/USD`,
@@ -115,6 +78,53 @@ See `memory/TRADING-STRATEGY.md`.
 Key parameters: target 3–5% per trade, recycle capital multiple times per day, full alt
 universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new trades**
 (placed immediately after fill), crash gate = BTC down >20% in 24h.
+
+## Routine Cadence & Naming Convention (added 2026-09-02)
+
+The scheduled tasks that fire these sessions are configured outside this repo (not visible or
+editable from within a session — `CronList`/`CronCreate` only manage session-local jobs, not
+the actual recurring triggers). This section documents the **intended** cadence and naming so
+routines stay consistent regardless of what the external scheduler is actually set to, and so
+drift between "intended" and "actual" is visible rather than silently absorbed into inconsistent
+log labels.
+
+This replaces an ad hoc pattern (reconstructed from a week of logs on 2026-09-02) that had
+~8+ passes/day clustered unevenly — e.g. a Midday Scan and a Session-Open Execution only 40
+minutes apart, another pair less than an hour apart — while leaving a ~10-hour overnight window
+(~22:00–08:00 UTC) with only sporadic coverage.
+
+### Target schedule (7 passes/day, UTC)
+
+| Time | Name | Scope |
+|---|---|---|
+| 00:00 | Scan — 00:00 UTC | Full discovery sweep + open-position check (stop verify, T1 partial-fill cleanup, thesis check) |
+| 04:00 | Scan — 04:00 UTC | Same as above |
+| 08:00 | Scan — 08:00 UTC | Same as above |
+| 12:00 | Scan — 12:00 UTC | Same as above |
+| 16:00 | Scan — 16:00 UTC | Same as above |
+| 20:00 | Scan — 20:00 UTC | Same as above |
+| 23:50 | EOD Reconciliation | Closed-book summary only — confirm all positions closed/reconciled via `kraken.sh closedorders` or balance delta, log Day P&L, Phase P&L, vs-BTC |
+
+Every scan slot runs the identical routine — crypto has no single "session open" or "midday," so
+there's no reason for six near-identical passes to carry six different names. **Retired names:**
+"Pre-Session Research," "Pre-Session Scan," "Session-Open Execution," "Midday Scan," "Evening
+Scan," "Overnight Triage" — do not use these going forward; log every non-EOD pass as
+`Scan — HH:00 UTC` using the nearest canonical slot time, not the exact fire time.
+
+### Handling schedule drift
+
+If a scheduled task fires at a time that doesn't land within ~15 minutes of one of the 7 slots
+above, log it under the nearest canonical slot name anyway (don't invent a new label), and note
+the actual vs. intended time in that pass's entry — e.g. "Scan — 12:00 UTC (fired 12:47 UTC)."
+This keeps the log queryable by intended slot even while the external trigger times still need
+manual alignment. If drift is frequent or large, flag it explicitly rather than treating it as
+routine, since consistent 4-hour spacing (not clustering + gaps) is the entire point of this
+schedule — see the 2026-09-02 routine-cadence review for the original clustering/gap pattern
+this replaced.
+
+**Not fixed by this document alone:** the actual trigger times still need to be set to match
+this table wherever the scheduled tasks are configured (outside this repo). This section is the
+target to align them to, not a mechanism that enforces it.
 
 ## Pre-Session Research — Kraken Framework
 
