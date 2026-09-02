@@ -34867,3 +34867,33 @@ No push sent — this was a live, user-initiated test run (not an unattended sch
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (OOB) was rejected on a hard spread-cap breach plus two additional independent gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 12:00 UTC
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 11:33 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Crash gate:** BTC live $76,872.90 vs today's session open $77,398.10 → **−0.68%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $76,872.90 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC, reconfirmed via fresh daily-candle pull) → **−1.25%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 9 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. No AU-restricted assets (ZEC, DASH) appeared. Deep-dived all 9 on 15m OHLC (closed candles only) for true 4h/1h momentum, 1h-vs-trailing-24h-hourly volume ratio, and confirmed-closed-candle 24h-high freshness (cadence-relative ceiling = min(30min, time since last logged pass ~27min) = 27 min):
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | Confirmed? | Note |
+|---|---|---|---|---|---|---|
+| ROBO/USD | +4.92% | **+5.93%** | 0.57x | 5.5 min | Yes | 1h clears strongly, fresh high, two-candle accel — but 4h just under 5% bar and volume fails decisively (below its own average). |
+| EGLD/USD | +3.56% | +3.81% | 0.73x | 5.5 min | Yes | 1h clears, fresh high, accel — but 4h fails and volume fails decisively. |
+| FF/USD | +8.65% | +1.88% | 0.00x | 20.5 min | Yes | 4h clears strongly but 1h fails and volume is effectively zero — same marginal-liquidity name flagged on repeated passes this morning. |
+| SAFE/USD | +1.55% | −0.91% | 4.74x | 35.5 min | Yes | Volume clears strongly but both momentum bars fail/negative; high just outside the freshness ceiling. |
+| PYTH/USD | −0.33% | +0.79% | 3.85x | 380.5 min | Yes | Volume clears but momentum fails both windows; high very stale. |
+| PIEVERSE/USD | +0.57% | +2.24% | 3.17x | 155.5 min | Yes | Volume clears; 1h close but under 3% bar, 4h fails, high stale. |
+| MNT/USD | +0.95% | +0.51% | 0.76x | 80.5 min | Yes | Fails every bar. |
+| CELO/USD | +0.26% | +0.65% | 0.53x | 290.5 min | Yes | Fails every bar; high stale. |
+| SYRUP/USD | −0.34% | +0.50% | 1.61x | 275.5 min | Yes | Momentum flat/negative, same pair rejected repeatedly all morning. |
+
+**No candidate cleared every gate.** ROBO/USD and EGLD/USD both printed genuinely fresh highs (~5.5 min old, well inside the freshness ceiling) with confirmed two-candle acceleration — the cleanest structural shape of the pass — but both failed the 4h>5% bar marginally (4.92%, 3.56%) and the volume bar decisively (0.57x, 0.73x, both below their own 24h average, meaning the move is happening on thin/declining volume, not confirmed buying pressure). No candidate warranted a Perplexity catalyst-confirmation query given neither of the two structurally-freshest candidates cleared the volume gate.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. No prior stop-out history on record for ROBO or EGLD within the 7-day window. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.68%), weekly trend gate clear (−1.25%/5d, standard regime). Full-universe sweep (639 pairs) found 9 raw candidates; ROBO/USD and EGLD/USD both had fresh, confirmed, accelerating highs but each failed the 4h momentum bar marginally and the volume bar decisively (below-average volume on both). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened to manufacture a trade. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, and the two structurally-freshest candidates (ROBO, EGLD) were rejected on a decisive, documented volume gate rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
