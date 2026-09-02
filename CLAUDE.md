@@ -20,6 +20,17 @@ open the session and approve it, which could be hours or days later.
   commit it to `main` in the same pass — don't wait for it to stall a future run first.
 - This is a standing operating constraint for this repo, independent of what any individual
   scheduled-task prompt says.
+- **Known limit of this approach, found 2026-09-02:** `permissions.allow` in `.claude/settings.json`
+  is not sufficient on its own even when correctly committed to `main` — it also requires the
+  workspace to be marked trusted (`hasTrustDialogAccepted: true` for this repo path in
+  `~/.claude.json`, which lives outside the repo and outside version control). And even with both
+  the allow rule and workspace trust in place, the Artifact tool's `write_db` action was still
+  denied in direct testing — some tool actions appear to carry a hard, non-configurable
+  confirmation gate that no combination of settings.json + trust fixes. See "Position Watch
+  Dashboard" below (retired the same day, for exactly this reason). Conclusion: don't assume a
+  `permissions.allow` entry makes a tool safe for unattended use — test the actual call before
+  relying on it in the routine, and if it's still denied after both fixes, treat that as a hard
+  no rather than a config problem to keep chasing.
 
 ## Git / Persistence
 
@@ -78,15 +89,27 @@ the user via push notification rather than silently completing. A clean-looking 
 session branch does not guarantee the push is safe; the risk is specifically that `origin/main`
 advanced past your base while you worked.
 
-## Position Watch Dashboard — RETIRED 2026-09-02
+## Position Watch Dashboard (added 2026-09-02, RETIRED 2026-09-02)
 
-The Artifact-based read-only status page (`state/bot` doc, `write_db` every pass) is **retired by
-user decision** — it lagged the hourly routine and caused recurring Artifact-tool friction
-(permission/edit prompts) inconsistent with unattended operation. **Do not call the `Artifact`
-tool for routine hourly passes anymore** — no dashboard write step exists in this routine now.
-If a future session wants to rebuild visibility tooling, design it so it cannot stall or slow an
-unattended hourly pass (e.g. fire-and-forget, or push-notification-based) and get explicit user
-sign-off first, per the same reasoning that retired WhatsApp/CallMeBot below.
+**Retired by user decision, same day it was added.** The dashboard lived at
+`https://claude.ai/code/artifact/576a1343-17bf-4818-85aa-b998a1007622` and was meant to be a
+read-only status page for the user's own monitoring. It's gone because it never actually worked
+for an unattended routine: the Artifact tool's `write_db` action requires interactive approval
+that no amount of `.claude/settings.json` `permissions.allow` configuration or workspace-trust
+fix (`hasTrustDialogAccepted` in `~/.claude.json`, both tried 2026-09-02) could suppress — the
+call was denied again in direct testing even after both fixes were in place. This appears to be
+a hard, by-design confirmation gate on writes to shared/artifact-visible state, not a
+misconfiguration this repo can route around. Chasing it further was costing routine passes for
+a feature that was explicitly "best-effort" and not part of the trading logic.
+
+- **Do not call the Artifact tool's `write_db` (or any other Artifact action) from the routine.**
+  It is not pre-approvable for unattended runs; a session that tries it will either stall on a
+  permission prompt nobody can answer, or the call will be denied outright, per the above.
+  Skip any prior STEP instruction that references updating the dashboard — silently, without
+  logging it as an error.
+- If the user wants position visibility restored later, it needs a different mechanism than the
+  Artifact tool's `write_db` — this is a decision for the user to make, not something to
+  re-attempt with the same approach.
 
 ## Notifications (WhatsApp/CallMeBot — RETIRED 2026-08-21)
 
