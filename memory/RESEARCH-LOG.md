@@ -34867,3 +34867,37 @@ No push sent — this was a live, user-initiated test run (not an unattended sch
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, and the one candidate clearing both momentum bars (OOB) was rejected on a hard spread-cap breach plus two additional independent gates rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-02 — Scan — 15:00 UTC (fired 15:34 UTC)
+
+**Drift note:** Fired ~34 minutes after the top of the hour — logged under the nominal 15:00 UTC hour per CLAUDE.md's drift-handling guidance.
+
+**Pre-check:** Kraken `positions: {}`, `orders: {"open": {}}`, ZUSD $69.4011, all other balances dust/zero — exact match to the 11:00 UTC pass, no fills or drift since. Alpaca `positions: []`, `orders` reconfirmed stop `a2b44cf9` still `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphan stops/T1 orders, no runners to tighten, no thesis breaks).
+
+**Prior-pass reconciliation:** 11:00 UTC pass logged Decision: HOLD — no resulting position/order expected, confirmed clear.
+
+**Crash gate:** BTC live $77,163.60 vs today's session open $77,398.10 → **−0.30%**. Clear, nowhere near −20%/24h. **Weekly trend gate:** live $77,163.60 vs 5-day-ago daily close $77,841.80 (2026-08-28, Kraken daily OHLC) → **−0.87%/5d**, well inside the ±3% band. Standard regime applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs. 11 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k. Deep-dived all 11 on 15m OHLC (closed candles only) for true 4h/1h momentum, closed-candle volume ratio vs trailing 24h average, confirmed-closed-candle 24h-high freshness, and two-candle acceleration:
+
+| Pair | 4h momentum | 1h momentum | Volume ratio | Closed-high age | 2-candle accel | Note |
+|---|---|---|---|---|---|---|
+| SOMI/USD | **+12.90%** | −0.51% | 1.32x | 79.1 min | No | Strongest raw 4h print but 1h is negative — already faded. |
+| EGLD/USD | **+7.14%** | +1.35% | 2.78x | 49.1 min | Yes | 4h clears, volume clears; 1h fails the 3% bar. |
+| ARB/USD | **+6.30%** | +0.97% | 1.91x | 34.1 min | No | 4h clears; 1h and volume both fail/marginal. |
+| PYTH/USD | +4.22% | −0.33% | 2.05x | 49.1 min | No | 4h under 5% bar, 1h negative. |
+| SYRUP/USD | +3.82% | −2.10% | 2.02x | 94.1 min | No | Same pair flagged fading repeatedly this morning — 1h now clearly negative. |
+| ASTER/USD | +3.37% | −0.97% | 8.71x | 49.1 min | No | Volume clears very strongly but both momentum bars fail/negative. |
+| (5 others: FF, MIRA, PIEVERSE, CELO, US) | — | — | — | — | — | All fail multiple bars — momentum weak/negative or volume thin. |
+
+**No candidate cleared every gate.** SOMI/USD posted the strongest raw 4h print of the pass (+12.90%) but its 1h momentum is already negative (−0.51%) — a faded spike, not sustained momentum. EGLD/USD was the closest all-around clearer (4h and volume both pass) but missed the 1h>3% bar (+1.35%). No candidate cleared both momentum bars simultaneously, so no Perplexity catalyst-confirmation query was warranted.
+
+**Market context:** Not queried this pass — no candidate reached the catalyst-check stage.
+
+**Same-thesis check:** No open or recently-stopped-at-a-loss positions to gate. **Performance-linked controls:** win-rate kill switch and daily consecutive-loss pause both N/A this pass — no momentum-only entries in the trailing window (book has been flat since before 2026-08-31), neither control is active.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.30%), weekly trend gate clear (−0.87%/5d, standard regime). Full-universe sweep (639 pairs) found 11 raw candidates; none cleared both the 4h>5% and 1h>3% momentum bars together — SOMI had the strongest 4h print but had already faded on the 1h window, EGLD was the closest all-around clearer but missed 1h. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $69.4011 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared both momentum bars simultaneously. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
