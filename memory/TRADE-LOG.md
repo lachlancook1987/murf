@@ -11016,3 +11016,21 @@ Filled as a resting order, txid **OYWDWO-3G7JA-EGIZVJ**, trigger stop $75,075.10
 ### Step 8 — Notification
 
 **Push sent** — this pass found account state that didn't match the last logged book-flat position (unexpected BTC position, ~98% of session capital moved outside the bot's own order mechanism), placed a protective stop on the newly-discovered unprotected position, and is now out of tradeable cash. This is exactly the kind of operational anomaly + notable state change CLAUDE.md's Step 8 guidance calls for surfacing now rather than logging silently.
+
+## 2026-09-03 — EOD Snapshot
+
+### Sep 3 — EOD Snapshot (Day 106, Thursday)
+
+**Portfolio:** $71.3113 | **Cash:** $0.0011 (0.0%) | **Day P&L:** +$1.9102 (+2.75%) | **Phase P&L:** −$108.4687 (−60.34%) | **vs BTC:** −2.52%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| XXBT | 0.00087844 | $78,218 (implied, out-of-band conversion) | $81,178.20 | +5.27% | +$2.6004 (+3.79%) | OYWDWO-3G7JA-EGIZVJ @ $80,230.90 (2.5% trail) |
+
+**Trades today:** none (the only bot-side action today was the 00:00 UTC protective trailing-stop placement on the out-of-band position; no bot-originated buy/sell filled) | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $0.0011, XXBT 0.00087844, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero. `orders: {"open": {OYWDWO-3G7JA-EGIZVJ}}` — protective trailing stop, `vol` matches XXBT balance exactly, no orphan. Position originated from a manual/out-of-band Kraken Convert action at 2026-09-03 00:22 UTC (implied entry ≈$78,218), documented and protected at the 00:00 UTC pass — not a bot decision, per CLAUDE.md's Manual/Out-of-Band Kraken Activity section. **Portfolio value:** XXBT 0.00087844 × $81,178.20 (live last) = $71.3102, + ZUSD $0.0011 = **$71.3113**. **Day P&L:** vs yesterday's Sep 2 EOD baseline ($69.4011, book flat) → +$1.9102 (+2.75%) — reflects both the account's conversion into BTC (which happened after that baseline was set) and today's BTC price move. **Phase P&L:** vs $179.78 Kraken starting equity (May 22) → −$108.4687 (−60.34%), a modest improvement from Sep 2's −61.40% purely from today's BTC gain (no new capital, no trades). **vs BTC:** BTC moved from $77,114.60 (Sep 2 EOD live reference) to $81,178.20 today → **+5.27%**; bot's day return (+2.75%) trails BTC's raw move by **−2.52 points** — expected, since the account's actual BTC entry (implied ≈$78,218 at the 00:22 UTC conversion) sits above the $77,114.60 reference price, so less of today's rally was captured than a position opened exactly at that reference would show. Every hourly pass today (00:00 through 23:00 UTC, 23 passes plus the recovered 12:00 UTC pass — see RESEARCH-LOG.md) reached HOLD (no capital available) — ZUSD available has been $0.0011 since the conversion, so no discovery sweep could size a new entry regardless of what it found. The trailing stop tightened progressively through the day as BTC made new highs (stopprice moved from $78,915.60 at 00:00 UTC to $80,230.90 now, tracking the 2.5% trail correctly) but never fired — position remains open and protected into tomorrow. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $0.0011 ZUSD cash (still effectively zero), 0.00087844 XXBT held and protected, no new entries possible until the stop fires or the user adds capital.
+
+### Step 8 — Notification
+
+No push sent — protected position unchanged in substance from every pass since 00:00 UTC (same stop, same zero-cash constraint, gain still well under the 20% tightening threshold), EOD snapshot is routine record-keeping showing a positive day (bot ahead by BTC's move minus the entry-timing gap, nothing operationally wrong). Nothing here needs the user's attention right now.
