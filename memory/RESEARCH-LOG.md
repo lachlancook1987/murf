@@ -35302,3 +35302,19 @@ No push sent — book flat with no unprotected exposure, both gates clear, caden
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, zero trades today (Day P&L flat, bot ahead of BTC on the day), and every real-momentum candidate this pass was rejected on a specific, documented structural gate rather than a manufactured excuse. The ~30-35 min post-hour firing pattern seen across every pass today (10:34, 11:33, 13:34, 14:35, 16:34, 17:33, 18:34, 20:34, 21:33, now 23:35) is a consistent, already-flagged scheduling characteristic, not new information — not pushed separately per the standing guidance that this is infrastructure outside any single session's reach. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21). Nothing here needs the user's attention right now.
+
+## 2026-09-03 — Scan — 00:00 UTC
+
+**Out-of-band account activity — full detail in TRADE-LOG.md.** Pre-check found ZUSD $0.0011 and XXBT 0.00087844 vs the expected book-flat state (ZUSD $69.4011, no positions) from the 23:00 UTC EOD pass. `git fetch` confirmed no concurrent session had pushed a trade; `kraken.sh closedorders` showed no bot-placed BTC order ever. Direct query of Kraken's `/0/private/Ledgers` endpoint found two `spend`/`receive`-type entries (Kraken's Convert/Instant-Buy feature, not the order-book API this bot uses): a dust→ZAUD sweep at 23:01:49 UTC and a full-balance ZUSD→XXBT conversion at 00:22:08 UTC (−$68.71 ZUSD → +0.00087844 XXBT, implied price ≈$78,218, already ~−1.56% underwater vs the $77,000.10 live price 12 minutes later). Neither matches this bot's own order-placement mechanism — most consistent with a manual conversion performed directly on the exchange, outside this routine.
+
+**Action:** the resulting BTC position had no stop and no resting order of any kind. Placed a 2.5% trailing stop for the full 0.00087844 XXBT (txid OYWDWO-3G7JA-EGIZVJ, trigger $75,075.10) per TRADING-STRATEGY.md's mandatory no-unprotected-position rule — this applies regardless of how a position originated.
+
+**Crash gate:** BTC −0.39% vs today's open. Clear. **Weekly trend gate:** −1.08%/5d vs 2026-08-28 close. Standard regime.
+
+**Discovery:** Not run in substance — ZUSD available capital is $0.0011 (effectively zero); no candidate could be sized this pass regardless of how it screened. Deferred to next pass.
+
+### Decision: **HOLD (no capital available).** Book now holds 0.00087844 XXBT (protected, not bot-originated) instead of being flat; zero ZUSD available for new entries.
+
+### Step 8 — Notification
+
+Push sent — unexpected out-of-band account activity (full session capital moved outside the bot's own mechanism into an unprotected position) plus the resulting loss of all tradeable cash both warrant surfacing now, per CLAUDE.md's Step 8 guidance.
