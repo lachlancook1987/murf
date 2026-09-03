@@ -127,6 +127,32 @@ prefers Claude Code's own push notifications and no longer wants CallMeBot pursu
   an operational failure), surface it via the session's own push-notification
   mechanism instead, the way the 2026-08-21 weekly review did.
 
+## Manual/Out-of-Band Kraken Activity (added 2026-09-03)
+
+The user trades on this Kraken account manually sometimes, outside `scripts/kraken.sh` — e.g.
+via Kraken's own web/app UI, including its Convert/Instant-Buy feature (shows up in
+`/0/private/Ledgers` as `spend`/`receive`-type entries, not the `trade`-type entries a
+bot-placed order produces, and never appears in `kraken.sh closedorders`). Confirmed
+2026-09-03: the user manually converted the full ZUSD balance to BTC directly on Kraken.
+
+- **This is normal, expected user activity, not an operational anomaly.** A pass that finds
+  account state (balances/positions) different from the last logged pass should first check
+  whether it's explained by a manual conversion (ledger `spend`/`receive` entries, no matching
+  bot order) before assuming a bug, a missed fill, or a concurrent-session race.
+- **Still protect it.** If a manual trade leaves a position with no stop-loss, place the
+  standard stop immediately per the mandatory no-unprotected-position rule in
+  TRADING-STRATEGY.md — that part of position maintenance applies regardless of who opened
+  the position. Do this silently as routine Step 3 maintenance.
+- **Do not push notification just because:** (a) account state doesn't match the prior pass
+  due to a manual trade, or (b) available cash is low/zero as a result of one (the "piggy bank
+  is empty from an empty tradie" case). Log it in TRADE-LOG.md/RESEARCH-LOG.md for continuity
+  (so the next pass isn't confused by a non-flat book it didn't expect) but treat it the same
+  as any other no-capital-available HOLD pass — no push.
+- **Still push when something is actually wrong**, independent of the manual-trade explanation:
+  a stop-placement attempt that fails/errors, an unprotected position the routine can't
+  reconcile, or genuine ambiguity about whether an action was the user's (e.g. it doesn't match
+  any known manual-trade pattern, or account access looks compromised).
+
 ## Kraken Script Commands (primary broker)
 
 `scripts/kraken.sh` supports: `account`, `positions`, `orders`, `quote SYM/USD`,
