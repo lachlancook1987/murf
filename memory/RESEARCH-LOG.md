@@ -35356,3 +35356,22 @@ No push sent — this is a continuation of the already-flagged 00:00 UTC out-of-
 ### Step 8 — Notification
 
 No push sent — continuation of the already-flagged out-of-band-conversion state (per CLAUDE.md's Manual/Out-of-Band Kraken Activity section, low/zero available cash resulting from a manual conversion is not push-worthy on a repeat pass). Stop is intact and correctly sized, no orphan, no thesis break, both crash and weekly trend gates clear. Nothing new needs the user's attention this pass.
+
+## 2026-09-03 — Scan — 03:00 UTC
+
+**Pre-check:** Kraken `account` — ZUSD $0.0011, XXBT 0.00087844 (unchanged from the 02:00 UTC pass), all other balances dust/zero. `positions: {}`. `orders: {"open": {...OYWDWO-3G7JA-EGIZVJ...}}` — the protective trailing stop is still open and correctly sized to the full XXBT balance (vol 0.00087844 matches exactly); not orphaned. Alpaca `positions: []`, zero exposure, no action needed.
+
+**Step 3 (position maintenance):**
+- a. Orphan-stop check: stop OYWDWO-3G7JA-EGIZVJ vol (0.00087844) matches XXBT balance exactly — not orphaned. No T1 limit order exists for this position (protection-only, not a bot-originated thesis trade), so no T1 orphan check applies.
+- b. T1 partial-take: N/A, no T1 order was placed for this position.
+- c. Progressive stop-tightening: BTC live $77,710.90 (bid) vs implied entry ~$78,218 (from the 00:22 UTC conversion) → position is **~−0.65% unrealized**, not a gain — tightening thresholds (≥20%/≥40% gain) do not apply. Trailing stop has moved up correctly with price (trigger now $75,921.30, up from $75,782.60 last pass, tracking the new 24h high $77,868), confirming the trail is functioning normally.
+- d. Thesis-break: N/A — no bot-defined thesis attached to this position.
+- e. Crash gate: BTC live $77,710.90 vs today's session open $77,304.90 → **+0.52%**. Clear.
+
+**Step 4 (research/execute):** Skipped in substance — ZUSD available capital is **$0.0011**, i.e. zero, unchanged from the last three passes. No candidate, however clean, could be sized. Full discovery sweep deferred until either the resting stop fires (returning ~$77.7 cash) or the user adds capital.
+
+### Decision: **HOLD (no capital available).** Book unchanged from the 02:00 UTC pass: 0.00087844 XXBT held, protected by the existing 2.5% trailing stop (txid OYWDWO-3G7JA-EGIZVJ, trigger now $75,921.30), currently ~−0.65% unrealized. ZUSD $0.0011, no capital for new entries. Alpaca confirmed flat.
+
+### Step 8 — Notification
+
+No push sent — continuation of the already-flagged out-of-band-conversion state (per CLAUDE.md's Manual/Out-of-Band Kraken Activity section, low/zero available cash resulting from a manual conversion is not push-worthy on a repeat pass). Stop is intact and correctly sized, no orphan, no thesis break, crash gate clear. Nothing new needs the user's attention this pass.
