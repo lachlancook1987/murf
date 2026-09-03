@@ -35776,3 +35776,26 @@ No Step 3 action taken (nothing needed doing).
 ### Step 8 — Notification
 
 No push sent — state unchanged in substance from prior passes (same protected position, same zero-cash constraint, no new anomaly, gain still well under the 20% tightening threshold). Nothing here needs the user's attention right now.
+
+## 2026-09-03 — Scan — 23:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $0.0011 (unchanged since the 00:00 UTC pass), XXBT 0.00087844 held (out-of-band manual conversion, protected 2026-09-03 00:00 UTC pass), ZAUD $0.1550 dust from the same conversion's ledger sweep. `positions: {}` (spot, margin-only endpoint). `orders: {"open": {...OYWDWO-3G7JA-EGIZVJ...}}` — the protective trailing stop is still open, `vol` 0.00087844 matches the full XXBT balance exactly, no orphan. Alpaca: `positions: []`, zero exposure; orders all historical, stop `a2b44cf9` unchanged (still `canceled`, since 2026-05-22) — no change, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** clear — one open order (the BTC trailing stop), balance matches order volume exactly.
+- **T1 partial-take check:** N/A — this position has no bot-placed T1 limit order (protection-only, not a bot-originated entry; documented 2026-09-03 00:00 UTC).
+- **Progressive stop-tightening:** live BTC bid $81,181.50 / ask $81,181.60 (last $81,178.20) vs implied conversion entry ≈$78,218 → position is **~+3.79% unrealized**, a gain but well under the ≥20% tightening threshold — no action. 24h high unchanged at $82,288.10 (same as last pass) → stopprice unchanged at $80,230.90 — trail mechanism idle because price hasn't made a new high since last pass, working as expected.
+- **Thesis-break check:** N/A, no bot thesis attached to this position.
+- **Crash gate:** BTC live $81,178.20 vs today's session open $77,304.90 → **+5.01%**. Clear, nowhere near −20%.
+
+No Step 3 action taken (nothing needed doing).
+
+**Step 4 — Research and execute:** **Skipped.** ZUSD available = $0.0011, effectively zero — no candidate, however clean, could be sized this pass. Same capital-constrained state as every pass since 00:00 UTC (now 23 consecutive passes, accounting for the missing-then-recovered 12:00 UTC pass); full discovery sweep remains deferred until the BTC stop fires (returning cash) or the user adds capital.
+
+### Decision: **HOLD (no capital available).** Book unchanged from the 22:00 UTC pass: 0.00087844 XXBT held (out-of-band origin), protected by trailing stop OYWDWO-3G7JA-EGIZVJ (trigger $80,230.90, unchanged), now ~+3.79% unrealized. ZUSD $0.0011, no capital for new entries. Alpaca fully flat.
+
+**Step 6 — EOD mode (23:00 UTC pass):** Full EOD Snapshot computed and appended to memory/TRADE-LOG.md — see that file for Day P&L, Phase P&L, and vs-BTC detail. Portfolio $71.3113 (XXBT $71.3102 + ZUSD $0.0011), Day P&L +$1.9102 (+2.75%), Phase P&L −$108.4687 (−60.34%), vs BTC −2.52 points today (the account's BTC entry, from the out-of-band conversion at implied ≈$78,218, sits above the $77,114.60 reference price used for yesterday's EOD baseline, so the bot captured less of today's BTC rally than a position opened at that baseline would have).
+
+### Step 8 — Notification
+
+No push sent — state unchanged in substance from prior passes (same protected position, same zero-cash constraint, no new anomaly, gain still well under the 20% tightening threshold, EOD snapshot is routine record-keeping not a new event). Nothing here needs the user's attention right now.
