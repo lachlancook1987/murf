@@ -10990,3 +10990,29 @@ No push sent — book flat, crash gate clear, no candidate within reach of the s
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift beyond the already-logged firing-time offset, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +0.93 points. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-03 — Scan — 00:00 UTC — OUT-OF-BAND ACCOUNT ACTIVITY DETECTED
+
+**Pre-check anomaly:** Kraken `account` returned ZUSD **$0.0011** (was $69.4011 at the 23:00 UTC EOD pass) and **XXBT 0.00087844** (~$67.64 at live price) — a material mismatch against every prior pass's book-flat state. `positions: {}` and `orders: {"open": {}}` (both empty at pre-check, before this pass's own action below). Investigated before assuming a bug or a concurrent-session trade:
+- `git fetch origin main` showed no new commits since this session's base (`b5a223f`, the 23:00 UTC EOD push) — ruled out a concurrent hourly pass having executed and pushed a trade this session hadn't seen.
+- `kraken.sh closedorders` (the bot's own order-history view) shows no BTC order at all — most recent closed order is still the 2026-08-30 ZORA round-trip. The bot has never placed a BTC order via `kraken.sh order` (AddOrder).
+- Queried Kraken's private `/0/private/Ledgers` endpoint directly (no wrapper command exists for this) and found two **`spend`/`receive`-type** ledger entries — a distinct ledger type from the `trade`-type entries every bot-placed order produces, consistent with Kraken's **Instant Buy/Sell/Convert** feature (web/app UI), not the order-book `AddOrder` API this bot's scripts use:
+  - **2026-09-02 23:01:49 UTC** — dust sweep: BABY, HYPE, KAS, TAO, POL, SUI, FET, NEAR, AVAX, INJ, AAVE, XETH (all near-zero) → **0.0499 ZAUD** (new ZAUD balance 0.1550).
+  - **2026-09-03 00:22:08 UTC** — **full ZUSD balance converted to BTC**: −$68.71 ZUSD → +0.00087844 XXBT (implied price ≈$78,218/BTC — well above the live $77,000.10 at this pass, i.e. already **≈−1.56% unrealized** by the time this pass ran, ~12 min later).
+- **Conclusion:** this was not a bot action, not a script bug, and not a concurrent session's trade — it was performed through a mechanism outside `scripts/kraken.sh`'s capabilities (Convert, not AddOrder), most consistent with a manual action on the exchange account directly (by the account owner) rather than any part of this routine.
+
+**Protective action taken (per TRADING-STRATEGY.md's mandatory "no open unprotected position" rule, which applies to any open position regardless of how it originated):** the resulting 0.00087844 XXBT position had **no stop-loss and no resting order of any kind** — fully exposed. Placed a standard trailing stop for the full balance immediately:
+```
+bash scripts/kraken.sh order '{"symbol":"BTC/USD","qty":"0.00087844","side":"sell","type":"trailing_stop","trail_percent":2.5,"time_in_force":"gtc"}'
+```
+Filled as a resting order, txid **OYWDWO-3G7JA-EGIZVJ**, trigger stop $75,075.10 (2.5% below live $77,000.10 at placement). No T1 partial-limit order was placed alongside it (unlike a normal bot entry) — this position has no bot-defined entry/T1/T2 thesis to partial-take against; it is being protected, not managed as a strategy-originated trade. Future passes should treat this as a held position requiring the standard progressive-stop-tightening checks (≥20%/≥40% gain thresholds) if it moves in profit, and standard orphan-stop verification if the stop later fires.
+
+**Crash gate:** BTC live $77,000.10 vs today's session open $77,304.90 → **−0.39%**. Clear. **Weekly trend gate:** live $77,000.10 vs 5-day-ago daily close $77,841.80 (2026-08-28) → **−1.08%/5d**, inside the ±3% band. Standard regime.
+
+**Step 4 (research/execute):** Skipped in substance — ZUSD available capital is **$0.0011**, i.e. zero. No candidate, however clean, could be sized this pass. Full discovery sweep deferred to the next pass, when either the new stop fires (returning cash) or the user adds capital.
+
+### Decision: **HOLD (no capital available).** Book is no longer flat: 0.00087844 XXBT now held, protected by a fresh 2.5% trailing stop (txid OYWDWO-3G7JA-EGIZVJ, trigger $75,075.10). This position originated from an out-of-band exchange-side conversion, not a bot decision — see anomaly note above. ZUSD $0.0011, no capital available for new entries.
+
+### Step 8 — Notification
+
+**Push sent** — this pass found account state that didn't match the last logged book-flat position (unexpected BTC position, ~98% of session capital moved outside the bot's own order mechanism), placed a protective stop on the newly-discovered unprotected position, and is now out of tradeable cash. This is exactly the kind of operational anomaly + notable state change CLAUDE.md's Step 8 guidance calls for surfacing now rather than logging silently.
