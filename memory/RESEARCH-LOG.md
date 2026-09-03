@@ -35599,10 +35599,12 @@ No push sent — state unchanged in substance from prior passes (same protected 
 
 No Step 3 action taken (nothing needed doing).
 
-**Step 4 — Research and execute:** **Skipped.** ZUSD available = $0.0011, effectively zero — no candidate, however clean, could be sized this pass. Same capital-constrained state as every pass since 00:00 UTC (now 14 consecutive passes, accounting for the missing 12:00 UTC pass); full discovery sweep remains deferred until the BTC stop fires (returning cash) or the user adds capital.
+**Step 4 — Research and execute:** **Skipped.** ZUSD available = $0.0011, effectively zero — no candidate, however clean, could be sized this pass. Same capital-constrained state as every pass since 00:00 UTC (now 14 consecutive passes, accounting for the missing-then-recovered 12:00 UTC pass); full discovery sweep remains deferred until the BTC stop fires (returning cash) or the user adds capital.
 
 ### Decision: **HOLD (no capital available).** Book unchanged from the 13:00 UTC pass: 0.00087844 XXBT held (out-of-band origin), protected by trailing stop OYWDWO-3G7JA-EGIZVJ (trigger now $77,857.70, up from $76,756.90), now ~+2.09% unrealized (largest gain since the conversion). ZUSD $0.0011, no capital for new entries. Alpaca fully flat.
 
+**Note on origin/main drift:** this pass's `git fetch` (before push) found `origin/main` had advanced past this session's fork point — a concurrent session's mem-sync for the previously-missing 12:00 UTC pass landed at 14:19:59 UTC, merged cleanly inline (chronologically correct insertion, `TRADE-LOG.md` untouched) rather than a wholesale clobber. Per CLAUDE.md's known concurrent-mem-sync-race guidance, verified via `git diff` before pushing rather than blindly overwriting with this session's stale (dc68652-based) copy; rebased this pass's entry onto the current `origin/main` content so both the 12:00 and 14:00 UTC entries are preserved. No content was lost this pass, but this is the same race pattern already flagged in CLAUDE.md — logged here for continuity, not pushed as a new alert (no data loss occurred).
+
 ### Step 8 — Notification
 
-No push sent — state unchanged in substance from prior passes (same protected position, same zero-cash constraint, no new anomaly). Nothing here needs the user's attention right now.
+No push sent — state unchanged in substance from prior passes (same protected position, same zero-cash constraint, no new anomaly; the origin/main drift above was caught and resolved without data loss, consistent with the already-documented concurrent-session race, not a new distinct failure). Nothing here needs the user's attention right now.
