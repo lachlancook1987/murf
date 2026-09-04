@@ -36550,3 +36550,35 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the widest technical clear since the kill switch was flagged (MORPHO/RIVER/TON) was correctly blocked on the no-catalyst kill switch rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 23:00 UTC (EOD pass)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 22:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22, zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,700.10 vs today's session open $81,276.10 → **−1.94%**. Clear, nowhere near −20%. **Fear & Greed:** 74 (Greed), unchanged from the 22:00 UTC pass.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 16 candidates cleared vs-open>3% + live-fade<6% + liquidity ≥$50k, with DASH and ZEC pre-excluded as AU-restricted. Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left six candidates: NEAR (+11.86%, fade 0.21%), ACU (+10.75%, fade 0.89%), DCR (+9.37%, fade 0.78%), M (+6.56%, fade 1.37%), RIVER (+5.23%, fade 0.00%), ROBO (+3.18%, fade 1.48%).
+
+**Two-candle acceleration check (checked 23:34 UTC — last closed 15m candle 23:15–23:30, prior closed candles 23:00–23:15 and 22:45–23:00):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| NEAR | 23:00 C 2.1336 > 22:45 C 2.1279 (passes step 1); 23:15 C 2.1812 > 23:00 C 2.1336 (passes step 2) | Passes acceleration — but see confirmed-candle check below |
+| ACU | 23:00 C 0.1457 > 22:45 C 0.1452 (passes step 1); 23:15 C 0.1458 > 23:00 C 0.1457 (+0.0001, one tick) | Marginal/noise, not genuine acceleration — same spike-then-stall pattern rejected at 22:00 UTC |
+| DCR | 23:00 C 15.435 > 22:45 C 15.269 (passes step 1); 23:15 C 15.549 > 23:00 C 15.435 (passes step 2) | Passes acceleration — but see confirmed-candle check below |
+| M | 23:00 C 1.11054 > 22:45 C 1.10381 (passes step 1); 23:15 C 1.10598 < 23:00 C 1.11054 | Fails at step 2 |
+| RIVER | 23:00 C 1.326 < 22:45 C 1.330 | Fails at step 1 |
+| ROBO | 23:00 C 0.01213 > 22:45 C 0.01191 (passes step 1); 23:15 C 0.01210 < 23:00 C 0.01213 | Fails at step 2 |
+
+**Confirmed-candle check (NEAR, DCR — the two technical accelerators):** refetched ticker + OHLC at 23:34:38 UTC. NEAR's 24h high $2.1952 and DCR's 24h high $15.738 both sit in the **still-forming 23:30–23:45 candle** (NEAR's last closed-candle high was $2.1812 at 23:15; DCR's was $15.564), not a closed candle — both **fail confirmed-candle**, same failure mode the strategy's freshness/confirmation gate exists to catch (an in-progress spike, not a settled move). ACU's 24h high $0.1466 does match its 23:15 closed-candle high (confirmed, fresh — set ~19 min before check), but ACU already failed genuine acceleration above (one-tick noise inside an overall stall/fade from $0.1466 high to $0.1453 last, −0.89% off high).
+
+**No candidate cleared every gate.** Zero candidates reached the catalyst-confirmation stage this pass (unlike the 22:00 UTC pass's MORPHO/RIVER/TON, which cleared every technical gate and were blocked only by the kill switch) — this pass's failures were earlier in the funnel, on acceleration/confirmed-candle, before the kill switch question was even reached.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.94%). Full-universe sweep (640 pairs) found six candidates clearing the raw momentum/fade/liquidity screen; none cleared two-candle acceleration with a confirmed closed-candle high. Per the gate-protection default, this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage. EOD snapshot appended to TRADE-LOG.md per Step 6 (23:00 UTC pass).
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, no operational issues, no drift from the last logged state, EOD snapshot is routine record-keeping. Nothing here needs the user's attention right now.
