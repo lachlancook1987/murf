@@ -1339,3 +1339,78 @@ None — 100% cash. No open Kraken orders. Alpaca fully closed.
 **This was the bot's worst week on record — a 36.82% drawdown against a rising BTC (+2.97%), driven almost entirely by a collapse in momentum-only win rate (3-16, 15.8%, down from last week's validated 4-3) as the market shifted from a strong trend into a choppy, range-bound stretch.** Every mechanically-checkable gate (spread, R:R floor, crash gate, catalyst freshness) was applied correctly on every trade — this wasn't a discipline failure, it was the momentum-breakout method itself producing repeated fakeouts once the tape stopped trending. The fastest reversals (BMT#1 in under 3 minutes) point to a specific, fixable gap: the freshness check accepted a still-forming candle's new high as confirmation, which is exactly the kind of signal that fails first when a rally stalls. Tightened the momentum-peak-check to require one closed confirming candle, and formalized two recurring operational issues (EOD mislabeling, deferred trade logging) into standing rules rather than leaving them as review-note reminders that keep recurring.
 
 ---
+
+## Week of 2026-08-28 to 2026-09-04 — Review Date: 2026-09-04
+
+### Context
+Continued choppy/range-bound tape through Aug 28-30 (5 bot trades, all under the pre-overhaul rules), then a major rule overhaul fired mid-week (2026-09-02: confirmed-candle + two-candle-acceleration + live-fade checks, limit-at-bid default entry, 1.8:1 momentum-only R:R floor, volatility-scaled sizing, T1 partial-take redesign, progressive stop-tightening, rolling win-rate kill switch, daily loss-pause) — zero bot trades placed since then despite the routine now firing hourly (vs. the old 4+ hour gaps) and dozens of candidates screened. Separately, an out-of-band manual Kraken Convert action (full ZUSD → BTC, Sep 3 00:22 UTC) parked ~98% of account equity in BTC outside the bot's own order mechanism for about 27 hours; the bot protected it with a standard trailing stop per the Manual/Out-of-Band Kraken Activity rule, and the user directed its liquidation back to cash on Sep 4 (~03:20 UTC) specifically to free capital for the routine. Crash gate and weekly BTC-downtrend gate never triggered all week.
+
+### Account Snapshot (Friday 07:00 UTC pass, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $70.6298 | $70.6298 ZUSD (+$0.1550 ZAUD dust) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$70.6298** | $70.6298 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Aug 28 EOD) | $73.6760 |
+| Ending Equity (Fri Sep 4, live @ 07:00 UTC) | **$70.6298** |
+| **Week Return** | **−4.13%** (−$3.0462) |
+| BTC Week Return | **+1.39%** ($79,781.10 → $80,890.10 live) |
+| **Bot vs BTC** | **−5.52%** (underperformed) |
+
+**Note on the out-of-band BTC excursion:** not a bot decision (see Context) and excluded from the trade summary/win-rate stats below, but it passed through account equity: the account held 0.00087844 XXBT from Sep 3 00:22 UTC to Sep 4 03:20 UTC, realizing ≈+3.41% before fees on that stretch (implied entry ≈$78,218 → market-sell fill $80,887.60) before the user converted it back to the $70.6298 ZUSD now on hand. The equity table above nets all of this in — it is the actual, reconciled account balance at both endpoints, bot-originated or not.
+
+### Trade Summary (bot-originated only)
+| # | Date | Pair | Entry | Exit | P&L | Status |
+|---|---|---|---|---|---|---|
+| 1 | Aug 28 | ZIG/USD | $0.049636 | stop-out (3.5% trail) | **−$3.7129** (−5.12%) | LOSS |
+| 2 | Aug 29 | HNT/USD | $0.316128 | stop-out (3.5% trail) | **−$1.9647** (−2.89%) | LOSS |
+| 3 | Aug 29 | NIL/USD | $0.060461 | $0.0620 (trail stop 3.5%) | **+$1.2841** (+1.93%) | WIN |
+| 4 | Aug 30 | UAI/USD | $0.343468 | $0.35300 (trail stop 3.5%) | **+$1.48784** (+2.16%) | WIN |
+| 5 | Aug 30 | ZORA/USD | $0.00829500 | $0.008183 (trail stop 3.5%) | **−$1.36935** (−1.942%) | LOSS |
+
+All 5 trades landed Aug 28-30, before the Sep 2 rule overhaul — none were subject to the confirmed-candle/two-candle-acceleration/live-fade checks, the 1.8:1 R:R floor, or limit-at-bid entries that govern every pass since. Zero bot trades Aug 31 - Sep 4 (07:00 UTC).
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 5 |
+| Wins | 2 |
+| Losses | 3 |
+| Win Rate | **40.0%** |
+| Gross Wins | $2.77194 |
+| Gross Losses | $7.04695 |
+| Profit Factor | **0.39** |
+| Avg Win | $1.39 |
+| Avg Loss | $2.35 |
+| Largest Win | UAI/USD **+$1.48784 (+2.16%)** |
+| Largest Loss | ZIG/USD **−$3.7129 (−5.12%)** |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | ~$1.60 (5 round trips × ~$70 avg notional at the documented ~1.6%/round-trip rate) |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $70.6298 (+$0.1550 ZAUD dust). No open Kraken orders. Alpaca fully closed.
+
+### Trade Quality Review
+
+**Entry types:** All 5 trades were momentum-only (no confirmed <6h catalyst), all used the high-ATR 3.5% trailing-stop exception — the same "exception became the default" pattern flagged as worth naming in the 2026-08-28 review (18/20 that week), now 5/5 this week. Every trade predates the Sep 2 overhaul, so none were held to the tightened gates now in force; no conclusions about the new rules' effectiveness can be drawn from this week's closed trades — the relevant data point is the *zero entries* since Sep 2 despite the routine firing hourly and dozens of candidates screened (TRIA, USELESS, CHIP, MINA, DGAI, TIA, BTR, PEAQ, XAN, XCN, Q, and more — full detail in RESEARCH-LOG.md), each rejected on a specific, logged gate rather than a loosened threshold.
+
+**Assets:** Winners — NIL (+1.93%), UAI (+2.16%). Losers — ZIG (−5.12%, largest loss of the week), HNT (−2.89%), ZORA (−1.94%). No asset traded to a loss more than once; no same-thesis cooling-period triggers this week.
+
+**Stop quality:** All 5 stops fired mechanically and correctly on the 3.5% trail, no orphaned positions, no manual intervention needed at exit. None reached T1 before reversing (consistent with the pre-overhaul T1-tightening mechanism's known low fire rate, now superseded by the exchange-resting partial-limit-sell redesign).
+
+**Profile violations:** None on the 5 bot trades — spread confirmed ≤1% at execution on every trade, no leverage used, catalyst freshness correctly assessed (all 5 correctly treated as momentum-only). The out-of-band BTC position was protected with a stop within the same pass it was discovered, per the mandatory no-unprotected-position rule, and its liquidation was fully user-directed and logged — not a bot violation.
+
+**🚩 Rolling win-rate kill switch — currently ACTIVE, not being checked in daily passes (found this review):** TRADING-STRATEGY.md's win-rate kill switch (added 2026-09-02) requires suspending new momentum-only entries whenever the realized win rate over the last 10 momentum-only entries drops below 35%, and requires that trailing win rate to be logged in every pass's discovery summary. Neither has happened in practice — no pass since Sep 2 has computed or logged it, likely because every pass since then has reached HOLD on structural grounds before the rule was ever consulted. Computing it now from TRADE-LOG.md, most-recent-first: ZORA(L), UAI(W), NIL(W), HNT(L), ZIG(L), GWEI(L, Aug 28), BMT#2(L, Aug 27), TAO(L, Aug 27), RUNE(L, Aug 27), BMT#1(L, Aug 25) — **2 wins / 8 losses = 20.0%**, well below the 35% floor. This has not caused an actual rule violation yet (no momentum-only candidate has cleared every structural gate since Sep 2 to test it against), but it is a live risk control that would currently block a qualifying momentum-only entry and nothing in the routine would catch that until this review. Capital just became available again (Sep 4 ad hoc liquidation) at the same moment this gate is silently active — the two arriving together is exactly the scenario the kill switch exists for. Added an explicit current-status line to TRADING-STRATEGY.md (see Concrete Adjustments) so the next pass sees it without needing to recompute the window from scratch.
+
+**Concrete Adjustments (added 2026-09-04):**
+1. **Win-rate kill switch given an explicit "current status" line in TRADING-STRATEGY.md**, stating it is ACTIVE as of this review (20.0% trailing win rate) and momentum-only entries are suspended until it recovers above 35% — catalyst-confirmed entries unaffected. This turns a rule that depended on each pass re-deriving it from TRADE-LOG.md (and, in practice, wasn't being derived at all) into a standing status flag any pass can read directly at Step 1, the same fix pattern used for the EOD-labeling and same-pass-logging rules in the 2026-08-28 review after review-note flagging alone failed to stop their recurrence.
+2. No other rule change — the Sep 2 overhaul's gates (confirmed-candle, two-candle acceleration, live-fade, 1.8:1 R:R floor) have a clean early track record (zero entries let through a fading or unconfirmed setup across dozens of screened candidates) and don't yet have enough trade volume under them to warrant further tuning either way.
+
+### Key Lesson
+**The picture this week is really two different regimes stitched together: 5 trades under the old rules (2-3, 40% win rate, −4.13% net including the BTC excursion) through Aug 28-30, then zero trades for the four days since the Sep 2 rule overhaul despite hourly coverage and a wide candidate pool — every rejection tied to a specific, logged gate.** That's the intended behavior of a gate-protection-first strategy and not itself a problem. The real finding this review is procedural, not a trading-rule gap: the rolling win-rate kill switch this same overhaul introduced has been silently unenforced since the day it was added, and is currently sitting at 20% — a full 15 points under its own suspension floor — right as fresh capital came back onto the books. Nothing has gone wrong yet only because no candidate has cleared the structural gates far enough to reach the kill switch's check. Giving it a standing status line in TRADING-STRATEGY.md closes that gap going forward the same way two prior silent-recurrence issues (EOD mislabeling, deferred logging) were closed: by making the rule something a pass reads directly rather than something it's supposed to remember to recompute.
+
+---
