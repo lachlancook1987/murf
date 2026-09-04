@@ -36222,3 +36222,36 @@ All other raw candidates (GAIA, LSETH, ANON, SN44, WMTX, FXS, ZEX, TBTC, IR, UXL
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the win-rate-kill-switch or catalyst stage this pass (all rejected on structural gates: stale high, sub-floor liquidity, or live fade), no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 13:00 UTC (fired 13:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the last logged state (2026-09-04 03:20 UTC user-directed liquidation). `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, orders all historical (stop `a2b44cf9` still `canceled` since 2026-05-22) — zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,374.70 vs today's session open $81,276.10 → **−2.34%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,374.70 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through the week, reconfirmed via fresh daily OHLC pull) → **+2.18%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 65 (Alternative.me) / 59 (CFGI, Neutral) / 73 (CoinStats) — clustered Greed, not Extreme Fear. **BTC perp funding:** ~+0.004–0.008%/8h across venues, mildly positive (longs paying shorts), not extreme. **Macro catalysts (Perplexity):** US jobs report / softer ADP print driving a BTC rebound above $80k on short-covering; no asset-specific <6h catalyst beyond broad macro risk-on tone (SOL, ZEC cited as day's notable movers, neither a Kraken-sweep candidate this pass).
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass (no new momentum-only fills since the review to recompute the window). Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). Only 6 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k — a notably narrower raw screen than recent passes:
+
+| Pair | vs-open | Prox to 24h high | Liquidity | Verdict |
+|---|---|---|---|---|
+| NPC | +11.58% | −1.52% (fails live-fade >1.5%) | $624k | Rejected — live-fade, repeat-offender pattern |
+| PTB | +11.22% | −2.07% | $322k | Rejected — live-fade |
+| PEAQ | +9.06% | −5.13% | $189k | Rejected — live-fade |
+| COTI | +8.17% | −0.76% | $90k | Deep-dived — see below |
+| M | +5.26% | −0.01% | $74k | Deep-dived — see below |
+| SYRUP | +4.47% | −3.06% | $660k | Rejected — live-fade |
+
+**COTI/USD deep-check:** 15m closed candles show clean acceleration — 12:45 close 0.01378 → 13:00 close 0.01403 → 13:15 close 0.01423, each closing higher; two-candle acceleration passes. 24h high $0.01441 sits exactly on the 13:15 candle's own high (closed 4 min before this check) — confirmed-closed-candle and fresh (well inside the 30-min ceiling). Live fade 0.97% (well under 1.5% cap). Spread: ask $0.01428 / bid $0.01424 ≈ 0.28%, clean. **Catalyst (Perplexity):** only cited driver is the COTI GC general-availability launch dated **Aug 29, 2026** — same stale catalyst already rejected on the 11:00 UTC pass, no new <6h development found. Classified **momentum-only**. Cross-exchange: CoinGecko $0.01305 / CMC $0.01316 vs Kraken live $0.01427 → ~9.3% divergence, within the acceptable band, not independently disqualifying. **Rejected: momentum-only classification triggers the active win-rate kill switch (20.0%, floor 35%)** — blocked outright, independent of and prior to any R:R calculation.
+
+**M/USD deep-check:** 24h high $1.09259 sits exactly on the 13:15 candle's own high (confirmed, fresh) and live price is right at it (fade 0.007%, clears the fade cap easily). **Fails two-candle acceleration**, however: closes 12:45→13:00 were flat (both $1.06887, the 13:00 candle printed zero volume) — the immediately-prior step does not close higher, so the "last two closed candles each close higher than the prior close" requirement fails at the first step despite the most recent 13:00→13:15 step being a strong gain. **Rejected on acceleration**, catalyst check not reached.
+
+**No candidate cleared every gate.** COTI was the only pair to clear every structural/momentum gate (acceleration, confirmed-fresh high, live-fade, spread, liquidity) but lacks a confirmed <6h catalyst and is blocked by the active win-rate kill switch. M cleared price/fade/freshness but failed acceleration on a zero-volume flat candle. NPC, PTB, PEAQ, and SYRUP all failed the live-fade cap outright. No candidate reached a same-thesis cooling-period check (kill switch and acceleration gates were decisive first).
+
+### Decision: **HOLD.** Crash gate clear (BTC −2.34%), weekly trend gate clear (+2.18%/5d). Narrow full-universe sweep (663 pairs, only 6 raw candidates vs the usual 15-30) found one candidate (COTI) clearing every structural gate, blocked by the already-flagged, already-logged momentum-only win-rate kill switch (not a new anomaly) rather than any threshold being loosened. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (COTI) was rejected on the already-flagged win-rate kill switch (not a new anomaly), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
