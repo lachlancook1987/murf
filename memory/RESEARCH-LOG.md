@@ -35939,3 +35939,28 @@ No push sent — this was a user-initiated interactive pass, the user is activel
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, all four liquid candidates rejected on specific documented gates (acceleration, live-fade) rather than a manufactured excuse, no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 05:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, XXBT 0.0000000000, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 04:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, no orphans to check. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $80,972.10 vs today's session open $81,276.10 → **−0.37%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,972.10 vs 5-day-ago daily close $77,681.60 (2026-08-30, Kraken daily OHLC) → **+4.24%/5d**, well inside (above) the ±3% band — standard regime, pure-momentum entries remain open. **Fear & Greed:** 65 (Greed) per Alternative.me (Perplexity cross-check showed 54–73 across providers) — not Extreme Fear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 16 candidates cleared vs-open>3% + within 6% of 24h high + spread <2%. Of those, six had liquidity ≥$50k: USELESSUSD ($7.83M), BABYSHARKUSD ($390k), FLOCKUSD ($64.7k), FHEUSD ($79.6k), XANUSD ($52.6k), PEAQUSD ($90.2k).
+
+- **USELESSUSD** (+7.55% vs-open) and **BABYSHARKUSD** (+11.66%): live price already 2.10%/4.40% off the 24h high respectively — both hard-reject on the live intracandle fade cap (>1.5%), same repeat-offender fading pattern logged across multiple prior passes this week.
+- **FLOCKUSD**: spread 1.09% — breaches the mandatory ≤1% cap outright, decisive rejection on its own (high_prox 5.63% also fails the fade check independently).
+- **FHEUSD**: clears spread (0.42%) and fade (0.42%) but fails two-candle acceleration — 15m closes 04:45→05:00→05:15 are 0.02367→0.02362→0.02361, declining, not building (momentum stalling right at the point of entry, the exact pattern this gate targets).
+- **XANUSD**: clears spread (0.30%) and fade (1.19%), and shows a real breakout candle (05:15 close +3.4% on a large volume spike after several flat/zero-volume candles) — but that spike is a single closed candle, not two consecutive higher closes (04:45→05:00 was flat at 0.01282→0.01282). Fails two-candle acceleration; also genuinely thin order flow (most 15m candles show zero volume between sporadic prints) despite a $52.6k trailing-24h liquidity figure.
+- **PEAQUSD**: only candidate technically passing both spread (0.08%) and two-candle acceleration (04:45→05:00→05:15 closes each higher: 0.02395→0.02400→0.02413) — but true 1h momentum is just ~0.5% (04:15 close 0.02400 → 05:15 close 0.02413), well short of the 1h>3%/4h>5% primary momentum signal this strategy screens for. A grind, not a mover; rejected on momentum magnitude rather than a structural gate.
+- **QUSD** (+20.63% vs-open, high_prox 5.37%): liquidity $35.9k, below the ~$50k practical bar used consistently by this routine, and already fails the live-fade cap independently — not deep-dived further.
+
+**No candidate cleared every gate.** PEAQUSD was the only one clearing every structural/technical check but lacked real momentum magnitude; FHE and XAN each failed the two-candle acceleration gate at the final step; USELESS/BABYSHARK/FLOCK failed on fade or spread outright. Catalyst checks not run (no candidate reached that stage). Same-thesis check: no prior stop-out history on record for any of these six within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.37%), weekly trend gate clear (+4.24%/5d). Full-universe sweep (639 pairs) found six liquid candidates clearing the raw momentum/proximity screen; all six failed a specific, documented gate (fade ×2, spread ×1, acceleration ×2, momentum magnitude ×1). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, all six liquid candidates rejected on specific documented gates (fade, spread, acceleration, momentum magnitude) rather than a manufactured excuse, no operational issues. Nothing here needs the user's attention right now.
