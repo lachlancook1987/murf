@@ -36357,3 +36357,35 @@ No push sent — book flat with no unprotected exposure, both gates clear, three
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the two closest, ICNT and VVV, rejected on the freshness gate — stale highs, not new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 17:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 16:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` still historical/canceled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,539.70 vs today's session open $81,276.10 → **−2.14%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,539.70 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.39%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 74 (Alternative.me/Bitget) / 75 (CoinStats) / 68 (CFGI Bitcoin-specific) — clustered Greed, consistent with the 16:00 UTC pass. Perplexity BTC cross-check ($80.6k–$81.4k depending on source) is within normal cross-exchange noise of Kraken's live $79,539.70, no divergence flag.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted, both also present this pass at +17.57%/+6.73% vs-open and skipped without deep-dive per standing rule). 16 candidates cleared vs-open>3% + live-fade<6% + liquidity ≥$50k: QUSD (+27.39%, fade 5.88%), TAC (+22.75%, fade 0.53%), MIM (+13.73%, fade 4.45%), BICO (+11.29%, fade 5.07%), PEAQ (+10.12%, fade 4.20%), NPC (+8.94%, fade 3.86%), LIGHTER (+8.45%, fade 4.77%), SYRUP (+8.07%, fade 1.48%), ACU (+7.55%, fade 0.42%), COTI (+6.81%, fade 2.01%), 0G (+6.32%, fade 3.35%), M (+5.39%, fade 1.61%), XAN (+4.24%, fade 1.12%), S (+3.89%, fade 2.65%), ICNT (+3.85%, fade 0.60%), VELO (+3.55%, fade 0.00%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated QUSD, MIM, BICO, PEAQ, NPC, LIGHTER, COTI, 0G, M, S — six candidates cleared through to deep-dive: TAC, SYRUP, ACU, XAN, ICNT, VELO.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close, all six, checked at 17:34 UTC — last closed candle 17:15–17:30):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| TAC | 17:00 C 0.002752 < 16:45 C 0.002756 | Fails at step 1 |
+| SYRUP | 17:00 C 0.23098 < 16:45 C 0.23347 | Fails at step 1 |
+| ACU | 17:00 C 0.1391 > 16:45 C 0.1390 (passes step 1); 17:15 C 0.1411 > 17:00 C 0.1391 | **Passes** — deep-dived further below |
+| XAN | 17:00 C 0.01329 > 16:45 C 0.01324 (passes step 1); 17:15 C 0.01327 < 17:00 C 0.01329 | Fails at step 2 |
+| ICNT | 17:00 C 0.1167 > 16:45 C 0.1161 (passes step 1); 17:15 C 0.1156 < 17:00 C 0.1167 | Fails at step 2 |
+| VELO | 17:00 C 0.004828 > 16:45 C 0.004785 (passes step 1); 17:15 C 0.004816 < 17:00 C 0.004828 | Fails at step 2 |
+
+**ACU/USD deep-check (only candidate to pass acceleration):** Spread 0.14% (bid $0.1411/ask $0.1413) — well inside the 1% cap. 24h high $0.1417 sits on the 17:15 closed candle (closed 17:30, ~4 min old at check time) — well within the 30-min freshness ceiling, confirmed-closed-candle satisfied, live fade 0.42% off the high. All technical/structural gates clear. **Catalyst check (Perplexity, decisive reject):** queried Acurast/ACU news and the most recent official item is a "Processor Update V1.27.0" blog post dated Sep 3 and a CoinMarketCap AI-integration-surge note from Sep 2 03:05 PM UTC — both >24h old at check time, no confirmed catalyst <6h old. Classified **momentum-only** → blocked outright by the active win-rate kill switch suspension (20.0% trailing win rate, floor 35%), independent of and in addition to the 1.8:1 R:R floor it would also need to clear. **Rejected on kill-switch suspension.**
+
+**No candidate cleared every gate.** ACU was the only one of six deep-dived candidates to pass two-candle acceleration, cleared every remaining technical gate (spread, freshness, confirmed-candle, live-fade), but had no confirmed <6h catalyst — classified momentum-only and blocked by the active kill-switch suspension. TAC and SYRUP failed acceleration at step 1 (spike-then-reversal); XAN, ICNT, and VELO all passed step 1 but failed step 2 (stalled on the most recent closed candle). Same-thesis check: no prior stop-outs on record for ACU within the 7-day window — cooling-period cap does not apply, moot given the kill-switch rejection.
+
+### Decision: **HOLD.** Crash gate clear (BTC −2.14%), weekly trend gate clear (+2.39%/5d). Full-universe sweep (640 pairs) found six candidates clearing the raw momentum/fade/liquidity screen; one (ACU) cleared every technical/structural gate but was blocked by the active momentum-only win-rate kill-switch suspension for lacking a confirmed <6h catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (ACU) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
