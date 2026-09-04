@@ -36054,3 +36054,42 @@ No push sent — book flat with no unprotected exposure, both gates clear, all s
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (MINA) was rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly — its SUSPENDED status was surfaced and pushed at the 07:00 UTC pass), no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 09:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 08:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, `orders` — stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $81,127.70 vs today's session open $81,276.10 → **−0.18%**. Clear, nowhere near −20%. **Weekly trend gate:** live $81,127.70 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through today's passes) → **+4.44%/5d**, well inside (above) the ±3% band — standard regime. **Fear & Greed:** 65 (Greed) per Alternative.me (Perplexity cross-check showed 32–74 across providers) — not Extreme Fear. Macro: BTC $80.6k–$81.4k, +3.6% to +5.6%/24h depending on source, consistent with the crash/weekly-gate reads above.
+
+**🚩 Win-rate kill switch status (carried from 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 36 candidates cleared vs-open>3% + within 6% of 24h high (BDXN excluded — 741% spread, illiquid noise). Of those with liquidity ≥$50k and spread ≤1%: TRIA/USD (5.29% fade — reject outright), USELESS/USD, SKR/USD (2.18% fade — reject), PEAQ/USD (1.15%), SPX/USD, XMR/USD, MINA/USD (3.1% fade — reject), FLOKI/USD, CRV/USD, SAHARA/USD ($50.4k, borderline liquidity), BICO/USD, DCR/USD, ASTER/USD. Live-fade screen eliminated TRIA, SKR, MINA outright (>1.5% cap); remaining ten deep-dived on 15m OHLC (closed candles, last boundary 09:00–09:15) for two-candle acceleration:
+
+| Pair | 2-candle accel (08:45→09:00→09:15 closes) | Confirmed-candle high? | Verdict |
+|---|---|---|---|
+| USELESS/USD | Fails — 09:15 close (0.26479) lower than 09:00 close (0.26748) | — | Rejected — fails acceleration, same repeat-offender pattern logged across multiple prior passes today |
+| PEAQ/USD | Fails — declining across both steps (0.02565→0.02563→0.02555) | — | Rejected — fails acceleration |
+| SPX/USD | Fails — 09:00 close (0.6397) lower than 08:45 close (0.6427) | — | Rejected — fails acceleration at the first step |
+| XMR/USD | Fails — 09:15 close (546.62) lower than 09:00 close (549.68) | — | Rejected — fails acceleration |
+| FLOKI/USD | Fails — 09:00 close marginally lower than 08:45 close | — | Rejected — fails acceleration, narrowly |
+| CRV/USD | Fails — 09:15 close (0.37832) lower than 09:00 close (0.38151) | — | Rejected — fails acceleration |
+| BICO/USD | Passes — 0.02219→0.02240→0.02261, each closed higher | **No** — 24h high $0.02279 sits on the still-forming 09:30 candle only; no closed candle reaches it | Rejected — unconfirmed forming-candle high |
+| DCR/USD | Passes — 14.460→14.694→14.710, each closed higher | **No** — 24h high $14.750 sits on the still-forming 09:30 candle only | Rejected — unconfirmed forming-candle high |
+| SAHARA/USD | Passes — 0.00888→0.00935→0.00944, each closed higher | Yes — 24h high $0.00947 matches the 09:00 closed candle's own high exactly (unchanged on live re-check), not the forming candle | Clears every structural/momentum gate — see catalyst check below |
+| ASTER/USD | Passes — 0.73874→0.74180→0.74475, each closed higher | Yes — 24h high $0.75057 matches the 09:00 closed candle's own high exactly (unchanged on live re-check) | Clears every structural/momentum gate — see catalyst check below |
+
+**SAHARA/USD and ASTER/USD catalyst checks (only two candidates clearing every structural gate):**
+- **SAHARA:** Perplexity — cited items are the Sorin/AI-platform integration and a token-unlock roundup (CoinMarketCap), plus a separate note that SAHARA fell sharply recently with the team finding "no security flaws" after an internal investigation — none dated as a fresh <6h trigger. Classified **momentum-only**.
+- **ASTER:** Perplexity — cited items are a 12-month team-token-cliff extension and a perpetual-futures incentive campaign, both ongoing/administrative, not fresh triggers; Perplexity explicitly notes the move looks driven by "broader altcoin sentiment and narrative trading" rather than a protocol catalyst. Classified **momentum-only**.
+
+Both **blocked outright by the active win-rate kill switch** (20.0% trailing win rate, floor 35%), independent of and prior to any R:R calculation. Same-thesis check not reached for either (moot — kill switch is decisive on its own); no prior stop-out on record for SAHARA or ASTER in the 7-day window regardless (first appearance for both in these logs).
+
+**No candidate cleared every gate.** SAHARA and ASTER were the only pairs to clear live-fade, two-candle acceleration, and a genuinely confirmed-closed-candle high, but neither has a confirmed <6h catalyst, so both fall under the momentum-only win-rate kill switch suspension and are blocked regardless of technical shape. BICO and DCR each had a clean acceleration sequence but their 24h high sits only on the still-forming candle (unconfirmed). USELESS, PEAQ, SPX, XMR, FLOKI, and CRV all failed two-candle acceleration outright. TRIA, SKR, and MINA were eliminated earlier on live-fade.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.18%), weekly trend gate clear (+4.44%/5d). Full-universe sweep (639 pairs) found two candidates (SAHARA, ASTER) clearing every structural/momentum gate, but both lack a confirmed <6h catalyst and are therefore blocked by the active momentum-only win-rate kill switch (20.0%, floor 35%) rather than any threshold being loosened to manufacture a trade. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the two candidates clearing every structural gate (SAHARA, ASTER) were rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), no operational issues. Nothing here needs the user's attention right now.
