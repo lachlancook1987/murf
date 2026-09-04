@@ -36255,3 +36255,42 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (COTI) was rejected on the already-flagged win-rate kill switch (not a new anomaly), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 14:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 13:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, `orders` — stop `a2b44cf9` still historical/canceled (since 2026-05-22) among the order history, zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,371.40 vs today's session open $81,276.10 → **−2.34%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,371.40 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through the week) → **+2.18%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 74-75 (Bitget/CoinStats) / 65 (Alternative.me) / 59 (CFGI, Neutral) — clustered Greed, consistent with recent passes.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs (ZEC pre-excluded, AU-restricted; DASH not currently listed). 12 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k:
+
+| Pair | vs-open | Live fade off 24h high | Spread | Liquidity | Verdict |
+|---|---|---|---|---|---|
+| QUSD | +20.03% | 5.83% | 0.41% | $75.7k | Rejected — fails live-fade cap (>1.5%) |
+| TAC | +14.37% | 4.97% | 0.53% | $207k | Rejected — fails live-fade cap |
+| PEAQ | +11.53% | 2.97% | 0.12% | $198k | Rejected — fails live-fade cap |
+| UAI | +11.05% | 2.73% | 0.15% | $545k | Rejected — fails live-fade cap |
+| FLOCK | +10.87% | 1.32% | **1.41%** | $56.6k | Rejected — spread breaches the mandatory ≤1% cap outright |
+| NPC | +9.60% | 3.27% | 0.05% | $608k | Rejected — fails live-fade cap, repeat-offender pattern from every prior pass today |
+| COTI | +6.96% | 1.87% | 0.21% | $90.7k | Rejected — fails live-fade cap this pass (also momentum-only kill-switch blocked regardless) |
+| PORTAL | +5.99% | 0.71% | 0.78% | $77.3k | Deep-dived — see below |
+| M | +5.42% | 0.00% | 0.62% | $67.1k | Deep-dived — see below (same pair rejected on acceleration at the 13:00 UTC pass) |
+| SYRUP | +4.58% | 2.96% | 0.15% | $627k | Rejected — fails live-fade cap |
+| S | +3.53% | 2.98% | 0.69% | $112k | Rejected — fails live-fade cap |
+| ZEC | +3.24% | 4.75% | 0.05% | huge | Excluded pre-emptively — AU-restricted per TRADING-STRATEGY.md |
+
+**PORTAL/USD deep-check (clears raw screen + live-fade cap):** 15m closed candles (last two closed: 14:00 C $0.01637, 14:15 C $0.01675) show clean two-candle acceleration — each closes higher than the prior close. But the live 24h high used for the fade calc ($0.01694) does **not** appear anywhere in the last several hours of 15m/1h candles; pulled 1h OHLC back 26 hours and found it was set at the **2026-09-03 17:00 UTC candle** — over **21 hours stale**, far outside even the cadence-relative freshness ceiling (min(30min, 59min since the 13:00 UTC pass) = 30min). Current price ($0.01682, forming 14:30 candle) remains genuinely below that old high — this is a steady intraday uptrend approaching a day-old resistance level, not a fresh breakout. **Rejected: fails momentum-peak-check freshness decisively** — no confirmed close above the (very stale) prior high, and current price hasn't even reached it yet.
+
+**M/USD deep-check (clears raw screen + live-fade cap, live price sits exactly at 24h high):** The 24h high ($1.09416) matches the live price exactly, but that high sits only on the **currently-forming 14:30 candle** (started 3 min before this check) — not confirmed by any closed candle. **Fails the confirmed-candle requirement.** Independently, two-candle acceleration also fails: last two closed candles (14:00 C $1.08899, 14:15 C $1.08899 on zero volume) are flat, not each-higher — same flat-candle pattern that rejected this pair on the 13:00 UTC pass. **Rejected on two independent grounds** (unconfirmed forming-candle high; failed acceleration).
+
+**No candidate cleared every gate.** PORTAL and M were the only two pairs to clear the raw screen and the live-fade cap, but PORTAL's defining high is 21+ hours stale (not a real breakout) and M repeats its 13:00 UTC pass failure (flat acceleration, plus this pass its high is unconfirmed too). QUSD, TAC, PEAQ, UAI, NPC, COTI, SYRUP, and S all failed the live-fade cap outright; FLOCK failed the hard spread cap. No candidate reached a catalyst check this pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC −2.34%), weekly trend gate clear (+2.18%/5d). Full-universe sweep (638 pairs) found no candidate clearing every structural/momentum gate — the two closest (PORTAL, M) were rejected on independent, documented grounds (stale/unbroken 24h high; failed acceleration + unconfirmed high) rather than any threshold being loosened. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the win-rate-kill-switch or catalyst stage this pass (closest two rejected on structural gates: stale high, failed acceleration), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
