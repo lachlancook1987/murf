@@ -36448,3 +36448,32 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the one closest, NEAR, rejected on a still-forming-candle high rather than new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 20:00 UTC (fired 20:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 19:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, orders all historical (stop `a2b44cf9` still `canceled` since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,751.60 vs today's session open $81,276.10 → **−1.88%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,751.60 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.66%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** provider-split 50–75 (CFGI 54 Neutral, Alternative.me 65 Greed, CoinStats 75 Greed, Bitget 74 Greed) — consistent with recent passes' clustered Greed-leaning reading.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (XZECZUSD and DASHUSD pre-excluded, AU-restricted, at +9.21%/+18.72% vs-open, skipped without deep-dive per standing rule). 13 candidates cleared vs-open>3% + live-fade<6% + liquidity ≥$50k: UAI (+36.47%, fade 4.57%), BICO (+11.33%, fade 5.03%), PEAQ (+11.06%, fade 3.38%), ACU (+8.92%, fade 1.31%), COTI (+8.77%, fade 1.57%), NEAR (+8.66%, fade 2.90%), VELO (+6.89%, fade 1.49%), VVV (+5.41%, fade 2.14%), M (+5.22%, fade 1.76%), XAN (+5.18%, fade 0.30%), SYRUP (+4.17%, fade 5.04%), DAI (+3.98%, fade 0.00% — a USD stablecoin, no directional momentum thesis possible, skipped without deep-dive), EGLD (+3.39%, fade 2.40%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated UAI, BICO, PEAQ, COTI, NEAR, VVV, M, SYRUP, EGLD — three candidates cleared through to deep-dive: ACU, VELO, XAN.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close, checked at 20:34 UTC — last closed candle 20:00–20:15, the 20:30 candle still forming):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| ACU | 20:00 C 0.1416 > 19:45 C 0.1412 (passes step 1); 20:15 C 0.1437 > 20:00 C 0.1416 | **Passes** — deep-dived further below |
+| VELO | 20:00 C 0.005055 > 19:45 C 0.005054 (barely passes step 1); 20:15 C 0.005021 < 20:00 C 0.005055 | Fails at step 2 |
+| XAN | 20:00 C 0.01335 < 19:45 C 0.01342 | Fails at step 1 |
+
+**ACU/USD deep-check (only candidate to pass acceleration — rejected on the confirmed-candle/freshness requirement):** Live 24h high $0.1448 traces back to the **18:15 UTC closed candle** (H $0.1448, confirmed by full 15m OHLC history) — **~140 minutes old** at check time, well outside the 30-min freshness ceiling (and outside the cadence-relative alternative, since the last logged pass was only ~94 min ago). The recent closed-candle sequence (19:00–20:15) has recovered off a 19:30 dip ($0.1394 low) but the highest closed-candle print since is 20:15's $0.1437, still **below** the stale $0.1448 high — no fresh breakout above the prior high has occurred. Per the momentum-peak-check rule, a stale high with price still declining from it (not yet re-broken) is a repricing-already-occurred case regardless of the two-candle acceleration technically passing on the recovery leg. **Rejected on the confirmed-candle/freshness requirement**, prior to any catalyst check.
+
+**No candidate cleared every gate.** ACU was the only one of three deep-dived candidates to pass two-candle acceleration, but its acceleration is a recovery off a dip toward a stale (~140 min old) 24h high it hasn't yet re-broken — rejected on the momentum-peak-check freshness requirement. VELO and XAN both failed acceleration outright (spike-then-reversal / one bar down). UAI, BICO, PEAQ, COTI, NEAR, VVV, M, SYRUP, and EGLD all failed the live-fade cap upfront; DAI was skipped as a stablecoin with no momentum thesis.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.88%), weekly trend gate clear (+2.66%/5d). Full-universe sweep (640 pairs) found three candidates clearing the raw momentum/fade/liquidity screen; one (ACU) passed two-candle acceleration but was rejected on the momentum-peak-check freshness requirement (recovering toward, not breaking, a ~140-min-old high). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the one closest, ACU, rejected on a stale-high freshness check rather than new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
