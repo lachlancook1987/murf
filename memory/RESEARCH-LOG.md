@@ -36322,3 +36322,38 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, three candidates reached the kill-switch stage but none had a confirmed <6h catalyst (a routine, expected kill-switch block, not a new development), no operational issues beyond a self-resolved transient network retry, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 16:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 15:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, `orders` — stop `a2b44cf9` still historical/canceled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,710.40 vs today's session open $81,276.10 → **−1.93%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,710.40 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.61%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 75 (CoinStats) / 74 (Bitget, FearGreedMeter) / 65 (Alternative.me) — clustered Greed. **Macro catalysts (Perplexity):** BTC rally above $81k tied to Waller signaling openness to holding rates steady (dollar-weakening, short squeeze, ~$140M in liquidations within an hour); today's US jobs report is the dominant near-term macro driver; ETH/alts riding the same risk-on wave; ~$1.5B in early-September token unlocks flagged as an overhang (HYPE named). No catalyst specific to any candidate below.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 638 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 16 candidates cleared vs-open>3% + live-fade<6% + liquidity ≥$50k: QUSD (+26.39%, fade 0.84%), UAI (+25.76%, fade 3.49%), TAC (+18.47%, fade 1.56%), BICO (+11.20%, fade 0.65%), PEAQ (+10.76%, fade 3.64%), LIGHTER (+8.33%, fade 4.87%), SYRUP (+7.35%, fade 0.39%), 0G (+6.84%, fade 2.87%), ACU (+6.63%, fade 0.85%), M (+5.18%, fade 1.80%), COTI (+4.31%, fade 4.30%), EGLD (+3.60%, fade 2.20%), S (+3.53%, fade 2.98%), ICNT (+3.40%, fade 0.17%), DCR (+3.31%, fade 0.87%), VVV (+3.04%, fade 0.71%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated UAI, TAC, PEAQ, LIGHTER, 0G, M, COTI, EGLD, S — seven candidates cleared through to deep-dive: QUSD, BICO, SYRUP, ACU, ICNT, DCR, VVV.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close), all seven:**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| QUSD | 16:00 C 0.026386 < 15:45 C 0.027178 (already fails step 1); 16:15 C 0.026338 < 16:00 C 0.026386 | Fails — spike-then-reversal inside the 16:00 candle itself |
+| BICO | 16:00 C 0.02373 < 15:45 C 0.02392 | Fails at step 1 |
+| SYRUP | 16:00 C 0.22821 = 15:45 C 0.22821 (flat) | Fails — not strictly higher |
+| ACU | 16:00 C 0.1386 < 15:45 C 0.1397 | Fails at step 1 |
+| DCR | 16:00 C 14.600 > 15:45 C 14.559 (passes step 1); 16:15 C 14.589 < 16:00 C 14.600 | Fails at step 2 |
+| ICNT | 16:00 C 0.1147 > 15:45 C 0.1142; 16:15 C 0.1155 > 16:00 C 0.1147 | **Passes** — deep-dived further below |
+| VVV | 16:00 C 17.543 > 15:45 C 17.409; 16:15 C 17.616 > 16:00 C 17.543 | **Passes** — deep-dived further below |
+
+**ICNT/USD deep-check (only technical gate remaining: freshness):** Live 24h high $0.1158 matches the ask exactly (essentially at the high right now, fade 0.17%). But that high sits on the **15:30 candle** (H=0.1158, closed 15:45) — **~49 minutes old** at check time (16:34 UTC), outside the 30-minute freshness ceiling (cadence-relative ceiling is still 30min; last logged pass was 15:00 UTC, 94 min ago). The forming 16:30 candle has only reached H=0.1156, not yet a confirmed close above the stale high. **Rejected on freshness** — accelerating toward a stale high, not a confirmed fresh breakout above it.
+
+**VVV/USD deep-check (only technical gate remaining: freshness):** Live 24h high $17.786 was set on the **14:00 candle** (closed 14:15) — over **2h19min** stale. Price faded hard to $17.284 by 14:30 and has spent the last two hours climbing back, now at $17.699 (fade 0.49% off the stale high) without yet closing above it. **Rejected on freshness** — same stale-high-approach pattern as PORTAL on the 14:00 UTC pass and ICNT above, not a genuine fresh breakout.
+
+**No candidate cleared every gate.** ICNT and VVV were the only two of seven deep-dived candidates to pass two-candle acceleration, but both are climbing back toward a 24h high set 49min–2h19min ago rather than confirming a fresh breakout — both rejected on the momentum-peak-check freshness gate. QUSD, BICO, SYRUP, ACU, and DCR all failed acceleration outright (three of five on a spike-then-reversal or flat candle). No candidate reached the catalyst/kill-switch stage this pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.93%), weekly trend gate clear (+2.61%/5d). Full-universe sweep (638 pairs) found seven candidates clearing the raw momentum/fade/liquidity screen, two of which (ICNT, VVV) also passed two-candle acceleration, but both were rejected on the momentum-peak-check freshness gate (stale 24h highs, not confirmed fresh breakouts) rather than any threshold being loosened. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the two closest, ICNT and VVV, rejected on the freshness gate — stale highs, not new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
