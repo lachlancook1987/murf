@@ -35883,3 +35883,32 @@ No Step 3 action taken (nothing needed doing).
 ### Step 8 — Notification
 
 No push sent — state unchanged in substance from every pass since the 2026-09-03 00:22 UTC conversion (same protected position, same zero-cash constraint, no new anomaly, gain still well under the 20% tightening threshold). Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 03:00 UTC (user-requested ad hoc pass, run ~03:50 UTC)
+
+**Context:** run interactively at the user's request, immediately after they directed a manual liquidation of the out-of-band BTC position (see TRADE-LOG.md ~03:20 UTC entry) specifically to free up equity for this routine. Not a scheduled firing — labeled under the current hour per the Routine Cadence convention.
+
+**Pre-check:** Kraken `account`: XXBT 0.0000000000, ZUSD **$70.6298**, ZAUD $0.1550 (dust) — book fully flat following the user-directed sell. `positions: {}`, `orders: {"open": {}}` — no open orders, no orphans. Alpaca: `positions: []`, zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to maintain.
+
+**Crash gate:** BTC live $80,932.20 vs today's session open $81,276.10 → **−0.42%**. Clear. **Weekly trend gate:** live $80,932.20 vs 5-day-ago daily close $77,681.60 (2026-08-30) → **+4.19%/5d**, well inside (above) the ±3% band — standard regime, pure-momentum entries remain open. **Fear & Greed:** 65 (Greed) per Alternative.me (Perplexity cross-check showed 54–74 depending on source; used the most commonly cited Alternative.me reading) — not Extreme Fear, so that specific R:R floor doesn't apply (the flat 1.8:1 momentum-only floor applies regardless per the 2026-09-02 update).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 637 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 17 candidates cleared vs-open>3% + within 6% of 24h high + spread ≤1.5%. Of those, only four had liquidity in the range past sessions have treated as worth deep-diving (≥~$50k 24h quote volume): TRIA ($110.8k), CHIP ($1.41M), CFG ($533.4k), DOS ($51.0k). Deep-dived all four on 15m OHLC (closed candles) for confirmed-closed-candle status, two-candle acceleration, and live intracandle fade:
+
+| Pair | vs-open | High-prox | Live fade off 24h high | Confirmed-candle? | Two-candle accel? | Liquidity | Verdict |
+|---|---|---|---|---|---|---|---|
+| TRIA/USD | +20.52% | 0.22% | 0.00% | **No** — current 24h high ($0.00466) sits on the still-forming 03:45 candle only; last closed candle (03:30) topped at $0.00462, below it | Yes (7 straight higher closes) | $110.8k | Rejected — unconfirmed forming-candle high |
+| CHIP/USD | +6.36% | 4.01% | 4.01% | N/A (fails fade first) | No (03:15 candle closed lower than 03:00) | $1.41M | Rejected — live fade >1.5%, also fails acceleration; same repeat-offender pattern logged multiple times this week |
+| CFG/USD | +3.28% | 2.21% | 2.21% | N/A (fails fade first) | Mixed | $533.4k | Rejected — live fade >1.5% |
+| DOS/USD | +3.60% | 0.00% | 0.00% | Yes — 24h high ($0.2508) was set and closed near-high on the confirmed-closed 03:30 candle, re-tested by the live tick | Yes (03:15→03:30 both closed higher) | **$51.0k** | Clears every structural/momentum gate but liquidity is thin — 15m candle volumes only ~$200–700 in quote terms, well under the ~$100k practical liquidity bar this routine has consistently used before deep-diving further (per RESEARCH-LOG.md history) |
+
+**DOS/USD deep-check (only candidate clearing every structural gate — rejected on liquidity):** No prior stop-out history for DOS in the 7-day window (repeatedly screened and rejected on momentum/volume/staleness across many prior sessions per RESEARCH-LOG.md, never entered) — same-thesis cap does not apply. Momentum-peak freshness: the 24h high was set within the 03:30 candle (confirmed-closed) and re-touched by the live tick — within the cadence-relative freshness ceiling. However, at $51k 24h quote volume and ~$200–700 per 15-min candle, a position sized even conservatively off the current $70.6298 available capital (momentum-only entries capped at 60% equity = ~$42) would represent a meaningful fraction of a single candle's typical turnover — real slippage risk on both entry and the eventual 2.5% stop, per the Risk Awareness note on thin alt liquidity eating into the stop budget. Catalyst check not run (Perplexity) since this position would be momentum-only regardless (no <6h catalyst context surfaced for DOS in any prior session's log either) and the liquidity concern alone is disqualifying independent of R:R math. **Rejected on liquidity risk.**
+
+**No candidate cleared every gate.** TRIA had the strongest raw momentum but its high is unconfirmed (still-forming candle only). CHIP and CFG — both liquid — had already faded materially off their 24h highs by the time of this check. DOS structurally cleared every momentum/candle gate but liquidity is too thin to size safely.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.42%), weekly trend gate clear (+4.19%/5d, well inside band). Freed-up capital ($70.6298 ZUSD, fully available after the user-directed liquidation) found no candidate clearing every gate on this pass — TRIA (unconfirmed candle), CHIP/CFG (already faded >1.5% off high), DOS (thin liquidity). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome even with fresh capital on hand — no threshold loosened to manufacture a trade. Next scheduled hourly pass will re-sweep with fresh data.
+
+### Step 8 — Notification
+
+No push sent — this was a user-initiated interactive pass, the user is actively in the session and already saw the liquidation result; the HOLD outcome here doesn't need a separate push since there's no unattended gap to bridge. Will flag normally on a future pass only if something changes materially (a candidate clears every gate, an anomaly, etc).
