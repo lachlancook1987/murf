@@ -36418,3 +36418,33 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (VELO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 19:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 18:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, orders all historical (stop `a2b44cf9` still `canceled` since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,725.50 vs today's session open $81,276.10 → **−1.91%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,725.50 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.63%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 74 (multiple trackers) / 54 CFGI broad-market average — clustered Greed on BTC-specific readings, consistent with recent passes.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted, both also present this pass at +8.70%/+15.81% vs-open and skipped without deep-dive per standing rule). 16 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k: UAI (+38.40%, fade 3.22%), MIM (+16.88%, fade 1.81%, spread 5.91%), BICO (+10.79%, fade 5.49%), PEAQ (+9.82%, fade 4.46%), LIGHTER (+8.69%, fade 4.56%), COTI (+8.47%, fade 1.85%), NEAR (+8.02%, fade 0.74%), ACU (+7.24%, fade 2.83%), VELO (+5.96%, fade 0.62%), SYRUP (+5.92%, fade 3.43%), M (+5.58%, fade 1.43%), 0G (+4.74%, fade 4.78%), XAN (+4.56%, fade 0.82%), S (+3.53%, fade 2.98%). Applying the mandatory live-intracandle-fade cap (≤1.5%) and hard spread cap (≤1%) up front eliminated UAI, MIM, BICO, PEAQ, LIGHTER, COTI, ACU, SYRUP, 0G, S — four candidates cleared through to deep-dive: NEAR, VELO, M, XAN.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close, checked at 19:33 UTC — last closed candle 19:00–19:15, the 19:30 candle still forming):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| NEAR | 19:00 C 2.0290 > 18:45 C 2.0223 (passes step 1); 19:15 C 2.1147 > 19:00 C 2.0290 | **Passes** — deep-dived further below |
+| VELO | 19:00 C 0.005007 > 18:45 C 0.004943 (passes step 1); 19:15 C 0.004996 < 19:00 C 0.005007 | Fails at step 2 |
+| M | 19:00 C 1.09935 > 18:45 C 1.09313 (passes step 1); 19:15 C 1.09582 < 19:00 C 1.09935 | Fails at step 2 — same spike-then-reversal pattern as this pair's failures on the 13:00/14:00/15:00 UTC passes |
+| XAN | 19:00 C 0.01331 > 18:45 C 0.01327 (passes step 1); 19:15 C 0.01331 = 19:00 C 0.01331 (flat) | Fails at step 2 — not strictly higher |
+
+**NEAR/USD deep-check (only candidate to pass acceleration):** Live 24h high $2.12650 sits almost exactly on the still-forming 19:30 candle (H $2.1265, not yet closed at check time — closes 19:45) — the last two *closed* candles (19:00 H $2.0299, 19:15 H $2.1155) never reached it. **Fails the confirmed-closed-candle requirement** — full day's OHLC confirms no earlier closed candle touched ≥$2.120 either, so this is not a stale-high case, it's a still-forming-candle fakeout risk, the same pattern that has repeatedly rejected other candidates this week (M/USD, CHIP, PORTAL-class). Live fade is tight (0.74%) and spread is excellent (0.05%), but the defining high has not yet been confirmed by a closed candle. **Rejected on the confirmed-candle requirement**, independent of and prior to any catalyst check.
+
+**No candidate cleared every gate.** NEAR was the only one of four deep-dived candidates to pass two-candle acceleration, but its defining 24h high sits on the currently-forming candle rather than a confirmed close — rejected on the confirmed-candle requirement before reaching the catalyst/kill-switch stage. VELO, M, and XAN all failed acceleration at step 2 (spike-then-reversal or flat candles). UAI, MIM, BICO, PEAQ, LIGHTER, COTI, ACU, SYRUP, 0G, and S all failed the live-fade cap or hard spread cap upfront.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.91%), weekly trend gate clear (+2.63%/5d). Full-universe sweep (640 pairs) found four candidates clearing the raw momentum/fade/liquidity screen; one (NEAR) also passed two-candle acceleration but was rejected on the confirmed-closed-candle requirement (defining high sits on a still-forming candle). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the one closest, NEAR, rejected on a still-forming-candle high rather than new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
