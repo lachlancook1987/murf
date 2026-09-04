@@ -36186,3 +36186,39 @@ Both **blocked outright by the active win-rate kill switch** (20.0% trailing win
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the two candidates clearing every structural gate (S/USD, COTI/USD) were rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 12:00 UTC (fired 12:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 11:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,776.80 vs today's session open $81,276.10 → **−1.85%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,776.80 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through the week) → **+2.70%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 65-74 depending on provider (Alternative.me 65, others 73-74; CFGI.io 54 Neutral) — clustered Greed, not Extreme Fear.
+
+**🚩 Win-rate kill switch status (carried from 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 661 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 20 candidates cleared vs-open>3% + within 6% of 24h high (BDXN excluded — 276% vs-open on $0.00139 last, illiquid noise, same pattern as prior passes). Of the remaining 19, filtered by liquidity ≥$50k and spread ≤1%:
+
+| Pair | vs-open | Live fade | Spread | Liquidity | Verdict |
+|---|---|---|---|---|---|
+| NPC | +9.57% | 3.29% | 0.18% | $576k | Rejected — fails live-fade cap (>1.5%) |
+| ZEREBRO | +4.04% | 3.67% | 0.31% | $61k | Rejected — fails live-fade cap |
+| LIGHTER | +3.19% | 2.17% | 0.37% | $1.90M | Rejected — fails live-fade cap |
+| ZBCN | +3.08% | 2.76% | 0.66% | $212k | Rejected — fails live-fade cap, repeat-offender pattern from every prior pass today |
+| QUAI | +37.50% | 0.17% | 0.09% | $38k | Deep-dived despite borderline liquidity given the raw signal strength — see below |
+
+All other raw candidates (GAIA, LSETH, ANON, SN44, WMTX, FXS, ZEX, TBTC, IR, UXLINK, FF, PRIME, YOM, CAMP) failed on liquidity <$50k and/or spread >1% outright (several with double-digit % spreads — FXS 10.3%, IR 16.6%).
+
+**QUAI/USD deep-check (strongest raw print of the pass, liquidity below the $50k floor at $38k):**
+- 15m OHLC (closed candles): two-candle acceleration passes — 11:45 close 0.01081 → 12:00 close 0.01105 → 12:15 close 0.01127, each closed higher.
+- 24h high $0.01147 sits on the **11:15 candle** (closed at 11:30), confirmed but **stale** — roughly 64 minutes old at check time (12:34 UTC), well outside the 30-minute freshness ceiling (last logged pass was 11:00 UTC, so cadence-relative ceiling is still the 30-min cap). The currently-forming 12:30 candle has matched but not yet closed above that high (live last $0.01145 vs high $0.01147, fade 0.17% — flat, not declining, but also not a confirmed fresh breakout).
+- Per the momentum-peak-check rule, a >30-min-old high with price merely re-testing (not confirmed-closing above) it does not qualify as a fresh 1h breakout. **Rejected on freshness** — no confirmed close above the prior high yet. Independently, liquidity ($38k) sits below the $50k floor.
+- Catalyst check skipped — rule only requires it for candidates clearing every structural/momentum gate; QUAI did not clear the freshness gate.
+
+**No candidate cleared every gate.** QUAI had by far the strongest raw momentum (+37.5% vs-open) and clean spread/fade, but its defining high is stale (>30 min, no confirmed breakout close yet) and its liquidity sits below the floor — two independent rejection grounds. NPC, ZEREBRO, LIGHTER, and ZBCN all cleared the liquidity/spread screen but failed live-fade. No candidate reached a catalyst check this pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.85%), weekly trend gate clear (+2.70%/5d). Full-universe sweep (661 pairs) found no candidate clearing every structural/momentum gate — QUAI (strongest raw signal) rejected on a stale, unconfirmed-breakout high plus sub-floor liquidity; four others (NPC, ZEREBRO, LIGHTER, ZBCN) rejected on live intracandle fade. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the win-rate-kill-switch or catalyst stage this pass (all rejected on structural gates: stale high, sub-floor liquidity, or live fade), no operational issues. Nothing here needs the user's attention right now.
