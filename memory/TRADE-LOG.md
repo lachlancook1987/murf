@@ -11045,3 +11045,23 @@ No push sent — protected position unchanged in substance from every pass since
 **Resulting state:** `account` confirms XXBT 0.0000000000, ZUSD **$70.6298**, `orders: {"open": {}}` — book fully flat, no open orders. This realizes the position's gain from the implied out-of-band entry (≈$78,218) to the sell fill ($80,887.60), ≈+3.41% before the $0.42633 fee.
 
 **Capital now available:** $70.6298 ZUSD, fully deployable on the next hourly pass's discovery/execution step (Step 4), ending the no-capital-available streak that ran since the 2026-09-03 00:22 UTC conversion.
+
+## 2026-09-04 — EOD Snapshot
+
+### Sep 4 — EOD Snapshot (Day 107, Friday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** −$0.6815 (−0.96%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** +0.87%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+
+Book fully flat — no open positions, no open orders.
+
+**Trades today:** 1) User-directed (interactive, ~03:20 UTC, outside scheduled pass — see RESEARCH-LOG.md): cancelled protective trailing stop `OYWDWO-3G7JA-EGIZVJ`, market-sold 0.00087844 XXBT (the 2026-09-03 00:22 UTC out-of-band manual conversion position) at $80,887.60, txid `OANKFC-XOS54-GOTIXR`, proceeds $71.05499, fee $0.42633. No bot-originated buy/sell filled across all 24 hourly passes today (00:00–23:00 UTC) — every pass reached HOLD, first on the zero-cash constraint (00:00–03:20 UTC), then on the active momentum-only win-rate kill switch or earlier technical gates (acceleration/confirmed-candle) for the remainder of the day. | **Total since migration:** 152 (unchanged — the user-directed liquidation was not a bot decision, same convention applied to the Sep 3 out-of-band conversion)
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. **Day P&L:** vs yesterday's Sep 3 EOD baseline ($71.3113, then holding 0.00087844 XXBT) → −$0.6815 (−0.96%) — reflects the user's 03:20 UTC exit realizing the position from its Sep 3 EOD mark ($81,178.20) down to the $80,887.60 fill plus the $0.42633 fee, with the remaining cash flat for the rest of the day (no bot trade filled). **Phase P&L:** vs $179.78 Kraken starting equity (May 22) → −$109.1502 (−60.71%), a modest decline from Sep 3's −60.34% purely from the position exit; no new capital. **vs BTC:** BTC moved from $81,178.20 (Sep 3 EOD reference) to $79,700.10 today → **−1.82%**; bot's day return (−0.96%) beat BTC's raw move by **+0.87 points** — the user's exit locked in the position near its recent local high before BTC's later intraday decline, so the bot's cash-flat remainder of the day avoided that decline entirely. Every hourly pass today (00:00 through 23:00 UTC) reached HOLD — the 00:00–03:00 UTC passes on zero available capital (pre-liquidation), the 04:00–23:00 UTC passes (post-liquidation, $70.6298 ZUSD available) on gate failures: no candidate cleared every gate at any pass, with the widest technical clears (MORPHO/RIVER/TON at 22:00 UTC) blocked by the active momentum-only win-rate kill switch (20.0%, below the 35% floor) rather than lack of opportunity. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 ZUSD fully available, no open positions, win-rate kill switch status to be reassessed as new momentum-only entries (if any) roll into the trailing 10-trade window.
+
+### Step 8 — Notification
+
+No push sent — book flat, no unprotected exposure, EOD snapshot shows a positive day relative to BTC (bot's cash-out timing beat BTC's later decline) with nothing operationally wrong. Nothing here needs the user's attention right now.
