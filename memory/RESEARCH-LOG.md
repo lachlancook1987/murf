@@ -35964,3 +35964,32 @@ No push sent — book flat with no unprotected exposure, both gates clear, all f
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, all six liquid candidates rejected on specific documented gates (fade, spread, acceleration, momentum magnitude) rather than a manufactured excuse, no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 06:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, XXBT 0.0000000000, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 05:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, no orphans to check. Alpaca: `positions: []`, `orders` — stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $80,740.90 vs today's session open $81,276.10 → **−0.66%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,740.90 vs 5-day-ago daily close $77,681.60 (2026-08-30, Kraken daily OHLC) → **+3.94%/5d**, well inside (above) the ±3% band — standard regime, pure-momentum entries remain open. **Fear & Greed:** 65 (Greed) per Alternative.me (Perplexity cross-check showed 50–78 across providers) — not Extreme Fear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 26 candidates cleared vs-open>3% + within 6% of 24h high. Of those, six had liquidity ≥$50k and spread ≤1%: TRIAUSD ($194k), USELESSUSD ($8.09M), MINAUSD ($419k), FLOCKUSD ($64k), PEAQUSD ($110k), XANUSD ($77k). DASHUSD (+6.19%) excluded pre-emptively (AU-restricted). QUSD ($49k) fell just under the liquidity bar, not deep-dived.
+
+Deep-dived all six on 15m OHLC (closed candles, last closed boundary 06:15–06:30) plus live ticker for fade/confirmed-candle checks:
+
+| Pair | vs-open | Confirmed-candle high? | 2-candle accel | Live fade off 24h high | Verdict |
+|---|---|---|---|---|---|
+| TRIA/USD | +37.92% | Yes — 24h high $0.00533 matches the 06:15 closed candle's high exactly | Yes (05:45→06:00→06:15 each closed higher) | **1.69%** (high $0.00533 vs live $0.005240) | Rejected — narrowly fails the 1.5% live-fade cap despite otherwise the cleanest technical shape of the sweep |
+| USELESS/USD | +11.26% | Yes — 24h high $0.23689 on the 06:15 closed candle | Yes (05:45→06:00→06:15 each closed higher) | **1.59%** (high $0.23689 vs live $0.23313) | Rejected — narrowly fails live-fade, same repeat-offender pattern logged across multiple prior passes today |
+| MINA/USD | +4.87% | Yes — 24h high $0.07640 on the 06:15 closed candle | **No** — 06:00 close ($0.07475) is lower than the 05:45 close ($0.07541); sequence breaks | 0.45% (passes) | Rejected — fails two-candle acceleration despite a fresh confirmed high |
+| FLOCK/USD | +4.65% | — | — | 4.59% | Rejected — decisive live-fade failure |
+| PEAQ/USD | +3.93% | — | — | 4.33% | Rejected — decisive live-fade failure (06:00 candle spiked on volume then faded hard over the next two candles) |
+| XAN/USD | +3.46% | — | — | 1.86% | Rejected — live-fade failure |
+
+**No candidate cleared every gate.** TRIA and USELESS were the closest calls of the sweep — both cleared confirmed-candle and two-candle-acceleration cleanly but missed the 1.5% live-fade cap by under 0.4 points (1.69% and 1.59% respectively). MINA had a genuinely fresh confirmed high but its candle sequence dipped before recovering, failing acceleration. No catalyst checks run (fade/acceleration are decisive, independent of catalyst status). Same-thesis check: no prior stop-out history on record for any of TRIA, USELESS, MINA, FLOCK, PEAQ, or XAN within the 7-day window.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.66%), weekly trend gate clear (+3.94%/5d). Full-universe sweep (639 pairs) found six liquid candidates clearing the raw momentum/proximity screen; all six failed a specific, documented gate (live-fade ×4, acceleration ×1, with two of the fade rejections — TRIA, USELESS — narrowly missing the cap). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, all six liquid candidates rejected on specific documented gates (live-fade, acceleration) rather than a manufactured excuse, no operational issues. Nothing here needs the user's attention right now.
