@@ -36512,3 +36512,41 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the two closest, ACU and DCR, rejected on freshness/confirmed-candle grounds rather than new information), no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 22:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 21:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, orders all historical (stop `a2b44cf9` still `canceled` since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,716.30 vs today's session open $81,276.10 → **−1.92%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,716.30 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.62%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 74 (Greed, Alternative.me/Bitcoin.com/feargreedmeter.com consistent), unchanged in substance from recent Greed-leaning readings.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 17 candidates cleared vs-open>3% + live-fade<6% + liquidity ≥$50k: UAI (+37.85%), DASH (+24.78%, AU-restricted, pre-excluded), XCN (+22.91%), PEAQ (+11.66%), ACU (+10.59%), NEAR (+9.40%), XAN (+9.11%), COTI (+9.00%), ZEC (+7.12%, AU-restricted, pre-excluded), M (+6.35%), VELO (+5.81%), DCR (+5.18%), MORPHO (+3.94%), RIVER (+3.91%), TON (+3.80%), VVV (+3.71%), S (+3.53%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated UAI, XCN, PEAQ, NEAR, COTI, M, VELO, VVV, S — six candidates cleared through: ACU, XAN, DCR, MORPHO, RIVER, TON.
+
+**Spread check (hard ≤1% cap):** all six clear — ACU 0.069%, XAN 0.289%, DCR 0.047%, MORPHO 0.183%, RIVER 0.151%, TON 0.070%.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close, checked at 22:34 UTC — last closed candle 22:00–22:15, the 22:15–22:30 candle already closed by check time):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| ACU | 22:00 C 0.1444 > 21:45 C 0.1436 (passes step 1); 22:15 C 0.1444 = 22:00 C 0.1444 | Fails at step 2 (flat, not higher) |
+| XAN | 22:00 C 0.01370 > 21:45 C 0.01367 (passes step 1); 22:15 C 0.01361 < 22:00 C 0.01370 | Fails at step 2 |
+| DCR | 22:00 C 14.999 < 21:45 C 15.043 | Fails at step 1 |
+| MORPHO | 22:00 C 2.56999 > 21:45 C 2.55606 (passes); 22:15 C 2.58092 > 22:00 C 2.56999 | **Passes** — deep-dived further below |
+| RIVER | 22:00 C 1.319 > 21:45 C 1.314 (passes); 22:15 C 1.334 > 22:00 C 1.319 | **Passes** — deep-dived further below |
+| TON | 22:00 C 1.406 > 21:45 C 1.396 (passes); 22:15 C 1.426 > 22:00 C 1.406 | **Passes** — deep-dived further below |
+
+**MORPHO/RIVER/TON deep-check:** all three confirmed by a closed candle (24h high on each matches the 22:15 closed candle's high, not the still-forming 22:30 candle) and fresh (high set within the last ~20 minutes, well inside the 30-min ceiling). Live fade 0.30–0.35% on all three, clear of the 1.5% cap. **Catalyst check (Perplexity, decisive reject on all three):**
+- **MORPHO:** cited drivers are the $175M Paradigm/a16z funding round and $14B-deposits milestone — both established/August news, not a fresh <6h headline.
+- **RIVER:** no fresh catalyst; near-term tone is actually mixed-to-bearish (scheduled ~1.11M token unlock Sep 22, incentive season ending Sep 30 cited as supply-pressure risk) — momentum here is not catalyst-backed at all.
+- **TON:** cited drivers (Telegram/TON validator role, legacy bridge shutdown) are ongoing narrative items with no confirmed <6h timestamp.
+- All three classified **momentum-only** → **blocked by the active win-rate kill switch** (20.0% trailing win rate, SUSPENDED), not merely held to the tighter R:R floor.
+
+**No candidate cleared every gate.** MORPHO, RIVER, and TON were the only three of six deep-dived candidates to pass two-candle acceleration, and all three cleared confirmed-candle/freshness/fade checks — the cleanest technical clear since the kill switch was flagged active — but none has a confirmed <6h catalyst, so all three are blocked by the win-rate kill switch rather than any threshold being loosened. ACU and XAN failed acceleration at step 2 (spike-then-stall). DCR failed acceleration outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.92%), weekly trend gate clear (+2.62%/5d). Full-universe sweep (640 pairs) found six candidates clearing the raw momentum/fade/liquidity screen; three (MORPHO, RIVER, TON) also passed two-candle acceleration and every technical gate, but all three lack a confirmed <6h catalyst and are blocked by the active momentum-only win-rate kill switch (20.0%, below the 35% floor). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20) and the Performance-Linked Controls section, this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the widest technical clear since the kill switch was flagged (MORPHO/RIVER/TON) was correctly blocked on the no-catalyst kill switch rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
