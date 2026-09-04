@@ -36389,3 +36389,32 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (ACU) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 18:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 17:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, orders all historical (stop `a2b44cf9` still `canceled` since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $79,620.20 vs today's session open $81,276.10 → **−2.04%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,620.20 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used all week) → **+2.50%/5d**, inside the ±3% band — standard regime. **Fear & Greed:** 73 (CFGI) — Greed, consistent with recent passes.
+
+**🚩 Win-rate kill switch status (carried from 2026-09-04 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 17 candidates cleared vs-open>3% + within 6% of 24h high + liquidity ≥$50k: UAI (+32.85%, fade 4.45%), MIM (+13.71%, fade 4.46%), BICO (+11.83%, fade 4.60%), PEAQ (+10.04%, fade 4.27%), LIGHTER (+9.25%, fade 4.06%), SYRUP (+8.35%, fade 1.22%), ACU (+8.23%, fade 1.93%), NPC (+6.92%, fade 5.64%), COTI (+6.43%, fade 2.36%), VELO (+5.49%, fade 0.16%), 0G (+5.26%, fade 4.31%), M (+5.17%, fade 1.81%), XAN (+4.71%, fade 0.67%), MINA (+4.67%, fade 5.10%), UNITAS (+3.41%, fade 0.00%, spread 26.62% — illiquid noise, hard skip), S (+3.18%, fade 3.31%). Applying the mandatory live-intracandle-fade cap (≤1.5%) and hard spread cap (≤1%) up front eliminated UAI, MIM, BICO, PEAQ, LIGHTER, ACU, NPC, COTI, 0G, M, MINA, S, UNITAS (spread) — three candidates cleared through to deep-dive: SYRUP, VELO, XAN.
+
+**Two-candle acceleration check (last two closed 15m candles vs. prior close, checked at 18:33 UTC — last closed candle 18:15–18:30):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| SYRUP | 18:00 C 0.22683 < 17:45 C 0.22772 (already fails step 1) | Fails at step 1 |
+| VELO | 18:00 C 0.004917 > 17:45 C 0.004890 (passes step 1); 18:15 C 0.004960 > 18:00 C 0.004917 | **Passes** — deep-dived further below |
+| XAN | 18:00 C 0.01333 = 17:45 C 0.01333 (flat, zero volume both candles) | Fails — not strictly higher |
+
+**VELO/USD deep-check (only candidate to pass acceleration):** 24h high $0.004966 confirmed by the closed 18:15 candle (H=0.004966, closed 18:30, ~3 min old at check time) — well inside the 30-min freshness ceiling, confirmed-closed-candle requirement satisfied. Live fade 0.16% off the high, spread 0.955% (ask $0.004967/bid $0.004920) — both clear their caps, spread narrowly. 1h momentum ~+2.95% (just under the 3% screening bar, not a hard gate on its own), vs-open +5.49%. **Catalyst check (Perplexity):** cited drivers are a Binance.US listing and a Zebec card/payment partnership, neither with a confirmed <6h timestamp — both read as ongoing narrative, not a fresh headline; also flags a 3B-token unlock scheduled Sep 20 as a headwind. No dated <6h catalyst confirmed. Cross-exchange: Perplexity/CoinGecko ~$0.0046 vs Kraken live $0.004958 → ~7.8% divergence, within the acceptable band, not a rejection on its own. Classified **momentum-only** → **blocked by the active win-rate kill switch** (20.0%, floor 35%), independent of R:R.
+
+**No candidate cleared every gate.** VELO was the only one of three deep-dived candidates to pass two-candle acceleration and every remaining technical gate (confirmed-candle, freshness, live-fade, spread), but lacks a confirmed <6h catalyst — classified momentum-only and blocked by the active kill-switch suspension. SYRUP and XAN both failed acceleration outright (spike-then-reversal / flat candles). UAI, MIM, BICO, PEAQ, LIGHTER, ACU, NPC, COTI, 0G, M, MINA, and S all failed the live-fade cap upfront; UNITAS failed the hard spread cap.
+
+### Decision: **HOLD.** Crash gate clear (BTC −2.04%), weekly trend gate clear (+2.50%/5d). Full-universe sweep (640 pairs) found three candidates clearing the raw momentum/fade/liquidity screen; one (VELO) cleared every structural/technical gate but was blocked by the active momentum-only win-rate kill-switch suspension for lacking a confirmed <6h catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no threshold loosened or bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (VELO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Nothing here needs the user's attention right now.
