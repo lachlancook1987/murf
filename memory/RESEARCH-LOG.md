@@ -36025,3 +36025,32 @@ No push sent — book flat with no unprotected exposure, both gates clear, all s
 ### Step 8 — Notification
 
 **Push sent** — the weekly review surfaced a live risk-control gate (the rolling win-rate kill switch, added 2026-09-02) that had gone completely unchecked in every pass since its addition, and is currently sitting at 20% — well under its own 35% suspension floor — right as fresh capital came back onto the books from Wednesday's user-directed liquidation. Nothing has actually gone wrong yet (no momentum-only candidate has cleared every structural gate since Sep 2 to test it against, including this pass's own sweep), but this is exactly the kind of operational gap CLAUDE.md's Step 8 guidance calls for surfacing now rather than letting it sit undiscovered until it silently blocks (or worse, fails to block) a real trade. Fixed going forward via a standing status line in TRADING-STRATEGY.md; no action needed from the user unless they want to weigh in on the suspension itself.
+
+## 2026-09-04 — Scan — 08:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 07:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, `orders` all historical (stop `a2b44cf9` still `canceled` since 2026-05-22) — zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $80,983.70 vs today's session open $81,276.10 → **−0.36%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,983.70 vs 5-day-ago daily close $77,681.60 (2026-08-30) → **+4.25%/5d**, well inside (above) the ±3% band — standard regime. **Fear & Greed:** 74 (Greed) per Perplexity, up from 65 at the 07:00 UTC pass — not Extreme Fear.
+
+**🚩 Win-rate kill switch status (carried from 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 630 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 29 candidates cleared vs-open>3% + within 6% of 24h high. Of those, liquidity ≥$50k and spread ≤1%: TRIA/USD ($247.8k, 0.19%), USELESS/USD ($11.67M, 0.22%), XCN/USD ($1.93M, 0.46%), Q/USD ($65.3k, 0.62%), PEAQ/USD ($139.6k, 0.12%), SKR/USD ($995.7k, 0.26%), MINA/USD ($434.1k, 0.22%), XAN/USD ($79.1k, 0.23%), XMR/USD ($9.14M, 0.13%, first appearance in logs), CRV/USD ($4.34M, 0.09%). Live-fade screen (off 24h high) eliminated six outright: TRIA 5.17%, XCN 5.4%, Q 4.81%, PEAQ 1.53%, SKR 2.81%, CRV 1.77% — all >1.5% cap. Four passed the fade screen and were deep-dived on 15m OHLC (closed candles, last boundary 08:00–08:15) for two-candle acceleration:
+
+| Pair | Live fade | 2-candle accel (07:45→08:00→08:15 closes) | Verdict |
+|---|---|---|---|
+| USELESS/USD | 0.47% (passes) | Fails — 08:00 close (0.24075) lower than 07:45 close (0.24340) | Rejected — fails acceleration at the first step, same repeat-offender pattern logged across multiple prior passes this week |
+| MINA/USD | 1.17% (passes) | **Passes** — 0.07622→0.07740→0.07838, each closed higher; 24h high $0.07838 sits exactly on the 08:15 closed candle (confirmed, not still-forming) | Clears every structural/momentum gate — see catalyst check below |
+| XAN/USD | 1.19% (passes, close to cap) | Fails — 08:00 close (0.01324) lower than 07:45 close (0.01333) | Rejected — fails acceleration |
+| XMR/USD | 0.94% (passes) | Fails — 08:00 close (538.77) essentially flat/marginally lower than 07:45 close (538.79) | Rejected — fails acceleration, narrowly |
+
+**MINA/USD catalyst check (only candidate clearing every structural gate):** Perplexity — cited driver is the **Mesa mainnet upgrade** (reduces block slot time to 90s, expands zkApp limits, adds hard-fork automation) plus a related Bithumb deposit/withdrawal pause supporting the transition. Perplexity explicitly could not confirm any **fresh, distinct announcement within the last 6 hours** — the upgrade is an already-in-motion, multi-day event, not a <6h trigger. Classified **momentum-only** (no confirmed <6h catalyst) → **blocked outright by the active win-rate kill switch** (20.0% trailing win rate, floor 35%), independent of and prior to any R:R calculation. Same-thesis check not reached (moot — kill switch is decisive on its own); no prior MINA stop-out on record in the 7-day window regardless.
+
+**No candidate cleared every gate.** MINA/USD was the only pair to clear live-fade and two-candle acceleration with a genuinely confirmed-closed-candle high, but its only catalyst (Mesa upgrade) is not fresh enough to classify as catalyst-confirmed, so it falls under the momentum-only win-rate kill switch suspension and is blocked regardless of technical shape. USELESS, XAN, and XMR all failed two-candle acceleration outright (XMR debuting in these logs as a new, previously-unscreened liquid pair, worth keeping on the watch list). TRIA/XCN/Q/PEAQ/SKR/CRV were eliminated earlier on live-fade.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.36%), weekly trend gate clear (+4.25%/5d). Full-universe sweep (630 pairs) found one candidate (MINA) clearing every structural/momentum gate, but it lacks a confirmed <6h catalyst and is therefore blocked by the active momentum-only win-rate kill switch (20.0%, floor 35%) rather than any threshold being loosened to manufacture a trade. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (MINA) was rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly — its SUSPENDED status was surfaced and pushed at the 07:00 UTC pass), no operational issues. Nothing here needs the user's attention right now.
