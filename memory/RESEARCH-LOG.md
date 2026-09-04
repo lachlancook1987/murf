@@ -36133,3 +36133,56 @@ ZBCN is **blocked outright by the active win-rate kill switch** (20.0% trailing 
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (ZBCN) was rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), and the other technically-clean candidate (DCR) was rejected for a documented, substantive reason (active exploit incident) rather than a manufactured excuse. No operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 11:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 10:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, `orders` — stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $81,261.80 vs today's session open $81,276.10 → **−0.02%**. Clear. **Weekly trend gate:** live $81,261.80 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through today's passes) → **+4.61%/5d**, well inside (above) the ±3% band — standard regime. **Fear & Greed:** 65-77 depending on provider (Alternative.me 65, Binance 77, CoinStats 73, Bitget 74, CFGI 54-59) — clustered Greed, not Extreme Fear.
+
+**🚩 Win-rate kill switch status (carried from 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 661 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 51 candidates cleared vs-open>3% + within 6% of 24h high (BDXN excluded — 700% spread, illiquid noise). Of those with liquidity ≥$50k and spread ≤1%: PEAQ, NPC, XMLN, SPX, S, XPL, SYRUP, ZBCN, XMR, MINA, MNT, FLOKI, ASTER, ENS, GWEI, XAN, BONK, NEAR, LIGHTER, FARTCOIN, ZEREBRO, BICO (22 pairs), plus two borderline-liquidity names (SAHARA $46.7k, COTI $46.0k, both just under the $50k threshold but close enough to deep-dive per past-pass convention). All 24 deep-dived on 15m OHLC (closed candles, last boundary 11:15-11:30) for two-candle acceleration, confirmed-closed-candle high, and live intracandle fade:
+
+| Pair | 2-candle accel (10:45→11:00→11:15 closes) | Confirmed-candle high? | Live fade off 24h high | Verdict |
+|---|---|---|---|---|
+| PEAQ | Fails — 11:15 close flat vs 11:00 close (no gain) | — | — | Rejected — fails acceleration |
+| NPC | Fails — 11:15 close lower than 11:00 close | — | — | Rejected — fails acceleration |
+| XMLN | Fails — declining across both steps | — | 5.55% | Rejected — fails acceleration, also fails fade |
+| SPX | Passes | **No** — live high not on any recent closed candle | 2.96% | Rejected — unconfirmed high, also fails fade cap |
+| **S/USD** | **Passes** — 0.0297→0.0299→0.0302, each closed higher | **Yes** — live high $0.0302 matches the 11:15 closed candle's own high exactly | **0.33%** | Clears every structural/momentum gate — see catalyst check below |
+| XPL | Fails — 11:00 close flat vs 10:45 close | — | — | Rejected — fails acceleration at first step |
+| SYRUP | Passes | **No** — live high not confirmed by any recent closed candle (~1% above closed-candle max) | 0.52% | Rejected — unconfirmed high |
+| ZBCN | Fails — 11:00 close lower than 10:45 close | — | 0.00% | Rejected — fails acceleration at first step, same repeat-offender pattern logged across multiple prior passes today |
+| XMR | Fails — 11:15 close lower than 11:00 close | — | 3.43% | Rejected — fails acceleration, also fails fade |
+| MINA | Fails — 11:15 close lower than 11:00 close | — | 5.56% | Rejected — fails acceleration, also fails fade; repeat-offender pattern consistent with every prior pass today |
+| MNT | Passes | **No** — live high not confirmed by any recent closed candle | 0.02% | Rejected — unconfirmed high |
+| FLOKI | Fails — 11:15 close ~flat/marginally lower than 11:00 close | — | 2.43% | Rejected — fails acceleration, also fails fade |
+| ASTER | Fails — 11:15 close lower than 11:00 close | — | 0.73% | Rejected — fails acceleration |
+| ENS | Fails — 11:15 close lower than 11:00 close | — | 1.00% | Rejected — fails acceleration |
+| GWEI | Passes | **No** — live high not confirmed by any recent closed candle | 1.88% | Rejected — unconfirmed high, also fails fade cap |
+| XAN | Fails — flat across all three candles, no acceleration | — | 1.56% | Rejected — fails acceleration (flat), also fails fade cap; repeat-offender pattern |
+| BONK | Passes | **No** — live high not confirmed (0.37% above closed-candle max) | 0.92% | Rejected — unconfirmed high |
+| NEAR | Passes | **No** — live high not confirmed (0.78% above closed-candle max) | 0.62% | Rejected — unconfirmed high |
+| LIGHTER | Passes — 4.613→4.639→4.644, each closed higher | **Yes** — live high $4.69 matches the 11:15 closed candle's own high exactly | **1.56%** | Rejected — narrowly exceeds the 1.5% live-fade cap despite confirmed high |
+| FARTCOIN | Passes | **No** — live high not confirmed (1.92% above closed-candle max) | 1.46% (passes, but moot) | Rejected — unconfirmed high |
+| ZEREBRO | Fails — 11:00 close marginally lower than 10:45 close | — | 0.00% | Rejected — fails acceleration at first step |
+| BICO | Passes | **No** — live high not confirmed (0.48% above closed-candle max) | 0.70% | Rejected — unconfirmed high |
+| SAHARA | Passes | **No** — live high not confirmed (1.16% above closed-candle max); liquidity $46.7k, below the $50k threshold | 1.16% | Rejected — unconfirmed high, also below the liquidity floor |
+| **COTI/USD** | **Passes** — 0.01364→0.01368→0.01378, each closed higher | **Yes** — live high $0.01378 matches the 11:15 closed candle's own high exactly | **0.80%** | Clears every structural/momentum gate — see catalyst check below (liquidity $46.0k, borderline below $50k threshold) |
+
+**S/USD and COTI/USD catalyst checks (only two candidates clearing every structural gate):**
+- **S/USD (Sonic):** Perplexity — cited driver is CoinGecko's "Sonic rallies as Bundle Transactions upgrade drives DEX volume to $2.46M" plus a Bybit +7.06%/24h read. No confirmed timestamp places this within the last 6h — reads as an ongoing product-activity narrative, not a fresh dated trigger. Consistent with S/USD's extensive rejection history in this log (repeatedly hits the momentum-only no-catalyst R:R gate on 2026-08-26 and 2026-08-27 passes). Classified **momentum-only**.
+- **COTI/USD:** Perplexity — cited items are GC general availability (Aug 29, old), a Vibe Code Challenge that closed Aug 31 (old), and an ongoing V1→V2 migration deadline (administrative, not a fresh trigger). Classified **momentum-only**.
+
+Both **blocked outright by the active win-rate kill switch** (20.0% trailing win rate, floor 35%), independent of and prior to any R:R calculation. Same-thesis check: no COTI or S/USD entries appear in the trailing-10 momentum-only window (per the 07:00 UTC weekly review's list), so the cooling-period cap doesn't independently apply — moot regardless given the kill switch block. Macro Perplexity context: BTC $80.6k-$81.4k (+3.6% to +5.6%/24h depending on source), Fear & Greed clustered 65-77 (Greed), BTC perp funding mildly positive (+0.006-0.008%/8h, longs paying shorts, not extreme), macro catalysts are jobs-report/Fed-cut-expectations driven rather than asset-specific.
+
+**No candidate cleared every gate.** S/USD and COTI/USD were the only pairs to clear live-fade, two-candle acceleration, and a genuinely confirmed-closed-candle high, but neither has a confirmed <6h catalyst, so both fall under the momentum-only win-rate kill switch suspension. LIGHTER cleared confirmed-high and acceleration but narrowly missed the live-fade cap (1.56% vs 1.5%). SPX, SYRUP, MNT, GWEI, BONK, NEAR, FARTCOIN, BICO, and SAHARA all passed acceleration but had an unconfirmed/stale 24h high. PEAQ, NPC, XMLN, XPL, ZBCN, XMR, MINA, FLOKI, ASTER, ENS, XAN, and ZEREBRO all failed two-candle acceleration outright, several (ZBCN, MINA, XAN) repeat-offender patterns already logged across multiple prior passes today.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.02%), weekly trend gate clear (+4.61%/5d). Full-universe sweep (661 pairs) found two candidates (S/USD, COTI/USD) clearing every structural/momentum gate, but both lack a confirmed <6h catalyst and are therefore blocked by the active momentum-only win-rate kill switch (20.0%, floor 35%) rather than any threshold being loosened to manufacture a trade. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the two candidates clearing every structural gate (S/USD, COTI/USD) were rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), no operational issues. Nothing here needs the user's attention right now.
