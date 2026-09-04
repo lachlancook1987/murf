@@ -36093,3 +36093,43 @@ Both **blocked outright by the active win-rate kill switch** (20.0% trailing win
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the two candidates clearing every structural gate (SAHARA, ASTER) were rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), no operational issues. Nothing here needs the user's attention right now.
+
+## 2026-09-04 — Scan — 10:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 09:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $80,989.90 vs today's session open $81,276.10 → **−0.35%**. Clear. **Weekly trend gate:** live $80,989.90 vs 5-day-ago daily close $77,681.60 (2026-08-30, consistent reference used through today's passes) → **+4.26%/5d**, well inside (above) the ±3% band — standard regime. **Fear & Greed:** 74 (Greed) per Alternative.me, up from 65 yesterday — not Extreme Fear.
+
+**🚩 Win-rate kill switch status (carried from 07:00 UTC weekly review):** trailing win rate over the last 10 momentum-only entries remains **20.0%**, below the 35% floor — momentum-only entries stay **SUSPENDED** this pass. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 637 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 24 candidates cleared vs-open>3% + within 6% of 24h high + spread ≤1.5%. Of those with liquidity ≥$50k: PEAQ, UAI, NPC, SPX, XMR, CHIP, XMLN (borderline), DCR, MINA, S, ZBCN, FLOKI, ENS, XAN. Deep-dived on 15m OHLC (closed candles, boundary 10:15→10:30) for two-candle acceleration, confirmed-closed-candle high, and live intracandle fade:
+
+| Pair | 2-candle accel (09:45→10:00→10:15 closes) | Confirmed-candle high? | Live fade off 24h high | Verdict |
+|---|---|---|---|---|
+| PEAQ | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| NPC | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| SPX | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| XMR | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| S | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| ENS | Fails — 10:00 close lower than 09:45 close | — | — | Rejected — fails acceleration |
+| XAN | Fails — 10:15 close lower than 10:00 close | — | — | Rejected — fails acceleration at second step |
+| CHIP, MINA | Already-documented repeat-offender fade pattern this week | — | >1.5% | Rejected — live fade, consistent with every prior pass this week |
+| UAI | Passes — 0.37182→0.38884→0.39143, each closed higher | No — live 24h high ($0.40252) does not match any recent closed candle (max recent closed high $0.39642) — set earlier in the day, not fresh | **2.00%** — exceeds 1.5% cap | Rejected — live intracandle fade, also fails freshness independently |
+| DCR | Marginal pass — 14.751→14.752 (~flat, +0.001) →14.828 | Yes — 24h high $14.853 matches the 10:15 closed candle's own high | 0.03% | Clears technical gates but catalyst is an active inflation-exploit/security incident (see below) — reject on substance, not process |
+| ZBCN | Passes — 0.001937→0.001978→0.001988, each closed higher | Yes — 24h high $0.001988 matches the 10:15 closed candle's own high exactly | 0.05% | Clears every structural/momentum gate — see catalyst check below |
+
+**DCR/USD catalyst check (Perplexity):** Decred disclosed an **inflation vulnerability** that was actively exploited (~2,077.97 DCR minted), patched via an emergency v2.1.6 release with no chain rollback. This is a live security-incident narrative, not a bullish trigger — momentum here reads as event-driven volatility around an ongoing exploit response, not a catalyst to buy into. Rejected on substance (thesis risk), independent of and prior to any win-rate-kill-switch or R:R check.
+
+**ZBCN/USD catalyst check (Perplexity):** Cited items are Zebec's payroll-launch rollout, a European football marketing push, an EU MiCA-related Bitvavo filing, and a Privy partnership — all ongoing/pre-existing project updates, not a fresh <6h trigger. Perplexity explicitly attributes today's move to a **broader risk-on crypto shift on dovish Fed expectations**, not a ZBCN-specific event. Classified **momentum-only**.
+
+ZBCN is **blocked outright by the active win-rate kill switch** (20.0% trailing win rate, floor 35%), independent of and prior to any R:R calculation. No prior stop-out on record for ZBCN in the 7-day window (only prior mentions are failed-gate rejections at earlier passes, never an actual entry) — same-thesis cap does not apply, but is moot given the kill switch block.
+
+**No candidate cleared every gate.** ZBCN was the only pair to clear live-fade, two-candle acceleration, and a genuinely confirmed-closed-candle high, but lacks a confirmed <6h catalyst and falls under the momentum-only win-rate kill switch suspension. DCR cleared the same technical gates but carries an active security-exploit narrative that disqualifies it on substance regardless of the kill switch. UAI failed live-fade and freshness independently. PEAQ, NPC, SPX, XMR, S, ENS, and XAN all failed two-candle acceleration outright. CHIP and MINA remain repeat-offender fades, consistent with every prior pass this week.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.35%), weekly trend gate clear (+4.26%/5d). Full-universe sweep (637 pairs) found one candidate (ZBCN) clearing every structural/momentum gate, blocked by the active momentum-only win-rate kill switch (20.0%, floor 35%); one further candidate (DCR) cleared the same technical gates but is rejected on substance due to an active, unresolved security-exploit incident. No threshold loosened to manufacture a trade. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate clearing every structural gate (ZBCN) was rejected on the already-flagged, already-logged win-rate kill switch (not a new anomaly), and the other technically-clean candidate (DCR) was rejected for a documented, substantive reason (active exploit incident) rather than a manufactured excuse. No operational issues. Nothing here needs the user's attention right now.
