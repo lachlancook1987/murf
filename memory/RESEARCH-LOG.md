@@ -35914,3 +35914,28 @@ No push sent — state unchanged in substance from every pass since the 2026-09-
 No push sent — this was a user-initiated interactive pass, the user is actively in the session and already saw the liquidation result; the HOLD outcome here doesn't need a separate push since there's no unattended gap to bridge. Will flag normally on a future pass only if something changes materially (a candidate clears every gate, an anomaly, etc).
 
 **Re-check ~03:55 UTC (user asked to re-look, same session):** Fresh ticker/OHLC pull, ~5 min after the pass above. TRIA now +22.08%/$0.0047 but its high is *still* only on the forming 03:45 candle (last confirmed-closed candle, 03:30, topped at $0.00462) — same unconfirmed-candle rejection. New candidate BABYSHARK/USD (+11.75%, $438k liquidity) surfaced but is already 4.52% off its 24h high — fails the 1.5% live-fade cap outright. CHIP unchanged at ~5% faded, still rejected. DOS unchanged (0.28% fade, still structurally clean) but liquidity still thin at $51k — same liquidity-risk rejection as the pass above, nothing materially changed in 5 minutes. **No candidate cleared every gate on re-check either — HOLD stands.** No new capital committed.
+
+## 2026-09-04 — Scan — 04:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, XXBT 0.0000000000, ZAUD $0.1550 (dust), all other balances zero — book fully flat, exact match to the 03:00 UTC ad hoc pass's post-liquidation state, no drift. `positions: {}`, `orders: {"open": {}}` — no open orders, no orphans to check. Alpaca: `positions: []`, `orders` all historical — zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** N/A, book flat, nothing to protect or tighten.
+
+**Crash gate:** BTC live $81,202.40 vs today's session open $81,276.10 → **−0.09%**. Clear, nowhere near −20%. **Weekly trend gate:** live $81,202.40 vs 5-day-ago daily close $77,681.60 (2026-08-30, Kraken daily OHLC) → **+4.53%/5d**, well inside (above) the ±3% band — standard regime, pure-momentum entries remain open. **Fear & Greed:** 65 (Greed) per Alternative.me (Perplexity cross-check showed 32–73 across providers; used the most commonly cited Alternative.me reading, same as the 03:00 UTC pass) — not Extreme Fear.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 637 online USD pairs (DASHUSD/XZECZUSD pre-excluded, AU-restricted). 29 candidates cleared vs-open>3% + within 6% of 24h high. Of those, four had liquidity clearing the ~$50k practical bar this routine has used: BABYSHARKUSD ($399k), BTRUSD ($1.07M), CHIPUSD ($1.27M), USELESSUSD ($7.69M) — all others in the raw screen were <$25k, too thin to deep-dive per the DOS precedent from the 03:00 UTC pass. Deep-dived all four on 15m OHLC (closed candles only, current time 04:34 UTC → last closed candle boundary 04:15–04:30):
+
+| Pair | vs-open | 2-candle accel (closes 03:45→04:00→04:15) | Live fade off 24h high | Spread | Verdict |
+|---|---|---|---|---|---|
+| BABYSHARK/USD | +14.6% | Fails — 04:15 close (0.006431) flat vs 04:00 close (0.006431), not higher | 1.90% (>1.5% cap) | — | Rejected — fails acceleration and live-fade |
+| BTR/USD | +9.7% (fresh candidate, first appearance in logs) | Passes — 0.05056→0.05164→0.05225, each higher | **2.42%** (0.05506 h24 vs 0.05373 live, >1.5% cap) | 0.28%, clean | Rejected on live-fade only — otherwise the cleanest technical shape of the four |
+| CHIP/USD | +5.0% | Fails — 04:00 close (0.05852) lower than 03:45 close (0.05953) | — | — | Rejected — same repeat-offender fading pattern logged across multiple prior passes this week |
+| USELESS/USD | +3.2% | Fails — 04:00 close (0.20811) lower than 03:45 close (0.20895) | — | — | Rejected — acceleration fails at the first step |
+
+**No candidate cleared every gate.** BTR/USD was the closest — clean spread, confirmed-candle two-candle acceleration intact — but its live price sits 2.42% below the 24h high ($0.05506), which itself looks like a stale spike rather than part of the current up-move; the live intracandle fade check rejects it regardless of when that high was set. No catalyst checks run (no candidate reached that stage). Same-thesis check: no prior stop-out history for BABYSHARK, BTR, CHIP, or USELESS within the 7-day window — cap does not apply to any of them.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.09%), weekly trend gate clear (+4.53%/5d). Full-universe sweep (637 pairs) found four liquid candidates clearing the raw momentum/proximity screen; all four failed a specific, documented gate (acceleration ×3, live-fade ×2, one candidate failing both). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, all four liquid candidates rejected on specific documented gates (acceleration, live-fade) rather than a manufactured excuse, no operational issues. Nothing here needs the user's attention right now.
