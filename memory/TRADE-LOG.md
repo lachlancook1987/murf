@@ -11034,3 +11034,14 @@ Filled as a resting order, txid **OYWDWO-3G7JA-EGIZVJ**, trigger stop $75,075.10
 ### Step 8 — Notification
 
 No push sent — protected position unchanged in substance from every pass since 00:00 UTC (same stop, same zero-cash constraint, gain still well under the 20% tightening threshold), EOD snapshot is routine record-keeping showing a positive day (bot ahead by BTC's move minus the entry-timing gap, nothing operationally wrong). Nothing here needs the user's attention right now.
+
+## 2026-09-04 — User-directed liquidation (~03:20 UTC, interactive, outside scheduled pass)
+
+**User request:** in a live interactive turn (not a scheduled hourly pass), the user confirmed the 0.00087844 XXBT position was their own manual out-of-band purchase (per the 2026-09-03 00:22 UTC conversion, documented above) and explicitly asked to sell it to free up equity for the routine's ad hoc trades. Executed on direct instruction:
+
+1. **Cancelled** protective trailing stop `OYWDWO-3G7JA-EGIZVJ` (trigger was $80,230.90).
+2. **Market sell** 0.00087844 XXBT — `bash scripts/kraken.sh order '{"symbol":"BTC/USD","qty":"0.00087844","side":"sell","type":"market","time_in_force":"gtc"}'`. Filled: txid **OANKFC-XOS54-GOTIXR**, fill price $80,887.60, proceeds $71.05499, fee $0.42633.
+
+**Resulting state:** `account` confirms XXBT 0.0000000000, ZUSD **$70.6298**, `orders: {"open": {}}` — book fully flat, no open orders. This realizes the position's gain from the implied out-of-band entry (≈$78,218) to the sell fill ($80,887.60), ≈+3.41% before the $0.42633 fee.
+
+**Capital now available:** $70.6298 ZUSD, fully deployable on the next hourly pass's discovery/execution step (Step 4), ending the no-capital-available streak that ran since the 2026-09-03 00:22 UTC conversion.
