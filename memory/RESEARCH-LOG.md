@@ -37340,3 +37340,23 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared the technical gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 22:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 21:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,845.70 vs today's session open $79,676.50 → **+0.21%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,845.70 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.63%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 72–73 (CFGI.io, Alternative.me, Bitget) — Greed, consistent with prior passes today.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs (ZEC/DASH pre-excluded, AU-restricted; DASH also cleared the raw screen at +7.31% but skipped). 89 candidates cleared vs-open>3% + liquidity≥$50k — AKE (+40.32%), ARB, SUSHI, FLOCK, ZIG, CAT, SODA, XAN, VELVET leading. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 40 survivors, computed via full 15m OHLC (real 1h/4h momentum on candle-open basis, 1h-vs-trailing-24h volume ratio, confirmed-closed-candle high freshness, two-candle acceleration).
+
+**Real momentum + acceleration check (40 fade-survivors):** Best raw 1h momentum was **ARB at +3.41%** (4h +23.08%, volume 4.30x, confirmed high only 5.1 min old) — the strongest print of the pass and the only candidate to clear the 1h>3%/4h>5%/volume>2x/freshness bars simultaneously. **Rejected on two-candle acceleration**: the last two closed 15m candles show a stall (0.1723→0.1722, a slight pullback) immediately before the final push (→0.1760) — fails the strict "each closed candle higher than the last" requirement, a spike-recover pattern rather than clean sustained acceleration. OP was next-closest (4h +8.46%, volume 6.08x, fresh) but 1h momentum only +2.13%, below the 3% bar, and also failed acceleration. No other candidate cleared even the raw 1h/4h momentum bars — the rest were flat-to-negative on a candle-close basis despite raw vs-open prints suggesting otherwise (the same raw-screen-overstates-momentum pattern flagged repeatedly this week).
+
+**No candidate cleared every gate.** ARB was the closest (only candidate clearing momentum+volume+freshness together) but failed cleanly on the acceleration check; no candidate reached the catalyst/kill-switch review stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.21%), weekly trend gate clear (+1.63%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor), though this pass didn't need to reach that gate — no candidate cleared the acceleration/real-momentum bars together. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared the real-momentum/acceleration gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
