@@ -36699,3 +36699,43 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (ROBO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 03:00 UTC (fired 03:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 02:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` remains canceled since 2026-05-22, zero exposure. Book fully flat, Step 3a–3d no-op.
+
+**Crash gate:** BTC live (Kraken) $79,622.10 vs today's session open $79,676.50 → **−0.07%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,622.10 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.34%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed: 74 (Greed), unchanged.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 645 online USD pairs. 22 candidates cleared vs-open>3% + liquidity≥$50k: AKE (+47.94%), DRV (+21.54%), UNITAS (+17.09%), SODA (+14.98%), DCR (+9.98%), AR (+9.10%), VFY (+7.69%), STRK (+7.41%), IDEX (+6.59%), FLOCK (+5.67%), DASH (+4.47%, AU-restricted, pre-excluded), ICP (+4.18%), DOG (+4.08%), Q (+4.05%), GALA (+3.95%), XLTC (+3.70%), FET (+3.68%), CFG (+3.53%), ONDO (+3.34%), AVNT (+3.14%), NIL (+3.09%), KSM (+3.03%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left seven candidates: AR (0.00%), GALA (0.00%), XLTC (0.17%), ONDO (0.06%), NIL (0.79%), ICP (1.15%), FET (1.41%).
+
+**Two-candle acceleration check (checked 03:33 UTC — last closed 15m candle 03:15–03:30, prior closed 02:45–03:00 and 03:00–03:15):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| AR | 02:45 C=2.774 → 03:00 C=2.830 (higher) → 03:15 C=2.854 (higher) | **Passes** — deep-dived below |
+| GALA | 02:45 C=0.00182 → 03:00 C=0.00182 (flat) | Fails at step 1 (not strictly higher) |
+| XLTC | 02:45 C=52.23 → 03:00 C=52.22 (lower) | Fails at step 1 |
+| ONDO | 02:45 C=0.36791 → 03:00 C=0.36825 (higher) → 03:15 C=0.36829 (+0.00004, one-tick) | Marginal/noise, same spike-then-stall pattern rejected in prior passes (e.g. ACU 2026-09-04 23:00 UTC) — not genuine acceleration |
+| NIL | 02:45 C=0.0504 → 03:00 C=0.0500 (lower) | Fails at step 1 |
+| ICP | 02:45 C=2.548 → 03:00 C=2.548 (flat) | Fails at step 1 |
+| FET | 02:45 C=0.1629 → 03:00 C=0.1613 (lower) → 03:15 C=0.1608 (lower again) | Fails — already reversing hard |
+
+**AR/USD deep-check — clears every technical/structural gate, rejected on kill-switch:**
+- Confirmed-candle: 24h high $2.854 matches the closed 03:15 candle's own H and C exactly (fresh, ~3–18 min old, well inside the 30-min ceiling — also inside the min(30min, time-since-last-pass=60min) cadence ceiling).
+- Live re-quote (03:33 UTC): ask $2.830 / bid $2.825, mid $2.8275 → fade vs $2.854 high ≈ **0.93%**, inside the 1.5% cap (using mid, since the ticker's stale last-trade print of $2.854 sits above current tradeable bid/ask — used the more conservative mid-price fade).
+- Spread: (2.830−2.825)/2.8275 ≈ **0.18%**, well inside the ≤1% cap.
+- 1h momentum (02:30 candle-open $2.700 → live mid $2.8275): **+4.72%**, clears >3%. 4h momentum (23:30 candle-open $2.635 → live mid): **+7.31%**, clears >5%.
+- Volume: last 1h (02:30–03:30 closed candles) ≈ 8,853 AR ≈ $24.8k notional vs 24h-avg-hourly ≈ $7.3k notional → **≈3.39x**, clears the >2x surge bar.
+- Catalyst (Perplexity): CoinMarketCap cites a "breakout toward $3.00" watch tied to AI/DePIN utility via AO, plus AR.IO stablecoin payments and a node-software upgrade — all ongoing ecosystem narrative, **no dated <6h trigger**. Classified **momentum-only, no confirmed catalyst**.
+- Cross-exchange: Perplexity-cited feeds show AR ~$2.57–$2.71 vs Kraken live ~$2.83 → divergence ≈4–10%, well inside the ~15–20% rejection band.
+- Fear & Greed: 74 (Greed), consistent across trackers.
+- **Rejected:** momentum-only classification means this entry is blocked by the active win-rate kill switch (20.0% trailing win rate, floor 35%), the same standing gate that blocked ROBO/TURBO/NEAR/MORPHO/RIVER/TON in recent passes.
+
+**No candidate cleared every gate.** AR was the only one of seven fade-filtered candidates to clear every technical/structural bar (acceleration, confirmed-candle, freshness, live-fade, spread, momentum, volume), but lacks a confirmed <6h catalyst and is blocked by the still-active momentum-only win-rate kill switch. GALA/XLTC/NIL/ICP/FET all failed the two-candle acceleration check outright; ONDO passed on paper but on one-tick noise, not genuine acceleration.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.07%), weekly trend gate clear (+1.34%/5d). Full-universe sweep (645 pairs) found seven candidates clearing fade/liquidity; only AR cleared every technical/structural gate, but it's momentum-only with no catalyst and is blocked by the active kill switch. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (AR) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
