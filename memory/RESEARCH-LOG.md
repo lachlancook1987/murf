@@ -36901,3 +36901,40 @@ Only BLESS/USD cleared both real-momentum bars (1h and 4h) with acceleration pas
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state beyond the routine's usual off-the-hour firing. The one candidate clearing both real-momentum bars (BLESS) was rejected on a specific structural gate (still-forming-candle high) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 08:00 UTC (fired 08:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 07:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,604.50 vs today's session open $79,676.50 → **−0.09%**. Clear. **Weekly trend gate:** live $79,604.50 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.32%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (re-checked via Perplexity this pass): 73–75 (Greed) across Bitget/Binance/CoinStats/Alternative.me — unchanged in substance.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 50 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left 18: TURBO (0.00%), CAKE (0.00%), CHIP (1.49%), NIL (1.33%), FET (1.31%), TAO (0.60%), SUSHI (0.65%), SUI (0.74%), GRT (0.85%), ATOM (0.63%), BNB (0.12%), XETCZ (1.23%), ALGO (0.99%), VIRTUAL (1.16%), BABY (0.96%), PLAY (0.21%), SHIB (0.48%), W (1.29%). DASH also passed the raw screen (+7.83%) but is AU-restricted, pre-excluded per TRADING-STRATEGY.md.
+
+**Two-candle acceleration check (checked 08:34 UTC — last two closed 15m candles 08:00 and 08:15, prior 07:45):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| TAO | 07:45 C=233.669 → 08:00 C=236.011 (higher) → 08:15 C=236.544 (higher) | **Passes** — deep-dived below |
+| BNB | 07:45 C=738.38 → 08:00 C=740.78 (higher) → 08:15 C=746.49 (higher) | **Passes** — deep-dived below |
+| VIRTUAL | 07:45 C=0.6815 → 08:00 C=0.6830 (higher) → 08:15 C=0.6835 (higher) | **Passes** — deep-dived below |
+| ALGO | 07:45 C=0.09386 → 08:00 C=0.09388 (higher, marginal) → 08:15 C=0.09377 (lower) | Fails at step 2 (spike-then-stall) |
+| TURBO, CAKE, CHIP, NIL, FET, SUSHI, SUI, GRT, ATOM, XETCZ, BABY, PLAY, SHIB, W | — | All fail step 1 (flat or lower) |
+
+**TAO/USD — rejected (momentum-peak-check freshness):** live 24h high $237.7724 is not matched by any of the last several closed candles (max closed H = $237.5579 at 07:15) or the forming 08:30 candle (H $237.1506) — the high was set earlier and hasn't been retested, well outside the freshness ceiling. **Rejected on staleness**, prior to any momentum/catalyst check.
+
+**VIRTUAL/USD — rejected (momentum-peak-check freshness):** live 24h high $0.6909 is not matched by any closed candle (max closed H = $0.6864 at 08:15) or the forming 08:30 candle (H $0.6834) — same stale-high pattern as TAO. **Rejected on staleness.**
+
+**BNB/USD deep-check — clears acceleration + confirmed-candle, rejected on actual momentum:**
+- Confirmed-candle: live 24h high $748.73 matches the closed 08:15 candle's own H exactly, fresh (~4–19 min old), not exceeded by the forming 08:30 candle (H $748.46). **Passes.**
+- Live re-quote (08:34 UTC): ask $747.30 / bid $747.03, mid $747.165. Fade vs $748.73 high ≈ 0.20%, inside the 1.5% cap. Spread ≈ 0.036%, very clean.
+- **1h momentum (candle-open basis, 07:30 open $732.60 → live mid $747.165):** **+1.99%** — decisively short of the >3% bar. **4h momentum (04:30 open $722.03 → live mid):** **+3.48%** — also short of the >5% bar. The raw vs-session-open screen (+3.63%, measured from today's 00:00 UTC open) overstated actual recent momentum — same pattern as BABY/NIL/EUL in prior passes today.
+- **Rejected:** neither real-momentum bar clears once measured on a proper candle-open basis. No catalyst check warranted per convention (structural/momentum gate decisive on its own).
+
+**No candidate cleared every gate.** BNB was the only one of eighteen fade-filtered candidates to pass two-candle acceleration and confirmed-candle, but failed on real 1h/4h momentum once properly measured. TAO and VIRTUAL passed acceleration but had stale (unconfirmed-fresh) 24h highs. ALGO spiked then stalled. The remaining fourteen failed acceleration outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.09%), weekly trend gate clear (+1.32%/5d). Full-universe sweep (640 pairs) found eighteen candidates clearing fade/liquidity; none cleared every technical/structural gate — the closest (BNB) passed acceleration and confirmed-candle but failed on real 1h/4h momentum once properly measured. Momentum-only entries remain SUSPENDED regardless (kill switch 20.0%, floor 35%). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (the one technical near-miss was rejected on a real-momentum gate), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
