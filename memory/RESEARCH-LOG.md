@@ -36938,3 +36938,29 @@ No push sent — book flat with no unprotected exposure, both gates clear, no op
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (the one technical near-miss was rejected on a real-momentum gate), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 09:00 UTC (fired 09:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 08:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,700.10 vs today's session open $79,676.50 → **+0.03%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,700.10 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.44%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (re-checked via Perplexity this pass): 74 (Greed), 73–75 range across trackers — unchanged in substance.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 54 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left 21: NIL (0.38%), CAKE (0.33%), GOMINING (0.30%), TURBO (0.00%), SUSHI (0.05%), TAO (0.85%), SN51 (0.26%), SUI (0.72%), RENDER (0.87%), WIF (0.09%), BNB (0.32%), VIRTUAL (0.48%), GRT (0.85%), W (0.70%), PLAY (0.00%), ALGO (0.89%), BABY (0.70%), ATOM (0.90%), SHIB (0.59%), WLD (0.48%), FHE (1.31%). DASH also passed the raw screen (+6.49%) but is AU-restricted, pre-excluded per TRADING-STRATEGY.md.
+
+**Two-candle acceleration + confirmed-candle check (last 3 closed 15m candles, checked ~09:35 UTC):** Only four of 21 passed acceleration (each closed candle higher than the last): CAKE, SN51, WIF, FHE. Of those, CAKE, WIF, and FHE all failed confirmed-candle — their live 24h high sits on the currently-forming candle, not a fully closed one (same still-forming-candle fakeout pattern as APR/ACU/ATOM/BLESS in prior passes today). **SN51/USD was the only candidate to pass both acceleration and confirmed-candle** — live 24h high $19.973 matches the closed 09:15 candle's own high exactly, fresh (~4–19 min old), not exceeded by the forming 09:30 candle (H $19.973, already retraced to $19.921).
+
+**SN51/USD deep-check — rejected (actual momentum + liquidity quality):**
+- Live fade off high: (19.973−19.921)/19.973 ≈ 0.26%, inside the 1.5% cap. Passes on paper.
+- **1h momentum (candle-open basis, 08:30 open $19.900 → live $19.921):** **−0.26%** — actually negative, decisively short of the >3% bar (the raw vs-session-open screen showed +4.43%, badly overstating real recent momentum — same pattern as BABY/NIL/EUL/BNB in prior passes today). **4h momentum (05:30 open $19.394 → live):** +2.72%, also short of the >5% bar.
+- **Liquidity quality red flag (new observation this pass):** the 15m candle history behind this move is extremely thin — several candles show **zero volume and zero trade count**, and the candles that did move price carried trade counts as low as 1–5 with notional volume in the tens of dollars. The $63,250 24h-liquidity figure that let this pass the initial screen is barely above the $50k floor and is not representative of tradeable depth at the moment of entry — this reads as a handful of small trades walking a thin book, not a genuine momentum/volume signal.
+- **Rejected:** neither real-momentum bar clears, and the underlying liquidity is not the kind this strategy's volume-surge signal is meant to capture. No catalyst check warranted (decisive on momentum + liquidity grounds); would also be blocked outright by the active momentum-only kill switch regardless.
+
+**No candidate cleared every gate.** SN51 was the only one of 21 fade-filtered candidates to pass two-candle acceleration and confirmed-candle, but failed on real 1h/4h momentum (1h actually negative) plus a genuine liquidity-quality concern. CAKE/WIF/FHE passed acceleration but failed confirmed-candle. The remaining 17 failed acceleration outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.03%), weekly trend gate clear (+1.44%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) regardless. Full-universe sweep (663 pairs) found no candidate clearing every technical/structural gate — the closest (SN51) passed acceleration and confirmed-candle but failed on real momentum and liquidity quality. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (the one technical near-miss was rejected on real-momentum and liquidity grounds), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
