@@ -37178,3 +37178,41 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, one candidate (SUSHI) reached the catalyst/kill-switch stage this pass and was rejected on a documented, correctly-applied gate (no fresh catalyst, kill switch active) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 17:00 UTC (fired 17:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 16:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $80,083.50 vs today's session open $79,676.50 → **+0.51%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,083.50 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.93%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 77 candidates cleared vs-open>3% + liquidity≥$50k (DASH also cleared at +9.02% but is AU-restricted, pre-excluded). SUSHI stood out sharply — **+25.64% vs session open**, a huge acceleration from the 16:00 UTC pass's +3.95%/1h. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) to the full candidate list left ~30 survivors; two-candle acceleration (last two closed 15m candles each closing higher than the prior) passed 8: SUSHI, XAN, FLOKI, AERO, TIA, XXMR, XETC, LINK, BCH.
+
+**Confirmed-candle check (8 acceleration-passers):**
+- **SUSHI**: live 24h high climbing in real time on the still-forming 17:30–17:45 candle (checked twice, 5 min apart: $0.24010 → $0.24210, both matching live ask) — the prior closed candle (17:15–17:30) topped at $0.2347. High is NOT confirmed by a close; this is the same still-forming-candle spike pattern CHIP/UNI/ASTER were rejected for earlier today. **Rejected — unconfirmed.**
+- **AERO, TIA, XXMR**: same pattern — forming-candle high already exceeds the last closed candle's high by a meaningful margin. **Rejected — unconfirmed.**
+- **XAN, FLOKI, XETC, LINK, BCH**: forming-candle high does not exceed the last closed candle's high — confirmed, fresh (high set on the candle that just closed, well inside the 30 min freshness ceiling).
+
+**Real momentum check (candle-close basis, 5 confirmed survivors):**
+| Pair | 1h | 4h | Verdict |
+|---|---|---|---|
+| **XAN** | **+5.61%** | **+12.21%** | Clears both >3%/>5% bars |
+| LINK | +1.95% | +2.70% | Fails both |
+| BCH | +1.69% | +2.49% | Fails both |
+| FLOKI | +1.50% | +1.77% | Fails both |
+| XETC | +0.51% | −0.33% | Fails both |
+
+**XAN/USD deep-check — clears every technical/structural gate, rejected on catalyst/kill-switch:**
+- Spread (`kraken.sh quote XAN/USD`): ask $0.01555 / bid $0.01550 ≈ **0.32%**, clean.
+- Liquidity: ≈$56k 24h notional — thin, right at the edge of the discovery floor; noted as a secondary concern even before the catalyst check.
+- Catalyst (Perplexity): only concrete news is an **Upbit listing that already happened and triggered a 38% sell-off**, not a fresh upside trigger, plus an ongoing airdrop-claim window open until Oct 5 — neither is a <6h breaking-today catalyst for this specific move. External commentary (CoinMarketCap via Perplexity) actually flags XAN as vulnerable to thin liquidity and profit-taking, the opposite of a confirmed catalyst thesis.
+- **Classified momentum-only** (no confirmed <6h catalyst) → **blocked outright by the active win-rate kill switch** (20.0%, below the 35% floor). Also would need the 1.8:1 R:R floor for momentum-only entries, not separately checked given the kill-switch block is dispositive.
+
+**No candidate cleared every gate.** SUSHI was the largest mover of the day by a wide margin but is still accelerating on an unconfirmed candle (checked twice this pass, high moved higher both times) — flag for the next pass to re-check once it prints a closed candle holding the high. XAN cleared every technical/structural gate (fade, acceleration, confirmed-candle, freshness, real 1h/4h momentum, spread) but has no fresh catalyst and is blocked by the kill switch, consistent with SUSHI's rejection at the 16:00 UTC pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.51%), weekly trend gate clear (+1.93%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) — this blocked XAN, the only candidate this pass to clear every technical/structural gate, on the sole basis of no confirmed <6h catalyst. SUSHI (today's biggest mover) was independently rejected on the confirmed-candle requirement — still actively spiking on an unclosed candle. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the two candidates that reached deeper review (SUSHI, XAN) were both rejected on documented, correctly-applied gates (unconfirmed candle; no catalyst + active kill switch) rather than manufactured excuses, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
