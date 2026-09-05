@@ -37290,3 +37290,29 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate that reached deeper review (XAN) was rejected on documented, correctly-applied gates (no fresh catalyst, kill switch active, widening cross-exchange divergence) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 20:00 UTC (fired 20:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 19:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,722.40 vs today's session open $79,676.50 → **+0.06%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,722.40 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.47%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73–75 across sources (Bitget 73, Alternative.me 74, CoinStats 75), consistent Greed, unchanged in substance from the 19:00 UTC pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 81 candidates cleared vs-open>3% + liquidity≥$50k — AKE (+45.93%), SODA, SUSHI, ZIG, ARB, CAT, VELVET, UAI, FLOCK, AR, XAN, UNI leading. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 17 survivors: ARB, UAI, XAN, GWEI, FARTCOIN, TIA, EIGEN, GRT, ETC, CVX, SPK, RE, APT, XMR, JTO, FIL, AKT.
+
+**Two-candle acceleration + confirmed-candle freshness (17 fade-survivors, full closed 15m candle series traced for true 24h-high set-time):**
+- **ARB, UAI:** pass acceleration but the currently-forming candle has already pushed past the last confirmed-closed high — same still-forming-candle spike pattern rejected repeatedly today (this is ARB/UAI's second+ rejection on this exact basis). **Rejected — unconfirmed.**
+- **ETC** (63.9 min), **RE** (543.9 min), **AKT** (273.9 min): pass acceleration but confirmed high is stale, well outside the 30-min freshness ceiling. **Rejected — freshness.**
+- **XAN, GWEI, TIA, EIGEN, GRT, SPK, APT, XMR, JTO, FIL:** fail acceleration outright (no two-candle build). **Rejected — acceleration.**
+- **CVX:** confirmed-closed high $2.326 set 18.9 min ago, forming candle has NOT exceeded it — confirmed AND fresh, only survivor to clear fade/acceleration/confirmed-candle/freshness together.
+
+**CVX/USD deep-check — rejected (real momentum):** Candle-open basis: **1h +1.88%**, **4h +2.69%** — both decisively short of the >3%/>5% bars, despite a strong raw vs-open print (+4.81%) — the same raw-screen-overstates-real-momentum pattern flagged repeatedly this week (VELVET/FHE/BLESS/ALGO). **Rejected** on real momentum; would also be blocked by the active kill switch regardless (no catalyst check warranted, momentum gate decisive on its own).
+
+**No candidate cleared every gate.** CVX was the only one of 17 fade-filtered candidates to pass acceleration, confirmed-candle, and the freshness ceiling together, but failed decisively on real 1h/4h momentum. ARB and UAI continue their pattern (now multi-pass) of still-forming-candle spikes rather than confirmed breakouts.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.06%), weekly trend gate clear (+1.47%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor), though this pass didn't even need to reach that gate — no candidate cleared the real 1h/4h momentum bars at all. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared real momentum this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
