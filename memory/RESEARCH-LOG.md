@@ -36779,3 +36779,51 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the kill-switch stage this pass (both technical near-misses were rejected on structural gates), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 05:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 04:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op.
+
+**Crash gate:** BTC live (Kraken) $79,607.00 vs today's session open $79,676.50 → **−0.09%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,607.00 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.33%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (re-checked via Perplexity this pass): 74 (Greed) Alternative.me, 75 CoinStats, 72 CFGI — unchanged in substance.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 28 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left 12: DRV (0.50%), DASH (0.81%, AU-restricted, pre-excluded), NIL (0.00%), ICP (0.87%), AERO (0.47%), TIA (0.25%), XLTC (0.42%), KSM (0.79%), ALGO (0.26%), EUL (0.00%), BABY (0.44%), ATOM (0.24%) — 11 after excluding DASH.
+
+**Two-candle acceleration check (checked ~05:34 UTC — last closed 15m candle 05:15–05:30, prior closed 04:45–05:00 and 05:00–05:15):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| DRV | 04:45 C=0.19308 → 05:00 C=0.19290 (lower) | Fails at step 1 |
+| NIL | 04:45 C=0.0498 → 05:00 C=0.0508 (higher) → 05:15 C=0.0517 (higher) | **Passes** — deep-dived below |
+| ICP | 04:45 C=2.624 → 05:00 C=2.622 (lower) | Fails at step 1 |
+| AERO | 04:45 C=0.5218 → 05:00 C=0.5190 (lower) | Fails at step 1 |
+| TIA | 04:45 C=0.3617 → 05:00 C=0.3653 (higher) → 05:15 C=0.3643 (lower) | Fails at step 2 (spike-then-stall) |
+| XLTC | 04:45 C=52.59 → 05:00 C=52.56 (lower) | Fails at step 1 |
+| KSM | 04:45 C=3.72 → 05:00 C=3.74 (higher) → 05:15 C=3.75 (higher, marginal) | Passes — see confirmed-candle below |
+| ALGO | 04:45 C=0.09340 → 05:00 C=0.09357 (higher) → 05:15 C=0.09329 (lower) | Fails at step 2 |
+| EUL | 04:45 C=1.319 → 05:00 C=1.324 (higher) → 05:15 C=1.342 (higher) | **Passes** — deep-dived below |
+| BABY | 04:45 C=0.01133 → 05:00 C=0.01129 (lower) | Fails at step 1 |
+| ATOM | 04:45 C=1.5364 → 05:00 C=1.5402 (higher) → 05:15 C=1.5433 (higher) | Passes — see confirmed-candle below |
+
+**KSM — rejected (stale high):** live 24h high $3.80 is not matched by either the closed 05:15 candle (H $3.75) or the forming 05:30 candle (H $3.77) — the high was set earlier in the day, well outside the freshness ceiling, and current price hasn't broken back above it. **Rejected on momentum-peak-check freshness.**
+
+**ATOM — rejected (confirmed-candle):** live 24h high $1.5458 is being set on the currently-forming 05:30 candle (H $1.5458) — the last confirmed-closed candle (05:15) topped at $1.5433. Same still-forming-candle fakeout pattern as FET/STRK/KSM/AKE/DCR in prior passes. **Rejected on the confirmed-candle requirement.**
+
+**NIL/USD deep-check — rejected (actual momentum):**
+- Confirmed-candle: 24h high $0.0517 matches the closed 05:15 candle's own H exactly, not exceeded by the forming 05:30 candle — **passes**, fresh (~4–19 min old).
+- Live re-quote: ask $0.0516 / bid $0.0515, spread ≈0.19%; fade vs $0.0517 high ≈0%. Both **pass**.
+- **1h momentum (candle-open basis, 04:30 open $0.0503 → live $0.0517):** **+2.78%** — just short of the >3% bar. 4h momentum (01:30 open $0.0492 → live): +5.08%, clears. Volume ratio ≈2.4x, clears.
+- **Rejected:** 1h real-momentum bar doesn't clear once measured on candle-open basis rather than the raw vs-session-open screen (which showed +6.60%) — same pattern as BABY/PEAQ in prior passes. No catalyst check warranted.
+
+**EUL/USD deep-check — rejected (actual momentum):**
+- Confirmed-candle: 24h high $1.346 matches the closed 05:15→05:30 candle sequence's own H exactly, fresh (~4–19 min old). Live re-quote ask $1.344/bid $1.343, fade vs high ≈0.2%. Spread ≈0.07%. All **pass**.
+- **1h momentum (04:30 open $1.317 → live $1.346):** **+2.20%**, short of >3%. **4h momentum (01:30 open $1.306 → live):** **+3.06%**, short of >5%. The raw vs-session-open screen (+3.54%, measured from today's 00:00 UTC open) overstated actual recent momentum, same pattern as NIL above.
+- **Rejected:** neither real-momentum bar clears. No catalyst check warranted.
+
+**No candidate cleared every gate.** NIL and EUL were the only two of eleven fade-filtered candidates to pass two-candle acceleration and confirmed-candle, but both failed on real 1h/4h momentum once measured on a proper candle-open basis. KSM's high was stale; ATOM's high was still forming; DRV/ICP/AERO/XLTC/BABY failed acceleration outright; TIA/ALGO spiked then stalled.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.09%), weekly trend gate clear (+1.33%/5d). Full-universe sweep (663 pairs) found eleven candidates clearing fade/liquidity; none cleared every technical/structural gate — the two closest (NIL, EUL) passed acceleration and confirmed-candle but failed on real 1h/4h momentum once properly measured. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (both technical near-misses were rejected on real-momentum gates), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
