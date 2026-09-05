@@ -36582,3 +36582,39 @@ No push sent — book flat with no unprotected exposure, both gates clear, the w
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, no operational issues, no drift from the last logged state, EOD snapshot is routine record-keeping. Nothing here needs the user's attention right now.
+
+## 2026-09-05 — Scan — 00:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero. `positions: {}`, `orders: {"open": {}}` — exact match to the 2026-09-04 23:00 UTC EOD snapshot, no drift since. Alpaca: `positions: []`, orders all historical/filled — confirmed fully flat, stop `a2b44cf9` remains canceled since 2026-05-22, zero exposure. Book fully flat, nothing to protect (Step 3a–3d no-op).
+
+**Crash gate:** BTC live (Kraken) $79,681.80 vs 24h-ago daily close $79,676.40 → **+0.007%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,681.80 vs 5-day-ago daily close $78,566.10 (2026-08-31) → **+1.42%/5d**, inside the ±3% band. Standard regime — pure-momentum entries not banned by this gate.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10) over the last 10 momentum-only entries, below the 35% floor. No bot-originated trades have filled since that review (all HOLDs), so the window is unchanged. Catalyst-confirmed entries remain open.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Raw screen (vs-open >3%, within 6% of 24h high, liquidity ≥$50k) cleared only **2 candidates** this pass — a notably thin sweep vs. recent multi-candidate passes:
+
+| Pair | vs-open chg | Proximity to 24h high | Liquidity |
+|---|---|---|---|
+| DRV/USD | +19.36% | −3.09% | $513k |
+| NEAR/USD | +3.28% | −0.11% | $11.09M |
+
+**DRV/USD deep-check — rejected (technical):** 15m candles show a massive single-candle spike at 00:00 UTC (O 0.15090→H 0.18400→C 0.18286, +21% in one candle) immediately followed by reversal: the 00:15 candle closed at 0.18177, *lower* than the 00:00 close — fails the two-closed-candle acceleration requirement outright (spike-then-reversal, not sustained acceleration). Live price at check time (0.18011) sits −3.09% off the 24h high, decisively breaching the 1.5% live intracandle fade cap. Two independent, decisive technical rejections — no catalyst check warranted.
+
+**NEAR/USD deep-check — clears every technical/structural gate, rejected on kill-switch:**
+- Closed 15m candles: 23:45 C=2.1741 → 00:00 C=2.1995 (higher) → 00:15 C=2.2458 (higher again) — two-candle acceleration **passes**.
+- 24h high $2.2485 set intracandle during the 00:15 candle (now closed, confirmed held at close 2.2458, only 0.12% below its own high) — confirmed-candle requirement **passes**, freshness ~15–30 min old, well inside the 30-min ceiling.
+- Live intracandle fade: live $2.2449 vs 24h high $2.2485 → **−0.16%**, well inside the 1.5% cap. **Passes.**
+- 1h momentum (vs 23:30 open $2.1778): **+3.08%**. 4h momentum (vs 20:30 open $2.1180): **+5.99%**. Both clear their respective bars.
+- Volume: last ~49min volume (23:45–00:30 partial candles) annualized to hourly ≈ $459k-equivalent vs 24h avg hourly volume ≈$205.8k → **≈2.23x**, clears the >2x surge bar.
+- Spread: ask $2.2448 / bid $2.2436 ≈ **0.05%**, well inside the ≤1% cap.
+- Catalyst (Perplexity): "Intents processed $2.5B in 30 days," OKX added NEAR margin trading in Europe, Q2 2026 report items (dynamic resharding, post-quantum signing) — all general positive fundamentals, **none pinned to a <6h dated trigger** for today's specific move. Classified **momentum-only**, no confirmed <6h catalyst.
+- Fear & Greed: mixed by provider, ~74 (Greed) on the most-cited tracker.
+- **Rejected:** momentum-only classification means this entry is subject to the active win-rate kill-switch suspension (20.0% trailing win rate, floor 35%) — blocked regardless of R:R quality, which would otherwise have been comfortably at/above the 1.8:1 momentum-only floor (T1 +3% vs 2.5% stop plus fees).
+
+**No candidate cleared every gate.** NEAR/USD was the only one of two raw candidates to clear every technical/structural bar (acceleration, confirmed-candle, freshness, live-fade, spread, momentum, volume), but lacks a confirmed <6h catalyst and is therefore blocked by the active kill-switch suspension, not a manufactured excuse.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.007%/24h), weekly trend gate clear (+1.42%/5d). Thin raw sweep (2 of 640 pairs cleared the initial screen) — one (DRV) reversed on its own candle structure, the other (NEAR) cleared every technical gate but is blocked by the still-active momentum-only win-rate kill switch. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (NEAR) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
