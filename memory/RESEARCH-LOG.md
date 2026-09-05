@@ -37216,3 +37216,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, one c
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the two candidates that reached deeper review (SUSHI, XAN) were both rejected on documented, correctly-applied gates (unconfirmed candle; no catalyst + active kill switch) rather than manufactured excuses, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 18:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 17:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,994.20 vs today's session open $79,676.50 → **+0.40%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,994.20 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.82%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 74 (Greed), up slightly from 69 on 2026-09-04.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 85 candidates cleared vs-open>3% + liquidity≥$50k (DASH also cleared at +7.88% but is AU-restricted, pre-excluded). SUSHI continued climbing (+32.00% vs open, up from +25.64% at the 17:00 UTC pass) but still fails the live-intracandle-fade cap (1.84%, just over the 1.5% ceiling) — still the biggest mover of the day but not yet re-tested for confirmed-candle status this pass since it fails fade first. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 38 survivors. Two-candle acceleration (last two closed 15m candles each closing higher than the prior) passed 5: UNI, ARB, CRV, SPK, XETC.
+
+**Confirmed-candle + freshness check (5 acceleration-passers, 24h-high traced across the full closed 24h candle series to find its actual set-time, not just the last few candles):**
+- **UNI**: confirmed-closed high $6.9603 set 4.4 min ago, but the currently-forming candle has already pushed to $6.9918 — live price already exceeds the confirmed high before it could even be acted on. Same still-forming-candle spike pattern UNI was rejected for at the 16:00 UTC pass. **Rejected — unconfirmed.**
+- **ARB, CRV, SPK**: confirmed-closed high set 4.4 min ago in all three, forming candle has NOT exceeded it — confirmed, fresh (well inside the 30 min ceiling).
+- **XETC**: confirmed-closed high is actually $7.796, set **679 min ago** (traced across the full 24h series) — the last few candles I initially checked only showed a lower local high ($7.761); the true 24h high is stale. **Rejected — freshness.**
+
+**Real momentum check (candle-open basis, 3 confirmed+fresh survivors):**
+| Pair | 1h | 4h | Verdict |
+|---|---|---|---|
+| **ARB** | **+4.47%** | **+5.79%** | **Clears both >3%/>5% bars** |
+| CRV | +2.85% | +2.62% | Fails both |
+| SPK | +0.35% | +1.83% | Fails both |
+
+**ARB/USD deep-check — clears every technical/structural gate, rejected on catalyst/kill-switch:**
+- Spread (`kraken.sh quote ARB/USD`): ask $0.14290 / bid $0.14280 ≈ **0.07%**, very clean.
+- Cross-exchange check (Perplexity): external trackers show ARB at **$0.131–$0.134** vs Kraken live $0.1426 → ~6-8% divergence, well within the safe band — no thin/dislocated-book concern.
+- Catalyst (Perplexity): mixed bullish/bearish — Robinhood Chain fee-generation activity and a new Pendle yield market are real but ongoing, not a fresh <6h trigger; a 92.6M ARB unlock is scheduled Sept 16 (>2h out, not a pre-positioning window issue either way); CoinMarketCap separately flags the current move as profit-taking being digested. No single dated catalyst explains today's specific move.
+- Same-thesis check: ARB's last stop-out on record (2026-07-09) is well outside the 7-day cooling window — no cap applies.
+- **Classified momentum-only** (no confirmed <6h catalyst) → **blocked outright by the active win-rate kill switch** (20.0%, below the 35% floor), independent of the fact that it would also need the 1.8:1 R:R floor for momentum-only entries. This is the first candidate since the 16:00/17:00 UTC passes (SUSHI, XAN) to clear every technical/structural gate — same rejection reason.
+
+**No candidate cleared every gate.** ARB was the strongest candidate this pass — genuine real momentum on a clean, confirmed, fresh breakout with tight spread and safe cross-exchange divergence — but lacks a fresh catalyst and is blocked by the active kill switch. UNI failed on the same still-forming-candle pattern seen at 16:00 UTC; XETC's raw high looked fresh in a shallow check but proved stale (679 min) once traced across the full 24h series — worth noting as a methodology reminder for future passes (always trace the full closed-candle series for freshness, not just the last few candles).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.40%), weekly trend gate clear (+1.82%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) — this blocked ARB, the only candidate this pass to clear every technical/structural gate including real 1h/4h momentum, tight spread, and safe cross-exchange divergence, on the sole basis of no confirmed <6h catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate that reached deeper review (ARB) was rejected on a documented, correctly-applied gate (no fresh catalyst, kill switch active) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
