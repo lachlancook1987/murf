@@ -37135,3 +37135,46 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (all rejected on real-momentum grounds), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 16:00 UTC (fired 16:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 15:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,980.00 vs today's session open $79,676.50 → **+0.38%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,980.00 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.80%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 76 candidates cleared vs-open>3% + liquidity≥$50k (DASH also cleared at +10.79% but is AU-restricted, pre-excluded). Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 31: FLOKI (0.00%), CC (0.04%), RAY (0.12%), FOLD (0.12%), BNB (0.39%), GWEI (0.39%), ATOM (0.45%), CRV (0.45%), GOMINING (0.51%), GRT (0.57%), CHIP (0.57%), AKT (0.58%), ADA (0.61%), SUSHI (0.69%), XDG (0.70%), JUP (0.74%), FARTCOIN (0.76%), APR (0.83%), KAS (0.91%), UNI (0.97%), XLTC (1.01%), XETC (1.01%), SPK (1.14%), EIGEN (1.18%), SUI (1.19%), JTO (1.26%), ARB (1.31%), TIA (1.38%), PENGU (1.40%), XXMR (1.41%), NIGHT (1.42%).
+
+**Two-candle acceleration check (15m OHLC, closed candles, ~16:34 UTC):** Passed by 8 of 31 — CC, RAY, BNB, GRT, CHIP, SUSHI, FARTCOIN, UNI. Remaining 23 failed (flat/lower close or spike-then-stall).
+
+**Confirmed-candle + freshness check (8 acceleration-passers, live 24h-high matched against closed-candle highs, freshness ceiling = min(30min, time since last pass) = 30 min):**
+- **BNB**: closed-candle high $774.04 matches live 24h high exactly, 4.5 min old — confirmed, fresh.
+- **SUSHI**: closed-candle high $0.2170 matches live 24h high exactly, 19.5 min old — confirmed, fresh.
+- **CC**: closed-candle high $0.11141 vs live $0.11148 (0.06% diff, tick-level), 19.5 min old — confirmed, fresh.
+- **FARTCOIN**: closed-candle high $0.1703 vs live $0.1707 (0.23% diff), 4.5 min old — confirmed, fresh.
+- **CHIP**: closed-candle high matches live exactly (4.5 min old) but the *currently forming* candle has already pushed to $0.06003, above the live-high snapshot — same unconfirmed-spike pattern as ASTER on the 12:00 UTC pass. Rejected.
+- **UNI**: closed-candle high $6.6371 vs live $6.6416 — the live high sits on the still-forming candle itself (forming-candle high == live high snapshot), not yet confirmed by a close. Rejected.
+- **RAY, GRT**: both stale (214.5 min / 229.5 min since their matching closed candle) — rejected on freshness.
+
+**Real momentum check (candle-open basis, 4 confirmed+fresh survivors):**
+| Pair | 1h | 4h | Verdict |
+|---|---|---|---|
+| **SUSHI** | **+3.95%** | **+6.68%** | **Clears both >3%/>5% bars** |
+| BNB | +0.66% | +2.01% | Fails both |
+| CC | +1.74% | +2.13% | Fails both |
+| FARTCOIN | +1.80% | +2.60% | Fails both |
+
+**SUSHI/USD deep-check — clears every technical/structural gate, rejected on catalyst/kill-switch:**
+- Spread (`kraken.sh quote SUSHI/USD`): ask $0.21600 / bid $0.21590 ≈ **0.046%**, very clean.
+- Live-intracandle fade re-check at quote time: 24h high $0.21700 vs live $0.21570 → 0.60% fade, still comfortably under the 1.5% cap.
+- Catalyst (Perplexity): SushiSwap has several real ecosystem items — USDT0/Stellar partnership, "Launch V2" on Robinhood Chain, and a treasury buyback vote — but none is a fresh <6h trigger. The most concrete dated item (weekly SUSHI purchases) **doesn't start until September 7**, and monthly xSUSHI buybacks not until October 1 — forward-looking scheduled items, not a breaking-today catalyst. No source ties today's price move to any of these specifically.
+- **Classified momentum-only** (no confirmed <6h catalyst) → **blocked outright by the active win-rate kill switch** (20.0%, below the 35% floor), independent of the fact that it would also need the 1.8:1 R:R floor for momentum-only entries. This is the first candidate all day to clear every technical/structural gate (fade cap, acceleration, confirmed-candle, freshness, real 1h/4h momentum, spread) — rejected purely on the catalyst/kill-switch gate, not a structural failure.
+
+**No candidate cleared every gate.** SUSHI was the strongest candidate seen today — genuine real momentum on top of a clean structural setup — but lacks a fresh catalyst and is blocked by the active kill switch. CHIP and UNI both showed a live high already pushing past an otherwise-confirmed reference (unconfirmed-candle pattern), consistent with several rejections earlier today (ASTER, 12:00 UTC).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.38%), weekly trend gate clear (+1.80%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) — this blocked SUSHI, the first candidate today to otherwise clear every technical/structural gate including real 1h/4h momentum, on the sole basis of no confirmed <6h catalyst. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, one candidate (SUSHI) reached the catalyst/kill-switch stage this pass and was rejected on a documented, correctly-applied gate (no fresh catalyst, kill switch active) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
