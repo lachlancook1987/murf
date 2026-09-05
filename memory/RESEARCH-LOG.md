@@ -37102,3 +37102,36 @@ No push sent — book flat with no unprotected exposure, both gates clear, five 
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (the one structural near-miss was rejected on real-momentum grounds), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 15:00 UTC (fired 15:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 14:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,718.70 vs today's session open $79,676.50 → **+0.05%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,718.70 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.47%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (Perplexity): 73 (Greed), consistent with prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 61 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 23: VELVET (0.00%), AR (0.98%), APR (0.41%), SUSHI (0.53%), BNB (0.60%), GWEI (0.05%), XLTC (0.86%), GOMINING (0.51%), AKT (0.17%), SUI (1.31%), XXMR (1.05%), XETC (0.94%), NIGHT (1.24%), ATOM (0.72%), GRT (1.13%), INX (0.52%), XXLM (0.00%), KAS (0.91%), JUP (0.91%), XDG (0.63%), EIGEN (1.38%), SEI (0.23%), ADA (0.90%).
+
+**Two-candle acceleration check (checked ~15:34 UTC, last two closed 15m candles vs prior close):** Passed by 9 of 23 — SUSHI, GWEI, XLTC, XXMR, ATOM, INX, XXLM, KAS, JUP. VELVET, AR, APR, BNB, GOMINING, AKT, SUI, XETC, NIGHT, GRT, XDG, EIGEN, SEI, ADA all failed (spike-then-stall or declining close sequence) — VELVET in particular again shows the highest raw vs-open print (19.31%) but failed acceleration outright, the same recurring pattern as VELVET/FHE/BLESS/ALGO in earlier passes today.
+
+**Freshness ceiling (min(30min, time since last pass) = 30 min, last pass 14:00 UTC ≈90 min ago):** Of the 9 acceleration-passers, confirmed-candle-high freshness was ≤30min for 7 — SUSHI (19.5min), GWEI (19.5min), XLTC (19.5min), INX (19.5min), XXLM (19.5min), KAS (19.5min), JUP (19.5min). XXMR (79.5min) and ATOM (64.5min) are stale, excluded.
+
+**Real momentum check (candle-open basis, the 7 freshness-passers):**
+| Pair | 1h | 4h | Verdict |
+|---|---|---|---|
+| GWEI | +2.73% | +3.62% | Closest, still short of both >3%/>5% bars |
+| SUSHI | +1.86% | +2.97% | Fails both |
+| XLTC | −0.06% | +1.98% | Fails both |
+| INX | +1.51% | +1.33% | Fails both |
+| XXLM | +0.78% | +1.03% | Fails both |
+| KAS | +0.49% | +1.53% | Fails both |
+| JUP | +0.64% | +1.36% | Fails both |
+
+**No candidate cleared every gate.** All 7 candidates reaching the freshness stage failed real 1h/4h momentum by a wide margin — none warranted a catalyst check (momentum gate decisive on its own, and momentum-only entries are suspended by the kill switch regardless).
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.05%), weekly trend gate clear (+1.47%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) regardless. Full-universe sweep (640 pairs) found no candidate clearing every technical/structural gate — closest (GWEI) passed acceleration, confirmed-candle, and freshness but failed decisively on real momentum. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached the catalyst/kill-switch stage this pass (all rejected on real-momentum grounds), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
