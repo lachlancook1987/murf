@@ -37049,3 +37049,34 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (the one strong-looking near-miss reversed in real time before any order was considered), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 13:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 12:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,750.00 vs today's session open $79,676.50 → **+0.09%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,750.00 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as 12:00 UTC pass) → **+1.51%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (Perplexity): 74 (Alternative.me), 73 (Bitget), 64 (CFGI.io) — all Greed, consistent with prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 69 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 39: CAKE, VELVET, BLESS, AR, FET, SN51, ALGO, SUSHI, WIF, GOMINING, XLTC, BNB, FLOKI, SUI, FOLD, SHIB, AKT, AERO, VIRTUAL, TIA, XXMR, XETC, JTO, PENGU, EIGEN, GRT, APT, HBAR, GWEI, FIL, RENDER, CFG, SEI, XDG, JUP, ATOM, KAS, OP, NIGHT.
+
+**Two-candle acceleration check (last two closed 15m candles each closing higher than the prior):** Passed by 8 of 39 — VELVET, XLTC, SHIB, AKT, JTO, EIGEN, HBAR, XDG. Remainder failed (flat/lower close or spike-then-stall).
+
+**Confirmed-candle + freshness check on the eight acceleration-passers:** VELVET, SHIB, AKT, EIGEN, HBAR all had their 24h high matched by a closed 15m candle ~20 min old (within the 30-min freshness ceiling). XLTC, JTO, XDG were stale/unconfirmed — their 24h high sits on the still-forming candle, not a closed one — rejected on confirmed-candle grounds.
+
+**Spread check (five confirmed-candle survivors):** VELVET 0.358%, SHIB 0.036%, AKT 0.038%, EIGEN 0.050%, HBAR 0.025% — all clear the ≤1% cap comfortably.
+
+**Catalyst check (Perplexity, all five):**
+- **VELVET** — only catalyst is the Robinhood Chain/VelvetX integration announced **2026-09-04**, i.e. yesterday — not <6h fresh.
+- **SHIB** — Japan listing (Laser Digital) + burn-tracker headline, but Perplexity itself flags the move as largely **macro/flow-driven**, not a clean single-asset catalyst, and burn-tracker transparency is in question. No clean <6h trigger.
+- **AKT** — Project Twilight hard fork, a **scheduled** protocol upgrade going live now — TRADING-STRATEGY.md's scheduled-catalyst caution applies (no anticipatory pre-positioning), and Perplexity separately reports price **already slightly down** as the upgrade lands (buy-the-rumor-sell-the-news pattern), plus an alternative view citing no coin-specific catalyst at all, just BTC beta/thin liquidity.
+- **EIGEN** — mixed bag (tokenomics proposal, whale accumulation, Google-partnership optimism) but also a **September unlock overhang** flagged as a headwind in the same feed; no single fresh, unambiguous bullish trigger.
+- **HBAR** — Wyoming stablecoin (FRNT) win is real but Perplexity reports the market has **already faded it** (early pop, then sold off ~2% on the day) — the catalyst has already been priced in and rejected by price action, the opposite of a fresh trigger.
+
+**No candidate cleared every gate.** All five confirmed-candle/acceleration survivors lack a genuinely fresh (<6h), unambiguous, price-confirmed catalyst — each is either stale (VELVET), macro/flow-driven with no clean single-asset trigger (SHIB), a scheduled event already reacting as sell-the-news (AKT), an unlock-overhang mixed picture (EIGEN), or already-faded/rejected by price (HBAR). Since none carries a confirmed catalyst, all are classified momentum-only and are blocked outright by the active win-rate kill switch regardless of the catalyst read — decisive on its own, with the catalyst analysis as a secondary, independent disqualifier for each.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.09%), weekly trend gate clear (+1.51%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor). Full-universe sweep (663 pairs) found five candidates clearing every technical/structural gate (fade cap, two-candle acceleration, confirmed-candle freshness, spread), but none has a confirmed <6h catalyst, so all are blocked by the kill switch; each also has an independent catalyst-side rejection reason on top. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, five candidates reached the catalyst/kill-switch stage this pass but all were rejected on documented, independent grounds (no clean fresh catalyst on any, kill switch decisive regardless), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
