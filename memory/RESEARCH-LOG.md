@@ -37316,3 +37316,27 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared real momentum this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 21:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 20:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,852.70 vs today's session open $79,676.50 → **+0.22%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,852.70 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.64%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Bitget/FearGreedTracker), 74 (FearGreedMeter), 75 (CoinStats) — all Greed, consistent with the 20:00 UTC pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted; DASH also cleared the raw screen at +8.12% but skipped). 93 candidates cleared vs-open>3% + liquidity≥$50k — AKE (+44.15%), SUSHI (+36.84%), SODA, ARB, ZIG, UAI, CAT, XAN, FLOCK, VELVET, UNI leading, broadly consistent with a market-wide risk-on tape (F&G 73-75).
+
+**Confirmed-candle + freshness + two-candle acceleration check (36 candidates deep-checked via 15m OHLC, full closed-candle series traced for true 24h-high set-time):**
+- **XAN, GRT, OP, ARB, CRV, TIA:** confirmed-closed high set ~19-20 min ago (fresh), but the currently-forming candle has already pushed past it — same still-forming-candle spike pattern rejected repeatedly all day (ARB/XAN's third+ rejection today on this exact basis). **Rejected — unconfirmed.**
+- **FARTCOIN, STRK, MOODENG, BLESS:** pass acceleration and confirmed-candle, but high is stale (64-499 min old, outside the 30-min freshness ceiling). **Rejected — freshness.**
+- **UAI, UNI, DRV, FHE, GWEI, ZIG, CAT, VELVET, AR, SOLV, ICP, CAKE, ZK, FOLD, GALA, KTA, VFY, SUI, RAY, AKE, BNB, XLTCZ:** fail acceleration outright (no two-candle build, or high stale by hundreds of minutes) — momentum has already peaked/faded on the closed-candle basis. **Rejected — acceleration/freshness.**
+- **FLOCK, XDG, SODA, SUSHI:** pass acceleration and confirmed-candle, but high is stale (109-1069 min old). **Rejected — freshness.**
+
+**No candidate cleared every gate.** Zero candidates this pass reached the real-momentum/catalyst deep-dive stage — every one of the 36 deep-checked failed on confirmed-candle, freshness, or acceleration first. This is a wider and cleaner rejection spread than most passes today (16:00-20:00 UTC each had 1 candidate reach the catalyst/kill-switch stage); today's broad risk-on tape produced many raw movers but very few with a genuinely fresh, still-building breakout rather than an already-peaked or still-spiking-uncorrected one.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.22%), weekly trend gate clear (+1.64%/5d). No candidate cleared the confirmed-candle/freshness/acceleration technical gates this pass, so the active win-rate kill switch (20.0%, below 35% floor) was not even needed to reject anything. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared the technical gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
