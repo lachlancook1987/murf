@@ -36739,3 +36739,43 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (AR) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 04:00 UTC (fired 04:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 03:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` remains canceled since 2026-05-22, zero exposure. Book fully flat, Step 3a–3d no-op.
+
+**Crash gate:** BTC live (Kraken) $79,566.90 vs 24h-ago daily close $79,676.40 (2026-09-04) → **−0.14%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,566.90 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.27%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed (re-checked via Perplexity this pass): 74 (Greed) on Alternative.me, 75 on CoinStats/Binance, 72 on CFGI — consistent with recent passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 23 candidates cleared vs-open>3% + liquidity ≥$50k: SODA (+79.11%), AKE (+44.43%), DRV (+21.90%), DCR (+9.06%), DASH (+7.82%, AU-restricted, pre-excluded), STRK (+7.33%), AR (+6.73%), VFY (+6.47%), FET (+5.03%), HNT (+4.82%), ICP (+4.78%), PIEVERSE (+4.04%), GALA (+3.95%), AERO (+3.93%), NIL (+3.71%), DOG (+3.66%), AKT (+3.60%), ONDO (+3.45%), XLTC (+3.39%), BABY (+3.36%), Q (+3.36%), VELVET (+3.33%), IDEX (+3.30%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left nine candidates: FET (0.18%), NIL (0.20%), AERO (0.23%), ONDO (0.23%), BABY (0.26%), GALA (0.54%), ICP (0.58%), XLTC (0.66%), DOG (1.50%, at the cap).
+
+**Two-candle acceleration check (checked 04:33 UTC — last closed 15m candle 04:15–04:30, prior closed 03:45–04:00 and 04:00–04:15):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| FET | 03:45 C=0.1607 → 04:00 C=0.1618 (higher) → 04:15 C=0.1628 (higher) | **Passes** — deep-dived below |
+| NIL | 03:45 C=0.0501 → 04:00 C=0.0501 (flat) | Fails at step 1 |
+| AERO | 03:45 C=0.5168 → 04:00 C=0.5149 (lower) | Fails at step 1 |
+| ONDO | 03:45 C=0.36771 → 04:00 C=0.36620 (lower) | Fails at step 1 |
+| BABY | 03:45 C=0.01125 → 04:00 C=0.01136 (higher) → 04:15 C=0.01140 (higher) | **Passes** — deep-dived below |
+| GALA | 03:45 C=0.00183 → 04:00 C=0.00184 (higher, marginal) → 04:15 C=0.00183 (lower) | Fails at step 2 |
+| ICP | 03:45 C=2.587 → 04:00 C=2.580 (lower) | Fails at step 1 |
+| XLTC | 03:45 C=52.50 → 04:00 C=52.33 (lower) | Fails at step 1 |
+| DOG | 03:45 C=0.001241 → 04:00 C=0.001241 (flat) | Fails at step 1 |
+
+**FET/USD deep-check — rejected (confirmed-candle):** live 24h high $0.1631 is being set on the **currently-forming 04:30 candle** (H $0.1631 as of the intracandle print) — the last confirmed-closed candle (04:15) topped at $0.1630, one tick below. Same still-forming-candle fakeout pattern as STRK/KSM/AKE/DCR/NEAR in prior passes. **Rejected on the confirmed-candle requirement**, prior to any catalyst check.
+
+**BABY/USD deep-check — rejected (actual momentum, despite passing acceleration/confirmed-candle):**
+- Confirmed-candle: 24h high $0.01141 matches the closed 04:15 candle's own H exactly, not exceeded by the 04:30 forming candle (H $0.01139 and declining) — **passes**, fresh (~3–18 min old).
+- Live intracandle fade: live ~$0.01135–0.01138 vs 24h high $0.01141 → **0.26–0.53%**, inside the 1.5% cap. **Passes.**
+- Spread: ask $0.011380 / bid $0.011360 ≈ **0.18%**, well inside the ≤1% cap.
+- **1h momentum (candle-open-to-close basis, 03:30 open $0.01129 → live ~$0.01136):** only **+0.62%** — decisively short of the >3% bar. **4h momentum (00:30 open $0.01105 → live):** **+2.8%**, also short of the >5% bar. The raw vs-open screen (+3.36%, measured from today's 00:00 UTC session open) overstated this pair's actual recent momentum — same pattern as PEAQ (2026-09-05 02:00 UTC pass) and ONDO (this pass, failed acceleration outright).
+- **Rejected:** neither the 1h nor 4h real-momentum bar clears, despite acceleration and confirmed-candle both passing — not a genuine momentum signal, no catalyst check warranted.
+
+**No candidate cleared every gate.** FET and BABY were the only two of nine fade-filtered candidates to pass two-candle acceleration; FET failed on an unconfirmed (still-forming-candle) high, and BABY — despite clearing acceleration, confirmed-candle, freshness, live-fade, and spread — failed on actual 1h/4h momentum once measured on a proper candle-open basis rather than the raw vs-session-open screen. Neither reached the catalyst/kill-switch stage. NIL/AERO/ONDO/ICP/XLTC/DOG all failed the two-candle acceleration check outright; GALA passed step 1 on marginal noise then failed step 2.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.14%), weekly trend gate clear (+1.27%/5d). Full-universe sweep (640 pairs) found nine candidates clearing fade/liquidity; none cleared every technical/structural gate — the closest (BABY) passed acceleration and confirmed-candle but failed on real 1h/4h momentum once properly measured. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the kill-switch stage this pass (both technical near-misses were rejected on structural gates), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
