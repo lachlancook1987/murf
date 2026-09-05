@@ -36864,3 +36864,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state. The one candidate clearing every technical bar (APR) was rejected on the active kill switch plus two independent additional gates (stale catalyst, cross-exchange divergence) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 07:00 UTC (fired 07:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero. `positions: {}`, `orders: {"open": {}}` — exact match to the 06:00 UTC pass, no drift. Alpaca: `positions: []`, orders all historical (oldest filled 2026-05-22, stop `a2b44cf9` reconfirmed `canceled` previously), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live $79,724.90 vs today's session open $79,676.50 → **+0.06%**. Clear. **Weekly trend gate:** live $79,724.90 vs 5-day-ago daily close $78,566.10 (2026-08-31, Kraken daily OHLC) → **+1.48%/5d**, inside the ±3% band. Standard regime.
+
+**Momentum-only kill switch status (read before evaluating candidates):** Per TRADING-STRATEGY.md's 2026-09-04 weekly-review status line, trailing win rate over the last 10 momentum-only entries is **20.0%**, below the 35% floor — **momentum-only entries remain SUSPENDED**. No momentum-only entries have closed since (book flat all of 2026-09-05 so far). Only a catalyst-confirmed (<6h) entry can qualify this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 56 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5%) up front left 27: STRK, ICP, GALA, NIL, XLTCZ, FET, TAO, TIA, RENDER, BLESS, AERO, APT, TURBO, TRUMP, ALGO, XETCZ, SUI, BABY, ATOM, GRT, AKT, SUSHI, KAS, W, VIRTUAL, OP, SHIB (DASH also passed the raw screen but is AU-restricted, pre-excluded per TRADING-STRATEGY.md; AKE/DRV/DCR/VFY/WAR/IDEX/PTB/MINA/BABYSHARK/CSPR/KSM/NEAR/PENGU/BONK/ONDO/EUL/RE/EIGEN/CHIP failed the fade cap outright).
+
+**Real 1h/4h momentum (candle-open basis) + two-candle acceleration, all 27 fade-filtered candidates:**
+
+| Pair | 1h (real) | 4h (real) | Accel (3 closed candles) |
+|---|---|---|---|
+| BLESS | **+3.16%** | **+5.46%** | **PASS** |
+| TAO | +3.66% | +2.98% | FAIL (spike-then-stall) |
+| GALA | +2.66% | +5.46% | PASS (1h short of 3%) |
+| NIL | +0.19% | +5.40% | PASS (1h short of 3%) |
+| STRK, ICP, XLTCZ, FET, TIA, RENDER, AERO, APT, TURBO, TRUMP, ALGO, XETCZ, SUI, BABY, ATOM, GRT, AKT, SUSHI, KAS, W, VIRTUAL, OP, SHIB | ≤1.9% | ≤3.2% | mixed | — all fail the 1h>3% real-momentum bar outright |
+
+Only BLESS/USD cleared both real-momentum bars (1h and 4h) with acceleration passing.
+
+**BLESS/USD deep-check — rejected (confirmed-candle):**
+- Live ticker 24h high $0.0091810 matches the **currently-forming 07:30–07:45 candle's own high** ($0.009181, live ask $0.009191/bid $0.009161) exactly — not exceeded by, and not confirmed by, the last fully closed candle (07:15–07:30, H $0.009058, C $0.009034). Same still-forming-candle fakeout pattern as APR/ACU/ATOM in the last two passes.
+- Volume ratio (1h $7.78M vs 24h-average-hourly $781.7k) ≈9.9x, a genuine surge, and spread would need checking, but neither matters once confirmed-candle fails.
+- **Rejected on the confirmed-candle requirement** — no catalyst or cross-exchange check warranted per convention (structural gate is decisive on its own, same treatment as ACU/ATOM in the 05:00/06:00 UTC passes).
+
+**Macro context (Perplexity):** Fear & Greed 73–75 (Greed) across Bitget/Alternative.me/CoinStats — unchanged in substance from the 06:00 UTC pass (74).
+
+**No candidate cleared every gate.** BLESS was the only candidate clearing both real-momentum bars and acceleration, but its 24h high sits on a still-forming candle, not a confirmed close — rejected on the confirmed-candle requirement. TAO passed 1h but failed acceleration (spike-then-stall). GALA/NIL cleared 4h and acceleration but not the 1h>3% bar. All other 23 candidates failed 1h real-momentum outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.06%), weekly trend gate clear (+1.48%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) regardless, and no candidate this pass cleared every technical/structural gate in any case (BLESS rejected on confirmed-candle). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state beyond the routine's usual off-the-hour firing. The one candidate clearing both real-momentum bars (BLESS) was rejected on a specific structural gate (still-forming-candle high) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
