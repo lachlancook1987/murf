@@ -36827,3 +36827,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate reached even the catalyst/kill-switch stage this pass (both technical near-misses were rejected on real-momentum gates), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 06:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero. `positions: {}`, `orders: {"open": {}}` — exact match to the 2026-09-04 23:00 UTC EOD snapshot, no drift. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat, nothing to protect, nothing to tighten (Step 3 no-op — no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live $79,661.60 vs today's session open $79,676.50 → **−0.02%**. Clear. **Weekly trend gate:** live $79,661.60 vs 5-day-ago daily close $77,681.60 (2026-08-30) → **+2.55%/5d**, inside the ±3% band. Standard regime.
+
+**Momentum-only kill switch status (read before evaluating candidates):** Per TRADING-STRATEGY.md's 2026-09-04 weekly-review status line, trailing win rate over the last 10 momentum-only entries is **20.0%**, below the 35% floor — **momentum-only entries remain SUSPENDED**. No momentum-only entries have closed since that review (book flat all of 2026-09-04), so the window and status are unchanged. Only a catalyst-confirmed (<6h) entry can qualify this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. 25 candidates cleared vs-open>3% + live fade ≤1.5% + liquidity ≥$50k. Deep-dived the strongest by momentum/liquidity on 15m OHLC (closed candles) for real 1h/4h momentum, two-candle acceleration, and confirmed-candle status:
+
+| Pair | 4h momentum | 1h momentum | Accel (2 closed candles) | Confirmed-candle | Note |
+|---|---|---|---|---|---|
+| APR/USD | +6.05% | **+8.23%** | Passes (05:45→06:00→06:15 each higher) | Passes (24h high $0.23335 confirmed on closed 06:00 candle, ~20min old, forming candle hasn't exceeded it) | Clears every raw/technical bar — see deep-check below, **rejected**. |
+| ACU/USD | +5.21% | +3.37% | Passes | **Fails** — live 24h high $0.1542 is being set on the currently-forming 06:30 candle; last confirmed-closed candle (06:15) topped at $0.1536 | Rejected on confirmed-candle. |
+| ICP/USD | +7.14% | +2.14% | Passes | — | 1h fails the >3% real-momentum bar. |
+| STRK/USD | +4.73% | +2.42% | Fails (06:00→06:15 lower) | — | Fails acceleration and 1h bar. |
+| GALA, XLTCZ, TIA, FET, AERO | +1.4% to +3.9% | ≤1.4% | Fails/marginal | — | All fail 1h real-momentum bar decisively. |
+
+**APR/USD deep-check — clears every technical gate, rejected on catalyst + cross-exchange divergence:**
+- Confirmed-candle and two-candle acceleration both pass (see table). Live fade off 24h high: (0.23335−0.23014)/0.23335 ≈ 1.38%, inside the ≤1.5% cap (close to the edge). Spread: ask $0.23063/bid $0.22998 ≈ 0.28%, clean.
+- **Price action context:** the 05:15–05:30 candles show a sharp flash-crash (−14% intracandle, O $0.22077→L $0.18976) immediately followed by a v-shaped recovery back to new highs by 06:15 — a whipsaw pattern, not steady accumulation.
+- **Catalyst (Perplexity):** only cited driver is an August "5.3% supply buyback" that sparked a short squeeze — stale, not a <6h fresh trigger. Perplexity separately flags **"extreme whale concentration"** on this asset (CoinMarketCap), consistent with the flash-crash/whipsaw pattern observed directly. Classified **momentum-only**.
+- **Momentum-only kill switch:** ACTIVE/SUSPENDED (see status above) — this alone disqualifies APR regardless of any other gate.
+- **Cross-exchange divergence (secondary, independent disqualifier):** Perplexity reports APR trading **$0.17–$0.22 across major trackers** (CoinMarketCap $0.2188, CoinGecko $0.2141, Binance $0.2175, Gate $0.1722) with most trackers showing APR **down 11–18% today**, vs Kraken's live $0.230 (up +6.8% vs Kraken's own session open). Divergence vs Gate ≈ 33.6%, well past the ~15–20% rejection band; even vs the closest reference (CoinMarketCap) the *direction* of the day's move disagrees entirely (down elsewhere, up on Kraken) — signals a thin/dislocated Kraken order book, not a real tradeable move.
+- **Rejected:** momentum-only kill switch (decisive on its own) + stale catalyst + cross-exchange divergence, all independently disqualifying.
+- No prior stop-out history for APR found in TRADE-LOG (screened repeatedly in past sessions, never entered) — same-thesis cooling period does not apply.
+
+**Macro context (Perplexity):** Fear & Greed 74 (Greed). No fresh (<6h) asset-specific catalyst surfaced for any Kraken-sourced candidate this pass — today's cited catalysts (FOMC Sept 15–16, BTC ETF inflows, CLARITY Act, ZEC/HYPE/UNI/SOL items) are either macro/scheduled-future or for assets not among this pass's technical candidates.
+
+**No candidate cleared every gate.** APR/USD was the only candidate clearing every raw/technical bar (momentum, acceleration, confirmed-candle, fade, spread), but is momentum-only (kill switch blocks it outright) with a stale catalyst and a material cross-exchange divergence on top.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.02%), weekly trend gate clear (+2.55%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) — no candidate this pass carried a confirmed <6h catalyst to qualify as catalyst-confirmed, so no entry was eligible regardless of technical strength. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state. The one candidate clearing every technical bar (APR) was rejected on the active kill switch plus two independent additional gates (stale catalyst, cross-exchange divergence) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
