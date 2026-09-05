@@ -36656,3 +36656,46 @@ No push sent — book flat with no unprotected exposure, both gates clear, the o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (TURBO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 02:00 UTC (fired 02:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 01:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` remains canceled since 2026-05-22, zero exposure. Book fully flat, Step 3a–3d no-op.
+
+**Crash gate:** BTC live $79,576.40 vs today's session open $79,676.50 → **−0.13%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,576.40 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.29%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed: 74 (Greed), unchanged in substance.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 14 candidates cleared vs-open>3% + liquidity ≥$50k: AKE (+41.87%), DCR (+26.46%), DRV (+21.78%), STRK (+8.68%), DASH (+7.46%, AU-restricted, pre-excluded), ROBO (+6.49%), Q (+5.30%), KSM (+4.41%), BONK (+4.00%), DOG (+3.83%), AR (+3.59%), SODA (+3.51%), PEAQ (+3.47%), RIVER (+3.27%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated Q (3.26%), BONK (2.97%), DOG (1.73%), AR (2.62%), RIVER (1.97%) — candidates cleared through: AKE, DCR, DRV, STRK, ROBO, KSM, SODA, PEAQ.
+
+**Two-candle acceleration check (checked 02:33 UTC — last closed 15m candle 02:15–02:30, prior closed 02:00–02:15 and 01:45–02:00):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| AKE | 01:45 C 0.01788744 → 02:00 C 0.01862467 (higher) → 02:15 C 0.01879730 (higher) | Passes — see confirmed-candle below |
+| DCR | 01:45 C 16.429 → 02:00 C 17.959 (higher) → 02:15 C 18.549 (higher) | Passes — see below (rejected on spread/fade) |
+| DRV | 01:45 C 0.18339 → 02:00 C 0.18250 (lower) | Fails at step 1 |
+| STRK | 01:45 C 0.02732 → 02:00 C 0.02740 (higher) → 02:15 C 0.02831 (higher) | Passes — see confirmed-candle below |
+| ROBO | 01:45 C 0.01238 → 02:00 C 0.01262 (higher) → 02:15 C 0.01279 (higher) | **Passes** — deep-dived below |
+| KSM | 01:45 C 3.69 → 02:00 C 3.75 (higher) → 02:15 C 3.76 (higher, marginal) | Passes — see confirmed-candle below |
+| SODA | 01:45 C 0.01198 → 02:00 C 0.01200 (higher, marginal) → 02:15 C 0.01209 (higher) | Passes (thin volume, flagged) |
+| PEAQ | 01:45 C 0.02709 → 02:00 C 0.02725 (higher) → 02:15 C 0.02738 (higher) | Passes — see below (rejected on 1h/4h momentum) |
+
+**Confirmed-candle check (re-quoted live ticker at 02:34 UTC):** AKE's live 24h high (0.01898266) matches its still-forming 02:30 candle high exactly, not the closed 02:15 candle (H 0.01896515) — **fails confirmed-candle**. KSM's live 24h high (3.80) exceeds both the closed 02:15 candle (H 3.76) and the 02:30 forming candle as last checked (H 3.79) — high still being set intracandle — **fails confirmed-candle**. STRK's live 24h high (0.02835) sits fractionally above its closed 02:15 candle high (0.02833) — **fails confirmed-candle** (marginal, but still an unconfirmed forming-candle print). DCR's spread widened to **1.047%**, breaching the mandatory ≤1% cap outright, and its live fade jumped to **4.34%** (24h high $19.708 vs live $18.852) — **two independent decisive rejections**, no catalyst check warranted. PEAQ and ROBO both confirmed (24h high matches the closed 02:15 candle, not exceeded by the 02:30 forming candle) and fresh (high set within the closed 02:15–02:30 window, ~3–18 min old).
+
+**PEAQ/USD — rejected on momentum:** despite confirmed-candle/freshness passing, actual 1h momentum (candle-open-to-close basis, 01:30 open $0.02716 → last $0.02738) is only **+0.81%**, and 4h momentum (22:30 open $0.02634 → last) is **+3.95%** — neither clears the Candidate Screening Priority bars (1h >3%, 4h >5%). Volume ratio 1.26x, under the 2x surge bar. The raw vs-open screen (+3.47%) overstated this pair's actual recent momentum; rejected as not a genuine momentum signal.
+
+**ROBO/USD deep-check — clears every technical/structural gate, rejected on kill-switch:**
+- Confirmed-candle: 24h high $0.01298 matches the closed 02:15 candle's own H, not broken by the 02:30 forming candle (H $0.01284) — confirmed, fresh (~3–18 min old).
+- 1h momentum (01:30 open $0.01227 → last $0.01279): **+4.24%**, clears >3%. 4h momentum (22:30 open $0.01183 → last): **+8.11%**, clears >5%.
+- Volume: last 1h ≈$9,582 vs 24h-avg-hourly ≈$3,528 → **2.72x**, clears the >2x surge bar.
+- Spread (re-quoted 02:34 UTC): ask $0.01287 / bid $0.01284 ≈ **0.23%**, well inside the ≤1% cap.
+- Live intracandle fade (re-quoted): 24h high $0.01298 vs live last $0.01291 → **0.54%**, inside the 1.5% cap.
+- Catalyst (Perplexity): explicitly **"no clear fresh ROBO catalyst identified today"** — most recent project items are Pi Network/RoboPay integration (Aug 4) and a Snapshot governance launch (Jul 5), both weeks old. Classified **momentum-only, no confirmed <6h catalyst**.
+- **Rejected:** momentum-only classification means this entry is blocked by the active win-rate kill switch (20.0% trailing win rate, floor 35%), the widest clean technical clear this pass but blocked on the same standing gate as TURBO/NEAR/MORPHO/RIVER/TON in recent passes.
+
+**No candidate cleared every gate.** ROBO was the only one of eight fade-filtered candidates to clear every technical/structural bar (acceleration, confirmed-candle, freshness, live-fade, spread, momentum, volume), but lacks a confirmed <6h catalyst and is blocked by the still-active momentum-only win-rate kill switch. AKE/KSM/STRK failed on unconfirmed (still-forming-candle) highs; DCR failed decisively on spread + fade; PEAQ failed on actual momentum despite passing structural checks; DRV failed acceleration outright; SODA passed on paper but on thin, near-dead volume (flagged, not separately rejected since ROBO already supersedes it as the stronger candidate).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.13%), weekly trend gate clear (+1.29%/5d). Full-universe sweep (640 pairs) found eight candidates clearing fade/liquidity; only ROBO cleared every technical/structural gate, but it's momentum-only with no catalyst and is blocked by the active kill switch. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (ROBO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
