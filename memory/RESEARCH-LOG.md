@@ -37253,3 +37253,40 @@ No push sent — book flat with no unprotected exposure, both gates clear, the t
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate that reached deeper review (ARB) was rejected on a documented, correctly-applied gate (no fresh catalyst, kill switch active) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 19:00 UTC (fired 19:32 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 18:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,941.80 vs today's session open $79,676.50 → **+0.33%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,941.80 vs 5-day-ago daily close $78,566.10 (2026-08-31, same reference as prior passes today) → **+1.75%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 74 (Alternative.me)/75 (CoinStats)/76 (Binance Square) — all Greed, consistent with the 18:00 UTC pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 639 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 87 candidates cleared vs-open>3% + liquidity≥$50k. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) left 48 survivors. Two-candle acceleration (last two closed 15m candles each closing higher than the prior) passed 19: AR, XAN, ARB, GWEI, AERO, UAI, SUI, TIA, GRT, OP, VIRTUAL, APT, FIL, W, XTZ, HBAR, POL, KAS, XXLM.
+
+**Confirmed-candle + freshness check (19 acceleration-passers, full closed-candle high traced):**
+- **AR, ARB, AERO, UAI, GRT, SUI:** fresh confirmed high (≤20–80 min old) but the currently-forming candle has already pushed past it — same still-forming-candle spike pattern rejected repeatedly today (UNI at 16:00/18:00 UTC). **Rejected — unconfirmed.**
+- **TIA, VIRTUAL, APT, FIL, W, HBAR, POL, KAS, XXLM:** confirmed high is stale (65–815 min old, well outside the 30-min freshness ceiling once traced across the full closed-candle series). **Rejected — freshness.**
+- **XAN, GWEI, OP, XTZ:** confirmed AND fresh (high set on the candle that just closed, ~20 min old, forming candle has not exceeded it).
+
+**Real momentum check (candle-close basis, 4 confirmed+fresh survivors):**
+| Pair | 1h | 4h | Verdict |
+|---|---|---|---|
+| **XAN** | **+4.61%** | **+11.67%** | Clears both >3%/>5% bars |
+| GWEI | +1.55% | +3.51% | Fails both |
+| OP | +0.99% | +2.20% | Fails both |
+| XTZ | +1.19% | +1.91% | Fails both |
+
+**XAN/USD deep-check — clears every technical/structural gate, rejected on catalyst/kill-switch (same asset rejected at 17:00 UTC, price has continued higher since):**
+- Spread (`kraken.sh quote XAN/USD`): ask $0.01594 / bid $0.01590 ≈ **0.25%**, clean.
+- Catalyst (Perplexity, re-checked this pass): CoinMarketCap explicitly states **"no new coin-specific catalyst in the last 24 hours"** — confirms the 17:00 UTC pass's finding still holds; the only concrete news remains the already-priced-in Upbit listing sell-off. Not a fresh <6h trigger.
+- Cross-exchange check (new this pass): external trackers show XAN at **$0.011–$0.014** vs Kraken live $0.0159 → **~13–43% divergence**, worse than at the 17:00 UTC pass (Kraken has continued climbing while other venues lag) — a second, independent red flag alongside the missing catalyst, consistent with a thin/dislocated order book.
+- **Classified momentum-only** (no confirmed <6h catalyst) → **blocked outright by the active win-rate kill switch** (20.0%, below the 35% floor), independent of the cross-exchange divergence flag and the 1.8:1 R:R floor for momentum-only entries.
+
+**No candidate cleared every gate.** XAN remains the strongest technical setup of the day (real 1h/4h momentum, confirmed fresh breakout, clean spread) but is blocked by the same two gates as the 17:00 UTC pass — no fresh catalyst, and now a widening cross-exchange divergence on top of the kill switch. AR/ARB/AERO/UAI/GRT/SUI all continue their pattern of still-forming-candle spikes rather than confirmed breakouts.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.33%), weekly trend gate clear (+1.75%/5d). Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) — this blocked XAN, the only candidate this pass to clear every technical/structural gate, on the sole basis of no confirmed <6h catalyst (compounded by a widening cross-exchange divergence). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate that reached deeper review (XAN) was rejected on documented, correctly-applied gates (no fresh catalyst, kill switch active, widening cross-exchange divergence) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
