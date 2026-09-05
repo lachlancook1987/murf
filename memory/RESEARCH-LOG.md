@@ -36618,3 +36618,41 @@ No push sent — book flat with no unprotected exposure, crash gate clear, no op
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the catalyst/kill-switch stage (NEAR) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-05 — Scan — 01:00 UTC (fired 01:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 00:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical/filled, stop `a2b44cf9` remains canceled since 2026-05-22, zero exposure. Book fully flat, Step 3a–3d no-op.
+
+**Crash gate:** BTC live $79,712.90 vs 24h-ago daily close $79,676.40 (2026-09-04) → **+0.05%**. Clear. **Weekly trend gate:** live $79,712.90 vs 5-day-ago daily close $78,566.10 (2026-08-31, consistent reference) → **+1.46%/5d**, inside the ±3% band — standard regime.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 9 candidates cleared vs-open>3% + liquidity ≥$50k: AKE (+31.33%, fade 0.00%), DRV (+19.90%, fade 2.65%), BONK (+5.85%, fade 1.25%), DASH (+4.76%, AU-restricted, pre-excluded), Q (+3.59%, fade 4.82%), AR (+3.52%, fade 2.69%), DOG (+3.50%, fade 2.05%), TURBO (+3.25%, fade 0.20%), RIVER (+3.19%, fade 1.70%). Applying the mandatory live-intracandle-fade cap (≤1.5%) up front eliminated DRV, Q, AR, DOG, RIVER — three candidates cleared through: AKE, BONK, TURBO.
+
+**Spread check (hard ≤1% cap):** AKE 0.85%, BONK 0.03%, TURBO 0.10% — all clear.
+
+**Two-candle acceleration check (checked 01:34 UTC — last closed 15m candle 01:15–01:30, the 01:30–01:45 candle still forming):**
+| Pair | Closed candle sequence | Verdict |
+|---|---|---|
+| AKE | 00:45 C 0.01406684 → 01:00 C 0.01461500 (higher) → 01:15 C 0.01652482 (higher) | **Passes** — deep-dived below |
+| BONK | 00:45 C 0.000003306 → 01:00 C 0.000003319 (higher) → 01:15 C 0.000003355 (higher) | **Passes** — deep-dived below |
+| TURBO | 00:45 C 0.001005 → 01:00 C 0.001013 (higher) → 01:15 C 0.001016 (higher, marginal) | **Passes** — deep-dived below |
+
+**AKE/USD deep-check — rejected (confirmed-candle):** live 24h high $0.01749963 is being set on the **currently-forming 01:30 candle** (H $0.01749963, still open at check time) — the last confirmed-closed candle (01:15) topped at $0.01665662. Same still-forming-candle fakeout pattern as DCR/NEAR in prior passes. **Rejected on the confirmed-candle requirement**, prior to any catalyst check.
+
+**BONK/USD deep-check — rejected (live intracandle fade):** 24h high $0.000003429 is confirmed by the closed 01:15 candle (matches its own H, fresh ~3–18 min old, well inside the 30-min ceiling) — confirmed-candle and freshness both pass. But live price re-quoted at 01:34:12 UTC is $0.000003371, **−1.69%** off that high — breaches the 1.5% live-fade cap (fresh-quote fade grew from the 1.25% seen in the initial screen a minute earlier). **Rejected on live intracandle fade.**
+
+**TURBO/USD deep-check — clears every technical/structural gate, rejected on kill-switch:**
+- Confirmed-candle: 24h high $0.001018 matches the closed 01:15 candle's own H, fresh (~4–19 min old). Live re-quote $0.001016 → fade **0.20%**, clear of the 1.5% cap.
+- Spread 0.10%, clear. 1h/4h momentum and acceleration technically pass (see table above).
+- **Volume caveat (not a formal gate, logged for gate-tuning per Gate-Rejection Outcome Tracking):** the 01:15 closed candle's volume (54,792 TURBO ≈ $56 notional) is a sharp drop from the prior three candles ($7k, $2.7k, $765 notional-equivalent... actual $ notional: 00:00 candle ≈$7.0k, 00:15 ≈$2.7k, 00:45 ≈$765, 01:00 ≈$5.3k) — 1h-vs-24h-avg volume ratio ≈1.46x, under the 2x surge bar used as a priority signal. The "acceleration" here looks like a thin order book being nudged, not real buying pressure — flagged for later comparison, not used as the rejection reason since the kill switch already applies.
+- Catalyst (Perplexity): cited items are Aurora Labs' TurboChain/TurboSwap launch and an AEON payments partnership — both ongoing ecosystem narrative, no dated <6h trigger. CoinGecko/CoinMarketCap/Yahoo quotes cluster ~$0.00097–0.00098 vs Kraken live $0.001016 (≈4–5% divergence), well inside the cross-exchange gate. Fear & Greed 74–75 (Greed).
+- Classified **momentum-only, no confirmed catalyst** → **blocked by the active win-rate kill switch** (20.0%, floor 35%), not merely held to the tighter R:R floor.
+
+**No candidate cleared every gate.** TURBO was the only one of three deep-dived candidates to clear every technical/structural bar, but lacks a confirmed <6h catalyst and is blocked by the still-active momentum-only win-rate kill switch. AKE failed on an unconfirmed (still-forming-candle) high; BONK's live fade widened past the cap between the initial screen and the deep-check re-quote.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.05%/24h), weekly trend gate clear (+1.46%/5d). Full-universe sweep (640 pairs) found three candidates clearing fade/spread/acceleration; only TURBO cleared every technical gate, but it's momentum-only with no catalyst and is blocked by the active kill switch. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, the one candidate reaching the kill-switch stage (TURBO) was rejected on the kill-switch suspension itself rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
