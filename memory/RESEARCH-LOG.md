@@ -37660,3 +37660,42 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (JUP/ZAMA rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 10:00 UTC (fired ~10:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 09:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,984.70 vs today's session open $79,828.40 → **+0.20%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,984.70 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.34%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies, consistent with recent passes.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). Top vs-open movers with notional24 > $30k: RAY (+25.41%, prox −5.24%, recurring stale/faded candidate), IDOS (+23.86%, prox −21.19%, stale), COTI (+19.94%, prox −6.15%), FLOCK (+18.26%, prox −6.71%), JUP (+17.00%, prox −0.90%), ZAMA (+16.41%, prox −1.93%, fails fade cap), SOLV (+12.16%, prox −7.52%), GRT (+9.45%, prox −6.61%), ARB (+9.36%, prox −6.06%). Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k liquidity floor left **MET, JUP, ZK, JTO, MON, SOMI, TIA, IMX, DOT, MNT** as survivors.
+
+**15m OHLC deep-dive (closed candles):**
+
+| Pair | 1h | 4h | Accel | Fresh-high age | Verdict |
+|---|---|---|---|---|---|
+| MET | +2.64% | +3.45% | Yes | 4.1 min | Fails both 1h>3% and 4h>5% bars |
+| **JUP** | **+3.09%** | **+11.99%** | **Yes** | **19.1 min** | Clears 1h/4h/accel/freshness; live fade −0.90% (within 1.5% cap); spread ~0.25% — full technical clear |
+| **ZK** | **+3.71%** | **+5.31%** | **Yes** | **4.1 min** | Clears 1h/4h/accel/freshness; live fade 0.00% (fresh high); spread ~0.36% — full technical clear, new candidate this pass |
+| JTO | +2.25% | +1.97% | Yes | 19.1 min | Fails both momentum bars |
+| MON | +0.11% | +3.33% | No | 19.1 min | Fails both bars, no acceleration |
+| SOMI | +0.61% | +0.38% | No | 289.1 min | Fails both bars, stale high |
+| TIA | +2.38% | +3.55% | No | 4.1 min | Fails both bars |
+| IMX | −0.22% | +0.60% | Yes | 349.1 min | Fails both bars, stale high |
+| DOT | +0.85% | +2.29% | Yes | 139.1 min | Fails both bars |
+| MNT | +1.16% | +3.01% | Yes | 4.1 min | Fails both bars |
+
+**Catalyst checks (Perplexity):**
+- **ZK (zkSync):** Perplexity cites a modest rebound (+7–9%), "bullish" community sentiment, an ongoing security-upgrade migration (not a fresh event), and flags an upcoming 19 Sept token unlock (173.41M ZK) as a near-term risk, not a catalyst. No confirmed <6h driver — this is a rebound/drift narrative, not a discrete event. Cross-exchange: Perplexity ~$0.0101–0.0102 vs Kraken live $0.01098 → ~7–8% divergence, within tolerance.
+- **JUP:** Unchanged from the 09:00 UTC pass's finding (same session, no new catalyst has emerged in the intervening hour) — no confirmed <6h driver, "Universal Deposit"/"Litterbox Trust" narratives explicitly not tied to a fresh event.
+
+**Verdict:** Both ZK and JUP classify as **momentum-only** (no confirmed <6h catalyst) → **blocked by the active win-rate kill switch** (SUSPENDED, 20.0% trailing win rate, below the 35% floor). ZK is a genuinely new full technical clear this pass (freshest high of the day, 4.1 min); JUP remains a recurring clear with the same catalyst gap as prior passes today.
+
+**No candidate cleared every gate.** ZK and JUP both cleared every structural/technical gate but neither has a confirmed catalyst, so both remain blocked by the standing win-rate kill switch.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.20%). Weekly trend gate outside band but upside, not downside — standard regime. ZK and JUP both cleared every technical gate (momentum, acceleration, freshness, fade, spread) but neither has a confirmed <6h catalyst, so both remain classified momentum-only and are blocked by the active win-rate kill switch (20.0%, below 35% floor). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20) and the Performance-Linked Controls kill switch, this is a correct, expected outcome — the kill switch is not to be bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (ZK/JUP rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
