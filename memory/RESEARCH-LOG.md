@@ -37607,3 +37607,28 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (ZAMA rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 08:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 07:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,812.90 vs today's session open $79,828.40 → **−0.02%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,812.90 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.12%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed, per Crypto Fear & Greed Index tracker).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. Top vs-open movers with notional24 > $30k: FLOCK (+17.45%), ZAMA (+8.07%), ARB (+10.32%), GRT (+10.77%), JUP (+8.83%), SPK (+7.18%), PENDLE (+5.67%) — all others below the liquidity floor or off the ranked list. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) eliminated ARB (−5.23%), GRT (−5.49%), JUP (−1.89%), SPK (−2.84%) — left FLOCK (0.00% off high), ZAMA (−1.29%), PENDLE (−0.65%) as fade-cap survivors.
+
+**Spread check:** FLOCK ask/bid 0.07519/0.07396 → **1.66% spread, breaches the mandatory ≤1% cap outright** — hard skip. ZAMA 0.05422/0.05411 → 0.20%, passes. PENDLE 2.135/2.132 → 0.14%, passes.
+
+**15m OHLC deep-dive (ZAMA, PENDLE):**
+- **ZAMA:** 24h high $0.05492 was set on the 08:00–08:15 UTC candle (closed 0.05449, still an accelerating close vs the prior 07:45 close of 0.05444). But the *next* closed candle (08:15–08:30) closed at $0.05421 — **lower** than the 08:00 candle's close — failing the two-candle acceleration requirement on the two most recently closed candles. Live price $0.05421 is fading from a high made in a candle that already closed, not a still-forming one. Momentum has stalled/reversed one candle after the breakout. **Reject: fails two-candle acceleration.** (Also still blocked by the win-rate kill switch as a no-catalyst/momentum-only setup regardless.)
+- **PENDLE:** 24h high $2.139 was set on the 07:00–07:15 UTC candle (~94 min old), which spiked and immediately reversed intra-candle (closed at $2.102, well off the $2.139 high). Every candle since has traded in a $2.10–$2.13 range with no fresh breakout above the stale high. **Reject: fails momentum-peak-check freshness (high >30 min old, cadence-relative ceiling not met) and shows no acceleration.**
+- FLOCK not deep-dived further after the hard spread-cap breach (decisive on its own).
+
+**Same-thesis check:** No open or recently-stopped positions to gate; not reached for ZAMA/PENDLE since both rejected on structural gates before the catalyst/R:R stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.02%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every structural gate this pass — FLOCK on a hard spread breach, ZAMA on the two-candle acceleration requirement (had cleared everything at the 07:00 UTC pass but faded one candle later), PENDLE on stale freshness. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
