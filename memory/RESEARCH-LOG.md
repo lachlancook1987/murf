@@ -37909,3 +37909,34 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 18:00 UTC (fired ~18:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 17:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` reconfirmed `canceled`, zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,934.70 vs today's session open $79,828.40 → **+0.13%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,934.70 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.28%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes today.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k notional liquidity floor to the vs-open>3% raw movers left 15 survivors: XZEC (+19.13%, AU-restricted, skipped pre-emptively), ARX (+14.63%, prox −0.51%), XAN (+11.04%, prox −1.27%), TAO (+9.72%, prox −0.35%), SOMI (+6.16%, prox −1.41%), FET (+4.55%, prox −0.35%), MORPHO (+4.55%, prox −1.03%), TOSHI (+4.12%, prox −0.47%), RENDER (+3.89%, prox −0.91%), INJ (+3.70%, prox −1.17%), MASK (+3.51%, prox −1.05%), LINEA (+3.35%, prox −1.42%), SOL (+3.20%, prox −0.80%), SYRUP (+3.06%, prox −0.01%), LINK (+3.00%, prox −0.31%). RAY, JUP, UAI, and the other larger raw movers had all faded well past the 1.5% cap by this pass's timing.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 17:45→18:00→18:15):**
+- **Fail acceleration outright:** ARX (18:15 close < 18:00), XAN (18:15 < 18:00), SOMI (18:15 = 18:00, not strictly higher), MORPHO (18:15 < 18:00), TOSHI (18:00 < 17:45), INJ (18:00 < 17:45), MASK (flat all three), LINEA (flat all three), SYRUP (18:00 < 17:45).
+- **Pass acceleration:** TAO, FET, RENDER, SOL, LINK (each of the last two closed candles higher than the prior).
+
+**Momentum bars on acceleration-passers (1h = 17:15 close → 18:15 close; 4h = 14:15 close → 18:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| TAO | +2.64% | +7.35% | Fails 1h >3% bar (4h clears) |
+| FET | +1.00% | +2.08% | Fails both |
+| RENDER | +1.06% | +2.28% | Fails both |
+| SOL | +0.43% | +0.46% | Fails both |
+| LINK | +0.82% | +1.53% | Fails both |
+
+**No candidate cleared every gate.** TAO was again the closest (as at the 17:00 UTC pass) — passes acceleration and the 4h bar but falls just short of the 1h >3% momentum bar (2.64%). No catalyst check run for any candidate — all five acceleration-passers were rejected on the momentum bars before reaching catalyst-confirmation stage, consistent with the standing convention.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.13%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
