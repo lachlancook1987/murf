@@ -37380,3 +37380,28 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared the confirmed-candle/real-momentum gate stack this pass, no operational issues, no drift from the last logged state. EOD snapshot (below, TRADE-LOG.md) shows a flat, uneventful day with nothing needing attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 00:00 UTC (fired 00:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 2026-09-05 EOD baseline, no drift overnight. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed present/historical (canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,929.30 vs today's session open $79,828.40 → **+0.13%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,929.30 vs 5-day-ago daily close $77,398.10 (2026-09-01, Kraken daily OHLC) → **+3.27%/5d** — outside the ±3% band but on the **upside** (gate only tightens on a >3% *downtrend*), so standard regime applies, pure-momentum entries not banned by this gate.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 40 candidates cleared vs-open>3.7%. Recomputed real 1h/4h momentum from closed 15m candles (not just vs-session-open, which for most of this list turned out to reflect a move that happened hours earlier with the book completely flat/zero-volume since — TUSD, COW, RSR, CCD, ARB, KEEP-adjacent names all showed 0.00 last-candle volume on most of the list). Candidates with real closed-candle 1h momentum and live volume:
+- **KEEP/USD**: 1h +14.77%, single-candle spike on thin volume (~$557 notional) — spread check: **9.90%**, hard fail (≤1% cap).
+- **TUSD/USD**: 1h +11.98%, 4h +14.35%, real volume — but this is a **stablecoin (TrueUSD) depeg move**, not a tradeable momentum asset; also highprox 5.92% fails the 1.5% live-fade cap. Excluded as out-of-scope for a momentum/day-trade thesis regardless.
+- **ARB/USD**: 1h +4.22%, 4h +13.95%, spread 0.053% (excellent), but **highprox 1.68%** — fails the ≤1.5% live-intracandle-fade cap by a small margin (price already retraced off the 24h high).
+- **QUID/USD**: 1h +4.63%, 4h +4.87%, highprox 0.88% (clears fade cap) — but spread **1.106%**, fails the ≤1% mandatory cap.
+- **COW/RSR/CCD/UAI** and the remaining ~35 candidates: real 1h momentum ≈0.00% on the last closed candle (flat price, zero volume) despite double-digit vs-session-open prints — the move is stale, already fully priced hours ago, no ongoing acceleration. Fail the confirmed-candle/two-candle-acceleration requirement outright.
+
+**Catalyst check (Perplexity):** Fear & Greed Index **73 (Greed)**. Today's flagged catalysts: HYPE token unlock (~$797M, bearish supply event, not a buy signal), Sept 15–16 FOMC (scheduled, >2h out — pre-positioning caution applies, not actionable now), CLARITY Act Senate vote (pending, no confirmed date), ZEC Grayscale ETF filing (AU-restricted asset, excluded per universe rules). None of these map to any of the technically-screened candidates above (KEEP, TUSD, ARB, QUID) — no catalyst-confirmed override available even if a technical gate had been marginal.
+
+**Same-thesis check:** No open or recently-stopped positions to gate.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.13%). Weekly trend gate technically outside band but upside, not downside — standard regime, no restriction triggered. Every candidate with real (not stale) momentum failed a specific hard gate: KEEP (spread 9.90%), QUID (spread 1.106%), ARB (live-fade 1.68%), TUSD (stablecoin depeg + live-fade, out of scope). All other high vs-open movers showed zero live volume/momentum on their last closed candle — already-priced-in moves, not active breakouts. No catalyst from today's macro sweep maps to any screened candidate. Momentum-only entries remain SUSPENDED per the win-rate kill switch regardless (moot this pass — nothing reached that gate). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), every real-momentum candidate rejected on a specific documented gate (spread cap ×2, live-fade cap, stablecoin-depeg scope exclusion) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
