@@ -37795,3 +37795,26 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (JTO blocked by the standing win-rate kill switch, XAN rejected on spread/divergence — neither a new operational issue), no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 14:00 UTC (fired ~14:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 13:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,462.50 vs today's session open $79,828.40 → **−0.46%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,462.50 vs 5-day-ago daily close $77,398.10 (2026-09-01, confirmed via daily OHLC) → **+2.67%/5d** — inside the ±3% band this pass (first time in several passes), standard regime applies regardless.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Top vs-open movers with notional24 > $30k: RAY (+43.23%, prox −7.79%, fails fade cap, recurring stale/faded candidate), COTI (+20.13%, prox −6.00%, fails fade cap), JUP (+19.79%, prox −6.96%, fails fade cap), ZAMA (+19.68%, prox −5.61%, fails fade cap), IDOS (+17.58%, prox −15.83%, stale), FLOCK (+15.72%, prox −9.25%, fails fade cap), RNBW (+13.48%, prox −9.67%, fails fade cap), SOLV (+12.46%, prox −7.27%, fails fade cap), UAI (+12.01%, prox −18.75%, stale), XZEC (AU-restricted, skipped), MET (+10.98%, prox −5.05%, fails fade cap), NEAR (+8.82%, prox −4.05%, fails fade cap), ORCA (+8.08%, prox −7.88%, fails fade cap), NOCK (+7.10%, prox −3.89%, near-zero-volume stale single print, excluded on inspection), METIS (+7.02%, prox −7.90%, fails fade cap), JTO (+6.92%, prox −4.35%, fails fade cap), GRT/ZK/SHX/BONK/EDGEX/ARB/FARTCOIN/MON/XAN/DOT/TRAC/SOMI also screened, all failing the fade cap. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k liquidity floor left only **SCRT** (+3.75%, prox 0.00%, notional $31.8k — barely above liquidity floor), **HYPE** (+3.48%, prox −1.41%, notional $16.9M), and **KTA** (+3.08%, prox −0.90%, notional $173k) as survivors — the thinnest survivor list of the week; every other mover from RAY down through TRAC/SOMI has already faded well past the 1.5% cap by this pass's timing.
+
+**Spread + 15m OHLC deep-dive:**
+- **SCRT:** live quote bid 0.0082/ask 0.0083, spread **1.22%** — breaches the ≤1% cap outright. Hard skip, no OHLC deep-dive needed.
+- **HYPE:** live quote spread 0.01%, passes. 15m closed candles 13:45→14:00→14:15: 89.44→89.15→88.68 — declining both steps, **fails two-candle acceleration outright** (same pattern that has rejected HYPE at prior passes today, e.g. 13:00 UTC).
+- **KTA:** live quote spread 0.52%, passes. 15m closed candles 13:45→14:00→14:15: 0.0770→0.0770→0.0770 — flat, **fails two-candle acceleration outright** (no candle closes higher than the prior; the notional spike traces to a single 13:30 volume print with price otherwise dead flat since).
+
+**No candidate cleared every gate.** All three survivors of the fade-cap/liquidity screen were rejected decisively on independent structural gates (SCRT on spread, HYPE and KTA both on two-candle acceleration) before reaching the catalyst-confirmation stage, so no Perplexity catalyst check was run this pass — consistent with the convention (e.g. 12:00 UTC pass's RAY) of not spending scan time confirming catalysts for candidates already rejected on an earlier, decisive gate.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.46%). Weekly trend gate back inside the ±3% band this pass — standard regime applies either way. No candidate cleared every structural gate this pass; the entire discovery sweep faded harder than usual, leaving only three thin/marginal survivors, all independently rejected (spread, acceleration ×2). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
