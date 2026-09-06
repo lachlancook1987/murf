@@ -37762,3 +37762,36 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 13:00 UTC (fired ~13:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 12:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,813.10 vs today's session open $79,828.40 → **−0.02%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,813.10 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.12%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies, consistent with every pass today.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), unchanged.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Top vs-open movers with notional24 > $30k: RAY (+47.52%, prox −3.87%, fails fade cap, recurring stale/faded candidate), ZAMA (+22.97%, prox −0.87%), JUP (+22.32%, prox −5.00%, fails fade cap), IDOS (+21.19%, prox −19.11%, stale), FLOCK (+14.96%, prox −9.85%, fails fade cap), COTI (+13.80%, prox −10.95%, fails fade cap), MET (+13.17%, prox −3.18%, fails fade cap), ORCA (+12.28%, prox −4.30%, fails fade cap), JTO (+10.85%, prox −0.60%), UAI (+9.02%, prox −20.93%, stale), NEAR (+8.79%, prox −1.18%), ZK (+7.68%, prox −4.12%, fails fade cap), ARB (+7.56%, prox −7.61%, fails fade cap), GRT/MON/SHX/FARTCOIN/SOMI/XAN/DOT also screened. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k liquidity floor left **ZAMA, NOCK, JTO, NEAR, SOMI, XAN, AKT, SNX, BONK, HYPE, LDO, MASK, TAO, COMP, JITOSOL, RENDER** as survivors. NOCK excluded on inspection — a near-zero-volume pair with one stale single-print jump, not a real move.
+
+**15m OHLC deep-dive (closed candles, last three closes 12:45→13:00→13:15):**
+- **ZAMA:** closes 0.06135→0.06001→0.06063 — first step down, **fails two-candle acceleration** (same flat/reversal pattern that rejected it at the 08:00 UTC pass today).
+- **NEAR:** closes 2.3480→2.3686→2.3742, accel passes, but 1h momentum only **+0.65%** (12:15 close 2.3588 → 13:15 close 2.3742) — fails the >3% bar outright.
+- **HYPE:** closes 89.19→89.14→88.82, fails acceleration (declining).
+- **TAO:** closes 243.5694→244.3828→244.7219, accel passes, but 1h momentum only **+0.15%** — fails outright.
+- **AKT:** closes 0.5672→0.5682→0.5662, fails acceleration (down on second step).
+- **JTO:** closes 0.46032→0.46300→0.46670, accel passes both steps. 1h momentum (12:15 close 0.45292 → 13:15 close 0.46670): **+3.04%**, clears >3%. 4h momentum (13:15 close 0.4667 vs ~09:30 close 0.43995): **+6.08%**, clears >5%. Live quote: bid 0.46586/ask 0.46639, spread **0.11%**, passes. 24h high (live, including forming candle) $0.46785 set on the still-forming 13:30 candle (age ~4 min); confirmed-closed-candle high is the 13:15 candle's $0.4667 (age ~20 min, both well inside the 30-min freshness ceiling). Live fade off the true 24h high: (0.46610 mid /0.46785 − 1) ≈ **−0.37%**, within the 1.5% cap. **Full technical clear** — strongest candidate this pass.
+- **XAN:** closes 0.01698→0.01711→0.01789, accel passes both steps. 1h momentum (12:15 close 0.01671 → 13:15 close 0.01789): **+7.06%**, clears. 4h momentum (13:15 close vs ~09:30 close 0.01707): **+4.80%**, clears >3% but short of the >5% 4h bar (borderline, close). Live quote: bid 0.01772/ask 0.01791, spread **1.07%**, marginally breaches the ≤1% cap. Live fade off 24h high $0.01799: ~-1.5%, right at the cap boundary. Weaker/borderline clear vs JTO on multiple fronts (spread breach alone is a hard skip).
+
+**Catalyst checks (Perplexity):**
+- **JTO:** Cited driver is an ongoing governance proposal (JTX revenue → buyback-and-burn through Q4 2027) plus general Solana-ecosystem strength — no dated announcement confirming this surfaced or accelerated within the last 6h; also flags Jito's Q2 protocol revenue fell 45% QoQ, a headwind not a catalyst. Cross-exchange: Perplexity cites ~$0.42–0.44 vs Kraken live $0.4667–0.4679 → ~6–11% divergence, within tolerance, not decisive. **No confirmed <6h catalyst — classifies momentum-only.**
+- **XAN:** Perplexity explicitly states "no verified new announcement, listing, or on-chain spike in the last 24 hours" — current move attributed to sector rotation into privacy narratives and post-Upbit-listing volatility (the listing itself being stale, not new). Cross-exchange: Perplexity cites ~$0.011–0.016 vs Kraken live $0.0178–0.0180 → roughly 11–38% divergence depending on which reference point is used, materially higher than JTO's and brushing against the ~15–20% divergence-gate tolerance. **No confirmed catalyst, plus a marginal/failing spread and a wide cross-exchange divergence — multiple independent rejection grounds, decisive without needing the kill switch.**
+
+**Verdict:** JTO is a clean full technical clear (momentum, acceleration, freshness, fade, spread) but has no confirmed <6h catalyst → classifies momentum-only → **blocked by the active win-rate kill switch** (SUSPENDED, 20.0%, below 35% floor). XAN is rejected independently on spread + cross-exchange divergence, on top of also lacking a catalyst.
+
+**No candidate cleared every gate.**
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.02%). Weekly trend gate outside band but upside, not downside — standard regime. JTO cleared every structural/technical gate but lacks a confirmed catalyst and is blocked by the standing win-rate kill switch; XAN is independently rejected on spread and cross-exchange divergence. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20) and the Performance-Linked Controls kill switch, this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (JTO blocked by the standing win-rate kill switch, XAN rejected on spread/divergence — neither a new operational issue), no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
