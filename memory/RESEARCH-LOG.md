@@ -37437,3 +37437,22 @@ Both decisively short of the required >3%/1h and >5%/4h bars despite clearing ev
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared the real-momentum gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 02:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat, exact match to the last logged Sep 5 EOD state, no drift. Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Nothing to reconcile in Step 3 (no orphan stops/T1 orders, no runner to tighten, no thesis break, book was already flat).
+
+**Crash gate:** BTC live $79,943.90 vs 24h-ago open $79,828.40 → **+0.14%**. Clear. **Weekly trend gate:** live $79,943.90 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.29%/5d**, upside not downside — standard regime, no restriction triggered. Fear & Greed: **72 (Greed)**.
+
+**Discovery sweep:** Full Kraken USD-pair sweep (663 pairs) via public Ticker API, ranked by vs-open % with proximity-to-24h-high filter. 33 candidates cleared >3% vs-open within 3% of their 24h high; most are illiquid micro-caps (BKS, QU, TMX, FF, KEEP — sub-$100k or even sub-$1k 24h dollar volume). Two genuine candidates deep-dived:
+
+- **UAI/USD** (+30.78% vs open, spread ~0.14%, 24h vol ~$1.13M): Recurring candidate from multiple prior passes. Perplexity cross-check: Kraken live $0.65 vs CoinMarketCap $0.479, CoinGecko $0.471, Binance $0.4495 → **~36% cross-exchange divergence**, the worst measured yet for this pair and well past the ~15-20% rejection band. **Rejected on cross-exchange divergence gate** (TRADING-STRATEGY.md 2026-07-24) — decisive on its own, consistent with every prior UAI rejection. Catalyst present (Binance UAI/USDT perpetual futures listing) but moot given the divergence rejection.
+- **RAY/USD** (Raydium, +5.83% vs open at sweep time, accelerated to +6.7% live; two confirmed-closed 15m candles each closing higher than the prior — 01:45→02:00→02:15 — real 1h momentum ~+5.4%, 4h momentum ~+10%, spread ~0.2%): 24h high sits on the still-forming 02:30 candle (live price = high at check time). Perplexity cross-check: Kraken live $0.970 vs CoinGecko $0.836 / CoinMarketCap $0.834 / Binance $0.840 → **~16% divergence**, at the low end of the reject band but comparable to or above the 18.6% UAI divergence a prior pass called "borderline-high" and rejected. Catalyst cited (Robinhood/Revolut listing, $1T cumulative volume milestone) but Perplexity gave no timestamp confirming it's <6h old — cannot classify as catalyst-confirmed. **Rejected on two independent grounds:** (1) cross-exchange divergence in the same range as a documented prior rejection, and (2) absent confirmed catalyst freshness, defaults to momentum-only classification, which is **hard-blocked outright by the active win-rate kill switch** (20.0%, below the 35% floor, per the 2026-09-04 weekly review — status unchanged, no new momentum-only entries have rolled into the window since).
+
+STRK, FIL, COTI, SPK all showed weaker or choppier momentum (STRK's most recent closed candle dipped rather than accelerated) and were not pursued further given RAY was already the stronger candidate and still failed.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.14%). Weekly trend gate clear (+3.29%/5d, upside). Two real candidates found (UAI, RAY); both rejected on cross-exchange divergence, with RAY additionally blocked by the active momentum-only win-rate kill switch. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state, and both real candidates rejected on specific documented gates (cross-exchange divergence; win-rate kill switch) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
