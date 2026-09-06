@@ -38067,3 +38067,32 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate had a confirmed catalyst so the standing kill-switch rejection is not a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 23:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 22:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` reconfirmed `canceled`, zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $80,192.30 vs today's session open $79,828.40 → **+0.46%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,192.30 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.61%/5d** — outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (unchanged from the 16:00–22:00 UTC passes).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes today.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤3% proximity to 24h high as prelim filter) and $30k notional liquidity floor to the vs-open>3% raw movers (excluding XZEC, AU-restricted, skipped pre-emptively): METIS (+21.79%, prox −0.55%), TIA (+15.91%, prox −1.12%), TAO (+12.11%, prox −2.75%), KNTQ (+11.56%, prox −1.65%, notional $33.8k — borderline), NEAR (+11.24%, prox −2.43%), LINK (+9.78%, prox −0.85%). All six passed the spread check via live `kraken.sh quote` (0.02%–0.53%, all well under the 1% cap; METIS improved to 0.53% from 1.48% at the 22:00 UTC pass).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 22:45→23:00→23:15):**
+- **KNTQ disqualified on inspection:** OHLC shows zero volume on 4 of the last 6 closed 15m candles (flat O=H=L=C), with all volume concentrated in a single 22:30 print — not real sustained trading activity, same "too thin" pattern that has excluded similar low-notional candidates on prior passes despite nominally clearing the $30k floor.
+- **Fail acceleration outright:** METIS (23:00 close 3.522 < 22:45 close 3.547), TIA (23:15 close 0.4427 < 23:00 close 0.4432), NEAR (23:15 close 2.4527 < 23:00 close 2.4561).
+- **Pass acceleration:** TAO (22:45→23:00→23:15: 260.4533→262.1741→265.7185, each higher), LINK (22:45→23:00→23:15: 13.04334→13.13080→13.17398, each higher).
+
+**Momentum bars on acceleration-passers (1h = 22:15 close → 23:15 close):**
+| Asset | 1h momentum | Verdict |
+|---|---|---|
+| TAO | +1.35% | Fails 1h >3% bar |
+| LINK | +2.33% | Fails 1h >3% bar |
+
+**No candidate cleared every gate.** TAO and LINK were the only two to pass two-candle acceleration this pass, but both fall short of the 1h >3% momentum bar despite strong raw vs-open prints — consistent with the standing pattern today of late-session moves being multi-hour drift rather than sharp 1h acceleration. No catalyst check run for any candidate — both acceleration-passers were rejected on the momentum bar before reaching catalyst-confirmation stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.46%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
