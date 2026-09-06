@@ -37581,3 +37581,29 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (GRT rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 07:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 06:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical/filled, zero exposure. Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis break — book was already flat).
+
+**Crash gate:** BTC live $79,832.10 vs today's session open $79,828.40 → **+0.005%**. Clear. **Weekly trend gate:** live $79,832.10 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.14%/5d** — outside the ±3% band but on the **upside**, so standard regime applies, consistent with recent passes. Fear & Greed index: **73 (Greed)**.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). Top vs-open prints: BKS/WAR/ACA/UNITAS/OBOL (all sub-$16k notional, skipped as illiquid dust), RAY (+17.38%, already faded −11.31% off high, recurring rejected candidate), FLOCK (+13.67%, prox −2.42%, recurring — same spread-cap rejection as 05:00 UTC pass expected to still apply), XZEC (AU-restricted, skipped), IDOS/UAI/GRT (all >19% off their highs, stale), ARB (+9.08%, prox −5.24%, stale), JUP (+8.17%, prox −2.50%, stale). Filtered to liquid (>$30k notional) candidates within the 1.5% live-fade cap: **ZAMA** (prox −0.43%, notional $265k), **SOMI** (prox −1.13%, notional $51k), **IMX** (prox −1.48%, notional $30k).
+
+**Deep-dive (15m OHLC, candle-close basis):**
+- **SOMI, IMX:** both choppy/flat over the last 2h (SOMI oscillating 0.129–0.132 with no directional close sequence; IMX flat/declining 0.133–0.134). Neither shows real 1h or 4h momentum — raw vs-open prints were stale, not live moves. Rejected outright, not pursued further.
+- **ZAMA:** genuine accelerating move — closes 06:45→07:00→07:15: 0.05205→0.05293→0.05372, each higher than the last (two-candle acceleration passes). 1h momentum (07:15 close vs 06:15 close): +4.13%, clears >3%. 4h momentum (07:15 close vs 03:15 close $0.05061): +6.15%, clears >5%. 24h high $0.05387 sits on the still-forming 07:30 candle, but only 0.00001 (0.02%) above the immediately preceding closed 07:15 candle's own high ($0.05386) — effectively confirmed by the prior closed candle, not a bare unconfirmed spike. Live price $0.05364/$0.05353 (bid/ask) is only −0.43% off the 24h high, well within the 1.5% live-fade cap. Confirmed-high age ~4 min, well inside the 30-min freshness ceiling. Spread: bid $0.05347 / ask $0.05354 → **~0.13%**, well within the ≤1% cap. Pair confirmed online via `kraken.sh assets`, no margin available (irrelevant, spot trade).
+
+**ZAMA catalyst check (Perplexity):** cites a Revolut listing giving ZAMA access to 70M+ users as the main driver, alongside general "privacy-tech breakout" commentary — no timestamp confirms this is a fresh (<6h) event rather than an already-circulating narrative (consistent with several other Revolut/Robinhood-listing citations rejected as stale this week, e.g. RAY at 03:00/04:00 UTC). Cross-exchange sanity check: Perplexity cites ZAMA trading ~$0.050–0.051 on other trackers vs Kraken's live $0.0535 — a ~5–7% gap, within normal tolerance, not a rejection ground here.
+
+**ZAMA verdict:** Classifies as **momentum-only** (no confirmed <6h catalyst) → **blocked by the active win-rate kill switch** (SUSPENDED, 20.0% trailing win rate, below the 35% floor). This is the sole reason for rejection — ZAMA otherwise cleared every structural gate (momentum, acceleration, freshness, live-fade, spread) cleanly, the strongest full technical clear since GRT at the 06:00 UTC pass.
+
+**No candidate cleared every gate.** ZAMA was the closest, blocked only by the standing win-rate kill switch.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.005%). Weekly trend gate outside band but upside, not downside — standard regime. ZAMA cleared every technical gate (momentum, acceleration, freshness, fade, spread) but lacks a confirmed <6h catalyst, so it remains classified momentum-only and is blocked by the active win-rate kill switch (20.0%, below 35% floor). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20) and the Performance-Linked Controls kill switch, this is a correct, expected outcome — the kill switch is not to be bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (ZAMA rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
