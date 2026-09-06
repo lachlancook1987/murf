@@ -37818,3 +37818,32 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 15:00 UTC (fired ~15:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 14:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,604.50 vs today's session open $79,828.40 → **−0.28%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,604.50 vs 5-day-ago daily close $77,398.10 (2026-09-01, confirmed via daily OHLC) → **+2.85%/5d** — inside the ±3% band, standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from the 14:00 UTC pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k notional liquidity floor to the vs-open>3% raw movers left 7 survivors: ARX (+9.49%, prox −0.83%, notional $30.6k), XAN (+7.34%, prox −1.32%, notional $264k), TRAC (+4.93%, prox −1.45%, notional $118k), SNX (+4.69%, prox −1.04%, notional $63k), BLESS (+4.31%, prox −0.13%, notional $118k), HYPE (+3.99%, prox −0.91%, notional $16.3M), COMP (+3.17%, prox −1.37%, notional $58k). RAY (+46.20%), JUP (+20.86%), ZAMA (+16.75%), COTI (+13.67%), FLOCK (+13.56%), UAI (+11.56%), NEAR (+7.32%) and others all faded well past the 1.5% cap by this pass's timing.
+
+**Spread check (all 7 survivors):** ARX 0.37%, XAN 0.33%, TRAC 0.49%, SNX 0.13%, BLESS 0.23%, HYPE 0.01%, COMP 0.24% — all pass the ≤1% cap.
+
+**15m OHLC deep-dive (last two closed candles, two-candle acceleration check):**
+- **ARX:** closes 14:45→15:00→15:15 = 0.14393→0.14296→0.14414. 15:00 close < 14:45 close — **fails two-candle acceleration** (first of the two candles already lower).
+- **XAN:** closes 14:45→15:00→15:15 = 0.01785→0.01759→0.01796. 15:00 close < 14:45 close — **fails two-candle acceleration**.
+- **SNX:** closes 14:45→15:00→15:15 = 0.2255→0.2254→0.2279. 15:00 close < 14:45 close — **fails two-candle acceleration**.
+- **BLESS:** closes 14:45→15:00→15:15 = 0.009802→0.009754→0.009824. 15:00 close < 14:45 close — **fails two-candle acceleration**.
+- **HYPE:** closes 14:45→15:00→15:15 = 89.00→89.13→89.01. Second candle (15:15) lower than first (15:00) — **fails two-candle acceleration** (same pattern rejecting HYPE at every pass today).
+- **TRAC:** closes 14:45→15:00→15:15 = 0.3394→0.3456→0.3471 — both closes higher, **passes** two-candle acceleration. But the 24h high $0.3522 was set on the 13:45 UTC candle (~109 min before this pass, well past the 30-min/cadence-relative freshness ceiling) and live price ($0.3471) remains below it with no fresh breakout — **fails momentum-peak-check freshness**.
+- **COMP:** closes 14:45→15:00→15:15 = 20.67→20.75→20.86 — both closes higher, **passes** two-candle acceleration. But the 24h high $21.15 was set on the 12:15 UTC candle (~3h before this pass), live price ($20.86) remains well below it with no fresh breakout — **fails momentum-peak-check freshness**.
+
+**No candidate cleared every gate.** All 7 survivors of the fade-cap/liquidity/spread screen were rejected on independent structural gates (5 on two-candle acceleration, 2 on momentum-peak-check freshness despite passing acceleration) before reaching the catalyst-confirmation stage, so no Perplexity catalyst check was run this pass, consistent with the standing convention of not spending scan time confirming catalysts for candidates already rejected on an earlier, decisive gate.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.28%). Weekly trend gate inside the ±3% band (+2.85%/5d) — standard regime. No candidate cleared every structural gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
