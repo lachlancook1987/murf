@@ -37405,3 +37405,35 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), every real-momentum candidate rejected on a specific documented gate (spread cap ×2, live-fade cap, stablecoin-depeg scope exclusion) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 01:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero — exact match to the 00:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (most recent filled/canceled from 2026-05-22), zero exposure. Book fully flat, Step 3a–3d no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,925.10 vs today's session open $79,828.40 → **+0.12%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,925.10 vs 5-day-ago daily close $77,398.10 (2026-09-01, same reference as the 00:00 UTC pass) → **+3.26%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), consistent with recent passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. 18 candidates cleared vs-open>3% + notional>$30k — UAI (+19.20%), TUSD (stablecoin depeg, out of scope), ENA, ARB, DASH (AU-restricted, skipped), SPK, STRK, CSPR, ZEC (AU-restricted, skipped), UNI, OP, AR, USELESS, XAN, ENS, ETHFI, EIGEN, PHA. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) eliminated UAI (3.78%), ARB (3.19%), CSPR (3.45%), UNI (1.62%), AR (3.14%), USELESS (15.1%) — left 9 survivors: ENA, SPK, STRK, OP, XAN, ENS, ETHFI, EIGEN, PHA.
+
+**Two-candle acceleration + confirmed-candle freshness (9 fade-survivors, 15m OHLC traced):**
+- **ENA, OP, XAN, ETHFI:** fail two-candle acceleration outright (last two closed candles don't both close higher than the prior). **Rejected — acceleration.**
+- **PHA:** fails acceleration; confirmed high also stale (753.9 min old). **Rejected — acceleration/freshness.**
+- **SPK, STRK:** pass acceleration, confirmed-closed high fresh (18.9 min), but the currently-forming candle has already pushed past the confirmed high — same still-forming-candle spike pattern seen repeatedly this week. **Rejected — unconfirmed.**
+- **ENS, EIGEN:** pass acceleration, confirmed-closed high fresh (18.9 min), forming candle does NOT exceed it — confirmed AND fresh, only two survivors to clear fade/acceleration/confirmed-candle/freshness together.
+
+**Real momentum check (candle-open basis, 2 confirmed+fresh survivors):**
+| Pair | 1h | 4h | Volume ratio | Verdict |
+|---|---|---|---|---|
+| ENS | +1.66% | +2.33% | 1.99x | Fails both momentum bars |
+| EIGEN | +2.01% | +2.89% | 3.57x | Fails both momentum bars |
+
+Both decisively short of the required >3%/1h and >5%/4h bars despite clearing every earlier structural gate — the same raw-screen-overstates-real-momentum pattern flagged repeatedly this week. Neither reached the catalyst/kill-switch review stage since the momentum gate was already dispositive.
+
+**No candidate cleared every gate.** ENS and EIGEN were the only two of 18 raw movers to survive fade, acceleration, confirmed-candle, and freshness together, but both failed decisively on real 1h/4h momentum.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.12%). Weekly trend gate technically outside band but upside, not downside — standard regime, no restriction triggered. No candidate cleared the real 1h/4h momentum bars this pass; momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) regardless, though moot this pass since nothing reached that gate. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared the real-momentum gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
