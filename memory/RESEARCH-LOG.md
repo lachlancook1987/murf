@@ -37847,3 +37847,41 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 16:00 UTC (fired ~16:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 15:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,750.70 vs today's session open $79,828.40 → **−0.10%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,750.70 vs 5-day-ago daily close $77,398.10 (2026-09-01, confirmed via daily OHLC) → **+3.04%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k notional liquidity floor to the vs-open>3% raw movers left 20 survivors, top by chg%: BONK (+13.22%, prox −0.82%, notional $977k), ARX (+12.78%, prox −0.22%, notional $34k), NOCK (+11.96%, prox 0.00%, notional $52k, recurring near-zero-volume single-print pattern, excluded on inspection), ZK (+11.91%, prox −1.13%), XAN (+9.19%, prox −0.54%), LDO (+7.52%, prox −1.15%), TAO (+5.37%, prox −0.35%), COMP (+5.34%, prox 0.00%), UNI (+4.80%, prox −1.31%), SNX (+4.73%, prox −1.00%), KSM (+4.26%, prox −0.76%), FET (+4.19%, prox −0.69%), INJ (+3.78%, prox −1.10%), LINEA (+3.72%, prox −1.06%), RENDER (+3.55%, prox −0.78%), HYPE (+3.48%, prox −1.41%, recurring decliner all day), EIGEN (+3.10%, prox −0.37%), MASK (+3.07%, prox −1.47%). RAY (+46.09%), JUP (+22.76%), UAI (+17.02%), XZEC (AU-restricted, skipped pre-emptively), COTI, ZAMA, SOLV, FLOCK, MET, ORCA, NEAR, IDOS, JTO, SN51, SHX, ARB, GRT, METIS, MON, PHA, FARTCOIN, SOMI, DOT, WOO all faded well past the 1.5% cap by this pass's timing.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 15:45→16:00→16:15):**
+- **Fail acceleration outright** (a close lower than, or equal to, the prior candle): ARX, LDO (16:15 close = 16:00 close), TAO, SNX, KSM, FET, INJ, LINEA (16:15 < 16:00), HYPE (declining all day, same pattern as every pass today), EIGEN (16:15 close = 16:00 close), MASK (flat).
+- **Pass acceleration:** BONK (0.000003464→0.000003529→0.000003656), ZK (0.01119→0.01131→0.01147), XAN (0.01796→0.01815→0.01832), COMP (20.96→21.10→21.27), UNI (6.9792→7.0580→7.3983), RENDER (1.509→1.511→1.520).
+
+**Momentum bars on acceleration-passers (1h = 15:15 close → 16:15 close; 4h = 12:15 close → 16:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| BONK | +5.12% (0.000003478→0.000003656) | +10.79% (0.000003300→0.000003656) | **Clears both bars** |
+| ZK | +3.33% | +4.27% | Fails 4h >5% bar |
+| XAN | +2.00% | +6.14% | Fails 1h >3% bar |
+| COMP | +1.97% | +1.09% | Fails both |
+| UNI | +6.48% | +4.39% | Fails 4h >5% bar (1h clears) |
+| RENDER | +1.40% | +0.73% | Fails both |
+
+**BONK deep-dive (only full technical clear):** Live quote bid 0.000003630/ask 0.000003631, spread **0.03%**, passes. 24h high (live) $0.000003670 set on the 16:15 closed candle (~5–20 min old at check time), well inside the 30-min freshness ceiling; confirmed by the closed candle itself, which closed at 0.000003656, 99.6% of the high — holds the breakout. Live fade off 24h high: (0.000003632/0.000003670 − 1) ≈ **−1.04%**, within the 1.5% cap. Pair confirmed online via `kraken.sh assets`. No prior BONK stop-out history in TRADE-LOG.md (every past BONK appearance was a discovery-sweep rejection, never an actual entry) — same-thesis cooling period does not apply.
+
+**Catalyst check (Perplexity):** BONK is under **heavy bearish pressure** today — **Upbit announced a delisting** of BONK/KRW and BONK/USDT pairs effective **2026-09-07** (tomorrow), compounded by a reported **$20M governance/security incident**; price is near a three-year low and trading below key moving averages. This is a genuine bearish fundamental break, not a confirming catalyst for the current intraday pump — same rejection logic applied to BONK and GALA on prior dates (TRADE-LOG.md) where positive momentum ran directly against negative fundamental news. **Classifies as momentum-only at best, with an active negative catalyst working against the move** — rejected on catalyst grounds independent of the kill switch, and would also be blocked by the standing win-rate kill switch (SUSPENDED, 20.0%, below 35% floor) even absent the bearish news.
+
+**Verdict:** BONK is the only candidate to clear every raw/technical gate (acceleration, both momentum bars, freshness, fade, spread) but is rejected on a genuine bearish catalyst (delisting + exploit) working against the pump — a classic dead-cat-bounce/short-squeeze pattern this bot has been burned by before. ZK/XAN/COMP/UNI/RENDER all fail the momentum bars outright; ARX/LDO/TAO/SNX/KSM/FET/INJ/LINEA/HYPE/EIGEN/MASK fail acceleration.
+
+**No candidate cleared every gate.**
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.10%). Weekly trend gate outside band but upside, not downside — standard regime. BONK cleared every technical/structural gate but carries an active bearish catalyst (Upbit delisting effective tomorrow + $20M exploit) directly opposing the move, and would separately be blocked by the standing win-rate kill switch regardless. No other candidate cleared acceleration + both momentum bars. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (BONK rejected on a genuine bearish catalyst, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
