@@ -38043,3 +38043,27 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), the one candidate to clear every technical gate this pass (TIA) was rejected on the standing catalyst/kill-switch gates rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 22:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 21:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,893.00 vs today's session open $79,828.40 → **+0.08%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,893.00 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.21%/5d** — outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (unchanged from the 21:00 UTC pass's logic).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed, Alternative.me), unchanged from the prior pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched, AU-restricted ZEC/DASH pre-filtered), 639 online USD pairs. Top vs-open movers: RNBW (+58.7%), NOCK (+52.9%), RAY (+38.3%), ACA (+33.3%), YOM (+25.6%), JUP (+21.1%), NEAR (+12.0%), TIA (+14.1%, already deep-dived at 21:00 UTC). Filtered to candidates with 24h-high proximity ≤3% (fresh breakout, not faded): RNBW (−1.06%), BKS (0%, vol $11.9k — too thin, skipped), WAR (−2.08%), XAN (−3.12%), UNITAS (0%, vol $2.4k — too thin, skipped), NEAR (−1.78%), TIA (−1.07%).
+
+- **WAR/USD:** spread 2.13% — hard skip, breaches the mandatory ≤1% cap outright.
+- **RNBW/USD:** spread 0.69% (passes). Perplexity: no fresh catalyst — only news is a stale (1 Jul 2026) MEXC perpetual-futures *delisting*, a liquidity negative not a catalyst. Low-cap ($3.7M mkt cap), thin ($1.1M 24h vol) — momentum-only by exclusion, and thin-liquidity risk on top.
+- **NEAR/USD:** spread 0.05% (passes). Perplexity cited a "v2.13 mainnet upgrade activating post-quantum signatures/dynamic resharding" as a driver — checked directly: **activated 20 July 2026**, ~7 weeks stale, not a fresh catalyst (confirms the pattern of Perplexity surfacing real-but-old developments as if current). 15m OHLC: 24h high $2.50 was set in the 22:00–22:15 candle (fresh, <30min old) but live price has since faded to ~$2.4526 → **−1.9% intracandle fade, exceeds the 1.5% cap**. Two-candle acceleration also fails: last closed candle (22:15, close 2.4464) closed higher than 22:00 (2.4320), but 22:00 closed *lower* than 21:45 (2.4929) — a drop-then-partial-bounce pattern, not sustained acceleration. Three independent rejection grounds; momentum-only regardless.
+- **TIA/USD:** unchanged in substance from the 21:00 UTC deep-dive — same ambiguous Sovereign Labs/V9-upgrade narrative with no dated <6h catalyst, same bearish unlock overhang. Momentum-only.
+- **XAN/USD:** spread 0.20% (passes) but not deep-dived — every candidate reaching this stage this pass lacks a confirmed <6h catalyst, and the standing win-rate kill switch blocks momentum-only entries regardless of technical quality, so further technical screening would not change the outcome.
+
+**Verdict:** No candidate this pass has a confirmed <6h catalyst. Every technically-clean candidate (RNBW, NEAR, TIA) is momentum-only and is blocked outright by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) independent of R:R math or technical gate status.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.08%). Weekly trend gate outside band but upside, not downside — standard regime, unchanged. No candidate cleared the catalyst-confirmation bar; the standing win-rate kill switch blocks all momentum-only entries regardless of technicals. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate had a confirmed catalyst so the standing kill-switch rejection is not a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
