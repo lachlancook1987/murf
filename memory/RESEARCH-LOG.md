@@ -37511,3 +37511,41 @@ None clear both the 1h>3% and 4h>5% bars together. JUP has real 4h momentum (+5.
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared the real-momentum/acceleration gate stack this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 05:00 UTC (fired 05:32 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 04:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical/filled, zero exposure. Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis break — book was already flat).
+
+**Crash gate:** BTC live $79,875.80 vs today's session open $79,828.40 → **+0.06%**. Clear. **Weekly trend gate:** live $79,875.80 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.20%/5d** — outside the ±3% band but on the **upside**, so standard regime applies. Fear & Greed index: **73 (Greed)**, consistent with recent passes.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Top vs-open prints: RAY (+24.75%), UAI (+20.73%), SODA (+19.54%), DASH (AU-restricted, skipped), FLOCK (+15.40%), XZEC (AU-restricted, skipped), ARB (+9.36%), IDOS, SPK, COTI, GRT, JUP, DCR, ORCA, JTO among liquid survivors (notional >$50k).
+
+**Real momentum + acceleration check (15m OHLC, candle-close basis) on the strongest liquid candidates:**
+
+| Pair | 1h | 4h | Accel | Fade off 24h high | Verdict |
+|---|---|---|---|---|---|
+| SODA | +20.38% | +20.30% | No | 28.91% | Fails accel + fade cap outright — stale high, no longer near it |
+| FLOCK | +6.60% | +15.83% | **Yes** | **0.94%** (within 1.5% cap) | Clears momentum, accel, freshness (19.1 min) — **spread ~1.21%, breaches mandatory ≤1% cap**, decisive hard skip |
+| IDOS | +1.65% | +5.11% | No | 31.41% | Fails 1h bar + fade cap |
+| COTI | −0.90% | +3.66% | No | 0.36% | Fails 1h bar (negative) and 4h bar |
+| GRT | +3.11% | +4.01% | Yes | 0.41% | Fails 4h bar (just under 5%) |
+| DCR | +5.26% | +5.55% | Yes | 5.53% | Clears 1h/4h/accel but fails live-intracandle-fade cap (>1.5%) |
+| ORCA | +0.07% | +4.79% | Yes | 3.28% | Fails 1h bar and fade cap |
+| JTO | +1.16% | +4.77% | No | 2.21% | Fails 1h bar, accel, and fade cap |
+| RAY | −1.73% | +24.42% | No | 5.74% | 1h already faded, fails accel + fade cap |
+| UAI | +8.69% | +1.60% | No | 12.02% | Fails 4h bar and fade cap |
+| JUP | −0.18% | +4.26% | No | 0.89% | Fails 1h bar and accel |
+
+**FLOCK deep-dive (closest candidate):** cleared 1h>3%, 4h>5%, two-candle acceleration, and the live-intracandle-fade cap (0.94%, well inside 1.5%) — the strongest technical clear of this pass. Rejected on spread: `kraken.sh quote FLOCK/USD` shows bid $0.07243 / ask $0.07331 → **spread ≈1.21%**, breaching the mandatory ≤1% cap outright. This is decisive on its own regardless of catalyst status, per the Entry Rules spread check. Not pursued further (no catalyst check run — moot given the hard spread-cap breach).
+
+**RAY catalyst re-check (Perplexity):** confirms the same picture as the 03:00/04:00 UTC passes — "technical momentum plus renewed platform usage" (breakout narrative, LaunchLab buyback revenue, high on-chain activity), explicitly **no confirmed hack/partnership/protocol-upgrade catalyst in the last 24h**. Momentum-only classification stands; moot this pass since RAY also fails accel/fade technically now (1h already reversed to −1.73%).
+
+**No candidate cleared every gate.** FLOCK was the single genuine near-miss, rejected on a hard, independent gate (spread) rather than the win-rate kill switch.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.06%). Weekly trend gate technically outside band but upside, not downside — standard regime, no restriction triggered. No candidate cleared every gate this pass; the closest (FLOCK) cleared momentum/acceleration/freshness but breached the mandatory ≤1% spread cap. Momentum-only entries remain SUSPENDED per the active win-rate kill switch (20.0%, below 35% floor) as a standing constraint, though moot this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (FLOCK rejected on a hard, well-documented spread-cap breach), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
