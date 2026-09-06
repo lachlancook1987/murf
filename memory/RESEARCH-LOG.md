@@ -37456,3 +37456,26 @@ STRK, FIL, COTI, SPK all showed weaker or choppier momentum (STRK's most recent 
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state, and both real candidates rejected on specific documented gates (cross-exchange divergence; win-rate kill switch) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 03:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 02:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical/filled, zero exposure. Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis break — book was already flat).
+
+**Crash gate:** BTC live $79,971.30 vs 24h-ago open $79,828.40 → **+0.18%**. Clear. **Weekly trend gate:** live $79,971.30 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.33%/5d**, upside — standard regime, no restriction. Fear & Greed: **72–73 (Greed)**, consistent with recent passes.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Full Kraken USD-pair sweep (663 pairs) via public Ticker API, ranked by vs-open %. 54 candidates cleared >3% vs-open; most illiquid micro-caps (BKS, MF, UNITAS, TMX, POLIS sub-$50k 24h volume) skipped. Two genuine, liquid candidates deep-dived:
+
+- **RAY/USD** (Raydium, +25–27% vs open, accelerating live to +31% intra-pass, 24h vol ~$900k, spread ~0.2%): Explosive breakout — 15m candles show a step-change at 03:15 UTC (close 0.978→0.986→1.114→1.140+, volume 10x+ normal) continuing into the still-forming candle (live high $1.146). Two-candle acceleration passes (03:00 close > 02:45 close; 03:15 close > 03:00 close). But the live 24h high ($1.146) sits on the still-forming candle, not yet confirmed by a closed candle holding above it — the same "confirmed high already exceeded by an unconfirmed forming-candle spike" shape rejected across six assets (AR, ARB, AERO, UAI, GRT, SUI) at the 02:00 UTC pass. Perplexity catalyst check: no fresh single-event catalyst — coverage attributes the move to "broad technical breakout / Solana ecosystem rotation," explicitly citing the same stale Robinhood/Revolut listing (2+ weeks old) as the only concrete news item, and separately notes a legacy-infrastructure exploit ($1.34M) explicitly described as *not* affecting current programs (not a thesis-relevant risk since we hold no position). **No confirmed <6h catalyst → momentum-only classification → hard-blocked outright by the active win-rate kill switch**, independent of the confirmed-candle ambiguity above.
+- **JUP/USD** (Jupiter, +6.2% vs open, accelerating on the last two closed candles, live near 24h high, spread ~0.2%, 24h vol ~$970k): Perplexity catalyst check: attributes the move to ongoing buyback/Litterbox Trust accumulation and JupUSD integration — real but non-discrete, ongoing developments, not a fresh <6h event. **Same outcome: no confirmed catalyst → momentum-only → hard-blocked by the kill switch.**
+
+ARB (+7.2%, prox to high −4.2%, high already 60+ min stale) and PUMP (+5.9%, prox −4.8%) were weaker on freshness and not pursued given RAY/JUP were the stronger prints and both still failed on the same decisive ground.
+
+**Gate-rejection outcome tracking:** RAY was rejected at the 02:00 UTC pass at ~$0.97–1.14 (mid-move); it is now $1.14, i.e. this pass's live price is at the high end of that prior rejection's range — momentum continued rather than reversing, consistent with genuine trend strength, but the kill-switch rejection ground (no confirmed catalyst) is unchanged and unaffected by this. Observation only, per TRADING-STRATEGY.md — not a basis to re-enter retroactively.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.18%). Weekly trend gate clear (+3.33%/5d, upside). Two genuine, liquid candidates found (RAY, JUP), both showing real acceleration, both rejected on the same decisive ground: no confirmed <6h catalyst, defaulting to momentum-only classification, hard-blocked by the active win-rate kill switch (20.0%, below the 35% floor). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade despite the strongest raw momentum print (RAY) seen in several passes. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear, no operational issues, no drift from the last logged state, and the standout candidate (RAY) was rejected on a specific, documented gate (win-rate kill switch) rather than a manufactured excuse. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
