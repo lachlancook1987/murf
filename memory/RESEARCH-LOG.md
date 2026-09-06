@@ -37885,3 +37885,27 @@ No push sent — book flat with no unprotected exposure, both gates clear, no ca
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (BONK rejected on a genuine bearish catalyst, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 17:00 UTC (fired ~17:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 16:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,742.60 vs today's session open $79,828.40 → **−0.11%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,742.60 vs 5-day-ago daily close $77,398.10 (2026-09-01, confirmed via daily OHLC) → **+3.03%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (consistent with the 16:00 UTC pass's +3.04%/5d).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from the 16:00 UTC pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k notional liquidity floor to the vs-open>3% raw movers left 7 survivors: NOCK (+23.39%, prox 0.00%), XZEC (+17.57%, AU-restricted per TRADING-STRATEGY.md, skipped pre-emptively), XMLN (+11.98%, prox −0.29%, notional $69k), XAN (+10.62%, prox −0.54%), TAO (+6.92%, prox −1.19%), SNX (+4.32%, prox −1.39%), LINEA (+4.09%, prox −0.71%).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 16:45→17:00→17:15):**
+- **Fail acceleration outright:** NOCK (flat-zero-volume single-print pattern through 16:15–16:45, then a jump on the 17:00 candle — same recurring near-zero-volume artifact flagged and excluded on the 16:00 UTC pass; 17:00 close also below the 16:45 close), XMLN (17:00 close 1.4624 < 16:45 close 1.5081), XAN (17:00 close 0.01843 > 16:45 0.01832 but 17:15 close 0.01842 ≤ 17:00 — spike-then-stall), SNX (17:00 close 0.2269 < 16:45 0.2294), LINEA (17:00 close 0.00281 > 16:45 0.00279 but 17:15 close 0.00280 < 17:00 — spike-then-stall).
+- **Pass acceleration:** TAO only (16:45 close 250.6562 → 17:00 close 251.2000 → 17:15 close 253.0821, each higher than the last).
+
+**TAO deep-dive (only acceleration-passer):** True 1h momentum (16:15 close 248.9281 → 17:15 close 253.0821) = **+1.67%**, well short of the >3% 1h bar. True 4h momentum (13:15 close 244.7219 → 17:15 close 253.0821) = **+3.42%**, short of the >5% 4h bar. The 24h vs-open screen (+6.92%) that flagged TAO as a raw survivor reflects a slower multi-hour drift, not the sharp 1h/4h acceleration the entry rules require — fails both momentum bars despite passing the candle-acceleration check. No catalyst check run (momentum bars are a harder gate than catalyst confirmation; failing both makes the catalyst check moot).
+
+**Verdict:** No candidate cleared every gate. TAO was the only pair to pass two-candle acceleration but failed both the 1h and 4h momentum bars; NOCK/XMLN/XAN/SNX/LINEA all failed acceleration outright (already stalling or reversing on the last closed candle).
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.11%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass — the closest (TAO) passed acceleration but failed both momentum bars. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
