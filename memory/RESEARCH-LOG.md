@@ -37549,3 +37549,35 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (FLOCK rejected on a hard, well-documented spread-cap breach), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 06:00 UTC (fired 06:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 05:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical/filled, zero exposure. Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis break — book was already flat).
+
+**Crash gate:** BTC live $79,842.90 vs today's session open $79,828.40 → **+0.02%**. Clear. **Weekly trend gate:** live $79,842.90 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.16%/5d** — outside the ±3% band but on the **upside**, so standard regime applies, same as the 05:00 UTC pass.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **SUSPENDED for momentum-only entries**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs (ZEC/DASH pre-excluded, AU-restricted). 23 candidates cleared vs-open>3% + notional≥$50k — RAY (+23.43%), COTI (+12.33%), FLOCK (+12.10%), GRT (+9.84%), SPK, ARB, IDOS, UAI, WOO, DCR, JUP among liquid survivors. Filtered to those within 1.5% of 24h high: COTI, JUP, NIL, KTA, GRT, JTO, PENDLE — deep-dived on 15m OHLC (candle-close basis).
+
+| Pair | 1h | 4h | Accel | Fresh-high age | Verdict |
+|---|---|---|---|---|---|
+| COTI | +4.93% | +5.70% | No | 34.2 min | Clears 1h/4h but fails two-candle acceleration (0.01723→0.01725→0.01724, stalls) and freshness ceiling (34.2 min > 30 min) |
+| JUP | −0.98% | +3.28% | No | 199.2 min | Fails 1h bar (negative), stale high |
+| NIL | +0.56% | +0.56% | No | 154.2 min | Fails 1h/4h bars outright |
+| KTA | +0.65% | +1.05% | Yes | 364.2 min | Fails 1h/4h bars, high long stale |
+| **GRT** | **+3.44%** | **+5.41%** | **Yes** | **19.2 min** | Clears 1h>3%, 4h>5%, two-candle acceleration, freshness (within min(30, 62min-since-last-pass)=30min ceiling), and live-fade (0.30% off 24h high, quote confirms) — strongest technical clear this pass |
+| JTO | +0.20% | +4.83% | No | 94.2 min | Fails 1h bar, stale high |
+| PENDLE | +2.28% | +3.03% | No | 49.2 min | Fails 1h bar, stale high |
+
+**GRT catalyst check (Perplexity):** "The Graph launched a Rewards Eligibility Oracle on 26 Aug 2026" (11 days stale, not a fresh catalyst) and CoinDesk noting FIL/GRT lifting a computing sector index — explicitly framed as **sector rotation, not a single major catalyst**. No confirmed catalyst <6h old. Cross-exchange check: Kraken last $0.0201 vs Perplexity-cited CoinGecko ~$0.0180/Investing.com ~$0.0175 → ~12–15% divergence, within tolerance but not material here since the catalyst gate is already decisive.
+
+**GRT verdict:** Classifies as **momentum-only** (no confirmed <6h catalyst) → **blocked by the active win-rate kill switch** (SUSPENDED, 20.0% trailing win rate). This is the sole reason for rejection — GRT otherwise cleared every structural gate (momentum, acceleration, freshness, live-fade) cleanly, spread not yet checked since the kill switch is decisive on its own.
+
+**No candidate cleared every gate.** GRT was the closest — the first pass in several days to clear every raw/technical gate — but the catalyst-confirmation requirement (needed to escape the active momentum-only suspension) was not met.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.02%). Weekly trend gate outside band but upside, not downside — standard regime. GRT cleared every technical gate (momentum, acceleration, freshness, fade) but lacks a confirmed <6h catalyst, so it remains classified momentum-only and is blocked by the active win-rate kill switch (20.0%, below 35% floor). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20) and the Performance-Linked Controls kill switch, this is a correct, expected outcome — the kill switch is not to be bypassed to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (GRT rejected specifically on the active win-rate kill switch, a known standing constraint, not a new issue), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
