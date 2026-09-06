@@ -37972,3 +37972,36 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-06 — Scan — 20:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 19:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` reconfirmed `canceled`, zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,950.10 vs today's session open $79,828.40 → **+0.15%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,950.10 vs 5-day-ago daily close $77,398.10 (2026-09-01) → **+3.30%/5d** — technically outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (consistent with the 16:00–19:00 UTC passes).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes today.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. Applying the mandatory live-intracandle-fade cap (≤1.5% off 24h high) and $30k notional liquidity floor to the vs-open>3% raw movers left 15 survivors (excluding XZEC, AU-restricted, skipped pre-emptively): METIS (+19.57%, prox −0.89%, notional $42k), TAO (+14.70%, prox −0.05%), XAN (+13.90%, prox −0.73%), TIA (+10.19%, prox −0.29%), FET (+7.53%, prox −0.39%), RENDER (+5.46%, prox −0.32%), TOSHI (+5.19%, prox −1.01%), NIGHT (+4.82%, prox −1.38%), INJ (+4.42%, prox −0.98%), MORPHO (+4.25%, prox −1.32%), COMP (+4.01%, prox −1.41%), S (+3.69%, prox −0.64%), EIGEN (+3.63%, prox −0.14%), LINK (+3.55%, prox −0.14%), LINEA (+3.35%, prox −1.42%).
+
+**Spread check:** METIS ask 3.556/bid 3.504 → spread **1.48%**, breaches the mandatory ≤1% cap outright — hard skip regardless of momentum quality.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 19:45→20:00→20:15; current time ~20:34 UTC, so 20:15 is the most recent closed candle):**
+- **Fail acceleration outright:** TOSHI (20:15 close = 20:00, not strictly higher), NIGHT (20:15 < 20:00), INJ (declining both steps), MORPHO (20:15 = 20:00, flat), COMP (flat all three), S (first step down), EIGEN (first step down), LINK (first step down), LINEA (flat last step).
+- **Pass acceleration:** TAO, XAN, TIA, FET, RENDER (each of the last two closed candles higher than the prior).
+
+**Momentum bars on acceleration-passers (1h = 19:15 close → 20:15 close; 4h = 16:15 close → 20:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| TIA | +3.67% | +4.66% | Clears 1h, fails 4h >5% bar (close) |
+| XAN | +2.72% | +4.97% | Fails both bars (narrowly) |
+| TAO | +2.29% | +8.13% | Fails 1h >3% bar (4h clears) |
+| FET | +1.61% | not checked | Fails 1h outright |
+| RENDER | +1.51% | not checked | Fails 1h outright |
+
+**No candidate cleared every gate.** TIA was the closest — clears the 1h >3% bar (+3.67%) but falls just short of the 4h >5% bar (+4.66%), consistent with the standing convention (established across prior passes, e.g. JTO earlier) that both the 1h and 4h momentum bars must clear together for a full technical pass. XAN and TAO each cleared one bar but not the other. METIS had the strongest raw print but failed the mandatory spread cap outright (1.48% vs ≤1% ceiling) before reaching the momentum stage. No catalyst check run for any candidate — all five acceleration-passers were rejected on momentum bars (or spread, for METIS) before reaching catalyst-confirmation stage, consistent with the standing convention.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.15%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
