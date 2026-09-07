@@ -38649,3 +38649,39 @@ BODEN, KAVA, SN8, SCRT excluded pre-emptively on thin notional (at/near the $30k
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, one candidate (RNBW) reached the deep-dive stage and was correctly rejected on a real structural gate (live intracandle fade, confirmed by re-query, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 17:00 UTC (fired ~17:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 16:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,103.50 vs today's session open $80,334.40 → **−1.53%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,103.50 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.33%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 29 candidates: SN8 (+27.34%, notional $35.5k — thin, erratic single-digit-volume prints), UAI (+24.55%, notional $1.31M), PEAQ (+22.34%, notional $302.4k), KAVA (+14.66%, notional $61.5k — thin), WLD (+12.23%, notional $2.62M), DOT (+11.43%, notional $3.34M), ICP (+10.77%, notional $3.20M), INJ (+8.92%, notional $3.05M), SCRT (+8.43%, notional $41.6k — thin), FIL (+7.95%, notional $517.4k), ACU/STX/MINA/FET/ATOM/REDUSD/XDC/ARKM/APT/CSPR/VET/VVV/PROVE/AVNT/ADI/MASK/XXLM/KSM/BAT rounding out the list at 2.0–6.9%.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 16:45→17:00→17:15, current time ~17:34 UTC, 17:30 still forming):**
+- **Fail acceleration:** PEAQ (17:00 C 0.03130 < 16:45 C 0.03172), DOT (17:00 C 1.0905 < 16:45 C 1.0994), ICP (17:15 C 3.040 < 17:00 C 3.045), ACU (17:00 C 0.1435 < 16:45 C 0.1445), STX (17:00 C 0.2859 < 16:45 C 0.2872), MINA (17:15 C 0.08233 < 17:00 C 0.08297), ATOM (17:00 C 1.6622 < 16:45 C 1.6650), SN8 (17:00 C 7.697 < 16:45 C 8.018, also erratic/illiquid — pre-filtered).
+- **Pass acceleration (both prior candle-pairs rising):** UAI (0.71112→0.71851→0.72011), WLD (0.4620→0.4699→0.4712), INJ (5.658→5.681→5.775), FIL (0.862→0.866→0.869), KAVA (0.0600→0.0607→0.0608, marginal second leg).
+
+**Momentum bars on acceleration-passers (1h = 16:15C → 17:15C; 4h = 13:15C → 17:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **UAI** | **+4.74%** | **+11.29%** | **Clears both bars** |
+| **KAVA** | **+3.58%** | **+5.01%** | **Clears both bars (marginal)** |
+| WLD | +3.77% | +3.02% | Fails 4h bar |
+| INJ | +2.70% | N/A | Fails 1h bar |
+| FIL | +1.28% | N/A | Fails 1h bar |
+
+**UAI/USD deep-dive:** Spread (ask $0.72766 / bid $0.72529) = 0.327%, clears the ≤1% cap. Live intracandle fade: live last $0.72754 vs 24h high $0.73402 → −0.88%, within the 1.5% cap. **Fails the confirmed-candle requirement:** the 24h high ($0.73402) was set on the still-forming 17:30 candle; the last fully closed candle (17:15) topped out at $0.72120 (its own high) before closing at $0.72011 — the forming-candle high sits **+1.78%** above that last confirmed closed-candle high, a materially larger jump than the ~1.2% marginal-extension precedent that was treated as passable (FIL/WLD, prior passes) — **rejected as an unconfirmed breakout**, not a marginal live extension. Same-thesis check: last UAI activity was the 2026-08-30 stop-out (+2.16% gain, not a loss) — no stop-outs within the current 7-day window, cooling cap does not apply, but moot given the structural rejection. Not deep-dived further for catalyst/R:R since a structural gate already fails it.
+
+**KAVA/USD deep-dive:** Spread (ask $0.06090 / bid $0.06060) = 0.495%, clears the cap. Notional $61.5k — thin but above the $30k floor. **Fails the confirmed-candle requirement** on a different pattern: the 24h high ($0.06120) was a wick on the now-**closed** 17:15 candle, which itself closed at $0.0608 — below its own wick high — and the subsequent (forming) 17:30 candle has not traded above $0.0610, well short of confirming it. This is the same wicked-and-reversed-within-the-candle pattern that rejected KAS (earlier same day) and SKR (2026-09-06 15:00 UTC pass). **Rejected.** Not deep-dived further for catalyst/R:R.
+
+SCRT excluded pre-emptively on thin notional; DOT, ICP, PEAQ, ACU, STX, MINA, ATOM, SN8 failed the two-candle acceleration check outright. Fear & Greed reads 72–74 ("Greed," cross-checked Alternative.me/CFGI/CoinStats via Perplexity) — not Extreme Fear, standard R:R floors apply; not queried further since no candidate reached the catalyst-review stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.53%). Weekly trend gate inside the ±3% band (+2.33%/5d), standard regime, non-restrictive. Two candidates (UAI, KAVA) cleared the momentum-bar pair (1h>3% AND 4h>5%) plus the two-candle acceleration and spread/fade checks, but both failed the confirmed-candle requirement on independent grounds (UAI: material forming-candle extension beyond the last confirmed high; KAVA: closed-candle wick that reversed within its own candle). No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, two candidates (UAI, KAVA) reached the deep-dive stage and were both correctly rejected on real structural gates (confirmed-candle, two independent failure patterns), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
