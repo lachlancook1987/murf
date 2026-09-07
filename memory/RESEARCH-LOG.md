@@ -38194,3 +38194,33 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), two clean technical candidates (ARX, CFG) both rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 03:00 UTC (fired ~03:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat, exact match to the Sep 6 23:00 UTC EOD snapshot, no drift. Alpaca `positions: []`, zero exposure, stop `a2b44cf9` unchanged. Step 3 maintenance: no-op (no open positions/orders to reconcile, resize, tighten, or check for thesis breaks).
+
+**Crash gate:** BTC live $79,731.00 vs today's session open $80,334.40 → **−0.75%**. Clear. **Weekly trend gate:** live $79,731.00 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+3.14%/5d**, outside the ±3% band but on the **upside** — standard regime applies (gate only restricts on downside breach).
+
+**Discovery sweep:** Pulled all 663 live Kraken USD pairs via public Ticker (batched), ranked by vs-open %, filtered to 24h-high-proximity >−2% and 24h USD volume >$50k. Three candidates cleared the liquidity/proximity screen:
+
+| Pair | vs-open | Prox to 24h high | 24h USD vol | Spread |
+|---|---|---|---|---|
+| UAI/USD | +15.93% | −0.16% | $852,736 | 0.58% |
+| PIEVERSE/USD | +7.28% | −1.93% | $92,490 | 0.19% |
+| PEAQ/USD | +5.49% | −0.47% | $68,074 | 0.22% |
+
+**UAI/USD deep dive (strongest candidate by far):** 15m closed candles show a clean acceleration from 02:30 UTC (close 0.62636) → 02:45 (0.66227) → 03:00 (0.66619) → 03:15 (0.67263, last closed) — each candle closing higher than the prior, satisfying the two-candle-acceleration requirement. Confirmed-candle requirement satisfied: the 03:00/03:15 closes already held well above the prior ~0.60–0.62 consolidation range before the still-forming 03:30 candle pushed to the 24h high (0.679). Live intracandle fade: live price $0.67766 is only 0.20% off the 24h high (well under the 1.5% fade-reject threshold). 1h move ≈ +10.5% (vs 02:30 open 0.61305), clears the >3% 1h bar and the >5% 4h bar decisively. Spread 0.58% (ask 0.67808 / bid 0.67418) — **clears the ≤1% cap** for the first time since this ticker started appearing in scans (previously rejected on ~1.9% spread, e.g. 2026-08-31 pass).
+
+**Catalyst check (Perplexity):** No confirmed <6h fundamental catalyst — coverage explicitly frames the move as "momentum-driven rather than fundamental," AI-sector token strength cited generically, next scheduled event is a token unlock rescheduled to 06 Nov 2026 (irrelevant to today's move). Cross-exchange check showed material spread across venues (CoinGecko $0.5501, Bybit $0.5915, Binance $0.6695 vs Kraken $0.6777) — Binance is close (1.2% divergence) but CoinGecko/Bybit diverge 23%/14.6%, likely feed-lag on a fast-moving thin-cap token rather than a real arb gap, but adds to the caution rather than resolving it.
+
+**Decision-relevant gate: Rolling win-rate kill switch.** UAI has no confirmed catalyst, so it is a **momentum-only** entry. Per TRADING-STRATEGY.md's Performance-Linked Controls, the win-rate kill switch remains **ACTIVE** (20.0% trailing win rate over the last 10 momentum-only entries, below the 35% floor) — no bot-originated trades have executed since the 2026-09-04 review to change this window. Momentum-only entries are suspended regardless of how cleanly they clear every structural/technical gate. This is the sole and sufficient rejection reason for UAI — it cleared every other gate (freshness, confirmed-candle, two-candle acceleration, live-fade, spread) for the first time in this ticker's repeated appearances in scans.
+
+PIEVERSE and PEAQ were not deep-dived past the liquidity/proximity screen — both are thin (<$100k 24h volume, well below UAI's), neither shows PIEVERSE/PEAQ's momentum threatening a catalyst-confirmed case, and the same kill-switch suspension would block them too absent a confirmed catalyst.
+
+**Fear & Greed:** 73 (Greed), up from 69 last week, 29 last month. **BTC macro:** −0.49%/24h per Perplexity cross-check, broadly consistent with Kraken's own −0.75%-vs-open read. **Top catalysts today:** US–Iran geopolitical risk-off headlines, Treasury buyback liquidity support, continued spot ETF inflows, Sept 15–16 FOMC as the month's dominant scheduled macro catalyst — none of these are asset-specific catalysts for any Kraken-sourced candidate this pass.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.75%). Weekly trend gate breached upside only (+3.14%/5d) — standard regime, non-restrictive. UAI/USD cleared every structural/technical gate (first time doing so after repeated spread-based rejections) but is blocked by the standing rolling win-rate kill switch (20.0%, momentum-only entries suspended) since no confirmed catalyst exists. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome — no gate loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat, no unprotected exposure, crash gate clear, weekly trend gate breach is upside/non-restrictive, and the one candidate with real momentum quality (UAI, first time clearing every technical/spread gate) was rejected on the standing win-rate kill switch rather than a manufactured excuse — same standing constraint already known to the user, not a new operational issue. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
