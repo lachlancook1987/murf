@@ -38743,3 +38743,36 @@ No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — FET came
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, five candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair (one a genuine razor-thin miss, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 21:00 UTC (fired ~21:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 19:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,212.70 vs today's session open $80,334.40 → **−1.40%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,212.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.47%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 639 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 111 candidates; top raw movers: INJ (+17.48%, notional $4.66M), AERO (+13.85%, notional $1.60M), KAS (+13.38%, notional $3.39M), ICP (+12.38%, notional $3.80M), WLD (+11.35%, notional $3.14M), ACU (+11.21%, at 24h high, notional $249.3k), VVV (+9.49%, notional $1.49M), FET (+8.49%, at 24h high, notional $995.6k), PENDLE (+6.37%, notional $320.4k).
+
+**15m OHLC deep-dive on the nine highest-notional/highest-momentum candidates:**
+- **24h-high freshness:** INJ's high (6.351) set 80 min ago; AERO's (0.6347) 110 min ago; KAS's (0.03757) 440 min ago; ICP's (3.128) 65 min ago; WLD's (0.4777) 410 min ago; VVV's (18.977) 65 min ago — all stale beyond the 30-min ceiling with no fresh closed-candle breakout above those levels. ACU (0.1491) and FET (0.1916) both made fresh highs on the still-**forming** 21:30 candle (5 min old) — fails the confirmed-candle requirement outright (high not yet held by a closed candle).
+- **Two-candle acceleration (closed candles 20:45→21:00→21:15):** ACU fails outright (21:00 C 0.1466 < 20:45 C 0.1473, spike-then-dip). INJ, ICP fail on their most recent leg (21:15 close below 21:00 close — both already reversing, consistent with INJ's live intracandle fade below). AERO, KAS, WLD, VVV, FET each pass acceleration on the closed-candle sequence.
+- **Live intracandle fade:** INJ live last vs 24h high → −1.92%, breaches the 1.5% cap — rejected outright regardless of its strong 4h momentum.
+- **Momentum bars (1h = 20:15C→21:15C; 4h = 17:15C→21:15C), computed on the five acceleration-passers plus INJ for reference:**
+
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| INJ | −2.05% | +6.98% | Fails 1h (already reversing — also fails live-fade above) |
+| AERO | +2.99% | +10.79% | Fails 1h bar (0.01-point miss) — also fails freshness (110 min stale, no confirmed breakout) |
+| KAS | +2.40% | +1.95% | Fails both bars |
+| WLD | +1.69% | −0.49% | Fails both bars |
+| VVV | +1.42% | +7.30% | Fails 1h bar |
+| FET | +1.45% | +2.54% | Fails both bars |
+
+No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — AERO came closest (1h +2.99%, a 0.01-point miss, same razor-thin-miss pattern as FET at the 19:00 UTC pass) but was independently disqualified on freshness regardless. Checked Perplexity for the two largest raw movers as a sanity check despite the momentum-bar miss: **INJ** — a Pineapple Financial mortgage-tokenization story plus an Upbit deposit/withdrawal warning, neither dated to today with confirmed <6h freshness, and already failing live-fade regardless. **AERO** — ongoing Velodrome-merger/buyback/Binance-listing narrative, multi-day not a fresh <6h event. Neither would have qualified as catalyst-confirmed even if the technical bars had cleared, so this doesn't change the outcome. Fear & Greed reads 73–74 ("Greed") — not Extreme Fear, standard R:R floors apply.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.40%). Weekly trend gate inside the ±3% band (+2.47%/5d), standard regime, non-restrictive. Five candidates (AERO, KAS, WLD, VVV, FET) cleared two-candle acceleration but none cleared the 1h>3%/4h>5% momentum-bar pair; INJ had the strongest raw prints but failed both the live intracandle fade cap and 1h momentum outright. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, five candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair or fade/freshness, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
