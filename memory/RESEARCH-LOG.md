@@ -38711,3 +38711,35 @@ No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — not deep
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, crash and weekly-trend gates both clear/non-restrictive, three candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 19:00 UTC (fired ~19:33 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 18:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}`. Alpaca `positions: []`, orders list is historical only (stop `a2b44cf9` remains canceled since 2026-05-22). Book fully flat both venues — Step 3 (a)-(e) all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live $79,317.40 vs today's session open $80,334.40 → **−1.27%**. Clear. **Weekly trend gate:** live $79,317.40 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.60%/5d**, inside the ±3% band. Standard regime, non-restrictive.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 9 higher-notional candidates worth deep-diving: INJ (+14.43%, notional $3.32M), AERO (+12.68%, notional $1.17M), ICP (+10.95%, notional $3.27M), DOT (+10.79%, notional $3.67M), ACU (+9.72%, notional $217.8k), FET (+7.70%, notional $1.09M), MINA (+6.07%, notional $600.8k), VVV (+5.53%, notional $943.1k), STX (+5.13%, notional $339.1k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 18:45→19:00→19:15, current time ~19:33 UTC, 19:30 still forming):**
+- **Fail acceleration:** INJ (19:00 C 5.977 < 18:45 C 5.999), AERO (19:15 C 0.6208 < 19:00 C 0.6210, marginal), DOT (19:00 C 1.0829 < 18:45 C 1.0891), STX (19:00 C 0.2834 < 18:45 C 0.2852).
+- **Pass acceleration (both prior candle-pairs rising):** ICP (2.999→3.000→3.029), ACU (0.1435→0.1446→0.1454), FET (0.1855→0.1880→0.1893), MINA (0.08129→0.08142→0.08238), VVV (17.702→17.709→17.820).
+
+**Momentum bars on acceleration-passers (1h = 18:15C → 19:15C; 4h = 15:15C → 19:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| FET | +2.99% | +4.41% | Fails both bars (1h short by 0.01pt) |
+| ICP | +1.54% | +3.24% | Fails both bars |
+| ACU | +1.61% | +2.83% | Fails both bars |
+| MINA | +1.34% | +2.28% | Fails both bars |
+| VVV | +0.95% | +1.65% | Fails both bars |
+
+No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — FET came closest (1h +2.99%, a razor-thin 0.01-point miss) but still fell well short on the 4h bar (+4.41% vs required >5%), so not deep-dived further for spread/catalyst/R:R since the structural bar fails first for all five. INJ, AERO, DOT, STX failed the two-candle acceleration check outright on their most recent closed candle despite the largest raw vs-open prints of the sweep (INJ +14.43%, AERO +12.68%, DOT +10.79%) — consistent with the recurring pattern this week of the biggest headline movers already stalling by the time a session catches them. No candidate warranted a Perplexity catalyst check this pass — none advanced past the structural momentum/candle gates.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.27%). Weekly trend gate inside the ±3% band (+2.60%/5d), standard regime, non-restrictive. Five candidates (ICP, ACU, FET, MINA, VVV) cleared the two-candle acceleration check but none cleared the 1h>3%/4h>5% momentum-bar pair — FET's 1h miss was the closest of the day (0.01 points) but still failed 4h by a real margin. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, five candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair (one a genuine razor-thin miss, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
