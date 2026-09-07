@@ -38776,3 +38776,33 @@ No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — AERO cam
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, five candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair or fade/freshness, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 22:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 21:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Book fully flat both venues — Step 3 (a)-(e) all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,073.00 vs today's session open $80,334.40 → **−1.57%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,073.00 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.29%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), ~639 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $20k notional floor and ≥90% proximity-to-24h-high filter surfaced 53 candidates; top raw movers vs today's session open: PEAQ (+21.99%, notional $406.7k), PIEVERSE (+20.90%, notional $379.3k), UAI (+19.49%, notional $1.52M), INJ (+14.82%, notional $4.63M), WLD (+13.18%, notional $3.22M), AERO (+13.09%, notional $1.63M), KAS (+12.60%, notional $3.31M), ICP (+10.58%, notional $3.84M), PUMP (+9.64%, notional $8.25M).
+
+**15m OHLC deep-dive, two-candle acceleration:** WLD, AERO, and PUMP pass (last two closed candles each closing higher than the prior); PEAQ, PIEVERSE, UAI, INJ, KAS, ICP, KAVA, VELODROME, ACU, VVV, CAP, DOT all fail outright — most are already retracing from an intraday peak (UAI −4.35%/4h and fading fastest, live fade 7.48% off its 24h high).
+
+**Momentum bars (1h vs 4h, computed from closed 15m candles) on the three acceleration-passers, plus a reference check on the largest raw movers:**
+
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| WLD | +1.34% | +3.55% | Fails both bars |
+| AERO | +1.10% | +7.92% | Fails 1h bar |
+| PUMP | +2.00% | +1.84% | Fails both bars |
+| INJ | −1.04% | +3.12% | Fails 1h bar (already reversing) |
+| UAI | −0.78% | −4.35% | Fails both bars, fading hardest of the sweep |
+
+No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair this pass — AERO came closest, clearing the 4h bar comfortably (+7.92%) but missing the 1h bar by nearly 2 points, same pattern as the 19:00/21:00 UTC passes (a large 4h move that has already lost 1h acceleration). No candidate warranted a Perplexity catalyst check — none advanced past the structural momentum-bar gate. Fear & Greed not re-queried this pass (no candidate reached the R:R-floor stage where it would matter).
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.57%). Weekly trend gate inside the ±3% band (+2.29%/5d), standard regime, non-restrictive. Three candidates (WLD, AERO, PUMP) cleared two-candle acceleration but none cleared the 1h>3%/4h>5% momentum-bar pair; AERO's 4h print was the strongest of the day but its 1h leg had already stalled. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, three candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
