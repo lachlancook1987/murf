@@ -38371,3 +38371,38 @@ ICP, KAS, INJ, CAP, RNBW, ARKM, ACU all failed on a real structural/momentum/spr
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical candidate (WLD) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 09:00 UTC (fired ~09:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 08:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,454.70 vs today's session open $80,334.40 → **−1.10%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,454.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.78%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor and ≤3% proximity-to-24h-high filter to the vs-open>3% raw movers: CAP (+14.95%, prox −2.06%, notional $340.9k), TX (+14.06%, prox −0.45%, notional $38.3k), PLAY (+13.44%, prox −2.00%, notional $218.5k), KAS (+10.16%, prox −1.33%, notional $1.70M), ICP (+9.70%, prox −2.06%, notional $2.89M), WLD (+8.02%, prox −2.47%, notional $2.11M), USELESS (+7.69%, prox −2.40%, notional $5.55M), INJ (+6.37%, prox −0.70%, notional $2.31M), MINA (+6.03%, prox −2.26%, notional $259.8k), ACU (+5.75%, prox −0.49%, notional $175.6k), KNTQ (+5.14%, notional $53.5k — excluded pre-emptively, same thin/single-trade-candle pattern flagged in prior passes), PEAQ/ZRO/AI/PUMP/XDC/ARKM/ASTR all below the top-10 momentum cut.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 08:45→09:00→09:15, current time ~09:35 UTC, 09:30 still forming):**
+- **Fail acceleration:** CAP (09:15 C 0.049317 < 09:00 C 0.049924), PLAY (09:00 C 0.038856 < 08:45 C 0.039292), ICP (09:15 C 3.014 < 09:00 C 3.023), MINA (09:15 C 0.08218 < 09:00 C 0.08383), ACU (09:00 C 0.1398 < 08:45 C 0.1403).
+- **Pass acceleration (both 08:45→09:00 and 09:00→09:15 rising):** TX (0.00215→0.00218→0.00219), KAS (0.03497→0.03533→0.03547), WLD (0.4539→0.4564→0.4567, narrowly), USELESS (0.21965→0.22776→0.23012), INJ (5.605→5.614→5.642).
+
+**Momentum bars on acceleration-passers (1h = 08:15C → 09:15C; 4h = 05:15C → 09:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **TX** | **+4.29%** | **+6.83%** | **Clears both bars** |
+| **KAS** | **+3.23%** | **+7.13%** | **Clears both bars** |
+| USELESS | +11.38% | +4.05% | Fails 4h bar |
+| WLD | −1.68% | n/a | Fails 1h bar (already faded off its 08:15 peak) |
+| INJ | +0.84% | n/a | Fails 1h bar |
+
+**TX deep-dive:** spread (ask 0.00218 / bid 0.00217) = 0.46%, clears cap. Live intracandle fade −0.45%, well inside cap. But candle-count data shows this is an extremely thin market — cnt=1 trade in the still-forming 09:30 candle (vs. cnt=5-22 on prior candles), 3-significant-figure pricing so single trades move price ~0.5%, and 24h notional of only $38.3k is barely above the liquidity floor. This is the same thin/single-trade-candle pattern the strategy doc's KNTQ precedent excludes — **rejected as a data-quality/liquidity call, not a real tradeable move**, despite technically clearing both momentum bars and the spread cap.
+
+**KAS deep-dive:** spread (ask 0.035460 / bid 0.035430) = 0.085%, clears cap easily. But the 24h high (0.036050) was only touched as a wick on the 09:00 candle (H 0.03605, C 0.03533 — closed well below) and never confirmed by a subsequent closed candle holding above it (09:15 H only reached 0.03554). **Fails the confirmed-candle requirement** — the high is not confirmed by a closed candle holding above it. Independently, live intracandle fade: live $0.035470 vs 24h high $0.036050 → **−1.61%, breaches the 1.5% live-fade cap**. Rejected on two independent gates.
+
+CAP, PLAY, ICP, MINA, ACU all failed acceleration outright. USELESS failed its 4h momentum bar despite a strong 1h print. WLD and INJ failed their 1h bar.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.10%). Weekly trend gate inside the ±3% band (+2.78%/5d), standard regime, non-restrictive. No candidate cleared every gate this pass — TX and KAS both technically cleared the momentum/acceleration bars but were independently rejected (TX on thin/single-trade liquidity, KAS on unconfirmed-high + live-fade breach); every other candidate failed a structural gate outright. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate this pass on real structural/liquidity/fade grounds rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
