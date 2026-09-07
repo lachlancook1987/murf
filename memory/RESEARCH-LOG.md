@@ -38162,3 +38162,35 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), the one clean technical candidate (ORCA) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 02:00 UTC (fired ~02:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 01:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $80,005.70 vs today's session open $80,334.40 → **−0.41%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,005.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+3.49%/5d** — outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (unchanged from recent passes).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 663 online USD pairs. Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high prelim filter to the vs-open>3% raw movers (excluding ZEC/DASH, AU-restricted, skipped pre-emptively): ARX (+8.10%, prox −1.09%, notional $58.8k), CFG (+7.08%, prox −1.19%, notional $91.6k), INJ (+4.62%, prox −0.14%, notional $2.10M), CRV (+3.65%, prox 0.00%, notional $2.94M), VET (+3.21%, prox −0.41%, notional $74.4k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 01:45→02:00→02:15; current time 02:34 UTC, so 02:15 is the most recent closed candle):**
+- **Fail acceleration outright:** INJ (02:00 close 5.482 < 01:45 close 5.486), CRV (02:00 close 0.38457 < 01:45 close 0.38463 — fails by a hair), VET (02:00 close 0.007240 < 01:45 close 0.007265).
+- **Pass acceleration (3 consecutive rising closes):** ARX (01:45→02:00→02:15: 0.15351→0.15593→0.15637), CFG (01:45→02:00→02:15: 0.1149→0.1171→0.1174).
+
+**Momentum bars on acceleration-passers (1h = 01:15 close → 02:15 close; 4h = 22:15 close → 02:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **ARX** | **+3.98%** | **+10.94%** | **Clears both bars** |
+| **CFG** | **+3.89%** | **+10.75%** | **Clears both bars** |
+
+**ARX deep-dive:** Live quote bid $0.15547/ask $0.15611, spread **0.41%**, under the 1% cap. Pair confirmed online (`kraken.sh assets`). Confirmed-closed-candle requirement satisfied. Live-intracandle fade off the 24h high ($0.15637): current last $0.15466 → **−1.09%**, inside the 1.5% cap. **Caveat:** the 01:15 candle (O=H=L=C=0.15038, V=72.7) is flat with near-zero volume — the same thin/wash-trade signature that disqualified ARX outright on the 01:00 UTC pass 34 minutes ago; the three subsequent candles (V=3,422 / 13,165 / 11,364 / 24,332) show real volume, so this pass does not exclude ARX on the same hard rule, but it's a recurring liquidity-quality flag on this pair. Catalyst check (Perplexity): no coin-specific catalyst found — "lifted mainly by a broader rotation into altcoins, not a coin-specific announcement," no fresh headline in the last few hours. **Momentum-only.**
+
+**CFG deep-dive:** Live quote bid $0.1169/ask $0.117, spread **0.09%**, well under cap. Pair confirmed online. Confirmed-closed-candle requirement satisfied, three consecutive rising closes. Live-intracandle fade off the 24h high ($0.1178): current last $0.1169 → **−0.76%**, inside the 1.5% cap. Every technical/structural gate clears. **Catalyst check (Perplexity):** CFG has a real, well-covered story — governance proposal CP172 (token-to-equity conversion for CFG holders at 1:1) — but it was announced **2026-08-17/18**, roughly 3 weeks ago, not <6h old. Follow-up query confirmed the associated Snapshot vote opened **2026-09-03** (4 days ago, running until Sep 10), not in the last few hours either. No separate breaking announcement found in the last few hours beyond the ongoing vote. **This makes CFG a momentum-only entry** despite having a real underlying narrative — the narrative itself is stale relative to the <6h freshness bar this strategy requires for the catalyst-confirmed R:R floor and kill-switch exemption.
+
+**Verdict:** No candidate converts to a trade. Both ARX and CFG clear every technical/structural gate (spread, both momentum bars, two-candle acceleration, confirmed-candle, live-fade) but neither has a confirmed <6h catalyst, so both are momentum-only and are flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) — the same rejection pattern as ORCA at the 01:00 UTC pass. INJ, CRV, VET all failed acceleration outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.41%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass (ARX/CFG rejections were the standing kill-switch block on momentum-only entries, not a manufactured excuse). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), two clean technical candidates (ARX, CFG) both rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
