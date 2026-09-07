@@ -38224,3 +38224,27 @@ PIEVERSE and PEAQ were not deep-dived past the liquidity/proximity screen — bo
 ### Step 8 — Notification
 
 No push sent — book flat, no unprotected exposure, crash gate clear, weekly trend gate breach is upside/non-restrictive, and the one candidate with real momentum quality (UAI, first time clearing every technical/spread gate) was rejected on the standing win-rate kill switch rather than a manufactured excuse — same standing constraint already known to the user, not a new operational issue. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 04:00 UTC (fired ~04:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 03:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,592.70 vs today's session open $80,334.40 → **−0.92%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,592.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.96%/5d** — back inside the ±3% band (was +3.14%/5d at the 03:00 UTC pass). Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the $50k notional liquidity floor and ≤3% proximity-to-24h-high prelim filter to the vs-open>3% raw movers (excluding ZEC/DASH, AU-restricted, skipped pre-emptively): ARX (+10.04%, prox −1.86%, notional $71.3k), PIEVERSE (+6.42%, prox −2.72%, notional $94.6k), MNT (+6.06%, prox −0.71%, notional $269.7k), PLAY (+5.35%, prox −0.37%, notional $73.8k), PEAQ (+5.30%, prox −1.91%, notional $66.3k), INJ (+4.30%, prox −2.00%, notional $2.19M), TOSHI (+3.38%, prox −0.07%, notional $106.4k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 03:45→04:00→04:15; current time 04:34 UTC, so 04:15 is the most recent closed candle):**
+- **Fail acceleration outright:** MNT (04:15 close 0.6477 < 04:00 close 0.6494), INJ (04:15 close 5.492 < 04:00 close 5.499), ARX (04:15 close 0.15520 < 04:00 close 0.15785 — also carries the same thin/wash-candle flag noted on the 02:00 UTC pass), PLAY (04:00 close 0.035374 < 03:45 close 0.035760, fails at the first comparison), PEAQ (04:00/04:15 both declining from 03:45), PIEVERSE (04:15 close 1.1191 < 04:00 close 1.1270).
+- **Pass acceleration (3 consecutive rising closes):** TOSHI (03:45→04:00→04:15: 0.0001283→0.0001295→0.0001320) — the only candidate to pass this pass.
+
+**TOSHI momentum bars (1h = 03:15 close → 04:15 close; 4h = 00:15 close → 04:15 close):** both reference closes happen to be identical (0.0001283), giving **1h momentum +2.88%** and **4h momentum +2.88%** — fails the >3% 1h bar (barely) and fails the >5% 4h bar decisively. Not deep-dived further (spread/catalyst) since it doesn't clear the momentum bars regardless of a clean acceleration pattern.
+
+**Verdict:** No candidate cleared every gate. TOSHI was the only pass on two-candle acceleration but falls short of both momentum bars. All other candidates failed acceleration outright (spike-then-stall pattern), consistent with the standing pattern seen across recent passes today.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.92%). Weekly trend gate back inside the ±3% band (+2.96%/5d) — standard regime, non-restrictive. No candidate cleared every gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, weekly trend gate back inside band, no candidate cleared every gate this pass (TOSHI's rejection was a real momentum-bar shortfall, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
