@@ -11101,3 +11101,21 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly behind BTC (−0.46 points) on a mildly positive BTC day with the book fully cash-flat. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — EOD Snapshot
+
+### Sep 7 — EOD Snapshot (Day 110, Monday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** +1.49%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat all day, no TRADE-LOG entries dated today, no drift since the Sep 6 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $70.6298 baseline. Phase P&L unchanged at −$109.1502 (−60.71%) from $179.78 Kraken starting equity (May 22). **vs BTC:** BTC moved from $80,192.30 (Sep 6 EOD live reference) to $78,994.10 today → **−1.49%**; bot's day return (0.00%) beat BTC's raw move by **+1.49 points** — the book was flat and untouched through BTC's intraday pullback. Total trades since migration unchanged at 152 (no activity today). Every hourly pass today (00:00 through 23:00 UTC, 24 passes) reached HOLD — a broad alt rally mid-morning (13:00–14:00 UTC passes surfaced 29 raw movers) produced several candidates that cleared momentum bars and acceleration (CAKE, PIEVERSE, AKE, PEAQ among others) but each was rejected either on a structural gate (confirmed-candle, spread cap, momentum-peak freshness) or, for the technically-clean momentum-only candidates, the standing win-rate kill switch (ACTIVE, 20.0% trailing win rate, below the 35% floor). This pass's own sweep (23:00 UTC) found five candidates failing acceleration outright and the sole acceleration-passer (PENDLE) failing momentum-peak freshness (24h high ~3h stale). No candidate reached execution at any point today. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed historical/canceled (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 cash, fully available, no open positions, win-rate kill switch status to be reassessed as new momentum-only entries (if any) roll into the trailing 10-trade window.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +1.49 points on a day where BTC pulled back from a broad alt rally. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
