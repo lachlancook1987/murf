@@ -38553,3 +38553,36 @@ KAS, WLD (on its own 4h bar), FET, VVV, KAVA all failed a momentum bar independe
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate this pass (kill switch + confirmed-candle rejections on real structural grounds, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 14:00 UTC (fired ~14:36 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 13:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,044.70 vs today's session open $80,334.40 → **−1.61%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,044.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.25%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 638 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). The broad alt rally seen at the 12:00/13:00 UTC passes continues in raw vs-open terms — applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 22 candidates: PIEVERSE (+23.26%, notional $265.5k), KAS (+14.93%, notional $2.84M), UAI (+14.33%, notional $1.24M), ICP (+9.19%, notional $3.15M), WLD (+9.16%, notional $2.28M), INJ (+8.47%, notional $2.70M), DOT (+8.35%, notional $3.05M), KAVA (+8.27%, notional $38.8k — thin, at the liquidity floor), SCRT (+7.23%, spread 1.136% — hard skip), FIL (+6.34%, notional $441.7k), BABYSHARK (+5.61%, spread 0.848%, thin), KNTQ (+5.27%, notional $47.7k — excluded pre-emptively, thin/single-trade-candle pattern flagged repeatedly), STX/ATOM/MELANIA/VVV/SKR/ALIGN/XDC/KSM/AVNT/FET rounding out the list.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 13:45→14:00→14:15, current time ~14:36 UTC, 14:30 still forming):**
+- **Fail acceleration (stalled or reversed on the last closed candle):** PIEVERSE (14:15 C 1.2818 < 14:00 C 1.2931 — the rally that was accelerating at the 12:00/13:00 passes has now stalled), WLD (14:15 C 0.4593 < 14:00 C 0.4682), DOT (14:15 C 1.0566 < 14:00 C 1.0733), FIL (falling across all three candles), ATOM (14:15 C 1.6706 < 14:00 C 1.6743), VVV (14:15 C 17.734 < 14:00 C 17.807), FET (14:00 C 0.1811 < 13:45 C 0.1855).
+- **Pass acceleration (both prior candle-pairs rising):** KAS (0.03706→0.03708→0.03724), UAI (0.65878→0.65944→0.66702), ICP (2.977→2.982→2.990), INJ (5.719→5.732→5.761).
+
+**Momentum bars on acceleration-passers (1h = 13:15C → 14:15C; 4h = 10:15C → 14:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **UAI** | **+3.09%** | +4.39% | Clears 1h, fails 4h bar (needs >5%) |
+| KAS | +1.64% | +5.11% | Fails 1h bar |
+| ICP | −0.23% | −1.64% | Fails both bars |
+| INJ | −0.52% | +1.66% | Fails both bars |
+
+No candidate cleared **both** the 1h>3% and 4h>5% momentum bars simultaneously this pass — UAI came closest (1h clears comfortably, 4h short by 0.61 points) but the rule requires both together, so it does not proceed to spread/confirmed-candle/catalyst review. This pass reads as the broad alt rally topping out: every asset that was accelerating at the 12:00/13:00 UTC passes (PIEVERSE, DOT, FIL, WLD, ATOM, VVV, FET) failed the two-candle acceleration check outright on its most recent closed candle, and none of the four that still passed acceleration (KAS, UAI, ICP, INJ) had the sustained 4h base to clear the momentum-bar pair. No gate was loosened or skipped to force a review despite three consecutive passes of an active-looking rally.
+
+KAVA, SCRT, BABYSHARK, KNTQ, MELANIA, ALIGN excluded pre-emptively on thin notional (at/near the $30k floor) or hard spread-cap breach (SCRT 1.136%, BABYSHARK 0.848% is under cap but paired with thin notional), consistent with the exclusion pattern applied in prior passes — not deep-dived individually since none reached even the acceleration stage among the higher-notional set above.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.61%). Weekly trend gate inside the ±3% band (+2.25%/5d), standard regime, non-restrictive. No candidate cleared the momentum-bar pair (1h>3% AND 4h>5%) — UAI was the closest miss, failing only the 4h bar by 0.61 points — so no candidate reached the spread/confirmed-candle/catalyst/kill-switch review stage this pass. The alt rally that produced live candidates at the 12:00/13:00 UTC passes appears to be stalling/reversing on this pass's closed candles. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate reached even the deep-dive stage this pass (momentum-bar pair not cleared, closest miss still short by a real margin), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
