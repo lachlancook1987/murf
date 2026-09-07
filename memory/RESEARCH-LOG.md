@@ -38510,3 +38510,46 @@ RNBW rejected on spread breach. PUMP, ZRO, XDC failed acceleration. KAS, INJ eac
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the two clean technical candidates (CAKE, PIEVERSE) were rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 13:00 UTC (fired ~13:36 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 12:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,493.50 vs today's session open $80,334.40 → **−1.05%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,493.50 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.83%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 639 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). A broad alt rally is underway this pass — applying a $30k notional liquidity floor and ≤3% proximity-to-24h-high filter to the vs-open>3% raw movers surfaced 29 candidates, well above the usual count: PIEVERSE (+21.47%, prox −1.31%, notional $219.6k), KAS (+12.76%, prox −1.22%, notional $2.51M), NOCK (+9.97%, notional $191.5k — spread 8.13%, hard skip), FIL (+9.32%, prox −0.23%, notional $468.4k), ICP (+9.19%, prox −2.52%, notional $3.32M), KAVA (+9.02%, notional $32.2k — right at the liquidity floor), INJ (+8.81%, notional $2.60M), WLD (+8.54%, notional $2.06M), KNTQ (+6.75%, notional $55.9k — excluded pre-emptively, thin/single-trade-candle pattern flagged repeatedly), DOT (+6.29%, notional $2.29M), BABYSHARK (+5.76%, notional $39.5k — spread 1.61%, hard skip), STX/XLTC/MOG/ATOM/EGLD/ZRO/XDC/IMX/KSM/ARKM/MELANIA/FET/VVV/CAKE rounding out the list at 3.5–5.7%.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 12:45→13:00→13:15, current time ~13:36 UTC, 13:30 still forming):**
+- **Pass acceleration (both prior candle-pairs rising):** PIEVERSE (1.2078→1.2563→1.2589), KAS (0.03629→0.03658→0.03664), FIL (0.854→0.864→0.872), WLD (0.4479→0.4525→0.4574), DOT (1.0207→1.0270→1.0416), FET (0.1828→0.1840→0.1855), VVV (17.523→17.679→17.722), KAVA (0.0568→0.0577→0.0579, thin liquidity).
+- **Fail acceleration:** ICP (13:00 C 2.963 < 12:45 C 2.978), INJ (13:00 C 5.730 < 12:45 C 5.747), STX (13:15 C 0.2856 < 13:00 C 0.2890), XLTC (13:00 C 58.50 < 12:45 C 59.09), ATOM (13:15 C 1.6780 < 13:00 C 1.6802), EGLD (13:15 C 4.71 < 13:00 C 4.72), ZRO (13:00 C 1.165 < 12:45 C 1.175), XDC (13:00 C 0.02967 < 12:45 C 0.02969), CAKE (13:00 C 2.322 < 12:45 C 2.373).
+
+**Momentum bars on acceleration-passers (1h = 09:15C → 13:15C; 4h = using available closed-candle history):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **PIEVERSE** | **+6.46%** | **+15.82%** | **Clears both bars** |
+| **FIL** | **+5.19%** | **+6.34%** | **Clears both bars** |
+| **DOT** | **+5.13%** | **+6.30%** | **Clears both bars** |
+| KAS | +1.72% | +3.30% | Fails both bars |
+| WLD | +2.15% | +0.15% | Fails both bars |
+| FET | +3.11% | +4.45% | Fails 4h bar |
+| VVV | +3.19% | +4.08% | Fails 4h bar |
+| KAVA | +2.30% | +4.32% | Fails 4h bar (also thin liquidity) |
+
+**DOT deep-dive (cleanest of the three momentum-bar clears):** spread (ask 1.0369 / bid 1.0368) = **0.010%**, comfortably clears cap. Confirmed-candle check: the 24h high ($1.0455) sits exactly on the last fully **closed** 13:15 candle's own high, not the still-forming 13:30 candle — a cleanly confirmed breakout. Live intracandle fade: live $1.0366 vs 24h high $1.0455 → **−0.85%**, comfortably inside the 1.5% cap. Both momentum bars clear decisively (1h +5.13%, 4h +6.30%).
+
+**FIL deep-dive:** spread (ask 0.880 / bid 0.879) = 0.114%, clears cap. Confirmed-candle check: the 24h high ($0.882) is set on the still-forming 13:30 candle, only marginally above the last closed 13:15 candle's own high ($0.878, +0.46%) — treated as an already-confirmed-breakout-with-marginal-live-extension per the WLD/PLAY/UAI precedent rather than a fresh unconfirmed spike. Live intracandle fade −0.57%, within cap. Both momentum bars clear.
+
+**PIEVERSE deep-dive:** spread (ask 1.2723 / bid 1.2655) = 0.537%, clears cap. Confirmed-candle check: the 24h high ($1.2853) is set on the still-forming 13:30 candle, **2.10% above** the last closed 13:15 candle's own high ($1.2589) — this is a materially fresh, unconfirmed extension, not a marginal one (unlike FIL above). **Fails the confirmed-candle requirement.**
+
+**Catalyst check (Perplexity):** Fear & Greed reads 74 ("Greed," CoinStats) — not Extreme Fear, so the standard R:R floors apply without the Extreme-Fear variant. Macro catalyst query returned broad market-wide drivers (ETF inflows, Treasury liquidity support, short-covering squeeze, SEC framework proposal) — nothing asset-specific to DOT or FIL. **DOT:** queried directly — no confirmed <6h event; drivers cited are a "technical breakout and positive social sentiment" plus a stale (4-day-old) Polkadot ETF-filing withdrawal, neither a fresh discrete catalyst. **FIL:** queried directly — no confirmed event either; drivers cited are "profit-taking after a strong weekly rally" and technical consolidation, i.e. no catalyst at all. **Both DOT and FIL are momentum-only entries** (no confirmed <6h catalyst), so both are flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) regardless of otherwise clearing every technical, momentum, spread, and confirmed-candle gate — same rejection pattern as WLD, PLAY, UAI, VVV, ORCA, CAKE, PIEVERSE in prior passes this week. This broad alt rally appears macro-driven (ETF/liquidity/short-squeeze), not a set of independent asset catalysts, consistent with no single asset clearing a catalyst check.
+
+KAS, WLD (on its own 4h bar), FET, VVV, KAVA all failed a momentum bar independently. ICP, INJ, STX, XLTC, ATOM, EGLD, ZRO, XDC, CAKE all failed acceleration outright. NOCK and BABYSHARK were excluded pre-emptively on hard spread-cap breaches.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.05%). Weekly trend gate inside the ±3% band (+2.83%/5d), standard regime, non-restrictive. Three candidates (DOT, FIL, PIEVERSE) cleared or near-cleared every technical/momentum/spread gate amid an unusually broad alt rally, but none has a confirmed <6h catalyst (this appears to be a macro-driven, not asset-specific, move) — DOT and FIL are blocked by the active momentum-only win-rate kill switch (20.0% < 35% floor), and PIEVERSE additionally fails the confirmed-candle requirement outright. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate this pass (kill switch + confirmed-candle rejections on real structural grounds, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
