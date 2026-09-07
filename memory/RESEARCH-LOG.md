@@ -38406,3 +38406,34 @@ CAP, PLAY, ICP, MINA, ACU all failed acceleration outright. USELESS failed its 4
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate this pass on real structural/liquidity/fade grounds rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 10:00 UTC (fired ~10:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 09:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,412.80 vs today's session open $80,334.40 → **−1.15%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,412.80 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.73%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor and ≤3% proximity-to-24h-high filter to the vs-open>3% raw movers: AKE (+18.05%, prox −0.63%, notional $1.33M), ICP (+10.33%, prox −1.50%, notional $2.90M), KAS (+9.91%, prox −1.55%, notional $1.79M), PEAQ (+7.61%, prox −0.22%, notional $72,984), ACU (+6.88%, prox −0.56%, notional $170,570), INJ (+6.45%, prox −0.63%, notional $2.24M), XDC (+4.70%, prox −0.17%, notional $366,646). TX excluded pre-emptively (thin/single-trade-candle pattern, previously flagged). CFG/RNBW/SOLV/ORCA/WLD/USELESS/FORTH/ATLAS all excluded on prox >3% off high.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 09:45→10:00→10:15, current time ~10:35 UTC, 10:30 still forming):**
+- **Fail acceleration:** ICP (10:00 C 3.022 < 09:45 C 3.023), KAS (09:45 C 0.03565 < 09:30 C 0.03577, 10:00 C 0.03537 < 09:45), ACU (10:00 C 0.1422 < 09:45 C 0.1433), XDC (10:15 C 0.02963 = 10:00 C 0.02963, not strictly higher).
+- **Pass acceleration (both prior candle-pairs rising):** AKE (0.01479377→0.01535120→0.01578863→0.01610657→0.01648271, five straight higher closes), PEAQ (0.02695→0.02715→0.02743→0.02784), INJ (5.613→5.619→5.667, last two pairs rising despite an earlier dip).
+
+**Momentum bars on acceleration-passers (1h = close 4 candles back → latest closed; 4h = close 16 candles back → latest closed):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **AKE** | **+11.42%** | **+8.44%** | **Clears both bars** |
+| PEAQ | +3.23% | +1.42% | Fails 4h bar |
+| INJ | +0.44% | n/a | Fails 1h bar |
+
+**AKE deep-dive (only candidate clearing both momentum bars):** Confirmed-candle check — live ticker 24h high ($0.01694705) is **exactly equal to the live last price**, and is **above** the last fully closed candle's own high (10:15 candle: H 0.01676321, C 0.01648271). This means the 24h high is being set live, on the still-forming 10:30 candle, with **no closed candle yet confirming it holds** — the exact still-forming-candle fakeout pattern the confirmed-candle rule (added 2026-08-28) exists to reject, regardless of how clean the acceleration/momentum numbers look. **Rejected on confirmed-candle requirement.** Live intracandle fade is a non-issue here (0.00% — price is at the high, not faded off it), but that doesn't override the confirmed-candle failure. No catalyst check run — rejected on a structural gate independent of catalyst quality, consistent with prior passes' convention of not spending a Perplexity query on a candidate already rejected upstream.
+
+PEAQ and INJ both failed a momentum bar independently (PEAQ's 4h print is a modest 1.42%, well short of the 5% floor; INJ's 1h print of 0.44% shows it's basically flat over the last hour despite today's raw vs-open gain). ICP, KAS, ACU, XDC all failed acceleration outright.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.15%). Weekly trend gate inside the ±3% band (+2.73%/5d), standard regime, non-restrictive. No candidate cleared every gate this pass — AKE cleared both momentum bars and full acceleration but was rejected on the confirmed-candle requirement (its 24h high is being made live, unconfirmed by any closed candle); PEAQ and INJ each failed one momentum bar; ICP/KAS/ACU/XDC failed acceleration outright. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one candidate with real momentum (AKE) was rejected on a genuine structural gate (unconfirmed live high) rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
