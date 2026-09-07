@@ -38298,3 +38298,39 @@ No push sent — book flat with no unprotected exposure, both venues confirmed c
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, weekly trend gate breach is upside/non-restrictive, no candidate cleared every gate this pass (KAS/AI came closest but failed on a real still-forming-candle confirmed-candle gate, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 07:00 UTC (fired ~07:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 06:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,355.90 vs today's session open $80,334.40 → **−1.22%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,355.90 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.65%/5d** — back inside the ±3% band (was +3.09%/5d at the 06:00 UTC pass). Standard regime applies, non-restrictive either way (gate only tightens on downside breach).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed, Alternative.me), unchanged from prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor, ≤3% proximity-to-24h-high, and ≤1.5% spread prelim filter to the vs-open>3% raw movers: PLAY (+13.01%, prox −0.31%, notional $152k, spread 0.14%), ICP (+8.93%, prox −2.11%, notional $2.58M, spread 0.14%), KNTQ (+5.93%, prox 0.00%, notional $48k — excluded pre-emptively, same thin/zero-volume pattern flagged on prior passes), KAS (+4.99%, prox −1.51%, notional $1.24M, spread 0.15%), MOG (+4.92%, prox −1.84%, notional $137k — sub-cent token, excluded, low candle resolution/wash-pattern), WLD (+4.52%, prox −1.17%, notional $1.63M, spread 0.23%), PEAQ (+4.29%, prox −2.84%, notional $74k), INJ (+4.00%, prox −2.92%, notional $2.21M), ACU (+3.59%, prox −0.65%, notional $163k), ARKM (+3.29%, prox −0.96%, notional $54k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 06:45→07:00→07:15; current time ~07:34 UTC, so 07:15 is the most recent closed candle, 07:30 still forming):**
+- **Fail acceleration outright:** INJ (07:15 close 5.541 < 07:00 close 5.571 — spike then fade), ARKM (07:15 close 0.1130 < 07:00 close 0.1132), KAS (07:00 close 0.03414 < 06:45 close 0.03421, declining further at 07:15).
+- **Pass acceleration (3 consecutive rising closes):** PLAY (0.037695→0.037961→0.038310), ICP (2.944→2.989→2.997, narrowly), WLD (0.4372→0.4386→0.4408), ACU (0.1368→0.1388→0.1392).
+
+**Momentum bars on acceleration-passers (1h = close 4 periods back → last-closed-candle close; 4h = close 16 periods back → last-closed-candle close; closed-candle basis only, live price excluded per methodology):**
+| Asset | 1h momentum | 4h momentum | Live fade off 24h high | Verdict |
+|---|---|---|---|---|
+| **PLAY** | **+3.40%** | **+9.99%** | −0.53% | **Clears both bars + fade cap** |
+| ICP | +0.40% (07:15C 2.997 vs 06:15C 2.985) | not computed (1h bar already fails) | **−1.65%** (breaches 1.5% cap) | Fails 1h bar and fade cap |
+| WLD | +2.37% (07:15C 0.4408 vs 06:15C 0.4306) | +6.14% | −0.05% | **Fails 1h bar** |
+| ACU | +2.20% (07:15C 0.1392 vs 06:15C 0.1362) | +3.65% | −0.65% | **Fails both bars** |
+
+**PLAY deep-dive (only candidate clearing every technical/momentum/liquidity/spread gate):** Pair confirmed online (`kraken.sh assets`), base asset **PlaysOut**. Spread 0.19% (well under 1% cap). Confirmed-closed-candle requirement: the 07:00/07:15 closes (0.037961, 0.038310) already held clearly above the prior 06:15–06:30 consolidation range (~0.0369–0.0371) before the still-forming 07:30 candle nudged to a marginal fresh high (0.038594, +0.02% above the 07:15 candle's own high) — same "already-confirmed breakout, marginal live extension" pattern accepted for UAI at the 2026-09-07 03:00 UTC pass, so treated as satisfying the rule rather than a fresh unconfirmed spike. Live intracandle fade −0.53%, comfortably inside the 1.5% cap. Both momentum bars clear decisively (1h +3.40%, 4h +9.99%).
+
+**Cross-exchange divergence check:** Perplexity's own PLAY price citation ($0.0217) diverged ~77% from Kraken's live $0.0385 — flagged as a possible divergence-gate reject, but investigated directly via CoinGecko rather than taking Perplexity's number at face value (known chronic Perplexity price-data-quality issue). CoinGecko confirms Kraken's PLAY ticker maps to **PlaysOut** (coingecko id `playsout`), with CoinGecko's own current USD price ($0.03860) matching Kraken's live price ($0.0385) within ~0.3% — **no real divergence**; Perplexity's number was simply wrong/stale data (likely conflating with the unrelated, much-lower-priced "Play Solana Token," also symbol PLAY, coingecko id `play-solana-token`, current price ~$0.00084). Cross-exchange gate clears.
+
+**Catalyst check (Perplexity, PlaysOut-specific):** No confirmed <6h catalyst — most recent identifiable events are a Binance Alpha listing/airdrop (May 2026) and a BSC→Base migration (undated, described as a prior event), both stale. A cited Binance Square note explicitly states "no official major announcement in the past 24 hours," with the move described as trading-driven. **This makes PLAY a momentum-only entry**, which is flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) regardless of clearing every other gate — same rejection pattern as ORCA (Sep 6 01:00 UTC), UAI (Sep 7 03:00 UTC), and VVV (Sep 7 05:00 UTC).
+
+ICP, WLD, ACU, KAS, INJ, ARKM all failed on a real structural/momentum gate (fade cap, 1h/4h bar shortfall, or acceleration) independent of the kill switch.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.22%). Weekly trend gate back inside the ±3% band (+2.65%/5d) — standard regime, non-restrictive. PLAY cleared every technical, momentum, spread, liquidity, and cross-exchange-divergence gate (the divergence flag itself resolved as a Perplexity data error, not a real gap) but has no confirmed <6h catalyst, so it's blocked by the active momentum-only win-rate kill switch (20.0%, below the 35% floor) rather than any gate being loosened to force a trade. Every other candidate failed a structural/momentum gate independently. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical candidate (PLAY) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse (and its apparent cross-exchange divergence resolved as a Perplexity data error on investigation, not a real risk), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
