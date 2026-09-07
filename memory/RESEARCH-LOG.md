@@ -38334,3 +38334,40 @@ ICP, WLD, ACU, KAS, INJ, ARKM all failed on a real structural/momentum gate (fad
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical candidate (PLAY) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse (and its apparent cross-exchange divergence resolved as a Perplexity data error on investigation, not a real risk), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 08:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 07:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,481.30 vs today's session open $80,334.40 → **−1.06%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,481.30 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.82%/5d** — inside the ±3% band (narrowing from +2.65%/5d... actually moving up from the 06:00 UTC pass's +3.09%, then 07:00's +2.65%, now +2.82% — noise around the band edge, still non-restrictive since it only tightens on downside breach). Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor and ≤3% proximity-to-24h-high filter to the vs-open>3% raw movers: RNBW (+27.30%, prox −1.77%, notional $45.5k), PLAY (+13.67%, prox −1.45%, notional $172.5k), CAP (+11.68%, prox −0.14%, notional $492.6k), ICP (+11.50%, prox −0.46%, notional $2.63M), WLD (+10.00%, prox −0.69%, notional $1.88M), KAS (+6.32%, prox −1.29%, notional $1.31M), KNTQ (+5.51%, prox −0.80%, notional $50.3k — excluded pre-emptively, same thin/zero-volume pattern as prior passes), INJ (+5.47%, prox −1.55%, notional $2.14M), ARKM (+5.21%, prox −0.52%, notional $57.1k), ACU (+4.93%, prox −1.27%, notional $164.5k). CFG/PROS/ORCA/TX/FORTH/ARX/XAN/MNT/AKE/RIZE all failed the proximity filter (already faded >3% off their 24h high).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 08:00→08:15, current time ~08:34 UTC, 08:30 still forming):**
+- **CAP:** new candidate this pass, spread 0.26% (clears cap). Acceleration **fails** — 08:15 close 0.045741 < 08:00 close 0.047307, a clean spike-then-reversal after the 07:30–08:00 run (07:45 C 0.047002 → 08:00 C 0.047307 → 08:15 C 0.045741, declining).
+- **RNBW:** spread (ask 0.03724 / bid 0.03685) = **1.06%, breaches the ≤1% hard cap** — rejected outright. Also fails acceleration independently (08:15 close 0.03545 < 08:00 close 0.03665) with volume drying up (08:15 vol 3,852 vs 08:00 vol 40,473).
+- **PLAY:** fails acceleration this pass — 08:00 close 0.038440 < 07:45 close 0.038822 (stalled/pulled back off its 07:45 high of 0.039269, unlike the 07:00 UTC pass where it cleanly passed).
+- **ARKM, ACU:** both fail acceleration — 08:15 close below 08:00 close in each case (0.1150<0.1155; 0.1403<0.1406).
+- **Pass acceleration:** ICP (3.014→3.040→3.049), **WLD** (0.4492→0.4596→0.4645), KAS (0.03377→0.03433→0.03436, narrowly), INJ (5.553→5.586→5.595).
+
+**Momentum bars on acceleration-passers (1h = closed candle 4 periods back → last-closed-candle close; 4h = 16 periods back → last-closed-candle close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **WLD** | **+5.38%** (07:15C 0.4408 → 08:15C 0.4645) | **+11.45%** (04:30C 0.4168 → 08:15C 0.4645) | **Clears both bars** |
+| ICP | +1.73% (07:15C 2.997 → 08:15C 3.049) | not computed (1h bar already fails) | Fails 1h bar |
+| KAS | +1.03% (07:15C 0.03401 → 08:15C 0.03436) | not computed | Fails 1h bar |
+| INJ | +0.97% (07:15C 5.541 → 08:15C 5.595) | not computed | Fails 1h bar |
+
+**WLD deep-dive (only candidate clearing every technical/momentum/liquidity/spread gate):** Spread (ask 0.4623 / bid 0.4618) = 0.11%, well under 1% cap. Live intracandle fade: live $0.4626 vs 24h high $0.4654 → **−0.60%**, comfortably inside the 1.5% cap. Confirmed-candle check: the 08:15 closed candle (H 0.4650, C 0.4645) already confirmed a fresh high off the prior range before the still-forming 08:30 candle nudged marginally further to 0.4654 (+0.09% above 08:15's high) — same "already-confirmed breakout, marginal live extension" pattern accepted for PLAY (Sep 7 07:00 UTC pass) and UAI (Sep 7 03:00 UTC pass), treated as satisfying the rule.
+
+**Catalyst check (Perplexity, WLD-specific, two queries):** No confirmed <6h catalyst. Cited items: Kalshi launched USD-settled WLD perpetual futures on a CFTC-regulated platform — confirmed via follow-up query as **September 4, 2026**, i.e. **3 days stale**, not <6h. World Foundation raised $52.5M in a WLD token sale with a 1-year lockup — no fresh timestamp given, treated as not confirmed-fresh either. Perplexity's own cited WLD spot price ($0.41–0.43) was stale/low vs Kraken's live $0.4626 — consistent with the known chronic Perplexity price-data-quality issue, Kraken remains price source of record. **This makes WLD a momentum-only entry**, flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) — same rejection pattern as ORCA (Sep 6), UAI (Sep 7 03:00), VVV (Sep 7 05:00), and PLAY (Sep 7 07:00).
+
+ICP, KAS, INJ, CAP, RNBW, ARKM, ACU all failed on a real structural/momentum/spread gate independent of the kill switch.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.06%). Weekly trend gate inside the ±3% band (+2.82%/5d), standard regime, non-restrictive. WLD cleared every technical, momentum, spread, liquidity, and confirmed-candle gate but has no confirmed <6h catalyst (nearest news is 3 days stale), so it's blocked by the active momentum-only win-rate kill switch rather than any gate being loosened to force a trade. Every other candidate failed a structural/spread/momentum gate independently. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical candidate (WLD) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
