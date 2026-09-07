@@ -38096,3 +38096,34 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 00:00 UTC (fired ~00:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 2026-09-06 23:00 UTC EOD-pass state, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` reconfirmed `canceled`, zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $80,188.90 vs today's session open $80,334.40 → **−0.18%**. Clear, nowhere near −20%. **Weekly trend gate:** live $80,188.90 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+3.73%/5d** — outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Fear & Greed index: 73 (Greed), reconfirmed via Perplexity, unchanged from prior passes.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high prelim filter to the vs-open>3% raw movers (excluding XZEC, AU-restricted, skipped pre-emptively): ORCA (+9.41%, prox −1.59%, notional $232.5k), TIA (+6.30%, prox −1.94%, notional $672.1k), YGG (+5.69%, prox −1.89%, notional $120.9k), GFI (+5.61%, prox −1.31%, notional $32.3k, borderline), ARKM (+3.56%, prox 0.00%, notional $49.1k), DOT (+3.03%, prox −0.25%, notional $1.56M).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 23:45→00:00→00:15; current time 00:34 UTC, so 00:15 is the most recent closed candle):**
+- **Fail acceleration outright:** ORCA (00:15 close 1.545 < 00:00 close 1.549), YGG (00:15 close 0.0254 < 00:00 close 0.0259), GFI (flat/near-zero volume on most candles — too thin despite nominally clearing the notional floor, excluded on the same grounds as prior thin-candidate rejections).
+- **Pass acceleration:** TIA (0.4426→0.4532→0.4780), ARKM (0.1095→0.1107→0.1123), DOT (0.9792→0.9897→1.0086).
+
+**Momentum bars on acceleration-passers (1h = 23:15 close → 00:15 close; 4h = 20:15 close → 00:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **TIA** | **+7.97%** | **+14.44%** | **Clears both bars** |
+| DOT | +3.62% | +4.53% | Fails 4h (close) |
+| ARKM | +2.75% | not checked | Fails 1h |
+
+**TIA deep-dive:** Live quote bid $0.4710/ask $0.4712, spread **0.04%**, well under the 1% cap. Pair confirmed online (`kraken.sh assets`). Confirmed-closed-candle requirement satisfied (00:00 and 00:15 both closed above the prior breakout level). **However:** the currently-forming 00:30 candle printed a fresh high of $0.48 before fading back to a live last price of $0.4707 (ask $0.4712) — live intracandle fade off that $0.48 high is **−1.94% to −1.98%**, breaching the mandatory ≤1.5% live-intracandle-fade cap. This is the same fade-between-passes pattern the gate exists to catch (per the CHIP/MINA precedent cited in TRADING-STRATEGY.md) — rejected on this gate before reaching catalyst-confirmation stage. Per the Gate-Rejection Outcome Tracking note, worth a later-pass check on how TIA's price behaves from this rejection point ($0.4707) — observation only, no re-entry off this note. This is also the third consecutive pass (21:00, 22:00, 23:00 UTC Sep 6, now 00:00 UTC Sep 7) TIA has reached deep-dive stage without converting to a trade — first two on the catalyst/kill-switch gate, this one on live fade.
+
+**Verdict:** No candidate cleared every gate. TIA was the strongest technical print (clears both momentum bars, acceleration, spread, confirmed-candle) but fails the live-intracandle-fade cap on its most recent spike. DOT fell just short of the 4h >5% bar. ARKM failed the 1h >3% bar.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.18%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass. Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (TIA's rejection was on a real live-fade breach, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
