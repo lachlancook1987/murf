@@ -38471,3 +38471,42 @@ PIEVERSE and ZRO each failed one momentum bar independently (PIEVERSE's 4h print
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate this pass on real structural/spread/momentum grounds rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 12:00 UTC (fired ~12:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 11:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,498.30 vs today's session open $80,334.40 → **−1.04%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,498.30 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.84%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 663 online USD pairs (636 with live ticker data; ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor and ≤3% proximity-to-24h-high filter to the vs-open>3% raw movers: RNBW (+30.73%, prox −1.26%, notional $53.5k), PIEVERSE (+14.58%, prox 0.00%, notional $160.7k), PUMP (+12.70%, prox −2.28%, notional $7.63M), KAS (+11.64%, prox −0.99%, notional $2.14M), INJ (+8.02%, prox −0.57%, notional $2.35M), KNTQ (+7.03%, notional $51.0k — excluded pre-emptively, same thin/single-trade-candle pattern flagged repeatedly), REZ (+6.98%, notional $30.8k — excluded, right at the liquidity floor), LUNA (+6.55%, notional $269.0k), ZRO (+6.43%, prox −0.84%, notional $469.7k), CAKE (+5.06%, prox −0.80%, notional $213.2k), MELANIA/XDC/ETHFI/XLM/STX/FIL/EV/ARKM/LTC/AVNT all below the top-10 momentum cut or thin.
+
+**Spread check on top candidates:** RNBW ask/bid spread = **1.129% — breaches the ≤1% hard cap**, rejected outright (same rejection pattern as the 2026-09-07 09:00/earlier passes). PIEVERSE 0.369%, PUMP 0.044%, KAS 0.083%, INJ 0.105%, ZRO 0.170%, CAKE 0.213%, XDC 0.068% — all clear.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 11:45→12:00→12:15, current time ~12:35 UTC, 12:30 still forming):**
+- **Fail acceleration:** PUMP (12:00 C 0.004521 < 11:45 C 0.004530), ZRO (12:15 C 1.180 < 12:00 C 1.185), XDC (12:15 C 0.02951 not strictly higher than 12:00 C 0.02951, flat).
+- **Pass acceleration (both 11:45→12:00 and 12:00→12:15 rising):** PIEVERSE (1.1457→1.1503→1.1825), KAS (0.03520→0.03596→0.03602, narrowly), INJ (5.653→5.725→5.741), CAKE (2.275→2.309→2.353).
+
+**Momentum bars on acceleration-passers (1h = 11:15C → 12:15C; 4h = 08:15C → 12:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **PIEVERSE** | **+4.33%** | **+8.36%** | **Clears both bars** |
+| **CAKE** | **+5.66%** | **+7.74%** | **Clears both bars** |
+| KAS | +2.62% | +4.83% | Fails 1h bar |
+| INJ | +1.25% | +2.61% | Fails 1h bar |
+
+**CAKE deep-dive:** spread 0.213%, clears cap. Confirmed-candle check: the 24h high ($2.367) is set exactly on the last **closed** 12:15 candle's own high — not the still-forming 12:30 candle — so this is a cleanly confirmed breakout, not a live-only spike. Live intracandle fade: live $2.35 vs 24h high $2.367 → **−0.72%**, comfortably inside the 1.5% cap. Both momentum bars clear decisively.
+
+**PIEVERSE deep-dive:** spread 0.369%, clears cap. Confirmed-candle check: the 12:15 closed candle (H 1.1908, C 1.1825) already confirmed a sharp breakout off the prior 11:15–12:00 consolidation range (~1.13–1.15) before the still-forming 12:30 candle nudged marginally further to a fresh high of 1.1966 (+0.49% above 12:15's own high) — same "already-confirmed breakout, marginal live extension" pattern accepted for WLD/PLAY/UAI in prior passes. Live intracandle fade −0.06%, negligible. Both momentum bars clear.
+
+**Catalyst check (Perplexity):** Fear & Greed reads mixed across providers (48–74, most commonly cited "Greed" 73 on alternative.me) — not Extreme Fear, so the standard 1.2:1 R:R floor (not the 1.5:1 Extreme-Fear variant) would apply if either candidate had a confirmed catalyst. **CAKE:** no confirmed <6h event — cited drivers are ongoing "PancakeSwap v4 hooks"/cross-chain narrative and BNB Chain/DeFi rotation, explicitly not a single fresh headline. **PIEVERSE:** no confirmed <6h event either — nearest items are an unlock-related narrative (a headwind, not a bullish catalyst) and a stale ~84h-old OKX listing/De1 Lab partnership. **Both candidates are momentum-only entries**, flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) regardless of otherwise clearing every technical, momentum, spread, and confirmed-candle gate — same rejection pattern as WLD, PLAY, UAI, VVV, ORCA in prior passes this week.
+
+RNBW rejected on spread breach. PUMP, ZRO, XDC failed acceleration. KAS, INJ each failed the 1h momentum bar.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.04%). Weekly trend gate inside the ±3% band (+2.84%/5d), standard regime, non-restrictive. Two candidates (CAKE, PIEVERSE) cleared every technical, momentum, spread, liquidity, and confirmed-candle gate but neither has a confirmed <6h catalyst, so both are blocked by the active momentum-only win-rate kill switch rather than any gate being loosened to force a trade. Every other candidate failed a structural/spread/momentum gate independently. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the two clean technical candidates (CAKE, PIEVERSE) were rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
