@@ -38127,3 +38127,38 @@ No push sent — book flat with no unprotected exposure, both gates clear (or no
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), no candidate cleared every gate this pass (TIA's rejection was on a real live-fade breach, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 01:00 UTC (fired ~01:36 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 00:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure. Book fully flat, Step 3a–3d all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,952.60 vs today's session open $80,334.40 → **−0.48%**. Clear, nowhere near −20%. **Weekly trend gate:** live $79,952.60 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+3.43%/5d** — outside the ±3% band but on the **upside**, so the stricter downtrend regime is not triggered; standard regime applies (unchanged from recent passes).
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 640 online USD pairs. Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high prelim filter to the vs-open>3% raw movers (excluding XZEC, AU-restricted, skipped pre-emptively): ORCA (+15.4%, prox 0.00%, notional $314.9k), CFG (+4.3%, prox 0.00%, notional $85.3k), ARX (+5.1%, prox −0.86%, notional $57.2k), XAN (+3.0%, prox −2.35%, notional $456.3k), INJ (+3.3%, prox −0.16%, notional $2.09M), T/USD "TUSD" (+5.7%, prox −2.44%, notional $55.9k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 00:45→01:00→01:15):**
+- **ARX disqualified on inspection:** two of the last six closed 15m candles (00:30, 00:45) are flat O=H=L=C with zero volume — same thin/wash-trade pattern that has excluded similar low-notional candidates on prior passes.
+- **T/USD fails acceleration outright:** 01:00 close 0.00473 < 00:45 close 0.00482.
+- **XAN faded below the 1h screen by the time of deep-dive:** live vs-open dropped to +2.43% (from +3.0% at initial sweep), below the >3% 1h-surge signal threshold — not pursued further.
+- **Pass acceleration (3 consecutive rising closes each):** ORCA (00:45→01:00→01:15: 1.530→1.584→1.607), CFG (00:45→01:00→01:15: 0.1103→0.1116→0.1130), INJ (00:45→01:00→01:15: 5.400→5.442→5.471).
+
+**Momentum bars on acceleration-passers (1h = 00:15 close → 01:15 close; 4h = 21:15 close → 01:15 close):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **ORCA** | **+4.01%** | **+15.03%** | **Clears both bars** |
+| CFG | +1.80% | +5.41% | Fails 1h bar |
+| INJ | +1.28% | +5.09% | Fails 1h bar |
+
+**ORCA deep-dive:** Live quote bid $1.649/ask $1.658, spread **0.55%**, under the 1% cap. Pair confirmed online. Confirmed-closed-candle requirement satisfied — three consecutive closed candles (00:45, 01:00, 01:15) each closed higher, well above the session's earlier range, confirming sustained (not single-spike) momentum. The currently-forming 01:30 candle printed a fresh 24h high of $1.661; live last $1.654 is only **−0.42%** off that high — comfortably inside the 1.5% live-intracandle-fade cap. Every technical/structural gate clears: spread, both momentum bars, two-candle acceleration, confirmed-candle, live-fade.
+
+**Catalyst check (Perplexity):** No confirmed <6h catalyst. Cited items are all stale relative to today's +17% move — Sept 2 whale-accumulation note, Aug 26 Shinhan/Visa tokenized-fund pilot, and an undated/unfired DAO buyback proposal. None explain today's live surge. **This makes ORCA a momentum-only entry**, which is flatly blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0% < 35% floor) regardless of how cleanly it clears every technical/structural gate — the cleanest technical print seen in several days, rejected on the kill switch alone.
+
+**Verdict:** No candidate converts to a trade. ORCA cleared every technical gate but has no confirmed catalyst, so the win-rate kill switch blocks it outright. CFG and INJ both failed the 1h momentum bar. ARX and T/USD excluded on thin/failed acceleration grounds.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.48%). Weekly trend gate outside band but upside, not downside — standard regime. No candidate cleared every gate this pass (ORCA's rejection was the standing kill-switch block on a momentum-only entry, not a manufactured excuse). Per the gate-protection default (TRADING-STRATEGY.md 2026-07-20), this is a correct, expected outcome. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear (or non-restrictive), the one clean technical candidate (ORCA) was rejected on the standing win-rate kill switch for lacking a fresh catalyst rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
