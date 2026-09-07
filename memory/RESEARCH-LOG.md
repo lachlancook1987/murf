@@ -38586,3 +38586,33 @@ KAVA, SCRT, BABYSHARK, KNTQ, MELANIA, ALIGN excluded pre-emptively on thin notio
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate reached even the deep-dive stage this pass (momentum-bar pair not cleared, closest miss still short by a real margin), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 15:00 UTC (fired ~15:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 14:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,846.70 vs today's session open $80,334.40 → **−1.85%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,846.70 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+1.99%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 638 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 10 candidates: UAI (+16.27%, notional $1.18M), DOT (+10.02%, notional $3.06M), SKR (+8.08%, notional $469.5k), SCRT (+7.23%, notional $38.0k — thin, at the liquidity floor), INJ (+6.94%, notional $2.76M), FIL (+6.83%, notional $469.9k), ACU (+5.90%, notional $184.8k), BABYSHARK (+5.61%, notional $38.6k — thin), ALIGN (+4.02%, notional $41.7k — thin), ATOM (+3.24%, notional $488.5k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 14:45→15:00→15:15, current time ~15:34 UTC, 15:30 still forming):**
+- **Fail acceleration:** DOT (15:00 C 1.0665 < 14:45 C 1.0679), INJ (15:15 C 5.704 < 15:00 C 5.730), ATOM (falling across the last two closed candles), ACU (flat/choppy, no clean rise), ALIGN (15:15 C 0.00829 < 14:15 baseline choppy).
+- **Pass acceleration (both prior candle-pairs rising):** UAI (0.66169→0.67526→0.67716), SKR (0.021885→0.022241→0.022462).
+
+**Momentum bars on acceleration-passers (1h = 14:15C → 15:15C; 4h = 11:15C → 15:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **SKR** | **+4.61%** | **+6.11%** | **Clears both bars** |
+| UAI | +1.52% | +5.49% | Fails 1h bar |
+
+**SKR deep-dive (only candidate clearing both momentum bars):** Spread (ask 0.0224510 / bid 0.0224030) = 0.214%, clears the ≤1% cap easily. Live intracandle fade: live $0.022451 vs 24h high $0.022605 → −0.68%, well inside the 1.5% cap. **Fails the confirmed-candle requirement**, however: the 24h high (0.022605) was set as a wick on the now-closed 15:15 candle, which itself closed at 0.022462 — below its own wick high — and no subsequent closed candle has held above that level (the 15:30 candle is still forming). This is the same wicked-and-reversed-within-the-candle pattern that rejected KAS at the 09:34 UTC pass on 2026-09-07 (see earlier entry same day) — **rejected on the confirmed-candle gate**, not deep-dived further for catalyst/R:R since a structural gate already fails it. UAI failed outright on the 1h momentum bar (+1.52%, needs >3%) despite a strong 4h base, so was not deep-dived past the momentum-bar stage.
+
+SCRT, BABYSHARK, ALIGN excluded pre-emptively on thin notional (at/near the $30k floor); DOT, INJ, ATOM, ACU failed the two-candle acceleration check outright on their most recent closed candle. No candidate warranted a Perplexity catalyst check this pass — none advanced past the structural momentum/candle gates.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.85%). Weekly trend gate inside the ±3% band (+1.99%/5d), standard regime, non-restrictive. Only one candidate (SKR) cleared the momentum-bar pair (1h>3% AND 4h>5%) plus the two-candle acceleration and spread/fade checks, but it failed the confirmed-candle requirement outright — its 24h high was a wick on a closed candle that reversed before its own close, unconfirmed by any subsequent closed candle. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, one candidate (SKR) reached the deep-dive stage and was correctly rejected on a real structural gate (confirmed-candle, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
