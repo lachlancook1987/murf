@@ -38616,3 +38616,36 @@ SCRT, BABYSHARK, ALIGN excluded pre-emptively on thin notional (at/near the $30k
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, one candidate (SKR) reached the deep-dive stage and was correctly rejected on a real structural gate (confirmed-candle, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 16:00 UTC (fired ~16:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 15:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,927.10 vs today's session open $80,334.40 → **−1.75%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,927.10 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.10%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since, window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 661 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying the $30k notional liquidity floor and ≤3% proximity-to-24h-high filter surfaced 19 candidates: BODEN (+80.22%, notional $54.0k — thin, extreme print), RNBW (+31.61%, notional $72.7k), PEAQ (+22.46%, notional $290.3k), UAI (+19.62%, notional $1.22M), DOT (+11.42%, notional $3.26M), KAVA (+10.34%, notional $45.8k — thin), SN8 (+9.39%, notional $39.0k — thin, choppy/flat-then-spike pattern), ACU (+7.70%, notional $205.3k), FIL (+7.33%, notional $489.7k), SCRT (+7.23%, notional $39.2k — thin), STX (+6.43%, notional $340.0k), INJ (+6.32%, notional $3.00M), BABYSHARK/ZRO/ATOM/AVNT/XDC/APT/FET rounding out the list at 3.0–5.6%.
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 15:45→16:00→16:15, current time ~16:34 UTC, 16:30 still forming):**
+- **Fail acceleration:** BODEN (16:00 C 0.002001 < 15:45 C 0.002114), DOT (16:00 C 1.0761 < 15:45 C 1.0782), KAVA (16:00 C 0.0574 flat vs 15:45 C 0.0574, not strictly higher), SN8 (16:00 C 7.073 flat vs 15:45 C 7.073), FIL (16:15 C 0.858 < 16:00 C 0.862), SCRT (16:00 C 0.0088 < 15:45 C 0.0089), STX (16:15 C 0.2832 < 16:00 C 0.2846), INJ (16:00 C 5.635 < 15:45 C 5.662).
+- **Pass acceleration (both prior candle-pairs rising):** RNBW (0.03402→0.03549→0.03720), PEAQ (0.02982→0.03060→0.03136), UAI (0.67994→0.68739→0.68753, marginal on the second leg), ACU (0.1454→0.1435→0.1441).
+
+**Momentum bars on acceleration-passers (1h = 15:15C → 16:15C; 4h = 12:15C → 16:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| **RNBW** | **+13.93%** | **+6.13%** | **Clears both bars** |
+| PEAQ | +3.91% | +1.55% | Fails 4h bar |
+| UAI | +1.53% | N/A | Fails 1h bar |
+| ACU | +1.91% | N/A | Fails 1h bar |
+
+**RNBW deep-dive (only candidate clearing both momentum bars):** Spread (ask 0.03792 / bid 0.03773) = 0.50%, clears the ≤1% cap. Confirmed-candle check: the 24h high ($0.03796) sits on the still-forming 16:30 candle, only marginally above the last closed 16:15 candle's own high ($0.03751, +1.2%) — treated as a marginal live extension of an already-confirmed breakout, passable per the FIL/WLD precedent. **Fails the live intracandle fade check, however:** live last-trade price $0.03722 vs 24h high $0.03796 → **−1.95%**, exceeding the 1.5% cap (re-queried 3s later to rule out a stale read — bid also softened from $0.03773 to $0.03764 in that window, confirming the fade is real and the book is already pulling back, not a stale tick). **Rejected on the live intracandle fade gate.** Thin liquidity (notional $72.7k, only marginally above the $30k floor, ordermin 350 units) is consistent with this kind of fast fade-after-spike pattern. Not deep-dived further for catalyst/R:R since a structural gate already fails it.
+
+BODEN, KAVA, SN8, SCRT excluded pre-emptively on thin notional (at/near the $30k floor) combined with choppy/flat-then-spike OHLC patterns inconsistent with sustained momentum; DOT, FIL, STX, INJ failed the two-candle acceleration check outright on their most recent closed candle. Fear & Greed reads 73 ("Greed," Alternative.me) — not Extreme Fear, standard R:R floors apply; not queried further since no candidate reached the catalyst-review stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.75%). Weekly trend gate inside the ±3% band (+2.10%/5d), standard regime, non-restrictive. Only one candidate (RNBW) cleared the momentum-bar pair (1h>3% AND 4h>5%) plus the two-candle acceleration and confirmed-candle checks, but it failed the live intracandle fade check outright — a real-time re-query confirmed the fade (both last price and bid softening within 3 seconds), not a stale-data artifact. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, one candidate (RNBW) reached the deep-dive stage and was correctly rejected on a real structural gate (live intracandle fade, confirmed by re-query, not a manufactured excuse), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
