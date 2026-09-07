@@ -38685,3 +38685,29 @@ SCRT excluded pre-emptively on thin notional; DOT, ICP, PEAQ, ACU, STX, MINA, AT
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, two candidates (UAI, KAVA) reached the deep-dive stage and were both correctly rejected on real structural gates (confirmed-candle, two independent failure patterns), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-07 — Scan — 18:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $70.6298, all other balances zero/dust (ZAUD $0.1550) — exact match to the 17:00 UTC pass. `positions: {}`, `orders: {"open": {}}`. Alpaca `positions: []`, orders list is historical only (stop `a2b44cf9` remains canceled since 2026-05-22). Book fully flat, nothing to reconcile — Step 3 (a)-(d) all no-op.
+
+**Crash gate:** BTC live $79,090.90 vs today's session open $80,334.40 → **−1.55%**. Clear. **Weekly trend gate:** live $79,090.90 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.31%/5d**, inside the ±3% band. Standard regime, non-restrictive.
+
+**Discovery sweep:** Full 640 online USD pairs ranked by vs-session-open %. Filtered to candidates within ~5% of their 24h high (freshness proxy) with spread ≤1%: BKS, MF, PWT, BADGER excluded outright on spread (11.5%–354%, all illiquid micro-caps). Remaining — INJ, DOT, UAI, PIEVERSE, PEAQ, KAVA, SGB — deep-dived on 15m OHLC (closed candles 17:45→18:00→18:15, ~18:35 UTC current, 18:30 still forming):
+- **Fail two-candle acceleration:** DOT (18:00 C 1.0966 < 17:45 C 1.0970, then 18:15 C 1.0947 lower again), UAI (18:15 C 0.72769 < 18:00 C 0.74789 — already fading after a strong 17:30–18:00 run), KAVA (18:00 C 0.0596 < 17:45 C 0.0604, then 18:15 C 0.0594 lower again). SGB flat/illiquid (three consecutive identical-OHLC candles), pre-filtered.
+- **Pass acceleration:** INJ (5.803→5.897→5.929), PIEVERSE (1.2557→1.2725→1.2769), PEAQ (0.03151→0.03174→0.03200).
+
+**Momentum bars on acceleration-passers (1h = 17:15C → 18:15C; 4h = 14:15C → 18:15C):**
+| Asset | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|
+| INJ | +2.67% | +2.92% | Fails both bars |
+| PEAQ | +0.53% | +10.65% | Fails 1h bar |
+| PIEVERSE | +0.02% | −0.38% | Fails both bars |
+
+No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair — not deep-dived further for spread/catalyst/R:R since the structural bar fails first. Fear & Greed reads 73–74 ("Greed," Alternative.me/CoinStats via Perplexity) — not Extreme Fear, standard R:R floors would apply if a candidate reached that stage. Perplexity's catalyst query returned a stale/wrong BTC price (~$73.5k vs live $79.1k) — a known data-quality issue (TRADING-STRATEGY.md, Perplexity demoted to context-only); no catalyst specific to INJ/PEAQ/PIEVERSE surfaced regardless, so this had no bearing on the decision. Rolling win-rate kill switch remains **ACTIVE** (20.0%, below 35% floor per 2026-09-04 weekly review) — moot this pass since no candidate reached the catalyst-review stage.
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.55%). Weekly trend gate inside the ±3% band (+2.31%/5d), standard regime. Three candidates (INJ, PEAQ, PIEVERSE) cleared the two-candle acceleration check but none cleared the 1h>3%/4h>5% momentum-bar pair; three others (DOT, UAI, KAVA) failed acceleration outright, with UAI notably fading after the 17:00 UTC pass's rejection (24h high has moved on, still not sustainably breaking out). No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, crash and weekly-trend gates both clear/non-restrictive, three candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
