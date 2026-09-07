@@ -38806,3 +38806,27 @@ No candidate cleared the required 1h>3% AND 4h>5% momentum-bar pair this pass �
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, three candidates reached the acceleration stage and were correctly rejected on the momentum-bar pair, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-07 — Scan — 23:00 UTC (EOD pass)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 22:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,994.10 vs today's session open $80,334.40 → **−1.67%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,994.10 vs 5-day-ago daily close $77,305.10 (2026-09-02) → **+2.19%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $30k notional liquidity floor and ≥-3% proximity-to-24h-high filter to the vs-open>3% raw movers: WLD (+14.09%, prox −0.02%, notional $3.20M), VVV (+8.44%, prox −2.94%, notional $1.53M), PENDLE (+6.46%, prox −0.97%, notional $330.2k), BABYSHARK (+5.12%, notional $37.0k), SENT (+4.89%, notional $35.4k), EGLD (+4.45%, notional $65.9k), AIOZ (+4.21%, notional $58.2k), MOG (+4.12%, notional $120.2k), XPL (+3.35%, notional $557.4k), XDC (+3.32%, notional $561.6k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 22:45→23:00→23:15, current time ~23:34 UTC, 23:30 still forming):**
+- **Fail acceleration:** WLD (23:15 C 0.4761 < 23:00 C 0.4785), VVV (23:15 C 18.436 < 23:00 C 18.467), XPL (23:15 C 0.0928 < 23:00 C 0.0933), XDC (23:15 C 0.02923 < 23:00 C 0.02928), EGLD (23:15 C 4.71 < 23:00 C 4.72).
+- **Pass acceleration:** PENDLE only (22:45 C 2.228 → 23:00 C 2.236 → 23:15 C 2.241, both legs rising).
+
+**PENDLE deep-dive (only acceleration-passer):** spread clears cap easily (ask 2.241/bid 2.240 ≈ 0.04%). Live intracandle fade: live $2.241 vs 24h high $2.263 → −0.97%, inside the 1.5% cap. **Fails momentum-peak-check freshness outright:** the 24h high (2.263) was set on the 20:30 candle, roughly **3 hours** before this pass (current time ~23:34 UTC) — far beyond the 30-min ceiling (and beyond the ~60 min since the last logged pass). Price has been declining from that high since, with no fresh 1h candle breakout above 2.263 and no new distinct catalyst — the repricing already happened, this is a fading tape, not an accelerating one. **Rejected on the momentum-peak-check gate**, independent of catalyst quality; not deep-dived further.
+
+WLD, VVV, XPL, XDC, EGLD all failed the two-candle acceleration check outright on their most recent closed leg (each stalled or reversed on the 23:00→23:15 close). BABYSHARK, SENT, AIOZ, MOG not deep-dived (thinner notional, none flagged for a specific catalyst).
+
+### Decision: **HOLD.** Crash gate clear (BTC −1.67%). Weekly trend gate inside the ±3% band (+2.19%/5d), standard regime, non-restrictive. Five candidates (WLD, VVV, XPL, XDC, EGLD) failed two-candle acceleration outright; the one that passed (PENDLE) failed the momentum-peak-check freshness gate — its 24h high was set ~3h ago and price has been fading since. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate on real structural/freshness grounds rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
