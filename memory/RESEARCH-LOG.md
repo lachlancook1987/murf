@@ -38912,3 +38912,34 @@ No push sent — book flat with no unprotected exposure, both gates clear/non-re
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical setup (INJ) was correctly rejected on the win-rate kill switch rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 03:00 UTC (fired ~03:33 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 02:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` unchanged, zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,901.10 vs today's session open $79,090.40 → **−0.24%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,901.10 vs 5-day-ago daily close $81,178.20 (2026-09-03 EOD reference) → **−2.81%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 638 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $20k notional floor, vs-open >3%, and ≥−3% proximity-to-24h-high filter surfaced 8 candidates: XAN (+6.84% vs open, prox −0.82%, notional $215.7k), AERO (+6.50%, prox −0.44%, notional $2.15M), SKR (+4.45%, prox −1.40%, notional $478.0k), AVNT (+4.19%, prox −0.82%, notional $79.4k), SENT (+4.18%, prox −0.14%, notional $58.5k), RAY (+4.11%, prox −2.48%, notional $968.3k), DRV (+4.01%, prox −1.92%, notional $222.5k), AVA (+3.68%, prox −0.12%, notional $30.0k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 02:45→03:00→03:15, current time ~03:33 UTC, 03:30 still forming):**
+- **Pass acceleration:** XAN (0.0211→0.02152→0.02154), AERO (0.6425→0.6495→0.6515), SKR (0.021948→0.022258→0.022336), DRV (0.1622→0.16378→0.16561).
+- **Fail acceleration:** AVNT (03:00 C 0.11071 < 02:45 C 0.11181, dip-then-recover), SENT (03:15 C 0.01474 < 03:00 C 0.014762), RAY (03:15 C 1.201 < 03:00 C 1.218), AVA (03:00 C 0.1646 < 02:45 C 0.165).
+
+**24h-high freshness + live intracandle fade on the four acceleration-passers (full 96-candle/24h history pulled to find actual high-set time, not just the ticker's rolling 24h figure):**
+
+| Asset | 24h high set | Age | Live fade off high | 1h mom | 4h mom | Verdict |
+|---|---|---|---|---|---|---|
+| XAN | prior-day 04:45 | 1369 min | −0.82% | +3.01% | +6.06% | Fails freshness (stale by ~22.8h, already fading below) |
+| AERO | 01:45 | 109 min | −0.44% | +0.91% | +5.32% | Fails freshness (stale beyond 30-min ceiling, no fresh breakout above 0.6615) |
+| SKR | prior-day 15:15 | 739 min | −1.40% | +2.66% | +4.59% | Fails freshness (stale by ~12.3h) |
+| DRV | 03:15 (this pass's most recent closed candle) | 19 min | **−1.92%** | +3.19% | +5.20% | Fresh (within 30-min ceiling) but **fails live intracandle fade cap** (>1.5%) |
+
+DRV was the closest candidate this pass — genuinely fresh high (19 min old, well inside the cadence-relative 30-min ceiling) and both momentum bars would have cleared (1h +3.19%, 4h +5.20%), but live price had already retraced 1.92% off that high by the time of this check, breaching the 1.5% live-fade cap independent of the freshness/momentum reads — rejected on that gate alone, not deep-dived further for spread/catalyst/R:R. XAN, AERO, SKR all carried stale 24h highs (1.8–22.8h old) with live price still fading below them, no fresh breakout on any — rejected on the momentum-peak-check freshness gate. No candidate warranted a Perplexity catalyst check this pass — none advanced past the structural freshness/fade gates.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.24%). Weekly trend gate inside the ±3% band (−2.81%/5d), standard regime, non-restrictive. Four candidates (XAN, AERO, SKR, DRV) cleared two-candle acceleration; three (XAN, AERO, SKR) failed the momentum-peak-check freshness gate on stale highs, and DRV — the one genuinely fresh setup, both momentum bars clearing — failed the live intracandle fade cap by a real margin (−1.92% vs 1.5%), not a razor-thin miss. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one fresh technical setup (DRV) was correctly rejected on the live intracandle fade cap rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
