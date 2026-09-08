@@ -39277,3 +39277,32 @@ Two candidates (USELESS, VVV) are the cleanest technical setups seen in several 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome; the two cleanest technical setups this week were rejected on a real, active gate (downtrend-regime catalyst freshness), not a manufactured one. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 15:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure. Step 3a–3e all no-op — no orphans, no T1 fills, no runners, no thesis breaks; nothing logged to TRADE-LOG.md this pass.
+
+**Crash gate:** BTC live (Kraken) $78,435.00 vs today's session open $79,090.40 → **−0.83%**. Clear.
+**Weekly trend gate:** live $78,435.00 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.49%/5d** — remains outside the ±3% band, weekly BTC downtrend regime **still ACTIVE** (consistent with every pass since 07:00 UTC today). Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL), below the 35% floor. No momentum-only entries have executed since to roll the window.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 53 raw candidates. Top: USELESS (+30.08%), VVV (+28.29%), AKE (+21.59%, same long-stale-peak pattern flagged every pass this week), SODA/PEPECOIN/GLMR/IDOS/BODEN/FF/QI (all thin or stale from prior passes), NPC (+10.48%), **DOT (+10.31%, $4.9M notional, off-high only 1.42%)**, XETC (+10.14%), ATOM (+9.90%), MEGA (+9.49%), DCR/VET/BTR/AVA/NOCK/FLOCK/AKT and 30+ more.
+
+**15m OHLC (1h/4h momentum, 24h-high age, two-candle acceleration, live fade)** pulled for the freshest/highest-notional names:
+- **DOT:** 1h +7.13%, 4h +8.29% (clears both the standard 3% bar and the active downtrend gate's 5% bar comfortably). 24h high ($1.1879) set on the 15:15 candle, now fully closed — 19 min old, inside the 30-min freshness ceiling. Confirmed-candle: satisfied (high sits on a closed candle, not the current forming one). Two-candle acceleration: 15:00 close (1.1444) > 14:45 close (1.1214), and 15:15 close (1.1774) > 15:00 close (1.1444) — **pass**. Live fade: live $1.17110 vs $1.18790 high → 1.41%, inside the 1.5% cap (narrowly). Spread 0.026% (a $1.17500 / b $1.17470) — well inside 1%. **Clears every structural/technical gate — the cleanest setup seen this week.** Catalyst check via Perplexity: reports cite a Polkadot network-activity surge (~150% tx growth, ~5,000 tx/hour) and a tokenomics (2.1B DOT cap) proposal, but a timing follow-up query found the network-activity narrative dated to sources from **07 Sep 14:02 UTC** and **08 Sep 03:49 UTC** (already describing an existing surge, not a fresh trigger), with one source referencing the pattern as far back as **02 Sep** — no dated event pinpointed within the last 3 hours. **Reject — no fresh (<3h) catalyst; pure momentum entries are banned under the active weekly downtrend gate regardless of how clean the technical picture is.** Same rejection basis as USELESS/VVV in the 14:00 UTC pass.
+- **XETC:** 1h +4.47%, 4h +7.67%, very fresh high (4.4 min), accel pass, fade 0.77% — clean technically but 1h momentum falls just short of the downtrend gate's 5% bar. **Reject — momentum strength (downtrend gate).**
+- **MEGA:** 1h +4.56%, high_age 4.4 min, accel pass, fade 0.07% — same shortfall, just under 5%. **Reject — momentum strength (downtrend gate).**
+- **AKT:** 1h +4.89%, high_age 19.4 min, accel pass, fade 1.37% — closest miss, 0.11pt short of the 5% bar. **Reject — momentum strength (downtrend gate), marginal.**
+- **USELESS:** 1h +4.19%, accel fail (this candle's close pattern reversed from the 14:00 UTC read), fade 3.40% — no longer clean even on structure. **Reject.**
+- **VVV:** 1h +1.61% (much weaker than the 14:00 UTC read as the move has cooled), fade 3.12%. **Reject — momentum strength.**
+- **AKE:** 1h +7.25% (clears downtrend gate) but high_age 79.4 min — same stale-peak pattern flagged every pass this week. **Reject — freshness.**
+- **FF, NPC, ATOM, VET, AVA, MOVR, KTA, DRV, XNY, US:** accel fail, negative/flat momentum, or stale peaks (99–260+ min). **Reject.**
+
+No candidate reached the catalyst-confirmation stage with a positive result — DOT was the cleanest technical setup of the week (better than USELESS/VVV at 14:00 UTC on every structural gate) but failed the same catalyst-freshness requirement under the active weekly downtrend gate.
+
+### Decision: **HOLD.** No candidate clears every gate. Weekly BTC downtrend gate (−3.49%/5d) is the binding constraint this pass — DOT clears every standard structural/technical gate (momentum, freshness, confirmed-candle, acceleration, fade, spread) but lacks a catalyst dated within the required 3h window. Standing win-rate kill switch (20.0%, momentum-only suspended) reinforces HOLD independently. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome; the cleanest technical setup of the week (DOT) was rejected on a real, active gate (downtrend-regime catalyst freshness), not a manufactured one. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
