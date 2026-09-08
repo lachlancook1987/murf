@@ -39390,3 +39390,26 @@ No push sent — book flat on both exchanges, no drift, no operational issues, n
 No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate (the one momentum spike found was a clear pump-and-dump, correctly filtered by existing gates). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
 
 **Git-history note (informational, added this pass):** `git fetch origin main` this pass reported a non-fast-forward ("forced update") change relative to this container's previously-cached `origin/main` tracking ref (last seen at `c08cf72`, dated 2026-09-04 16:00 UTC) — the new tip has no common ancestor with that old ref. Investigated before pushing: the actual **file content** of TRADE-LOG.md and RESEARCH-LOG.md on the current `origin/main` is fully intact back to the May 2026 migration (verified directly via `git show origin/main:memory/...`), so no trading-record content was lost. What changed is that `main`'s fine-grained git commit history prior to a "2026-09-06 15:00 UTC" root commit appears to have been squashed/replaced at some point before this session started (this session's own branch was already based on that new lineage from its start, so the rewrite predates this pass). This push proceeds safely as a clean fast-forward (this session's branch parent is exactly `origin/main`'s current tip, `5490614`) — no clobbering risk this pass. Noting this for continuity in case a future pass's `git fetch origin main` shows the same old stale cached ref and gets confused; not pushed as a notification since content is intact and no trading impact resulted.
+
+## 2026-09-08 — Scan — 19:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — book flat on both exchanges, no orphan stops/T1 orders, no runners, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,399.10 vs today's session open $79,090.40 → **−0.87%**. Clear.
+**Weekly trend gate:** live $78,399.10 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.54%/5d** — outside the ±3% band (widening slightly from −3.10% at 18:00 UTC), weekly BTC downtrend regime **still ACTIVE**. Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Not the binding gate this pass (no candidate reached that stage).
+
+**Fear & Greed:** ~70 (Greed) per Perplexity (Alternative.me 69, CoinStats 71, Binance Square 72, CFGI 72) — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 49 raw candidates. Top by vs-open: VVV (+26.62%), SODA (+22.64%), USELESS (+17.73%), DOGS (+16.79%), DOT (+16.32%), FF (+14.22%), BODEN (+11.54%), VET (+11.05%), AIOZ (+10.94%), NPC (+10.59%), QI (+10.49%), NOCK (+9.93%), PEPECOIN (+9.90%), ATOM (+9.76%), BTR (+8.35%), XPL (+8.30%), DCR (+8.27%), AIO (+8.05%), XETC (+7.01%), AKT (+6.78%), plus 29 more with weaker vs-open (down to VELO +3.85%).
+
+**1h momentum check (15m OHLC)** on the 15 highest vs-open/notional candidates, to apply the active weekly-downtrend gate's 1h>5% bar directly: VVV +1.61%, SODA +2.59%, USELESS +0.73%, DOT +0.46%, DOGS −4.36% (reversed), ATOM −1.44%, XPL +0.20%, DCR +0.36%, VET −0.03%, AIOZ +1.27% (the still-forming pump-and-dump candle flagged and rejected at 18:00 UTC has now fully faded — no longer even close to 5%), NPC +1.09%, BTR −0.34%, XETC −0.98%, INJ +0.84%, BODEN −0.40%. **None reached the 5% bar** — every candidate's vs-open reading reflects a move that has already cooled substantially by the time of this check (the classic "already crested" pattern this gate exists to filter). No candidate reached the catalyst-confirmation or win-rate-kill-switch stage.
+
+### Decision: **HOLD.** No candidate cleared the active weekly-downtrend gate's 1h>5% + fresh-catalyst requirement. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
