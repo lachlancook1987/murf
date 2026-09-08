@@ -38830,3 +38830,26 @@ WLD, VVV, XPL, XDC, EGLD all failed the two-candle acceleration check outright o
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, no candidate cleared every gate on real structural/freshness grounds rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-08 — Scan — 00:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 2026-09-07 23:00 UTC EOD pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` unchanged, zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,085.00 vs today's session open $79,090.40 → **−0.01%**. Clear, essentially flat. **Weekly trend gate:** live $79,085.00 vs 5-day-ago daily close $81,178.20 (2026-09-03 EOD reference) → **−2.58%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $20k notional floor, vs-open >3%, and ≥−3% proximity-to-24h-high filter surfaced only **2 candidates** — a notably thin sweep (overnight low-activity hours): AERO (+4.01% vs open, notional $1.84M, prox-to-high −1.03%), BABYSHARK (+5.12% vs open, notional $37.1k, prox-to-high −2.64%).
+
+**Deep-dive:**
+- **BABYSHARK:** 15m OHLC shows six consecutive identical-OHLC candles (O=H=L=C=0.005563, zero volume each) — a dead/stale order book, not real price action; the notional figure that passed the filter is a stale 24h-volume artifact, not current liquidity. Rejected outright, not a real candidate.
+- **AERO:** Two-candle acceleration passes (closed 15m candles: 23:45 C 0.6182 → 00:00 C 0.6272 → 00:15 C 0.6404, both legs rising). Spread clears easily (ask 0.6446/bid 0.6428 ≈ 0.28%). **Fails momentum-peak-check freshness outright:** pulled full OHLC history and found the 24h high (0.6499) was set at **21:45 UTC on 2026-09-07** — roughly **168 minutes** before this pass, far beyond the 30-min ceiling (cadence-relative ceiling = min(30min, ~93min since last logged pass) = 30min regardless). Live price ($0.6432) sits 1.03% below that high with no fresh breakout above it — the repricing already happened and price has been fading/consolidating below the peak since, not accelerating past it. Rejected on the momentum-peak-check gate, independent of catalyst quality; not deep-dived further for R:R/catalyst.
+
+No candidate warranted a Perplexity catalyst check this pass — neither advanced past the structural freshness/liquidity gates.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.01%). Weekly trend gate inside the ±3% band (−2.58%/5d), standard regime, non-restrictive. Discovery sweep was thin (2 raw candidates, typical for the 00:00 UTC overnight hour) — BABYSHARK was a dead/illiquid ticker despite passing the notional pre-filter, and AERO cleared two-candle acceleration but failed the momentum-peak-check freshness gate (24h high set ~2.8h ago, price fading below it since). No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the only two raw candidates were correctly rejected (one illiquid/dead, one stale-high), no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
