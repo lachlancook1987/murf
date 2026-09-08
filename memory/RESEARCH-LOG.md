@@ -39131,3 +39131,34 @@ No other candidate advanced past the two-candle acceleration screen.
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with the only acceleration-passer rejected on a clear momentum-bar shortfall rather than a manufactured excuse. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 10:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure. Step 3a–3e all no-op — no orphans, no T1 fills, no runners, no thesis breaks, nothing logged to TRADE-LOG.md this pass.
+
+**Crash gate:** BTC live (Kraken) $78,750.00 vs today's session open $79,090.40 → **−0.43%**. Clear.
+**Weekly trend gate:** live $78,750.00 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.11%/5d** — remains outside the ±3% band, weekly BTC downtrend regime **still ACTIVE** (consistent with 07:00–09:00 UTC passes). Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL), below the 35% floor. No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 71 (Greed) per Perplexity — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 38 raw candidates. Top by vs-open: GUSD (+16.95%), SAFE (+13.51%), AKE (+12.69%), BTR (+8.79%), VET (+8.41%), USELESS (+8.15%), XPL (+7.97%), BODEN (+7.68%), CPOOL (+7.41%), KAITO (+7.34%), AVA (+7.05%), HNT (+6.94%), SYRUP (+6.88%), IDOS (+6.65%), plus 24 more with weaker vs-open.
+
+**15m OHLC (1h/4h momentum, 24h-high age, two-candle acceleration)** pulled for the 20 candidates closest to their 24h high plus the highest-notional/recurring names (AKE, USELESS, BTR, GUSD, IDOS, BODEN):
+- **XPL:** 1h +4.38%, 4h +10.12%, accel pass, 24h high 4 min old (fresh). Best candidate this pass — closest to clearing the downtrend gate's 1h>5% bar but falls short (4.38% < 5%). **Reject — momentum strength.**
+- **VET:** 1h +3.70%, 4h +6.93%, accel pass, 24h high 19 min old (fresh). Clears standard 1h>3% but not the active downtrend gate's >5% bar. **Reject — momentum strength.**
+- **USELESS:** 1h +4.50%, 4h +2.20%, accel **fail** (09:xx close < prior close), 24h high 19 min old. **Reject — acceleration.**
+- **WAL, XETC, ROBO, TRUST, SAFE, ATOM, DOT, AVA:** all accel-pass but 1h momentum 1.2–2.2%, nowhere near either the standard 3% or downtrend-gate 5% bar. **Reject — momentum strength.**
+- **KAITO, PROVE, APT, COTI, SYRUP, MOVR, ACU, ARB, GWEI, CAKE:** fail two-candle acceleration outright (latest closed leg lower or flat vs prior). **Reject — acceleration.**
+- **AKE:** still flat/reversed (1h −0.07%, 4h −0.11%), 24h high 844 min stale — same long-stale-peak pattern flagged every pass today. **Reject — stale peak.**
+- **BTR:** 1h −7.13% (sharp reversal since the 09:00 UTC pass's +8.79% vs-open read), accel fail. **Reject — reversed hard.**
+- **IDOS, BODEN:** both flat/negative 1h, stale peaks (1204 min / 979 min). **Reject.**
+
+No candidate clears every gate. XPL is the closest miss — fresh peak, passing acceleration and (implicitly, at 4.38% off entry-relevant windows) fade, but 1h momentum short of the downtrend gate's required >5% by a real margin (0.62 points), not a rounding-level miss.
+
+### Decision: **HOLD.** No candidate clears every gate — the strongest candidate (XPL) fails only the active weekly-downtrend momentum bar, everything else fails acceleration or momentum strength outright. Weekly BTC downtrend gate (−3.11%/5d) and the standing win-rate kill switch (20.0%, momentum-only suspended) both reinforce HOLD as well. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with the closest candidate rejected on a clear (not borderline) momentum-bar shortfall. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
