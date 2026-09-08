@@ -39104,3 +39104,30 @@ Win-rate kill switch: still **ACTIVE** (20.0% trailing win rate on momentum-only
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 09:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure. Step 3a–3e all no-op — no orphans, no T1 fills, no runners, no thesis breaks, nothing logged to TRADE-LOG.md this pass.
+
+**Crash gate:** BTC live (Kraken) $78,522.30 vs today's session open $79,090.40 → **−0.72%**. Clear.
+**Weekly trend gate:** live $78,522.30 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.39%/5d** — remains outside the ±3% band, weekly BTC downtrend regime **still ACTIVE** (consistent with 07:00/08:00 UTC passes, −3.43%/−3.45%). Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL), below the 35% floor. No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 71 (Greed) per Perplexity — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs. Applying a $30k notional floor and vs-open ≥3% filter surfaced 27 candidates; top by vs-open: BTR (+15.01%), AKE (+12.65%), BODEN (+11.94%), SAFE (+11.57%), IDOS (+11.22%), HNT (+9.45%), MEGA (+7.60%), G (+6.84%), CAKE (+6.65%), MOVR (+5.94%), USELESS (+5.76%), SYRUP (+5.62%), AVA (+5.56%), VET (+5.47%), SOMI (+5.18%), XPL (+4.74%), KAITO (+4.71%), AVNT (+4.68%), CPOOL (+4.49%), AERO (+3.88%), ICP (+3.68%), GWEI (+3.56%), XETC (+3.54%), AZTEC (+3.50%), UNI (+3.36%), PROVE (+3.29%), ICNT (+3.19%).
+
+**15m OHLC two-candle acceleration (last two CLOSED candles 09:00→09:15, current time ~09:34 UTC, 09:30 still forming)** on the candidates closest to their 24h high (proximity within ~2%): SAFE, MOVR, VET, XPL, GWEI, XETC, PROVE, ICNT, GUSD, SOMI, KAITO, MEGA.
+- **Fail (dip or decline on latest closed leg):** SAFE (09:15 C 0.1082 < 09:00 C 0.1086), VET (09:00 C 0.007503 < 08:45 C 0.007534), XPL (09:15 C 0.0959 < 09:00 C 0.0960), GWEI (09:00 C 0.024920 < 08:45 C 0.024933), XETC (declining across all three), PROVE (09:00 C 0.1933 < 08:45 C 0.1942), ICNT (09:00 C 0.1120 < 08:45 C 0.1122), GUSD (09:00 C 0.004147 < 08:45 C 0.004153), SOMI (declining across all three), KAITO (09:15 C 0.3344 < 09:00 C 0.3376), MEGA (09:15 C 0.04298 < 09:00 C 0.04336).
+- **Pass acceleration: MOVR** (08:45 C 0.8690 → 09:00 C 0.8787 → 09:15 C 0.8811, each closed higher).
+
+**MOVR deep-dive:** 24h high $0.8846 set at the 09:15 closed candle — **19 min old**, well inside the 30-min freshness ceiling, confirmed on a closed (not still-forming) candle. Live last $0.8811 vs high $0.8846 → **−0.40% fade**, comfortably inside the 1.5% cap. Notional ~$72k, spread reasonable. **But momentum bars fail:** 1h momentum (09:15 close $0.8811 vs 08:15 close $0.8613) = **+2.30%** — below even the standard >3% bar, and nowhere near the active downtrend gate's required >5%. 4h momentum (09:15 close $0.8811 vs 05:15 close $0.8609) = **+2.35%** — also below the standard >5% bar. MOVR cleared freshness, confirmed-candle, acceleration, and live-fade cleanly but fails on raw momentum strength — a real miss on both legs, not a borderline one. **Reject.** No catalyst check warranted (momentum itself insufficient regardless of catalyst confirmation, and a catalyst wouldn't lift it into the downtrend gate's 1h>5% bar anyway).
+
+No other candidate advanced past the two-candle acceleration screen.
+
+### Decision: **HOLD.** No candidate clears every gate — eleven of twelve near-high candidates failed two-candle acceleration outright; the sole passer (MOVR) cleared freshness/confirmed-candle/live-fade but missed both the 1h and 4h momentum bars by a wide margin. Weekly BTC downtrend gate (−3.39%/5d) and the standing win-rate kill switch both reinforce HOLD as well. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with the only acceleration-passer rejected on a clear momentum-bar shortfall rather than a manufactured excuse. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
