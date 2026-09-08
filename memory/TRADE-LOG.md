@@ -11119,3 +11119,21 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +1.49 points on a day where BTC pulled back from a broad alt rally. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — EOD Snapshot
+
+### Sep 8 — EOD Snapshot (Day 111, Tuesday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** +0.70%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat all day, no TRADE-LOG entries dated today, no drift since the Sep 7 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $70.6298 baseline. Phase P&L unchanged at −$109.1502 (−60.71%) from $179.78 Kraken starting equity (May 22). **vs BTC:** BTC moved from $78,994.10 (Sep 7 EOD live reference) to $78,443.40 today → **−0.70%**; bot's day return (0.00%) beat BTC's raw move by **+0.70 points** — book flat and untouched through BTC's modest pullback. Total trades since migration unchanged at 152 (no activity today). Every hourly pass today (00:00 through 23:00 UTC, 24 passes) reached HOLD, driven throughout by the **weekly BTC downtrend gate**, active all day (BTC 5-day change ranging roughly −3.4% to −3.5%, consistently outside the ±3% band) — this raises the bar for any entry (catalyst-driven included) to 1h momentum >5% AND a fresh catalyst <3h old. The raw discovery sweep surfaced 50-55 candidates most hours (VVV, USELESS, DOT, ATOM, SODA, FF, AIOZ, DCR, BTR, VET, NPC, XETC among the recurring top names) but no candidate's 1h momentum cleared 5% at any pass this pass checked closely — highest readings seen were in the 3-4.5% range (VVV, BODEN), short of the bar. The standing momentum-only win-rate kill switch (20.0%, below the 35% floor since the 2026-09-04 review) remained a secondary constraint all day but was never the binding gate — no candidate reached that stage. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 cash, fully available, no open positions, weekly downtrend gate and win-rate kill switch both to be reassessed fresh.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +0.70 points on a day the weekly downtrend gate correctly kept the book out of a net-negative BTC move. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
