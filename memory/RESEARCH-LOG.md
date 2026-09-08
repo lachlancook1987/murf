@@ -38878,3 +38878,37 @@ No push sent — book flat with no unprotected exposure, both gates clear/non-re
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical setup (WLD) was correctly rejected on the win-rate kill switch rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-08 — Scan — 02:00 UTC (fired ~02:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 01:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` unchanged, zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $79,199.00 vs today's session open $79,090.40 → **+0.14%**. Clear. **Weekly trend gate:** live $79,199.00 vs 5-day-ago daily close $81,178.20 (2026-09-03 EOD reference) → **−2.44%/5d** — inside the ±3% band. Standard regime applies.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 637 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $20k notional floor, vs-open >3%, and ≥−3% proximity-to-24h-high filter surfaced 10 candidates: INJ (+7.64% vs open, prox −0.57%, notional $5.87M), BABYSHARK (+5.12%, prox −2.64%, notional $37.1k), AERO (+4.58%, prox −2.24%, notional $2.18M), AVNT (+4.25%, prox −0.77%, notional $59.4k), VELODROME (+4.24%, prox 0.00%, notional $33.1k), PUMP (+4.17%, prox −2.03%, notional $8.70M), ATH (+3.35%, prox −1.00%, notional $108.6k), VVV (+3.21%, prox −0.15%, notional $1.82M), MEGA (+3.01%, prox −0.05%, notional $80.5k), SENT (+3.00%, prox −0.38%, notional $60.0k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 01:45→02:00→02:15, current time ~02:34 UTC, 02:30 still forming):**
+- **BABYSHARK:** eight consecutive identical-OHLC candles (O=H=L=C=0.005563, zero volume) — same dead/stale order book as every prior pass this week. Rejected outright, not a real candidate.
+- **VELODROME:** intermittent zero-volume candles (flat O=H=L=C on several bars) — thin/illiquid order book, not real price action. Rejected outright.
+- **Fail acceleration:** AERO (02:00 C 0.6497 < 01:45 C 0.6562), PUMP (02:00 C 0.004506 < 01:45 C 0.004513), ATH (02:15 C 0.00493 < 02:00 C 0.00498), SENT (02:00 C 0.014659 < 01:45 C 0.014719) — all stalled or reversed on the most recent leg.
+- **Pass acceleration:** INJ (01:45 C 6.530 → 02:00 C 6.585 → 02:15 C 6.649, both legs rising), AVNT (01:45 C 0.11112 → 02:00 C 0.11173 → 02:15 C 0.11267, both legs rising), VVV (01:45 C 18.905 → 02:00 C 18.960 → 02:15 C 18.982, both legs rising), MEGA (01:45 C 0.04051 → 02:00 C 0.04110 → 02:15 C 0.04129, both legs rising).
+
+**24h-high freshness + momentum bars on the four acceleration-passers (1h = close 02:15 vs close 01:15; 4h = close 02:15 vs close 22:15 prior pass window):**
+
+| Asset | 24h high set | Freshness | Live fade | 1h momentum | 4h momentum | Verdict |
+|---|---|---|---|---|---|---|
+| INJ | 02:15 closed candle (~20-30 min ago) | Fresh, confirmed-closed | −0.57% (within 1.5% cap) | +4.07% | +8.75% | **Clears every structural/technical gate** |
+| AVNT | 02:15 closed candle (~20-30 min ago) | Fresh, confirmed-closed | −0.77% | +2.50% | +4.68% | Fails 1h momentum bar |
+| VVV | 02:30 (still-forming candle) | **Fails confirmed-candle requirement** | −0.15% | +0.55% | +3.20% | Rejected on freshness (unconfirmed high) — also fails both momentum bars |
+| MEGA | 02:15 closed candle (~20-30 min ago) | Fresh, confirmed-closed | −0.05% | +1.45% | +1.50% | Fails both momentum bars |
+
+**INJ deep-dive (only candidate clearing every structural/technical gate):** Spread clears easily (ask 6.627/bid 6.618 ≈ 0.14%). Pair confirmed online via `kraken.sh assets INJ/USD`. Catalyst check via Perplexity ("INJ Injective Protocol news catalyst today, last 6 hours"): the cited drivers are Pineapple Financial's mortgage-tokenization story (the same multi-day narrative already checked and rejected as stale at the 2026-09-07 21:00 UTC pass), native USDC/Circle CCTP integration, a tokenomics supply-reduction proposal, and the IIP-677 interoperability upgrade — none dated to within the last 6 hours; all are ongoing/multi-day narratives, not a fresh event. **Reclassified as momentum-only (no confirmed <6h catalyst).** The rolling win-rate kill switch is ACTIVE and momentum-only entries are explicitly SUSPENDED regardless of technical quality — **rejected on the kill switch**, not a structural/technical gate. This is the second consecutive pass (after WLD at 01:00 UTC) to find a technically clean momentum-only setup blocked purely by the kill switch rather than a raw or structural gate.
+
+### Decision: **HOLD.** Crash gate clear (BTC +0.14%). Weekly trend gate inside the ±3% band (−2.44%/5d), standard regime, non-restrictive. Four candidates (INJ, AVNT, VVV, MEGA) cleared two-candle acceleration; VVV failed the confirmed-candle requirement (high on a still-forming candle) and AVNT/MEGA failed the momentum-bar pair. INJ cleared every technical/structural gate — freshness, live-fade, both momentum bars, spread — but its catalysts are all multi-day narratives, not <6h fresh, so it does not qualify as catalyst-confirmed; as a momentum-only candidate it is blocked by the standing rolling win-rate kill switch (ACTIVE, 20.0%, below the 35% floor). No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one clean technical setup (INJ) was correctly rejected on the win-rate kill switch rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
