@@ -39162,3 +39162,34 @@ No candidate clears every gate. XPL is the closest miss — fresh peak, passing 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with the closest candidate rejected on a clear (not borderline) momentum-bar shortfall. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 11:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — exact match to the 10:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders all historical (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure. Step 3a–3e all no-op — no orphans, no T1 fills, no runners, no thesis breaks; nothing logged to TRADE-LOG.md this pass.
+
+**Crash gate:** BTC live (Kraken) $78,464.60 vs today's session open $79,090.40 → **−0.79%**. Clear.
+**Weekly trend gate:** live $78,464.60 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.46%/5d** — remains outside the ±3% band, weekly BTC downtrend regime **still ACTIVE**. Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL), below the 35% floor. No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 71–72 (Greed) per Perplexity (Alternative.me 71, Binance/CFGI 72) — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 638 online USD pairs, notional ≥$30k, vs-open ≥3% → 35 raw candidates. Top by vs-open: GUSD (+17.31%, no longer tradeable — `EQuery:Unknown asset pair` on OHLC lookup, likely delisted/renamed, skip), GLMR (+16.77%), AKE (+13.81%, same long-stale-peak pattern as every pass today/yesterday), SAFE (+12.90%), SODA (+12.15%), USELESS (+11.89%), VET (+10.83%), AVA (+8.93%), TREE (+7.49%), BTR (+7.09%), SYRUP (+6.86%), HNT (+6.28%), BICO (+6.19%), LIT (+5.68%), PROVE (+5.42%), KAITO (+5.37%), UAI (+5.34%), AERO (+5.17%), IDOS (+4.85%), plus 16 more with weaker vs-open.
+
+**15m OHLC (1h/4h momentum, 24h-high age, two-candle acceleration, live fade)** pulled for the 20 candidates closest to their 24h high plus highest-notional names:
+- **GLMR:** 24h high set on the most recently closed 15m candle (11:15 UTC close), **19 min old** — inside the 30-min freshness ceiling, accel pass, 1h +16.54%, 4h +19.88% (comfortably clears even the downtrend gate's 5% bar). **But that same closed candle's own close sits 4.33% below its own high** (high $0.00832, close $0.00796) — fails the live-intracandle-fade cap (>1.5% cap) outright, a large miss not a rounding one. **Reject — intracandle fade.**
+- **SODA:** 24h high set at the 11:00 UTC closed candle, **34 min old** — 4 minutes past the 30-min freshness ceiling (last pass was 10:00 UTC, so the cadence-relative ceiling stays at the 30-min figure, not widened). Otherwise clean: fade −0.91% (inside cap), accel pass (10:45→11:00→11:15 closes each higher), 1h +7.88%/4h +10.59% (clears the downtrend gate's 5% bar too). Rejected solely on freshness — a narrow but real miss, not waived per the gate-protection default. **Reject — freshness (34min > 30min ceiling).**
+- **VET:** fresh (19 min), fade 0.00%, accel fail (1h momentum only 2.63%, below even the standard 3% bar). **Reject — momentum strength.**
+- **FF:** 1h +10.80%/4h +10.80% strong, but peak 50 min stale, fade −4.45% (fails cap), accel fail. **Reject — multiple gates.**
+- **SAFE, ACU, COTI, ATOM, CRO, BEAM, TREE, LIT, PROVE:** accel fail or 1h momentum 0.2–1.9%, nowhere near the standard 3% bar let alone the downtrend gate's 5%. **Reject — momentum strength / acceleration.**
+- **AKE:** flat/reversed, 24h high stale (same pattern every pass this week). **Reject — stale peak.**
+- **BTR, CAKE, SOMI, MOVR, XPL, CPOOL, KAITO, RARE, SENT, KTA:** all accel fail and/or negative 1h momentum. **Reject — acceleration / momentum reversed.**
+- **MINA:** accel pass but 1h momentum only 0.24%, peak stale (1115 min). **Reject — momentum strength / stale peak.**
+
+No candidate clears every gate. GLMR and SODA were the two closest — GLMR on raw momentum strength alone would have cleared every bar including the active downtrend gate's 5% floor, but its own most-recent closed candle already gave back 4.33% from the high, a clean rejection on the live-fade cap, not a borderline call. SODA cleared every gate except freshness, missed by 4 minutes. Neither reached the catalyst-confirmation stage since both failed on structural gates independent of catalyst quality.
+
+### Decision: **HOLD.** No candidate clears every gate — GLMR fails the live-intracandle-fade cap by a wide margin, SODA fails only the freshness ceiling by 4 minutes, everything else fails acceleration or raw momentum strength outright. Weekly BTC downtrend gate (−3.46%/5d) and the standing win-rate kill switch (20.0%, momentum-only suspended) both reinforce HOLD as well. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with the two closest candidates rejected on real (not manufactured) gate misses. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
