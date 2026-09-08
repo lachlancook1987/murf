@@ -39042,3 +39042,34 @@ No candidate cleared every gate. Perplexity macro scan (BTC/ETH price, top catal
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 07:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state, no drift. Alpaca `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure. Step 3 maintenance: nothing to do — no open positions, no orphan stops/T1 orders, no thesis-break check applicable.
+
+**Crash gate:** BTC live $78,430.80 vs 24h-ago open $79,090.40 → **−0.83%**. Clear.
+**Weekly trend gate:** daily-close-based 5d change (2026-09-03 close $81,276.10 → today's close $78,491.60) → **−3.43%/5d**, breaches the ±3% band → **weekly BTC downtrend regime ACTIVE**. Per TRADING-STRATEGY.md: pure momentum entries banned, catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Discovery sweep:** Full Kraken USD-pair ticker sweep (663 pairs, batched). Top candidates by 24h change with real liquidity (vol ≥$50k) and proximity to 24h high: AKE (+14.70%, $3.07M vol, 5.57% off high), MEGA (+6.03%, $135k vol, 1.55% off high), KAITO (+6.34%, $207k vol, 0.50% off high), SOLV (+5.76%, $150k vol), CAKE (+5.35%, $200k vol), SYRUP (+4.69%, $452k vol), MOVR/SOMI/BTR/ACU/VET at or near their 24h high but weak 24h% and low volume. Pulled 15m OHLC (last 4h) for the 12 most liquid/notable:
+
+| Pair | 1h | 4h | 2-candle accel | 24h-high age |
+|---|---|---|---|---|
+| AKE | +2.29% | +8.11% | pass | 665 min (stale) |
+| MEGA | +2.42% | +5.05% | pass | 35 min (stale, ceiling=30min) |
+| KAITO | +0.33% | +5.38% | **fail** | 35 min (stale) |
+| SOLV | −0.42% | +7.88% | fail | 65 min (stale) |
+| CAKE | +1.97% | +4.53% | fail | 1130 min (stale) |
+| SYRUP | −0.93% | +1.46% | pass but 1h negative | 125 min (stale) |
+| UNI/MOVR/SOMI/BTR/ACU/VET | all weak (<2% 1h, <4% 4h) | — | mixed | mostly fresh but momentum too weak |
+
+None clears the 1h>3% + 4h>5% pair together with a fresh (≤30min) high and passing acceleration. AKE has the strongest 4h move and highest volume — Perplexity confirms a real catalyst (Bitget futures listing) but also flags "manipulation / forced-liquidation allegations" and that short-term pullbacks have already appeared; its 24h high was set ~11h ago and live price has already faded ~5.6% off it — this is the "buy the rumour, sell the news" pattern the momentum-peak-check gate exists to reject, not a fresh breakout. **Reject — stale peak, weak 1h, catalyst timing unconfirmed <3h (required under active weekly downtrend gate).** MEGA's high is fresh by only 5 minutes over the 30-min ceiling and Perplexity found no bullish catalyst ("weak speculative momentum," price far below launch levels) — **reject, no catalyst + marginal technicals.** KAITO fails acceleration outright. All others fail on weak 1h/4h momentum, staleness, or thin liquidity.
+
+Under the active weekly downtrend gate, the bar is 1h momentum >5% + catalyst <3h old — no candidate today came close to 1h >5% (best was AKE at 2.29%), so this gate would have blocked everything regardless of the standard gates above.
+
+Win-rate kill switch: still **ACTIVE** (20.0% trailing win rate on momentum-only entries, unchanged since the 2026-09-04 review — no momentum-only entries have executed since to roll the window). Not the binding reason this pass (no candidate reached that stage), but remains a standing constraint.
+
+### Decision: **HOLD.** No candidate clears every gate (freshness, two-candle acceleration, or confirmed near-term catalyst all rejected the top candidates independently); weekly BTC downtrend gate (−3.43%/5d) and the standing win-rate kill switch both reinforce HOLD as well. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
