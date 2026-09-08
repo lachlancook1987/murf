@@ -39009,3 +39009,36 @@ Also ran the standard context queries: BTC $79,056 (−1.01%/24h, Perplexity/Coi
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, crash gate clear, no trade executed, no operational issues. The weekly-trend-gate breach is a real state change (first breach in the tracked window) but it's a gate tightening entry criteria, not a loss/trade/operational failure — logged clearly here for every subsequent pass to read rather than pushed. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 06:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to every pass since the 2026-09-04 user-directed liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), zero exposure, stop `a2b44cf9` unchanged. Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks) — nothing logged to TRADE-LOG.md this pass.
+
+**Crash gate:** BTC live (Kraken) $78,420.70 vs today's session open $79,090.40 → −0.85%. Clear, nowhere near −20%.
+
+**Weekly trend gate:** live $78,420.70 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.51%/5d** — outside the ±3% band, a **breach** (first since this gate started being checked this week). Per TRADING-STRATEGY.md, stricter day-trade criteria apply: pure momentum entries banned, catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old. In practice this changes nothing this pass — see win-rate kill switch below, which already suspends all momentum-only entries regardless of this gate.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor (or the stricter downtrend-gate criteria above).
+
+**Fear & Greed:** 71 (Greed) per Perplexity — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned. Applying a $30k notional liquidity floor and >3% vs-open filter, top candidates by 24h change: HNT (+13.78%, prox −0.70%, notional $275.9k), AVA (+8.61%, prox −1.14%, notional $68.4k), SAFE (+8.39%, prox −0.84%, notional $37.5k), SYRUP (+6.69%, prox −1.70%, notional $430.5k), XAN (+6.00%, prox −1.10%, notional $142.3k), GUSD (+5.97%, prox −1.13%, notional $45.4k), KAITO (+5.49%, prox −0.88%, notional $182.4k), MEGA (+4.68%, prox −1.89%, notional $123.5k), SOMI (+4.05%, prox −0.86%, notional $66.7k).
+
+**15m OHLC deep-dive (last two closed candles 06:00→06:15, current time ~06:35 UTC, 06:30 still forming):**
+- **SYRUP:** 24h high $0.23932 set at 05:30 (65 min stale, fails 30-min freshness ceiling). Two-candle acceleration fails (06:15 close $0.23297 < 06:00 close $0.23609). Live intracandle fade 1.79% off high (within 1.5% cap only barely — actually exceeds it). **Reject — freshness + acceleration + fade.** Perplexity catalyst check found genuine fundamentals (Maple Finance MIP-021 buybacks, syrupUSDG/Robinhood Chain launch) but freshness as a <6h-old *event* couldn't be confirmed (reads as an ongoing multi-day narrative, 7d +25%) — moot given the technical rejections above.
+- **KAITO:** 24h high $0.3409 set at 05:00 (95 min stale). **Reject — freshness**, no fresh breakout above it since (06:15 close $0.3385 still below).
+- **XAN:** 06:00 close $0.02101 < 05:45 close $0.02146. **Reject — acceleration** (dip-then-recover pattern, not sustained build).
+- **AVA:** 06:15 close $0.1743 < 06:00 close $0.1760. **Reject — acceleration.**
+- **SAFE:** 06:00 close $0.1057 < 05:45 close $0.1060. **Reject — acceleration.**
+- **GUSD:** 06:00 close $0.004065 < 05:45 close $0.004099. **Reject — acceleration.**
+- **SOMI:** 06:15 close $0.1386 < 06:00 close $0.1398. **Reject — acceleration.**
+- **MEGA:** Two-candle acceleration passes (05:45→06:00→06:15 each closed higher). 24h high $0.04284 set at 06:15 (fresh, within 30-min ceiling). **But live intracandle fade 2.03% off high** ($0.04284 high vs $0.04197 last) — exceeds the 1.5% cap. **Reject — live fade.**
+- **HNT:** Perplexity found no fresh coin-specific catalyst in the last 24h (Celina, TX story is from late August); HNT is one of the 8 losses in the active kill-switch window. **Reject — no catalyst, momentum-only entries suspended anyway.**
+
+No candidate cleared every gate. Perplexity macro scan (BTC/ETH price, top catalysts today) found nothing actionable beyond what's already reflected in the sweep — macro catalysts (Fed/CPI calendar, Treasury buybacks, ETF flows) are not asset-specific entry triggers.
+
+### Decision: **HOLD.** No candidate clears every gate (freshness, two-candle acceleration, live intracandle fade, or confirmed catalyst all rejected different candidates). Book remains flat, $70.6298 ZUSD fully available for the next pass. Weekly BTC downtrend gate now active (−3.51%/5d) alongside the standing win-rate kill switch (20.0%, momentum-only suspended) — both are HOLD-reinforcing, not the binding reason this pass (technical gates rejected every candidate independently).
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
