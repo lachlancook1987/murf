@@ -39335,3 +39335,30 @@ No candidate reached the catalyst-confirmation stage this pass — the strongest
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome on a quieter pass than the last two. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 17:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero. `positions: {}`, `orders: {"open": {}}` — book fully flat, matches every pass since the 2026-09-04 03:20 UTC user-directed liquidation. No drift, no manual out-of-band activity detected this pass. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — zero exposure, no action needed.
+
+**Step 3 (position maintenance):** Nothing to do — book flat on both exchanges, no orphan stops/T1 orders, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,570.60 vs today's session open $79,090.40 → **−0.66%**. Clear.
+**Weekly trend gate:** live $78,570.60 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.32%/5d** — outside the ±3% band, weekly BTC downtrend regime **ACTIVE**. Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Not the binding gate this pass (no candidate reached that stage).
+
+**Fear & Greed:** 69–72 (Greed, source-dependent) per Perplexity — no Extreme Fear R:R adjustment applies.
+
+**Macro/catalyst context (Perplexity):** BTC $79,388.70 (−0.60%/24h per Perplexity's source, vs $78,570.60 live Kraken — normal cross-source lag, no divergence-gate concern). Main catalysts: Sept 15–16 FOMC decision, Treasury buyback liquidity tailwind, sustained ETF inflows, CLARITY Act Senate vote pending. Asset-specific: ZEC rallying on Grayscale spot-ETF-conversion filing (ZEC is AU-restricted on this account per TRADING-STRATEGY.md — skipped regardless), HYPE mentioned but no fresh <3h trigger identified. No catalyst maps to any live Kraken candidate this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 55 raw candidates. Computed live 1h momentum (15m OHLC, last 4 candles) across all 55 to apply the weekly-downtrend gate's 1h>5% bar directly rather than relying on day-open vs-open, which can mask already-faded pumps:
+- **PEPECOIN: only candidate clearing 1h>5%** (+10.69% 1h, vs-open +19.75%). Investigated: spread = (0.14573−0.13841)/0.13841 = **5.29%**, far outside the 1% hard cap — **reject, spread**. Also 24h high was set at 13:00 UTC, ~4.5h before this pass — **reject, freshness** (30-min ceiling), independent of the spread failure. Thin book ($50.6k notional) consistent with the wide spread. No catalyst query run — already dead on two independent hard gates.
+- **VVV (+25.01% vs-open) and USELESS (+24.85% vs-open)**, the two largest day-movers, are both already fading hard intraday: VVV 1h mom **−3.15%**, USELESS 1h mom **−4.18%** — classic buy-the-rumour-sell-the-news pattern the momentum-peak/live-fade checks exist to catch. Reject, momentum already reversed.
+- All other 52 candidates: 1h momentum ranged from +4.11% (EDGEX) down to negative — none reached the 5% bar the active weekly downtrend gate requires. DOT (+2.83% 1h, +15.03% vs-open) was the largest legitimate large-cap mover but falls well short of 5%.
+- No candidate reached the win-rate-kill-switch or R:R-floor evaluation stage — all were rejected upstream on the weekly-downtrend gate's momentum bar or on spread/freshness.
+
+### Decision: **HOLD.** No candidate cleared the active weekly-downtrend gate's 1h>5% + fresh-catalyst requirement; the sole 1h>5% candidate (PEPECOIN) failed independently on spread (5.29%) and staleness (24h high 4.5h old). Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
