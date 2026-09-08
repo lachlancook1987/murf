@@ -38976,3 +38976,36 @@ AVA and KTA both had genuinely fresh 24h highs (19 min old, well inside the cade
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive (weekly trend gate drifting toward its band edge but not yet breached), the two fresh technical setups (AVA, KTA) were correctly rejected on real momentum-bar misses rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 05:00 UTC (fired ~05:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 04:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` unchanged, zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,731.90 vs today's session open $79,090.40 → **−0.45%**. Clear, nowhere near −20%.
+
+**Weekly trend gate: BREACHED this pass (first time since gate has been tracked recently).** Live $78,731.90 vs 5-day-ago daily close $81,178.20 (2026-09-03 EOD reference) → **−3.01%/5d**, past the −3% band edge (was −2.87% last pass, −2.25% at 01:00 UTC, and had peaked at +3.61%/5d on 2026-09-06 the other direction). Per TRADING-STRATEGY.md's BTC Weekly Trend Gate, stricter day-trade entry criteria now apply: require 1h momentum **>5%** AND a fresh catalyst **<3h old** (not just >3%/1h momentum); **pure momentum entries (no specific catalyst) are banned** until this recovers back inside ±3%. Catalyst-driven entries remain open regardless. Flagging clearly for every subsequent pass to read until the gate clears.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor. Combined with the weekly-trend-gate breach above, momentum-only entries are now doubly blocked (kill switch + weekly-downtrend ban) — a confirmed <3h catalyst is required for any entry this pass regardless of how clean the technicals look.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $20k notional floor, vs-open >3%, and within-3%-of-24h-high filter surfaced 20 candidates; top by vs-open: AVA (+8.80%), SAFE (+8.09%), PIEVERSE (+7.63%), SENT (+6.69%), HNT (+6.41%), SYRUP (+6.26%), XAN (+5.76%), KAITO (+5.34%), G (+5.27%), CAKE (+5.08%), KTA (+4.47%), plus several smaller-notional names (SOMI, EDGEX, MOVR, VFY, VELODROME, FLUX, WAL, ARB, TREE).
+
+**15m OHLC two-candle acceleration (closed candles 04:45→05:00→05:15, current time ~05:35 UTC, 05:30 still forming):** Pass: PIEVERSE (1.2936→1.3200→1.3256), ARB (0.1710→0.1735→0.1739), CAKE (2.271→2.290→2.338), KAITO (0.3249→0.3383→0.3392). Fail (spike-then-dip or outright decline on the latest leg): AKE, UAI, INJ, SYRUP, HNT, AVNT, XAN, SAFE, SENT, AVA, SOMI, EDGEX, KTA, MOVR, VFY, VELODROME, FLUX, WAL, TREE, G.
+
+**1h/4h momentum bars on the four acceleration-passers (closed-candle basis, 05:15 vs 04:15 for 1h, 05:15 vs 01:15 for 4h):**
+
+| Asset | 1h mom | 4h mom | 24h high age | Live fade | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| PIEVERSE | +4.57% | — | ~20-35 min (05:00 candle) | −0.69% | wide (illiquid, thin order book pattern) | Fails 1h bar (needs >5% under weekly-downtrend gate) |
+| ARB | +2.35% | — | fresh | −0.74% | tight ($4.4M notional) | Fails 1h bar outright |
+| CAKE | +3.63% | — | fresh | −1.47% | ok | Fails 1h bar |
+| KAITO | **+5.24%** | **+5.70%** | ~24 min (high $0.3409 hit 05:12 UTC, confirmed via 1m candles) | −0.88% | 0.18% (tight) | Clears both momentum bars and every technical gate — catalyst check required next |
+
+**KAITO catalyst check (Perplexity):** Explicitly **no coin-specific catalyst** — "CMC AI says today's price action appears driven by low-volume trading and that no clear coin-specific catalyst was visible," with the only forward-looking item being a **September 20 token unlock** (2 weeks out, not a same-day trigger, and unlock events are bearish supply pressure, not a bullish catalyst anyway). Cross-check: CoinGecko/CMC show KAITO at $0.316–$0.317 (+1.60%/24h) vs Kraken's $0.338 — a ~6.9% cross-exchange divergence, below the 15–20% hard-reject threshold but a signal this is a thin, Kraken-specific print rather than a broad market move. **KAITO is a pure momentum-only setup with no catalyst** — banned outright by the weekly-downtrend gate (pure momentum entries banned while gate is breached) and separately still blocked by the standing win-rate kill switch. Rejected on both counts.
+
+Also ran the standard context queries: BTC $79,056 (−1.01%/24h, Perplexity/CoinGecko reference, consistent with Kraken's own −0.45%-vs-session-open reading), Fear & Greed **72 (Greed)**.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.45%). Weekly trend gate breached this pass (−3.01%/5d, first breach since tracking resumed) — pure momentum entries now banned until it recovers inside ±3%. Four candidates (PIEVERSE, ARB, CAKE, KAITO) cleared two-candle acceleration; three failed the 1h>5% momentum bar outright, and the one that cleared both momentum bars (KAITO) had no confirmed catalyst — explicitly ruled out by Perplexity as low-volume/no-catalyst movement — so it's banned under the freshly-breached weekly-downtrend gate regardless of otherwise-clean technicals, and would also be blocked by the standing win-rate kill switch. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, crash gate clear, no trade executed, no operational issues. The weekly-trend-gate breach is a real state change (first breach in the tracked window) but it's a gate tightening entry criteria, not a loss/trade/operational failure — logged clearly here for every subsequent pass to read rather than pushed. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
