@@ -39438,3 +39438,29 @@ No push sent — book flat on both exchanges, no drift, no operational issues, n
 ### Step 8 — Notification
 
 No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate (the one momentum spike is a known, already-flagged pump-and-dump instance still fading). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 21:00 UTC (fired 21:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero/dust — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders history all pre-2026-05-22 (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — book flat on both exchanges, no orphan stops/T1 orders, no runners, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,474.40 vs today's session open $79,090.40 → **−0.78%**. Clear.
+**Weekly trend gate:** live $78,474.40 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.45%/5d** — outside the ±3% band (narrowing slightly from −3.44% at 20:00 UTC, materially unchanged), weekly BTC downtrend regime **still ACTIVE**. Pure momentum entries banned; catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Not the binding gate this pass (no candidate reached that stage).
+
+**Fear & Greed:** ~69 (Greed) per Perplexity (Alternative.me/live trackers 69–71 Greed, CFGI 52–55 Neutral, methodology-dependent spread) — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 52 raw candidates. Top by vs-open: VVV (+28.93%), USELESS (+21.84%), SODA (+21.60%), FF (+18.80%), AIOZ (+17.57%), DOT (+16.79%), BTR (+15.33%), ATOM (+12.67%), QI (+12.49%), VET (+10.51%), NPC (+10.10%), DCR (+10.04%), XETC (+9.65%), NOCK (+9.24%), BODEN (+8.96%), DOGS (+8.31%), plus 36 more with weaker vs-open (down to KSM +3.03%).
+
+**1h momentum check (15m OHLC)** on the 16 highest vs-open/notional candidates, to apply the active weekly-downtrend gate's 1h>5% bar directly: VVV −0.77%, USELESS +1.60%, SODA −0.97%, FF +0.37%, AIOZ −2.56%, DOT −0.22%, BTR +2.69%, ATOM +1.30%, QI +4.00%, VET −1.31%, NPC +1.06%, DCR +0.77%, XETC +1.91%, NOCK −0.63%, BODEN +0.82%, DOGS −4.00%. **None reached the 5% bar.** A secondary quick pass over the remaining 34 lower-notional candidates found only one above 3%: CSPR +3.27%, still well short of 5%.
+- **QI** (closest at +4.00%) investigated: 24h high $0.00197 set 634 min (10.6h) ago, live last $0.001405 — a **28.68% fade** off that high, decisively outside the fade cap and nowhere near a fresh breakout. **Reject — stale high, decisive fade.**
+- **AIOZ** — the pump-and-dump instance flagged at 18:00/20:00 UTC has continued fading: 1h now **−2.56%**, live fade 14.19% off its earlier high. Fully spent, no longer a candidate.
+- All other candidates: vs-open readings reflect moves that had already cooled by this check (the standard "already crested" pattern this gate exists to filter). No candidate reached the catalyst-confirmation or win-rate-kill-switch stage.
+
+### Decision: **HOLD.** No candidate cleared the active weekly-downtrend gate's 1h>5% + fresh-catalyst requirement. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
