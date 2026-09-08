@@ -39487,3 +39487,26 @@ No push sent — book flat on both exchanges, no drift, no operational issues, n
 ### Step 8 — Notification
 
 No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 23:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero/dust — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders history all pre-2026-05-22 (stop `a2b44cf9` reconfirmed `canceled`, `filled_at` unchanged), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — book flat on both exchanges, no orphan stops/T1 orders, no runners, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,443.40 vs today's session open $79,090.40 → **−0.82%**. Clear.
+**Weekly trend gate:** live $78,443.40 vs 5-trading-day-ago daily close $81,276.10 (2026-09-03) → **−3.49%/5d** — outside the ±3% band (materially unchanged from −3.43% at 22:00 UTC), weekly BTC downtrend regime **still ACTIVE** for the entire day. Pure momentum entries banned; any entry (including catalyst-driven) requires 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Not the binding gate this pass (no candidate reached that stage).
+
+**Fear & Greed:** 69 (Greed) per Perplexity (Alternative.me 69, CoinStats 71, CFGI 57 Neutral — methodology-dependent spread, consistent with every pass today) — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 54 raw candidates. Top by vs-open: VVV (+37.96%), USELESS (+23.86%), SODA (+21.53%), FF (+17.50%), DOT (+17.05%), AIOZ (+16.33%), ATOM (+13.75%), BODEN (+13.08%), BTR (+12.33%), DCR (+10.59%), VET (+10.41%), PEPECOIN (+10.06%), NPC (+9.75%), XETC (+8.60%), QI (+8.41%), plus 39 more with weaker vs-open (down to SAFE +3.07%). XZEC also screened (+3.47%, $47.9M notional) but is AU-restricted per TRADING-STRATEGY.md — skipped pre-emptively, not deep-dived.
+
+**1h momentum check (15m OHLC)** on the 17 highest vs-open/notional candidates, to apply the active weekly-downtrend gate's 1h>5% bar directly: VVV +3.29% (highest of the set), BODEN +4.25% (closest to the bar, but thin $94k notional off a single-candle jump — fails two-candle acceleration, not investigated further), USELESS +2.17%, DCR +1.11%, VET +0.89%, INJ +0.85%, DOT +0.06%, PEPECOIN −0.10%, XPL −0.20%, ATOM −0.13%, XETC −0.23%, BTR −0.71%, FF −0.64%, SODA +0.00%, QI −1.88%, NPC −2.27%, AIOZ −4.19% (the pump-and-dump flagged repeatedly since 18:00 UTC — now essentially fully faded, ~4% reversal off its earlier high). **None reached the 5% bar.** No candidate reached the catalyst-confirmation or win-rate-kill-switch stage.
+
+### Decision: **HOLD.** No candidate cleared the active weekly-downtrend gate's 1h>5% + fresh-catalyst requirement all day — the closest reading all pass was BODEN's thin, single-candle 4.25% (94k notional, fails acceleration) and VVV's 3.29% on genuine volume. Book remains flat, $70.6298 ZUSD fully available for tomorrow.
+
+### Step 8 — Notification
+
+No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, zero trades today (24/24 passes HOLD), HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. EOD snapshot below is routine record-keeping. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
