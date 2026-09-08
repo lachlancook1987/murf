@@ -39073,3 +39073,34 @@ Win-rate kill switch: still **ACTIVE** (20.0% trailing win rate on momentum-only
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-08 — Scan — 08:00 UTC
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero — matches last logged state exactly, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca `positions: []`, orders all historical/filled/canceled (stop `a2b44cf9` reconfirmed `canceled` since 2026-05-22), zero exposure. Step 3 maintenance: nothing to do — no open positions, no orphan stops/T1 orders, no runners, no thesis-break check applicable.
+
+**Crash gate:** BTC live (Kraken) $78,475.10 vs 24h-ago open $79,090.40 → **−0.78%** (Perplexity cross-check: $79,132.00, −0.77% — consistent). Clear.
+**Weekly trend gate:** daily-close-based 5d change (2026-09-03 close $81,276.10 → today's close $78,475.10 live) → **−3.45%/5d**, breaches the ±3% band → **weekly BTC downtrend regime remains ACTIVE** (same as 07:00 UTC pass, −3.43%/5d then). Per TRADING-STRATEGY.md: pure momentum entries banned, catalyst-driven entries require 1h momentum >5% AND a fresh catalyst <3h old.
+
+**Discovery sweep:** Full Kraken USD-pair ticker sweep (663 pairs). Top movers by 24h% with real liquidity (vol ≥$50k): AKE (+15.36%, $3.13M vol, 5.03% off high), IDO (+22.53%, $438k vol, 26.55% off high), HNT (+12.27%, $433k vol, 4.15% off high), CAKE (+7.91%, $232k vol, 1.07% off high), MEGA (+6.70%, $149k vol), KAITO (+5.56%, $210k vol), AVA (+5.49%, $80k vol), SOMI (+5.26%, $71k vol), CAT (+4.84%, $52k vol, sub-cent token). Pulled 15m OHLC (last 5h) for all nine:
+
+| Pair | 1h | 4h | 24h-high age | 2-candle accel |
+|---|---|---|---|---|
+| IDO | +5.66% | +14.68% | 105 min (stale) | fail |
+| AKE | +0.48% | +5.96% | 75 min (stale) | fail |
+| HNT | +2.96% | +4.40% | 15 min (fresh) | **pass** |
+| CAKE | +0.08% | +4.94% | 15 min (fresh) | fail |
+| MEGA | −0.42% | +3.53% | 30 min (borderline) | fail |
+| KAITO | −1.49% | +4.45% | 45 min (stale) | fail |
+| AVA | −0.71% | −0.94% | 150 min (stale) | fail |
+| SOMI | +0.43% | +3.01% | 30 min (borderline) | fail |
+| CAT | +0.43% | +6.16% | 120 min (stale) | fail |
+
+IDO is the only candidate with 1h >5% (the bar the active downtrend gate requires) but its 24h high is 105 min stale (well past the 30-min freshness ceiling) and it fails two-candle acceleration outright — reject on structural gates before the downtrend-gate catalyst question is even reached; also thin/obscure pair, not deep-dived further. AKE (same asset flagged at 07:00 UTC, now +15.36% vs +14.70% then) remains stale-peaked and fails acceleration — same reject as last pass. HNT is the only candidate to pass freshness + acceleration, but its 1h move (2.96%) doesn't clear even the standard 3% bar, let alone the active downtrend gate's 5% bar — reject on momentum strength, not timing. (HNT is also one of the 8 realized losses behind the standing win-rate kill switch, though that's moot here since it fails the raw momentum bar first.) No candidate clears every gate.
+
+Win-rate kill switch: still **ACTIVE** (20.0% trailing win rate on momentum-only entries, unchanged since 2026-09-04 — no momentum-only entries have executed since to roll the window). Not the binding reason this pass (no candidate reached that stage). Fear & Greed: **Greed (~71)** per Perplexity — not Extreme Fear, so that specific R:R-floor rule doesn't apply, though the momentum-only 1.8:1 floor and active downtrend gate both still would if a candidate had reached that stage.
+
+### Decision: **HOLD.** No candidate clears every gate — IDO fails freshness/acceleration despite meeting the downtrend-gate momentum bar, AKE remains stale-peaked (same as 07:00 UTC), HNT passes freshness/acceleration but falls short of even the standard 1h momentum bar. Weekly BTC downtrend gate (−3.45%/5d) and the standing win-rate kill switch both reinforce HOLD as well. Book remains flat, $70.6298 ZUSD fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades, no operational issues, no unprotected exposure, HOLD is a correct and expected outcome with every top candidate failing a specific structural gate. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
