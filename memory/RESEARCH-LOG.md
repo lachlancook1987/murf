@@ -38943,3 +38943,36 @@ DRV was the closest candidate this pass — genuinely fresh high (19 min old, we
 ### Step 8 — Notification
 
 No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive, the one fresh technical setup (DRV) was correctly rejected on the live intracandle fade cap rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+
+## 2026-09-08 — Scan — 04:00 UTC (fired ~04:34 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded), all other balances zero — exact match to the 03:00 UTC pass, no drift since. `positions: {}`, `orders: {"open": {}}` — nothing to reconcile. Alpaca: `positions: []`, orders all historical (filled/canceled since 2026-05-22), stop `a2b44cf9` unchanged, zero exposure. Book fully flat both venues, Step 3a–3e all no-op (no orphans, no T1 fills, no runners, no thesis breaks).
+
+**Crash gate:** BTC live (Kraken) $78,847.60 vs today's session open $79,090.40 → **−0.31%**. Clear, nowhere near −20%. **Weekly trend gate:** live $78,847.60 vs 5-day-ago daily close $81,178.20 (2026-09-03 EOD reference) → **−2.87%/5d** — inside the ±3% band but the closest to breach of any pass today (trend has drifted from −2.25% at 01:00 UTC to −2.87% now as BTC has softened through the overnight hours). Standard regime still applies; will re-check next pass in case it crosses.
+
+**Win-rate kill switch status:** unchanged since the 2026-09-04 weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10: UAI, NIL wins; ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 losses), below the 35% floor. No bot-originated trades have filled since (TRADE-LOG total still 152), window unchanged. Catalyst-confirmed entries remain open at the standard 1.2:1 R:R floor.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 639 online USD pairs scanned (ZEC/DASH pre-filtered, AU-restricted). Applying a $20k notional floor, vs-open >3%, and ≥−3% proximity-to-24h-high filter surfaced 14 candidates: AERO (+8.23% vs open, prox −1.06%, notional $2.32M), AVNT (+6.93%, prox −0.14%, notional $82.7k), SYRUP (+6.35%, prox −0.41%, notional $323.3k), SAFE (+6.35%, prox −1.14%, notional $25.8k), SENT (+5.68%, prox −2.61%, notional $82.3k), PIEVERSE (+5.41%, prox −1.79%, notional $299.3k), AVA (+5.37%, prox −0.18%, notional $35.9k), HNT (+4.47%, prox −1.18%, notional $154.0k), KTA (+4.34%, prox −0.65%, notional $159.4k), DRV (+3.26%, prox −2.63%, notional $299.9k), VELODROME (+3.22%, prox −0.98%, notional $35.4k), G (+3.16%, prox −2.41%, notional $31.1k), MEGA (+3.14%, prox −0.86%, notional $84.8k), SKR (+3.09%, prox −2.68%, notional $468.5k).
+
+**15m OHLC deep-dive, two-candle acceleration (closed candles 03:45→04:00→04:15, current time ~04:34 UTC, 04:30 still forming):**
+- **PIEVERSE, VELODROME:** intermittent/repeated identical-OHLC flat candles — thin/illiquid, stale-order-book artifacts, same pattern as BABYSHARK in prior passes. Rejected outright, not real candidates.
+- **Fail acceleration (spike-then-dip on the most recent leg):** AERO (04:00 C 0.6690 < 03:45 C 0.6765), AVNT (04:15 C 0.11435 < 04:00 C 0.11460), SYRUP (04:15 C 0.23356 < 04:00 C 0.23504), SAFE (04:15 C 0.1041 < 04:00 C 0.1049), SENT (04:15 C 0.015165 < 04:00 C 0.015248), DRV (04:00 C 0.16235 < 03:45 C 0.16315), G (04:15 C 0.003997 < 04:00 C 0.004076), MEGA (04:15 C 0.04127 < 04:00 C 0.04158).
+- **Pass acceleration:** AVA (03:45 C 0.1665 → 04:00 C 0.1668 → 04:15 C 0.1691), HNT (03:45 C 0.5474 → 04:00 C 0.5545 → 04:15 C 0.5617), KTA (03:45 C 0.0750 → 04:00 C 0.0763 → 04:15 C 0.0770), SKR (03:45 C 0.021701 → 04:00 C 0.021818 → 04:15 C 0.021999).
+
+**24h-high freshness (full 96-candle/24h history pulled) + live intracandle fade + momentum bars on the four acceleration-passers:**
+
+| Asset | 24h high set | Age | Live fade off high | 1h mom (close 04:15 vs 03:15) | 4h mom (close 04:15 vs 00:15) | Verdict |
+|---|---|---|---|---|---|---|
+| AVA | 04:15 closed candle | 19 min | −0.18% | +2.24% | — (not computed, failed 1h first) | Fails 1h momentum bar (0.76-point miss) |
+| HNT | prior-day 05:45 | 1369 min | −1.18% | — | — | Fails freshness outright (stale by ~22.8h) |
+| KTA | 04:15 closed candle | 19 min | −0.65% | +3.50% | +4.05% | Clears 1h; **fails 4h momentum bar** (0.95-point miss) |
+| SKR | prior-day 15:15 | 799 min | −2.68% | — | — | Fails freshness outright (stale by ~13.3h) |
+
+AVA and KTA both had genuinely fresh 24h highs (19 min old, well inside the cadence-relative 30-min ceiling, both on confirmed-closed candles) with clean spreads (AVA ask/bid 0.1689/0.1684 ≈ 0.30%; KTA ask/bid 0.0770/0.0765 ≈ 0.65%) and comfortable live-fade margins — but neither cleared both momentum bars together: AVA missed the 1h bar (2.24% vs required >3%), KTA cleared 1h (3.50%) but missed the 4h bar (4.05% vs required >5%), each a real miss rather than a razor-thin one. HNT and SKR both carried stale 24h highs (13–23h old) with live price still fading below them — rejected on the momentum-peak-check freshness gate, same pattern as HNT's prior stop-out entry in the kill-switch window. No candidate warranted a Perplexity catalyst check this pass — none advanced past the structural momentum-bar/freshness gates.
+
+### Decision: **HOLD.** Crash gate clear (BTC −0.31%). Weekly trend gate inside the ±3% band (−2.87%/5d, closest to the band edge of any pass today — flagged for next-pass re-check, not yet restrictive). Four candidates (AVA, HNT, KTA, SKR) cleared two-candle acceleration; HNT and SKR failed the momentum-peak-check freshness gate on stale highs, and AVA/KTA — both genuinely fresh — each missed one leg of the required 1h>3%/4h>5% momentum-bar pair. No gate was loosened to manufacture a trade. Book fully flat, ZUSD $70.6298 fully available, no open positions to manage.
+
+### Step 8 — Notification
+
+No push sent — book flat with no unprotected exposure, both gates clear/non-restrictive (weekly trend gate drifting toward its band edge but not yet breached), the two fresh technical setups (AVA, KTA) were correctly rejected on real momentum-bar misses rather than a manufactured excuse, no operational issues, no drift from the last logged state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
