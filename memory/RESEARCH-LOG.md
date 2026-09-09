@@ -39998,3 +39998,34 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one technically-clean mover, UAI, correctly blocked by the standing kill switch; no coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 15:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 14:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,441.10 vs today's session open $78,449.60 → **-0.01%**. Clear.
+**Weekly trend gate:** live $78,441.10 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.55%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 55-71 depending on source (CFGI whole-market 55/Neutral, others 66-71 Greed) — same spread as prior passes, Greed-leaning, no Extreme Fear adjustment applies.
+
+**Macro catalysts (Perplexity):** Same landscape as recent passes — Treasury buyback liquidity ops (today), Solana Transaction V1 (activated today), CLARITY Act procedural vote (~Sept 15), Fed meeting Sept 15-16, HYPE unlock (~Sept 29), Zcash/Uniswap watch items. Nothing new maps to a fresh, qualifying Kraken candidate this pass.
+
+**Discovery sweep (666 USD pairs, ticker-based, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** Only four candidates cleared the fade+liquidity screen: **SC** (+32.76%, fade 1.08%, $68k notional), **UAI** (+9.43%, fade 0.18%, $522k notional), **KII** (+6.69%, fade 1.39%, $56k notional), **KNTQ** (+4.52%, fade 1.25%, $50k notional, borderline liquidity). Everything else in the top movers (OXT, LRC, WARD, KAT, IDEX, RAY, MINA, PHA, KTA, NEAR, GRASS, PEPECOIN, PROS, SCRT, UP, ONE, FLOCK, etc.) failed the fade cap outright (most 3-25% off their 24h high already) or notional (<$50k, e.g. VANRY, UNITAS, SBR, LSK, SWARMS, BOS, GST, OMG, SN44). XZEC cleared fade/notional but is AU jurisdiction-restricted — skipped pre-emptively per TRADING-STRATEGY.md.
+
+**Deep check — SC, UAI, KII, KNTQ:**
+- **SC/USD:** spread 1.623% (bid 0.000986/ask 0.001002) — **fails the ≤1% spread hard cap**. Reject before any candle check.
+- **UAI/USD:** spread 0.107% ✓. 15m closed candles (now 15:34 UTC, last closed = 15:15): 14:45 close 0.76849 → 15:00 close 0.76156 (**lower**) → 15:15 close 0.76933 (higher than 15:00, but the prior leg down breaks the sequence). **Fails two-candle acceleration** (requires both of the last two closed candles to each close higher than the prior candle's close — here 15:00 closed lower than 14:45). Also the 24h high (0.78319) was set in the 14:15 candle, well over an hour old — **fails momentum-peak-check freshness** independently. Reject on both grounds; moot for catalyst-check purposes (would also be momentum-only, blocked by the kill switch regardless).
+- **KII/USD:** spread 0.216% ✓. 15m closed candles: 14:45 close 0.07374 → 15:00 close 0.07374 (flat, zero volume — a dead/no-trade candle, not a real close) → 15:15 close 0.07379. **Fails two-candle acceleration** (15:00 close is not strictly higher than 14:45 close; also the zero-volume 15:00 candle indicates this "surge" is thin/illiquid noise, not real buying pressure). 24h high (0.07500) was set in the 14:15 candle — stale, fails freshness too. Reject.
+- **KNTQ/USD:** spread 0.005% ✓ but liquidity is a concern at $50k notional (borderline). 15m candles show the 14:15/14:30 candles flat with zero volume (stale/dead prints), then a **declining** sequence: 14:45 close 0.22151 → 15:00 close 0.22147 (lower) → 15:15 close 0.22084 (lower again). **Fails two-candle acceleration outright** — price is fading, not accelerating, despite the raw 24h %-change screen showing a positive number (driven by a stale earlier print, not current action). Reject.
+
+**Step 4 (research/execute):** No candidate cleared every structural/technical gate this pass — SC failed on spread, UAI/KII/KNTQ all failed two-candle acceleration and/or momentum-peak freshness independent of the standing win-rate kill switch. No catalyst-confirmed candidate found either (nothing in the macro catalyst sweep maps to any of the four).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No candidate reached even the momentum-only/kill-switch decision stage this pass — all four liquidity/fade survivors failed spread or acceleration/freshness gates outright. Crash gate clear (BTC -0.01% today), weekly downtrend gate clear (-1.55%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate reached a marginal pass this hour, no coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
