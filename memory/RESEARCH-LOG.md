@@ -40029,3 +40029,41 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate reached a marginal pass this hour, no coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 16:00 UTC (fired 16:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 15:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,759.60 vs today's session open $78,449.60 → **+0.40%**. Clear.
+**Weekly trend gate:** live $78,759.60 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.15%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 66/Greed (Perplexity). No Extreme Fear adjustment applies.
+
+**Macro catalysts (Perplexity):** Same landscape as recent passes — Treasury buyback liquidity ops (today), Solana Transaction V1 (activated today), CLARITY Act procedural vote (~Sept 15), Fed meeting Sept 15-16, Zcash Grayscale ETF conversion filing, Bittensor spot ETF applications under SEC review, HYPE unlock (~Sept 29). Nothing new maps to a fresh, qualifying Kraken candidate this pass.
+
+**Discovery sweep (671 USD pairs, ticker-based, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 12 candidates cleared the fade+liquidity screen: **PHA** (+20.83%, fade 1.41%, $244k), **NEAR** (+12.51%, fade 1.15%, $13.6M), **GRASS** (+11.45%, fade 1.38%, $256k), **COTI** (+10.32%, fade 0.71%, $254k), **KII** (+10.23%, fade 0.00%, $60k), **STBL** (+9.99%, fade 0.65%, $75k), **XZEC** (+9.64%, fade 0.50%, $70.7M — AU jurisdiction-restricted, skipped pre-emptively per TRADING-STRATEGY.md), **PUMP** (+9.10%, fade 0.80%, $7.4M), **GWEI** (+6.19%, fade 1.16%, $106k), **PYTH** (+5.32%, fade 0.88%, $234k), **KNTQ** (+4.53%, fade 1.24%, $51k, borderline liquidity), **JUP** (+4.05%, fade 1.40%, $1.3M).
+
+**Deep check — PHA, NEAR, GRASS, COTI, KII, STBL, PUMP, GWEI, PYTH, KNTQ, JUP:**
+- **PHA/USD:** spread 1.629% (bid 0.0313/ask 0.03181) — **fails the ≤1% spread hard cap**. Reject before any candle check.
+- **NEAR/USD:** spread 0.092% ✓. Two-candle acceleration passes (15:45 C=2.5894 → 16:00 C=2.5939 → 16:15 C=2.5944, each higher). But 24h high (2.64320) does not appear in any of the last 5 closed/forming 15m candles (max H seen 2.6200) — set well over an hour ago, and live price (2.612, -1.18% off that high) is declining from it with no fresh breakout above 2.6432. **Fails momentum-peak-check freshness.** Reject.
+- **GRASS/USD:** spread 0.189% ✓. 15m closes declining/choppy (15:45 C=0.3698 → 16:00 C=0.3707 → 16:15 C=0.3690, lower) — **fails two-candle acceleration**. 24h high (0.3760) also stale (not in last 5 candles, max H 0.3708), price declining from it. Reject on both grounds.
+- **COTI/USD:** spread 0.357% ✓. 16:00 close (0.01887) < 15:45 close (0.01906) — **fails two-candle acceleration** at the first step. Reject.
+- **KII/USD:** spread 0.210% ✓. Live price *is* the 24h high right now (0.07641 = 0.07641), but that high was just set on the still-**forming** 16:30 candle (16:15 closed at 0.07609) — **fails confirmed-candle requirement**. Also 16:00 close (0.07465) < 15:45 close (0.07474) — **fails two-candle acceleration** independently. Reject.
+- **STBL/USD:** spread 0.149% ✓. Two-candle acceleration passes (15:45 C=0.026557 → 16:00 C=0.026761 → 16:15 C=0.026814, each higher; forming 16:30 also higher at 0.026931). But 24h high (0.027108) not reached by any closed or forming candle shown (max H 0.026931) — stale, live price still 0.42% below it with no confirmed breakout. **Fails momentum-peak-check freshness** — closest candidate this pass, worth a fresh look next pass if it breaks the old high on a closed candle. Reject for now.
+- **PUMP/USD:** spread 0.042% ✓. 16:00 close (0.004602) < 15:45 close (0.004631) — **fails two-candle acceleration**. Reject.
+- **GWEI/USD:** spread 0.221% ✓. 16:00 close (0.023889) < 15:45 close (0.024138) — **fails two-candle acceleration**. Reject.
+- **PYTH/USD:** spread 0.178% ✓. 16:00 close (0.05598) < 15:45 close (0.05650) — **fails two-candle acceleration**. Reject.
+- **KNTQ/USD:** spread 0.032% ✓ but liquidity borderline ($51k). 16:00/16:15/16:30 candles all flat at 0.22087 with **zero volume** — dead/illiquid tape, not a real move; the raw %-change is a stale earlier print. **Fails two-candle acceleration** (no real close sequence). Reject.
+- **JUP/USD:** spread 0.195% ✓. 16:00 close (0.24795) < 15:45 close (0.24871) — **fails two-candle acceleration**. Reject.
+
+**Step 4 (research/execute):** No candidate cleared every structural/technical gate this pass — PHA failed on spread; NEAR and STBL passed acceleration but failed momentum-peak freshness (stale 24h high, no confirmed breakout); GRASS, COTI, KII, PUMP, GWEI, PYTH, KNTQ, JUP all failed two-candle acceleration outright. No candidate reached the catalyst-confirmation or win-rate-kill-switch decision stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.40% today), weekly downtrend gate clear (-1.15%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
