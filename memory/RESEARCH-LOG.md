@@ -40234,3 +40234,26 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour; TRUST came closest but faded past the cap in real time between checks). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 22:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 21:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $77,943.50 vs today's session open $78,449.60 → **-0.65%**. Clear.
+**Weekly trend gate:** live $77,943.50 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-2.17%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** wide spread across sources (CFGI 51/Neutral, Alternative.me 66/Greed, CoinStats 74/Greed, one stale July reading of 31/Fear discarded as outdated) — no live Extreme Fear reading, no adjustment applies.
+
+**Discovery sweep (direct Kraken public API, AssetPairs + batched Ticker, 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** **0 candidates cleared the fade+liquidity screen** — the cleanest possible pass, no borderline cases to deep-check. For context, the top raw movers today (ACA +95.8%, OXT +65.3%, TCS +62.6%, GAIB +54.3%, SC +31.7%, KAT +25.8%, LRC +16.1%, MINA +13.4%, CLOUD +13.2%, among others) all carry either negligible notional (ACA $320, GAIB $14.8k, UNITAS $340, MULTI $1.1k, DMC $2.8k, VANRY $4.6k — thin/illiquid) or heavy fade off their 24h high already (OXT 19.4%, TCS 38.9%, SC 17.7%, KAT 8.9%, VANRY 51.4%, LRC 20.6%, IDEX 16.5%) — every real-notional mover has already round-tripped well past the 1.5% fade cap, consistent with stale pumps rather than fresh breakouts. No AU-restricted assets (ZEC/DASH) present among the top movers.
+
+**Step 4 (research/execute):** No candidate reached deep-check this pass — zero survivors of the initial fade+liquidity screen, so no acceleration/confirmed-candle/freshness/catalyst checks were needed.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC -0.65% today), weekly downtrend gate clear (-2.17%/5d). No candidate cleared even the first screening gate this pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (zero candidates cleared even the initial screen this hour — no coverage gap, just a quiet tape). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
