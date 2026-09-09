@@ -40067,3 +40067,45 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 17:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 16:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,756.20 vs today's session open $78,449.60 → **+0.39%**. Clear.
+**Weekly trend gate:** live $78,756.20 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.15%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** inconsistent across trackers this pass (CFGI 57/Neutral vs 66-73/Greed elsewhere) — no Extreme Fear reading from any source, no adjustment applies.
+
+**BTC funding rate:** mildly positive (~+0.0047-0.0077%/8h across venues, OI-weighted ~+0.0067-0.0068%) — longs paying shorts, unremarkable.
+
+**Macro catalysts (Perplexity):** Treasury buyback liquidity ops (today), Solana Transaction V1 activated today, Fed meeting Sept 15-16 flagged as the month's dominant catalyst, CLARITY Act procedural vote (~mid-Sept), HYPE unlock (~Sept 29, ~$1.2B), Zcash Grayscale ETF conversion filing (~Sept 14 decision window). Nothing new maps to a fresh, qualifying Kraken candidate this pass.
+
+**Discovery sweep (642 online USD pairs, direct Kraken public API AssetPairs+batched Ticker, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 13 candidates cleared the fade+liquidity screen: **COTI** (+14.89%, fade 1.31%, $279k), **GRASS** (+14.64%, fade 0.16%, $250k), **NEAR** (+13.35%, fade 0.65%, $13.5M), **KII** (+12.74%, fade 1.08%, $78k), **STBL** (+11.78%, fade 1.07%, $77k), **ZRX** (+8.79%, fade 1.45%, $182k), **BTR** (+8.67%, fade 0.50%, $550k), **GWEI** (+8.44%, fade 0.02%, $105k), **PYTH** (+5.64%, fade 0.97%, $231k), **ZAMA** (+4.50%, fade 1.10%, $254k), **DRV** (+3.43%, fade 0.35%, $198k), **EGLD** (+3.35%, fade 0.57%, $160k), **ATH** (+3.07%, fade 0.98%, $58k). No AU-restricted assets (ZEC/DASH) present this pass.
+
+**Deep check (15m closed candles as of 17:34 UTC — last fully closed candle 17:15, 17:30 still forming):**
+- **COTI/USD:** C16:45=0.02033 → C17:00=0.02048 (higher) → C17:15=0.02039 (lower than 17:00). **Fails two-candle acceleration.** Reject.
+- **GRASS/USD:** C16:45=0.3763 → C17:00=0.3763 (flat, not strictly higher). **Fails two-candle acceleration.** Reject.
+- **NEAR/USD:** C16:45=2.5992 → C17:00=2.6439 (higher) → C17:15=2.6354 (lower than 17:00). **Fails two-candle acceleration.** Reject.
+- **STBL/USD:** C16:45=0.027343 → C17:00=0.027321 (lower). **Fails two-candle acceleration** at the first step. Reject.
+- **ZRX/USD:** 16:45 candle is a dead zero-volume print (C=0.1079 unchanged from itself); C17:00=0.1089 → C17:15=0.1089 (flat, not strictly higher). **Fails two-candle acceleration.** Reject.
+- **BTR/USD:** C16:45=0.05473 → C17:00=0.05466 (lower). **Fails two-candle acceleration.** Reject.
+- **PYTH/USD:** C16:45=0.05602 → C17:00=0.05656 (higher) → C17:15=0.05641 (lower than 17:00). **Fails two-candle acceleration.** Reject.
+- **EGLD/USD:** C16:45=5.19 → C17:00=5.24 (higher) → C17:15=5.22 (lower than 17:00). **Fails two-candle acceleration.** Reject.
+- **GWEI/USD:** C16:45=0.024155 → C17:00=0.024284 (higher) → C17:15=0.024287 (higher). Passes acceleration. But live 24h high (0.024485) sits on the still-**forming** 17:30 candle (H=0.024485, matches exactly) — the last closed candle (17:15) only reached H=0.024287. **Fails confirmed-candle requirement.** Reject.
+- **ZAMA/USD:** C16:45=0.05220 → C17:00=0.05287 (higher) → C17:15=0.05318 (higher). Passes acceleration. But 24h high (0.05377) does not appear in any of the last 6 candles (max H seen 0.05338 on the forming 17:30 candle) — stale, no confirmed breakout. **Fails momentum-peak-check freshness.** Reject.
+- **ATH/USD:** C16:45=0.00501 → C17:00=0.00502 (higher) → C17:15=0.00504 (higher). Passes acceleration. But 24h high (0.00509) does not appear in any of the last 6 candles (max H seen 0.00505) — stale by more than the 30-min ceiling. **Fails momentum-peak-check freshness.** Reject.
+- **DRV/USD:** spread 0.112% ✓. C16:45=0.16787 → C17:00=0.16788 (higher, thin) → C17:15=0.16986 (higher). **Passes two-candle acceleration.** 24h high (0.17046) matches the 17:15 closed-candle high exactly — that candle closed at 17:30, ~19 min before this check. **Passes confirmed-candle and momentum-peak freshness** (well inside the 30-min ceiling). Live intracandle fade: 0.352%, well under the 1.5% cap. **Clears every structural/technical gate.** Catalyst check (Perplexity): recent coverage cites an Upbit/Bithumb listing catalyst, but a precise-timing follow-up query confirmed the listing actually went live **2026-07-14** — nearly two months stale, not a fresh <6h catalyst. Perplexity also flagged a **confirmed 50% DRV supply increase** (500M mint, 1.0B→1.5B total supply, approved via governance/project disclosure) as an active dilution overhang. No other fresh catalyst found. **Momentum-only, no qualifying catalyst** → subject to the win-rate kill switch (ACTIVE) → blocked. The confirmed dilution risk is an independent reason for caution even setting the kill switch aside.
+- **KII/USD:** spread 0.778% ✓ (under 1% cap but the widest of this pass's survivors). C16:45=0.07700 → C17:00=0.07769 (higher) → C17:15=0.07900 (higher). Passes acceleration. 24h high (0.079) matches the 17:15 closed-candle high, ~19 min old — passes confirmed-candle and freshness. Live fade 1.076%, under the 1.5% cap. **Clears every structural/technical gate.** Catalyst check (Perplexity): KiiChain suffered a **security exploit on 2026-08-22** — ~148.33M KII moved across 18 attack rounds, chain halted at block 9,355,723; roughly 54.4% of stolen tokens (~80.73M KII) remain frozen at attacker addresses and recovery is still in progress. Today's move is speculative rebound trading off a still-damaged base with an unresolved exploit overhang, not a fresh bullish catalyst — this is an **active negative-thesis risk**, not merely an absent catalyst. Reject independent of the kill switch — do not treat as a qualifying momentum-only candidate either, given the specific exploit/recovery risk profile.
+
+**Step 4 (research/execute):** Two candidates (DRV, KII) cleared every structural/technical gate (spread, acceleration, confirmed-candle, freshness, live fade) this pass. DRV has no fresh <6h catalyst (its listing news is ~2 months stale) plus a confirmed dilution overhang, making it momentum-only and blocked by the standing win-rate kill switch. KII carries an active unresolved exploit/recovery risk that independently disqualifies it as a catalyst-confirmed entry, regardless of the kill switch. No catalyst-confirmed, thesis-clean candidate found this pass.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.39% today), weekly downtrend gate clear (-1.15%/5d). Win-rate kill switch remains ACTIVE (20.0%, below 35% floor) and correctly blocked the one clean-momentum candidate (DRV) that lacked a fresh catalyst; KII rejected independently on exploit/recovery risk.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two technically-clean movers this pass, both correctly rejected — one on the standing kill switch plus a real dilution overhang, one on an unresolved exploit risk). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
