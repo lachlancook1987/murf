@@ -39567,3 +39567,30 @@ No push sent — book flat on both exchanges, no drift, no operational issues, n
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, weekly downtrend gate recovering to inactive is a routine regime shift not requiring attention, sole momentum candidate (SKR) correctly rejected on structural gates. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 02:00 UTC (fired 02:33 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 01:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,821.50 vs today's session open $78,449.60 → **+0.47%**. Clear.
+**Weekly trend gate:** live $78,821.50 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **−1.07%/5d** — inside the ±3% band, unchanged from 01:00 UTC's −1.17%. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 57-69 (source-dependent: CFGI 57 Neutral, CoinAligator 58 Greed, Alternative.me 69 Greed), consistent with recent passes — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → only **8 raw candidates** (thin overnight/early-UTC count, consistent with the 00:00 UTC pass): SCRT (+11.36%), PEAQ (+5.84%), IDOS (+5.48%), KAT (+5.21%), RIZE (+4.40%), KII (+3.59%), PEPECOIN (+3.52%), DENT (+3.05%).
+
+**Live intracandle fade check (24h-high vs live last) on all 8:** SCRT −10.9% off high, PEAQ −7.55%, IDOS −14.2%, RIZE −2.3%, KII −4.25%, PEPECOIN −16.4%, DENT −7.05% — all reject outright, decisively outside the 1.5% fade cap (these are bounces off prior lows, not fresh breakouts). **KAT** alone passes (−0.59% off high, 0.00505 vs 24h high 0.00508) — sole candidate advanced to full check.
+
+**KAT/USD deep check:** Spread 0.20% (ask 0.005060/bid 0.005050) — clears the 1% cap. 15m OHLC: 24h high 0.00508 sits on the **still-forming** 02:30 candle (current time ~02:37 UTC) — **fails confirmed-candle requirement** (last fully closed candle, 02:15, closed 0.00500, below the live high). **Also fails two-candle acceleration** — closes: 01:45 0.00486 → 02:00 0.00485 (down) → 02:15 0.00500 (up); the 02:00 candle closed lower than the prior (01:45) candle, breaking the required "both of the last two closed candles close higher" pattern. Both are structural, catalyst-independent gates — reject regardless of catalyst status; no catalyst check run, moot given the structural fail. Same "spike then stall on a still-forming candle" pattern flagged on SKR at 01:00 UTC.
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. KAT was the only asset to pass the live-fade filter and it fails two independent structural gates (confirmed-candle, two-candle acceleration). Win-rate kill switch was not the binding constraint for any candidate — no candidate reached that review stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — no candidate cleared every gate. Weekly downtrend gate remains clear; win-rate kill switch remains active/unchanged.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected outcome (sole live-fade-passing candidate, KAT, correctly rejected on structural gates). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
