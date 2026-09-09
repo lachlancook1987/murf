@@ -40143,3 +40143,34 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two technically-clean movers correctly blocked by the standing kill switch, one with an independent negative-thesis flag; no coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 19:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 18:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,531.40 vs today's session open $78,449.60 → **+0.10%**. Clear.
+**Weekly trend gate:** live $78,531.40 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.44%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** inconsistent across trackers (CoinStats 74/Greed, FearGreedMeter 66/Greed, CFGI 55/Neutral) — no Extreme Fear reading from any source, no adjustment applies.
+
+**Discovery sweep (direct Kraken public API, AssetPairs + batched Ticker, 642 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 6 candidates cleared the fade+liquidity screen: **COTI** (+22.56%, fade 0.00%, $451k), **GWEI** (+7.20%, fade 1.42%, $113k), **ORCA** (+4.78%, fade 1.26%, $76k), **KNTQ** (+4.37%, fade 1.47%, $51k, borderline liquidity, historically dead/illiquid tape per prior passes), **ZAMA** (+4.15%, fade 1.43%, $265k), **ATH** (+3.27%, fade 0.79%, $59k). No AU-restricted assets (ZEC/DASH) present this pass.
+
+**Deep check (15m closed candles as of 19:33 UTC — last fully closed candle 19:15, 19:30 still forming):**
+- **COTI/USD:** spread 0.419% ✓. C18:45=0.02100 → C19:00=0.02117 (higher) → C19:15=0.02136 (higher). **Passes two-candle acceleration.** But live 24h high (0.02173) matches the still-**forming** 19:30 candle's high exactly (last closed candle, 19:15, only reached H=0.02152) — **fails confirmed-candle requirement**. Closest candidate this pass; worth a fresh look next pass if the breakout holds on a closed candle. Reject for now.
+- **GWEI/USD:** C18:45=0.024276 → C19:00=0.024156 (**lower**). **Fails two-candle acceleration** at the first step. Reject.
+- **ORCA/USD:** 19:15 and 19:30 candles both zero-volume, price flat — dead/illiquid tape, not a real move. **Fails two-candle acceleration.** Reject.
+- **KNTQ/USD:** not deep-checked in detail — borderline $51k liquidity and consistently flagged as dead/illiquid tape in every prior pass this week; C18:45=0.22173 → C19:00=0.22112 (lower) confirms the pattern. Reject.
+- **ZAMA/USD:** C18:45=0.05302 → C19:00=0.05298 (**lower**). **Fails two-candle acceleration** at the first step. Reject.
+- **ATH/USD:** C18:45=0.00504 → C19:00=0.00504 (flat, not strictly higher). **Fails two-candle acceleration** (flat does not satisfy "each closes higher"). Reject.
+
+**Step 4 (research/execute):** One candidate (COTI) passed two-candle acceleration but failed the confirmed-candle requirement — its 24h high sits on the still-forming candle, not a closed one. All other candidates failed acceleration outright (GWEI, ZAMA immediately; ORCA/KNTQ on dead/illiquid tape; ATH on a flat middle candle). No candidate cleared every structural/technical gate this pass, so no catalyst-confirmation or win-rate-kill-switch check was needed.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.10% today), weekly downtrend gate clear (-1.44%/5d). COTI is the one candidate worth re-checking next pass if its high confirms on a closed candle.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
