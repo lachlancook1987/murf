@@ -39911,3 +39911,31 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (structural gates correctly rejecting two fresh movers, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+
+## 2026-09-09 — Scan — 12:00 UTC (fired 12:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 11:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $79,484.50 vs today's session open $78,449.60 → **+1.32%**. Clear.
+**Weekly trend gate:** live $79,484.50 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-0.24%/5d** — inside the ±3% band. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs (620 with live tickers), notional ≥$30k, vs-open ≥3% → 49 raw candidates, led by OXT (+60.99%, fade-rejected before), BODEN (+23.63%, fade-rejected before), KAT (+20.83%, fade-rejected before), RIZE/IDEX/WARD (thin, <$60k notional), LRC (+16.41%, carried, continuing to fade since its 09:00 UTC reversal), PEPECOIN (fade-rejected before), **MINA (+13.48%, $1.04M, carried)**, **NEAR (+12.52%, $10.1M, carried, confirmed-candle fail at 10:00 UTC)**, **USELESS (+11.06%, $5.09M, carried, stale catalyst)**, **GRASS (+9.44%, $208k, carried, bearish-unlock non-catalyst)**, **RAY (+9.17%, $1.27M, carried, stale catalyst)**, ZRX (fade-rejected before), **PHA (+8.54%, $186k, carried, spread fail at 09:00 UTC)**, **CHIP (+8.54%, $430k, carried, confirmed-candle fail at 09:00 UTC)**, **PUMP (+8.32%, $6.6M, carried, live-fade near cap but structurally weak)**, SC (thin), **KTA (+7.73%, $237k, carried, fade-rejected)**, XZEC (AU-restricted, skipped pre-emptively), **LIGHTER (+7.57%, $1.15M, carried, cooling since 09:00 UTC)**, **VVV (+7.49%, $14.4M, carried, stale 3-week-old catalyst)**, PROS (fade-rejected before), CLOUD/BERT/STBL (thin or fade-rejected before), DOG (thin), **COTI (+5.41%, $220,930 — new this pass)**, BTR (thin), GWEI (thin), **XTZ (+5.03%, $557k, carried, two-candle acceleration fail at 11:00 UTC)**, NPC (thin), **ATOM (+4.81%, $1.9M, carried, live-fade reject at 10:00 UTC)**, **JUP (+4.49%, $1.13M, carried, two-candle acceleration fail at 11:00 UTC)**, **ZBCN (+4.42%, $111,865 — new this pass)**, MET (thin), KNTQ (dead/illiquid ticker), PRO (thin), GLMR (thin), CFG (thin), DASH (AU-restricted, skipped pre-emptively), DGAI (thin), KII/RSR/AVA (thin, <$60k notional).
+
+**Deep check, the two new candidates (COTI, ZBCN):**
+- **COTI/USD:** live fade -0.37% (24h high 0.01876 vs live 0.01869) — passes the 1.5% cap easily. Spread 0.2678% (bid 0.01867 / ask 0.01872, tight). 15m closed candles (current time 12:34 UTC, last closed = 12:15): 11:45 close 0.01834 → 12:00 close 0.01863 (**higher**) → 12:15 close 0.01857 (**lower than 12:00** — breaks the sequence). **Fails two-candle acceleration** — spiked into 12:00 then stalled/reversed on the 12:15 close, the same "higher high, lower close" pattern flagged repeatedly this week.
+- **ZBCN/USD:** live fade -1.74% (24h high 0.0019 vs live 0.001867) — passes, though closer to the cap than most. Spread 0.4285% (bid 0.001867 / ask 0.001875, tight). 15m closed candles (last closed = 12:15): 11:45 close 0.001845 → 12:00 close 0.001872 (**higher**) → 12:15 close 0.001867 (**lower than 12:00** — breaks the sequence). **Fails two-candle acceleration**, identical pattern to COTI (and to XTZ/JUP at the 11:00 UTC pass).
+
+**Catalyst check:** Not run on COTI or ZBCN — both fail structurally (two-candle acceleration) before reaching the catalyst-confirmation stage, and both would be momentum-only regardless (no catalyst carried from any prior pass's research on either), making them subject to the standing win-rate kill switch even in the counterfactual where they passed structure.
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. COTI and ZBCN (the only two new movers this pass) both fail two-candle acceleration on an identical spike-then-stall pattern at the 12:00→12:15 candle transition. Every carried candidate remains blocked on grounds established in earlier passes today (stale/non-existent catalyst, spread fail, confirmed-candle fail, live-fade fail, or thin liquidity).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — COTI/ZBCN both fail two-candle acceleration, all carried candidates remain blocked on previously-established grounds plus the standing win-rate kill switch. Weekly downtrend gate remains clear, crash gate clear (BTC +1.32% today).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (structural gates correctly rejecting two fresh movers, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
