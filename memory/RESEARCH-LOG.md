@@ -39777,3 +39777,38 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (a new large mover, VVV, correctly blocked on stale catalyst + standing kill switch, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 08:00 UTC (fired 08:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 07:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $79,663.90 vs today's session open $78,449.60 → **+1.55%**. Clear.
+**Weekly trend gate:** live $79,663.90 vs 5-trading-day-ago daily reference $79,700.10 (2026-09-04 EOD live reference) → **-0.05%/5d** — inside the ±3% band. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 55-73 across providers (CFGI 55 Neutral, Bitget 66 Greed, CoinStats 71 Greed, Binance Square 73 Greed) — Greed/Neutral regime, no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 645 online USD pairs, notional ≥$30k, vs-open ≥3% → 41 raw candidates, led by OXT (+78.91%, thin $135k, skipped), IDEX (+25.29%, thin $50k, skipped), RIZE/BODEN/KAT (all fade-rejected before or thin), **MINA (+12.62%, $773k)**, **GRASS (+11.96%, $150k)**, KTA (+10.70%, $160k), **CHIP (+10.14%, $318k)**, GLMR (thin/fade), **VVV (+9.79%, $12.7M — carried from 07:00 UTC)**, **USELESS (+9.51%, $6.8M — carried)**, PEPECOIN (thin), **LIGHTER (+8.69%, $934k)**, **RAY (+7.45%, $1.14M, carried, stale catalyst)**, ZRX (fade-rejected before), PHA ($142k), PROS (fade), **NEAR (+6.27%, $7.16M)**, MET (thin), **ENA (+5.45%, $2.25M)**, **PUMP (+5.07%, $3.73M)**, IDOS (fade-rejected before), plus a long thin/sub-$60k tail (PRO, CLOUD, KNTQ, DGAI, BERT, W, JUP, BTR, PYTH, CFG, ARB, ZBCN, ETHFI, FARTCOIN, WIF).
+
+**Live intracandle fade check on the 8 most liquid/notable movers:** MINA -1.21% (passes), GRASS 0.00% (passes), CHIP -1.16% (passes), LIGHTER -0.87% (passes), NEAR -0.09% (passes), ENA -0.47% (passes), PUMP -1.39% (passes), ATOM +4.50%/$1.4M new this pass, -0.09% (passes). VVV -3.01% and RAY -11.10% and USELESS -7.13% **reject outright** (already known stale/fading from prior passes).
+
+**Deep check (spread + 15m candle structure) on the 8 fade-passers:**
+- Spreads all tight and clear the 1% cap: MINA 0.489%, GRASS 0.270%, CHIP 0.170%, LIGHTER 0.095%, NEAR 0.057%, ENA 0.059%, PUMP 0.044%, ATOM 0.134%.
+- **Two-candle acceleration** (last two closed 15m candles, as of ~08:34 UTC — 08:00 and 08:15, with 08:30 still forming): MINA fails (08:00 close 0.08824 < 07:45 close 0.08926 — down leg breaks the sequence). GRASS fails (08:00 close 0.3692 < 07:45 close 0.3703). CHIP fails (08:15 close 0.05928 < 08:00 close 0.05963). LIGHTER fails (08:15 close 5.281 < 08:00 close 5.291). NEAR fails (08:00 close 2.4250 < 07:45 close 2.4365). PUMP fails (08:00 close 0.004526 < 07:45 close 0.004550). **ENA marginally passes** (08:00 close 0.1684 > 07:45 0.1671; 08:15 close 0.1685 > 08:00 0.1684, a bare +0.06% tick) — weakest possible pass, essentially flat between the two closes.
+- **ATOM** — live ticker shows the 24h high (1.9438) exactly equal to the current last trade price, i.e. the high is printing on the still-forming 08:30 candle right now, not a closed one (last fully closed candle, 08:15, topped out at 1.9391/closed 1.9385, below the live price). **Fails confirmed-candle requirement** despite otherwise-clean two-candle acceleration (08:00 close 1.9002 > 07:45 1.8867; 08:15 close 1.9385 > 08:00 1.9002).
+- **ENA confirmed-candle check:** 24h high $0.1690 sits on the 08:00 candle (closed, not the forming 08:30 one) — passes confirmed-candle. **Momentum-peak freshness:** high age is borderline — the 08:00-08:15 candle window means the high could have printed anywhere from 34 down to ~20 minutes ago against the 30-min ceiling (freshness ceiling this pass = min(30min, ~60min since 07:00 pass) = 30min); not cleanly fresh, and the acceleration signal itself is a bare +0.06% tick, not real acceleration.
+
+**Catalyst check:** Not run on ENA or any other candidate this pass — ENA is the only one to reach a marginal structural pass, but it has no confirmed catalyst from any prior pass's research on this asset, making it momentum-only regardless of catalyst-check outcome, and momentum-only entries are blocked outright by the active win-rate kill switch below. Running a catalyst query would not change the outcome, so skipped per the established "moot given structural fail" convention.
+
+**Win-rate kill switch / R:R application:** Every candidate that reached a fade-check pass this scan (MINA, GRASS, CHIP, LIGHTER, NEAR, ENA, PUMP, ATOM) is momentum-only — no confirmed <6h catalyst on any from this pass or prior passes' research. ENA is the only one to reach a marginal (not clean) structural pass, and even it is blocked outright by the active win-rate kill switch (20.0%, below the 35% floor) independent of its own borderline freshness/acceleration reading. **Reject all.**
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. ENA is the closest technical near-miss (tight spread, marginal two-candle pass, confirmed-candle high) but its freshness reading is borderline and its acceleration is essentially flat — and it's blocked by the standing kill switch regardless since it carries no catalyst. Every other liquid mover (MINA/GRASS/CHIP/LIGHTER/NEAR/PUMP) fails two-candle acceleration outright; ATOM fails confirmed-candle (high printing live, not yet confirmed by a closed candle).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — no candidate clears every structural gate this pass, and the one marginal near-miss (ENA) would be blocked by the standing win-rate kill switch regardless. Weekly downtrend gate remains clear, crash gate clear (BTC +1.55% today).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (structural gates and the standing kill switch working as designed, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
