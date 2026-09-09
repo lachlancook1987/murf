@@ -40205,3 +40205,32 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour; two of four also carry standing independent thesis-risk flags from prior passes). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 21:00 UTC (fired 21:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 20:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,232.30 vs today's session open $78,449.60 → **-0.28%**. Clear.
+**Weekly trend gate:** live $78,232.30 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.81%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 49-71 depending on source (AltIndex 49/Neutral, CFGI 57/Neutral, Bitget 66/Greed, Binance 71/Greed) — wide spread, no Extreme Fear reading anywhere, no adjustment applies.
+
+**Discovery sweep (direct Kraken public API, AssetPairs + batched Ticker, 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 4 candidates cleared the fade+liquidity screen: **CLOUD** (+15.43%, fade 0.95%, $235.8k), **CSPR** (+5.67%, fade 0.00%, $105.1k), **RSR** (+3.30%, fade 1.14%, $72.2k), **TRUST** (+3.02%, fade 1.31%, $69.2k). No AU-restricted assets (ZEC/DASH) present this pass.
+
+**Deep check (15m closed candles as of 21:34 UTC — last fully closed candle 21:15, 21:30 still forming):**
+- **CLOUD/USD:** spread 1.671% (bid 0.0412/ask 0.0419) — **fails the ≤1% spread hard cap**. Reject before any candle check.
+- **CSPR/USD:** spread 0.241% ✓. Closes: C20:45=0.0029753 → C21:00=0.0030349 (higher) → C21:15=0.0030118 (**lower** than 0.0030349). **Fails two-candle acceleration** — spiked then stalled/reversed on the second candle. Reject.
+- **RSR/USD:** spread 0.272% ✓. Closes: C20:45=0.001472 → C21:00=0.001475 (higher) → C21:15=0.001477 (higher). Passes two-candle acceleration. But the 24h high (0.00149) was set in the 20:15 candle — **79 minutes old**, well outside the freshness ceiling, and no closed candle since (20:30 through 21:15) has broken back above it (highest close since is 0.001479). **Fails momentum-peak-check freshness.** Reject.
+- **TRUST/USD:** spread 0.239% ✓ at initial check. Closes: C21:00=0.05917 → C21:15=0.05926, each higher than prior — passes two-candle acceleration, and the 21:15 candle's close (0.05926) held above the prior breakout level (0.05922, the 21:00 candle's high) — passes the confirmed-candle requirement. 24h high (0.05948) was set in the 21:15 candle itself — fresh. But the still-forming 21:30 candle immediately reversed hard (o=0.05933 → l=0.05870, a ~1.06% intracandle drop), and a re-check of the live quote moments later showed bid had fallen to 0.05848 — **live intracandle fade off the 24h high reached 1.68%, over the 1.5% cap** (worse than the 1.31% read at initial screen). **Fails live intracandle fade check.** Also checked catalyst via Perplexity: no confirmed news/catalyst found for Kraken's TRUST pair (Perplexity's data return was for an unrelated $0.0001616 token, not a usable match) — would have been a momentum-only entry in any case, which is currently **blocked outright by the active win-rate kill switch** regardless of the technical fade-check outcome. Reject on both grounds.
+
+**Step 4 (research/execute):** No candidate cleared every structural/technical gate this pass — CLOUD failed on spread; CSPR failed acceleration; RSR passed acceleration but failed momentum-peak freshness; TRUST passed acceleration and the confirmed-candle check but failed the live intracandle fade check as the reversal accelerated between the initial screen and the deep check, and would have been blocked by the win-rate kill switch regardless (no confirmed catalyst).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC -0.28% today), weekly downtrend gate clear (-1.81%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour; TRUST came closest but faded past the cap in real time between checks). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
