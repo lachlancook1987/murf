@@ -39812,3 +39812,46 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (structural gates and the standing kill switch working as designed, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 09:00 UTC (fired 09:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 08:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $79,405.20 vs today's session open $78,449.60 → **+1.22%**. Clear.
+**Weekly trend gate:** live $79,405.20 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-0.34%/5d** — inside the ±3% band. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 55 (CFGI), Neutral — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 39 raw candidates, led by OXT (+81.32%, fade-rejected before), RIZE/WARD/IDEX (thin or fade-fail), **LRC (+17.02%, $61k notional — new this pass)**, **KTA (+16.62%, $198k, carried)**, KAT (fade-rejected before), **GRASS (+12.20%, $184k, carried)**, **CHIP (+11.41%, $366k, carried)**, PHA (+10.80%, $192k), USELESS (fade-rejected, carried), **ZRX (+9.09%, $231k, carried)**, MINA (fade-rejected), PROS (fade-rejected), LIGHTER (now fade-rejected at -1.84%, first time — momentum has cooled since 04:00-08:00 UTC), **ATOM (+7.35%, $1.79M)**, **FF (+6.52%, $97k)**, NEAR (fade-rejected, -1.55%, marginal), **ETHFI (+5.28%, $236k)**, CLOUD/GLMR/BODEN (fade-rejected), **KNTQ (+4.87%, $56k)**, MET/NPC (fade-rejected), RAY (fade-rejected, carried, stale catalyst), BERT (fade-rejected), PUMP/ZBCN (fade-rejected), PRO (+3.97%, thin), ENA/PIEVERSE/ARB (fade-rejected), **DGAI (+3.57%, $900k)**, **RSR (+3.37%, $33k)**, PEPECOIN/BTR (fade-rejected). DASH/XZEC skipped pre-emptively (AU-restricted).
+
+**Live intracandle fade check:** 12 candidates pass the 1.5% cap: LRC, KTA, GRASS, CHIP, PHA, ZRX, ATOM, FF, ETHFI, KNTQ, DGAI, RSR. LIGHTER now fails (-1.84%) for the first time today after carrying clean through 04:00-08:00 UTC — its rally has visibly cooled.
+
+**Spread check (12 fade-passers):** ATOM 0.100%, DGAI 0.005%, GRASS 0.162%, KTA 0.664%, CHIP 0.523%, ZRX 0.366%, ETHFI 0.173%, FF 0.832%, LRC 0.404% (at check time), KNTQ 0.077%, RSR 0.275% all clear the 1% cap. **PHA 1.304% — fails spread, hard skip.**
+
+**Structural gate deep check (15m candles, current time 09:34 UTC — last closed candle 09:15, forming candle 09:30):**
+- **ATOM:** 09:00 close (1.9805) > 08:45 close (1.9670) ✓, but 09:15 close (1.9643) < 09:00 close (1.9805) — **fails two-candle acceleration** (pulled back after the earlier breakout that was rejected on confirmed-candle grounds at 08:00 UTC). Reject.
+- **DGAI:** 09:00 close (0.77821) < 08:45 close (0.78411) — **fails two-candle acceleration** at the first step; already rolling over. Reject.
+- **GRASS:** 09:00 close (0.3716) < 08:45 close (0.3760) — **fails two-candle acceleration**. Reject.
+- **ZRX:** 09:00 close (0.1085) < 08:45 close (0.1091) — **fails two-candle acceleration**. Reject.
+- **ETHFI:** 09:00 close (0.6314) < 08:45 close (0.6375) — **fails two-candle acceleration**. Reject.
+- **FF:** 09:00 candle shows zero volume (flat carryover print), thin/choppy tape — not a real accelerating move. Reject.
+- **KNTQ, RSR:** both show multiple consecutive 15m candles frozen at an identical price with zero volume — dead/illiquid tickers, not real moves. Reject.
+- **CHIP:** 09:00 close (0.05807) > 08:45 close (0.05745) ✓; 09:15 close (0.05976) > 09:00 close (0.05807) ✓ — **passes two-candle acceleration**. But the live 24h high (0.06005) sits on the still-**forming** 09:30 candle (H=0.06005), while the last closed candle (09:15) topped at only 0.05979 — **fails confirmed-candle requirement**. Reject on structural grounds.
+- **KTA:** 09:00 close (0.0886) > 08:45 close (0.0877) ✓; 09:15 close (0.0889) > 09:00 close (0.0886) ✓ — **passes two-candle acceleration**. Same confirmed-candle problem as CHIP: live 24h high (0.0909) sits on the still-forming 09:30 candle, last closed candle (09:15) topped at 0.0889. **Fails confirmed-candle requirement.** Reject.
+- **LRC:** 09:00 close (0.009783) > 08:45 close (0.009157) ✓ (large jump on a genuine volume surge — 08:00/09:00 hourly candles printed ~2.2-2.8M volume vs a baseline of a few thousand); 09:15 close (0.009835) > 09:00 close (0.009783) ✓ — **passes two-candle acceleration**. Confirmed-candle: the 24h high (0.010060) was set **inside the 09:15 candle, which has since closed** — genuinely confirmed, not resting on the still-forming candle. 1h momentum (vs 08:00 hourly open 0.008671) ≈ **+14.6%**, 4h momentum (vs ~05:00 level ~0.008484) ≈ **+17.1%**, both clear their bars by a wide margin on real volume. **Cleanest technical setup checked this pass — but a fresh live re-quote taken immediately after this structural check (09:34 UTC) showed the setup had already moved against entry**: spread widened to **1.27%** (ask 0.009961/bid 0.009836, vs 0.404% at initial screen) and live-vs-24h-high fade widened to **-1.69%** (live 0.009890 vs high 0.010060), both now **outside their caps** (spread >1%, fade >1.5%) — the move faded materially in the few minutes between the structural check and the pre-entry re-quote. **Reject on live spread + fade, re-checked immediately pre-entry.**
+
+**Catalyst check (Perplexity):** Fear & Greed reconfirmed 55/Neutral (no Extreme Fear adjustment). LRC (the sole structurally-clean survivor before its live re-quote failure) checked for completeness: *"LRC LoopringUSD Kraken breaking news catalyst last hour"* — no coin-specific catalyst found; sources describe the move as low-volume-adjacent drift, and separately note Loopring's DEX/relayer has been in a **wind-down/shutdown phase** (a bearish structural fact, not a driver of this rally) plus Coinbase's Aug 7 LRC-USD delisting reducing liquidity elsewhere. **No catalyst <6h old confirmed** — LRC would have been momentum-only even before its live-quote failure, and momentum-only entries are blocked outright by the standing win-rate kill switch (20.0%, below the 35% floor) regardless.
+
+**Win-rate kill switch / R:R application:** No candidate reached a clean structural pass with a live-executable spread/fade at decision time, so the kill switch was not the binding gate for any single candidate this pass — but it stands ready to block LRC/CHIP/KTA even had they cleared (all momentum-only, no catalyst).
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. LRC was the strongest and most genuine mover checked (real volume surge, clean two-candle acceleration, confirmed-candle high) but reversed against entry (spread + fade both breached) in the minutes between structural check and pre-entry re-quote — a real-time illustration of why the live-intracandle-fade and mandatory pre-order spread checks exist. CHIP and KTA both fail confirmed-candle (24h high resting on the still-forming candle). Everything else fails two-candle acceleration outright or is a dead/illiquid ticker.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — LRC's clean technical setup reversed against entry before an order could be placed; CHIP/KTA blocked on confirmed-candle; all other candidates fail acceleration or are illiquid. Weekly downtrend gate remains clear, crash gate clear (BTC +1.22% today).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (the closest near-miss, LRC, self-rejected on a live re-quote exactly as the gates are designed to catch, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
