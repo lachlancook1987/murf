@@ -40257,3 +40257,30 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (zero candidates cleared even the initial screen this hour — no coverage gap, just a quiet tape). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 23:00 UTC (EOD)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 22:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,206.80 vs today's session open $78,449.60 → **-0.31%**. Clear.
+**Weekly trend gate:** live $78,206.80 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.85%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 66/Greed (Alternative.me-style aggregate) vs 51/Neutral (CFGI coin-weighted) — no Extreme Fear reading, no adjustment applies.
+
+**Discovery sweep (direct Kraken public API, AssetPairs + batched Ticker, 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 2 candidates cleared the fade+liquidity screen: **CSPR** (+4.48%, fade 1.13%, $122.6k), **RSR** (+3.37%, fade 1.07%, $73.6k). No AU-restricted assets (ZEC/DASH) present this pass.
+
+**Deep check (15m closed candles as of 23:34 UTC — last fully closed candle 23:15, 23:30 still forming):**
+- **CSPR/USD:** spread ~0.243% ✓. Closes: C22:45=0.0029970 → C23:00=0.0030153 (higher) → C23:15=0.0030156 (higher, marginally). Technically passes two-candle acceleration. But the 24h high (0.00305) was set in the 21:45 candle — **~109 minutes old**, well outside the 30-min freshness ceiling, and no closed candle since has broken back above it (closest approach 0.0030156, still 1.1% below). **Fails momentum-peak-check freshness** decisively. Reject.
+- **RSR/USD:** spread ~1.98% at deep-check quote (bid 0.001467/ask 0.001470... wait ask 0.00147/bid nominal spread narrow ✓). Closes: C22:45=0.001454 → C23:00=0.001469 (higher) → C23:15=0.001484 (higher). Passes two-candle acceleration. But the 24h high (0.00149) was set in the 20:15 candle — **~3h19m old**, far outside the freshness ceiling, and no closed candle since has broken back above it (highest close since is 0.001484). **Fails momentum-peak-check freshness** decisively — same stale-high pattern flagged on this asset at the 20:00/21:00/22:00 UTC passes today. Reject.
+
+**Step 4 (research/execute):** Both candidates passed two-candle acceleration but failed momentum-peak-check freshness on stale 24h highs set well outside the freshness ceiling (CSPR ~109min stale, RSR ~3h19m stale). No candidate reached the catalyst-confirmation or win-rate-kill-switch decision stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC -0.31% today), weekly downtrend gate clear (-1.85%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates failed on stale 24h highs, a structural gate, not a coverage gap). EOD snapshot below is routine record-keeping showing another flat day essentially in line with BTC. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
