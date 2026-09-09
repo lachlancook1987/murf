@@ -39510,3 +39510,36 @@ No push sent — book flat on both exchanges, no drift, no operational issues, n
 ### Step 8 — Notification
 
 No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, zero trades today (24/24 passes HOLD), HOLD is the expected outcome per the active weekly downtrend gate and no qualifying candidate. EOD snapshot below is routine record-keeping. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-09 — Scan — 00:00 UTC (fired 00:35 UTC)
+
+**Pre-check:** Kraken `account`: ZUSD $70.6298 (100% cash), ZAUD $0.1550 (dust), all other balances zero/dust — exact match to every pass since the 2026-09-04 liquidation, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca `positions: []`, orders history all pre-2026-05-22 (stop `a2b44cf9` reconfirmed `canceled`, `filled_at: null`), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — book flat on both exchanges, no orphan stops/T1 orders, no runners, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,595.30 vs today's session open $78,449.60 → **+0.19%**. Clear.
+**Weekly trend gate:** live $78,595.30 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **−1.36%/5d** — back inside the ±3% band. **Weekly BTC downtrend regime now CLEAR** (was ACTIVE all day 2026-09-08 at −3.1% to −3.5%/5d). Standard entry rules apply — no stricter 1h>5%+catalyst<3h requirement this pass.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Not the binding gate this pass (no candidate reached that stage).
+
+**Fear & Greed:** 69 (Greed) per Perplexity Alternative.me reading; CFGI 57 Neutral, CoinAligator 58 Greed (methodology-dependent spread, consistent with recent passes) — no Extreme Fear R:R adjustment applies.
+
+**Perplexity macro context:** BTC $78,721.39 (−0.82%/24h per CoinDesk, broadly consistent with Kraken's live read). ETH $2,472.66 (−1.06%/24h). Catalysts flagged: Solana **Transaction V1 rollout** live today (Sept 9, SIMD-0550), a U.S. Treasury buyback operation (macro liquidity, not asset-specific), Fed meeting Sept 15–16 and CLARITY Act vote as near-term macro risk windows, ZEC governance poll closing Sept 14 (AU-restricted asset, not tradeable regardless), UNI burn-mechanics narrative, HYPE ~$1.2B token unlock Sept 29 (dilution risk, not a long catalyst). Checked SOL directly against its live catalyst: 24h high $104.81 set 2026-09-08 16:30 UTC (8h stale), live last $103.49 (1.26% off high), approx 1h change **+0.05%** — flat, no momentum despite the fresh network-upgrade catalyst; market has not priced it as a surge. No open positions to query.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → only **6 raw candidates** (notably thin vs. the 50+ typical daytime count — low-volume overnight/early-UTC hour): MIRA (+6.02%, $35k), CPOOL (+5.37%, $63k), RLS (+4.67%, $32k), SCRT (+4.55%, $130k), CRO (+4.33%, $260k), PIEVERSE (+4.21%, $92k, flat/stale ticker — 0% 1h change, likely a stale quote).
+
+**Momentum-peak-check (24h-high freshness + live fade) on all 6:**
+- **MIRA:** 24h high $0.0587 set 00:15 UTC — fresh (19 min old, inside the 30-min ceiling). But live last $0.0546 is **6.98% off that high** — decisively outside the 1.5% live-intracandle-fade cap. **Reject.**
+- **CRO:** 1h momentum looked strong (+5.59% via candle-close comparison) but 24h high is $0.06418, set **2026-09-08 12:00 UTC (12.5h stale)** — current price $0.06216 sits **3.1% below** that high, i.e. this is a bounce off an intraday low, not a breakout to new highs. Fails momentum-peak-check outright (no fresh high, no breakout above the stale high). **Reject.**
+- **RLS:** 24h high $0.00451 set 2026-09-08 03:45 UTC (21h stale), live last $0.00224 — a **50.33% fade** off that high. The apparent "surge" is a small bounce off a much deeper low, not a breakout. **Reject, decisively.**
+- **SCRT:** 24h high $0.0101 set 20:15 UTC (previous day, ~4h stale), live last $0.0092 — **8.91% fade**. **Reject.**
+- **CPOOL:** flat/no-volume ticker over the last hour (closes pinned at 0.02160-0.02169 for 4 of 5 checked candles) — the reported vs-open is a stale artifact, not real momentum. **Reject.**
+- **PIEVERSE:** zero volume across the entire checked window (V=0.00000 on every 15m candle) — illiquid, ticker not moving. **Reject.**
+
+No candidate reached the catalyst-confirmation, R:R, or win-rate-kill-switch stage — all six rejected upstream on momentum-peak-check freshness/fade or on being non-representative (stale/illiquid) ticks.
+
+### Decision: **HOLD.** No candidate cleared momentum-peak-check freshness/fade. All 6 raw movers were either stale bounces off a prior low (CRO, RLS, SCRT) or fresh-looking highs that have already faded past the cap (MIRA), plus two non-representative thin/stale tickers (CPOOL, PIEVERSE). SOL's live network-upgrade catalyst (Transaction V1, today) has not produced any price momentum yet (+0.05%/1h) — no entry to make on catalyst alone without price confirmation. Book remains flat, $70.6298 ZUSD fully available for the next pass. Weekly BTC downtrend gate is now clear (−1.36%/5d) — worth noting for the next pass since it changes which entry-gate regime applies.
+
+### Step 8 — Notification
+
+No push sent — book flat on both exchanges, no drift, no operational issues, no unprotected exposure, HOLD is the expected and correct outcome (nothing cleared the momentum-peak-check gate). The weekly downtrend gate flipping to clear is a regime note for continuity, not something requiring the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
