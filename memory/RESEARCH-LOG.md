@@ -39662,3 +39662,44 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (LIGHTER's clean breakout correctly blocked by the standing win-rate kill switch/R:R floor rather than a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 05:00 UTC (fired 05:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 04:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, orders history all pre-2026-05-22, stop `a2b44cf9` remains historical/canceled, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,972.20 vs today's session open $78,449.60 → **+0.67%**. Clear.
+**Weekly trend gate:** live $78,972.20 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04, Kraken daily OHLC) → **-0.88%/5d** — inside the ±3% band, consistent with 01:00-04:00 UTC readings. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. **This pass's binding gate** — see LIGHTER below.
+
+**Fear & Greed:** 69 (Alternative.me) / 71 (CoinStats), Greed — consistent with recent passes. No Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 665 online USD pairs, notional ≥$30k, vs-open ≥3% → 14 raw candidates: KAT (+19.38%), PROS (+13.50%), ZRX (+8.49%), USELESS (+8.41%), LIGHTER (+6.40%), SKR (+6.34%), KTA (+5.67%), RAY (+4.99%), MINA (+4.95%), CELO (+4.40%), PUMP (+3.98%), XZEC (+3.97%, AU-restricted, skipped pre-emptively), SCRT (+3.41%), SEI (+3.03%).
+
+**Live intracandle fade check (24h-high vs live last):** KAT -9.62%, PROS -12.56%, USELESS -1.92% (marginal fail, just over 1.5% cap), SKR -7.53%, MINA -2.39%, SCRT -17.27% — all reject outright. **ZRX** (-0.00%, at high), **LIGHTER** (-0.59%), **KTA** (-0.73%), **RAY** (-0.39%), **CELO** (0.00%), **PUMP** (-0.90%), **SEI** (-1.14%) pass the fade cap and advance.
+
+**Spread check (all 7 survivors):** ZRX 0.28%, LIGHTER 0.27%, KTA 0.37%, RAY 0.69%, CELO 0.37%, PUMP 0.05%, SEI 0.06% — all clear the 1% cap.
+
+**Structural gate deep check (15m candles, current time 05:34 UTC — last closed candle 05:15, forming candle 05:30):**
+- **KTA:** 05:15 close (0.0819) < 05:00 close (0.0820) — **fails two-candle acceleration** (chopping flat, not accelerating). Reject.
+- **RAY:** 05:00 close (1.237) < 04:45 close (1.251) — **fails two-candle acceleration** at the first step. Reject.
+- **CELO:** last 3×15m candles show zero volume, price frozen at 0.0830 — stale/dead ticker, not a real move. Reject.
+- **ZRX:** passes acceleration (05:00 0.1077>04:45 0.1068; 05:15 0.1081>05:00 0.1077) and 1h (+3.80%, 04:30 close 0.1052→live 0.1092) and 4h momentum (+7.91%, 01:00 close 0.1012→live 0.1092) — both clear their bars. But the 24h high (0.1092) is only touched on the still-**forming** 05:30 candle, not confirmed by any fully closed candle yet — **fails confirmed-candle requirement**. Reject on structural grounds.
+- **PUMP:** two-candle acceleration technically passes but on noise-level ticks (+0.02%, +0.07% closes); 1h momentum vs 04:00 hourly close is now **negative** (0.004503→0.004493, -0.22%) and 4h momentum only +1.28% — the earlier move has stalled/reversed. Reject, momentum not real.
+- **SEI:** two-candle acceleration passes narrowly but 1h momentum vs 04:00 hourly close is flat (+0.08%) and 4h momentum only +2.24% — stalled. Reject.
+- **LIGHTER:** passes two-candle acceleration (05:00 5.178>04:45 5.134; 05:15 5.191>05:00 5.178) and confirmed-candle (05:15 close 5.191 holds above the prior local high 5.185 set at 04:15, and 05:15 is fully closed — closed ~4 min ago). 4h momentum **+5.65%** (01:00 close 4.920→live 5.198) clears the 5% bar; 1h momentum vs the 04:00 hourly close is weaker (+1.25%, the surge that cleared 3% at the 04:00 pass has partly cooled on an hourly view even as 15m candles keep printing higher). Spread 0.27%. **The only candidate clearing every structural/technical gate this pass.**
+
+**Catalyst check (Perplexity), LIGHTER only (sole structurally-clean survivor):**
+- *"LIGHTER crypto token LIGHTERUSD Kraken breaking news last hour"* — no new Kraken-specific breaking item; only reference is the Kraken Pro listing from 17 Aug 2026 (stale, not a fresh catalyst). **No catalyst <6h old confirmed** — same conclusion as the 04:00 UTC pass, reconfirmed now with fresh data at a higher price.
+
+**Win-rate kill switch / R:R application:** LIGHTER remains momentum-only (no confirmed catalyst) — blocked by the active win-rate kill switch (20.0%, below the 35% floor) and independently by the momentum-only R:R floor (≥1.8:1 required; standard T1/stop structure caps at 1.2:1). **Reject.**
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. LIGHTER is again the strongest technical setup (clean acceleration, confirmed breakout, tight spread, clears 4h momentum) but has no catalyst and is blocked by both the win-rate kill switch and the structural momentum-only R:R floor. KTA/RAY fail acceleration outright, CELO is a stale ticker, ZRX fails confirmed-candle (high only on a still-forming candle), PUMP/SEI have stalled/reversed momentum on the 1h/4h view despite passing the raw fade cap.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — LIGHTER correctly blocked by the standing win-rate kill switch and momentum-only R:R floor, not a coverage gap. Weekly downtrend gate remains clear.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
