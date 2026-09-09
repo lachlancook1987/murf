@@ -39594,3 +39594,33 @@ No push sent — book flat, no trades, no operational issues, weekly downtrend g
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected outcome (sole live-fade-passing candidate, KAT, correctly rejected on structural gates). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 03:00 UTC (fired 03:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 02:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, orders history all pre-2026-05-22, stop `a2b44cf9` remains historical/canceled, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,589.20 vs today's session open $78,449.60 → **+0.18%**. Clear. Perplexity cross-check: $78,552.66, −0.66%/24h — consistent.
+**Weekly trend gate:** live $78,589.20 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **−1.36%/5d** — inside the ±3% band, unchanged in substance from 01:00/02:00 UTC. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. **This pass's binding gate** — see KAT below.
+
+**Fear & Greed:** 57 (CFGI, Neutral) to 72 (Greed, other trackers), source-dependent, consistent with recent passes — no Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 7 raw candidates: KAT (+28.54%, $137k), SCRT (+6.82%, $196k), KTA (+3.87%, $147k), IDOS (+3.68%, $130k), KII (+3.71%, $54k), DENT (+4.77%, $49k), RIZE (+3.11%, $34k).
+
+**Live intracandle fade check (24h-high vs live last) on all 7:** SCRT −14.55%, IDOS −15.64%, DENT −5.5%, KII −4.15%, RIZE −3.49% — all reject outright, decisively outside the 1.5% cap (bounces off prior lows, not fresh breakouts). **KTA** −1.34% (using ask 0.08080 vs 24h high 0.08190) passes the fade cap narrowly, but its high was set at the 02:45 candle (close), now **49 min stale** — outside the 30-min freshness ceiling — and the three closed candles since (03:00, 03:15, 03:30) each closed lower than the one before (0.0809 → 0.0807 → 0.0806), the opposite of acceleration. No fresh breakout above 0.0819 and no new catalyst identified. **Reject** on stale-peak + declining-candle grounds. **KAT** is the sole candidate advancing to full check.
+
+**KAT/USD deep check:** Pair was completely flat/zero-volume from ~22:45 to 01:30 UTC (fixed at $0.00478–0.00480 for 2.75h), then began a genuine acceleration: closes 02:30 0.00494 → 02:45 0.00507 → 03:00 0.00556 → 03:15 0.00612 → 03:30 (forming) last 0.00623, high so far 0.00628. Spread 0.48% (ask 0.006250/bid 0.006220) — clears the 1% cap. **Two-candle acceleration:** passes — both 03:00 (0.00556 > 0.00507) and 03:15 (0.00612 > 0.00556) closed higher than the prior candle's close. **Confirmed-candle:** the 03:00 and 03:15 closes both decisively broke and held above the pre-move ~0.00508 local high, so the breakout itself is closed-candle-confirmed, not resting solely on the still-forming 03:30 candle's marginal further high (0.00628) — treated as passing, distinct from the SKR (01:00 UTC)/KAT (02:00 UTC) rejections where no closed candle had yet broken the prior level. **Live intracandle fade:** 0.48% off the 24h high — clears the 1.5% cap. 1h momentum ≈+25% (0.00497 → 0.00623), 4h momentum ≈+30% (flat 0.00478 baseline → 0.00623) — both far above threshold.
+- **Catalyst check (Perplexity):** *"KAT crypto token Kraken news catalyst today"* — no fresh Kraken-specific or coin-specific catalyst found; explicitly "driven by spot volume spikes and sometimes no clear coin-specific catalyst," with the only recent news item actually bearish (Coinbase delisted KAT perpetuals Aug 26). **No catalyst <6h old confirmed** → this is a momentum-only candidate.
+- **Win-rate kill switch:** momentum-only entries are ACTIVE-SUSPENDED (20.0% trailing win rate, below the 35% floor). KAT has no catalyst to qualify as catalyst-confirmed. **Reject — blocked by kill switch**, the clean technical setup notwithstanding.
+- **Secondary flag:** even absent the kill switch, KAT's near-zero volume for hours before this move on very thin 24h notional ($137k) is the thin-liquidity/spike-risk pattern the Risk Awareness notes warn against — would have warranted caution regardless.
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. KAT was the only asset with a genuine, structurally-clean breakout and it is blocked by the active win-rate kill switch (no catalyst to qualify as an exception). KTA's peak is stale and declining; the remaining five failed the live-fade cap outright.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — the one clean technical setup (KAT) is blocked by the momentum-only win-rate kill switch, correctly per Performance-Linked Controls. Weekly downtrend gate remains clear.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (KAT's clean breakout correctly blocked by the standing win-rate kill switch rather than a gap in coverage). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
