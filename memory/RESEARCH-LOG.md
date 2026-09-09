@@ -40174,3 +40174,34 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 20:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 19:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,265.90 vs today's session open $78,449.60 → **-0.23%**. Clear.
+**Weekly trend gate:** live $78,265.90 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-1.77%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 57-74 depending on source (Alternative.me/FearGreedMeter 66, CoinStats 74, CFGI whole-market 57/Neutral) — Greed-leaning majority, no Extreme Fear adjustment applies.
+
+**Macro catalysts (Perplexity):** Same landscape as recent passes — Treasury buyback liquidity ops (today), Fed meeting Sept 15-16 flagged as the month's dominant catalyst, CLARITY Act procedural vote (~mid-Sept), HYPE unlock (~Sept 29), Solana Transaction V1 activated today (SOL momentum still not qualifying), Zcash Grayscale ETF filing watch item. Nothing new maps to a fresh, qualifying Kraken candidate this pass.
+
+**Discovery sweep (direct Kraken public API, AssetPairs + batched Ticker, 642 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%):** 4 candidates cleared the fade+liquidity screen: **KII** (+13.82%, fade 1.38%, $100.6k), **STBL** (+11.79%, fade 1.48%, $99.4k), **ORCA** (+5.27%, fade 0.79%, $61.2k), **RSR** (+3.51%, fade 0.94%, $69.9k). No AU-restricted assets (ZEC/DASH) present this pass.
+
+**Deep check (15m closed candles as of 20:34 UTC — last fully closed candle 20:15, 20:30 still forming):**
+- **KII/USD:** spread 1.035% (bid 0.07824/ask 0.07905) — **fails the ≤1% spread hard cap**. Reject before any candle check. (Also carries the standing KiiChain exploit/recovery overhang flagged at the 17:00 UTC pass — independent disqualifier regardless.)
+- **STBL/USD:** spread 0.190% ✓. C19:45=0.026707 → C20:00=0.027109 (higher) → C20:15=0.027359 (higher). **Passes two-candle acceleration.** But the 24h high (0.027786) was set in the 18:45 candle (closed 19:00) — **94 minutes old**, well outside the 30-min freshness ceiling, and no closed candle since has broken above it (20:15 high only reached 0.027468). **Fails momentum-peak-check freshness.** Also carries the negative-thesis overhang flagged at the 18:00 UTC pass (insider-trading allegations, ~80%+ collapse from peak) — an independent disqualifier regardless of the technical gates. Reject.
+- **ORCA/USD:** spread 0.134% ✓. C19:45=1.484 → C20:00=1.495 (higher) → C20:15=1.496 (higher). **Passes two-candle acceleration.** But the 24h high (1.51) does not appear in any of the last 16 closed/forming candles (going back to 16:45, max H seen 1.498) — stale by well over 4 hours, live price 1.498 declining from a high it never actually approached this session. **Fails momentum-peak-check freshness** decisively. Reject.
+- **RSR/USD:** spread 0.136% ✓. C19:30=0.001466 → C19:45=0.001466 (flat, zero-volume dead candle) → C20:00=0.001463 (**lower**). **Fails two-candle acceleration** — price declining/flat, not accelerating. Reject.
+
+**Step 4 (research/execute):** No candidate cleared every structural/technical gate this pass — KII failed on spread (plus an independent exploit overhang); STBL and ORCA both passed acceleration but failed momentum-peak freshness on stale 24h highs (STBL also carries an independent negative-thesis overhang); RSR failed acceleration outright. No candidate reached the catalyst-confirmation or win-rate-kill-switch decision stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC -0.23% today), weekly downtrend gate clear (-1.77%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate cleared every gate this hour; two of four also carry standing independent thesis-risk flags from prior passes). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
