@@ -39703,3 +39703,41 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 06:00 UTC (fired 06:34 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 05:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $79,143.20 vs today's session open $78,449.60 → **+0.88%**. Clear.
+**Weekly trend gate:** live $79,143.20 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04) → **-0.67%/5d** — inside the ±3% band. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. **This pass's binding gate** — see USELESS/RAY below.
+
+**Fear & Greed:** 69 (CoinAligator, Greed) / 55 (CFGI, Neutral) — source-dependent. No Extreme Fear R:R adjustment applies.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 30 raw candidates, led by IDEX (+31.03%, thin $38k — skipped, near liquidity floor), **USELESS (+14.65%, $6.7M notional)**, **RAY (+14.65%, $866k)**, BODEN (+12.34%, $64k), KAT (+12.29%, $257k), **LIGHTER (+8.73%, $843k — carrying over from 04:00/05:00 UTC passes, still accelerating)**, PROS (+8.35%), ZRX (+7.59%), KTA (+7.22%), GRASS (+7.12%), PEPECOIN, SKR, MINA, PUMP, DASH (AU-restricted, skipped), ORCA, KII, JUP, ENA, XZEC (AU-restricted, skipped), ARB, CFG, DENT, PYTH, JTO, STRK, MET, PRO, IDOS, ETHFI, SEI.
+
+**Live intracandle fade check (24h-high vs live last):** USELESS -0.59%, RAY -1.20%, LIGHTER -0.04%, KTA -0.95%, GRASS -0.00%, PUMP -0.96% — all pass the 1.5% cap. BODEN -11.48%, KAT -14.98%, PROS -16.53%, IDOS -16.08%, PEPECOIN -14.17%, SKR -7.87% — all reject outright.
+
+**Deep check on the two strongest movers, USELESS and RAY:**
+- **USELESS/USD:** spread 0.46%. 15m closes show a sustained multi-hour uptrend (04:45→06:15, each closed candle higher than the last, no stall): 05:45 close 0.32113 → 06:00 close 0.32322 → 06:15 close 0.32673 — **two-candle acceleration passes cleanly**, not a single-candle spike. **Confirmed-candle passes** — 06:15 (closed) holds above the prior local high (06:00's 0.32453). 24h high 0.329 sits on the still-forming 06:30 candle but the breakout itself was already confirmed on multiple prior closed candles, not a fresh single-candle fakeout. Cleanest technical setup checked in several passes.
+- **RAY/USD:** spread 0.21%. 15m closes also accelerating: 06:00 close 1.318 → 06:15 close 1.397, both higher than prior — passes acceleration and confirmed-candle.
+- **LIGHTER/USD:** same candidate carried from 04:00/05:00 UTC passes, still technically clean (spread 0.31%, continued acceleration to 5.268).
+
+**Catalyst check (Perplexity), USELESS and RAY (the two strongest movers) plus a general market-catalyst sweep:**
+- USELESS: driving narrative is an **Upbit listing**, but dated to the Sept 8 announcement with trading live at **12:30 UTC Sept 8** — confirmed via follow-up query, this is **~18h old**, well outside the <6h freshness window. **No qualifying catalyst.**
+- RAY: driving narrative is Raydium's StonkFun/LaunchLab integration, dated via follow-up query to **Sept 5, with follow-up coverage Sept 6-7** — several days old. **No qualifying catalyst.**
+- LIGHTER: reconfirmed no catalyst <6h old (per 04:00/05:00 UTC passes' checks, unchanged).
+- General "top crypto catalysts today" sweep (Treasury buybacks, SEC/CFTC leverage rules, Solana Transaction V1 activation, ZEC Grayscale ETF filing, UNI burn, TAO ETF watch) — none map onto a Kraken candidate on this pass's surge list; SOL itself is not surging, ZEC is AU-restricted.
+
+**Win-rate kill switch / R:R application:** USELESS, RAY, and LIGHTER are all momentum-only (no catalyst <6h old confirmed) — all three blocked by the active win-rate kill switch (20.0%, below the 35% floor) and independently by the momentum-only R:R floor (≥1.8:1 required; standard T1/stop structure caps at 1.2:1). **Reject all three.** KTA/GRASS/PUMP were not deep-checked this pass since the same kill-switch block would apply to any momentum-only candidate regardless of technical quality — no macro catalyst surfaced that would map to any of them either.
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. USELESS is the strongest raw mover seen in weeks (sustained multi-hour accelerating rally, $6.7M notional, tight spread) but its driving catalyst (Upbit listing) is ~18h stale — correctly rejected on freshness, not technicals. RAY and LIGHTER fail the same catalyst-freshness test.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — USELESS/RAY/LIGHTER all correctly blocked by the standing win-rate kill switch and momentum-only R:R floor (no qualifying catalyst on any). Weekly downtrend gate remains clear.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (strongest mover in weeks, USELESS, correctly blocked on stale catalyst + standing kill switch, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
