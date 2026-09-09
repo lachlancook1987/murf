@@ -39741,3 +39741,39 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (strongest mover in weeks, USELESS, correctly blocked on stale catalyst + standing kill switch, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-09 — Scan — 07:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 06:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $79,235.90 vs today's session open $78,449.60 → **+1.00%**. Clear.
+**Weekly trend gate:** live $79,235.90 vs 5-trading-day-ago daily close $79,676.40 (2026-09-04, via Kraken daily OHLC) → **-0.55%/5d** — inside the ±3% band. Weekly BTC downtrend regime remains **CLEAR**. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. **This pass's binding gate** — see VVV/GRASS below.
+
+**Fear & Greed:** no Extreme Fear adjustment applies this pass (unchanged Greed/Neutral regime per prior passes).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + batched Ticker), 640 online USD pairs, notional ≥$30k, vs-open ≥3% → 40+ raw candidates, led by CQT/IDEX/OXT (all thin, <$60k, skipped), BODEN (+17.68%, fade-rejected before), **VVV (+11.76%, $14.8M notional — new large mover this pass)**, USELESS (+14.27%, $8.1M, carried from 05:00/06:00 UTC), KAT (rejected before, fade), RUJI (thin), FOREST (thin), IDOS (rejected before, fade), MINA (+10.32%, $746k), GRASS (+10.28%, $155k), RAY (+9.57%, $1.18M, carried, stale catalyst), LIGHTER (+9.18%, $926k, carried, no catalyst), KTA (+9.15%, carried), plus GLMR, MET, ZRX, PROS, CHIP, ENA, PUMP, PIEVERSE, ORCA, XZEC (AU-restricted, skipped).
+
+**Live intracandle fade check on new/notable candidates:** VVV 24h-high $29.223 vs live $29.023 → -0.68%, **passes**. GRASS $0.3703 vs $0.3669 → -0.92%, **passes**. MINA $0.09266 vs $0.08979 → -3.10%, **rejects**. ZRX $0.1105 vs $0.1058 → -4.25%, **rejects**. USELESS/RAY/LIGHTER/KTA/PUMP reconfirmed clean (unchanged from 06:00 UTC pass).
+
+**Deep check, VVV (strongest new mover) and GRASS (only other pass on fade):**
+- **VVV/USD:** spread 0.12% (tight). 15m closes accelerating: 06:45 close 26.806 → 07:00 close 27.261 → 07:15 close 29.088, each closed candle higher than the last — **two-candle acceleration and confirmed-candle both pass** (breakout already confirmed on the closed 07:15 candle, not reliant on the still-forming 07:30 candle where the 24h high of 29.223 actually printed).
+- **GRASS/USD:** spread 0.19% (tight). 15m closes also accelerating through 06:45→07:00, but the 07:15 closed candle (0.3668) is a slight pullback from 07:00's 0.3679 — weaker acceleration than VVV, not deep-checked further given the catalyst finding below.
+
+**Catalyst check (Perplexity):**
+- **VVV:** driving narrative is Venice AI's **"$100M annualized revenue" milestone + emissions cut (8M→6M/yr)**. Follow-up query pinned the announcement date to **August 17, 2026** — over 3 weeks old, well outside the <6h freshness window. **No qualifying catalyst** — the current rally is a delayed/momentum continuation of old news, not a fresh trigger.
+- **GRASS:** driving factor is a **181M-token, ~$80M unlock today** — a **dilutive/bearish** supply event, not a bullish catalyst; the rally is happening despite it, not because of it. **No qualifying catalyst** (and the unlock itself is a headwind, not a tailwind).
+- General "top crypto catalysts today" sweep (Treasury buyback program, Solana Transaction V1 launch, Fed Sept 15-16 meeting, CPI Sept 10, CLARITY Act vote, Hyperliquid unlock Sept 29) — none map onto VVV, GRASS, USELESS, RAY, or any other Kraken surge candidate this pass.
+
+**Win-rate kill switch / R:R application:** VVV, GRASS, USELESS, RAY, LIGHTER, KTA, PUMP are all momentum-only (no catalyst <6h old confirmed on any) — all blocked by the active win-rate kill switch (20.0%, below the 35% floor) and independently by the momentum-only R:R floor (≥1.8:1; standard structure caps at 1.2:1). **Reject all.**
+
+**Step 4 (research/execute):** No candidate clears every gate this pass. VVV is the strongest technical setup checked (clean multi-candle acceleration, tight 0.12% spread, $14.8M notional) but its catalyst is a 3-week-old revenue announcement, not a fresh trigger — momentum-only, correctly blocked.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). No new entries — VVV/GRASS/USELESS/RAY/LIGHTER/KTA/PUMP all correctly blocked by the standing win-rate kill switch and momentum-only R:R floor (no qualifying catalyst on any). Weekly downtrend gate remains clear.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (a new large mover, VVV, correctly blocked on stale catalyst + standing kill switch, not a coverage gap). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
