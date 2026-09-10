@@ -40400,3 +40400,30 @@ Checked the four candidates nearest their 24h high with spread ≤1% against the
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one technically-clean mover correctly blocked by the standing kill switch, with an independent thin-liquidity flag; no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 05:00 UTC (fired 05:33 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 04:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,495.00 vs today's session open $78,288.60 → **+0.26%**. Clear.
+**Weekly trend gate:** live $78,495.00 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05) → **−1.67%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed:** 51-55/Neutral (CFGI-style reads) — not Extreme Fear, no stricter R:R adjustment applies (moot regardless, superseded by the blanket 1.8:1 momentum-only floor).
+
+**Step 4 (discovery sweep):** Direct Kraken public API (AssetPairs + batched Ticker), 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%. **2 candidates cleared the screen:** **VETUSD** (+7.59%, fade 0.87%, $336.6k notional), **SN51USD** (+4.21%, fade 0.96%, $114.1k notional). Loosened check (no filter) for context: top raw movers were ACAUSD (+183%, $332 notional — thin), VTHOUSD (+54.7%, 16.3% fade — long since crested, same recurring stale pattern), NESUSD (+41.4%, thin), REZUSD (+17.9%, 7.7% fade — exceeds fade cap), ARXUSD (+12.8%, fade 0.90%, but notional only $47,987 — just under the $50k liquidity floor, consistent with the thin-Kraken-liquidity flag raised on this asset at the 04:00 UTC pass), GHSTUSD/RAYUSD/RIZEUSD/B3USD (all double-digit fades). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 05:33 UTC — last fully closed candle 05:15, 05:30 still forming):**
+- **VETUSD:** spread 0.174% (ask 0.008032/bid 0.008018) ✓. Closes: C04:45=0.007911 → C05:00=0.007975 (higher) → C05:15=0.008036 (higher) — technically passes two-candle acceleration. But the 24h high (0.0081130) was set in the 04:00 candle — **~78-93 min old**, well outside the 30-min freshness ceiling, and no closed candle since has broken back above it (closest approach 0.008036, still ~1.0% below). **Fails momentum-peak-check freshness** decisively. Reject.
+- **SN51USD:** spread 0.0736% (ask 24.460/bid 24.442) ✓. The 24h high (24.687) was set in the 05:15 candle — genuinely fresh (~18 min old at check time), but that same candle closed well below its own high (C05:15=24.522 vs H05:15=24.687, a 0.67% intra-candle pullback), and the next closed candle closed even lower (C05:30=24.460 < C05:15=24.522). **Fails two-candle acceleration** — a spike-then-stall/decline pattern, the exact case the rule targets. Reject.
+
+**Step 4 (research/execute):** Both candidates failed before reaching catalyst evaluation — VETUSD on stale freshness, SN51USD on failed acceleration (spiked then declined). No candidate reached the catalyst/R:R/win-rate-kill-switch stage this pass.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.26% today), weekly downtrend gate clear (−1.67%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates failed on structural gates — stale freshness and failed acceleration — not a coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
