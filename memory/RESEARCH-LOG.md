@@ -40320,3 +40320,21 @@ No push sent — book flat, no trades, no drift, no operational issues, nothing 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no drift, no operational issues, nothing needs the user's attention right now.
+
+## 2026-09-10 — Scan — 02:00 UTC
+
+**Step 2 (account state):** Kraken: ZUSD $70.6298 (unchanged since 2026-09-04 liquidation), ZAUD $0.1550 (dust), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat, no drift from the 01:00 UTC pass, nothing to reconcile. Alpaca: `positions: []` fully flat, orders show only the historical `a2b44cf9` stop record (filled 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** No open positions or orders — orphan-stop/T1 check, T1 partial-take check, progressive stop-tightening, and thesis-break check are all no-ops this pass. **Crash gate:** BTC live (Kraken) $78,099.60 vs today's session open $78,288.60 → **−0.24%**. Clear. **Weekly trend gate:** live $78,099.60 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05) → **−2.17%/5d**, inside the ±3% band. Standard regime, not triggered.
+
+**Step 4 (research/execute):** Full Kraken-native discovery sweep — direct AssetPairs+batched Ticker pull across all 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%. **1 candidate cleared the screen:** **SAHARA** (+3.96%, fade 0.46%, $83.7k notional). Deep check: quote bid 0.01078/ask 0.01092 → spread **1.30%** — **fails the ≤1% spread hard cap**. Reject before any candle/acceleration/freshness check. Loosened check (no filter) for context: top raw movers were ACA (+183%, $332 notional — thin), VTHO (+53%, 17.1% fade — long since crested), UP (+25%, $10.7k — thin), NES (+21%, 12.4% fade), CLOUD (+10.7%, $220.7k notional but 4.96% fade — exceeds fade cap, same recurring pattern as recent passes), RLS (+10.4%, 3.56% fade), among others — no additional survivors of the fade+liquidity screen. No AU-restricted assets (ZEC/DASH) present.
+
+**Context (Perplexity, brief):** Crypto Fear & Greed Index reads **Neutral-to-Greed, 55-69** depending on source (CFGI 55/Neutral, FearGreedMeter 66/Greed, Alternative.me 69/Greed) — not Extreme Fear, no stricter R:R adjustment applies regardless (superseded by the blanket 1.8:1 momentum-only floor anyway). Moot this pass since the sole candidate failed on spread before reaching catalyst evaluation.
+
+**Win-rate kill switch status (unchanged, last computed 2026-09-04 weekly review):** ACTIVE — momentum-only entries SUSPENDED, trailing win rate 20.0% (2W/8L over last 10 momentum-only entries), below the 35% floor. No new momentum-only entries have filled since 2026-09-04 to roll the window. Not the binding gate this pass regardless — the sole candidate was rejected on spread first.
+
+### Decision: **HOLD (sole candidate failed spread cap).** Book flat, $70.6298 ZUSD available, no positions to protect, no maintenance actions taken.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no drift, no operational issues, nothing needs the user's attention right now.
