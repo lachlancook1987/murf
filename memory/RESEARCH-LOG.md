@@ -40809,3 +40809,28 @@ No candidate reached R:R, confirmed-candle-vs-catalyst, or win-rate-kill-switch 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (four fade-cap survivors all cleanly rejected on the same gate, no ambiguity, no drift from the prior pass). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 21:00 UTC (fired 21:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (20:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history confirms stop `a2b44cf9` `status: "canceled"` (unchanged since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken ask) $77,185.00 vs today's session open $78,288.60 → **−1.41%**. Clear.
+**Weekly trend gate:** live $77,184.90 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05 EOD reference) → **−3.31%/5d** — outside the ±3% band on the downside (essentially unchanged from the 20:00 UTC pass's −3.27%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for today's-session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **2 candidates cleared the screen** — USUSD (+18.95%, fade 0.18%, notional $138.1k), ADIUSD (+3.73%, fade 0.01%, notional $148.0k). Other large raw movers (SYND +439.74%, GAIB +162.93%, VTHO +41.84%, SAGA +37.94%, RAY +14.24%) all failed the fade cap outright (already-crested pumps, fades from 2.08% to 51.17%) or had negligible/illiquid notional. No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 21:33 UTC — last fully closed candle 21:15–21:30, 21:30 candle still forming):**
+- **USUSD:** Recurring choppy candidate flagged in nearly every pass today, but this pass shows real structure: closes C20:45=0.01645 → **C21:00=0.01660 (higher)** → **C21:15=0.01704 (higher)** — clears two-candle acceleration cleanly for the first time today. 24h high $0.01704 set at the 21:15 close (~18 min old), live price $0.01701 is only 0.18% off it — clears momentum-peak-check freshness and live-intracandle-fade. However, 1h momentum (20:30 close $0.01644 → live $0.01701) is **+3.47%** — short of the weekly-downtrend gate's mandatory **1h momentum >5%** floor (in force at −3.31%/5d). **Reject** on the weekly-downtrend gate alone; did not proceed to catalyst-timing or R:R checks since this is the binding rejection.
+- **ADIUSD:** Closes C20:45=8.5453 → **C21:00=8.5339 (lower)** — **fails two-candle acceleration** at the first leg. Reject.
+
+No candidate reached R:R, confirmed-candle-vs-catalyst, or win-rate-kill-switch evaluation as the binding gate — USUSD (the stronger candidate, clearing every structural/technical gate) was blocked solely by the weekly-downtrend gate's stricter momentum floor, missing it by less than 1.5 points.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.41%). Weekly downtrend gate **ACTIVE** at −3.31%/5d (essentially unchanged from 20:00 UTC's −3.27%). USUSD cleared every technical gate (acceleration, freshness, fade) but was rejected on the weekly-downtrend gate's 1h-momentum floor alone — a clean structural reject, not a coverage gap. ADIUSD rejected on two-candle acceleration. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for either candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (the one structurally-clean candidate, USUSD, was correctly filtered by the weekly-downtrend gate's momentum floor rather than a manufactured excuse). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
