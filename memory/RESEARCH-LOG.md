@@ -40284,3 +40284,21 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates failed on stale 24h highs, a structural gate, not a coverage gap). EOD snapshot below is routine record-keeping showing another flat day essentially in line with BTC. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); per CLAUDE.md's Position Watch Dashboard section, the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-10 — Scan — 00:00 UTC
+
+**Step 2 (account state):** Kraken: ZUSD $70.6298 (unchanged since 2026-09-04 liquidation), ZAUD $0.1550 (dust), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat, no drift from the 2026-09-09 23:00 UTC EOD snapshot, nothing to reconcile. Alpaca: `positions: []`, confirmed flat, no action needed.
+
+**Step 3 (position maintenance):** No open positions or orders — orphan-stop/T1 check, T1 partial-take check, progressive stop-tightening, and thesis-break check are all no-ops this pass. **Crash gate:** BTC live $78,195.10 vs today's session open $78,288.60 → −0.12%. Clear. **Weekly trend gate:** live $78,195.10 vs 5-day-ago daily close $79,828.40 (2026-09-05) → **−2.05%/5d**, inside the ±3% band. Standard regime, not triggered.
+
+**Step 4 (research/execute):** Full Kraken-native discovery sweep — direct AssetPairs+batched Ticker pull across all 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3% (the standard fade+liquidity+momentum screen used across recent passes). **0 candidates cleared the screen this pass** — a cleaner (if less eventful) outcome than the usual pattern of several raw movers each failing a downstream gate. Loosened check (no filter) for context: highest raw %-change names were ACAUSD/UNITASUSD/BNCUSD (all near-zero notional, sub-$1k, not real liquidity) and CLOUDUSD (+10.74%, $225,901 notional, but 4.96% fade off 24h high — exceeds the 1.5% live-intracandle-fade cap) and TCSUSD (+4.05%, $296,581 notional, 39.15% fade — long since crested). No AU-restricted assets (ZEC/DASH) present. No candidate reached the catalyst/R:R/win-rate-kill-switch evaluation stage this pass since nothing cleared the initial screen.
+
+**Context (Perplexity, brief — no candidates to confirm/deny catalysts against):** Crypto Fear & Greed Index reads **Greed, ~66-74** depending on source (FearGreedMeter/CoinStats), not Extreme Fear — the stricter 1.5:1 R:R floor for unconfirmed-catalyst-in-Extreme-Fear is not in play regardless (superseded anyway by the blanket 1.8:1 momentum-only floor).
+
+**Win-rate kill switch status (unchanged, last computed 2026-09-04 weekly review):** ACTIVE — momentum-only entries SUSPENDED, trailing win rate 20.0% (2W/8L over last 10 momentum-only entries), below the 35% floor. No new momentum-only entries have filled since 2026-09-04 to roll the window, so this stays unchanged. Not the binding gate this pass regardless — no candidate reached that stage.
+
+### Decision: **HOLD (no candidate cleared the discovery screen).** Book flat, $70.6298 ZUSD available, no positions to protect, no maintenance actions taken.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no drift, no operational issues, nothing needs the user's attention right now.
