@@ -40427,3 +40427,22 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates failed on structural gates — stale freshness and failed acceleration — not a coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 06:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 05:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $78,152.60 vs today's session open $78,288.60 → **−0.17%**. Clear.
+**Weekly trend gate:** live $78,152.60 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05, via Kraken daily OHLC) → **−2.10%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (discovery sweep):** Direct Kraken public API (AssetPairs + batched Ticker), 643 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change >3%. **0 candidates cleared the screen this pass.** Loosened check (no filter) for context: top raw movers were ACAUSD (+183.33%, $550 notional — thin), VTHOUSD (+57.70%, 14.66% fade — long since crested, same recurring stale pattern), GHSTUSD (+33.22%, $142.3k notional but 2.09% fade — exceeds fade cap), NESUSD (+21.12%, thin, 17.40% fade), ARXUSD (+14.13%, $59.5k notional but 4.00% fade — exceeds fade cap), REZUSD (+13.23%, $318.8k notional but 11.34% fade — exceeds fade cap), RAYUSD (+9.41%, $2.64M notional but 7.92% fade — exceeds fade cap) — every real-notional mover has already round-tripped well past the 1.5% fade cap or is thin. No AU-restricted assets (ZEC/DASH) present among the top movers. No candidate reached the catalyst/R:R/win-rate-kill-switch evaluation stage since nothing cleared the initial screen.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.17% today), weekly downtrend gate clear (−2.10%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (clean 0-candidate screen, no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
