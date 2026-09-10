@@ -40534,3 +40534,30 @@ Closes: C09:30=0.01990 → C09:45=0.01923 (lower) → C10:00=0.02077 (higher) �
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one candidate correctly rejected on a structural gate — no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 11:00 UTC (fired 11:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (10:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history confirms stop `a2b44cf9` `status: "canceled"` (unchanged since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken ask) $78,013.80 vs today's session open $78,288.60 → **−0.35%**. Clear.
+**Weekly trend gate:** live $78,013.80 vs 5-trading-day-ago daily close $79,824.10 (2026-09-05 EOD reference) → **−2.27%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (discovery sweep):** Direct Kraken public API (AssetPairs + batched Ticker), 666 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change ≥3% AND spread ≤1%. **3 candidates cleared the screen:** **GOMININGUSD** (+8.50%, fade 0.71%, $71.9k notional, spread 0.488%), **SAGAUSD** (+7.16%, fade 0.07%, $105.1k notional, spread 0.266%), **ETHFIUSD** (+4.00%, fade 0.11%, $362.3k notional, spread 0.329%). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 11:34 UTC — last fully closed candle 11:15-11:30, 11:30 candle still forming):**
+- **ETHFIUSD:** Closes: C10:45=0.6301 → C11:00=0.6267 (**lower**) → C11:15=0.6361 (higher). **Fails two-candle acceleration** at the first step (11:00 close dipped below 10:45 close). Reject.
+- **SAGAUSD:** Closes: C10:45=0.01469 → C11:00=0.01476 (higher) → C11:15=0.01488 (higher) — **passes two-candle acceleration**. But the ticker's 24h high (0.01498) is not present in any closed candle — the 11:15 candle's high was only 0.01490, and the live/still-forming 11:30 candle (O=0.01498, H=0.01498) is what set it. **Fails confirmed-candle requirement** (high sits on a still-forming candle only). Reject.
+- **GOMININGUSD:** Closes: C10:45=0.3525 → C11:00=0.3849 (higher) → C11:15=0.3910 (higher) — **passes two-candle acceleration**. The 24h high (0.3920) was set and held by the fully-closed 11:15 candle (H=0.3920, C=0.3910), confirmed ~4 min before this check — **passes confirmed-candle and momentum-peak freshness**. Live price (0.3892, per `kraken.sh quote`) is 0.71% off the high — **passes live-intracandle-fade** (<1.5% cap). Spread 0.488% (ask 0.3907/bid 0.3892) ✓. **Passes every structural/technical gate.**
+  - **Catalyst check (Perplexity):** GOMINING's only live news is an **unconfirmed hack report** — alleged ~$2.8M / 600+ wallets affected, with Bitget reported to have suspended GOMINING-ETH deposits/withdrawals pending confirmation. This is a bearish security risk, not a bullish catalyst supporting a long entry — it does not qualify as a confirmed <6h catalyst under the Discovery Method, and its presence is itself a reason to avoid the asset regardless of the clean technical setup (thesis-break risk: a token mid-hack-investigation with an exchange restricting withdrawals is a textbook candidate for a further price collapse if the report is confirmed). Since the only available "catalyst" is negative, this is at best a momentum-only setup — and momentum-only entries remain **SUSPENDED** under the active win-rate kill switch (20.0%, below the 35% floor). **Reject** — both on the kill switch (momentum-only, no bullish catalyst) and independently on emerging security risk.
+
+No candidate reached R:R evaluation (each rejected upstream: two failed structural gates, GOMININGUSD failed the catalyst/kill-switch gate combined with an active security-risk flag).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.35%), weekly downtrend gate clear (−2.27%/5d). Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor). GOMININGUSD is flagged for exclusion in future passes for as long as the hack allegation is unresolved — re-check its status (Bitget deposit/withdrawal suspension lifted or confirmed) before considering it again even if a genuine bullish catalyst later appears.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. The one technically-clean candidate (GOMININGUSD) was correctly screened out by the catalyst-confirmation gate combined with an unconfirmed-but-live hack/security report — exactly the kind of downstream risk gate protection is meant to catch, not a coverage gap. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
