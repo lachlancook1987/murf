@@ -40338,3 +40338,32 @@ No push sent — book flat, no trades, no drift, no operational issues, nothing 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no drift, no operational issues, nothing needs the user's attention right now.
+
+## 2026-09-10 — Scan — 03:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the last logged pass (Sep 9 EOD), no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live $78,383.20 vs today's session open $78,288.60 → **+0.12%**. Clear.
+**Weekly trend gate:** live $78,383.20 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05) → **-1.81%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (discovery sweep):** Full Kraken-native sweep across all 666 USD pairs, ranked by 24h change with a $5k notional 24h-volume floor. Top movers: VTHOUSD (+57.0%, but 15% below its 24h high — already faded, stale), NESUSD, UPUSD, B3USD, GHSTUSD (+8.85%, at 24h high), CPOOLUSD, BTRUSD (+7.90%, very high $1.4M volume), SN51USD, ARXUSD, SENTUSD among others.
+
+Checked the six cleanest candidates near their 24h high with spread ≤1% against the two-closed-candle acceleration requirement (last two fully-closed 15m candles, 03:00 and 03:15 UTC, each closing higher than the prior candle's close):
+- **GHSTUSD** — PASSES: 03:00 close (0.0615) > 02:45 close (0.0613); 03:15 close (0.0637) > 03:00 close (0.0615). Confirmed-closed-candle requirement also met. Live price at 24h high (distToHigh 0.00%), so momentum-peak freshness and live-intracandle-fade both clear. Spread 0.62% (a 0.0653 / b 0.0649) — clears the ≤1% cap.
+- ARXUSD, CPOOLUSD, BTRUSD, SN51USD, SENTUSD — all fail: either a flat/zero-volume closed candle breaking the acceleration chain, or the most recent closed candle closing lower than the one before it (BTRUSD, SENTUSD).
+
+**Catalyst check (GHSTUSD):** Perplexity — no confirmed catalyst <6h old. Price ~$0.06, "mixed to bearish" tone: cites a stale Binance delisting event (Feb 2026, long past), thin liquidity, and a vague "mid-September DAO vote" with no fixed time — none of this clears the <6h freshness bar for a catalyst-confirmed entry. Gotchi Battler beta nearing completion is a real but non-dated product update, not a catalyst event. **Treated as momentum-only.**
+
+**Fear & Greed:** 69 (Greed) per Alternative.me-style read, 55 (Neutral) per CFGI.io — not Extreme Fear, so that specific R:R floor doesn't apply, but the momentum-only 1.8:1 floor and the win-rate kill switch both apply regardless of Fear/Greed level.
+
+**Gate result:** GHSTUSD is the only candidate to pass every technical/structural gate (acceleration, confirmed-candle, freshness, live-fade, spread), but with no confirmed <6h catalyst it is a momentum-only entry — **blocked by the active rolling win-rate kill switch** (20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor; unchanged since 2026-09-04). Perplexity's delisting-risk/thin-liquidity overhang is an independent reason for caution even setting the kill switch aside.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). GHSTUSD is the cleanest technical setup this pass but is momentum-only (no confirmed catalyst) and is correctly blocked by the standing win-rate kill switch; it also carries an independent negative-thesis overhang (delisting risk, thin liquidity) per Perplexity. Crash gate clear (BTC +0.12% today), weekly downtrend gate clear (-1.81%/5d).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one technically-clean mover correctly blocked by the standing kill switch, with an independent negative-thesis flag; no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
