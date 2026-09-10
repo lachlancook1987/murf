@@ -40512,3 +40512,25 @@ No candidate reached catalyst-confirmation or R:R evaluation. Context check: Cry
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 10:00 UTC (fired 10:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (09:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history confirms stop `a2b44cf9` `status: "canceled"` (`canceled_at` 2026-05-22T05:22:01Z, unchanged since), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken) $77,880.10 vs today's session open $78,288.60 → **−0.52%**. Clear.
+**Weekly trend gate:** live $77,880.10 vs 5-trading-day-ago daily close $79,824.10 (2026-09-05 EOD reference) → **−2.44%/5d** — inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (discovery sweep):** Direct Kraken public API (AssetPairs + batched Ticker), 666 online USD pairs, filtered by 24h-high-fade ≤1.5% AND notional >$50k AND today's %-change ≥3% AND spread ≤1%. **1 candidate cleared the screen: GAIBUSD** (+24.72%, fade 0.00%, notional $51,114 — just above the liquidity floor, spread 0.137%). Loosened check (no filter) for context: top raw movers were VULTUSD (+54.60%, $72 notional — dust-thin), VTHOUSD (+38.18%, 25.22% fade — long-since-crested, same recurring stale pattern seen on prior passes), NESUSD (+30.55%, 10.97% fade), ACAUSD (+27.03%, $456 notional — thin), UPUSD (+26.25%, 22.14% fade), GHSTUSD (+13.36%, 20.40% fade), REZUSD (+10.33%, 13.61% fade) — all exceed the fade cap or are too thin. No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check — GAIBUSD (15m closed candles as of 10:34 UTC, 10:30 candle still forming):**
+Closes: C09:30=0.01990 → C09:45=0.01923 (lower) → C10:00=0.02077 (higher) → C10:15=0.02168 (higher). Last two fully-closed candles (10:00, 10:15) each close higher than the prior close — **passes two-candle acceleration**. Spread 0.137% ✓. But the current 24h high (0.02200) was set in the **still-forming 10:30 candle** (O=0.02177, H=0.02200, last print = 0.02200, candle not due to close until 10:45) — no fully-closed candle has yet held above the prior 10:15 high (0.02175). **Fails the confirmed-candle requirement** (do not enter on a still-forming candle's fresh high alone) — this is the exact still-forming-candle fakeout pattern the rule targets, and the move itself (+24.72%/24h, thin $51k notional just over the liquidity floor, from a sub-$0.02 base) is a textbook thin-market pump profile. Rejected before reaching catalyst/R:R evaluation; moot regardless given the standing win-rate kill switch (would require a confirmed <6h catalyst to even be eligible, none sought given the structural fail).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.52%), weekly downtrend gate clear (−2.44%/5d). Sole candidate (GAIBUSD) rejected on the confirmed-candle requirement — its 24h high sits on a still-forming, not-yet-closed candle.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one candidate correctly rejected on a structural gate — no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
