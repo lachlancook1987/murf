@@ -40702,3 +40702,29 @@ No candidate reached full R:R evaluation — each rejected upstream (confirmed-c
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (the session's largest mover carried an active bearish catalyst overhang, correctly filtered rather than chased on raw momentum alone; all other candidates failed clean structural/regime gates). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 17:00 UTC (fired 17:33 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 16:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,386.80 vs today's session open $78,288.60 → **−1.15%**. Clear.
+
+**Weekly trend gate:** live $77,386.80 vs 5-day-ago daily close $79,828.40 (2026-09-05, direct Kraken public OHLC 1440-interval query) → **−3.06%/5d**, still just outside the ±3% band on the downside, though improved from the 16:00 UTC pass's −3.68% (BTC recovered somewhat over the hour). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for today's-session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: only **2 candidates cleared the screen — ETHFIUSD** (+15.73%, fade 1.14%, notional $744.4k), **USUSD** (+12.94%, fade 0.68%, notional $132.5k). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 17:33 UTC — last fully closed candle 17:15–17:30, 17:30 candle still forming):**
+- **ETHFIUSD:** Closes: C16:30=0.6849 → C16:45=0.6907 (higher) → **C17:00=0.6850 (lower than 16:45)** → C17:15=0.7038 (higher than 17:00). The second-to-last closed candle (17:00) closed lower than its prior (16:45) — **fails two-candle acceleration**. Reject.
+- **USUSD:** Closes: C16:30=0.01613 → C16:45=0.01626 (higher) → **C17:00=0.01624 (lower than 16:45)** → C17:15=0.01615 (lower again). The second-to-last closed candle (17:00) closed lower than its prior (16:45) — **fails two-candle acceleration** (same recurring choppy pattern as this asset's rejection at 16:00 UTC). Reject.
+
+No candidate reached confirmed-candle, catalyst, or R:R evaluation — both rejected outright on two-candle acceleration; the bar alone is dispositive. Momentum-only win-rate kill switch was never reached as a distinct rejection stage this pass.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.15%). Weekly downtrend gate remains **ACTIVE** but eased slightly to −3.06%/5d (from −3.68% at 16:00 UTC) — BTC recovering modestly over the hour. Both raw candidates this pass failed two-candle acceleration outright, a clean structural reject rather than a coverage gap. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both raw candidates correctly screened out on two-candle acceleration, no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
