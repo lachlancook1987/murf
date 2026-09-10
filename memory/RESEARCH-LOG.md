@@ -40728,3 +40728,31 @@ No candidate reached confirmed-candle, catalyst, or R:R evaluation — both reje
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both raw candidates correctly screened out on two-candle acceleration, no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 18:00 UTC (fired 18:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (17:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history confirms stop `a2b44cf9` `status: "canceled"` (unchanged since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken ask) $77,034.60 vs today's session open $78,288.60 → **−1.60%**. Clear.
+**Weekly trend gate:** live $77,034.60 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05 EOD reference) → **−3.50%/5d** — outside the ±3% band on the downside (worsened from the 17:00 UTC pass's −3.06%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for today's-session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **5 candidates cleared the screen** — TACUSD (+14.88%, fade 1.48%), USUSD (+12.66%, fade 1.47%), EIGENUSD (+8.65%, fade 1.21%), FOLDUSD (+4.79%, fade 1.16%), ADIUSD (+3.03%, fade 0.0%). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 18:33 UTC — last fully closed candle 18:15–18:30, 18:30 candle still forming):**
+- **TACUSD:** Closes: C17:45=0.001834 → **C18:00=0.001861 (higher)** → C18:15=0.001861 (equal, not higher) — **fails two-candle acceleration** (second leg flat, not accelerating). Reject.
+- **USUSD:** Closes: C17:45=0.01629 → **C18:00=0.01619 (lower)** — **fails two-candle acceleration** at the first leg (same recurring choppy pattern flagged repeatedly across prior passes, e.g. 16:00/17:00 UTC today). Reject.
+- **EIGENUSD:** Closes: C17:45=0.2206 → **C18:00=0.2212 (higher)** → C18:15=0.2188 (lower than 18:00) — **fails two-candle acceleration** (spike-then-stall pattern). Reject.
+- **ADIUSD:** Closes accelerate cleanly (C17:45=8.4521 → C18:00=8.4584 → C18:15=8.4868, each higher), but 1h momentum (17:30 close 8.4517 → live ~8.4868) is only **+0.42%**, far short of the weekly-downtrend gate's mandatory **1h momentum >5%** floor. Reject — session-gain screen (3.03%) is not the same measure as the gate's 1h-momentum requirement, and this one fails the latter outright.
+- **FOLDUSD:** Closes accelerate cleanly (C17:45=0.05052 → C18:00=0.05302 → C18:15=0.05345, each higher) and 1h momentum (17:30 close 0.04900 → live $0.0524 bid/ask mid) is **+7.0%**, clearing the weekly-downtrend gate's momentum floor. Perplexity catalyst check (`Manifold Finance FOLD token news and price outlook today`) surfaced a genuine but vaguely-timed "liquidity deployment" update (no confirmed <3h timestamp) alongside a severe **cross-exchange price-divergence red flag**: Kraken's live price ($0.0524) vs CoinGecko's ($0.034–0.035, +3.10%/24h) is a **~51–52% divergence** — well past the ~15–20% rejection threshold — and other aggregators show wildly inconsistent prices spanning $1.89 (Coinbase) to $20.86 (CoinMarketCap), plus CoinGecko reports only ~$138 in 24h volume against Kraken's own $155k notional screen hit. This is exactly the thin/not-yet-arbitraged/listing-distorted order-book pattern the cross-exchange divergence gate exists to catch (per TRADING-STRATEGY.md, added 2026-07-24). **Reject** on cross-exchange divergence, independent of and in addition to the catalyst-timing ambiguity.
+
+No candidate reached R:R or entry-order evaluation — each rejected outright on acceleration, the weekly-downtrend 1h-momentum floor, or cross-exchange divergence. Momentum-only win-rate kill switch was never reached as a distinct rejection stage this pass (weekly downtrend gate and divergence gate got there first on the only two candidates that cleared acceleration).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.60%). Weekly downtrend gate **ACTIVE** and worsened slightly to −3.50%/5d (from −3.06% at 17:00 UTC). All 5 raw candidates rejected on independent structural/gate grounds (two-candle acceleration ×3, weekly-downtrend momentum floor ×1, cross-exchange divergence ×1) — a clean set of structural rejects, not a coverage gap. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all five raw candidates correctly screened out on independent gates, including a textbook cross-exchange-divergence catch on FOLD). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
