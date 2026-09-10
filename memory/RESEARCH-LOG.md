@@ -40756,3 +40756,29 @@ No candidate reached R:R or entry-order evaluation — each rejected outright on
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all five raw candidates correctly screened out on independent gates, including a textbook cross-exchange-divergence catch on FOLD). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 19:00 UTC (fired 19:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (18:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,091.60 vs today's session open $78,288.60 → **−1.53%**. Clear.
+**Weekly trend gate:** live $77,091.60 vs 5-trading-day-ago daily close $79,828.40 (2026-09-05 EOD reference, direct Kraken public OHLC 1440-interval query) → **−3.43%/5d** — outside the ±3% band on the downside (worsened slightly from the 18:00 UTC pass's −3.50%... within noise). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for today's-session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **3 candidates cleared the screen** — USUSD (+13.15%, fade 1.04%, notional $138.2k), RAYUSD (+13.11%, fade 1.13%, notional $1.99M), ADIUSD (+3.37%, fade 0.32%, notional $144.9k). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (hourly + 1m OHLC as of 19:34 UTC):**
+- **USUSD:** Recurring choppy candidate flagged in nearly every pass today. 24h high $0.01635 set at 17:00 UTC (2.5h old) — stale past the 30-min freshness ceiling, and live price (~$0.01618) has not broken back above it. **Fails momentum-peak-check freshness** (no confirmed recent high, no breakout above the stale high). Reject.
+- **RAYUSD:** Largest, cleanest-looking candidate this pass ($1.99M notional, two-candle acceleration clears: 19:00 close $1.345 > 18:45 close $1.314, 19:15 close $1.394 > 19:00 close $1.345). But the actual 24h high ($1.422) was set at **06:00 UTC — 13.5h old**, and live price (~$1.406–1.410) has not broken back above it (currently ~1.1% below). **Fails momentum-peak-check freshness/breakout requirement.** Checked for a qualifying fresh catalyst per the rule's exception: Perplexity (`Raydium RAY token news and price outlook today`) surfaced a real LaunchLab-upgrade + StonkFun-integration narrative, but timing is described only as "today's news flow," not confirmed **<2h old** (the freshness-exception bar) nor **<3h old** (the weekly-downtrend-gate's stricter mandatory-catalyst bar, which is separately in force). Reject on momentum-peak-check freshness; would also fail the weekly-downtrend gate's catalyst-timing requirement even if the freshness gate were cleared.
+- **ADIUSD:** Two-candle acceleration is clean, but 1h momentum (18:00 close $8.4637 → live ~$8.5151) is only **+0.61%**, far short of the weekly-downtrend gate's mandatory **1h momentum >5%** floor (in force at −3.43%/5d). Reject.
+
+No candidate reached R:R, confirmed-candle, or win-rate-kill-switch evaluation — each rejected outright on momentum-peak-check freshness/breakout or the weekly-downtrend gate's 1h-momentum/catalyst-timing requirements.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.53%). Weekly downtrend gate **ACTIVE** at −3.43%/5d (essentially unchanged from 18:00 UTC's −3.50%). All 3 raw candidates rejected on independent structural/gate grounds (momentum-peak-check freshness ×2, weekly-downtrend 1h-momentum floor ×1) — a clean set of structural rejects, not a coverage gap. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not the binding gate for any candidate this pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all three raw candidates correctly screened out on independent gates, including a clean momentum-peak-check catch on the largest-notional candidate, RAY, whose 24h high was 13.5h stale despite a currently-accelerating price). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
