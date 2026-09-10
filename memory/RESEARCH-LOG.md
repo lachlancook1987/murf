@@ -40646,3 +40646,31 @@ No candidate reached R:R evaluation — ETHFI and VET both failed on the mandato
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two candidates cleared every momentum/technical gate but correctly failed the active weekly-downtrend gate's fresh-catalyst requirement — the gate doing exactly what it's designed to do, not a coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 15:00 UTC (fired 15:33 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 14:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,133.00 vs today's session open $78,288.60 → **−1.48%**. Clear.
+
+**Weekly trend gate:** live $77,133.00 vs 5-day-ago daily close $79,828.40 (2026-09-05, direct Kraken public OHLC 1440-interval query) → **−3.38%/5d**, still breaching the ±3% band on the downside, deepened slightly from the 14:00 UTC pass's −3.22%. **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for today's-session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **4 candidates cleared the screen — SAGAUSD** (+13.31%, fade 0.81%, notional $134.1k), **METUSD** (+4.03%, fade 0.00%, notional $111.6k), **CSPRUSD** (+3.97%, fade 1.12%, notional $179.2k), **KAVAUSD** (+3.73%, fade 0.62%, notional $71.6k). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 15:33 UTC — last fully closed candle 15:15–15:30, 15:30 candle still forming):**
+- **SAGAUSD:** Closes: C14:30=0.01542 → C14:45=0.01569 (higher) → **C15:00=0.01567 (lower than 14:45)** → C15:15=0.01580 (higher than 15:00). The second-to-last closed candle (15:00) failed to close higher than its prior (14:45) — **fails two-candle acceleration**. Also, the recorded 24h high (0.01596) sits on the still-forming 15:30 candle (H=0.01596, not yet closed) — **fails confirmed-candle** independently. Reject on two grounds.
+- **METUSD:** Closes: C14:30=0.2180 → C14:45=0.2178 (lower) → **C15:00=0.2178 (flat, not higher than 14:45)** → C15:15=0.2194 (higher than 15:00). The second-to-last closed candle (15:00) closed flat rather than higher than its prior (14:45) — **fails two-candle acceleration**. Reject.
+- **KAVAUSD:** Closes: C14:30=0.0630 → C14:45=0.0638 (higher) → **C15:00=0.0637 (lower than 14:45)** → C15:15=0.0639 (higher than 15:00). Same failure pattern — second-to-last closed candle dipped — **fails two-candle acceleration**. Reject.
+- **CSPRUSD:** Closes: C14:30=0.0030906 → C14:45=0.0030872 (lower) → C15:00=0.0031025 (higher than 14:45) → C15:15=0.0031196 (higher than 15:00) — **passes two-candle acceleration**. The 15:15 candle's high (0.0031853) matches the recorded 24h high and the candle has closed (holds above the prior breakout level) — passes confirmed-candle nominally, though the same candle's close (0.0031196) sat well below its own high, a notable intracandle spike-and-pullback. Live price (0.0031495) is 1.12% off the 24h high — passes the live-intracandle-fade cap (<1.5%). Spread 0.197% ✓. **But 1h momentum is only ≈+1.9%** (14:30 close 0.0030906 → live 0.0031495) — far short of the weekly-downtrend gate's now-mandatory 1h **>5%** bar. **Reject on the momentum-bar**, independent of and without needing to resolve the candle-quality ambiguity; catalyst not checked further since the bar alone is dispositive.
+
+No candidate reached catalyst-confirmation or R:R evaluation — three rejected on two-candle acceleration outright, the fourth (CSPRUSD) on the weekly-downtrend gate's mandatory 1h >5% momentum bar. Context check: Crypto Fear & Greed Index today reads **69 "Greed"** (Alternative.me/Bitget) vs CFGI's 51 "Neutral" — not Extreme Fear, moot regardless given the weekly-downtrend gate and kill switch above.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.48%). Weekly downtrend gate remains **ACTIVE** (−3.38%/5d, deepened slightly from 14:00 UTC's −3.22%) — the mandatory 1h >5% momentum bar was the binding constraint on the one structurally-clean candidate (CSPRUSD); the other three failed two-candle acceleration outright. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was never reached as a distinct rejection stage this pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all four raw candidates correctly screened out by structural/momentum gates, no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
