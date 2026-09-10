@@ -40367,3 +40367,36 @@ Checked the six cleanest candidates near their 24h high with spread ≤1% agains
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one technically-clean mover correctly blocked by the standing kill switch, with an independent negative-thesis flag; no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 04:00 UTC
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the last logged pass (03:00 UTC), no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live $78,376.50 vs today's session open $78,288.60 → **+0.11%**. Clear.
+**Weekly trend gate:** unchanged since last pass — **-1.81%/5d**, inside the ±3% band. Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (discovery sweep):** Full Kraken-native sweep via public Ticker across all USD pairs, ranked by 24h change with a $5k notional 24h-volume floor. Top movers largely unchanged from the 03:00 UTC pass: VTHOUSD (+66.4%, ~10% below 24h high — stale/faded), NESUSD, UPUSD, ALIGNUSD, GHSTUSD (+11.35%, already faded from its 03:00 high — 04:00-04:15 closes declining), B3USD, RAYUSD ($2.3M notional but 7.7% off high), REZUSD, USELESSUSD, ARXUSD (+7.25%, at 24h high, distToHigh 0.00%), BTRUSD, VVVUSD, SN51USD, VETUSD, SENTUSD among others.
+
+Checked the four candidates nearest their 24h high with spread ≤1% against the two-closed-candle acceleration requirement (last two fully-closed 15m candles: 04:00 and 04:15 UTC):
+- **ARXUSD** — PASSES: 04:00 close (0.15741) > 03:45 close (0.15526); 04:15 close (0.15760) > 04:00 close (0.15741). Confirmed-closed-candle requirement met. Live quote (ask 0.15956/bid 0.15854) sitting *above* the recorded 24h high (0.15760) at check time — a fresh intracandle breakout, no live fade. Spread 0.627% — clears the ≤1% cap.
+- SN51USD — fails: 04:15 close (24.225) < 04:00 close (24.283), acceleration chain breaks.
+- SENTUSD — fails: 04:00 close (0.014653) < 03:45 close (0.014716), acceleration chain breaks at the first step.
+- GHSTUSD — already faded from its 03:00 UTC peak; 04:00/04:15 closes both declining. Same candidate rejected last pass on missing catalyst (blocked by kill switch); now also fails acceleration.
+
+**Catalyst check (ARXUSD → Arcium):** Perplexity — mixed signal. CoinMarketCap cites "Umbra private payroll launch on Arcium Mainnet Alpha," "airdrop buzz," and a "Binance Futures ARX perpetuals listing" as recent attention drivers, but none carries a confirmed timestamp inside the <6h freshness bar; broader market shows a volatile, "not cleanly trending" 24h picture (range -4.8% to +8.7% across venues) rather than a single clean catalyst event. **Treated as momentum-only** — no catalyst clears the <6h confirmation bar.
+
+**Liquidity/divergence note:** Kraken's ARXUSD 24h notional is only ~$35.7k vs. Perplexity-reported ~$15.4M global 24h volume (CoinGecko) — a ~430x gap. Price divergence itself is small (Kraken ~$0.158 vs. global ~$0.149-0.153, ~4-6%), well inside the ~15-20% hard-divergence gate, so does not trigger that gate outright. But the extreme Kraken-specific thinness (consistent with the flat, single-print 15m candles observed in the OHLC pull) is an independent liquidity-risk flag per the Risk Awareness section — a thin book here could gap through the stop budget even at a nominally tight quoted spread.
+
+**Fear & Greed:** 51 (Neutral) per CFGI, 66 (Greed) per an alternate tracker — not Extreme Fear, so that specific R:R floor doesn't apply; the momentum-only 1.8:1 floor and win-rate kill switch both apply regardless.
+
+**Gate result:** ARXUSD is the only candidate to pass every technical/structural gate (acceleration, confirmed-candle, freshness, live-fade, spread) this pass, but with no catalyst clearing the <6h freshness bar it is momentum-only — **blocked by the active rolling win-rate kill switch** (20.0% trailing win rate, below the 35% floor; unchanged since 2026-09-04). The Kraken-specific liquidity thinness (~$35.7k vs ~$15.4M global) is an independent reason for caution even setting the kill switch aside.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). ARXUSD is the cleanest technical setup this pass but is momentum-only (no catalyst confirmed <6h) and is correctly blocked by the standing win-rate kill switch; it also carries an independent thin-liquidity flag on Kraken specifically. Crash gate clear (BTC +0.11% today), weekly downtrend gate clear (-1.81%/5d, unchanged).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one technically-clean mover correctly blocked by the standing kill switch, with an independent thin-liquidity flag; no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
