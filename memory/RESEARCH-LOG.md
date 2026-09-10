@@ -40493,3 +40493,22 @@ Context check: Crypto Fear & Greed Index today reads **Greed (66-74 depending on
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two candidates failed structural gates on their own merits, one was ambiguous but moot under the standing win-rate kill switch). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 09:00 UTC (fired 09:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (08:00 UTC pass) exactly, no drift. Alpaca: `positions: []`, stop `a2b44cf9` historical/canceled since 2026-05-22, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. **Crash gate:** BTC live $78,061.40 vs today's session open $78,288.60 → **−0.29%**. Clear. **Weekly trend gate:** live $78,061.40 vs 5-day-ago reference (Sep 5 EOD, $79,824.10) → **−2.21%/5d**, inside the ±3% band. Standard regime, normal entry criteria apply.
+
+**Step 4 (research/execute):** Kraken-native sweep (public Ticker, all USD pairs) filtered to chg24 ≥3%, spread ≤1%, within 3% of 24h high → 13 candidates: REUSD (+9.84%), KASUSD (+7.29%), VETUSD (+5.58%), PIEVERSEUSD (+5.01%), CVCUSD (+4.52%), KIIUSD (+4.43%), SN51USD (+4.02%), BLENDUSD (+3.85%), SLXUSD (+3.69%), EDGEUSD (+3.40%), QUIDUSD (+3.34%), SOLVUSD (+3.26%), NEOUSD (+3.02%). Checked 15m closed-candle sequences against the two-candle acceleration / confirmed-candle / live-intracandle-fade gates:
+- **REUSD, KASUSD, VETUSD, SN51USD, BLENDUSD, CVCUSD, QUIDUSD, SOLVUSD, NEOUSD:** last two fully-closed 15m candles do not each close higher than the prior close (flat, declining, or spike-then-pullback patterns) — **fail two-candle acceleration**.
+- **PIEVERSEUSD:** passes two-candle acceleration (closes rising 08:45→09:00→09:15), but live price (1.3296) has retraced **1.55%** off the fresh 24h high (1.3505, set in the 09:15 candle) — **fails live intracandle fade cap (>1.5%)**.
+- **SLXUSD:** passes two-candle acceleration, but the 24h high (0.06963) was touched only in the still-forming 09:30 candle, marginally above the prior 08:30 local high (0.06959) — not yet held by a subsequent closed candle. **Fails confirmed-candle requirement** (same ambiguous-retest pattern flagged on this asset at the 08:00 UTC pass).
+
+No candidate reached catalyst-confirmation or R:R evaluation. Context check: Crypto Fear & Greed Index today reads **Neutral-to-Greed (48-74 depending on source, most major trackers 66-74 Greed)** per Perplexity — not Extreme Fear, moot regardless given the kill switch below. **Win-rate kill switch status (unchanged since 2026-09-04):** ACTIVE — momentum-only entries SUSPENDED, trailing win rate 20.0% (2W/8L over last 10 momentum-only entries); no new momentum-only entries have filled since to roll the window. Not the binding gate this pass — no candidate reached that stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.29%), weekly downtrend gate clear (−2.21%/5d). All 13 raw candidates rejected on structural gates (acceleration, confirmed-candle, or live-fade) before reaching the win-rate kill switch or catalyst stage.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
