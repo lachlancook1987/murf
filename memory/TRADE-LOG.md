@@ -11155,3 +11155,21 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly ahead of BTC (+0.30 points) on a day BTC pulled back slightly. Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
+
+## 2026-09-10 — EOD Snapshot
+
+### Sep 10 — EOD Snapshot (Day 113, Thursday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** +1.86%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat all day, no TRADE-LOG entries dated today, no drift since the Sep 9 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $70.6298 baseline. Phase P&L unchanged at −$109.1502 (−60.71%) from $179.78 Kraken starting equity (May 22). **vs BTC:** BTC moved from $78,206.80 (Sep 9 EOD live reference) to $76,753.80 today → **−1.86%**; bot's day return (0.00%) beat BTC's raw move by **+1.86 points** — book flat and untouched through a steady BTC slide. Total trades since migration unchanged at 152 (no activity today). Every hourly pass today (00:00 through 23:00 UTC, 24 passes) reached HOLD. The weekly BTC downtrend gate went ACTIVE mid-afternoon and worsened steadily through the rest of the day (from roughly −3.3%/5d around 21:00 UTC to −3.85%/5d at this pass) as BTC slid from its session open of $78,288.60 down to $76,753.80 — this raised the entry bar to 1h momentum >5% AND a fresh catalyst <3h old, banning pure-momentum entries, for the back half of the day. Candidates across the day (KNTQ, COTI, GWEI, ORCA, ZAMA, ATH, KII, STBL, RSR, CLOUD, CSPR, TRUST, TAC, ADI, RAY among others) were rejected on a mix of momentum-peak-check freshness (stale 24h highs with no fresh breakout — RAY at this final pass was the clearest example, its high 2h19m old), failed two-candle acceleration (spike-then-dip patterns, including ADI at both the 22:00 and 23:00 passes), thin/illiquid volume, or — once the weekly downtrend gate went active — the added 1h-momentum >5% floor (RAY's 4.17% 1h momentum this pass fell just short). The momentum-only win-rate kill switch (20.0%, below the 35% floor since the 2026-09-04 review) remained a standing secondary constraint all day but was rarely the binding gate — candidates were almost always rejected on a structural check before reaching that stage. Fear & Greed checked this final pass: 69/100 "Greed" — not Extreme Fear, so that R:R-floor rule stayed inactive throughout. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 cash, fully available, no open positions; weekly downtrend gate (currently ACTIVE at −3.85%/5d) and win-rate kill switch both to be reassessed fresh.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot ahead of BTC by +1.86 points on a day BTC slid steadily and the weekly downtrend gate correctly kept the book out of it. The weekly downtrend gate going active mid-day is a normal, expected gate response to BTC's own move, not an operational anomaly — nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21).
