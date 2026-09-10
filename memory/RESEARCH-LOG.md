@@ -40474,3 +40474,22 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (three candidates cleared the initial screen but each failed the two-candle acceleration check on its own merits — no coverage gap). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 08:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 9 EOD) exactly, no drift. Alpaca: `positions: []`, stop `a2b44cf9` historical/canceled since 2026-05-22, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. **Crash gate:** BTC live $78,006.10 vs today's session open $78,288.60 → **−0.36%**. Clear. **Weekly trend gate:** live $78,006.10 vs 5-day-ago reference (Sep 5 EOD, $79,824.10) → **−2.28%/5d**, inside the ±3% band. Standard regime, normal entry criteria apply.
+
+**Step 4 (research/execute):** Kraken-native sweep (public AssetPairs + Ticker, 186 USD pairs returned) ranked by 24h change, filtered to chg24 ≥3%, spread ≤1%, within 3% of 24h high. Three candidates surfaced:
+- **SN51USD:** spread 0.14% ✓, chg24 +4.09%. OHLC 15m: price flatlined at 24.420 since 07:30, volume **zero** for the last three candles (08:00, 08:15, 08:30) — no actual trading activity, stale print. Reject (illiquid/stale, not real momentum).
+- **PIEVERSEUSD:** spread 0.34% ✓, chg24 +3.55%, dist-from-high 2.58%. Closes: C07:45=1.2873 → C08:00=1.2950 (higher) → C08:15=1.3002 (higher) — passes two-candle acceleration. But the 24h high (1.3481) sits well above current price and wasn't touched anywhere in the visible 10-candle window (>2.5h stale) — price has not broken back above it. **Fails momentum-peak-check freshness** (no fresh breakout above the prior high). Reject.
+- **SLXUSD:** spread 0.14% ✓, chg24 +3.22%, dist-from-high 0.00% (currently at 24h high). Closes: C07:45=0.06876 (flat/zero-vol) → C08:00=0.06897 (higher) → C08:15=0.06931 (higher) — passes two-candle acceleration. Live intracandle fade: 0% off the high (08:30 candle still forming at 0.06931, no trades yet). However the 0.06931 level was first touched as an intracandle high wick at 07:15 (~79 min ago) and only matched, not broken-and-held-above, by the 08:15 close — ambiguous under the confirmed-candle rule's intent (a genuine new breakout held by a subsequent close, not a re-test of an old wick). No confirmed catalyst found or sought in depth given the point below. Moot regardless: this is a momentum-only setup (no catalyst), and the **rolling win-rate kill switch remains ACTIVE/SUSPENDED** (20.0% trailing win rate on the last 10 momentum-only entries, unchanged since the 2026-09-04 review — no new momentum-only entries have filled since to roll the window), which blocks all momentum-only entries regardless of technical merit. Reject.
+
+Context check: Crypto Fear & Greed Index today reads **Greed (66-74 depending on source)** per Perplexity — not Extreme Fear, so that R:R-floor rule doesn't apply; moot anyway given the kill switch above. No candidate reached the catalyst-confirmation or R:R evaluation stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.36% today), weekly downtrend gate clear (−2.28%/5d). Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor) — flagging per TRADING-STRATEGY.md's requirement to state this every pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two candidates failed structural gates on their own merits, one was ambiguous but moot under the standing win-rate kill switch). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
