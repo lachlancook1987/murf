@@ -40592,3 +40592,29 @@ No candidate reached R:R evaluation — all 12 rejected upstream (8 on spread, 3
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues. The weekly downtrend gate flipping active is a normal, expected regime signal (BTC drifted from -1.8% to -3.1%/5d intraday) that raises the entry bar rather than something requiring the user's attention now — consistent with how the same gate's activation on 2026-09-08 was handled. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-10 — Scan — 13:00 UTC (fired 13:35 UTC)
+
+**Step 2 (account state):** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — exact match to the 12:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []` fully flat, stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions, no open orders, no orphans, no runners to tighten, no thesis breaks. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live $76,860.30 vs today's session open $78,288.60 → **−1.83%**. Clear.
+
+**Weekly trend gate:** live $76,860.30 vs 5-day-ago daily close $79,828.40 (2026-09-05, direct Kraken public OHLC 1440-interval query) → **−3.72%/5d**, still breaching the ±3% band on the downside, and more negative than the 12:00 UTC pass's −3.09% (BTC continued sliding through the hour). **ACTIVE** — pure momentum entries banned; any entry now requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public Ticker calls across all 666 USD pairs (batched, not Perplexity). Filtered for today's-session gain >3% within 2% of the 24h high: 14 raw candidates. Of those, only 3 cleared the mandatory spread ≤1% hard skip: **USUSD** (spread 0.46%, session +7.83%), **SAGAUSD** (spread 0.20%, session +6.66%), **STABLEUSD** (spread 0.26%, session +4.28%). The rest (JUNO, CXT, PUFFER, WINGS, ES, NOBODY, ORDER, EUROP, BMB, OBOL, CHILLHOUSE) failed spread (1.85–29.88%) outright.
+
+- **USUSD:** 15m closes choppy this pass — last two fully-closed candles (13:00 close $0.01526, vs 12:45 close $0.01535) show a **decrease**, failing two-candle acceleration outright; current live price is trading on the still-forming 13:30 candle relative to the recorded 24h high, also failing confirmed-candle. Reject on two independent structural grounds before even reaching the momentum-bar/catalyst stage.
+- **SAGAUSD:** Passes two-candle acceleration (13:00 close $0.01491 > 12:45 close $0.01484; 13:15 close $0.01498 > 13:00 close $0.01491) and confirmed-candle (24h high $0.01504 set on a prior closed candle, current price holding below it, no still-forming-candle breakout claim). But **1h momentum only ≈+1.9%** (12:30 close $0.01462 → live $0.01490) — far short of the weekly-downtrend gate's now-mandatory 1h >5% bar. Reject on the momentum-bar, independent of catalyst (which was not checked further since the bar alone is dispositive).
+- **STABLEUSD:** Choppy 15m structure, still-forming 13:30 candle showing a jump to $0.03028 off a $0.02936 13:00 close — fails confirmed-candle (breakout not yet closed). 1h momentum ≈+2.0% (12:30 close $0.02969 → live ~$0.03028) also short of the 5% weekly-downtrend bar regardless.
+
+No candidate reached catalyst-check stage — all three spread-qualifying candidates rejected upstream on the weekly-downtrend-mandated 1h >5% momentum bar and/or structural gates (two-candle acceleration, confirmed-candle). The 11 spread-failing candidates were not evaluated further.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −1.83% vs session open). Weekly downtrend gate remains **ACTIVE** and deepened to −3.72%/5d (from −3.09% at 12:00 UTC) — the mandatory 1h >5% momentum bar this triggers was the binding constraint on the only structurally-clean candidate (SAGAUSD), not the momentum-only win-rate kill switch (also still ACTIVE, 20.0%, unchanged). No candidate cleared every gate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected outcome (weekly downtrend gate's elevated momentum bar correctly filtered out the session's top movers, none of which cleared 1h >5%). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
