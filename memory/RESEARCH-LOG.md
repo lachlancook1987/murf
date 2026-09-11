@@ -41167,3 +41167,34 @@ No candidate reached confirmed-candle-plus-freshness together, catalyst, R:R, or
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all five screen-passers cleanly rejected on structural gates, no ambiguity, including the pass's biggest mover on a still-forming-candle technicality rather than a judgment call). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 10:00 UTC (fired 10:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (09:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $76,982.60 vs today's session open $76,542.00 → **+0.58%**. Clear.
+**Weekly trend gate:** live $76,982.60 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, unchanged) → **−4.17%/5d** — outside the ±3% band on the downside (essentially unchanged from the 09:00 UTC pass's −3.98%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** 54/100 "Neutral" (provider split: Bitget 56 "Greed", others 68-69 "Greed") — none reach ≤25 Extreme Fear, so the Extreme-Fear R:R-floor rule doesn't apply this pass.
+
+**STORJ re-check (flagged from 09:00 UTC pass):** Live quote now shows spread widened to **~1.68%** (bid 0.039360, ask 0.040020) — already over the 1% hard-skip cap — and price has faded to $0.03953 vs its 24h high of $0.04300, a **~8.06% fade**, far past the 1.5% cap. The pump has clearly crested and reversed; correctly excluded from this pass's screen on both spread and fade before any deeper check was needed.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **4 candidates cleared the screen** — METUSD (+17.92%, fade 0.00%, spread 0.35%, notional $170.6k), PTBUSD (+4.76%, fade 1.02%, spread 0.29%, notional $60.7k), MORPHOUSD (+3.32%, fade 0.60%, spread 0.21%, notional $240.0k), KAVAUSD (+3.15%, fade 1.06%, spread 0.31%, notional $73.0k). No AU-restricted assets (ZEC/DASH) present. MET is the same recurring pumper seen at 07:00-09:00 UTC, now printing its largest gain yet with a fresh at-the-high print (fade 0.00%).
+
+**Deep check (15m closed candles as of 10:33 UTC — last fully closed candle 10:15–10:30, 10:30 candle still forming):**
+- **METUSD:** C(09:45)=0.2442, C(10:00)=0.2507 (leg 1 passes, higher close), C(10:15)=0.2498 < C(10:00)=0.2507 (leg 2 fails, lower close) — **fails two-candle acceleration**, same spike-then-stall pattern that has rejected MET on every prior pass today (06:00 stale-high, 07:00/08:00/09:00 acceleration failures). The still-forming 10:30 candle is printing a fresh high (0.2546) but this doesn't matter since acceleration already fails.
+- **PTBUSD:** C(09:45)=0.000670 < C(09:30)... first required leg: C(10:00)=0.000669 < C(09:45)=0.000670 — **fails two-candle acceleration** at the first required leg.
+- **MORPHOUSD:** C(10:00)=2.34506 > C(09:45)=2.33578 (leg 1 passes) but C(10:15)=2.33430 < C(10:00)=2.34506 (leg 2 fails, lower close) — **fails two-candle acceleration**.
+- **KAVAUSD:** C(10:00)=0.0658 > C(09:45)=0.0654 (leg 1 passes) but C(10:15)=0.0658 = C(10:00)=0.0658 (flat, not higher) — **fails two-candle acceleration** at the second leg.
+
+No candidate reached confirmed-candle, freshness, catalyst, R:R, or win-rate-kill-switch evaluation as the binding gate — all four screen-passers rejected outright on two-candle acceleration (three on a spike-then-stall/flat second leg, one on a dip-first leg).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.58%). Weekly downtrend gate **ACTIVE** at −4.17%/5d (essentially unchanged from 09:00 UTC's −3.98%). Four candidates cleared the initial screen (MET, PTB, MORPHO, KAVA); all four failed two-candle acceleration outright. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate. STORJ, flagged for re-check from the 09:00 UTC pass, has clearly crested and reversed (spread now 1.68%, fade 8.06%) and is correctly excluded.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all four screen-passers cleanly rejected on acceleration, no ambiguity). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
