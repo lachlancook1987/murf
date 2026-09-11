@@ -41221,3 +41221,29 @@ No candidate reached confirmed-candle, acceleration, freshness, catalyst, R:R, o
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (zero candidates even cleared the initial fade/spread screen this pass, no ambiguity). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 12:00 UTC (fired 12:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (11:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $76,897.60 vs today's session open $76,542.00 → **+0.46%**. Clear.
+**Weekly trend gate:** live $76,897.60 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query, unchanged) → **−4.28%/5d** — outside the ±3% band on the downside (essentially unchanged from the 11:00 UTC pass's −4.36%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** CFGI.io 54/100 "Neutral" (provider split: Bitget/alternative.me 56 "Greed", CoinStats 68 "Greed", CoinAligator 47 "Neutral"). None reach ≤25 Extreme Fear on any provider, so the Extreme-Fear R:R-floor rule doesn't apply this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **1 candidate cleared the screen** — STBLUSD (+3.88%, fade 0.4%, spread 0.4%, notional $61.3k). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 12:34 UTC — last fully closed candle 12:15–12:30, 12:30 candle still forming):**
+- **STBLUSD:** C(12:00)=0.025428 < C(11:45)=0.025682 — **fails two-candle acceleration** at the first required leg. Independently also fails **momentum-peak-check freshness**: the actual 24h high (0.025769) was set at the 10:45 candle, ~109 min old, far outside the 30-min ceiling, and live price (0.025666) has not broken back above it — today's screen-level "session gain" reflects a recovery within a lower range, not a fresh breakout.
+
+No candidate reached confirmed-candle, catalyst, R:R, or win-rate-kill-switch evaluation as the binding gate — the sole screen-passer rejected on both two-candle acceleration and momentum-peak-check freshness independently.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.46%). Weekly downtrend gate **ACTIVE** at −4.28%/5d (essentially unchanged from 11:00 UTC's −4.36%). One candidate (STBL) cleared the initial screen but failed two structural gates independently (acceleration, freshness). Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (sole screen-passer cleanly rejected on two independent structural gates, no ambiguity). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
