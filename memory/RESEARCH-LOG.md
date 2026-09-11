@@ -40928,3 +40928,30 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome with zero candidates even reaching the screening stage. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 02:00 UTC (fired 02:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (01:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, `orders` confirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $76,758.70 vs today's session open $76,542.00 → **+0.28%**. Clear.
+**Weekly trend gate:** live $76,758.70 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query, unchanged reference) → **−4.45%/5d** — outside the ±3% band on the downside (essentially unchanged from the 01:00 UTC pass's −4.50%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** 49/100 "Neutral" — unchanged from the 01:00 UTC pass, well above the ≤25 Extreme Fear threshold.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 666 USD pairs (all with live ticker data). Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **2 candidates cleared the screen** — XANUSD (+10.20% session gain, fade 0.00%, spread 0.51%, notional $87,759), KTAUSD (+3.74%, fade 0.00%, spread 0.12%, notional $72,017). Other large raw movers (VULT +40.95%, RAILS +27.46%, SC +22.80%, JUNO +20.99%, NOCK +13.46%, TRAC +13.16%, XCN +11.05%) all failed on fade and/or spread caps outright (already-crested pumps and/or 2–40%+ spreads on thin books). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m OHLC as of 02:34 UTC — last fully closed candle 02:15–02:30, 02:30 candle still forming):**
+- **XANUSD:** Closes C01:45=0.01108 → **C02:00=0.01140 (higher)** → **C02:15=0.01174 (higher)** — clears two-candle acceleration. 1h momentum (01:30 close 0.01108 → live 0.01188) is **+7.22%**, clearing the weekly-downtrend gate's mandatory >5% floor. However, the 24h high (0.01188, fade 0.00%) was set on the **currently-forming 02:30 candle** (single 4-minute-old print, vol 16,835 already booked) — no fully-closed 15m candle has yet confirmed a hold above the prior breakout level (0.01174). **Fails the confirmed-candle requirement** — this is a still-forming candle's fresh high, not a confirmed breakout. Reject on this gate alone; would also require the win-rate kill switch's momentum-only suspension to be checked (no catalyst identified) before reaching R:R, so this would remain blocked regardless.
+- **KTAUSD:** Closes C01:45=0.0834 → **C02:00=0.0833 (lower than prior)** — **fails two-candle acceleration** at the first required leg. The 24h high (0.0860, fade 0.00%) similarly sits on the still-forming 02:30 candle, so it would independently fail the confirmed-candle requirement too. Reject on both grounds.
+
+No candidate reached confirmed-candle-vs-catalyst, R:R, or win-rate-kill-switch evaluation as the binding gate — XAN was rejected solely on the confirmed-candle requirement (a fresh, still-forming breakout, not yet held by a closed candle) despite otherwise clean acceleration and momentum; KTA failed acceleration outright.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.28%). Weekly downtrend gate **ACTIVE** at −4.45%/5d (essentially unchanged from 01:00 UTC's −4.50%). XAN was the strongest raw candidate this pass — clean acceleration, fresh 1h momentum clearing the downtrend-gate floor — but its breakout high is on a still-forming candle, not yet confirmed; correctly held per the confirmed-candle requirement rather than chased. KTA rejected on acceleration alone. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for either candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (the one live-breakout candidate, XAN, correctly deferred pending candle confirmation rather than chased on a still-forming spike). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
