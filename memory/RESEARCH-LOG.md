@@ -41440,3 +41440,25 @@ No candidate reached confirmed-candle, catalyst, R:R, or win-rate-kill-switch ev
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (the one candidate to clear the mandatory momentum floor was cleanly rejected on two independent structural gates, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+---
+
+## 2026-09-11 — Scan — 20:00 UTC (fired 20:34 UTC)
+
+**Step 3 (position maintenance):** `positions: {}`, `orders: {"open": {}}`, `account` shows ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — book fully flat, nothing to reconcile, no orphan stops, no orphan T1 limits, no thesis-break candidates (no open positions), no action taken. Alpaca: `positions: []` confirmed flat, orders show only the historical stop `a2b44cf9` (filled/inactive since 2026-05-22), zero exposure. Crash gate: BTC quote $77,343.90 vs 24h open $76,542.00 → **+1.05%** (not down >20%), gate clear.
+
+**Step 4 (research):** Direct public AssetPairs + batched Ticker sweep across 627 online USD pairs. Filtered for session gain ≥3%, notional >$50k, fade from 24h high ≤1.5%: **10 candidates** — STBL (+7.60%), METH (+6.93%), XNY (+6.91%), TRIA (+6.10%), BAT (+5.05%), DOS (+4.09%), NIL (+3.86%), KAVA (+3.63%), TRUST (+3.56%), AI (+3.06%).
+
+**Weekly BTC downtrend gate check:** BTC 5-day change from Sep 6 daily close ($80,334.3) to current ($77,341.8) → **−3.72%**, outside the ±3% band → **gate ACTIVE**. This raises the entry bar to 1h momentum **>5% AND** a fresh catalyst **<3h old**; pure-momentum entries banned while active.
+
+**1h momentum check on all 10 candidates** (15m OHLC, last ~1h close-to-close): STBL +0.88%, METH 0.00%, XNY −0.81%, TRIA +1.11%, BAT +1.75% (highest), DOS −0.19%, NIL +1.18%, KAVA −0.30%, TRUST −0.11%, AI +0.56%. **None clear the 5% 1h-momentum floor required by the active weekly downtrend gate** — the closest (BAT) is roughly 3.3 points short. No candidate reached the catalyst-confirmation or downstream gate stage (R:R, two-candle acceleration, confirmed-candle, momentum-peak freshness) since all failed this structural bar first.
+
+**Context (Perplexity):** Crypto Fear & Greed Index today = 54/100, Neutral (not Extreme Fear — that R:R-floor rule stays inactive regardless, moot here since no candidate qualifies).
+
+**Win-rate kill switch status:** unchanged — ACTIVE/SUSPENDED for momentum-only entries (20.0% trailing win rate over last 10 momentum-only entries, below the 35% floor per the 2026-09-04 weekly review; no new momentum-only entries since then to roll the window, total trades since migration still 152). Not the binding gate this pass — the weekly downtrend gate rejected every candidate first.
+
+**Decision: HOLD.** No candidate clears every gate. Weekly BTC downtrend gate (active) is the binding constraint this pass — no candidate's 1h momentum came within 3 points of the required 5% floor. $70.6298 ZUSD remains fully available for the next pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no operational issues, crash gate clear, HOLD is a correct/expected outcome with the weekly downtrend gate active and no candidate close to clearing it. The ~33-34min scheduler drift continues (consistent with every pass today) but is an already-flagged, recurring, non-worsening pattern — not re-escalating this pass.
