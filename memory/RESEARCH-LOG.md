@@ -41137,3 +41137,33 @@ No candidate reached confirmed-candle, catalyst, R:R, or win-rate-kill-switch ev
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all five screen-passers cleanly rejected on structural gates, no ambiguity). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 09:00 UTC (fired 09:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (08:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,140.00 vs today's session open $76,542.00 → **+0.78%**. Clear.
+**Weekly trend gate:** live $77,140.00 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query, unchanged) → **−3.98%/5d** — outside the ±3% band on the downside (essentially unchanged from the 08:00 UTC pass's −3.65%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** provider split — CFGI.io 54/100 "Neutral", Bitget/feargreedmeter.com 56 "Greed", CoinStats 68 "Greed". None reach ≤25 Extreme Fear on any provider, so the Extreme-Fear R:R-floor rule doesn't apply this pass regardless of provider used.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **5 candidates cleared the screen** — STORJUSD (+29.57%, fade 0.39%, spread 0.75%, notional $105.4k), METUSD (+14.03%, fade 1.08%, spread 0.16%, notional $185.2k), BLUAIUSD (+4.00%, fade 0.79%, spread 0.11%, notional $63.1k), MORPHOUSD (+3.63%, fade 0.26%, spread 0.23%, notional $272.7k), AEROUSD (+3.14%, fade 0.94%, spread 0.07%, notional $469.6k). No AU-restricted assets (ZEC/DASH) present. STORJ's +29.57% is the largest single-pass session-gain print logged this week.
+
+**Deep check (15m closed candles as of 09:34 UTC — last fully closed candle 09:15–09:30, 09:30 candle still forming):**
+- **STORJUSD:** Two-candle acceleration passes cleanly (C09:00=0.03335>C08:45=0.03158; C09:15=0.03446>C09:00=0.03335). But the 24h high is still being set on the **currently-forming 09:30 candle** — its high climbed from 0.03611 (ticker snapshot) to 0.03637 (re-fetch 60s later) mid-check, i.e. the pump is actively extending into the still-open candle with no closed candle yet holding above the prior breakout level. **Fails confirmed-candle requirement** — same fast-continuous-pump pattern that has been correctly rejected on this gate repeatedly this week (NOCK/RAY/MET/JUP/ORCA/FET on 2026-09-11 04:00 UTC). 1h momentum (~+15-16%, well past the weekly-downtrend gate's >5% floor) would otherwise clear, but confirmed-candle is dispositive regardless.
+- **METUSD:** C(09:00)=0.2463 = C(08:45)=0.2463 (flat, zero-volume carry-forward candle) — **fails two-candle acceleration** at the first required leg, despite the second-largest session gain of the field.
+- **BLUAIUSD:** C(09:00)=0.011338 > C(08:45)=0.011303 (leg 1 passes) but C(09:15)=0.011338 = C(09:00)=0.011338 (flat, zero-volume carry-forward) — **fails two-candle acceleration** at the second leg.
+- **MORPHOUSD:** C(09:00)=2.34101 < C(08:45)=2.35091 — **fails two-candle acceleration** at the first required leg.
+- **AEROUSD:** Two-candle acceleration passes narrowly (C09:00=0.5581>C08:45=0.5579; C09:15=0.5589>C09:00=0.5581). But the true 24h high ($0.5640) was set at the 08:30 candle (closed 08:45) — **~49min stale**, outside the 30-min freshness ceiling — and live price ($0.5587) remains below it with no fresh breakout. **Fails momentum-peak-check freshness.**
+
+No candidate reached confirmed-candle-plus-freshness together, catalyst, R:R, or win-rate-kill-switch evaluation as the binding gate — STORJ (strongest mover) rejected on confirmed-candle (still-forming-candle high), AERO on stale freshness, MET/BLUAI/MORPHO on two-candle acceleration outright.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.78%). Weekly downtrend gate **ACTIVE** at −3.98%/5d (essentially unchanged from 08:00 UTC's −3.65%). Five candidates cleared the initial screen, including the week's largest single-pass gain (STORJ +29.57%), but every one failed a structural gate: confirmed-candle on an actively-extending still-forming high (STORJ), momentum-peak-check freshness on a stale high (AERO), or two-candle acceleration outright (MET, BLUAI, MORPHO). Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate. STORJ is flagged for the next pass to re-check fresh — if the pump confirms with a closed candle holding above the new high and the live intracandle fade stays under 1.5%, it would still need to clear R:R, catalyst/kill-switch, and the weekly-downtrend 1h-momentum floor (already comfortably clear at ~+15-16%).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all five screen-passers cleanly rejected on structural gates, no ambiguity, including the pass's biggest mover on a still-forming-candle technicality rather than a judgment call). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
