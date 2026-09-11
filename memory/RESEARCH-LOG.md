@@ -40907,3 +40907,24 @@ No push sent this scan sub-section — see EOD Snapshot below for the day's over
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome with zero candidates even reaching the screening stage. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 01:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (00:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, `orders` confirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $76,720.30 vs today's session open $76,542.00 → **+0.28%**. Clear.
+**Weekly trend gate:** live $76,720.30 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query) → **−4.50%/5d** — outside the ±3% band on the downside (essentially unchanged from the Sep 11 00:00 UTC pass's −4.48%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** 49/100 "Neutral" (CFGI live crypto; CoinAligator shows 47/100, also Neutral) — well above the ≤25 Extreme Fear threshold, so the Extreme-Fear R:R-floor rule doesn't apply this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 666 USD pairs (all with live ticker data). Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **zero candidates cleared the screen.** Top raw movers (VULT +40.95%, JUNO +20.99%, SAMO +13.01%, TRAC +12.81%, XTER +10.55%, SC +10.45%, FOREST +9.26%, GFI +8.95%, XCN +8.68%, KAT +7.19%, NOCK +6.70%, RAY +6.63%, RIZE +6.23%) all failed on fade and/or spread caps — the two closest, NOCK (fade 1.88%, just over the 1.5% cap) and RAY (fade 2.28%, notional $2.37M but still over cap), both already-crested pumps by the time of this check. No candidate reached deep-check (15m candle acceleration, momentum-peak freshness, R:R, or win-rate-kill-switch evaluation) since none cleared the initial screen. No AU-restricted assets (ZEC/DASH) present in the raw mover list.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.28%). Weekly downtrend gate **ACTIVE** at −4.50%/5d (essentially unchanged from the prior pass). Zero candidates cleared even the initial session-gain/fade/spread/notional screen — a clean coverage gap on this pass's market conditions, not a borderline call. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as a rejection stage since no candidate got that far.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome with zero candidates even reaching the screening stage. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
