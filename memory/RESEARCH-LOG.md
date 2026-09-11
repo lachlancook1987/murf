@@ -41387,3 +41387,29 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (nineteen candidates cleanly rejected on the weekly-downtrend gate's mandatory 1h-momentum floor, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+
+## 2026-09-11 — Scan — 18:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (17:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,194.30 vs today's session open $76,542.00 → **+0.85%**. Clear.
+**Weekly trend gate:** live $77,194.30 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query, unchanged) → **−3.91%/5d** — outside the ±3% band on the downside (remains ACTIVE, worsened from 17:00 UTC's −3.17%/5d as BTC pulled back further from $77,789 to $77,194). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** CFGI.io 54/100 "Neutral". Not Extreme Fear, so the Extreme-Fear R:R-floor rule doesn't apply this pass. BTC macro cross-check (Perplexity): quotes ranged $76,732–$79,207 across sources (CoinDesk, Binance US, CoinGecko, Binance), consistent with Kraken's live $77,194.30 within normal cross-exchange noise — no divergence-gate concern for the reference price itself.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 627 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **8 candidates cleared the screen** — VELVETUSD (+14.91%), XNYUSD (+6.72%), TRIAUSD (+4.94%), KNTQUSD (+4.61%), APRUSD (+4.51%), SUPERUSD (+4.05%), KAVAUSD (+3.63%), TRUSTUSD (+3.18%) — the smallest field logged today by a wide margin, consistent with BTC's pullback cooling the broader alt rally seen at 14:00–17:00 UTC. No AU-restricted assets (ZEC/DASH) present.
+
+**Weekly-downtrend 1h-momentum floor check (mandatory gate this pass, since the weekly downtrend gate is ACTIVE):** Computed 1h momentum from the last two closed 1h candles for all 8 screen-passers. **None cleared the mandatory >5% bar** — KNTQUSD +1.83% (closest), XNYUSD +0.72%, TRIAUSD +0.84%, KAVAUSD +0.46%, VELVETUSD 0.00%, APRUSD −0.12%, TRUSTUSD −0.35%, SUPERUSD −0.66%. All 8 rejected outright on this mandatory gate — none reached confirmed-candle, two-candle acceleration, catalyst, or win-rate-kill-switch evaluation.
+
+No candidate reached the R:R evaluation stage — all 8 screen-passers were rejected outright on the weekly-downtrend gate's mandatory 1h-momentum floor.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.85%). Weekly downtrend gate **ACTIVE** at −3.91%/5d (worsened from 17:00 UTC's −3.17% as BTC continued pulling back). Eight candidates cleared the initial screen — the smallest field today — but every one failed the weekly-downtrend gate's mandatory 1h-momentum >5% floor, the closest being KNTQUSD (+1.83%). Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all eight candidates cleanly rejected on the weekly-downtrend gate's mandatory 1h-momentum floor, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
