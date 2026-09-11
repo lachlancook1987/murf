@@ -1414,3 +1414,59 @@ None — 100% ZUSD $70.6298 (+$0.1550 ZAUD dust). No open Kraken orders. Alpaca 
 **The picture this week is really two different regimes stitched together: 5 trades under the old rules (2-3, 40% win rate, −4.13% net including the BTC excursion) through Aug 28-30, then zero trades for the four days since the Sep 2 rule overhaul despite hourly coverage and a wide candidate pool — every rejection tied to a specific, logged gate.** That's the intended behavior of a gate-protection-first strategy and not itself a problem. The real finding this review is procedural, not a trading-rule gap: the rolling win-rate kill switch this same overhaul introduced has been silently unenforced since the day it was added, and is currently sitting at 20% — a full 15 points under its own suspension floor — right as fresh capital came back onto the books. Nothing has gone wrong yet only because no candidate has cleared the structural gates far enough to reach the kill switch's check. Giving it a standing status line in TRADING-STRATEGY.md closes that gap going forward the same way two prior silent-recurrence issues (EOD mislabeling, deferred logging) were closed: by making the rule something a pass reads directly rather than something it's supposed to remember to recompute.
 
 ---
+
+## Week of 2026-09-04 to 2026-09-11 — Review Date: 2026-09-11
+
+### Context
+**Zero-trade week.** Following the Sep 4 07:00 UTC review (which found the rolling win-rate kill switch silently unenforced at 20.0%, below the 35% suspension floor, and gave it a standing status line), every single hourly pass this week — 168 passes, Sep 4 08:00 UTC through Sep 11 07:00 UTC — reached HOLD. No bot trade executed. The book has been 100% flat cash the entire week, unchanged since the Sep 4 03:20 UTC user-directed liquidation reported in last week's review. The weekly BTC downtrend gate went ACTIVE partway through the week (BTC's own 5-day change crossed below −3%) and remained active into this pass, raising the entry bar for the back half of the week; the win-rate kill switch (still 20.0%, unchanged all week — no momentum-only entries executed to roll the window) applied throughout regardless. No manual/out-of-band Kraken activity this week. No crash-gate event (BTC never approached −20%/24h). Alpaca confirmed fully flat all week, stop `a2b44cf9` still historical/canceled since 2026-05-22.
+
+### Account Snapshot (Friday 07:00 UTC pass, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $70.6298 | $70.6298 ZUSD (+$0.1550 ZAUD dust) | 0 — 100% cash |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$70.6298** | $70.6298 | 0 open |
+
+### Weekly Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Sep 4 EOD/07:00 UTC live) | $70.6298 |
+| Ending Equity (Fri Sep 11, live @ 07:34 UTC) | **$70.6298** |
+| **Week Return** | **0.00%** ($0.00) |
+| BTC Week Return | **−4.49%** ($80,890.10 → $77,257.60 live) |
+| **Bot vs BTC** | **+4.49%** (outperformed) |
+
+### Trade Summary (bot-originated)
+None. Zero bot trades this week (last bot trade remains Aug 30 — ZORA/USD stop-out, per the pre-overhaul rules; unchanged since last review).
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (closed) | 0 |
+| Wins / Losses | 0 / 0 |
+| Win Rate | N/A (no trades) |
+| Profit Factor | N/A (no trades) |
+| Open Unrealized | $0 (100% cash) |
+| Est. Fees Paid | $0.00 |
+| Hourly passes this week | 168 (Sep 4 08:00 UTC – Sep 11 07:00 UTC), all HOLD |
+
+### Open Positions (End of Week)
+None — 100% ZUSD $70.6298 (+$0.1550 ZAUD dust). No open Kraken orders. Alpaca fully closed.
+
+### Trade Quality Review
+
+**No trades to review.** The relevant finding this week is entirely about the *shape* of the HOLD streak, not any executed trade:
+- **Structural gates did the vast majority of the rejecting.** Across the week's logged passes, the dominant rejection reason was the **two-candle acceleration requirement** (a spike-then-stall or dip-first pattern), followed by the **confirmed-candle requirement** (fresh highs sitting on a still-forming candle) and **momentum-peak-check freshness** (stale highs with no confirmed breakout). These are working as designed — several passes this week (notably 2026-09-04 04:00 UTC) found a wide field of 8-10 raw screen-passers during apparent market-wide alt moves, and every one was independently rejected on a specific, documented technical gate rather than the field being waved through.
+- **The weekly BTC downtrend gate was the binding gate on the few candidates that did clear structural checks.** RUNE and DOT (2026-09-11 05:00 and 06:00 UTC passes) cleared every acceleration/confirmed-candle/freshness/fade check but were rejected outright by the gate's mandatory >5% 1h-momentum floor while BTC's 5-day trend sat below −3%. This is the gate functioning exactly as designed — banning pure-momentum entries during a confirmed weekly downtrend — and this week is the first real evidence of it binding in practice (it had gone unused in prior weeks).
+- **The win-rate kill switch (20.0%, ACTIVE since 2026-09-04) never became the binding gate for any single candidate this week** — every momentum-only candidate that reached the point of being technically clean was still caught by either the weekly downtrend gate or a structural check first. It remains a live, unrolled constraint: with zero momentum-only entries this week, the trailing-10 window is unchanged from last review (2W/8L, still driven by the Aug 21-29 losing streak). It will only start rolling off those old losses once new momentum-only entries actually clear every other gate.
+- **No profile violations, no operational issues.** No orphan stops, no unprotected positions, no logging gaps, no EOD-labeling errors — every EOD snapshot this week was correctly written on that day's final pass with a flat, unchanged book.
+- **Schedule drift (informational, not a strategy issue):** passes have consistently fired ~30-35 minutes past the hour throughout the week (e.g. 22:34, 23:34, 00:34, 02:34, 03:33, 04:33, 05:35, 06:33, 07:34 UTC on 2026-09-10/11), a steady, unchanging offset rather than a growing one. This is a trigger-scheduling matter outside any session's reach per CLAUDE.md's Routine Cadence section — noted for continuity, not actionable from within a pass.
+
+### Concrete Adjustments (added 2026-09-11)
+
+**None.** With zero trade volume this week, there is no realized-outcome data to tune the structural gates, the win-rate kill switch threshold, or the weekly-downtrend-gate momentum floor against. The one candidate pattern worth flagging for future review (not a rule change now): RUNE and DOT both cleared every gate except the weekly-downtrend >5% momentum floor twice in the same morning (05:00 and 06:00 UTC passes) — if this becomes a recurring shape (technically-clean momentum candidates repeatedly blocked only by the downtrend gate, never by a structural or catalyst check), a future review with more data should look at whether the >5% floor is calibrated correctly or unnecessarily strict relative to the 3%/5% standard T1/T2 structure it's being measured against. Observation only, per the Gate-Rejection Outcome Tracking convention in TRADING-STRATEGY.md — not acted on this review.
+
+### Key Lesson
+**A full week of disciplined inaction.** Zero trades, zero drawdown, zero operational errors, and the bot finished **+4.49 points ahead of BTC** purely by staying in cash through a real BTC weekly downtrend that the downtrend gate correctly detected and restricted against. This is the intended behavior of a gate-protection-first strategy during a genuinely unfavorable tape, not a gap to fix — the gates (acceleration, confirmed-candle, freshness, downtrend floor) each did real work this week rejecting specific, named candidates rather than acting as a blanket freeze. The one open question carried forward is whether the win-rate kill switch and downtrend gate are now compounding into an overly conservative regime — worth watching, not yet worth changing, since no trade this week was a false negative by any objective measure (every RUNE/DOT-style near-miss was reasonably rejected against the current rules, and the structural failures were genuine fakeouts by the deep-check evidence in RESEARCH-LOG.md).
+
+---
