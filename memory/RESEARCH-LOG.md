@@ -41462,3 +41462,30 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no operational issues, crash gate clear, HOLD is a correct/expected outcome with the weekly downtrend gate active and no candidate close to clearing it. The ~33-34min scheduler drift continues (consistent with every pass today) but is an already-flagged, recurring, non-worsening pattern — not re-escalating this pass.
+
+---
+
+## 2026-09-11 — Scan — 21:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (20:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,347.00 vs today's session open $76,542.00 → **+1.05%**. Clear (not down >20%).
+**Weekly trend gate:** live $77,347.00 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, confirmed fresh via direct Kraken public OHLC 1440-interval query this pass) → **−3.72%/5d** — outside the ±3% band on the downside (remains **ACTIVE**, essentially unchanged from 20:00 UTC's −3.72%). Pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 54/100 "Neutral" (a second source read 56/100 "Greed"); not Extreme Fear either way, so the Extreme-Fear R:R-floor rule stays inactive — moot this pass regardless since no candidate qualifies.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **11 candidates cleared the screen** — STBLUSD (+7.71%), APRUSD (+7.15%), XNYUSD (+6.74%), TRIAUSD (+6.10%), NILUSD (+6.04%), TRUSTUSD (+4.49%), BATUSD (+4.29%), BICOUSD (+3.69%), DOSUSD (+3.59%), CHZUSD (+3.31%), ALGOUSD (+3.08%). No AU-restricted assets (ZEC/DASH) present.
+
+**Weekly-downtrend 1h-momentum floor check (mandatory gate this pass, since the weekly downtrend gate is ACTIVE):** Computed 1h momentum from the last two closed 1h candles (via direct OHLC interval=60) for all 11 screen-passers. **None cleared the mandatory >5% bar** — BATUSD +1.51% (closest), NILUSD +1.18%, TRIAUSD +0.83%, CHZUSD +0.65%, TRUSTUSD +0.54%, ALGOUSD +0.33%, STBLUSD +0.22%, APRUSD −0.08%, BICOUSD −0.05%, DOSUSD −0.05%, XNYUSD −0.86%. All 11 rejected outright on this mandatory gate — none reached confirmed-candle, two-candle acceleration, catalyst, or win-rate-kill-switch evaluation.
+
+No candidate reached the R:R evaluation stage — all 11 screen-passers were rejected outright on the weekly-downtrend gate's mandatory 1h-momentum floor.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +1.05%). Weekly downtrend gate **ACTIVE** at −3.72%/5d (essentially unchanged from 20:00 UTC's −3.72%). Eleven candidates cleared the initial screen, led by STBLUSD's +7.71% session gain, but every one failed the weekly-downtrend gate's mandatory 1h-momentum >5% floor, the closest being BATUSD (+1.51%) — well short. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all eleven candidates cleanly rejected on the weekly-downtrend gate's mandatory 1h-momentum floor, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
