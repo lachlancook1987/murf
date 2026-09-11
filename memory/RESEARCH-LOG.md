@@ -41303,3 +41303,35 @@ No candidate reached the R:R, catalyst-freshness-vs-momentum-only, or win-rate-k
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome despite the largest candidate field logged this week (a genuine market-wide rally cleanly rejected on acceleration/confirmed-candle/cross-exchange-divergence gates, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 15:00 UTC (fired 15:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (14:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $78,744.20 vs today's session open $76,542.00 → **+2.88%**. Clear.
+**Weekly trend gate:** live $78,744.20 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, unchanged) → **−1.98%/5d** — back inside the ±3% band (was ACTIVE most of the day, cleared at the 14:00 UTC pass on BTC's intraday rally and remains clear). **CLEAR** — standard entry rules apply, no mandatory >5% 1h-momentum floor.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** CFGI.io 54/100 "Neutral" (provider split: Bitget/alternative.me 56 "Greed"). None reach ≤25 Extreme Fear, so the Extreme-Fear R:R-floor rule doesn't apply this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs (the market-wide alt rally flagged at 14:00 UTC is continuing). Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **68 candidates cleared the screen**, led by KTAUSD (+19.42%), AEROUSD (+13.64%), FARTCOINUSD (+10.96%), NEARUSD (+10.74%), PENDLEUSD (+8.43%), BABYUSD (+8.25%), CHIPUSD (+7.87%), JTOUSD (+7.85%), STRKUSD (+7.54%), STBLUSD (+7.32%), and dozens more in the 3-7% range. XZECUSD also cleared the screen (+11.89%) but is pre-emptively excluded per TRADING-STRATEGY.md's AU jurisdiction-restricted-assets note.
+
+**Deep checks (two-candle acceleration on last two closed 15m candles — 15:00 vs 14:45, 15:15 vs 15:00 — now=15:34/15:35 puts the 15:30 candle still forming):** Ran on the top 18 by session gain (KTA, AERO, FARTCOIN, NEAR, PENDLE, BABY, CHIP, JTO, STRK, STBL, MON, MNT, AAVE, OP, EIGEN, SHIB, HYPE, ONDO).
+- **KTAUSD, AEROUSD:** both pass two-candle acceleration cleanly, but both **fail the confirmed-candle requirement** — their 24h highs (0.0990 and 0.6156 respectively) are sitting in the still-forming 15:30 candle, not yet held by any closed candle; classic actively-extending-pump pattern.
+- **NEARUSD, PENDLEUSD:** fail **momentum-peak-check freshness** — NEAR's 24h high (2.7344) was set at the 14:30 candle (~64min stale) with price since faded 1.27% below it; PENDLE's high (2.148) predates even the 5-candle lookback window (>75min stale), far outside the 30-min ceiling.
+- **STRK, MNT, SHIB, HYPE:** fail two-candle acceleration outright (flat or lower second leg).
+- **CHIP, JTO, MON, AAVE, OP, EIGEN, ONDO, STBL:** mixed rejections on acceleration and/or freshness — none reached confirmed-candle-plus-freshness together.
+- **BABYUSD — sole passer of every technical gate:** two-candle acceleration passes (C14:45=0.01114 < C15:00=0.01123 < C15:15=0.01125, both legs higher). 24h high (0.01131) confirmed by the closed 15:15 candle itself (not the forming 15:30 candle, whose high so far is only 0.01129) — fresh, ~5-20min old, well inside the 30-min ceiling. Live fade 0.18%, spread 0.09% (bid 0.011270/ask 0.011280), both well inside caps. Volume on the breakout candles (104.7k, 90.1k) confirms real participation.
+
+**Catalyst check (BABYUSD, via Perplexity):** BABY's only identifiable catalyst is Kraken's standing Babylon BTC-staking product (a long-running feature, not fresh news) — Perplexity's own reference prices (CoinGecko ~$0.01051, down 1.5%/24h; Kraken's own price page ~$0.010) sit below Kraken's live $0.0113, consistent with the intraday pump not yet reflected in slower external sources rather than a ticker-identity mismatch. Critically, Perplexity flags a **token unlock (dated 2026-09-10)** as the live near-term catalyst, and characterizes it as **bearish** (added sell pressure from new supply) — the opposite direction of today's rally. **No fresh (<6h) bullish catalyst found.** With the momentum-only win-rate kill switch ACTIVE (20.0%, below the 35% floor) and no catalyst to reclassify this as catalyst-confirmed, BABY is a pure-momentum setup and is **blocked by the kill switch** despite clearing every technical gate.
+
+No candidate reached the R:R evaluation stage — the 67 other screen-passers were rejected on acceleration, confirmed-candle, or freshness, and the sole all-technical-gates passer (BABY) was blocked by the win-rate kill switch for lacking a confirmed fresh catalyst.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +2.88%). Weekly downtrend gate **CLEAR** (−1.98%/5d, remains inside band after clearing at 14:00 UTC). Sixty-eight candidates cleared the initial screen amid a continuing market-wide alt rally; all but one were rejected on acceleration, confirmed-candle, or freshness; the sole all-technical-gates passer (BABY) was blocked by the momentum-only win-rate kill switch after Perplexity found no fresh bullish catalyst (only a bearish token-unlock overhang).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one candidate reached the final gate and was cleanly blocked by the standing win-rate kill switch for lack of a catalyst, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
