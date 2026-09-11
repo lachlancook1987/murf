@@ -40979,3 +40979,38 @@ No candidate reached confirmed-candle-vs-catalyst, R:R, or win-rate-kill-switch 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (sole candidate cleanly rejected on independent structural gates, no ambiguity, no drift from the prior pass). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 04:00 UTC (fired 04:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (03:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken last) $77,114.20 vs today's session open $76,542.00 → **+0.75%**. Clear.
+**Weekly trend gate:** live $77,114.20 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, direct Kraken public OHLC 1440-interval query, unchanged reference) → **−4.01%/5d** — outside the ±3% band on the downside (improved slightly from the 03:00 UTC pass's −4.52%, BTC ticking up this hour). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** 69/100 "Greed" (Bitget/FearGreedMeter consensus; Binance Square 67, CoinStats 68 — broadly consistent) — well above the ≤25 Extreme Fear threshold, so the Extreme-Fear R:R-floor rule doesn't apply this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs (635 with usable ticker data). Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **10 candidates cleared the screen** — NOCKUSD (+19.43%), RAYUSD (+19.25%), METUSD (+6.39%), JUPUSD (+5.82%), XTZUSD (+4.95%), ORCAUSD (+4.84%), FETUSD (+4.76%), EIGENUSD (+4.25%), DOTUSD (+3.50%), GRASSUSD (+3.02%). No AU-restricted assets (ZEC/DASH) present. Notably wide candidate count this pass — a market-wide alt move appears to be underway across the 03:45–04:30 UTC window.
+
+**Deep check (15m OHLC as of 04:33 UTC — last fully closed candle 04:15–04:30, 04:30 candle still forming):**
+- **NOCKUSD:** C(04:00)=0.03844 < C(03:45)=0.03943 — **fails two-candle acceleration** at the first required leg (dip-then-recover).
+- **XTZUSD:** C(04:15)=0.26609 = C(04:00)=0.26609 (flat, not higher) — **fails two-candle acceleration** at the second required leg.
+- **RAYUSD:** Passes two-candle acceleration (C(04:00)=1.662>C(03:45)=1.634; C(04:15)=1.723>C(04:00)=1.662). But live re-check found the 24h high ($1.75) was set on the **currently-forming 04:30 candle** — **fails confirmed-candle requirement**. Independently, live price ($1.712, bid $1.714) has already retraced **2.17%** off that fresh high — **fails the live intracandle-fade cap (1.5%)** too, a double reject.
+- **METUSD:** Passes two-candle acceleration (C(04:00)=0.2250>C(03:45)=0.2144; C(04:15)=0.2278>C(04:00)=0.2250). 24h high ($0.2297) also set on the still-forming 04:30 candle — **fails confirmed-candle requirement**. 1h momentum (03:15 close 0.2142 → live 0.2297) would clear the weekly-downtrend gate's >5% floor at **+7.24%**, but the confirmed-candle gate is dispositive regardless.
+- **JUPUSD:** Passes two-candle acceleration (C(04:00)=0.23381>C(03:45)=0.23100; C(04:15)=0.23788>C(04:00)=0.23381). 24h high ($0.23955) again set on the still-forming 04:30 candle — **fails confirmed-candle requirement**.
+- **ORCAUSD:** Passes two-candle acceleration (C(04:00)=1.439>C(03:45)=1.438; C(04:15)=1.468>C(04:00)=1.439). 24h high ($1.472) again set on the still-forming 04:30 candle — **fails confirmed-candle requirement**.
+- **FETUSD:** Passes two-candle acceleration (C(04:00)=0.1700>C(03:45)=0.1690; C(04:15)=0.1714>C(04:00)=0.1700). 24h high ($0.1724) again set on the still-forming 04:30 candle — **fails confirmed-candle requirement**.
+- **EIGENUSD:** Passes two-candle acceleration. But 24h high is actually **$0.2265, set 2026-09-10 20:15 UTC** (~8h stale) — live price has not broken back above it (04:30 candle high only reached $0.2236) — **fails momentum-peak-check freshness** (stale high, no confirmed breakout).
+- **DOTUSD:** Passes two-candle acceleration. 24h high is **$1.1384, set 2026-09-11 00:45 UTC** (~3h45m stale) — live price has not broken back above it (04:30 candle high only reached $1.1379) — **fails momentum-peak-check freshness**.
+- **GRASSUSD:** Passes two-candle acceleration. 24h high is **$0.3536, set 2026-09-10 17:15 UTC** (~11h stale) — live price ($0.3513) sits well below it, no fresh breakout — **fails momentum-peak-check freshness**. Weakest signal of the ten anyway (session gain only 3.02%).
+
+No candidate reached catalyst confirmation, R:R, or win-rate-kill-switch evaluation as the binding gate — every one of the ten rejected outright on two-candle acceleration, the confirmed-candle requirement (five candidates whose fresh 24h high sits on the still-forming 04:30 candle — a market-wide pump appears to be actively building into this exact candle across several alts simultaneously), or momentum-peak-check freshness (three candidates whose highs are hours-stale with no fresh breakout).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.75%). Weekly downtrend gate **ACTIVE** at −4.01%/5d (improved from 03:00 UTC's −4.52%). Ten candidates cleared the initial screen — the widest field in recent passes — but every one failed a structural gate: acceleration (2), confirmed-candle on a still-forming fresh high (5), or stale-high freshness (3). This looks like a market-wide alt move actively building into the still-forming 04:30 candle; correctly held pending confirmation on the next pass rather than chased. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (a wide candidate field, all correctly deferred pending candle confirmation rather than chased on still-forming highs). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
