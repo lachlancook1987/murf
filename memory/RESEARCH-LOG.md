@@ -41043,3 +41043,34 @@ No candidate reached catalyst confirmation, R:R, or win-rate-kill-switch evaluat
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two candidates technically clean but blocked by the active weekly-downtrend momentum floor, two failed acceleration outright). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-11 — Scan — 06:00 UTC (fired 06:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (05:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/canceled (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken ask) $77,179.60 vs today's session open $76,542.00 → **+0.83%**. Clear.
+**Weekly trend gate:** live $77,179.60 vs 5-trading-day-ago daily close $80,334.30 (2026-09-06 EOD reference, unchanged) → **−3.93%/5d** — outside the ±3% band on the downside (essentially unchanged from the 05:00 UTC pass's −4.08%). **ACTIVE** — pure momentum entries banned; any entry requires 1h momentum **>5%** AND a fresh catalyst **<3h old**.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window.
+
+**Fear & Greed (Perplexity, context only):** provider split — CFGI.io 54/100 "Neutral", CoinStats 68 "Greed", Bitget 69 "Greed". None reach ≤25 Extreme Fear, so the Extreme-Fear R:R-floor rule doesn't apply this pass regardless of provider used.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across all 643 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **4 candidates cleared the screen** — METUSD (+6.86%, fade 1.37%, spread 0.35%, notional $157.6k), RUNEUSD (+6.07%, fade 0.91%, spread 0.37%, notional $104.4k), DOTUSD (+5.79%, fade 0.36%, spread 0.01%, notional $1.73M), UNIUSD (+3.30%, fade 1.32%, spread 0.04%, notional $4.40M). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check (15m closed candles as of 06:35 UTC — last fully closed candle 06:15–06:30, 06:30 candle still forming):**
+- **METUSD:** Two-candle acceleration passes (C06:00=0.2286>C05:45=0.2265; C06:15=0.2294>C06:00=0.2286). But confirmed-closed-candle 24h high is **0.2339, set at the 04:45 candle** — ~110 min old, well outside the 30-min freshness ceiling, and live price (0.2307) sits below it with no fresh breakout. **Rejected on momentum-peak-check freshness** — the pump has already crested.
+- **RUNEUSD:** Two-candle acceleration passes narrowly (C06:00=0.533>C05:45=0.532; C06:15=0.539>C06:00=0.533). Confirmed-closed-candle 24h high is **0.547, set at the 05:15 candle** — ~80 min old, outside the 30-min ceiling; live price (0.542) remains below it, no fresh breakout. **Rejected on momentum-peak-check freshness.**
+- **DOTUSD:** Two-candle acceleration passes robustly (C06:00=1.1572>C05:45=1.1494; C06:15=1.1592>C06:00=1.1572). Confirmed-closed-candle 24h high is **1.1630, set at the just-closed 06:15 candle** (~5 min old — fresh, passes confirmed-candle and freshness). Live intracandle fade vs the live 24h high (1.1642, sits on the still-forming candle) is only **0.37%**, well under the 1.5% cap. Technically clean on every structural gate — but **1h momentum is only ~1.1–1.6%** (C05:30=1.1477 or C05:15=1.1414 vs live ask 1.1619), far short of the weekly-downtrend gate's mandatory **>5%** 1h-momentum floor while that gate is ACTIVE. **Rejected** — dispositive regardless of catalyst.
+- **UNIUSD:** C06:00=6.2023>C05:45=6.1661 (passes leg1) but C06:15=6.1710<C06:00=6.2023 (fails leg2 — stalled/reversed into the close). **Fails two-candle acceleration.**
+
+No candidate reached catalyst confirmation, R:R, or win-rate-kill-switch evaluation as the binding gate this pass — DOT cleared every structural/technical/freshness gate but was rejected outright by the weekly-downtrend gate's mandatory >5% 1h-momentum floor (best read ~1.6%, not close); MET and RUNE both failed on stale (>30min) confirmed-candle highs with price already receded from the crest; UNI failed two-candle acceleration.
+
+**Schedule-drift note:** this pass fired ~06:33 UTC, ~33 min past the hour — consistent with the pattern across essentially every pass in the last 24h (22:34, 23:34, 00:34, 02:34, 03:33, 04:33, 05:35, now 06:33), i.e. a stable ~33–35 min offset rather than landing near the top of the hour. Per CLAUDE.md this is a scheduling/trigger-config matter outside any session's reach, not something to fix here; flagged for continuity since the pattern remains consistent rather than resolving on its own. No push — steady-state, previously observed, not new or worsening.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.83%). Weekly downtrend gate **ACTIVE** at −3.93%/5d (essentially unchanged from 05:00 UTC's −4.08%). Four candidates cleared the initial screen; DOT passed every technical/freshness gate but fell well short of the weekly-downtrend gate's >5% 1h-momentum requirement; MET and RUNE both had already-crested (>30min stale) confirmed highs; UNI failed two-candle acceleration outright. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for any candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one candidate technically clean but blocked by the active weekly-downtrend momentum floor, two rejected on stale highs, one failed acceleration outright). Schedule drift noted above is steady-state, not new. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
