@@ -41653,3 +41653,33 @@ Two candidates (CHZUSD, KNCUSD) cleared every structural/technical gate (confirm
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two clean technical setups correctly blocked by the win-rate kill switch, two others cleanly rejected on structural gates). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 04:00 UTC (fired 04:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (03:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,269.30 vs today's session open $77,210.90 → +0.08%. Clear (not down >20%). 24h range $76,000.00–$79,832.30.
+**Weekly trend gate:** live $77,269.30 vs 5-trading-day-ago daily close $79,090.30 (2026-09-07 EOD, same fixed reference used every pass this window) → **−2.30%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE** (unchanged from 02:00/03:00 UTC). Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 39/100 "Fear" (unchanged from 03:00 UTC pass). Not Extreme Fear (≤25), so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event — same forward-dated narratives as the 03:00 UTC pass (Sept 15–16 FOMC, CLARITY Act Senate cloture vote, Circle Arc mainnet launch Sept 16, Treasury buyback program). ZEC ETF-filing and UNI burn narratives mentioned as general drivers, not dated <6h catalysts (ZEC also AU-restricted, moot regardless).
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, spread ≤1%, notional >$50k: top passers were **SCUSD** (+9.55%, fade 9.42%), **CHZUSD** (+9.44%, fade 0.00% — sitting at 24h high), **KNCUSD** (+5.58%, fade 1.10%), **ETHFIUSD** (+5.27%, fade 2.03%), **XTZUSD** (+5.00%, fade 2.19%), **PENDLEUSD** (+3.73%, fade 2.93%), **CLOUDUSD** (+3.56%, fade 1.45%), **APTUSD** (+3.55%, fade 5.19%), **PYTHUSD** (+3.48%, fade 2.73%), **USELESSUSD** (+3.35%, fade 15.07%), **STXUSD** (+3.28%, fade 2.28%). No AU-restricted assets (ZEC/DASH) present. Live-intracandle-fade check (≤1.5%) immediately eliminates all but CHZUSD, KNCUSD, and CLOUDUSD.
+
+**Deep check on the three fade-survivors (direct 15m OHLC, last fully-closed candle per API `last` marker = 04:15 at 04:34 UTC check time — the 04:30 candle is still forming):**
+- **CHZUSD:** 24h high $0.01531 sits on the **still-forming** 04:30 candle (live price = high, fade 0.00% is itself the tell) — **fails confirmed-candle outright**, same failure mode as its 02:00 UTC rejection. Also fails two-candle acceleration independently: last two *closed* candles were 04:00 (C=0.01525) → 04:15 (C=0.01522), a lower close, not higher. Double rejection.
+- **KNCUSD:** 24h high $0.1359 sits on the 03:30 candle, which **is** closed (confirmed-candle passes), but that candle itself closed at 03:45 — **49 minutes stale** at 04:34 UTC, past the 30-min freshness ceiling, and price has since declined to $0.1344 with no fresh breakout above $0.1359 and no new catalyst. **Fails momentum-peak-check freshness** (stale-and-declining case the rule exists to block).
+- **CLOUDUSD:** Direct `kraken.sh quote CLOUD/USD` shows ask $0.0407 / bid $0.0402 → spread **1.24%**, above the 1% hard-skip threshold (the ticker-batch estimate of 0.99% understated it — `kraken.sh quote` is the authoritative mandatory check per Entry Rules). **Fails spread gate**, hard skip. Also would have failed confirmed-candle separately (24h high $0.0413 sits on the still-forming 04:30 candle).
+
+All three rejected on structural/technical gates before reaching catalyst-confirmation or win-rate-kill-switch evaluation.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.08% session). Weekly downtrend gate INACTIVE (−2.30%/5d). CHZUSD (fails confirmed-candle + two-candle acceleration), KNCUSD (fails momentum-peak-check freshness, high now 49min stale and declining), and CLOUDUSD (fails mandatory spread gate at 1.24%, also confirmed-candle) all cleanly rejected. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (three technical screen-passers all cleanly rejected on distinct structural gates, no ambiguity). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
