@@ -41941,3 +41941,36 @@ No candidate cleared both momentum legs together this pass (KTA's 4h+7.00%/1h+0.
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate reached even the acceleration/freshness stage on momentum magnitude alone; no candidate needed the kill switch or R:R floor to be rejected). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 13:00 UTC (fired 13:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (12:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,249.70 vs today's session open $77,210.90 → +0.05%. Clear (not down >20%). 24h range $76,821.10–$79,832.30.
+**Weekly trend gate:** live $77,249.70 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD close, same fixed reference used every pass this window, reconfirmed via direct Kraken public OHLC 1440-interval query) → **−2.33%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 63/100 "Greed" (Alternative.me-style); 53-54 "Neutral" per another tracker — methodology spread, consistent with prior passes. Not Extreme Fear (≤25) under any reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event. Same forward-dated narrative as recent passes — Fed policy expectations ahead of the Sept 15-16 FOMC decision, Treasury buybacks/yields ("debasement trade"), ETF flow dynamics (BTC/XRP), and the CLARITY Act Senate vote. ZEC's Grayscale ETF-filing narrative and HYPE (Trump remarks) cited as altcoin-specific but ZEC is AU-restricted (skip per standing rule) and neither is a live Kraken-sourced candidate this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs (all 622 returned usable ticker data). Filtered for session gain ≥3%, notional >$50k, spread ≤1%: 32 pairs passed, topped by LSKUSD (+67.17%), OXTUSD (+33.13%), VTHOUSD (+20.86%), FLOCKUSD, LRCUSD, TREEUSD, USELESSUSD, AKEUSD, ETHFIUSD, PENDLEUSD, SCUSD, KTAUSD, KAVAUSD, BERAUSD, STXUSD, VETUSD, MOGUSD, WALUSD, UNIUSD, SOMIUSD, ZROUSD, PYTHUSD, SYRUPUSD, EIGENUSD, GRTUSD, MINAUSD, INJUSD, KATUSD, CROUSD, SKYUSD, NPCUSD, ZAMAUSD rounding out the list. Applying the ≤1.5% live-intracandle-fade cap eliminated all but eight: **AKEUSD** (fade 1.16%), **PENDLEUSD** (0.41%), **KAVAUSD** (0.98%), **STXUSD** (0.88%), **VETUSD** (1.22%), **GRTUSD** (0.00%), **CROUSD** (0.41%), **SKYUSD** (0.86%) — carried to deep check. No AU-restricted assets (ZEC/DASH) present in the surviving shortlist.
+
+**Deep check (15m OHLC; two-candle acceleration = each of the last two closed candles closes strictly higher than the prior candle's close; 1h/4h momentum must both clear the 3%/5% signal bar together; freshness ceiling this pass = min(30min, ~34min since 12:33 UTC pass) ≈ 30min):**
+- **AKEUSD:** Closest to the momentum bar — 4h +6.02% clears, but **1h only +1.82%** fails the paired 1h>3% requirement. Two-candle acceleration also fails (closes ...01541→0.0153543→0.0154981, a dip on the middle leg). 24h high 18.8min old (fresh). Rejected on momentum magnitude and acceleration independently.
+- **PENDLEUSD:** Passes two-candle acceleration (closes 2.179→2.19→2.209, each strictly higher) and confirmed-candle (24h high 18.8min old, on a closed candle), fade only 0.41%. But 1h momentum only +2.23% and 4h only +2.42% — both short of the 3%/5% signal bar. Rejected on weak momentum despite passing every structural gate.
+- **KAVAUSD:** 1h +2.01%, 4h +3.50% — both short of the bar; also fails acceleration (dip on final leg). Rejected.
+- **GRTUSD:** Passes acceleration, but 24h high sits on the **currently-forming candle** (age 3.8min) — fails confirmed-candle independently. Momentum also weak (1h +0.99%, 4h +2.17%). Rejected on two grounds.
+- **STXUSD, VETUSD, CROUSD:** All show flat-to-negative 1h momentum (−0.45% to +0.10%) and weak 4h momentum (0.33%–1.56%) — rejected on weak momentum without further structural check.
+- **SKYUSD:** Passes acceleration but 24h high is 1248min (20.8h) stale — fails freshness by a wide margin; momentum also flat (1h +0.14%, 4h −0.05%). Rejected.
+
+No candidate cleared both momentum legs together this pass — AKEUSD (4h +6.02%/1h +1.82%) was closest, same failure pattern (1h leg short) as KTAUSD in the 11:00/12:00 UTC passes. PENDLEUSD was the only candidate to pass every structural gate (acceleration, confirmed-candle, fade cap) but fell short on momentum magnitude alone.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.05% session). Weekly downtrend gate INACTIVE (−2.33%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). No candidate among 32 raw session-gain passers and 8 fade-cap survivors cleared both the 1h>3% and 4h>5% momentum legs together; PENDLEUSD passed every structural gate but fell short on momentum magnitude; AKEUSD was closest on the 4h leg but failed the 1h leg and acceleration. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (structurally-clean candidate rejected only on momentum magnitude; closest momentum candidate rejected on two independent structural gates; no candidate needed the kill switch or R:R floor to be rejected). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
