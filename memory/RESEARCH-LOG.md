@@ -41712,3 +41712,39 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one clean technical-gate survivor correctly blocked for lack of a confirmed catalyst under the active kill switch; three other movers cleanly rejected on spread/fade gates before that). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 06:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (05:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,273.60 vs today's session open $77,210.90 → +0.08%. Clear (not down >20%). 24h range $76,000.00–$79,832.30.
+**Weekly trend gate:** live $77,273.60 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD, same fixed reference used every pass this window) → **−2.30%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE** (consistent with 04:00/05:00 UTC). Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 39/100 "Fear" per CoinAligator (down from 49 yesterday, 52 last week); CFGI.io cites 54 "Neutral" (methodology spread, consistent with prior passes). Not Extreme Fear (≤25) under either reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event — same forward-dated narratives as prior passes (Sept 15–16 FOMC, CLARITY Act Senate cloture vote Sept 15, Treasury buyback program). Zcash (ETF filing), Hyperliquid (ATH on Trump remarks), UNI (fee-switch burn), Bittensor/TAO (pending SEC ETF decision) cited as general altcoin drivers, none dated <6h. ZEC also AU-restricted, moot regardless.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, ranked by 24h change with notional/volume filter. Top movers with real notional: **LSKUSD** (+39.50%, fade 9.98%), **VTHOUSD** (+29.91%, fade 4.98%), **OXTUSD** (+28.22%, fade 25.75%), **NOCKUSD** (+20.25%, fade 8.94%), **VETUSD** (+6.84%, fade 0.32%), **KNCUSD** (+6.60%, fade 0.15%), **STXUSD** (+5.21%, fade 0.45%), **MOVRUSD** (+5.16%, fade 0.20%), **SOMIUSD** (+4.79%, fade 0.14%), **MASKUSD** (+3.82%, fade 0.65%). Live-intracandle-fade check (≤1.5%) eliminates LSK/VTHO/OXT/NOCK outright; VET/KNC/STX/MOVR/SOMI/MASK all pass fade and spread (0.08–0.69%, all ≤1%).
+
+**Deep check (15m OHLC, last closed candle per API `last` marker ≈19min old at check time; forming candle ≈4min old) on the six fade/spread survivors — two-candle acceleration (each of the last two closed candles must close higher than the prior candle's close):**
+- **VETUSD:** Closes 0.007659→0.007745→0.007793 (each higher) — **passes acceleration**. Confirmed-candle: 24h high $0.007818 sits on the second-to-last *closed* candle (not the still-forming one) — **passes confirmed-candle**. Momentum-peak freshness: high set within the last ~4–19min — **passes**. **Clears every technical/structural gate.**
+- **MOVRUSD:** Closes 0.7575→0.7583→0.7626 (each higher) — **passes acceleration**, confirmed-candle and freshness both pass (24h high $0.7636 on the same closed candle, ~4-19min old). **Clears every technical/structural gate.** Notional thin ($15.4k/24h).
+- **KNCUSD:** Closes 0.1345→0.1344→0.1352 — second-to-last candle (0.1344) closed *lower* than the one before it (0.1345) — **fails acceleration** (choppy, not building).
+- **STXUSD:** Closes 0.2635→0.2635→0.2657 — flat, not strictly higher, between the first two — **fails acceleration**.
+- **SOMIUSD:** Closes 0.1466→0.1462→0.1465 — second-to-last candle closed lower than prior — **fails acceleration**.
+- **MASKUSD:** Last two 15m candles both printed zero volume (stale/illiquid book at this granularity) — no real intracandle structure to evaluate acceleration on — **fails on data quality**, skip.
+
+**Catalyst check on the two structural survivors (Perplexity):**
+- **VETUSD:** Cited catalyst is "Coinbase support" driving a sharp move plus the Sept 16 Interstellar/VIP-255 upgrade (future-dated, not a current trigger). Follow-up query confirmed the Coinbase VET-support announcement is from **September 12, 2023** — stale by three years, not fresh news — and explicitly found **no timestamped VET news within the last 6 hours**. **Fails the confirmed-<6h-catalyst requirement** — momentum-only.
+- **MOVRUSD:** No fresh coin-specific catalyst; the one live narrative is *bearish* (Binance Monitoring Tag / delisting-risk overhang from Aug 11, unrelated to today's move) with analysts attributing the price action to sentiment/rotation, not a new development. **Fails the confirmed-<6h-catalyst requirement** — momentum-only, and the underlying overhang is a further reason not to chase it even if the kill switch were inactive.
+- Because the momentum-only win-rate kill switch is **ACTIVE** (suspending momentum-only entries entirely regardless of R:R), and neither VET nor MOVR has a confirmed <6h catalyst, **neither can be entered this pass** despite VET clearing every technical/structural gate cleanly.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.08% session). Weekly downtrend gate INACTIVE (−2.30%/5d). VETUSD was the cleanest technical/structural-gate survivor of a 622-pair sweep (two-candle acceleration, confirmed-candle, fresh peak, tight spread, minimal fade) but lacks a confirmed <6h catalyst — the cited "Coinbase support" driver is stale 2023 news — and the active momentum-only win-rate kill switch (20.0%, below the 35% floor) blocks entry without one. MOVRUSD cleared the same technical gates but also lacks a catalyst and carries an unrelated bearish delisting-risk overhang. KNC/STX/SOMI/MASK rejected on failed two-candle acceleration or data quality; LSK/VTHO/OXT/NOCK rejected on live-intracandle-fade. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one clean technical-gate survivor correctly blocked for lack of a confirmed catalyst under the active kill switch, a second technical survivor rejected for the same reason plus an unrelated bearish overhang, remaining candidates rejected on structural gates). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
