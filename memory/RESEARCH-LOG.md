@@ -42225,3 +42225,38 @@ No candidate cleared the full gate chain this pass. KAVAUSD and REZUSD were the 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome; the two closest candidates (KAVAUSD, REZUSD) were both cleanly rejected on the confirmed-candle requirement, not a near-miss worth flagging. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+
+## 2026-09-12 — Scan — 22:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (21:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,202.80 vs today's session open $77,210.90 → −0.01% (flat). Clear (not down >20%). 24h range $76,977.30–$77,490.00.
+**Weekly trend gate:** live $77,202.80 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD close, same fixed reference used every pass this window) → **−2.39%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open. (Not reached this pass — no candidate survived structural gates to this stage.)
+
+**Fear & Greed (Perplexity, context only):** CFGI.io 53 "Neutral"; MarginPad/Alternative.me 63 "Greed"; CoinAligator 39 "Fear" — same methodology spread as prior passes. Not Extreme Fear (≤25) under any reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event. Same forward-dated narrative as recent passes — Fed's Sep 15-16 FOMC decision, Treasury buyback/yield dynamics, CLARITY Act vote, BTC/XRP ETF flows. ZEC, HYPE, UNI, SOL cited as idiosyncratic movers on ETF/tokenomics themes, none tied to a live Kraken-sourced candidate this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, notional >$50k, spread ≤1%: 39 pairs passed, topped by GRIFFAINUSD (+39.39%), FLOCKUSD (+30.09%), REZUSD (+24.98%), AKEUSD, VTHOUSD, TREEUSD, LRCUSD, SCUSD, BERAUSD, KAVAUSD, PENDLEUSD, KTAUSD, USELESSUSD, PYTHUSD, EULUSD, GOATUSD, CROUSD, PUMPUSD, UNIUSD, AVLUSD, STXUSD, SOMIUSD, MOGUSD, ETHFIUSD, INJUSD, ACUUSD, SAGAUSD, CLOUDUSD, KNTQUSD, WLFIUSD, CELOUSD, WUSD, ZROUSD, XTZUSD, VVVUSD, PEPEUSD, VETUSD, SYRUPUSD, SUSHIUSD rounding out the list. Applying the ≤1.5% live-intracandle-fade cap eliminated all but seven: **KNTQUSD** (0.00%), **CROUSD** (0.18%), **SAGAUSD** (0.46%), **AKEUSD** (0.52%), **GOATUSD** (0.56%), **PEPEUSD** (0.64%), **SUSHIUSD** (0.80%) — carried to deep check. No AU-restricted assets (ZEC/DASH) present in the surviving shortlist.
+
+**Deep check (15m OHLC, closed candles; two-candle acceleration = each of the last two closed candles closes strictly higher than the prior candle's close; 1h/4h momentum must both clear the 3%/5% signal bar together; freshness ceiling this pass = min(30min, ~60min since the 21:00 UTC pass) = 30min):**
+- **KNTQUSD:** Passes acceleration (closes 0.20794→0.20812→0.20867, each strictly higher) and confirmed-candle (24h high $0.20867 sits on the fully-closed 22:15–22:30 candle, ~3min old — very fresh). **Fails momentum pairing:** 1h +0.77%, 4h +0.98%, both far short of the 3%/5% bar — the 4.02% session gain is a slow all-day ramp, not a concentrated recent move. **Not entered.**
+- **CROUSD:** Fails acceleration (closes 0.05956→0.05965→0.05989 — technically higher each time, marginal) but momentum falls well short regardless: 1h +0.94%, 4h +2.46%. **Not entered.**
+- **SAGAUSD:** **Fails acceleration** (closes 0.01684→0.01680→0.01708 — middle candle closed lower than the first, a spike-then-dip shape). 1h +2.71% (just under the 3% bar), 4h +6.15% (clears 5%) — would have failed the paired bar on the 1h leg alone even had acceleration passed. **Not entered.**
+- **AKEUSD:** **Fails acceleration** (closes 0.01620463→0.01634008→0.01633273 — last candle closed lower than the prior, spike-then-stall). **Not entered.**
+- **GOATUSD:** Momentum far short of the paired bar (1h +1.77%, 4h +0.75%). **Not entered.**
+- **PEPEUSD:** Passes acceleration (closes 0.000003408→0.000003413→0.000003416, each strictly higher) but momentum negligible (1h +0.23%, 4h +0.32%) — the 3.30% session gain is almost entirely stale, not a live move. **Not entered.**
+- **SUSHIUSD:** **Fails acceleration** (closes 0.2245→0.2230→0.2249 — middle candle dipped). Momentum also short (1h/4h not computed after acceleration failure, consistent with prior passes' pattern for this asset). **Not entered.**
+
+No candidate cleared the full gate chain this pass. KNTQUSD was the closest — passed both acceleration and confirmed-candle with excellent freshness (~3min) — but its 1h/4h momentum (0.77%/0.98%) was nowhere near the paired 3%/5% signal bar, consistent with a slow intraday grind rather than a real breakout. No candidate reached the catalyst-confirmation or win-rate-kill-switch evaluation stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.01% session, essentially flat). Weekly downtrend gate INACTIVE (−2.39%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass, no candidate survived structural gates that far. No candidate among 39 raw session-gain passers and 7 fade-cap survivors cleared every gate; KNTQUSD was the closest (clean acceleration + confirmed-candle + fresh high) but failed the paired 1h/4h momentum bar by a wide margin. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome; the closest candidate (KNTQUSD) was cleanly rejected on the momentum-pairing bar, not a near-miss worth flagging. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
