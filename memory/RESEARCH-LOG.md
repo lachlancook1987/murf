@@ -41539,3 +41539,30 @@ No candidate reached the R:R evaluation stage — all 7 screen-passers were reje
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (all seven candidates cleanly rejected on the weekly-downtrend gate's mandatory 1h-momentum floor, no ambiguity, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+---
+
+## 2026-09-12 — Scan — 00:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 11 23:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/`canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,231.60 vs today's session open $77,210.90 → +0.03%. Clear (not down >20%). 24h range $76,000.00–$79,832.30, no extreme move.
+**Weekly trend gate:** Reference date rolled forward — 5 trading days ago is now 2026-09-07 (daily close $79,090.30, direct Kraken public OHLC 1440-interval query), not the Sep 6 reference used through all of Sep 11. Live $77,231.70 vs $79,090.30 → **−2.35%/5d** — back **inside** the ±3% band. **Weekly downtrend gate now INACTIVE** (was ACTIVE at −3.91%/5d for the entirety of Sep 11 under the rolling Sep 6 reference; the reference date advancing one day as the window rolled forward is what cleared it, not a change in BTC's actual path). Standard entry rules apply (no added 1h-momentum-floor requirement) if a candidate otherwise qualifies.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 39/100 "Fear" (down from 49 yesterday, 52 last week). Not Extreme Fear (≤25), so the Extreme-Fear R:R-floor rule doesn't apply — moot this pass regardless since no candidate reached that stage.
+
+**Catalyst context (Perplexity):** Macro-dominated backdrop — Fed Sept 15-16 rate decision, Senate CLARITY Act cloture vote, Treasury bond buyback program (linked to easier crypto liquidity), Circle's Arc mainnet launch Sept 16, ZEC ETF-conversion filing (Grayscale). No <6h-old catalyst identified for any Kraken-sourced candidate this pass (see below — none reached candidate status).
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **0 candidates cleared the screen** — the quietest sweep logged in recent memory. Top raw session gainers (SCUSD +15.65%, WARUSD +14.29%, BILLYUSD +12.52%, ELXUSD +12.42%, TREEUSD +10.18%, LSKUSD +7.43%) all failed on fade-from-high, spread, or notional (e.g. SCUSD's fade was 4.38%, well past the 1.5% cap; most sub-$50k-notional micro-caps like WARUSD/ELXUSD/ALPHAUSD had spreads of 4-11%+). No AU-restricted assets (ZEC/DASH) present among raw movers.
+
+No candidate reached momentum-peak-check, confirmed-candle, two-candle acceleration, catalyst-confirmation, R:R, or win-rate-kill-switch evaluation — the initial screen itself produced zero passers.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.03% session). Weekly downtrend gate flipped **INACTIVE** this pass as the rolling 5-day reference advanced past Sep 6 to Sep 7 (BTC now −2.35%/5d, inside the ±3% band) — a mechanical reference-date rollover, not a market recovery signal (BTC itself is roughly flat pass-over-pass). Zero candidates cleared even the initial screen (session gain/fade/spread/notional), the quietest sweep in recent memory — nothing to evaluate against downstream gates. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate this pass.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome on a pass where the initial screen produced zero candidates (nothing to gate, let alone loosen). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
