@@ -42133,3 +42133,33 @@ No candidate executed. RIVERUSD cleared acceleration and both momentum legs on c
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome. RIVERUSD is worth a fresh look next pass once its 18:30 candle closes, but that's routine follow-up, not something needing the user's attention now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 19:00 UTC (fired 19:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (18:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,100.10 vs today's session open $77,210.90 → −0.14%. Clear (not down >20%). 24h range $76,965.90–$77,490.00.
+**Weekly trend gate:** live $77,100.10 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD close, same fixed reference used every pass this window) → **−2.52%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** Alternative.me 63 "Greed"; CFGI.io 53 "Neutral"; CoinGlass/Crypto.news 42 "Fear" — same methodology spread as prior passes. Not Extreme Fear (≤25) under any reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**RIVERUSD follow-up (flagged last pass for a re-check once its 18:30 candle closed):** Live quote now $1.4600 (bid $1.459/ask $1.462) vs 24h high $1.5300 — the 18:30 candle's spike did **not** hold; price has faded **4.58%** off the 24h high, well past the 1.5% live-intracandle-fade cap. No longer a candidate this pass — the confirmed-candle rejection from the 18:00 UTC pass was correct positioning, not a missed opportunity.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, notional >$50k, spread ≤1%: 38 pairs passed, topped by LSKUSD (+77.27%), GRIFFAINUSD (+44.69%), FLOCKUSD (+32.35%), OXTUSD, REZUSD, AKEUSD, VTHOUSD, TREEUSD, SCUSD, LRCUSD, PENDLEUSD, PYTHUSD, RIVERUSD, PUMPUSD, BERAUSD, KTAUSD, ETHFIUSD, USELESSUSD, SOMIUSD, BLUAIUSD, EULUSD, KAVAUSD, INJUSD, ACUUSD, GOATUSD, WUSD, CELOUSD, UNIUSD, STXUSD, CLOUDUSD, MOGUSD, ZROUSD, WLFIUSD, CROUSD, ZAMAUSD, VETUSD, PEPEUSD, SYRUPUSD rounding out the list. Applying the ≤1.5% live-intracandle-fade cap eliminated all but seven: **AKEUSD** (0.90%), **PYTHUSD** (1.40%), **SOMIUSD** (0.53%), **BLUAIUSD** (1.01%), **WUSD** (0.10%), **CROUSD** (1.38%), **PEPEUSD** (0.41%) — carried to deep check. No AU-restricted assets (ZEC/DASH) present in the surviving shortlist.
+
+**Deep check (15m OHLC, closed candles; two-candle acceleration = each of the last two closed candles closes strictly higher than the prior candle's close; 1h/4h momentum must both clear the 3%/5% signal bar together; freshness ceiling this pass = min(30min, ~33min since the 19:00 UTC-labeled 18:00 pass) = 30min):**
+- **AKEUSD:** Closest on momentum (4h +4.94%, just under the 5% bar) but 1h only +0.42% (fails that leg outright) and acceleration fails (closes 0.01600→0.01616→0.01610, middle leg lower); 24h high also 94.3min stale, past the freshness ceiling.
+- **PYTHUSD, SOMIUSD, BLUAIUSD, CROUSD, PEPEUSD:** All fail acceleration and show flat-to-negative 1h momentum (best of this group: BLUAIUSD 4h +3.84%, still short of the paired bar); SOMIUSD and CROUSD also carry stale 24h highs (319min and 169min respectively).
+- **WUSD:** Passes acceleration (closes 0.01001→0.01002→0.01008, each strictly higher) and freshness (high 4.3min old) but momentum falls well short of the paired bar (1h +0.80%, 4h +2.13%).
+
+No candidate cleared both momentum legs together this pass. AKEUSD was the closest miss on the 4h leg alone but failed 1h momentum, acceleration, and freshness independently — no candidate needed the kill switch, R:R floor, or catalyst check to be rejected; all failed on the structural momentum-pairing gate first.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC −0.14% session). Weekly downtrend gate INACTIVE (−2.52%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). No candidate among 38 raw session-gain passers and 7 fade-cap survivors cleared both the 1h>3% and 4h>5% momentum legs together; AKEUSD was the closest miss on the 4h leg only. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (no candidate came close to clearing both momentum legs; RIVERUSD's follow-up confirmed its spike faded rather than held). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
