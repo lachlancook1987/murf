@@ -42005,3 +42005,39 @@ No candidate cleared both momentum legs together this pass. CFGUSD (1h +4.42%/4h
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (closest candidate passed every structural gate and one momentum leg but missed the paired bar on the other leg; no candidate needed the kill switch or R:R floor to be rejected). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 15:00 UTC (fired 15:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (14:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,393.90 vs today's session open $77,210.90 → +0.24%. Clear (not down >20%). 24h range $76,821.10–$78,815.50.
+**Weekly trend gate:** live $77,393.90 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD close, same fixed reference used every pass this window) → **−2.14%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** CFGI 53 "Neutral"; CoinAligator 39 "Fear"; MarginPad/alternative.me-style 63 "Greed" — same methodology spread as prior passes. Not Extreme Fear (≤25) under any reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event. Same forward-dated narrative as recent passes — Fed policy expectations, Treasury buybacks/yields, BTC ETF flows, and the CLARITY Act Senate cloture vote. ZEC's Grayscale ETF-filing rally (AU-restricted — skip per standing rule) and Circle's Arc mainnet launch cited as altcoin-specific but neither is a live Kraken-sourced candidate this pass.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, notional >$50k, spread ≤1%: 37 pairs passed, topped by LSKUSD (+75.60%), GRIFFAINUSD (+32.19%), FLOCKUSD (+20.42%), LRCUSD, VTHOUSD, USELESSUSD, TREEUSD, ETHFIUSD, AKEUSD, PENDLEUSD, SCUSD, UNIUSD, ZRXUSD, BERAUSD, PYTHUSD, ZROUSD, CHIPUSD, KAVAUSD, VETUSD, MINAUSD, SOMIUSD, MOGUSD, WALUSD, STXUSD, NPCUSD, GRTUSD, CROUSD, MERLUSD, SYRUPUSD, INJUSD, ZAMAUSD, XANUSD, DCRUSD, WLFIUSD, KNTQUSD, ARBUSD, KTAUSD rounding out the list. Applying the ≤1.5% live-intracandle-fade cap eliminated all but sixteen: **CROUSD** (0.00%), **ZAMAUSD** (0.18%), **DCRUSD** (0.30%), **GRTUSD** (0.38%), **ZROUSD** (0.47%), **UNIUSD** (0.50%), **NPCUSD** (0.52%), **KNTQUSD** (0.73%), **WLFIUSD** (0.87%), **PENDLEUSD** (0.95%), **KTAUSD** (0.98%), **XANUSD** (1.24%), **ZRXUSD** (1.37%), **PYTHUSD** (1.37%), **AKEUSD** (1.39%), **VETUSD** (1.41%) — carried to deep check. No AU-restricted assets (ZEC/DASH) present in the surviving shortlist.
+
+**Deep check (15m OHLC; two-candle acceleration = each of the last two closed candles closes strictly higher than the prior candle's close; 1h/4h momentum must both clear the 3%/5% signal bar together; freshness ceiling this pass = min(30min, ~59min since the 14:00 UTC pass) = 30min):**
+- **UNIUSD:** Passes acceleration (closes 6.4151→6.485→6.5238, each strictly higher), 1h +2.28% / 4h +3.02% — both short of the 3%/5% bar regardless. Also fails confirmed-candle independently: 24h high age 4.1min but sits on the **currently-forming** candle.
+- **AKEUSD:** Passes acceleration, 24h high 19.1min old (fresh, closed candle) — closest on momentum this pass (1h +1.51%, 4h +4.46%) but **1h leg falls short** of the paired 3% requirement.
+- **KTAUSD:** 1h +3.27% clears the bar, but 4h only +2.64% falls short of the paired 5% requirement; also fails acceleration (dip on final leg, closes 0.1015→0.0998→0.101). Same failure shape as CFGUSD (14:00 UTC pass) — one leg clears, the other doesn't.
+- **PYTHUSD:** Passes acceleration, but 24h high 49.1min old — stale under the 30min freshness ceiling; momentum also weak (1h +2.61%, 4h +2.69%), both short of the bar independent of freshness.
+- **ZAMAUSD:** Passes acceleration but 24h high 34.1min old (stale) and momentum weak (1h +0.04%, 4h +1.84%).
+- **GRTUSD, NPCUSD:** Pass acceleration (GRT fails on inspection — flat middle leg), fresh-ish highs, but both show weak momentum (GRT 1h+0.71%/4h+2.10%; NPC 1h+1.14%/4h+1.85%, high 289min stale).
+- **CROUSD, DCRUSD, ZROUSD, KNTQUSD, WLFIUSD, XANUSD, ZRXUSD, VETUSD:** All fail acceleration and/or show flat-to-negative 1h momentum with 4h momentum topping out at ZROUSD's +3.04% (on a 1444min-stale high, essentially no real freshness) — none close to the paired 3%/5% bar.
+
+No candidate cleared both momentum legs together this pass. AKEUSD (1h +1.51%/4h +4.46%) and KTAUSD (1h +3.27%/4h +2.64%) were the closest misses, each clearing one leg but not the other — the same one-leg-short pattern seen repeatedly across today's passes (PENDLEUSD 13:00 UTC, CFGUSD 14:00 UTC). No candidate needed the kill switch, R:R floor, or catalyst check to be rejected — all failed on structural/momentum gates first.
+
+**Schedule-drift note:** this pass fired ~15:33 UTC, ~33 min past the hour — consistent with the ~30-37 min post-hour firing pattern seen across essentially every pass today (05:34, 08:34, 09:34, 10:34, 11:37, 12:33, 13:34, now 15:33). Per CLAUDE.md this is a scheduling/trigger-config matter outside any session's reach; flagged for continuity since the pattern remains consistent, not new or worsening — not pushed separately per standing guidance.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.24% session). Weekly downtrend gate INACTIVE (−2.14%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). No candidate among 37 raw session-gain passers and 16 fade-cap survivors cleared both the 1h>3% and 4h>5% momentum legs together; AKEUSD and KTAUSD each cleared one leg but not the other. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (two candidates each cleared one momentum leg but not the other; no candidate needed the kill switch or R:R floor to be rejected). Schedule drift noted above is steady-state, not new. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
