@@ -41595,3 +41595,30 @@ Neither candidate reached catalyst-confirmation, R:R, or win-rate-kill-switch ev
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates cleanly rejected on structural gates, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 02:00 UTC (fired 02:33 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust, all other balances zero/dust — same dust set as every prior pass, no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (01:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains historical/`canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,276.10 vs today's session open $77,210.90 → +0.08%. Clear (not down >20%). 24h range $76,000.00–$79,832.30, no extreme move.
+**Weekly trend gate:** live $77,276.10 vs 5-trading-day-ago daily close $79,090.30 (2026-09-07 EOD close, confirmed fresh via direct Kraken public OHLC 1440-interval query this pass) → **−2.29%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE** (unchanged from 00:00/01:00 UTC — same Sep 7 reference, BTC essentially flat pass-over-pass). Standard entry rules apply (no added 1h-momentum-floor requirement) if a candidate otherwise qualifies.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed with no rule change at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** 54/100 "Neutral". Not Extreme Fear (≤25), so the Extreme-Fear R:R-floor rule doesn't apply — moot this pass regardless since no candidate reached that stage.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, 24h-high fade ≤1.5%, spread ≤1%, notional >$50k: **2 candidates cleared the screen** — CHZUSD (+3.72%, fade 0.75%, spread 0.21%, notional $78,996), RIVERUSD (+3.25%, fade 1.06%, spread 0.64%, notional $273,966). No AU-restricted assets (ZEC/DASH) present.
+
+**Deep check on both screen-passers (direct 15m OHLC):**
+- **CHZUSD:** 24h high $0.01462 sits on the **currently-forming** 02:30 candle (H=0.01462, still open at check time), not a closed one — live price ~$0.01451-0.01453 is just off this unconfirmed high. **Fails the confirmed-candle requirement outright** — the still-forming-candle's-fresh-high case the rule exists to block. Rejected without proceeding further.
+- **RIVERUSD:** 24h high $1.414 sits on the closed 02:15 candle (C=1.410) — passes the confirmed-candle requirement (high is not on the still-forming candle). **Fails two-candle acceleration**: closes were 01:45=1.404 → 02:00=1.365 (lower — spike-then-dip) → 02:15=1.410 (higher again). The 02:00 candle closing below the prior candle's close breaks the required "each of the last two closed candles closes higher than the prior" pattern. Rejected — same chop/spike-then-dip shape RIVERUSD has shown in prior passes this week (19:00/23:00 UTC Sep 11), not clean acceleration.
+
+Neither candidate reached catalyst-confirmation, R:R, or win-rate-kill-switch evaluation — both rejected on structural gates first.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.08% session). Weekly downtrend gate INACTIVE (−2.29%/5d, unchanged from 00:00/01:00 UTC). Two candidates cleared the initial screen (CHZUSD, RIVERUSD) but CHZ failed the confirmed-candle check (its 24h high sits on a still-forming candle) and RIVER failed two-candle acceleration (spike-then-dip) — both clean structural rejections, no ambiguity. Momentum-only win-rate kill switch remains ACTIVE (20.0%, below 35% floor, unchanged) but was not reached as the binding gate for either candidate.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (both candidates cleanly rejected on structural gates, no gate loosened). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
