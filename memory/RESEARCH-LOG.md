@@ -41748,3 +41748,35 @@ No push sent — book flat, no trades, no operational issues, HOLD is the expect
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one clean technical-gate survivor correctly blocked for lack of a confirmed catalyst under the active kill switch, a second technical survivor rejected for the same reason plus an unrelated bearish overhang, remaining candidates rejected on structural gates). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-12 — Scan — 07:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (06:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,281.70 vs today's session open $77,210.90 → +0.09%. Clear (not down >20%). 24h range $76,000.00–$79,832.30.
+**Weekly trend gate:** live $77,281.70 vs 5-trading-day-ago reference $79,090.30 (2026-09-07 EOD, same fixed reference used every pass this window) → **−2.29%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE** (consistent with 04:00/05:00/06:00 UTC). Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review, reconfirmed at the 2026-09-11 07:00 UTC weekly review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Fear & Greed (Perplexity, context only):** CFGI.io 53/100 "Neutral"; alternate tracker 39/100 "Fear" (methodology spread, consistent with prior passes). Not Extreme Fear (≤25) under either reading, so the Extreme-Fear R:R-floor rule doesn't apply.
+
+**Macro catalyst check (Perplexity):** No fresh dated <6h event for the broad market — ongoing drivers are macro/rate-sensitive (recent hawkish Fed repricing, Treasury buyback program through Nov 4, ETF flows), plus the forward-dated Sept 15–16 FOMC meeting and CLARITY Act Senate cloture vote. Zcash (Grayscale ETF-conversion filing), Hyperliquid (fresh high), Uniswap (fee-switch burn record), Circle Arc mainnet (Sept 16) cited as general altcoin drivers, none dated <6h.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs. Filtered for session gain ≥3%, live-intracandle-fade ≤1.5%, spread ≤1%, notional >$50k: five candidates cleared — **ETHFIUSD** (+9.05%, fade 0.38%, spread 0.15%, notional $993,739), **UAIUSD** (+14.17%, fade 0.67%→0.93% live at deep-check, spread 0.22%–0.43%, notional $1,153,766), **STXUSD** (+4.86%, fade 0.78%, spread 0.04%, notional $540,016), **PENDLEUSD** (+5.32%, fade 1.44%, spread 0.05%, notional $565,129), **KATUSD** (+4.61%, fade 0.99%, spread 0.40%, notional $141,563). No AU-restricted assets (ZEC/DASH) present. Higher raw-% movers (LSK, OXT, VTHO, NOCK, TMX, RAILS, ALKIMI, USELESS, TREE, BERA, DUAL) were excluded outright on the live-intracandle-fade or spread gate before deep-check.
+
+**Deep check (15m OHLC, last closed candle = 07:15 at 07:34 UTC check time — 07:30 candle still forming; two-candle acceleration = each of the last two closed candles closes higher than the prior candle's close):**
+- **ETHFIUSD:** Closes 06:45=0.7305 → 07:00=0.7303 (lower — **fails acceleration** right there) → 07:15=0.7371 (higher, but the prior leg already broke the chain). Rejected.
+- **UAIUSD:** Closes 06:45=0.69675 → 07:00=0.71376 (higher) → 07:15=0.75947 (higher again) — **passes acceleration**. 24h high $0.76496 sits exactly on the closed 07:15 candle (H=0.76496), not the still-forming 07:30 candle — **passes confirmed-candle**. Freshness: high set ~4–19 min ago — **passes**. Live quote: bid $0.75804/ask $0.75967, spread 0.22% — **passes**; live fade off 24h high 0.93% — **passes**. **Clears every structural/technical gate** — same-thesis check: prior UAI stop-out was 2026-08-23 (>2 weeks ago), no stop-out within the current 7-day window, cooling period does not apply.
+- **STXUSD:** Closes 06:45=0.2657 → 07:00=0.2651 (lower) → 07:15=0.2652 — choppy, **fails acceleration**.
+- **PENDLEUSD:** Closes 06:45=2.114 → 07:00=2.118 (higher) → 07:15=2.116 (lower) — **fails acceleration** on the second leg.
+- **KATUSD:** 06:30–07:00 candles printed zero volume (stale/illiquid at this granularity) — **fails on data quality**, skip.
+
+**Catalyst check on the sole structural survivor (Perplexity):** UAI's cited drivers are a Sept 10 all-time-high/breakout narrative and the Aug 14 Jupiter-on-Solana integration — both **stale, not <6h fresh**; Perplexity explicitly notes no verified single catalyst for the current move, attributing it to AI-token sector momentum/speculative rotation. **Fails the confirmed-<6h-catalyst requirement — momentum-only.** Because the momentum-only win-rate kill switch is **ACTIVE** (suspending momentum-only entries entirely regardless of R:R or how cleanly every technical gate clears), **UAI cannot be entered this pass**.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear (BTC +0.09% session). Weekly downtrend gate INACTIVE (−2.29%/5d). UAIUSD was the sole technical/structural-gate survivor of a 622-pair sweep (two-candle acceleration, confirmed-candle, fresh peak, tight spread, minimal fade, same-thesis cap does not apply) but lacks a confirmed <6h catalyst — the cited drivers (Sept 10 ATH, Aug 14 Jupiter integration) are both stale — and the active momentum-only win-rate kill switch (20.0%, below the 35% floor) blocks entry without one. ETHFI/STX/PENDLE rejected on failed two-candle acceleration; KAT rejected on illiquid/zero-volume data. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, HOLD is the expected and correct outcome (one clean technical-gate survivor correctly blocked for lack of a confirmed catalyst under the active kill switch, remaining candidates cleanly rejected on structural gates). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
