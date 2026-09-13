@@ -42945,3 +42945,31 @@ No candidate reached the catalyst/R:R/kill-switch stage — three candidates (AL
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 19:00 UTC). Three candidates failing on the confirmed-candle requirement for a still-forming-candle high is the gate system working exactly as designed, not an anomaly. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 21:00 UTC (fired 21:34 UTC)
+
+**Step 1-2:** Read TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails. Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — unchanged from the 20:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 — Position maintenance:** No open positions/orders to maintain (orphan-stop/T1 check, T1 partial-take, progressive tightening, thesis-break all N/A — book flat). Crash gate: BTC/USD quote $77,367.90, 24h range $76,459.70–$77,400.00 — no crash. Weekly downtrend gate: BTC vs Sep 8 EOD reference $78,443.40 → $77,367.90 = **−1.37%/5d**, INACTIVE (within ±3% band), standard entry rules apply. No maintenance actions taken.
+
+**Step 4 — Research:** Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 27 candidates, top by gain — LSKUSD (+218.56%, 53.12% off high), CVCUSD (+62.30%), B3USD, FILUSD, VTHOUSD, REZUSD among others. Applying the ≤1.5% live-intracandle-fade cap left 4 survivors: **CRVUSD** (1.12%), **CAPUSD** (0.48%), **PLAYUSD** (0.42%), **PYTHUSD** (1.24%) — all others already 1.6–53% off their highs and eliminated outright.
+
+**Deep check — 4 fade-survivors via 15m closed candles (20:45→21:00→21:15 closed, 21:30 forming at check time 21:34) for two-candle acceleration:**
+- **CRVUSD:** Closes 0.35307→0.35267→0.35157 — declining both legs. **Fails acceleration.**
+- **CAPUSD:** Closes 0.047102→0.047039→0.047308 — first leg reverses (20:45→21:00 lower) even though 21:00→21:15 recovers. **Fails acceleration** (both legs must build in sequence).
+- **PYTHUSD:** Closes 0.05746→0.05771→0.05734 — second leg reverses. **Fails acceleration.**
+- **PLAYUSD:** Closes 0.031521→0.032047→0.031886 (15m) — wait, rechecked via 5m granularity: 20:45 15m-close 0.031521 → 21:00 15m-close 0.031544→0.032047 (using standard 15m boundary closes 20:45/21:00/21:15: 0.031521→0.031544→0.031886, both legs build). **Passes acceleration.** 24h high (0.032283) confirmed on the closed 21:00–21:15 15m candle (pinned via 5m candles to the 21:10–21:15 window, ~20–24 min before this check) — **passes confirmed-candle** and **passes momentum-peak-check freshness** (well inside the 30-min ceiling, and inside the min(30min, time-since-last-pass) refinement too). Live intracandle fade 0.42%, well under the 1.5% cap — **passes**. Clean sweep of every structural/technical/freshness gate.
+
+**Catalyst check (Perplexity):** `PLAY token (Kraken PLAYUSD) news and price outlook today` — no fresh headline; TradingView news feed shows no active items; tone described as "weak-to-neutral," down ~1.4%/24h and ~12.1%/7d on external trackers, no catalyst younger than the routine 7-day price context. **No confirmed <6h catalyst** — classified momentum-only.
+
+**Win-rate kill switch:** Per TRADING-STRATEGY.md, momentum-only entries remain **ACTIVE/SUSPENDED** (20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor, unchanged since the 2026-09-04 review — no new momentum-only entries have resolved since to move the window). **PLAYUSD is blocked by the kill switch** despite clearing every structural/technical/freshness/fade gate cleanly — same outcome pattern as GOATUSD on 2026-09-12. Not executed.
+
+**Context (Perplexity, macro only):** Fear & Greed Index 53/55 "Neutral" (two sources, neither Extreme Fear — doesn't change any R:R floor). Not queried further since no candidate reached the point of needing per-position or additional catalyst confirmation (book flat, no open positions).
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.37%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — the binding gate this pass, blocking the one candidate (PLAYUSD) that otherwise cleared every technical/structural check. No gate loosened to manufacture a trade.
+
+**Cadence note:** This pass fired at 21:34 UTC, 34 minutes past the nominal 21:00 UTC hour — the tenth consecutive such drift today (also 11:33, 13:34, 14:33, 15:35, 16:34, 17:33, 18:33, 19:34, 20:35), all landing in the 33–35 minute range. Consistent, recurring pattern; flagged again per CLAUDE.md's drift-handling note — this is a scheduling/infrastructure matter outside any session's reach, not something this pass's logic can fix.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 20:00 UTC). PLAYUSD clearing every technical gate but being correctly blocked by the standing win-rate kill switch is the kill switch working as designed, not an anomaly. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
