@@ -11209,3 +11209,21 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot essentially in line with BTC (−0.06 points) on a near-flat BTC day. GOATUSD clearing every technical gate but being correctly blocked by the standing win-rate kill switch is the kill switch working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — EOD Snapshot
+
+### Sep 13 — EOD Snapshot (Day 116, Sunday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** −0.57%
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust — same dust set as every prior day, no manual/out-of-band activity. `positions: {}`, `orders: {"open": {}}` — book fully flat all day, no TRADE-LOG entries dated today, no drift since the Sep 12 EOD snapshot. Day P&L $0.00 (0.00%) vs yesterday's $70.6298 baseline. Phase P&L unchanged at −$109.1502 (−60.71%) from $179.78 Kraken starting equity (May 22). **vs BTC:** BTC moved from $77,239.40 (Sep 12 EOD live reference) to $76,798.30 today → **−0.57%**; bot's day return (0.00%) beat BTC's raw move by **+0.57 points** — book flat and untouched through a mild BTC pullback. Total trades since migration unchanged at 152 (no activity today). Every hourly pass today (00:00 through 23:00 UTC, 24 passes) reached HOLD — the weekly downtrend gate stayed INACTIVE all day (ranging roughly −1.4% to −2.2%/5d against the fixed 2026-09-08 EOD reference of $78,443.40), so standard entry rules applied throughout. Candidates cleared raw session-gain/notional/spread screens most hours (LSKUSD as a recurring extreme anomaly always deeply off-high, CVCUSD, FILUSD, B3USD, VTHOUSD, REZUSD, ARUSD, XTZUSD, POWRUSD, BATUSD, CTRUSD, ANKRUSD, FLOWUSD, CELOUSD, FETUSD, CRVUSD, FLUXUSD, KNCUSD, NPCUSD, DCRUSD, CAPUSD, CHZUSD, AVAUSD, GRTUSD, BTRUSD, PYTHUSD, ALGOUSD, TIAUSD, PLAYUSD among others) but were rejected almost entirely on the live-intracandle-fade cap, two-candle acceleration, or the confirmed-candle/momentum-peak-freshness requirement for stale 24h highs. Two candidates reached the catalyst-confirmation stage and were correctly blocked by the standing momentum-only win-rate kill switch (ACTIVE since 2026-09-04, 20.0% trailing win rate, below the 35% floor) despite clearing every structural/technical/freshness gate: **DCRUSD** (18:00 UTC pass — genuine large volume surge, no confirmed DCR-specific catalyst, CoinMarketCap attributed the move to broad market strength) and **PLAYUSD** (21:00 UTC pass — clean sweep of acceleration/confirmed-candle/freshness/fade gates, no fresh catalyst found). No candidate reached execution at any point today. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 cash, fully available, no open positions; weekly downtrend gate (currently INACTIVE at −2.10%/5d) and win-rate kill switch (ACTIVE, 20.0%) both to be reassessed fresh.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly ahead of BTC (+0.57 points) on a day BTC pulled back slightly. DCRUSD and PLAYUSD both clearing every technical gate but being correctly blocked by the standing win-rate kill switch is the kill switch working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
