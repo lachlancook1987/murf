@@ -42349,3 +42349,30 @@ No candidate reached execution this pass. Three candidates (SAGA, KAVA, ZRX) eac
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 00:00 UTC). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 02:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 01:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,249.90 vs today's session open $77,264.20 → ~flat (−0.02%). Clear (not down >20%). 24h range $77,050.00–$77,490.00.
+**Weekly trend gate:** live $77,249.90 vs 5-trading-day-ago reference $78,449.60 (2026-09-08 daily close, same reference used at 00:00/01:00 UTC passes) → **−1.53%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** BTC $77,193–77,250 (+0.1–0.2%/24h). Fear & Greed 53/100 "Neutral" (CFGI.io, updated 2026-09-12 06:04 UTC) — not Extreme Fear. Macro catalysts: Sept 15–16 FOMC, Sept 15 CLARITY Act Senate cloture vote, Treasury buyback narrative, Sept 13 CHEEL unlock (~$2.24M, immaterial), Grayscale ZEC ETF filing (AU-restricted asset, skip per standing rule) — nothing dated <6h old tied to a live candidate.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: **13 candidates**. Ranked by proximity to 24h high (momentum-peak-check) and deep-checked:
+
+**Deep check — BERAUSD:** Spread 0.24%, live fade only 0.10% off 24h high (0.2072). Confirmed-candle requirement passes (high set on the closed 02:00 candle, not a forming one). Two-candle acceleration passes (02:00 close 0.2059 > 01:45 close 0.2039; 02:15 close 0.2071 > 02:00 close 0.2059). Both momentum legs clear: 1h +3.4%, 4h +6.8%. **Cleared every structural/technical/freshness gate.** Perplexity catalyst check (`"Berachain BERA news and price outlook today catalyst"`): only an "ongoing" Japan exchange listing and PoL narrative, nothing dated <6h — **classified momentum-only**. Blocked twice over: (1) active win-rate kill switch suspends all momentum-only entries outright; (2) even ignoring the switch, standard 3%/2.5% structure gives R:R 1.2:1, below the momentum-only 1.8:1 floor. **Not entered.**
+
+**Other candidates, all rejected on structural gates before reaching kill-switch evaluation:** KAVAUSD (live fade grew to 1.57%, >1.5% cap — between-scan fade), ZRXUSD (fade 1.95% at re-check), AVAUSD (two-candle acceleration fails — 02:00 close 0.1759 < 01:45 close 0.1772), BATUSD (confirmed-candle fails — 24h high on the still-forming 02:30 candle), AVLUSD (fade 1.51%, just over cap), ZORAUSD (momentum-peak-check freshness — 24h high ~80min stale, no fresh breakout since), POWR/MET/LAPTOP/VTHO/SAGA (fades 4.9%–22.5%, nowhere near the cap). No AU-restricted assets in the candidate set.
+
+No candidate reached execution this pass. BERAUSD was the only one to clear every structural/technical gate, but failed on catalyst classification (momentum-only) combined with both the active kill switch and the R:R floor — a clean double rejection, not a near-miss worth flagging further. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.53%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). BERAUSD cleared every structural/technical gate but was blocked as momentum-only (no confirmed <6h catalyst) by both the kill switch and the 1.8:1 R:R floor.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 01:00 UTC). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
