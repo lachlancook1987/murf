@@ -42916,3 +42916,32 @@ No candidate reached the catalyst/R:R/leverage-sizing stage — CAPUSD was the o
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 18:00 UTC). CAPUSD failing on a stale 24h high before reaching the catalyst/kill-switch stage is the gate system working as designed, not an anomaly needing the user's attention. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 20:00 UTC (fired 20:35 UTC)
+
+**Step 1-2:** Read TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails. Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — unchanged from the 19:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat, nothing to reconcile. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 — Position maintenance:** No open positions/orders to maintain (orphan-stop/T1 check, T1 partial-take, progressive tightening, thesis-break all N/A — book flat). Crash gate: BTC/USD quote $77,321/$77,328, 24h range $76,459.70–$77,375.00 (~1.2% range) — no crash. Weekly downtrend gate: BTC daily closes Sep 8 $78,449.60 → Sep 13 $77,323.90 = **−1.44%/5d**, INACTIVE (within ±3% band), standard entry rules apply. No maintenance actions taken.
+
+**Step 4 — Research:** Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k: 31 candidates, top by gain — LSKUSD (+192.76%, recurring extreme anomaly, 56.9% off high), FORTHUSD (+87.89%), CVCUSD (+59.98%), B3USD, MEZOUSD, FILUSD, VTHOUSD, REZUSD among others. Applying the ≤1.5% live-intracandle-fade cap left 7 survivors: **ALGOUSD** (0.03%), **FLOWUSD** (0.33%), **PYTHUSD** (0.66%), **XTZUSD** (0.75%), **CAPUSD** (1.12%), **NPCUSD** (1.31%), **CRVUSD** (1.42%) — all others already 1.8–57% off their highs and eliminated outright.
+
+**Deep check — 7 fade-survivors via 15m closed candles (19:45→20:00→20:15 closed, 20:30 forming at check time 20:34) for two-candle acceleration, momentum-peak freshness, and confirmed-candle:**
+- **ALGOUSD:** Closes 0.09658→0.09700→0.09750 — both legs build cleanly, **passes acceleration**. But live 24h high (0.09793) only appears on the still-forming 20:30 candle (last closed candle, 20:15, topped at 0.09776/closed 0.09750, below the live high). **Fails confirmed-candle requirement** — breakout high not yet held by a closed candle.
+- **XTZUSD:** Closes 0.29592→0.29690→0.30149 — both legs build, **passes acceleration**. Same failure mode: 24h high (0.30500) only on the forming 20:30 candle (closed 20:15 candle topped 0.30251/closed 0.30149). **Fails confirmed-candle requirement.**
+- **NPCUSD:** Closes 0.021345→0.021650→0.021763 — both legs build, **passes acceleration**. 24h high (0.022073) again only on the forming candle (closed 20:15 candle topped 0.021778). **Fails confirmed-candle requirement.**
+- **PYTHUSD:** Closes 0.05680→0.05689→0.05693 — marginal acceleration pass, but live 24h high (0.05731) does not appear on any candle back to 19:30 (all recent highs ≤0.05714) — high set well outside the 30-min freshness window, price declining from it, no fresh breakout. **Fails momentum-peak-check** (stale high).
+- **CRVUSD:** Closes 0.34876→0.34986→0.35015 — both legs build, **passes acceleration**. But 24h high (0.35555) doesn't appear on any candle back to 19:30 (recent highs ≤0.35098) — stale high, price declining from it. **Fails momentum-peak-check.**
+- **CAPUSD:** Closes 0.046937→0.047045→0.046982 — second leg reverses. **Fails acceleration.**
+- **FLOWUSD:** 20:15/20:30 candles printed zero volume — thin/stale, marginal $50.9k notional. **Fails on liquidity**, not evaluated further.
+
+No candidate reached the catalyst/R:R/kill-switch stage — three candidates (ALGO, XTZ, NPC) mechanically passed two-candle acceleration but failed on the confirmed-candle requirement (fresh high sitting only on a still-forming candle, the exact still-forming-candle fakeout pattern this gate exists to catch), two failed on stale 24h highs, two failed outright on acceleration/liquidity. No gate loosened to manufacture a trade.
+
+**Context (Perplexity, macro only):** Fear & Greed Index 53 "Neutral" (one source; a second source read 61 "Greed" — noted, doesn't change any gate since neither is Extreme Fear). Not queried further since no candidate reached the catalyst-confirmation stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.44%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass, no candidate got that far. Three candidates (ALGO/XTZ/NPC) came closest, cleanly clearing acceleration but rejected on the confirmed-candle requirement for a high that only exists on the currently-forming candle.
+
+**Cadence note:** This pass fired at 20:35 UTC, 35 minutes past the nominal 20:00 UTC hour — the ninth consecutive such drift today (also 11:33, 13:34, 14:33, 15:35, 16:34, 17:33, 18:33, 19:34), all landing in the 33–35 minute range. This remains a consistent, recurring pattern; flagged again per CLAUDE.md's drift-handling note. Not pushed as a standalone notification (scheduling/infrastructure matter outside any session's reach, per the known cadence issue documented 2026-09-02), logged here for continued pattern-tracking.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 19:00 UTC). Three candidates failing on the confirmed-candle requirement for a still-forming-candle high is the gate system working exactly as designed, not an anomaly. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
