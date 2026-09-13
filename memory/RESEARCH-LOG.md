@@ -42646,3 +42646,37 @@ No candidate reached the spread/1h-4h-momentum/catalyst/R:R check stage — all 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 10:00 UTC). FLOCKUSD failing on the confirmed-candle check despite an otherwise clean setup is the gate working exactly as designed (it exists specifically to block still-forming-candle highs), not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+---
+
+## 2026-09-13 — Scan — 12:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 11:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $76,782.10 vs today's session open $77,264.20 → −0.62%. Clear (not down >20%). 24h range $76,459.70–$77,490.00.
+**Weekly trend gate:** live $76,782.10 vs 5-trading-day-ago daily close $77,090.30 (2026-09-07 reference) → **−2.31%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" — not Extreme Fear, so that R:R-floor rule stays inactive.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 19 candidates — B3USD (+35.48%), VTHOUSD (+30.29%), CTRUSD, AVAUSD, ANKRUSD, KNCUSD, BATUSD, CRVUSD, ZRXUSD, CELOUSD, BMTUSD, CHZUSD, CAPUSD, FILUSD, METUSD, ZORAUSD, XTZUSD, ARPAUSD, MANAUSD. Applying the ≤1.5% live-intracandle-fade cap eliminated all but 7 whose price sits within 1.5% of its 24h high: **ANKRUSD** (−1.04%), **KNCUSD** (−0.74%), **BMTUSD** (−0.58%), **CHZUSD** (−0.67%), **FILUSD** (−0.60%), **XTZUSD** (−0.80%), **CRVUSD** (−0.73%) — all others (B3USD, VTHOUSD, CTRUSD, AVAUSD, BATUSD, ZRXUSD, CELOUSD, CAPUSD, METUSD, ZORAUSD, ARPAUSD, MANAUSD) already off their highs by 2–29% and eliminated outright.
+
+**Deep check — 7 fade-survivors via 15m closed candles (10:45→12:00→12:15) for two-candle acceleration, plus paired 1h>3%/4h>5% momentum bar:**
+- **ANKRUSD:** acceleration passes (0.00464→0.00469→0.00475, each higher). 1h momentum +2.81% (short of 3%), 4h momentum +5.32% (clears). **Fails** — 1h leg short.
+- **KNCUSD:** acceleration passes (0.1433→0.1454→0.1469). 1h momentum +1.66% (short), 4h momentum +6.22% (clears). **Fails** — 1h leg short.
+- **BMTUSD:** closes 0.01875→0.01875→0.01909 — flat first leg. **Fails** acceleration outright.
+- **CHZUSD:** acceleration passes (0.01488→0.01493→0.01494) but both legs weak: 1h +1.15%, 4h +1.29% — neither clears its bar. **Fails** both legs.
+- **FILUSD:** closes 0.820→0.818→0.835 — first leg declines. **Fails** acceleration outright.
+- **XTZUSD:** acceleration passes (0.26846→0.27009→0.27490). 1h momentum +3.52% (clears), 4h momentum +3.36% (short of 5%). **Fails** — 4h leg short, closest candidate this pass.
+- **CRVUSD:** acceleration passes (0.34972→0.35041→0.35054) but weak: 1h +0.22% (far short), 4h +6.04% (clears). **Fails** — 1h leg far short.
+
+No candidate cleared both legs of the momentum bar simultaneously — XTZUSD (1h ✓/4h ✗) and ANKRUSD/KNCUSD/CRVUSD (1h ✗/4h ✓) were the closest, each missing one leg. No candidate reached the catalyst/R:R/win-rate-kill-switch check stage. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−2.31%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). XTZUSD was the closest candidate — clean acceleration and a passing 1h leg — but its 4h momentum (+3.36%) fell short of the 5% bar, a clean structural rejection.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 11:00 UTC). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
