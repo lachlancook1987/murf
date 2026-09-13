@@ -42993,3 +42993,29 @@ No candidate reached the two-candle-acceleration/confirmed-candle stage this pas
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 21:00 UTC). No candidate reaching even the fade-cap screen is a normal quiet pass, not an anomaly. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 23:00 UTC (fired 23:34 UTC)
+
+**Step 1-2:** Read TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails. Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — unchanged from the 22:00 UTC pass, no manual/out-of-band activity. `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state exactly. Alpaca: `positions: []`, orders history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 — Position maintenance:** No open positions/orders on either exchange — orphan-stop/T1 check, T1 partial-take, progressive tightening, thesis-break all N/A. Crash gate: BTC/USD quote $76,798.30, 24h range $76,459.70–$77,400.00, session open $77,264.20 → −0.60% intraday — no crash. Weekly downtrend gate: BTC vs Sep 8 EOD reference $78,443.40 → $76,798.30 = **−2.10%/5d**, INACTIVE (within ±3% band), standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Context (Perplexity):** Fear & Greed Index 53/100 "Neutral" (CFGI.io), unchanged from prior passes; other trackers 55-67 range, none Extreme Fear. That R:R-floor rule stays inactive.
+
+**Step 4 — Research:** Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 16 candidates, top by gain — B3USD (+46.17%, 23.68% off high), CVCUSD (+37.43%, 58.09% off high), VTHOUSD, FILUSD, BATUSD, REZUSD, ANKRUSD, XTZUSD, ARUSD, CAPUSD, FLUXUSD, CTRUSD, NPCUSD, CRVUSD, CTSIUSD, AVAUSD, PLAYUSD. Applying the ≤1.5% live-intracandle-fade cap left 2 survivors: **CAPUSD** (1.08%), **PLAYUSD** (1.43%) — all others already 2.2–58% off their highs and eliminated outright.
+
+**Deep check — 2 fade-survivors via 15m closed candles (22:45→23:00→23:15 closed, 23:30 forming at check time 23:34) for two-candle acceleration and momentum-peak freshness:**
+- **CAPUSD:** Closes 0.046489→0.046962→0.046985 — both legs build (mechanically **passes acceleration**, though the second leg is marginal). 24h high (0.047582) traced back through OHLC history: set at **08:30 UTC**, ~15 hours before this check — far outside the 30-min freshness ceiling, current price ($0.047068) declining from it, no fresh 1h breakout above it. **Fails momentum-peak-check** (stale high).
+- **PLAYUSD:** Closes 0.031630→0.031694→0.031726 (approx via 15m boundaries) — both legs build, **passes acceleration**. 24h high (0.032283) traced back: set at **21:00 UTC**, ~2h34m before this check — outside the 30-min ceiling (and outside the cadence-relative refinement too, since the last logged pass was only ~1h ago), current price ($0.031822) still well below it with no fresh breakout. **Fails momentum-peak-check** (stale high).
+
+No candidate reached the catalyst/R:R/kill-switch stage — both fade-cap survivors passed two-candle acceleration mechanically but were rejected on the momentum-peak-check for highs set well outside the freshness window. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−2.10%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass, no candidate got that far. Both candidates that passed the fade-cap screen (CAP, PLAY) were rejected on stale 24h highs before reaching acceleration mattered.
+
+**Cadence note:** This pass fired at 23:34 UTC, 34 minutes past the nominal 23:00 UTC hour — consistent with today's recurring ~33-35min drift pattern (11:33, 13:34, 14:33, 15:35, 16:34, 17:33, 18:33, 19:34, 20:35, 21:34). Not pushed as a standalone notification (scheduling/infrastructure matter outside any session's reach, per the known cadence issue documented 2026-09-02), logged here for continued pattern-tracking. This is the EOD pass (HOUR==23) — EOD Snapshot appended to TRADE-LOG.md per STEP 6.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 22:00 UTC). Both candidates failing on stale 24h highs is the gate system working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
