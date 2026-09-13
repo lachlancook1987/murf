@@ -42488,3 +42488,37 @@ No candidate reached execution this pass. DYMUSD was the only one to clear every
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 05:00 UTC). DYMUSD clearing every technical gate but being correctly blocked by the standing win-rate kill switch/R:R floor is the gate system working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 07:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 06:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,106.90 vs today's session open $77,264.20 → −0.20% (flat). Clear (not down >20%). 24h range $77,032.90–$77,490.00.
+**Weekly trend gate:** live $77,106.90 vs 5-trading-day-ago daily close $78,449.60 (2026-09-08 reference) → **−1.71%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" (CFGI.io, 06:04 UTC refresh; other trackers 51-63) — not Extreme Fear under any reading, so that R:R-floor rule stays inactive.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Ranked by session gain, then filtered to candidates within ~1.5% of 24h high with real notional: top raw prints (LSKUSD +130%, VTHOUSD +32%, POWRUSD +30%, B3USD +29%, FORTHUSD +23%, AVAUSD +22%, CVCUSD, IDOSUSD, CTRUSD, SAGAUSD, SYNDUSD, CHILLHOUSEUSD, METUSD, PHAUSD) all eliminated outright on the live-intracandle-fade cap (each 2%+ off their 24h high). Survivors within the fade cap with non-trivial notional: ZORAUSD ($77.6k), CAPUSD ($93.3k), MANAUSD ($564k), ANKRUSD ($48.1k), API3USD ($11.3k), ANIMEUSD ($11.5k) — all cleared the spread cap (0.038%-0.694%). QTUMUSD ($10.5k) and ZETAUSD ($11.4k) also checked as borderline-liquid near-high candidates.
+
+**Deep check — all six near-high survivors + two borderline candidates, via 15m closed-candle two-candle-acceleration test:**
+- **MANAUSD:** closes monotonically declining (06:15→07:15: 0.07868→0.07841→0.07830→0.07820→0.07809) — fading, not accelerating. **Fails.**
+- **CAPUSD:** 07:00 close (0.046726) < 06:45 close (0.047097) — fails the first leg of the two-candle test outright. **Fails.**
+- **ANKRUSD:** flat/choppy, mostly zero-volume candles at an unchanged price level. **Fails** (no real acceleration).
+- **API3USD:** sparse, mostly zero-volume flat candles — illiquid/stale prints, not a real move. **Fails** (thin/no genuine momentum).
+- **ANIMEUSD:** 07:00 close (0.003132) = 06:45 close (0.003132), not strictly higher — fails the two-candle test (flat, not building). **Fails.**
+- **QTUMUSD:** erratic thin prints (0.994→0.981→0.993 across three candles on single-digit-to-triple-digit volume) — noise, not a real directional move. **Fails** (thin/erratic).
+- **ZETAUSD:** 07:00 close (0.0364) = 07:15 close (0.0364), not strictly higher — fails the two-candle test. **Fails.**
+- **ZORAUSD (best candidate):** Two-candle acceleration **passes**: 07:00 close (0.008756) > 06:45 close (0.008670); 07:15 close (0.008900) > 07:00 close (0.008756). Confirmed-candle **passes**: the 07:15 candle (closed at 07:30, ~4min before this check) closed exactly at its high (0.008900), holding above the prior close — not a still-forming-candle fakeout. Momentum-peak-check freshness **passes**: 24h high (0.0089) set on that same closed 07:15 candle, ~4min old, well inside the 30min ceiling. Live intracandle fade **passes**: live price (bid 0.008867/ask 0.008892/last 0.0089) is at/essentially-at the 24h high, ~0% fade. Spread **passes**: 0.259%, within the 1% cap. **1h/4h momentum signal check:** 4h momentum clears well (+5.37%, price 0.008446 four hours ago → 0.0089 now), but **1h momentum is only +2.48-2.56%** (price ~0.008678-0.008690 one hour ago → 0.0089 now) — **short of the 3% 1h-surge threshold** in the Candidate Screening Priority. Consistent with how prior passes (e.g. Sep 8, Sep 11-12) have applied this as a paired 1h>3%/4h>5% bar rather than an either/or, ZORA is rejected on the 1h leg despite otherwise clearing every structural/freshness/fade/spread gate.
+  - Perplexity catalyst check (`"Zora ZORA crypto news and price outlook today"`): CEO transition/buyback focus and creator-trading product expansion — general narrative, no dated <6h event. **Classified momentum-only** even had it cleared the 1h bar. Would have been blocked twice over regardless: (1) active win-rate kill switch suspends all momentum-only entries; (2) standard structure gives R:R 1.2:1 (T1 +3% vs 2.5% stop), below the momentum-only 1.8:1 floor.
+
+No candidate reached execution this pass. ZORAUSD was the closest — clearing acceleration, confirmed-candle, freshness, fade, and spread — but was rejected on the 1h momentum leg, and would have been double-blocked by the kill switch and R:R floor as a no-catalyst entry regardless. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.71%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). ZORAUSD came closest but fell short of the 1h momentum threshold and would have been blocked as momentum-only regardless.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 06:00 UTC). ZORAUSD falling just short of the 1h momentum bar while otherwise clean is the gate system working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
