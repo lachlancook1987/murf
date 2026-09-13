@@ -42885,3 +42885,34 @@ No candidate reached the R:R/leverage-sizing stage — DCRUSD cleared every tech
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 17:00 UTC). DCRUSD failing only on the kill-switch/catalyst check despite an otherwise clean technical setup (including a genuine volume surge) is the gate system working as designed, not an anomaly needing the user's attention. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 19:00 UTC (fired 19:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 18:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,224.90 vs today's session open $77,264.20 → −0.05%. Clear (not down >20%). 24h range $76,459.70–$77,375.00.
+**Weekly trend gate:** live $77,224.90 vs 5-trading-day-ago EOD close $78,449.60 (2026-09-08 reference, unchanged) → **−1.56%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" (unchanged; other trackers show 48-61, primary reading used stays 53). Not Extreme Fear, so that R:R-floor rule stays inactive regardless.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 28 candidates, top by gain — LSKUSD (+188.96%, recurring extreme anomaly, 57.5% off high), CVCUSD (+56.83%), B3USD (+26.81%), REZUSD (+23.80%), FILUSD (+23.41%), VTHOUSD (+20.26%), ARUSD (+9.22%), POWRUSD, XTZUSD, BATUSD, CTRUSD, ANKRUSD, NPCUSD, AVAUSD, FLUXUSD, CELOUSD, CAPUSD, CRVUSD, KNCUSD, CHZUSD, MOVRUSD, PYTHUSD, VETUSD, ALGOUSD, GRTUSD, BABYUSD, METUSD, TIAUSD. No AU-restricted assets (ZEC, DASH) appeared. Applying the ≤1.5% live-intracandle-fade cap left 4 survivors: **CAPUSD** (0.93%), **PYTHUSD** (0.80%), **ALGOUSD** (0.62%), **TIAUSD** (0.28%) — all others (including the large LSK/CVC/B3/REZ/FIL/VTHO prints, and ARUSD/CRVUSD/GRTUSD just outside the cap at 3.31%/1.54%/1.57%) already 1.5-57% off their highs and eliminated outright.
+
+**Deep check — 4 fade-survivors via 15m closed candles (18:45→19:00→19:15 closed, 19:30 currently forming at check time 19:34) for two-candle acceleration (vs prior candle 18:30/18:45):**
+- **CAPUSD:** Closes 18:45→19:00→19:15 = 0.046893→0.047039→0.047114 — both legs build cleanly. **Passes acceleration.** But the live 24h high (0.047582) does not appear on any 15m candle back to 18:15 (all recent candle highs top out ≤0.047323) — the high was set well outside the last 30 minutes, current price ($0.047174) is declining from it, and there is no fresh 1h breakout above it. **Fails momentum-peak-check (stale 24h high >30min old, no fresh breakout).** Rejected on this structural gate before reaching catalyst/R:R stage.
+- **PYTHUSD:** Closes 18:45→19:00→19:15 = 0.05705→0.05696→0.05693 — both legs decline. **Fails acceleration.**
+- **ALGOUSD:** Closes 18:45→19:00→19:15 = 0.09587→0.09608→0.09595 — first leg builds, second leg reverses. **Fails acceleration.**
+- **TIAUSD:** Closes 18:45→19:00→19:15 = 0.3609→0.3603→0.3604 — first leg declines. **Fails acceleration.**
+
+No candidate reached the catalyst/R:R/leverage-sizing stage — CAPUSD was the only one to mechanically pass two-candle acceleration but failed the momentum-peak-check on a stale 24h high with no fresh breakout, and the remaining three failed acceleration outright. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.56%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). No candidate this pass reached the catalyst-confirmation stage — CAPUSD's acceleration pass was undercut by a stale 24h high (set outside the 30-min freshness ceiling) that current price is fading from, not building toward.
+
+**Cadence note:** This pass fired at 19:34 UTC, 34 minutes past the nominal 19:00 UTC hour — the eighth consecutive such drift today (also 11:33, 13:34, 14:33, 15:35, 16:34, 17:33, 18:33), all landing in the 33–35 minute range. This remains a consistent, recurring pattern; flagged again per CLAUDE.md's drift-handling note. Not pushed as a standalone notification (scheduling/infrastructure matter outside any session's reach, per the known cadence issue documented 2026-09-02), logged here for continued pattern-tracking.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 18:00 UTC). CAPUSD failing on a stale 24h high before reaching the catalyst/kill-switch stage is the gate system working as designed, not an anomaly needing the user's attention. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
