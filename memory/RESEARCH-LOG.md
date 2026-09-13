@@ -42973,3 +42973,23 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 20:00 UTC). PLAYUSD clearing every technical gate but being correctly blocked by the standing win-rate kill switch is the kill switch working as designed, not an anomaly. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 22:00 UTC
+
+**Step 1-2:** Read TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails. Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust — unchanged from the 21:00 UTC pass, no manual/out-of-band activity. `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state exactly. Alpaca: `positions: []`, zero exposure.
+
+**Step 3 — Position maintenance:** No open positions/orders on either exchange — orphan-stop/T1 check, T1 partial-take, progressive tightening, thesis-break all N/A. Crash gate: BTC/USD quote last $76,755.00, 24h range $76,459.70–$77,400.00 (~1.2% range), session open $77,264.20 → −0.66% intraday — no crash. Weekly downtrend gate: BTC vs Sep 8 EOD reference $78,443.40 → $76,755.00 = **−2.15%/5d**, INACTIVE (within ±3% band), standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Context (Perplexity):** Fear & Greed Index 53/100 "Neutral" (cfgi.io), unchanged from prior passes. Not Extreme Fear, so that R:R-floor rule stays inactive.
+
+**Step 4 — Research:** Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 16 candidates, top by gain — LSKUSD (+188.85%, recurring extreme anomaly, 57.5% off high), CVCUSD (+44.79%), FILUSD (+18.31%), VTHOUSD (+18.31%), REZUSD (+11.06%), XTZUSD, BATUSD, CTRUSD, POWRUSD, ARUSD, ANKRUSD, NPCUSD, DOGUSD, CAPUSD, CRVUSD, FLUXUSD. Applying the ≤1.5% live-intracandle-fade cap: **zero survivors** — closest was DOGUSD at 1.68% off its 24h high, still outside the cap; CAPUSD (2.23%) and CRVUSD (2.72%), which have survived on recent passes, both faded further this pass. No AU-restricted assets (ZEC, DASH) appeared.
+
+No candidate reached the two-candle-acceleration/confirmed-candle stage this pass — every raw gain-screen candidate was eliminated outright by the intracandle-fade cap before any deeper check was warranted. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−2.15%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass, no candidate got that far. Quietest pass of the day so far — no candidate survived even the mechanical fade-cap screen.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 21:00 UTC). No candidate reaching even the fade-cap screen is a normal quiet pass, not an anomaly. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
