@@ -42680,3 +42680,38 @@ No candidate cleared both legs of the momentum bar simultaneously — XTZUSD (1h
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 11:00 UTC). Nothing here needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+---
+
+## 2026-09-13 — Scan — 13:00 UTC (fired 13:34 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 12:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $76,625.30 vs today's session open $77,264.20 → −0.83%. Clear (not down >20%). 24h range $76,459.70–$77,490.00.
+**Weekly trend gate:** live $76,625.30 vs 5-trading-day-ago EOD close $78,443.40 (2026-09-08 EOD reference) → **−2.32%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" (unchanged from the 11:00/12:00 UTC passes) — not Extreme Fear, so that R:R-floor rule stays inactive.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 21 candidates — VTHOUSD (+22.40%), POWRUSD (+16.75%), CTRUSD, ANKRUSD, CTSIUSD, KNCUSD, AVAUSD, BMTUSD, FLUXUSD, BATUSD, METUSD, XTZUSD, CELOUSD, SKRUSD, CRVUSD, CHZUSD, FLOCKUSD, CAPUSD, ZRXUSD, FILUSD, ARPAUSD. Applying the ≤1.5% live-intracandle-fade cap eliminated all but 10 whose price sits within 1.5% of its 24h high: **ANKRUSD** (0.00%), **SKRUSD** (0.00%), **BMTUSD** (0.61%), **FLUXUSD** (0.25%), **FILUSD** (0.24%), **CRVUSD** (0.68%), **CHZUSD** (0.73%), **KNCUSD** (1.20%), **XTZUSD** (1.34%), **CAPUSD** (1.48%) — all others (VTHOUSD, POWRUSD, CTRUSD, CTSIUSD, AVAUSD, BATUSD, METUSD, CELOUSD, FLOCKUSD, ZRXUSD, ARPAUSD) already off their highs by 2–46% and eliminated outright.
+
+**Deep check — 10 fade-survivors via 15m closed candles (12:45→13:00→13:15, current time 13:34 so the 13:30 candle is still forming) for the confirmed-candle requirement and two-candle acceleration, plus 24h-high freshness:**
+- **BMTUSD:** 24h high (0.01972) is only 4min old — but sits on the **currently-forming 13:30 candle** (live price 0.0196 vs last closed 13:15 close 0.01952), not a fully closed one. **Fails confirmed-candle requirement**, despite closes 0.01904→0.01921→0.01952 passing two-candle acceleration cleanly. Same pattern as FLOCKUSD (11:00 UTC pass) — closest candidate this pass.
+- **FLUXUSD:** Same profile — 24h high (0.05655) 4min old, on the forming 13:30 candle (live 0.05641 vs last closed 13:15 close 0.05611). **Fails confirmed-candle requirement.** Closes 0.05513→0.05572→0.05611 pass acceleration cleanly, but the high itself isn't confirmed.
+- **SKRUSD:** 24h high also 4min old on the forming candle, but closes 0.018732→0.018601→0.018888 — first leg declines. **Fails acceleration outright** (confirmed-candle check moot).
+- **XTZUSD:** 24h high (0.2853) is 19min old on a closed candle (13:15) — freshness clears. But closes 0.28019→0.28327→0.28274 — first leg up, second leg reverses. **Fails** acceleration (spike-then-stall).
+- **CHZUSD:** 24h high (0.01517) 19min old, closed candle — freshness clears. Closes 0.01509→0.01513→0.01506 — both legs weak/declining. **Fails** acceleration.
+- **FILUSD, CRVUSD:** 24h highs both 34min old (13:00 candle) — 4min past the 30min ceiling. **Fail** freshness; closes also reverse on the second leg for both (would have failed acceleration too).
+- **ANKRUSD, KNCUSD:** 24h highs 64min/49min old respectively — clearly stale. **Fail** freshness; first legs also decline (would fail acceleration too).
+- **CAPUSD:** 24h high over 5h old (304min). Clean stale rejection.
+
+No candidate reached the spread/1h-4h-momentum/catalyst/R:R check stage — all ten were eliminated on the confirmed-candle requirement, acceleration, or momentum-peak-check freshness first. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−2.32%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). BMTUSD and FLUXUSD were the standout candidates — both clean on two-candle acceleration with a 4-minute-fresh 24h high — but both highs sit on the still-forming candle, not a closed one, so both correctly failed the confirmed-candle requirement rather than being chased.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 12:00 UTC). BMTUSD/FLUXUSD failing on the confirmed-candle check despite otherwise-clean setups is the gate working exactly as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
