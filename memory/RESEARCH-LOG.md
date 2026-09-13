@@ -42583,3 +42583,35 @@ No candidate reached the spread/1h-4h-momentum/catalyst/R:R check stage — all 
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 08:00 UTC). A quieter pass than usual (no candidate came close to a genuine near-miss) is expected variance, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+
+## 2026-09-13 — Scan — 10:00 UTC
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 09:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $76,745.30 vs today's session open $77,264.20 → −0.67%. Clear (not down >20%). 24h range $76,500.10–$77,490.00.
+**Weekly trend gate:** live $76,745.30 vs 5-trading-day-ago daily close $78,449.60 (2026-09-08 reference, unchanged) → **−2.17%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" (CFGI.io) / 51/100 (secondary read, same source, different refresh) — not Extreme Fear, so that R:R-floor rule stays inactive.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for fade <2% off 24h high, notional >$20k, spread ≤1%, gain >0.5%: 20 survivors — PORTALUSD, CAPUSD, SOLVUSD, CHZUSD, CRVUSD, SKRUSD, AUSD, MOVRUSD, BABYUSD, DOSUSD, BMTUSD, RSRUSD, SNXUSD, FILUSD, DOGUSD, AXSUSD, DCRUSD, HBARUSD, ZAMAUSD, EULUSD. All top raw gainers (LSKUSD +242%, VTHOUSD +39%, SYNDUSD +38% [spread 3.3%, hard skip], POWRUSD +33%, FORTHUSD +32% among others) eliminated outright on the live-intracandle-fade cap (19–51% off their 24h highs).
+
+**Deep check — top 10 by gain plus remaining survivors, via 15m closed-candle two-candle-acceleration test (last two fully closed candles as of ~10:34 UTC: 09:45→10:00→10:15) and momentum-peak-check freshness:**
+- **PORTALUSD, SOLVUSD, AUSD, DOSUSD, SKRUSD:** fail two-candle acceleration outright (flat or declining first/second leg — DOSUSD, SKRUSD both spike-then-decline patterns).
+- **CAPUSD:** first leg passes (0.046783→0.046889) but second leg reverses (→0.046722) — spike-then-stall, same pattern as the 09:00 pass. Fails.
+- **MOVRUSD:** 24h high extremely fresh (19min old, fade ~0.01%) but the candle sequence dips before recovering (0.7881→0.7876→0.7941) — fails the strict "each candle closes higher than the prior" acceleration test despite the tempting freshness.
+- **CHZUSD, CRVUSD, FILUSD, EULUSD, ZAMAUSD:** all pass two-candle acceleration cleanly, but every one has a stale 24h high (65–1070min old, all >30min ceiling) with live price still below that high (no fresh breakout) — clean momentum-peak-check freshness rejections, not near-misses.
+- **BABYUSD:** passes acceleration cleanly (0.0119→0.01196→0.01199) but 24h high is 34min old — 4 minutes past the 30min freshness ceiling (min(30, ~58min since last pass) = 30). Closest near-miss this pass; still a clean rejection, not loosened.
+- **BMTUSD, RSRUSD, SNXUSD, DOGUSD, AXSUSD, DCRUSD, HBARUSD:** all have stale 24h highs (200–1220min old) with flat/mixed closes — clean rejections on freshness and/or acceleration.
+
+No candidate reached the spread/1h-4h-momentum/catalyst/R:R check stage — all twenty were eliminated on acceleration or momentum-peak-check freshness first. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−2.17%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). BABYUSD came closest (passed acceleration, missed freshness by 4 minutes) but was correctly held back rather than fudged.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 09:00 UTC). A near-miss on freshness by a few minutes (BABYUSD) is the gate working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
