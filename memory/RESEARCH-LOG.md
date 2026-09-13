@@ -42748,3 +42748,36 @@ No candidate reached the R:R/leverage-sizing stage — FILUSD failed confirmed-c
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 13:00 UTC). BABYUSD failing only on the kill-switch/catalyst check despite an otherwise clean technical setup is the gate system working as designed, not an anomaly needing the user's attention. The ~33min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-13 — Scan — 15:00 UTC (fired 15:35 UTC)
+
+**Step 1-2:** Read memory (TRADING-STRATEGY.md, CLAUDE.md, TRADE-LOG.md/RESEARCH-LOG.md tails). Live state: Kraken `account` ZUSD $70.6298 (only non-dust balance besides ZAUD $0.1550 dust; all other balances zero/dust, same dust set as every prior pass — no manual/out-of-band activity), `positions: {}`, `orders: {"open": {}}` — book fully flat, matches last logged state (Sep 13 14:00 UTC pass) exactly, no drift. Alpaca: `positions: []` fully flat, order history reconfirms stop `a2b44cf9` remains `canceled` (since 2026-05-22), zero exposure.
+
+**Step 3 (position maintenance):** Nothing to do — no open positions or orders on either exchange, nothing to reconcile, no orphan stops/T1 limits, no runner to tighten, no thesis to break. Not logged to TRADE-LOG.md per the no-op convention.
+
+**Crash gate:** BTC live (Kraken quote) $77,077.30 vs today's session open $77,264.20 → −0.24%. Clear (not down >20%). 24h range $76,459.70–$77,420.30.
+**Weekly trend gate:** live $77,077.30 vs 5-trading-day-ago EOD close $78,443.40 (2026-09-08 EOD reference) → **−1.74%/5d** — inside the ±3% band. **Weekly downtrend gate remains INACTIVE.** Standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 review — **ACTIVE, momentum-only entries SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed since to roll the window. Catalyst-confirmed entries remain open.
+
+**Perplexity context:** Fear & Greed 53/100 "Neutral" (unchanged from the 11:00–14:00 UTC passes) — not Extreme Fear, so that R:R-floor rule stays inactive.
+
+**Step 4 (research):** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 20 candidates, top by gain — LSKUSD (+194.75%, extreme anomaly), CVCUSD (+64.27%), VTHOUSD (+19.37%), FILUSD (+15.44%), BATUSD (+12.23%), CTRUSD, ANKRUSD, BABYUSD, METUSD, CELOUSD, XTZUSD, KNCUSD, FLUXUSD, POWRUSD, CHZUSD, AVAUSD, CRVUSD, CVXUSD, MANAUSD, NPCUSD. Applying the ≤1.5% live-intracandle-fade cap left 6 survivors: **BATUSD** (1.02%), **CELOUSD** (0.94%), **XTZUSD** (1.14%), **CHZUSD** (1.37%), **CRVUSD** (1.28%), **CVXUSD** (0.0%) — FILUSD (1.8%) narrowly missed the cap; LSKUSD/CVCUSD/VTHOUSD/POWRUSD/AVAUSD were already 19–57% off their highs and eliminated outright (LSKUSD's 194% session gain is a clear data/thin-liquidity anomaly, not a tradeable move — its 56.6% fade confirms it had already fully reversed).
+
+**Deep check — 6 fade-survivors via 15m closed candles (14:45→15:00→15:15, current time 15:35 so the 15:30 candle is still forming) for two-candle acceleration:**
+- **BATUSD:** Closes 0.08108→0.08201→0.08174 — first leg up, second leg reverses. **Fails acceleration.**
+- **CELOUSD:** Closes 0.0844→0.0844→0.0850 — first leg flat (no increase); 14:45/15:00 candles both printed zero volume. **Fails acceleration**, thin/stale.
+- **XTZUSD:** Closes 0.28104→0.27934→0.28012 — first leg declines. **Fails acceleration.**
+- **CHZUSD:** Closes 0.01531→0.01532→0.01515 — first leg barely flat, second leg reverses; 15:30 candle printed zero volume. **Fails acceleration**, thin/stale.
+- **CRVUSD:** Closes 0.35203→0.35422→0.34968 — first leg up, second leg reverses. **Fails acceleration.**
+- **CVXUSD:** Closes 2.115→2.115→2.120 — first leg flat (no increase). **Fails acceleration.**
+
+No candidate reached the confirmed-candle/freshness/catalyst/R:R stage — all six fade-survivors were eliminated on two-candle acceleration first (five of six show a spike-then-reverse or flat-first-leg pattern). No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate clear. Weekly downtrend gate INACTIVE (−1.74%/5d). Win-rate kill switch unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%). No candidate this pass cleared even the two-candle acceleration gate, let alone reached the catalyst/kill-switch stage — a quieter pass than 13:00/14:00 UTC (BMTUSD/FLUXUSD/BABYUSD came closer to clearing every gate on those passes).
+
+**Cadence note:** This pass fired at 15:35 UTC, 35 minutes past the nominal 15:00 UTC hour — the fourth consecutive such drift today (also 11:33, 13:34, 14:33), all landing in the 33–35 minute range. This is a consistent, recurring pattern rather than noise; flagged again per CLAUDE.md's drift-handling note. Not pushed as a standalone notification (scheduling/infrastructure matter outside any session's reach, consistent with the known cadence issue documented 2026-09-02), but logged here for visibility and pattern-tracking.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 14:00 UTC). A quiet pass — no candidate cleared even the first technical gate (two-candle acceleration) this hour, nothing here needs the user's attention. The recurring ~33-35min firing-time drift is logged above for pattern-tracking but doesn't clear the bar for a push on its own. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
