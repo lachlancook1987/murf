@@ -43412,3 +43412,71 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 (routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 20:00 UTC (fired 20:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 19:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat; stop `a2b44cf9` reconfirmed `canceled`.
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,377.50 vs session open $84,384.50 → −0.01%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,377.50 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.88%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep, 668 online USD pairs, zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: 125 candidates (broad market-wide rally
+continuing from prior passes today). Applying the ≤1.5% live-intracandle-fade cap left 42
+survivors; deep-checked the top 15 by gain via 15m closed candles for momentum-peak-check freshness
+(ceiling: min(30min, time since last logged pass) = 30min, since the last pass was ~61min ago) and
+two-closed-candle acceleration:
+
+| Pair | 24h-high age | Accel | Verdict |
+|---|---|---|---|
+| QNTUSD | 31.3min | — | fails freshness ceiling (marginal, just over 30min, same as 19:00 pass) |
+| XPLUSD | 76.3min | — | fails freshness ceiling |
+| PLAYUSD | 46.3min | — | fails freshness ceiling |
+| SNXUSD | 16.3min | pass (0.2527→0.2530→0.2537) | survives to momentum-bar check |
+| SYRUPUSD | 61.3min | — | fails freshness ceiling |
+| KMNOUSD | 16.3min | fail (0.03793→0.03793→0.0382, flat-then-rise) | fails acceleration |
+| BTRUSD | 46.3min | — | fails freshness ceiling |
+| BILLUSD | 151.3min | — | fails freshness ceiling |
+| AIOZUSD | 256.3min | — | fails freshness ceiling |
+| KAITOUSD | 271.3min | — | fails freshness ceiling |
+| CVXUSD | 61.3min | — | fails freshness ceiling |
+| SANDUSD | 121.3min | — | fails freshness ceiling |
+| TRUMPUSD | 271.3min | — | fails freshness ceiling |
+| MANAUSD | 76.3min | — | fails freshness ceiling |
+| SUIUSD | 46.3min | — | fails freshness ceiling |
+
+**SNXUSD momentum-bar check:** the sole survivor of freshness + acceleration also cleared the live-
+fade cap (0.24% off 24h high). Computed 1h/4h momentum directly from 15m closed candles rather than
+relying on the 9.45% session-gain figure (session gain = vs. today's open, not a rolling 1-4h
+window): **1h momentum +1.24%** (needs >3%) and **4h momentum +0.32%** (needs >5%) — both well short
+of the Candidate Screening Priority bar. The session gain was built earlier in the day and the move
+has been flat-to-drifting for the last 4h, not accelerating — a stale/already-priced move that only
+looked fresh through the candle-close/fade checks in isolation. Rejected on the primary momentum
+signal itself; no catalyst check run (clean structural rejection, consistent with how prior passes
+have handled similar cases rather than spending a Perplexity query on a candidate that fails before
+reaching the catalyst-confirmation stage).
+
+**Fear & Greed** checked this pass: CFGI 46/100 "Neutral" (CoinGecko separately reads 42 "Fear",
+provider-dependent) — not Extreme Fear, so that R:R-floor rule stays inactive; moot regardless since
+no candidate reached the R:R evaluation stage.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.88%/5d, upside breach). Win-rate kill switch unchanged
+(ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass; SNXUSD, the only candidate to
+clear freshness/acceleration/fade, was rejected on the underlying 1h/4h momentum-bar check before
+any catalyst or kill-switch evaluation was needed. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~61min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
