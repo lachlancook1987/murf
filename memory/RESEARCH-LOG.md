@@ -43019,3 +43019,131 @@ No candidate reached the catalyst/R:R/kill-switch stage — both fade-cap surviv
 ### Step 8 — Notification
 
 No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass (Sep 13 22:00 UTC). Both candidates failing on stale 24h highs is the gate system working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 15:00 UTC (fired 15:48 UTC — first pass since 2026-09-13 23:00 UTC)
+
+**OPERATIONAL FLAG — 10.6-day gap in hourly firing.** The last committed pass on `main` was
+`crypto hourly pass 2026-09-13 23:00 UTC` (commit `4abd31f`, pushed 23:35:42 UTC that day). This
+session fired at 2026-09-24 15:48 UTC — roughly **255 hours / ~10.6 days** with zero logged passes,
+far beyond the ~33-35min drift previously flagged on 2026-09-13. This is not a labeling question
+(per the drift-handling note in CLAUDE.md) — it is a near-total outage of the consolidated hourly
+routine for over a week. The trigger firing now confirms the schedule itself still exists; whatever
+caused the gap is outside this session's visibility (scheduler config/infra, per the standing
+"not fixed by this document alone" note in CLAUDE.md's Routine Cadence section). Flagged via push
+notification per Step 8 — this is exactly the kind of operational failure that warrants one.
+
+**Step 1-2:** Read TRADING-STRATEGY.md, CLAUDE.md, tails of TRADE-LOG.md/RESEARCH-LOG.md (both
+end at the 2026-09-13 23:00 UTC EOD pass). Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust),
+all other balances zero/dust — **identical to the Sep 13 23:00 UTC state**, confirming no manual
+or bot activity occurred anywhere in the 10.6-day gap. `positions: {}`, `orders: {"open": {}}` —
+book fully flat. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22),
+zero exposure.
+
+**Step 3 — Position maintenance:** No open positions/orders on either exchange — orphan-stop/T1
+check, T1 partial-take, progressive tightening, thesis-break all N/A. No manual out-of-band Kraken
+activity found (account state exactly matches last logged pass). **Crash gate:** BTC/USD live quote
+$84,399.40, today's session open $84,384.50 → +0.02% intraday, clear. 24h OHLC close-to-close
+(Sep 23→24 daily candles: $84,384.60→$84,332.40, essentially flat); Perplexity's own "-2.0%/24h"
+read is noise from a different reference window/source and not corroborated by Kraken's own data —
+nowhere near the >20% crash threshold either way. **Weekly downtrend gate:** BTC live $84,399.40 vs
+5-trading-day-ago daily close (2026-09-19, $81,226.50, from live Kraken daily OHLC, not a stale
+cached reference) → **+3.91%/5d**. This is an *upside* breach of the ±3% band; per
+TRADING-STRATEGY.md the gate only tightens entry criteria on a **downside** breach — remains
+**INACTIVE**, standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since the 2026-09-04 review — **ACTIVE, momentum-only entries
+SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). No momentum-only entries have executed
+in the gap to roll the window (book was flat throughout). Catalyst-confirmed entries remain open.
+
+**Context (Perplexity):** BTC $84,464.26, described as -2.0%/24h on the source Perplexity cited
+(inconsistent with Kraken's own daily-close data above — noted, not treated as a crash signal).
+Fear & Greed: CFGI 46/100 "Neutral" (primary reading used), other trackers ranged 42 (Fear) to 71
+(Greed) — mixed but none Extreme Fear, so that R:R-floor rule stays inactive. Top catalysts today:
+US Senate CLARITY Act cloture vote, US jobless-claims/new-home-sales prints, a Trump-Xi meeting
+flagged as a risk-sentiment event, and a SOSO token unlock (~7.6% of supply) — none of these map to
+any Kraken-sourced candidate below.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls
+across 622 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k,
+spread ≤1%: **122 candidates** (broad market-wide rally — BTC itself up ~10% since the last logged
+pass on Sep 13, alts moving in sympathy). Top by gain: PACTUSD (+36.92%, 7.10% off high — outside
+fade cap), ALEOUSD (+29.36%, 37.95% off high), ONDOUSD (+25.03%, 1.52% off high — just outside the
+1.5% fade cap), XLTCZUSD (+19.44%, 1.12% off high), PEAQUSD (+17.99%, 0.99%), FETUSD (+17.65%,
+5.98% off high), QNTUSD (+15.97%, 0.38%), and dozens more.
+
+Applying the ≤1.5% live-intracandle-fade cap left 15 survivors; deep-checking each via 15m closed
+candles for the momentum-peak-check freshness ceiling (min(30min, time since last logged pass) —
+the 10.6-day gap since the last pass means the ceiling stays fixed at its 30-min floor, not
+widened) and two-closed-candle acceleration:
+
+| Pair | Gain | 24h-high age | Accel (2-leg build) | Verdict |
+|---|---|---|---|---|
+| XPLUSD | +9.22% | 1.1min | pass | survives to catalyst stage |
+| BILLUSD | +8.72% | 1.1min | pass | survives to catalyst stage |
+| ALGOUSD | +8.22% | 1.1min | pass | survives to catalyst stage |
+| PEAQUSD | +17.99% | 16.1min | pass | survives to catalyst stage |
+| PYTHUSD | +9.89% | 16.1min | pass | survives to catalyst stage |
+| RIVERUSD | +8.73% | 16.1min | pass | survives to catalyst stage |
+| JTOUSD | +7.87% | 16.1min | pass | survives to catalyst stage |
+| CRVUSD | +7.37% | 16.1min | pass | survives to catalyst stage |
+| ARXUSD | +10.74% | 31.1min | — | fails freshness ceiling (marginal, >30min) |
+| QNTUSD | +15.97% | 76.2min | — | fails freshness ceiling |
+| OPUSD | +9.19% | 76.2min | fail | fails freshness + acceleration |
+| JASMYUSD | +8.57% | 76.2min | fail | fails freshness + acceleration |
+| XLTCZUSD | +19.44% | 76.2min | — | fails freshness ceiling |
+| LDOUSD | +9.61% | 91.2min | — | fails freshness ceiling |
+| CFGUSD | +10.92% | 16.1min | fail | fails acceleration (spike-then-stall) |
+
+**Catalyst check (Perplexity, all 8 freshness/acceleration survivors):**
+- **PEAQUSD:** "peaqOS launching on Solana/Sunrise" — an ongoing multi-day narrative (7d +44.1%), not
+  a dated <6h event. No confirmed fresh catalyst.
+- **PYTHUSD:** "Approved as external distributor of Nasdaq Basic" — real but undated news; external
+  trackers (CoinGecko -5.2%, CMC -3.6%, Kraken itself -3.72% per Perplexity's own read) show PYTH
+  **down** on the day even as our Kraken sweep read it +9.89% intraday — a real cross-exchange
+  divergence in direction, not just magnitude. No confirmed fresh catalyst; treated as noise/thin
+  book behavior, not a real breakout.
+- **XPLUSD:** Bearish — large token unlock scheduled **tomorrow (Sept 25)**, ~63% of circulating
+  supply, cited as the primary driver of *recent selling pressure*. This is the Scheduled-Catalyst
+  Pre-Positioning rule's exact bad case (entering ahead of a dated catalyst on momentum alone) and
+  the catalyst direction is bearish, not bullish. Rejected.
+- **RIVERUSD:** Bearish — a Sept 22 token unlock (~4% of supply) cited as the current selling driver;
+  external trackers show -1.7% to -9.8%/24h (mixed but net negative), "bearish to choppy" tone. No
+  confirmed fresh bullish catalyst.
+- **BILLUSD:** Catalysts cited (Robinhood/Bitstamp listing Aug 1, Clarity Act vote item Sept 4) are
+  weeks old, not <6h. No confirmed fresh catalyst.
+- **ALGOUSD:** Ecosystem items (v5.0 upgrade, post-quantum messaging) are not dated as fresh <6h
+  events; external trackers show ALGO **down** 4-6%/24h vs Kraken's own +9.07% read — another
+  cross-exchange direction mismatch. No confirmed fresh catalyst.
+- **JTOUSD:** No single token-specific catalyst — "volatile range trade," mixed technical reads. No
+  confirmed fresh catalyst.
+- **CRVUSD:** News flow (Llamalend v2 on Optimism, yRisk as risk provider) is protocol development,
+  not a dated <6h catalyst; external trackers show CRV **down** 7-10%/24h vs Kraken's own +7.37%
+  read — a third instance of the same cross-exchange direction mismatch pattern seen on PYTH/ALGO
+  today.
+
+All 8 survivors remain **momentum-only** (no confirmed <6h catalyst) and are therefore blocked by
+the standing win-rate kill switch (ACTIVE, 20.0%, below the 35% floor) regardless of R:R math. The
+repeated Kraken-vs-external-tracker direction mismatches on PYTH/ALGO/CRV specifically (Kraken up
+intraday, every external source down on the day) are also a soft cross-exchange divergence signal
+independent of the kill switch — noted for pattern-tracking, not yet at the >15-20% price-level
+threshold the formal gate uses, but consistent with several of today's "session gain" reads being
+partly a stale-book/thin-liquidity artifact against a broader down day rather than a clean breakout.
+No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders) — unchanged
+through the entire 10.6-day gap. Crash gate clear. Weekly downtrend gate INACTIVE (BTC +3.91%/5d,
+upside breach doesn't tighten criteria). Win-rate kill switch unchanged (ACTIVE, momentum-only
+SUSPENDED, 20.0%) — the binding gate for all 8 candidates that otherwise cleared every structural/
+technical/freshness check, none of which had a confirmed <6h catalyst (three of the eight showed
+outright bearish catalysts or cross-exchange direction mismatches on top of that). No gate loosened
+to manufacture a trade.
+
+### Step 8 — Notification
+
+**Push sent** — the 10.6-day gap in the hourly routine firing (last pass 2026-09-13 23:00 UTC,
+this pass 2026-09-24 15:48 UTC) is a genuine operational failure the user needs to know about,
+independent of the fact that the book happened to sit flat and unaffected throughout it (no
+capital was at risk, but the monitoring/trading function itself was dark for over a week — a
+different outcome would have gone unmanaged the whole time). No trade executed this pass. Per
+CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21);
+the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
