@@ -43267,3 +43267,66 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 (routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 18:00 UTC (fired 18:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 17:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat.
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,429.70 vs session open $84,384.50 → +0.05%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,429.70 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.94%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep, 623 online USD pairs, zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: 120 candidates (broad market-wide rally
+continuing from prior passes today). Applying the ≤1.5% live-intracandle-fade cap left 37
+survivors (XZECZUSD excluded pre-emptively, AU jurisdiction-restricted per TRADING-STRATEGY.md);
+deep-checked the top 15 by gain via 15m closed candles for momentum-peak-check freshness (ceiling:
+min(30min, time since last logged pass) = 30min, since the last pass was ~61min ago) and
+two-closed-candle acceleration:
+
+| Pair | 24h-high age | Accel | Verdict |
+|---|---|---|---|
+| PEAQUSD | 16.2min | pass | survives to catalyst stage |
+| PLAYUSD | 1.2min | pass | survives to catalyst stage |
+| RAYUSD | 16.2min | pass | survives to catalyst stage |
+| LINKUSD | 1.2min | pass | survives to catalyst stage |
+| LDOUSD | 1.2min | fail | fails acceleration (spike-then-stall) |
+| SKYUSD | 16.2min | fail | fails acceleration (spike-then-stall) |
+| QNTUSD, JTOUSD, ACHUSD, BILLUSD, AUSD, RENDERUSD, JASMYUSD, MANAUSD, SANDUSD | 31–271min | — | fail freshness ceiling |
+
+**Catalyst check (Perplexity, all 4 freshness/acceleration survivors):**
+- **PEAQUSD:** No fresh catalyst — same 7–17-day-old peaqOS/Economics 2.0 items cited on every
+  pass today. No confirmed <6h catalyst.
+- **PLAYUSD:** Ticker still ambiguous across multiple unrelated "PLAY" tokens — no reliable
+  same-day catalyst identifiable, consistent with the 16:00 UTC pass.
+- **RAYUSD:** No time-stamped catalyst in the last 6h — move attributed to an ongoing buyback
+  narrative and tokenized-stock-volume milestone (Raydium crossing $5B cumulative), both
+  standing themes, not a fresh discrete event. No confirmed <6h catalyst.
+- **LINKUSD:** Initial read cited a Chainlink–Infosys partnership as a fresh catalyst; follow-up
+  query pinned the actual announcement to **Sep 22, 2026** (~2 days old, X post timestamp
+  13:01/13:32 Sep 22) — older news being recirculated, not a same-day event. No confirmed <6h
+  catalyst.
+
+All 4 survivors remain momentum-only (no confirmed <6h catalyst) and are blocked by the standing
+win-rate kill switch (ACTIVE, 20.0%, below the 35% floor) regardless of R:R math. No gate loosened
+to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.94%/5d, upside breach). Win-rate kill switch
+unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — binding gate for all 4 candidates that
+otherwise cleared every structural/technical/freshness check, none with a confirmed <6h catalyst
+(LINK's apparent catalyst turned out to be ~2 days stale on verification).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~61min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
