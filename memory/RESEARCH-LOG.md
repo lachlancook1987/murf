@@ -43547,3 +43547,66 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 cross-exchange gate working as designed, not an anomaly needing the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 22:00 UTC (fired 22:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 21:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,111.20 vs session open $84,384.50 → −0.32%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,111.20 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.55%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs/Ticker, 623 online USD pairs,
+zero fetch errors — market-wide rally continuing from prior passes today. Filtered for session gain
+≥3%, notional24h >$50k: 123 candidates. Applying the ≤1.5% live-intracandle-fade cap left 18
+survivors; pulled 15m OHLC for each to check momentum-peak-check freshness (ceiling: min(30min,
+time since last logged pass) = 30min, last pass was ~59min ago), two-closed-candle acceleration, and
+1h/4h momentum bars (>3%/>5%):
+
+| Pair | 24h-high age | mom1h | mom4h | Accel | Verdict |
+|---|---|---|---|---|---|
+| PLAYUSD | 31.0min | −0.20% | +2.57% | No | fails freshness ceiling (barely) + fails momentum bars anyway |
+| LCXUSD | 91.0min | −1.29% | +1.56% | No | fails freshness ceiling + momentum bars |
+| ENAUSD | 496.0min | −0.93% | +3.04% | No | fails freshness ceiling hard |
+| POLUSD | 31.0min | −0.20% | +0.81% | No | fails freshness ceiling (barely) + momentum bars |
+| SANDUSD | 241.0min | −0.70% | −1.16% | No | fails freshness ceiling + momentum reversed |
+| MANAUSD | 196.0min | −0.89% | −1.01% | No | fails freshness ceiling + momentum reversed |
+| XXLMZUSD | 76.0min | −0.27% | +0.06% | No | fails freshness ceiling + momentum bars |
+| ICNTUSD | 976.0min | −0.70% | +0.50% | No | fails freshness ceiling hard |
+| USUSD | 61.0min | +2.50% | +8.14% | Yes | 4h momentum clears, 1h just short (2.50%<3%); **fails freshness ceiling** — 24h high stale 61min with no fresh breakout above it (price still 0.45% below that high) |
+| REUSD | 391.0min | −0.22% | +0.20% | No | fails freshness ceiling hard |
+| KSMUSD | 391.0min | −0.44% | −1.08% | No | fails freshness ceiling hard |
+| YGGUSD | 61.0min | −0.37% | +0.00% | No | fails freshness ceiling + momentum bars |
+| BABYUSD | 391.0min | −0.08% | −0.08% | No | fails freshness ceiling hard |
+| ETHFIUSD | 16.0min | +0.06% | +1.23% | Yes | passes freshness+acceleration but **fails momentum bars** (1h 0.06%<3%, 4h 1.23%<5%) — fresh high but flat move, not real momentum |
+| RUNEUSD | 121.0min | −0.16% | +0.63% | No | fails freshness ceiling + momentum bars |
+| WLFIUSD | 421.0min | −0.35% | +1.08% | No | fails freshness ceiling hard |
+| PROMPTUSD | 61.0min | −1.13% | +0.55% | No | fails freshness ceiling + momentum bars |
+| SENTUSD | 1201.0min | −0.06% | +2.24% | No | fails freshness ceiling hard |
+
+No candidate cleared freshness + momentum bars + acceleration together — the two closest (USUSD,
+ETHFIUSD) each failed exactly one of the three, cleanly, not a near-miss worth chasing. No catalyst-
+confirmation query run (no candidate reached that evaluation stage), so the standing win-rate kill
+switch was never the binding constraint this pass.
+
+**Fear & Greed:** not queried this pass — moot, since no candidate reached the R:R/catalyst
+evaluation stage where it would apply.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.55%/5d, upside breach). Win-rate kill switch unchanged
+(ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass. No gate loosened to manufacture a
+trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called
+(retired 2026-09-02, per the Position Watch Dashboard section).
