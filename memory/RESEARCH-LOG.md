@@ -43480,3 +43480,70 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 (routine fired ~61min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 21:00 UTC (fired 21:47 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 20:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat; stop `a2b44cf9` reconfirmed `canceled`.
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,468.20 vs session open $84,384.50 → +0.10%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,468.20 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.99%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep, 623 online USD pairs, zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: 133 candidates (broad market-wide rally
+continuing from prior passes today). Applying the ≤1.5% live-intracandle-fade cap left 63
+survivors; deep-checked the top candidates by gain via 15m closed candles for momentum-peak-check
+freshness (ceiling: min(30min, time since last logged pass) = 30min, last pass was ~47min ago) and
+two-closed-candle acceleration, then 1h/4h momentum bars (>3%/>5%) for freshness-passers:
+
+| Pair | 24h-high age | Verdict |
+|---|---|---|
+| ONDOUSD | 286.1min | fails freshness ceiling hard (no fresh 1h breakout above the stale high either — 1h mom +2.88%, 4h mom +0.57%, both short of bar anyway) |
+| QNTUSD | 16.1min | passes freshness+acceleration, but 1h momentum +2.32% / 4h momentum +4.70% — both just short of the 3%/5% bar |
+| XPLUSD | 16.1min | passes freshness+acceleration+fade, **1h mom +4.04% / 4h mom +11.96% — clears momentum bars** — see catalyst check below, **rejected on cross-exchange divergence** |
+| PLAYUSD | 46.3min | fails freshness ceiling |
+| CHIPUSD | 17.6min | passes freshness+fade+momentum bars (1h +4.07%, 4h +10.05%) but **fails two-candle acceleration** — closed sequence 0.04778→0.04789→0.04824→0.04804→0.05002: the 21:15 close (0.04804) is *lower* than the 21:00 close (0.04824), a dip before the final spike, not sustained acceleration |
+| LDOUSD | 77.3min | fails freshness ceiling |
+| SNXUSD | 2.3min | fresh high but 1h mom +0.79% / 4h mom +2.98% — well short of momentum bar |
+| BILLUSD | 2.3min | fresh high but 1h mom +1.27% / 4h mom +2.58% — well short of momentum bar |
+| SANDUSD | 2.3min | fresh high but 1h mom +0.70% / 4h mom +0.94% — well short of momentum bar |
+| JTOUSD, BTRUSD, SYRUPUSD, ENAUSD, CRVUSD, AUSD, TIAUSD, KAITOUSD, AIOZUSD | 47–437min | all fail freshness ceiling |
+| DASHUSD | — | AU-restricted asset, skipped pre-emptively per TRADING-STRATEGY.md |
+
+**XPLUSD catalyst + divergence check (Perplexity):** Plasma (XPL) is approaching a major token
+unlock on **Sept 25, 2026** (~1.76B XPL, ~63% of circulating supply, ~$160–179M) — a supply-
+overhang/bearish factor cited as the actual driver of recent volatility, not a bullish <6h catalyst.
+More importantly, **major trackers (CoinGecko/CMC-class sources) price XPL at roughly $0.089–0.0954
+while Kraken's live XPLUSD quote is $0.1133** — a **~19–27% divergence**, squarely inside the
+Cross-Exchange Price-Divergence Gate's reject band (>15–20%, per TRADING-STRATEGY.md, the
+PTB/ALKIMI/TNSR pattern). **Rejected on the divergence gate regardless of clearing every
+momentum/freshness/acceleration check** — thin/possibly-distorted Kraken order book, not a real
+tradeable move at the quoted price. No order placed.
+
+No other candidate reached the catalyst-confirmation stage (all failed a structural/momentum gate
+first), so the standing win-rate kill switch was never the binding constraint this pass.
+
+**Fear & Greed:** not queried this pass — moot, since no candidate reached the R:R/catalyst
+evaluation stage where it would apply.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.99%/5d, upside breach). Win-rate kill switch
+unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached; the two candidates that cleared
+freshness+momentum bars were rejected on other gates (XPLUSD: cross-exchange divergence ~19-27%,
+clear reject-band breach; CHIPUSD: failed two-candle acceleration on a spike-then-dip sequence). No
+gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~47min after the prior pass, normal cadence). The XPLUSD divergence catch is the
+cross-exchange gate working as designed, not an anomaly needing the user's attention. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
