@@ -43209,3 +43209,61 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard
 section).
+
+## 2026-09-24 — Scan — 17:00 UTC (fired 17:45 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 16:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat.
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,112.70 vs session open $84,384.50 → −0.32%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,112.70 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.55%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep, 622 online USD pairs (613 valid tickers), zero
+fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 122 candidates
+(continuing broad market-wide rally). Applying the ≤1.5% live-intracandle-fade cap left 37
+survivors; deep-checked the highest-gain/lowest-offhigh subset (19 pairs) via 15m closed candles
+for momentum-peak-check freshness (ceiling: min(30min, time since last logged pass) = 30min, since
+the last pass was ~59min ago) and two-closed-candle acceleration:
+
+| Pair | 24h-high age | Accel | Verdict |
+|---|---|---|---|
+| PEAQUSD | 16.2min | pass | survives to catalyst stage |
+| MOGUSD | 16.2min | pass | survives to catalyst stage |
+| ARXUSD | 61.2min | pass | fails freshness ceiling |
+| SKYUSD | 46.2min | pass | fails freshness ceiling |
+| RENDERUSD | 31.2min | fail | fails freshness ceiling + acceleration |
+| RSRUSD, JTOUSD, LDOUSD, ACHUSD, BILLUSD, JASMYUSD, TACUSD | 91–211min | fail | fail freshness + acceleration |
+| BTRUSD, CVXUSD, MEGAUSD | 16.5min | fail | fresh but fail two-candle acceleration |
+| YGGUSD, REZUSD, SANDUSD, MANAUSD | 76–211min | fail | fail freshness + acceleration |
+| XZECZUSD | — | — | AU jurisdiction-restricted (ZEC), skipped pre-emptively per TRADING-STRATEGY.md |
+
+**Catalyst check (Perplexity, both freshness/acceleration survivors):**
+- **PEAQUSD:** Catalysts cited are peaqOS launching on Solana (Sept 17) and Economics 2.0 Phase One
+  activation (Sept 7) — both real but 7–17 days old, not a dated <6h event. Same conclusion as the
+  15:00/16:00 UTC passes today. No confirmed fresh catalyst.
+- **MOGUSD:** No fundamental catalyst at all — Perplexity explicitly attributes the move to
+  "community/speculative momentum," not a protocol announcement, tied loosely to an OnChainHeroes
+  farming-activity narrative. No confirmed fresh catalyst.
+
+Both survivors remain momentum-only and are blocked by the standing win-rate kill switch (ACTIVE,
+20.0%, below the 35% floor) regardless of R:R math. No gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.55%/5d, upside breach). Win-rate kill switch
+unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — binding gate for both candidates that
+otherwise cleared every structural/technical/freshness check, neither with a confirmed <6h
+catalyst.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
