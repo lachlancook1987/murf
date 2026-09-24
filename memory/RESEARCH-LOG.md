@@ -43330,3 +43330,85 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 (routine fired ~61min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — Scan — 19:00 UTC (fired 19:45 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 18:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []`, confirmed flat.
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,414.90 vs session open $84,384.50 → +0.04%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,414.90 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.93%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep, 623 online USD pairs, zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: 137 candidates (broad market-wide rally
+continuing from prior passes today). Applying the ≤1.5% live-intracandle-fade cap left 64
+survivors; deep-checked the top 15 by gain via 15m closed candles for momentum-peak-check freshness
+(ceiling: min(30min, time since last logged pass) = 30min, since the last pass was ~59min ago) and
+two-closed-candle acceleration:
+
+| Pair | 24h-high age | Accel | Verdict |
+|---|---|---|---|
+| QNTUSD | 30.9min | fail | fails freshness ceiling (marginal, just over 30min) |
+| PLAYUSD | 15.9min | fail | fails acceleration (spike-then-dip) |
+| CHIPUSD | 15.9min | pass | survives to catalyst stage |
+| RIVERUSD | 15.9min | pass | survives to catalyst stage |
+| LDOUSD | 15.9min | pass | survives to catalyst stage |
+| RAYUSD | 46.0min | fail | fails freshness ceiling |
+| SKYUSD | 15.9min | pass | survives to catalyst stage |
+| BIOUSD | 180.9min | fail | fails freshness ceiling |
+| JTOUSD | 61.0min | fail | fails freshness ceiling + acceleration |
+| AUSD | 15.9min | pass | survives to catalyst stage (but see below — stablecoin, price ~$1) |
+| CRVUSD | 15.9min | pass | survives to catalyst stage |
+| SYRUPUSD | 315.9min | fail | fails freshness ceiling |
+| SNXUSD | 315.9min | fail | fails freshness ceiling + acceleration |
+| JASMYUSD | 165.9min | fail | fails freshness ceiling + acceleration |
+| RENDERUSD | 61.0min | fail | fails freshness ceiling + acceleration |
+
+**Catalyst check (Perplexity, all 6 freshness/acceleration survivors):**
+- **CHIPUSD (USD.AI):** Standing narrative ($128.9M GPU financing facility, 32 NVIDIA GB200 NVL72
+  deployment) with no fresh dated event; sentiment across trackers actually reads bearish/-8-11%
+  on the day despite our sweep's session-gain read, and 7-day trend (+8.6%) is stronger than
+  today's move. No confirmed <6h catalyst.
+- **RIVERUSD:** Only news item is a scheduled **token unlock** (~$1.22M, dated Sep 22) adding
+  supply pressure — a bearish/neutral factor, not a bullish catalyst explaining the pump. No
+  confirmed <6h catalyst.
+- **LDOUSD:** A proposed market-making/buyback liquidity mandate is under community debate, not a
+  confirmed dated event; tone otherwise cautious-to-bearish on staking-share concerns. No
+  confirmed <6h catalyst.
+- **SKYUSD:** Real catalysts exist (Galaxy Digital $100M sUSDS treasury add + SKY purchase, first
+  protocol burn) and best matched the price action of any candidate this pass — followed up with a
+  targeted timestamp query: Galaxy Digital's announcement was first reported **2026-09-23 ~09:13
+  AM** (StockTitan/PRNewswire), i.e. **~34.5 hours old**, well outside the <6h window; burn
+  announcement timestamp unverifiable via Perplexity. No confirmed <6h catalyst.
+- **AUSD:** Ticker is Agora's USD stablecoin (pegged ~$1.00) — the sweep's 9.28% "session gain" on
+  a stablecoin is a thin-market/data-quality artifact, not a real momentum move, consistent with
+  this ticker's recurring ambiguity flagged on prior passes. No confirmed <6h catalyst; also not a
+  genuine momentum candidate by asset type.
+- **CRVUSD:** Governance news (new crvUSD/Llamalend risk provider, Llamalend v2 on Optimism) is
+  ongoing/procedural, not a dated <6h event; price outlook itself reads mixed-to-bearish
+  (CoinMarketCap AI flags bearish pressure). No confirmed <6h catalyst.
+
+All 6 survivors remain momentum-only (no confirmed <6h catalyst) and are blocked by the standing
+win-rate kill switch (ACTIVE, 20.0%, below the 35% floor) regardless of R:R math. No gate loosened
+to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.93%/5d, upside breach). Win-rate kill switch
+unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — binding gate for all 6 candidates that
+otherwise cleared every structural/technical/freshness check, none with a confirmed <6h catalyst
+(SKY's real catalyst verified at ~34.5h old on direct timestamp check; AUSD's "gain" is a
+stablecoin data artifact, not real momentum).
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, nothing new vs. the last logged pass
+(routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
