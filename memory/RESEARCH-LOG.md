@@ -44893,3 +44893,74 @@ catalyst freshness/specificity grounds (stale momentum, recent move actually bea
 here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were
 not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per
 the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 15:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 14:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; orders history
+unchanged (residual filled/canceled entries from 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,477.70 vs session open $84,380.00 → −1.07% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$83,477.70 = **+2.85%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 621 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **68 candidates**. Live-intracandle-fade cap (≤1.5% off 24h
+high) plus spread ≤1% narrowed this to **6** survivors (SPK, US, TAC, GALA, APR, MANA).
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration) on
+all 6: only **SPKUSD** survived — confirmed-closed-candle high (15:30 UTC candle, H $0.023778,
+closed ~1.6min before this check) held above the prior breakout level, both of the last two closed
+15m candles closing higher than the prior close (0.023064 → 0.023174 → 0.023692), live fade 0.23%
+off the confirmed-closed high (well inside the 1.5% cap). Live spread widened to 0.925% by the time
+of the deep-check quote (still under the 1% hard cap, but the batch-sweep's initial 0.225% read had
+moved). TACUSD (last-two-closed-candle close declined, 0.001635 vs 0.001640) and GALAUSD (flat,
+not strictly higher) both failed acceleration on a stall/flat pattern; APRUSD's move was a single-
+candle spike with no second confirming candle; MANAUSD and USUSD both reversed on their most recent
+closed candle after an initial up leg (classic spike-then-fade). None of these four/five reached
+catalyst-confirmation.
+
+Fear & Greed checked: 52 "Neutral" (CFGI) — not Extreme Fear, that R:R-floor rule stays inactive.
+
+Catalyst-confirmation via Perplexity on the sole survivor:
+- **SPK (Spark):** No dated <6h catalyst. Cited items — an OKX USDT vault launch (Sep 11) and
+  RLUSD added to Spark's stablecoin FX layer (Sep 10) — are both 2 weeks stale. CoinMarketCap's own
+  AI read frames today's move as a technical breakout above $0.022 resistance, not a dated news
+  event. Momentum-only.
+
+SPK clears every technical/freshness/acceleration/fade/spread gate but carries no catalyst meeting
+the <6h freshness/specificity bar (the ONDO 06:00 UTC entry's standard), so it is classified
+momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04, 20.0%
+trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8 losses: ZORA, HNT,
+ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries SUSPENDED). ONDO's
+06:00 UTC win was catalyst-confirmed and does not count toward this window, so the 20.0% figure is
+unchanged. Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed as a
+win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** One candidate (SPK)
+cleared every technical/freshness/acceleration/fade/spread gate but carried no catalyst meeting the
+<6h freshness/specificity bar (its cited news was 2 weeks stale, move attributed to a technical
+resistance breakout, not a dated event) — blocked by the active win-rate kill switch as momentum-
+only. Crash gate clear (BTC −1.07% intraday). Weekly downtrend gate inactive (+2.85%/5d, upside
+breach). $72.3189 cash fully available for the next pass to redeploy against a qualifying
+candidate. Book unchanged from the 14:00 UTC pass — no Step 3 maintenance action needed (nothing
+open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. One candidate (SPK) cleared every technical gate but was correctly excluded on
+catalyst freshness/specificity grounds (stale news, technical-breakout framing not a dated event) —
+nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02,
+per the Position Watch Dashboard section).
