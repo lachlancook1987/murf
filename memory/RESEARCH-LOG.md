@@ -45472,3 +45472,97 @@ clear/inactive. 4 candidates cleared acceleration but all sat below stale 24h hi
 breakout — a clean structural rejection, not a near-miss worth flagging. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 22:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 21:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,068.70 vs session open $84,380.00 → −0.37% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) $84,068.70 = **+3.58%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **109 candidates** — the market-wide alt rally continuing from
+every earlier pass today, now the second-widest candidate count of the day. Live-intracandle-fade
+cap (≤1.5% off 24h high) narrowed this to **48** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness + two-closed-candle acceleration) on the
+top 25 survivors by gain: **15 cleared two-candle acceleration** (SEI, DEEP, JUP, WLD, PYTH, OP,
+GALA, POL, ARKM, VIRTUAL, FARTCOIN, POPCAT, PENGU, ETHFI, FIL); ENA, JTO, ZRO, SENT, WAL, RED,
+AVNT, TAO, ZETA, JASMY failed acceleration on a flat/declining second leg.
+
+**Momentum-peak-check freshness (30min ceiling) on the 15 acceleration-passers:**
+- **SEIUSD, DEEPUSD:** 24h high (from closed candles) set 30.9min ago — narrowly outside the 30min
+  ceiling, no fresh breakout above it since. Stale (marginal).
+- **OPUSD, GALAUSD, FARTCOINUSD, FILUSD:** 24h high set 135.9min ago. Stale.
+- **PENGUUSD:** 24h high set 165.9min ago. Stale.
+- **VIRTUALUSD:** 24h high set 585.9min (9.8h) ago. Stale.
+- **JUPUSD, WLDUSD, PYTHUSD, POLUSD, ARKMUSD, POPCATUSD, ETHFIUSD:** 24h high set **15.9min ago —
+  within the freshness ceiling.** 7 candidates cleared momentum-peak-check.
+
+Spread check on all 7 freshness-passers: JUP 0.192%, WLD 0.143%, PYTH 0.133%, POL 0.111%, ARKM
+0.073%, POPCAT 0.167%, ETHFI 0.153% — all well inside the 1% cap.
+
+**Catalyst-confirmation via Perplexity on all 7 structural passers:**
+- **JUPUSD (+14.32%):** Coverage cites a general rally extension tied to stronger Solana DeFi
+  activity and rising volume — no single dated event. Momentum-only.
+- **WLDUSD (+11.25%):** Cross-venue price divergence ($0.41–$0.46) but no catalyst mentioned,
+  described as "choppy trading," not a breakout. Momentum-only.
+- **PYTHUSD (+9.89%):** Clearest cited item (Nasdaq Basic real-time equity-data distributor
+  announcement) confirmed dated **Sep 22, 2026** — 3 days stale, outside the <6h bar. Secondary
+  item (Switchboard oracle shutdown) is undated/ongoing narrative. Momentum-only (stale catalyst).
+- **POLUSD (+7.43%):** Proposed 100M POL burn — pending Security Council approval, no fixed
+  trigger date, an ongoing/anticipatory narrative rather than a same-day dated event. Momentum-only.
+- **ARKMUSD (+7.11%):** Cited for real-time tracking of the Bitget hack — sources themselves flag
+  the move as more likely sector rotation (AI/data tokens) than an Arkham-specific release.
+  Momentum-only.
+- **POPCATUSD (+6.56%):** CoinMarketCap explicitly states no specific POPCAT catalyst was found in
+  the data — attributed to meme-sector rotation (PEPE/DOGE surge) and technical breakout chatter.
+  Momentum-only.
+- **ETHFIUSD (+6.1%):** Clearest item (21Shares ether.fi ETP launch on Euronext) confirmed dated
+  **Sep 22, 2026** — 3 days stale, outside the <6h bar, same recurring pattern as PYTH/OP this
+  week. Momentum-only (stale catalyst).
+
+All 7 candidates that cleared every technical/freshness/acceleration/fade/spread gate are
+therefore classified momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE
+since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL;
+8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only
+entries SUSPENDED). ONDO's 06:00 UTC win remains catalyst-confirmed and does not count toward this
+window, so the 20.0% figure is unchanged. Fear & Greed checked: 52 "Neutral" (CFGI primary), 45
+"Fear" (CoinGecko), 73 "Greed" (CoinStats/CMC-based) — not Extreme Fear on the primary reading, so
+that R:R-floor rule stays inactive (moot — no candidate reached R:R evaluation). Daily
+consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed as a win at the 08:00
+UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 7 candidates cleared
+every technical/freshness/acceleration/fade/spread gate (OP, among the 15 acceleration-passers,
+was rejected earlier on stale 24h-high freshness alone — 135.9min old — and did not reach
+catalyst-check this pass), but every one of the 7 carries either no dated catalyst at all (JUP,
+WLD, POL, POPCAT, ARKM — three explicitly noted by sources as having no clear token-specific
+event) or a real catalyst that is 3+ days stale (PYTH, ETHFI, both dated Sep 22) — the same
+recurring stale/vague-catalyst pattern seen across every pass this week. All 7 are
+therefore blocked by the active win-rate kill switch as momentum-only. Crash gate clear (BTC
+−0.37% intraday). Weekly downtrend gate inactive (+3.58%/5d, upside breach). $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate. Book unchanged from the
+21:00 UTC pass — no Step 3 maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. 7 candidates cleared every technical gate but were correctly excluded on catalyst
+freshness/specificity grounds (two 3-day-stale dated items, five with no coin-specific catalyst at
+all) — nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
