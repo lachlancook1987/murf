@@ -1470,3 +1470,137 @@ None — 100% ZUSD $70.6298 (+$0.1550 ZAUD dust). No open Kraken orders. Alpaca 
 **A full week of disciplined inaction.** Zero trades, zero drawdown, zero operational errors, and the bot finished **+4.49 points ahead of BTC** purely by staying in cash through a real BTC weekly downtrend that the downtrend gate correctly detected and restricted against. This is the intended behavior of a gate-protection-first strategy during a genuinely unfavorable tape, not a gap to fix — the gates (acceleration, confirmed-candle, freshness, downtrend floor) each did real work this week rejecting specific, named candidates rather than acting as a blanket freeze. The one open question carried forward is whether the win-rate kill switch and downtrend gate are now compounding into an overly conservative regime — worth watching, not yet worth changing, since no trade this week was a false negative by any objective measure (every RUNE/DOT-style near-miss was reasonably rejected against the current rules, and the structural failures were genuine fakeouts by the deep-check evidence in RESEARCH-LOG.md).
 
 ---
+## Week of 2026-09-11 to 2026-09-25 — Review Date: 2026-09-25 (two-week span — Sep 18 review skipped)
+
+### Context
+**This review covers two calendar weeks, not one.** The Sep 18 Friday 07:00 UTC weekly-review pass
+never fired — it fell inside a **10-day, ~256-firing trigger outage** (2026-09-13 23:00 UTC through
+2026-09-24 14:00 UTC) discovered and already pushed to the user on 2026-09-24 (see TRADE-LOG.md and
+RESEARCH-LOG.md 2026-09-24 entries for full detail). This is a scheduler/infrastructure gap outside
+any session's reach, not a review that was skipped by choice. Roughly 80 of a possible 336 hourly
+passes actually fired across the two-week span. The book was confirmed fully flat and unmonitored-
+but-unchanged for the entire outage window (`kraken.sh closedorders` shows zero fills in that
+window), so no fill, stop event, or position needing maintenance was missed — the outage cost
+opportunity, not safety.
+
+**One trade this span:** ONDO/USD, bought 2026-09-25 06:00 UTC (Trade 153) — the first bot trade
+since 2026-08-30, a 26-day gap spanning almost the entire two-week review window. Still open at
+review time, protected by a full-quantity 2.5% trailing stop. A structural finding was also made
+this pass: the T1 partial-profit-take mechanism (an exchange-resting 50%-quantity limit sell,
+introduced 2026-09-02) **cannot be placed on Kraken spot** — the full-quantity trailing stop
+reserves the entire asset balance, leaving no room for a second independent sell order. Documented
+in TRADING-STRATEGY.md's Exit & Stop Rules section; resolution for now is full-quantity-stop-only,
+T1 profit-locking reverts to session-dependent until a real fix (Kraken OCO/conditional-close
+params) is evaluated by a future session.
+
+**Separately, a second mem-sync failure mode was found and recovered this span:** the 2026-09-24
+EOD Snapshot had been computed correctly but landed on an orphaned, never-merged session branch
+(`claude/keen-babbage-jwnnf4`) instead of `main` — a single session's own push apparently failing
+silently, distinct from the already-documented concurrent-session wholesale-clobber race. Recovered
+verbatim into both TRADE-LOG.md and RESEARCH-LOG.md in correct chronological order this span
+(2026-09-25 06:00 UTC pass).
+
+### Account Snapshot (Friday 07:00 UTC pass, live-confirmed)
+| Account | Equity | Cash | Positions |
+|---|---|---|---|
+| Kraken | $71.4032 | $5.6962 ZUSD (+$0.1550 ZAUD dust) | ONDO 119 @ $0.55216 = $65.7070 (unrealized +$0.7734 / +1.19% vs cost incl. fee) |
+| Alpaca | $0 | — | Fully closed (stop `a2b44cf9` still `canceled`, since 2026-05-22) |
+| **Total** | **$71.4032** | $5.6962 | 1 open (ONDO, protected by 2.5% trailing stop) |
+
+### Weekly (two-week) Performance
+| Metric | Value |
+|---|---|
+| Starting Equity (Fri Sep 11 07:00 UTC, live) | $70.6298 |
+| Ending Equity (Fri Sep 25 07:00 UTC, live, incl. unrealized ONDO) | **$71.4032** |
+| **Span Return** | **+1.09%** ($0.7734) |
+| BTC Span Return | **+8.58%** ($77,257.60 → $83,886.20 live) |
+| **Bot vs BTC** | **−7.49 points** (underperformed) |
+
+### Trade Summary (bot-originated)
+| # | Date | Asset | Entry | Status | P&L (unrealized) |
+|---|---|---|---|---|---|
+| 153 | Sep 25 06:00 UTC | ONDO/USD | $0.54133 | OPEN (trailing stop 2.5%) | +$0.7734 (+1.19%) unrealized |
+
+### Weekly Stats
+| Metric | Value |
+|---|---|
+| Total Trades (opened) | 1 |
+| Total Trades (closed) | 0 |
+| Win Rate | N/A — 0 closed trades this span |
+| Profit Factor | N/A — 0 closed trades |
+| Open Unrealized | +$0.7734 (+1.19% on ONDO cost basis) |
+| Est. Fees Paid | $0.51535 (ONDO buy-side taker fee, 0.80%; sell-side fee not yet incurred, position still open) |
+| Hourly passes this span | ~80 fired of 336 possible (10-day outage absorbed the rest) |
+
+### Open Positions (End of Review)
+ONDO/USD — 119 units, entry $0.54133, current $0.55216, protected by full-quantity 2.5% trailing
+stop (`O7IS4V-IFYNT-EOVQ7Q`, stopprice $0.54375). No T1 limit order (mechanism-level placement
+failure, see above). Thesis reconfirmed intact this pass via Perplexity — no break signal.
+
+### Trade Quality Review
+
+**The dominant story this span is the outage, not the strategy.** With ~256 of 336 possible hourly
+passes never firing, this window cannot be used to judge gate calibration the way a normally-
+covered week can — most of the BTC rally that drove the −7.49-point underperformance happened
+while the routine was not running at all, not because live passes rejected good candidates. The
+80 passes that did fire (Sep 11–13 and Sep 24–25) were consistent with prior weeks: structural
+gates (freshness ceiling, two-candle acceleration, live-intracandle-fade) did nearly all of the
+rejecting, with no gate loosened to manufacture a trade.
+
+**The one trade that did happen was clean.** ONDO cleared every gate on its own merits — confirmed
+catalyst (<24h old, Ondo Intelligent Portfolios launch + NEAR partnership), 16.3min-fresh
+confirmed-closed-candle breakout, two-candle acceleration, 0.16% live fade (well inside the 1.5%
+cap), 0.092% spread, 1.2:1 R:R at the catalyst-confirmed floor, no cross-exchange divergence, clear
+of the same-thesis cooling period (last ONDO stop-outs were early June). It is exempt from the
+win-rate kill switch as a catalyst-confirmed entry. The only blemish is operational, not a trading
+decision: the T1 partial-limit order could not be placed for the structural reason above.
+
+**Win-rate kill switch: unchanged, still ACTIVE.** 20.0% trailing win rate over the last 10
+momentum-only entries (2W/8L, driven by the Aug 21–29 losing streak), unchanged since the
+2026-09-04 review — no momentum-only entry has executed since then to roll the window (ONDO is
+catalyst-confirmed and doesn't count). Momentum-only entries remain suspended.
+
+**Profile violations: none.** Spread, freshness, acceleration, fade, R:R, and catalyst-confirmation
+gates were all correctly applied on the one trade executed; the mandatory stop-placement rule was
+honored (stop confirmed open in the same pass as the fill) even though the secondary T1 mechanism
+failed — the primary "no unprotected position" rule was never violated.
+
+**Capital constraint, new observation this review:** ONDO's 92%-of-equity conviction sizing left
+only $5.70 cash — below Kraken's own order minimum for essentially every other pair screened this
+morning (PHAUSD's $11.75 minimum alone exceeds it). This is a natural consequence of full-conviction
+sizing on a catalyst-confirmed entry with "no per-position cap," not a bug, but worth naming: while
+a single large position is open, the strategy is effectively unable to execute a second concurrent
+trade regardless of how clean a new candidate looks, until that position is closed (stopped out or
+manually reduced) and cash is freed. No rule violated — the philosophy explicitly favors conviction
+sizing over diversification — but it's the first time this span this specific interaction (one
+big winner blocking capital for a second good setup) has actually been observed rather than
+theoretical.
+
+### Concrete Adjustments (added 2026-09-25)
+
+**None to trading rules.** With only one trade this span (still open, no closed outcome to grade)
+and the review window itself distorted by a 10-day outage, there isn't realized-outcome data to
+tune the structural gates, the win-rate kill switch threshold, or the weekly-downtrend gate against.
+The T1 partial-profit-take mechanism finding was already documented and resolved (full-stop-only,
+pending a future OCO-based redesign) in TRADING-STRATEGY.md by the pass that discovered it — no
+further change needed here. The capital-constraint observation above is noted for future reviews to
+watch (does full-conviction sizing on a single position recurringly crowd out good setups, or was
+this a one-off?) — not acted on now, per the Gate-Rejection Outcome Tracking convention of
+observing before tuning.
+
+### Key Lesson
+**A two-week span dominated by an infrastructure gap, not a trading-strategy result.** The headline
+number (−7.49 points vs BTC) looks bad in isolation but is almost entirely attributable to the
+already-flagged 10-day trigger outage during which BTC rallied ~9% while the routine simply wasn't
+running — not to any gate rejecting a trade it should have taken. The one trade that did execute
+(ONDO) was a clean, fully-gated, catalyst-confirmed entry with no rule violations, ending the
+26-day drought since the last bot trade (Aug 30). The two genuine findings worth carrying forward
+are both operational, not strategic: (1) the T1 partial-profit-take mechanism is unworkable on
+Kraken spot as designed, already resolved this span; (2) a second, distinct mem-sync failure mode
+(a session's own push silently not landing on `main`) exists alongside the known concurrent-session
+clobber race, and both together suggest the mem-sync recipe in CLAUDE.md needs more robustness than
+"stop and diff before overwriting" alone provides — worth the user's attention as an infrastructure
+item, separate from anything a strategy-doc change can fix.
+
+---
+
