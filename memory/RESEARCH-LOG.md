@@ -44964,3 +44964,104 @@ catalyst freshness/specificity grounds (stale news, technical-breakout framing n
 nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02,
 per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 16:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 15:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,884.30 vs session open $84,380.00 → −0.59% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$83,884.30 = **+3.35%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **89 candidates** (broad market-wide rally continuing,
+consistent with every pass today). Live-intracandle-fade cap (≤1.5% off 24h high) plus spread ≤1%
+narrowed this to **34** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration) on
+all 34 survivors: **12** cleared both — AEROUSD, GRASSUSD, ENAUSD, JTOUSD, SEIUSD, WALUSD, WLDUSD,
+AAVEUSD, SHXUSD, SOLUSD, ARBUSD, POPCATUSD (all with freshness ≤1.3min on their max-high candle
+except JTOUSD/SEIUSD at 1.3min too — effectively all fired off the most recent closed candle, a
+genuine broad-market acceleration moment at scan time). The other 22 (CCUSD, JUPUSD, REDUSD,
+LDOUSD, ZETAUSD, GALAUSD, JASMYUSD, APRUSD, METUSD, POLUSD, TACUSD, CFGUSD, MANAUSD, ETHFIUSD,
+KSMUSD, EIGENUSD, CROUSD, FILUSD, SENTUSD, AIUSD, ADAUSD, BABYUSD) failed either acceleration
+(spike-then-stall/flat closes) or freshness (max high 16–91min stale) or both.
+
+Fear & Greed checked: 52 "Neutral" (Alternative.me), CFGI showing 58 — not Extreme Fear, that R:R-
+floor rule stays inactive. Macro catalyst scan: today's dominant market-wide narrative is the
+~$16B BTC options expiry (Deribit) plus the failed CLARITY Act vote reaction — broad risk-on
+altcoin rotation, not any single-asset catalyst; this is consistent with 12 different assets all
+clearing technical/freshness/acceleration gates simultaneously (a market-wide move, not isolated
+setups).
+
+Catalyst-confirmation via Perplexity on the top candidates by session gain (AERO 18.5%, GRASS
+17.4%, ENA 16.7%, SEI 10.7%, WAL 8.0%, AAVE 4.5%, WLD 4.8%, SOL 3.9%, ARB 3.8%):
+- **AERO:** Cited drivers (Slipstream V3, buyback narrative, new listings, Base activity) are
+  standing multi-day narratives, no single dated <6h trigger. Momentum-only.
+- **GRASS:** Grass Wallet launch announcement and a Coinbase spot-trading item are undated/
+  ambiguous-dated product news, not a confirmed <6h trigger. Momentum-only.
+- **ENA:** Fee-switch/buyback mechanics and an "Arthur Hayes bullish call" are the closest items
+  but neither is pinned to a <6h window; a looming Oct 5 unlock is actually a headwind, not a
+  driver. Momentum-only.
+- **SEI:** Canary Capital's amended staked-SEI-ETF S-1 — the cited catalyst — was filed **Sep 21**,
+  4 days stale, well outside the <6h freshness bar despite being a real, specific, dated event.
+  Momentum-only (stale catalyst).
+- **WAL:** Perplexity explicitly found no dated catalyst in the last 6h; freshest WAL-specific item
+  is 2 days old. Momentum-only.
+- **AAVE:** Closest candidate — Aave V4 deposit-cap raise and an Equities Hub/tokenized-stock
+  launch are both dated today. Follow-up query directly asking what CoinMarketCap/crypto.news cite
+  as the dominant driver came back explicit: CMC attributes AAVE's move to **broad altcoin sector
+  rotation** (capital flowing out of BTC into higher-beta alts pre-Fed-meeting), finding **no
+  clear Aave-specific driver**; crypto.news' closest match is a generic "improving DeFi sentiment"
+  blurb with no single named trigger. Does not meet the ONDO standard (a specific dated item
+  explicitly named as the dominant driver). Momentum-only.
+- **WLD:** No fresh WLD-specific item in the last 6h found; nearest news items are 6-8 days stale.
+  Momentum-only.
+- **SOL:** Multiple same-day headlines (stablecoin-proposal testing, Clarity Act reaction, ETF-
+  timeline news, Foundation hire) but no single dominant driver named by any source — diffuse
+  market-wide reaction, not an SOL-specific trigger. Momentum-only.
+- **ARB:** Priority Gas Auctions/Fast Feed launch dated **Sep 24** (yesterday) — stale, outside the
+  <6h bar despite being a real, specific, named event. Momentum-only (stale catalyst).
+
+All 12 candidates that cleared every technical/freshness/acceleration/fade/spread gate are
+therefore classified momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE
+since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL;
+8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only
+entries SUSPENDED). ONDO's 06:00 UTC win was catalyst-confirmed and does not count toward this
+window, so the 20.0% figure is unchanged. Daily consecutive-loss pause: N/A, no losses today (only
+trade today, ONDO, closed as a win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** A genuinely large
+crop of 12 technically-clean candidates this pass (largest single-pass count today, reflecting a
+real market-wide altcoin rotation off the BTC-options-expiry/CLARITY-Act news backdrop) — but none
+carried a specific, dated, <6h, dominant-driver catalyst meeting the ONDO standard: two (SEI, ARB)
+had real catalysts that were simply stale (4 days, 1 day old respectively), the rest had no
+single named driver at all, and AAVE's move was explicitly attributed by CMC to broad sector
+rotation rather than an Aave-specific event. All 12 therefore classified momentum-only and blocked
+by the active win-rate kill switch. Crash gate clear (BTC −0.59% intraday). Weekly downtrend gate
+inactive (+3.35%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy
+against a qualifying candidate. Book unchanged from the 15:00 UTC pass — no Step 3 maintenance
+action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. A larger-than-usual crop of 12 technically-clean candidates were all correctly
+excluded on catalyst freshness/specificity grounds (two had real but stale catalysts, the rest had
+no single named driver, and the closest case — AAVE — was explicitly attributed by CoinMarketCap
+to broad market rotation, not an asset-specific event) — nothing here needs the user's attention.
+Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard
+section).
