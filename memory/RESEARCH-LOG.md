@@ -43809,3 +43809,59 @@ most attractive raw print this pass but was correctly rejected on the confirmed-
 behavior, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 03:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 02:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/
+tightening/thesis-break all N/A. **Crash gate:** BTC/USD $84,192.20 vs session open $84,380.00 →
+−0.22% intraday; 24h range $82,832.30–$84,914.80, nowhere near a 20% drop — clear. **Weekly
+downtrend gate:** BTC live $84,192.20 vs 5-trading-day-ago reference (~$81,164.00, 2026-09-20) →
+still comfortably positive (~+3.7%/5d), upside breach, gate stays INACTIVE — standard entry rules
+apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries
+SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain
+open. (Moot this pass — no candidate reached this stage.)
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h
+>$50k, spread ≤1%: **7 candidates**:
+
+| Pair | Session gain | Notional24h | Spread | Off 24h-high (at sweep) |
+|---|---|---|---|---|
+| B3USD | +29.99% | $131,855 | 0.871% | 8.10% |
+| AKEUSD | +9.49% | $3,198,369 | 0.382% | 19.59% |
+| SYNUSD | +5.79% | $1,702,665 | 0.230% | 6.37% |
+| AXSUSD | +5.27% | $61,646 | 0.265% | 1.98% |
+| CAPUSD | +4.47% | $400,372 | 0.223% | 2.03% |
+| ZROUSD | +3.27% | $1,592,525 | 0.067% | 5.72% |
+| DEEPUSD | +6.13% | $114,421 | 0.190% | 1.77% |
+
+Live-intracandle-fade cap (≤1.5%) applied at point of check: **all 7 candidates fail outright**
+(1.77%–19.59% off their respective 24h highs) — none sit close enough to a fresh high to clear
+the fade screen. Live re-quotes on the two closest (DEEPUSD 1.77%, AXSUSD 1.98%) confirmed the
+same fade a few minutes later (DEEPUSD: high 0.02149 vs live 0.02111 = 1.77%; AXSUSD: high 1.161
+vs live 1.138 = 1.98%) — no improvement, both still outside the cap. No candidate reached the
+confirmed-candle, acceleration, catalyst-confirmation, or win-rate-kill-switch evaluation stages
+this pass — the fade cap was dispositive for the entire candidate set.
+
+**Fear & Greed:** mixed readings — CFGI 46 "Neutral", CoinMarketCap 73 "Greed", Alternative.me 78
+"Extreme Greed" — not Extreme Fear on any tracker, moot regardless since no candidate reached
+execution.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC ~+3.7%/5d). All 7 raw gain/notional/spread survivors
+were rejected outright on the live-intracandle-fade cap — no gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, no drift from the prior pass. Every
+candidate this pass failed cleanly on the fade cap (nearest miss 1.77% vs a 1.5% ceiling) — normal
+gate behavior, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
