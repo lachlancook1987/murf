@@ -43741,3 +43741,71 @@ but being correctly blocked by the standing win-rate kill switch (no catalyst fo
 switch working as designed, not an anomaly needing the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 02:00 UTC (fired ~02:45 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 01:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully
+flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since
+2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/
+tightening/thesis-break all N/A. **Crash gate:** BTC/USD $84,458.20 vs session open $84,380.00 →
++0.09% intraday; 24h range $82,832.00–$84,914.80, nowhere near a 20% drop — clear. **Weekly
+downtrend gate:** BTC live $84,458.20 vs 5-trading-day-ago reference ($81,164.00, 2026-09-20) →
+**+4.06%/5d**, upside breach, gate stays INACTIVE — standard entry rules apply. No maintenance
+actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries
+SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain
+open. (Moot this pass — no candidate reached this stage.)
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h
+>$50k, spread ≤1%: **6 candidates**:
+
+| Pair | Session gain | Notional24h | Spread | Off 24h-high (at sweep) |
+|---|---|---|---|---|
+| SYNUSD | +12.46% | $1,772,568 | 0.219% | 0.00% |
+| DEEPUSD | +6.13% | $119,220 | 0.190% | 1.77% |
+| AXSUSD | +4.53% | $63,733 | 0.178% | 2.67% |
+| PLAYUSD | +4.45% | $677,349 | 0.306% | 1.35% |
+| TREADUSD | +3.12% | $398,618 | 0.042% | 7.54% |
+| SNEKUSD | +3.09% | $57,014 | 0.951% | 2.01% |
+
+Live-intracandle-fade cap (≤1.5%) applied at sweep snapshot: DEEPUSD, AXSUSD, TREADUSD, SNEKUSD
+fail outright (1.77–7.54%). SYNUSD (0.00%) and PLAYUSD (1.35%) survive the initial screen.
+
+**SYNUSD deeper check:** 15m OHLC — 01:45 close 0.2141 → 02:00 close 0.2200 → 02:15 close 0.2266
+→ 02:30 close 0.2301, each closed candle building on the last (two-candle acceleration met). But
+live re-check shows the 24h high (0.23110) was printed inside the still-forming 02:45 candle
+(high 0.2311, low volume 3,370 consistent with a partial candle) — the last fully closed candle
+(02:30) topped out at 0.2306/closed 0.2301, below that live high. The breakout high is **not**
+confirmed by any fully closed candle holding above the prior level — fails the confirmed-candle
+requirement (the still-forming-candle pattern this gate exists to catch). **Rejected.**
+
+**PLAYUSD deeper check:** Live re-quote moments after the sweep shows further fade: 24h high
+0.040769, live price 0.040094 → **1.656% off high**, up from 1.35% at the sweep snapshot — now
+fails the live-intracandle-fade cap on re-check (mirrors the DEEPUSD pattern from the 2026-09-25
+01:00 UTC pass, where fade worsened between snapshot and live re-check). **Rejected.**
+
+No candidate reached the catalyst-confirmation or win-rate-kill-switch stage this pass — both
+survivors of the initial gain/notional/spread/fade screen failed on deeper live re-verification.
+
+**Fear & Greed:** 46 "Neutral" (one tracker); 70/73 "Greed" (two others) — mixed readings, not
+Extreme Fear on any of them, moot regardless since no candidate reached execution.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +4.06%/5d, upside breach). SYNUSD and PLAYUSD were the
+only candidates to clear the initial gain/notional/spread/fade screen; both failed on deeper
+live re-check (unconfirmed still-forming-candle high; further intracandle fade respectively). No
+gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues. SYNUSD's clean +12.46% move was the
+most attractive raw print this pass but was correctly rejected on the confirmed-candle check
+(fresh high printed on a still-forming candle) rather than a stale/loosened gate — normal gate
+behavior, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
