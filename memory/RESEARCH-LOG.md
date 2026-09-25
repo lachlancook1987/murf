@@ -43670,3 +43670,74 @@ much larger 10.6-day gap earlier today was handled (pushed) versus routine singl
 (logged only). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
 retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-25 — Scan — 01:00 UTC (fired ~01:45 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 00:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully
+flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since
+2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/
+tightening/thesis-break all N/A. **Crash gate:** BTC/USD $84,461.20 vs session open $84,380.00 →
++0.10% intraday, clear. **Weekly downtrend gate:** BTC live $84,461.20 vs 5-trading-day-ago daily
+close (2026-09-20, $81,164.00, per last pass's reference) → **+4.06%/5d**, upside breach, gate
+stays INACTIVE — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries
+SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain
+open.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h
+>$50k, spread ≤1%: **4 candidates**:
+
+| Pair | Session gain | Notional24h | Spread | Off 24h-high (at sweep) |
+|---|---|---|---|---|
+| AXSUSD | +7.40% | $64,245 | 0.261% | 0.00% |
+| DEEPUSD | +6.08% | $105,318 | 0.095% | 1.40% |
+| SYNUSD | +4.28% | $1,243,765 | 0.140% | 3.90% |
+| CAPUSD | +3.88% | $398,406 | 0.130% | 1.81% |
+
+Live-intracandle-fade cap (≤1.5%) applied at point of check: SYNUSD and CAPUSD fail outright
+(3.90%, 1.81%). DEEPUSD faded further between the sweep snapshot and the live re-check moments
+later (1.40% → **2.57%** off high) — now fails too. **AXSUSD survives** (0.00% off high, sitting
+exactly at a fresh 24h high, spread re-confirmed 0.173% via live quote).
+
+AXSUSD deeper check: 15m OHLC shows the 01:30 candle closed at 1.161 (= new 24h high, holding the
+breakout above the prior 01:15 high of 1.140) — confirmed-candle requirement met. Two-candle
+acceleration: 01:15 close (1.133) > 01:00 close (1.131), and 01:30 close (1.161) > 01:15 close
+(1.133) — both closed candles building, acceleration confirmed. Momentum-peak freshness: the 24h
+high was set in the 01:30 candle, well inside the 30-min ceiling. 1h momentum: 1.101→1.161 in the
+last hour (+5.45%). 4h momentum: ~1.087 (21:00 UTC)→1.161 = **+6.8%**, clears the >5% bar. Volume:
+01:00 hourly candle vol 11,297 vs a typical 1,600–5,800 in prior hours this session — a real surge.
+**AXS cleared every structural/technical/freshness gate cleanly.**
+
+**Catalyst check (Perplexity):** `"AXS Axie Infinity news and price outlook today"` returned stale,
+flat-to-bearish price data (~$1.06–$1.08 across CoinGecko/CoinMarketCap/Bybit/MarketBeat, "neutral
+to mildly bearish," support $1.00–$1.05, resistance $1.13–$1.22) with **no news catalyst of any
+kind** — no listing, partnership, upgrade, or regulatory item. The ~8.5% divergence between
+Kraken's live price ($1.161) and the cross-exchange reference (~$1.07) is under the ~15–20%
+divergence-gate threshold, but it confirms this move is Kraken-specific momentum with no broader
+market driver. **Classified momentum-only, no confirmed catalyst.**
+
+Per the standing win-rate kill switch (ACTIVE since 2026-09-04, 20.0% trailing win rate, below
+the 35% floor), momentum-only entries are SUSPENDED — **AXSUSD correctly blocked at this stage
+despite a clean technical sweep.** No R:R/sizing work was needed since the kill switch is
+dispositive.
+
+**Fear & Greed:** 73 "Greed" (CoinMarketCap; CFGI 70, another tracker 71) — not Extreme Fear, moot
+regardless since no candidate reached execution.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +4.06%/5d, upside breach). Win-rate kill switch
+unchanged (ACTIVE, momentum-only SUSPENDED, 20.0%) — bound this pass on AXSUSD, the only candidate
+to clear every technical/freshness gate. No gate loosened to manufacture a trade.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues. AXSUSD clearing every technical gate
+but being correctly blocked by the standing win-rate kill switch (no catalyst found) is the kill
+switch working as designed, not an anomaly needing the user's attention. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
