@@ -45065,3 +45065,82 @@ to broad market rotation, not an asset-specific event) — nothing here needs th
 Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard
 section).
+
+## 2026-09-25 — Scan — 17:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 16:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,784.10 vs session open $84,380.00 → −0.71% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$83,784.10 = **+3.23%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **85 candidates** (broad market-wide rally continuing,
+consistent with every pass today). Live-intracandle-fade cap (≤1.5% off 24h high) plus spread ≤1%
+narrowed this to **28** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration) on
+all 28 survivors: only **2** cleared both — **GRASSUSD** (24h-high freshness 15.7min, two closed
+candles each closing higher: 0.5283 → 0.5449 → 0.547) and **AEROUSD** (freshness 15.7min, closes
+0.8363 → 0.8405 → 0.8473). Several others showed acceleration but on stale highs well outside the
+30min ceiling (REZUSD 435.7min, CROUSD 3810.7min, SENTUSD 3135.7min, GRTUSD 3195.7min) or fresh
+highs without acceleration (SEIUSD, WALUSD, ENAUSD, PHAUSD — the latter up 58% but its high was set
+45.7min ago with a spike-then-dip candle pattern, failing acceleration).
+
+Fear & Greed checked: 52 "Neutral" (Alternative.me/CFGI), 73 "Greed" on Binance/CMC-style views,
+45-46 "Fear" on CoinGecko — mixed readings but none Extreme Fear, so that R:R-floor rule stays
+inactive regardless (moot here — both candidates are blocked before reaching R:R evaluation).
+
+Catalyst-confirmation via Perplexity on both structural passers:
+- **AEROUSD (+22.0% session):** CoinMarketCap's live page names no specific catalyst (just the 24h
+  % move); Binance attributes the rise to "improving market sentiment and increased trading
+  activity" with broader crypto strength as a contributing factor — generic, not a dated event.
+  Bybit's "liquidity layer merger expectations" thesis is TradeGPT analysis, not a cited news
+  catalyst. No dated <6h catalyst found. Momentum-only.
+- **GRASSUSD (+23.7% session):** CoinMarketCap explicitly attributes the move to "momentum in the
+  AI/data sector" broadly, stating no clear Grass-specific news or on-chain catalyst. CoinGecko
+  surfaces a minor "TouchGrass burns tokens" headline but it's not the stated dominant driver and
+  isn't dated within 6h. No dated <6h catalyst found. Momentum-only.
+
+Both AEROUSD and GRASSUSD are therefore classified momentum-only and **BLOCKED by the standing
+win-rate kill switch** (ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10
+momentum-only entries — 2 wins: UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 —
+below the 35% floor; momentum-only entries SUSPENDED). ONDO's 06:00 UTC win was catalyst-confirmed
+and does not count toward this window, so the 20.0% figure is unchanged. Same two names (AERO,
+GRASS) were already assessed and blocked on the same grounds at the 16:00 UTC pass — this pass's
+independent re-check confirms no new catalyst has emerged for either in the intervening hour, and
+both have continued to run further (AERO 18.5%→22.0% session gain, GRASS 17.4%→23.7%) purely on
+momentum. Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed as a
+win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 28 candidates
+cleared the raw gain/notional/fade/spread screen, only 2 (AEROUSD, GRASSUSD) cleared the
+freshness+acceleration structural gates, and both were re-confirmed via Perplexity as carrying no
+dated <6h catalyst — CoinMarketCap explicitly attributes both moves to broad sector/market
+sentiment rather than an asset-specific event. Both therefore blocked by the active win-rate kill
+switch as momentum-only. Crash gate clear (BTC −0.71% intraday). Weekly downtrend gate inactive
+(+3.23%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate. Book unchanged from the 16:00 UTC pass — no Step 3 maintenance action needed
+(nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. AEROUSD and GRASSUSD both cleared every technical/freshness/acceleration gate but
+were correctly excluded on catalyst-specificity grounds (CoinMarketCap attributes both moves to
+broad sector/market sentiment, not an asset-specific event) — the same conclusion as the 16:00 UTC
+pass, re-verified rather than assumed. Nothing here needs the user's attention. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
