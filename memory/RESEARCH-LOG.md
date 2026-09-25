@@ -43610,3 +43610,63 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 (routine fired ~59min after the prior pass, normal cadence). Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called
 (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 00:00 UTC (fired 00:47 UTC)
+
+**Minor schedule note:** last logged pass was 2026-09-24 22:00 UTC (fired 22:46 UTC); this pass
+fired at 00:47 UTC, ~2h01m later — the 2026-09-24 23:00 UTC pass did not fire, so no EOD Snapshot
+was generated for Sep 24. This is a single skipped hour, not a repeat of the 10.6-day outage
+flagged earlier today — book was flat throughout ($70.6298 ZUSD, no positions/orders either
+exchange, unchanged), so nothing was left unmanaged, and no EOD heading is being fabricated
+retroactively under this pass's timestamp per the Process Integrity labeling rule. Noted for
+pattern-tracking (a second, smaller gap on the same day as the big one) — not push-worthy on its
+own given zero financial impact, but worth watching if single-hour skips recur.
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 22:00 UTC pass. `positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca:
+`positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,561.60 vs session open $84,380.00 → +0.22%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,561.60 vs 5-trading-day-ago daily close
+(2026-09-20, $81,164.00, from live Kraken daily OHLC) → **+4.19%/5d**, upside breach, gate stays
+INACTIVE per the rule (only downside tightens criteria) — standard entry rules apply. No
+maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker calls,
+623 online USD pairs, zero fetch errors — a much quieter tape than the last several passes. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: only **4 candidates**:
+
+| Pair | Session gain | Notional24h | Spread | Off 24h-high |
+|---|---|---|---|---|
+| YFIUSD | +4.78% | $54,887 | 0.174% | 1.78% |
+| MANTRAUSD | +4.04% | $103,086 | 0.547% | 1.91% |
+| SYNUSD | +3.89% | $966,854 | 0.281% | 4.26% |
+| CVCUSD | +3.04% | $212,242 | 0.548% | 19.30% |
+
+Applying the ≤1.5% live-intracandle-fade cap: **all 4 candidates fail** (1.78%, 1.91%, 4.26%, and
+19.30% off their respective 24h highs, all above the 1.5% cap) — every raw session-gain screen-passer
+had already faded meaningfully off its high by the time of this check. No survivors reached the
+momentum-peak-freshness/acceleration stage, so no candle-level or catalyst work was needed this
+pass. No gate loosened to manufacture a trade.
+
+**Fear & Greed:** not queried this pass — moot, since no candidate survived even the first
+downstream gate.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +4.19%/5d, upside breach). Win-rate kill switch unchanged
+(ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass; all 4 raw candidates were rejected
+on the live-intracandle-fade cap before any freshness/acceleration/catalyst check was needed.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues. The ~2h gap since the last pass (one
+skipped hourly firing, no EOD generated for Sep 24) had zero financial impact since the book was
+flat throughout; noted in the log for pattern-tracking rather than pushed, consistent with how the
+much larger 10.6-day gap earlier today was handled (pushed) versus routine single-pass drift
+(logged only). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
+retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
