@@ -44650,3 +44650,92 @@ attention. The ~48min schedule-firing drift is a known, already-flagged recurrin
 new finding. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
 retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-25 — Scan — 12:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 11:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,390.10 vs session open $84,380.00 → +0.01% intraday, 24h range
+  $83,348.90–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$84,398.40 = **+3.99%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 671 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: **83 candidates** (broad market-wide rally
+continuing, consistent with the 10:00/11:00 UTC passes). Live-intracandle-fade cap (≤1.5% off
+24h high) narrowed this to **42** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration)
+on all 42: **5 survived** — SEI (1.7min, accel, +9.94% session gain), WLD (1.7min, accel,
++4.48%), ADA (1.7min, accel, +3.93%), POL (1.7min, accel, +3.80%), WIF (1.7min, accel, +3.71%).
+37 failed on stale freshness (16.7min–601.7min) or failed two-candle acceleration despite fresh
+highs (NEAR, ENA, ETHFI, DOT, SENT, OP, JASMY, PYTH, ARB, GALA, STX, ARKM, APT, KAS, KSM,
+XXLMZUSD among others).
+
+Fear & Greed checked: 52/51 "Neutral" (CFGI, two pages) — not Extreme Fear, that R:R-floor rule
+stays inactive. No separate BTC/ETH-specific breaking catalyst found via macro scan; today's
+backdrop remains the same Deribit/CME quarterly options expiry and supportive ETF-inflow
+narrative referenced in the 10:00/11:00 UTC passes.
+
+Catalyst-confirmation via Perplexity on all 5 survivors:
+- **SEI:** Already established at the 11:00 UTC pass — sole dated catalyst (Canary Capital's
+  Staked SEI ETF S-1 Amendment No. 2) traces to Sep 20-21, 4-5 days old. Fails the <6h freshness
+  bar. Momentum-only (re-confirmed, no new dated item found this pass).
+- **WLD:** Mixed/conflicting drivers — CoinMarketCap flags a same-day **100.1M WLD token unlock**
+  (bearish supply pressure, not a bullish trigger) as the immediate focus, alongside a "World
+  Money" super-app rollout of unclear same-day specificity. Price feeds also showed unusually wide
+  24h-change dispersion (-12% to +10%) across sources. No clean, unambiguous bullish catalyst
+  meeting the ONDO-quality bar. Momentum-only, and the token-unlock item actually cuts against
+  the long side.
+- **ADA:** Multiple candidate items (x402 payment-standard integration, Mastercard-related
+  payment-rail news, a governance fee-reduction proposal) but none confirmed as a specific,
+  dated-today event named as the dominant driver; also a same-window negative item (Splash
+  protocol exploit, 2.4M ADA loss) adds noise. Momentum-only, ambiguous.
+- **POL:** Two candidate drivers — a "Heimdall V2 upgrade" CoinGecko links to the move, and a
+  100M POL token burn — but the upgrade is described as "scheduled to launch" (unclear if already
+  fired or still pending), which would trigger the scheduled-catalyst pre-positioning caution
+  (≤~2h ahead only) rather than a confirmed post-event reaction. Not confirmed as a clean <6h
+  fired catalyst. Momentum-only.
+- **WIF:** Perplexity explicitly attributes the move to a **"broad memecoin rally... rather than
+  a clear project-specific catalyst"** plus short-covering/leverage dynamics — no project-specific
+  catalyst at all. Momentum-only, explicitly confirmed no catalyst.
+
+None of the 5 clears the bar the 06:00 UTC ONDO entry did (a specific, dated item explicitly
+named as the dominant driver of that day's move). All 5 are therefore momentum-only and
+**BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04, 20.0% trailing win
+rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI,
+BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries SUSPENDED). ONDO's 06:00
+UTC win was catalyst-confirmed and does not count toward this window, so the 20.0% figure is
+unchanged. Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed as
+a win).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 5 candidates
+cleared every technical/freshness/acceleration/fade/spread gate, but none carried a catalyst
+meeting the <6h freshness/specificity bar (SEI's ETF-amendment catalyst stale at 4-5 days, WLD's
+dated item was a bearish token unlock, POL's upgrade catalyst unconfirmed as already-fired, WIF
+explicitly attributed to sector-wide memecoin rally with no project-specific driver), so all 5
+are blocked by the active win-rate kill switch as momentum-only. Crash gate clear (BTC +0.01%
+intraday). Weekly downtrend gate inactive (+3.99%/5d, upside breach). $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate. Book unchanged from the
+11:00 UTC pass — no Step 3 maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. Five candidates cleared every technical gate but were correctly excluded on
+catalyst freshness/specificity grounds (SEI stale, WLD's dated item was net-negative, POL's
+catalyst unconfirmed as fired, WIF explicitly sector-wide with no project catalyst) — nothing
+here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were
+not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02,
+per the Position Watch Dashboard section).
