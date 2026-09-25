@@ -11227,3 +11227,57 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly ahead of BTC (+0.57 points) on a day BTC pulled back slightly. DCRUSD and PLAYUSD both clearing every technical gate but being correctly blocked by the standing win-rate kill switch is the kill switch working as designed, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-24 — EOD Snapshot
+
+**Recovery note (added retroactively by the 2026-09-25 06:00 UTC pass):** This entry was computed correctly by the originating session but never reached `main` — its mem-sync landed on orphaned branch `claude/keen-babbage-jwnnf4` (commit `6fe3bc1`) instead, so `origin/main`'s TRADE-LOG.md history skipped straight from Sep 13 to Sep 25 with this EOD Snapshot missing. Recovered verbatim from that commit and inserted here in correct chronological position — no content altered from the original. See the matching recovery note in RESEARCH-LOG.md's 2026-09-24 23:00 UTC entry for how this was found.
+
+### Sep 24 — EOD Snapshot (Day 127, Thursday)
+
+**Portfolio:** $70.6298 | **Cash:** $70.6298 (100.0%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** −$109.1502 (−60.71%) | **vs BTC:** see note below (not a clean single-day comparison — see outage note)
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 152 (unchanged)
+
+**Operational note — 10-day trigger outage discovered this pass:** The hourly routine did not fire at all from **2026-09-13 23:00 UTC through 2026-09-24 14:00 UTC** — `origin/main`'s memory/ commit history jumps directly from the Sep 13 23:00 UTC pass (`4abd31f`, committed 23:35:42 UTC) to today's 15:00 UTC pass (`8a807ae`, committed 15:49:20 UTC), roughly **10 days 16 hours / ~256 missed hourly firings**, confirmed independently by the absence of any Sep 14–23 headings in RESEARCH-LOG.md. `kraken.sh closedorders` shows **zero closed orders** anywhere in that window, so no fill, no stop event, and no position needing maintenance was missed — the book was already fully flat going into the gap (last confirmed state: Sep 13 EOD, $70.6298 cash, no positions) and remained flat throughout purely because nothing traded, not because anything was being monitored. This was a scheduler/trigger problem, not a strategy or execution failure — see RESEARCH-LOG.md 2026-09-24 23:00 UTC entry for full detail. Flagged to the user via push per Step 8.
+
+**Notes:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust — identical to the last confirmed Sep 13 EOD state and to every pass since the routine resumed today (15:00 UTC onward). `positions: {}`, `orders: {"open": {}}` — book fully flat. Day P&L $0.00 (0.00%): cash is unchanged from the last logged baseline (Sep 13 EOD, $70.6298), and today's own hourly passes (15:00 through 23:00 UTC, 9 passes — the rest of the UTC day fell inside the outage) all reached HOLD with zero trades. Phase P&L unchanged at −$109.1502 (−60.71%) from $179.78 Kraken starting equity (May 22). **vs BTC:** because the last EOD reference point is 11 calendar days old (Sep 13, BTC $76,798.30) rather than 1 day old, a direct "Day P&L vs BTC" comparison would conflate the outage period with today and is not reported as a single-day figure. For continuity: BTC moved from $76,798.30 (Sep 13 EOD reference) to $84,383.80 now → **+9.88% cumulative** over the gap+today combined, while the bot's return over that same combined span was 0.00% (book flat throughout, both because of the outage and because every pass since resuming reached HOLD on structural/momentum gates — see RESEARCH-LOG.md for today's individual pass decisions). This underperformance is an opportunity-cost artifact of the 10-day outage, not of today's decision-making: today's own passes (15:00–23:00 UTC) correctly held through a legitimate market-wide alt rally after every candidate failed a structural gate (freshness ceiling, momentum bars, acceleration, or — for the cleanest technical candidates, XPLUSD and PLAYUSD/PROMPTUSD across different passes — the cross-exchange divergence gate and the momentum-bar floor respectively). Total trades since migration unchanged at 152. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $70.6298 cash, fully available, no open positions; weekly downtrend gate (currently INACTIVE at +3.89%/5d, upside breach) and win-rate kill switch (ACTIVE, 20.0%, momentum-only SUSPENDED) both to be reassessed fresh. **The trigger-cadence issue itself is outside any session's reach to fix** (per CLAUDE.md's "Handling schedule drift" section) — the user needs to check why the scheduled trigger stopped firing for over a week.
+
+### Step 8 — Notification
+
+**Push sent** (see RESEARCH-LOG.md 23:00 UTC entry) — the 10-day trigger outage is the reportable event today, not trading activity (book stayed flat, zero trades, zero drift, no losses). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 06:00 UTC — Trade 153: ONDO/USD BUY
+
+| Field | Value |
+|---|---|
+| **Symbol** | ONDO/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 119 ONDO |
+| **Entry Price** | $0.54133 (blended, incl. fee) |
+| **Cost (ex-fee)** | $64.41827 |
+| **Fee** | $0.51535 (0.80% taker) |
+| **Total spent** | $64.93362 |
+| **T1 (+3%)** | $0.55757 |
+| **T2 (+5%)** | $0.56840 |
+| **Stop Type** | trailing_stop 2.5% GTC (full 119 qty) |
+| **Stop Order ID** | O7IS4V-IFYNT-EOVQ7Q |
+| **Buy Order ID** | O24MNU-YVFQD-QHUUMU (limit 0.54515, filled in full immediately) |
+| **T1 partial-limit order** | **NOT PLACED — see note below** |
+| **Thesis** | Catalyst-confirmed: Ondo Finance launched three tokenized portfolios using BlackRock investment models (for eligible non-U.S. investors) plus a new NEAR partnership expanding tokenized-equity distribution, per Perplexity (CoinMarketCap/crypto.news sourced) — cited as the dominant driver of today's move. Catalyst-confirmed entry, standard 1.2:1 R:R floor applies (not the 1.8:1 momentum-only floor) and is exempt from the win-rate kill switch (ACTIVE, momentum-only SUSPENDED — moot here). |
+| **R:R** | 3% / 2.5% = 1.2:1 (meets catalyst-confirmed floor exactly) |
+| **Spread** | 0.092% ✓ |
+| **Size** | $64.93 (92.0% of $70.6298 equity) — catalyst-confirmed, no 60% momentum-only cap applies |
+
+**Gate checklist:** Crash gate clear (BTC −0.45% intraday). Weekly downtrend gate INACTIVE (BTC ~+3.5%/5d, upside breach) — standard rules applied. Momentum-peak-check freshness: confirmed-closed-candle 24h high ($0.54553) set at 06:30 UTC, 16.3min before entry (within the 30min ceiling). Two-closed-candle acceleration: 06:15 close > 06:00 close, 06:30 close > 06:15 close — both legs up, passes. Live intracandle fade at entry: 0.16% off the confirmed high (well inside 1.5% cap). Cross-exchange check: Perplexity's other-tracker range ($0.527–$0.536) vs. Kraken entry ($0.54133) — no material (>15-20%) divergence. Same-thesis cooling period: last ONDO stop-outs were early June (Jun 8), well outside the 7-day window — cap does not apply. Fear & Greed 78 "Extreme Greed" (Alternative.me) — not Extreme Fear, so that R:R floor rule is inactive. Daily consecutive-loss pause: no trades yet today, N/A.
+
+**T1 partial-profit-take order — placement failed, documented as a mechanism-level operational finding, not a one-off error:** Immediately after the stop above was confirmed open, attempted the standard second step per TRADING-STRATEGY.md — a limit sell for 59.5 ONDO (50%) at $0.55757 (T1). Kraken rejected it with `EOrder:Insufficient funds`: the full-quantity trailing stop already reserves the entire 119 ONDO balance, leaving nothing available for a second independent sell order. Splitting the position into two smaller orders instead (stop on half, T1-limit on the other half) was considered and rejected — that would leave the T1-limit half completely unprotected until/unless it fills, which violates the mandatory "no open unprotected position" stop rule. **Resolution: the full-quantity 2.5% trailing stop is the only protective order on this position** (it is in place and confirmed open); T1 profit-locking reverts to session-dependent (a future pass must catch price live at/above $0.55757 to act) until a real fix is evaluated. Full detail and the strategy-doc update in TRADING-STRATEGY.md's Exit & Stop Rules section (updated this pass).
+
+### Decision: **TRADE — ONDO/USD.** Order placed and fill confirmed via `kraken.sh orders`/`account` in this same pass (119 ONDO acquired, ZUSD $70.6298 → $5.6962). Protective trailing stop placed and confirmed open in the same pass. T1 partial-limit order attempted and failed for a documented structural reason (see above) — not a silent omission.
+
+### Step 8 — Notification
+
+**Push sent** — first trade in over 3 weeks (last trade activity: ZUSD conversion Sep 4, last actual BUY well before that), plus a structural finding (T1 partial-profit mechanism unplaceable on Kraken spot) that affects every future trade under the current strategy doc until addressed. Also flagging the recovered Sep 24 EOD Snapshot/outage entries (found orphaned on an unmerged session branch, restored to main this pass — see the recovery notes on both the Sep 24 RESEARCH-LOG and TRADE-LOG entries above). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).

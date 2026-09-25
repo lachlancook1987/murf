@@ -43611,6 +43611,113 @@ No push sent — book flat, no trades, no operational issues, nothing new vs. th
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called
 (retired 2026-09-02, per the Position Watch Dashboard section).
 
+## 2026-09-24 — Scan — 23:00 UTC (fired 23:46 UTC) — EOD MODE
+
+**Recovery note (added retroactively by the 2026-09-25 06:00 UTC pass):** This entry was computed
+correctly by the originating session but never reached `main` — its mem-sync landed on orphaned
+branch `claude/keen-babbage-jwnnf4` (commit `6fe3bc1`) instead, so `origin/main`'s memory/ history
+skipped straight from the 22:00 UTC pass to 2026-09-25 00:00 UTC with this pass missing. Recovered
+verbatim from that commit by the 2026-09-25 06:00 UTC pass, which found the orphaned branch while
+investigating an unrelated Kraken order-placement question and is inserting it here in its correct
+chronological position rather than leaving it lost. No content altered from the original.
+
+**Operational note found this pass — 10-day trigger outage:** While pulling context for this pass,
+found that `origin/main`'s memory/ commit history jumps directly from `4abd31f` ("crypto hourly pass
+2026-09-13 23:00 UTC", committed 2026-09-13 23:35:42 UTC) to `8a807ae` ("crypto hourly pass
+2026-09-24 15:00 UTC", committed 2026-09-24 15:49:20 UTC) — **zero hourly passes committed for
+~10 days 16 hours** (2026-09-13 23:00 UTC through 2026-09-24 14:00 UTC inclusive, ~256 missed
+hourly firings). RESEARCH-LOG.md and TRADE-LOG.md both confirm this independently — no `## 2026-09-1
+[4-9]`/`2[0-3]` headings exist in either file. Checked `kraken.sh closedorders` across the full gap
+window: **zero closed orders in that period** — confirms the book was genuinely untouched (no fills,
+no missed stop-management need) for the whole outage, consistent with every pass since resuming
+today showing an unchanged flat book ($70.6298 ZUSD, no positions/orders). So this was **not** a
+safety incident — no unprotected position sat unmonitored — but it is exactly the kind of "routine
+couldn't run at all" operational failure the routine's own instructions call out for a push
+notification, and matches the class of issue CLAUDE.md's concurrent-session section already flags as
+"a scheduling/infrastructure problem... needs the user's attention," just manifesting as a total gap
+instead of overlapping/duplicate firings this time. Flagging via push per Step 8 below. No action
+taken in-repo beyond logging this (nothing to reconcile since nothing happened during the gap).
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to every pass since the routine resumed today and, per the gap analysis above, identical
+to the last confirmed state on 2026-09-13. `positions: {}`, `orders: {"open": {}}` — book fully
+flat. Alpaca: `positions: []`, confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since
+2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/tightening/
+thesis-break all N/A. **Crash gate:** BTC/USD $84,383.80 vs session open $84,384.50 → −0.00%
+intraday, clear. **Weekly downtrend gate:** BTC live $84,383.80 vs 5-trading-day-ago daily close
+(2026-09-19, $81,226.50) → **+3.89%/5d**, upside breach, gate stays INACTIVE per the rule (only
+downside tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries SUSPENDED**,
+trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain open.
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs/Ticker, 623 online USD pairs,
+zero fetch errors — market-wide rally continuing from prior passes today. Filtered for session gain
+≥3%, notional24h >$50k, spread ≤1%: 124 candidates. Applying the ≤1.5% live-intracandle-fade cap
+left 35 survivors; deep-checked the top 20 by gain via 15m closed candles for momentum-peak-check
+freshness (ceiling: min(30min, time since last logged pass) = 30min, last pass was ~60min ago) and
+two-closed-candle acceleration:
+
+| Pair | 24h-high age | Accel | Verdict |
+|---|---|---|---|
+| ONDOUSD | 406.4min | — | fails freshness ceiling hard |
+| PLAYUSD | 1.4min | pass (0.037771→0.037923→0.038583) | survives to momentum-bar check |
+| LDOUSD | 46.4min | fail | fails freshness ceiling + acceleration |
+| DASHUSD | — | — | AU-restricted asset, skipped pre-emptively per TRADING-STRATEGY.md |
+| SYRUPUSD | 166.4min | — | fails freshness ceiling hard |
+| CVXUSD | 121.4min | — | fails freshness ceiling |
+| ALGOUSD | 436.4min | — | fails freshness ceiling hard |
+| AUSD | 256.4min | — | fails freshness ceiling |
+| POLUSD | 91.4min | pass | fails freshness ceiling anyway |
+| SANDUSD | 301.4min | — | fails freshness ceiling |
+| XXLMZUSD | 31.4min | — | fails freshness ceiling (marginal, just over 30min) |
+| VIRTUALUSD | 451.4min | — | fails freshness ceiling hard |
+| MANAUSD | 256.4min | — | fails freshness ceiling |
+| GALAUSD | 556.4min | — | fails freshness ceiling hard |
+| ICNTUSD | 1036.4min | — | fails freshness ceiling hard |
+| PROMPTUSD | 16.4min | pass (0.0218→0.02184→0.02219) | survives to momentum-bar check |
+| AAVEUSD | 16.4min | fail (145.69→147.24→146.78, spike-then-dip) | fails acceleration |
+| NIGHTUSD | 451.4min | — | fails freshness ceiling hard |
+| YGGUSD | 121.4min | — | fails freshness ceiling |
+| SEIUSD | 136.4min | — | fails freshness ceiling |
+
+**Momentum-bar check (PLAYUSD, PROMPTUSD — the two freshness+acceleration survivors):** computed
+1h/4h momentum directly from 15m closed candles (not the raw session-gain figure, which is vs.
+today's open, not a rolling 1-4h window):
+- **PLAYUSD:** 1h momentum +2.87% (needs >3%), 4h momentum +3.86% (needs >5%) — both just short.
+- **PROMPTUSD:** 1h momentum +1.88%, 4h momentum +1.98% — well short of both bars.
+
+Neither cleared the momentum-bar gate, so neither reached catalyst-confirmation or the win-rate
+kill-switch stage. No other candidate reached freshness+acceleration together, so this was a clean
+structural rejection across the board — no gate loosened.
+
+**Fear & Greed:** not queried this pass — moot, since no candidate reached the R:R/catalyst
+evaluation stage where it would apply.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC +3.89%/5d, upside breach). Win-rate kill switch unchanged
+(ACTIVE, momentum-only SUSPENDED, 20.0%) — not reached this pass; PLAYUSD and PROMPTUSD, the only
+candidates to clear freshness+acceleration, were both rejected on the underlying 1h/4h momentum-bar
+check before any catalyst or kill-switch evaluation was needed. No gate loosened to manufacture a
+trade.
+
+### Step 6 — EOD Mode
+
+See `memory/TRADE-LOG.md` 2026-09-24 EOD Snapshot entry for full Day/Phase P&L and vs-BTC detail.
+Headline: book flat all day (and, per the gap note above, for the entire 10-day outage preceding
+today), zero trades, Day P&L $0.00, Phase P&L unchanged at −$109.1502 (−60.71%).
+
+### Step 8 — Notification
+
+**Push sent** — this is the first pass since discovering the 10-day trigger outage (2026-09-13
+23:00 UTC to 2026-09-24 14:00 UTC, ~256 missed hourly firings). No financial harm occurred (book was
+flat throughout, zero closed orders in the gap window, so nothing needed monitoring), but the outage
+itself is an operational failure the user needs to know about — the scheduler/trigger, not this
+session, needs attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
 ## 2026-09-25 — Scan — 00:00 UTC (fired 00:47 UTC)
 
 **Minor schedule note:** last logged pass was 2026-09-24 22:00 UTC (fired 22:46 UTC); this pass
@@ -44010,3 +44117,99 @@ candidates failed cleanly on structural gates (fade cap, spread cap, or stale-hi
 normal gate behavior, not an anomaly needing the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 06:00 UTC (fired 06:46 UTC) — Trade 153 (ONDO/USD)
+
+**Pre-check found a mem-sync gap — recovered before proceeding:** While reading memory context, the
+tail of TRADE-LOG.md stopped at the Sep 13 EOD Snapshot despite RESEARCH-LOG.md continuing daily
+through today (including detailed passes discussing "today" as Sep 24) — investigated via
+`git log --all -- memory/TRADE-LOG.md` / `memory/RESEARCH-LOG.md` and found both files' Sep 24 23:00
+UTC ("EOD MODE") entries sitting on an orphaned, never-merged session branch
+(`claude/keen-babbage-jwnnf4`, commit `6fe3bc1`) instead of `main` — that session's own STEP 9
+mem-sync push evidently did not land. Confirmed via `kraken.sh closedorders` cross-check (implicitly,
+via the recovered entry's own content) that this was a pure logging gap, not a missed trade or
+position — the orphaned entry itself documents a flat book. Recovered both files' content verbatim
+into their correct chronological position on `main` this pass (see the Sep 24 23:00 UTC entries in
+both files, each carrying its own recovery note) rather than silently leaving it lost, per CLAUDE.md's
+"stop and diff before overwriting" guidance for exactly this class of finding. This is a *different*
+failure mode than the previously-documented concurrent-session wholesale-clobber bug — here a single
+session's own push to `main` seems to have simply failed or been dropped, not been overwritten by a
+competing session — worth flagging to the user alongside the already-known clobbering risk.
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 05:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange at pre-check —
+orphan/T1/tightening/thesis-break all N/A before this pass's own trade. **Crash gate:** BTC/USD
+$84,003.60 vs session open $84,380.00 → −0.45% intraday; 24h range $82,832.30–$84,914.80 — clear.
+**Weekly downtrend gate:** BTC vs 5-trading-day-ago reference (~$81,164.00) → ~+3.50%/5d, upside
+breach, gate stays INACTIVE — standard entry rules apply.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — ACTIVE, momentum-only entries SUSPENDED,
+20.0% trailing win rate. Does not apply to this pass's trade (catalyst-confirmed, see below).
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs + batched Ticker calls, 623
+online USD pairs. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: 18 candidates.
+Live-intracandle-fade cap (≤1.5% off 24h high) left 9 survivors: QNTUSD, DEEPUSD, XPLUSD, ARKMUSD,
+ONDOUSD, SANDUSD, SNEKUSD, AEROUSD, MANAUSD. Deep-checked all 9 via 15m OHLC (24h-window closed-candle
+high, matched against ticker's own h[1] to confirm no stale multi-day-high false positive):
+
+| Pair | Confirmed 24h-high age | Two-candle accel | Verdict |
+|---|---|---|---|
+| QNTUSD | 16.3min | fail (06:15 close < 06:00 close) | fails acceleration |
+| DEEPUSD | 271.3min | — | fails freshness ceiling |
+| XPLUSD | 31.3min | — | fails freshness ceiling (marginal) |
+| ARKMUSD | 31.3min | — | fails freshness ceiling (marginal) |
+| ONDOUSD | 16.3min | pass (both legs up) | **survives to catalyst check** |
+| SANDUSD | 16.3min | pass (both legs up) | survives to catalyst check |
+| SNEKUSD | 781.3min | — | fails freshness ceiling hard |
+| AEROUSD | 976.3min | — | fails freshness ceiling hard (ticker off-high misleadingly small) |
+| MANAUSD | 16.3min | pass (both legs up) | survives to catalyst check |
+
+Live re-quotes on the three survivors (ONDO, SAND, MANA) reconfirmed fade cap and spread all still
+comfortably clear moments before catalyst check. Confirmed-candle requirement satisfied for all three
+(breakout held by the 06:30 closed candle, not just a still-forming one — ONDO's ticker 24h-high had
+in fact ticked slightly higher inside the still-forming 06:45 candle, $0.54714 vs the confirmed
+$0.54553, but the freshness/acceleration checks above correctly used only the closed-candle value).
+
+**Catalyst confirmation (Perplexity, F&G checked first: 78 "Extreme Greed" per Alternative.me — not
+Extreme Fear, so that R:R-floor rule stays inactive):**
+- **ONDO:** Strong, specific, fresh catalyst — Ondo Finance launched three tokenized portfolios using
+  BlackRock investment models (eligible non-U.S. investors) plus a new NEAR partnership expanding
+  tokenized-equity distribution; Perplexity's sources (CoinMarketCap, crypto.news) cite this as the
+  dominant driver of today's move. **Catalyst-confirmed** — standard 1.2:1 R:R floor applies, exempt
+  from the momentum-only win-rate kill switch.
+- **SAND:** Perplexity returned an ambiguous/conflated result (confused with the unrelated NYSE-listed
+  Sandstorm Gold ticker); no Sandbox-token-specific catalyst found. Momentum-only — would be BLOCKED
+  by the standing kill switch even if it had cleared every technical gate.
+- **MANA:** No asset-specific catalyst found — Perplexity attributed the move to "broader altcoin
+  risk-on" sentiment only. Momentum-only — would be BLOCKED by the standing kill switch.
+
+ONDO is the only survivor with a confirmed catalyst, so it's the only one of the three not blocked by
+the active kill switch. Same-thesis cooling check: last ONDO stop-outs were early June, well outside
+the 7-day window — clear.
+
+### Decision: **TRADE — ONDO/USD.** Entry via limit buy 119 ONDO @ $0.54515 (≤0.15% above the
+$0.54435 bid), filled in full immediately at blended avg $0.54133 (order O24MNU-YVFQD-QHUUMU, fee
+$0.51535/0.80%). Full-quantity 2.5% trailing stop placed and confirmed open immediately after
+(O7IS4V-IFYNT-EOVQ7Q). **T1 partial-profit-take limit order (50% qty at $0.55757) failed with
+`EOrder:Insufficient funds`** — Kraken reserves the full asset balance against the open trailing
+stop, leaving none available for a second independent sell order; splitting the position instead
+would leave half of it unprotected, which the mandatory stop rule forbids. This is a genuine
+mechanism-level incompatibility, not a one-off error — documented in TRADING-STRATEGY.md's Exit &
+Stop Rules section this pass, with the resolution (full stop only, T1 reverts to session-dependent
+tightening) and candidate real fixes (Kraken's native OCO/conditional-close params) for a future
+session. Full trade detail in TRADE-LOG.md.
+
+### Step 8 — Notification
+
+**Push sent** — first executed trade in 3+ weeks (ONDO/USD, catalyst-confirmed, fully protected by a
+trailing stop), a structural finding that the T1 partial-profit-take mechanism cannot be placed as
+designed on Kraken spot (affects every future trade until a fix is evaluated), and a second,
+previously-undocumented mem-sync failure mode (a session's own push to `main` silently not landing,
+distinct from the known concurrent-session clobber bug) discovered and recovered this pass. All of
+this genuinely needs the user's attention, unlike a routine HOLD pass. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact
+tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
