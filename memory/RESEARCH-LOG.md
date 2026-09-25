@@ -43865,3 +43865,74 @@ candidate this pass failed cleanly on the fade cap (nearest miss 1.77% vs a 1.5%
 gate behavior, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 04:00 UTC (fired 04:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $70.6298, ZAUD $0.1550 (dust), all other balances zero/dust —
+identical to the 03:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22).
+
+**Step 3 — Position maintenance:** No open positions/orders either exchange — orphan/T1/
+tightening/thesis-break all N/A. **Crash gate:** BTC/USD live $84,265.90 vs session open
+$84,380.00 → −0.14% intraday; 24h range $82,832.30–$84,914.80 — nowhere near a 20% drop, clear.
+**Weekly downtrend gate:** BTC live $84,265.90 vs 5-trading-day-ago reference (~$81,164.00,
+2026-09-20) → **~+3.82%/5d**, upside breach, gate stays INACTIVE per the rule (only downside
+tightens criteria) — standard entry rules apply. No maintenance actions taken.
+
+**Win-rate kill switch:** unchanged since 2026-09-04 — **ACTIVE, momentum-only entries
+SUSPENDED**, trailing win rate 20.0% (2/10 wins: UAI, NIL). Catalyst-confirmed entries remain
+open. (Moot this pass — no candidate reached this stage.)
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h
+>$50k, spread ≤1%: **13 candidates**:
+
+| Pair | Session gain | Notional24h | Spread | Off 24h-high |
+|---|---|---|---|---|
+| AKEUSD | +8.66% | $3,369,390 | 0.320% | 20.20% |
+| QNTUSD | +6.53% | $3,772,486 | 0.114% | 2.63% |
+| DEEPUSD | +6.39% | $113,085 | 0.142% | 1.54% |
+| TREADUSD | +5.68% | $385,031 | 0.027% | 5.24% |
+| SYNUSD | +5.60% | $1,667,419 | 0.184% | 6.55% |
+| AXSUSD | +4.81% | $63,475 | 0.265% | 2.41% |
+| XPLUSD | +4.15% | $3,346,397 | 0.261% | 2.12% |
+| CAPUSD | +4.08% | $387,012 | 0.168% | 2.40% |
+| ZROUSD | +3.83% | $1,812,622 | 0.134% | 5.21% |
+| SNEKUSD | +3.75% | $55,533 | 0.951% | 1.39% |
+| NILUSD | +3.70% | $8,836,999 | 0.174% | 23.16% |
+| CROUSD | +3.41% | $235,420 | 0.154% | 2.27% |
+| ARKMUSD | +3.36% | $73,139 | 0.151% | 0.83% |
+
+Live-intracandle-fade cap (≤1.5%) applied: 11 of 13 fail outright (1.54%–23.16% off high,
+DEEPUSD re-quoted live at 1.54% off high — confirmed still just outside the cap, no improvement).
+Two survive the fade cap: **SNEKUSD** (1.39% off high) and **ARKMUSD** (0.83% off high).
+
+Deep-checked both via 15m OHLC for the momentum-peak-check freshness ceiling (min(30min, time
+since last logged pass) = 30min) and two-closed-candle acceleration:
+- **SNEKUSD:** ticker 24h high $0.0006460 last touched by a closed candle at **17:45 UTC —
+  661.6min (11h) ago**, current price $0.000637 still below that high (no fresh breakout).
+  Fails freshness ceiling decisively. Last two closed candles (04:15 close $0.000628, 04:30
+  close $0.000637) also don't form clean two-leg acceleration off the 04:00 close ($0.000641).
+- **ARKMUSD:** ticker 24h high $0.1333 last touched by a closed candle at **14:30 UTC —
+  856.6min (14.3h) ago**, current price $0.1322 still below that high. Fails freshness ceiling
+  decisively. Last two closed candles (04:15 close $0.1323, 04:30 close $0.1322) are flat/down,
+  not accelerating.
+
+Both fade-cap survivors fail the freshness ceiling hard (11h+ and 14h+ stale highs, no fresh
+breakout above either) — neither reached the confirmed-candle, acceleration, catalyst-
+confirmation, or win-rate-kill-switch evaluation stages. No candidate reached execution this
+pass; no gate loosened to manufacture a trade.
+
+### Decision: **HOLD.** Book remains flat ($70.6298 ZUSD, no open positions/orders). Crash gate
+clear. Weekly downtrend gate INACTIVE (BTC ~+3.82%/5d, upside breach). All 13 raw gain/notional/
+spread survivors were rejected — 11 on the live-intracandle-fade cap outright, the remaining 2
+(SNEK, ARKM) on the momentum-peak-check freshness ceiling despite clearing the fade cap.
+
+### Step 8 — Notification
+
+No push sent — book flat, no trades, no operational issues, no drift from the prior pass. All 13
+candidates failed cleanly on structural gates (fade cap or stale-high freshness) — normal gate
+behavior, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
