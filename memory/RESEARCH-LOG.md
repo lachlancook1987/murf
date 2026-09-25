@@ -45403,3 +45403,72 @@ no confirmed catalyst, three with catalysts stale by 13h+ to 7 days, two with on
 nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 21:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 20:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,803.90 vs session open $84,380.00 → −0.68% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) $83,803.90 = **+3.25%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **93 candidates** — the market-wide alt rally continuing from
+every earlier pass today. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **14**
+survivors: BNKR, PHA, US, WAL, RED, PYTH, POL, JASMY, ETHFI, FIL, POPCAT, ASTER, SUPER, MON.
+
+15m-OHLC deep-check (confirmed-closed-candle two-candle acceleration — last two closed 15m candles
+each closing higher than the prior close) on all 14: **4** cleared — USUSD, PYTHUSD, POLUSD,
+ASTERUSD. BNKR and PHA both showed a spike-then-dip pattern (declining second-to-last close before
+a late spike) despite large headline session gains (77%, 70%) — classic single-candle pump, not
+genuine acceleration; BNKR's notional ($92k) was thin enough to be a low-liquidity pump regardless.
+WAL, RED, JASMY, ETHFI, FIL, POPCAT, SUPER, MON all failed acceleration (flat or declining second
+leg).
+
+**Momentum-peak-check freshness (30min ceiling, unchanged by the cadence-relative rule since the
+prior pass was only 60min ago) on all 4 acceleration-passers — all failed, each on a stale 24h high
+with no fresh breakout above it:**
+- **USUSD:** 24h high $0.02164 set 407min (6.8h) ago; current price $0.02145 still below it — no
+  fresh breakout. Stale.
+- **PYTHUSD:** 24h high $0.07440 set 392min (6.5h) ago; current price $0.07349 still below it.
+  Stale.
+- **POLUSD:** 24h high $0.11518 set 62min ago — outside the 30min ceiling by a narrow margin;
+  current price $0.11504 still marginally below it, no fresh breakout. Stale.
+- **ASTERUSD:** 24h high $0.74375 set 767min (12.8h) ago; current price $0.73713 still below it.
+  Stale.
+
+All 4 rejected on the momentum-peak-check before reaching catalyst-confirmation or the win-rate
+kill switch stage — no Perplexity catalyst queries needed on individual candidates this pass.
+Fear & Greed checked: 52 "Neutral" (CFGI) — not Extreme Fear, moot regardless (no candidate reached
+R:R evaluation). Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO,
+closed as a win at the 08:00 UTC pass). Win-rate kill switch status unchanged (ACTIVE, 20.0%,
+momentum-only SUSPENDED) — not consulted this pass, no candidate reached that stage.
+
+### Decision: **HOLD — no candidate cleared the momentum-peak-check freshness gate this pass.**
+14 candidates cleared the fade cap and 4 of those cleared two-candle acceleration, but every one of
+the 4 sits below a 24h high that is itself 62min–13h stale with no fresh breakout above it —
+approaching a stale high from below is not the same as a fresh breakout, and the gate correctly
+rejected all 4 before catalyst-confirmation was even needed. Crash gate clear (BTC −0.68%
+intraday). Weekly downtrend gate inactive (+3.25%/5d, upside breach). $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate. Book unchanged from the
+20:00 UTC pass — no Step 3 maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. 4 candidates cleared acceleration but all sat below stale 24h highs with no fresh
+breakout — a clean structural rejection, not a near-miss worth flagging. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
