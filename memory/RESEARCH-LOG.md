@@ -44307,3 +44307,55 @@ not push absent a genuine operational or trading anomaly — this review's headl
 10-day trigger outage, not new information) does not clear that bar on its own. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 08:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), ONDO 0.00000 — the position from the 06:00 UTC entry is gone. `positions: {}`, `orders: {"open": {}}` — no open orders. Pulled `closedorders` to reconcile: trailing stop `O7IS4V-IFYNT-EOVQ7Q` shows `status: closed`, `descr.order: "sell 119.00000 ONDOUSD @ trailing stop 0.56602"`, filled at $0.56437, closetm 08:12:43 UTC — fired and filled between the 07:00 and 08:00 UTC passes. Buy order `O24MNU-YVFQD-QHUUMU` unchanged from the 06:00 UTC entry (cost $64.41827, fee $0.51535). Net proceeds on the sell: cost $67.16003 − fee $0.53728 = $66.62275. Net P&L vs the $64.93362 total entry spend: **+$1.68913 (+2.601%)**. Full detail logged in TRADE-LOG.md this pass. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** ONDO balance 0, no open orders of any kind — nothing orphaned, nothing to cancel. The stop closed itself cleanly on fill; no T1 limit order existed to become an orphan (none was ever placed, per the 06:00 UTC entry's documented mechanism limitation).
+- **T1 partial-take check:** N/A — no T1 order exists or ever existed for this trade.
+- **Progressive stop-tightening:** N/A — position is closed, no open position to check.
+- **Thesis-break check:** N/A — position is closed.
+- **Crash gate:** BTC/USD last $84,288.50 vs session open $84,380.00 → −0.11% intraday, 24h range $82,832.30–$84,914.80 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close $81,164.00 → today (live) $84,288.50 = **+3.85%/5-trading-day**, an upside breach — gate stays **INACTIVE**, standard entry rules apply.
+
+No Step 3 resize/cleanup/exit/liquidation action needed this pass beyond the stop-fire reconciliation logged in TRADE-LOG.md above.
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs + batched Ticker calls, 668 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread ≤1%: **34 candidates**. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **13** non-ONDO survivors: TREAD (0.00%), GRASS (1.28%), AERO (0.72%), ARKM (0.59%), JTO (0.02%), MANA (0.21%), LINK (0.60%), AR (0.38%), CC (0.30%), ICP (0.59%), ASTER (0.16%), VIRTUAL (0.42%), GALA (0.48%). (ONDO itself re-appears at +7.68% session gain/3.13% off-high but the bot's own position in it just closed — not re-evaluated as a fresh entry this pass given the 06:00 UTC entry and 08:00 UTC exit are the same session's round trip.)
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-candle acceleration) on all 13:
+
+| Pair | 24h-high age (confirmed candle) | Two-candle accel | Verdict |
+|---|---|---|---|
+| TREAD | 1.1min | fail (leg1 false) | fails acceleration |
+| GRASS | 16.1min | fail (both legs) | fails acceleration |
+| AERO | 1.1min | pass (both legs up) | **survives to catalyst check** |
+| ARKM | 136.1min | fail | fails freshness ceiling |
+| JTO | 1.1min | pass (both legs up) | **survives to catalyst check** |
+| MANA | 76.1min | pass, but stale | fails freshness ceiling |
+| LINK | 16.1min | fail (leg2 false) | fails acceleration |
+| AR | 1.1min | pass (both legs up) | **survives to catalyst check** |
+| CC | 16.1min | pass (both legs up) | **survives to catalyst check** |
+| ICP | 1.1min | pass (both legs up) | **survives to catalyst check** |
+| ASTER | 1.1min | pass (both legs up) | **survives to catalyst check** |
+| VIRTUAL | 16.1min | pass (both legs up) | **survives to catalyst check** |
+| GALA | 16.1min | fail (leg2 false) | fails acceleration |
+
+**7 survivors** (AERO, JTO, AR, CC, ICP, ASTER, VIRTUAL) proceeded to catalyst-confirmation via Perplexity (F&G checked first: 70 "Greed" per the aggregator headline, with CoinGecko 46/Alternative.me 78/CoinStats 73 shown as the underlying spread — not Extreme Fear on any reading, so that R:R-floor rule stays inactive regardless):
+
+- **AERO:** General coverage of a reported buyback/max-lock and altcoin-rotation liquidity commentary — not clearly dated as a fresh, specific trigger for today's move specifically. Momentum-only.
+- **JTO:** Governance vote (Sep 17) and staking-role clarification (Sep 20) both >4 days old, well outside the <6h freshness bar; an oracle-migration note carries no date. Momentum-only.
+- **AR:** Node-operator-upgrade note dated Aug 25 (a month old) and a vague "investor activity" mention Sep 21 (4 days old); CoinMarketCap AI's "technical breakout" framing is a price-action description, not a catalyst. Momentum-only.
+- **CC (Cocos-BCX):** Perplexity explicitly returned "no Cocos-BCX news items." Pure momentum-only, no ambiguity.
+- **ICP:** A "24h transaction record" stat plus general AI/Web3 narrative support — an ongoing metric, not a discrete dated event attributable as today's driver. Momentum-only.
+- **ASTER:** Grid 2.0/Marketplace-upgrade and buyback/burn coverage sourced from general roundups with no clear same-day date; CMC also flags a competitive headwind (Binance listing HYPE). Ambiguous at best, momentum-only.
+- **VIRTUAL:** Multi-chain AI-agent expansion and an "agent tokenisation live on Arc" note, again sourced from general "recent update roundups" rather than a dated today-specific item. Momentum-only.
+
+None of the 7 clears the bar the 06:00 UTC ONDO entry did (a specific, dated, CMC/crypto.news-sourced item explicitly named as the dominant driver of that day's move). All 7 are therefore momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor). The 6 other structural rejects (TREAD, GRASS, ARKM, MANA, LINK, GALA) were not catalyst-checked since they already failed freshness/acceleration.
+
+### Decision: **HOLD — book flat post-stop-fire, no catalyst-confirmed candidate available this pass.** The ONDO trailing stop fired and closed the position profitably (+2.601%, logged above) before this pass began — no maintenance action needed beyond reconciliation. The 08:00 UTC discovery sweep found 7 candidates clearing every technical/freshness/acceleration gate, but none with a catalyst meeting the standard's freshness/specificity bar, so all 7 are blocked by the active win-rate kill switch as momentum-only. Crash gate clear, weekly downtrend gate inactive (+3.85%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+**Push sent** — the ONDO position closed via its trailing stop for a realized profit (+$1.69, +2.60%) since the last pass, a genuine state change (open position → flat, with a confirmed win) worth surfacing now rather than waiting for a HOLD-pass summary. The discovery-sweep HOLD outcome itself is routine and not separately flagged. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
