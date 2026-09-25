@@ -44359,3 +44359,108 @@ None of the 7 clears the bar the 06:00 UTC ONDO entry did (a specific, dated, CM
 ### Step 8 — Notification
 
 **Push sent** — the ONDO position closed via its trailing stop for a realized profit (+$1.69, +2.60%) since the last pass, a genuine state change (open position → flat, with a confirmed win) worth surfacing now rather than waiting for a HOLD-pass summary. The discovery-sweep HOLD outcome itself is routine and not separately flagged. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 09:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 08:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat, consistent with the 08:00 UTC pass's post-stop-fire
+state (ONDO trailing stop closed the prior position between 07:00–08:00 UTC for +2.601%). Alpaca:
+`positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22) — no
+action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders of any kind (Kraken or Alpaca) — nothing to
+  reconcile, nothing orphaned.
+- **T1 partial-take check:** N/A — no open position.
+- **Progressive stop-tightening:** N/A — no open position.
+- **Thesis-break check:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,600.00 vs session open $84,380.00 → +0.26% intraday, 24h range
+  $83,015.10–$84,914.80 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) $84,600.00 = **+4.23%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply (not the stricter >5% 1h-momentum + <3h-catalyst bar).
+
+No Step 3 action needed this pass (no resize, no orphan cleanup, no thesis-break exit, no crash
+liquidation) — nothing to log per the no-op convention.
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs + batched Ticker calls, 623
+online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread
+≤1%: **54 candidates**. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **29**
+non-restricted survivors (XZECZUSD excluded pre-emptively — ZEC is on the AU jurisdiction-
+restricted list per TRADING-STRATEGY.md): GRASS, AERO, NEAR, JTO, SEI, AR, LINK, VIRTUAL, PUMP,
+JASMY, MORPHO, RED, ARKM, ACU, WAL, GALA, ALGO, CC, ASTER, VVV, AVA, SPX, KAS, RENDER, MANA, ICP,
+ARB, ZETA, PYTH.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration)
+on all 29: **8 survived** — GRASS (16.4min, accel), NEAR (16.4min, accel), AR (16.4min, accel),
+LINK (16.4min, accel), PUMP (16.4min, accel), MORPHO (16.4min, accel), ARB (16.4min, accel),
+RENDER (16.4min, accel). Notable near-misses: WALUSD (31.4min, just outside the 30min ceiling),
+ALGOUSD (1.4min but high sits on a still-forming, not yet closed, candle — fails the confirmed-
+candle requirement). The other 19 failed on stale freshness (REDUSD 286min, ARKMUSD 211min,
+ACUUSD 1366min, GALAUSD/AVAUSD/KASUSD 46min, CCUSD 61min, ASTERUSD 46min, MANAUSD 151min, ICPUSD
+76min, ZETAUSD/PYTHUSD/SPXUSD ~1021-1051min) or failed acceleration despite fresh highs (AEROUSD,
+JTOUSD, SEIUSD, VIRTUALUSD, JASMYUSD, VVVUSD).
+
+Fear & Greed checked: 52 "Neutral" (CFGI) / 46 "Neutral" (CoinGecko) — not Extreme Fear, that
+R:R-floor rule stays inactive regardless. Macro catalyst scan (Perplexity): no BTC/ETH-specific
+breaking news; notable items are the Deribit/CME quarterly options expiry (derivatives
+repositioning risk, not a directional catalyst), the Fed's proposed stablecoin framework, a
+reported $352M Bitget hack (market-negative headline, no direct exposure here), and a 1.76B XPL
+unlock today (not one of our 8 survivors).
+
+Catalyst-confirmation via Perplexity on all 8 survivors:
+- **GRASS:** General "real-world usage" ecosystem updates (Touch Grass burns, Solana expansion,
+  iOS app) with no dated same-day trigger. Momentum-only.
+- **NEAR:** Strongest-sounding candidate at first pass (Hyperliquid spot listing cited as "new
+  catalyst"), but a follow-up freshness-specific query confirmed the listing/deployment dates to
+  **Sept 23**, ~2 days old — Perplexity explicitly found no new same-day announcement. Fails the
+  <6h freshness bar. Momentum-only.
+- **AR:** Vague "network upgrades for node operators" and "investor activity," no dated trigger;
+  CoinMarketCap itself frames it as "storage-sector momentum," not a specific catalyst.
+  Momentum-only.
+- **LINK:** Strongest-looking on the surface (RWA integrations, CCIP bridging, node software
+  update), but a freshness-specific follow-up query traced the actual driver to the **Chainlink–
+  Infosys partnership announced earlier this week**, with Perplexity explicitly stating it found
+  no clearly new announcement from the last few hours. Fails the <6h freshness bar. Momentum-only.
+- **PUMP:** Ongoing buyback program (not a discrete dated event) plus an iOS app return dated
+  **Sep 18** (a week old); 24h price actually shows mixed/negative on some trackers despite the
+  positive session gain used in the sweep. Momentum-only, ambiguous.
+- **MORPHO:** "Coinbase expanded Morpho-powered loans" cited as a "material adoption catalyst"
+  but undated in the results — likely follow-on coverage of an earlier integration, not confirmed
+  same-day. Momentum-only.
+- **ARB:** "Priority Gas Auctions (PGA) and Fast Feed going live" cited as the fresh catalyst but
+  undated; 24h price change is flat (−0.9% to +1.0% across trackers), inconsistent with the
+  sweep's +3.15% session-gain read — treated as unconfirmed/stale. Momentum-only.
+- **RENDER:** Only concrete recent news item is a **security-negative** one (legacy RNDR-on-
+  Polygon deprecation after unauthorized contract access) — no bullish dated catalyst found.
+  Momentum-only.
+
+None of the 8 clears the bar the 06:00 UTC ONDO entry did (a specific, dated, CMC/crypto.news-
+sourced item explicitly named as the dominant driver of that day's move). All 8 are therefore
+momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04,
+20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8 losses: ZORA,
+HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries SUSPENDED).
+ONDO's 06:00 UTC win was catalyst-confirmed and does not count toward this window, so the 20.0%
+figure is unchanged. The other 21 structural rejects were not catalyst-checked since they already
+failed freshness/acceleration. Daily consecutive-loss pause: N/A, no losses today (only trade
+today, ONDO, was a win).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 8 candidates
+cleared every technical/freshness/acceleration/fade/spread gate, but none carried a catalyst
+meeting the <6h freshness/specificity bar (two — NEAR, LINK — had genuine-looking news that on
+closer freshness-specific inspection dated to 2-7 days old, not today), so all 8 are blocked by
+the active win-rate kill switch as momentum-only. Crash gate clear (BTC +0.26% intraday). Weekly
+downtrend gate inactive (+4.23%/5d, upside breach). $72.3189 cash fully available for the next
+pass to redeploy against a qualifying candidate. Book unchanged from the 08:00 UTC pass — no
+Step 3 maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift, no
+operational issues, no unprotected position, crash gate and weekly downtrend gate both clear/
+inactive. Two near-catalyst candidates (NEAR, LINK) were investigated closely and correctly
+excluded on freshness grounds, not left ambiguous — nothing here needs the user's attention.
+Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
