@@ -44820,3 +44820,76 @@ catalyst freshness/specificity grounds (all cited news 3+ days stale, move attri
 social chatter) — nothing here needs the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 14:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 13:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,615.70 vs session open $84,380.00 → −0.91% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$83,615.70 = **+3.02%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 671 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k, spread ≤1%: **56 candidates** (broad market-wide rally
+continuing, consistent with prior passes today). Live-intracandle-fade cap (≤1.5% off 24h high)
+narrowed this to **11** survivors (ACU, TAC, MUBARAK, GRASS, ZETA, POL, ETHFI, SENT, KAS, ENA, KSM).
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration)
+on all 11: only **MUBARAKUSD** survived — confirmed 24h high ($0.05131) 1.1min old, both of the
+last two closed 15m candles closing higher than the prior close (0.04805 → 0.05049 → 0.05076),
+live fade 0.97% off the confirmed high (well inside the 1.5% cap), spread 0.217%. ACUUSD had a
+fresh-enough high (31.1min, just outside the 30min ceiling) and failed acceleration anyway. SENT,
+KAS, and KSM passed acceleration but all had stale confirmed highs (76.1min, 181.1min, 151.1min).
+The remaining 7 (TAC, GRASS, ZETA, POL, ETHFI, ENA) failed acceleration outright (spike-then-stall)
+despite several having fresh highs (POL and ENA both 1.1min old but non-accelerating).
+
+Fear & Greed checked: 52 "Neutral" (CFGI) — not Extreme Fear, that R:R-floor rule stays inactive.
+
+Catalyst-confirmation via Perplexity on the sole survivor:
+- **MUBARAK:** No dated <6h catalyst. Perplexity's read: choppy, reversal-prone setup — this
+  week's earlier 52-68% gains are 2+ days stale, a 19%+ single-day drop hit the token on Sep 23
+  (2 days ago, itself a bearish signal), and the only named catalysts (Websea/Huobi HTX perpetual
+  listings) are undated background context, not a fresh trigger. Explicitly described as "choppy
+  rather than trending" with reversal risk. Momentum-only, and the closest thing to a "catalyst"
+  argues against the long side rather than for it. Same-thesis cooling period checked: no MUBARAK
+  stop-outs in the last 7 days (last MUBARAK activity was a win on 2026-08-19, over a month old) —
+  cap does not apply, but moot given the catalyst rejection.
+
+MUBARAK clears every technical/freshness/acceleration/fade/spread gate but carries no catalyst
+meeting the <6h freshness/specificity bar (the ONDO 06:00 UTC entry's standard), so it is
+classified momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE since
+2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8
+losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries
+SUSPENDED). ONDO's 06:00 UTC win was catalyst-confirmed and does not count toward this window, so
+the 20.0% figure is unchanged. Daily consecutive-loss pause: N/A, no losses today (only trade
+today, ONDO, closed as a win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** One candidate
+(MUBARAK) cleared every technical/freshness/acceleration/fade/spread gate but carried no catalyst
+meeting the <6h freshness/specificity bar (its move was 2+ days stale and its most recent
+development was actually bearish, a 19%+ drop two days ago) — blocked by the active win-rate kill
+switch as momentum-only. Crash gate clear (BTC −0.91% intraday). Weekly downtrend gate inactive
+(+3.02%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate. Book unchanged from the 13:00 UTC pass — no Step 3 maintenance action needed
+(nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. One candidate (MUBARAK) cleared every technical gate but was correctly excluded on
+catalyst freshness/specificity grounds (stale momentum, recent move actually bearish) — nothing
+here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were
+not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per
+the Position Watch Dashboard section).
