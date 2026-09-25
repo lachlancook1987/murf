@@ -45225,3 +45225,79 @@ freshness/specificity grounds (two real but stale dated catalysts, three with no
 driver) — nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 19:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 18:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,003.90 vs session open $84,380.00 → −0.45% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$84,003.90 = **+3.50%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **101 candidates** (broad market-wide rally continuing,
+consistent with every pass today). Live-intracandle-fade cap (≤1.5% off 24h high) plus spread ≤1%
+narrowed this to **35** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration) on
+all 35 survivors: **3** cleared both — **SENTUSD** (freshness 1.5min, closes accelerating:
+0.022823 → 0.022933 across the last two closed candles, third-prior close lower), **POLUSD**
+(freshness 1.5min, closes 0.1136 → 0.11416), **ASTERUSD** (freshness 1.5min, closes 0.73748 →
+0.73932). CROUSD showed acceleration but on a stale high (61.5min, well outside the 30min
+ceiling). The rest failed acceleration (flat/declining second leg) despite fresh highs in several
+cases (CCUSD, SEIUSD, JUPUSD, REDUSD, 2ZUSD, WLDUSD, SUPERUSD, GUSD all at 1.5min freshness but
+non-accelerating).
+
+Fear & Greed checked: 52 "Neutral" (Alternative.me/CFGI) — not Extreme Fear, so that R:R-floor
+rule stays inactive regardless (moot here — none of the three candidates reached R:R evaluation).
+
+Catalyst-confirmation via Perplexity on all 3 structural passers:
+- **SENTUSD (+6.18% session):** Perplexity found only generic price/volume commentary and analyst
+  bull/bear scenarios tied to token-unlock risk — no dated <6h specific event named as the driver.
+  Momentum-only.
+- **POLUSD (+4.97% session):** Real, specific, dated catalysts exist — a 100M POL burn (Sep 23),
+  Austin/Kyoto hard-fork security patches, and Circle USDC-on-Polygon support — but the burn is
+  2 days stale, outside the <6h freshness bar (same stale-dated-catalyst pattern as APT/SEI earlier
+  this week). Momentum-only (stale catalyst).
+- **ASTERUSD (+4.28% session):** Grid 2.0/Grid Marketplace launched Sep 24 (yesterday) and a
+  fee-funded buyback program are cited as sentiment support, but both are >6h stale; Perplexity's
+  own read calls near-term price action "range-bound... below a clearly confirmed breakout." No
+  dated <6h catalyst. Momentum-only.
+
+All 3 candidates that cleared every technical/freshness/acceleration/fade/spread gate are
+therefore classified momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE
+since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL;
+8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only
+entries SUSPENDED). ONDO's 06:00 UTC win was catalyst-confirmed and does not count toward this
+window, so the 20.0% figure is unchanged. Daily consecutive-loss pause: N/A, no losses today (only
+trade today, ONDO, closed as a win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 3 candidates cleared
+every technical/freshness/acceleration/fade/spread gate (SENT, POL, ASTER); all three carry either
+no dated catalyst or a real dated catalyst that is 1-2 days stale (POL's burn, ASTER's Grid 2.0
+launch), same recurring pattern as every pass this week. All 3 therefore blocked by the active
+win-rate kill switch as momentum-only. Crash gate clear (BTC −0.45% intraday). Weekly downtrend
+gate inactive (+3.50%/5d, upside breach). $72.3189 cash fully available for the next pass to
+redeploy against a qualifying candidate. Book unchanged from the 18:00 UTC pass — no Step 3
+maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. 3 candidates cleared every technical gate but were correctly excluded on catalyst
+freshness/specificity grounds (two real but stale dated catalysts, one with no single named <6h
+driver) — nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
