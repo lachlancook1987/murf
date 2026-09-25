@@ -44555,3 +44555,98 @@ ambiguous — nothing here needs the user's attention. The ~48min schedule-firin
 already-flagged recurring pattern, not a new finding. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 11:00 UTC
+
+**Cadence note:** Consistent with today's recurring ~45-48min drift pattern (already logged
+repeatedly since 00:47 UTC) — not pushed as a standalone notification, scheduler matter outside
+any session's reach.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 10:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; buying_power
+$2.54, no open orders beyond the historical filled/canceled ones — no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,705.00 vs session open $84,380.00 → +0.39% intraday, 24h range
+  $83,316.10–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) $84,705.00 = **+4.36%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 627 online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h
+>$50k, spread ≤1%: **87 candidates** (broad market-wide rally continuing). Live-intracandle-fade
+cap (≤1.5% off 24h high, XZECZUSD/XDASHZUSD pre-emptively excluded per the AU jurisdiction-
+restricted list) narrowed this to **54** survivors.
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration)
+on all 54: **7 survived** — PHA (1.7min, accel, +27.56% session gain), SEI (1.7min, accel), CC
+(1.7min, accel), ENA (1.7min, accel), COTI (16.7min, accel), KSM (1.7min, accel), KTA (1.7min,
+accel). 25 failed freshness (several because the 24h high sits on a still-forming, not yet
+closed, candle — NIL, VIRTUAL, PROS, SN64, GRT — correctly rejected under the confirmed-candle
+requirement; others simply stale, 30min+ to 1000min+ old). 22 failed the two-candle acceleration
+check despite fresh highs (DEEP, AERO, PUMP, NEAR, ACU, BEAM, STRK, ARKM, RED, JASMY, PYTH, KAS,
+ICP, GALA, ETHFI, MON, ARB, FIL, TAO, ADA, BIO, XRP among them).
+
+Fear & Greed checked: 52 "Neutral" (CFGI) / 46 "Neutral" (CoinGecko) / 78 "Extreme Greed"
+(Alternative.me) — not Extreme Fear by any tracker, that R:R-floor rule stays inactive. Macro
+scan (Perplexity): no BTC/ETH-specific breaking catalyst; today's backdrop is the same Deribit/
+CME ~$16B quarterly BTC/ETH options expiry (pin-risk event, not directional), supportive ETF
+inflows, and a same-day XPL token unlock (not one of our 7 survivors).
+
+Catalyst-confirmation via Perplexity on all 7 survivors:
+- **PHA:** No specific dated catalyst in the last 6h found; most concrete PHA news items
+  (CoinTR delisting, network milestone) are 3+ days to over a month old. Momentum-only, and the
+  cross-venue price spread (60% gain on some trackers vs. Kraken's 27.56%) flags thin/volatile
+  liquidity.
+- **SEI:** Initially looked like the strongest candidate — Canary Capital's Amendment No. 2 to
+  its Staked SEI ETF S-1 cited as the driver — but a freshness-specific follow-up query confirmed
+  the filing dates to **Sep 20–21**, 4-5 days old, not a same-day event. Fails the <6h freshness
+  bar. Momentum-only.
+- **CC:** No dated catalyst in the last 6h; most relevant items (DTCC tokenization, SBI/Kyobo
+  stablecoin test) are 3-7 days old. Momentum-only.
+- **ENA:** Main cited catalyst (Arthur Hayes buying ENA, USDe brief depeg) dates to Sep 21-22,
+  3-4 days old. No fresh <6h item found. Momentum-only.
+- **COTI:** Newest dated item is the Bitget delisting (Sep 24, bearish liquidity headwind, not a
+  bullish driver); bullish narrative (Avalanche privacy tool) is older. Momentum-only, and the
+  one dated item actually cuts against the long side (same pattern as the 10:00 UTC pass).
+- **KSM:** No dated catalyst in the last 6h; only unconfirmed rumor-tier Polkadot-merger chatter.
+  Momentum-only.
+- **KTA:** No dated catalyst in the last 6h; most recent item (testnet throughput report) not
+  confirmed as same-day. Momentum-only, and KTA is actually flat-to-down on other trackers despite
+  the Kraken session-gain read.
+
+None of the 7 clears the bar the 06:00 UTC ONDO entry did (a specific, dated item explicitly
+named as the dominant driver of that day's move). All 7 are therefore momentum-only and
+**BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04, 20.0% trailing win
+rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI,
+BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries SUSPENDED). ONDO's 06:00
+UTC win was catalyst-confirmed and does not count toward this window, so the 20.0% figure is
+unchanged. Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed as
+a win).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 7 candidates
+cleared every technical/freshness/acceleration/fade/spread gate, but none carried a catalyst
+meeting the <6h freshness/specificity bar (one, SEI, had a genuine-looking but stale 4-5-day-old
+catalyst; one, COTI, had net-negative dated news), so all 7 are blocked by the active win-rate
+kill switch as momentum-only. Crash gate clear (BTC +0.39% intraday). Weekly downtrend gate
+inactive (+4.36%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy
+against a qualifying candidate. Book unchanged from the 10:00 UTC pass — no Step 3 maintenance
+action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. Seven candidates cleared every technical gate but were correctly excluded on
+catalyst freshness/specificity grounds (SEI's ETF-amendment catalyst traced to 4-5 days old,
+COTI's dated news was net-negative), not left ambiguous — nothing here needs the user's
+attention. The ~48min schedule-firing drift is a known, already-flagged recurring pattern, not a
+new finding. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
+retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
