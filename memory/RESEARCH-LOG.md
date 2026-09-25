@@ -45144,3 +45144,84 @@ broad sector/market sentiment, not an asset-specific event) — the same conclus
 pass, re-verified rather than assumed. Nothing here needs the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 18:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 17:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,975.60 vs session open $84,380.00 → −0.48% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) ~$83,975.60 = **+3.46%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **99 candidates** (broad market-wide rally continuing,
+consistent with every pass today). Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to
+**37** survivors (spread not yet checked at this stage).
+
+15m-OHLC deep-check (confirmed-closed-candle freshness ≤30min + two-closed-candle acceleration) on
+all 37 survivors: **5** cleared both — GRASSUSD (freshness 1.6min), SEIUSD (1.6min), GRTUSD
+(1.6min), APTUSD (1.6min), AAVEUSD (1.6min). AEROUSD (31.6min) and CCUSD (31.6min) narrowly missed
+the freshness ceiling. The rest failed acceleration (spike-then-stall closes) or were well outside
+the freshness window (USUSD 211.6min, OPUSD 331.6min, EIGENUSD 121.6min, MONUSD 436.6min, ASTERUSD
+571.6min, WIFUSD 361.6min, PENGUUSD 436.6min among others).
+
+Spread check on the two not yet checked today (GRT, APT): GRT 0.21%, APT 0.08% — both well inside
+the 1% cap.
+
+Catalyst-confirmation via Perplexity:
+- **GRASSUSD, SEIUSD, AAVEUSD:** already assessed and blocked earlier today (16:00/17:00 UTC
+  passes) — GRASS/AERO on no dated <6h driver (CoinMarketCap: broad AI-sector/market sentiment),
+  SEI on a real but stale catalyst (Canary Capital SEI-ETF S-1 filed Sep 21, 4 days stale), AAVE on
+  CMC's explicit "broad altcoin sector rotation" attribution with no Aave-specific driver found. No
+  new catalyst has emerged for any of the three since those checks; all three continue to run on
+  pure momentum (GRASS 27.63% session gain now vs 23.7% at 17:00, AAVE 5.76% vs prior).
+- **GRTUSD (new this pass):** CoinMarketCap attributes the move primarily to broad AI/data-
+  infrastructure sector rotation; The Graph's own "Best AI Tooling" ETHOnline contest-winner
+  announcement is dated Sep 24 (yesterday), stale outside the <6h bar. No dated <6h dominant driver.
+  Momentum-only.
+- **APTUSD (new this pass):** Real, specific, dated catalysts exist — mainnet node v1.49.1 release
+  (Sep 23-24), Aptos staking launch on Bithumb (Sep 24), Lotte Group on-chain ticketing (Sep 23) —
+  but all are 1-2 days stale, outside the <6h freshness bar (same pattern as SEI/ARB earlier this
+  week: a real dated event that simply isn't fresh enough). Momentum-only (stale catalyst).
+
+All 5 candidates that cleared every technical/freshness/acceleration/fade/spread gate are therefore
+classified momentum-only and **BLOCKED by the standing win-rate kill switch** (ACTIVE since
+2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8
+losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries
+SUSPENDED). ONDO's 06:00 UTC win was catalyst-confirmed and does not count toward this window, so
+the 20.0% figure is unchanged. Fear & Greed checked: 52 "Neutral" (CFGI), 45 "Fear" (CoinGecko) —
+not Extreme Fear either reading, so that R:R-floor rule stays inactive (moot — no candidate reached
+R:R evaluation). Daily consecutive-loss pause: N/A, no losses today (only trade today, ONDO, closed
+as a win at the 08:00 UTC pass).
+
+### Decision: **HOLD — no catalyst-confirmed candidate available this pass.** 5 candidates cleared
+every technical/freshness/acceleration/fade/spread gate (GRASS, SEI, GRT, APT, AAVE); two newly
+checked this pass (GRT, APT) both failed catalyst freshness — GRT's driver is broad sector rotation
+with no dated <6h trigger, APT's real dated catalysts (mainnet release, Bithumb staking) are 1-2
+days stale. The other three (GRASS, SEI, AAVE) were already blocked on the same grounds at earlier
+passes today with no new catalyst having emerged since. All 5 therefore blocked by the active
+win-rate kill switch as momentum-only. Crash gate clear (BTC −0.48% intraday). Weekly downtrend
+gate inactive (+3.46%/5d, upside breach). $72.3189 cash fully available for the next pass to
+redeploy against a qualifying candidate. Book unchanged from the 17:00 UTC pass — no Step 3
+maintenance action needed (nothing open to maintain).
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from last pass, no drift in account
+state, no operational issues, no unprotected position, crash gate and weekly downtrend gate both
+clear/inactive. 5 candidates cleared every technical gate but were correctly excluded on catalyst
+freshness/specificity grounds (two real but stale dated catalysts, three with no single named <6h
+driver) — nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
