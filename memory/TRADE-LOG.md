@@ -11293,3 +11293,21 @@ Stop txid `O7IS4V-IFYNT-EOVQ7Q` fired between the 07:00 and 08:00 UTC passes (tr
 ### Step 8 — Notification
 
 **Push sent** — the ONDO trailing stop fired and closed the position for a realized net profit (+$1.69, +2.60%), the first completed round-trip trade in 3+ weeks and confirmation the stop-placement/exit mechanism worked exactly as designed. This is a genuine state change (book went from a live open position to fully flat with realized P&L) worth surfacing, not a routine HOLD. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — EOD Snapshot
+
+### Sep 25 — EOD Snapshot (Day 128, Friday)
+
+**Portfolio:** $72.3189 | **Cash:** $72.3189 (100.0%) | **Day P&L:** +$1.6891 (+2.391%) | **Phase P&L:** −$107.4611 (−59.774%) | **vs BTC:** +2.772 points
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** 1 (Trade 153: ONDO/USD BUY 06:00 UTC, closed via trailing stop between 07:00–08:00 UTC) | **Total since migration:** 153
+
+**Notes:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat at EOD, no drift since the 22:00 UTC pass. First trade in over 3 weeks: catalyst-confirmed ONDO/USD entry at 06:00 UTC (BlackRock tokenized-portfolio + NEAR partnership catalyst), 119 ONDO acquired at $0.54133 blended entry, protected immediately by a full-quantity 2.5% trailing stop (T1 partial-limit order attempted and rejected — `EOrder:Insufficient funds`, documented as a structural Kraken-spot limitation in TRADING-STRATEGY.md, not a one-off error). The trailing stop fired between the 07:00 and 08:00 UTC passes at $0.56437 (price ran to +4.257% before the 2.5% trail caught the pullback), realizing **+$1.68913 (+2.601%)** net of fees. Day P&L +$1.6891 (+2.391%) vs yesterday's $70.6298 baseline. Phase P&L −$107.4611 (−59.774%) from $179.78 Kraken starting equity (May 22) — a modest improvement from −60.71% at the last snapshot. **vs BTC:** BTC moved from $84,383.80 (Sep 24 EOD live reference) to $84,062.60 today → **−0.381%**; bot's day return (+2.391%) beat BTC's raw move by **+2.772 points** — the only day this week with a realized gain. Every hourly pass after the 08:00 UTC close (09:00 through 23:00 UTC, 15 passes) reached HOLD on a market-wide alt rally that produced dozens of raw momentum candidates per pass but consistently failed structural gates downstream — mostly the momentum-peak-check freshness ceiling (stale 24h highs approached from below rather than freshly broken) and, on the handful that cleared every technical/freshness gate (DCR-pattern repeats: JUP, WLD, PYTH, POL, ARKM, POPCAT, ETHFI at 22:00 UTC; SUPER at 23:00 UTC), the standing momentum-only win-rate kill switch (ACTIVE, 20.0%, below the 35% floor since 2026-09-04) correctly blocking every one for lacking a confirmed <6h catalyst. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $72.3189 cash, fully available, no open positions; weekly downtrend gate (currently INACTIVE at +3.57%/5d, upside breach) and win-rate kill switch (ACTIVE, 20.0%, momentum-only SUSPENDED, unchanged by today's catalyst-confirmed ONDO win) both to be reassessed fresh.
+
+### Step 8 — Notification
+
+No push sent this pass — the reportable event today (ONDO stop-fire realizing a net profit, book returning to flat) was already pushed at the 08:00 UTC pass when it happened; this EOD snapshot is a routine end-of-day summary of a result the user has already been notified of, with no new drift, loss, or operational issue since. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
