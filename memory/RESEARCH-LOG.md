@@ -44213,3 +44213,97 @@ distinct from the known concurrent-session clobber bug) discovered and recovered
 this genuinely needs the user's attention, unlike a routine HOLD pass. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact
 tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 07:00 UTC (Weekly Review pass)
+
+**Step 1-2:** Kraken `account`: ZUSD $5.6962, ZAUD $0.1550 (dust), ONDO 119.00000 — matches the
+06:00 UTC pass's trade exactly, no drift, no manual/out-of-band activity. `positions: {}` (margin,
+as expected for spot), open order: trailing-stop `O7IS4V-IFYNT-EOVQ7Q` sell 119 ONDOUSD @ +2.5%
+trail, stopprice $0.54375 (watermarked off the $0.55769 high), confirmed open and correctly sized
+to the full position. No T1 limit order exists (by design — placement failed and was documented as
+a hard mechanism limitation last pass). Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22) — no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No orphan — ONDO balance (119) matches the open trailing stop's volume (119)
+  exactly. No T1 limit order to check as orphan (never placed).
+- **T1 partial-take check:** N/A, no T1 order exists this pass or ever for this trade (see 06:00
+  UTC entry — Kraken rejects the second order with `EOrder:Insufficient funds` since the
+  full-quantity trailing stop reserves the whole balance).
+- **Progressive stop-tightening:** ONDO current price $0.55216 (last trade) vs entry $0.54133 →
+  **+2.00% unrealized gain from entry**, well under the 20% tightening threshold. No action —
+  stop stays at 2.5% trail, correctly still trailing the $0.55769 high with no widening.
+- **Thesis-break check:** Perplexity re-checked ("Ondo Finance news and price outlook today") —
+  thesis intact and strengthening, not broken: the Sep 24 "Ondo Intelligent Portfolios" catalyst
+  is still the dominant driver, plus supporting coverage of tokenized-stock-access expansion,
+  institutional in-kind mint/redeem routes, and a DTCC Fund/SERV integration. No exploit, rug,
+  regulatory action, or unlock-dump signal. No thesis-break exit warranted.
+- **Crash gate:** BTC/USD $83,886.20 vs session open $84,380.00 → −0.59% intraday, 24h range
+  $82,832.30–$84,914.80 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today $83,886.20 = **+3.35%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply (not the stricter >5% 1h-momentum + <3h-catalyst bar).
+
+No Step 3 action taken (no resize, no orphan cleanup, no thesis-break exit, no crash liquidation)
+— nothing to log per the no-op convention.
+
+**Step 4 — Research:** Full Kraken-native sweep via public AssetPairs + batched Ticker calls, 623
+online USD pairs, zero fetch errors. Filtered for session gain ≥3%, notional24h >$50k, spread
+≤1%: **21 candidates** (TREAD, PHA, AXS, QNT, SAND, GRASS, DEEP, ONDO, ZRO, BLZ, TAKE, SYN, ARKM,
+OOB, MANA, XPL, LDO, AERO, SNEK, SNX, JTO). ONDO itself re-appears (+6.10% session gain) but is
+already held — not a new-entry candidate. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed
+this to 8 non-ONDO survivors: PHA (1.18%), AXS (1.32%), GRASS (1.18%), MANA (1.14%), LDO (0.66%),
+AERO (1.32%), SNX (1.10%), JTO (0.73%). 15m-OHLC deep-check (confirmed-closed-candle freshness +
+two-candle acceleration) on all 8:
+
+| Pair | 24h-high age (confirmed candle) | Two-candle accel | Verdict |
+|---|---|---|---|
+| PHA | 17.6min | pass (both legs up) | **survives to catalyst/capital check** |
+| AXS | 47.6min | fail | fails freshness ceiling |
+| GRASS | 32.6min | fail (dip-then-partial) | fails freshness + acceleration |
+| MANA | 32.6min | fail (declining closes) | fails freshness + acceleration |
+| LDO | 32.6min | fail (flat close) | fails freshness + acceleration |
+| AERO | 1037.6min | fail | fails freshness ceiling hard |
+| SNX | 407.6min | pass | fails freshness ceiling hard (stale high despite accel) |
+| JTO | 32.6min | fail (declining) | fails freshness + acceleration |
+
+**PHAUSD is the sole survivor** — confirmed 24h high ($0.05916) set 17.6min ago (within the 30min
+ceiling), two consecutive closed 15m candles both higher than the prior close, live re-quote
+($0.05877 ask, 0.324% spread, 0.66% off high) reconfirming the batch-snapshot numbers.
+
+**Capital check — binding constraint, blocks execution regardless of catalyst outcome:** Available
+cash is **$5.6962** (92% of equity is already deployed in the open ONDO position from the 06:00 UTC
+pass). Checked PHAUSD's exchange minimum via `kraken.sh assets PHA/USD`: **`ordermin: 200` units**
+— at the live ask ($0.05877), 200 PHA costs **≈$11.75**, more than double the $5.6962 available.
+This is a hard exchange floor, not a strategy-gate threshold — no amount of conviction sizing can
+place an order Kraken will accept below its own minimum. Did not proceed to Perplexity
+catalyst-confirmation for PHA since the trade is unexecutable on capital grounds regardless of the
+outcome (would be moot even if catalyst-confirmed); did not check catalyst for the other 7 rejects
+since they already failed technical gates. Fear & Greed checked: 46 "Neutral" (CoinGecko) — not
+Extreme Fear, that R:R-floor rule stays inactive regardless.
+
+### Decision: **HOLD — insufficient available capital for the sole gate-clearing candidate.**
+PHAUSD (the only candidate to clear freshness + acceleration + fade + spread) cannot be executed:
+its $11.75 minimum order size exceeds the $5.6962 cash on hand, a hard Kraken exchange floor, not
+a gate to loosen. All other 7 near-miss candidates were independently rejected on freshness/
+acceleration before reaching this stage. This is the same class of outcome as the "piggy bank
+empty from a large single position" case CLAUDE.md's manual-trade section describes for
+out-of-band trades — here self-inflicted by the bot's own 92%-equity conviction sizing on ONDO
+last pass, not a bug. Crash gate clear, weekly downtrend gate inactive, kill switch (ACTIVE, 20.0%,
+momentum-only suspended) unchanged and not reached this pass since no momentum-only candidate got
+that far. This is also the **Friday 07:00 UTC Weekly Review pass** — full review appended to
+WEEKLY-REVIEW.md this pass, covering the two weeks since the last review (Sep 11 → Sep 25) since
+the Sep 18 review was skipped entirely during the 10-day trigger outage (Sep 13 23:00 – Sep 24
+14:00 UTC, already documented in the Sep 24 TRADE-LOG/RESEARCH-LOG entries).
+
+### Step 8 — Notification
+
+No push sent for the HOLD/capital-constraint outcome itself — expected, mechanical, not an
+anomaly (analogous to the manual-trade low-cash case CLAUDE.md already excludes from
+notification). The weekly review is appended to WEEKLY-REVIEW.md for the user to read at their own
+pace rather than pushed, consistent with prior weekly-review passes (Sep 4, Sep 11) which also did
+not push absent a genuine operational or trading anomaly — this review's headline (two-week
++1.10% vs BTC's +8.58%, a real gap, but fully explained by the already-flagged and already-pushed
+10-day trigger outage, not new information) does not clear that bar on its own. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
