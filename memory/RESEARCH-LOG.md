@@ -45566,3 +45566,76 @@ freshness/specificity grounds (two 3-day-stale dated items, five with no coin-sp
 all) — nothing here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-25 — Scan — 23:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 22:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,062.60 vs session open $84,380.00 → −0.38% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 20 close
+  $81,164.00 → today (live) $84,062.60 = **+3.57%/5-trading-day**, an upside breach — gate stays
+  **INACTIVE**, standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **117 candidates** — the market-wide alt rally continuing
+from every earlier pass today, now the widest candidate count of the day. Live-intracandle-fade
+cap (≤1.5% off 24h high) narrowed this to a broad survivor set; top 25 by session gain among
+fade-passers taken forward to the 15m-OHLC deep check.
+
+15m-OHLC deep-check (confirmed-closed-candle two-closed-candle acceleration) on the top 25:
+**3 cleared** — SENTUSD, VIRTUALUSD, SUPERUSD; the other 22 (ENA, SEI, JTO, DEEP, JUP, ZRO, WLD,
+PUMP, SN64, ARKM, GALA, ZETA, RED, TAO, AVNT, POL, CFG, JASMY, FIL, POPCAT, SPX, PENGU) failed
+acceleration on a flat/declining second leg.
+
+**Momentum-peak-check freshness (30min ceiling) on the 3 acceleration-passers:**
+- **SENTUSD:** 24h high set 90.8min ago — stale, no fresh breakout above it.
+- **VIRTUALUSD:** 24h high set 645.8min (10.8h) ago — stale.
+- **SUPERUSD:** 24h high ($0.1854) set **15.8min ago — within the 30min ceiling**, current price
+  at the high (0% live fade). Cleared.
+
+**SUPERUSD (SuperVerse) — the sole structural passer this pass:** Spread 0.162% (bid $0.1848 /
+ask $0.1851) — well inside the 1% cap. Session gain +6.19%, notional $81,791 (thin-ish but above
+the $50k floor). Perplexity catalyst-confirmation: no token-specific news catalyst found — sources
+attribute the move to general "risk-on altcoin rotation," explicitly noting no coin-specific
+trigger in the data. **Classified momentum-only and BLOCKED by the standing win-rate kill switch**
+(ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins:
+UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor;
+momentum-only entries SUSPENDED). ONDO's 06:00 UTC win remains catalyst-confirmed and does not
+count toward this window, so the 20.0% figure is unchanged.
+
+Fear & Greed checked: 52 "Neutral" (CFGI primary), 45 "Fear" (CoinGecko), 73 "Greed"
+(CoinStats/CMC-based) — not Extreme Fear on the primary reading, moot regardless (SUPERUSD never
+reached R:R evaluation, blocked at the catalyst/kill-switch stage). Daily consecutive-loss pause:
+N/A, no losses today (only trade today, ONDO, closed as a win at the 08:00 UTC pass).
+
+### Decision: **HOLD — sole structural passer (SUPERUSD) has no confirmed catalyst, blocked by the
+active win-rate kill switch.** 117 raw candidates narrowed to 3 acceleration-passers, of which only
+SUPERUSD cleared the freshness ceiling with a fresh (15.8min-old) breakout — but Perplexity found
+no coin-specific catalyst, only generic sector rotation, so it stays classified momentum-only and
+is correctly held back. Crash gate clear (BTC −0.38% intraday). Weekly downtrend gate inactive
+(+3.57%/5d, upside breach). $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate. Book unchanged from the 22:00 UTC pass — no Step 3 maintenance action needed.
+
+### Step 6 — EOD Snapshot mode (HOUR == 23): see TRADE-LOG.md EOD Snapshot entry appended this pass.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD/EOD pass, book flat, one completed round-trip trade today (ONDO,
+realized +$1.69/+2.60%), no drift in account state, no operational issues, no unprotected
+position, crash gate and weekly downtrend gate both clear/inactive. SUPERUSD clearing every
+structural/technical gate but being correctly blocked by the win-rate kill switch (no catalyst
+found) is the kill switch working as designed, not an anomaly. Day P&L positive and ahead of BTC
+— a good EOD result already reported to the user via the 08:00 UTC pass's push when the ONDO stop
+fired; nothing new here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
