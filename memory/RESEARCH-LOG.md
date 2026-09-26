@@ -46420,3 +46420,88 @@ spread gate is a clean structural rejection, not an anomaly — nothing here nee
 attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
 (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 10:00 UTC (fired 10:47 UTC)
+
+**Cadence note:** This pass fired ~47 min past the nominal hour, the fourth consecutive such drift
+today (also 07:45, 08:46, 09:46) — consistent, recurring, already-flagged pattern (see prior
+cadence notes throughout this log, e.g. 2026-09-13/16 entries). Scheduling/infrastructure matter
+outside any session's reach; logged for continuity, not pushed separately.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 09:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+remains cancelled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,143.00 vs session open $84,090.50 → +0.062% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,143.00 = **−2.83%/5-trading-day** — stays
+  under the >3% threshold (was −2.98%/5d at 09:00 UTC, easing slightly as BTC ticked back up).
+  Gate remains **INACTIVE** — standard entry rules apply; win-rate kill switch below is the
+  independent, still-binding constraint on momentum-only entries.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **39 candidates**, top by gain: RARE +48.36%, POND +28.04%,
+2Z +26.06%, Q +24.13%, BLZ +15.19%, EDGE +12.57%, TNSR +11.86%, FOLD +10.33%, QNT +9.64%,
+VELODROME +8.74%, RUNE +7.62%, AERO +7.31%, CPOOL +6.92%, NPC +6.86%, PUMP +6.49%, AVNT +6.37%,
+KMNO +6.31%, KAS +5.98%, LOFI +5.95%, ENA +5.57%, STX +5.37%, ENJ +4.95%, US +4.67%, MNT +4.20%,
+BABY +4.12%, XPL +4.02%, CC +3.95%, W +3.88%, IMX +3.77%, REZ +3.64%, FIL +3.43%, RLC +3.33%,
+ATH +3.32%, AZTEC +3.20%, FLOW +3.18%, WLFI +3.14%, TOSHI +3.09%, SKY +3.08%, BAT +3.06%.
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **10 survivors**: W (0.16%),
+BAT (0.43%), WLFI (0.50%), AERO (0.53%), FIL (0.64%), KAS (0.69%), KMNO (0.72%), ATH (0.91%),
+IMX (1.06%), SKY (1.31%) — the other 29 faded 1.53–34.23% off-high.
+
+**15m-OHLC deep check on the 10 survivors** (last two fully-closed candles at check time, 10:15
+and 10:30 UTC — 10:45 still forming): two-candle acceleration (each closed candle higher than the
+prior close) **passed for only 2 of 10 — WLFI and W**. WLFI: 10:00 close 0.0580 → 10:15 close
+0.0587 → 10:30 close 0.0592, both legs up. W: 10:00 close 0.01259 → 10:15 close 0.01281 → 10:30
+close 0.01288, both legs up. The other 8 (AERO, ATH, BAT, FIL, IMX, KAS, KMNO, SKY) showed a
+spike-then-stall or spike-then-reverse pattern on one leg and were rejected on this gate.
+
+**Momentum-peak-check freshness on WLFI and W:** WLFI's confirmed 24h high ($0.0595) was set in
+the 10:30 candle, closed ~1.5min before this check — well within the 30min ceiling. W's confirmed
+24h high ($0.01288) was set in the same 10:30 candle, also ~1.5min old — both pass cleanly, no
+still-forming-candle high used for either.
+
+**Spread + catalyst-confirmation on WLFI and W:** Spreads both well inside the 1% cap (WLFI
+0.169%, W 0.155%, via `kraken.sh quote`). Perplexity catalyst check on each:
+- **WLFIUSD** — governance proposal for a holder incentive program targeting an **Oct 1** rollout
+  (forward-looking, not a live trigger), Aster DEX RWA volume note dated **Sep 23** (3 days old),
+  plus bearish US regulatory/Senate-probe overhang. **No confirmed <6h catalyst** — momentum-only.
+- **WUSD (Wormhole)** — tokenomics overhaul (strategic reserve, 4% target base yield, biweekly
+  unlock model) described only as "recent," no dated trigger tied to today's move; Injective/
+  Backpack Wallet integration and a Uniswap governance proposal both undated/general. **No
+  confirmed <6h catalyst** — momentum-only.
+
+Both are therefore **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04,
+20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor; momentum-only
+entries SUSPENDED). Fear & Greed checked this pass: 57 "Neutral" per Alternative.me (CoinGecko 45
+Fear, CoinMarketCap 73 Greed cited as alternate readings) — not Extreme Fear, so that R:R-floor
+rule stayed inactive; moot here since the kill switch is the binding gate regardless. Daily
+consecutive-loss pause: N/A, no trades today yet. Same-thesis cooling: N/A, no prior WLFI/W
+stop-outs on file.
+
+### Decision: **HOLD — no candidate cleared every gate.** 39 raw candidates narrowed to 10
+fade-cap survivors, then to 2 acceleration survivors (WLFI, W) — both cleared every structural/
+technical/freshness/spread gate cleanly but lacked a confirmed <6h catalyst and were blocked by
+the standing momentum-only win-rate kill switch (20.0%, below the 35% floor). The weekly
+downtrend gate remained INACTIVE this pass (−2.83%/5d, easing slightly) and was not the binding
+constraint — the kill switch was. $72.3189 cash fully available for the next pass to redeploy
+against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 09:00 UTC pass, no drift, no
+operational issues, no unprotected position. WLFI and W both clearing technicals but being
+blocked by the standing win-rate kill switch is the kill switch working as designed — nothing
+here needs the user's attention right now. The ~47min schedule-firing drift is a known,
+already-flagged recurring pattern, not a new issue. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
