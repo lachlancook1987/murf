@@ -46505,3 +46505,98 @@ here needs the user's attention right now. The ~47min schedule-firing drift is a
 already-flagged recurring pattern, not a new issue. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 11:00 UTC (fired 11:46 UTC)
+
+**Cadence note:** Fired ~46min past the hour, consistent with today's recurring drift pattern
+(also 07:45, 08:46, 09:46, 10:47) — known, already-flagged, not a new issue.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 10:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,160.40 vs session open $84,090.50 → +0.083% intraday, 24h range
+  $83,163.60–$84,741.90 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,160.40 = **−2.81%/5-trading-day** — stays
+  under the >3% threshold (was −2.83%/5d at 10:00 UTC, easing marginally). Gate remains
+  **INACTIVE** — standard entry rules apply; win-rate kill switch below is the independent,
+  still-binding constraint on momentum-only entries.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k: **47 candidates**, top by gain: RARE +50.50%,
+POND +42.36%, Q +35.13%, 2Z +23.69%, SPELL +14.98%, EDGE +14.19%, TNSR +12.89%, BLZ +12.25%,
+KMNO +11.76%, RUNE +9.45%, AERO +7.71%, CPOOL +7.29%, PUMP +7.23%, VELODROME +7.04%, KAS +6.59%,
+FOLD +6.58%, AVNT +6.43%, QNT +6.27%, US +6.23%, BABY +5.99%, XPL +5.85%, LOFI +5.76%, HNT +5.25%,
+NPC +5.23%, LCX +5.17%, ENA +4.89%, AZTEC +4.89%, PYTH +4.82%, ENJ +4.75%, FIL +4.57%, STX +4.51%,
+AKE +4.48%, PTB +4.43%, MNT +4.35%, W +4.12%, ATH +4.11%, IMX +3.90%, CC +3.89%, RLC +3.62%,
+FLOW +3.50%, BAT +3.48%, VELO +3.27%, MINA +3.27%, REZ +3.27%, SPK +3.17%, TOSHI +3.17%,
+STRK +3.13%. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **16 survivors**:
+KMNO (0.02%), ATH (0.15%), PYTH (0.17%), KAS (0.29%), FLOW (0.31%), FIL (0.36%), BABY (0.42%),
+BAT (0.51%), Q (0.52%), PTB (0.60%), STRK (0.65%), MINA (0.68%), W (0.69%), AERO (0.65%),
+XPL (0.74%), IMX (0.94%) — the other 31 faded 1.51–33.15% off-high (RUNE closest miss at 1.51%).
+
+**15m-OHLC deep check on the 16 survivors** (last two fully-closed candles at check time, 11:00
+and 11:15 UTC — 11:30 had just closed as the check ran, 11:45 still forming): two-candle
+acceleration (each closed candle higher than the prior close) **passed for only 6 of 16 — KMNO,
+AERO, KAS, PYTH, FIL, ATH**. The other 10 (Q, BABY, XPL, PTB, W, IMX, FLOW, BAT, MINA, STRK)
+showed a spike-then-stall or spike-then-reverse pattern on one leg and were rejected on this gate.
+
+**Momentum-peak-check freshness on the 6 acceleration survivors:** KMNO's 24h high ($0.04659)
+sits on the still-forming 11:45 candle only (last confirmed-closed candle, 11:30, topped out at
+$0.04648) — fails the confirmed-closed-candle requirement, rejected. AERO's 24h high ($0.9208)
+and KAS's ($0.04508) both predate the visible 15m window entirely (neither appears in the last
+four candles through the still-forming one) — stale, declining-from-high pattern, rejected on
+freshness without further digging since three clean candidates were already in hand. **PYTH,
+FIL, and ATH all had their 24h high confirmed on the same closed 11:30 candle** (closed ~1–16min
+before this check, well within the ceiling — min(30min, 59min since the 10:47 UTC pass) = 30min):
+PYTH high $0.07793 (11:30 close matched exactly), FIL high $1.102 (11:30 close matched exactly),
+ATH high $0.00659 (11:30 close matched exactly) — all three pass cleanly.
+
+**Spread + catalyst-confirmation on PYTH, FIL, ATH:** Spreads all well inside the 1% cap (PYTH
+0.154%, FIL 0.182%, ATH 0.303%, via `kraken.sh quote`). Perplexity catalyst check on each:
+- **PYTHUSD** — best available driver is Nasdaq approving Pyth as an external distributor of
+  Nasdaq Basic, but Perplexity gives no date tying this to today's move (described alongside
+  "ongoing product expansion," evergreen-sounding coverage, not a fresh headline) — same failure
+  mode as the 2026-09-1x pass that found this exact Nasdaq/Pyth story dated ~2 months stale.
+  **No confirmed <6h catalyst** — momentum-only.
+- **FILUSD** — v27 "Golden Week" network upgrade went live **Sep 24**, 2 days old, not <6h; the
+  October emission-cut story is forward-looking, not a live trigger. **No confirmed <6h
+  catalyst** — momentum-only.
+- **ATHUSD** — no project-specific catalyst found; move attributed to broad AI/GPU-sector
+  sentiment, with the only recent named item (Coinbase delisting ATH futures, Aug 19) negative
+  and a month+ old. **No confirmed <6h catalyst** — momentum-only.
+
+All three are therefore **BLOCKED by the standing win-rate kill switch** (ACTIVE since
+2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor;
+momentum-only entries SUSPENDED). Fear & Greed checked this pass: 57 "Neutral" per CFGI.io
+(CoinGecko 45 Fear, CoinMarketCap ~72-73 Greed cited as alternate readings) — not Extreme Fear,
+so that R:R-floor rule stayed inactive; moot here since the kill switch is the binding gate
+regardless. Same-thesis cooling: N/A — no PYTH/FIL/ATH stop-outs found in TRADE-LOG.md within
+the last 7 days (only historical rejection notes, no actual entries). Daily consecutive-loss
+pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 47 raw candidates narrowed to 16
+fade-cap survivors, then to 6 acceleration survivors, then to 3 with a fresh confirmed-closed-
+candle 24h high (PYTH, FIL, ATH) — all three cleared every structural/technical/freshness/spread
+gate cleanly but lacked a confirmed <6h catalyst and were blocked by the standing momentum-only
+win-rate kill switch (20.0%, below the 35% floor). The weekly downtrend gate remained INACTIVE
+this pass (−2.81%/5d, easing marginally) and was not the binding constraint — the kill switch
+was. $72.3189 cash fully available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 10:00 UTC pass, no drift, no
+operational issues, no unprotected position. PYTH, FIL, and ATH all clearing technicals but being
+blocked by the standing win-rate kill switch is the kill switch working as designed — nothing
+here needs the user's attention right now. The ~46min schedule-firing drift is a known,
+already-flagged recurring pattern, not a new issue. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
