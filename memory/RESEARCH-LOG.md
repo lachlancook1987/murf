@@ -45709,3 +45709,83 @@ momentum floor despite clean technicals is the gate working as designed — noth
 user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
 called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 01:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 00:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,055.30 vs session open $84,090.50 → −0.04% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,055.30 = **−2.93%/5-trading-day** — back
+  under the >3% threshold. Gate flips **INACTIVE** this pass (was ACTIVE at the 00:00 UTC pass,
+  −3.15%/5d) — standard entry rules apply, no stricter 1h>5%/catalyst<3h bar this pass.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 624 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **7 candidates** (EDGE +19.04%, BLZ +13.30%, CPOOL +9.72%,
+QI +4.11%, CC +3.88%, DOG +3.87%, SEI +3.20%). Live-intracandle-fade cap (≤1.5% off 24h high)
+narrowed this to **2 survivors**: CCUSD (fade 0.66% at first pass, 1.27% on live re-check) and
+SEIUSD (fade 0.05%); EDGE (27.37%), BLZ (13.11%), CPOOL (6.98%), QI (27.64%), and DOG (5.88%) were
+all already well off their 24h highs.
+
+**15m-OHLC deep check on the 2 survivors (last two fully closed candles, 01:15 and 01:30, vs.
+01:00):**
+- **SEIUSD:** 01:15 close (0.07598) < 01:00 close (0.07646) — a lower close on the first leg.
+  **Fails two-candle acceleration** — spike-then-stall pattern, not sustained building.
+- **CCUSD:** 01:00→01:15→01:30 closes (0.13156, 0.13278, 0.13400) each higher than the last.
+  **Two-candle acceleration passes** cleanly. 24h high ($0.13537) set inside the now-closed
+  01:30 candle (closed 01:45 UTC), ~20min before this check — within the 30min freshness ceiling,
+  confirmed-closed-candle satisfied. Live re-check: price $0.13365, fade 1.27% off the high (inside
+  the 1.5% cap). Spread 0.06% (bid $0.13368 / ask $0.13376) — well inside the 1% cap. Session gain
+  3.24% (fresh o/c), 1h momentum ~2.1%, 4h momentum ~4.4% (21:00 close $0.12803 → live $0.13365) —
+  clears the >3%/1-4h-momentum screening bar; volume surge clear (last 1h volume ~1.93M vs.
+  ~300k–760k in the preceding hours, well over 2×).
+
+**CCUSD (Canton Coin) — the sole structural passer this pass:** Perplexity catalyst-confirmation:
+identified as Canton Coin, the Canton Network's native token. Cited drivers are an anticipated
+**DTCC tokenization-service rollout on Canton in October 2026** and an **SBI/Kyobo stablecoin
+test on Canton** — both ongoing/anticipatory institutional narratives with no fixed same-day
+trigger, not a dated <6h event. A second, more targeted query returned CoinMarketCap's own
+assessment explicitly: **"no clear coin-specific news broke in the last 24 hours"** — the surge is
+narrative- and momentum-driven, the same recurring pattern seen on ARKM/POPCAT/JUP/WLD this week.
+**Classified momentum-only and BLOCKED by the standing win-rate kill switch** (ACTIVE since
+2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries — 2 wins: UAI, NIL; 8
+losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the 35% floor; momentum-only entries
+SUSPENDED). ONDO's Sep 25 win remains catalyst-confirmed and does not count toward this window, so
+the 20.0% figure is unchanged.
+
+Fear & Greed checked: 52 "Neutral" (CFGI primary), 45 "Fear" (CoinGecko), 73 "Greed"
+(CoinStats/CMC-based) — not Extreme Fear, moot regardless (CCUSD never reached R:R evaluation,
+blocked at the catalyst/kill-switch stage). Daily consecutive-loss pause: N/A, no losses today.
+
+### Decision: **HOLD — sole structural passer (CCUSD) has no confirmed catalyst, blocked by the
+active win-rate kill switch.** 7 raw candidates narrowed to 2 fade-cap survivors; SEIUSD failed
+two-candle acceleration outright, and CCUSD — the cleanest technical setup this pass (steady
+3-candle build, fresh 24h-high breakout, tight spread, real volume surge) — cleared every
+structural/technical/freshness gate but carries only an anticipatory institutional narrative
+(October DTCC rollout, SBI/Kyobo test) with CoinMarketCap itself confirming no dated coin-specific
+news in the last 24h. Correctly held back as momentum-only. Crash gate clear (BTC −0.04%
+intraday). Weekly downtrend gate flipped back INACTIVE this pass (−2.93%/5d, was ACTIVE at
+−3.15%/5d last pass) — standard entry rules applied throughout, not the binding constraint for
+either candidate. $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 00:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping back INACTIVE
+after one pass ACTIVE is a normal gate response to BTC's own small moves around the 3% threshold,
+not an anomaly. CCUSD clearing every technical gate but being correctly blocked by the win-rate
+kill switch (no dated catalyst found) is the kill switch working as designed — nothing here needs
+the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
+called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
