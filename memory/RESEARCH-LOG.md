@@ -45952,3 +45952,76 @@ normal, expected gate response to BTC's own gradual slide crossing the 3%/5-day 
 anomaly — nothing here needs the user's attention right now. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 04:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 03:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+still cancelled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,974.60 vs session open $84,090.50 → −0.14% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $83,974.60 = **−3.03%/5-trading-day** — stays
+  crossed over the >3% threshold. Gate remains **ACTIVE** (was ACTIVE at −3.06%/5d at the 03:00
+  UTC pass) — 1h momentum >5% AND a fresh catalyst <3h old required, pure-momentum entries banned.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **17 candidates**, top by gain: PUMP +4.96%, ENA +3.85%,
+LSK +3.77%, KAS +3.51%, AVNT +3.22%, SKY +3.20%, ACU +3.16%, US +3.07% (plus GFI, SAGA, LCX and
+others further off their highs). Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to
+**5 survivors**: PUMPUSD (fade 0.07%), ENAUSD (fade 0.04%), SKYUSD (fade 0.01%), KASUSD (fade
+1.09%), LSKUSD (fade 1.39%).
+
+**15m-OHLC deep check on the 5 survivors (last two fully closed candles as of ~04:46 UTC):**
+- **PUMPUSD:** Second-most-recent closed candle (03:31→03:45 UTC, close 0.004335) closed *lower*
+  than the prior candle (close 0.004403) — spike-then-dip. **Fails two-candle acceleration.**
+- **ENAUSD:** Same pattern — second-most-recent closed candle (close 0.2697) lower than the prior
+  (close 0.2767). **Fails two-candle acceleration.**
+- **KASUSD:** First leg up (0.04272→0.04374) but the most-recent closed candle reversed down
+  (close 0.04358 < 0.04374). **Fails two-candle acceleration** (spike-then-dip on the second leg).
+- **LSKUSD:** Two-candle acceleration passes (0.346584→0.346957→0.352558, each higher). But the
+  actual 24h high ($0.357856 per ticker) was **not** set within the visible recent-candle window
+  (highest recent candle high is $0.353122) — it predates the ~76min lookback shown and live price
+  remains below it with no fresh breakout. **Fails momentum-peak-check freshness.**
+- **SKYUSD:** Two-candle acceleration passes cleanly (0.07758→0.07847→0.07902, each higher).
+  24h high ($0.07902) was set in the most-recently-closed candle itself (closed ~1–2min before
+  this check) — passes freshness easily. Live price at the high (fade ~0.01%). Clean technical
+  setup. **But 1h momentum is only ~+1.8%** (candle close ~61min ago $0.07761 → live $0.07901) —
+  far short of the weekly-downtrend-gate's elevated **1h momentum >5%** requirement that applies
+  to every entry while the gate is ACTIVE (crossed active at the 03:00 UTC pass, still active this
+  pass at −3.03%/5d). **Fails the weekly downtrend gate's momentum floor** before reaching
+  catalyst-confirmation or the standing win-rate kill switch — no Perplexity per-candidate query
+  needed since the gate rejects on momentum alone regardless of catalyst status.
+
+Standard context queries: BTC $83,943.55 (−0.51%/24h per Perplexity, consistent with Kraken's own
+−0.14% intraday reading — different reference windows). Fear & Greed checked: 52 "Neutral" (CFGI),
+45 "Fear" (CoinGecko), 72–73 "Greed" (CMC/CoinStats-style) — not Extreme Fear, moot regardless (no
+candidate reached R:R evaluation). Daily consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 17 raw candidates narrowed to 5
+fade-cap survivors (PUMP, ENA, KAS, LSK, SKY); PUMP/ENA/KAS all failed two-candle acceleration
+(spike-then-dip on the second leg), LSK failed momentum-peak-check freshness (stale 24h high, no
+fresh breakout), and SKY — the cleanest technical setup this pass (steady 3-candle build, 24h high
+set in the just-closed candle, tight spread, real volume) — was rejected by the weekly downtrend
+gate's elevated 1h-momentum >5% floor (actual ~1.8%), which applies while the gate stays ACTIVE
+regardless of catalyst status. Crash gate clear (BTC −0.14% intraday). Weekly downtrend gate
+remains ACTIVE this pass (−3.03%/5d, essentially unchanged from −3.06%/5d at 03:00 UTC) — this was
+the binding constraint for the one otherwise-clean candidate (SKY) this pass. $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 03:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate correctly blocking SKY on
+its elevated momentum floor is the gate working as designed, not an anomaly — nothing here needs
+the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
+called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
