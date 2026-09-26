@@ -47201,3 +47201,93 @@ momentum (2.48%, 3.61%) also sit well under the *standard* >3%/1h bar's more rel
 point (5%), so this wasn't a case of a gate blocking an otherwise-strong setup. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 19:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 18:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,006.30 vs session open $84,090.50 → −0.100% intraday, 24h range
+  $83,619.60–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE (flipped back this pass):** BTC daily closes (Kraken OHLC,
+  interval=1440): Sep 21 close $86,593.80 (5 trading days ago) → now (live) $84,006.30 =
+  **−2.987%/5-trading-day** — back under the >3% threshold after the 18:00 UTC pass measured
+  −3.00% (ACTIVE). This is the same boundary-noise pattern flagged on prior passes this week —
+  BTC ticked up ~$13 between passes, enough to cross back under the line. Gate **INACTIVE** this
+  pass: standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **54 candidates**, top by gain: RARE +41.70%, EDGE +39.13%, US +27.45%,
+QNT +24.05%, KMNO +21.02%, 2Z +20.02%, SGB +18.45%, KAS +16.41%, RUNE +13.26%, LAPTOP +12.62%
+among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **10 survivors**: LAPTOP (0.00%),
+LSK (0.07%), PYTH (0.29%), SUPER (0.29%), DOG (0.36%), CFG (0.71%), W (0.98%), BILL (1.03%),
+HNT (1.19%), TON (1.38%).
+
+**15m-OHLC deep check on the 10 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min): **4 of 10 passed acceleration** (last two closed 15m candles each higher than
+the prior) — LAPTOP, LSK, PYTH, SUPER. The rest failed acceleration (DOG, CFG, W, BILL, HNT, TON —
+a down leg in the last two closed candles). Of the 4 acceleration passers, **LSK failed the
+confirmed-closed-candle requirement** — its apparent 24h high ($0.36301, fade 0.07%) was set on
+the still-*forming* 15m candle, not a closed one; the most recent *closed* candle's high
+($0.358540) is only 61.8min old on a stale, lower level, well outside the 30min ceiling, so LSK is
+rejected as an unconfirmed-candle fakeout risk (same failure mode the confirmed-candle rule was
+added to catch). **LAPTOP, PYTH, SUPER** all cleared: confirmed-closed-candle 24h highs each
+~17.3min old (within ceiling), two-candle acceleration intact, spread clean (LAPTOP 0.12%,
+PYTH 0.20%, SUPER 0.20%, all well inside the 1% cap).
+
+**Catalyst-confirmation on LAPTOP, PYTH, SUPER (binding stage this pass):**
+- **LAPTOP** — Perplexity coverage is uniformly **bearish**: reports of a post-launch collapse
+  of 95–99% from early highs, "large numbers of underwater buyers," no recovery catalyst cited.
+  **Cross-exchange divergence flag:** CoinGecko shows LAPTOP **+2.30%/24h** and OKX shows
+  **−14.52%/24h** at the same time our Kraken read shows **+12.62%** session gain — a material
+  three-way disagreement on both direction and magnitude, consistent with a thin/volatile order
+  book rather than a real tradeable move. **Rejected outright on the divergence gate**,
+  independent of catalyst status — chasing a token multiple other trackers show falling while
+  ours shows rallying is exactly what that gate exists to catch.
+- **PYTH** — Perplexity surfaces a "Nasdaq real-time equity data distributor" narrative and a
+  Gate-exchange staking-delisting deadline (Oct 8), but neither is dated to the last 6h — the
+  Nasdaq item reads as an existing/ongoing narrative ("was reported," no date), and the Gate
+  deadline is a scheduled future event, not today's trigger. No specific dated <6h catalyst
+  found — classified momentum-only.
+- **SUPER** — Perplexity cites a "new SuperVerse game launch" and "expanding gaming utility" as
+  the sentiment driver, but with no specific date attached — general/ongoing narrative, not a
+  confirmed <6h trigger. Classified momentum-only.
+
+PYTH and SUPER are therefore **BLOCKED by the standing win-rate kill switch** (ACTIVE since
+2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor;
+momentum-only entries SUSPENDED — catalyst-confirmed entries, like the 2026-09-25 06:00 UTC ONDO
+trade, remain unaffected and open). Fear & Greed checked this pass: 57 "Neutral" per Perplexity
+consensus — not Extreme Fear; moot here since the win-rate kill switch (for PYTH/SUPER) and the
+cross-exchange divergence gate (for LAPTOP) are the binding rejections, reached before any
+Fear/Greed-linked R:R floor would matter. Same-thesis cooling: N/A, no entries this pass. Daily
+consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 54 raw candidates narrowed to 10
+fade-cap survivors, to 4 with fresh two-candle acceleration (LAPTOP, LSK, PYTH, SUPER), to 3 after
+LSK failed the confirmed-closed-candle check (LAPTOP, PYTH, SUPER) — all 3 cleared spread cleanly
+but LAPTOP was rejected outright on cross-exchange divergence (bearish elsewhere, no catalyst),
+and PYTH/SUPER had no confirmed <6h catalyst so are classified momentum-only and blocked by the
+standing win-rate kill switch (20.0%, below the 35% floor). $72.3189 cash fully available for the
+next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 18:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping back to INACTIVE
+is the same boundary-noise pattern already flagged on recent passes, not a new development, and
+wasn't the binding gate for any candidate this pass regardless (LAPTOP failed on cross-exchange
+divergence, PYTH/SUPER on the win-rate kill switch — neither depends on the weekly-gate state).
+Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
