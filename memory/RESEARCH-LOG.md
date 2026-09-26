@@ -46025,3 +46025,77 @@ its elevated momentum floor is the gate working as designed, not an anomaly — 
 the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
 called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 05:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 04:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+still cancelled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,956.10 vs session open $84,090.50 → −0.16% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $83,956.10 = **−3.05%/5-trading-day** — stays
+  crossed over the >3% threshold. Gate remains **ACTIVE** (was ACTIVE at −3.03%/5d at the 04:00
+  UTC pass) — 1h momentum >5% AND a fresh catalyst <3h old required, pure-momentum entries banned.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **13 candidates**, top by gain: EDGE +20.16%, BLZ +18.23%,
+GFI +9.63%, PUMP +8.68%, CPOOL +8.66%, SAGA +7.31%, AERO +5.64%, FLOCK +5.12%, AVNT +5.00%,
+SKY +3.40%, CC +3.19%, 2Z +3.06%, KAS +3.04%. Live-intracandle-fade cap (≤1.5% off 24h high)
+narrowed this to **6 survivors**: PUMPUSD (fade 0.57%), AEROUSD (0.84%), FLOCKUSD (0.86%),
+SKYUSD (0.23%), CCUSD (1.32%), 2ZUSD (0.88%) — EDGE/BLZ/GFI/CPOOL/SAGA/AVNT all faded well past the
+cap (7.9–26.7% off-high), KAS narrowly failed at 1.68%.
+
+**15m-OHLC deep check + 1h momentum on the 6 survivors (as of ~05:46 UTC), against the weekly
+downtrend gate's elevated 1h-momentum >5% floor:**
+- **PUMPUSD:** 1h momentum +1.38% (0.004487→0.004549). **Fails the gate's momentum floor.**
+- **AEROUSD:** 1h momentum +0.35% (0.8930→0.8961). **Fails the gate's momentum floor.**
+- **FLOCKUSD:** 1h momentum +2.10% (0.07482→0.07639). **Fails the gate's momentum floor.**
+- **SKYUSD:** 1h momentum +0.25% (0.07896→0.07916). **Fails the gate's momentum floor.**
+- **CCUSD:** 1h momentum +1.92% (0.13106→0.13358). **Fails the gate's momentum floor.**
+- **2ZUSD:** 1h momentum **+5.46%** (0.05737→0.0607) — clears the gate's momentum floor, the only
+  survivor to do so. Two-candle acceleration confirmed (05:15 close $0.05922 > 05:00 close $0.05758;
+  05:30 close $0.06070 > 05:15 close $0.05922 — both legs up). Confirmed-closed-candle freshness:
+  24h high ($0.06104) was set inside the just-closed 05:30 candle itself (~1–16min old), well
+  within the 30min ceiling. Live intracandle fade 0.88% (within the 1.5% cap). Spread 0.31%
+  (`kraken.sh quote 2Z/USD`, ask $0.0608/bid $0.06061) — within the 1% cap. Cross-exchange check:
+  Kraken $0.0607 vs. Perplexity-cited other-tracker range $0.054–$0.058 — ~8.3% divergence, not
+  material (<15–20% threshold). **Catalyst check (2Z = DoubleZero):** Perplexity identifies a real,
+  specific catalyst — a Hyperion DeFi/DoubleZero partnership enabling paid Hyperliquid data feeds —
+  but pins its publication timestamps to **2026-09-24, 10:04–22:00 UTC**, i.e. **>31 hours** old as
+  of this pass (05:47 UTC). **Fails the weekly downtrend gate's <3h-old fresh-catalyst leg** — the
+  gate requires both legs (1h momentum >5% AND catalyst <3h old) while active, and pure-momentum
+  entries are banned outright, so 2Z is rejected here even though it is the technically cleanest
+  setup this pass and would otherwise have been a catalyst-confirmed candidate (real catalyst, just
+  stale) at the standard 1.2:1 R:R floor had the weekly downtrend gate not been active.
+
+Standard context queries: BTC $83,956 (Kraken live, −0.16% intraday) consistent with the crash-gate
+check above. Fear & Greed checked: Alternative.me-style ~71–78 "Greed/Extreme Greed", CMC 72
+"Greed", CFGI.io 52–56 "Neutral" depending on source — not Extreme Fear, moot regardless (no
+candidate reached R:R evaluation). Daily consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 13 raw candidates narrowed to 6
+fade-cap survivors (PUMP, AERO, FLOCK, SKY, CC, 2Z); five of six failed the weekly downtrend
+gate's elevated 1h-momentum >5% floor outright, and the sixth (2Z/DoubleZero) cleared that
+momentum floor but was rejected on the gate's paired <3h-fresh-catalyst requirement — its real
+Hyperion DeFi/Hyperliquid-data-feed catalyst is >31h old. Crash gate clear (BTC −0.16% intraday).
+Weekly downtrend gate remains ACTIVE this pass (−3.05%/5d, essentially unchanged from −3.03%/5d at
+04:00 UTC) — this was the binding constraint for every survivor this pass. $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 04:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate correctly blocking 2Z on
+its stale-catalyst leg (a real catalyst, just too old) is the gate working as designed, not an
+anomaly — nothing here needs the user's attention right now. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
