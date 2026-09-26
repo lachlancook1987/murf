@@ -46951,3 +46951,97 @@ all 8 surviving candidates failed on the win-rate kill switch, which would have 
 under either gate state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
 called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per
 the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 16:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 15:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,120.50 vs session open $84,090.50 → +0.036% intraday, 24h range
+  $83,612.90–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21
+  close $86,593.80 (5 trading days ago) → now (live) $84,120.50 = **−2.857%/5-trading-day** —
+  under the >3% threshold, consistent with the 14:00/15:00 UTC passes' boundary-noise finding.
+  Gate **INACTIVE** this pass: standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 624 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **76 candidates**, top by gain: US +38.63%, RARE +36.04%, EDGE +36.00%,
+QNT +23.44%, SGB +18.56%, 2Z +17.96%, KMNO +16.91%, FIL +16.48%, RUNE +15.85%, KAS +15.70% among
+others (76 total).
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **31 survivors**: GALA (0.00%),
+JTO (0.00%), DOT (0.03%), ATOM (0.07%), TON (0.13%), FIL (0.16%), WLFI (0.17%), SAND (0.21%),
+TIA (0.37%), CFG (0.41%), ATH (0.46%), KAS (0.47%), IMX (0.47%), FET (0.50%), DCR (0.51%),
+RENDER (0.63%), CC (0.65%), BILL (0.65%), ARKM (0.69%), TREAD (0.77%), W (0.77%), EUL (0.79%),
+ICP (0.98%), RUNE (1.04%), EIGEN (1.05%), AVAX (1.13%), SGB (1.14%), TAKE (1.17%), RLC (1.35%),
+HNT (1.35%), QNT (1.36%).
+
+**15m-OHLC deep check on the 31 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min): **7 of 31 passed both** — QNT (24h high 16.3min old), FIL (16.3min),
+GALA (16.3min), JTO (16.3min), BILL (16.3min), TON (16.3min), SAND (16.3min). The rest either
+failed acceleration (SGB, RUNE, CC, HNT, TAKE, TREAD, CFG, RLC, ATOM, EUL, IMX, ICP, W, WLFI,
+ARKM, ATH, DCR — a down leg in the last two closed candles) or failed freshness on an otherwise-
+accelerating candidate (KAS 106min, EIGEN 106min, DOT 46min, FET 1441min, RENDER 76min, TIA
+76min, AVAX 91min — all far outside the 30min ceiling).
+
+**Spread + catalyst-confirmation on the 7 freshness+acceleration survivors:** All 7 cleared
+spread cleanly: QNT 0.098%, FIL 0.163%, GALA 0.427%, JTO 0.068%, BILL 0.217%, TON 0.131%,
+SAND 0.426% — all well inside the 1% cap. Perplexity catalyst-confirmation on all 7 found no
+confirmed **<6h** catalyst:
+- **QNT** — strongest case on the surface (The Clearing House selected Quant for a tokenized-
+  deposit "On-Chain Money Initiative"), but a targeted follow-up query pinned the announcement to
+  **24 Sept 2026, 13:00 UTC** — ~51 hours old, not <6h. Multiple sources tie the ongoing rally to
+  this same 2-day-old announcement (institutional-adoption narrative, network itself not expected
+  live until H1 2027), so it fails the freshness bar for a "confirmed catalyst" despite being a
+  real, specific, dated event.
+- **FIL** — cited driver is a **planned 75% reduction in gross FIL issuance after October 2026**
+  (a future-dated event, not a <6h trigger) plus vague "network/storage upgrades"; one source
+  flags the move as technically overbought/due for consolidation.
+- **GALA** — cited news is a mid-September security exploit (~$3M drained), stale and actually a
+  bearish overhang, not today's driver; no fresh catalyst identified.
+- **JTO** — cited items are a Sep 25 SEC liquid-staking guidance revision (~1 day old, not <6h)
+  and a recycled Solana governance-vote reference flagged stale on this ticker before; also a
+  JTX trading-platform launch with no specific timestamp.
+- **BILL** — no token-specific catalyst; coverage is dominated by the broader CLARITY Act
+  regulatory theme with no dated trigger, and CoinMarketCap actually flags BILL as under selling
+  pressure.
+- **TON** — cited news (Toncoin→GRAM rebrand, a ~$52.68M token-cliff unlock) is a bearish/mixed
+  overhang, not a bullish dated catalyst; sentiment described as "mixed rather than strongly
+  directional."
+- **SAND** — cited catalyst is a Sept 9 GMO delisting (stale, bearish) plus generic "altcoin
+  rotation" commentary; no specific dated trigger for today's move.
+
+All 7 are therefore classified momentum-only and **BLOCKED by the standing win-rate kill switch**
+(ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the
+35% floor; momentum-only entries SUSPENDED — catalyst-confirmed entries, like the 2026-09-25
+06:00 UTC ONDO trade, remain unaffected and open). Fear & Greed checked this pass: 57 "Neutral"
+per CFGI.io — not Extreme Fear; moot here since the win-rate kill switch is the binding
+constraint, reached and failed for all 7 candidates before Fear/Greed-linked R:R floors would
+matter. Same-thesis cooling: N/A, no entries this pass. Daily consecutive-loss pause: N/A, no
+trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 76 raw candidates narrowed to 31
+fade-cap survivors, to 7 with fresh confirmed-closed-candle two-candle acceleration (QNT, FIL,
+GALA, JTO, BILL, TON, SAND) — all 7 cleared spread cleanly but had no confirmed <6h catalyst
+(QNT's real, dated Clearing House announcement is ~51h old), so all are classified momentum-only
+and blocked outright by the standing win-rate kill switch (20.0%, below the 35% floor). $72.3189
+cash fully available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 15:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate stayed INACTIVE (boundary
+noise, BTC −2.857%/5d, under the 3% line) and was not the binding constraint anyway — all 7
+surviving candidates failed on the win-rate kill switch, which would have blocked them under
+either gate state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
