@@ -46600,3 +46600,71 @@ here needs the user's attention right now. The ~46min schedule-firing drift is a
 already-flagged recurring pattern, not a new issue. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 12:00 UTC (fired 12:45 UTC)
+
+**Cadence note:** Fired ~45min past the hour, consistent with today's recurring drift pattern
+(also 07:45, 08:46, 09:46, 10:47, 11:46) — known, already-flagged, not a new issue.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 11:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,037.40 vs session open $84,090.50 → −0.063% intraday, 24h range
+  $83,163.60–$84,552.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,037.40 = **−2.95%/5-trading-day** — stays
+  under the >3% threshold by a narrowing margin (was −2.81%/5d at 11:00 UTC). Gate remains
+  **INACTIVE** — standard entry rules apply, but this is close enough to the 3% line that the
+  next pass should re-check carefully in case it flips ACTIVE.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 668 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered
+for session gain ≥3%, notional24h >$50k: **38 candidates**, top by gain: Q +50.68%, RARE +48.36%,
+POND +28.20%, 2Z +22.59%, EDGE +17.29%, SPELL +15.81%, BLZ +11.78%, KMNO +11.78%, TNSR +10.82%,
+RUNE +9.91%, VELODROME +9.69%, AERO +7.43%, US +6.75%, NPC +6.49%, KAS +6.45%, CPOOL +5.78%,
+QNT +5.38%, PUMP +5.34%, BABY +5.16%, FOLD +5.06%, HNT +4.84%, LCX +4.81%, AVNT +4.79%, CC +4.75%,
+STX +4.48%, TAO +4.41%, ENA +4.33%, PTB +4.32%, SN64 +4.21%, MINA +4.13%, LOFI +4.09%, MNT +3.95%,
+REZ +3.94%, AZTECUSD +3.80%, MUBARAK +3.57%, PYTH +3.30%, RLC +3.11%, ACU +3.08%. Live-intracandle-
+fade cap (≤1.5% off 24h high) narrowed this to **5 survivors**: KAS (0.44%), KMNO (1.08%),
+MINA (1.18%), VELODROME (1.23%), US (1.31%) — the other 33 faded 1.82–33.85% off-high.
+
+**15m-OHLC deep check on the 5 survivors** (last two fully-closed candles at check time, 12:15
+and 12:30 UTC — 12:45 still forming, only ~1min old): two-candle acceleration (each closed
+candle higher than the prior close) **passed for 0 of 5**:
+- KAS: 12:15 close 0.04500 → 12:30 close 0.04489 (down) — fails.
+- KMNO: 12:15 close 0.04700 → 12:30 close 0.04688 (down) — fails.
+- MINA: 12:15 close 0.14773 → 12:30 close 0.14690 (down) — fails.
+- VELODROME: 12:15 close 0.03954 → 12:30 close 0.03927 (down) — fails.
+- US: 12:00 close 0.02251 → 12:15 close 0.02249 (down, first leg fails) → 12:30 close 0.02260 (up)
+  — spike-then-stall-then-partial-recover pattern, first leg down disqualifies it regardless of
+  the second leg.
+
+All 5 rejected on the acceleration gate — none reached freshness/spread/catalyst-confirmation
+stage this pass. Fear & Greed checked this pass: 57 "Neutral" per CFGI.io (CoinGecko 45 Fear,
+CoinMarketCap ~73 Greed cited as alternate readings) — not Extreme Fear; moot here since no
+candidate reached that evaluation stage. Same-thesis cooling: N/A, no entries this pass. Daily
+consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 38 raw candidates narrowed to 5
+fade-cap survivors, all 5 rejected on the two-candle acceleration gate (spike-then-stall/reverse
+pattern on at least one leg in the last 30min). The weekly downtrend gate remained INACTIVE this
+pass but is narrowing toward the 3% threshold (−2.95%/5d, up from −2.81%/5d at 11:00 UTC) — worth
+watching, not yet binding. $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 11:00 UTC pass, no drift, no
+operational issues, no unprotected position. All 5 candidates failed on structural acceleration
+gates before reaching the win-rate kill switch or catalyst-confirmation stage — nothing here
+needs the user's attention right now. The ~45min schedule-firing drift is a known, already-
+flagged recurring pattern, not a new issue. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
