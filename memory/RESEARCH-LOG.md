@@ -45789,3 +45789,95 @@ kill switch (no dated catalyst found) is the kill switch working as designed —
 the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
 called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 02:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 01:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,020.00 vs session open $84,090.50 → −0.08% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) ~$84,020 = **−2.97%/5-trading-day** — stays just
+  under the >3% threshold. Gate remains **INACTIVE** (was INACTIVE at the 01:00 UTC pass,
+  −2.93%/5d) — standard entry rules applied.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **8 candidates** (EDGE +20.97%, CPOOL +9.69%, BLZ +9.40%,
+QI +9.08%, US +6.70%, GFI +6.19%, AERO +4.69%, PUMP +3.12%). Live-intracandle-fade cap (≤1.5% off
+24h high) narrowed this to **3 survivors**: USUSD (fade 0.0%), AEROUSD (fade 0.43% on first pass,
+0.60% on live re-check), and PUMPUSD (fade 0.35%); EDGE (26.19%), CPOOL (7.01%), BLZ (16.10%),
+QI (24.18%), and GFI (14.10%) were all well off their 24h highs.
+
+**15m-OHLC deep check on the 3 survivors (last two fully closed candles as of ~02:47 UTC):**
+- **USUSD:** Choppy, thin, multiple **zero-volume candles** (02:00, 02:30) — stale/illiquid print,
+  not a real move. Last two closed candles flat (02:15 close 0.02172 = 02:30 close 0.02172, not
+  higher). **Fails two-candle acceleration** outright.
+- **PUMPUSD:** 02:00 close (0.004311) > 02:15 close (0.004281) — a lower close on the second leg
+  (spike-then-dip). **Fails two-candle acceleration.**
+- **AEROUSD:** 02:00→02:15→02:30 closes (0.8577, 0.8838, 0.8864) each higher than the last.
+  **Two-candle acceleration passes** cleanly. Confirmed (closed-candle) 24h high $0.8929 set inside
+  the 02:30 candle (closed 02:45:00 UTC) — ~3min old at the 02:47:49 live check, well within the
+  30min freshness ceiling. Live price $0.8910 (ask $0.8936/bid $0.8880) vs. today's actual high
+  $0.8964 (touched inside the still-forming 02:45 candle) → live fade 0.60%, inside the 1.5% cap.
+  Spread 0.63% — inside the 1% cap. Session gain +4.91% (open $0.8493 → live $0.8910), 1h momentum
+  ~+4.47% (01:45 close $0.8529 → live), both clear the >3%/1h screening bar. Volume surge: recent
+  15m candles running 15k–47k vs. a ~23.6k/15min 24h-average baseline — real, not thin-noise.
+
+**AEROUSD (Aerodrome Finance) — the sole structural passer this pass:** Perplexity
+catalyst-confirmation found a named, specific catalyst — **Slipstream V3** protocol upgrade (MEV
+auctions, value-accrual for LPs/holders) plus a **34K AERO buyback-and-max-lock** update (>199M
+AERO bought back/locked per CoinGecko) — but a targeted follow-up query dated the Slipstream V3
+launch signal to **2026-09-25**, with the clearest timestamped market-news item at **Sep 25, 8:04
+AM UTC**. At this pass's live time (Sep 26, 02:47 UTC), that catalyst is **~18.7h old**, well past
+the mandatory **<6h** freshness bar for catalyst-confirmed classification. **AERO is therefore
+classified momentum-only (no catalyst confirmed <6h old) and BLOCKED by the standing win-rate
+kill switch** (ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only
+entries — 2 wins: UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — below the
+35% floor; momentum-only entries SUSPENDED). ONDO's Sep 25 win remains catalyst-confirmed and does
+not count toward this window, so the 20.0% figure is unchanged. Note also a cross-exchange
+divergence worth flagging for continuity, not itself a reject basis: Perplexity's other trackers
+quoted AERO in the **$0.79–$0.84** range (some citing +13–19% gains) vs. Kraken's live $0.8910 —
+roughly 6–9% above the upper end of that range, inside the ~15–20% material-divergence threshold,
+so the gate does not fire, but the spread across trackers is wider than usual for a liquid pair
+like AERO.
+
+Standard context queries: BTC $84,066 (−0.50%/24h per Perplexity, consistent with Kraken's own
+−0.08% intraday reading — different reference windows). ETH ~$2,690 (~flat, sub-0.2% either
+direction). Fear & Greed 52 "Neutral" (CFGI primary) — not Extreme Fear, moot regardless (AERO
+never reached R:R evaluation, blocked at the catalyst/kill-switch stage). BTC perpetual funding
+near flat to slightly positive across major venues (no funding-driven signal). Macro catalysts
+today are flow-driven (Treasury buyback/debasement trade, ETF inflows, SEC/CFTC leveraged-crypto
+initiative, quarter-end options expiry) rather than any single asset-specific event. Token unlocks
+today (JUP, ALT, FOGO, GT, SAHARA) don't overlap with any screened candidate. Daily
+consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — sole structural passer (AEROUSD) has a catalyst too old to confirm, blocked
+by the active win-rate kill switch.** 8 raw candidates narrowed to 3 fade-cap survivors; USUSD and
+PUMPUSD both failed two-candle acceleration outright (thin/stale and spike-then-dip respectively),
+and AEROUSD — the cleanest technical setup this pass (steady 3-candle build, fresh confirmed
+breakout, tight spread, real volume surge, +4.91% session gain) — cleared every
+structural/technical/freshness gate but its named catalyst (Slipstream V3 / buyback) dates to
+Sep 25, ~18.7h old, past the <6h bar. Correctly held back as momentum-only. Crash gate clear (BTC
+−0.08% intraday). Weekly downtrend gate stays INACTIVE this pass (−2.97%/5d, just under the 3%
+threshold, consistent with the 01:00 UTC pass's −2.93%/5d reading) — standard entry rules applied
+throughout, not the binding constraint for AERO. $72.3189 cash fully available for the next pass
+to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 01:00 UTC pass, no drift, no
+operational issues, no unprotected position. AEROUSD clearing every technical/structural gate but
+being correctly blocked by the win-rate kill switch (catalyst confirmed but too old, ~18.7h vs the
+<6h bar) is the kill switch working as designed, not an anomaly — nothing here needs the user's
+attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
