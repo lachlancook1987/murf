@@ -47129,3 +47129,75 @@ surviving candidates failed on the win-rate kill switch, which would have blocke
 either gate state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
 (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 18:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 17:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,993.60 vs session open $84,090.50 → −0.115% intraday, 24h range
+  $83,619.60–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — ACTIVE (newly, this pass):** BTC daily closes (Kraken OHLC,
+  interval=1440): Sep 21 close $86,593.80 (5 trading days ago) → now (live) $83,993.60 =
+  **−3.00%/5-trading-day** — crosses the >3% threshold for the first time in several passes
+  (17:00 UTC pass measured −2.886%, just under the line; BTC's further slide this hour tipped it
+  over). Gate **ACTIVE** this pass: entry bar raised to 1h momentum **>5%** AND a fresh catalyst
+  **<3h old**; pure-momentum entries banned regardless of other gates clearing.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 624 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **57 candidates**, top by gain: EDGE +45.82%, RARE +41.57%, US +26.13%,
+QNT +21.95%, KMNO +19.99%, 2Z +19.41%, SGB +18.11%, POND +16.34%, KAS +16.08%, RUNE +12.65%
+among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **11 survivors**: GRASS (0.07%),
+SPK (0.32%), W (0.38%), PTB (0.48%), TON (0.69%), DCR (0.73%), BILL (0.83%), ACU (1.06%),
+LSK (1.23%), QUID (1.33%), TREAD (1.34%).
+
+**15m-OHLC deep check on the 11 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min): **3 of 11 passed acceleration** (last two closed 15m candles each higher than
+the prior) — TON, BILL, TREAD. The rest failed acceleration (GRASS, SPK, W, PTB, DCR, ACU, LSK —
+a down leg in the last two closed candles) or were flat (QUID, no price movement across the
+session at all). Of the 3 acceleration passers, freshness (24h high set ≤30min ago) narrowed to
+**TON and BILL** — TON's 24h high ($1.583) set 17.7min ago, BILL's ($0.01448) also 17.7min ago,
+both inside the ceiling; TREAD's 24h high ($0.8711) was 227.7min old, far outside it — rejected.
+
+**Weekly-downtrend-gate 1h-momentum check on TON and BILL (binding gate this pass):** With the
+gate newly ACTIVE, both must clear 1h momentum >5% (not the standard >3%/1h) to even reach
+catalyst-confirmation. Neither does: **TON** 1h momentum (17:45 close $1.534 → current $1.572)
+= **+2.48%**; **BILL** 1h momentum (17:45 close $0.01386 → current $0.01436) = **+3.61%**. Both
+fall short of the 5% floor — rejected on the weekly downtrend gate before catalyst-confirmation
+was even attempted (moot to run Perplexity on either). Fear & Greed checked this pass: 57
+"Neutral" per Alternative.me/CFGI-style consensus reading (Perplexity noted some divergence across
+trackers — CoinGecko showing 45 "Fear," others 72-74 "Greed" — but the consensus mid-range reading
+is Neutral, not Extreme Fear); moot here regardless since the weekly downtrend gate's 1h-momentum
+floor is the binding rejection for both survivors. Same-thesis cooling: N/A, no entries this pass.
+Daily consecutive-loss pause: N/A, no trades today yet. Win-rate kill switch (ACTIVE, 20.0%,
+momentum-only SUSPENDED) unchanged, not reached as the binding gate this pass.
+
+### Decision: **HOLD — no candidate cleared every gate.** 57 raw candidates narrowed to 11
+fade-cap survivors, to 3 with fresh two-candle acceleration (TON, BILL, TREAD), to 2 with
+confirmed-closed-candle freshness ≤30min (TON, BILL) — both rejected by the weekly downtrend
+gate's newly-active stricter 1h-momentum >5% floor (TON +2.48%, BILL +3.61%, both short of 5%).
+The weekly downtrend gate itself crossed into ACTIVE this pass (BTC −3.00%/5d, up from −2.886%
+last pass) as BTC continued its slow slide — a real gate-state change, not boundary noise this
+time. $72.3189 cash fully available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 17:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping ACTIVE is a normal,
+expected gate response to BTC's own price action, not an operational anomaly, and it was not even
+the sole reason either surviving candidate was rejected in isolation — both TON and BILL's 1h
+momentum (2.48%, 3.61%) also sit well under the *standard* >3%/1h bar's more relevant comparison
+point (5%), so this wasn't a case of a gate blocking an otherwise-strong setup. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
