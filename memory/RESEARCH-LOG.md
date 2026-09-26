@@ -47356,3 +47356,75 @@ on the two-candle acceleration check, a purely technical gate independent of the
 state). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-26 — Scan — 21:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 20:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,154.60 vs session open $84,090.50 → +0.076% intraday, 24h range
+  $83,755.40–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 21 close $86,593.80 (5 trading days ago) → now (live) $84,154.60 = **−2.817%/5-trading-day**
+  — back under the >3% threshold after the 20:00 UTC pass measured −3.10% (ACTIVE). Same
+  boundary-noise pattern flagged on recent passes. Gate **INACTIVE**: standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 668 online USD pairs (AU-restricted ZEC/DASH pre-excluded, ZEC's Kraken pair key confirmed
+as `XZECZUSD` — noted for future sweep scripts since a naive `ZECUSD` string match misses it).
+Filtered for session gain ≥3%, notional24h >$50k: **52 candidates**, top by gain: EDGE +44.49%,
+RARE +34.84%, US +26.93%, Q +26.31%, QNT +25.32%, 2Z +21.48%, KMNO +19.72%, RUNE +15.55%,
+SGB +14.24%, SPELL +13.74% among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **8 survivors** (ZEC excluded
+manually per the AU-restriction note above): DCR (0.55%), TON (0.69%), PYTH (0.73%),
+TREAD (0.82%), XCN (0.94%), QNT (1.04%), RLC (1.20%), RUNE (1.30%).
+
+**15m-OHLC deep check on the 8 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min): **5 of 8 passed acceleration** (last two closed 15m candles each higher than
+the prior) — DCR, PYTH, TREAD, QNT, RUNE. TON, XCN, RLC failed (a down or flat leg in the two
+closed candles). Of the 5 acceleration passers, only **DCR's** 24h high ($18.45) matched exactly
+to a closed candle (21:30 UTC, 17min old, within the 30min ceiling) — PYTH, TREAD, QNT, and RUNE's
+ticker-reported 24h highs did not match any closed candle in the last 2 hours of 15m data,
+indicating those highs were set well outside the freshness ceiling (a stale high with price now
+approaching but not confirming a fresh break) — all four rejected on momentum-peak-check
+freshness. **DCR alone cleared acceleration + confirmed-closed-candle freshness.**
+
+**DCR/USD checks:** Spread 0.142% (bid $18.282 / ask $18.308) ✓. Pair online, ordermin 0.35 DCR.
+**Catalyst-confirmation (binding stage):** Perplexity surfaces a "mandatory security patch v2.1.6"
+(fixing a critical consensus vulnerability, a mixing-deanonymization issue, and DoS risks) and a
+"rotation into privacy narratives" sector-wide note. Follow-up query confirmed the patch was
+announced **2026-08-18**, over five weeks old — not a <6h catalyst. The privacy-sector-rotation
+note carries no specific dated trigger either. **No confirmed <6h catalyst found — DCR classified
+momentum-only.** Momentum-only entries remain **BLOCKED by the standing win-rate kill switch**
+(ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the
+35% floor; catalyst-confirmed entries, like the 2026-09-25 ONDO trade, remain unaffected). Fear &
+Greed not re-checked this pass (moot — the win-rate kill switch is the binding rejection for the
+only surviving candidate, independent of Fear/Greed-linked R:R floors). Same-thesis cooling: N/A,
+no entries this pass. Daily consecutive-loss pause: N/A, no trades today.
+
+### Decision: **HOLD — no candidate cleared every gate.** 52 raw candidates narrowed to 8
+fade-cap survivors, to 5 with fresh two-candle acceleration (DCR, PYTH, TREAD, QNT, RUNE), to 1
+with confirmed-closed-candle freshness (DCR) — DCR cleared spread cleanly but had no confirmed
+<6h catalyst (its only news, a security patch, is 5+ weeks old) so is classified momentum-only and
+blocked by the standing win-rate kill switch (20.0%, below the 35% floor). $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 20:00 UTC pass, no drift, no
+operational issues, no unprotected position. DCR clearing every technical/freshness/spread gate
+but being correctly blocked by the standing win-rate kill switch is the kill switch working as
+designed, not an anomaly needing the user's attention. The weekly downtrend gate flipping back to
+INACTIVE is the same boundary-noise pattern already flagged on recent passes, not a new
+development, and wasn't the binding gate for DCR regardless (the kill switch was). Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
