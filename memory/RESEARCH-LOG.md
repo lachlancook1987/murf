@@ -47428,3 +47428,92 @@ INACTIVE is the same boundary-noise pattern already flagged on recent passes, no
 development, and wasn't the binding gate for DCR regardless (the kill switch was). Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 22:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 21:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,275.00 vs session open $84,090.50 → +0.219% intraday, 24h range
+  $83,777.00–$84,401.90 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 21 close $86,593.80 (5 trading days ago) → now (live) $84,275.00 = **−2.678%/5-trading-day**
+  — under the >3% threshold. Standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 624 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **56 candidates**, top by gain: EDGE +50.17%, QNT +43.29%, Q +42.80%,
+RARE +36.16%, US +26.93%, 2Z +22.06%, KMNO +20.06%, RUNE +14.63%, GRASS +14.50%, SGB +14.12%
+among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **11 survivors**: TREAD (0.13%),
+PYTH (0.51%), QUID (0.52%), BAT (0.57%), PEAQ (0.74%), DOG (0.91%), DCR (0.91%), QNT (1.05%),
+CFG (1.06%), TON (1.38%), GRASS (1.47%).
+
+**15m-OHLC deep check on the 11 survivors** (two-candle acceleration, last two closed candles
+22:15/22:30 as of ~22:46 UTC): **7 of 11 passed acceleration** (each closed candle higher than the
+prior) — TREAD, QUID, BAT, PEAQ, DOG, QNT, CFG. PYTH, DCR, TON, GRASS failed (a down or flat leg
+in the two closed candles). Of the 7 acceleration passers, confirmed-closed-candle freshness
+(24h/breakout high matched to a closed candle ≤30min old) eliminated 5: **TREAD** (ticker high
+$0.8711 does not match any candle in the last 4h — stale, no fresh breakout above it), **BAT**
+(ticker high $0.09555 likewise unmatched in the last 4h — stale), **PEAQ** (ticker high $0.04469
+unmatched — stale), **DOG** (ticker high $0.001099 last matched at 19:30 UTC, ~3h15m old — stale),
+**CFG** (ticker high $0.1696 last matched at 20:00 UTC, ~2h30m old — stale, current price has not
+broken back above it). **QUID** passed freshness (24h high $0.07319 matched exactly to the closed
+22:15 candle, 16min old) but was **hard-skipped on spread**: live quote showed bid $0.07048 / ask
+$0.07378 = **4.68% spread**, far over the 1% cap — the ticker-level fade/OHLC checks don't capture
+spread, so this was only caught at the live-quote stage. **QNT alone cleared every technical gate**:
+confirmed-closed-candle high $142.31 (22:30 candle, closed ~3min before the live-quote check) is a
+genuine new high above each prior closed candle in sequence (124.27 → 128.19 → 133.26 → 142.31),
+two-candle acceleration strong (closes 125.84 → 131.35 → 141.96, each leg accelerating), live
+quote spread 0.311% (bid $141.40/ask $141.84) ✓, live intracandle fade 0.64–1.00% depending on
+whether measured off the confirmed-closed high ($142.31) or the ticker's forming-candle high
+($142.83) — within the 1.5% cap either way.
+
+**QNT/USD catalyst-confirmation (binding stage) and cross-exchange check:** CoinGecko cross-check
+($141.07, +44.36%/24h) matches Kraken's price and gain almost exactly — **no cross-exchange
+divergence**, the move is real, not a thin-book Kraken-specific artifact. Perplexity (two queries)
+both cite **The Clearing House selecting Quant for its U.S. On-Chain Money Initiative** (tokenized-
+deposit infrastructure for banks) as the driver, with some Perplexity price/gain figures
+significantly stale/lagged relative to live Kraken/CoinGecko data (a recurring Perplexity
+data-quality issue per TRADING-STRATEGY.md's Discovery Method section — not treated as a
+divergence signal since CoinGecko's live figure matches Kraken). Critically, this Clearing House
+announcement is the **same catalyst already logged in prior passes' research as ~51h old** (first
+surfaced multiple sessions ago) — not a fresh <6h trigger; a second, more targeted Perplexity query
+for breaking QNT news in the last 3 hours surfaced no new distinct announcement, only continued
+coverage of the same Clearing House item plus a general UK-banks/tokenized-deposits narrative with
+no dated trigger. **No confirmed <6h catalyst — QNT classified momentum-only.** Momentum-only
+entries remain **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04, 20.0%
+trailing win rate on the last 10 momentum-only entries, below the 35% floor; the 2026-09-25 ONDO
+win was catalyst-confirmed and does not affect this count). Same-thesis cooling: N/A, QNT has no
+prior stop-outs logged (recurring HOLD-only candidate, never entered). Daily consecutive-loss
+pause: N/A, no trades today.
+
+### Decision: **HOLD — no candidate cleared every gate.** 56 raw candidates narrowed to 11
+fade-cap survivors, to 7 with fresh two-candle acceleration, to 2 with confirmed-closed-candle
+freshness (QUID, QNT) — QUID hard-skipped on a 4.68% live spread (only caught at the live-quote
+stage, well past the ticker-level screens), and QNT — despite clearing every technical, spread,
+fade, and cross-exchange-divergence check cleanly — had no confirmed <6h catalyst (its only real
+news, the Clearing House partnership, is ~51h+ old) so is classified momentum-only and blocked by
+the standing win-rate kill switch (20.0%, below the 35% floor). $72.3189 cash fully available for
+the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 21:00 UTC pass, no drift, no
+operational issues, no unprotected position. QNT clearing every technical/spread/fade/divergence
+gate but being correctly blocked by the standing win-rate kill switch for lacking a fresh catalyst
+is the kill switch working as designed, not an anomaly needing the user's attention. The weekly
+downtrend gate staying INACTIVE (BTC −2.68%/5d) is consistent with the recent boundary-noise
+pattern and wasn't the binding gate for either surviving candidate regardless (QUID failed on
+spread, QNT on the win-rate kill switch). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
