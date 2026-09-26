@@ -46355,3 +46355,68 @@ blocked by the standing win-rate kill switch is the kill switch working as desig
 needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 09:00 UTC (fired 09:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 08:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+remains cancelled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,009.90 vs session open $84,090.50 → −0.096% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,009.90 = **−2.98%/5-trading-day** — stays
+  under the >3% threshold (was −2.73%/5d at 08:00 UTC, tightening slightly as BTC eased further).
+  Gate remains **INACTIVE** — standard entry rules apply; win-rate kill switch below is the
+  independent, still-binding constraint on momentum-only entries.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **30 candidates**, top by gain: RARE +36.92%, 2Z +32.64%,
+POND +32.12%, BLZ +17.00%, Q +16.55%, TNSR +14.43%, EDGE +14.27%, VELODROME +8.63%, QNT +6.85%,
+PUMP +6.63%, KMNO +6.57%, LOFI +6.51%, CPOOL +6.43%, NPC +6.29%, AERO +6.08%, RUNE +5.95%,
+STX +4.85%, ENJ +4.55%, MNT +4.53%, CC +4.49%, KAS +4.36%, IMX +3.96%, AVNT +3.85%, XPL +3.84%,
+US +3.68%, ENA +3.66%, LCX +3.65%, EUL +3.45%, ATH +3.16%, SKY +3.08%. Live-intracandle-fade cap
+(≤1.5% off 24h high) narrowed this to **9 survivors**: IMX (0.24%), KMNO (0.47%), EUL (0.92%),
+ATH (1.06%), XPL (1.08%), ENA (1.18%), SKY (1.31%), POND (1.34%), KAS (1.39%) — the other 21
+faded further off-high.
+
+**15m-OHLC deep check on the 9 survivors** (last two fully-closed candles at check time, 09:00 and
+09:15 UTC — 09:30 had just closed as the check ran, 09:45 still forming): two-candle acceleration
+(each closed candle higher than the prior close) **passed for only 1 of 9 — POND** (09:00 close
+0.001913 → 09:15 close 0.002147 → 09:30 close 0.002346, both legs up cleanly). The other 8 (IMX,
+KMNO, EUL, ATH, XPL, ENA, SKY, KAS) showed a spike-then-stall or spike-then-reverse pattern on one
+leg and were rejected on this gate.
+
+**POND deep dive — rejected on spread, not reaching catalyst-confirmation stage:** Momentum-peak
+check: confirmed-closed 24h high $0.002382 set in the 09:30 candle (closed ~1min before this
+check, well within the 30min ceiling); live intracandle fade 0.55% off that confirmed high (well
+inside the 1.5% cap — the raw ticker high of $0.002393 sits on the still-forming 09:45 candle and
+was correctly not used as the qualifying high per the confirmed-candle rule). **Spread check
+(`kraken.sh quote POND/USD`): ask $0.002385 / bid $0.002345 = 1.68% spread — hard skip per the
+mandatory ≤1% spread rule.** POND is a thin, fast-moving micro-cap (32% session gain on a
+$0.002-handle token) where the book has widened out under the move; rejected here before any
+catalyst-confirmation or win-rate-kill-switch check was needed. Daily consecutive-loss pause: N/A,
+no trades today yet. Same-thesis cooling: N/A, no prior POND stop-outs on file.
+
+### Decision: **HOLD — no candidate cleared every gate.** 30 raw candidates narrowed to 9
+fade-cap survivors, then to 1 acceleration survivor (POND), which failed the mandatory spread cap
+(1.68% vs ≤1% required) before reaching catalyst confirmation or the win-rate kill switch. The
+weekly downtrend gate remained INACTIVE this pass (−2.98%/5d, edging closer to the 3% threshold as
+BTC eased) and was not the binding constraint — spread was. $72.3189 cash fully available for the
+next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 08:00 UTC pass, no drift, no
+operational issues, no unprotected position. POND clearing acceleration/freshness but failing the
+spread gate is a clean structural rejection, not an anomaly — nothing here needs the user's
+attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
