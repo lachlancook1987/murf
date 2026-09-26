@@ -45881,3 +45881,74 @@ being correctly blocked by the win-rate kill switch (catalyst confirmed but too 
 attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
 (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 03:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 02:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,941.60 vs session open $84,090.50 → −0.18% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $83,941.60 = **−3.06%/5-trading-day** — crosses
+  the >3% threshold. Gate flips **ACTIVE** this pass (was INACTIVE at −2.97%/5d at the 02:00 UTC
+  pass) — 1h momentum >5% AND a fresh catalyst <3h old now required, pure-momentum entries banned
+  for as long as this stays active.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **11 candidates** (EDGE +21.83%, SAGA +12.43%, BLZ +8.74%,
+CPOOL +8.26%, AERO +4.73%, US +3.96%, CC +3.72%, GFI +3.67%, ALEO +3.19%, TREAD +3.11%,
+PUMP +3.03%). Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **2 survivors**:
+CCUSD (fade 0.81%) and PUMPUSD (fade 0.71%); AEROUSD came close (fade 1.57%, just outside the cap)
+and EDGE/SAGA/BLZ/CPOOL/US/GFI/ALEO/TREAD were all well off their 24h highs (6–26% fade).
+
+**15m-OHLC deep check on the 2 survivors (last two fully closed candles as of ~03:46 UTC, 03:15
+and 03:30, vs. 03:00):**
+- **CCUSD:** 03:00→03:15→03:30 closes (0.13251, 0.13350, 0.13448) each higher than the last —
+  **two-candle acceleration passes**. But the *actual* 24h high ($0.13537, per ticker) was set in
+  the 01:30 candle (closed 01:45 UTC) — **~2h1m old** at this check, well past the 30min freshness
+  ceiling, and live price ($0.13425–0.13448) remains below that high with no fresh breakout above
+  it. **Fails momentum-peak-check freshness** — the fade-cap pass above was measuring distance from
+  a stale high, not confirming a fresh one.
+- **PUMPUSD:** Closes flat/choppy (03:00 0.004318, 03:15 0.004320, 03:30 0.004320) — marginal,
+  effectively non-accelerating. The 24h high ($0.004350, per ticker) was set in the 02:45 candle
+  (closed 03:00 UTC) — **~46min old**, also past the 30min freshness ceiling, with live price
+  below it and no fresh breakout. **Fails momentum-peak-check freshness** (and acceleration is at
+  best marginal).
+
+Both fade-cap survivors reject on the momentum-peak-check freshness gate before reaching the
+catalyst-confirmation stage — no candidate this pass warranted a per-asset Perplexity query.
+Standard context queries: BTC $84,066.41 (−0.50%/24h per Perplexity, consistent with Kraken's own
+−0.18% intraday reading — different reference windows). Fear & Greed checked: 56 "Neutral" (CFGI
+primary), 45 "Fear" (CoinGecko), 72–74 "Greed" (CMC-linked/Alternative.me-style) — not Extreme
+Fear, moot regardless (no candidate reached R:R evaluation). Daily consecutive-loss pause: N/A, no
+trades today yet.
+
+### Decision: **HOLD — no candidate cleared the momentum-peak-check freshness gate.** 11 raw
+candidates narrowed to 2 fade-cap survivors (CCUSD, PUMPUSD); both looked clean on the fade cap
+and (CCUSD) two-candle acceleration, but their respective 24h highs were 2h1m and 46min old with
+no fresh breakout above either — stale pumps approached from below, not accelerating moves.
+Correctly held back on a structural gate before reaching the catalyst/kill-switch stage. Crash
+gate clear (BTC −0.18% intraday). Weekly downtrend gate flipped **ACTIVE** this pass (−3.06%/5d,
+crossing the >3% threshold for the first time since the 2026-09-25 8:00 UTC pass window) —
+did not bind on either candidate this pass (both rejected upstream on freshness), but raises the
+bar for next pass: pure-momentum entries banned, 1h momentum >5% AND fresh catalyst <3h old now
+required. $72.3189 cash fully available for the next pass to redeploy against a qualifying
+candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 02:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping ACTIVE is a
+normal, expected gate response to BTC's own gradual slide crossing the 3%/5-day threshold, not an
+anomaly — nothing here needs the user's attention right now. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
