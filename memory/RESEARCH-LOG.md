@@ -46267,3 +46267,91 @@ blocked by the standing win-rate kill switch is the kill switch working as desig
 needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 08:00 UTC (fired 08:46 UTC)
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 07:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+remains cancelled (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,227.70 vs session open $84,090.50 → +0.163% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $84,227.70 = **−2.73%/5-trading-day** — stays
+  under the >3% threshold (was −2.95%/5d at 07:00 UTC). Gate remains **INACTIVE** — standard entry
+  rules apply; win-rate kill switch below is the independent, still-binding constraint on
+  momentum-only entries.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **31 candidates**, top by gain: RARE +34.91%, 2Z +23.25%,
+BLZ +13.96%, EDGE +13.27%, TNSR +10.31%, POND +9.57%, PUMP +9.18%, STX +8.49%, VELODROME +7.21%,
+ENJ +7.01%, QNT +6.47%, AERO +5.90%, CC +5.82%, RUNE +5.64%, AVNT +5.60%, KAS +5.36%, MNT +5.31%,
+KMNO +5.06%, REZ +5.04%, CPOOL +5.00%, BABY +4.87%, LCX +4.66%, EUL +4.28%, SKY +4.13%, ENA +4.07%,
+RLC +4.04%, IMX +4.02%, KAITO +3.40%, ACU +3.38%, FIL +3.14%, XPL +3.06%. Live-intracandle-fade
+cap (≤1.5% off 24h high) narrowed this to **15 survivors**: ENJ (0.00%), IMX (0.00%), KAS (0.09%),
+EUL (0.13%), STX (0.25%), SKY (0.31%), RUNE (0.43%), KAITO (0.46%), FIL (0.46%), ENA (0.46%),
+KMNO (0.82%), MNT (0.84%), PUMP (0.91%), LCX (1.23%), BABY (1.48%) — the other 16 faded 1.64–30.89%
+off-high.
+
+**15m-OHLC deep check on the 15 survivors** (last two fully-closed candles at check time, 08:00 and
+08:15 UTC — 08:30 closed just as the check ran, 08:45 still forming): two-candle acceleration (each
+closed candle higher than the prior close) **passed** for only 6 of 15 — **IMX, KAS, SKY, RUNE,
+ENA, BABY**. The other 9 (ENJ, EUL, STX, KAITO, FIL, KMNO, MNT, PUMP, LCX) showed a spike-then-stall
+or spike-then-reverse pattern on the second leg and were rejected on this gate.
+
+**Momentum-peak-check freshness on the 6 acceleration survivors:** IMX (24h high $0.1682 set in the
+just-closed 08:30 candle, ~1–16min old), KAS (24h high $0.04447 set in the 08:30 candle, ~1–16min
+old), SKY (24h high $0.07997 set in the 08:30 candle, ~1–16min old), and RUNE (fresh breakout — 24h
+high ticked to $0.696 live at check time, matching the live ask) all pass cleanly. **ENA** and
+**BABY** fail: ENA's 24h high ($0.2799) predates the 08:00–08:30 candle range (recent closed highs
+only reach $0.2785–0.2789, no fresh breakout above the stale high) and BABY's 24h high ($0.01422,
+set ~06:30 UTC per the 06:00 UTC pass) is unchanged and >2h stale, with live price ($0.01400)
+tracking below it — both rejected on the freshness/confirmed-candle requirement despite passing
+acceleration.
+
+**Spread + catalyst-confirmation on the 4 survivors (IMX, KAS, SKY, RUNE):** Spreads all well
+inside the 1% cap (IMX 0.18%, KAS 0.09%, SKY 0.04%, RUNE 0.43%, all via `kraken.sh quote`).
+Perplexity catalyst check on each:
+- **IMXUSD** — general "fourth straight day rally" / bullish-reversal-pattern commentary and
+  overbought warnings, no dated <6h trigger. **No confirmed catalyst** — momentum-only.
+- **KASUSD** — Rusty Kaspa v2.1.0 (Sep 22, 4 days old), native .k Name Service launch (Sep 24, 2
+  days old), KuMining cloud-mining addition (Sep 23, 3 days old) — all real but none <6h old.
+  **No confirmed <6h catalyst** — momentum-only.
+- **SKYUSD** — Galaxy Digital $100M sUSDS treasury addition, Standard Chartered bullish coverage,
+  first SKY burn (2.86M SKY) — all recent-ish but no dated-today trigger tied to this specific
+  move. **No confirmed <6h catalyst** — momentum-only.
+- **RUNEUSD** — same forward-looking Riverside Ecosystem Spotlight livestream flagged at the 07:00
+  UTC pass, still scheduled for 14:00 UTC today (hasn't occurred yet), plus stale tokenomics/burn-
+  rate news. **No confirmed <6h catalyst** — momentum-only (unchanged from last pass).
+
+All four are therefore **BLOCKED by the standing win-rate kill switch** (ACTIVE since 2026-09-04,
+20.0% trailing win rate on the last 10 momentum-only entries, below the 35% floor; momentum-only
+entries SUSPENDED) — same outcome pattern as MNT/RUNE/IMX at 07:00 UTC and the long run of prior
+passes: clean technicals, no catalyst, kill switch is the binding gate. Daily consecutive-loss
+pause: N/A, no trades today yet. Same-thesis cooling: N/A for IMX/KAS/SKY (no prior stop-outs on
+file); RUNE's last stop-outs were in the Aug 21–29 window, well outside the 7-day cooling window
+even if it had cleared the kill switch.
+
+### Decision: **HOLD — no candidate cleared every gate.** 31 raw candidates narrowed to 15
+fade-cap survivors, then to 6 acceleration survivors, then to 4 freshness survivors (IMX, KAS, SKY,
+RUNE) — all 4 cleared every structural/technical/freshness/spread gate cleanly but lacked a
+confirmed <6h catalyst and were blocked by the standing momentum-only win-rate kill switch (20.0%,
+below the 35% floor). The weekly downtrend gate remained INACTIVE this pass (−2.73%/5d) and was not
+the binding constraint for any candidate — the kill switch was. $72.3189 cash fully available for
+the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 07:00 UTC pass, no drift, no
+operational issues, no unprotected position. IMX/KAS/SKY/RUNE all clearing technicals but being
+blocked by the standing win-rate kill switch is the kill switch working as designed — nothing here
+needs the user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
