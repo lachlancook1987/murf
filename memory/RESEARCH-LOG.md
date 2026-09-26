@@ -46099,3 +46099,84 @@ its stale-catalyst leg (a real catalyst, just too old) is the gate working as de
 anomaly — nothing here needs the user's attention right now. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 06:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 05:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; orders history
+shows only historical filled/cancelled entries (stop `a2b44cf9` remains cancelled since
+2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,904.60 vs session open $84,090.50 → −0.22% intraday, 24h range
+  $83,163.60–$85,247.40 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $83,904.60 = **−3.11%/5-trading-day** — stays
+  crossed over the >3% threshold. Gate remains **ACTIVE** (was ACTIVE at −3.05%/5d at the 05:00
+  UTC pass) — 1h momentum >5% AND a fresh catalyst <3h old required, pure-momentum entries banned.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **18 candidates**, top by gain: RARE +25.60%, 2Z +16.81%,
+EDGE +14.90%, BLZ +10.26%, PUMP +9.09%, VELODROME +8.38%, CPOOL +8.09%, AERO +6.79%, CC +5.92%,
+AVNT +5.49%, BABY +5.24%, FLOCK +5.09%, AKE +5.02%, QNT +4.12%, KMNO +3.98%, LCX +3.92%,
+SAGA +3.85%, SKY +3.61%. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **5
+survivors**: CCUSD (fade 0.03%), SKYUSD (0.19%), AEROUSD (0.21%), PUMPUSD (0.87%), BABYUSD (1.13%)
+— RARE/2Z/EDGE/BLZ/VELODROME/CPOOL/AVNT/FLOCK/AKE/QNT/KMNO/LCX/SAGA all faded well past the cap
+(1.64–29.89% off-high).
+
+**15m-OHLC deep check + 1h momentum on the 5 survivors (as of ~06:46 UTC), against the weekly
+downtrend gate's elevated 1h-momentum >5% floor:**
+- **CCUSD:** Two-candle acceleration passes (06:00 close 0.13434 > 05:45 close 0.13298; 06:15
+  close 0.13492 > 06:00; 06:30 close 0.13693 > 06:15 — all legs up). 24h high ($0.13716) set in the
+  06:30 candle itself (just closed, ~1–16min old) — passes freshness cleanly. Live fade 0.03%
+  (essentially at the high). **1h momentum only +3.69%** (05:30 open $0.13224 → live $0.13712) —
+  falls short of the gate's elevated >5% floor.
+- **SKYUSD:** Acceleration passes (06:00→06:15→06:30 closes each higher). 24h high ($0.07947) set
+  in the 06:15 candle (~16–31min old), within freshness ceiling. But live price has since faded
+  back to $0.07873 in the forming 06:45 candle — **1h momentum only +0.18%** (05:30 open $0.07859 →
+  live $0.07873), a clean momentum-floor rejection; this candidate had already stalled by the time
+  of this check.
+- **AEROUSD:** Acceleration passes. 24h high ($0.9089) set in the 06:15 candle (~16–31min old),
+  within freshness ceiling. Live fade 0.21%. **1h momentum only +1.89%** (05:30 open $0.8902 →
+  live $0.9070) — fails the elevated floor.
+- **PUMPUSD:** Acceleration passes (06:00→06:15→06:30 closes each higher). 24h high ($0.004613)
+  set in the 06:30 candle itself, fresh. Live fade 0.87%. **1h momentum only +0.75%** (05:30 open
+  $0.004539 → live $0.004573) — fails the elevated floor by a wide margin.
+- **BABYUSD:** Acceleration passes (06:00 close 0.01359 → 06:15 close 0.01403 → 06:30 close
+  0.01411, each higher). 24h high ($0.01422) set in the 06:30 candle, fresh (~1–16min old). Live
+  fade 1.20% (within the 1.5% cap). 1-minute OHLC cross-check for precision: price ~60min prior
+  (05:46) was $0.01340–0.01341 vs. live $0.01405 → **1h momentum +4.85%** — the closest approach
+  of any candidate this pass, but still **short of the gate's >5% floor** by a narrow margin; no
+  fresh breakout above the already-fresh high to bridge the gap. Correctly held back on the
+  structural gate rather than rounded up.
+
+All 5 survivors rejected on the weekly downtrend gate's elevated 1h-momentum floor before reaching
+catalyst-confirmation or the standing win-rate kill switch — no per-candidate Perplexity query
+needed. Standard context queries: BTC $83,943–84,066 (CoinMarketCap/CoinGecko, −0.50/−0.51%/24h)
+consistent with Kraken's own −0.22% intraday reading (different reference windows). Fear & Greed:
+52 "Neutral" (CFGI) — not Extreme Fear, moot regardless (no candidate reached R:R evaluation).
+Daily consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 18 raw candidates narrowed to 5
+fade-cap survivors (CC, SKY, AERO, PUMP, BABY); all 5 passed two-candle acceleration and momentum-
+peak-check freshness cleanly but every one failed the weekly downtrend gate's elevated 1h-momentum
+>5% floor, ranging from a wide miss (PUMP +0.75%) to a narrow one (BABY +4.85%, the closest any
+candidate has come to this floor in recent passes). Crash gate clear (BTC −0.22% intraday). Weekly
+downtrend gate remains ACTIVE this pass (−3.11%/5d, essentially unchanged from −3.05%/5d at 05:00
+UTC) — this was the binding constraint for every survivor this pass. $72.3189 cash fully available
+for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 05:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate blocking all 5 technically-
+clean survivors (including a narrow 4.85%-vs-5% miss on BABY) is the gate working as designed, not
+an anomaly — nothing here needs the user's attention right now. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
