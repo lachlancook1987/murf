@@ -47517,3 +47517,84 @@ pattern and wasn't the binding gate for either surviving candidate regardless (Q
 spread, QNT on the win-rate kill switch). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 23:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 22:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,384.90 vs session open $84,090.50 → +0.350% intraday, 24h range
+  $83,777.00–$84,426.00 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 21 close $86,593.80 (5 trading days ago) → now (live) $84,384.90 = **−2.550%/5-trading-day**
+  — under the >3% threshold, same boundary-noise pattern as recent passes. Standard entry rules
+  apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 624 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **53 candidates**, top by gain: QNT +54.55% (a huge continuation of its
+Clearing House move from the 22:00 UTC pass — now already faded 6.17% off its new high, well past
+this pass's fade cap), EDGE +46.36%, Q +39.33%, RARE +33.96%, US +27.36%, 2Z +22.47%,
+KMNO +20.90%, SGB +16.40%, RUNE +16.16%, GRASS +13.50% among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **14 survivors**: SUPER (0.00%),
+TON (0.00%), PEAQ (0.13%), POL (0.18%), BAT (0.39%), EUL (0.79%), PYTH (0.62%), QUID (0.70%),
+DCR (0.96%), CFG (1.06%), ATOM (1.15%), W (1.14%), RUNE (1.30%), ACU (1.49%). QNT itself fell out
+here (6.17% fade, well over the cap) — the run-up that cleared every gate at the 22:00 UTC pass
+except the catalyst check has now itself rolled over.
+
+**15m-OHLC deep check on the 14 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness, last closed candle 23:30 as of ~23:47 UTC): only **2 of 14 passed acceleration**
+(each closed candle higher than the prior close) — **W** (closes 0.01302→0.01304→0.01306) and
+**TON** (closes 1.566→1.579→1.594). The other 12 (PEAQ, QUID, PYTH, BAT, POL, ACU, CFG, SUPER,
+RUNE, EUL, ATOM, DCR) all showed a down-or-flat leg across the last two closed candles — fail.
+
+Of the 2 acceleration passers, **neither cleared the confirmed-closed-candle freshness check**:
+- **W:** ticker 24h high ($0.01321) last matched a candle ~4h17m ago — well outside the 30min
+  ceiling (min(30min, time since last logged pass ≈60min) = 30min this pass). Stale high, no fresh
+  breakout candle. **Rejected on freshness.**
+- **TON:** ticker's reported 24h high ($1.60) does not match any *closed* 15m candle at all — the
+  live/still-forming 23:45 candle has already printed a high of $1.607, above the ticker's snapshot
+  high, meaning the breakout is happening on the currently-forming candle, not a confirmed-closed
+  one. Per the confirmed-candle rule ("do not enter on a still-forming candle's fresh high alone"),
+  this is exactly the pattern the rule exists to reject regardless of how clean the two-candle
+  acceleration looks. **Rejected on confirmed-candle requirement.**
+
+No candidate reached the catalyst-confirmation or win-rate-kill-switch evaluation stage this pass
+— both technical survivors were rejected upstream on freshness/confirmed-candle grounds. Fear &
+Greed not checked this pass (moot, no candidate reached that stage). Same-thesis cooling: N/A, no
+entries this pass. Daily consecutive-loss pause: N/A, no trades today. Win-rate kill switch
+(ACTIVE, 20.0%, momentum-only SUSPENDED) unchanged, not reached as the binding gate.
+
+### Decision: **HOLD — no candidate cleared every gate.** 53 raw candidates narrowed to 14
+fade-cap survivors, to 2 with two-candle acceleration (W, TON) — both rejected before reaching
+catalyst-confirmation: W on a stale (4h+) 24h high, TON on an unconfirmed still-forming-candle
+breakout. $72.3189 cash fully available for the next pass to redeploy against a qualifying
+candidate.
+
+### Step 6 — EOD mode (23:00 UTC pass)
+
+See TRADE-LOG.md "2026-09-26 — EOD Snapshot" for the full computation. Summary: book flat all day,
+zero trades, Day P&L $0.00 (0.00%), Phase P&L unchanged at −$107.4611 (−59.774%), BTC moved
++0.384% (from $84,062.60 Sep 25 EOD reference to $84,384.90 now) so the bot trailed BTC by −0.384
+points on an otherwise uneventful, quiet day.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD/EOD pass, book flat and unchanged all day, no drift, no operational
+issues, no unprotected position, no trades to report. W and TON both failing on freshness/
+confirmed-candle grounds (rather than the win-rate kill switch this time) is a normal gate
+rejection, not an anomaly. The QNT run continuing to fresh highs before rolling over between the
+22:00 and 23:00 UTC passes is exactly the kind of move the win-rate kill switch and catalyst-
+confirmation requirement are designed to keep the book out of when there's no genuine fresh
+catalyst behind it — not something needing the user's attention. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).

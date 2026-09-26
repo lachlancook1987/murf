@@ -11311,3 +11311,21 @@ Stop txid `O7IS4V-IFYNT-EOVQ7Q` fired between the 07:00 and 08:00 UTC passes (tr
 ### Step 8 — Notification
 
 No push sent this pass — the reportable event today (ONDO stop-fire realizing a net profit, book returning to flat) was already pushed at the 08:00 UTC pass when it happened; this EOD snapshot is a routine end-of-day summary of a result the user has already been notified of, with no new drift, loss, or operational issue since. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — EOD Snapshot
+
+### Sep 26 — EOD Snapshot (Day 129, Saturday)
+
+**Portfolio:** $72.3189 | **Cash:** $72.3189 (100.0%) | **Day P&L:** $0.00 (0.000%) | **Phase P&L:** −$107.4611 (−59.774%) | **vs BTC:** −0.383 points
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** none | **Total since migration:** 153
+
+**Notes:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust — unchanged all day, no manual/out-of-band activity, no drift since the Sep 25 EOD snapshot (the ONDO round-trip closed the prior day). `positions: {}`, `orders: {"open": {}}` at every pass today — book fully flat throughout. Day P&L $0.00 (0.000%) vs yesterday's $72.3189 baseline. Phase P&L unchanged at −$107.4611 (−59.774%) from $179.78 Kraken starting equity (May 22). **vs BTC:** BTC moved from $84,062.60 (Sep 25 EOD live reference) to $84,384.90 today → **+0.383%**; bot's day return (0.000%) trailed BTC's raw move by **−0.383 points** — a quiet day, book untouched through a modest BTC grind higher. Total trades since migration unchanged at 153 (no activity today). Every hourly pass today (00:00 through 23:00 UTC, 24 passes) reached HOLD — the weekly downtrend gate oscillated around its 3%/5-trading-day boundary all day (roughly −2.55% to −3.10%, flipping ACTIVE/INACTIVE on boundary noise multiple times) without ever being the binding rejection for a technically-clean candidate. The day's clearest technical near-misses were **QNT** (22:00 UTC pass — cleared every technical/spread/fade/cross-exchange-divergence gate cleanly but blocked by the standing momentum-only win-rate kill switch for lacking a confirmed <6h catalyst, its only real news the ~51h+-old Clearing House partnership) and **DCR** (21:00 UTC pass — same story, its only news a 5+-week-old security patch), followed by QNT's own continuation running to +54.55% before rolling over and failing its own fade cap by the very next (23:00 UTC) pass — a clean illustration of exactly the reversal risk the win-rate kill switch and catalyst-confirmation requirement exist to keep the book out of. The 23:00 UTC pass's two acceleration-passers (W, TON) were both rejected further upstream, on stale-high and unconfirmed-still-forming-candle grounds respectively, never reaching the catalyst stage. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $72.3189 cash, fully available, no open positions; weekly downtrend gate (currently INACTIVE at −2.55%/5d, oscillating near its boundary) and win-rate kill switch (ACTIVE, 20.0%, momentum-only SUSPENDED) both to be reassessed fresh.
+
+### Step 8 — Notification
+
+No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly behind BTC (−0.383 points) on an otherwise quiet day. QNT's late-day round trip (clean technical setup → correctly blocked by the win-rate kill switch → rolled over and faded within the hour) is the kill switch working as designed, not an anomaly. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
