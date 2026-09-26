@@ -46757,3 +46757,103 @@ weekly gate hadn't caught it first, so no live trade opportunity was actually lo
 CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-26 — Scan — 14:00 UTC (fired 14:46 UTC)
+
+**Cadence note:** Fired ~46min past the hour, consistent with today's recurring drift pattern
+(also 07:45, 08:46, 09:46, 10:47, 11:46, 12:45, 13:46) — known, already-flagged, not a new issue.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 13:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,000.40 vs session open $84,090.50 → −0.107% intraday, 24h range
+  $83,351.50–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — flipped back INACTIVE this pass:** BTC daily closes (Kraken OHLC,
+  interval=1440): Sep 21 close $86,593.80 (5 trading days ago) → now (live) $84,000.40 =
+  **−2.994%/5-trading-day** — back under the >3% threshold (was −3.099%/5d ACTIVE at the 13:00
+  UTC pass). This is boundary noise right at the line, not a real regime change — BTC has moved
+  <0.2% since the last pass. Gate is **INACTIVE** this pass: standard entry rules apply (standard
+  <6h catalyst floor for catalyst-confirmed entries, 1.2:1 R:R; momentum-only entries still
+  require 1.8:1 R:R and remain blocked outright by the win-rate kill switch below regardless of
+  this gate's state).
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **55 candidates**, top by gain: Q +57.59%, RARE +42.77%, EDGE +39.72%,
+2Z +26.31%, SPELL +21.07%, US +20.05%, KMNO +20.01%, POND +19.98%, KAS +14.13%, RUNE +12.04%,
+GRIFFAIN +11.03%, QNT +10.51%, TNSR +9.54%, FOLD +8.80%, MUBARAK +7.98%, VELODROME +7.85%,
+FIL +7.71%, AVNT +7.07%, CC +6.48%, BLZ +6.46%, PUMP +6.37%, AERO +5.93%, VTHO +5.26%, STX +5.00%,
+ENJ +4.85%, EIGEN +4.79%, STRK +4.76%, NPC +4.73%, NIGHT +4.63%, TREAD +4.59%, PYTH +4.51%,
+JTO +4.46%, ENA +4.45%, HNT +4.44%, PTB +4.43%, BABY +4.42%, REZ +4.32%, ETHFI +4.07%,
+AZTECUSD +3.98%, MNT +3.95%, SN64 +3.77%, PEAQ +3.76%, RLC +3.59%, XPL +3.49%, LINK +3.43%,
+DOG +3.39%, IMX +3.34%, AVAX +3.30%, CPOOL +3.23%, GALA +3.23%, SPK +3.21%, FLOW +3.18%,
+SYRUP +3.17%, MINA +3.08%, ATH +3.01%. Live-intracandle-fade cap (≤1.5% off 24h high) narrowed
+this to **16 survivors**: ETHFI (0.00%), SYRUP (0.00%), FIL (0.09%), STRK (0.19%), PEAQ (0.23%),
+KMNO (0.36%), TREAD (0.45%), LINK (0.57%), JTO (0.63%), US (0.70%), AVAX (0.67%), QNT (0.93%),
+FLOW (0.92%), ATH (1.21%), GALA (1.32%), IMX (1.47%) — Q (1.86%) and DOG (1.57%) both missed
+narrowly, the other 37 faded 1.72%+ off-high.
+
+**15m-OHLC deep check on the 16 survivors** (two-candle acceleration — both of the last two
+closed legs must close higher than the prior close): **passed for 7 of 16 — US, QNT, JTO, ETHFI,
+SYRUP, IMX, GALA**. The other 9 (KMNO, FIL, STRK, TREAD, PEAQ, LINK, AVAX, FLOW, ATH) showed a
+down leg in the last two closed candles and were rejected.
+
+**Momentum-peak-check freshness** (ceiling = min(30min, time since last logged pass) = min(30,
+~60min since the 13:00 UTC pass) = **30min**) **on the 7 acceleration survivors:**
+- **US** — confirmed-closed-candle 24h high $0.02563, ~16.5min old. **PASS.**
+- **JTO** — confirmed-closed-candle 24h high $0.60198, ~1.5min old. **PASS.**
+- **ETHFI** — confirmed-closed-candle 24h high $0.7486, ~1.5min old. **PASS.**
+- **SYRUP** — confirmed-closed-candle 24h high $0.2300, ~1.5min old. **PASS.**
+- **QNT** — confirmed-closed-candle 24h high $110.02, ~271.5min old, far outside the ceiling. **REJECT.**
+- **IMX** — confirmed-closed-candle 24h high $0.1696, ~271.5min old. **REJECT.**
+- **GALA** — confirmed-closed-candle 24h high $0.00227, ~211.5min old. **REJECT.**
+
+**Spread + catalyst-confirmation on the 4 freshness survivors (US, JTO, ETHFI, SYRUP):** All four
+cleared spread cleanly via `kraken.sh quote`: US 0.54%, JTO 0.05%, ETHFI 0.21%, SYRUP 0.31% — all
+well inside the 1% cap. Perplexity catalyst-confirmation on all four found no confirmed <6h
+catalyst:
+- **US** (Talus Token, Sui network) — only stale items surfaced (production-ready API, Protocol
+  v2.0 mainnet upgrade), both many days old, same as the 13:00 UTC pass's finding on this ticker.
+- **JTO** (Jito) — cited catalyst is a Solana governance vote from **Sep 17**, ~9 days stale.
+- **ETHFI** (Ether.fi) — general roundup (21Shares European ETP listing, Enso app routing,
+  "defibank" expansion) with no specific timestamp confirming any item is <6h old; also flagged a
+  reported (not mainstream-confirmed) AtomicQueue access-control monitoring alert as a risk note,
+  not a trade driver.
+- **SYRUP** (Maple Finance) — cited "23% upside move after an Upbit listing"; follow-up query
+  confirmed Upbit's SYRUP listing was **25 Jul 2025**, ~9,564 hours (over a year) stale — this
+  headline is recycled/mismatched to today's move, not a live catalyst.
+
+All four are therefore classified momentum-only and **BLOCKED by the standing win-rate kill
+switch** (ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries,
+below the 35% floor; momentum-only entries SUSPENDED — catalyst-confirmed entries, like the
+2026-09-25 06:00 UTC ONDO trade, remain unaffected and open). Fear & Greed checked this pass: 57
+"Neutral" per CFGI.io (CoinGecko 45 Fear, Binance/CoinStats 72-73 Greed cited as alternate
+readings) — not Extreme Fear; moot here since the win-rate kill switch is the binding constraint,
+reached and failed for all four candidates before Fear/Greed-linked R:R floors would matter. Same-
+thesis cooling: N/A, no entries this pass. Daily consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 55 raw candidates narrowed to 16
+fade-cap survivors, to 7 acceleration survivors, to 4 with a fresh confirmed-closed-candle 24h
+high (US, JTO, ETHFI, SYRUP) — all 4 cleared spread cleanly but had no confirmed <6h catalyst, so
+all are classified momentum-only and blocked outright by the standing win-rate kill switch
+(20.0%, below the 35% floor). $72.3189 cash fully available for the next pass to redeploy against
+a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 13:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping back INACTIVE
+this pass is boundary noise (BTC moved <0.2% since the last pass, gate sitting right at the 3%
+line) and was not the binding constraint anyway — all four surviving candidates failed on the
+win-rate kill switch, which would have blocked them under either gate state. The ~46min
+schedule-firing drift is a known, already-flagged recurring pattern, not a new issue. Per
+CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
