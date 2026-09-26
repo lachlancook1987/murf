@@ -47291,3 +47291,68 @@ divergence, PYTH/SUPER on the win-rate kill switch — neither depends on the we
 Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-26 — Scan — 20:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 19:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,905.90 vs session open $84,090.50 → −0.220% intraday, 24h range
+  $83,619.60–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — ACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 21 close $86,593.80 (5 trading days ago) → now (live) $83,905.90 = **−3.104%/5-trading-day**
+  — over the >3% threshold. Gate **ACTIVE**: entry bar raised to 1h momentum **>5%** AND a fresh
+  catalyst **<3h old**; pure-momentum entries banned regardless of other gates clearing.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **43 candidates**, top by gain: EDGE +48.87%, RARE +39.37%, US +26.93%,
+Q +23.05%, QNT +22.25%, KMNO +19.70%, 2Z +18.01%, LAPTOP +16.69%, SGB +14.12%, RUNE +14.02%
+among others.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **2 survivors**: GLMR (0.28%),
+LAPTOP (1.38%).
+
+**15m-OHLC deep check on GLMR and LAPTOP** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min), as of 20:45:58 UTC: last two **closed** 15m candles are 20:15 and 20:30 (the
+20:45 candle is still forming).
+- **GLMR:** closes 20:00 $0.00687 → 20:15 $0.00685 (down) → 20:30 $0.00707 (up) — the 20:15 close
+  is *lower* than the 20:00 close, so the two-closed-candle sequence is not two consecutive higher
+  closes. **Fails acceleration** (spike-dip-spike pattern, not sustained building momentum).
+- **LAPTOP:** closes 20:00 $0.0850 → 20:15 $0.0865 (up) → 20:30 $0.0860 (down) — higher high then a
+  lower close on the second closed candle. **Fails acceleration** (classic spike-then-stall pattern
+  the two-candle rule targets). Note: LAPTOP was already flagged bearish (post-launch collapse
+  narrative) and rejected on cross-exchange divergence at the 19:00 UTC pass — today's technical
+  picture is now also failing on its own, independent of that prior rejection.
+
+Neither survivor reaches catalyst-confirmation or the weekly-downtrend-gate's stricter 1h-momentum
+check — both rejected on acceleration first. Fear & Greed checked this pass: 57 "Neutral" per
+Perplexity consensus (CoinGecko divergently reads 45 "Fear," others 72-74 "Greed") — not Extreme
+Fear; moot regardless since acceleration is the binding rejection for both candidates. Same-thesis
+cooling: N/A, no entries this pass. Daily consecutive-loss pause: N/A, no trades today. Win-rate
+kill switch (ACTIVE, 20.0%, momentum-only SUSPENDED) unchanged, not reached as the binding gate
+this pass.
+
+### Decision: **HOLD — no candidate cleared every gate.** 43 raw candidates narrowed to 2
+fade-cap survivors (GLMR, LAPTOP), both rejected on the two-candle acceleration check before
+reaching catalyst-confirmation or the weekly downtrend gate's stricter momentum floor. $72.3189
+cash fully available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 19:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping back to ACTIVE
+(BTC −3.10%/5d) is a normal, expected response to BTC's continued slide, not an operational
+anomaly, and was not the binding rejection for either surviving candidate regardless (both failed
+on the two-candle acceleration check, a purely technical gate independent of the weekly-gate
+state). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
