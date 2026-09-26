@@ -45639,3 +45639,73 @@ found) is the kill switch working as designed, not an anomaly. Day P&L positive 
 fired; nothing new here needs the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 00:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 2026-09-25 23:00 UTC EOD pass, no drift, no manual/out-of-band activity.
+`positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat;
+stop `a2b44cf9` history unchanged (residual, since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $83,869.50 vs session open $84,090.50 → −0.26% intraday — clear,
+  nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21 close
+  $86,593.80 (5 trading days ago) → today (live) $83,869.50 = **−3.15%/5-trading-day** — crosses
+  the >3% downtrend threshold. Gate flips **ACTIVE** this pass (was INACTIVE at the last logged
+  pass, +3.57%/5d on Sep 25 23:00 UTC) — stricter entry criteria apply: require 1h momentum >5%
+  AND a fresh catalyst <3h old; pure momentum entries banned for the duration.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 627 online USD pairs (AU-restricted ZEC/DASH pre-excluded), zero fetch errors. Filtered for
+session gain ≥3%, notional24h >$50k: **7 candidates** (BLZ +27.83%, EDGE +16.01%, REZ +10.83%,
+CPOOL +10.61%, ALEO +6.50%, QI +3.45%, AXS +3.39%) — a much narrower field than recent days,
+consistent with the market-wide pullback that also tripped the weekly downtrend gate this pass.
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **2 survivors**: BLZUSD (fade
+0.30%) and AXSUSD (fade 0.08%); EDGE (29.22%), REZ (2.09%), CPOOL (6.23%), ALEO (38.08%), and QI
+(28.09%) all already well off their 24h highs.
+
+**15m-OHLC deep check on the 2 survivors:**
+- **BLZUSD:** Choppy/thin pattern — 23:45 close (0.01073) up from 23:30, but 00:00 close (0.01061)
+  down, then 00:15 close (0.01061) flat vs 00:00 (not higher), then a single massive-volume spike
+  candle at 00:30 (close 0.01328, +25% in one candle on 530k volume vs a normal few-thousand
+  baseline). **Fails two-candle acceleration** — the last two closed candles (00:15, 00:30) do not
+  each close higher than the prior candle's close (00:15 was flat vs 00:00). Also **spread 2.48%**
+  (bid $0.01290 / ask $0.01322), far over the 1% hard-skip cap — a thin, illiquid, single-spike
+  coin (notional24 $54,933, barely above the $50k floor). Rejected on multiple independent grounds.
+- **AXSUSD:** Clean, steady build — 23:30→23:45→00:00→00:15→00:30 closes (1.186, 1.191, 1.197,
+  1.207, 1.216) each higher than the last, **two-candle acceleration passes** cleanly, 24h high
+  set live in the still-forming 00:45 candle (essentially now — within the 30min freshness
+  ceiling), fade 0.08%, spread 0.16% (well inside 1% cap). Technically the strongest setup this
+  pass. **However, 1h momentum is only ~+2.5%** (23:45 close $1.191 → live $1.221) — session gain
+  was 3.39%, not a sharp 1h surge. With the weekly downtrend gate ACTIVE this pass, the entry bar
+  requires **1h momentum >5%**, not the standard >3%; AXSUSD falls well short. **Rejected on the
+  weekly-downtrend-gate's stricter momentum floor**, not on any technical/structural gate — the
+  cleanest technical setup of the day, blocked by regime, not quality.
+
+Fear & Greed checked: 52 "Neutral" (CFGI primary), 45 "Fear" (CoinGecko), 73 "Greed"
+(CoinStats/CMC-based) — not Extreme Fear, moot regardless (neither candidate reached R:R
+evaluation). Daily consecutive-loss pause: N/A, no trades today yet.
+
+### Decision: **HOLD — no candidate clears the weekly-downtrend-gate's stricter momentum bar.**
+2 candidates survived the fade cap; BLZUSD failed on acceleration/spread/thin-liquidity grounds
+independent of the gate, and AXSUSD — otherwise the cleanest technical setup seen in days (steady
+5-candle build, fresh breakout, tight spread) — fell short of the >5% 1h-momentum floor the newly-
+ACTIVE weekly downtrend gate requires (only ~2.5%). Crash gate clear (BTC −0.26% intraday). Weekly
+downtrend gate newly ACTIVE this pass (−3.15%/5d) — first activation since Sep 25's INACTIVE
+reading, a genuine regime change worth noting for the next several passes. $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the last pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate flipping ACTIVE is a normal
+gate response to BTC's own move (not an anomaly), and AXSUSD being blocked by that gate's stricter
+momentum floor despite clean technicals is the gate working as designed — nothing here needs the
+user's attention right now. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not
+called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
