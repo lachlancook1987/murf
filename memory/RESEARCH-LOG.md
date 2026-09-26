@@ -47045,3 +47045,87 @@ surviving candidates failed on the win-rate kill switch, which would have blocke
 either gate state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
 (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-26 — Scan — 17:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 16:00 UTC pass, no drift, no manual/out-of-band activity. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9`
+reconfirmed present in orders history (`canceled`, since 2026-05-22), zero exposure, no action
+needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,094.60 vs session open $84,090.50 → +0.005% intraday, 24h range
+  $83,619.60–$84,314.70 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE:** BTC daily closes (Kraken OHLC, interval=1440): Sep 21
+  close $86,593.80 (5 trading days ago) → now (live) $84,094.60 = **−2.886%/5-trading-day** —
+  under the >3% threshold, consistent with the last three passes' boundary-noise finding. Gate
+  **INACTIVE** this pass: standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **62 candidates**, top by gain: RARE +47.30%, EDGE +45.42%, QNT +25.48%,
+US +20.61%, KMNO +19.84%, 2Z +19.71%, KAS +17.55%, SPELL +14.05%, RUNE +12.35%, FIL +11.62%
+among others (62 total).
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **17 survivors**: KAS (0.12%),
+CFG (0.24%), BILL (0.29%), PTB (0.30%), RENDER (0.48%), QNT (0.59%), ATOM (0.69%), TON (0.78%),
+EUL (0.98%), ATH (1.06%), LSK (1.08%), RLC (1.22%), TAKE (1.26%), PEAQ (1.30%), IMX (1.30%),
+QUID (1.33%), W (1.44%).
+
+**15m-OHLC deep check on the 17 survivors** (two-candle acceleration + confirmed-closed-candle
+freshness ≤30min): **3 of 17 passed both** — KASUSD (24h high 16.9min old), LSKUSD (16.9min),
+ATOMUSD (16.9min). The rest either failed acceleration (QNT, TAKE, RLC, TON, W, QUID, BILL, EUL,
+IMX, ATH — a down leg in the last two closed candles) or failed freshness on an otherwise-
+accelerating candidate (PEAQ 106.9min, PTB 346.9min, CFG 136.9min, RENDER 46.9min — all outside
+the 30min ceiling).
+
+**Spread + catalyst-confirmation on the 3 freshness+acceleration survivors:** All 3 cleared
+spread cleanly: KAS 0.141%, LSK 0.338%, ATOM 0.133% — all well inside the 1% cap. Perplexity
+catalyst-confirmation on all 3 found no confirmed <6h catalyst:
+- **KAS** — the most concrete dated items (native .K name-service launch, KuMining cloud-mining
+  addition, a node security update) all cluster around **22–24 Sep**, 2–4 days stale. Coverage
+  otherwise attributes the move to technical momentum/altcoin rotation, not a fresh news trigger.
+- **LSK** — the cited catalyst is Lisk's **chain wind-down/shutdown announcement from 10 Sep
+  2026** (holders told to bridge to Ethereum ahead of an Oct 31 shutdown), over two weeks stale,
+  and multiple sources explicitly frame the current move as a derivatives-driven "exit pump"
+  already partly reversing. **Cross-exchange divergence flag:** CoinGecko shows LSK **−4.60%
+  over 24h** and −23.20% over 7d at the same time our Kraken read shows **+5.59%** intraday —
+  a material data disagreement on direction, not just magnitude, on top of an already-stale
+  catalyst and a structurally risky "trade a winding-down chain's short squeeze" thesis. Rejected
+  on both counts independent of the kill switch.
+- **ATOM** — the closest thing to a catalyst (Cosmos Hub recovering ~1.23M ATOM after a Neutron
+  governance-attack halt) is an older recovery narrative, not a fresh trigger; CoinMarketCap
+  attributes the move to broad altcoin rotation with "no single strong secondary catalyst."
+
+All 3 are therefore classified momentum-only and **BLOCKED by the standing win-rate kill switch**
+(ACTIVE since 2026-09-04, 20.0% trailing win rate on the last 10 momentum-only entries, below the
+35% floor; momentum-only entries SUSPENDED — catalyst-confirmed entries, like the 2026-09-25
+06:00 UTC ONDO trade, remain unaffected and open). Fear & Greed checked this pass: 57 "Neutral"
+per CFGI.io — not Extreme Fear; moot here since the win-rate kill switch is the binding
+constraint, reached and failed for all 3 candidates before Fear/Greed-linked R:R floors would
+matter, and LSK was independently rejected on catalyst/divergence grounds regardless.
+Same-thesis cooling: N/A, no entries this pass. Daily consecutive-loss pause: N/A, no trades
+today yet.
+
+### Decision: **HOLD — no candidate cleared every gate.** 62 raw candidates narrowed to 17
+fade-cap survivors, to 3 with fresh confirmed-closed-candle two-candle acceleration (KAS, LSK,
+ATOM) — all 3 cleared spread cleanly but had no confirmed <6h catalyst (LSK additionally flagged
+for a cross-exchange direction divergence and a structurally risky wind-down-chain thesis), so
+all are classified momentum-only and blocked outright by the standing win-rate kill switch (20.0%,
+below the 35% floor). $72.3189 cash fully available for the next pass to redeploy against a
+qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the 16:00 UTC pass, no drift, no
+operational issues, no unprotected position. The weekly downtrend gate stayed INACTIVE (boundary
+noise, BTC −2.886%/5d, under the 3% line) and was not the binding constraint anyway — all 3
+surviving candidates failed on the win-rate kill switch, which would have blocked them under
+either gate state. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
