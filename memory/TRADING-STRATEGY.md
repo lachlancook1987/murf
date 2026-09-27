@@ -348,9 +348,38 @@ Run via `bash scripts/perplexity.sh "<query>"`:
 4. `"Bitcoin perpetual futures funding rate today"`
 5. `"Crypto token unlocks or major protocol upgrades this week $DATE"`
 6. `"Top crypto market catalysts and breaking news today $DATE"`
-7. One query per open position: `"<ASSET> news and price outlook today"`
-8. One query per Kraken-sourced candidate from the sweep above: `"<ASSET> news and
-   price outlook today"` — to confirm/deny a catalyst, not to source the candidate
+7. One query per open position, using the **dated-catalyst query template** below
+8. One query per Kraken-sourced candidate from the sweep above, same template — to
+   confirm/deny a catalyst, not to source the candidate
+
+**Dated-catalyst query template (revised 2026-09-27 — replaces the old generic
+"<ASSET> news and price outlook today" phrasing):**
+
+> `"<ASSET>: what is the single most recent, dated, <ASSET>-specific catalyst
+> (exchange listing, protocol upgrade/mainnet event, partnership, funding round,
+> regulatory news) — state the exact date/time it happened or was announced, and
+> your source. If nothing <ASSET>-specific has happened in the last 6 hours, or the
+> only available news is broader market/sector commentary, or is older than 6 hours,
+> respond exactly: 'NO CATALYST <6H FOR <ASSET>.'"`
+
+**Why this changed:** the 2026-09-27 gate-attribution review of all 342 hourly
+passes since the 2026-09-02 overhaul found the win-rate kill switch was the binding
+rejection reason in 100 of them (29%) — and in nearly every one, the candidate had
+already cleared every technical/spread/fade/freshness/divergence gate cleanly and
+was blocked only because the old query's prose answer left catalyst freshness
+ambiguous, requiring a manual follow-up judgment call ("catalyst 4 days stale,"
+"51h+ old," "no dated trigger," ticker-identity confusion between similarly-named
+assets like PLAY/AUSD). The new template forces an explicit date/time or an explicit
+"NO CATALYST" flag in the first query, removing the guesswork and the need for a
+second confirmation query on borderline cases. **Log the exact date/time (or the "NO
+CATALYST" flag) the query returns directly in the trade-idea/rejection reasoning** —
+this also makes future gate-attribution reviews auditable without re-deriving
+freshness from prose.
+
+This is a query-wording fix only — it does not loosen the 6-hour freshness bar, the
+R:R floors, or the win-rate kill switch. A candidate with a genuinely absent or stale
+catalyst is still correctly classified momentum-only and still subject to the kill
+switch/probe-batch rules above.
 
 **Do not use** Perplexity's "biggest 1h surge," "top gainers," "momentum plays on
 Kraken," "volume surge alerts," or "best intraday setups" queries — these are the

@@ -282,8 +282,12 @@ of each session went to disproving Perplexity instead of finding real setups.
    now"`, `"Crypto Fear and Greed Index today"`, `"Bitcoin perpetual futures funding
    rate today"`, `"Top crypto market catalysts and breaking news today $DATE"`,
    `"Crypto token unlocks or major protocol upgrades this week $DATE"`, one query per
-   open Kraken position (`"<ASSET> news and price outlook today"`), and one query per
-   Kraken-sourced candidate from step 1 (same format) to confirm/deny a catalyst.
+   open Kraken position, and one query per Kraken-sourced candidate from step 1 to
+   confirm/deny a catalyst — see the dated-catalyst query template in
+   `memory/TRADING-STRATEGY.md`'s Discovery & Research Method section (revised
+   2026-09-27 after the gate-attribution review found this query the single largest
+   source of blocked-but-clean setups — do not revert to the old generic "news and
+   price outlook" phrasing).
 4. **Do not run or rely on** Perplexity's "biggest 1h surge," "top gainers,"
    "momentum plays on Kraken," "volume surge alerts," or "best intraday setups"
    queries — these are the specific query types that produced bad data nearly every
