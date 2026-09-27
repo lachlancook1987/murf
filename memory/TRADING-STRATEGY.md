@@ -290,21 +290,27 @@ of them.
       has used, which is why loosening the general momentum-only/probe R:R floor was considered
       and rejected; the probe's job is to test whether the win rate itself has improved, not to be
       profitable at the current known rate).
-  - **Current status (updated 2026-09-27, second update — Probe 1/3 taken): ACTIVE — momentum-only
-    entries SUSPENDED, PROBE IN PROGRESS.**
+  - **Current status (updated 2026-09-27, third update, 04:00 UTC pass — Probe 2/3 taken, both
+    resolved): ACTIVE — momentum-only entries SUSPENDED, PROBE IN PROGRESS.**
     Trailing win rate over the last 10 momentum-only entries (pre-probe) is **20.0%** (2 wins: UAI,
     NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1) — this window is stale and will
     be fully displaced once the probe batch resolves, per the mechanism below, not blended with it.
-    Suspended since 2026-09-04. **Probe status: 1/3 taken** — Trade 154, JTO/USD, executed
-    02:00 UTC pass (fired 02:46 UTC) 2026-09-27, 30.2% equity, 1.5% trailing stop (R:R 2.0:1 at
-    T1), momentum-only/no confirmed catalyst. See TRADE-LOG.md for full order detail and
-    RESEARCH-LOG.md for the discovery/gate reasoning. Still open as of this update. Update this
-    line again when this trade resolves (win/loss) and again as probe trades 2/3 and 3/3 are
-    taken. Once all 3 have resolved, recompute the trailing win rate using **only** the 3 probe
-    trades (displacing the stale 20.0%/10-trade window above) — ≥35% reactivates standard-sized
-    momentum-only entries; <35% re-suspends and restarts the 7-day timer from the date the last
-    probe trade closed. Catalyst-confirmed entries (e.g. ONDO, 2026-09-25) are unaffected and
-    remain open throughout, and do not count toward the probe batch.
+    Suspended since 2026-09-04. **Probe status: 2/3 taken, both resolved** — Trade 154, JTO/USD
+    (Probe 1/3), executed 02:00 UTC pass 2026-09-27, 30.2% equity, 1.5% trailing stop; stop fired
+    03:57 UTC for a net **LOSS (−0.730%)** — gross price moved +0.871% but round-trip fees ate it.
+    Trade 155, COMP/USD (Probe 2/3, tentative), executed ~03:48 UTC pass — **this pass's own
+    RESEARCH-LOG/TRADE-LOG entries were lost when that session died before any git commit** (no
+    orphaned branch survives, unlike the 2026-09-24 outage); reconstructed from Kraken's own
+    `closedorders` records only, sizing/stop-rate consistent with but not provably a probe entry.
+    Stop fired 04:37 UTC for a net **WIN (+0.245%)**. See TRADE-LOG.md's 2026-09-27 "OPERATIONAL
+    FAILURE" entry for full reconstruction detail and caveats. A third probe candidate (LIT/USD)
+    was found and gate-checked clean at the 04:00 UTC pass but its limit order never filled and
+    was cancelled — **still 2/3 taken, not 3/3**. Update this line again once a third probe trade
+    actually executes. Once all 3 have resolved, recompute the trailing win rate using **only** the
+    3 probe trades (displacing the stale 20.0%/10-trade window above) — ≥35% reactivates
+    standard-sized momentum-only entries; <35% re-suspends and restarts the 7-day timer from the
+    date the last probe trade closed. Catalyst-confirmed entries (e.g. ONDO, 2026-09-25) are
+    unaffected and remain open throughout, and do not count toward the probe batch.
 - **Daily consecutive-loss pause:** After **3 consecutive stop-outs on the same calendar day**
   (any assets, not sector-specific — sector pause rules remain retired), pause all new entries
   for the remainder of that day regardless of how clean a subsequent candidate looks. This is

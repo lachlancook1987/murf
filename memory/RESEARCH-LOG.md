@@ -48133,3 +48133,111 @@ was proposed and discussed before being implemented).
 ### Decision: **TRADE — JTO/USD, KILL-SWITCH PROBE 1/3.** Full detail in TRADE-LOG.md. This is the first practical test of the probe-batch mechanism designed earlier today (2026-09-27) specifically to break the kill-switch's closed-loop deadlock (suspended since 2026-09-04, unable to recompute without new momentum-only trades, which it also blocked).
 
 **Follow-up for next pass:** update TRADING-STRATEGY.md's Performance-Linked Controls status line to "Probe status: 1/3 taken" (currently still reads 0/3 as of the 2026-09-27 same-day update written before this trade executed).
+
+## 2026-09-27 — Scan — 04:00 UTC
+
+**Operational failure discovered this pass — see full detail in TRADE-LOG.md's dedicated entry.**
+`git log origin/main` has no commit for a 2026-09-27 03:00 UTC pass at all (jumps straight from
+`0c5e464` at 02:00 UTC to this pass), and no orphaned branch survives either — unlike the Sep 24
+outage, this session's reasoning is permanently lost. Kraken's own order history shows that pass
+nonetheless ran, and traded: it caught the JTO probe-1/3 stop firing (03:57:23 UTC, net **LOSS**
+−0.730%) and opened a full new round-trip on **COMP/USD** (buy 03:48:14 UTC, stop-out 04:37:15
+UTC, net **WIN** +0.245%, sized consistent with a probe-batch entry — tentatively counted as
+**Probe 2/3**). Both reconstructed directly from `kraken.sh closedorders`, logged in full in
+TRADE-LOG.md. Probe-batch status is now 2/3 taken (1 loss, 1 win); one more probe-eligible
+candidate needed before the trailing win-rate recompute triggers.
+
+**Pre-check:** Kraken `account` ZUSD $72.2132 (consistent with cash flow through the two round
+trips above — $72.3189 → $50.4953 [JTO buy] → $28.6266 [COMP buy] → $50.2909 [JTO stop] →
+$72.2132 [COMP stop], reconciles cleanly), `positions: {}`, `orders: {"open": {}}` at the start of
+this pass — book flat, no orphan stops/T1 limits to clean up (both prior positions' stops fired
+and fully resolved before this pass began). Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed
+`canceled` — zero exposure, no action needed. Step 3 maintenance: nothing else to do.
+
+**Crash gate:** clear — BTC $84,331.10, today's open $84,426.80, intraday change −0.11%.
+
+**Weekly downtrend gate:** not recomputed as binding this pass (last-known INACTIVE at −2.50%/5d
+from the 02:00 UTC pass; no candidate reached the point where it would matter — see below).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 624 online USD
+pairs. Filter (chg vs open >2%, live fade ≤1.5% off 24h high, notional >$20k) → 8 survivors:
+LIT (+9.46%, prox −0.43%, notional $37.0k), W (+9.36%, prox −0.63%, notional $309k), TREAD
+(+8.10%, prox −0.35%, notional $255k), SYN (+3.17%, prox −1.13%, notional $113k), SLX (+3.02%,
+prox −0.14%, notional $20.9k), RE (+2.72%, prox −0.34%, notional $63.2k), RAY (+2.23%, prox
+−1.17%, notional $677k), FHE (+2.03%, prox −0.96%, notional $52.8k).
+
+**15m-OHLC two-candle acceleration (last two closed candles vs. prior close):** LIT (up, up —
+pass), TREAD (up, up — pass), SLX (up, up — pass). Fail: W (down then up), SYN (flat then up —
+fails the strict-higher rule), RE (down then up), RAY (down, down), FHE (up then down).
+
+**Momentum-peak-check freshness (24h-high age via 15m OHLC scan of the trailing 24h):** LIT's 24h
+high ($0.1613) set 19.4min ago — **passes** (within the 30min ceiling). SLX's 24h high ($0.07213)
+also set 19.4min ago — **passes**. TREAD's 24h high ($0.98) was set 334min ago and current price
+($0.9766) remains below it with no fresh breakout — **fails freshness**, rejected.
+
+**Spread check:** LIT 0.743% (bid 0.1615/ask 0.1627) — passes but noticeably wider than this
+account's recent trades. SLX 0.306% (bid 0.07194/ask 0.07216) — passes, tighter.
+
+**Catalyst check — both candidates:** Perplexity dated-catalyst query returned `NO CATALYST <6H
+FOR LIT` and (after a false start, see note below) `NO CATALYST <6H FOR SLX` cleanly.
+`rssnews.sh 6 LIT Litentry` and `rssnews.sh 6 SLX "Solstice Finance"` both returned `RSS: NO
+COVERAGE`. Both classified **momentum-only, no catalyst**.
+
+**Cross-exchange check — ticker-identity near-miss caught and corrected:** initial CoinGecko
+lookup for SLX used the id `solaxy` and returned $0.0000277 vs. Kraken's $0.07203 — a ~2600x
+"divergence" that would have triggered a hard reject under the cross-exchange gate. Before
+rejecting, ran `perplexity.sh "What cryptocurrency project uses the ticker symbol SLX on
+Kraken?"`, which identified Kraken's SLX as **Solstice Finance**, not Solaxy — an unrelated
+project with a coincidentally similar CoinGecko slug. Perplexity's own price estimate for
+Solstice Finance (~$0.071) matches Kraken's $0.07203 closely — **no genuine divergence**; the
+initial alarm was a bad reference-id lookup on this session's part, not a Kraken data problem.
+Re-ran the catalyst/RSS checks under the correct name (both still `NO CATALYST`/`NO COVERAGE`,
+unchanged). Flagging this as a concrete example of the ticker-identity-confusion failure mode
+TRADING-STRATEGY.md already warns about (PLAY/AUSD precedent) — this time caught before it
+produced a bad rejection, not after. LIT's CoinGecko match (`litentry`, $0.162236) matched
+Kraken's $0.1621 cleanly with no identity ambiguity.
+
+**Probe-batch evaluation:** win-rate kill switch ACTIVE/SUSPENDED, PROBE IN PROGRESS (2/3 taken
+per this pass's reconstruction above). Both LIT and SLX clear every other gate and would need
+R:R ≥2.0:1 at the probe's tighter 1.5% stop (3%/1.5% = 2.0:1, achievable at the standard T1
+without stretching the target, exactly as designed). **Chose LIT over SLX** for the final probe
+slot on liquidity grounds (LIT notional $37.0k vs. SLX's $20.9k, right at the liquidity floor) —
+same reasoning precedent as choosing JTO over CAP in the 02:00 UTC pass.
+
+**Fear & Greed:** not queried this pass (probe R:R floor is fixed at 2.0:1 regardless of F&G
+reading, and this isn't a catalyst-confirmed entry where the Extreme Fear rule could apply).
+
+**Same-thesis cooling:** no LIT stop-outs in the last 7 days (no LIT activity anywhere in the
+trade history under the current profile). Not applicable.
+
+**Daily consecutive-loss pause:** 1 loss so far today (JTO, reconstructed from the missing 03:00
+pass) — 1 of 3, does not trigger the pause.
+
+**Execution:** Limit buy placed at $0.1617 (0.15% above the $0.1615 bid, within the 0.15% cap) —
+**below** the $0.1627 ask given LIT's wider 0.743% spread, so unlike JTO/COMP's tight-spread
+immediate fills, this order rested unfilled (order `OBHFJN-3KBEJ-SKNDZA`). Re-checked minutes
+later: price had moved further away (bid/ask up to $0.1629/$0.1641), order still unfilled at
+0 vol_exec. Per TRADING-STRATEGY.md's entry-order-type rule (do not chase an unfilled limit with
+a market order in the same pass), **cancelled the order** and treated this as a skip rather than
+force a fill. Confirmed via `kraken.sh orders`/`account`: book back to `{}`/`{open: {}}`, ZUSD
+unchanged at $72.2132.
+
+### Decision: **HOLD (execution not completed) — LIT/USD.** LIT cleared every gate through the
+probe-batch R:R check but the limit order never filled within this pass and was cancelled per
+rule rather than chased. Per the mandatory TRADE-decision-requires-confirmed-fill rule, this is
+logged as HOLD, not TRADE — **probe-batch status remains 2/3 taken** (JTO loss, COMP win,
+reconstructed above), not 3/3. LIT (or SLX) remain live candidates for a future pass if either is
+still fresh then. $72.2132 cash fully available, book flat.
+
+### Step 8 — Notification
+
+**Push sent** — this pass surfaced a real operational failure: the 03:00 UTC pass executed and
+fully resolved a round-trip trade (COMP) with zero record in git, discoverable only via Kraken's
+own order history, and the JTO probe-1/3 resolution (a loss) was similarly undocumented until this
+pass reconstructed it. Both are now logged in TRADE-LOG.md with full reconstructed detail and
+appropriate caveats about what can and cannot be verified. This is a session-reliability/scheduler
+problem (a pass ran, traded, and died before persisting anything — no orphaned branch survives, so
+this is not fixable by better mem-sync discipline the way the Sep 24 outage was) that needs the
+user's attention, not something a single pass can prevent going forward. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
