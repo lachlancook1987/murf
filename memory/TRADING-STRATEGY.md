@@ -385,6 +385,47 @@ switch/probe-batch rules above.
 Kraken," "volume surge alerts," or "best intraday setups" queries — these are the
 specific query types that produced bad data nearly every session this month.
 
+### Tertiary: free RSS catalyst cross-check (added 2026-09-27)
+
+Run via `bash scripts/rssnews.sh <max_age_hours> <term1> [term2] ...` — no API key
+required. Scans seven major crypto news outlets' public RSS feeds (CoinDesk,
+Cointelegraph, Decrypt, The Block, CryptoSlate, NewsBTC, Bitcoinist) for the most
+recent item whose title or summary matches any given search term, and reports its
+real publish timestamp. Pass **both** the ticker and the project's full name as
+separate terms (e.g. `bash scripts/rssnews.sh 6 ONDO "Ondo Finance"`) — headlines
+almost always use the project name, not the ticker, so ticker-only matching misses
+real coverage.
+
+**Why this exists:** a paid dedicated crypto-news API (CryptoPanic) was evaluated as
+a fix for the same catalyst-ambiguity problem the dated-catalyst query above
+addresses, but CryptoPanic discontinued its free tier in April 2026 — its cheapest
+plan ($50/week) would cost roughly 3x this account's equity every month for a fix
+expected to resolve only a minority of the ambiguity cases, so it was rejected as
+disproportionate at this account size (see RESEARCH-LOG.md 2026-09-27 for the full
+cost/benefit reasoning). RSS feeds get a meaningful slice of the same benefit for
+free: a real `pubDate` removes the freshness-judgment guesswork entirely for
+majors/mid-caps that mainstream outlets cover, at the cost of weaker recall on
+thin-liquidity micro-cap alts these outlets rarely write about.
+
+**How to use it:** run this **alongside**, not instead of, the Perplexity
+dated-catalyst query for every open position and every Kraken-sourced candidate. If
+`scripts/rssnews.sh` returns `RSS CATALYST FOUND` within the window, treat that as
+strong independent confirmation (cite both the RSS item and Perplexity's answer in
+the trade-idea reasoning). If it returns `RSS: STALE ONLY` or `RSS: NO COVERAGE`,
+that does **not** by itself reject the candidate — it has no bearing on genuinely
+obscure alts with no mainstream coverage — fall back to Perplexity's answer alone,
+as before. If Perplexity and this RSS check actively **disagree** on the age of the
+same underlying event (e.g. Perplexity claims a catalyst is fresh but the RSS feed's
+own article on the same story is timestamped >6h old), trust the RSS timestamp — it
+is a real publish date, not an LLM's inference — and reject the candidate; log the
+discrepancy explicitly, this is exactly the class of error (a "Perplexity data
+error") this check exists to catch.
+
+This does not loosen any gate — a genuinely absent or stale catalyst is still
+correctly classified momentum-only and still subject to the kill switch/probe-batch
+rules above. It only improves the precision of the catalyst-freshness judgment
+itself, for the subset of assets it has coverage on.
+
 ### Candidate Screening (fast-mover focus)
 
 Priority signals to look for in research output — rank candidates by these:

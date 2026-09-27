@@ -288,6 +288,13 @@ of each session went to disproving Perplexity instead of finding real setups.
    2026-09-27 after the gate-attribution review found this query the single largest
    source of blocked-but-clean setups — do not revert to the old generic "news and
    price outlook" phrasing).
+3b. Also run `bash scripts/rssnews.sh <hours> <ticker> "<full name>"` alongside the
+    Perplexity query, for the same position/candidate set — a free RSS cross-check
+    against major outlets' real publish timestamps (no API key). See "Tertiary: free
+    RSS catalyst cross-check" in `memory/TRADING-STRATEGY.md` for how to weigh it
+    against Perplexity's answer (added 2026-09-27; a paid CryptoPanic integration was
+    evaluated and rejected as disproportionate to this account's size — do not
+    re-propose it without a materially larger account or a materially cheaper plan).
 4. **Do not run or rely on** Perplexity's "biggest 1h surge," "top gainers,"
    "momentum plays on Kraken," "volume surge alerts," or "best intraday setups"
    queries — these are the specific query types that produced bad data nearly every
