@@ -48984,3 +48984,50 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 16:00 UTC (fired 16:45 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 15:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,370.60, today's open $84,426.80, intraday −0.07%, 24h range
+$83,816.20–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 16 survivors, led by PUMP
+($9.30M notional, +12.14% — checked NO CATALYST repeatedly in the 11:00–15:00 UTC passes,
+re-checked fresh this pass), TON ($3.87M, +5.08%, first appearance this session), XDC ($1.10M,
++8.68%), PENDLE ($485k, +3.23%), GRT ($255k, +3.30%).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on the top 5 by
+liquidity — PUMP, TON, XDC, PENDLE, GRT.
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP` (same recurring result as 11:00–15:00 UTC).
+  rssnews: `RSS: STALE ONLY` (20.4h old SEC token-buyback piece, not PUMP-specific).
+- **TON** — Perplexity: `NO CATALYST <6H FOR TON`. rssnews: `RSS: STALE ONLY` (6312.5h old,
+  unrelated BTC/ETH/SOL ETF piece from January — no real TON coverage).
+- **XDC** — Perplexity: `NO CATALYST <6H FOR XDC`.
+- **PENDLE** — Perplexity: `NO CATALYST <6H FOR PENDLE`.
+- **GRT** — Perplexity: `NO CATALYST <6H FOR GRT` (same recurring result as the 14:00 UTC pass).
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
