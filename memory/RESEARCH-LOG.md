@@ -48825,3 +48825,55 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 13:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 12:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,730.40, today's open $84,426.80, intraday +0.36%, 24h range
+$83,816.20–$85,142.80 (well inside crash-gate range).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 16 survivors, led by WLD
+($9.22M notional, +11.39% — already round-tripped this exact asset earlier this session, probe
+3/3 loss at 10:05:58 UTC; momentum-only regardless, not re-evaluated), ONDO ($4.15M, +2.18%),
+PUMP ($2.48M, +3.21%), NIGHT ($912k, +3.74%), XDC ($815k, +5.77%), US ($409k, +28.58%), CAKE
+($207k, +3.62%), BABY ($199k, +2.87%), ARX ($132k, +23.56%).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query and `rssnews.sh` on
+the top 5 non-WLD candidates by liquidity — ONDO, PUMP, NIGHT, XDC, US.
+- **ONDO** — Perplexity: `NO CATALYST <6H FOR ONDO`. rssnews: `RSS: STALE ONLY` (48.7h old
+  BlackRock/tokenization piece, well outside window).
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP`. rssnews: `RSS: STALE ONLY` (17.4h old SEC
+  token-buyback piece, not PUMP-specific).
+- **NIGHT** — Perplexity: `NO CATALYST <6H FOR NIGHT`. rssnews: `RSS: NO COVERAGE`.
+- **XDC** — Perplexity: `NO CATALYST <6H FOR XDC`. rssnews: `RSS: NO COVERAGE`.
+- **US** — Perplexity: `NO CATALYST <6H FOR US`. rssnews: matched a "RSS CATALYST FOUND" hit
+  (Bitcoinist, 5.3h old) but the article ("BIX Card Wants To Expand Crypto Spending From 29 To 49
+  US States") is about US-state count for a card product, not the US token itself — a search-term
+  false-positive on the literal string "US" (same pattern as the recurring SOL false-positive in
+  prior passes this day). Treated as NO CATALYST.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
