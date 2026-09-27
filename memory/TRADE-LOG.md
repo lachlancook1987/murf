@@ -11358,3 +11358,32 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 **Push sent** — first trade in 2 days and the first test of the kill-switch probe-batch mechanism (designed 2026-09-27 earlier today) in practice; also flagging the JTO cross-exchange price gap (Perplexity ~8.6% below Kraken) as a data point, not a block, for future gate-tuning review. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 03:00 UTC (fired 03:46 UTC) — Trade 155: COMP/USD BUY — KILL-SWITCH PROBE 2/3
+
+| Field | Value |
+|---|---|
+| **Symbol** | COMP/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 0.879 COMP |
+| **Entry Price** | $24.8790 (blended, incl. fee) |
+| **Cost (ex-fee)** | $21.7816 |
+| **Fee** | $0.0871 (0.40% — taker rate, limit order crossed and filled instantly at $24.77, better than the $24.78 limit) |
+| **Total spent** | $21.8687 |
+| **T1 (+3%)** | $25.6254 |
+| **T2 (+5%)** | $26.1230 |
+| **Stop Type** | trailing_stop **1.5%** GTC (full 0.879 qty) — probe-batch rate, not the 2.5% default |
+| **Stop Order ID** | O6WK6D-45SSB-QKKMU6 |
+| **Buy Order ID** | OQEPWB-L6JQ4-WDM2JR (limit 24.78, filled in full at 24.77) |
+| **Thesis** | **Momentum-only, no confirmed catalyst** — Perplexity dated-catalyst query returned exactly `NO CATALYST <6H FOR COMP`; `rssnews.sh 6 COMP Compound` returned `RSS: NO COVERAGE`. Tagged **KILL-SWITCH PROBE 2/3** per TRADING-STRATEGY.md's Performance-Linked Controls probe-batch fix — probe 1/3 (JTO, 02:46 UTC this same day) is still open/unresolved; the probe-batch mechanism does not require sequential resolution before the next probe slot, only that all 3 be tagged and later recomputed together once all have resolved. |
+| **R:R** | 3% / 1.5% = **2.0:1** (meets probe floor exactly, via the corrected tighter-stop mechanism, not a stretched target) |
+| **Spread** | 0.32% ✓ (bid 24.75 / ask 24.83) |
+| **Size** | $21.87 (**~30.1% of ~$72.65 total equity** [$50.4953 cash + 34.545 JTO @ ~$0.6413 ≈ $22.15, pre-trade] — probe-batch cap, not the standard 60% momentum-only cap) |
+
+**Gate checklist:** Crash gate clear (BTC $84,368.20, −0.07% intraday vs today's open $84,426.80). Weekly downtrend gate INACTIVE (BTC 5-trading-day ~−2.5%, under the 3% threshold, unchanged from the 02:00 UTC pass) — standard entry rules applied. Kraken-native full sweep (669 USD pairs) via public Ticker: within-2%-of-24h-high AND >2%-vs-today's-open filter → 30 raw candidates; liquidity filter (24h notional >$20k, excluding the already-held JTO position) → 15 survivors; 15m-OHLC deep check on the top 5 by liquidity (RAY, STX, COMP, W, CFG): **RAY** rolling over (03:00→03:15 close down), fail. **STX** — 24h high ($0.3547) was set before today's UTC-day high ($0.3520), meaning the high predates the last ~3h46m of candles and is stale, not fresh — fails momentum-peak-check despite passing two-candle acceleration. **W** — 03:15→03:30 leg down after a 03:00→03:15 spike (spike-then-stall), fail. **CFG** — 03:00→03:15 leg down before the 03:15→03:30 leg up, fails the "both legs building" requirement despite the most recent leg alone looking strong. **COMP — passed**: 03:00→03:15→03:30 closes each higher (24.40→24.77→24.80), 24h high $24.81 confirmed on the just-closed 03:30 candle (~1–16 min old, well within the 30min ceiling), live intracandle fade 0.04% off high (well inside 1.5% cap), spread 0.32%. Cross-exchange check: Perplexity quoted COMP at $24.21 (CMC)/$23.69 (CoinGecko) vs Kraken's $24.80 — a 2.4–4.7% gap, small and well below the 15–20% hard-reject threshold, consistent with Perplexity's known slight-staleness pattern on live price quotes (same pattern flagged on JTO earlier today) rather than a thin/distorted book — not treated as a reject. Same-thesis cooling: no prior COMP activity anywhere in this log — does not apply. Fear & Greed: mixed readings across providers (CFGI 57 Neutral, CoinGecko 47 Neutral, CMC-linked ~72–74 Greed) — not Extreme Fear on any reading, and the probe floor (2.0:1) is unaffected by F&G regardless. Daily consecutive-loss pause: no trades resolved yet today (JTO probe 1/3 still open) — N/A. Position maintenance (Step 3, this pass): JTO unrealized gain ~1.5% (below the +3%/T1 tightening rung, stop already at the probe's 1.5% rate which is tighter than any tightening rung would set) — no action needed; no orphans (JTO stop matches JTO balance); no thesis break; Alpaca reconfirmed flat (`positions: []`, stop `a2b44cf9` `canceled` since 2026-05-22).
+
+### Decision: **TRADE — COMP/USD, KILL-SWITCH PROBE 2/3.** Order placed and fill confirmed via `kraken.sh closedorders`/`account` in this same pass (0.879 COMP acquired at $24.77, ZUSD $50.4953 → $28.6266). Protective 1.5% trailing stop placed and confirmed open in the same pass (stop order O6WK6D-45SSB-QKKMU6, initial trigger $24.4100 off HWM $24.78). **Probe status: 2/3 taken** (1/3 JTO still open, 2/3 COMP just opened, 0/3 resolved) — update TRADING-STRATEGY.md's Performance-Linked Controls status line this pass, and continue holding the trailing win-rate recompute until all 3 probe trades have resolved (stale pre-probe 20.0%/10-trade window still not blended with probe outcomes).
+
+### Step 8 — Notification
+
+**Push sent** — second trade today and second probe-batch entry (2/3), taken while probe 1/3 (JTO) is still open; genuinely new state (a second live position, second stop placed) worth surfacing, not a routine HOLD. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
