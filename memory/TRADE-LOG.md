@@ -11450,3 +11450,32 @@ taken** (JTO loss, COMP win) — not advanced to 3/3.
 ### Step 8 — Notification
 
 No push sent — routine HOLD pass, no operational issues.
+
+## 2026-09-27 — Scan — 09:00 UTC (fired 09:46 UTC) — Trade 156: WLD/USD BUY — KILL-SWITCH PROBE 3/3
+
+| Field | Value |
+|---|---|
+| **Symbol** | WLD/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 38.73 WLD |
+| **Entry Price** | $0.563757 (blended, incl. fee) / $0.5593 (exchange avg fill) |
+| **Cost (ex-fee)** | $21.66169 |
+| **Fee** | $0.17329 |
+| **Total spent** | $21.83498 |
+| **T1 (+3%)** | $0.580670 |
+| **T2 (+5%)** | $0.591945 |
+| **Stop Type** | trailing_stop **1.5%** GTC (full 38.73 qty) — probe-batch rate |
+| **Stop Order ID** | ONZC7B-O3GYF-PFB7SR (stop trigger $0.5509 off HWM $0.5592) |
+| **Buy Order ID** | O5DVTS-UPCDU-JWEPJX (limit 0.5594, filled in full at 0.5593) |
+| **Thesis** | **Momentum-only, no confirmed catalyst** — Perplexity dated-catalyst query returned exactly `NO CATALYST <6H FOR WLD`; `rssnews.sh 6 WLD Worldcoin World-Network` returned `RSS: NO COVERAGE`. Tagged **KILL-SWITCH PROBE 3/3** per TRADING-STRATEGY.md's Performance-Linked Controls probe-batch fix. |
+| **R:R** | 3% / 1.5% = **2.0:1** (probe floor, via tighter stop not stretched target) |
+| **Spread** | 0.089% ✓ (bid 0.5586 / ask 0.5593 at order time) |
+| **Size** | $21.83 (**30.2% of $72.2132 equity** — probe-batch cap) |
+
+**Gate checklist:** Crash gate clear (BTC $84,780, today's open $84,426.80, intraday +0.42%). Weekly downtrend gate INACTIVE (BTC 5-trading-day ~−2.15%, under 3% threshold) — not binding for a probe entry regardless. Kraken-native full sweep (669 USD pairs) via public Ticker: 33 candidates cleared today's-chg >2%/live-fade ≤1.5%/notional >$20k. 15m-OHLC two-candle acceleration check on top-liquidity tier (SOL, WLD, UNI, RENDER, VVV, JTO, EIGEN, NIL, RAY, SUSHI, TREAD, US, XDC, BONK, JASMY, DEEP): SOL/RENDER/VVV/SUSHI/JASMY/DEEP failed (spike-then-stall or down leg); US failed (flat second leg). Passed acceleration: WLD, UNI, JTO, EIGEN, NIL, RAY, TREAD, XDC, BONK. Confirmed-closed-candle freshness check on those 9: UNI's 24h high stale (196min old, set 06:30 UTC); SOL/BONK highs stale (~91min); JTO/RAY/XDC highs sat on the still-forming candle (fails "no still-forming-candle-alone" rule). **WLD, EIGEN, NIL, TREAD** passed both checks (high set on the just-closed 09:30–09:45 candle). Ranked by liquidity: WLD ($6.4M notional) >> EIGEN ($1.04M) > NIL ($820k) > TREAD ($344k, high vs-open % raising pump/dump caution) — WLD selected as the strongest candidate (cleanest 2-candle acceleration: $0.5468→$0.5481→$0.5604, biggest final-leg jump; deepest liquidity/most-established asset). Live intracandle fade at order time: 0.64% off 24h high $0.5622 (well inside 1.5% cap). Cross-exchange check: Perplexity quoted WLD at CMC $0.5235 (+7.83%)/CoinGecko $0.5336 (+17.70%)/Binance $0.5350 (+16.41%) vs Kraken $0.5593 — 4.5–6.8% divergence, below the 15–20% hard-reject threshold, consistent with Perplexity's documented stale-reference-price pattern on less-mainstream tickers rather than a genuine thin-orderbook distortion. Same-thesis cooling: last WLD stop-out was 2026-06-16 (over 3 months ago, well outside the 7-day window) — cap does not apply. Daily consecutive-loss pause: today's realized outcomes are JTO (loss) then COMP (win), not 3 consecutive losses — does not trigger. Fear & Greed not queried (probe R:R floor fixed at 2.0:1 regardless of reading). Entry via limit buy at $0.5594 (0.14% above bid $0.5586, within the 0.15% cap) — filled in full, crossing the $0.5593 ask (taker fee 0.8%, consistent with a marketable limit).
+
+### Decision: **TRADE — WLD/USD, KILL-SWITCH PROBE 3/3.** Order placed and fill confirmed via `kraken.sh closedorders`/`account` in this same pass (38.73 WLD acquired, ZUSD $72.2132 → $50.3782). Protective 1.5% trailing stop placed and confirmed open in the same pass (stop order ONZC7B-O3GYF-PFB7SR). **Probe status: 3/3 taken** (JTO loss, COMP win, WLD pending) — once this trade resolves (stop fires or held to target), recompute the trailing win rate using only these 3 probe trades per TRADING-STRATEGY.md's probe mechanism (displacing the stale pre-probe 20.0%/10-trade window): ≥35% (i.e. at least 1 of the 3 nets positive after fees — 1/3 ≈ 33.3% falls just short, 2/3 ≈ 66.7% clears) reactivates standard-sized momentum-only entries; otherwise re-suspend and restart the 7-day timer from this trade's close date. Update TRADING-STRATEGY.md's status line next pass to reflect 3/3 taken.
+
+### Step 8 — Notification
+
+**Push sent** — third and final kill-switch probe trade executed, completing the probe batch (JTO loss, COMP win, WLD now open); once WLD resolves the trailing win-rate recompute will determine whether momentum-only entries reactivate at standard sizing or the suspension continues for another 7-day cycle. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
