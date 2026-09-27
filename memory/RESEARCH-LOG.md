@@ -48414,3 +48414,95 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 07:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $72.2132, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 06:00 UTC pass's closing state. Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. Step 3 maintenance: nothing to do (no orphan stops/T1
+limits, no runners, no thesis breaks — book was flat at pass start).
+
+**Crash gate:** clear — BTC $84,597.30, today's open $84,426.80, intraday +0.20%.
+
+**Weekly downtrend gate:** not recomputed this pass (no candidate reached a stage where it would
+bind); last-known INACTIVE (−2.50%/5d, from the 02:00 UTC pass).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched — 624 online USD
+pairs). Filter (today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 34 survivors,
+led by US (+16.65%), W (+14.80%), NEAR (+7.88%), DEEP (+7.56%), SUI (+7.39%), PYTH (+7.24%), RAY
+(+5.53%), SEI (+4.93%), KAS (+3.95%), UNI (+3.63%), ARB (+3.42%), AVAX (+2.94%), RENDER (+2.76%),
+BCH (+2.25%), VVV (+3.71%).
+
+**15m-OHLC two-candle acceleration (last two closed candles: 07:00, 07:15, 07:30 — 07:45 was the
+still-forming candle at check time), top-12 by liquidity (NEAR $27.2M, SUI $22.8M, AVAX $10.6M,
+UNI $7.5M, KAS $3.9M, ARB $2.7M, RENDER $2.2M, SEI $1.19M, PYTH $1.08M, VVV $1.78M, BCH $1.8M, RAY
+$0.72M):**
+- **NEAR, RENDER, VVV, BCH, RAY** — fail two-candle acceleration: each shows a spike-then-stall or
+  down leg breaking the chain (e.g. NEAR closes $5.4557→$5.4509→$5.4282, down on both legs after
+  its own earlier 05:00 UTC parabolic set-aside; RAY $2.170→$2.184→$2.181, stalls on the second
+  leg).
+- **UNI, KAS, ARB** — pass two-candle acceleration on closed candles but fail on **stale 24h high**:
+  UNI's ticker high ($10.1934) exceeds every closed-candle high shown (max $10.0676); KAS's
+  ($0.05011) and ARB's ($0.2308) likewise sit above their last several candles' highs (ARB checked
+  back 8 candles/2h, still no match) — all three highs were set well outside the 30min freshness
+  ceiling with no fresh breakout above them on the current candle.
+- **SUI, AVAX, SEI, PYTH** — pass both two-candle acceleration (closed 07:00→07:15→07:30 legs)
+  and confirmed-candle freshness (24h high sits on a closed candle within the ceiling) at initial
+  check. Catalyst check run on the top two (SUI, AVAX): Perplexity dated-catalyst query returned
+  `NO CATALYST <6H` for both; `rssnews.sh 6` returned `RSS: STALE ONLY` (SUI, 6111h-old unrelated
+  item) and `RSS: NO COVERAGE` (AVAX) — both classified momentum-only, probe-eligible. Cross-
+  exchange check: Perplexity/CoinGecko quoted SUI $1.18 vs Kraken $1.2547 (~5.9% gap) and AVAX
+  $10.45–10.86 vs Kraken $11.165 (~2.7–6.4% gap) — both well below the 15–20% hard-reject
+  threshold and consistent with Perplexity's documented stale-data pattern, not a genuine
+  thin-book distortion. Fear & Greed 57 "Neutral" (not binding — probe R:R floor is fixed at 2.0:1
+  regardless). Daily consecutive-loss pause: today's realized outcomes so far are JTO (loss) then
+  COMP (win), not 3 consecutive losses — does not trigger. Same-thesis cooling: no SUI/AVAX
+  stop-outs in the last 7 days — cap does not apply.
+
+**Execution attempt abandoned — price action deteriorated between gate-check and order placement:**
+Over the ~3 minutes spent confirming spread/cross-exchange/catalyst on SUI and AVAX, both
+candidates' live price moved materially away from the clean pattern that passed the initial gate
+check:
+- **SUI** broke to a fresh live high ($1.2666) on the still-forming 07:45 candle, well above the
+  last confirmed (07:30-closed) high of $1.2585 — per the confirmed-candle rule ("do not enter on
+  a still-forming candle's fresh high alone"), this is not an enterable breakout; it needs a
+  closed-candle confirmation first. Same pattern as NEAR's set-aside at the 05:00 UTC pass.
+- **SEI** did the same in real time across three successive quote checks (24h high ticked up
+  $0.07547 → $0.07566 → $0.07590 within minutes, each a live, unconfirmed print) — never held
+  still long enough to confirm a level on a closed candle.
+- **AVAX** went the other way: a persistent, multi-check downward drift from $11.165 → $11.123 →
+  $11.116 → $11.109 over roughly 5–6 minutes, fading further from its confirmed $11.211 high each
+  time (0.41% → 0.78% → 0.85% → 0.91% fade) — still inside the 1.5% hard cap at every check, but a
+  sustained one-directional decline rather than noise, i.e. the setup was actively stalling/
+  reversing in real time rather than holding the acceleration pattern the initial closed-candle
+  check found.
+- **PYTH** — acceleration was already marginal at the initial check (07:15→07:30 close up by only
+  +0.03%) and also drifted down on subsequent checks (0.62% → 0.92% fade).
+
+None of the four held a stable, still-accelerating setup at the moment execution would have
+occurred. Forcing an entry into any of them at that point would have meant buying into a live
+stall/reversal already in progress — exactly the failure mode the two-candle-acceleration and
+confirmed-candle rules exist to prevent, even where the numeric fade cap technically still had
+room. Treating this as a timing/execution-instability skip, not a gate loosening or tightening —
+no rule threshold was changed, the underlying instruments simply moved past the point of a valid
+entry before the process could complete.
+
+**Probe-batch status:** unchanged, **2/3 taken** (JTO loss, COMP win). No probe trade executed
+this pass. SUI (pending closed-candle confirmation above $1.2585), SEI (pending a level holding
+still long enough to confirm), and AVAX (would need to stabilize/resume upward before its next
+gate-check) all remain live candidates for a future pass if conditions re-clarify.
+
+### Decision: **HOLD.** Four candidates cleared the initial technical screen but none held a
+stable entry-eligible pattern by the time spread/catalyst/cross-exchange checks completed — all
+four had moved into either an unconfirmed forming-candle breakout or a live fade/stall by the
+time of the execution decision. Probe-batch remains 2/3 taken. $72.2132 cash fully available,
+book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. The near-misses here are a normal, expected gate outcome
+(unstable price action at decision time), not an operational failure worth interrupting the user
+for. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
+Dashboard section).
