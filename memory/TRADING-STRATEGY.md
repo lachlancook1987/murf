@@ -290,17 +290,21 @@ of them.
       has used, which is why loosening the general momentum-only/probe R:R floor was considered
       and rejected; the probe's job is to test whether the win rate itself has improved, not to be
       profitable at the current known rate).
-  - **Current status (updated 2026-09-27): ACTIVE — momentum-only entries SUSPENDED, PROBE DUE.**
-    Trailing win rate over the last 10 momentum-only entries is still **20.0%** (2 wins: UAI, NIL;
-    8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — unchanged since the 2026-09-04
-    review; no new momentum-only trades since). Suspended since 2026-09-04 — well past the 7-day
-    probe threshold as of this update, so **the next pass that finds a momentum-only candidate
-    clearing every other gate should treat it as Probe 1/3** (30% equity cap, R:R ≥2.0:1 via a
-    1.5% trailing stop at standard T1, per the corrected mechanism above) rather than blocking it
-    outright. Track probe progress here: **Probe status: 0/3 taken.** Update this
-    line every time a probe trade is placed or closes. Catalyst-confirmed entries (e.g. ONDO,
-    2026-09-25) are unaffected and remain open throughout, and do not count toward the probe
-    batch.
+  - **Current status (updated 2026-09-27, second update — Probe 1/3 taken): ACTIVE — momentum-only
+    entries SUSPENDED, PROBE IN PROGRESS.**
+    Trailing win rate over the last 10 momentum-only entries (pre-probe) is **20.0%** (2 wins: UAI,
+    NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1) — this window is stale and will
+    be fully displaced once the probe batch resolves, per the mechanism below, not blended with it.
+    Suspended since 2026-09-04. **Probe status: 1/3 taken** — Trade 154, JTO/USD, executed
+    02:00 UTC pass (fired 02:46 UTC) 2026-09-27, 30.2% equity, 1.5% trailing stop (R:R 2.0:1 at
+    T1), momentum-only/no confirmed catalyst. See TRADE-LOG.md for full order detail and
+    RESEARCH-LOG.md for the discovery/gate reasoning. Still open as of this update. Update this
+    line again when this trade resolves (win/loss) and again as probe trades 2/3 and 3/3 are
+    taken. Once all 3 have resolved, recompute the trailing win rate using **only** the 3 probe
+    trades (displacing the stale 20.0%/10-trade window above) — ≥35% reactivates standard-sized
+    momentum-only entries; <35% re-suspends and restarts the 7-day timer from the date the last
+    probe trade closed. Catalyst-confirmed entries (e.g. ONDO, 2026-09-25) are unaffected and
+    remain open throughout, and do not count toward the probe batch.
 - **Daily consecutive-loss pause:** After **3 consecutive stop-outs on the same calendar day**
   (any assets, not sector-specific — sector pause rules remain retired), pause all new entries
   for the remainder of that day regardless of how clean a subsequent candidate looks. This is

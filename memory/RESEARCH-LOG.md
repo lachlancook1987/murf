@@ -48100,3 +48100,36 @@ integration, loosens a loss-response gate, or redesigns a core mechanism must be
 recommendation with supporting data and pushed as a notification for the user's sign-off, not
 auto-applied — mirroring exactly how today's session actually operated (every consequential change
 was proposed and discussed before being implemented).
+
+## 2026-09-27 — Scan — 02:00 UTC (fired 02:46 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $72.3189 (unchanged since Sep 25 EOD), `positions: {}`, `orders: {"open": {}}` — book flat, exact match to prior pass, no drift. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure, no action needed. Step 3 (position maintenance): nothing to do, book was already flat.
+
+**Crash gate:** clear — BTC $84,457.40, today's open $84,426.80, intraday change +0.036%.
+
+**Weekly downtrend gate:** INACTIVE — BTC 5-trading-day (Sep 21 close $86,593.80 → Sep 26 close $84,426.70) = −2.50%, under the 3% threshold. Standard entry rules apply.
+
+**Discovery:** Full Kraken-native sweep via public Ticker across all 669 USD pairs (no auth required). First-pass filter: within 2% of 24h high AND >2% change vs today's UTC open → 24 raw candidates. Liquidity filter (24h notional volume >$20k) → 9 survivors (TEL, JTO, DEEP, EVAA, TAC, RAY, TRUST, CAP, ARB). 15m-OHLC deep check (confirmed-closed-candle + two-candle-acceleration) run on the top 5 by liquidity:
+- **ARB** — rolling over, 02:15/02:30 closes declining. Fail.
+- **RAY** — spiked 02:00→02:15 then stalled 02:15→02:30 (higher high, lower close). Fail (spike-then-stall pattern this gate specifically targets).
+- **DEEP** — already declining into 02:30. Fail.
+- **JTO** — both legs building (02:00→02:15→02:30 closes each higher than the last), 24h high confirmed on the closed 02:30 candle ~16min before entry, live fade 0.038%. **Pass.**
+- **CAP** — also passed the same two-candle-acceleration check (02:00→02:15→02:30 closes each higher), spread 0.063%, fade 0.564%. **Pass**, but not traded — see below.
+
+**Catalyst check (JTO):** Perplexity dated-catalyst query returned exactly `NO CATALYST <6H FOR JTO` (no ambiguous prose this time — the 2026-09-27 query-wording fix is working as intended). `rssnews.sh 6 JTO Jito` returned `RSS: NO COVERAGE`. Classified **momentum-only, no catalyst**.
+
+**Kill-switch / probe-batch:** Momentum-only entries have been SUSPENDED since 2026-09-04 (20.0% trailing win rate, below the 35% floor), and per the 2026-09-27 probe-batch fix, suspended ≥7 calendar days with zero new momentum-only trades in that window qualifies for a probe. JTO clears every other gate (freshness, confirmed-candle, two-candle acceleration, live fade, spread, cross-exchange divergence — see below, same-thesis cooling N/A) and R:R at the probe's tighter 1.5% stop is exactly 3%/1.5% = 2.0:1, meeting the corrected probe floor. **Executed as KILL-SWITCH PROBE 1/3** — see TRADE-LOG.md for full order detail (34.545 JTO @ $0.631901 blended entry, $21.82 total spend = 30.2% equity, 1.5% trailing stop confirmed open).
+
+**CAP not traded this pass** despite also clearing the technical gates — held back deliberately to keep this first, most-cautious probe on the higher-liquidity/more-established candidate (JTO: ~$1.06M 24h notional vs CAP's ~$128k) rather than doubling up on two probe entries in the same pass. CAP remains a live candidate for a future pass if it's still fresh then; not pre-committing probe slot 2/3 to it now.
+
+**Cross-exchange note (flagged, not a rejection):** Perplexity quoted JTO at $0.579 (CoinGecko)/$0.5845 (CMC) vs Kraken's live $0.629 — an ~8.6% divergence. Below the ~15-20% hard-reject threshold in TRADING-STRATEGY.md, and JTO's own order book (0.059% spread, established pair) doesn't show the thin/distorted-book signature the gate targets — most likely explained by Perplexity's well-documented tendency to quote stale/cached prices on less-mainstream tickers (the same failure mode that got Perplexity demoted from discovery to context-only back on 2026-07-20). Logging this for future gate-attribution review rather than treating it as inconclusive-but-ignored.
+
+**Fear & Greed:** 57 "Neutral" (Alternative.me) — doesn't change the probe's R:R floor (already 2.0:1 regardless of F&G reading) or trigger the Extreme Fear rule.
+
+**Same-thesis cooling:** No JTO stop-outs in the last 7 days (last JTO activity in the log predates the current Kraken day-trading profile). Not applicable.
+
+**Daily consecutive-loss pause:** No trades yet today. N/A.
+
+### Decision: **TRADE — JTO/USD, KILL-SWITCH PROBE 1/3.** Full detail in TRADE-LOG.md. This is the first practical test of the probe-batch mechanism designed earlier today (2026-09-27) specifically to break the kill-switch's closed-loop deadlock (suspended since 2026-09-04, unable to recompute without new momentum-only trades, which it also blocked).
+
+**Follow-up for next pass:** update TRADING-STRATEGY.md's Performance-Linked Controls status line to "Probe status: 1/3 taken" (currently still reads 0/3 as of the 2026-09-27 same-day update written before this trade executed).
