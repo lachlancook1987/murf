@@ -49233,3 +49233,52 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 21:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 20:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,550.50, today's open $84,426.80, intraday +0.15%, 24h range
+$84,098.50–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 17 survivors, led by NEAR
+($33.2M notional, +9.83% — checked stale at 19:00 UTC), PUMP ($11.4M, +15.88% — checked NO
+CATALYST at 20:00 UTC), GRT ($1.70M, +25.88% — sharp jump from +17.80%/+4.78% seen earlier this
+session, re-checked fresh given the magnitude), BONK ($1.2M, +2.19%), XDC ($1.15M, +9.98%), SEI
+($1.10M, +6.35%, first appearance this session), JUP ($1.05M, +7.76% — checked NO CATALYST at
+18:00 UTC), FARTCOIN ($637k, +2.40% — checked NO CATALYST repeatedly this session).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on the top
+candidates not recently checked or showing a notable move — GRT, SEI, XDC, NEAR.
+- **GRT** — Perplexity: `NO CATALYST <6H FOR GRT` (same recurring result as
+  14:00/16:00/17:00/19:00 UTC despite the outsized +25.88% move — no fresh catalyst found).
+- **SEI** — Perplexity: `NO CATALYST <6H FOR SEI`.
+- **XDC** — Perplexity: `NO CATALYST <6H FOR XDC`.
+- **NEAR** — Perplexity: `NO CATALYST <6H FOR NEAR` (the Ondo tokenized-equities partnership
+  flagged stale at 19:00 UTC is now further outside the 6h window; no newer event surfaced).
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality or how large the raw price move was (GRT +25.88%,
+PUMP +15.88%).
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
