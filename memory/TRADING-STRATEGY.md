@@ -131,13 +131,31 @@ target, move on. Volume of profitable trades beats size of any single trade.
     permanent and removing the T1-limit step from this document. Do not re-attempt the two-
     independent-orders design as currently written — it is a hard no per the same standard CLAUDE.md
     applies to the Artifact `write_db` limitation, not a config issue to keep chasing.
-- **Progressive stop-tightening on runners (added 2026-09-02, corrected 2026-09-02):** Layered on
-  top of, not instead of, the T1 partial-profit-take above. For any position (or the post-T1
-  remainder) with unrealized gain from entry **≥20%**, tighten the trailing stop to **2%** (from
-  the 2.5% default, or from 3.5% on high-ATR entries). If unrealized gain reaches **≥40%**, tighten
-  further to **1.5%**. Never widen a trailing stop; never replace a tighter stop with a looser one —
-  if a position is already on a tighter trail than the threshold would set, leave it alone. Checked
-  every hourly pass as part of Step 3 position maintenance.
+  - **Resolution adopted (2026-09-27):** Retire the two-order design permanently — do not
+    re-attempt it in any form (per the confirmed hard constraint above, this is an exchange
+    balance-accounting limit, not a fixable bug). Replace it with a new rung on the Progressive
+    Stop-Tightening ladder below: tighten the trailing stop to **1.5%** as soon as unrealized gain
+    reaches **T1 (+3%)**, checked every hourly pass alongside the existing 20%/40% rungs. This
+    drops the "sell exactly 50% at T1" behavior but achieves the same underlying goal — lock in
+    gains once T1 is reached — using a mechanism Kraken can actually execute reliably (a single
+    stop order's cancel+replace, no second order, no balance conflict). It stays session-checked
+    rather than exchange-resting, but at the current hourly cadence the gap between T1 being
+    crossed and the tightening actually firing is at most ~1 hour, not the multi-hour-to-days gap
+    that made the original pre-2026-09-02 version of this problem serious.
+- **Progressive stop-tightening on runners (added 2026-09-02, corrected 2026-09-02, extended
+  2026-09-27 to absorb the T1 profit-lock — see the Resolution note under T1 partial-profit-take
+  above):** Checked every hourly pass as part of Step 3 position maintenance. Never widen a
+  trailing stop; never replace a tighter stop with a looser one — if a position is already on a
+  tighter trail than a threshold below would set, leave it alone.
+  - **≥3% unrealized gain (T1) — added 2026-09-27:** tighten to **1.5%** (from the 2.5% default,
+    or 3.5% on high-ATR entries). This rung is the replacement mechanism for locking in gains once
+    T1 is reached, since the resting T1 limit-sell order design does not work on Kraken spot.
+  - **≥20% unrealized gain:** tighten to **2%**.
+  - **≥40% unrealized gain:** tighten further to **1.5%**.
+  In practice, once the T1 rung has fired on a winning trade, the 20%/40% rungs will already be
+  satisfied (1.5% is at or tighter than either target) — they're kept as an independent floor for
+  the edge case of a position gapping straight past one of those thresholds before an hourly pass
+  ever catches it at the T1 stage.
   - **Correction note:** the routine originally carried this as an inline instruction (outside this
     doc, in the scheduled task prompt) with the thresholds backwards — tightening from 2.5% to 3%
     at ≥20% gain, which is a *widening*, not a tightening, and directly contradicted the "never
@@ -222,17 +240,38 @@ of them.
   above that line. Catalyst-confirmed entries are unaffected and remain open. Log the current
   trailing win rate in every research pass's discovery summary so a suspension is visible before
   it's needed, not discovered after the fact.
-  - **Current status (updated 2026-09-04 weekly review): ACTIVE — momentum-only entries are
-    SUSPENDED.** Trailing win rate over the last 10 momentum-only entries is **20.0%** (2 wins:
-    UAI, NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — most recent first, see
-    WEEKLY-REVIEW.md 2026-09-04 entry for the full derivation), well under the 35% floor. This
-    line exists because the rule above was not actually being checked in any pass between its
-    2026-09-02 addition and this review — every pass in that window happened to reach HOLD on a
-    structural gate first, so the kill switch was never consulted despite being active. **Every
-    pass must read this line before evaluating a momentum-only candidate** and treat momentum-only
-    entries as blocked until a pass recomputes the window (same method as above) and finds it back
-    above 35% — at that point, update this status line to INACTIVE and record the new win rate.
-    Catalyst-confirmed entries are unaffected and remain open throughout.
+  - **Probe-batch deadlock fix (added 2026-09-27):** The rule above has a structural flaw — it can
+    only recompute using new momentum-only entries, but it also blocks momentum-only entries, so
+    once suspended it can never generate the data needed to lift itself. Confirmed in practice:
+    suspended since 2026-09-04 at 20.0%, unchanged through 2026-09-27 (23 days, zero new
+    momentum-only trades) purely because there was nothing new to recompute against. Fix: if
+    momentum-only entries have been suspended for **≥7 calendar days** with **zero new momentum-
+    only trades** in that window, open a **probe batch**: up to **3 momentum-only entries**, each
+    capped at **30% equity** (down from the standard 60% momentum-only cap) and requiring **R:R
+    ≥2.0:1** at T1 (up from the standard 1.8:1 momentum-only floor). All other gates (freshness,
+    confirmed-candle, two-candle acceleration, live intracandle fade, spread, cross-exchange
+    divergence, same-thesis cooling, daily loss-pause) still apply in full to probe trades — the
+    probe only relaxes sizing and raises the R:R bar, it does not relax entry quality. Tag each
+    probe trade explicitly in TRADE-LOG.md (e.g. "KILL-SWITCH PROBE 1/3") so it's never blended
+    silently with normal-sized entries in a later review. Once all 3 probe trades have resolved
+    (stopped out or hit target), recompute the trailing win rate using **only the probe batch**
+    (the stale pre-probe entries are fully displaced, not blended) — ≥35% → reactivate momentum-
+    only entries at standard sizing/R:R and update the status line to INACTIVE; <35% → re-suspend
+    and restart the 7-day timer from the date the last probe trade closed. If 7 days pass with no
+    qualifying probe candidate found (no candidate clearing every other gate, as opposed to a probe
+    loss), the timer does not reset — keep evaluating probe-eligible candidates each pass until 3
+    have actually been taken. Catalyst-confirmed entries are unaffected throughout and never count
+    toward or against the probe batch.
+  - **Current status (updated 2026-09-27): ACTIVE — momentum-only entries SUSPENDED, PROBE DUE.**
+    Trailing win rate over the last 10 momentum-only entries is still **20.0%** (2 wins: UAI, NIL;
+    8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1 — unchanged since the 2026-09-04
+    review; no new momentum-only trades since). Suspended since 2026-09-04 — well past the 7-day
+    probe threshold as of this update, so **the next pass that finds a momentum-only candidate
+    clearing every other gate should treat it as Probe 1/3** (30% equity cap, R:R ≥2.0:1) rather
+    than blocking it outright. Track probe progress here: **Probe status: 0/3 taken.** Update this
+    line every time a probe trade is placed or closes. Catalyst-confirmed entries (e.g. ONDO,
+    2026-09-25) are unaffected and remain open throughout, and do not count toward the probe
+    batch.
 - **Daily consecutive-loss pause:** After **3 consecutive stop-outs on the same calendar day**
   (any assets, not sector-specific — sector pause rules remain retired), pause all new entries
   for the remainder of that day regardless of how clean a subsequent candidate looks. This is
@@ -376,4 +415,4 @@ just tune it, and was explicitly left for the user to decide separately rather t
 
 ---
 
-*Last updated: 2026-09-25 (documented that the T1 partial-profit-take two-order design does not work on Kraken spot — the full-quantity trailing stop reserves the entire asset balance, leaving no room for the independent 50% T1 limit sell; discovered on this profile's first live test of the mechanism, the ONDO entry at 06:00 UTC. Resolution for now: place only the full-quantity trailing stop, skip the T1 limit order, until a real fix (Kraken's native OCO/conditional-close order params) is evaluated. Previous update: 2026-09-04 (weekly review — added a current-status line to the rolling win-rate kill switch after discovering it had gone unchecked by every pass since its 2026-09-02 addition; the trailing win rate over the last 10 momentum-only entries is 20.0%, below the 35% floor, so momentum-only entries are now explicitly flagged SUSPENDED for every pass to read directly rather than re-derive. No other rule changed this review — the Sep 2 overhaul's structural gates have a clean early record with no trade volume yet to warrant tuning.) Previous update: 2026-09-02, second same-day correction (added the progressive stop-tightening rule for runners with unrealized gain ≥20%/≥40% as a formal, documented entry in this file — it had only existed as an inline instruction in the scheduled task prompt with the thresholds backwards, tightening 2.5%→3% at ≥20% gain, which is a widening and directly contradicted that same instruction's own "never widen" rule. Corrected to 2.5%→2%→1.5% and flagged this doc as authoritative over the stale prompt wording.) Previous update same day: 2026-09-02 (implemented the Sept 2 loss-pattern review's recommendations: tightened momentum-peak-check freshness window 60→30min, added two-closed-candle acceleration and live intracandle fade checks, switched default entry order type from market to limit-at-bid, added volatility-scaled sizing cap (60% equity) for momentum-only entries, redesigned T1 profit-lock from a session-dependent trail-tightening action — which fired only 3 times in ~100+ days — to an exchange-resting partial-limit-sell placed at entry time, raised the momentum-only R:R floor from 1.5:1 to 1.8:1, added a rolling win-rate kill switch and a same-day consecutive-loss pause, and added a hard TRADE-decision-requires-confirmed-fill gate after the 2026-08-20 silent execution miss. Driven by a review of the Aug 21–29 losing streak: 5 of 6 momentum-only entries lost, most stopped within minutes to hours of entry, plus the Aug 19-20 BIO/MUBARAK wins showing the old T1-tightening mechanism never actually fired.) Previous update: 2026-08-28 (weekly review — worst week on record, −36.82% vs BTC +2.97%, driven by a collapse in momentum-only win rate to 15.8% as the market shifted from trending to choppy/range-bound. Added a confirmed-closed-candle requirement to the momentum-peak-check after several fast reversals (one stop-out 2m42s post-fill) showed the 60-min freshness window alone wasn't catching still-forming-candle fakeouts; added an AU jurisdiction-restricted asset list (ZEC, DASH); formalized two recurring operational issues — EOD-snapshot mislabeling and deferred trade logging — into standing Process Integrity rules after review-note flagging alone failed to stop their recurrence; added `kraken.sh closedorders` command to fix a reconciliation data gap). Previous update: 2026-08-21 (flagged the T1 stop-tightening-to-0.5% rule as aspirational-only, not reliably executed given the scan cadence — sessions run periodically, not continuously, so they usually miss the moment price crosses T1; recent trades (MUBARAK, BIO) closed on the original untightened trail well past T1/T2 instead). Previous update: 2026-08-14 (weekly review — raised the R:R floor for momentum-only/no-catalyst entries to 1.5:1 at all Fear/Greed levels, after three such entries at the bare 1.2:1 floor lost 3-for-3 since the fee correction (VELVET, SYN, BICO)). Previous update: 2026-07-31 (weekly review — corrected taker fee assumption from 0.4%/leg to the actually-measured 0.8%/leg, ~1.6% round trip, after the VELVET trade showed the prior figure was 2x too low). Previous update: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Prior: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
+*Last updated: 2026-09-27 (user-requested review of the consolidated hourly routine's first ~3.5 weeks surfaced two structural issues, both fixed this update: (1) the rolling win-rate kill switch was a closed loop — suspended since 2026-09-04 at 20.0%, unable to ever recover because it can only recompute from new momentum-only trades, which it also blocks; added a probe-batch fix — after 7 calendar days suspended with zero new momentum-only trades, allow up to 3 probe entries at 30% equity / R:R ≥2.0:1, then recompute the window from just those 3, displacing the stale Aug data. Current status updated to PROBE DUE, 0/3 taken. (2) The T1 partial-profit-take two-order design (confirmed broken 2026-09-25, see below) had no adopted replacement; added a new rung to the Progressive Stop-Tightening ladder — tighten to 1.5% at +3% (T1) gain — as the mechanism for locking in T1 gains going forward, since it reuses the already-working single-stop cancel+replace path instead of a second order Kraken rejects. Previous update: 2026-09-25 (documented that the T1 partial-profit-take two-order design does not work on Kraken spot — the full-quantity trailing stop reserves the entire asset balance, leaving no room for the independent 50% T1 limit sell; discovered on this profile's first live test of the mechanism, the ONDO entry at 06:00 UTC. Resolution for now: place only the full-quantity trailing stop, skip the T1 limit order, until a real fix (Kraken's native OCO/conditional-close order params) is evaluated. Previous update: 2026-09-04 (weekly review — added a current-status line to the rolling win-rate kill switch after discovering it had gone unchecked by every pass since its 2026-09-02 addition; the trailing win rate over the last 10 momentum-only entries is 20.0%, below the 35% floor, so momentum-only entries are now explicitly flagged SUSPENDED for every pass to read directly rather than re-derive. No other rule changed this review — the Sep 2 overhaul's structural gates have a clean early record with no trade volume yet to warrant tuning.) Previous update: 2026-09-02, second same-day correction (added the progressive stop-tightening rule for runners with unrealized gain ≥20%/≥40% as a formal, documented entry in this file — it had only existed as an inline instruction in the scheduled task prompt with the thresholds backwards, tightening 2.5%→3% at ≥20% gain, which is a widening and directly contradicted that same instruction's own "never widen" rule. Corrected to 2.5%→2%→1.5% and flagged this doc as authoritative over the stale prompt wording.) Previous update same day: 2026-09-02 (implemented the Sept 2 loss-pattern review's recommendations: tightened momentum-peak-check freshness window 60→30min, added two-closed-candle acceleration and live intracandle fade checks, switched default entry order type from market to limit-at-bid, added volatility-scaled sizing cap (60% equity) for momentum-only entries, redesigned T1 profit-lock from a session-dependent trail-tightening action — which fired only 3 times in ~100+ days — to an exchange-resting partial-limit-sell placed at entry time, raised the momentum-only R:R floor from 1.5:1 to 1.8:1, added a rolling win-rate kill switch and a same-day consecutive-loss pause, and added a hard TRADE-decision-requires-confirmed-fill gate after the 2026-08-20 silent execution miss. Driven by a review of the Aug 21–29 losing streak: 5 of 6 momentum-only entries lost, most stopped within minutes to hours of entry, plus the Aug 19-20 BIO/MUBARAK wins showing the old T1-tightening mechanism never actually fired.) Previous update: 2026-08-28 (weekly review — worst week on record, −36.82% vs BTC +2.97%, driven by a collapse in momentum-only win rate to 15.8% as the market shifted from trending to choppy/range-bound. Added a confirmed-closed-candle requirement to the momentum-peak-check after several fast reversals (one stop-out 2m42s post-fill) showed the 60-min freshness window alone wasn't catching still-forming-candle fakeouts; added an AU jurisdiction-restricted asset list (ZEC, DASH); formalized two recurring operational issues — EOD-snapshot mislabeling and deferred trade logging — into standing Process Integrity rules after review-note flagging alone failed to stop their recurrence; added `kraken.sh closedorders` command to fix a reconciliation data gap). Previous update: 2026-08-21 (flagged the T1 stop-tightening-to-0.5% rule as aspirational-only, not reliably executed given the scan cadence — sessions run periodically, not continuously, so they usually miss the moment price crosses T1; recent trades (MUBARAK, BIO) closed on the original untightened trail well past T1/T2 instead). Previous update: 2026-08-14 (weekly review — raised the R:R floor for momentum-only/no-catalyst entries to 1.5:1 at all Fear/Greed levels, after three such entries at the bare 1.2:1 floor lost 3-for-3 since the fee correction (VELVET, SYN, BICO)). Previous update: 2026-07-31 (weekly review — corrected taker fee assumption from 0.4%/leg to the actually-measured 0.8%/leg, ~1.6% round trip, after the VELVET trade showed the prior figure was 2x too low). Previous update: 2026-07-24 (weekly review — formalized the cross-exchange price-divergence rejection gate after three ad hoc applications this week). Prior: 2026-07-20 (demoted Perplexity to context/catalyst-confirmation only, replaced with Kraken-native discovery sweep; added gate-protection default rule resolving the "TRADE is default stance" vs. gate framing conflict). Prior: 2026-07-10 (added Extreme Fear + unconfirmed catalyst R:R floor of 1.5:1; corrected taker fee assumption from 0.26% to the actually-measured 0.4%)*
