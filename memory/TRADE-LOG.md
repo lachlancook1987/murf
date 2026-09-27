@@ -11329,3 +11329,32 @@ No push sent this pass — the reportable event today (ONDO stop-fire realizing 
 ### Step 8 — Notification
 
 No push sent — book flat, zero trades today, no drift, no operational issues, Day P&L flat at $0.00, bot modestly behind BTC (−0.383 points) on an otherwise quiet day. QNT's late-day round trip (clean technical setup → correctly blocked by the win-rate kill switch → rolled over and faded within the hour) is the kill switch working as designed, not an anomaly. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 02:00 UTC (fired 02:46 UTC) — Trade 154: JTO/USD BUY — KILL-SWITCH PROBE 1/3
+
+| Field | Value |
+|---|---|
+| **Symbol** | JTO/USD |
+| **Side** | BUY (spot) |
+| **Qty** | 34.545 JTO |
+| **Entry Price** | $0.631901 (blended, incl. fee) |
+| **Cost (ex-fee)** | $21.6957 |
+| **Fee** | $0.1279 (0.589% — maker rate, order rested as a limit and filled without crossing) |
+| **Total spent** | $21.8236 |
+| **T1 (+3%)** | $0.650858 |
+| **T2 (+5%)** | $0.663496 |
+| **Stop Type** | trailing_stop **1.5%** GTC (full 34.545 qty) — probe-batch rate, not the 2.5% default |
+| **Stop Order ID** | OD4PPS-EG3VD-WMK6WA |
+| **Buy Order ID** | OS5MHH-R2OPO-F5YPGN (limit 0.62803, filled in full) |
+| **Thesis** | **Momentum-only, no confirmed catalyst** — Perplexity dated-catalyst query returned exactly `NO CATALYST <6H FOR JTO`; `rssnews.sh 6 JTO Jito` returned `RSS: NO COVERAGE`. Tagged **KILL-SWITCH PROBE 1/3** per TRADING-STRATEGY.md's Performance-Linked Controls probe-batch fix (momentum-only entries suspended since 2026-09-04 at 20.0% trailing win rate, past the 7-day probe-eligibility threshold with zero new momentum-only trades in the interim). |
+| **R:R** | 3% / 1.5% = **2.0:1** (meets probe floor exactly, via the corrected tighter-stop mechanism, not a stretched target) |
+| **Spread** | 0.059% ✓ (bid 0.62766 / ask 0.62803) |
+| **Size** | $21.82 (**30.2% of $72.3189 equity** — probe-batch cap, not the standard 60% momentum-only cap) |
+
+**Gate checklist:** Crash gate clear (BTC $84,457.40, +0.036% intraday vs today's open $84,426.80). Weekly downtrend gate INACTIVE (BTC 5-trading-day: Sep 21 close $86,593.80 → Sep 26 close $84,426.70 = −2.50%, under the 3% threshold) — standard entry rules applied. Kraken-native full sweep (669 USD pairs) via public Ticker: 24 raw candidates ≤2% off 24h high with >2% today-change; liquidity filter (24h notional >$20k) narrowed to 9; 15m-OHLC deep check on the top 5 by liquidity (ARB, RAY, JTO, DEEP, CAP) for confirmed-candle/two-candle-acceleration: ARB and DEEP both already rolling over (declining closes), RAY spiked-then-stalled (fails two-candle acceleration), **JTO and CAP both passed** — JTO chosen over CAP for the probe on liquidity/maturity grounds (JTO 24h notional ~$1.06M vs CAP's ~$128k; established Jito Labs restaking token vs a much thinner, less liquid pair) to keep this first, extra-cautious probe on the higher-quality candidate; CAP was not traded this pass. Momentum-peak-check: 24h high $0.62962 confirmed on the closed 02:30–02:45 UTC 15m candle, ~16min before entry (well within the 30min ceiling). Two-closed-candle acceleration: 02:00→02:15 close up ($0.61964→$0.62226), 02:15→02:30 close up ($0.62226→$0.62857) — both legs building. Live intracandle fade at entry: 0.038% off the confirmed high (well inside the 1.5% cap). Cross-exchange check: Perplexity quoted JTO at $0.579 (CoinGecko) / $0.5845 (CMC) vs Kraken's $0.629 — an ~8.6% gap, below the ~15-20% hard-reject threshold, and consistent with Perplexity's well-documented pattern of stale/cached price data on less-mainstream tickers (see TRADING-STRATEGY.md's Discovery Method history) rather than a genuine thin-orderbook distortion — JTO is a liquid, established Kraken pair with a 0.059% spread, not the kind of thin/newly-listed book this gate exists to catch. Logged for the record, not treated as a reject. Same-thesis cooling: no JTO stop-outs anywhere in the last 7 days (last JTO activity in the log is from May) — cap does not apply. Fear & Greed 57 "Neutral" (Alternative.me) — not Extreme Fear, R:R floor unaffected either way (probe floor is already 2.0:1 regardless of F&G). Daily consecutive-loss pause: no trades yet today, N/A. Entry via limit buy at $0.62803 (0.059% above bid, within the 0.15% cap) — filled in full as a resting limit order (maker fee), not a market cross.
+
+### Decision: **TRADE — JTO/USD, KILL-SWITCH PROBE 1/3.** Order placed and fill confirmed via `kraken.sh account`/`orders` in this same pass (34.545 JTO acquired, ZUSD $72.3189 → $50.4953). Protective 1.5% trailing stop placed and confirmed open in the same pass (stop order OD4PPS-EG3VD-WMK6WA, initial trigger $0.61714 off HWM $0.62653). **Probe status: 1/3 taken** — update TRADING-STRATEGY.md's Performance-Linked Controls status line to reflect this on the next pass that touches that file, and recompute the trailing win rate only once all 3 probe trades have resolved (per the probe-batch mechanism — the stale pre-probe 20.0%/10-trade window is fully displaced by the probe outcome, not blended).
+
+### Step 8 — Notification
+
+**Push sent** — first trade in 2 days and the first test of the kill-switch probe-batch mechanism (designed 2026-09-27 earlier today) in practice; also flagging the JTO cross-exchange price gap (Perplexity ~8.6% below Kraken) as a data point, not a block, for future gate-tuning review. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
