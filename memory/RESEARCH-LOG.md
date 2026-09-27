@@ -49078,3 +49078,50 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 18:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 17:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,734.90, today's open $84,426.80, intraday +0.36%, 24h range
+$83,816.20–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 29 survivors, led by ONDO
+($3.92M notional, +2.61%), ENA ($3.44M, +5.16%), FARTCOIN ($868k, +2.71%), ZRO ($718k, +5.13%),
+NIGHT ($692k, +5.88%), JUP ($686k, +2.20%), TIA ($655k, +2.28%).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on the top 7 by
+liquidity — ONDO, ENA, FARTCOIN, ZRO, NIGHT, JUP, TIA.
+- **ONDO** — Perplexity: `NO CATALYST <6H FOR ONDO`.
+- **ENA** — Perplexity: `NO CATALYST <6H FOR ENA` (same recurring result as the 17:00 UTC pass).
+- **FARTCOIN** — Perplexity: `NO CATALYST <6H FOR FARTCOIN`.
+- **ZRO** — Perplexity: `NO CATALYST <6H FOR ZRO`.
+- **NIGHT** — Perplexity: `NO CATALYST <6H FOR NIGHT` (same recurring result as the 14:00/15:00
+  UTC passes).
+- **JUP** — Perplexity: `NO CATALYST <6H FOR JUP`.
+- **TIA** — Perplexity: `NO CATALYST <6H FOR TIA`.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
