@@ -47745,6 +47745,91 @@ actively present and asked for this pass live. Per CLAUDE.md, `scripts/clickup.s
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
 
+## 2026-09-27 — Scan — 01:00 UTC (second firing this hour, fired ~01:45 UTC)
+
+**Operational note — duplicate/overlapping trigger firing:** This is a second hourly-routine
+firing labeled for the same 01:00 UTC hour as the pass already logged and pushed to `main` above
+(commit `9a297c3`, committed 01:09:38 UTC). This session's own clock read `date -u +%H` = `01` at
+01:44:53 UTC, 35 minutes after the prior pass for this hour completed — this is the same
+overlapping/duplicate-trigger pattern documented in CLAUDE.md's "Known bug" section from
+2026-09-02 (three sessions firing for overlapping hours within minutes of each other), not
+schedule drift (drift would mean firing late for an hour not yet covered; this hour was already
+covered). Per that section's guidance, flagging this to the user via push rather than completing
+silently. `git fetch origin main` was checked before this pass's mem-sync push (per the same
+section) — no unexpected commits beyond the already-known `9a297c3`, so no data-loss risk this
+time. Proceeding with a full position-maintenance + research pass regardless, since account state
+can change within 35 minutes even though nothing here turned out to have moved.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 01:00 UTC pass 35 minutes ago, no drift. `positions: {}`, `orders: {"open": {}}`
+— book fully flat. Alpaca: `positions: []` confirmed flat, zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** No open positions, no open orders (Kraken or Alpaca) — nothing
+to reconcile, no stop-tightening or thesis-break checks applicable. **Crash gate:** BTC/USD last
+$84,400.70 vs session open $84,426.80 → −0.03% intraday, 24h range $83,816.20–$84,451.30 — clear.
+No Step 3 action needed.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 622 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **13 candidates** — LCX +17.11%, QNT +16.63%, HFT +10.84%, US +10.57%,
+FOLD +9.23%, SC +8.77%, COW +8.76%, DRV +5.79%, TREAD +4.49%, PYTH +4.15%, XCN +3.86%, T +3.68%,
+JTO +3.06%.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **5 survivors**: LCX (0.00%),
+US (1.48%), DRV (0.80%), PYTH (0.80%), JTO (0.03%). QNT, HFT, FOLD, SC, COW, TREAD, XCN, T all
+faded >1.5% off their 24h highs.
+
+**15m-OHLC deep check on the 5 survivors** (current time ~01:45 UTC, last closed candle 01:30):
+- **LCX:** **fails two-candle acceleration** — 01:00→01:15 close was a down leg (0.03907→0.03843)
+  before 01:15→01:30 recovered (→0.04041). Not two consecutive up legs. **Rejected.**
+- **US:** **fails two-candle acceleration** — same pattern, 01:00→01:15 down (0.02930→0.02875)
+  before 01:15→01:30 up (→0.03002). **Rejected.**
+- **DRV:** two-candle acceleration passes (01:00→01:15→01:30 closes: 0.43201→0.43334→0.43636, both
+  legs up). **Fails confirmed-closed-candle freshness** — the 24h high (0.4399) was set on the
+  01:15 candle's wick, not the most recent closed (01:30) candle, whose own high (0.43866) came in
+  *below* the prior candle's — price faded from that spike rather than confirming a new high on
+  the latest closed candle. Same "stale high approached from below" pattern the confirmed-candle
+  rule exists to reject (as FOLD/W were rejected on 25 minutes ago). **Rejected.**
+- **JTO:** two-candle acceleration passes (0.60648→0.60752→0.61881, both legs up). **Fails
+  confirmed-closed-candle requirement** — ticker 24h high (0.61901) doesn't match the last closed
+  (01:30) candle's high (0.61881); the discrepancy sits on the currently-forming 01:45 candle.
+  **Rejected.**
+- **PYTH:** two-candle acceleration passes (0.08261→0.08332→0.08435, both legs up). 24h high
+  (0.08503) **exactly matches** the last closed (01:30) candle's high — confirmed fresh, ~15min
+  old, within the 30min ceiling. Spread 0.261% (ask 0.08458/bid 0.08436) — well within 1% cap.
+  Live intracandle fade at check time: 0.694% off the confirmed high — inside the 1.5% cap.
+  **Clears every technical/freshness/spread gate — the first candidate to do so since the
+  probe-batch fix went live.**
+
+**PYTH classified momentum-only** (no per-candidate Perplexity catalyst check was needed to reach
+this conclusion — see R:R gate below, which rejects it before catalyst confirmation would matter).
+Per the probe-batch rule (win-rate kill switch ACTIVE/SUSPENDED, PROBE DUE, 0/3 taken — unchanged
+since this morning), the next qualifying momentum-only candidate is Probe 1/3, requiring **R:R
+≥2.0:1 at T1**. Using the strategy's standard T1 (+3%) against the standard 2.5% stop, R:R is
+structurally **1.2:1** — the same fixed ratio every trade produces under the default targets, and
+well short of 2.0:1. Reaching 2.0:1 would require setting T1 out at +5% (i.e., using the standard
+T2 level as the actual first target) with no technical basis shown here for that much further
+continuation — PYTH's session gain is 4.15%, its most recent candle is fresh but not explosively
+strong (a steady, not accelerating-parabolic, climb), and pushing T1 out to manufacture a 2.0:1
+ratio would be exactly the kind of gate-loosening-to-manufacture-a-trade the strategy doc
+explicitly prohibits. **Rejected on the probe R:R floor**, not entered.
+
+### Decision: **HOLD — one candidate (PYTH) cleared every technical/freshness/spread gate but
+failed the probe R:R floor (needs ≥2.0:1 at T1; standard T1/stop structure only supports 1.2:1
+without stretching the target past what the setup's momentum justifies).** $72.3189 cash fully
+available for the next pass. Probe status unchanged: still 0/3 taken, still due.
+
+### Step 8 — Notification
+
+**Push sent** — flagging the duplicate/overlapping hourly-trigger firing (two firings labeled
+01:00 UTC, 35 minutes apart) as the same scheduler pattern CLAUDE.md documented on 2026-09-02; no
+data loss this time (verified via `git fetch` before mem-sync) and no trading impact (book stayed
+flat both passes), but it's worth the user's attention since CLAUDE.md flags this as an
+infrastructure issue outside any single session's reach to fix. Trading-wise this was a routine
+HOLD, not independently push-worthy. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
+
 ## 2026-09-27 — Ad-hoc session: catalyst-detection tooling review (outside normal hourly cadence)
 
 Following the 2026-09-27 gate-attribution review (see prior entry) identifying the win-rate kill
