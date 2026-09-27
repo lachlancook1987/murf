@@ -48241,3 +48241,90 @@ this is not fixable by better mem-sync discipline the way the Sep 24 outage was)
 user's attention, not something a single pass can prevent going forward. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 05:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $72.2132, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, consistent with the 04:00 UTC pass's closing state (both probe trades JTO/COMP already
+resolved, LIT order cancelled unfilled). Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed
+`canceled` — zero exposure. Step 3 maintenance: nothing to do (no orphan stops/T1 limits, no
+runners to tighten, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,530.20, today's open $84,426.80, intraday +0.12%.
+
+**Weekly downtrend gate:** last-known INACTIVE (−2.50%/5d from the 02:00 UTC pass); not binding
+this pass, not recomputed since no candidate reached the point where it would matter.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched), 628 online USD
+pairs. Filter (chg vs open >2%, live fade ≤1.5% off 24h high, notional >$20k) → 14 survivors:
+US (+13.44%), W (+10.74%), PYTH (+5.15%), STX (+4.38%), RAY (+3.93%), RE (+3.43%), NEAR (+3.42%,
+notional $23.7M — dominant liquidity), NES (+3.41%), WIN (+3.21%), AUSD (+2.86%), EVAA (+2.25%),
+FHE (+2.20%), SPACE (+2.18%), LUNA (+2.08%).
+
+**15m-OHLC two-candle acceleration (last two closed candles vs. prior close), top-6 by liquidity
+(NEAR, PYTH, STX, RAY, US, W):** NEAR (up, up — pass), STX (up, up — pass), RAY (up, up — pass),
+W (up, up — pass). Fail: PYTH (05:15 close up, 05:30 close down — spike-then-stall, classic
+Aug-streak failure pattern), US (24h high set 31.1 min ago — fails freshness ceiling, no fresh
+breakout on the current forming candle to substitute).
+
+**NEAR — set aside despite passing on closed candles:** partway through this pass's checks, NEAR
+went sharply parabolic *within the still-forming 05:45 candle* (05:30 close $5.2116 → live price
+$5.359, +2.8% in under 2 minutes, high $5.3765 vs. the last confirmed-closed-candle high of
+$5.2406). Per TRADING-STRATEGY.md's confirmed-candle requirement ("do not enter on a still-forming
+candle's fresh high alone"), the new high is not yet confirmed by a closed candle, and chasing a
+live blow-off spike this fast is exactly the "buy right as it stalls" pattern the confirmed-candle
+and two-candle-acceleration rules exist to prevent — even though the letter of the live-intracandle-
+fade check (measuring retracement, not acceleration) doesn't itself flag it. Set aside rather than
+chased; re-evaluate next pass once the candle closes and the move either holds or reverses.
+
+**Catalyst check (all four remaining candidates — NEAR, STX, RAY, W):** Perplexity dated-catalyst
+query returned `NO CATALYST <6H FOR <ASSET>` cleanly for all four. `rssnews.sh 6` returned `RSS:
+STALE ONLY` (NEAR, 41.9h-old unrelated bond-market item) or `RSS: NO COVERAGE` (STX, RAY, W) —
+no confirmation for any. All four classified **momentum-only, no catalyst**, subject to the
+win-rate kill switch / probe-batch rules.
+
+**Probe-batch status entering this pass: 2/3 taken** (JTO loss, COMP win, both reconstructed by
+the 04:00 UTC pass). This pass's job was to find the third and final probe-eligible candidate.
+
+**Chose STX over RAY/W** for the probe slot: STX and RAY have near-identical 24h notional
+(~$686k/$685k) but RAY's currently-forming 05:45 candle showed **zero volume** (stale/thin in the
+live window, elevated slippage/gap risk), while STX's forming candle was consolidating calmly just
+under its high (0.3566–0.3574 range) — a cleaner, non-parabolic continuation. W was next most liquid
+($345k) but behind both on notional. NEAR (by far the most liquid at $23.7M) was excluded per the
+confirmed-candle concern above, not on liquidity grounds.
+
+**STX/USD gate checklist:** Spread 0.112% (bid 0.35680/ask 0.35720 at check time) ✓. Momentum-peak
+freshness: 24h high $0.36 set 18.1 min ago (closed 05:30 candle) — within the 30min ceiling ✓.
+Two-candle acceleration: 05:00→05:15 close up ($0.3534→$0.3570), 05:15→05:30 close up
+($0.3570→$0.3600) — both legs building ✓. Live intracandle fade: 0.75% off the confirmed high,
+within the 1.5% cap ✓. Cross-exchange: Perplexity/CoinGecko quoted STX at $0.3321 vs. Kraken's
+$0.3573 — a ~7.6% gap, below the 15–20% hard-reject threshold and consistent with Perplexity's
+well-documented stale-data pattern on a liquid, established top-100 asset (same reasoning as the
+JTO precedent, 2026-09-27 02:00 UTC pass) rather than a genuine thin-book distortion — logged, not
+treated as a reject. Same-thesis cooling: no STX stop-outs anywhere in the last 7 days (no STX
+activity at all under the current profile — prior entries were all SKIPs/HOLDs from May–Jun) — cap
+does not apply. Fear & Greed 57 "Neutral" (not queried as binding — probe R:R floor is fixed at
+2.0:1 regardless of F&G). Daily consecutive-loss pause: 1 loss so far today (JTO) — 1 of 3, does
+not trigger. R:R: 3%/1.5% probe stop = **2.0:1**, meets the probe floor exactly via the tighter-stop
+mechanism (not a stretched target), per TRADING-STRATEGY.md's 2026-09-27 correction.
+
+**Execution attempt:** Limit buy 60.64 STX @ $0.3572 (order `OTLNIZ-TXKCW-X2VBOL`), 0.056% above
+the $0.3568 bid at placement (well within the 0.15% cap) — sized at $21.66, 30.0% of $72.2132
+equity (probe-batch cap). Price drifted up before the order could cross (ask moved to $0.3578,
+then bid to $0.3575, both above the resting limit) — order sat at `vol_exec: 0.00000000` through
+two follow-up checks (~65s total). Per the entry-order-type rule (do not chase an unfilled limit
+with a market order in the same pass), **cancelled the order**. Confirmed via `kraken.sh
+orders`/`account`: book back to `{open: {}}`, ZUSD unchanged at $72.2132.
+
+### Decision: **HOLD (execution not completed) — STX/USD.** STX cleared every probe-batch gate
+but the limit order never filled within this pass and was cancelled per rule rather than chased.
+**Probe-batch status remains 2/3 taken** (JTO loss, COMP win) — not advanced to 3/3. STX, NEAR
+(pending candle confirmation), RAY, and W all remain live candidates for a future pass if still
+fresh then.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).

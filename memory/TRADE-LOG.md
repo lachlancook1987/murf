@@ -11431,3 +11431,22 @@ taken** (JTO loss, COMP win, both reconstructed above) — not advanced to 3/3.
 
 See the Operational Failure entry above — the reportable event this pass is the reconstructed
 missing 03:00 UTC trade record, not this pass's own HOLD outcome.
+
+## 2026-09-27 — Scan — 05:00 UTC — STX/USD order placed, unfilled, cancelled
+
+Limit buy 60.64 STX @ $0.3572 (order `OTLNIZ-TXKCW-X2VBOL`) placed as the candidate for
+KILL-SWITCH PROBE 3/3 (STX cleared freshness/acceleration/spread/catalyst/R:R gates — see
+RESEARCH-LOG.md for full detail). Order rested unfilled as price moved away (bid/ask rose to
+$0.3575/$0.3578 before trading back down to the $0.3572 limit). Cancelled per the "do not chase
+an unfilled limit with a market order" rule. No fill, no cost, no fee — ZUSD unchanged at
+$72.2132. Book flat, no Step 3 maintenance needed this pass (no open positions/orders at pass
+start, no orphans, no runners, no thesis breaks). NEAR (highest-liquidity candidate, $23.7M
+notional) went parabolic mid-pass on a still-forming candle and was set aside per the
+confirmed-candle rule rather than chased — see RESEARCH-LOG.md.
+
+### Decision: **HOLD (execution not completed) — STX/USD.** Probe-batch status remains **2/3
+taken** (JTO loss, COMP win) — not advanced to 3/3.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, no operational issues.
