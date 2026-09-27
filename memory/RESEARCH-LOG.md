@@ -48506,3 +48506,79 @@ gate clear, no unprotected positions. The near-misses here are a normal, expecte
 for. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch
 Dashboard section).
+
+## 2026-09-27 — Scan — 08:00 UTC (fired 08:46 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $72.2132, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 07:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (no orphan stops/T1 limits, no runners, no thesis breaks — book was flat at pass
+start).
+
+**Crash gate:** clear — BTC $84,733.10, today's open $84,426.80, intraday +0.36%.
+
+**Weekly downtrend gate:** BTC 5-trading-day (Sep 21 close $86,593.80 → today $84,733.10) =
+−2.15% — INACTIVE, under the 3% threshold. Standard entry rules apply (not binding this pass
+regardless, since no candidate reached that stage).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched — 624 online USD
+pairs). Filter (today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 27 survivors,
+led by SOON (+34.75%), US (+18.34%), W (+17.10%), DEEP (+8.18%), WAXL (+7.46%), PIEVERSE (+6.59%),
+JTO (+5.85%), SEI (+5.39%), WLD (+4.79%), JASMY (+4.70%), RENDER (+4.67%).
+
+**15m-OHLC two-candle acceleration + confirmed-high-freshness check, top tier by liquidity (SOL
+$32.3M, WLD $6.1M, RENDER $2.26M, VVV $1.78M, BCH $1.89M, HBAR $1.59M, JTO $1.10M, SEI $1.19M,
+VIRTUAL $834k, SUSHI $279k, W $469k, US $314k, DEEP $215k):**
+- **SOL** — 24h high fresh but last two closed 15m candles: $124.22→$124.38 (up)→$124.11 (down) —
+  fails two-candle acceleration (spike-then-stall).
+- **WLD, VIRTUAL** — 24h highs both stale (set ~16.8h and ~16.8h ago respectively, price declining
+  from both since) — fail freshness outright, despite WLD's closed-candle sequence otherwise
+  passing two-candle acceleration ($0.5385→$0.5409→$0.5455, all up).
+- **JTO** — 24h high stale (set 03:30 UTC, ~5.3h old) — fails freshness; today's earlier probe-1/3
+  entry/stop-out on this same asset (03:57 UTC) is the actual peak, price hasn't retested it.
+- **SEI, HBAR, DEEP, W** — all have a fresh 24h high (16 min old, within the 30min ceiling) but
+  each fails two-candle acceleration on a mixed/down leg: SEI $0.07508→$0.07577(up)→$0.07566(down);
+  HBAR $0.09553→$0.09538(down)→$0.09540(up, but first leg breaks the chain); DEEP
+  $0.02424→$0.02448(up)→$0.02434(down); W $0.01528→$0.01538(up)→$0.01532(down). Same
+  spike-then-stall pattern across the board.
+- **RENDER** — 24h high age 31 min, one minute over the 30min freshness ceiling (borderline fail);
+  candle sequence also flat on the second leg ($2.084→$2.084) — fails both freshness and
+  acceleration.
+- **BCH** — 24h high 46 min old — fails freshness (stale, already declining: $347.56→$343.65→
+  $342.96).
+- **US** — 24h high 31 min old, one minute over ceiling (borderline fail on freshness alone); candle
+  sequence itself ($0.03208→$0.03214→$0.03232) does pass two-candle acceleration cleanly — noted
+  as the closest near-miss this pass, rejected solely on the 1-minute freshness overage, consistent
+  with how RENDER's identical borderline case was treated above.
+- **SUSHI** — fails two-candle acceleration: $0.2742→$0.2766(up)→$0.2748(down).
+
+**Second liquidity tier checked (SOON, JASMY, CVX, KSM, MOVR, NOS, RED, APE, ZK, JITOSOL):**
+- **CVX, APE** — fresh highs (17 min) but fail two-candle acceleration on a down-then-up or
+  up-then-down mixed sequence (CVX $2.121→$2.111→$2.116; APE $0.1575→$0.1589→$0.1587).
+- **MOVR** — fresh high (17 min) but second leg reverses hard ($1.0578→$1.0489).
+- **JASMY, KSM, RED, JITOSOL** — all 24h highs 32 min old, over the 30min ceiling — fail
+  freshness regardless of candle shape.
+- **SOON, ZK** — highs both well stale (3.8h and 16.3h old respectively).
+- **NOS** — high 47 min old — stale.
+
+No candidate reached the catalyst-confirmation stage this pass — all 21 checked survivors were
+rejected upstream on freshness or two-candle-acceleration grounds. Perplexity/RSS macro-context
+queries not run — nothing downstream depended on them.
+
+**Probe-batch status:** unchanged, **2/3 taken** (JTO loss, COMP win, both from the reconstructed
+03:00/03:48 UTC entries). No probe-eligible candidate reached the R:R/sizing stage this pass —
+every candidate failed upstream on technical gates before catalyst-confirmation classification
+would even apply.
+
+### Decision: **HOLD.** Full 27-survivor sweep (21 checked across two liquidity tiers) failed on
+stale 24h highs or spike-then-stall two-candle patterns in every case — US and RENDER were the
+closest near-misses, both rejected solely on a 1-minute freshness overage (31 min vs the 30min
+ceiling), not on candle quality. Probe-batch remains 2/3 taken. $72.2132 cash fully available,
+book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02,
+per the Position Watch Dashboard section).
