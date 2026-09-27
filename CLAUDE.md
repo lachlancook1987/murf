@@ -259,6 +259,25 @@ hourly cadence, that ceiling is now satisfied by construction on most passes —
 improvement over the old 4+ hour gaps, though still not sub-30-minute coverage. Tightening
 further (sub-hourly) was considered and not adopted, per the Watch Pass note above.
 
+### Fortnightly Deep Review — a deliberate exception to "retired as separate triggers" (added 2026-09-27)
+
+The "do not recreate these as distinct scheduled tasks" rule above governs the six *retired*
+per-session-of-day triggers folded into the hourly routine on 2026-09-02 — it does not forbid
+every possible separate trigger. **A second, genuinely separate scheduled task — "Fortnightly
+Deep Strategy Review" — was deliberately added on 2026-09-27, at the user's request, and is not a
+regression to the pre-consolidation pattern.** It is categorically different from the hourly
+routine's own lightweight Friday-07:00-UTC weekly-review mode: it mines the *entire* historical
+trade record (not just the past week), fans out parallel agents for data volume the way the
+2026-09-27 session did (gate-attribution tallies, full R:R-history extraction), and — critically —
+defaults to *proposing* risk-relevant changes for the user's sign-off rather than auto-applying
+them, unlike the hourly routine's Friday mode which already has standing permission to update
+TRADING-STRATEGY.md directly. See `memory/FORTNIGHTLY-DEEP-REVIEW-PROMPT.md` for the full prompt
+text, cadence (every second Friday, self-gated via ISO week parity since cron has no native
+fortnightly primitive), and the autonomous-vs-confirm-first test it uses. That file is the source
+of truth for this trigger's setup — it must be configured as its own platform-level scheduled task
+(the `CronCreate` tool available inside a session is session-scoped and auto-expires after 7 days,
+so it cannot host a task meant to run indefinitely).
+
 ## Trading Framework — Kraken Research & Decision Rules
 
 The Kraken profile is **aggressive day trading**. Apply only these rules in pre-session

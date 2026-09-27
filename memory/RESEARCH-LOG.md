@@ -48070,3 +48070,33 @@ queries, the free RSS cross-check) are aimed at. This is supported directly by t
 catalyst-confirmed trades have run at ~36% historically vs. momentum-only's ~23% — a real,
 economically meaningful gap that improving catalyst detection should widen further, and a far more
 promising path to profitability than tuning a ratio the data says hasn't mattered historically.
+
+## 2026-09-27 — Ad-hoc session: fortnightly deep-review trigger designed (outside normal hourly cadence)
+
+At the user's request, following today's deep-review session (gate-attribution review, R:R
+history review, several fixes), designed a second, separate scheduled task — "Fortnightly Deep
+Strategy Review" — to repeat this kind of analysis periodically rather than as a one-off.
+
+**Key constraint discovered:** the `CronCreate` tool available inside a session is session-scoped
+(jobs die when the session ends) and any recurring job auto-expires after 7 days regardless — it
+cannot host a task meant to run indefinitely every two weeks. The actual hourly routine that runs
+this bot is a platform-level scheduled task configured outside any session (via Claude Code on the
+web's scheduling UI), and a new durable trigger has to be added the same way — there is no tool
+available from inside a session to create one directly.
+
+**What was built instead:** `memory/FORTNIGHTLY-DEEP-REVIEW-PROMPT.md`, a durable, repo-committed
+record of the exact prompt text and cadence (`0 8 * * 5` UTC weekly, self-gated to fire only on
+even ISO week numbers for a true fortnightly cadence, since cron has no native "every 2 weeks"
+primitive) for the user to configure as a new platform-level scheduled task. Cross-referenced from
+CLAUDE.md's Routine Cadence section as a deliberate, documented exception to the "do not recreate
+retired triggers" rule — this is a new, categorically different trigger (full-history mining vs.
+the existing lightweight Friday weekly-review mode), not a regression to the pre-2026-09-02
+six-triggers pattern.
+
+**Autonomy design, per user direction:** small calibration changes to already-established
+mechanisms may be applied autonomously and just logged (matching how the existing Friday review
+already operates); anything that changes R:R floors, sizing/leverage, adds a new paid
+integration, loosens a loss-response gate, or redesigns a core mechanism must be written up as a
+recommendation with supporting data and pushed as a notification for the user's sign-off, not
+auto-applied — mirroring exactly how today's session actually operated (every consequential change
+was proposed and discussed before being implemented).
