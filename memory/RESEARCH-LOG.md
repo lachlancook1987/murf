@@ -47598,3 +47598,66 @@ confirmation requirement are designed to keep the book out of when there's no ge
 catalyst behind it — not something needing the user's attention. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 00:00 UTC
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 2026-09-26 23:00 UTC EOD pass, no drift, no manual/out-of-band activity.
+`positions: {}`, `orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat;
+stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take / progressive stop-tightening / thesis-break:** N/A — no open position.
+- **Crash gate:** BTC/USD last $84,335.70 vs session open $84,426.80 → −0.108% intraday, 24h range
+  $83,816.20–$84,451.30 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 22 close $86,196.70 (5 trading days ago) → now (live) $84,335.70 = **−2.159%/5-trading-day**
+  — under the >3% threshold. Standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: only **11 candidates** this pass (quiet tape vs the 53-56 seen in the last two
+passes) — COW +12.44%, SPELL +11.16%, SC +7.09%, LCX +6.58%, FOLD +6.36%, ESP +5.55%, RARE +4.93%,
+DRV +4.76%, PYTH +3.56%, TREAD +3.48%, QNT +3.45% (QNT's Clearing House run continuing to fade —
+now 156.82 vs the 162.46 high seen last pass, well off its earlier +54% peak).
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **2 survivors**: ESP (1.22%),
+PYTH (0.85%). Everything else failed: SPELL (34.15%), RARE (10.50%), SC (5.82%), COW (5.47%),
+TREAD (4.61%), QNT (3.47%), LCX (2.42%), FOLD (2.36%), DRV (1.81%).
+
+**15m-OHLC deep check on the 2 survivors** (current time ~00:46 UTC, last closed candle 00:30):
+- **ESP:** two-candle acceleration **passes** — last two closed candles (00:15 close 0.11075,
+  00:30 close 0.11150) each close higher than the prior candle's close (00:00 close 0.10642).
+  **Fails confirmed-closed-candle requirement**: the ticker's 24h high (0.11349) does not match
+  any closed candle — it's printing on the currently-forming 00:45 candle (H=0.11349 as of this
+  check), not a fully closed one. Per the confirmed-candle rule, a still-forming candle's fresh
+  high alone does not qualify regardless of how clean the acceleration looks. **Rejected.**
+- **PYTH:** **fails two-candle acceleration** outright — the last closed candle (00:30, close
+  0.08371) closed *lower* than the prior closed candle (00:15, close 0.08431), a down leg. Does
+  not reach the confirmed-candle or freshness checks. **Rejected.**
+
+No candidate reached the catalyst-confirmation or win-rate-kill-switch evaluation stage this pass
+— both survivors were rejected upstream on acceleration/confirmed-candle grounds, the same
+failure pattern as the W/TON rejections at the 2026-09-26 23:00 UTC pass. Fear & Greed not
+checked this pass (moot, no candidate reached that stage). Same-thesis cooling: N/A, no entries
+this pass. Daily consecutive-loss pause: N/A, no trades today. Win-rate kill switch (ACTIVE,
+20.0%, momentum-only SUSPENDED per the 2026-09-04 review) unchanged, not reached as the binding
+gate.
+
+### Decision: **HOLD — no candidate cleared every gate.** 11 raw candidates (a notably quiet
+sweep vs. recent passes) narrowed to 2 fade-cap survivors (ESP, PYTH) — ESP rejected on the
+confirmed-closed-candle requirement (fresh high sitting on a still-forming candle), PYTH rejected
+on two-candle acceleration (a down leg in its last two closed candles). $72.3189 cash fully
+available for the next pass to redeploy against a qualifying candidate.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged from the prior pass, no drift, no
+operational issues, no unprotected position. A quiet 11-candidate sweep with both fade-cap
+survivors failing structural technical gates (not the win-rate kill switch this time) is a normal
+outcome, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
