@@ -48720,3 +48720,53 @@ unprotected exposure.
 entries stay suspended for another 7-day cycle starting today. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-27 — Scan — 11:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 10:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,885.60, today's open $84,426.80, intraday +0.54%.
+
+**Probe-batch status (unchanged from 10:00 UTC):** momentum-only entries remain SUSPENDED — probe
+batch resolved 1/3 (33.3%) below the 35% reactivation floor at the prior pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 28 survivors, led by SOL
+($34.1M notional, +2.00%), PUMP ($2.42M, +2.21%), USELESS ($2.27M, +5.48%), VVV ($1.90M, +5.72%),
+FARTCOIN ($956k, +2.35%), NIGHT ($902k, +2.88%), XDC ($692k, +5.04%), PLUME ($409k, +3.93%),
+PENDLE ($393k, +2.81%), US ($362k, +20.96%), LUNA ($277k, +2.13%). ZIG ($41k, +8.30%) present but
+skipped pre-emptively per its AU jurisdiction-restricted-asset flag in TRADING-STRATEGY.md.
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query and `rssnews.sh` on
+the top 5 candidates by liquidity — SOL, PUMP, USELESS, VVV, FARTCOIN.
+- **SOL** — Perplexity: `NO CATALYST <6H FOR SOL`. rssnews: matched a "RSS CATALYST FOUND" hit
+  (Bitcoinist, 4.3h old) but the article ("$15.6B Bitcoin Options Expiry Clears As BTC Holds Near
+  $84K") is broad BTC-market commentary with no SOL-specific content — the same keyword
+  false-positive pattern as the 10:00 UTC pass, treated as NO CATALYST.
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP`. rssnews: `RSS: STALE ONLY` (freshest match
+  15.4h old, and even that match — an SEC/token-buyback piece — is not PUMP-specific). Treated as
+  NO CATALYST on both staleness and relevance grounds.
+- **USELESS** — Perplexity: `NO CATALYST <6H FOR USELESS`. rssnews: `RSS: NO COVERAGE`.
+- **VVV** — Perplexity: `NO CATALYST <6H FOR VVV`. rssnews: `RSS: NO COVERAGE`.
+- **FARTCOIN** — Perplexity: `NO CATALYST <6H FOR FARTCOIN`. rssnews: `RSS: NO COVERAGE`.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (probe batch resolved below the 35% reactivation floor at the prior pass, timer running
+to 2026-10-04). $71.8128 cash fully available, book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
