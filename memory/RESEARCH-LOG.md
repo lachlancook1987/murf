@@ -47661,3 +47661,86 @@ survivors failing structural technical gates (not the win-rate kill switch this 
 outcome, not an anomaly needing the user's attention. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 01:00 UTC
+
+**Continuity note:** `memory/TRADING-STRATEGY.md` was updated earlier today (2026-09-27, ~00:xx UTC)
+outside the normal hourly-pass cadence, at the user's explicit request following a review of the
+consolidated hourly routine's first ~3.5 weeks. Two structural fixes were made and pushed to
+`main` before this pass began: (1) a **probe-batch fix** for the rolling win-rate kill switch,
+which had been a closed loop — suspended since 2026-09-04 at 20.0% with no way to ever recompute
+because it can only update from new momentum-only trades, which it also blocks. Fix: after **7
+calendar days** suspended with zero new momentum-only trades (already true — 23 days elapsed),
+open a probe batch of up to 3 momentum-only entries at 30% equity / R:R ≥2.0:1, then recompute the
+window from just those 3. Status line updated to **PROBE DUE, 0/3 taken**. (2) The broken T1
+partial-profit-take two-order design (confirmed non-functional on Kraken spot, 2026-09-25) is
+retired; a new rung was added to the Progressive Stop-Tightening ladder — tighten to 1.5% at +3%
+(T1) unrealized gain — as its replacement. This pass is the first to run under both changes.
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other balances zero/dust —
+unchanged from the 00:00 UTC pass, no drift. `positions: {}`, `orders: {"open": {}}` — book fully
+flat. Alpaca: `positions: []` confirmed flat; stop `a2b44cf9` reconfirmed `canceled` (since
+2026-05-22), zero exposure, no action needed.
+
+**Step 3 — Position maintenance:**
+- **Orphan check:** No open positions, no open orders (Kraken or Alpaca) — nothing to reconcile.
+- **T1 partial-take (new stop-tightening rung) / progressive stop-tightening / thesis-break:** N/A
+  — no open position to apply the new +3%→1.5% rung to. First live position opened after this
+  update will be the actual test of the new mechanism.
+- **Crash gate:** BTC/USD last $84,289.00 vs session open $84,426.80 → −0.163% intraday, 24h range
+  $83,816.20–$84,451.30 — clear, nowhere near the −20%/24h threshold.
+- **Weekly downtrend gate — INACTIVE this pass:** BTC daily closes (Kraken OHLC, interval=1440):
+  Sep 22 close $86,196.70 (5 trading days ago) → now (live) $84,289.00 = **−2.213%/5-trading-day**
+  — under the >3% threshold. Standard entry rules apply.
+
+No Step 3 action needed this pass — nothing open to maintain.
+
+**Step 4 — Research:** Full Kraken-native sweep via direct public AssetPairs + batched Ticker
+calls, 623 online USD pairs (AU-restricted ZEC/DASH pre-excluded). Filtered for session gain ≥3%,
+notional24h >$50k: **9 candidates** — LCX +12.06%, COW +11.53%, FOLD +9.18%, SC +6.81%,
+QNT +6.78% (still grinding higher, now 161.87 vs 156.82 last pass), W +4.68%, US +4.60%,
+TREAD +4.36%, DRV +4.01%.
+
+Live-intracandle-fade cap (≤1.5% off 24h high) narrowed this to **3 survivors**: LCX (0.00%),
+FOLD (0.74%), W (1.09%). QNT fell just outside the cap again (1.89% fade).
+
+**15m-OHLC deep check on the 3 survivors** (current time ~01:08 UTC, last closed candle 00:45):
+- **LCX:** **fails two-candle acceleration** — last closed candle (00:45, close 0.03757) closed
+  *lower* than the prior closed candle (00:30, close 0.03841), a down leg immediately after the
+  ticker-level snapshot was taken. **Rejected.**
+- **FOLD:** two-candle acceleration **passes** (00:30 close 0.06778 > 00:15 close 0.06675; 00:45
+  close 0.07000 > 00:30 close 0.06778). **Fails confirmed-closed-candle requirement** — the
+  ticker's 24h high (0.07022) doesn't match the last closed (00:45) candle's high (0.07000); it
+  matches the currently-forming 01:00 candle instead. Fresh high sitting on a still-forming
+  candle, exactly the pattern the confirmed-candle rule exists to reject. **Rejected.**
+- **W:** two-candle acceleration **passes** (00:30 close 0.01318 > 00:15 close 0.01313; 00:45
+  close 0.01375 > 00:30 close 0.01318, a strong leg). **Fails confirmed-closed-candle
+  requirement** — same pattern as FOLD: ticker 24h high (0.0138) matches the forming 01:00 candle
+  (H=0.01380), not the closed 00:45 candle (H=0.01375). **Rejected.**
+
+No candidate reached the catalyst-confirmation or probe-eligibility stage this pass — all 3
+fade-cap survivors were rejected upstream on acceleration/confirmed-candle grounds before ever
+being classified momentum-only. **This is a clean first test of the probe-batch fix: the fix
+removes the kill switch as an automatic block once a candidate clears every other gate, but it
+does not and should not force a trade when nothing does.** Per the 7-day-no-candidate clause added
+this morning, this does not reset or otherwise affect the probe timer — it stays due, and the next
+pass that does find a qualifying momentum-only candidate will be Probe 1/3. Same-thesis cooling:
+N/A, no entries this pass. Daily consecutive-loss pause: N/A, no trades today.
+
+### Decision: **HOLD — no candidate cleared every gate (probe mechanism not yet exercised).**
+9 raw candidates narrowed to 3 fade-cap survivors, all 3 rejected on acceleration/confirmed-candle
+grounds before reaching the point where the new probe-batch rule would even apply. $72.3189 cash
+fully available for the next pass to redeploy against a qualifying candidate, momentum-only or
+catalyst-confirmed alike.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged, no drift, no operational issues, no
+unprotected position. The strategy-doc changes (probe-batch fix, T1 stop-tightening rung) are
+confirmed live and correctly read by this pass, but neither mechanism was exercised since no
+candidate reached the point where they'd apply — a genuine test still requires a candidate to
+actually clear the upstream technical gates, which the user should know did not happen this pass.
+That is being conveyed directly in this session's own reply rather than a push, since the user is
+actively present and asked for this pass live. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
