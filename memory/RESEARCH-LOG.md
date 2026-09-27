@@ -48666,3 +48666,57 @@ probe-batch mechanism.
 
 **Push sent** — see TRADE-LOG.md's Trade 156 entry for the notification rationale (probe batch
 completed, outcome pending).
+
+## 2026-09-27 — Scan — 10:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book
+fully flat. WLD's probe-3/3 trailing stop (`ONZC7B-O3GYF-PFB7SR`) had already closed at 10:05:58
+UTC per `closedorders` by the time this pass ran full reconciliation — sold 38.73 WLD @ avg
+$0.5579, net **P&L −$0.40037 (−1.834%), a LOSS.** Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. See TRADE-LOG.md for full resolution detail and the
+probe-batch outcome.
+
+**Probe-batch final result:** JTO (loss, −0.730%), COMP (win, +0.245%), WLD (loss, −1.834%) —
+1 win of 3 = 33.3%, below the 35% reactivation floor (per TRADING-STRATEGY.md, 1/3≈33.3% "falls
+just short"). **Momentum-only entries remain SUSPENDED. 7-day probe-eligibility timer restarted
+from 2026-09-27** (this trade's close date). Catalyst-confirmed entries are unaffected and remain
+open. TRADING-STRATEGY.md's Performance-Linked Controls status line updated this pass.
+
+**Crash gate:** clear — BTC $84,847.70, today's open $84,426.80, intraday +0.5%.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 669 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 29 survivors, led by SOL
+($35.3M notional, +2.17%), WLD ($7.6M, +9.09%), RENDER ($2.1M, +3.72%), VVV ($1.9M, +4.15%),
+GRASS ($1.5M, +3.12%), FARTCOIN ($970k, +2.61%), XDC ($658k, +4.60%), PENDLE ($415k, +2.77%),
+PLUME ($409k, +4.15%), US ($368k, +20.48%), QI ($222k, +17.24%), ORCA ($201k, +12.20%).
+
+**Catalyst gate, checked first this pass (since momentum-only is suspended, only a
+catalyst-confirmed candidate can even be considered):** ran the Perplexity dated-catalyst query
+and `rssnews.sh` on the top 5 non-WLD candidates by liquidity — WLD itself was not re-evaluated,
+having just been stopped out on this exact asset minutes earlier in this same pass.
+- **SOL** — Perplexity: `NO CATALYST <6H FOR SOL`. rssnews: matched a "RSS CATALYST FOUND" hit
+  (Bitcoinist, 3.3h old) but the article ("$15.6B Bitcoin Options Expiry Clears As BTC Holds Near
+  $84K") is broad BTC-market commentary with no SOL-specific content — a search-term
+  false-positive (likely matched on "SOL" as a substring or incidental mention), not a genuine
+  SOL catalyst. Treated as NO CATALYST — logging this explicitly as a data-quality note on the
+  rssnews cross-check, parallel to the known Perplexity stale-price pattern already documented
+  in TRADING-STRATEGY.md.
+- **RENDER** — Perplexity: `NO CATALYST <6H FOR RENDER`. rssnews: `RSS: NO COVERAGE`.
+- **VVV** — Perplexity: `NO CATALYST <6H FOR VVV`. rssnews: `RSS: NO COVERAGE`.
+- **GRASS** — Perplexity: `NO CATALYST <6H FOR GRASS`. rssnews: `RSS: NO COVERAGE`.
+- **XDC** — Perplexity: `NO CATALYST <6H FOR XDC`. rssnews: `RSS: NO COVERAGE`.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate; momentum-only suspended (probe batch
+just resolved below reactivation floor). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+**Push sent** — probe batch resolved this pass at 1/3 (33.3%), below the 35% floor: momentum-only
+entries stay suspended for another 7-day cycle starting today. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02).

@@ -11479,3 +11479,54 @@ No push sent — routine HOLD pass, no operational issues.
 ### Step 8 — Notification
 
 **Push sent** — third and final kill-switch probe trade executed, completing the probe batch (JTO loss, COMP win, WLD now open); once WLD resolves the trailing win-rate recompute will determine whether momentum-only entries reactivate at standard sizing or the suspension continues for another 7-day cycle. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Trade 156 resolution: WLD/USD stop fired — KILL-SWITCH PROBE 3/3 result: LOSS
+
+Trailing stop order `ONZC7B-O3GYF-PFB7SR` closed 10:05:58 UTC (`kraken.sh closedorders`): sold
+38.73 WLD, avg fill $0.5579, cost $21.60747, fee $0.17286, net proceeds $21.43461. Against total
+spent $21.83498 (cost $21.66169 + fee $0.17329), realized **P&L = −$0.40037 (−1.834%)**. Price
+ran up further after entry (24h high reached $0.5622+ intra-pass, and the stop's implied HWM
+back-calculates to ~$0.5664 — 0.5579/0.985) before reversing hard enough to trigger the 1.5%
+probe-rate trail. **KILL-SWITCH PROBE 3/3 result: LOSS.**
+
+**Probe batch fully resolved: JTO (loss, −0.730%), COMP (win, +0.245%), WLD (loss, −1.834%) — 1
+win of 3 = 33.3%,** just short of the 35% reactivation floor per TRADING-STRATEGY.md's
+probe-batch mechanism. **Momentum-only entries remain SUSPENDED; 7-day probe-eligibility timer
+restarted from this trade's close date (2026-09-27).** Catalyst-confirmed entries are unaffected
+and remain open throughout. Status line updated in TRADING-STRATEGY.md this pass.
+
+Book fully flat and reconciled after this resolution: Kraken `positions: {}`, `orders: {"open":
+{}}`, ZUSD $71.8128. No orphan stop/T1 orders (buy and stop both already closed on the exchange
+before this pass started — no cleanup action needed). Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure there.
+
+## 2026-09-27 — Scan — 10:00 UTC — HOLD, no catalyst-confirmed candidate
+
+Crash gate clear (BTC $84,847.70, today's open $84,426.80, intraday +0.5%). Book flat at pass
+start (see resolution entry above) — no Step 3 maintenance beyond the WLD reconciliation already
+logged. Momentum-only entries SUSPENDED (probe batch resolved 1/3 = 33.3% this pass, see above) —
+only catalyst-confirmed candidates are eligible this pass. Kraken-native sweep (669 USD pairs):
+29 survivors (today's chg >2%, live fade ≤1.5%, notional >$20k), led by SOL ($35.3M notional,
++2.17%), WLD ($7.6M, +9.09% — already stopped out of this same asset this pass, not
+re-evaluated), RENDER ($2.1M, +3.72%), VVV ($1.9M, +4.15%), GRASS ($1.5M, +3.12%), FARTCOIN
+($970k, +2.61%), XDC ($658k, +4.60%). Catalyst check (Perplexity dated-catalyst query + rssnews)
+run on the top 5 non-WLD by liquidity: SOL, RENDER, VVV, GRASS, XDC — **all five returned exactly
+`NO CATALYST <6H FOR <TICKER>`** from Perplexity. rssnews cross-check: RENDER/VVV/GRASS/XDC all
+`RSS: NO COVERAGE`; SOL matched a `RSS CATALYST FOUND` hit, but the matched article ("$15.6B
+Bitcoin Options Expiry Clears As BTC Holds Near $84K") is a broad BTC-market piece with no
+SOL-specific content — a keyword false-positive, not a real SOL catalyst, treated as NO CATALYST
+per the rule that a genuine asset-specific event is required, not incidental term matching. No
+candidate reached catalyst-confirmed status; technical gates (two-candle acceleration, freshness,
+R:R) were not run on any candidate since none passed the catalyst prerequisite.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (probe batch resolved below the 35% reactivation floor this pass). $71.8128 cash fully
+available, book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+**Push sent** — probe batch fully resolved this pass (1/3 = 33.3%, below the 35% reactivation
+floor): momentum-only entries remain suspended for another 7-day cycle, restarting today. This is
+the outcome the prior pass's push already flagged as pending, so it's worth surfacing now that
+it's resolved. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
+retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
