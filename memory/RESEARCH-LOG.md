@@ -49328,3 +49328,56 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 23:00 UTC (EOD)
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 22:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,329.20, today's open $84,426.80, intraday −0.12%, 24h range
+$84,122.80–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 23 survivors, led by ONDO
+($5.32M notional, +7.15% — same asset as the Sep 25 catalyst-confirmed win, re-checked fresh), GRT
+($2.24M, +28.78% — checked NO CATALYST repeatedly this session, most recently 21:00/22:00 UTC),
+HBAR ($1.91M, +2.39%, first appearance today), XDC ($1.45M, +14.08% — checked NO CATALYST
+repeatedly, most recently 22:00 UTC), SEI ($1.41M, +9.35% — checked NO CATALYST at 21:00 UTC),
+JUP ($1.38M, +10.04% — checked NO CATALYST at 18:00 UTC), VIRTUAL ($1.20M, +7.06%, first
+appearance today), DRV ($1.06M, +5.95%, first appearance today).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on the top
+candidates not recently checked this session — ONDO, HBAR, VIRTUAL, DRV.
+- **ONDO** — Perplexity: `NO CATALYST <6H FOR ONDO`.
+- **HBAR** — Perplexity: `NO CATALYST <6H FOR HBAR`.
+- **VIRTUAL** — Perplexity: `NO CATALYST <6H FOR VIRTUAL`.
+- **DRV** — Perplexity: `NO CATALYST <6H FOR DRV`.
+
+Macro context (Perplexity): BTC ~$84.3K–$84.9K depending on source, 24h change roughly +0.3% to
++1.1% — broadly consistent with Kraken's own quote (−0.12% intraday from today's open, still up
+over the trailing 24h window).
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality or how large the raw price move was (GRT +28.78%,
+IMX +14.40%, XDC +14.08%).
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD/EOD pass, book flat throughout, no operational issues, no drift,
+crash gate clear, no unprotected positions. Today's net result (3 probe trades, 1 win/2 losses,
+already pushed as they resolved) is summarized in the EOD Snapshot in TRADE-LOG.md, not a new
+event. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02).
