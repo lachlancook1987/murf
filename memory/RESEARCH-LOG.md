@@ -48133,3 +48133,36 @@ was proposed and discussed before being implemented).
 ### Decision: **TRADE — JTO/USD, KILL-SWITCH PROBE 1/3.** Full detail in TRADE-LOG.md. This is the first practical test of the probe-batch mechanism designed earlier today (2026-09-27) specifically to break the kill-switch's closed-loop deadlock (suspended since 2026-09-04, unable to recompute without new momentum-only trades, which it also blocked).
 
 **Follow-up for next pass:** update TRADING-STRATEGY.md's Performance-Linked Controls status line to "Probe status: 1/3 taken" (currently still reads 0/3 as of the 2026-09-27 same-day update written before this trade executed).
+
+## 2026-09-27 — Scan — 03:00 UTC (fired 03:46 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $50.4953, JTO 34.545 (probe 1/3, opened 02:46 UTC this pass-cycle), `orders: {"open": {OD4PPS-EG3VD-WMK6WA: JTO trailing stop 1.5%}}` — matches the prior pass exactly, no drift. Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure, no action needed.
+
+**Step 3 position maintenance:** JTO current price $0.64131 vs entry $0.631901 blended = +1.49% unrealized gain, below the +3% T1 tightening rung; stop is already at the probe's 1.5% rate, tighter than any tightening rung would set regardless — no action needed. No orphan stops/T1 limits (JTO balance matches the open stop's volume). No thesis break. Crash gate clear (BTC $84,368.20, −0.07% intraday vs today's open $84,426.80).
+
+**Weekly downtrend gate:** INACTIVE — BTC 5-trading-day move ~−2.5%, under the 3% threshold (unchanged from the 02:00 UTC pass). Standard entry rules apply.
+
+**Discovery:** Full Kraken-native sweep via public Ticker across all 669 USD pairs. First-pass filter (within 2% of 24h high AND >2% change vs today's UTC open) → 30 raw candidates. Liquidity filter (24h notional >$20k, excluding the already-held JTO) → 15 survivors (SOON, IN, TEL, W, TRUST, LPT, COMP, CFG, EVAA, RAY, STX, XAN, FHE, IMX, CAP). 15m-OHLC deep check on the top 5 by liquidity:
+- **RAY** ($635k notional) — 03:00→03:15 close down (2.120→2.118). Fail, immediate acceleration break (also the same asset rejected on this exact pattern at the 02:00 UTC pass).
+- **STX** ($594k notional) — two-candle acceleration passes (03:00→03:15→03:30 closes each higher), but the 24h high ($0.3547) sits above today's UTC-day high ($0.3520) — meaning the 24h high was set before today's UTC midnight, well outside the 30min freshness ceiling. Fails momentum-peak-check on staleness despite passing acceleration.
+- **COMP** ($340k notional) — 03:00→03:15→03:30 closes each higher (24.40→24.77→24.80), 24h high $24.81 confirmed on the just-closed 03:30 candle (~1–16min old), live fade 0.04% off high, spread 0.32%. **Pass.**
+- **W** ($287k notional) — 03:00→03:15 up, 03:15→03:30 down (spike-then-stall). Fail.
+- **CFG** ($208k notional) — 03:00→03:15 down, 03:15→03:30 up — fails the "both legs building" requirement (most recent leg alone looks strong but the prior leg dipped).
+
+Only COMP passed the full technical stack this pass.
+
+**Catalyst check (COMP):** Perplexity dated-catalyst query returned exactly `NO CATALYST <6H FOR COMP`. `rssnews.sh 6 COMP Compound` returned `RSS: NO COVERAGE`. Classified **momentum-only, no catalyst**.
+
+**Kill-switch / probe-batch:** Momentum-only entries remain SUSPENDED (20.0% trailing win rate, pre-probe). Probe 1/3 (JTO) is still open/unresolved from the 02:00 UTC pass; nothing in the probe-batch mechanism requires waiting for a probe to resolve before taking the next slot — it only requires all 3 be tagged and recomputed together once all have resolved. COMP clears every other gate and R:R at the probe's 1.5% stop is exactly 3%/1.5% = 2.0:1, meeting the probe floor. **Executed as KILL-SWITCH PROBE 2/3** — see TRADE-LOG.md for full order detail (0.879 COMP @ $24.8790 blended entry, $21.87 total spend ≈ 30.1% of ~$72.65 total equity, 1.5% trailing stop confirmed open).
+
+**Cross-exchange note (flagged, not a rejection):** Perplexity quoted COMP at $24.21 (CMC)/$23.69 (CoinGecko) vs Kraken's live $24.80 — a 2.4–4.7% divergence, small and consistent with the same slight-staleness pattern seen on JTO earlier today, not a thin/distorted-book signature. Not treated as a reject.
+
+**Fear & Greed:** Mixed across providers this check (CFGI 57 Neutral, CoinGecko 47 Neutral, CMC-linked trackers ~72–74 Greed) — no reading is Extreme Fear, and the probe's R:R floor (2.0:1) is unaffected by F&G regardless.
+
+**Same-thesis cooling:** No prior COMP activity anywhere in the trade log. Not applicable.
+
+**Daily consecutive-loss pause:** No trades have resolved yet today (JTO probe 1/3 still open, COMP probe 2/3 just opened). N/A.
+
+### Decision: **TRADE — COMP/USD, KILL-SWITCH PROBE 2/3.** Full detail in TRADE-LOG.md. Second probe-batch entry, taken with probe 1/3 (JTO) still open — book now holds two live positions (JTO + COMP), both protected by 1.5% trailing stops.
+
+**Follow-up for next pass:** update TRADING-STRATEGY.md's Performance-Linked Controls status line to "Probe status: 2/3 taken" (done this pass, see TRADING-STRATEGY.md). One probe slot (3/3) remains; keep evaluating probe-eligible candidates each pass until the 3rd is taken, then hold for all three to resolve before recomputing the trailing win rate.
