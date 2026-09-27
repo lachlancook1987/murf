@@ -11358,3 +11358,76 @@ No push sent — book flat, zero trades today, no drift, no operational issues, 
 ### Step 8 — Notification
 
 **Push sent** — first trade in 2 days and the first test of the kill-switch probe-batch mechanism (designed 2026-09-27 earlier today) in practice; also flagging the JTO cross-exchange price gap (Perplexity ~8.6% below Kraken) as a data point, not a block, for future gate-tuning review. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — OPERATIONAL FAILURE: missing 03:00 UTC pass, reconstructed from Kraken order history
+
+**Discovered by the 04:00 UTC pass.** `git log origin/main` jumps directly from commit `0c5e464`
+("crypto hourly pass 2026-09-27 02:00 UTC") to this pass's own commit — there is no 03:00 UTC
+commit at all, and (unlike the 2026-09-24 outage) no orphaned session branch exists either
+(`git branch -r` shows only `origin/main` and this pass's own branch). The executing session for
+that hour placed and fully resolved a real trade, then evidently died/was terminated before
+running Step 9 (or any git commit) — its RESEARCH-LOG/TRADE-LOG reasoning is **not recoverable**,
+unlike the Sep 24 incident where the branch survived unmerged. Everything below is reconstructed
+purely from Kraken's own `closedorders` records (authoritative exchange data), not from any
+session log.
+
+**JTO/USD — Probe 1/3 resolution (trailing stop fired, previously undocumented):**
+Stop order `OD4PPS-EG3VD-WMK6WA` closed at 03:57:23 UTC (between the missing 03:00 pass and
+whenever it fired): 34.545 JTO sold, avg fill $0.63218, cost $21.839004, fee $0.174712, net
+proceeds $21.664292. Against the buy total spent of $21.823591 (cost $21.650388 + fee $0.173203,
+per `closedorders` — the exchange's own figures, which differ slightly from the $21.8236/$0.1279
+originally logged in the 02:00 UTC entry above; treating exchange data as authoritative), realized
+**P&L = −$0.159299 (−0.730%)**. Gross price move was actually +0.871% (entry $0.62672 → exit
+$0.63218) — this is a **net LOSS purely on round-trip fees** (~1.6% combined vs. a sub-1% gross
+move), never reaching T1 (+3%) before the tight 1.5% probe stop caught the pullback. **KILL-SWITCH
+PROBE 1/3 result: LOSS.**
+
+**COMP/USD — full round-trip trade, entirely undocumented, reconstructed:**
+| Field | Value (from Kraken `closedorders`) |
+|---|---|
+| Buy order | `OQEPWB-L6JQ4-WDM2JR`, limit, 0.879 COMP @ avg $24.77, cost $21.7816, fee $0.0871, opened 03:48:14 UTC |
+| Sell order (trailing stop) | `O6WK6D-45SSB-QKKMU6`, 0.879 COMP @ avg $25.14, cost $22.0991, fee $0.1768, closed 04:37:15 UTC |
+| Total spent | $21.8687 |
+| Net proceeds | $21.9223 |
+| **P&L** | **+$0.0536 (+0.245%)** |
+| Gross price move | $24.77 → $25.14 = +1.494% |
+
+Buy size ($21.8687) is 30.2% of the $72.3189 baseline equity — the same fraction as the JTO probe
+trade, strongly suggesting this was **KILL-SWITCH PROBE 2/3** (momentum-only, probe-batch sizing),
+though this cannot be confirmed with certainty since no catalyst-check, freshness-gate, or R:R
+reasoning survived. The stop's final trigger price ($25.15) is consistent with a 1.5% trailing
+stop off an implied HWM of ~$25.53 (25.53 × 0.985 ≈ 25.15), matching the probe-batch stop rate —
+also consistent with, but not proof of, Probe 2/3 classification. **Tentatively logged as
+KILL-SWITCH PROBE 2/3, result: WIN (+0.245%),** pending no better information ever surfacing.
+Neither trade's gate-checklist (freshness, two-candle acceleration, catalyst confirmation, R:R)
+is recoverable — this is a genuine gap in the audit trail, not a formatting issue.
+
+**Probe-batch status after this reconstruction: 2/3 taken (JTO loss, COMP win).** One more
+probe-eligible entry is needed before the trailing win-rate recompute (per TRADING-STRATEGY.md's
+probe mechanism) can trigger. Status line updated in TRADING-STRATEGY.md this pass.
+
+**Root cause note:** this is the second git-continuity incident in about a month (see the Sep 24
+10-day trigger-outage note above, and CLAUDE.md's documented concurrent-session mem-sync race).
+This one is different in kind — not a missed firing, but a firing that traded real money and then
+lost its own record entirely before persisting anything. This is exactly the "silently-dropped
+trade/position/order-ID entry" scenario CLAUDE.md's known-bug section warns would be a real safety
+issue, now realized in practice. Flagged to the user via push notification this pass — this is a
+scheduler/session-reliability problem outside any single pass's ability to fix, per the same
+reasoning CLAUDE.md already applies to the Sep 24 outage and the concurrent-session mem-sync race.
+
+## 2026-09-27 — Scan — 04:00 UTC — LIT/USD order placed, unfilled, cancelled
+
+Limit buy 133.9 LIT @ $0.1617 (order `OBHFJN-3KBEJ-SKNDZA`) placed as the candidate for
+KILL-SWITCH PROBE 3/3 (LIT cleared freshness/acceleration/spread/catalyst/R:R gates — see
+RESEARCH-LOG.md for full detail). Order rested unfilled as price moved away (bid/ask rose to
+$0.1629/$0.1641 before the price ever traded down to the $0.1617 limit). Cancelled per the
+"do not chase an unfilled limit with a market order" rule. No fill, no cost, no fee — ZUSD
+unchanged at $72.2132.
+
+### Decision: **HOLD (execution not completed) — LIT/USD.** Probe-batch status remains **2/3
+taken** (JTO loss, COMP win, both reconstructed above) — not advanced to 3/3.
+
+### Step 8 — Notification
+
+See the Operational Failure entry above — the reportable event this pass is the reconstructed
+missing 03:00 UTC trade record, not this pass's own HOLD outcome.
