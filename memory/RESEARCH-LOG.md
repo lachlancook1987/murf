@@ -47744,3 +47744,59 @@ That is being conveyed directly in this session's own reply rather than a push, 
 actively present and asked for this pass live. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Ad-hoc session: catalyst-detection tooling review (outside normal hourly cadence)
+
+Following the 2026-09-27 gate-attribution review (see prior entry) identifying the win-rate kill
+switch as the binding rejection reason in 100/342 passes (29%), almost always due to catalyst-
+freshness ambiguity, two follow-up fixes were evaluated and implemented at the user's direction:
+
+**1. CryptoPanic API — evaluated and rejected.** A dedicated crypto-news API was considered as a
+higher-precision catalyst source (ticker-tagged articles, real `published_at` timestamps, would
+directly fix the ticker-identity-confusion class of error, e.g. the PLAY/AUSD ambiguity noted in
+the review). Live-checked current pricing before proceeding: **CryptoPanic discontinued its free
+Developer tier in April 2026.** Current plans: Growth weekly $50/week, Growth monthly $199/month
+($179/month annual), Enterprise $899/month+. Against this account's $72.32 equity, even the
+cheapest plan would cost ~3x the entire account balance per month, for a fix expected to resolve
+only an estimated 15-25% of the 100 kill-switch near-misses (the rest are either genuinely
+catalyst-less momentum pumps or genuinely stale-by-days catalysts that no data source improves).
+**Rejected as disproportionate to account size — user declined to sign up, correctly.** Not to be
+re-proposed unless the account is materially larger or CryptoPanic's pricing changes materially.
+
+**2. Free RSS catalyst cross-check — built and tested.** As a zero-cost partial substitute,
+built `scripts/rssnews.sh` (+ `scripts/rssnews.py`), which scans seven major crypto news outlets'
+public RSS feeds (CoinDesk, Cointelegraph, Decrypt, The Block, CryptoSlate, NewsBTC, Bitcoinist —
+all verified live and parseable before building on them) for the freshest item matching a given
+ticker or project-name term, using each feed's own `pubDate` for an exact, non-inferred age. No
+API key required.
+
+Live-tested against four cases before committing:
+- **Bitget** (expected fresh): correctly found a 1.5h-old NewsBTC item within the 6h window.
+- **QNT/Quant** (known stale catalyst per the gate-attribution review): correctly found only a
+  40h-old mention, flagged `STALE ONLY`.
+- **ONDO/Ondo Finance** (this account's one real trade, catalyst now 2+ days old): correctly
+  surfaced the exact real article behind the original trade thesis ("BlackRock Leans Deeper Into
+  Tokenization with Ondo," Decrypt) at 36.9h old, flagged `STALE ONLY` — notably more precise and
+  directly sourced than a prose Perplexity answer would be for the same query.
+- **A nonsense ticker**: correctly returned `NO COVERAGE` rather than a false match.
+
+Wired into `memory/TRADING-STRATEGY.md`'s Discovery Method as a **tertiary, complementary** check
+run alongside (not instead of) the Perplexity dated-catalyst query for every position/candidate:
+a fresh RSS match is treated as strong independent confirmation; no coverage or a stale-only match
+does not by itself reject a candidate (mainstream outlets don't cover most micro-cap alts); and if
+Perplexity and the RSS feed actively disagree on an event's age, the RSS timestamp wins since it's
+a real publish date, not an LLM inference — this is precisely the "Perplexity data error" failure
+mode the 2026-09-07 07:00 UTC pass (PLAY/USD) hit in the gate-attribution review.
+
+Added `Bash(bash scripts/rssnews.sh:*)` to `.claude/settings.json`'s `permissions.allow`
+defensively per CLAUDE.md's Autonomous Operation section, even though no permission prompt has
+been observed for any script call this session — following the documented policy rather than
+waiting for a stall to discover it's needed.
+
+**Net effect of today's four changes (probe-batch kill-switch fix, T1 stop-tightening rung, dated
+Perplexity catalyst template, free RSS cross-check):** all are precision/unblocking fixes to the
+existing gate stack — none loosen the R:R floors, sizing caps, or the kill switch's underlying
+35% bar. Expected impact is a modest increase in how often a technically-clean setup successfully
+clears catalyst confirmation, concentrated in the "ambiguous timestamp / ticker confusion" slice
+of near-misses identified in the review, not a change to trade frequency for genuinely
+catalyst-less momentum pumps (which remain correctly gated by the kill switch/probe-batch rules).
