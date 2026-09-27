@@ -47986,3 +47986,87 @@ user's direct request as part of a live review, not an unattended pass. Per
 CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
 retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
 Position Watch Dashboard section).
+
+## 2026-09-27 — Ad-hoc session: R:R loosening review (outside normal hourly cadence)
+
+Following the probe-batch fix's discovery that its 2.0:1 R:R floor is structurally unreachable at
+the standard T1(+3%)/stop(2.5%) structure (fixed at 1.2:1 unless the target is stretched without
+technical justification — PYTH at 01:45 UTC and DRV at 02:00 UTC both hit this wall today), the
+user asked whether the R:R floors generally (probe's 2.0:1, and by extension the standing 1.8:1
+momentum-only / 1.2:1 catalyst-confirmed floors) should be loosened. Full historical trade data was
+extracted via 4 parallel agents covering all of TRADE-LOG.md (lines 1-11331, every trade since
+2026-05-09) to answer this with evidence rather than intuition.
+
+**Dataset: 106 resolved trades (of ~111 total BUYs; a handful unresolved/not separately logged),
+spanning every R:R regime this account has used:**
+
+| Period | R:R regime (nominal) | n | Win rate |
+|---|---|---|---|
+| 2026-05-09 to 05-27 | Unstandardized (5-7% trailing stops, no fixed T1) | 40 | 30.0% |
+| 2026-05-28 to 06-22 | Strict 1.2:1 (T1=+3%/stop=2.5%) | 24 | 29.2% |
+| 2026-06-22 to 07-29 | Strict 1.2:1 | 7 | 28.6% |
+| 2026-07-29 to 09-26 (incl. Aug 21-29 losing streak) | Widened to 1.6:1 then 1.71:1 (T1=+4-6%/stop=2.5-3.5%) | 35 | 28.6% |
+
+**Finding 1 — R:R floor level shows no measurable relationship with win rate.** Across four
+completely different regimes, including the one where the floor was deliberately raised from 1.2:1
+to 1.71:1 specifically to fix the Aug losing streak, win rate stayed at 28-30% throughout. Raising
+R:R did not improve the hit rate.
+
+**Finding 2 — the "improved" R:R period actually had worse expectancy, not better.** Computed
+realized avg win/loss magnitude for the two clearest comparison periods:
+- Strict 1.2:1 era (n=31, chunks 2+3 combined): avg win +3.80%, avg loss -3.45% → expectancy
+  ≈ -1.28%/trade
+- Widened 1.71:1 era (Aug streak, n=35): avg win +2.49%, avg loss -3.05% → expectancy
+  ≈ -1.47%/trade — WORSE despite the "improved" nominal ratio.
+
+Mechanism: R:R was raised by widening BOTH the target (+3%→+6%) AND the stop (2.5%→3.5%)
+simultaneously, which doesn't filter for quality — it just scales the whole bet up symmetrically,
+so losses (which occurred at the same ~29% rate regardless) got bigger. Additionally, the REALIZED
+win/loss ratio in the widened era (2.49/3.05 = 0.82:1) came in far below the NOMINAL 1.71:1 target,
+because a wide (3.5%) trailing stop gives back most of a partial rally before price ever reaches a
+distant (+6%) target, while losing trades ride the stop down close to its full distance regardless
+of stop width. Nominal R:R at entry and realized R:R through a trailing-stop exit are materially
+different numbers, and the gap has historically run against the account.
+
+**Finding 3 — breakeven R:R (= (1-winrate)/winrate) is far above every floor this strategy has
+ever used:**
+
+| Category | Historical win rate | Breakeven R:R needed |
+|---|---|---|
+| All trades combined | 29.2% | 2.43:1 |
+| Momentum-only, all-time | 22.6% (12/53) | 3.43:1 |
+| Momentum-only, trailing-10 (the kill-switch's own cited figure) | 20.0% | 4.00:1 |
+| Catalyst-confirmed, all-time | 35.8% (19/53) | 1.79:1 |
+
+Momentum-only's actual historical win rate would need something like 3.4-4.0:1 to break even —
+far beyond the current 1.8:1 floor, let alone anything looser. Catalyst-confirmed's higher ~36%
+win rate needs "only" ~1.79:1, above its current 1.2:1 floor (though this category's n=53 includes
+a 3-for-3 small-sample stretch in the most recent chunk that likely inflates the figure — not
+treated as a case for immediately raising the catalyst-confirmed floor, just noted for a future
+review with more data).
+
+**Decision: do not loosen the general momentum-only (1.8:1) or catalyst-confirmed (1.2:1) R:R
+floors.** The data gives no support for it — tightening R:R historically never improved win rate,
+and the breakeven math says the real gap between current floors and profitability is far larger
+than a modest adjustment in either direction would close. Loosening would only widen an
+already-losing gap.
+
+**Decision: fix the probe's specific mechanical problem via a tighter stop, not a wider target.**
+Corrected `memory/TRADING-STRATEGY.md`'s probe-batch rule (Performance-Linked Controls section)
+and the Exit & Stop Rules section: probe-batch entries now use `trail_percent: 1.5` (instead of
+the standard 2.5%) against the standard T1(+3%), making 2.0:1 achievable (3/1.5=2.0) without
+stretching the target — avoiding the exact mistake (widen both sides) that made the Aug 21-29
+period's expectancy worse than the plain 1.2:1 era. A tighter stop also caps downside on these
+explicitly cautious, reduced-size (30% equity) probe trades, which is the right direction for a
+post-suspension test batch even though it trades off a higher chance of a premature stop-out on
+ordinary noise.
+
+**The deeper conclusion, stated plainly:** no R:R adjustment in either direction looks likely to be
+the actual lever for this account's profitability. The momentum-only category's ~20-23% historical
+win rate is simply too low for realistic day-trading R:R multiples (1.2-4:1) to produce a positive
+expectancy — the only lever capable of closing that gap is raising the win rate itself through
+better setup selection, which is what this session's other changes (dated Perplexity catalyst
+queries, the free RSS cross-check) are aimed at. This is supported directly by the same dataset:
+catalyst-confirmed trades have run at ~36% historically vs. momentum-only's ~23% — a real,
+economically meaningful gap that improving catalyst detection should widen further, and a far more
+promising path to profitability than tuning a ratio the data says hasn't mattered historically.
