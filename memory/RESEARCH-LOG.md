@@ -48927,3 +48927,60 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 15:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 14:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,446.20, today's open $84,426.80, intraday +0.02%, 24h range
+$83,816.20–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (Ticker, 624 online USD pairs). Filter (today's chg
+>2%, live fade ≤1.5% off 24h high, notional >$20k) → 9 survivors, led by PUMP ($6.99M notional,
++9.00% — checked NO CATALYST repeatedly in the 11:00–14:00 UTC passes, re-checked fresh this
+pass), XDC ($991k, +6.64%), SOON ($146k, +48.14% — outsized move, checked despite lower notional
+per the established "large move gets a catalyst check regardless of liquidity rank" precedent),
+TEL ($118k, +12.00%), CCD ($73k, +3.63%).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on PUMP, XDC, SOON,
+TEL, CCD.
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP` (same recurring result as 11:00–14:00 UTC).
+- **XDC** — Perplexity: `NO CATALYST <6H FOR XDC`.
+- **SOON** — Perplexity returned an actual dated catalyst: "SOON Strategic Investment in Phala
+  TEE GPU Cluster to Support Privacy-Verifiable Computation for AI Agents," posted 2026-09-27
+  11:34 UTC (Bybit's SOON price/news page) — ~4h11m old at scan time, inside the 6h window.
+  rssnews cross-check: `RSS: STALE ONLY` (freshest match 27.8h old and unrelated — a Bitcoin
+  privacy-feature piece, not SOON-specific); per the strategy doc this does not by itself reject
+  a genuinely obscure micro-cap with no mainstream coverage, so the Perplexity catalyst stood.
+  **Rejected anyway on the spread gate**: `kraken.sh quote SOON/USD` — bid $0.3420 / ask $0.3461
+  = **1.20% spread**, over the 1% hard cap. This is the first candidate this session with an
+  actual confirmed catalyst, but the spread gate is unconditional ("skip if wider," no carve-out
+  for catalyst strength) — logged as a Gate-Rejection Outcome per TRADING-STRATEGY.md (price now
+  $0.3447 vs $0.3461 high at rejection, for a later pass's gate-tuning review), not re-entered.
+- **TEL** — Perplexity: `NO CATALYST <6H FOR TEL`.
+- **CCD** — Perplexity: `NO CATALYST <6H FOR CCD`.
+
+No candidate reached a tradeable state: PUMP/XDC/TEL/CCD failed the catalyst prerequisite outright
+(momentum-only suspended, no path regardless of technical quality); SOON cleared the catalyst gate
+but failed the spread gate before reaching the two-candle-acceleration/freshness/R:R technical
+checks.
+
+### Decision: **HOLD.** No catalyst-confirmed-and-spread-clear candidate this pass; momentum-only
+entries remain suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat,
+zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
