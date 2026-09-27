@@ -48328,3 +48328,89 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 06:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $72.2132, `positions: {}`, `orders: {"open": {}}` — book
+fully flat, unchanged from the 05:00 UTC pass's closing state (STX order cancelled unfilled, no
+fill, no cost). Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure.
+Step 3 maintenance: nothing to do (no orphan stops/T1 limits, no runners, no thesis breaks — book
+was flat at pass start).
+
+**Crash gate:** clear — BTC $84,506.40, today's open $84,426.80, intraday +0.094%.
+
+**Weekly downtrend gate:** not recomputed this pass (no candidate reached a stage where it would
+bind); last-known INACTIVE (−2.50%/5d, from the 02:00 UTC pass).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched — 624 online USD
+pairs, fetched in 8 chunks of ~80 via the Ticker endpoint's comma-separated pair param). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 19 survivors: US (+15.25%), W
+(+12.88%), NEAR (+8.46%), ZRO (+5.07%), DEEP (+4.76%), UNI (+4.32%), KAS (+4.18%), PIEVERSE
+(+3.73%), RAY (+3.30%), WIN (+3.21%), SUI (+3.16%), ZK (+3.13%), PENDLE (+3.12%), ARB (+3.06%),
+SEI (+2.87%), ZKP (+2.85%), NES (+2.80%), AUSD (+2.76%), LUNA (+2.11%).
+
+**15m-OHLC deep check, top-8 by liquidity (NEAR $27.0M, SUI $20.3M, UNI $7.3M, KAS $3.7M, ARB
+$2.6M, SEI $1.1M, ZRO $0.79M, RAY $0.68M):**
+- **KAS, ZRO, ARB, SEI** — fail on **stale 24h high**: each pair's reported 24h high exceeds its
+  own *today's* high (KAS 24h $0.05004 vs today $0.04983; ZRO $1.70 vs $1.678; ARB $0.2308 vs
+  $0.2306; SEI $0.07486 vs $0.07398) — the high was set before today's UTC session opened,
+  nowhere near the last 5 closed candles. Well outside the 30min freshness ceiling.
+- **RAY** — 24h high $2.153 matched the 06:00 candle (closed ~32 min before this check, just over
+  the 30min ceiling) and price has declined on every candle since ($2.153→2.142→2.124→2.129) with
+  no fresh breakout — fails freshness/declining-from-high.
+- **NEAR** — 24h high $5.48 matched the 05:45 candle (closed ~47 min before this check) — stale,
+  and current price ($5.4641) still hasn't closed back above it despite a real recovery from the
+  post-spike dip (closes: $5.3668→$5.4368→$5.4542). No fresh 1h breakout above the stale high, so
+  fails the freshness gate even though the two-candle-acceleration shape looks constructive — the
+  same stall risk flagged (and correctly not chased) at the 05:00 UTC pass is now fully realized:
+  NEAR peaked, dipped, and is grinding back up but hasn't reclaimed the high yet.
+- **SUI** — high $1.2136 fresh (06:15 candle, ~17 min old ✓) but fails **two-candle acceleration**:
+  closed candle closes $1.1880→$1.1998 (up)→$1.1985 (down) — spike-then-stall.
+- **UNI** — high $10.1934 fresh (06:30 candle, ~17 min old ✓) but fails two-candle acceleration:
+  closed closes $9.9849→$9.8922 (down)→$10.1307 (up) — the down leg breaks the chain even though
+  the most recent leg alone looks strong.
+
+**Next liquidity tier (PENDLE $411k, W $407k, US $351k, LUNA $239k, DEEP $209k):**
+- **PENDLE** — 24h high sits on the still-forming 06:45 candle (live $2.648 vs ticker-snapshot
+  $2.646) — fails the **confirmed-candle requirement** (no closed candle has confirmed this level
+  yet); two-candle acceleration on closed candles alone looks fine ($2.597→$2.605→$2.645) but the
+  confirmed-candle rule is independent and binding. Live candidate for next pass if the breakout
+  holds through a close.
+- **W** — high $0.01486 fresh (06:15 candle, ~18 min old) but fails two-candle acceleration:
+  closed closes $0.01463→$0.01450 (down) — spike-then-stall.
+- **US** — high $0.03147 set on the 06:00 candle, closed ~33 min before this check — just over the
+  30min ceiling, fails freshness.
+- **LUNA, DEEP** — both stale highs, set before the 5 most recent candles shown; LUNA additionally
+  shows a dead/near-zero-volume forming candle.
+
+**Remaining low-liquidity survivors (AUSD $74k, NES $22k, ZK $56k, PIEVERSE $38k, WIN $23k, ZKP
+$20k):** all checked and rejected on data-quality/thin-book grounds before any gate check —
+AUSD, NES, ZK, ZKP show mostly **zero-volume candles** (the reported "surge" is a stale last-trade
+price with no real trading since, not a live move); PIEVERSE's one real print (+2.7% on the 06:30
+candle, thin $468 volume) has had zero volume since; WIN's most recent candle shows a **decline**,
+not a surge (its "chg%" reflects a stale intraday high, not the current live direction). None
+representative of tradeable momentum.
+
+**Catalyst checks:** not run this pass — no candidate reached the catalyst-confirmation stage
+(all 19 survivors rejected upstream on freshness/two-candle-acceleration/confirmed-candle/
+data-quality grounds). Perplexity macro-context queries (BTC/ETH price, Fear & Greed, funding
+rate) also not run — not needed to reach this pass's decision and nothing downstream depended on
+them.
+
+**Probe-batch status:** unchanged, **2/3 taken** (JTO loss, COMP win, both from the reconstructed
+03:00/03:48 UTC entries). No probe-eligible candidate found this pass — nothing cleared even the
+technical/freshness gates that come before the probe's R:R/sizing check would apply.
+
+### Decision: **HOLD.** No candidate cleared every technical gate this pass — the full 19-survivor
+sweep failed on stale highs, spike-then-stall two-candle patterns, unconfirmed-candle breakouts,
+or thin/zero-volume data quality, in that order of liquidity priority. PENDLE is the one
+live-for-next-pass candidate (confirmed-candle pending) if its breakout holds through a close.
+Probe-batch remains 2/3 taken. $72.2132 cash fully available, book flat, zero unprotected
+exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
