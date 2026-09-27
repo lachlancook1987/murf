@@ -290,27 +290,30 @@ of them.
       has used, which is why loosening the general momentum-only/probe R:R floor was considered
       and rejected; the probe's job is to test whether the win rate itself has improved, not to be
       profitable at the current known rate).
-  - **Current status (updated 2026-09-27, third update, 04:00 UTC pass — Probe 2/3 taken, both
-    resolved): ACTIVE — momentum-only entries SUSPENDED, PROBE IN PROGRESS.**
+  - **Current status (updated 2026-09-27, fourth update, 09:00 UTC pass — Probe 3/3 taken, 1
+    pending): ACTIVE — momentum-only entries SUSPENDED, PROBE BATCH FULLY TAKEN, AWAITING FINAL
+    RESOLUTION.**
     Trailing win rate over the last 10 momentum-only entries (pre-probe) is **20.0%** (2 wins: UAI,
     NIL; 8 losses: ZORA, HNT, ZIG, GWEI, BMT#2, TAO, RUNE, BMT#1) — this window is stale and will
     be fully displaced once the probe batch resolves, per the mechanism below, not blended with it.
-    Suspended since 2026-09-04. **Probe status: 2/3 taken, both resolved** — Trade 154, JTO/USD
-    (Probe 1/3), executed 02:00 UTC pass 2026-09-27, 30.2% equity, 1.5% trailing stop; stop fired
-    03:57 UTC for a net **LOSS (−0.730%)** — gross price moved +0.871% but round-trip fees ate it.
-    Trade 155, COMP/USD (Probe 2/3, tentative), executed ~03:48 UTC pass — **this pass's own
-    RESEARCH-LOG/TRADE-LOG entries were lost when that session died before any git commit** (no
+    Suspended since 2026-09-04. **Probe status: 3/3 taken, 2 resolved, 1 pending** — Trade 154,
+    JTO/USD (Probe 1/3), executed 02:00 UTC pass 2026-09-27, 30.2% equity, 1.5% trailing stop; stop
+    fired 03:57 UTC for a net **LOSS (−0.730%)** — gross price moved +0.871% but round-trip fees
+    ate it. Trade 155, COMP/USD (Probe 2/3, tentative), executed ~03:48 UTC pass — **this pass's
+    own RESEARCH-LOG/TRADE-LOG entries were lost when that session died before any git commit** (no
     orphaned branch survives, unlike the 2026-09-24 outage); reconstructed from Kraken's own
     `closedorders` records only, sizing/stop-rate consistent with but not provably a probe entry.
     Stop fired 04:37 UTC for a net **WIN (+0.245%)**. See TRADE-LOG.md's 2026-09-27 "OPERATIONAL
-    FAILURE" entry for full reconstruction detail and caveats. A third probe candidate (LIT/USD)
-    was found and gate-checked clean at the 04:00 UTC pass but its limit order never filled and
-    was cancelled — **still 2/3 taken, not 3/3**. Update this line again once a third probe trade
-    actually executes. Once all 3 have resolved, recompute the trailing win rate using **only** the
-    3 probe trades (displacing the stale 20.0%/10-trade window above) — ≥35% reactivates
-    standard-sized momentum-only entries; <35% re-suspends and restarts the 7-day timer from the
-    date the last probe trade closed. Catalyst-confirmed entries (e.g. ONDO, 2026-09-25) are
-    unaffected and remain open throughout, and do not count toward the probe batch.
+    FAILURE" entry for full reconstruction detail and caveats. Trade 156, WLD/USD (Probe 3/3),
+    executed 09:00 UTC pass (fired 09:46 UTC), 30.2% equity ($21.83498 of $72.2132), 1.5% trailing
+    stop (order `ONZC7B-O3GYF-PFB7SR`), entry $0.563757 blended — **still open, pending
+    resolution.** Once WLD resolves (stop fires or closed for any other reason), recompute the
+    trailing win rate using **only** these 3 probe trades (displacing the stale 20.0%/10-trade
+    window above) — ≥35% (i.e. at least 1 of 3 net-positive after fees; 1/3≈33.3% falls just short,
+    2/3≈66.7% clears) reactivates standard-sized momentum-only entries; <35% re-suspends and
+    restarts the 7-day timer from the date this trade closes. Catalyst-confirmed entries (e.g.
+    ONDO, 2026-09-25) are unaffected and remain open throughout, and do not count toward the probe
+    batch.
 - **Daily consecutive-loss pause:** After **3 consecutive stop-outs on the same calendar day**
   (any assets, not sector-specific — sector pause rules remain retired), pause all new entries
   for the remainder of that day regardless of how clean a subsequent candidate looks. This is

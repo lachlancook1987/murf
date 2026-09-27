@@ -48582,3 +48582,87 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02,
 per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 09:00 UTC (fired 09:46 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $72.2132, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 08:00 UTC pass's closing state. Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. Step 3 maintenance: nothing to do (book flat at pass
+start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,780.00, today's open $84,426.80, intraday +0.42%.
+
+**Weekly downtrend gate:** BTC 5-trading-day ≈ −2.15% (per the 08:00 UTC pass's last check) —
+INACTIVE, under the 3% threshold. Not binding this pass regardless (probe-batch entries use fixed
+sizing/R:R independent of this gate).
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, batched — 669 online USD
+pairs). Filter (today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 33 survivors, led
+by SOON (+34.70%), TREAD (+20.21%), US (+19.63%), RAY (+10.24%), JASMY (+8.55%), DEEP (+8.09%),
+DAG (+7.77%), NIL (+7.47%), WLD (+7.46%), MOVR (+6.56%), JTO (+6.53%).
+
+**15m-OHLC two-candle acceleration check, top-liquidity tier (SOL $33.1M, WLD $6.4M, UNI $7.6M,
+RENDER $2.2M, VVV $1.8M, JTO $1.1M, EIGEN $1.04M, NIL $820k, RAY $727k, SUSHI $288k, TREAD $344k,
+US $314k, XDC $554k, BONK $885k, JASMY $180k, DEEP $214k), using last two closed 15m legs
+(09:00→09:15→09:30, with 09:30–09:45 the most recently closed candle at check time ~09:46 UTC):**
+- **SOL, RENDER, VVV, SUSHI, JASMY, DEEP** — fail two-candle acceleration: each shows a
+  spike-then-stall or down leg (e.g. SOL $123.81→$123.93→$124.19 looked fine but RENDER
+  $2.067→$2.064 down on the first leg; VVV $30.673→$30.671 flat/down; SUSHI $0.2721→$0.2715 down;
+  JASMY $0.00506→$0.00510→$0.00508 stalls on the second leg; DEEP $0.02406→$0.02388 down).
+- **US** — fails: second leg flat ($0.03248→$0.03248, not strictly higher).
+- **UNI, SOL, BONK** (of the acceleration-passers) — fail on **stale 24h high**: UNI's high
+  ($10.1934) set ~196min ago (06:30 UTC), well outside the 30min ceiling; SOL's and BONK's recent
+  highs both traced to ~91min-old candles (08:15 UTC) with no fresh breakout since.
+- **JTO, RAY, XDC** — pass two-candle acceleration but their live 24h-high highs sit on the
+  still-forming 09:45–10:00 candle (checked ~1–2min into that candle) — fails the "no
+  still-forming-candle-alone" confirmed-candle rule; would need that candle to close holding the
+  level before being re-evaluated.
+- **WLD, EIGEN, NIL, TREAD** — pass both two-candle acceleration AND confirmed-closed-candle
+  freshness (24h high set on the just-closed 09:30–09:45 candle, essentially at check time):
+  - WLD: $0.5468→$0.5481→$0.5604 (biggest final-leg jump, +2.4% in one candle), notional $6.4M
+  - EIGEN: $0.2797→$0.2800→$0.2840, notional $1.04M
+  - NIL: $0.1078→$0.1116→$0.1117 (second leg small), notional $820k
+  - TREAD: $0.9688→$1.0378→$1.0864 (very large % moves, thinner liquidity, elevated pump/dump risk
+    given the +20% today-change)
+
+**Candidate selected: WLD** — clearly deepest liquidity, cleanest/most established asset among the
+four, strongest final-leg acceleration. Catalyst check: Perplexity dated-catalyst query returned
+exactly `NO CATALYST <6H FOR WLD`; `rssnews.sh 6 WLD Worldcoin World-Network` returned `RSS: NO
+COVERAGE`. Classified momentum-only, no confirmed catalyst — probe-eligible (momentum-only entries
+have been SUSPENDED since 2026-09-04 per the win-rate kill switch, but the probe-batch fix allows
+up to 3 probe entries; JTO and COMP already taken as 1/3 and 2/3, both resolved, so WLD is
+eligible as 3/3).
+
+**Cross-exchange check:** Perplexity/CMC quoted WLD $0.5235 (+7.83% 24h), CoinGecko $0.5336
+(+17.70%), Binance $0.5350 (+16.41%) vs Kraken's live $0.5586–0.5593 — a 4.5–6.8% divergence
+across sources, well below the 15–20% hard-reject threshold and consistent with Perplexity's
+documented pattern of stale/cached reference prices on less-mainstream tickers rather than a
+genuine thin-orderbook distortion. Logged for the record, not a reject.
+
+**Same-thesis cooling:** last WLD stop-out on record is 2026-06-16 (over 3 months ago) — the
+7-day/2-stop-out cooling cap does not apply.
+
+**Daily consecutive-loss pause:** today's realized outcomes so far are JTO (loss, reconstructed
+from the missing 03:00 UTC pass) then COMP (win, same reconstruction) — not 3 consecutive losses,
+does not trigger.
+
+**Fear & Greed:** not queried this pass — the probe-batch R:R floor (2.0:1) is fixed regardless of
+Fear/Greed reading, so it isn't a binding input for this entry.
+
+**Execution:** Limit buy 38.73 WLD @ $0.5594 (0.14% above bid $0.5586, within the 0.15% entry-type
+cap) — order `O5DVTS-UPCDU-JWEPJX`, filled in full at $0.5593 (crossed the $0.5593 ask, taker fee).
+Cost $21.66169 + fee $0.17329 = $21.83498 total spent (30.2% of $72.2132 equity — probe-batch
+cap). Protective 1.5% trailing stop placed immediately: order `ONZC7B-O3GYF-PFB7SR`, confirmed open
+(stop trigger $0.5509 off HWM $0.5592). R:R = 3%/1.5% = 2.0:1, meeting the probe floor via the
+corrected tighter-stop mechanism (not a stretched target). See TRADE-LOG.md's Trade 156 entry for
+full field-by-field detail.
+
+### Decision: **TRADE — WLD/USD, KILL-SWITCH PROBE 3/3.** Probe batch now fully taken (3/3: JTO
+loss, COMP win, WLD pending). Once WLD resolves, recompute the trailing win rate using only these
+3 trades (displacing the stale pre-probe 20.0%/10-trade window) per TRADING-STRATEGY.md's
+probe-batch mechanism.
+
+### Step 8 — Notification
+
+**Push sent** — see TRADE-LOG.md's Trade 156 entry for the notification rationale (probe batch
+completed, outcome pending).
