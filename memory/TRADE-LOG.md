@@ -11530,3 +11530,25 @@ floor): momentum-only entries remain suspended for another 7-day cycle, restarti
 the outcome the prior pass's push already flagged as pending, so it's worth surfacing now that
 it's resolved. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
 retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-27 — EOD Snapshot
+
+### Sep 27 — EOD Snapshot (Day 130, Sunday)
+
+**Portfolio:** $71.8128 | **Cash:** $71.8128 (100.0%) | **Day P&L:** −$0.5061 (−0.700%) | **Phase P&L:** −$107.9672 (−60.055%) | **vs BTC:** −0.634 points
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** 3 (Trade 154: JTO/USD BUY 02:00 UTC, KILL-SWITCH PROBE 1/3, stop fired 03:57 UTC, LOSS −0.730%; Trade 155: COMP/USD BUY ~03:48 UTC, KILL-SWITCH PROBE 2/3, reconstructed after an undocumented session death, stop fired 04:37 UTC, WIN +0.245%; Trade 156: WLD/USD BUY 09:00 UTC pass (fired 09:46 UTC), KILL-SWITCH PROBE 3/3, stop fired 10:05:58 UTC, LOSS −1.834%) | **Total since migration:** 156
+
+**Notes:** Kraken `account`: ZUSD $71.8128, ZAUD $0.1550 (dust, excluded from portfolio total per convention), all other balances zero/dust. `positions: {}`, `orders: {"open": {}}` — book fully flat at EOD, unchanged since the probe batch fully resolved at 10:05:58 UTC (13 subsequent hourly passes, 11:00–22:00 UTC plus this 23:00 UTC pass, all reached HOLD). Day P&L −$0.5061 (−0.700%) vs yesterday's $72.3189 baseline, driven entirely by the kill-switch probe batch's net result: JTO loss (−0.730%), COMP win (+0.245%), WLD loss (−1.834%), all sized at ~30.2% equity per TRADING-STRATEGY.md's probe-batch cap — 1 win of 3 = 33.3%, just short of the 35% reactivation floor. Per the probe-batch mechanism, this result fully displaces the stale pre-probe 20.0%/10-trade window and re-suspends momentum-only entries, restarting the 7-day probe-eligibility timer from 2026-09-27 (next eligible window 2026-10-04). Phase P&L −$107.9672 (−60.055%) from $179.78 Kraken starting equity (May 22), a modest step down from −59.774% at the last snapshot, consistent with today's small net loss. **vs BTC:** BTC moved from $84,384.90 (Sep 26 EOD live reference) to $84,329.20 today → **−0.066%**; bot's day return (−0.700%) trailed BTC's raw move by **−0.634 points**, entirely attributable to the probe batch's realized cost. Every pass after the probe batch resolved (11:00 through 23:00 UTC, 13 passes) reached HOLD — catalyst gate checked first each pass (momentum-only suspended, so only a catalyst-confirmed candidate has any path to a trade) and consistently found no confirmed <6h catalyst on the pass's top-liquidity candidates (SOL, RENDER, VVV, GRASS, XDC, QNT, NEAR, SUI, PUMP, GRT, DOT, BONK, FARTCOIN, SEI, JUP, HBAR, ONDO, VIRTUAL, DRV, IMX, CAP among others), despite several large raw moves (QNT +29–54% intraday before rolling over, GRT +25–29%, IMX +14.40%, XDC +9.98–14.08%) — the catalyst-confirmation prerequisite is doing its job of blocking momentum-only entries during the suspension exactly as designed. Alpaca: confirmed fully flat (`positions: []`), stop `a2b44cf9` reconfirmed `canceled` (since 2026-05-22), zero exposure, no action needed. Tomorrow: next pass resumes with $71.8128 cash, fully available, no open positions; momentum-only entries remain SUSPENDED until the 7-day probe-eligibility timer expires 2026-10-04 (only catalyst-confirmed candidates eligible until then); crash gate clear.
+
+### Step 8 — Notification
+
+No push sent — book flat at EOD, today's net loss (−0.700%, all from the already-resolved and
+already-pushed probe batch) was fully reported as it happened through the day; this snapshot adds
+no new information requiring the user's attention now. Per CLAUDE.md, `scripts/clickup.sh`/
+`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
+called (retired 2026-09-02, per the Position Watch Dashboard section).
