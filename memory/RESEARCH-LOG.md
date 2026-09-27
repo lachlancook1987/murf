@@ -49179,3 +49179,57 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 20:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 19:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,623.10, today's open $84,426.80, intraday +0.23%, 24h range
+$83,816.20–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 18 survivors, led by QNT
+($38.2M notional, +29.13% — huge outlier move), NEAR ($30.9M, +8.38% — checked NO CATALYST/stale
+at 19:00 UTC), SUI ($24.7M, +9.18%), PUMP ($10.7M, +15.20%), INX ($126k, +28.47% — thin liquidity,
+not pursued given QNT/SUI/PUMP already cover the top-liquidity catalyst check this pass), DOT
+($1.64M, +2.33% — checked NO CATALYST at 19:00 UTC), BONK ($1.19M, +2.25%), FARTCOIN ($820k,
++2.50%).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on QNT (outlier
+move, warranted a dedicated check), SUI, PUMP.
+- **QNT** — Perplexity: found a real dated event, "The Clearing House selecting Quant for its
+  On-Chain Money Initiative," announced **2026-09-24** — 3 days old, far outside the 6h window.
+  Perplexity noted "a later report on September 27 says the move drove QNT's surge" but could not
+  pin an exact fresh timestamp for that report. rssnews cross-check (`rssnews.sh 6 QNT Quant
+  "Quant Network"`) resolved the ambiguity: freshest QNT-specific RSS item is **11.3h old**
+  ("Quant Jumps 39% As Altcoins Rally While Bitcoin Stalls Near $84K", Bitcoinist, 09:30 UTC
+  today) — a reactive article about the pump itself, not a new catalyst, and still outside the 6h
+  window regardless. **Rejected on catalyst staleness** per the RSS-disagreement-resolution rule
+  (trust the RSS timestamp over Perplexity's vaguer "later report" phrasing).
+- **SUI** — Perplexity: `NO CATALYST <6H FOR SUI`.
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP`.
+
+No candidate cleared the catalyst prerequisite (QNT's real catalyst is 3+ days stale, the rest
+returned no catalyst outright), so none proceeded to the two-candle-acceleration/freshness/R:R
+technical gates — with momentum-only entries suspended, there was no path to a trade for any of
+them regardless of technical quality or how large the raw price move was (QNT +29%, PUMP +15%).
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
