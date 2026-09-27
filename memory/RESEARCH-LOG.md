@@ -48877,3 +48877,53 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-27 — Scan — 14:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 13:00 UTC pass's closing state (no manual/out-of-band activity). Alpaca:
+`positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,701.50, today's open $84,426.80, intraday +0.32%, 24h range
+$83,816.20–$85,142.80 (well inside crash-gate range).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 10:00 UTC pass; 7-day probe-eligibility timer
+running from 2026-09-27, next eligible window 2026-10-04. Only catalyst-confirmed candidates are
+eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 14 survivors, led by PUMP
+($4.08M notional, +8.79% — already checked NO CATALYST in the 11:00/12:00/13:00 UTC passes,
+re-checked fresh this pass), NIGHT ($855k, +4.95%), JASMY ($386k, +15.17%), GRT ($222k, +3.08%),
+CAKE ($199k, +4.35%), ARX ($185k, +30.08% — outsized move, checked despite lower notional per the
+same "large move gets a catalyst check regardless of liquidity rank" precedent as Q on the 12:00
+UTC pass).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on the top 5 by
+liquidity plus ARX — PUMP, NIGHT, JASMY, GRT, CAKE, ARX.
+- **PUMP** — Perplexity: `NO CATALYST <6H FOR PUMP`. rssnews: `RSS: STALE ONLY` (18.4h old SEC
+  token-buyback piece, not PUMP-specific — same recurring stale match as the 11:00/12:00/13:00
+  UTC passes).
+- **NIGHT** — Perplexity: `NO CATALYST <6H FOR NIGHT`. rssnews: `RSS: NO COVERAGE`.
+- **JASMY** — Perplexity: `NO CATALYST <6H FOR JASMY`. rssnews: `RSS: NO COVERAGE`.
+- **GRT** — Perplexity: `NO CATALYST <6H FOR GRT`.
+- **CAKE** — Perplexity: `NO CATALYST <6H FOR CAKE`.
+- **ARX** — Perplexity: `NO CATALYST <6H FOR ARX`.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02, per the Position Watch Dashboard section).
