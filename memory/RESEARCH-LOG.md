@@ -47885,3 +47885,104 @@ existing gate stack — none loosen the R:R floors, sizing caps, or the kill swi
 clears catalyst confirmation, concentrated in the "ambiguous timestamp / ticker confusion" slice
 of near-misses identified in the review, not a change to trade frequency for genuinely
 catalyst-less momentum pumps (which remain correctly gated by the kill switch/probe-batch rules).
+
+## 2026-09-27 — Scan — 02:00 UTC
+
+**Continuity note:** first pass to test the free RSS catalyst cross-check
+(`scripts/rssnews.sh`) live alongside the dated Perplexity catalyst template, both
+shipped this session (see the 00:xx UTC "Ad-hoc session" entry above for the
+CryptoPanic-rejection reasoning and RSS-check build/test detail).
+
+**Step 1-2:** Kraken `account`: ZUSD $72.3189, ZAUD $0.1550 (dust), all other
+balances zero/dust — unchanged from the prior pass, no drift. `positions: {}`,
+`orders: {"open": {}}` — book fully flat. Alpaca: `positions: []` confirmed flat,
+zero exposure, no action needed.
+
+**Step 3 — Position maintenance:** No open positions, no open orders — nothing to
+reconcile. **Crash gate:** BTC/USD last $84,460.10 vs session open $84,426.80 →
++0.04% intraday, 24h range $83,816.20–$84,555.00 — clear. **Weekly downtrend gate —
+INACTIVE:** Sep 22 close $86,196.70 → now $84,460.10 = −2.015%/5-trading-day, under
+the 3% threshold. Standard entry rules apply. No Step 3 action needed.
+
+**Step 4 — Research:** Full Kraken-native sweep, 623 online USD pairs. Filtered for
+session gain ≥3%, notional24h >$50k: **15 candidates** — LCX +24.82%, QNT +20.63%
+(still grinding, now 182.86, another fresh leg since the last pass's 156.82), FOLD
++9.88%, COW +9.47%, US +9.43%, SC +8.21%, HFT +8.05%, DRV +5.94%, TREAD +4.68%,
+T(icker) +4.20%, DEEP +4.18%, RUNE +3.48%, Q +3.38%, LOFI +3.33%, TEL +3.22%.
+
+Live-intracandle-fade cap (≤1.5%) narrowed this to **6 survivors**: LCX (0.00%),
+DEEP (0.00%), RUNE (0.00%), TEL (0.00%), FOLD (1.07%), DRV (1.10%).
+
+**15m-OHLC deep check on the 6 survivors** (current time ~02:02 UTC, last closed
+candle 01:45):
+- **LCX:** acceleration passes; **fails confirmed-closed-candle** — 24h high
+  (0.044) matches the currently-forming 02:00 candle, not the closed 01:45 candle
+  (H=0.04291). **Rejected.**
+- **FOLD:** acceleration passes (marginally); **fails freshness** — 24h high
+  (0.07091) was set on the 01:00 candle, ~62min old, well past the ceiling.
+  **Rejected.**
+- **DEEP:** acceleration passes; **fails confirmed-closed-candle** — price is
+  already extending past the closed-candle high (0.02343) in the forming 02:00
+  candle (up to 0.02357). **Rejected.**
+- **RUNE:** acceleration passes; **fails confirmed-closed-candle** — 24h high
+  (0.803) matches the forming 02:00 candle, not the closed 01:45 candle (H=0.801).
+  **Rejected.**
+- **TEL:** acceleration passes; **fails confirmed-closed-candle** — same pattern,
+  price already past the closed candle's high in the forming candle. **Rejected.**
+- **DRV:** acceleration passes (01:30 close 0.43636 > 01:15 close 0.43334; 01:45
+  close 0.43699 > 01:30 close 0.43636). **Confirmed-closed-candle: passes** — 24h
+  high (0.44187) exactly matches the closed 01:45 candle, ~2-17min old, within the
+  cadence-relative freshness ceiling. Live intracandle fade 1.10% off that high —
+  within the 1.5% cap. Spread 0.176% (ask 0.43646/bid 0.43569) — well within 1% cap.
+  **Clears every technical/freshness/spread gate.**
+
+**DRV catalyst check — both new mechanisms tested live, consistent result:**
+Perplexity dated-catalyst template returned `NO CATALYST <6H FOR DRV` cleanly (no
+ambiguous prose to interpret, unlike the old query format). `scripts/rssnews.sh 6
+DRV Derive` returned `RSS: NO COVERAGE FOR ['DRV', 'Derive']` — expected and
+correctly non-blocking, since DRV is a thinner-liquidity alt outside the RSS
+sources' typical coverage (per the tertiary-check design, no-coverage does not
+reject a candidate on its own). Both checks agree cleanly; no Perplexity/RSS
+disagreement to arbitrate this pass. **DRV classified momentum-only.**
+
+**Probe-batch evaluation:** win-rate kill switch ACTIVE/SUSPENDED, PROBE DUE, 0/3
+taken (unchanged). DRV would be Probe 1/3, requiring **R:R ≥2.0:1 at T1** (up from
+the standard 1.8:1 momentum-only floor). Standard T1(+3%)/stop(2.5%) structure gives
+a fixed 1.2:1, same structural ceiling the 01:45 UTC pass hit on PYTH. Checked
+whether DRV's momentum justifies pushing T1 out to +5% (the only way to reach
+2.0:1): the last two closed-candle legs show **deceleration**, not acceleration
+(+0.70% then +0.14%) — no technical basis to stretch the target. Per the same
+discipline applied to PYTH 20 minutes ago, **not stretching T1 to manufacture a
+qualifying ratio. Rejected on the probe R:R floor**, not entered.
+
+**Observation for a future review (not acted on this pass):** this is the second
+consecutive pass (PYTH at 01:45 UTC, now DRV) where a candidate cleared every
+technical/freshness/spread/catalyst-adjacent gate and reached the probe stage, only
+to be rejected on the 2.0:1 probe R:R floor because standard target structure
+fixes R:R at 1.2:1 unless a wider target is technically justified. Two data points
+isn't enough to call this miscalibrated — both rejections were correct, disciplined
+calls given the actual momentum profile of each setup — but if this pattern
+continues (probe-eligible candidates reaching the R:R stage and dying there every
+time, regardless of setup quality), it would be worth asking in a future weekly
+review whether the 2.0:1 probe floor is achievable at all under the standard T1/T2
+structure, or whether it needs pairing with a tighter probe-specific stop (e.g. 1.5%
+instead of 2.5%, which would make 3%/1.5%=2.0:1 achievable at the standard T1
+without touching targets) rather than only being reachable by an unusually strong,
+technically-justified extended target.
+
+### Decision: **HOLD — DRV cleared every technical/freshness/spread/catalyst-check
+gate but failed the probe R:R floor** (deceleration in the last two closed candles
+gave no basis to stretch T1 to the 2.0:1 minimum). $72.3189 cash fully available.
+Probe status unchanged: still 0/3 taken, still due.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat and unchanged, no drift, no operational
+issues. Both new catalyst-detection mechanisms (dated Perplexity template, free RSS
+cross-check) performed exactly as designed on their first live production test
+alongside a real, clean, technically-qualifying candidate (DRV) — a clean
+confirmation worth noting in-session rather than pushing, since this was run at the
+user's direct request as part of a live review, not an unattended pass. Per
+CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel
+retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02, per the
+Position Watch Dashboard section).
