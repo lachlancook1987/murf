@@ -49428,3 +49428,48 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 01:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 00:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. Step 3 maintenance: nothing to do (book flat at pass
+start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,871.90, today's open $84,444.20, intraday −0.68%, 24h range
+$83,788.40–$85,142.80.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 3 survivors: SEI ($2.12M
+notional, +7.70% — checked repeatedly this session, most recently 21:00 UTC), TRAC ($113.9k,
++2.23%, first appearance today), CHEX ($35.2k, +4.35%, thin — not pursued, consistent with prior
+passes deprioritizing similarly thin candidates e.g. ALKIMI $48k).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on SEI (top
+liquidity, re-checked for freshness) and TRAC (first appearance).
+- **SEI** — Perplexity: `NO CATALYST <6H FOR SEI` (same recurring result as prior 2026-09-27
+  checks). `rssnews.sh 6 SEI "Sei Network"` returned `RSS: NO COVERAGE` — confirms no real
+  catalyst.
+- **TRAC** — Perplexity: `NO CATALYST <6H FOR TRAC`.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for either candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
