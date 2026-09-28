@@ -50305,3 +50305,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): LINK (+9.07%,
 Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.39k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): NPC, SYRUP, NMR (+17.78%, $255k), KII, AIN, TAKE, OMI, STABLE, APU. Dated-catalyst query on NMR (most liquid strong mover): `NO CATALYST <6H`, rssnews NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 22:00 UTC
+
+Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.46k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): CRV (+4.42%, $4.95M), NIGHT, CAP, NPC, SYRUP, NMR (+34%), OMI, STABLE. Dated-catalyst queries on SYRUP, CRV: `NO CATALYST <6H`; NIGHT/NMR/CAP/NPC already `NO CATALYST` in 18:00–21:00 passes. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
