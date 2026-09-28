@@ -50096,3 +50096,48 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 15:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 14:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at
+pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,186.60, today's open $84,444.20, intraday −1.49%, 24h range
+$82,566.40–$85,060.80 (down ~2.20% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 625 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 2 survivors: JST (+3.65%, fade
+0.76%, $58.99k notional), NIGHT (+2.21%, fade 0.57%, $1.53M notional).
+
+**Spread check:** JST 0.42%, NIGHT 0.144% — both ✓ within the 1% cap.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):**
+- **JST** (JUST) — Perplexity: `NO CATALYST <6H FOR JST` (re-checked; last checked 2h prior at
+  13:00 UTC, same result). Fails the prerequisite.
+- **NIGHT** — Perplexity: `NO CATALYST <6H FOR NIGHT`. Not RSS-cross-checked (ticker too generic
+  a word for reliable keyword search; Perplexity's explicit NO CATALYST response taken at face
+  value). Fails the prerequisite.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for either candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
