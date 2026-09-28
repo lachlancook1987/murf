@@ -49696,3 +49696,39 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 07:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 06:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still the only order on file (canceled), zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $82,901.90, today's open $84,444.20, intraday −1.83%, 24h range
+$82,688.50–$85,142.80 (down ~2.61% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → **0 survivors.** Top raw movers
+by today's-change all failed either the fade or liquidity leg: CHEXUSD (+33.33%, fade 11.96%),
+GFIUSD (+26.14%, fade 10.54%), TREADUSD (+12.23%, fade 18.75%, $1.36M notional — already crested
+hard), QIUSD (+9.94%, fade 35.62%), AUDIOUSD (+6.81%, fade 24.24%), SAGAUSD (+3.05%, fade 8.95%,
+$605.6k notional) — every candidate with meaningful liquidity had already faded well past the
+1.5% cap off its 24h high; the few with fade near zero (WARUSD, WFBUSD) were sub-$3k notional,
+far below the $20k liquidity floor. No candidate reached the catalyst-check stage this pass.
+
+### Decision: **HOLD.** No candidate cleared even the discovery-sweep prerequisite (momentum
+already faded on every liquid mover); momentum-only entries remain suspended regardless (timer
+running to 2026-10-04). $71.8128 cash fully available, book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
