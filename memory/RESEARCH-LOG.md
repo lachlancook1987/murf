@@ -50281,3 +50281,11 @@ Crash gate clear (BTC ≈ $83.83k). Momentum-only entries remain SUSPENDED (prob
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): GIB, AIN, APU, XDC (+7.41%, $3.8M), SHX, CAP, NIGHT, LINEA, CRV, NPC.
 Dated-catalyst checks on the three most liquid (XDC, CRV, NIGHT): all `NO CATALYST <6H`, rssnews NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD; stop-out was small −0.97% and expected behavior).
+
+---
+
+## Scan — 19:00 UTC
+
+Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.33k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): AIN (+10.63%, $77k), CAP (+5.16%, $442k). Dated-catalyst queries on both: `NO CATALYST <6H`. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
