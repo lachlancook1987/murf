@@ -49817,3 +49817,52 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 10:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 09:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still the only order on file (canceled), zero exposure. Step 3 maintenance:
+nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $82,875.10, today's open $84,444.20, intraday −1.86%, 24h range
+$82,566.40–$85,142.80 (down ~2.67% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 4 survivors: DOVU (+20.11%,
+fade 0.00%, $24.4k notional), ALGO (+8.30%, fade 0.52%, $2.65M notional), TON (+4.47%, fade
+1.16%, $4.70M notional), KAVA (+2.05%, fade 0.29%, $27.8k notional).
+
+**Spread check:** DOVU 7.351% (bid 0.001374/ask 0.001475) — **hard skip**, same wide-spread
+pattern as the 09:00 UTC pass (6.2% then), not pursued further regardless of catalyst status.
+ALGO 0.100%, TON 0.059%, KAVA 0.288% — all ✓ within the 1% cap.
+
+**Catalyst gate on the three spread-eligible survivors:** Perplexity dated-catalyst query plus
+`rssnews.sh` cross-check on each.
+- **ALGO** (Algorand) — Perplexity: `NO CATALYST <6H FOR ALGO`. `rssnews.sh 6 ALGO Algorand`
+  returned `RSS: NO COVERAGE` — confirms no real catalyst.
+- **TON** (Toncoin) — Perplexity: `NO CATALYST <6H FOR TON`. `rssnews.sh 6 TON "The Open Network"
+  Toncoin` returned `RSS: NO COVERAGE` — confirms no real catalyst.
+- **KAVA** (Kava) — Perplexity: `NO CATALYST <6H FOR KAVA`. `rssnews.sh 6 KAVA "Kava Labs"`
+  returned `RSS: NO COVERAGE` — confirms no real catalyst.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass (DOVU failed spread outright;
+ALGO/TON/KAVA cleared spread but not catalyst); momentum-only entries remain suspended (timer
+running to 2026-10-04). $71.8128 cash fully available, book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
