@@ -49991,3 +49991,59 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 13:00 UTC (fired 13:46 UTC)
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 12:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at
+pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,715.00, today's open $84,444.20, intraday −0.86%, 24h range
+$82,566.40–$85,060.80 (down ~1.58% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 670 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 5 survivors: NOCK (+18.19%,
+fade 0.00%, $76.2k notional), ALGO (+12.36%, fade 0.38%, $3.60M notional — third consecutive pass
+this asset has cleared the sweep), JST (+4.40%, fade 0.00%, $52.9k notional), CAP (+3.87%, fade
+1.29%, $380.5k notional), B2 (+3.39%, fade 0.00%, $24.9k notional).
+
+**Spread check:** NOCK 6.43% (ask 0.0268/bid 0.02518) — **hard skip**, well outside the 1% cap,
+not pursued further regardless of catalyst status. ALGO 0.097%, JST 0.144%, CAP 0.065%, B2 0.509%
+— all four ✓ within the 1% cap.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):** ran the Perplexity dated-catalyst query plus an `rssnews.sh` cross-check on ALGO, JST,
+and B2 (CAP not re-checked — already returned `NO CATALYST <6H FOR CAP` at the 12:00 UTC pass 46
+minutes prior, same-pass pattern unlikely to have changed).
+- **ALGO** (Algorand) — Perplexity: `NO CATALYST <6H FOR ALGO`. `rssnews.sh 6 ALGO Algorand`
+  returned `RSS: NO COVERAGE` — confirms no real catalyst. Logged per the Gate-Rejection Outcome
+  Tracking note (a future pass reviewing ALGO should note its price now, $0.13424, vs. price at
+  this rejection — third consecutive pass ALGO has cleared the technical sweep with no catalyst).
+- **JST** (JUST) — Perplexity: `NO CATALYST <6H FOR JST`. `rssnews.sh 6 JST JUST` returned
+  `RSS: STALE ONLY` (freshest match 9.0h old, an unrelated Ethereum-fork story with no JST-specific
+  content — a keyword false-positive on "JUST," not a real JST catalyst) — confirms no real
+  catalyst.
+- **B2** (B2 Network) — Perplexity: `NO CATALYST <6H FOR B2`. `rssnews.sh 6 B2 "B2 Network"`
+  returned `RSS: NO COVERAGE` — confirms no real catalyst.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
