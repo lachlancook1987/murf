@@ -49776,3 +49776,44 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 09:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 08:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []` reconfirmed — zero
+exposure. Step 3 maintenance: nothing to do (book flat at pass start, no orphans, no runners, no
+thesis breaks).
+
+**Crash gate:** clear — BTC $82,613.10, today's open $84,444.20, intraday −2.17%, 24h range
+$82,566.40–$85,142.80 (down ~2.97% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 2 survivors: SAUCE ($65.6k
+notional, +12.97%, fade 0.47% — SaucerSwap, first appearance today), DOVU ($23.6k notional,
++19.06%, fade 0.88% — Dovu, first appearance today).
+
+**Spread check:** SAUCE 0.06% (bid 0.01669/ask 0.01670) ✓. DOVU 6.2% (bid 0.001371/ask 0.001462)
+— **hard skip**, well above the 1% cap; not pursued further regardless of catalyst status.
+
+**Catalyst gate on SAUCE (only spread-eligible survivor):** Perplexity dated-catalyst query
+returned exactly `NO CATALYST <6H FOR SAUCE`. `rssnews.sh 6 SAUCE SaucerSwap` returned `RSS: NO
+COVERAGE` — confirms no real catalyst. Fails the catalyst prerequisite outright; not pursued to
+the two-candle-acceleration/freshness/R:R technical gates, since momentum-only entries are
+suspended and there is no path to a trade for it regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass (DOVU failed spread outright;
+SAUCE cleared spread but not catalyst); momentum-only entries remain suspended (timer running to
+2026-10-04). $71.8128 cash fully available, book flat, zero unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
