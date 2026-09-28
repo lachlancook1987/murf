@@ -49866,3 +49866,60 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 11:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 10:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at
+pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,023.80, today's open $84,444.20, intraday −1.68%, 24h range
+$82,566.40–$85,142.80 (down ~2.49% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 7 survivors: **HBAR** (+22.78%,
+fade 1.13%, $19.17M notional — largest raw move of the suspension window so far), DOVU (+20.11%,
+fade 0.00%, $24.3k notional), SAUCE (+16.40%, fade 1.48%, $90.1k notional), ALGO (+9.86%, fade
+0.48%, $3.06M notional), LSK (+5.25%, fade 1.31%, $253.9k notional), BTT (+3.05%, fade 0.23%,
+$21.7k notional), JST (+2.10%, fade 0.00%, $42.6k notional).
+
+**Spread check on the top four by liquidity:** HBAR 0.026% (ask 0.11781/bid 0.11778), ALGO 0.129%
+(ask 0.13169/bid 0.13152), LSK 0.365% (ask 0.332837/bid 0.331623), SAUCE 0.577% (ask 0.01732/bid
+0.01722) — all four ✓ well within the 1% cap.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):** ran the Perplexity dated-catalyst query plus an `rssnews.sh` cross-check on HBAR,
+ALGO, and LSK (BTT/JST/DOVU/SAUCE not checked — smaller moves/liquidity, and the pattern this
+suspension window has been catalyst-negative across the board).
+- **HBAR** (Hedera) — despite the standout +22.78% move and $19.17M notional, Perplexity:
+  `NO CATALYST <6H FOR HBAR`. `rssnews.sh 6 HBAR Hedera` returned `RSS: NO COVERAGE` — confirms
+  no real catalyst. Fails the prerequisite; not pursued to the two-candle-acceleration/freshness/
+  R:R technical gates. Logged per the Gate-Rejection Outcome Tracking note in TRADING-STRATEGY.md
+  (a future pass reviewing HBAR should note its price now, $0.11774, vs. price at this rejection).
+- **ALGO** (Algorand) — Perplexity: `NO CATALYST <6H FOR ALGO`. `rssnews.sh 6 ALGO Algorand`
+  returned `RSS: NO COVERAGE` — confirms no real catalyst.
+- **LSK** (Lisk) — Perplexity: `NO CATALYST <6H FOR LSK`. `rssnews.sh 6 LSK Lisk` returned
+  `RSS: NO COVERAGE` — confirms no real catalyst.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any candidate regardless of technical quality, including HBAR's outsized raw move.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. HBAR's large move is catalyst-negative and purely a
+suspension-blocked observation, not an operational issue. Per CLAUDE.md,
+`scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
+Artifact tool was not called (retired 2026-09-02).
