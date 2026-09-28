@@ -49381,3 +49381,50 @@ crash gate clear, no unprotected positions. Today's net result (3 probe trades, 
 already pushed as they resolved) is summarized in the EOD Snapshot in TRADE-LOG.md, not a new
 event. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-28 — Scan — 00:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, `positions: {}`, `orders: {"open": {}}` — book fully
+flat, unchanged from the 2026-09-27 23:00 UTC EOD pass's closing state (no manual/out-of-band
+activity). Alpaca: `positions: []`, stop `a2b44cf9` reconfirmed `canceled` — zero exposure. Step 3
+maintenance: nothing to do (book flat at pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $84,293.60, 24h range $84,122.80–$85,142.80, today's UTC-day open
+$84,444.20 (day just started), well within normal range.
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 628 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → only **2 survivors**: TRUST
+($442k notional, +5.17%, spread 0.297%) and TURBO ($30.9k notional, +2.16%, at the thin edge of
+the liquidity floor). Notably thin sweep result vs. recent passes (17–29 survivors) — day just
+rolled over at UTC midnight so today's-open-relative change stat resets; not treated as anomalous.
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query plus an
+`rssnews.sh` cross-check on TRUST (the only candidate with meaningful liquidity).
+- **TRUST** — Perplexity: `NO CATALYST <6H FOR TRUST`. `rssnews.sh 6 TRUST Intuition "Trust
+  Wallet"` returned `RSS: STALE ONLY` — freshest match 27.3h old, and that match ("US Charges Man
+  After Crypto Scam Wallets Received More Than $53M") is an unrelated "Trust Wallet" keyword
+  false-positive, not a TRUST-token-specific event. Confirms no real catalyst.
+- TURBO not checked — notional ($30.9k) too thin to be worth pursuing even if catalyst-confirmed,
+  consistent with how prior passes have deprioritized similarly thin candidates (e.g. ALKIMI
+  $48k, 2026-09-27 22:00 UTC).
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
