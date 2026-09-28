@@ -49923,3 +49923,71 @@ gate clear, no unprotected positions. HBAR's large move is catalyst-negative and
 suspension-blocked observation, not an operational issue. Per CLAUDE.md,
 `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the
 Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-28 — Scan — 12:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 11:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at
+pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,374.80, today's open $84,444.20, intraday −1.27%, 24h range
+$82,566.40–$85,142.80 (down ~2.08% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 6 survivors: PUMP (+2.23%, fade
+0.47%, $16.5M notional), XLM (+6.73%, fade 0.14%, $6.16M notional), CAP (+4.54%, fade 0.65%,
+$387k notional), CRO (+3.29%, fade 0.56%, $231k notional), JST (+3.57%, fade 0.00%, $46.9k
+notional), DOVU (+28.66%, fade 0.63%, $32.3k notional).
+
+**Spread check:** XLM 0.155%, PUMP 0.133%, CAP 0.141%, CRO 0.145%, JST 0.282% — all five ✓ within
+the 1% cap. DOVU 2.839% — **hard skip**, same wide-spread pattern as the two prior DOVU
+appearances (09:00 and 10:00 UTC passes, 6.2%/7.351%), not pursued further regardless of catalyst
+status.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):** ran the Perplexity dated-catalyst query plus an `rssnews.sh` cross-check on the four
+spread-eligible survivors with the strongest chg/liquidity combination (XLM, PUMP, CAP, CRO; JST
+not checked — smallest liquidity of the spread-eligible set and the pattern this suspension
+window has been catalyst-negative across the board).
+- **XLM** (Stellar) — Perplexity: `NO CATALYST <6H FOR XLM`. `rssnews.sh 6 XLM Stellar` returned
+  `RSS: STALE ONLY` (freshest match 66.2h old) — confirms no real catalyst.
+- **PUMP** (Pump.fun) — Perplexity returned a hit: Québec's AMF issued a public warning that
+  Pump.fun is not authorized to solicit investors in Québec, timestamped 2026-09-28 04:09:52 UTC.
+  Rejected on two independent grounds: (1) **stale** — 04:09:52 UTC is ~8h37m before this pass's
+  12:46 UTC catalyst-check time, outside the 6h window despite Perplexity's query framing implying
+  it was within one (a "Perplexity data error" per TRADING-STRATEGY.md's RSS-cross-check section —
+  `rssnews.sh 6 PUMP "Pump.fun"` returned `RSS: NO COVERAGE`, no independent confirmation either
+  way but no support for calling it fresh); (2) **wrong-direction even if fresh** — a regulatory
+  warning that a platform is unauthorized to solicit investors is bearish/negative news, not a
+  catalyst supporting a long entry thesis, and PUMP's own price move this pass (+2.23%) is the
+  weakest of the six survivors, consistent with no real bullish catalyst behind it.
+- **CAP** — Perplexity: `NO CATALYST <6H FOR CAP`. `rssnews.sh 6 CAP "Karrier One" Onchain`
+  returned a keyword false-positive (a Strategy/MicroStrategy Bitcoin-purchase headline with no
+  CAP-specific content, same class of error as the 2026-09-27 SOL/BTC-options-expiry false
+  positive) — disregarded per the strategy doc's guidance that RSS only overrides Perplexity when
+  it's a genuine same-story disagreement, not an unrelated keyword match; Perplexity's NO CATALYST
+  stands.
+- **CRO** (Cronos) — Perplexity: `NO CATALYST <6H FOR CRO`. `rssnews.sh 6 CRO Cronos` returned
+  `RSS: NO COVERAGE` — confirms no real catalyst.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
