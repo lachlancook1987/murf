@@ -50313,3 +50313,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): NPC, SYRUP, N
 Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.46k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): CRV (+4.42%, $4.95M), NIGHT, CAP, NPC, SYRUP, NMR (+34%), OMI, STABLE. Dated-catalyst queries on SYRUP, CRV: `NO CATALYST <6H`; NIGHT/NMR/CAP/NPC already `NO CATALYST` in 18:00–21:00 passes. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 23:00 UTC
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC $83,560, day open $84,444, −1.05%). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): LINK, XLM (+7.18%, $18.9M, new), CRV, NIGHT, SYRUP, CAP, NPC, 0G, STABLE. Dated-catalyst query on XLM: `NO CATALYST <6H FOR XLM`; rssnews STALE ONLY. LINK CCIP 2.0 catalyst now >10h old and same asset stopped out 17:34; others `NO CATALYST` in prior passes. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
