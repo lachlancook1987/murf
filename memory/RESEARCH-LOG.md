@@ -49566,3 +49566,48 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 04:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 03:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. Step 3 maintenance: nothing to do (book flat at pass
+start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,475.80, today's open $84,444.20, intraday −1.15%, 24h range
+$83,201.60–$85,142.80 (down ~1.96% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 2 survivors: ONDO ($9.75M
+notional, +2.89%, fade 0.61%, spread 0.395% — already an open catalyst-confirmed position
+historically, 2026-09-25, currently flat/no position), PLAY ($35.5k, +3.37%, thin — below the
+liquidity level this session has previously deprioritized, e.g. ALKIMI $48k, CHEX $35.2k).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query on both survivors.
+- **ONDO** — Perplexity: `NO CATALYST <6H FOR ONDO`. `rssnews.sh 6 ONDO "Ondo Finance"` returned
+  `RSS: STALE ONLY` — freshest match 63.7h old (BlackRock/Ondo tokenization piece, 2026-09-25) —
+  confirms no fresh catalyst.
+- **PLAY** — Perplexity: `NO CATALYST <6H FOR PLAY`. Not pursued further given thin liquidity
+  even absent the catalyst gate.
+
+No candidate cleared the catalyst prerequisite, so neither proceeded to the two-candle-
+acceleration/freshness/R:R technical gates — with momentum-only entries suspended, there was no
+path to a trade for either candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
