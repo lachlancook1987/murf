@@ -49473,3 +49473,50 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 02:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 01:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled` — zero exposure. Step 3 maintenance: nothing to do (book flat at pass
+start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,474.30, today's open $84,444.20, intraday −1.15%, 24h range
+$83,413.80–$85,142.80 (down ~1.96% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 624 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 3 survivors: SEI ($2.25M
+notional, +8.18% — checked repeatedly this session, most recently 01:00 UTC, NO CATALYST), CC
+($1.60M, +2.36%, first appearance today), AVNT ($75.6k, +4.46%, thin but above the liquidity
+floor, first appearance today).
+
+**Catalyst gate, checked first this pass (momentum-only suspended, so only a catalyst-confirmed
+candidate has any path to a trade):** ran the Perplexity dated-catalyst query plus an
+`rssnews.sh` cross-check on CC and AVNT (first appearances; SEI not re-queried, checked <1h ago).
+- **CC** (Canton Network) — Perplexity: no CC-specific catalyst within 6h (treated as NO
+  CATALYST). `rssnews.sh 6 CC "Canton Network"` returned `RSS: NO COVERAGE` — confirms no real
+  catalyst.
+- **AVNT** (Avantis) — Perplexity: `NO CATALYST <6H FOR AVNT` (only item found was Kraken's own
+  original listing announcement, dated 2025-09-09, not a fresh catalyst). `rssnews.sh 6 AVNT
+  Avantis` returned `RSS: NO COVERAGE` — confirms no real catalyst.
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a trade
+for any of them regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
