@@ -50047,3 +50047,52 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 14:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 13:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, `orders` reconfirmed —
+stop `a2b44cf9` still `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at
+pass start, no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $82,891.60, today's open $84,444.20, intraday −1.84%, 24h range
+$82,566.40–$85,060.80 (down ~2.55% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — probe batch resolved
+1/3 (33.3%) below the 35% reactivation floor at the 2026-09-27 10:00 UTC pass; 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 625 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 4 survivors: NMR (+12.91%, fade
+0.42%, $227.5k notional), JST (+3.91%, fade 0.51%, $63.3k notional), FWOG (+3.87%, fade 1.44%,
+$46.7k notional), APU (+8.34%, fade 0.28%, $21.6k notional).
+
+**Spread check:** NMR 0.750%, JST 0.266% — both ✓ within the 1% cap. FWOG 2.530%, APU 2.223% —
+both **hard skip**, well outside the 1% cap, not pursued further regardless of catalyst status.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):** ran the Perplexity dated-catalyst query plus an `rssnews.sh` cross-check on NMR (JST
+not re-checked — already returned `NO CATALYST <6H FOR JST` at the 13:00 UTC pass 1h prior,
+same-pattern unlikely to have changed).
+- **NMR** (Numeraire) — despite the standout +12.91% move and $227.5k notional, Perplexity:
+  `NO CATALYST <6H FOR NMR`. `rssnews.sh 6 NMR Numeraire` returned `RSS: NO COVERAGE` — confirms
+  no real catalyst. Fails the prerequisite; not pursued to the two-candle-acceleration/freshness/
+  R:R technical gates. Logged per the Gate-Rejection Outcome Tracking note in TRADING-STRATEGY.md
+  (a future pass reviewing NMR should note its price now, $11.81, vs. price at this rejection).
+
+No candidate cleared the catalyst prerequisite, so none proceeded to the two-candle-acceleration/
+freshness/R:R technical gates — with momentum-only entries suspended, there was no path to a
+trade for any candidate regardless of technical quality.
+
+### Decision: **HOLD.** No catalyst-confirmed candidate this pass; momentum-only entries remain
+suspended (timer running to 2026-10-04). $71.8128 cash fully available, book flat, zero
+unprotected exposure.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, book flat throughout, no operational issues, no drift, crash
+gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
+were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
+2026-09-02).
