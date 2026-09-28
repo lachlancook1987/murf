@@ -50209,3 +50209,65 @@ cleared the prerequisite that HBAR could not.
 **Push sent** — Trade 157 executed (LINK/USD, catalyst-confirmed). See TRADE-LOG.md for full
 detail. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
+## 2026-09-28 — Scan — 17:00 UTC
+
+**Pre-check:** Kraken `account` — LINK 4.67 (matches Trade 157's fill), ZUSD $1.2430, ZAUD $0.1550
+(dust), all other balances zero/dust. `positions: {}` (spot only, expected). `orders: {"open":
+{"OSHGDN-IC6MX-Z5L6A5": trailing-stop sell 4.67 LINKUSD @ +2.5%, stopprice $15.08891, HWM-implied
+$15.4758}}` — one open order, matches the one open position 1:1, no orphan. Alpaca: `positions:
+[]`, stop `a2b44cf9` reconfirmed `canceled`, zero exposure — no action needed.
+
+**Crash gate:** clear — BTC $84,011.90, today's open $84,444.20, intraday −0.51%, 24h range
+$82,566.40–$85,060.80.
+
+**Step 3 — Position maintenance (LINK/USD, Trade 157):** LINK quote $15.24645 (last trade) vs.
+entry avg fill $14.99135 → unrealized gain **+1.702%**, below the +3% (T1) progressive-tightening
+rung — stop stays at the standard 2.5% trail, no resize due. Stop order confirmed still open and
+correctly trailing (stopprice $15.08891 = 2.5% below the $15.4758 HWM, which matches today's 24h
+high) — functioning as designed, nothing to do. No orphan orders, no thesis break (no adverse
+LINK/CCIP news found), crash gate clear. **No Step 3 action taken this pass.**
+
+**Step 4 — Research:** Momentum-only entries remain SUSPENDED (probe-eligibility timer to
+2026-10-04) — only catalyst-confirmed candidates have any path to a trade. **Available capital is
+also a hard blocker this pass regardless of catalyst outcome: ZUSD cash is $1.2430 (Trade 157
+deployed ~98.3% of equity into LINK last pass)** — even a fully gate-clearing candidate could not
+be sized meaningfully. This is expected capital recycling behavior, not an anomaly (equity is
+deployed in an open, protected position, not idle or lost) — Step 4 discovery still run in full
+for gate-tracking continuity per the "every pass is execution-capable" principle, output below.
+
+Kraken-native full sweep (direct public AssetPairs+Ticker API, 625 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 10 survivors: CHEX (+78.99%,
+fade 0.40%, $292.3k notional), HBAR (+35.29%, fade 0.78%, $31.9M notional — largest liquidity by
+far, same asset rejected on catalyst grounds at the 16:00 UTC pass 1h prior), GIB (+25.73%, fade
+0.00%, $22.6k notional — thin), ALGO (+13.26%, fade 1.44%, $5.36M notional), KII (+8.13%, fade
+0.64%, $78.1k notional), AKE (+5.67%, fade 0.92%, $1.78M notional), CAP (+4.70%, fade 1.27%,
+$434k notional), TEL (+3.66%, fade 0.67%, $152.6k notional), NPC (+2.39%, fade 1.17%, $361.5k
+notional), GWEI (+2.07%, fade 0.00%, $179.3k notional).
+
+**Catalyst gate:** HBAR re-checked given the outsized move and liquidity — Perplexity's
+dated-catalyst query returned Grayscale's withdrawal of its HBAR ETF registration statement,
+timestamped 2026-09-28T08:31:49Z (~9h before this pass, outside the 6h freshness bar) — and a
+*withdrawal* is not a plausible driver of a +35% rally in any case, so even setting the staleness
+aside this doesn't read as a genuine dated catalyst for the move. `rssnews.sh 6 HBAR Hedera`
+returned `RSS: NO COVERAGE`, no independent corroboration. **Fails the catalyst prerequisite** —
+same conclusion as the 16:00 UTC pass. No other candidate checked (capital constraint makes
+further catalyst checks moot this pass; HBAR checked first as the standout by liquidity/move size
+for gate-rejection-tracking continuity — price now $0.12946 vs. $0.1277 at the 16:00 UTC
+rejection).
+
+No candidate cleared the catalyst prerequisite, and available capital ($1.2430) would not support
+a meaningful new position even if one had. No technical (two-candle acceleration, freshness, R:R)
+gates run on any candidate this pass.
+
+### Decision: **HOLD.** Trade 157 (LINK/USD) remains open and protected, unrealized +1.702%,
+below the T1 tightening threshold — no maintenance action due. No catalyst-confirmed candidate;
+momentum-only entries remain suspended; available cash ($1.2430) is fully committed to the LINK
+position regardless.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD pass, existing LINK position open/protected/unremarkable (+1.702%,
+stop correctly trailing), no operational issues, no orphan orders, no drift, crash gate clear, no
+unprotected exposure. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
+(channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
