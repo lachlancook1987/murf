@@ -50141,3 +50141,71 @@ No push sent — routine HOLD pass, book flat throughout, no operational issues,
 gate clear, no unprotected positions. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh`
 were not called (channel retired 2026-08-21); the Artifact tool was not called (retired
 2026-09-02).
+
+## 2026-09-28 — Scan — 16:00 UTC
+
+**Pre-check:** Kraken `account` ZUSD $71.8128, ZAUD $0.1550 (dust), all other balances zero/dust —
+`positions: {}`, `orders: {"open": {}}` — book fully flat, unchanged from the 15:00 UTC pass's
+closing state (no manual/out-of-band activity). Alpaca: `positions: []`, stop `a2b44cf9`
+reconfirmed `canceled`, zero exposure. Step 3 maintenance: nothing to do (book flat at pass start,
+no orphans, no runners, no thesis breaks).
+
+**Crash gate:** clear — BTC $83,716.50, today's open $84,444.20, intraday −0.86%, 24h range
+$82,566.40–$85,060.80 (down ~1.58% off the 24h high, nowhere near the >20% threshold).
+
+**Probe-batch status (unchanged):** momentum-only entries remain SUSPENDED — 7-day
+probe-eligibility timer running from 2026-09-27, next eligible window 2026-10-04. Only
+catalyst-confirmed candidates are eligible this pass.
+
+**Discovery sweep:** Direct Kraken public API (AssetPairs + Ticker, 625 online USD pairs). Filter
+(today's chg >2%, live fade ≤1.5% off 24h high, notional >$20k) → 6 survivors: HBAR (+33.35%,
+fade 0.67%, $29.4M notional — by far the standout move today), GIB (+23.63%, fade 0.07%, $21.8k
+notional — thin), LINK (+7.20%, fade 1.11%, $21.3M notional), CAP (+5.07%, fade 0.92%, $432k
+notional), JST (+3.34%, fade 1.06%, $67.5k notional), KII (+2.28%, fade 0.00%, $70.0k notional).
+
+**Spread check:** HBAR 0.094%, LINK 0.0865% — both well within the 1% cap.
+
+**Catalyst gate (momentum-only suspended, so only a catalyst-confirmed candidate has any path to
+a trade):**
+- **HBAR** (Hedera) — despite the standout +33.35% move and $29.4M notional (the cleanest
+  technical setup seen in weeks by liquidity/fade), Perplexity: `NO CATALYST <6H FOR HBAR`.
+  `rssnews.sh 6 HBAR Hedera` returned `RSS: NO COVERAGE` — confirms no real catalyst. Fails the
+  prerequisite; not pursued to the technical gates. Logged per Gate-Rejection Outcome Tracking
+  (a future pass should note HBAR's price then, $0.1277, vs. price now).
+- **LINK** (Chainlink) — Perplexity returned a real catalyst: Chainlink launched **CCIP 2.0**
+  (protocol upgrade). Follow-up verification query confirmed this independently, citing PR
+  Newswire (published 2026-09-28T12:46:42 UTC — ~3h50min before this pass, within the 6h bar) and
+  Chainlink's own blog ("CCIP 2.0 is now live"). `rssnews.sh 6 LINK Chainlink CCIP` returned a hit
+  but on an unrelated Bitget-hack article (keyword false-positive on a passing "Chainlink"
+  mention) — discounted as non-corroborating, same treatment as the 2026-09-27 SOL/BTC-options
+  false-positive; Perplexity's direct-citation follow-up stood as sufficient confirmation on its
+  own. **Passed the catalyst prerequisite — proceeded to full technical gate check.**
+
+**LINK technical gates:** 15m OHLC — 24h high $15.20202 set on the just-closed 16:30–16:45 UTC
+candle (confirmed-candle requirement met, not a still-forming-candle-only high); momentum-peak
+freshness ceiling min(30min, ~1h47m since last pass) = 30min, high sits well inside it. Two-candle
+acceleration: 16:15–16:30 close $14.96123 > prior close $14.68441 ✓; 16:30–16:45 close $14.99294 >
+prior close $14.96123 ✓ (both legs strictly higher-closing, though the second leg's magnitude is
+much smaller than the first — the rule as written checks direction, not decelerating magnitude, so
+this passes). Live intracandle fade at order time: 1.39% off 24h high (inside 1.5% cap).
+Cross-exchange check: Perplexity quoted LINK at Binance $13.94 / CoinGecko $13.80 vs Kraken
+$15.00 — 7.8–8.8% divergence, below the 15–20% hard-reject threshold; treated as Perplexity's
+documented stale-reference-price pattern rather than a real thin-orderbook distortion, since LINK
+is a top-liquidity major on Kraken, not a thin alt. Same-thesis cooling: no LINK stop-out in
+TRADE-LOG within the last 7 days — cap does not apply. Daily consecutive-loss pause: no trades yet
+today — does not trigger. R:R at standard catalyst-confirmed floor: 3% / 2.5% = 1.2:1, met exactly.
+
+### Decision: **TRADE — LINK/USD.** Entered via limit buy at $15.005 (0.061% above bid, within the
+0.15% cap), filled in full at avg $14.99135 (4.67 LINK, cost $70.009651 + fee $0.560077 = total
+spent $70.569728, ~98.3% of $71.8128 pre-trade equity). Protective 2.5% trailing stop placed and
+confirmed open immediately after fill (order OSHGDN-IC6MX-Z5L6A5). Full detail in TRADE-LOG.md
+(Trade 157). HBAR was the technically cleaner setup by a wide margin but had no confirmed
+catalyst and momentum-only entries remain suspended, so it was correctly passed over regardless
+of how clean the move looked — LINK's genuine, independently-verified CCIP 2.0 catalyst is what
+cleared the prerequisite that HBAR could not.
+
+### Step 8 — Notification
+
+**Push sent** — Trade 157 executed (LINK/USD, catalyst-confirmed). See TRADE-LOG.md for full
+detail. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called (channel retired
+2026-08-21); the Artifact tool was not called (retired 2026-09-02).
