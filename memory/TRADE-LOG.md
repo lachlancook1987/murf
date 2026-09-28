@@ -11552,3 +11552,66 @@ already-pushed probe batch) was fully reported as it happened through the day; t
 no new information requiring the user's attention now. Per CLAUDE.md, `scripts/clickup.sh`/
 `scripts/whatsapp.sh` were not called (channel retired 2026-08-21); the Artifact tool was not
 called (retired 2026-09-02, per the Position Watch Dashboard section).
+
+## 2026-09-28 — Scan — 16:00 UTC — Trade 157: LINK/USD BUY — CATALYST-CONFIRMED
+
+| Field | Value |
+|---|---|
+| **Symbol** | LINK/USD |
+| **Side** | BUY (spot, unleveraged) |
+| **Qty** | 4.67 LINK |
+| **Entry Price** | $15.1112 (blended, incl. fee) / $14.99135 (exchange avg fill) |
+| **Cost (ex-fee)** | $70.009651 |
+| **Fee** | $0.560077 |
+| **Total spent** | $70.569728 |
+| **T1 (+3%)** | $15.44109 |
+| **T2 (+5%)** | $15.74092 |
+| **Stop Type** | trailing_stop 2.5% GTC (full 4.67 qty, standard rate — LINK is not on the high-ATR exception list) |
+| **Stop Order ID** | OSHGDN-IC6MX-Z5L6A5 (stopprice $14.58694 off current price at placement) |
+| **Buy Order ID** | OZEDTO-D4S6N-C2PZOI (limit 15.005, filled in full at avg 14.99135) |
+| **Thesis** | **Catalyst-confirmed** — Chainlink launched **CCIP 2.0** (protocol upgrade), confirmed via Perplexity dated-catalyst query and independently verified via a follow-up query citing PR Newswire (timestamp 2026-09-28T12:46:42 UTC) and Chainlink's own blog ("CCIP 2.0 is now live"). Catalyst age at entry ≈3h50min, within the 6h freshness bar. `rssnews.sh 6 LINK Chainlink CCIP` returned a hit but it was an unrelated Bitget-hack article (keyword false-positive on "Chainlink" mention) — treated as non-corroborating per the same false-positive-discounting logic used for the 2026-09-27 10:00 UTC SOL/BTC-options-expiry case, and Perplexity's direct-verification follow-up (citing exact PR Newswire URL/timestamp) stood on its own as sufficient confirmation. |
+| **R:R** | 3% / 2.5% = **1.2:1** (catalyst-confirmed floor, met exactly) |
+| **Spread** | 0.0865% ✓ (bid 14.99092 / ask 15.00389 at order time) |
+| **Size** | $70.57 total spent (**98.3% of $71.8128 pre-trade equity**) — catalyst-confirmed, no position cap |
+
+**Gate checklist:** Crash gate clear (BTC $83,716.50, today's open $84,444.20, intraday −0.86%,
+24h range $82,566.40–$85,060.80). Momentum-only entries SUSPENDED (probe-eligibility timer to
+2026-10-04) — not applicable here since this is catalyst-confirmed, standard 1.2:1 floor applies,
+not the 1.8:1 momentum-only floor. Kraken-native full sweep (625 online USD pairs via public
+AssetPairs+Ticker): 6 survivors clearing today's-chg >2%/live-fade ≤1.5%/notional >$20k — HBAR
+(+33.35%, $29.4M notional, cleanest technical setup by far) checked first for catalyst but
+Perplexity returned `NO CATALYST <6H FOR HBAR` and `rssnews.sh 6 HBAR Hedera` returned `RSS: NO
+COVERAGE` — despite the standout move, fails the catalyst prerequisite while momentum-only is
+suspended, not pursued further (logged per Gate-Rejection Outcome Tracking: HBAR $0.1277 at
+rejection, worth revisiting price-now-vs-then in a future review). GIB ($21.8k notional, barely
+above the liquidity floor) skipped as too thin to prioritize a catalyst check on ahead of the
+larger candidates. **LINK** ($21.3M notional, +7.20% today) checked next: Perplexity returned the
+CCIP 2.0 catalyst directly (see Thesis above) — proceeded to full technical gate check. 15m OHLC:
+24h high $15.20202 set on the just-closed 16:30–16:45 UTC candle (confirmed-candle requirement
+met — high sits on a closed, not still-forming, candle); momentum-peak-check freshness ceiling
+min(30min, time-since-last-pass[~1h47m]) = 30min — high was set well inside that window. Two-candle
+acceleration: closed 16:15–16:30 candle closed $14.96123 > prior close $14.68441 ✓; closed
+16:30–16:45 candle closed $14.99294 > prior close $14.96123 ✓ (second leg materially smaller than
+the first — a decelerating-magnitude but still strictly-higher-close sequence, which the rule as
+written does not fail on). Live intracandle fade at order time: 1.39% off 24h high (inside the
+1.5% cap). Cross-exchange check: Perplexity quoted LINK at Binance $13.94 / CoinGecko $13.80 vs
+Kraken $15.00 — 7.8–8.8% divergence, below the 15–20% hard-reject threshold and consistent with
+the strategy's documented Perplexity-stale-reference-price pattern rather than a genuine
+thin-orderbook distortion (LINK is a top-liquidity major, not a thin alt). Same-thesis cooling:
+no LINK stop-out found in TRADE-LOG within the last 7 days (last LINK activity was a normal close
+back in the May/June phase) — cap does not apply. Daily consecutive-loss pause: no trades yet
+today — does not trigger. BTC weekly downtrend gate: not checked in detail since catalyst-confirmed
+entries are exempt from it regardless of reading. Entry via limit buy at $15.005 (0.061% above bid
+$14.99092, within the 0.15% cap) — filled in full, crossing the $15.00389 ask (taker fee 0.8%,
+consistent with a marketable limit).
+
+### Decision: **TRADE — LINK/USD, catalyst-confirmed (CCIP 2.0 launch).** Order placed and fill
+confirmed via `kraken.sh closedorders`/`account` in this same pass (4.67 LINK acquired, ZUSD
+$71.8128 → $1.2430). Protective 2.5% trailing stop placed and confirmed open in the same pass
+(stop order OSHGDN-IC6MX-Z5L6A5).
+
+### Step 8 — Notification
+
+**Push sent** — Trade 157 executed (LINK/USD, catalyst-confirmed CCIP 2.0 launch, ~98% equity
+deployed, 2.5% trailing stop live). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were
+not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
