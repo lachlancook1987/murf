@@ -50289,3 +50289,11 @@ Dated-catalyst checks on the three most liquid (XDC, CRV, NIGHT): all `NO CATALY
 Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.33k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): AIN (+10.63%, $77k), CAP (+5.16%, $442k). Dated-catalyst queries on both: `NO CATALYST <6H`. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 20:00 UTC
+
+Flat (ZUSD $71.13, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.44k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): LINK (+9.07%, $27.4M), CRO (+4.74%, $377k), NPC, AIN, 0G, STORJ, OMI. Dated-catalyst queries: CRO, NPC `NO CATALYST <6H`; LINK's CCIP 2.0 catalyst (12:35 UTC) now ~7.5h old — outside 6h bar (and same asset stopped out 17:34). No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
