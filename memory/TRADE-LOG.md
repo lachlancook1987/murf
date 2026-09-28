@@ -11625,3 +11625,21 @@ $70.45162, fee $0.563613). Entry blended $15.1112 → net **LOSS −$0.682 (−0
 fees (gross +0.63% vs exchange avg fill $14.99135; trail had ratcheted up before firing). Confirmed via
 `kraken.sh closedorders` + account (LINK 0, ZUSD $71.1310, no open orders/positions). No orphan orders.
 Position flat; catalyst-confirmed-entry outcome recorded (1 loss, small).
+
+## 2026-09-28 — EOD Snapshot
+
+### Sep 28 — EOD Snapshot (Day 131, Monday)
+
+**Portfolio:** $71.1310 | **Cash:** $71.1310 (100.0%) | **Day P&L:** −$0.6818 (−0.949%) | **Phase P&L:** −$108.6490 (−60.435%) | **vs BTC:** +0.098 points (BTC −1.047% from day open $84,444.20 to $83,560)
+
+| Symbol | Qty | Entry | Price | Day Chg | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | Book flat, no open positions |
+
+**Trades today:** 1 (Trade 157: LINK/USD BUY 16:00 UTC pass, catalyst-confirmed CCIP 2.0, stopped out ~17:34 UTC, LOSS −0.966% net) | **Total since migration:** 157
+
+**Notes:** Kraken `account`: ZUSD $71.1310, ZAUD $0.1550 dust (excluded); `positions: {}`, `orders: {"open": {}}`. Flat since the 17:34 UTC stop-out; passes 18:00–23:00 all HOLD.
+
+### Step 8 — Notification
+
+No push sent — routine HOLD/EOD; the only trade was already pushed when executed.
