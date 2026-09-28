@@ -50271,3 +50271,13 @@ No push sent — routine HOLD pass, existing LINK position open/protected/unrema
 stop correctly trailing), no operational issues, no orphan orders, no drift, crash gate clear, no
 unprotected exposure. Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were not called
 (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
+---
+
+## Scan — 18:00 UTC (fired 18:44 UTC, ~44 min drift)
+
+Reconciled prior pass (TRADE LINK): position stopped out ~17:34 UTC, see TRADE-LOG (−0.966% net). Flat, ZUSD $71.13, no open orders, Alpaca residual empty.
+Crash gate clear (BTC ≈ $83.83k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): GIB, AIN, APU, XDC (+7.41%, $3.8M), SHX, CAP, NIGHT, LINEA, CRV, NPC.
+Dated-catalyst checks on the three most liquid (XDC, CRV, NIGHT): all `NO CATALYST <6H`, rssnews NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD; stop-out was small −0.97% and expected behavior).

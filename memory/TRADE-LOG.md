@@ -11615,3 +11615,13 @@ $71.8128 → $1.2430). Protective 2.5% trailing stop placed and confirmed open i
 **Push sent** — Trade 157 executed (LINK/USD, catalyst-confirmed CCIP 2.0 launch, ~98% equity
 deployed, 2.5% trailing stop live). Per CLAUDE.md, `scripts/clickup.sh`/`scripts/whatsapp.sh` were
 not called (channel retired 2026-08-21); the Artifact tool was not called (retired 2026-09-02).
+
+---
+
+## 2026-09-28 — Scan — 18:00 UTC (fired 18:44 UTC): Trade 157 (LINK/USD) CLOSED by trailing stop
+
+Stop OSHGDN-IC6MX-Z5L6A5 fired ~17:34 UTC (closetm 1790618067): sold 4.67 LINK @ $15.086 (cost
+$70.45162, fee $0.563613). Entry blended $15.1112 → net **LOSS −$0.682 (−0.966%)** after 1.6% round-trip
+fees (gross +0.63% vs exchange avg fill $14.99135; trail had ratcheted up before firing). Confirmed via
+`kraken.sh closedorders` + account (LINK 0, ZUSD $71.1310, no open orders/positions). No orphan orders.
+Position flat; catalyst-confirmed-entry outcome recorded (1 loss, small).
