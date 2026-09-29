@@ -11651,3 +11651,18 @@ First live 4h-breakout swing entries (Strategy Revision 2026-09-29). Signal: las
 - **Trade 159 — SWING TRIAL 2/10 — AAVE/USD BUY** 0.1228 @ $173.36 post-only limit (fee $0.08515, order ONTR4A-PNNKC-JZ6CM6). Signal: close 171.41 > hh 166.21, vol ×3.3, EMA50 148.36, ATR14 3.20%. Stop: trailing 9.6% (3×ATR) **OGCVD6-VEN2V-TCVUKW**. Size ~$21.3 (~30%). Coinbase $173.43. Spread 0.10%.
 - Max hold 10 days → close by 2026-10-09 12:00 UTC. No fixed T1/T2; progressive tightening does not apply. Cash left ~$28.5 (max 2 concurrent reached).
 - Other 4h signals skipped (thin/wide spread/max-2 cap): NIGHT, SYRUP, ZBCN, ESPORTS, CELO.
+
+## 2026-09-29 — EOD Snapshot
+
+### Sep 29 — EOD Snapshot (Day 132, Tuesday)
+
+**Portfolio:** $69.36 | **Cash:** $28.4755 (41.1%) | **Day P&L:** −$1.77 (−2.49%) | **Phase P&L:** −$110.42 (−61.42%) | **vs BTC:** −2.72 points (BTC +0.23% from day open $83,462.7 to $83,652)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| AVAX | 1.81 | 11.711 | 11.395 | −$0.57 (−2.7%) | OELFVZ-FMZRH-ENMQWG, 11.5% trail, stopprice 10.419 |
+| AAVE | 0.1228 | 173.36 | 164.97 | −$1.03 (−4.8%) | OGCVD6-VEN2V-TCVUKW, 9.6% trail, stopprice 159.21 |
+
+**Trades today:** 2 (Trades 158 AVAX, 159 AAVE — 4h-breakout swing trials 1/10 and 2/10, entered 12:00 UTC pass) | **Total since migration:** 159
+
+**Notes:** Day P&L is mark-to-market on the two open swing trials plus entry fees; no realized exits today. Kraken `positions: {}`, only the two stop orders open.
