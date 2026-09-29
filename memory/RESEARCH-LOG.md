@@ -50409,3 +50409,10 @@ Kraken-native sweep (today chg >3%, fade ≤1.5%, spread <1%): AAVE (+11.7%, $4.
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.98k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >4%, spread <1%): fade ≤1.5% — ZBCN (+16.1%, $0.46M), ESPORTS, AAVE (+11.1%, $4.1M), CELO, AVAX (+8.5%, $13M, fade 1.5%), SYRUP. QNT (+11.5%, $48M) fade 8.0% and POND/GRASS/SOON fade >5% fail. AAVE/AVAX/SYRUP/CELO/ZBCN catalyst state unchanged from 09:00 (`NO CATALYST <6H`; AAVE V4 2026-09-26 stale). No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 11:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $84.24k, day open $83,463). 1h momentum-chase entries retired per Strategy Revision 2026-09-29; 4h-breakout swing is evaluated only on the pass right after a 4h close (next: 12:00 UTC). Nothing to evaluate this pass.
+### Decision: **HOLD.** No push (routine HOLD).
