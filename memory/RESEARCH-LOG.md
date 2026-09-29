@@ -50377,3 +50377,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): C
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.87k, day open $83,463). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): DeFi-sector move — ICP (+6.35%, $4.8M), AAVE (+4.45%, $2.3M), CRV (+4.33%, $7.1M), CELO, W, COMP, AERO, CVX, AVAX. Dated-catalyst queries on ICP, AAVE, CRV: all `NO CATALYST <6H`; rssnews STALE ONLY (AAVE V4/Coinbase item 88.8h old) / NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 07:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $84.02k, day open $83,463). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): DeFi-sector move extends — AAVE (+9.64%, $3.2M), ICP (+8.17%, $4.5M), CELO, AVAX (+6.25%, $10.5M), COMP, PTB, W. Dated-catalyst queries on AAVE, ICP, AVAX: all `NO CATALYST <6H`; rssnews AAVE STALE ONLY (89.8h), ICP/AVAX NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
