@@ -50337,3 +50337,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): A
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC $82,928, day open $83,463, −0.64%). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): ZBCN (+8.52%, $439k), WELL (+2.68%, $30k). Dated-catalyst query on ZBCN: `NO CATALYST <6H`, rssnews NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 02:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.02k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): US/USD only (+12.5%, $431k, spread 0.38%). Dated-catalyst query: `NO CATALYST <6H FOR US`; rssnews hit was a false "US" match (Decrypt, OpenAI/US gov headline). No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
