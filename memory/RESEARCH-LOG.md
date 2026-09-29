@@ -50423,3 +50423,10 @@ Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3
 
 Flat at open (ZUSD $71.1310, no orders/positions, Alpaca residual empty). Crash gate clear (BTC ≈ $84.29k, day open $83,463). Post-4h-close pass → ran 4h-breakout scan across 177 USD pairs (>$100k/24h, AU-restricted excluded). Signals: AVAX, AAVE (liquid), NIGHT, SYRUP, ZBCN, ESPORTS, CELO. Took AVAX and AAVE (most liquid, spread ≤0.1%, Coinbase cross-check aligned), 30% equity each, post-only at bid, 3×ATR trailing stops (11.5% / 9.6%). See TRADE-LOG SWING TRIAL 1/10, 2/10.
 ### Decision: **TRADE — AVAX, AAVE (swing trial).** Fills and stops confirmed via orders/closedorders.
+
+---
+
+## Scan — 13:00 UTC (2026-09-29, fired 13:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ trailing 11.5%, stopprice 10.419) and AAVE 0.1228 (stop OGCVD6 trailing 9.6%, stopprice 158.76) — both swing trials, stops confirmed live; no orphans; Alpaca residual empty. Crash gate clear (BTC ≈ $84.17k, day open $83,463). Not a post-4h-close pass and max-2 concurrent reached → no new-entry scan. Swing rules: no tightening; max-hold close by 2026-10-09 12:00 UTC.
+### Decision: **HOLD.** No push (routine HOLD).
