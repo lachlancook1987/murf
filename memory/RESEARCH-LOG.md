@@ -50393,3 +50393,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): D
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.82k, day open $83,463). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg, fade ≤1.5%, spread <1%): SOON (+18.0%, $139k), AAVE (+10.7%, $3.7M), CELO, ZBCN, INIT thin. Dated-catalyst queries: SOON `NO CATALYST <6H`; AAVE latest catalyst V4 on Avalanche 2026-09-26 16:48 UTC (>6h stale). No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 09:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions); no Step 3 action. Crash gate clear (BTC ≈ $83.98k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >3%, fade ≤1.5%, spread <1%): AAVE (+11.7%, $4.0M), AVAX (+8.4%, $12.1M), SYRUP (+7.9%, $1.2M), COMP (+7.9%, $0.4M), ZBCN, CRV. Dated-catalyst queries on AAVE, AVAX, SYRUP, COMP: all `NO CATALYST <6H`. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
