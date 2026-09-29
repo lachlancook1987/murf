@@ -11643,3 +11643,11 @@ Position flat; catalyst-confirmed-entry outcome recorded (1 loss, small).
 ### Step 8 — Notification
 
 No push sent — routine HOLD/EOD; the only trade was already pushed when executed.
+
+## 2026-09-29 — Scan — 12:00 UTC (fired 12:45 UTC): SWING TRIAL 1/10 and 2/10 — AVAX/USD, AAVE/USD
+
+First live 4h-breakout swing entries (Strategy Revision 2026-09-29). Signal: last closed 4h candle (08:00–12:00 UTC) close > prior 20-candle high, vol >2× 20-avg, close > EMA50.
+- **Trade 158 — SWING TRIAL 1/10 — AVAX/USD BUY** 1.81 @ $11.711 post-only limit (maker fee $0.08479, order OUDD2V-OMGZD-HR4JAF; first attempt OSIX7Z at 11.717 rejected post-only as price dipped, resubmitted at bid). Signal: close 11.835 > hh 11.543, vol ×3.0, EMA50 10.463, ATR14 3.84%. Stop: trailing 11.5% (3×ATR) **OELFVZ-FMZRH-ENMQWG**. Size ~$21.2 (~30% equity). Coinbase price $11.72 ≈ Kraken. Spread 0.03%.
+- **Trade 159 — SWING TRIAL 2/10 — AAVE/USD BUY** 0.1228 @ $173.36 post-only limit (fee $0.08515, order ONTR4A-PNNKC-JZ6CM6). Signal: close 171.41 > hh 166.21, vol ×3.3, EMA50 148.36, ATR14 3.20%. Stop: trailing 9.6% (3×ATR) **OGCVD6-VEN2V-TCVUKW**. Size ~$21.3 (~30%). Coinbase $173.43. Spread 0.10%.
+- Max hold 10 days → close by 2026-10-09 12:00 UTC. No fixed T1/T2; progressive tightening does not apply. Cash left ~$28.5 (max 2 concurrent reached).
+- Other 4h signals skipped (thin/wide spread/max-2 cap): NIGHT, SYRUP, ZBCN, ESPORTS, CELO.
