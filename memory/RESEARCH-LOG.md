@@ -50416,3 +50416,10 @@ Kraken-native sweep (today chg >4%, spread <1%): fade ≤1.5% — ZBCN (+16.1%, 
 
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $84.24k, day open $83,463). 1h momentum-chase entries retired per Strategy Revision 2026-09-29; 4h-breakout swing is evaluated only on the pass right after a 4h close (next: 12:00 UTC). Nothing to evaluate this pass.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 12:00 UTC (2026-09-29, fired 12:45 UTC)
+
+Flat at open (ZUSD $71.1310, no orders/positions, Alpaca residual empty). Crash gate clear (BTC ≈ $84.29k, day open $83,463). Post-4h-close pass → ran 4h-breakout scan across 177 USD pairs (>$100k/24h, AU-restricted excluded). Signals: AVAX, AAVE (liquid), NIGHT, SYRUP, ZBCN, ESPORTS, CELO. Took AVAX and AAVE (most liquid, spread ≤0.1%, Coinbase cross-check aligned), 30% equity each, post-only at bid, 3×ATR trailing stops (11.5% / 9.6%). See TRADE-LOG SWING TRIAL 1/10, 2/10.
+### Decision: **TRADE — AVAX, AAVE (swing trial).** Fills and stops confirmed via orders/closedorders.
