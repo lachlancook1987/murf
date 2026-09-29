@@ -50345,3 +50345,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k): ZBCN (+8.52%,
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.02k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): US/USD only (+12.5%, $431k, spread 0.38%). Dated-catalyst query: `NO CATALYST <6H FOR US`; rssnews hit was a false "US" match (Decrypt, OpenAI/US gov headline). No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 03:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.08k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): CRV (+2.18%, $6.3M), PHA, OMI. Dated-catalyst query on CRV (most liquid): `NO CATALYST <6H`. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
