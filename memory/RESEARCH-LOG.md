@@ -50361,3 +50361,11 @@ Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): C
 Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.13k). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
 Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): CRV (+2.23%, $6.2M; `NO CATALYST <6H` last pass), OMI (+2.66%, $42k), FOLKS (+2.37%, $31k). Too weak/thin to warrant catalyst checks. No catalyst-confirmed candidate; momentum-only blocked.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 05:00 UTC (2026-09-29)
+
+Flat (ZUSD $71.1310, no open orders/positions, Alpaca residual empty); no Step 3 action. Crash gate clear (BTC ≈ $83.26k, day open $83,463, −0.24%). Momentum-only entries remain SUSPENDED (probe window opens 2026-10-04).
+Kraken-native sweep (today chg >2%, fade ≤1.5%, notional >$20k, spread <1%): CELO (+4.99%, $112k), ICP (+4.53%, $4.5M), CRV, OMI, ZEREBRO. Dated-catalyst queries on ICP, CELO: `NO CATALYST <6H`, rssnews NO COVERAGE. No catalyst-confirmed candidate; momentum-only blocked.
+### Decision: **HOLD.** No push (routine HOLD).
