@@ -72,6 +72,11 @@ case "$CMD" in
     kraken_private "/0/private/ClosedOrders"
     ;;
 
+  fees)
+    SYM="${2:-BTC/USD}"
+    kraken_private "/0/private/TradeVolume" "pair=$(map_pair "$SYM")" "fee-info=true"
+    ;;
+
   quote)
     SYM="${2:?Usage: $0 quote SYM/USD}"
     PAIR=$(map_pair "$SYM")
@@ -137,6 +142,8 @@ elif kraken_type == 'trailing-stop':
 
 if body.get('leverage'):
     params['leverage'] = str(body['leverage'])
+if body.get('post_only'):
+    params['oflags'] = 'post'   # maker-only: rejected instead of crossing the spread
 if body.get('validate'):
     params['validate'] = 'true'
 
@@ -171,7 +178,7 @@ PYEOF
     ;;
 
   *)
-    echo "Usage: $0 {account|positions|orders|closedorders|quote SYM/USD|assets [SYM/USD]|order '{json}'|cancel <txid|all>}" >&2
+    echo "Usage: $0 {account|positions|orders|closedorders|fees [SYM/USD]|quote SYM/USD|assets [SYM/USD]|order '{json}'|cancel <txid|all>}" >&2
     exit 1
     ;;
 esac

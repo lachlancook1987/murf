@@ -13,6 +13,39 @@ target, move on. Volume of profitable trades beats size of any single trade.
 
 ---
 
+## Strategy Revision 2026-09-29 (supersedes conflicting rules below) — backtest-driven
+
+Full data: `memory/BACKTEST-2026-09-29.md`. The 1h momentum-chase entry rules underperform random
+entries in backtest and match the live loss record; fees (0.8%/leg taker) are the main drag.
+
+1. **Fees:** Kraken maker fee is 0.4% vs taker 0.8% (`bash scripts/kraken.sh fees SYM/USD`).
+   Every entry is a **post-only limit at the bid** (`"post_only":true` in the order JSON); if
+   rejected/unfilled by the end of the pass, cancel and skip. Do not use marketable limits/market
+   orders for entries. Trailing stops remain taker — unavoidable.
+2. **Retired entry mode:** the 1h momentum-chase entries (1h surge >3%, 24h-high freshness,
+   15m two-candle acceleration, fade check) are **no longer used to open new positions.**
+   Kill switch/probe-batch machinery below applied only to that mode and is moot for it.
+3. **New mode — 4h breakout swing (TRIAL, unproven):** evaluate only on the pass right after a
+   4h candle closes (00/04/08/12/16/20 UTC, using closed candles only). Enter when the last
+   closed 4h candle closes above the prior 20-candle high, volume >2× the 20-candle average, and
+   close > EMA50. Spread ≤1%, cross-exchange divergence and crash gates still apply. Skip
+   AU-restricted assets.
+   - **Stop:** trailing stop at 3×ATR14(4h) as a percent of price, floor 2%, cap 15% — not a fixed 2.5%.
+   - **No fixed T1/T2 targets**; let the trail run. Max hold 10 days (60 4h candles), then close.
+   - **Size:** max 30% of equity per position, max 2 concurrent, until the trial resolves.
+   - **Catalyst:** not required (the backtested signal is purely technical); a confirmed <6h catalyst
+     is a tiebreaker only.
+   - **Trial review:** tag trades "SWING TRIAL n/10" in TRADE-LOG.md. After 10 closed trades, compute
+     average net return; if ≤0 pause the mode and report to the user. Expect ~35% win rate with
+     avg win ~+10%, avg loss ~−5.5%; do not judge on fewer than 10 trades.
+   - **Progressive stop-tightening (≥3%/20%/40% rungs) does not apply** to swing positions — it would
+     cut the winners the strategy depends on. Thesis-break and crash-gate exits still apply.
+4. **Rejected by backtest:** pullback-in-uptrend entries (negative expectancy), widening
+   targets, more entry gates.
+5. **Monitoring:** hourly cadence is adequate for 4h-candle logic; no sub-hourly trigger needed.
+
+---
+
 ## Universe
 
 - **Any crypto asset tradeable on Kraken** — BTC, ETH, SOL, alts, micro-caps, memes

@@ -183,7 +183,8 @@ for quotes or placing orders.
 
 ## Current Strategy Profile
 
-Kraken **day trading** profile (activated 2026-05-21, day trading focus added 2026-05-26).
+**2026-09-29:** entries moved from 1h momentum-chase to a 4h-breakout swing trial with post-only (maker) entries and ATR trailing stops — see `memory/TRADING-STRATEGY.md` "Strategy Revision 2026-09-29" and `memory/BACKTEST-2026-09-29.md`. Older text below describing 2.5% stops / T1 / 1h chase entries is superseded for new entries.
+Prior profile: Kraken day trading (activated 2026-05-21, day trading focus added 2026-05-26).
 See `memory/TRADING-STRATEGY.md`.
 Key parameters: target 3–5% per trade, recycle capital multiple times per day, full alt
 universe, no position caps, up to 2x leverage, **2.5% trailing stop on all new trades**
