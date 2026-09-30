@@ -50517,3 +50517,10 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.367) and AAVE 0.1228 (sto
 
 Position change: AAVE stop OGCVD6 filled @ $159.13 (see TRADE-LOG) — SWING TRIAL 2/10 closed, net −9.3%. Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC ≈ $83.3k). Not a post-4h-close pass → no new-entry scan. Max-hold AVAX close by 2026-10-09 12:00 UTC.
 ### Decision: **HOLD.** No push (routine swing-trial stop-out, within expected loss size).
+
+---
+
+## Scan — 04:00 UTC (2026-09-30, fired 04:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC ≈ $83.3k). Post-4h-close pass, 1 swing slot free. 4h-breakout sweep over 136 liquid USD pairs (closed candles): SIGNAL COMP (close 26.42 > hh 25.59, vol ×5.1, EMA50 23.56, ATR 3.06%) and KSM (5.06 > 4.99, vol ×3.5, ATR 3.08%); near-misses ASTER, ZRO, ZBCN. Picked COMP (higher vol, spread 0.12%, Coinbase $25.73 ≈ Kraken). Post-only limit buy 0.79 @ 25.68 (OPXNSU-BI7BV-GCKQ6R) did not fill in ~3 min as bid rose to 25.70–25.76 → cancelled per post-only rule, skipped (no chase). No position, no stop needed.
+### Decision: **HOLD (entry missed, unfilled maker order cancelled).** No push.
