@@ -50512,3 +50512,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.417) and AAVE 0.1228 (sto
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.367) and AAVE 0.1228 (stop OGCVD6, stopprice 159.21; bid 160.01), both trailing stops live, no orphans; Alpaca residual positions empty. Crash gate clear (BTC ≈ $83.3k). Not a post-4h-close pass and max-2 concurrent swing trials reached → no new-entry scan. AAVE stop ~0.5% below bid — watch (stop is a swing stop; no action, per swing rules). Max-hold close by 2026-10-09 12:00 UTC.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 03:00 UTC (2026-09-30)
+
+Position change: AAVE stop OGCVD6 filled @ $159.13 (see TRADE-LOG) — SWING TRIAL 2/10 closed, net −9.3%. Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC ≈ $83.3k). Not a post-4h-close pass → no new-entry scan. Max-hold AVAX close by 2026-10-09 12:00 UTC.
+### Decision: **HOLD.** No push (routine swing-trial stop-out, within expected loss size).
