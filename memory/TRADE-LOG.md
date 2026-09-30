@@ -11670,3 +11670,6 @@ First live 4h-breakout swing entries (Strategy Revision 2026-09-29). Signal: las
 ## 2026-09-30 — Scan — 03:00 UTC: Trade 159 (AAVE/USD, SWING TRIAL 2/10) CLOSED by trailing stop
 
 Stop OGCVD6-VEN2V-TCVUKW fired (closetm 1790739149, ~02:12 UTC): sold 0.1228 AAVE @ $159.13 (cost $19.54239, fee $0.15634). Entry $173.36 (cost $21.288 + fee $0.085). Net **LOSS −$1.99 (−9.3%)** — in line with the 9.6% stop width. Confirmed via `closedorders` + account (AAVE 0, ZUSD $47.8616). Swing trial tally: 1 closed (loss), AVAX open (stop OELFVZ live). One slot free for next post-4h-close signal.
+
+## 2026-09-30 — Scan — 04:00 UTC: SWING TRIAL entry attempt COMP/USD — NOT FILLED
+Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% = 3×ATR 3.06%) unfilled as price ran away; cancelled. No trade number consumed; trial tally unchanged (1 closed loss, AVAX open).
