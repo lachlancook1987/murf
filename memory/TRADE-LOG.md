@@ -11677,3 +11677,18 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## 2026-09-30 — Scan — 08:00 UTC: SWING TRIAL 2/10 (tally: 1 closed loss) — Trade 160 KSM/USD BUY
 - **Trade 160 — SWING TRIAL entry — KSM/USD BUY** 3.85 @ $5.19 post-only limit (order OOA5IE-WR3HE-BQMABA, filled). Signal: 4h close 5.10 > hh 5.06, vol ×6.5, EMA50 4.65, ATR14 3.32%. Stop: trailing 9.96% (3×ATR) **OH6NX6-RLI7T-HAGSET**, stopprice 4.71. Spread 0.19%, Coinbase $5.187 ≈ Kraken. Size ~$20 (~30% equity). Max hold → close by 2026-10-10 08:00 UTC. Cash ~$27.8. Max 2 concurrent reached (AVAX + KSM).
 - Other signals skipped: GTC/MOVR (spread ~1.0%, thin), TRAC (lower vol ratio/wider spread).
+
+## 2026-09-30 — EOD Snapshot
+
+### Sep 30 — EOD Snapshot (Day 133, Wednesday)
+
+**Portfolio:** $67.48 | **Cash:** $27.80 (41.2%) | **Day P&L:** −$1.88 (−2.71%) | **Phase P&L:** −$112.30 (−62.47%) | **vs BTC:** ≈ −2.6 points (BTC ≈ −0.11% vs Sep 29 EOD $83,652 → $83,557; day-open approximated from prior EOD)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| AVAX | 1.81 | 11.711 | 10.948 | −$1.38 (−6.5%) | OELFVZ-FMZRH-ENMQWG, 11.5% trail, stopprice 10.419 |
+| KSM | 3.85 | 5.19 | 5.16 | −$0.12 (−0.6%) | OH6NX6-RLI7T-HAGSET, 9.96% trail, stopprice 4.84 |
+
+**Trades today:** 1 new (Trade 160 KSM swing entry 08:00 UTC pass); Trade 159 AAVE closed by stop 02:12 UTC (−9.3%) | **Total since migration:** 160
+
+**Notes:** Kraken `positions: {}`, only the two stop orders open. Swing trial tally: 1 closed (loss), 2 open.
