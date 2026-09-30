@@ -11673,3 +11673,7 @@ Stop OGCVD6-VEN2V-TCVUKW fired (closetm 1790739149, ~02:12 UTC): sold 0.1228 AAV
 
 ## 2026-09-30 — Scan — 04:00 UTC: SWING TRIAL entry attempt COMP/USD — NOT FILLED
 Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% = 3×ATR 3.06%) unfilled as price ran away; cancelled. No trade number consumed; trial tally unchanged (1 closed loss, AVAX open).
+
+## 2026-09-30 — Scan — 08:00 UTC: SWING TRIAL 2/10 (tally: 1 closed loss) — Trade 160 KSM/USD BUY
+- **Trade 160 — SWING TRIAL entry — KSM/USD BUY** 3.85 @ $5.19 post-only limit (order OOA5IE-WR3HE-BQMABA, filled). Signal: 4h close 5.10 > hh 5.06, vol ×6.5, EMA50 4.65, ATR14 3.32%. Stop: trailing 9.96% (3×ATR) **OH6NX6-RLI7T-HAGSET**, stopprice 4.71. Spread 0.19%, Coinbase $5.187 ≈ Kraken. Size ~$20 (~30% equity). Max hold → close by 2026-10-10 08:00 UTC. Cash ~$27.8. Max 2 concurrent reached (AVAX + KSM).
+- Other signals skipped: GTC/MOVR (spread ~1.0%, thin), TRAC (lower vol ratio/wider spread).

@@ -50545,3 +50545,10 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.162), trailing stop live,
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.140), trailing stop live, no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC $83,376). Not a post-4h-close pass → no new-entry scan (1 swing slot free; next window 08:00 UTC pass). No tightening (swing rules). Max-hold AVAX close by 2026-10-09 12:00 UTC.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 08:00 UTC (2026-09-30)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; Alpaca residual empty. Crash gate clear (BTC ≈ $83.0k). Post-4h-close pass, 1 swing slot free. Sweep of 227 USD pairs (closed candles): SIGNAL KSM, GTC, MOVR, TRAC; GTC/MOVR spread ≥1.0% skip; TRAC wider/lower vol. Picked KSM (vol ×6.5, spread 0.19%, Coinbase parity) — filled post-only 3.85 @ 5.19, trail 9.96% stop OH6NX6 placed. (Cost of note: sweep script reused from scratchpad.)
+### Decision: **TRADE (Trade 160 KSM).** Push notification sent.
