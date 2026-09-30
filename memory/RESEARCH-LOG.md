@@ -50555,3 +50555,10 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; Alpaca residual emp
 
 ## 2026-09-30 — Scan — 09:00 UTC: HOLD (max 2 concurrent swing slots full)
 Kraken: ZUSD $27.80, AVAX 1.81 (stop OELFVZ live, trail 11.5%), KSM 3.85 (stop OH6NX6 live, trail 9.96%); no orphan orders. Alpaca: no positions, only a filled May order. BTC ~$83.5k, no crash gate. AVAX bid ~11.17 (−4.6% vs entry, above stop 10.42); KSM ask 5.31 (+2.3%). No new entries — swing cap reached; no 4h close this hour anyway. No push.
+
+---
+
+## Scan — 10:00 UTC (2026-09-30)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.19), KSM 3.85 (stop OH6NX6, stopprice 4.84); no orphans; ZUSD $27.80; Alpaca residual empty. Crash gate clear (BTC ≈ $83.86k). Max-2 swing slots full and not a post-4h-close pass → no new-entry scan. Max-hold: AVAX 2026-10-09 12:00, KSM 2026-10-10 08:00.
+### Decision: **HOLD.** No push (routine HOLD).
