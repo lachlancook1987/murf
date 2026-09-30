@@ -50531,3 +50531,10 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), no orphans; ZUSD $47.8616; Alpa
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.294), trailing stop live, no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC ≈ $83.43k). Not a post-4h-close pass → no new-entry scan (1 swing slot free; next window 08:00 UTC pass). No tightening (swing rules). Max-hold AVAX close by 2026-10-09 12:00 UTC.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+---
+
+## Scan — 06:00 UTC (2026-09-30)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.162), trailing stop live, no orphans; ZUSD $47.8616; Alpaca residual empty. Crash gate clear (BTC $83,050, −1.1% 24h). Not a post-4h-close pass → no new-entry scan (1 swing slot free; next window 08:00 UTC pass). No tightening (swing rules). Max-hold AVAX close by 2026-10-09 12:00 UTC.
+### Decision: **HOLD.** No push (routine HOLD).
