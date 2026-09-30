@@ -11666,3 +11666,7 @@ First live 4h-breakout swing entries (Strategy Revision 2026-09-29). Signal: las
 **Trades today:** 2 (Trades 158 AVAX, 159 AAVE — 4h-breakout swing trials 1/10 and 2/10, entered 12:00 UTC pass) | **Total since migration:** 159
 
 **Notes:** Day P&L is mark-to-market on the two open swing trials plus entry fees; no realized exits today. Kraken `positions: {}`, only the two stop orders open.
+
+## 2026-09-30 — Scan — 03:00 UTC: Trade 159 (AAVE/USD, SWING TRIAL 2/10) CLOSED by trailing stop
+
+Stop OGCVD6-VEN2V-TCVUKW fired (closetm 1790739149, ~02:12 UTC): sold 0.1228 AAVE @ $159.13 (cost $19.54239, fee $0.15634). Entry $173.36 (cost $21.288 + fee $0.085). Net **LOSS −$1.99 (−9.3%)** — in line with the 9.6% stop width. Confirmed via `closedorders` + account (AAVE 0, ZUSD $47.8616). Swing trial tally: 1 closed (loss), AVAX open (stop OELFVZ live). One slot free for next post-4h-close signal.
