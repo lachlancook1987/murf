@@ -11692,3 +11692,18 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** 1 new (Trade 160 KSM swing entry 08:00 UTC pass); Trade 159 AAVE closed by stop 02:12 UTC (−9.3%) | **Total since migration:** 160
 
 **Notes:** Kraken `positions: {}`, only the two stop orders open. Swing trial tally: 1 closed (loss), 2 open.
+
+## 2026-10-01 — EOD Snapshot
+
+### Oct 1 — EOD Snapshot (Day 134, Thursday)
+
+**Portfolio:** $67.23 | **Cash:** $27.80 (41.4%) | **Day P&L:** −$0.25 (−0.37%) | **Phase P&L:** −$112.55 (−62.6%) | **vs BTC:** −1.8 points (BTC ≈ +1.46% vs Sep 30 EOD $83,557 → $84,783)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| AVAX | 1.81 | 11.711 | ~10.97 | −$1.33 (−6.3%) | OELFVZ-FMZRH-ENMQWG, 11.5% trail, stopprice 10.419 |
+| KSM | 3.85 | 5.19 | ~5.08 | −$0.42 (−2.1%) | OH6NX6-RLI7T-HAGSET, 9.96% trail, stopprice 4.84 |
+
+**Trades today:** 0 | **Total since migration:** 160
+
+**Notes:** Kraken `positions: {}`, only the two stop orders open; both swing trials still live (tally: 1 closed loss, 2 open). Equity is mark-to-market from Sep 30 EOD $67.48.
