@@ -1604,3 +1604,15 @@ item, separate from anything a strategy-doc change can fix.
 
 ---
 
+
+## Week of 2026-09-25 to 2026-10-02 — Review Date: 2026-10-02
+
+**Equity:** ≈ $67.8 now (≈ $71.1 at Sep 29 day open; Phase P&L ≈ −$112 / −62.5%). BTC ≈ $83.5k → $85.75k (≈ +2.6% over Sep 29–Oct 2); portfolio ≈ −4.6% over the same span → trailing BTC by ~7 points (approximate; no exact weekly-open snapshot on hand).
+
+**Trades (154–160):** JTO (probe 1/3) loss −0.73%; COMP (probe 2/3) win +0.25%; WLD (probe 3/3) loss −1.83%; LINK (catalyst) loss −0.97%; AAVE (swing 2/10 @ 173.36) stopped −9.3% (−$1.99); AVAX (swing @ 11.711) open ≈ −5.6%; KSM (swing @ 5.19) open ≈ 0%. Closed: 1 win / 5 losses (20% win rate); profit factor ≈ 0.1; largest loss −$1.99 (AAVE), largest win ≈ +$0.05 (COMP). Fees: maker entries ~$0.085 each — cheaper than prior taker regime.
+
+**Trade quality:** The strategy switch on 09-29 (4h breakout, post-only entries, 3×ATR trail) produced 3 swing signals in 3 days; one stopped for the full ~9.6% width within ~14h, one hovers at −5.6%. Wide stops with ~30% sizing cap per-trade damage to ~$2, consistent with design. No rule violations observed; one post-only entry (COMP 09-30) correctly cancelled unfilled rather than chased. Process: all hourly passes logged, no mem-sync gaps noted.
+
+**Concrete adjustment for next week:** None to rules — swing trial is 3/10 into its sample (1 closed loss, 2 open); too small to judge. Watch whether trail width (3×ATR ≈ 10–11.5%) vs. 10-day max-hold leaves AVAX/KSM stuck near entry; if both exit by time-stop (Oct 9–10) flat/negative, revisit stop multiple in the fortnightly deep review rather than mid-trial.
+
+---
