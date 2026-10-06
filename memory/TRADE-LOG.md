@@ -11757,3 +11757,17 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 
 - **SWING TRIAL close:** KSM stop OH6NX6-RLI7T-HAGSET filled 16:15 UTC, 3.85 @ 4.94 (entry 5.19 limit). Gross ≈ −$0.96, fees ≈ $0.23 (entry 0.08 + exit 0.15) → net ≈ −$1.19 (≈ −6%). Trial tally: 2 closed losses, 1 open (AVAX). ZUSD now $46.67.
 - **Entry attempt (no fill, cancelled):** MET/USD 4h breakout (close 0.3288 > prior-20 high 0.3189, vol 12.5×, > EMA50 0.3076; spread 0.48%; Coinbase 0.3373 ≈ Kraken). Post-only buy 59 @ 0.3361, txid OUP7SW-B5J7D-DU6GNW; bid ran to 0.3378 with no fill after ~3 min → cancelled per post-only rule. No MET held, no stop needed.
+
+## 2026-10-06 — EOD Snapshot
+
+### Oct 6 — EOD Snapshot (Day 139, Tuesday)
+
+**Portfolio:** $67.73 | **Cash:** $46.67 (68.9%) | **Day P&L:** −$0.28 (−0.41%) vs Oct 5 EOD $68.01 | **Phase P&L:** −$112.05 (−62.33%) | **vs BTC:** ≈ −0.1 points (BTC ≈ −0.28% vs Oct 5 EOD ~$85,803 → $85,564)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| AVAX | 1.81 | 11.711 | ~11.63 | −$0.15 (−0.7%) | OELFVZ-FMZRH-ENMQWG, 11.5% trail, stopprice 10.419 |
+
+**Trades today:** 1 closed (KSM swing trial stopped out 16:15 UTC, net ≈ −$1.19); MET post-only entry unfilled/cancelled | **Total since migration:** 160
+
+**Notes:** Kraken `positions: {}`, only the AVAX stop open; swing trial tally: 2 closed losses, 1 open (AVAX). Equity mark-to-market.
