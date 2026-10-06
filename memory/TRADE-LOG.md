@@ -11752,3 +11752,8 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** 0 | **Total since migration:** 160
 
 **Notes:** Kraken `positions: {}`, only the two stop orders open; swing trials live (tally: 1 closed loss, 2 open). Equity mark-to-market.
+
+## Scan — 16:00 UTC (2026-10-06) — KSM stopped out; MET entry unfilled
+
+- **SWING TRIAL close:** KSM stop OH6NX6-RLI7T-HAGSET filled 16:15 UTC, 3.85 @ 4.94 (entry 5.19 limit). Gross ≈ −$0.96, fees ≈ $0.23 (entry 0.08 + exit 0.15) → net ≈ −$1.19 (≈ −6%). Trial tally: 2 closed losses, 1 open (AVAX). ZUSD now $46.67.
+- **Entry attempt (no fill, cancelled):** MET/USD 4h breakout (close 0.3288 > prior-20 high 0.3189, vol 12.5×, > EMA50 0.3076; spread 0.48%; Coinbase 0.3373 ≈ Kraken). Post-only buy 59 @ 0.3361, txid OUP7SW-B5J7D-DU6GNW; bid ran to 0.3378 with no fill after ~3 min → cancelled per post-only rule. No MET held, no stop needed.
