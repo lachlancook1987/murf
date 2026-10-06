@@ -51290,3 +51290,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), KSM 3.85 (stop OH6NX6, stoppric
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), KSM 3.85 (stop OH6NX6, stopprice 4.94); 2 open orders, no orphans; ZUSD $27.80; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $86.28k). Not a post-4h-close pass, max-2 swing slots full → no new entry. Tuesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 15:00 UTC (2026-10-06)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), KSM 3.85 (stop OH6NX6, stopprice 4.94); 2 open orders, no orphans; ZUSD $27.80; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $86.09k). Not a post-4h-close pass, max-2 swing slots full → no new entry. Tuesday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
