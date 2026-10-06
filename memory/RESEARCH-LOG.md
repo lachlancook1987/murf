@@ -51305,3 +51305,8 @@ Position change: KSM trailing stop filled 16:15 UTC @ 4.94 (net ≈ −$1.19); A
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.506), no KSM; 1 open order, no orphans; ZUSD $46.67; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $85.6k). Not a post-4h-close pass → no new entry. Tuesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 18:00 UTC (2026-10-06)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.484), no KSM; 1 open order, no orphans; ZUSD $46.67; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $85.62k). Not a post-4h-close pass → no new entry. Tuesday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
