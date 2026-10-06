@@ -51300,3 +51300,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), KSM 3.85 (stop OH6NX6, stoppric
 
 Position change: KSM trailing stop filled 16:15 UTC @ 4.94 (net ≈ −$1.19); AVAX 1.81 still held (stop OELFVZ, stopprice 10.419). ZUSD $46.67; Alpaca positions empty. Crash gate clear (BTC ask $85.7k). 4h-close pass, slot free → full-universe 4h breakout scan (632 USD pairs): 17 passed the close>20-high / vol>2× / >EMA50 filter; most illiquid or wide-spread (FXS, LSETH, BADGER, ELIZAOS, ANON, ARPA fail ≤1% spread; FLUX/CAP/ELIZAOS 3×ATR >15% cap or already faded; AVAX already held). Best: MET (vol 12.5×, $409k 24h vol, spread 0.48%, 3×ATR 8.0%). Placed post-only 59 @ 0.3361 — unfilled, cancelled. Tuesday → no weekly review.
 ### Decision: **HOLD** (entry attempted, no fill). Note: KSM stop-out is routine trial outcome, no push.
+
+## Scan — 17:00 UTC (2026-10-06)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.506), no KSM; 1 open order, no orphans; ZUSD $46.67; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $85.6k). Not a post-4h-close pass → no new entry. Tuesday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
