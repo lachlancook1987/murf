@@ -51381,3 +51381,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.344), 1 open order, no or
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), 1 open order, no orphans; ZUSD $45.07; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.97k). 4h-close pass, slot free → sweep (225 USD pairs >$50k 24h vol, AU-restricted excluded, closed 04:00 candle): 0 passed close>20-high / vol>2× / >EMA50. Wednesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 09:00 UTC (2026-10-07) (fired 09:45 UTC)
+- State: Kraken positions {}, only AVAX trailing stop OELFVZ (11.5%) open; ZUSD $45.07; AVAX 1.81 @ ~11.02 (−5.9% vs 11.711 entry, stop 10.419 well clear). Alpaca positions/orders: no open position.
+- Crash gate clear (BTC ~83.8k, ~−2% vs yesterday). No orphans, no thesis break.
+- 4h-breakout swing mode evaluates only right after a 4h close (08:00 candle handled in 08:45 pass); next window 12:00 close. Decision: HOLD (no evaluation window).
