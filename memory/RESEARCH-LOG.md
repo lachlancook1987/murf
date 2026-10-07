@@ -51445,3 +51445,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; bid 11.171), RAY 7.9 (stop OXTDO
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.041), RAY 7.9 (stop OXTDO3; ask 2.495, entry 2.467), 2 open orders, no orphans; ZUSD $25.51; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.24k). Slots full (2/2), not a 4h-close pass → no new entry. Wednesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 23:00 UTC (2026-10-07) (fired 23:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ, 11.5%, stopprice 10.419; ask 11.14), RAY 7.9 (stop OXTDO3, 13.4%, stopprice 2.208; ask 2.466, entry 2.467), 2 open orders, no orphans; ZUSD $25.51; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.27k). Slots full (2/2), not a 4h-close pass → no new entry. Wednesday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).

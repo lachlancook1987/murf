@@ -11787,3 +11787,18 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - **Stop:** trailing_stop 13.4% (3×ATR14 4h), GTC, txid OXTDO3-MF4KJ-4YBHSN, initial stopprice 2.135.
 - Signal: 12:00 4h candle close 2.472 > 20-high 2.371, vol 8.0×, > EMA50. Spread 0.12%, Coinbase parity. Max hold to 2026-10-17 16:00 UTC.
 - Open: AVAX 1.81 (stop OELFVZ) + RAY 7.9 (stop OXTDO3). ZUSD ≈ $25.6.
+
+## 2026-10-07 — EOD Snapshot
+
+### Oct 7 — EOD Snapshot (Day 140, Wednesday)
+
+**Portfolio:** ≈$65.25 | **Cash:** $25.51 (39.1%) | **Day P&L:** ≈−$2.48 (−3.66%) vs Oct 6 EOD $67.73 | **Phase P&L:** ≈−$114.53 (−63.70%) | **vs BTC:** ≈ −1.0 points (BTC ≈ −2.68% vs Oct 6 EOD ~$85,564 → $83,274)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| AVAX | 1.81 | 11.711 | ~11.14 | −$1.03 (−4.9%) | OELFVZ-FMZRH-ENMQWG, 11.5% trail, stopprice 10.419 |
+| RAY | 7.9 | 2.467 | ~2.464 | −$0.02 (−0.1%) | OXTDO3-MF4KJ-4YBHSN, 13.4% trail, stopprice 2.208 |
+
+**Trades today:** INJ swing trial 3/10 (entered 00:45, stopped out 02:01 UTC, net ≈ −$1.59); RAY swing trial 5/10 entered 16:45 UTC (open) | **Total since migration:** ≈162
+
+**Notes:** Kraken `positions: {}`, two trailing stops open; swing trial tally: 3 closed losses, 2 open (AVAX, RAY). Equity mark-to-market.
