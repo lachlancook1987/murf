@@ -51416,3 +51416,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.268), 1 open order, no or
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.126), 1 open order, no orphans; ZUSD $45.07; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.30k). Not a post-4h-close pass (next 16:00 UTC) → no new entry. Wednesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 16:00 UTC (2026-10-07) (fired ~16:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), ZUSD $45.07, no orphans; Alpaca empty. Crash gate clear (BTC ask $83.41k, ~−2.5% 24h). 4h-close pass, slot free (1/2) → sweep (248 USD pairs >$50k 24h vol, closed 12:00 candle): 3 passed close>20-high / vol>2× / >EMA50 — RAY (close 2.472 vs hi 2.371, vol 8.0×, 3×ATR 13.4%, spread 0.12%), SAND (0.0844 vs 0.0808, 3.0×, ATR 14.5%, spread 0.24%), SWELL (0.000882 vs 0.000881, marginal, 3×ATR 18.1% >cap, thin $170k). Coinbase RAY 2.4644 / SAND 0.0835 vs Kraken — no divergence. Slot limit → took RAY (higher volume surge, tighter stop).
+### Decision: **TRADE — RAY** (SWING TRIAL 5/10, see TRADE-LOG).

@@ -11781,3 +11781,9 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## Scan — 02:00 UTC (2026-10-07) (fired 02:45 UTC) — SWING TRIAL 3/10 closed: INJ stopped out
 
 - **SWING TRIAL close:** INJ stop OXWUAC-S3PQQ-VPXQ4R filled 02:01 UTC, 2.55 @ 7.410 (entry 7.944 limit, ~1.3h hold). Gross ≈ −$1.36, fees ≈ $0.23 (entry 0.08 + exit 0.15) → net ≈ −$1.59 (≈ −7.8%). Trial tally: 3 closed losses, 1 open (AVAX). ZUSD now $45.07.
+
+## Scan — 16:00 UTC (2026-10-07) (fired ~16:45 UTC) — SWING TRIAL 5/10 entry: RAY
+- **BUY RAY/USD** 7.9 @ 2.467 post-only limit (txid ODB4I3-TXVDN-6BY6BF), filled (~$19.5 ≈ 30% equity). Maker entry.
+- **Stop:** trailing_stop 13.4% (3×ATR14 4h), GTC, txid OXTDO3-MF4KJ-4YBHSN, initial stopprice 2.135.
+- Signal: 12:00 4h candle close 2.472 > 20-high 2.371, vol 8.0×, > EMA50. Spread 0.12%, Coinbase parity. Max hold to 2026-10-17 16:00 UTC.
+- Open: AVAX 1.81 (stop OELFVZ) + RAY 7.9 (stop OXTDO3). ZUSD ≈ $25.6.
