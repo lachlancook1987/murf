@@ -51401,3 +51401,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 10.996), 1 open order, no or
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), 1 open order, no orphans; ZUSD $45.07; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.48k, ~−2.4% vs 24h open). 4h-close pass, slot free → sweep (242 USD pairs >$50k 24h vol, closed 08:00 candle): 2 passed close>20-high / vol>2× / >EMA50 — ZEUS (close 0.01492 vs hi 0.0076, vol 7.5×) and ELIZAOS (0.001118 vs 0.00075, vol 2.7×). Both skipped: live spread ZEUS ~3.1%, ELIZAOS ~4.2% (>1% hard skip); no Coinbase pair (divergence unverifiable); parabolic +50–96% candles, 3×ATR 45–47% (cap 15%). Wednesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 13:00 UTC (2026-10-07) (fired 13:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.191), 1 open order, no orphans; ZUSD $45.07; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.10k). Not a post-4h-close pass (next 16:00 UTC) → no new entry. Wednesday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
