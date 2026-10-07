@@ -51345,3 +51345,9 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), 1 open order, no orphans; Krake
 
 - Maintenance: INJ (OXWUAC, 7.3%) and AVAX (OELFVZ, 11.5%) stops open, balances match, no orphans. BTC ≈ 85.3k, crash gate clear. Alpaca empty.
 - No new 4h close since the 00:00 candle (already evaluated at 00:45 pass → INJ entry). Max 2 concurrent swing trials reached. HOLD, no trade. ZUSD ≈ $26.33.
+
+## Scan — 02:00 UTC (2026-10-07) (fired 02:45 UTC) — HOLD
+
+- Maintenance: INJ stop filled 02:01 UTC (see TRADE-LOG); AVAX 1.81 (OELFVZ, stopprice 10.419; ask 11.033) remains, 1 open order, no orphans. Kraken positions {}; Alpaca positions empty. BTC ask $83.86k (~−1.7% vs prior pass), crash gate clear.
+- Not a post-4h-close pass (next 04:00 UTC) → no new entry. Wednesday → no weekly review. ZUSD $45.07.
+### Decision: **HOLD.** No push (routine stop-out within trial parameters).

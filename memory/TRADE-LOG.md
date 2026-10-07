@@ -11777,3 +11777,7 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - **BUY INJ/USD** 2.55 @ 7.944 post-only limit, txid OMTQTH-R6EYB-ZZJY4Q, filled (cost $20.26, fee $0.08 maker). Signal: 20:00–00:00 4h close 8.118 > prior-20 high 7.956, vol 8.6×, > EMA50; spread 0.05%; Coinbase 7.9355 ≈ Kraken. ~30% equity.
 - **Stop:** trailing stop 7.3% (3×ATR14 4h), txid OXWUAC-S3PQQ-VPXQ4R, 2.55 INJ. No fixed T1/T2; max hold 10 days (close by 2026-10-17).
 - Open swing trials: AVAX (stop OELFVZ, 11.5%), INJ. ZUSD ≈ $26.33.
+
+## Scan — 02:00 UTC (2026-10-07) (fired 02:45 UTC) — SWING TRIAL 3/10 closed: INJ stopped out
+
+- **SWING TRIAL close:** INJ stop OXWUAC-S3PQQ-VPXQ4R filled 02:01 UTC, 2.55 @ 7.410 (entry 7.944 limit, ~1.3h hold). Gross ≈ −$1.36, fees ≈ $0.23 (entry 0.08 + exit 0.15) → net ≈ −$1.59 (≈ −7.8%). Trial tally: 3 closed losses, 1 open (AVAX). ZUSD now $45.07.
