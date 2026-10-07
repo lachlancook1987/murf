@@ -51335,3 +51335,8 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.593), no KSM; 1 open orde
 
 Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.636), no KSM; 1 open order, no orphans; ZUSD $46.67; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $85.56k). Not a post-4h-close pass (next 00:00 UTC) → no new entry. Tuesday → no weekly review. EOD snapshot appended to TRADE-LOG.md.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 00:00 UTC (2026-10-07) (fired 00:45 UTC)
+
+Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419), 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear. 4h-close pass, slot free → full sweep (217 USD pairs >$50k 24h vol, AU-restricted excluded): 2 passed close>20-high / vol>2× / >EMA50 — INJ (8.6×, $3.1M, spread 0.05%, 3×ATR 7.3%) and TIA (2.7×, marginal break 0.4899 vs 0.4893). Took INJ (stronger, 2 concurrent max). TIA skipped (slot limit, marginal). Wednesday → no weekly review.
+### Decision: **TRADE** — INJ swing trial entry filled + stop placed (see TRADE-LOG).
