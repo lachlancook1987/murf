@@ -11811,3 +11811,9 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## Scan — 18:00 UTC (2026-10-08) — SWING TRIAL 5/10 closed: RAY stopped out
 
 - **SWING TRIAL close:** RAY stop OXTDO3-MF4KJ-4YBHSN filled ~17:49 UTC (closetm 1791482980), 7.9 @ 2.205 (entry 2.467). Proceeds $17.42, exit fee $0.14 → gross ≈ −$2.07, net ≈ −$2.5 incl. entry fee (≈ −12.8%). Trial tally: 5 closed trades, 0 wins, 0 open. ZUSD now $61.49. Book flat, no open orders.
+
+## Scan — 20:00 UTC (2026-10-08) (fired 20:45 UTC) — SWING TRIAL 6/10 entry: TIA
+- **BUY TIA/USD** 35.5 @ 0.5139 post-only limit, txid OYLHNW-IVMAR-C346U7, filled (cost ≈$18.24, ≈30% equity, maker).
+- Signal: 16:00 4h close 0.5208 > prior-20 high 0.499, vol 13.3×, > EMA50 0.4666. Spread 0.02%; Coinbase 0.514/0.5139 parity. Other signals skipped (UAI/Q/OGN/ZRC/NODE: no Coinbase pair or wide spread/lower quality).
+- **Stop:** trailing_stop 15% (3×ATR14 4h = 15.4%, capped), GTC, txid OLJ63O-BN42W-WRWMNN, initial stopprice 0.4376. Max hold to 2026-10-18 20:00 UTC.
+- Open: TIA 35.5. ZUSD ≈ $43.18. Trial tally: 5 closed losses, 1 open (TIA).
