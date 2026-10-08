@@ -11802,3 +11802,8 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** INJ swing trial 3/10 (entered 00:45, stopped out 02:01 UTC, net ≈ −$1.59); RAY swing trial 5/10 entered 16:45 UTC (open) | **Total since migration:** ≈162
 
 **Notes:** Kraken `positions: {}`, two trailing stops open; swing trial tally: 3 closed losses, 2 open (AVAX, RAY). Equity mark-to-market.
+
+## Scan — 15:00 UTC (2026-10-08) — SWING TRIAL 1/10 closed: AVAX stopped out
+
+- **SWING TRIAL close:** AVAX stop OELFVZ-FMZRH-ENMQWG filled ~15:11 UTC, 1.81 @ 10.419 (entry 11.711). Proceeds $18.86, exit fee $0.15 → gross ≈ −$2.34, net ≈ −$2.7 incl. entry fee (≈ −12.5%). Trial tally: 4 closed losses, 1 open (RAY). ZUSD now $44.21.
+- Open: RAY 7.9 (stop OXTDO3, stopprice 2.208) intact; no orphans.
