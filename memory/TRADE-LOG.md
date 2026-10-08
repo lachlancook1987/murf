@@ -11807,3 +11807,7 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 
 - **SWING TRIAL close:** AVAX stop OELFVZ-FMZRH-ENMQWG filled ~15:11 UTC, 1.81 @ 10.419 (entry 11.711). Proceeds $18.86, exit fee $0.15 → gross ≈ −$2.34, net ≈ −$2.7 incl. entry fee (≈ −12.5%). Trial tally: 4 closed losses, 1 open (RAY). ZUSD now $44.21.
 - Open: RAY 7.9 (stop OXTDO3, stopprice 2.208) intact; no orphans.
+
+## Scan — 18:00 UTC (2026-10-08) — SWING TRIAL 5/10 closed: RAY stopped out
+
+- **SWING TRIAL close:** RAY stop OXTDO3-MF4KJ-4YBHSN filled ~17:49 UTC (closetm 1791482980), 7.9 @ 2.205 (entry 2.467). Proceeds $17.42, exit fee $0.14 → gross ≈ −$2.07, net ≈ −$2.5 incl. entry fee (≈ −12.8%). Trial tally: 5 closed trades, 0 wins, 0 open. ZUSD now $61.49. Book flat, no open orders.

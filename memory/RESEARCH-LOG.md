@@ -51522,3 +51522,7 @@ Open: RAY 7.9 (stop OXTDO3, stopprice 2.208) intact; 1 open order, no orphans; Z
 ## Scan — 17:00 UTC (2026-10-08)
 Open: RAY 7.9 (stop OXTDO3, stopprice 2.208) intact; 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $80.75k). Slot 1/2 free but not a 4h-close pass → no new entry. Thursday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 18:00 UTC (2026-10-08)
+RAY stop OXTDO3 filled @ 2.205 (see TRADE-LOG); Kraken positions {}, 0 open orders, ZUSD $61.49; Alpaca positions empty. Crash gate clear (BTC ask $81.50k). Flat, 2/2 slots free, but not a 4h-close pass → no new entry. Thursday → no weekly review. Trial 0/5 wins so far (n<10, no judgement yet per rules).
+### Decision: **HOLD.** No push (routine HOLD; stop-out within normal trial parameters).
