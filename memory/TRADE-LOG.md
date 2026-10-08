@@ -11817,3 +11817,17 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - Signal: 16:00 4h close 0.5208 > prior-20 high 0.499, vol 13.3×, > EMA50 0.4666. Spread 0.02%; Coinbase 0.514/0.5139 parity. Other signals skipped (UAI/Q/OGN/ZRC/NODE: no Coinbase pair or wide spread/lower quality).
 - **Stop:** trailing_stop 15% (3×ATR14 4h = 15.4%, capped), GTC, txid OLJ63O-BN42W-WRWMNN, initial stopprice 0.4376. Max hold to 2026-10-18 20:00 UTC.
 - Open: TIA 35.5. ZUSD ≈ $43.18. Trial tally: 5 closed losses, 1 open (TIA).
+
+## 2026-10-08 — EOD Snapshot
+
+### Oct 8 — EOD Snapshot (Day 141, Thursday)
+
+**Portfolio:** ≈$61.05 | **Cash:** $43.18 (70.7%) | **Day P&L:** ≈−$4.20 (−6.44%) vs Oct 7 EOD ≈$65.25 | **Phase P&L:** ≈−$118.73 (−66.04%) | **vs BTC:** ≈ −4.3 points (BTC ≈ −2.1% vs Oct 7 EOD ~$83,274 → $81,720)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| TIA | 35.5 | 0.5139 | ~0.5033 | −$0.38 (−2.1%) | OLJ63O-BN42W-WRWMNN, 15% trail, stopprice 0.4376 |
+
+**Trades today:** AVAX stopped out 15:11 (net ≈ −$2.7), RAY stopped out 17:49 (net ≈ −$2.5), TIA swing trial 6/10 entered 20:45 (open) | **Total since migration:** ≈164
+
+**Notes:** Kraken `positions: {}`, only TIA stop open; no orphans. Swing trial tally: 5 closed losses, 0 wins, 1 open (TIA). Equity mark-to-market.
