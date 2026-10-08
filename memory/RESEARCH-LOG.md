@@ -51534,3 +51534,7 @@ Kraken positions {}, 0 open orders (flat); Alpaca positions empty. Crash gate cl
 ## Scan — 20:00 UTC (2026-10-08) (fired 20:45 UTC)
 Flat at start (Kraken positions {}, 0 orders; Alpaca empty). 4h-close pass, 2/2 slots free: swept 633 online USD pairs → 6 signals (NODE, OGN, Q, TIA, UAI, ZRC). TIA best (vol 13.3×, spread 0.02%, Coinbase parity). Others: no Coinbase reference / thin or wide micro-caps / ATR stop >cap. Crash gate not checked-fired (BTC ~81k, stable).
 ### Decision: **TRADE** — TIA swing trial 6/10 (see TRADE-LOG). Stop placed.
+
+## Scan — 21:00 UTC (2026-10-08)
+Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4427; ask 0.5142, entry 0.5139) intact; 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $81.62k). Slot 1/2 free but not a 4h-close pass → no new entry. Thursday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
