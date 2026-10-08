@@ -51530,3 +51530,7 @@ RAY stop OXTDO3 filled @ 2.205 (see TRADE-LOG); Kraken positions {}, 0 open orde
 ## Scan — 19:00 UTC (2026-10-08)
 Kraken positions {}, 0 open orders (flat); Alpaca positions empty. Crash gate clear (BTC ask $81.68k). 2/2 slots free but not a 4h-close pass → no new entry. Thursday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 20:00 UTC (2026-10-08) (fired 20:45 UTC)
+Flat at start (Kraken positions {}, 0 orders; Alpaca empty). 4h-close pass, 2/2 slots free: swept 633 online USD pairs → 6 signals (NODE, OGN, Q, TIA, UAI, ZRC). TIA best (vol 13.3×, spread 0.02%, Coinbase parity). Others: no Coinbase reference / thin or wide micro-caps / ATR stop >cap. Crash gate not checked-fired (BTC ~81k, stable).
+### Decision: **TRADE** — TIA swing trial 6/10 (see TRADE-LOG). Stop placed.
