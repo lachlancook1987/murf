@@ -51450,3 +51450,7 @@ Open: AVAX 1.81 (stop OELFVZ, stopprice 10.419; ask 11.041), RAY 7.9 (stop OXTDO
 
 Open: AVAX 1.81 (stop OELFVZ, 11.5%, stopprice 10.419; ask 11.14), RAY 7.9 (stop OXTDO3, 13.4%, stopprice 2.208; ask 2.466, entry 2.467), 2 open orders, no orphans; ZUSD $25.51; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $83.27k). Slots full (2/2), not a 4h-close pass → no new entry. Wednesday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 00:00 UTC (2026-10-08)
+- Account: AVAX 1.81 (stop OELFVZ, stopprice 10.419) + RAY 7.9 (stop OXTDO3, stopprice 2.208) intact; no orphans; Kraken positions {}; Alpaca positions empty. BTC 83,242 (flat vs Oct 7 EOD) — crash gate clear.
+- Decision: HOLD. 4h candle just closed but max 2 concurrent swing positions already open → no new entries. No discovery sweep run.
