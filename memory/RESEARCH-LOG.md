@@ -51550,3 +51550,7 @@ Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4428; ask 0.5117, entry 0.5139) in
 ## Scan — 00:00 UTC (2026-10-09) (fired 00:45 UTC)
 Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4428) intact; 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $81.76k). 4h-close pass, 1/2 slots free: swept 633 USD pairs → 1 signal (Q, vol 2.6×, close 0.0269 > 20-high 0.0258). Rejected: no Coinbase reference (divergence gate unverifiable), spread 0.38%, micro-cap already extended to 0.0277 vs signal close, ATR stop 11.2%; same Q rejection as 20:00 pass. Friday but not 07:00 → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 01:00 UTC (2026-10-09)
+Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4428; ask 0.5105, entry 0.5139) intact; 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $81.92k). Slot 1/2 free but not a 4h-close pass → no new entry. Friday but not 07:00 → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
