@@ -11837,3 +11837,18 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - Signal: 00:00 4h close 0.06703 > prior-20 high 0.06285, vol 3.6×, > EMA50 0.0509. Spread 0.2%; Coinbase 0.0688 vs Kraken 0.0699 (1.6% div, OK). Price was ~4% above signal close at fill.
 - **Stop:** trailing_stop 15% (3×ATR14 4h = 16.2%, capped), GTC, txid OIBCQT-B2DXT-RTL6YL, initial stopprice 0.05854. Max hold to 2026-10-19 04:00 UTC.
 - Open: TIA 35.5 (stop OLJ63O) + STRK 262. ZUSD ≈ $24.8. Note: first order attempt used wrong field (`limit_price` → script error, no order placed); script expects `price`.
+
+## 2026-10-09 — EOD Snapshot
+
+### Oct 9 — EOD Snapshot (Day 142, Friday)
+
+**Portfolio:** ≈$60.85 | **Cash:** $24.84 (40.8%) | **Day P&L:** ≈−$0.20 (−0.33%) vs Oct 8 EOD ≈$61.05 | **Phase P&L:** ≈−$118.93 (−66.1%) | **vs BTC:** ≈ −1.4 points (BTC ≈ +1.05% vs Oct 8 EOD ~$81,720 → $82,576)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| TIA | 35.5 | 0.5139 | ~0.4742 | −$1.41 (−7.7%) | OLJ63O-BN42W-WRWMNN, 15% trail, stopprice 0.4485 |
+| STRK | 262 | 0.06972 | ~0.07319 | +$0.91 (+5.0%) | OIBCQT-B2DXT-RTL6YL, 15% trail, stopprice 0.06554 |
+
+**Trades today:** STRK swing trial 7/10 entered 04:45 UTC (open); no closes | **Total since migration:** ≈165
+
+**Notes:** Kraken `positions: {}`, two trailing stops open; no orphans. Swing trial tally: 5 closed losses, 0 wins, 2 open (TIA, STRK). Equity mark-to-market.
