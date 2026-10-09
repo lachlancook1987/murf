@@ -11831,3 +11831,9 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** AVAX stopped out 15:11 (net ≈ −$2.7), RAY stopped out 17:49 (net ≈ −$2.5), TIA swing trial 6/10 entered 20:45 (open) | **Total since migration:** ≈164
 
 **Notes:** Kraken `positions: {}`, only TIA stop open; no orphans. Swing trial tally: 5 closed losses, 0 wins, 1 open (TIA). Equity mark-to-market.
+
+## Scan — 04:00 UTC (2026-10-09) (fired 04:45 UTC) — SWING TRIAL 7/10 entry: STRK
+- **BUY STRK/USD** 262 @ 0.06972 post-only limit, txid OF4RL5-CBDLE-S7KZZG, filled (~$18.27 ≈ 30% equity, maker).
+- Signal: 00:00 4h close 0.06703 > prior-20 high 0.06285, vol 3.6×, > EMA50 0.0509. Spread 0.2%; Coinbase 0.0688 vs Kraken 0.0699 (1.6% div, OK). Price was ~4% above signal close at fill.
+- **Stop:** trailing_stop 15% (3×ATR14 4h = 16.2%, capped), GTC, txid OIBCQT-B2DXT-RTL6YL, initial stopprice 0.05854. Max hold to 2026-10-19 04:00 UTC.
+- Open: TIA 35.5 (stop OLJ63O) + STRK 262. ZUSD ≈ $24.8. Note: first order attempt used wrong field (`limit_price` → script error, no order placed); script expects `price`.
