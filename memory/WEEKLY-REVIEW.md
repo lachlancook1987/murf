@@ -1616,3 +1616,15 @@ item, separate from anything a strategy-doc change can fix.
 **Concrete adjustment for next week:** None to rules — swing trial is 3/10 into its sample (1 closed loss, 2 open); too small to judge. Watch whether trail width (3×ATR ≈ 10–11.5%) vs. 10-day max-hold leaves AVAX/KSM stuck near entry; if both exit by time-stop (Oct 9–10) flat/negative, revisit stop multiple in the fortnightly deep review rather than mid-trial.
 
 ---
+
+## Week of 2026-10-02 to 2026-10-09 — Review Date: 2026-10-09
+
+**Equity:** ≈ $61.3 now (≈ $67.8 at Oct 2; Phase P&L ≈ −$118.5 / −65.9%). BTC ≈ $85.75k → $82.47k (≈ −3.8%); portfolio ≈ −9.6% → trailed BTC by ~5.8 points.
+
+**Trades (swing trial 2–7/10):** KSM −6% (net ≈ −$1.19), INJ −7.8% (≈ −$1.59, stopped in 1.3h), AVAX −12.5% (≈ −$2.70), RAY −12.8% (≈ −$2.50); TIA (0.5139) and STRK (0.06972) open, both ≈ flat/slightly +. Closed this week: 0W/4L; trial overall 0W/5L (incl. AAVE), profit factor 0. Fees ≈ $0.08 maker entry / $0.15 stop exit each.
+
+**Trade quality:** All five closes were stop-outs on 3×ATR trails (7–15% wide) after 4h-breakout entries; no rule violations, no orphans, maker fills worked (one MET post-only cancelled unfilled). Pattern: breakouts in a falling BTC tape (−3.8%) fail quickly (INJ 1.3h). Per-trade damage held to ~$1.2–2.7 by 30% sizing.
+
+**Concrete adjustment for next week:** None mid-trial (2 open, sample 5/10 closed-ish); but add a BTC-trend context check (BTC 4h below EMA50 → note/flag) to evaluate in the fortnightly deep review whether breakout entries during BTC downtrends account for the 0/5 record.
+
+---
