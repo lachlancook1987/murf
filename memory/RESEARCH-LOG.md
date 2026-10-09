@@ -51546,3 +51546,7 @@ Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4428; ask 0.5117, entry 0.5139) in
 ## Scan — 23:00 UTC (2026-10-08) — EOD pass, HOLD
 - Maintenance: TIA stop OLJ63O intact, no orphans; Alpaca residual BTC state unchanged. BTC $81.7k (crash gate clear).
 - Not a 4h-close pass (swing entries evaluate at 00/04/08/12/16/20 only); TIA already open (max 2 concurrent allows another but no signal window). No entry. EOD snapshot appended.
+
+## Scan — 00:00 UTC (2026-10-09) (fired 00:45 UTC)
+Open: TIA 35.5 (stop OLJ63O, 15%, stopprice 0.4428) intact; 1 open order, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC ask $81.76k). 4h-close pass, 1/2 slots free: swept 633 USD pairs → 1 signal (Q, vol 2.6×, close 0.0269 > 20-high 0.0258). Rejected: no Coinbase reference (divergence gate unverifiable), spread 0.38%, micro-cap already extended to 0.0277 vs signal close, ATR stop 11.2%; same Q rejection as 20:00 pass. Friday but not 07:00 → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
