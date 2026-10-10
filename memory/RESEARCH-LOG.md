@@ -51731,3 +51731,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.4974; bid 0.5782, entry 0.5139, ≈+12.
 ## Scan — 21:00 UTC (2026-10-10)
 Open: TIA 35.5 (stop OLJ63O, stopprice 0.4974; ask 0.5762, entry 0.5139, ≈+12%) + AERO 21.3 (stop O6BWXR, stopprice 0.8365; ask 0.9277, entry 0.9047) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca flat. Crash gate clear (BTC ask $83.0k). 2/2 swing slots full, not a 4h-close pass → no new entry. Saturday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 22:00 UTC (2026-10-10) (fired 22:45 UTC)
+Open: TIA 35.5 (stop OLJ63O, stopprice 0.5028; bid 0.5854, entry 0.5139, ≈+14%) + AERO 21.3 (stop O6BWXR, stopprice 0.8493; bid 0.9441, entry 0.9047, ≈+4%) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca flat. Crash gate clear (BTC bid $82.97k). 2/2 swing slots full, not a 4h-close pass → no new entry. Saturday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
