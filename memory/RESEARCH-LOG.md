@@ -51719,3 +51719,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; bid 0.5089, entry 0.5139) + AERO 
 ## Scan — 18:00 UTC (2026-10-10) (fired 18:45 UTC)
 - Maintenance: TIA 35.5 (stop OLJ63O, stopprice 0.4664) + AERO 21.3 (stop O6BWXR, stopprice 0.8136) both protected; no orphans; Alpaca flat. BTC ~82,945, no crash.
 - Entry: no new closed 4h candle since 16:00 pass (next close 20:00); 2/2 max concurrent swing slots full. Decision: HOLD.
+
+## Scan — 19:00 UTC (2026-10-10) (fired 19:45 UTC)
+Open: TIA 35.5 (stop OLJ63O, stopprice 0.4801; bid 0.5561, entry 0.5139) + AERO 21.3 (stop O6BWXR, stopprice 0.8272; bid 0.9245, entry 0.9047) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC bid $83.00k). 2/2 slots full, not a 4h-close pass → no new entry. Saturday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
