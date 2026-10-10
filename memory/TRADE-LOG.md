@@ -11856,3 +11856,9 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## Scan — 15:00 UTC (2026-10-10) — SWING TRIAL 7/10 closed: STRK stopped out (WIN)
 - **SWING TRIAL close:** STRK stop OIBCQT-B2DXT-RTL6YL filled ~14:15 UTC (closetm 1791644119), 262 @ 0.08469 (entry 0.06972, +21.5%). Proceeds $22.19, exit fee $0.18, entry fee $0.07 → net ≈ +$3.67. First trial win. Trial tally: 6 closed (1 win, 5 losses), 1 open (TIA). ZUSD $46.85 (+AUD 0.155). Equity ≈ $64.4.
 - Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485) intact; no orphans.
+
+## Scan — 16:00 UTC (2026-10-10) (fired 16:45 UTC) — SWING TRIAL 8/10 entry: AERO
+- **BUY AERO/USD** 21.3 @ 0.9047 post-only limit, txid OU5FU7-X664L-7KXR7T, filled (cost $19.27, fee $0.077, ≈30% equity, maker). First attempt OYFTYA (0.9052) was post-only-rejected/canceled as bid moved; re-placed at bid.
+- Signal: 12:00 4h close 0.915 > prior-20 high 0.8674, vol 4.8×, > EMA50 0.818. Spread 0.06%; Coinbase 0.9057/0.9053 parity.
+- **Stop:** trailing_stop 10.6% (3×ATR14 4h), GTC, txid O6BWXR-2AKIT-AT7OPW, initial stopprice 0.8087. Max hold to 2026-10-20 16:00 UTC.
+- Open: TIA 35.5 (stop OLJ63O) + AERO 21.3. ZUSD ≈ $27.6. Trial tally: 6 closed (1 win, 5 losses), 2 open (TIA, AERO).
