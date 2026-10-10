@@ -11862,3 +11862,18 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - Signal: 12:00 4h close 0.915 > prior-20 high 0.8674, vol 4.8×, > EMA50 0.818. Spread 0.06%; Coinbase 0.9057/0.9053 parity.
 - **Stop:** trailing_stop 10.6% (3×ATR14 4h), GTC, txid O6BWXR-2AKIT-AT7OPW, initial stopprice 0.8087. Max hold to 2026-10-20 16:00 UTC.
 - Open: TIA 35.5 (stop OLJ63O) + AERO 21.3. ZUSD ≈ $27.6. Trial tally: 6 closed (1 win, 5 losses), 2 open (TIA, AERO).
+
+## 2026-10-10 — EOD Snapshot
+
+### Oct 10 — EOD Snapshot (Day 143, Saturday)
+
+**Portfolio:** ≈$68.99 | **Cash:** $27.50 (39.9%) | **Day P&L:** ≈+$8.14 (+13.4%) vs Oct 9 EOD ≈$60.85 | **Phase P&L:** ≈−$110.79 (−61.6%) | **vs BTC:** ≈ +12.9 points (BTC ≈ +0.45% vs Oct 9 EOD ~$82,576 → $82,945)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| TIA | 35.5 | 0.5139 | ~0.6052 | +$3.24 (+17.8%) | OLJ63O-BN42W-WRWMNN, 15% trail, stopprice 0.5164 |
+| AERO | 21.3 | 0.9047 | ~0.9396 | +$0.74 (+3.9%) | O6BWXR-2AKIT-AT7OPW, 10.6% trail, stopprice 0.8582 |
+
+**Trades today:** STRK swing trial 7/10 stopped out 14:15 (net ≈ +$3.67, first trial win); AERO swing trial 8/10 entered 16:45 UTC (open) | **Total since migration:** ≈167
+
+**Notes:** Kraken `positions: {}`, two trailing stops open; no orphans. Swing trial tally: 6 closed (1 win, 5 losses), 2 open (TIA, AERO). Equity mark-to-market.
