@@ -11852,3 +11852,7 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** STRK swing trial 7/10 entered 04:45 UTC (open); no closes | **Total since migration:** ≈165
 
 **Notes:** Kraken `positions: {}`, two trailing stops open; no orphans. Swing trial tally: 5 closed losses, 0 wins, 2 open (TIA, STRK). Equity mark-to-market.
+
+## Scan — 15:00 UTC (2026-10-10) — SWING TRIAL 7/10 closed: STRK stopped out (WIN)
+- **SWING TRIAL close:** STRK stop OIBCQT-B2DXT-RTL6YL filled ~14:15 UTC (closetm 1791644119), 262 @ 0.08469 (entry 0.06972, +21.5%). Proceeds $22.19, exit fee $0.18, entry fee $0.07 → net ≈ +$3.67. First trial win. Trial tally: 6 closed (1 win, 5 losses), 1 open (TIA). ZUSD $46.85 (+AUD 0.155). Equity ≈ $64.4.
+- Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485) intact; no orphans.
