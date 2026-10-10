@@ -51711,3 +51711,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; entry 0.5139) intact; 1 open orde
 ## Scan — 16:00 UTC (2026-10-10) (fired 16:45 UTC)
 - Maintenance: TIA stop OLJ63O intact (stopprice 0.4485); no orphans; Alpaca flat. BTC crash gate clear.
 - 4h breakout sweep (633 USD pairs, 12:00 candle closed): ACH, AERO, CFX, GAS, NEO, QTUM, STRK, VELODROME, ZK passed. Rejected: CFX spread 1.3%; QTUM (19×) no Coinbase pair for divergence check; STRK just exited at +21.5% (not re-chased); others lower volume ratio. Chose AERO (Coinbase parity). Executed — see TRADE-LOG.
+
+## Scan — 17:00 UTC (2026-10-10) (fired 17:45 UTC)
+Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; bid 0.5089, entry 0.5139) + AERO 21.3 (stop O6BWXR, stopprice 0.8136; bid 0.9007, entry 0.9047) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca flat. Crash gate clear (BTC bid $83.05k). 2/2 slots full, not a 4h-close pass → no new entry. Saturday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
