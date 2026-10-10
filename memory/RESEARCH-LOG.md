@@ -51667,3 +51667,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; bid 0.4749, entry 0.5139) + STRK 
 ## Scan — 05:00 UTC (2026-10-10)
 Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; bid 0.4899, entry 0.5139) + STRK 262 (stop OIBCQT, stopprice 0.06594; bid 0.07095, entry 0.06972) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC bid $82.71k). 2/2 slots full, not a 4h-close pass → no new entry. Not Fri 07:00 → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 06:00 UTC (2026-10-10)
+Open: TIA 35.5 (stop OLJ63O, stopprice 0.4485; bid 0.4962, entry 0.5139) + STRK 262 (stop OIBCQT, stopprice 0.06594; bid 0.0712, entry 0.06972) intact; 2 open orders, no orphans; Kraken positions {}; Alpaca positions empty. Crash gate clear (BTC bid $82.81k). 2/2 slots full, not a 4h-close pass → no new entry. Not Fri 07:00 → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
