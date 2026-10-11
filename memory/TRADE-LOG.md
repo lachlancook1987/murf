@@ -11877,3 +11877,7 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** STRK swing trial 7/10 stopped out 14:15 (net ≈ +$3.67, first trial win); AERO swing trial 8/10 entered 16:45 UTC (open) | **Total since migration:** ≈167
 
 **Notes:** Kraken `positions: {}`, two trailing stops open; no orphans. Swing trial tally: 6 closed (1 win, 5 losses), 2 open (TIA, AERO). Equity mark-to-market.
+
+## 2026-10-11 00:40 UTC — DISCRETIONARY: TIA stop tightened (user request)
+- TIA 35.5, entry 0.5139, price 0.5998 (+16.7%). Cancelled OLJ63O (15% trail, stopprice 0.5210); placed trailing_stop 8% GTC, txid OMGUM7-AKAZY-WA7K7G, stopprice 0.5519 (≈+7.4% over entry if hit). Deviates from swing-trial no-tightening rule at user's direction; trial review should note it. Hourly % alert on TIA enabled (see CLAUDE.md).
+- Open: TIA 35.5 (new stop), AERO 21.3 (O6BWXR, 10.6% trail, stopprice 0.8582).
