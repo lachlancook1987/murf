@@ -51793,3 +51793,8 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 - Maintenance: AERO 21.3 stop OV2RWJ (6%) + CFX 300 stop OAXPUI (15%, stopprice 0.05922) intact, only 2 open orders, no orphans. Kraken positions {}, Alpaca flat. AERO bid 0.9709 (+7.3%), CFX bid 0.0656 (-5.9%); swing positions → no tightening rungs. BTC 82.89k, crash gate clear.
 - Entry: not a 4h-close pass (08:00 candle swept), 2/2 swing slots full → no sweep. Sunday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 11:00 UTC (2026-10-11)
+- Maintenance: AERO 21.3 stop OV2RWJ (6%) + CFX 300 stop OAXPUI (15%, stopprice 0.05922) intact, only 2 open orders, no orphans. Kraken positions {}, Alpaca flat. AERO bid 0.9729 (+7.5%), CFX bid 0.0650 (-6.7%); swing positions → no tightening rungs. BTC 82.98k, crash gate clear.
+- Entry: not a 4h-close pass (08:00 candle swept), 2/2 swing slots full → no sweep. Sunday → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
