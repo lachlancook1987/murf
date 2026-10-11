@@ -51778,3 +51778,8 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 - Maintenance: AERO 21.3 stop OV2RWJ (6% trail) intact, only open Kraken order; bid 0.9576 (+5.9% vs entry 0.9047) → no tightening. Kraken positions {}, Alpaca flat, ZUSD $49.04, no orphans. BTC 82.93k, crash gate clear.
 - Entry: not a 4h-close pass (04:00 candle swept; next 08:00), 1/2 slots used → no sweep. Sunday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 08:00 UTC (2026-10-11) (fired 08:45 UTC)
+- Maintenance: AERO 21.3 stop OV2RWJ (6%) intact; bid ~0.964 (+6.5%); Kraken positions {}, Alpaca flat, no orphans. BTC 83.0k, crash gate clear.
+- Entry: 4h-close pass → sweep of 139 USD pairs on 04:00 closed candle: 3 hits (CFX, DOS, XDP). Took CFX (most liquid, 0.06% spread, Coinbase parity within 1.2%). 2/2 slots now used. Sunday → no weekly review.
+### Decision: **TRADE** — CFX swing trial 9/10 filled, stop placed (see TRADE-LOG). 
