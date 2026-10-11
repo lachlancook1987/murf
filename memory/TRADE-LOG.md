@@ -11907,3 +11907,17 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## Scan — 21:00 UTC (2026-10-11) — SWING TRIAL 8b closed: AERO stopped out (WIN)
 - AERO stop OV2RWJ-L7NVK-3JRQYF (6% trail, user-set) filled ~21:15 UTC (closetm 1791753308): 21.3 @ 0.9317 (entry 0.9047, +3.0%). Proceeds $19.85, exit fee $0.16, entry fee $0.08 → net ≈ +$0.34. Discretionary tightening (user-directed) cut the trade vs the 10.6% ATR trail; note in trial review.
 - Trial tally: 8 closed (3 wins, 5 losses), 1 open (CFX). ZUSD $47.75. CFX 300 stop OAXPUI (15%, stopprice 0.06173) intact, no orphans.
+
+## 2026-10-11 — EOD Snapshot
+
+### Oct 11 — EOD Snapshot (Day 144, Sunday)
+
+**Portfolio:** ≈$67.89 | **Cash:** $47.75 (70.3%) | **Day P&L:** ≈−$1.10 (−1.6%) vs Oct 10 EOD ≈$68.99 | **Phase P&L:** ≈−$111.89 (−62.2%) | **vs BTC:** ≈ −2.4 points (BTC ≈ +0.78% vs Oct 10 EOD ~$82,945 → $83,594)
+
+| Symbol | Qty | Entry | Price | Unrealized P&L | Trailing Stop |
+|---|---|---|---|---|---|
+| CFX | 300 | 0.06968 | ~0.06716 | −$0.76 (−3.6%) | OAXPUI-66ZRG-2TTXZX, 15% trail, stopprice 0.06173 |
+
+**Trades today:** TIA swing trial 6b closed 02:08 (user-managed stop, net ≈ +$3.3); CFX swing trial 9/10 entered 08:45 (open); AERO 8b stopped out ~21:15 (net ≈ +$0.34) | **Total since migration:** ≈169
+
+**Notes:** Kraken `positions: {}`, one trailing stop open; no orphans. Swing trial tally: 8 closed (3 wins, 5 losses), 1 open (CFX). Equity mark-to-market.
