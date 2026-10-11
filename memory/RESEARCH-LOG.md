@@ -51853,3 +51853,8 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 - Maintenance: CFX 300 stop OAXPUI (15%, stopprice 0.06173) intact, only 1 open order, no orphans. Kraken positions {}, Alpaca positions flat (only legacy May order in list). CFX bid 0.0671 (-3.7% vs entry 0.06968); swing position → no tightening rungs. BTC 83.59k (open 82.9k), crash gate clear. ZUSD ≈ $47.75.
 - Entry: not a 4h-close pass (swing evaluation only at 00/04/08/12/16/20) → no sweep. Sunday → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 23:00 UTC (2026-10-11) (fired 23:45 UTC)
+- Maintenance: CFX 300 stop OAXPUI (15%, stopprice 0.06173) intact, only 1 open order, no orphans. Kraken positions {}, Alpaca flat. CFX bid 0.06716 (-3.6% vs entry 0.06968); swing position → no tightening rungs. BTC 83.59k, crash gate clear. ZUSD $47.75.
+- Entry: not a 4h-close pass → no sweep. Sunday → no weekly review. EOD snapshot appended to TRADE-LOG.
+### Decision: **HOLD.** No push (routine HOLD).
