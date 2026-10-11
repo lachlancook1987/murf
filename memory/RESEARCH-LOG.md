@@ -51754,3 +51754,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 ## Scan — 03:00 UTC (2026-10-11) (fired 02:45 UTC)
 - Maintenance: AERO 21.3 stop OV2RWJ (6% trail, stopprice 0.8949) intact, only open order; ask 0.9431 (+4.2% vs entry 0.9047) → no tightening. Kraken positions {}, Alpaca flat, ZUSD $49.04, no orphans. BTC 83.03k, crash gate clear.
 - Entry: not a 4h-close pass, 1/2 swing slots used → no sweep. Sunday → no weekly review. HOLD. No push.
+
+## Scan — 03:00 UTC (2026-10-11) (second pass, fired ~03:xx UTC)
+- Maintenance: AERO 21.3 stop OV2RWJ (6%, stopprice 0.8949) intact, only open order; bid 0.9311 (+2.9% vs entry) → no tightening. Kraken positions {}, Alpaca flat, no orphans. BTC 82.89k, crash gate clear.
+- Entry: not a 4h-close pass, 1/2 slots used → no sweep. Sunday → no weekly review. HOLD. No push.
