@@ -11881,3 +11881,9 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## 2026-10-11 00:40 UTC — DISCRETIONARY: TIA stop tightened (user request)
 - TIA 35.5, entry 0.5139, price 0.5998 (+16.7%). Cancelled OLJ63O (15% trail, stopprice 0.5210); placed trailing_stop 8% GTC, txid OMGUM7-AKAZY-WA7K7G, stopprice 0.5519 (≈+7.4% over entry if hit). Deviates from swing-trial no-tightening rule at user's direction; trial review should note it. Hourly % alert on TIA enabled (see CLAUDE.md).
 - Open: TIA 35.5 (new stop), AERO 21.3 (O6BWXR, 10.6% trail, stopprice 0.8582).
+
+## Scan — 02:00 UTC (2026-10-11) (fired 02:15 UTC) — SWING TRIAL 6b closed: TIA (manual stop mgmt, WIN)
+- User manually replaced TIA stops (8% OMGUM7 and a 5% O4RITD cancelled "User requested"); trailing stop O2THDM-SNEKC-MWYZKS filled ~02:08 UTC: 35.5 TIA @ 0.6117 (entry 0.5139, +19.0%, ≈ +$3.3 net of fees). Discretionary deviation from no-tightening rule (user-directed); note in trial review.
+- Trial tally: 7 closed (2 wins, 5 losses), 1 open (AERO).
+- AERO 21.3: user cancelled O6BWXR (10.6%) and placed trailing_stop 6% OV2RWJ-L7NVK-3JRQYF, stopprice 0.8949 (price 0.9434, +4.3%). Also user-directed.
+- ZUSD $49.04, equity ≈ $69. TIA hourly-alert section removed from CLAUDE.md (position closed).

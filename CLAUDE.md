@@ -367,7 +367,3 @@ These belong to the old Alpaca strategy — do not use them:
 - "DXY red flag"
 - "BTC below 20-day MA → reduce sizing"
 - "Alts sector PAUSED"
-
-## TIA discretionary watch (added 2026-10-11, user request)
-
-User tightened the TIA swing stop to an **8% trail** (order `OMGUM7-AKAZY-WA7K7G`, stopprice 0.5519 at 0.5998, entry 0.5139) and asked for an **hourly check with a push notification showing where it is, in percent**. Every hourly pass while TIA is held: push a one-line status (price, % gain vs entry, stop price, % gain locked if stopped) via PushNotification — this is an explicit exception to the "no push on routine HOLD" rule. Reassess the trail each pass; may tighten further (never widen) if gain grows (suggest ~6% at ≥+25%), logging it as a discretionary change. Remove this section once TIA is closed.
