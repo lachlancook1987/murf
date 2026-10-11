@@ -11905,5 +11905,5 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - Open: AERO 21.3 (stop OV2RWJ, 6%) + CFX 300. ZUSD ≈ $28.06. Trial tally: 7 closed (2 wins, 5 losses), 2 open (AERO, CFX).
 
 ## Scan — 21:00 UTC (2026-10-11) — SWING TRIAL 8b closed: AERO stopped out (WIN)
-- AERO stop OV2RWJ-L7NVK-3JRQYF (6% trail, user-set) filled ~20:55 UTC (closetm 1791753308): 21.3 @ 0.9317 (entry 0.9047, +3.0%). Proceeds $19.85, exit fee $0.16, entry fee $0.08 → net ≈ +$0.34. Discretionary tightening (user-directed) cut the trade vs the 10.6% ATR trail; note in trial review.
+- AERO stop OV2RWJ-L7NVK-3JRQYF (6% trail, user-set) filled ~21:15 UTC (closetm 1791753308): 21.3 @ 0.9317 (entry 0.9047, +3.0%). Proceeds $19.85, exit fee $0.16, entry fee $0.08 → net ≈ +$0.34. Discretionary tightening (user-directed) cut the trade vs the 10.6% ATR trail; note in trial review.
 - Trial tally: 8 closed (3 wins, 5 losses), 1 open (CFX). ZUSD $47.75. CFX 300 stop OAXPUI (15%, stopprice 0.06173) intact, no orphans.
