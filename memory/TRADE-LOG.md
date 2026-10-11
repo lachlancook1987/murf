@@ -11896,3 +11896,10 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 
 ## 2026-10-11 — DISCRETIONARY: AERO trail tightened to 6% (user request)
 - AERO 21.3, entry 0.9047. Cancelled O6BWXR (10.6%, stopprice 0.8582); placed trailing_stop 6% GTC, txid OV2RWJ-L7NVK-3JRQYF, stopprice 0.8898 (≈−1.6% vs entry if hit). Deviates from swing-trial no-tightening rule at user's direction. TIA stop O2THDM (3%, 0.6089) unchanged.
+
+## Scan — 08:00 UTC (2026-10-11) (fired 08:45 UTC) — SWING TRIAL 9/10 entry: CFX
+- **BUY CFX/USD** 300 @ 0.06968 post-only limit, txid OXXK3A-ECZAU-TE7BFY, filled (cost ≈$20.9, ≈30% equity, maker). First attempt OYICXT (0.06963) unfilled as bid moved up → cancelled, re-placed at bid.
+- Signal: 04:00 4h close 0.06857 > prior-20 high 0.06467, vol 2.3×, > EMA50 0.05402. Spread 0.06%; Coinbase 0.0705 (≈1.2% divergence).
+- **Stop:** trailing_stop 15% (3×ATR14 4h = 15.6%, capped 15%), GTC, txid OAXPUI-66ZRG-2TTXZX, initial stopprice 0.05885. Max hold to 2026-10-21 08:00 UTC.
+- Other 4h hits not taken (slot cap 2): XDP (vol 3.3×, ATR trail 18.9%), DOS (2.5×).
+- Open: AERO 21.3 (stop OV2RWJ, 6%) + CFX 300. ZUSD ≈ $28.06. Trial tally: 7 closed (2 wins, 5 losses), 2 open (AERO, CFX).
