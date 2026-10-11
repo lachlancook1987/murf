@@ -51742,7 +51742,3 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 
 ## Scan — 00:00 UTC (2026-10-11) (fired 00:45 UTC)
 - Maintenance only: TIA 0.6005 (+16.9%), stop OMGUM7 stopprice 0.5558 (8% trail) → locks ≈+8.2%; AERO ~0.936 (+3.5%), stop O6BWXR 0.8582; BTC 82.88k. No orphans, Alpaca empty, crash gate clear. Progressive tightening: TIA <20%, none. Full 4h-breakout sweep not run this pass (cash ~$27, 2 open swing trials); HOLD. TIA % push sent per CLAUDE.md.
-
-## Scan — 01:00 UTC (2026-10-11)
-- Maintenance: TIA 35.5 stop OMGUM7 (8% trail, stopprice 0.5652) and AERO 21.3 stop O6BWXR (10.6%, 0.8582) intact, no orphans, Alpaca flat. BTC 82.9k (no crash). TIA 0.6117 = +19.0% vs entry (<20% tighten threshold; <+25% so 8% trail kept). AERO 0.9422 = +4.1%.
-- Entry sweep: not run this pass (no new 4h close since the 00:00 candle already assessed; ZUSD ≈$27.5). HOLD. TIA % push sent per CLAUDE.md.
