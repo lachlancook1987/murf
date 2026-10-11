@@ -11887,3 +11887,12 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - Trial tally: 7 closed (2 wins, 5 losses), 1 open (AERO).
 - AERO 21.3: user cancelled O6BWXR (10.6%) and placed trailing_stop 6% OV2RWJ-L7NVK-3JRQYF, stopprice 0.8949 (price 0.9434, +4.3%). Also user-directed.
 - ZUSD $49.04, equity ≈ $69. TIA hourly-alert section removed from CLAUDE.md (position closed).
+
+## 2026-10-11 01:46 UTC — DISCRETIONARY: TIA trail tightened to 5% (user request)
+- TIA 35.5 @ 0.6138 (+19.4% vs entry 0.5139). Cancelled OMGUM7 (8%, stopprice 0.5658); placed trailing_stop 5% GTC, txid O4RITD-SJSCA-KSNYAU, stopprice 0.5831 (≈+13.5% locked if hit). AERO unchanged (O6BWXR, 0.8582).
+
+## 2026-10-11 01:50 UTC — DISCRETIONARY: TIA trail tightened to 3% (user request)
+- TIA 35.5 @ ~0.6259 (+21.8%). Cancelled O4RITD (5%); placed trailing_stop 3% GTC, txid O2THDM-SNEKC-MWYZKS, stopprice 0.6069 (≈+18.1% locked if hit). AERO unchanged.
+
+## 2026-10-11 — DISCRETIONARY: AERO trail tightened to 6% (user request)
+- AERO 21.3, entry 0.9047. Cancelled O6BWXR (10.6%, stopprice 0.8582); placed trailing_stop 6% GTC, txid OV2RWJ-L7NVK-3JRQYF, stopprice 0.8898 (≈−1.6% vs entry if hit). Deviates from swing-trial no-tightening rule at user's direction. TIA stop O2THDM (3%, 0.6089) unchanged.
