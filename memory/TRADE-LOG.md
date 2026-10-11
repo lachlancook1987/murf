@@ -11887,3 +11887,6 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 
 ## 2026-10-11 01:50 UTC — DISCRETIONARY: TIA trail tightened to 3% (user request)
 - TIA 35.5 @ ~0.6259 (+21.8%). Cancelled O4RITD (5%); placed trailing_stop 3% GTC, txid O2THDM-SNEKC-MWYZKS, stopprice 0.6069 (≈+18.1% locked if hit). AERO unchanged.
+
+## 2026-10-11 — DISCRETIONARY: AERO trail tightened to 6% (user request)
+- AERO 21.3, entry 0.9047. Cancelled O6BWXR (10.6%, stopprice 0.8582); placed trailing_stop 6% GTC, txid OV2RWJ-L7NVK-3JRQYF, stopprice 0.8898 (≈−1.6% vs entry if hit). Deviates from swing-trial no-tightening rule at user's direction. TIA stop O2THDM (3%, 0.6089) unchanged.
