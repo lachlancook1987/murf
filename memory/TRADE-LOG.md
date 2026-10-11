@@ -11881,3 +11881,6 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## 2026-10-11 00:40 UTC — DISCRETIONARY: TIA stop tightened (user request)
 - TIA 35.5, entry 0.5139, price 0.5998 (+16.7%). Cancelled OLJ63O (15% trail, stopprice 0.5210); placed trailing_stop 8% GTC, txid OMGUM7-AKAZY-WA7K7G, stopprice 0.5519 (≈+7.4% over entry if hit). Deviates from swing-trial no-tightening rule at user's direction; trial review should note it. Hourly % alert on TIA enabled (see CLAUDE.md).
 - Open: TIA 35.5 (new stop), AERO 21.3 (O6BWXR, 10.6% trail, stopprice 0.8582).
+
+## 2026-10-11 01:46 UTC — DISCRETIONARY: TIA trail tightened to 5% (user request)
+- TIA 35.5 @ 0.6138 (+19.4% vs entry 0.5139). Cancelled OMGUM7 (8%, stopprice 0.5658); placed trailing_stop 5% GTC, txid O4RITD-SJSCA-KSNYAU, stopprice 0.5831 (≈+13.5% locked if hit). AERO unchanged (O6BWXR, 0.8582).
