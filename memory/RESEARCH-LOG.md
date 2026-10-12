@@ -51868,3 +51868,8 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 - Maintenance: CFX 300 stop OAXPUI (15%, stopprice 0.06173) + PLUME 900 stop O5K2VN (12.6%, stopprice 0.02037) intact, only 2 open orders, no orphans. Kraken positions {}, Alpaca flat. BTC 83.58k, crash gate clear. Swing positions → no tightening rungs.
 - Entry: 2/2 swing slots full; not a 4h-close pass → no sweep. Not Fri 07:00 → no weekly review.
 ### Decision: **HOLD.** No push (routine HOLD).
+
+## Scan — 02:00 UTC (2026-10-12)
+- Maintenance: CFX 300 stop OAXPUI (15%, stopprice 0.06173) + PLUME 900 stop O5K2VN (12.6%, stopprice 0.02037) intact, only 2 open orders, no orphans. Kraken positions {}, Alpaca flat. CFX bid 0.06516 (-6.5% vs entry, above stop), PLUME bid 0.02308 (+1.9%). BTC 83.81k, crash gate clear. Swing positions → no tightening rungs.
+- Entry: 2/2 swing slots full; not a 4h-close pass → no sweep. Not Fri 07:00 → no weekly review.
+### Decision: **HOLD.** No push (routine HOLD).
