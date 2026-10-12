@@ -11928,3 +11928,7 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 - **Stop:** trailing_stop 12.6% (3×ATR14 4h), GTC, txid O5K2VN-DA4CA-DXNHJB, initial stopprice 0.01984. Max hold to 2026-10-22 00:00 UTC.
 - Other hits not taken (slot cap 2): FLUX (vol 18×, but live price already back below prior-20 high — spike-fade, 24h hi 0.1086), ICP (3.4×), RSR, CAKE, FIL, GRASS, FOLD, XTZ, WAXL, TMX.
 - Open: CFX 300 (stop OAXPUI) + PLUME 900. ZUSD ≈ $6.9. Trial tally: 8 closed (3 wins, 5 losses), 2 open (CFX, PLUME). Trade 10/10 entered → trial review due after both close.
+
+## 2026-10-12 08:05 UTC — USER-DIRECTED: liquidated all positions into BTC
+- User asked: sell all positions, buy BTC. Held: CFX 300 (stop OAXPUI, 15% trail) and PLUME 900 (stop O5K2VN, 12.6% trail) — both stops cancelled, then market-sold (OS5KKL-XULLP-TCLKOY, OZXXR6-LICQA-EP232T). ZUSD $27.28 → $66.21.
+- Bought BTC 0.00078 market (OH7MMI-ZCJW5-N5VBCF) ≈ $65.3 + fee. Residual ZUSD $0.37. **BTC position has no stop** (user's explicit long hold; not placed pending user's say). Swing-trial positions CFX/PLUME closed by user, not by trial rules; exclude from trial stats.
