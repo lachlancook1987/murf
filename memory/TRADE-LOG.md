@@ -11935,3 +11935,13 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 
 ## 2026-10-12 09:00 UTC — NOTE: user withdrew BTC off Kraken
 - Ledger LBJAHX-JRCAP-TPOVHJ (~08:07 UTC): withdrawal 0.00076499 XXBT (fee 0.000015). Account is flat: ZUSD $0.37, dust only; no open orders/positions. Swing trial: 8 closed (3W/5L); CFX/PLUME were user-liquidated, excluded from stats; trial review not triggered.
+
+## 2026-10-12 — EOD Snapshot
+
+### Oct 12 — EOD Snapshot (Day 145, Monday)
+
+**Portfolio:** ≈$0.47 on Kraken (ZUSD $0.37 + ZAUD 0.155) — user liquidated to BTC and withdrew ~$65 off-exchange at ~08:07 UTC, so Day/Phase P&L vs prior EOD (≈$67.89) is not meaningful as a trading result | **Cash:** 100% | **vs BTC:** BTC ≈ $83,594 → ≈$81,720 (−2.2%) | **Positions:** none
+
+**Trades today:** PLUME swing trial 10/10 entered 00:00 (≈$20.4); CFX and PLUME user-liquidated 08:05 (excluded from trial stats); BTC bought and withdrawn by user. Bot trades: 1 entry, 0 bot-initiated exits.
+
+**Notes:** Account flat, no open orders/orphans. Swing trial tally unchanged: 8 closed (3W/5L); trial review not triggered. Bot has no deployable capital until the user funds the account.
