@@ -51894,3 +51894,7 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 ## Scan — 07:00 UTC (2026-10-12) — HOLD
 - Maintenance: CFX 300 (OAXPUI, 15%, stopprice 0.06173) + PLUME 900 (O5K2VN, 12.6%, stopprice 0.02109) intact, only 2 open orders, no orphans. Kraken positions {}, Alpaca flat. CFX ask 0.0635 (≈−8.9% vs entry), PLUME ask 0.02214 (≈−2.3%). BTC 83.88k, crash gate clear. ZUSD $27.28. Swing → no tightening rungs.
 - Entry: not a 4h-close pass; 2/2 slots full → no sweep. Mon → no weekly review. No push.
+
+## Scan — 09:00 UTC (2026-10-12) — HOLD
+- Account reconciled: the 08:05 BTC buy (0.00078, OH7MMI) was **withdrawn off-exchange** at ~08:07 UTC (ledger LBJAHX: withdrawal XXBT −0.00076499, fee 0.000015) — user's out-of-band action. XXBT now dust; Kraken positions {}, no open orders, no stop needed (nothing held). ZUSD $0.37 + dust. Alpaca flat. BTC 83.28k, crash gate clear.
+- Entry: no capital, not a 4h-close pass. Not Fri 07:00. No push (manual activity, per CLAUDE.md).

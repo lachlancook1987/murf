@@ -11932,3 +11932,6 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 ## 2026-10-12 08:05 UTC — USER-DIRECTED: liquidated all positions into BTC
 - User asked: sell all positions, buy BTC. Held: CFX 300 (stop OAXPUI, 15% trail) and PLUME 900 (stop O5K2VN, 12.6% trail) — both stops cancelled, then market-sold (OS5KKL-XULLP-TCLKOY, OZXXR6-LICQA-EP232T). ZUSD $27.28 → $66.21.
 - Bought BTC 0.00078 market (OH7MMI-ZCJW5-N5VBCF) ≈ $65.3 + fee. Residual ZUSD $0.37. **BTC position has no stop** (user's explicit long hold; not placed pending user's say). Swing-trial positions CFX/PLUME closed by user, not by trial rules; exclude from trial stats.
+
+## 2026-10-12 09:00 UTC — NOTE: user withdrew BTC off Kraken
+- Ledger LBJAHX-JRCAP-TPOVHJ (~08:07 UTC): withdrawal 0.00076499 XXBT (fee 0.000015). Account is flat: ZUSD $0.37, dust only; no open orders/positions. Swing trial: 8 closed (3W/5L); CFX/PLUME were user-liquidated, excluded from stats; trial review not triggered.
