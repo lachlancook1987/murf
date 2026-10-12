@@ -11921,3 +11921,10 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Trades today:** TIA swing trial 6b closed 02:08 (user-managed stop, net ≈ +$3.3); CFX swing trial 9/10 entered 08:45 (open); AERO 8b stopped out ~21:15 (net ≈ +$0.34) | **Total since migration:** ≈169
 
 **Notes:** Kraken `positions: {}`, one trailing stop open; no orphans. Swing trial tally: 8 closed (3 wins, 5 losses), 1 open (CFX). Equity mark-to-market.
+
+## Scan — 00:00 UTC (2026-10-12) — SWING TRIAL 10/10 entry: PLUME
+- **BUY PLUME/USD** 900 @ 0.02265 post-only limit (at bid), txid OHKOW2-ILVZC-VLKFQN, filled (cost ≈$20.4, ≈30% equity, maker).
+- Signal: 20:00 4h close 0.02273 > prior-20 high 0.02206, vol 4.8×, > EMA50 0.01877. Spread 0.09%; Coinbase 0.022605 (≈0.2% divergence).
+- **Stop:** trailing_stop 12.6% (3×ATR14 4h), GTC, txid O5K2VN-DA4CA-DXNHJB, initial stopprice 0.01984. Max hold to 2026-10-22 00:00 UTC.
+- Other hits not taken (slot cap 2): FLUX (vol 18×, but live price already back below prior-20 high — spike-fade, 24h hi 0.1086), ICP (3.4×), RSR, CAKE, FIL, GRASS, FOLD, XTZ, WAXL, TMX.
+- Open: CFX 300 (stop OAXPUI) + PLUME 900. ZUSD ≈ $6.9. Trial tally: 8 closed (3 wins, 5 losses), 2 open (CFX, PLUME). Trade 10/10 entered → trial review due after both close.
