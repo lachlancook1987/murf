@@ -51976,3 +51976,6 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 
 ## Scan — 12:00 UTC (2026-10-13)
 - Account flat: ZUSD $0.37, ZAUD 0.155, dust only; no positions/orders/orphans; Alpaca empty. Bot has no deployable capital (user withdrew funds 2026-10-12). Crash gate/4h-breakout sweep skipped. Decision: HOLD (no capital).
+
+## Scan — 13:00 UTC (2026-10-13) — HOLD
+- Account flat: Kraken positions {}, no open orders, ZUSD $0.37 + dust; Alpaca flat → nothing to maintain, no orphans. BTC ≈ $83.2k, crash gate clear. No capital for entries. Not Fri 07:00. No push.
