@@ -52006,3 +52006,6 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 
 ## Scan — 22:00 UTC (2026-10-13) — HOLD
 - Account flat: Kraken positions {}, no open orders; Alpaca positions empty → nothing to maintain, no orphans. No capital for entries. Not Fri 07:00. No push.
+
+## Scan — 23:00 UTC (2026-10-13) — HOLD
+- Account flat: Kraken positions {}, no open orders; Alpaca positions empty → nothing to maintain, no orphans. No capital for entries (ZUSD $0.37). Not Fri 07:00. No push.
