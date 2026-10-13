@@ -51940,3 +51940,6 @@ Open: TIA 35.5 (stop OLJ63O, stopprice 0.5164; bid 0.6052, entry 0.5139, ≈+17.
 
 ## Scan — 23:00 UTC (2026-10-12) — HOLD
 - Account flat: Kraken positions {}, no open orders, ZUSD ≈$0.37 + dust (ZAUD 0.155); Alpaca flat → nothing to maintain, no orphans. BTC ≈ $81.7k (24h range 81.6k–84.3k, no crash gate). No capital for entries; not a 4h-close pass anyway. No push.
+
+## Scan — 00:00 UTC (2026-10-13) — HOLD
+- Account flat: Kraken positions {}, no open orders, ZUSD $0.37 + dust; Alpaca flat → nothing to maintain, no orphans. Crash gate clear. No capital for entries (4h-close pass, nothing to deploy). Not Fri 07:00. No push.
