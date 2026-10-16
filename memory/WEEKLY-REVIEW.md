@@ -1628,3 +1628,15 @@ item, separate from anything a strategy-doc change can fix.
 **Concrete adjustment for next week:** None mid-trial (2 open, sample 5/10 closed-ish); but add a BTC-trend context check (BTC 4h below EMA50 → note/flag) to evaluate in the fortnightly deep review whether breakout entries during BTC downtrends account for the 0/5 record.
 
 ---
+
+## Week of 2026-10-09 to 2026-10-16 — Review Date: 2026-10-16
+
+**Equity:** ≈ $0.47 on Kraken now (≈ $61.3 at Oct 9). Account was user-liquidated to BTC and withdrawn off-exchange 2026-10-12 ~08:07 UTC, so weekly return is not a trading result. Pre-withdrawal, equity ≈ $67.9 at Oct 11 EOD (≈ +10.8% vs Oct 9). BTC ≈ $82.47k → $82.1k (≈ −0.4%).
+
+**Trades:** TIA 6b closed (user-managed stop, net ≈ +$3.3), AERO 8b stopped (≈ +$0.34), CFX 9/10 and PLUME 10/10 entered then user-liquidated (excluded from stats). Bot-closed this week: 2W/0L. Swing trial tally: 8 closed (3W/5L), profit factor ≈ 1 on small sample incl. these wins; fees ≈ $0.08 maker entry each.
+
+**Trade quality:** No rule violations, no orphans. Trial review not triggered (CFX/PLUME closed by user, not trial rules). Bot has had no deployable capital since Oct 12 — five days of HOLD.
+
+**Concrete adjustment for next week:** None. Pending user decision: refund the account to resume the swing trial, or retire the routine to avoid idle hourly passes.
+
+---
