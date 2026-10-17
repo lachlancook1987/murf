@@ -212,6 +212,23 @@ Each entry: DATE | PAIR | ACTION | SIZE | ENTRY | EXIT | P&L | NOTES
 
 ---
 
+## 2026-05-16 — Session-Open Check (~07:05 UTC)
+
+**Positions:**
+| Symbol | Qty | Entry | Current | P&L% | Stop Buffer | Stop Order |
+|---|---|---|---|---|---|---|
+| ETH/USD | 0.029925 | $2,265.20 | $2,214.43 | -2.24% | 2.82% | stop_limit $2,151.94/$2,130.42 GTC (e4efd513) ✓ |
+| XRP/USD | 31.174 | $1.439 | $1.416 | -1.60% | 2.58% | stop_limit $1.3814/$1.3676 GTC (e079ed77) ✓ |
+
+**Account:** Equity $134.97 | Cash $24.56 (18.2%) | Day P&L -$1.07 (-0.79%) vs last_equity $136.04
+**BTC Regime:** ~$78,616 (CAUTION — below est. 20-day MA $80-82k); 24h ~-1.7%; crash gate NOT triggered.
+**Open orders:** Both stop-limits confirmed active (status: new) ✓. No orphaned orders.
+**Cash:** $24.56 — insufficient for any new entry at CAUTION sizing (~$30 minimum).
+**Theses intact:** ETH Glamsterdam June 2026 + ETF inflows; XRP CLARITY Act cleared Senate Banking Committee 15-9 (Senate floor vote next).
+**Result: HOLD. No trades. No notification sent.**
+
+---
+
 ## 2026-05-16 — Midday Scan (no trades)
 
 - ETH/USD: 0.029925 @ $2,265.20 | Current $2,225.39 | -1.76% | Stop e4efd513 active ($2,151.94/$2,130.42) — HOLD (stop buffer 3.30%)
