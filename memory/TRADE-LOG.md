@@ -1969,6 +1969,46 @@ No adjustments needed.
 
 ---
 
+## 2026-05-24 — Session-Open Scan (Sunday Evening ~19:06 UTC)
+
+| Symbol | Qty | Entry | Ask | P&L% | HWM | Stop Trigger | Buffer | Order |
+|---|---|---|---|---|---|---|---|---|
+| NEAR/USD | 38.00 | $2.137 | $2.450 | **+14.6%** | $2.51110 | $2.33540 (trail 7%) | 4.7% | OSX7LL-VVQZV-JPVWBB ✓ |
+| ETH/USD | 0.0197 | $2,026.00 | $2,099 | **+3.6%** | $2,147.52 | $2,040.15 (trail 5%) | 2.8% | O6GVNC-H2KL5-3K2WQG ✓ |
+| LINK/USD | 1.6268 | $9.147 | $9.436 | **+3.2%** | $9.76665 | $9.27832 (trail 5%) | ⚠️ **1.7% CRITICAL** | OZ3567-BYLHI-5JVOHK ✓ |
+| SUI/USD | 27.00 | $1.0689 | $1.040 | **-2.7%** | $1.06940 | $1.01600 (trail 5%) | 2.3% | ONH4IU-X2MIR-H7KC5Y ✓ |
+
+**Account:** Kraken ZUSD $0.14 (fully deployed) | Alpaca: stop a2b44cf9 CANCELED (2026-05-22), no positions ✓
+**BTC:** $76,600 ask | 24h open $76,670 = **-0.10%** | Crash gate: NOT triggered ✓
+
+**STEP 3 — Hard checks:**
+- Crash gate: -0.10% 24h → CLEAR ✓
+- Emergency exits (≤-20%): none ✓
+- All 4 trailing stops confirmed open, covering correct quantities ✓
+
+**STEP 4 — Stop tightening (≥+20% from entry):**
+- NEAR 38 @ $2.137: current $2.450 = +14.6% — threshold: $2.564 (+20%). Not yet.
+- ETH @ $2,026: current $2,099 = +3.6% — threshold: $2,431. Not yet.
+- LINK @ $9.147: current $9.436 = +3.2% — threshold: $10.976. Not yet.
+- SUI @ $1.069: current $1.040 = -2.7% — threshold: $1.283. Not yet.
+No adjustments.
+
+**STEP 5 — Thesis check (from today's research log):**
+- NEAR: Grayscale ETF S-1 + Arthur Hayes AI narrative — INTACT. HWM $2.511 confirms momentum.
+- ETH: Glamsterdam Q3 2026 upgrade + ETF inflows — INTACT
+- LINK: ADI Foundation $240B + DTCC integration — INTACT. Buffer critically thin at 1.7%.
+- SUI: CME futures live + gasless stablecoins — PARTIAL. Price -2.7%, buffer 2.3%, $1.00 support key floor.
+
+**STEP 6 — New entries:**
+- ZUSD $0.14 — insufficient for any spot order
+- LINK stop buffer ⚠️ 1.7%: if triggers at $9.278 → ~$15.35 freed → HYPE/USD market buy per research plan (trail 7%)
+- SUI stop buffer 2.3%: if triggers at $1.016 → ~$27.43 freed → XRP/USD buy per research plan (trail 7%, CLARITY Act catalyst)
+- No margin setup with confirmed catalyst meets conviction threshold today (F&G 28, thin liquidity)
+
+**Decision: HOLD — No New Trades.** No notification sent.
+
+---
+
 ## 2026-05-25 — Session-Open Scan (Monday)
 
 | Symbol | Qty | Entry | Current | P&L% | HWM | Stop Trigger | Buffer | Order |
