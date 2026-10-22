@@ -12017,3 +12017,11 @@ Post-only limit buy 0.79 COMP @ 25.68 (OPXNSU-BI7BV-GCKQ6R, planned trail 9.2% =
 **Portfolio:** ≈$0.47 on Kraken (ZUSD $0.37 + ZAUD 0.155 + dust) | **Cash:** 100% | **Day P&L:** ≈$0 (no trades) | **Phase P&L:** unchanged vs Oct 20 EOD | **vs BTC:** n/a (flat) | **Positions:** none
 
 **Trades today:** none. **Notes:** Account flat, no orders/orphans. Swing trial tally unchanged: 8 closed (3W/5L). Bot has no deployable capital until the user funds the account.
+
+## 2026-10-22 — EOD Snapshot
+
+### Oct 22 — EOD Snapshot (Day 155, Thursday)
+
+**Portfolio:** ≈$0.47 on Kraken (ZUSD $0.37 + ZAUD 0.155 + dust) | **Cash:** 100% | **Day P&L:** ≈$0 (no trades) | **Phase P&L:** unchanged vs Oct 21 EOD | **vs BTC:** n/a (flat) | **Positions:** none
+
+**Trades today:** none. **Notes:** Account flat, no orders/orphans. Swing trial tally unchanged: 8 closed (3W/5L). Bot has no deployable capital until the user funds the account.
