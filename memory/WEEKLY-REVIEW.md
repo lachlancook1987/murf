@@ -1640,3 +1640,15 @@ item, separate from anything a strategy-doc change can fix.
 **Concrete adjustment for next week:** None. Pending user decision: refund the account to resume the swing trial, or retire the routine to avoid idle hourly passes.
 
 ---
+
+## Week of 2026-10-16 to 2026-10-23 — Review Date: 2026-10-23
+
+**Equity:** ≈ $0.47 on Kraken, unchanged vs Oct 16 (flat all week; no deployable capital). BTC ≈ $82.1k → ≈ $81.7k (≈ −0.5%).
+
+**Trades:** none. Swing trial tally unchanged: 8 closed (3W/5L). Fees $0.
+
+**Trade quality:** No rule violations, no orphans, no open positions/orders (Kraken or Alpaca). 7 days of pure HOLD passes due to no capital.
+
+**Concrete adjustment for next week:** None. Still pending user decision: refund the account to resume the swing trial, or retire the hourly routine to avoid idle passes.
+
+---
